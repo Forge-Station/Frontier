@@ -1,3 +1,4 @@
+using Content.Server.Disease; // Corvax-Wega-Disease
 using Content.Server.Body.Components;
 using Content.Server.Medical.Components;
 using Content.Server.PowerCell;
@@ -33,6 +34,7 @@ public sealed class HealthAnalyzerSystem : EntitySystem
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly TransformSystem _transformSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
+    [Dependency] private readonly DiseaseSystem _disease = default!; // Corvax-Wega-Disease
 
     public override void Initialize()
     {
@@ -107,6 +109,24 @@ public sealed class HealthAnalyzerSystem : EntitySystem
 
         if (!uid.Comp.Silent)
             _audio.PlayPvs(uid.Comp.ScanningEndSound, uid);
+
+        // Corvax-Wega-Disease-start
+        if (!string.IsNullOrEmpty(uid.Comp.Disease))
+        {
+            _disease.TryAddDisease(args.Target.Value, uid.Comp.Disease);
+
+            if (args.User == args.Target)
+            {
+                _popupSystem.PopupEntity(Loc.GetString("disease-scanner-gave-self", ("disease", uid.Comp.Disease)),
+                    args.User, args.User);
+            }
+            else
+            {
+                _popupSystem.PopupEntity(Loc.GetString("disease-scanner-gave-other", ("target", Identity.Entity(args.Target.Value, EntityManager)),
+                    ("disease", uid.Comp.Disease)), args.User, args.User);
+            }
+        }
+        // Corvax-Wega-Disease-end
 
         OpenUserInterface(args.User, uid);
         BeginAnalyzingEntity(uid, args.Target.Value);

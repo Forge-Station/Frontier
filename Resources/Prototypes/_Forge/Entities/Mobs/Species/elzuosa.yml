@@ -4,7 +4,9 @@
   name: Urist McElzuosa
   abstract: true
   components:
-  - type: Hunger # Corvax-Frontier
+  - type: Carriable # Forge-Change
+  - type: DiseaseCarrier # Forge-Change
+  - type: Hunger # Forge-Change
     starvationDamage:
       types:
         Cold: 0.15

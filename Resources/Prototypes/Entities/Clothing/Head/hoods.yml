@@ -14,8 +14,8 @@
   - type: GroupExamine
   - type: Armor
     modifiers: { }
-  - type: ZombificationResistance
-    zombificationResistanceCoefficient: 0.9
+  - type: DiseaseProtection # Corvax-Wega-Disease
+    protection: 0.15 # Corvax-Wega-Disease
   - type: Tag
     tags:
     - WhitelistChameleon
@@ -38,8 +38,8 @@
     sprite: Clothing/Head/Hoods/Bio/cmo.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/cmo.rsi
-  - type: ZombificationResistance
-    zombificationResistanceCoefficient: 0.8
+  - type: DiseaseProtection # Corvax-Wega-Disease
+    protection: 0.25 # Corvax-Wega-Disease
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -92,8 +92,8 @@
     sprite: Clothing/Head/Hoods/Bio/virology.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/virology.rsi
-  - type: ZombificationResistance
-    zombificationResistanceCoefficient: 0.8
+  - type: DiseaseProtection # Corvax-Wega-Disease
+    protection: 0.25 # Corvax-Wega-Disease
 
 - type: entity
   parent: ClothingHeadBase

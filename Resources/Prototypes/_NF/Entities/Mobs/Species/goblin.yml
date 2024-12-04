@@ -4,6 +4,8 @@
   id: MobGoblinBase
   abstract: true
   components:
+  - type: Carriable # Forge-Change
+  - type: DiseaseCarrier # Forge-Change
   - type: Sprite
     scale: 0.86, 0.75 # Increased from "0.8, 0.7" to "0.86, 0.75" to somewhat compensate for fixture change, odd numbers because I wanted to keep the proportions
   - type: HumanoidAppearance

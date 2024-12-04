@@ -262,6 +262,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/cmo.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/cmo.rsi
+  - type: DiseaseProtection # Corvax-Wega-Disease
+    protection: 0.15 # Corvax-Wega-Disease
 
 - type: entity
   parent: ClothingUniformBase # Frontier: remove BaseCommandContraband
@@ -450,6 +452,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/medical.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/medical.rsi
+  - type: DiseaseProtection # Corvax-Wega-Disease
+    protection: 0.1 # Corvax-Wega-Disease
 
 - type: entity
   parent: ClothingUniformBase
@@ -472,6 +476,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/paramedic.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/paramedic.rsi
+  - type: DiseaseProtection # Corvax-Wega-Disease
+    protection: 0.1 # Corvax-Wega-Disease
 
 - type: entity
   parent: ClothingUniformBase
@@ -483,6 +489,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/brigmedic.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/brigmedic.rsi
+  - type: DiseaseProtection # Corvax-Wega-Disease
+    protection: 0.1 # Corvax-Wega-Disease
 
 - type: entity
   parent: ClothingUniformBase
@@ -1023,6 +1031,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/ert_janitor.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/ert_janitor.rsi
+  - type: DiseaseProtection # Corvax-Wega-Disease
+    protection: 0.1 # Corvax-Wega-Disease
 
 - type: entity
   parent: [ BaseCentcommContraband, ClothingUniformBase ]
@@ -1045,6 +1055,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/ert_medic.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/ert_medic.rsi
+  - type: DiseaseProtection # Corvax-Wega-Disease
+    protection: 0.15 # Corvax-Wega-Disease
 
 - type: entity
   parent: [ BaseCentcommContraband, ClothingUniformBase ]
@@ -1206,6 +1218,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/senior_physician.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/senior_physician.rsi
+  - type: DiseaseProtection # Corvax-Wega-Disease
+    protection: 0.1 # Corvax-Wega-Disease
 
 - type: entity
   parent: [ClothingUniformBase, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable

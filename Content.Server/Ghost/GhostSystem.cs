@@ -5,6 +5,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers; // Frontier
 using Content.Server.Cargo.Systems; // Frontier
 using Content.Server.Chat.Managers;
+using Content.Server.Disease.Components; // Corvax-Wega-Disease
 using Content.Server.GameTicking;
 using Content.Server.Ghost.Components;
 using Content.Server.Mind;
@@ -531,6 +532,72 @@ namespace Content.Server.Ghost
             _nameMod.RefreshNameModifiers(ghost);
             return ghost;
         }
+
+        // Corvax-Wega-GhostBar-start
+        private void OnGhostSpawnGhostBar(EntityUid uid, GhostComponent component, ToggleGhostBarEvent args)
+        {
+            var spawnPointPrototype = args.SpawnPoint;
+
+            var spawnPoints = _entityManager.EntityQuery<TransformComponent>()
+                .Where(x =>
+                {
+                    var metaData = _entityManager.GetComponentOrNull<MetaDataComponent>(x.Owner);
+                    return metaData?.EntityPrototype?.ID != null && metaData.EntityPrototype.ID == spawnPointPrototype;
+                })
+                .Select(x => x.Owner)
+                .ToList();
+
+            if (spawnPoints.Count == 0)
+                return;
+
+            var spawnPoint = spawnPoints[0];
+            var transform = _entityManager.GetComponent<TransformComponent>(spawnPoint);
+            var coords = transform.Coordinates;
+
+            if (!coords.IsValid(_entityManager)
+                || _transformSystem.GetMapId(coords) == MapId.Nullspace
+                || !_playerManager.TryGetSessionByEntity(uid, out var targetActor))
+                return;
+
+            var targetUserId = targetActor.UserId;
+            var profile = _gameTicker.GetPlayerProfile(targetActor);
+
+            var spawnedMob = _spawning.SpawnPlayerMob(coords, null, profile, null);
+
+            if (spawnedMob != EntityUid.Invalid)
+            {
+                var targetMind = _mind.GetMind(targetUserId);
+                _entityManager.EnsureComponent<PacifiedComponent>(spawnedMob);
+                var ghostComponent = _entityManager.EnsureComponent<GhostComponent>(spawnedMob);
+                ghostComponent.CanGhostInteract = true;
+
+                if (TryComp<DiseaseCarrierComponent>(spawnedMob, out var carrier))
+                    _entityManager.RemoveComponent<DiseaseCarrierComponent>(spawnedMob);
+
+                if (targetMind != null)
+                {
+                    _mind.TransferTo(targetMind.Value, spawnedMob, true);
+                    args.Handled = true;
+                }
+                else
+                {
+                    var mindId = _mind.CreateMind(targetUserId);
+                    _mind.TransferTo(mindId, spawnedMob, true);
+                    args.Handled = true;
+                }
+
+                var ghostBarGear = new ProtoId<StartingGearPrototype>("GhostBarGear");
+
+                if (_loadout != null)
+                {
+                    List<ProtoId<StartingGearPrototype>> gear = new() { ghostBarGear };
+                    _loadout.Equip(spawnedMob, gear, null);
+                }
+
+                _chatManager.DispatchServerMessage(targetActor, Loc.GetString("ghost-bar-spawn-message"));
+            }
+        }
+        // Corvax-Wega-GhostBar-end
 
         public bool OnGhostAttempt(EntityUid mindId, bool canReturnGlobal, bool viaCommand = false, bool forced = false, MindComponent? mind = null)
         {

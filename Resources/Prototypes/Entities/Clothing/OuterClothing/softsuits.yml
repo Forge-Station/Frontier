@@ -135,6 +135,8 @@
         Slash: 0.80 #CorvaxFrontier
         Piercing: 0.75 #CorvaxFrontier
         Heat: 0.8 #CorvaxFrontier
+  - type: DiseaseProtection # Corvax-Wega-Disease
+    protection: 0.15 # Corvax-Wega-Disease
   - type: GroupExamine
   - type: StealTarget
     stealGroup: ClothingOuterHardsuitVoidParamed

@@ -5,6 +5,8 @@
   id: BaseMobVulpkanin
   abstract: true
   components:
+  - type: Carriable # Forge-Change
+  - type: DiseaseCarrier # Forge-Change
   - type: HumanoidAppearance
     species: Vulpkanin
     hideLayersOnEquip: # Frontier
