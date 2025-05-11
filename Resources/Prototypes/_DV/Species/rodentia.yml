@@ -35,38 +35,27 @@
     # LFoot: MobRodentiaLFoot
     # RFoot: MobRodentiaRFoot
 
-# - type: markingPoints
-  # id: MobRodentiaMarkingLimits
-  # points:
-    # Hair:
-      # points: 1
-      # required: false
-    # FacialHair:
-      # points: 1
-      # required: false
-    # Tail:
-      # points: 1
-      # required: true
-      # defaultMarkings: [ RodentiaTailDefault ]
-    # Legs:
-      # points: 4
-      # required: false
-    # Arms:
-      # points: 4
-      # required: false
-    # Snout:
-      # points: 1
-      # required: false
-    # HeadTop:
-      # points: 1
-      # required: true
-      # defaultMarkings: [ RodentiaHeadTopEarDefault ]
-    # HeadSide:
-      # points: 1
-      # required: false
-    # Chest:
-      # points: 2
-      # required: false
+# - type: speciesBaseSprites
+  # id: MobRodentiaSprites
+  # sprites:
+    # Head: MobRodentiaHead
+    # Hair: MobHumanoidAnyMarking
+    # FacialHair: MobHumanoidAnyMarking
+    # Snout: MobHumanoidAnyMarking
+    # Chest: MobRodentiaChest
+    # Groin: MobRodentiaGroin
+    # HeadTop: MobHumanoidAnyMarking
+    # HeadSide: MobHumanoidAnyMarking
+    # Tail: MobHumanoidAnyMarking
+    # Eyes: MobHumanoidEyes
+    # LArm: MobRodentiaLArm
+    # RArm: MobRodentiaRArm
+    # LHand: MobRodentiaLHand
+    # RHand: MobRodentiaRHand
+    # LLeg: MobRodentiaLLeg
+    # RLeg: MobRodentiaRLeg
+    # LFoot: MobRodentiaLFoot
+    # RFoot: MobRodentiaRFoot
 
 # - type: humanoidBaseSprite
   # id: MobRodentiaHead
@@ -93,22 +82,40 @@
     # state: torso_m
 
 # - type: humanoidBaseSprite
-  # id: MobRodentiaTorsoMale
+  # id: MobRodentiaChest
   # baseSprite:
     # sprite: _DV/Mobs/Species/Rodentia/parts.rsi
-    # state: torso_m
+    # state: chest_m
 
 # - type: humanoidBaseSprite
-  # id: MobRodentiaTorsoFemale
+  # id: MobRodentiaChestMale
   # baseSprite:
     # sprite: _DV/Mobs/Species/Rodentia/parts.rsi
-    # state: torso_f
+    # state: chest_m
 
 # - type: humanoidBaseSprite
-  # id: MobRodentiaLLeg
+  # id: MobRodentiaChestFemale
   # baseSprite:
     # sprite: _DV/Mobs/Species/Rodentia/parts.rsi
-    # state: l_leg
+    # state: chest_f
+
+# - type: humanoidBaseSprite
+  # id: MobRodentiaGroin
+  # baseSprite:
+    # sprite: _DV/Mobs/Species/Rodentia/parts.rsi
+    # state: groin_m
+
+# - type: humanoidBaseSprite
+  # id: MobRodentiaGroinMale
+  # baseSprite:
+    # sprite: _DV/Mobs/Species/Rodentia/parts.rsi
+    # state: groin_m
+
+# - type: humanoidBaseSprite
+  # id: MobRodentiaGroinFemale
+  # baseSprite:
+    # sprite: _DV/Mobs/Species/Rodentia/parts.rsi
+    # state: groin_f
 
 # - type: humanoidBaseSprite
   # id: MobRodentiaLHand

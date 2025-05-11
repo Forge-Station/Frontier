@@ -29,28 +29,28 @@
   # End Frontier: consistency with upstream
 
 - type: entity
-  id: TorsoHarpy
-  name: "harpy torso"
-  parent: [PartHarpy, BaseTorso] # Frontier: add BaseTorso
+  parent: [ PartHarpyBase, BaseChest ]
+  id: ChestHarpy
+  name: "harpy chest"
   components:
   - type: Sprite
-    netsync: false
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
-    state: "torso_m"
+    state: "chest_m"
   - type: Icon
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
-    state: "torso_m"
-  # - type: BodyPart # Frontier: inherited from BaseTorso
-  #   partType: Torso # Frontier: inherited from BaseTorso
-  # Frontier: added lines below, consistency with upstream
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Fat
-        Quantity: 10
-      - ReagentId: Blood
-        Quantity: 20
-  # End Frontier: consistency with upstream
+    state: "chest_m"
+
+- type: entity
+  parent: [ PartHarpyBase, BaseGroin ]
+  id: GroinHarpy
+  name: "harpy groin"
+  components:
+  - type: Sprite
+    sprite: _DV/Mobs/Species/Harpy/parts.rsi
+    state: "groin_m"
+  - type: Icon
+    sprite: _DV/Mobs/Species/Harpy/parts.rsi
+    state: "groin_m"
 
 - type: entity
   id: HeadHarpy

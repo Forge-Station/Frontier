@@ -4,6 +4,7 @@ using Content.Shared.Inventory;
 using Content.Shared.Popups;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
+using Content.Shared.IdentityManagement;
 
 namespace Content.Server.Destructible.Thresholds.Behaviors;
 
@@ -28,7 +29,6 @@ public sealed partial class BurnBodyBehavior : IThresholdBehavior
 
         var bodyIdentity = Identity.Entity(bodyId, system.EntityManager);
         sharedPopupSystem.PopupCoordinates(Loc.GetString("bodyburn-text-others", ("name", bodyIdentity)), transformSystem.GetMoverCoordinates(bodyId), PopupType.LargeCaution);
-
         system.EntityManager.QueueDeleteEntity(bodyId);
     }
 }

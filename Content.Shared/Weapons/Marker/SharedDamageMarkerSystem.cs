@@ -9,7 +9,10 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Timing;
 using Content.Shared.Mobs.Components; // Frontier
 using Content.Shared.Mobs.Systems; // Frontier
-
+using Content.Shared._Shitmed.Targeting; // Shitmed Change
+// Lavaland Change
+using Content.Shared._Lavaland.Weapons.Marker;
+using Content.Shared._Lavaland.Mobs;
 namespace Content.Shared.Weapons.Marker;
 
 public abstract class SharedDamageMarkerSystem : EntitySystem
@@ -40,6 +43,9 @@ public abstract class SharedDamageMarkerSystem : EntitySystem
         if (TryComp<LeechOnMarkerComponent>(args.Used, out var leech)
             && TryComp<MobStateComponent>(uid, out var state) // Frontier
             && !_mobStateSystem.IsDead(uid, state)) // Frontier
+            _damageable.TryChangeDamage(args.User, leech.Leech * 11f, true, false, origin: args.Used, targetPart: TargetBodyPart.All); // Shitmed Change
+
+        if (HasComp<DamageBoostOnMarkerComponent>(args.Used))
         {
             _damageable.TryChangeDamage(args.User, leech.Leech, true, false, origin: args.Used);
         }

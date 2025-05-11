@@ -130,7 +130,39 @@ public abstract partial class SharedStunSystem : EntitySystem // Forge-Change (p
             return;
 
         TryStun(args.OtherEntity, ent.Comp.Duration, true, status);
-        TryKnockdown(args.OtherEntity, ent.Comp.Duration, ent.Comp.Refresh, ent.Comp.AutoStand); // Forge-Change
+        TryKnockdown(args.OtherEntity, ent.Comp.Duration, true, status);
+    }
+
+    private void OnKnockInit(EntityUid uid, KnockedDownComponent component, ComponentInit args)
+    {
+        _layingDown.UpdateSpriteRotation(uid); // Goobstation
+        RaiseLocalEvent(uid, new CheckAutoGetUpEvent()); // WD EDIT
+        _layingDown.TryLieDown(uid, null, null, component.DropHeldItemsBehavior); // WD EDIT
+    }
+
+    private void OnKnockShutdown(EntityUid uid, KnockedDownComponent component, ComponentShutdown args)
+    {
+        // WD EDIT START
+        if (!TryComp(uid, out StandingStateComponent? standing))
+            return;
+
+        if (TryComp(uid, out LayingDownComponent? layingDown)
+            && component.StandOnRemoval) // Shitmed Change
+        {
+            if (layingDown.AutoGetUp && !_container.IsEntityInContainer(uid))
+                _layingDown.TryStandUp(uid, layingDown);
+            return;
+        }
+
+        if (component.StandOnRemoval) // Shitmed Change
+            _standingState.Stand(uid, standing);
+        // WD EDIT END
+    }
+
+    private void OnStandAttempt(EntityUid uid, KnockedDownComponent component, StandAttemptEvent args)
+    {
+        if (component.LifeStage <= ComponentLifeStage.Running)
+            args.Cancel();
     }
 
     private void OnSlowInit(EntityUid uid, SlowedDownComponent component, ComponentInit args)
@@ -171,8 +203,52 @@ public abstract partial class SharedStunSystem : EntitySystem // Forge-Change (p
     /// <summary>
     ///     Knocks down the entity, making it fall to the ground.
     /// </summary>
-    public bool TryKnockdown(EntityUid uid, TimeSpan time, bool refresh, bool autoStand = true, bool drop = true) // Forge-Change
+    public bool TryKnockdown(EntityUid uid, TimeSpan time, bool refresh,
+        DropHeldItemsBehavior behavior, StatusEffectsComponent? status = null, bool standOnRemoval = true) // Shitmed Change
     {
+        var modifierEv = new GetClothingStunModifierEvent(uid);
+        RaiseLocalEvent(modifierEv);
+        time *= modifierEv.Modifier;
+
+        if (!HasComp<LayingDownComponent>(uid)) // Goobstation - only knockdown mobs that can lie down
+            return false;
+
+        if (time <= TimeSpan.Zero || !Resolve(uid, ref status, false))
+            return false;
+
+        var component = _componentFactory.GetComponent<KnockedDownComponent>();
+        component.DropHeldItemsBehavior = behavior;
+        component.StandOnRemoval = standOnRemoval;
+        if (!_statusEffect.TryAddStatusEffect(uid, "KnockedDown", time, refresh, component))
+            return false;
+
+        var ev = new KnockedDownEvent();
+        RaiseLocalEvent(uid, ref ev);
+        return true;
+    }
+
+    /// <summary>
+    ///     Goobstation.
+    ///     Try knockdown, if it fails - stun.
+    /// </summary>
+    public bool KnockdownOrStun(EntityUid uid, TimeSpan time, bool refresh, StatusEffectsComponent? status = null)
+    {
+        return TryKnockdown(uid, time, refresh, status) || TryStun(uid, time, refresh, status);
+    }
+
+    /// <summary>
+    ///     Knocks down the entity, making it fall to the ground.
+    /// </summary>
+    public bool TryKnockdown(EntityUid uid, TimeSpan time, bool refresh,
+        StatusEffectsComponent? status = null)
+    {
+        var modifierEv = new GetClothingStunModifierEvent(uid);
+        RaiseLocalEvent(modifierEv);
+        time *= modifierEv.Modifier;
+
+        if (!HasComp<LayingDownComponent>(uid)) // Goobstation - only knockdown mobs that can lie down
+            return false;
+
         if (time <= TimeSpan.Zero)
             return false;
 
@@ -221,12 +297,13 @@ public abstract partial class SharedStunSystem : EntitySystem // Forge-Change (p
     ///     Applies knockdown and stun to the entity temporarily.
     /// </summary>
     public bool TryParalyze(EntityUid uid, TimeSpan time, bool refresh,
-        StatusEffectsComponent? status = null)
+        StatusEffectsComponent? status = null, bool standOnRemoval = true) // Shitmed Change
     {
         if (!Resolve(uid, ref status, false))
             return false;
 
-        return TryKnockdown(uid, time, refresh) && TryStun(uid, time, refresh, status); // Forge-Change
+        return TryKnockdown(uid, time, refresh, DropHeldItemsBehavior.AlwaysDrop, status, standOnRemoval) && // Shitmed Change
+               TryStun(uid, time, refresh, status); // Goob edit
     }
 
     /// <summary>

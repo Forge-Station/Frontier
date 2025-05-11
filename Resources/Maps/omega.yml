@@ -79786,6 +79786,7 @@ entities:
     components:
     - type: Transform
       pos: 26.489439,14.7007885
+<<<<<<< HEAD:Resources/Maps/omega.yml
       parent: 4812
   - uid: 13916
     components:
@@ -79793,6 +79794,10 @@ entities:
       pos: 16.414852,-23.288176
       parent: 4812
 - proto: TorsoHuman
+=======
+      parent: 2
+- proto: ChestHuman
+>>>>>>> 8706b5039e9 (Woundmed Port (#1859)):Resources/Maps/_Goobstation/omega.yml
   entities:
   - uid: 12423
     components:

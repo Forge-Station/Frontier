@@ -189,12 +189,20 @@
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
   - type: Armor
+    coverage:
+    - Head
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+    traumaDeductions:
+      Dismemberment: 0.34
+      OrganDamage: 0.34
+      BoneDamage: 0.34
+      VeinsDamage: 0
+      NerveDamage: 0
 
 #Security Hardsuit
 - type: entity
@@ -213,12 +221,22 @@
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 1000
   - type: Armor
+    coverage:
+    - Head
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+    traumaDeductions:
+      Dismemberment: 0.34
+      OrganDamage: 0.34
+      BoneDamage: 0.34
+      VeinsDamage: 0
+      NerveDamage: 0
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
 
 #Brigmedic Hardsuit
 - type: entity
@@ -234,14 +252,22 @@
   - type: PointLight
     color: "#00FFFF"
   - type: Armor
+    coverage:
+    - Head
     modifiers:
       coefficients:
-        Blunt: 0.95
-        Slash: 0.95
-        Piercing: 0.95
-        Heat: 0.95
-        Radiation: 0.90
-        Caustic: 0.90
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
+        Heat: 0.65
+        Radiation: 0.7
+        Caustic: 0.7
+    traumaDeductions:
+      Dismemberment: 0.34
+      OrganDamage: 0.24
+      BoneDamage: 0.24
+      VeinsDamage: 0
+      NerveDamage: 0
   - type: PressureProtection
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000
@@ -263,12 +289,22 @@
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 1000
   - type: Armor
+    coverage:
+    - Head
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+    traumaDeductions:
+      Dismemberment: 0.34
+      OrganDamage: 0.34
+      BoneDamage: 0.34
+      VeinsDamage: 0
+      NerveDamage: 0
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
 
 #Captain's Hardsuit
 - type: entity
@@ -284,6 +320,23 @@
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
+  - type: Armor #Backmen edit: armour coverage
+    traumaDeductions:
+      Dismemberment: 0
+      OrganDamage: 0.14
+      BoneDamage: 0.14
+      VeinsDamage: 0
+      NerveDamage: 0
+    coverage:
+    - Head
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
+        Heat: 0.65
 
 #Chief Engineer's Hardsuit
 - type: entity
@@ -355,12 +408,22 @@
     highPressureMultiplier: 0.45
     lowPressureMultiplier: 1000
   - type: Armor
+    coverage:
+    - Head
+    traumaDeductions:
+      Dismemberment: 0.42
+      OrganDamage: 0.42
+      BoneDamage: 0.42
+      VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.4
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
 
 #Luxury Mining Hardsuit
 - type: entity
@@ -399,12 +462,22 @@
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
   - type: Armor
+    coverage:
+    - Head
+    traumaDeductions:
+      Dismemberment: 0.42
+      OrganDamage: 0.42
+      BoneDamage: 0.42
+      VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
-      coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+      coefficients: # this should protect you REALLY weeell
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
 
 #Blood-red Medic Hardsuit
 - type: entity
@@ -423,12 +496,24 @@
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
   - type: Armor
+    coverage:
+    - Head
+    traumaDeductions:
+      Dismemberment: 0.42
+      OrganDamage: 0.42
+      BoneDamage: 0.42
+      VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.4
+        Radiation: 0.6
+        Caustic: 0.6
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
 
 #Syndicate Elite Hardsuit
 - type: entity
@@ -452,12 +537,22 @@
   - type: FireProtection
     reduction: 0.2
   - type: Armor
+    coverage:
+    - Head
+    traumaDeductions:
+      Dismemberment: 0.42
+      OrganDamage: 0.42
+      BoneDamage: 0.42
+      VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.4
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
 
 #Syndicate Commander Hardsuit
 - type: entity
@@ -476,12 +571,22 @@
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
   - type: Armor
+    coverage:
+    - Head
+    traumaDeductions:
+      Dismemberment: 0.42
+      OrganDamage: 0.42
+      BoneDamage: 0.42
+      VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.4
+        Heat: 0.4
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
 
 #Cybersun Juggernaut Hardsuit
 - type: entity
@@ -498,12 +603,22 @@
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
   - type: Armor
+    coverage:
+    - Head
+    traumaDeductions: # prevents traumas at all (kinda)
+      Dismemberment: 1
+      OrganDamage: 1
+      BoneDamage: 1
+      VeinsDamage: 1
+      NerveDamage: 1
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.37
+        Slash: 0.37
+        Piercing: 0.37
+        Heat: 0.37
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
 
 #Wizard Hardsuit
 - type: entity
@@ -521,13 +636,24 @@
   - type: PressureProtection
     highPressureMultiplier: 0.27
     lowPressureMultiplier: 1000
-  - type: Armor
+  - type: Armor # Goob edit
+    coverage:
+    - Head
+    traumaDeductions: # prevents traumas at all (kinda)
+      Dismemberment: 1
+      OrganDamage: 1
+      BoneDamage: 1
+      VeinsDamage: 1
+      NerveDamage: 1
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
+  - type: WizardClothes # Goobstation
 
 #Organic Space Suit
 - type: entity
@@ -620,12 +746,20 @@
   - type: PointLight
     color: "#addbff"
   - type: Armor
+    coverage:
+    - Head
+    traumaDeductions:
+      Dismemberment: 0.42
+      OrganDamage: 0.42
+      BoneDamage: 0.42
+      VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.4
 
 #ERT Chaplain Hardsuit
 - type: entity
@@ -657,12 +791,20 @@
   - type: FireProtection
     reduction: 0.2
   - type: Armor
+    coverage:
+    - Head
+    traumaDeductions:
+      Dismemberment: 0.42
+      OrganDamage: 0.42
+      BoneDamage: 0.42
+      VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.4
 
 #ERT Medical Hardsuit
 - type: entity
@@ -692,12 +834,20 @@
   - type: PointLight
     color: "#ffadc6"
   - type: Armor
+    coverage:
+    - Head
+    traumaDeductions:
+      Dismemberment: 0.42
+      OrganDamage: 0.42
+      BoneDamage: 0.42
+      VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.4
 
 #ERT Janitor Hardsuit
 - type: entity
@@ -745,14 +895,22 @@
     heatingCoefficient: 0.005
     coolingCoefficient: 0.005
   - type: Armor
+    coverage:
+    - Head
+    traumaDeductions:
+      Dismemberment: 0.42
+      OrganDamage: 0.42
+      BoneDamage: 0.42
+      VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
-  - type: ZombificationResistance
-    zombificationResistanceCoefficient: 0.75
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.4
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
 
 #Deathsquad Hardsuit
 - type: entity
@@ -772,14 +930,39 @@
   - type: FireProtection
     reduction: 0.2
   - type: Armor
+    coverage:
+    - Head
+    traumaDeductions: # prevents traumas at all (kinda)
+      Dismemberment: 1
+      OrganDamage: 1
+      BoneDamage: 1
+      VeinsDamage: 1
+      NerveDamage: 1
     modifiers:
       coefficients:
-        Blunt: 0.80
-        Slash: 0.80
-        Piercing: 0.80
-        Heat: 0.80
-        Radiation: 0.80
-        Caustic: 0.95
+        Blunt: 0.3
+        Slash: 0.3
+        Piercing: 0.3
+        Heat: 0.3
+        Radiation: 0.4
+        Caustic: 0.45
+  - type: FlashImmunity # Goobstation
+  - type: FlashSoundSuppression # Goobstation
+    protectionRange: 0
+  - type: PointLight # Goobstation - Light to deathsquad hardsuit
+    color: "#567fc4"
+    rotation: 30
+    energy: 10
+    radius: 5
+  # WD EDIT START
+  - type: ThermalVision
+    isEquipment: true
+    color: "#98EEFB"
+    lightRadius: 15
+  # WD EDIT END
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
 
 #MISC. HARDSUITS
 #Clown Hardsuit

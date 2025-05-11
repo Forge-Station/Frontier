@@ -19,10 +19,8 @@
     Hair: MobHumanoidAnyMarking
     FacialHair: MobHumanoidAnyMarking
     Snout: MobHumanoidAnyMarking
-    Chest: MobTajaranTorso
-    HeadTop: MobHumanoidAnyMarking
-    HeadSide: MobHumanoidAnyMarking
-    Tail: MobHumanoidAnyMarking
+    Chest: MobTajaranChest
+    Groin: MobTajaranGroin
     Eyes: MobTajaranEyes
     LArm: MobTajaranLArm
     RArm: MobTajaranRArm
@@ -83,22 +81,40 @@
     state: head_f
 
 - type: humanoidBaseSprite
-  id: MobTajaranTorso
+  id: MobTajaranChest
   baseSprite:
-    sprite: Forge/Mobs/Species/Tajaran/parts.rsi
-    state: torso_m
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: chest_m
 
 - type: humanoidBaseSprite
-  id: MobTajaranTorsoMale
+  id: MobTajaranChestMale
   baseSprite:
-    sprite: Forge/Mobs/Species/Tajaran/parts.rsi
-    state: torso_m
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: chest_m
 
 - type: humanoidBaseSprite
-  id: MobTajaranTorsoFemale
+  id: MobTajaranChestFemale
   baseSprite:
-    sprite: Forge/Mobs/Species/Tajaran/parts.rsi
-    state: torso_f
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: chest_f
+
+- type: humanoidBaseSprite
+  id: MobTajaranGroin
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: groin_m
+
+- type: humanoidBaseSprite
+  id: MobTajaranGroinMale
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: groin_m
+
+- type: humanoidBaseSprite
+  id: MobTajaranGroinFemale
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: groin_f
 
 - type: humanoidBaseSprite
   id: MobTajaranLLeg

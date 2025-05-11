@@ -6,6 +6,12 @@
   - type: Sprite
     sprite: Mobs/Species/Arachnid/organs.rsi
   - type: Organ
+    intCap: 28
+    integrity: 28
+    integrityThresholds:
+      Normal: 28
+      Damaged: 16
+      Destroyed: 0
   - type: Food
   - type: Extractable
     grindableSolutionName: organ
@@ -34,6 +40,14 @@
   - type: Sprite
     sprite: Mobs/Species/Arachnid/organs.rsi
     state: stomach
+  - type: Organ # Shitmed
+    intCap: 44
+    integrity: 44
+    integrityThresholds:
+      Normal: 44
+      Damaged: 21
+      Destroyed: 0
+    slotId: stomach
   - type: Item
     size: Small
     heldPrefix: stomach
@@ -61,6 +75,14 @@
     layers:
       - state: lung-l
       - state: lung-r
+  - type: Organ # Shitmed
+    intCap: 28
+    integrity: 28
+    integrityThresholds:
+      Normal: 28
+      Damaged: 16
+      Destroyed: 0
+    slotId: lungs
   - type: Lung
   - type: Metabolizer
     updateInterval: 1.5
@@ -99,13 +121,27 @@
     heldPrefix: heart
   - type: Metabolizer
     updateInterval: 1.5
-    maxReagents: 2
+    maxPoisonsProcessable: 2
     metabolizerTypes: [Arachnid]
     groups:
     - id: Medicine
     - id: Cryogenic # Frontier
     - id: Poison
     - id: Narcotic
+  - type: Organ # Shitmed
+    intCap: 21
+    integrity: 21
+    integrityThresholds:
+      Normal: 21
+      Damaged: 12
+      Destroyed: 0
+    slotId: heart
+  - type: Heart # Shitmed: Lets you transplant spider hearts into other species
+  - type: Tag # goob edit
+    tags:
+    - Meat
+    - Organ
+    - Heart
 
 - type: entity
   id: OrganArachnidLiver
@@ -121,11 +157,25 @@
     state: liver
   - type: Metabolizer # The liver metabolizes certain chemicals only, like alcohol.
     updateInterval: 1.5
-    maxReagents: 1
+    maxPoisonsProcessable: 1
     metabolizerTypes: [Animal]
     groups:
     - id: Alcohol
       rateModifier: 0.1 # removes alcohol very slowly along with the stomach removing it as a drink
+  - type: Organ # Shitmed
+    intCap: 28
+    integrity: 28
+    integrityThresholds:
+      Normal: 28
+      Damaged: 16
+      Destroyed: 0
+    slotId: liver
+  - type: Liver # Shitmed
+  - type: Tag # goob edit
+    tags:
+    - Meat
+    - Organ
+    - Liver
 
 - type: entity
   id: OrganArachnidKidneys
@@ -134,6 +184,14 @@
   description: "Filters toxins from the bloodstream."
   categories: [ HideSpawnMenu ]
   components:
+  - type: Organ # Shitmed
+    intCap: 21
+    integrity: 21
+    integrityThresholds:
+      Normal: 21
+      Damaged: 12
+      Destroyed: 0
+    slotId: kidneys
   - type: Sprite
     layers:
       - state: kidney-l
@@ -144,7 +202,7 @@
     heldPrefix: kidneys
   - type: Metabolizer
     updateInterval: 1.5
-    maxReagents: 5
+    maxPoisonsProcessable: 5
     metabolizerTypes: [Animal]
     removeEmpty: true
 
@@ -158,6 +216,20 @@
     layers:
       - state: eyeball-l
       - state: eyeball-r
+  - type: Organ # Shitmed
+    intCap: 17
+    integrity: 17
+    integrityThresholds:
+      Normal: 17
+      Damaged: 8
+      Destroyed: 0
+    slotId: eyes
+  - type: Eyes # Shitmed
+  - type: Tag # goob edit
+    tags:
+    - Meat
+    - Organ
+    - Eyes
   - type: Item
     size: Small
     heldPrefix: eyeballs

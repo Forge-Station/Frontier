@@ -46,3 +46,10 @@ public sealed partial class KnockedDownComponent : Component
     [DataField, AutoNetworkedField]
     public TimeSpan GetUpDoAfter = TimeSpan.FromSeconds(1);
 }
+    [ViewVariables, AutoNetworkedField]
+    public float HelpTimer = 0f;
+
+    // Shitmed Change: ANNOYING WITH THE GOD DAMN PAIN PROCS.
+    [DataField, AutoNetworkedField]
+    public bool StandOnRemoval = true;
+}
