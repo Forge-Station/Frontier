@@ -391,8 +391,16 @@
     id: NFPirateIDCard
     bookSlot: #corvax frontier
       startingItem: HyperlinkBookPirateCode #corvax frontier
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+        - BookPirateCode
     penSlot: #corvax frontier
       startingItem: LuxuryPen #corvax frontier
+      whitelist:
+        tags:
+        - LuxuryPen
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -409,8 +417,16 @@
     id: NFPirateCaptainIDCard
     bookSlot: #corvax frontier
       startingItem: HyperlinkBookPirateCode #corvax frontier
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+        - BookPirateCode
     penSlot: #corvax frontier
       startingItem: LuxuryPen #corvax frontier
+      whitelist:
+        tags:
+        - LuxuryPen
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -427,8 +443,16 @@
     id: NFPirateFirstMateIDCard
     bookSlot: #corvax frontier
       startingItem: HyperlinkBookPirateCode #corvax frontier
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+        - BookPirateCode
     penSlot: #corvax frontier
       startingItem: LuxuryPen #corvax frontier
+      whitelist:
+        tags:
+        - LuxuryPen
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:

@@ -9,3 +9,11 @@
   - type: Access
     tags:
     - SyndicateAgent
+
+- type: entity
+  parent: SyndicateIDCardSmuggler # Frontier: added BaseC3SyndicateContraband
+  categories: [ HideSpawnMenu ]
+  id: SyndicateIDCardSigmis
+  components:
+  - type: PresetIdCard
+    name: Сигмис

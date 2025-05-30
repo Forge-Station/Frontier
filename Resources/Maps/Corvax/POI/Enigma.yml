@@ -4,8 +4,8 @@ meta:
   engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/10/2025 04:27:09
-  entityCount: 2499
+  time: 05/12/2025 06:52:55
+  entityCount: 2502
 maps: []
 grids:
 - 2
@@ -936,6 +936,7 @@ entities:
     - type: BecomesStation
       id: Enigma
     - type: NavMap
+    - type: ShuttleImpact
   - uid: 1068
     components:
     - type: MetaData
@@ -5129,6 +5130,16 @@ entities:
     - type: Transform
       pos: 6.5,-0.5
       parent: 2
+  - uid: 2493
+    components:
+    - type: Transform
+      pos: 13.5,-0.5
+      parent: 2
+  - uid: 2502
+    components:
+    - type: Transform
+      pos: 13.5,0.5
+      parent: 2
 - proto: CableTerminal
   entities:
   - uid: 1079
@@ -6042,7 +6053,7 @@ entities:
       pos: 4.5,-11.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -13925.593
+      secondsUntilStateChange: -14305.584
       state: Closing
   - uid: 832
     components:
@@ -11628,7 +11639,7 @@ entities:
   - uid: 2494
     components:
     - type: Transform
-      pos: 25.568882,5.4974833
+      pos: 25.540668,5.5016847
       parent: 2
 - proto: NitrogenCanister
   entities:
@@ -14182,13 +14193,6 @@ entities:
     - type: Transform
       pos: -10.349688,0.45384032
       parent: 2
-- proto: SyndicateDataMiner
-  entities:
-  - uid: 2493
-    components:
-    - type: Transform
-      pos: 25.5,5.5
-      parent: 2
 - proto: SyndicateKitchenElectricRange
   entities:
   - uid: 2032
@@ -14227,6 +14231,8 @@ entities:
     - type: Transform
       pos: 24.5,5.5
       parent: 2
+    missingComponents:
+    - Anchorable
 - proto: SyndieFlag
   entities:
   - uid: 819
@@ -14605,6 +14611,18 @@ entities:
       pos: 10.5,-3.5
       parent: 2
     - type: Emagged
+- proto: VendingMachineFuelVend
+  entities:
+  - uid: 2500
+    components:
+    - type: Transform
+      pos: -16.5,2.5
+      parent: 2
+  - uid: 2501
+    components:
+    - type: Transform
+      pos: -16.5,-7.5
+      parent: 2
 - proto: VendingMachineMedical Syndicate
   entities:
   - uid: 2408

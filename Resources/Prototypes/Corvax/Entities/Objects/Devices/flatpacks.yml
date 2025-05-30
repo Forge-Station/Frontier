@@ -48,3 +48,14 @@
     layers:
     - state: power_charger
 
+- type: entity
+  parent: BaseNFFlatpack
+  id: SyndicateDataMinerFlatpack
+  name: упакованный дата майнер синдиката
+  description: упакованный дата майнер пассивно генерарующий доход, для сниятия поспользуйтесь мультитулом.
+  components:
+  - type: Flatpack
+    entity: SyndicateDataMiner
+  - type: Sprite
+    layers:
+    - state: power_console_ame

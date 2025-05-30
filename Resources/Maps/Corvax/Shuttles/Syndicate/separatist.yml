@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 247.2.0
+  engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/03/2025 05:37:17
+  time: 05/11/2025 12:00:56
   entityCount: 596
 maps: []
 grids:
@@ -354,6 +354,7 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: separatist
+    - type: ShuttleImpact
   - uid: 244
     components:
     - type: MetaData
@@ -2541,6 +2542,13 @@ entities:
     - type: Transform
       pos: 8.5,7.5
       parent: 1
+- proto: GravityGeneratorMini
+  entities:
+  - uid: 240
+    components:
+    - type: Transform
+      pos: 3.5,15.5
+      parent: 1
 - proto: Grille
   entities:
   - uid: 137
@@ -2573,11 +2581,6 @@ entities:
       parent: 1
 - proto: GyroscopeSyndicate
   entities:
-  - uid: 240
-    components:
-    - type: Transform
-      pos: 3.5,15.5
-      parent: 1
   - uid: 241
     components:
     - type: Transform

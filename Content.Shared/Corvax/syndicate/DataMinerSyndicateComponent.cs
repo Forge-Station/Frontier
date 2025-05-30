@@ -18,7 +18,7 @@ public sealed partial class DataMinerSyndicateComponent : Component
     /// The amount received each time depends on the tick
     /// </summary>
     [DataField]
-    public int AmountAccruals = 250;
+    public int AmountAccruals = 90;
 
     /// <summary>
     /// The time after which the payment will be made again

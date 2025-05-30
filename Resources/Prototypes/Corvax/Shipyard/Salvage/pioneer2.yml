@@ -31,7 +31,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Пионер1 {1}'
+          mapNameTemplate: 'Пионер {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

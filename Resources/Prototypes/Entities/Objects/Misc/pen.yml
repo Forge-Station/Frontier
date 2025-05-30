@@ -66,6 +66,9 @@
     state: luxury_pen
   - type: Item
     heldPrefix: luxury_pen
+  - type: Tag #CorvaxFrontier
+    tags:
+    - LuxuryPen
 
 - type: entity
   id: BaseAdvancedPen

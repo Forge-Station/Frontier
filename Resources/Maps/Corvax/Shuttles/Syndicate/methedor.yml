@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 247.2.0
+  engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/28/2025 06:51:29
-  entityCount: 294
+  time: 05/11/2025 12:07:13
+  entityCount: 293
 maps: []
 grids:
 - 1
@@ -506,6 +506,7 @@ entities:
     - type: IFF
       color: '#FFC000FF'
       flags: HideLabel
+    - type: ShuttleImpact
   - uid: 4
     components:
     - type: MetaData
@@ -1284,7 +1285,7 @@ entities:
     - type: Transform
       pos: -2.5508616,4.548942
       parent: 1
-- proto: ComputerIFFSyndicate
+- proto: ComputerIFF
   entities:
   - uid: 139
     components:

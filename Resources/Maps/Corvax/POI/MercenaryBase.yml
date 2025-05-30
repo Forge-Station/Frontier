@@ -1132,7 +1132,7 @@ entities:
       pos: 50.5,13.5
       parent: 3
     - type: Door
-      secondsUntilStateChange: -2936.8591
+      secondsUntilStateChange: -2920.9915
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1214,7 +1214,7 @@ entities:
       pos: 33.5,9.5
       parent: 3
     - type: Door
-      secondsUntilStateChange: -2516.093
+      secondsUntilStateChange: -2500.2253
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6211,13 +6211,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 16.5,20.5
       parent: 3
-- proto: PlushieOrangeFox
-  entities:
-  - uid: 1704
-    components:
-    - type: Transform
-      pos: 38.5,29.5
-      parent: 3
 - proto: ComputerMercenaryBountyRedemption
   entities:
   - uid: 2233
@@ -9317,8 +9310,6 @@ entities:
       parent: 3
     - type: GasThermoMachine
       targetTemperature: 73.15
-    - type: ApcPowerReceiver
-      powerDisabled: False
 - proto: GasVentPump
   entities:
   - uid: 581
@@ -10270,6 +10261,13 @@ entities:
     components:
     - type: Transform
       pos: 26.782738,27.527126
+      parent: 3
+- proto: PlushieOrangeFox
+  entities:
+  - uid: 1704
+    components:
+    - type: Transform
+      pos: 38.5,29.5
       parent: 3
 - proto: PortableScrubber
   entities:

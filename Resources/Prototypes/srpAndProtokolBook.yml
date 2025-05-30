@@ -18,6 +18,10 @@
   - type: GuideHelp
     guides:
     - Smugler
+  - type: Tag
+    tags:
+     - Book
+     - BookSpaceLaw  #Frontier
 
 - type: entity
   id: BookSCadet
@@ -39,6 +43,10 @@
   - type: GuideHelp
     guides:
     - SCadet
+  - type: Tag
+    tags:
+     - Book
+     - BookSpaceLaw  #Frontier
 
 - type: entity
   id: BookSComa
@@ -60,6 +68,10 @@
   - type: GuideHelp
     guides:
     - SComa
+  - type: Tag
+    tags:
+     - Book
+     - BookSpaceLaw  #Frontier
 
 - type: entity
   id: BookSParamed
@@ -81,6 +93,10 @@
   - type: GuideHelp
     guides:
     - SParamed
+  - type: Tag
+    tags:
+     - Book
+     - BookSpaceLaw  #Frontier
 
 - type: entity
   id: BookSShturm
@@ -102,6 +118,10 @@
   - type: GuideHelp
     guides:
     - SShturm
+  - type: Tag
+    tags:
+     - Book
+     - BookSpaceLaw  #Frontier
 
 - type: entity
   id: BookParamedic

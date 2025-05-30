@@ -46,4 +46,4 @@ ghost-role-information-dungeon-boss-rules = Вы — [color=red][bold]коман
 nf-ghost-role-information-derelict-cyborg-description = Вы — киборг, который много лет провёл на месте крушения, подвергаясь воздействию бесчисленных ионных бурь.
 ghost-role-information-sigmis-name = Сигмис
 ghost-role-information-sigmis-description = Ни с места! Работает Синдикат! Разыскивается во всех уголках сектора за массовый геноцид мышей.
-ghost-role-sigmis-information-emotional-support-rules = Ты, созданный Синдикатом кот. Подчиняющийся непосредственно кадету синдиката и его начальству.
+ghost-role-information-sigmis-rules = Ты, созданный Синдикатом кот. Подчиняющийся непосредственно кадету синдиката и его начальству.
