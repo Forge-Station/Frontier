@@ -38,7 +38,7 @@
 
 - type: entity
   name: mercenary bounty redemption computer
-  parent: [BaseStructureDisableToolUse, ComputerMercenaryBounty]
+  parent: [BaseStructureDisableToolUse, BaseComputer]
   id: ComputerMercenaryBountyRedemption
   description: Back from a voyage? Redeem yer bounties here, matey.
   components:

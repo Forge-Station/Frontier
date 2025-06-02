@@ -1,11 +1,11 @@
-meta:
+meta: #
   format: 7
   category: Grid
-  engineVersion: 247.2.0
+  engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/10/2025 05:34:37
-  entityCount: 2250
+  time: 05/15/2025 05:28:50
+  entityCount: 2257
 maps: []
 grids:
 - 3
@@ -1018,6 +1018,7 @@ entities:
     - type: BecomesStation
       id: MercenaryBase
     - type: NavMap
+    - type: ShuttleImpact
 - proto: AcousticGuitarInstrument
   entities:
   - uid: 835
@@ -1132,7 +1133,7 @@ entities:
       pos: 50.5,13.5
       parent: 3
     - type: Door
-      secondsUntilStateChange: -2920.9915
+      secondsUntilStateChange: -2997.7793
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1214,7 +1215,7 @@ entities:
       pos: 33.5,9.5
       parent: 3
     - type: Door
-      secondsUntilStateChange: -2500.2253
+      secondsUntilStateChange: -2577.0132
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11776,6 +11777,43 @@ entities:
     components:
     - type: Transform
       pos: 23.5,19.5
+      parent: 3
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 2251
+    components:
+    - type: Transform
+      pos: 6.5,25.5
+      parent: 3
+  - uid: 2252
+    components:
+    - type: Transform
+      pos: 6.5,30.5
+      parent: 3
+  - uid: 2253
+    components:
+    - type: Transform
+      pos: 19.5,18.5
+      parent: 3
+  - uid: 2254
+    components:
+    - type: Transform
+      pos: 18.5,18.5
+      parent: 3
+  - uid: 2255
+    components:
+    - type: Transform
+      pos: 17.5,18.5
+      parent: 3
+  - uid: 2256
+    components:
+    - type: Transform
+      pos: 38.5,26.5
+      parent: 3
+  - uid: 2257
+    components:
+    - type: Transform
+      pos: 36.5,26.5
       parent: 3
 - proto: SpawnPointMercenary
   entities:
