@@ -1,10 +1,9 @@
-using Robust.Shared;
 using Robust.Shared.Configuration;
 
 namespace Content.Shared._NF.CCVar;
 
 [CVarDefs]
-public sealed class NFCCVars : CVars
+public sealed class NFCCVars
 {
     /*
      *  Respawn
