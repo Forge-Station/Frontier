@@ -356,8 +356,6 @@ entities:
       id: separatist
     - type: ShuttleImpact
   - uid: 244
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - beaker
@@ -372,8 +370,6 @@ entities:
       containerName: beaker
       container: 243
   - uid: 246
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - beaker
@@ -388,8 +384,6 @@ entities:
       containerName: beaker
       container: 245
   - uid: 249
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - injector
@@ -404,8 +398,6 @@ entities:
       containerName: injector
       container: 248
   - uid: 251
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - beaker
@@ -420,8 +412,6 @@ entities:
       containerName: beaker
       container: 250
   - uid: 253
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - beaker
@@ -439,8 +429,6 @@ entities:
       containerName: beaker
       container: 252
   - uid: 255
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - beaker
@@ -455,8 +443,6 @@ entities:
       containerName: beaker
       container: 254
   - uid: 257
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - injector
@@ -774,8 +760,6 @@ entities:
 - proto: BaseChemistryEmptyVial
   entities:
   - uid: 250
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 242
@@ -794,8 +778,6 @@ entities:
         solution@beaker: !type:ContainerSlot
           ent: 251
   - uid: 254
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 242
@@ -828,8 +810,6 @@ entities:
 - proto: Beaker
   entities:
   - uid: 243
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 242
@@ -852,8 +832,6 @@ entities:
         solution@beaker: !type:ContainerSlot
           ent: 244
   - uid: 245
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 242
@@ -1787,8 +1765,6 @@ entities:
 - proto: ChemicalSynthesisKit
   entities:
   - uid: 242
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: 10.574477,13.607471
@@ -1890,8 +1866,6 @@ entities:
 - proto: ClothingEyesGlassesChemical
   entities:
   - uid: 247
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 242
@@ -1938,8 +1912,6 @@ entities:
 - proto: Dropper
   entities:
   - uid: 248
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 242
@@ -2705,8 +2677,6 @@ entities:
 - proto: Multitool
   entities:
   - uid: 456
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: 9.371081,6.5880566
@@ -3276,8 +3246,6 @@ entities:
 - proto: SyringeStimulants
   entities:
   - uid: 256
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: шприц стимулятора (гиперзин)
@@ -3465,8 +3433,6 @@ entities:
 - proto: VestineChemistryVial
   entities:
   - uid: 252
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: пробирка вестина (вестин)

@@ -938,8 +938,6 @@ entities:
     - type: NavMap
     - type: ShuttleImpact
   - uid: 1068
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - food
@@ -959,8 +957,6 @@ entities:
 - proto: ActionToggleLight
   entities:
   - uid: 1065
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 1064
@@ -968,8 +964,6 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 1064
   - uid: 1066
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 1064
@@ -5338,8 +5332,6 @@ entities:
 - proto: CartridgePistol
   entities:
   - uid: 951
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: -5.896087,-9.36916
@@ -5349,8 +5341,6 @@ entities:
     - type: EmitSoundOnCollide
       nextSound: -17808.6888976
   - uid: 952
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: -5.302337,-9.61916
@@ -5360,8 +5350,6 @@ entities:
     - type: EmitSoundOnCollide
       nextSound: -17808.6888976
   - uid: 953
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: -5.864837,-9.791035
@@ -11315,8 +11303,6 @@ entities:
 - proto: Lantern
   entities:
   - uid: 1064
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: -3.3532848,-9.520299
@@ -11903,8 +11889,6 @@ entities:
 - proto: PowerCellMedium
   entities:
   - uid: 1067
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 1064
@@ -14649,8 +14633,6 @@ entities:
 - proto: VendingMachineRestockTankDispenser
   entities:
   - uid: 668
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: 14.305549,-2.5038428
