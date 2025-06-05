@@ -130,6 +130,13 @@ public sealed partial class SpeciesPrototype : IPrototype
     /// </summary>
     [DataField]
     public int MaxAge = 120;
+    // Corvax-Frontier: job restrictions by species
+    [DataField("jobWhitelist")]
+    public List<string>? JobWhitelist { get; private set; }
+
+    [DataField("jobBlacklist")]
+    public List<string>? JobBlacklist { get; private set; }
+    // Corvax-Frontier
 }
 
 public enum SpeciesNaming : byte
