@@ -1182,31 +1182,31 @@
       Max: 20
       PotencyDivisor: 5
 
-#- type: seed
-#  id: aloe
-#  name: seeds-aloe-name
-#  noun: seeds-noun-seeds
-#  displayName: seeds-aloe-display-name
-#  plantRsi: Objects/Specific/Hydroponics/aloe.rsi
-#  packetPrototype: AloeSeeds
-#  productPrototypes:
-#    - FoodAloe
-#  lifespan: 25
-#  maturation: 10
-#  production: 3
-#  yield: 3
-#  potency: 10
-#  growthStages: 5
-#  waterConsumption: 0.60
-#  chemicals:
-#    Aloe:
-#      Min: 1
-#      Max: 10
-#      PotencyDivisor: 10
-#    Dermaline:
-#      Min: 1
-#      Max: 10
-#      PotencyDivisor: 10
+- type: seed
+  id: aloe
+  name: seeds-aloe-name
+  noun: seeds-noun-seeds
+  displayName: seeds-aloe-display-name
+  plantRsi: Objects/Specific/Hydroponics/aloe.rsi
+  packetPrototype: AloeSeeds
+  productPrototypes:
+    - FoodAloe
+  lifespan: 25
+  maturation: 10
+  production: 3
+  yield: 3
+  potency: 10
+  growthStages: 5
+  waterConsumption: 0.60
+  chemicals:
+    Aloe:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+    Dermaline:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
 
 - type: seed
   id: lily

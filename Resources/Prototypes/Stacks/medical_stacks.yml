@@ -5,12 +5,12 @@
   spawn: Ointment
   maxCount: 10
 
-#- type: stack
-#  id: AloeCream
-#  name: aloe cream
-#  icon: { sprite: "/Textures/Objects/Specific/Medical/medical.rsi", state: cream }
-#  spawn: AloeCream
-#  maxCount: 10
+- type: stack
+  id: AloeCream
+  name: aloe cream
+  icon: { sprite: "/Textures/Objects/Specific/Medical/medical.rsi", state: cream }
+  spawn: AloeCream
+  maxCount: 10
 
 - type: stack
   id: Gauze

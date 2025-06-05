@@ -94,9 +94,9 @@
       - id: FoodChillyPepper
         amount: !type:RangeNumberSelector
           range: 1, 5
-#      - id: FoodAloe
-#        amount: !type:RangeNumberSelector
-#          range: 1, 5
+      - id: FoodAloe
+        amount: !type:RangeNumberSelector
+          range: 1, 5
       - id: FoodPoppy
         amount: !type:RangeNumberSelector
           range: 1, 5
