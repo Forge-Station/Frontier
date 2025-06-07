@@ -90,7 +90,6 @@
   id: MobObserver
   components:
   - type: Spectral
-  - type: MobState # Corvax-Change
   - type: Tag
     tags:
     - AllowGhostShownByEvent
