@@ -428,16 +428,16 @@
     - type: Sprite
       sprite: Objects/Specific/Hydroponics/chilly.rsi
 
-#- type: entity
-#  parent: SeedBase
-#  name: packet of aloe seeds
-#  description: "Soothing."
-#  id: AloeSeeds
-#  components:
-#    - type: Seed
-#      seedId: aloe
-#    - type: Sprite
-#      sprite: Objects/Specific/Hydroponics/aloe.rsi
+- type: entity
+  parent: SeedBase
+  name: packet of aloe seeds
+  description: "Soothing."
+  id: AloeSeeds
+  components:
+    - type: Seed
+      seedId: aloe
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/aloe.rsi
 
 - type: entity
   parent: SeedBase

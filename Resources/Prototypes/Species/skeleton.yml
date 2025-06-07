@@ -10,6 +10,10 @@
   femaleFirstNames: NamesSkeletonFirst
   dollPrototype: MobSkeletonPersonDummy
   skinColoration: TintedHues
+  jobWhitelist:
+  - NFPirate
+  - NFPirateCaptain
+  - NFPirateFirstMate
 
 - type: speciesBaseSprites
   id: MobSkeletonSprites

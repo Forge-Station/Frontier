@@ -16,10 +16,12 @@
   - type: Oni
     modifiers:
       coefficients:
-        Blunt: 1.2
-        Slash: 1.2
-        Piercing: 1.2
-        Asphyxiation: 1.2
+        Blunt: 1.4
+        Slash: 1.4
+        Piercing: 1.4
+        Asphyxiation: 1.4
+        Heat: 1.4
+        Structural: 2
   - type: Damageable
     damageModifierSet: Oni
   - type: Body
@@ -37,9 +39,14 @@
         layer:
         - MobLayer
   - type: Stamina
-  - type: NpcFactionMember
-    factions:
-    - NanoTrasen
+  - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute.
+    allowedStates:
+    - Alive
+    damageCap: 199
+    damage:
+      groups:
+        Brute: -0.1
+        Burn: -0.1
 
 - type: entity
   save: false

@@ -1463,39 +1463,39 @@
       Burger: ChillyPepper
       Skewer: ChillyPepperSkewer
 
-#- type: entity
-#  name: aloe
-#  parent: FoodProduceBase
-#  id: FoodAloe
-#  description: A fragrant plant with soothing properties.
-#  components:
-#  - type: FlavorProfile
-#    flavors:
-#      - medicine
-#  - type: SolutionContainerManager
-#    solutions:
-#      food:
-#        maxVol: 20 ##I'm pretty sure this has to match the total of 100 potency yields
-#        reagents:
-#        - ReagentId: Aloe
-#          Quantity: 10
-#       - ReagentId: Dermaline
-#          Quantity: 10
-#  - type: Sprite
-#    sprite: Objects/Specific/Hydroponics/aloe.rsi
-#  - type: Item
-#    heldPrefix: produce
-#  - type: Produce
-#    seedId: aloe
-#  - type: Extractable
-#    grindableSolutionName: food
-#  - type: Tag
-#    tags:
-#    - Vegetable
-#  - type: FoodSequenceElement
-#    entries:
-#      Taco: Aloe
-#      Burger: Aloe
+- type: entity
+  name: aloe
+  parent: FoodProduceBase
+  id: FoodAloe
+  description: A fragrant plant with soothing properties.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - medicine
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20 ##I'm pretty sure this has to match the total of 100 potency yields
+        reagents:
+        - ReagentId: Aloe
+          Quantity: 10
+        - ReagentId: Dermaline
+          Quantity: 10
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/aloe.rsi
+  - type: Item
+    heldPrefix: produce
+  - type: Produce
+    seedId: aloe
+  - type: Extractable
+    grindableSolutionName: food
+  - type: Tag
+    tags:
+    - Vegetable
+  - type: FoodSequenceElement
+    entries:
+      Taco: Aloe
+      Burger: Aloe
 
 - type: entity
   name: poppy
