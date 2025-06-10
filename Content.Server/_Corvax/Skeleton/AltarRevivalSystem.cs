@@ -81,15 +81,13 @@ public sealed class AltarRevivalSystem : EntitySystem
             return;
         }
 
-        // Получение MindComponent перед удалением черепа
-        MindComponent? mindComp;
+        // Получение ума
         if (_entMan.TryGetComponent<MindContainerComponent>(skullUid, out var mindContainer) &&
-            mindContainer.HasMind &&
-            _entMan.TryGetComponent(mindContainer.Mind.Value, out mindComp)) // ✅ без типа
+            mindContainer.Mind is { } mindUid &&
+            _entMan.TryGetComponent<MindComponent>(mindUid, out var mindComp))
         {
-            _mindSystem.TransferTo(mindContainer.Mind.Value, skeletonUid, mind: mindComp);
+            _mindSystem.TransferTo(mindUid, skeletonUid, mind: mindComp);
         }
-
 
         // Удаление черепа и монет
         _entMan.DeleteEntity(skullUid);
