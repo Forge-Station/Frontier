@@ -227,8 +227,9 @@ namespace Content.Server.GameTicking
             var jobPrototype = _prototypeManager.Index<JobPrototype>(jobId);
 
 // Allow any job-species combo during unit tests
-            if (IoCManager.Resolve<IUnitTestManager>().IsInTest)
-                goto SkipWhitelistCheck;
+#if UNIT_TESTS
+    goto SkipWhitelistCheckA;
+#endif
 
 // Forge-Frontier: Species job whitelist/blacklist start
             var speciesPrototype = _prototypeManager.Index<SpeciesPrototype>(character.Species);
@@ -250,9 +251,8 @@ namespace Content.Server.GameTicking
 
                 return;
             }
-            SkipWhitelistCheck:
+            SkipWhitelistCheckA:
 // Forge-Frontier: Species job whitelist/blacklist end
-
 
             PlayerJoinGame(player, silent);
 
