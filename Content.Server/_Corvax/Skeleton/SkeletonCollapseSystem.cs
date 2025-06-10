@@ -1,0 +1,105 @@
+using Content.Shared._Corvax.Skeleton;
+using Content.Shared.Body.Part;
+using Content.Shared.Mobs;
+using Content.Shared.Inventory;
+using Content.Server.Mind;
+using Content.Shared.Mind;
+using Content.Shared.Mind.Components;
+using Content.Shared.Mobs.Components;
+using Robust.Server.GameObjects;
+using Robust.Shared.Map;
+
+namespace Content.Server._Corvax.Skeleton
+{
+    public sealed class SkeletonCollapseSystem : EntitySystem
+    {
+        [Dependency] private readonly TransformSystem _transform = null!;
+        [Dependency] private readonly IEntityManager _entMan = null!;
+        [Dependency] private readonly MindSystem _mindSystem = null!;
+        [Dependency] private readonly MetaDataSystem _metaSystem = null!;
+
+        public override void Initialize()
+        {
+            base.Initialize();
+            SubscribeLocalEvent<MobStateComponent, MobStateChangedEvent>(OnMobStateChanged);
+        }
+
+        private void OnMobStateChanged(EntityUid uid, MobStateComponent _, MobStateChangedEvent args)
+        {
+            if (args.NewMobState != MobState.Dead)
+                return;
+
+            if (!_entMan.HasComponent<BaseMobSkeletonPersonComponent>(uid))
+                return;
+
+            CollapseToSkull(uid);
+        }
+
+        private void CollapseToSkull(EntityUid uid)
+        {
+            // 1) Дропаем инвентарь
+            if (_entMan.TryGetComponent(uid, out InventoryComponent? inventory))
+            {
+                var dropCoords = new EntityCoordinates(uid, _transform.GetWorldPosition(uid));
+                var slotEnum = new InventorySystem.InventorySlotEnumerator(inventory);
+                while (slotEnum.NextItem(out var item))
+                {
+                    if (!_entMan.Deleted(item) && _entMan.HasComponent<TransformComponent>(item))
+                    {
+                        _transform.SetCoordinates(item, dropCoords);
+                    }
+                }
+            }
+
+            // 2) Удаляем все части тела, кроме головы
+            var parts = _entMan.EntityQueryEnumerator<BodyPartComponent>();
+            while (parts.MoveNext(out var partUid, out var partComp))
+            {
+                if (partComp.Body == uid && partComp.PartType != BodyPartType.Head)
+                    _entMan.DeleteEntity(partUid);
+            }
+
+            var worldPos = _transform.GetWorldPosition(uid);
+            var skull = _entMan.SpawnEntity("HeadSkeleton", new EntityCoordinates(uid, worldPos));
+
+            if (_entMan.TryGetComponent<MindContainerComponent>(uid, out var container) &&
+                container.Mind != null)
+            {
+                var mindUid = container.Mind.Value;
+
+                if (_entMan.TryGetComponent<MindComponent>(mindUid, out var mindComp))
+                {
+                    if (_entMan.HasComponent<MindContainerComponent>(skull))
+                    {
+                        _mindSystem.TransferTo(mindUid, skull, mind: mindComp);
+                    }
+                    else
+                    {
+                        Logger.WarningS("skeleton", $"Череп {skull} не имеет MindContainerComponent");
+                    }
+                }
+            }
+            else
+            {
+                Logger.WarningS("skeleton", $"Не удалось получить Mind с {uid} для переноса");
+            }
+
+
+
+            // 5) Копируем имя и описание
+            if (_entMan.TryGetComponent(uid, out MetaDataComponent? oldMeta))
+            {
+                var skullMeta = _entMan.EnsureComponent<MetaDataComponent>(skull);
+                _metaSystem.SetEntityName(skull, oldMeta.EntityName);
+                _metaSystem.SetEntityDescription(skull, oldMeta.EntityDescription);
+            }
+
+            // 6) Помечаем оригинал для воскрешения
+            var skullComp = _entMan.GetComponent<SkeletonSkullComponent>(skull);
+            skullComp.OriginalBody = uid;
+
+            // 7) Закрепляем тело на карте
+            _transform.AttachToGridOrMap(uid);
+        }
+    }
+}
