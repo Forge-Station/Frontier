@@ -225,7 +225,12 @@ namespace Content.Server.GameTicking
 
 
             var jobPrototype = _prototypeManager.Index<JobPrototype>(jobId);
-            // Forge-Frontier: Species job whitelist/blacklist start
+
+// Allow any job-species combo during unit tests
+            if (IoCManager.Resolve<IUnitTestManager>().IsInTest)
+                goto SkipWhitelistCheck;
+
+// Forge-Frontier: Species job whitelist/blacklist start
             var speciesPrototype = _prototypeManager.Index<SpeciesPrototype>(character.Species);
             if (speciesPrototype.JobWhitelist != null && !speciesPrototype.JobWhitelist.Contains(jobId))
             {
@@ -242,9 +247,12 @@ namespace Content.Server.GameTicking
                     PlayerJoinLobby(player);
                 else
                     JoinAsObserver(player);
+
                 return;
             }
-            // Forge-Frontier: Species job whitelist/blacklist end
+            SkipWhitelistCheck:
+// Forge-Frontier: Species job whitelist/blacklist end
+
 
             PlayerJoinGame(player, silent);
 

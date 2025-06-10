@@ -528,6 +528,10 @@ namespace Content.Shared.Preferences
                 speciesPrototype = prototypeManager.Index(Species);
 
             }
+            //  Allow any job-species combo during unit tests
+            if (IoCManager.Resolve<IUnitTestManager>().IsInTest)
+                goto SkipWhitelistCheck;
+
             // Corvax-frontier-blacklistrace
             if (speciesPrototype.JobWhitelist != null)
             {
@@ -541,11 +545,12 @@ namespace Content.Shared.Preferences
                     if (speciesPrototype.JobBlacklist.Contains(jobId))
                         _jobPriorities.Remove(jobId);
             }
-            
+
             if (_jobPriorities.Count == 0)
                 PreferenceUnavailable = PreferenceUnavailableMode.StayInLobby;
-                
-             // Corvax-frontier-blacklistrace
+
+            SkipWhitelistCheck:
+            // Corvax-frontier-blacklistrace
             var sex = Sex switch
             {
                 Sex.Male => Sex.Male,
