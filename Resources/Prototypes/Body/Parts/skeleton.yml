@@ -37,7 +37,7 @@
   id: HeadSkeleton
   name: "skull"
   description: Alas poor Yorick...
-  parent: PartSkeleton
+  parent: [ PartSkeleton, BaseMob ]
   components:
     - type: Sprite
       sprite: Mobs/Species/Skeleton/parts.rsi
@@ -71,9 +71,27 @@
       tags:
         - MindTransferTarget
         - Head
-    - type: SkeletonSkull
-    - type: Item
+        - SkeletonSkull
     - type: MindContainer
+    - type: Reform
+      reformPrototype: BaseMobSkeletonPerson
+      reformTime: 10 # 20 минут
+      startDelayed: true
+      popupText: skeleton-reforming
+      shouldStun: false
+      actionPrototype: SkeletonReformAction
+
+- type: entity
+  id: SkeletonReformAction
+  name: "Воссоздать тело"
+  description: "Сконцентрируйся и позволь своей сущности восстановить скелетное тело."
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Mobs/Species/Skeleton/parts.rsi
+      state: full
+    event: !type:ReformEvent { }
+    useDelay: 10
 
 - type: entity
   id: LeftArmSkeleton

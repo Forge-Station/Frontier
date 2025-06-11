@@ -40,11 +40,6 @@
         damage: 150
       behaviors:
       - !type:GibBehavior { }
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          HeadSkeleton:
-            min: 1
-            max: 1
   - type: SlowOnDamage #modified speeds because they're so weak
     speedModifierThresholds:
       60: 0.9
@@ -114,7 +109,20 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-  - type: BaseMobSkeletonPerson
+  - type: SkeletonReformOnDeath
+    polymorphId: SkeletonCollapsePolymorph
+
+- type: polymorph
+  id: SkeletonCollapsePolymorph
+  configuration:
+    entity: HeadSkeleton
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: false
+    transferDamage: false
+    revertOnDeath: false
+    revertOnCrit: false
+    inventory: None
 
 - type: entity
   parent: BaseSpeciesDummy
