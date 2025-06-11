@@ -4,7 +4,7 @@ meta:
   engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/28/2025 11:03:16
+  time: 06/10/2025 10:59:57
   entityCount: 1890
 maps: []
 grids:
@@ -4369,14 +4369,6 @@ entities:
     - type: Transform
       pos: -4.527932,-25.411976
       parent: 1
-- proto: CargoPallet
-  entities:
-  - uid: 563
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 5.5,-2.5
-      parent: 1
   - uid: 564
     components:
     - type: Transform
@@ -4392,6 +4384,11 @@ entities:
     components:
     - type: Transform
       pos: 4.5,-2.5
+      parent: 1
+  - uid: 625
+    components:
+    - type: Transform
+      pos: 0.5,-0.5
       parent: 1
 - proto: Carpet
   entities:
@@ -4713,11 +4710,6 @@ entities:
     - type: Transform
       pos: 12.5,-5.5
       parent: 1
-  - uid: 625
-    components:
-    - type: Transform
-      pos: 0.5,-0.5
-      parent: 1
   - uid: 626
     components:
     - type: Transform
@@ -4892,13 +4884,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 3.5,13.5
-      parent: 1
-- proto: ComputerSalvageExpedition
-  entities:
-  - uid: 70
-    components:
-    - type: Transform
-      pos: 0.5,16.5
       parent: 1
 - proto: ComputerShuttle
   entities:
@@ -8990,6 +8975,28 @@ entities:
     - type: Transform
       pos: 0.5,14.5
       parent: 1
+- proto: NFMagnetBoxOre
+  entities:
+  - uid: 1217
+    components:
+    - type: Transform
+      pos: 4.5,-3.5
+      parent: 1
+  - uid: 1218
+    components:
+    - type: Transform
+      pos: 4.5,-4.5
+      parent: 1
+  - uid: 1219
+    components:
+    - type: Transform
+      pos: 6.5,-5.5
+      parent: 1
+  - uid: 1220
+    components:
+    - type: Transform
+      pos: 6.5,-6.5
+      parent: 1
 - proto: NfsdTechFab
   entities:
   - uid: 1215
@@ -9029,28 +9036,6 @@ entities:
       parent: 1
     - type: Physics
       bodyType: Static
-- proto: OreBox
-  entities:
-  - uid: 1217
-    components:
-    - type: Transform
-      pos: 4.5,-3.5
-      parent: 1
-  - uid: 1218
-    components:
-    - type: Transform
-      pos: 4.5,-4.5
-      parent: 1
-  - uid: 1219
-    components:
-    - type: Transform
-      pos: 6.5,-5.5
-      parent: 1
-  - uid: 1220
-    components:
-    - type: Transform
-      pos: 6.5,-6.5
-      parent: 1
 - proto: OreProcessor
   entities:
   - uid: 1221

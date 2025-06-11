@@ -1475,8 +1475,8 @@
     - !type:BuyerJobCondition
       whitelist:
         - Sheriff
-
-- type: listing # Corvax-Frontier
+# Corvax-Frontier
+- type: listing 
   id: UplinkSecurityResearchDisk10000
   name:  uplink-security-research-disk-10000-name
   description: uplink-security-research-disk-10000-desc
@@ -1497,13 +1497,12 @@
         - SeniorOfficer
         - Sheriff
 
-#Corvax-Frontier
 - type: listing
   id: UplinkSecurityAmmoUran
   productEntity: BlueprintRifleUranium
   icon: { sprite: Objects/Specific/Research/researchdisk.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 45
+    FrontierUplinkCoin: 34
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1517,7 +1516,7 @@
   productEntity: BlueprintGrenade
   icon: { sprite: Objects/Specific/Research/researchdisk.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 75
+    FrontierUplinkCoin: 60
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1531,7 +1530,7 @@
   productEntity: BaseBlueprintWeaponXrayCannon
   icon: { sprite: Objects/Specific/Research/researchdisk.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 30
+    FrontierUplinkCoin: 26
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -1593,6 +1592,35 @@
     FrontierUplinkCoin: 19
   categories:
     - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityM4A1
+  name:  uplink-security-contraband-forensics-M4A1
+  description: uplink-security-contraband-forensics-M4A1-desc
+  productEntity: WeaponCaseLongM4A1
+  icon: { sprite: Corvax/Objects/Weapons/Guns/Rifles/m4a1.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 20
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityCrateEngineeringDSBF
+  productEntity: CrateEngineeringDSBF
+  cost:
+    FrontierUplinkCoin: 5
+  categories:
+    - UplinkSecurityUtility
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
