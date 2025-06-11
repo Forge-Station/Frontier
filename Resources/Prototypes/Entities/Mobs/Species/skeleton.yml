@@ -33,7 +33,6 @@
       0: Alive
       100: Critical
       150: Dead
-  - type: TransferMindOnGib
   - type: Destructible
     thresholds:
     - trigger: !type:DamageTrigger
@@ -117,12 +116,15 @@
   configuration:
     entity: HeadSkeleton
     forced: true
+    transferMind: false
     transferName: true
     transferHumanoidAppearance: false
     transferDamage: false
     revertOnDeath: false
     revertOnCrit: false
     inventory: None
+
+
 
 - type: entity
   parent: BaseSpeciesDummy

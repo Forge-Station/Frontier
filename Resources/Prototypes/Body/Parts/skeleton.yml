@@ -71,10 +71,8 @@
       tags:
         - MindTransferTarget
         - Head
-        - SkeletonSkull
     - type: MindContainer
-    - type: Reform
-      reformPrototype: BaseMobSkeletonPerson
+    - type: SkeletonReform
       reformTime: 10 # 20 минут
       startDelayed: true
       popupText: skeleton-reforming
@@ -92,6 +90,9 @@
       state: full
     event: !type:ReformEvent { }
     useDelay: 10
+    checkCanInteract: false
+    checkCanAccess: false
+    clientExclusive: false
 
 - type: entity
   id: LeftArmSkeleton
