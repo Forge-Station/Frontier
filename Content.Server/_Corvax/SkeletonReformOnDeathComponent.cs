@@ -1,10 +1,12 @@
-using Content.Server.Mind;
 using Content.Server.Polymorph.Systems;
 using Content.Shared.Mobs;
 using Content.Shared.Polymorph;
 using Content.Shared._Corvax;
+using Content.Shared._NF.Bank;
 using Content.Shared.Actions;
+using Content.Shared._NF.Bank.Components;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Server._Corvax;
 
@@ -19,7 +21,9 @@ public sealed class SkeletonReformOnDeathSystem : EntitySystem
 {
     [Dependency] private readonly PolymorphSystem _polymorph = default!;
     [Dependency] private readonly IEntityManager _entMan = default!;
-    [Dependency] private readonly MindSystem _mindSystem = default!;
+    [Dependency] private readonly MetaDataSystem _meta = default!;
+    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
     public override void Initialize()
     {
@@ -48,28 +52,34 @@ public sealed class SkeletonReformOnDeathSystem : EntitySystem
         }
 
         reform.OriginalBody = uid;
-
         Logger.Info($"[SkeletonReform] Skull {ToPrettyString(newEntity.Value)} linked to body {ToPrettyString(uid)}");
 
-        // Добавление экшена, если указан в компоненте
-        if (!string.IsNullOrEmpty(reform.ActionPrototype))
+        // 💰 Копируем банковский счёт
+        if (_entMan.TryGetComponent<BankAccountComponent>(uid, out var bankFrom))
         {
-            var actionEntity = _entMan.SpawnEntity(reform.ActionPrototype, Transform(newEntity.Value).Coordinates);
-            reform.ActionEntity = actionEntity;
-
-            if (_entMan.TryGetComponent(newEntity.Value, out ActionsComponent? actions))
-            {
-                var actionSys = _entMan.System<SharedActionsSystem>();
-                actionSys.AddAction(newEntity.Value, actionEntity, actionEntity, actions);
-            }
-            else
-            {
-                Logger.Warning($"[SkeletonReform] Skull {ToPrettyString(newEntity.Value)} has no ActionsComponent.");
-            }
+            var bankSystem = _entMan.System<SharedBankSystem>();
+            bankSystem.SetBalance(newEntity.Value, bankFrom.Balance);
         }
 
-        // ⚠ Mind НЕ переносим
-        // ⚠ Тело НЕ удаляем — сохраняется для воскрешения
-    }
+        // 💬 Копируем имя
+        if (_entMan.TryGetComponent(uid, out MetaDataComponent? metaOriginal))
+        {
+            _meta.SetEntityName(newEntity.Value, metaOriginal.EntityName);
+        }
 
+        // 🧠 Mind НЕ переносим (ожидается позже при воскрешении)
+
+        // ✅ Добавляем экшен через корректный API
+        if (!string.IsNullOrEmpty(reform.ActionPrototype))
+        {
+            EnsureComp<ActionsComponent>(newEntity.Value);
+            _actionsSystem.AddAction(newEntity.Value, ref reform.ActionEntity, reform.ActionPrototype);
+
+            if (reform.StartDelayed && reform.ReformTime > 0 && reform.ActionEntity != null)
+            {
+                var now = _timing.CurTime;
+                _actionsSystem.SetCooldown(reform.ActionEntity.Value, now, now + TimeSpan.FromSeconds(reform.ReformTime));
+            }
+        }
+    }
 }
