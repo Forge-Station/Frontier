@@ -33,12 +33,6 @@
       0: Alive
       100: Critical
       150: Dead
-  - type: Destructible
-    thresholds:
-    - trigger: !type:DamageTrigger
-        damage: 150
-      behaviors:
-      - !type:GibBehavior { }
   - type: SlowOnDamage #modified speeds because they're so weak
     speedModifierThresholds:
       60: 0.9
