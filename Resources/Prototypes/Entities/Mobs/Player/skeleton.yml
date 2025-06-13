@@ -63,12 +63,3 @@
   - type: Loadout
     prototypes: [LimitedPassengerGear]
   - type: RandomHumanoidAppearance
-
-- type: entity
-  parent: BaseMobSkeletonPerson
-  categories: [ HideSpawnMenu ]
-  id: MobSkeletonReformed
-  name: Reformed Skeleton
-  components:
-  - type: IsDeadIC
-  - type: RandomHumanoidAppearance
