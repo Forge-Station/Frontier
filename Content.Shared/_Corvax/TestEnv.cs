@@ -1,3 +1,4 @@
+using System.Reflection;
 namespace Content.Shared._Corvax;
 
 public static class TestEnv
@@ -6,7 +7,7 @@ public static class TestEnv
 #if UNIT_TESTS
         true;
 #else
-        false;
+        (Assembly.GetEntryAssembly()?.GetName().Name?.Contains("testhost") ?? false)
+        || (Assembly.GetEntryAssembly()?.GetName().Name?.Contains("vstest")  ?? false);
 #endif
-}
-
+}п
