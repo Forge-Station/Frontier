@@ -1,5 +1,6 @@
 using Content.Server.Mind;
 using Content.Server.Popups;
+using Content.Shared._Corvax.Skeleton;
 using Content.Shared._NF.Bank;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared.Damage;
@@ -13,23 +14,21 @@ namespace Content.Server._Corvax.Skeleton;
 
 public sealed class SkeletonReformSystem : EntitySystem
 {
-    [Dependency] private readonly IEntityManager   _ent   = null!;
-    [Dependency] private readonly ContainerSystem  _cont  = null!;
-    [Dependency] private readonly TransformSystem  _xform = null!;
-    [Dependency] private readonly DamageableSystem _dmg   = null!;
-    [Dependency] private readonly MobStateSystem   _state = null!;
-    [Dependency] private readonly MindSystem       _mind  = null!;
-    [Dependency] private readonly SharedBankSystem _bank  = null!;
-    [Dependency] private readonly PopupSystem      _popup = null!;
+    [Dependency] private readonly IEntityManager   _ent   = default!;
+    [Dependency] private readonly ContainerSystem  _cont  = default!;
+    [Dependency] private readonly TransformSystem  _xform = default!;
+    [Dependency] private readonly DamageableSystem _dmg   = default!;
+    [Dependency] private readonly MobStateSystem   _state = default!;
+    [Dependency] private readonly MindSystem       _mind  = default!;
+    [Dependency] private readonly SharedBankSystem _bank  = default!;
+    [Dependency] private readonly PopupSystem      _popup = default!;
 
     public override void Initialize()
     {
-        SubscribeLocalEvent<Shared._Corvax.Skeleton.SkeletonReformComponent, Shared._Corvax.Skeleton.SkeletonReformEvent>(OnReform);
+        SubscribeLocalEvent<SkeletonReformComponent, SkeletonReformEvent>(OnReform);
     }
 
-    private void OnReform(EntityUid skull,
-                          Shared._Corvax.Skeleton.SkeletonReformComponent comp,
-                          Shared._Corvax.Skeleton.SkeletonReformEvent _)
+    private void OnReform(EntityUid skull, SkeletonReformComponent comp, SkeletonReformEvent args)
     {
         if (comp.OriginalBody is not { } body)
             return;
