@@ -9,6 +9,5 @@ public static class TestEnv
 #else
         (Assembly.GetEntryAssembly()?.GetName().Name?.Contains("testhost") ?? false)
         || (Assembly.GetEntryAssembly()?.GetName().Name?.Contains("vstest")  ?? false);
-#
-endif
+#endif
 }
