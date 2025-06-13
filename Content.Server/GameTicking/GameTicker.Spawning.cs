@@ -24,6 +24,7 @@ using Robust.Shared.Utility;
 using Content.Server._Corvax.Respawn; // Frontier
 using Content.Shared._NF.Roles.Components; // Frontier
 using Content.Shared.Humanoid.Prototypes; // Frontier
+using Content.Shared._Corvax; // Corvax-frontier
 namespace Content.Server.GameTicking
 {
     public sealed partial class GameTicker
@@ -225,27 +226,27 @@ namespace Content.Server.GameTicking
 
 
             var jobPrototype = _prototypeManager.Index<JobPrototype>(jobId);
-// Forge-Frontier: Species job whitelist/blacklist start
-#if !UNIT_TESTS
-            var speciesPrototype = _prototypeManager.Index<SpeciesPrototype>(character.Species);
-            if (speciesPrototype.JobWhitelist != null && !speciesPrototype.JobWhitelist.Contains(jobId))
+
+// Forge-Frontier: Species job whitelist/blacklist
+            if (!TestEnv.IsUnitTest)
             {
-                if (LobbyEnabled)
-                    PlayerJoinLobby(player);
-                else
-                    JoinAsObserver(player);
-                return;
+                var speciesPrototype = _prototypeManager.Index<SpeciesPrototype>(character.Species);
+
+                if (speciesPrototype.JobWhitelist != null && !speciesPrototype.JobWhitelist.Contains(jobId))
+                {
+                    if (LobbyEnabled) PlayerJoinLobby(player);
+                    else JoinAsObserver(player);
+                    return;
+                }
+                else if (speciesPrototype.JobBlacklist != null && speciesPrototype.JobBlacklist.Contains(jobId))
+                {
+                    if (LobbyEnabled) PlayerJoinLobby(player);
+                    else JoinAsObserver(player);
+                    return;
+                }
             }
-            else if (speciesPrototype.JobBlacklist != null && speciesPrototype.JobBlacklist.Contains(jobId))
-            {
-                if (LobbyEnabled)
-                    PlayerJoinLobby(player);
-                else
-                    JoinAsObserver(player);
-                return;
-            }
-#endif
-// Forge-Frontier: Species job whitelist/blacklist end
+// Forge-Frontier end
+
 
 
             PlayerJoinGame(player, silent);

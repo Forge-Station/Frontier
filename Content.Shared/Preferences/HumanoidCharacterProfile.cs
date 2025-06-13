@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Text.RegularExpressions;
+using Content.Shared._Corvax; // Corvax-frontier
 using Content.Shared._NF.Bank;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
@@ -529,27 +530,24 @@ namespace Content.Shared.Preferences
 
             }
 // Corvax-frontier-blacklistrace
-#if !UNIT_TESTS
-            if (speciesPrototype.JobWhitelist != null)
+            if (!TestEnv.IsUnitTest)
             {
-                foreach (var jobId in _jobPriorities.Keys.ToList())
+                if (speciesPrototype.JobWhitelist != null)
                 {
-                    if (!speciesPrototype.JobWhitelist.Contains(jobId))
-                        _jobPriorities.Remove(jobId);
+                    foreach (var jid in _jobPriorities.Keys.ToList())
+                        if (!speciesPrototype.JobWhitelist.Contains(jid))
+                            _jobPriorities.Remove(jid);
                 }
-            }
-            else if (speciesPrototype.JobBlacklist != null)
-            {
-                foreach (var jobId in _jobPriorities.Keys.ToList())
+                else if (speciesPrototype.JobBlacklist != null)
                 {
-                    if (speciesPrototype.JobBlacklist.Contains(jobId))
-                        _jobPriorities.Remove(jobId);
+                    foreach (var jid in _jobPriorities.Keys.ToList())
+                        if (speciesPrototype.JobBlacklist.Contains(jid))
+                            _jobPriorities.Remove(jid);
                 }
-            }
 
-            if (_jobPriorities.Count == 0)
-                PreferenceUnavailable = PreferenceUnavailableMode.StayInLobby;
-#endif
+                if (_jobPriorities.Count == 0)
+                    PreferenceUnavailable = PreferenceUnavailableMode.StayInLobby;
+            }
 // Corvax-frontier-blacklistrace
 
 
