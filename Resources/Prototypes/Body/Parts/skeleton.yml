@@ -104,7 +104,6 @@
   id: SkeletonReformAction
   name: "Воссоздать тело"
   description: "Сконцентрируйся и позволь своей сущности восстановить скелетное тело."
-  noSpawn: true
   components:
   - type: InstantAction
     icon:
@@ -112,7 +111,6 @@
       state: full
     event: !type:SkeletonReformEvent  { }
     checkCanInteract: false
-    checkCanAccess: false
     clientExclusive: false
 
 - type: entity
