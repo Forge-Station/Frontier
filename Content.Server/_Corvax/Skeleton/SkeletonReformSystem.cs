@@ -14,14 +14,15 @@ namespace Content.Server._Corvax.Skeleton;
 
 public sealed class SkeletonReformSystem : EntitySystem
 {
+    [Dependency] private readonly PopupSystem      _popup = default!;
+    [Dependency] private readonly MindSystem       _mind  = default!;
     [Dependency] private readonly IEntityManager   _ent   = default!;
     [Dependency] private readonly ContainerSystem  _cont  = default!;
     [Dependency] private readonly TransformSystem  _xform = default!;
     [Dependency] private readonly DamageableSystem _dmg   = default!;
     [Dependency] private readonly MobStateSystem   _state = default!;
-    [Dependency] private readonly MindSystem       _mind  = default!;
     [Dependency] private readonly SharedBankSystem _bank  = default!;
-    [Dependency] private readonly PopupSystem      _popup = default!;
+
 
     public override void Initialize()
     {
