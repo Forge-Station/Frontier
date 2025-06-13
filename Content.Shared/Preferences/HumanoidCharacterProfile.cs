@@ -528,30 +528,30 @@ namespace Content.Shared.Preferences
                 speciesPrototype = prototypeManager.Index(Species);
 
             }
-            // Allow any job-species combo during unit tests
-#if UNIT_TESTS
-    goto SkipWhitelistCheckB;
-#endif
-
 // Corvax-frontier-blacklistrace
+#if !UNIT_TESTS
             if (speciesPrototype.JobWhitelist != null)
             {
                 foreach (var jobId in _jobPriorities.Keys.ToList())
+                {
                     if (!speciesPrototype.JobWhitelist.Contains(jobId))
                         _jobPriorities.Remove(jobId);
+                }
             }
             else if (speciesPrototype.JobBlacklist != null)
             {
                 foreach (var jobId in _jobPriorities.Keys.ToList())
+                {
                     if (speciesPrototype.JobBlacklist.Contains(jobId))
                         _jobPriorities.Remove(jobId);
+                }
             }
 
             if (_jobPriorities.Count == 0)
                 PreferenceUnavailable = PreferenceUnavailableMode.StayInLobby;
-
-            SkipWhitelistCheckB:
+#endif
 // Corvax-frontier-blacklistrace
+
 
             var sex = Sex switch
             {
