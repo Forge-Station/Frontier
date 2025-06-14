@@ -6,106 +6,107 @@ using Content.Shared.Humanoid;
 using Content.Shared.Inventory;
 using Content.Shared.PDA;
 using Content.Shared.Roles;
-using Robust.Shared.Player;
+using Robust.Shared.Timing;
 
 namespace Content.Server._Corvax.AutoSalarySystem;
 
+
 public sealed class AutoSalarySystem : EntitySystem
 {
-    [Dependency] private readonly InventorySystem _inventory = default!;
-    [Dependency] private readonly BankSystem _bank = default!;
+    [Dependency] private readonly InventorySystem _inv   = default!;
+    [Dependency] private readonly BankSystem      _bank  = default!;
+    [Dependency] private readonly IGameTiming     _time  = default!;
 
-    private static float _currentTime = 3600f;
+    private static readonly TimeSpan PayInterval = TimeSpan.FromSeconds(1200);
 
     [ValidatePrototypeId<DepartmentPrototype>]
-    private const string FrontierDep = "Frontier";
+    private const string SecurityDep  = "Security";
     [ValidatePrototypeId<DepartmentPrototype>]
-    private const string SecurityDep = "Security";
+    private const string FrontierDep  = "Frontier";
+
+    private readonly Dictionary<EntityUid, TimeSpan> _next = new();
+
+    private readonly Dictionary<string, int> _salary = new();
 
     public override void Initialize()
     {
-        base.Initialize();
+        void Add(string locKey, int pay) => _salary[Loc.GetString(locKey)] = pay;
 
-        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+        Add("job-name-bailiff",        13_500);
+        Add("job-name-brigmedic",      11_000);
+        Add("job-name-cadet-nf",        8_000);
+        Add("job-name-deputy",         10_000);
+        Add("job-name-nf-detective",   11_000);
+        Add("job-name-security-guard", 10_000);
+        Add("job-name-sheriff",        17_000);
+        Add("job-name-stc",             6_000);
+        Add("job-name-sr",             14_000);
+        Add("job-name-pal",            12_000);
+        Add("job-name-doc",            10_000);
+        Add("job-name-senior-officer", 12_000);
+        Add("job-name-janitor",         7_000);
+
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(_ =>
+        {
+            _next.Clear();
+            Log.Info("[AutoSalary] round restart — timers reset");
+        });
     }
 
     public override void Update(float frameTime)
     {
-        base.Update(frameTime);
+        var now = _time.CurTime;
 
-        _currentTime -= frameTime;
-
-        if (_currentTime <= 0)
+        var query = EntityQueryEnumerator<BankAccountComponent, HumanoidAppearanceComponent>();
+        while (query.MoveNext(out var body, out _, out _))
         {
-            _currentTime = 3600f;
-            ProcessSalary();
-        }
-    }
-
-    private void OnRoundRestart(RoundRestartCleanupEvent args)
-    {
-        _currentTime = 3600f;
-    }
-
-    private void ProcessSalary()
-    {
-        var currentTime = EntityQueryEnumerator<HumanoidAppearanceComponent, BankAccountComponent, ActorComponent>();
-        while (currentTime.MoveNext(out var uid, out _, out _, out _))
-        {
-            if (GetDepartment(uid, out var job))
+            if (!TryGetActiveJob(body, out var title))
             {
-                int salary = GetSalary(job);
-                _bank.TryBankDeposit(uid, salary);
+                _next.Remove(body);
+                continue;
             }
+
+            if (!_salary.TryGetValue(title, out var pay))
+                continue;
+
+            if (!_next.TryGetValue(body, out var due))
+                due = now + PayInterval;
+
+            if (now < due)
+            {
+                _next[body] = due;
+                continue;
+            }
+
+            if (_bank.TryBankDeposit(body, pay))
+                Log.Info("[AutoSalary] round restart — timers reset");
+            else
+                Log.Warning($"[AutoSalary] deposit FAIL {pay} Cr → {body} ({title})");
+
+            _next[body] = now + PayInterval;
         }
     }
 
-    private int GetSalary(string key) => key switch
+    private bool TryGetActiveJob(EntityUid body, out string title)
     {
-        var s when s == Loc.GetString("job-name-bailiff") => 40000,
-        var s when s == Loc.GetString("job-name-brigmedic") => 32000,
-        var s when s == Loc.GetString("job-name-cadet-nf") => 23000,
-        var s when s == Loc.GetString("job-name-deputy") => 29000,
-        var s when s == Loc.GetString("job-name-nf-detective") => 32500,
-        var s when s == Loc.GetString("job-name-security-guard") => 30000,
-        var s when s == Loc.GetString("job-name-sheriff") => 50000,
-        var s when s == Loc.GetString("job-name-stc") => 17500,
-        var s when s == Loc.GetString("job-name-sr") => 42000,
-        var s when s == Loc.GetString("job-name-pal") => 35000,
-        var s when s == Loc.GetString("job-name-doc") => 31000,
-        var s when s == Loc.GetString("job-name-senior-officer") => 35000,
-        var s when s == Loc.GetString("job-name-janitor") => 20000,
-        _ => throw new KeyNotFoundException()
-    };
+        title = string.Empty;
 
-    private bool GetDepartment(EntityUid uid, out string job)
-    {
-        job = string.Empty;
-        var idCard = GetIdCard(uid);
-
-        if (idCard is null)
+        if (!_inv.TryGetSlotEntity(body, "id", out var idUid))
             return false;
 
-        foreach (var departmentProtoId in idCard.JobDepartments)
+        if (EntityManager.TryGetComponent(idUid, out PdaComponent? pda) && pda.ContainedId != null)
+            idUid = pda.ContainedId.Value;
+
+        if (!EntityManager.TryGetComponent(idUid, out IdCardComponent? id))
+            return false;
+        foreach (var dep in id.JobDepartments)
         {
-            if (departmentProtoId == FrontierDep || departmentProtoId == SecurityDep)
+            if (dep == SecurityDep || dep == FrontierDep)
             {
-                job = idCard.LocalizedJobTitle != null ? idCard.LocalizedJobTitle : string.Empty;
-                return true;
+                title = id.LocalizedJobTitle ?? string.Empty;
+                return title.Length > 0;
             }
         }
         return false;
-    }
-
-    private IdCardComponent? GetIdCard(EntityUid uid)
-    {
-        if (!_inventory.TryGetSlotEntity(uid, "id", out var idUid))
-            return null;
-
-        if (EntityManager.TryGetComponent(idUid, out PdaComponent? pda) && pda.ContainedId != null)
-        {
-            return TryComp<IdCardComponent>(pda.ContainedId, out var idComp) ? idComp : null;
-        }
-        return EntityManager.TryGetComponent(idUid, out IdCardComponent? id) ? id : null;
     }
 }
