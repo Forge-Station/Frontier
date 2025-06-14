@@ -1,0 +1,82 @@
+- type: loadoutGroup
+  id: StormtrooperCaptainHead
+  name: loadout-group-contractor-head
+  minLimit: 1
+  loadouts:
+  - StormtrooperClothingHead1
+  - StormtrooperClothingHead2
+  - StormtrooperClothingHead3
+  fallbacks:
+  - StormtrooperClothingHead1
+
+- type: loadoutGroup
+  id: StormtrooperJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  minLimit: 1
+  loadouts:
+  - StormtrooperJumpsuit1
+  - StormtrooperJumpsuit2
+  - StormtrooperJumpsuit3
+  - StormtrooperJumpsuit4
+  - StormtrooperJumpsuit5
+  fallbacks:
+  - StormtrooperJumpsuit1
+  - StormtrooperJumpsuit2
+
+- type: loadoutGroup
+  id: StormtrooperBags
+  name: loadout-group-contractor-backpack
+  minLimit: 1
+  loadouts:
+  - StormtrooperClothingBackpack1
+  - StormtrooperClothingBackpack2
+  - StormtrooperClothingBackpack3
+  fallbacks:
+  - StormtrooperClothingBackpack1
+
+- type: loadoutGroup
+  id: StormtrooperGlasses
+  name: loadout-group-contractor-glasses
+  minLimit: 1
+  loadouts:
+  - StormtrooperClothingEyes1
+  - StormtrooperClothingEyes2
+  - StormtrooperClothingEyes3
+  fallbacks:
+  - StormtrooperClothingEyes1
+
+- type: loadoutGroup
+  id: StormtrooperShoes
+  name: loadout-group-contractor-shoes
+  minLimit: 0
+  loadouts:
+  - StormtrooperClothingShoes1
+  - StormtrooperClothingShoes2
+  - StormtrooperClothingShoes3
+  - StormtrooperClothingShoes4
+  fallbacks:
+  - StormtrooperClothingShoes1
+
+- type: loadoutGroup
+  id: StormtrooperNeck
+  name: loadout-group-contractor-neck
+  minLimit: 0
+  loadouts:
+  - StormtrooperNeck1
+  - StormtrooperNeck2
+  - StormtrooperNeck3
+  - StormtrooperNeck4
+  fallbacks:
+  - StormtrooperNeck1
+
+- type: loadoutGroup
+  id: StormtrooperOuterclothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - StormtrooperOuterclothing1
+  - StormtrooperOuterclothing2
+  - StormtrooperOuterclothing3
+  - StormtrooperOuterclothing4
+  - StormtrooperOuterclothing5
+  - StormtrooperOuterclothing6

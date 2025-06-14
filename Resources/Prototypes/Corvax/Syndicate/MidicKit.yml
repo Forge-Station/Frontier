@@ -1,0 +1,89 @@
+- type: entity
+  id: ToolboxMedic
+  name: подозрительный ящик неопределённости
+  description: Что же взять на этот раз?
+  parent: [ BaseItem, BaseC3SyndicateContraband ] # Frontier: BaseMinorContraband<BaseC3SyndicateContraband
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_syn.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - DefibrillatorSyndicateSet
+    - atreidesSet
+    - NocturineChemistryBottleSet
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+  - type: Contraband # Frontier
+    hideValues: true # Frontier
+
+# доп придметы
+- type: entity
+  name: сумка первой помощи
+  parent: NFPouchFirstAid
+  id: NFPouchFirstAidMEdickMedipen
+  components:
+  - type: StorageFill
+    contents:
+      - id: CombatMedipen
+        amount: 3
+      - id: EmergencyMedipen
+        amount: 3
+
+- type: entity
+  parent: NFPouchFirstAidAlt
+  id: NFPouchFirstAidMEdickBottle
+  components:
+  - type: StorageFill
+#    contents:
+#      - id: OmnizineChemistryBottle
+#        amount: 3
+#      - id: EpinephrineChemistryBottle
+#        amount: 3
+
+- type: latheRecipe
+  id: CrossbowBoltSponge
+  result: CrossbowBoltSponge
+  completetime: 2
+  materials:
+    Steel: 50
+    Plastic: 50
+    Glass: 50
+
+- type: entity
+  parent: BaseBlueprintExpedition
+  id: NFBlueprintCrossbowBoltSponge
+  name: чертёж болта с губчатым наконечником
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - CrossbowBoltSponge
+
+# Filled versions
+- type: entity
+  parent: ClothingBeltQuiverCrossbow
+  id: ClothingBeltQuiverCrossbowFilledBoltMEdic
+  suffix: Filled, Bolts, MediSindi
+  components:
+  - type: StorageFill
+    contents:
+    - id: CrossbowBoltSponge
+      amount: 7
+    - id: CrossbowBoltPlasteel
+      amount: 7
+
+#- type: entity
+#  parent: NFPouchFirstAid
+#  id: NFPouchFirstAidMEdickNoctorine
+#  components:
+#  - type: StorageFill
+#    contents:
+#      - id: OmnizineChemistryBottle
+#        amount: 3
+#      - id: NocturineChemistryBottle
+#        amount: 3

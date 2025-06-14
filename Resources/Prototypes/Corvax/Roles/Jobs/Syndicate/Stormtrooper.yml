@@ -1,0 +1,49 @@
+- type: job
+  id: Stormtrooper
+  name: Штурмовик
+  description: Штурмовик подчиняющийся командиру.
+  playTimeTracker: JobStormtrooper
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 1 # 48 hours
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 36000 # 10 hours
+  startingGear: StormtrooperGear
+  access:
+  - SyndicateAgent
+  - NuclearOperative
+  alwaysUseSpawner: true
+  hideConsoleVisibility: true
+  canBeAntag: true
+  icon: "JobIconStormtrooper"
+  supervisors: job-supervisors-syndicate
+  weight: 40
+  displayWeight: 40
+  setPreference: true
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: MailDisabled
+    - type: SpecialSectorStationRecord
+      recordGeneration: FalseRecord
+    - type: NpcFactionMember
+      factions:
+      - SyndicateNF
+  - !type:AddImplantSpecial
+    implants: [ DeathRattleImplanter ]
+
+- type: startingGear
+  id: StormtrooperGear
+  equipment:
+    ears: ClothingHeadsetAltSyndicate
+    id: SyndiPDACStorm
+    belt: ClothingBeltAssault
+    pocket1: WeaponPistolPollock
+    mask: ClothingMaskGasSwat
+  storage:
+    back:
+    - NFBoxSurvivalExtended
+    - MagazinePistol
+    - MagazinePistol
+    - SyndicateDataMinerFlatpack

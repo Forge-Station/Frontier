@@ -820,7 +820,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             return message;
         // Adds a period if the last character is a letter.
         if (char.IsLetter(message[^1]))
-            message += ".";
+            message += "";  //#Corvax-Frontier
         return message;
     }
 

@@ -28,7 +28,7 @@
   recipeUnlocks:
   - RadarConsoleCircuitboard
   - HandHeldMassScanner
-  
+
 - type: technology
   id: AdvancedPowercells
   name: research-technology-advanced-powercells
@@ -189,7 +189,10 @@
     - OreBagOfHolding
     - MiningDrillDiamond
     - AdvancedMineralScannerEmpty
-    - BorgModuleAdvancedMining
+    - NFBlueprintOreBagOfHolding # Frontier
+    - NFBlueprintMiningDrillDiamond # Frontier
+    - NFBlueprintAdvancedMineralScannerEmpty # Frontier
+    - BorgModuleAdvancedMining # Frontier
 
 # Tier 3
 
@@ -233,5 +236,6 @@
   tier: 2
   cost: 10000
   recipeUnlocks:
-    - ShipyardRCD # Frontier: RCD<ShipyardRCD
-    - ShipyardRCDAmmo # Frontier: RCDAmmo<ShipyardRCDAmmo
+    - ShipyardRCD # Frontier
+    - ShipyardRCDAmmo # Frontier
+    - NFBlueprintShipyardRCDAmmo # Frontier

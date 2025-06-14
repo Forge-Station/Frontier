@@ -54,9 +54,9 @@
           prob: 0.002
         # Big loot
         - id: NFSalvageMaterialCrateSpawner
-          prob: 0.9
+          prob: 0.007
         - id: NFSalvageChemicalBarrelSpawner
-          prob: 0.08
+          prob: 0.045
         - id: NFSalvageServiceBarrelSpawner
           prob: 0.02
         - id: NFSalvageDrinkableBarrelSpawner
@@ -74,7 +74,7 @@
         - id: NFSalvageSuitStorageSpawner
           prob: 0.1
         - id: RandomArtifactSpawner
-          prob: 0.05
+          prob: 0.009
         - id: NFSalvageTankSpawnerHighCapacity
           prob: 0.0005
         # Medical
@@ -86,6 +86,9 @@
         # Room
         - id: NFWreckRoomMarker
           prob: 0.01
+        # Corvax-Frontier Clothing
+        - id: SchoolgirlUniformSpawner
+          prob: 0.06
       Plating: *floor
       Lattice:
         - prob: 1 # Intentional blank.

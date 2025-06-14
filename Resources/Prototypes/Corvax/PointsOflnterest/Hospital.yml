@@ -1,0 +1,28 @@
+#- type: pointOfInterest
+#  id: Hospital
+#  name: "Клиника Здоровый лис"
+#  minimumDistance: 1000
+#  maximumDistance: 1800
+#  gridPath: /Maps/Corvax/POI/Hospital.yml
+#  addComponents:
+#  - type: IFF
+#    color: "#1895a3"
+#    readOnly: true
+#  - type: Shuttle
+#    angularDamping: 999999
+#    linearDamping: 999999
+
+#- type: gameMap
+#  id: Hospital
+#  mapName: 'Клиника Здоровый лис'
+#  mapPath: /Maps/Corvax/POI/Hospital.yml
+#  minPlayers: 0
+#  stations:
+#    Hospital:
+#      stationProto: StandardFrontierOutpost
+#      components:
+#        - type: StationNameSetup
+#          mapNameTemplate: 'Клиника Здоровый лис'
+#        - type: StationJobs
+#          availableJobs: {}
+#        - type: StationDeadDropHintExempt

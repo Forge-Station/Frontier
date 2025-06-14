@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen 
+
+# Shuttle Notes:
+- type: vessel
+  id: milestone
+  parent: BaseVessel
+  name: Рубеж
+  description: Средних размеров челнок контрабандиста. Отличный выбор для начинающий групп синдиката. Рекомендуемый экипаж 2-3 человека.
+  price: 27000
+  category: Medium
+  group: Syndicate
+  shuttlePath: /Maps/Corvax/Shuttles/Syndicate/milestone.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+  guidebookPage: Null
+  class:
+  - Syndicate
+
+- type: gameMap
+  id: milestone
+  mapName: 'Рубеж'
+  mapPath: /Maps/Corvax/Shuttles/Syndicate/milestone.yml
+  minPlayers: 0
+  stations:
+    milestone:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Рубеж {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

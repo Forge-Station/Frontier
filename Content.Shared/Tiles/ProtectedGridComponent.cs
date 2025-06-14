@@ -24,7 +24,15 @@ public sealed partial class ProtectedGridComponent : Component
     public bool PreventArtifactTriggers = false;
     [DataField]
     public bool KillHostileMobs = false;
-
+    /// </summary>
+    /// If true, this grid will not collide with other grids.
+    /// begin Corvax-Frontier
+    /// </summary>
+    [DataField]
+    public bool NoGridCollision = false;
+    /// </summary>
+    /// end Corvax-Frontier
+    /// </summary>
     /// <summary>
     /// The sound made when a hostile mob is killed when entering a protected grid.
     /// </summary>

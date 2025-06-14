@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: AnomalousLab
   parent: BasePOI
-  name: 'Anomalous Lab'
+  name: 'Аномальная Лаборатория'
   minimumDistance: 2100
   maximumDistance: 3800
   spawnGroup: ScienceLab
@@ -20,10 +20,15 @@
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
+  - type: IFF
+    color: "#ffa600"
+    readOnly: true
+  - type: ProtectedGrid
+    noGridCollision: true #CorvaxFrontier
 
 - type: gameMap
   id: AnomalousLab
-  mapName: 'Anomalous Lab'
+  mapName: 'Аномальная Лаборатория'
   mapPath: /Maps/_NF/POI/anomalouslab.yml
   minPlayers: 0
   stations:
@@ -31,7 +36,7 @@
       stationProto: StandardFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Anomalous Lab'
+          mapNameTemplate: 'Аномальная Лаборатория'
         - type: StationJobs
           availableJobs: {}
         - type: StationDeadDropHintExempt

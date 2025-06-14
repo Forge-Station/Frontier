@@ -169,7 +169,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: Kammerer
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable #Corvax-Frontier КБ
   id: WeaponShotgunKammerer
   description: An old yet faithful design, and a favorite among irregular forces on many worlds. Uses .50 shotgun shells. # Frontier: of<on
   components: # intend for Kammerer to have tighter choke for slower fire rate and/or manual cycling
@@ -192,7 +192,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: sawn-off shotgun
-  parent: [ BaseWeaponShotgun, BaseC1Contraband ] # Frontier: BaseSecurityBartenderContraband<BaseC1Contraband
+  parent: [ BaseWeaponShotgun, BaseC1Contraband ] #Corvax-Frontier КБ
   id: WeaponShotgunSawn
   description: Groovy! Uses .50 shotgun shells.
   components: # needs to be super inaccurate because you don't need to wield it

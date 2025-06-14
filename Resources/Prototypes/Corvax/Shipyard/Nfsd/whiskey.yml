@@ -1,0 +1,40 @@
+# Author -
+# GitHub: -
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Whiskey
+  parent: BaseVessel
+  name: NSF Виски
+  description: Среднегабаритный спасательный шаттл NSF, рассчитанное на одного-двух бригмедиков и пилота.
+  price: 55000
+  category: Medium
+  group: Security
+  access: Bailiff
+  shuttlePath: /Maps/Corvax/Shuttles/Nfsd/whiskey.yml
+  guidebookPage: Null
+  class:
+  - Medical
+
+- type: gameMap
+  id: Whiskey
+  mapName: 'NSF Whiskey'
+  mapPath: /Maps/Corvax/Shuttles/Nfsd/whiskey.yml
+  minPlayers: 0
+  stations:
+    Whiskey:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Виски {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

@@ -30,6 +30,7 @@ using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using System.Numerics;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -115,6 +116,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
             return;
 
         EntityManager.EnsureComponent<ShuttleComponent>(ev.EntityUid);
+        EnsureComp<ShuttleImpactComponent>(ev.EntityUid); //Corvax-Frontier - mersen
     }
 
     private void OnShuttleStartup(EntityUid uid, ShuttleComponent component, ComponentStartup args)

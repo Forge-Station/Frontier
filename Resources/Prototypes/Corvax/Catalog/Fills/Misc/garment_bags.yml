@@ -1,0 +1,59 @@
+- type: entity
+  id: GarmentBagFilledSR
+  parent: BaseGarmentBag
+  suffix: Filled, SR
+  description: A bag for storing extra clothes and shoes. Apparently, this set belongs to a Station Representative.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingNeckCloakSr
+      - id: ClothingNeckMantleSr
+
+      - id: ClothingUniformJumpsuitMilitarySr
+      - id: ClothingUniformJumpsuitSr
+      - id: ClothingUniformJumpsuitSrALT
+      - id: ClothingUniformJumpskirtSr
+      - id: ClothingUniformJumpskirtSrALT
+
+      - id: ClothingOuterJacketSr
+      - id: ClothingOuterArmorSrCarapace
+
+      - id: ClothingHeadHatSrBeret
+      - id: ClothingHeadHatSrCap
+
+      - id: ClothingShoesBootsLaceup
+
+      - id: ClothingEyesGlassesCommand
+
+      - id: ClothingMaskGasCentcom
+
+- type: entity
+  id: GarmentBagFilledSheriff
+  parent: BaseGarmentBag
+  suffix: Filled, Sheriff
+  description: A bag for storing extra clothes and shoes. Apparently, this set belongs to the Sheriff of NFSD.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingNeckCloakSheriff
+      - id: ClothingNeckMantleSheriff
+
+      - id: ClothingUniformJumpsuitNfsdTacCream
+      - id: ClothingUniformJumpsuitNfsdTacGray
+      - id: ClothingUniformJumpsuitNfsdTacCamo
+      - id: ClothingUniformJumpsuitNfsdTacBlack
+
+      - id: ClothingOuterCoatNfsdFormalSheriff
+
+      - id: ClothingHeadHatNfsdCampaign
+      - id: ClothingHeadHatNfsdBeretBrown
+      - id: ClothingHeadHatNfsdBeretGreen
+
+      - id: ClothingHandsGlovesCombatNfsdCream
+      - id: ClothingHandsGlovesCombatNfsdBrown
+
+      - id: ClothingShoesBootsWinterHoS
+      - id: ClothingShoesBootsNfsdBrown
+      - id: ClothingShoesBootsNfsdCream
+
+      - id: ClothingMaskGasSheriff

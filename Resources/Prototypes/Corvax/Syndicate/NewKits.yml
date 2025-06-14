@@ -1,0 +1,154 @@
+- type: thiefBackpackSet
+  id: DefibrillatorSyndicateSet
+  name: medic-backpack-category-DefibrillatorSyndicate-name
+  description: medic-backpack-category-DefibrillatorSyndicate-description
+  sprite:
+    sprite: /Textures/Objects/Specific/Medical/defibsyndi.rsi
+    state: icon
+  content:
+  - NFPouchFirstAidMEdickMedipen
+  - NFPouchFirstAidMEdickBottle
+  - DefibrillatorSyndicate
+  - MedkitAdvancedFilled
+  - MedkitAdvancedFilled
+  - WeaponDisablerSMG
+  - HypopenBox
+
+- type: thiefBackpackSet
+  id: NocturineChemistryBottleSet
+  name: medic-backpack-category-Crossbow-name
+  description: medic-backpack-category-Crossbow-description
+  sprite:
+    sprite: /Textures/_NF/Objects/Weapons/Guns/Crossbow/crossbowhand.rsi
+    state: icon
+  content:
+  - NFBlueprintCrossbowBoltSponge
+  - ClothingBeltQuiverCrossbowFilledBoltMEdic
+  - MedkitCombatFilled
+  - MedkitCombatFilled
+  - CrossbowModernHand
+
+- type: thiefBackpackSet
+  id: atreidesSet
+  name: "Набор боевой"
+  description: medic-backpack-category-fight-description
+  sprite:
+    sprite: /Textures/Objects/Weapons/Guns/SMGs/atreides.rsi
+    state: icon
+  content:
+  - StimkitFilled
+  - NFPouchFirstAidMEdickBottle
+  - EnergyDaggerLoud
+  - MedkitCombatFilled
+  - MedkitCombatFilled
+  - SyndiHypo
+
+- type: thiefBackpackSet
+  id: CadetNonLetalSet
+  name: "Набор нелетальной остановки"
+  description: cadet-backpack-category-stan-description
+  sprite:
+    sprite: /Textures/Clothing/Under/Socks/coder.rsi
+    state: icon
+  content:
+  - CadetWeaponDisabler
+  - SlipocalypseClusterSoap
+  - ClothingHeadHelmetSwatSyndicate
+  - ClothingOuterArmorBasic
+  - SyndicateBusinessCard
+  - BoxZiptie
+  - TelescopicShield
+  - ClothingShoesChameleonNoSlips
+  - FreedomImplanter
+
+- type: thiefBackpackSet
+  id: CadetSpaceSet
+  name: "Набор космического патрульного"
+  description: Cadet-backpack-category-Space-description
+  sprite:
+    sprite: /Textures/_NF/Clothing/Head/Hardsuits/private_security.rsi
+    state: icon
+  content:
+  - LanternFlash
+  - ScramImplanter
+  - NFPouchPrivateSecurity
+  - ClothingOuterHardsuitPrivateSecurity
+  - WeaponLaserCarbine
+  - WeaponLaserSvalinn
+  - ClothingShoesBootsMagSecurityFilled
+  - JetpackBlackFilled
+  - DoubleEmergencyNitrogenTankFilled
+  - DoubleEmergencyOxygenTank
+
+- type: thiefBackpackSet
+  id: CadetBouncerSet
+  name: "Набор Вышибалы"
+  description: Cadet-backpack-category-Bouncer-description
+  sprite:
+    sprite: /Textures/Objects/Weapons/Melee/baseball_bat.rsi
+    state: icon
+  content:
+  - StimkitFilled
+  - ClothingHeadHelmetBasic
+  - ClothingOuterVestWeb
+  - ClothingShoesChameleonNoSlips
+  - BaseBallBat
+  - ThrowingKnivesKit
+  - EmpImplanter
+  - BoxStingerGrenadesNfsd
+  - RevolverCapGun
+  - SpaceBladeContra
+
+- type: thiefBackpackSet
+  id: CadetTeaPartySet
+  name: "Набор чайной вечиринки"
+  description: Cadet-backpack-category-TeaParty-description
+  sprite:
+    sprite: /Textures/Objects/Consumable/Drinks/teapot.rsi
+    state: icon
+  content:
+  - ChairFoldingSpawnFolded
+  - ChairFoldingSpawnFolded
+  - TableFoldingSpawnFolded
+  - BriefcaseSyndieSniperBundleFilled
+  - ClothingOuterHardsuitCarp
+  - ClothingOuterHardsuitCarp
+  - DrinkTeapot
+  - DehydratedSpaceCarp
+  - DehydratedSpaceCarp
+  - DehydratedSpaceCarp
+  - DrinkTeacup
+  - DrinkTeacup
+  - DrinkTeacup
+  - DrinkTeacup
+  - DehydratedSharkMinnow
+  - DehydratedSharkMinnow
+  - DehydratedSharkMinnow
+  - ClothingBackpackDuffelSyndicateCarpSuit
+  - ClothingBackpackDuffelSyndicatePyjamaBundle
+  - PlushieCarp
+  - PlushieCarp
+  - PlushieCarp
+  - PlushieCarp
+
+- type: thiefBackpackSet
+  id: CadetSamuraiSet
+  name: "Набор самурая"
+  description: Cadet-backpack-category-Samurai-description
+  sprite:
+    sprite: /Textures/Objects/Weapons/Melee/katana.rsi
+    state: icon
+  content:
+  - NFPouchUtility
+  - Bola
+  - Bola
+  - Bola
+  - Bola
+  - Bola
+  - Katana
+  - ClothingBackpackDuffelSyndicateBundleSamurai
+  - BoxSmokeGrenades
+  - MacroBombImplanter
+  - ScramImplanter
+  - ClothingShoesChameleonNoSlips
+  - ClockworkShield

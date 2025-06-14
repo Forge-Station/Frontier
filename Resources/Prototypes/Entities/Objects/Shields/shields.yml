@@ -64,7 +64,7 @@
 
 - type: entity
   name: riot shield
-  parent: [ BaseShield, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  parent: [ BaseShield, BaseC1Contraband ] # Frontier: BaseRestrictedContraband<BaseC2ContrabandUnredeemable #Corvax-Frontier КБ
   id: RiotShield
   description: A large tower shield. Good for controlling crowds.
   components:

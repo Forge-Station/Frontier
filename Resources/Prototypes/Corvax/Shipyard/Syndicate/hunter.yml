@@ -1,0 +1,43 @@
+# Author -
+# GitHub: -
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Hunter
+  parent: BaseVessel
+  name: Охотник
+  description: Малогабаритный штурмовой шаттл синдиката. Рекомендованный состав команды 1-4 человека.
+  price: 40000
+  category: Small
+  group: Syndicate
+  shuttlePath: /Maps/Corvax/Shuttles/Syndicate/hunter.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+  guidebookPage: Null
+  class:
+  - Syndicate
+
+- type: gameMap
+  id: Hunter
+  mapName: 'Охотник'
+  mapPath: /Maps/Corvax/Shuttles/Syndicate/hunter.yml
+  minPlayers: 0
+  stations:
+    Hunter:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Охотник {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

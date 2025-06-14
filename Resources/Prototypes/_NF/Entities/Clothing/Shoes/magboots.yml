@@ -5,12 +5,28 @@
   description: Security magnetic boots, often used during extravehicular activity to ensure the user remains safely attached to the vehicle.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Shoes/Boots/magboots-security.rsi
+    sprite: Corvax/Clothing/Shoes/Boots/magboots-combat.rsi #Corvax-Frontier респрайт
     state: icon
   - type: Clothing
-    sprite: _NF/Clothing/Shoes/Boots/magboots-security.rsi
+    sprite: Corvax/Clothing/Shoes/Boots/magboots-combat.rsi #Corvax-Frontier респрайт
   - type: Magboots
     magbootsAlert: MagbootsSecurity
+
+- type: entity
+  parent: [ClothingShoesBootsMagSecurity, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
+  id: ClothingShoesBootsMagNfsd
+  name: NFSD magboots
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi
+    state: icon
+  - type: Clothing
+    sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi
+  - type: Magboots
+    magbootsAlert: MagbootsNfsd
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.9
 
 - type: entity
   parent: ClothingShoesBootsMagSecurity
@@ -42,23 +58,7 @@
   - type: NoSlip
 
 - type: entity
-  parent: ClothingShoesBootsMagSecurity
-  id: ClothingShoesBootsMagNfsd
-  name: NFSD magboots
-  components:
-  - type: Sprite
-    sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi
-    state: icon
-  - type: Clothing
-    sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi
-  - type: Magboots
-    magbootsAlert: MagbootsNfsd
-  - type: ClothingSpeedModifier
-    walkModifier: 0.95
-    sprintModifier: 0.9
-
-- type: entity
-  parent: [BaseC3PirateContraband, ClothingShoesBootsMagNfsd]
+  parent: [BaseC1Contraband, ClothingShoesBootsMagNfsd] #Corvax-Frontier КБ
   id: ClothingShoesBootsMagPirate
   name: pirate magboots
   description: Pirate magnetic boots, often used during extravehicular activity to ensure the user remains safely attached to the vehicle.

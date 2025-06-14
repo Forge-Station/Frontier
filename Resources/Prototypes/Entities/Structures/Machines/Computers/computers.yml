@@ -294,7 +294,7 @@
     board: ComputerIFFCircuitboard
 
 - type: entity
-  parent: ComputerIFF
+  parent: [ComputerIFF, BaseC3Contraband] #Corvax-Frontier КБ
   id: ComputerIFFSyndicate
   name: IFF computer
   suffix: Syndicate
@@ -583,7 +583,7 @@
     - Xenoarchaeology
 
 - type: entity
-  parent: [BaseStructureIndestructible, BaseComputerAiAccess] # Frontier: added BaseStructureIndestructible
+  parent: [BaseStructureIndestructible, BaseComputerAiAccess, BaseC2ContrabandUnredeemable] # Frontier: added BaseStructureIndestructible #Corvax-Frontier КБ
   id: ComputerId
   name: ID card computer
   description: Terminal for programming Nanotrasen employee ID cards to access parts of the station.
@@ -664,7 +664,7 @@
     color: "#1f8c28"
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: [BaseComputerAiAccess, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   id: ComputerComms
   name: communications computer
   description: A computer used to make station wide announcements via keyboard, set the appropriate alert level, and call the emergency shuttle.
@@ -708,7 +708,7 @@
     damageModifierSet: StructuralMetallicStrong
 
 - type: entity
-  parent: ComputerComms
+  parent: [ComputerComms, BaseC3Contraband] #Corvax-Frontier КБ
   id: SyndicateComputerComms
   name: syndicate communications computer
   description: A computer capable of remotely hacking into the station's communications systems. Using this to make an announcement will alert the station to your presence.

@@ -1,5 +1,5 @@
 - type: entity
-  parent: FoodBreadBaguette
+  parent: [FoodBreadBaguette, BaseC3Contraband] #Corvax-Frontier КБ
   id: WeaponBaguette
   suffix: Weapon
   components:

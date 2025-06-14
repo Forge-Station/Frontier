@@ -1,0 +1,93 @@
+- type: loadoutGroup
+  id: CommanderCaptainHead
+  name: loadout-group-contractor-head
+  minLimit: 1
+  loadouts:
+  - CommanderClothingHead1
+  - CommanderClothingHead2
+  - CommanderClothingHead3
+  fallbacks:
+  - CommanderClothingHead1
+
+- type: loadoutGroup
+  id: CommanderJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  minLimit: 1
+  loadouts:
+  - CommanderJumpsuit1
+  - CommanderJumpsuit2
+  - CommanderJumpsuit3
+  - CommanderJumpsuit4
+  - CommanderJumpsuit5
+  fallbacks:
+  - CommanderJumpsuit1
+  - CommanderJumpsuit2
+
+- type: loadoutGroup
+  id: CommanderBags
+  name: loadout-group-contractor-backpack
+  minLimit: 1
+  loadouts:
+  - CommanderClothingBackpack1
+  - CommanderClothingBackpack2
+  - CommanderClothingBackpack3
+  fallbacks:
+  - CommanderClothingBackpack1
+
+- type: loadoutGroup
+  id: CommanderGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 1
+  loadouts:
+  - CommanderClothingHandsGloves1
+  - CommanderClothingHandsGloves2
+  - CommanderClothingHandsGloves3
+  fallbacks:
+  - CommanderClothingHandsGloves1
+
+- type: loadoutGroup
+  id: CommanderGlasses
+  name: loadout-group-contractor-glasses
+  minLimit: 1
+  loadouts:
+  - CommanderClothingEyes1
+  - CommanderClothingEyes2
+  - CommanderClothingEyes3
+  fallbacks:
+  - CommanderClothingEyes1
+
+- type: loadoutGroup
+  id: CommanderShoes
+  name: loadout-group-contractor-shoes
+  minLimit: 0
+  loadouts:
+  - CommanderClothingShoes1
+  - CommanderClothingShoes2
+  - CommanderClothingShoes3
+  - CommanderClothingShoes4
+  fallbacks:
+  - CommanderClothingShoes1
+
+- type: loadoutGroup
+  id: CommanderNeck
+  name: loadout-group-contractor-neck
+  minLimit: 0
+  loadouts:
+  - CommanderNeck1
+  - CommanderNeck2
+  - CommanderNeck3
+  - CommanderNeck4
+  fallbacks:
+  - CommanderNeck1
+
+- type: loadoutGroup
+  id: CommanderOuterclothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - CommanderOuterclothing1
+  - CommanderOuterclothing2
+  - CommanderOuterclothing3
+  - CommanderOuterclothing4
+  - CommanderOuterclothing5
+  - CommanderOuterclothing6

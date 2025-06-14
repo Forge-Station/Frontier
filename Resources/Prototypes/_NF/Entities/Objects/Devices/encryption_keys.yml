@@ -17,7 +17,7 @@
     - state: stc_label
 
 - type: entity
-  parent: EncryptionKey
+  parent: [EncryptionKey, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   id: EncryptionKeyNfsd
   name: NFSD encryption key
   categories: [ DoNotMap ]

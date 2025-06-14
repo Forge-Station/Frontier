@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+- type: vessel
+  id: flash
+  parent: BaseVessel
+  name: Вспышка
+  description: Штурмовой истребитель Жнецов. Рекомендуемый экипаж 1-2 человека.
+  price: 26200
+  category: Medium
+  group: Syndicate
+  shuttlePath: /Maps/Corvax/Shuttles/Syndicate/flash.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+  guidebookPage: Null
+  class:
+  - Syndicate
+
+- type: gameMap
+  id: flash
+  mapName: 'Вспышка'
+  mapPath: /Maps/Corvax/Shuttles/Syndicate/flash.yml
+  minPlayers: 0
+  stations:
+    flash:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Вспышка {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

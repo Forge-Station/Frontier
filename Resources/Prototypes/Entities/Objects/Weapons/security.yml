@@ -1,6 +1,6 @@
 - type: entity
   name: stun baton
-  parent: [BaseItem, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  parent: [BaseItem, BaseC1Contraband] # Frontier: BaseRestrictedContraband<BaseC2ContrabandUnredeemable #Corvax-Frontier КБ
   id: Stunbaton
   description: A stun baton for incapacitating people with. Actively harming with this is considered bad tone.
   components:
@@ -94,7 +94,7 @@
 
 - type: entity
   name: truncheon
-  parent: [BaseItem, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [BaseItem, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable #Corvax-Frontier КБ
   id: Truncheon
   description: A rigid, steel-studded baton, meant to harm. On the handle is a label that says 'for authorized use only.'
   components:

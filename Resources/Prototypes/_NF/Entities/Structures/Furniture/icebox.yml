@@ -22,6 +22,9 @@
       reagents:
       - ReagentId: Ice
         Quantity: 1
+  - type: Drink #CorvaxFrontier
+    delay: 4
+    solution: tank
 
 - type: entity
   name: ice box
@@ -37,3 +40,6 @@
         reagents:
         - ReagentId: Ice
           Quantity: 500
+  - type: Drink #CorvaxFrontier
+    delay: 4
+    solution: tank

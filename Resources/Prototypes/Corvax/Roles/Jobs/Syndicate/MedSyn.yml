@@ -1,0 +1,51 @@
+- type: job
+  id: MedSyn
+  name: Штурмовой Парамедик Синдиката
+  description: Специально подготовленный синдикатом медик для работы в зонах боевых действий
+  playTimeTracker: JobMedSyn
+  access:
+  - SyndicateAgent
+  - NuclearOperative
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 1 # 48 hours
+    - !type:RoleTimeRequirement
+      role: JobparaMedical
+      time: 36000 # 10 hours
+ # whitelisted: true
+  startingGear: MedSynGear
+  alwaysUseSpawner: true
+  hideConsoleVisibility: true
+  canBeAntag: true
+  icon: "JobIconBrigmedic"
+  supervisors: job-supervisors-syndicate
+  weight: 40
+  displayWeight: 40
+  setPreference: true
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: MailDisabled
+    - type: SpecialSectorStationRecord
+      recordGeneration: FalseRecord
+    - type: NpcFactionMember
+      factions:
+      - SyndicateNF
+  - !type:AddImplantSpecial
+    implants: [ DeathRattleImplanter ]
+
+- type: startingGear
+  id: MedSynGear
+  equipment:
+    ears: ClothingHeadsetAltSyndicate
+    id: SyndiPDACParamed
+    belt: ClothingBeltMilitaryWebbingMedFilled
+    pocket1: WeaponPistolViper
+    pocket2: ToolboxMedic
+    mask: ClothingMaskNeckGaiterRed
+  storage:
+    back:
+    - NFBoxSurvivalExtended
+    - HypoBrigmedic
+    - PillCanisterTricordrazine
+    - SyndicateDataMinerFlatpack

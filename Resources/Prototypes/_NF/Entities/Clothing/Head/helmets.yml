@@ -26,7 +26,7 @@
 
 #Mercenary Helmet
 - type: entity
-  parent: [ BaseC1Contraband, ClothingHeadHelmetMercenary ]
+  parent: ClothingHeadHelmetMercenary #Corvax-Frontier удалена строка КБ
   id: ClothingHeadHelmetMercenaryBlack
   name: mercenary helmet
   description: The combat helmet is commonly used by mercenaries, is strong, light and smells like gunpowder and the urban sprawl.

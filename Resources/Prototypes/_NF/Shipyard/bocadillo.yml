@@ -6,39 +6,38 @@
 # GitHub: erhardsteinhauer
 # Discord: erhardsteinhauer
 
-# Shuttle Notes:
-#
-- type: vessel
-  id: Bocadillo
-  parent: BaseVessel
-  name: NC Bocadillo
-  description: A tiny food truck perfect for a solo chef.
-  price: 25500 # ~$23200 on mapinit + ~$2320 from 10% markup
-  category: Small
-  group: Shipyard
-  shuttlePath: /Maps/_NF/Shuttles/bocadillo.yml
-  guidebookPage: ShipyardBocadillo
-  class:
-  - Kitchen
-  engine:
-  - Plasma
+# # Shuttle Notes:
+# #
+# - type: vessel
+  # id: Bocadillo
+  # name: NC Bocadillo
+  # description: A tiny food truck perfect for a solo chef.
+  # price: 23500 # appraises for ~$21110, markup of ~7% - TODO: fix this value, getting tests to pass - Whatstone
+  # category: Small
+  # group: Shipyard
+  # shuttlePath: /Maps/_NF/Shuttles/bocadillo.yml
+  # guidebookPage: ShipyardBocadillo
+  # class:
+  # - Kitchen
+  # engine:
+  # - Plasma
 
-- type: gameMap
-  id: Bocadillo
-  mapName: 'Bocadillo'
-  mapPath: /Maps/_NF/Shuttles/bocadillo.yml
-  minPlayers: 0
-  stations:
-    Bocadillo:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Bocadillo {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            ContractorInterview: [ 0, 0 ]
-            PilotInterview: [ 0, 0 ]
-            MercenaryInterview: [ 0, 0 ]
+# - type: gameMap
+  # id: Bocadillo
+  # mapName: 'Bocadillo'
+  # mapPath: /Maps/_NF/Shuttles/bocadillo.yml
+  # minPlayers: 0
+  # stations:
+    # Bocadillo:
+      # stationProto: StandardFrontierVessel
+      # components:
+        # - type: StationNameSetup
+          # mapNameTemplate: 'Bocadillo {1}'
+          # nameGenerator:
+            # !type:NanotrasenNameGenerator
+            # prefixCreator: '14'
+        # - type: StationJobs
+          # availableJobs:
+            # Contractor: [ 0, 0 ]
+            # Pilot: [ 0, 0 ]
+            # Mercenary: [ 0, 0 ]

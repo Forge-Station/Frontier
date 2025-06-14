@@ -6,39 +6,38 @@
 # GitHub: arimah
 # Discord: arimah
 
-# Shuttle Notes:
-#
-- type: vessel
-  id: Bookworm
-  parent: BaseVessel
-  name: BB Bookworm
-  description: A cozy medium-size library for travellers who wish to relax with a book or perhaps a board game.
-  price: 31500 # ~29476 after purchase + ~5% markup
-  category: Medium
-  group: Shipyard
-  shuttlePath: /Maps/_NF/Shuttles/bookworm.yml
-  guidebookPage: ShipyardBookworm
-  class:
-  - Civilian
-  engine:
-  - Plasma
+# # Shuttle Notes:
+# #
+# - type: vessel
+  # id: Bookworm
+  # name: SBB Bookworm
+  # description: A cozy medium-size library for travellers who wish to relax with a book or perhaps a board game.
+  # price: 30000 # ~24660 after purchase + ~9% markup
+  # category: Medium
+  # group: Shipyard
+  # shuttlePath: /Maps/_NF/Shuttles/bookworm.yml
+  # guidebookPage: ShipyardBookworm
+  # class:
+  # - Civilian
+  # engine:
+  # - Plasma
 
-- type: gameMap
-  id: Bookworm
-  mapName: 'BB Bookworm'
-  mapPath: /Maps/_NF/Shuttles/bookworm.yml
-  minPlayers: 0
-  stations:
-    Bookworm:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Bookworm {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            ContractorInterview: [ 0, 0 ]
-            PilotInterview: [ 0, 0 ]
-            MercenaryInterview: [ 0, 0 ]
+# - type: gameMap
+  # id: Bookworm
+  # mapName: 'SBB Bookworm'
+  # mapPath: /Maps/_NF/Shuttles/bookworm.yml
+  # minPlayers: 0
+  # stations:
+    # Bookworm:
+      # stationProto: StandardFrontierVessel
+      # components:
+        # - type: StationNameSetup
+          # mapNameTemplate: 'Bookworm {1}'
+          # nameGenerator:
+            # !type:NanotrasenNameGenerator
+            # prefixCreator: '14'
+        # - type: StationJobs
+          # availableJobs:
+            # Contractor: [ 0, 0 ]
+            # Pilot: [ 0, 0 ]
+            # Mercenary: [ 0, 0 ]

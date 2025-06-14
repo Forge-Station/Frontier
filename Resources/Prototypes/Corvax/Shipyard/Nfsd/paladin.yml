@@ -1,0 +1,42 @@
+# Author -
+# GitHub: -
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Paladin
+  parent: BaseVessel
+  name: NSF Паладин
+  description: Небольшой штурмовик, предназначенный для ведения космического боя, оснащенный гранатометом EXP-2100g.
+  price: 34220
+  category: Small
+  group: Security
+  access: Security
+  shuttlePath: /Maps/Corvax/Shuttles/Nfsd/paladin.yml
+  guidebookPage: Null
+  class:
+  - Fighter
+  engine:
+  - APU
+
+- type: gameMap
+  id: Paladin
+  mapName: 'NSF Паладин'
+  mapPath: /Maps/Corvax/Shuttles/Nfsd/paladin.yml
+  minPlayers: 0
+  stations:
+    Paladin:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Паладин {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

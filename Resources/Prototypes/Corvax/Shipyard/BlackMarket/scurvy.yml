@@ -1,0 +1,39 @@
+# Author Info
+# GitHub: -
+# Discord: alexmactep
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen 
+
+# Shuttle Notes:
+
+- type: vessel
+  id: scurvy
+  parent: BaseVessel
+  name: Цинга
+  description: Малый пиратский шаттл. Рекомендованный состав команды 1-2 человека.
+  price: 39000
+  category: Small
+  group: BlackMarket
+  shuttlePath: /Maps/Corvax/Shuttles/BlackMarket/scurvy.yml
+  addComponents:
+  - type: IFF
+    flags: [HideLabel]
+
+- type: gameMap
+  id: scurvy
+  mapName: 'scurvy'
+  mapPath: /Maps/Corvax/Shuttles/BlackMarket/scurvy.yml
+  minPlayers: 0
+  stations:
+    scurvy:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Апотекарий {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

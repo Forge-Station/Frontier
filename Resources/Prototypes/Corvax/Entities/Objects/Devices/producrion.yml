@@ -1,0 +1,59 @@
+- type: entity
+  id: ThrusterSyndicateMachineCircuitboard
+  parent: [BaseMachineCircuitboard, BaseC3ContrabandUnredeemable]
+  name: двигатель Синдиката (машинная плата)
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ThrusterSyndicate
+    requirements:
+      Capacitor: 2
+    stackRequirements:
+      Steel: 5
+      Cable: 2
+
+- type: entity
+  id: SyndicateTechFabCircuitboard
+  parent: [SecurityTechFabCircuitboard, BaseC3ContrabandUnredeemable]
+  name: ТехФаб Синдиката (машинная плата)
+  description: Плата для создания техфаба синдиката.
+  components:
+    - type: Sprite
+      state: security
+    - type: MachineBoard
+      prototype: SyndicateTechFab
+
+- type: entity
+  id: GyroscopeSyndicateMachineCircuitboard
+  parent: [BaseMachineCircuitboard, BaseC3ContrabandUnredeemable]
+  name: гироскоп Синдиката (машинная плата)
+  components:   
+   - type: Sprite
+     state: security
+   - type: MachineBoard
+     prototype: GyroscopeSyndicate
+     requirements:
+      Manipulator: 1
+      Capacitor: 1
+     stackRequirements:
+      Glass: 2
+
+- type: entity
+  id: ShuttleGunSunsetCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Закат (машинная плата)
+  description: машинная плата для сборки стационарного орудия Закат
+  suffix: машинная плата
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ShuttleGunSunset
+    requirements: # Frontier
+      MatterBin: 6 # Frontier stackRequirements<requirements
+      Manipulator: 4 # Frontier stackRequirements<requirements
+    stackRequirements:
+      Steel: 10
+      CableHV: 5
+      Uranium: 2

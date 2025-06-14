@@ -4,8 +4,8 @@
 - type: latheRecipePack
   id: NFMercenaryTechfabDeprecatedStatic
   recipes:
-# Shared lathe recipes
-## Basic tools
+# Shared lathe recipes #CorvaxFrontier
+## Basic tools #CorvaxFrontier
   - Wirecutter
   - Screwdriver
   - Welder
@@ -17,12 +17,12 @@
   - HandLabeler
   - Signaller
   - ClothingMaskWeldingGas
-## Basic storage
+## Basic storage #CorvaxFrontier
   - ToolboxArtisticNF
   - ToolboxElectricalNF
   - ToolboxMechanicalNF
   - ToolboxEmergencyNF
-## Basic parts
+## Basic parts #CorvaxFrontier
   - CableStack
   - LightTube
   - LedLightTube
@@ -35,7 +35,7 @@
   - ConveyorBeltAssembly
   - PowerCellSmall
   - PowerCellMedium
-## Basic electronics
+## Basic electronics #CorvaxFrontier
   - SignalTimerElectronics
   - CellRechargerCircuitboard
   - BorgChargerCircuitboard
@@ -67,10 +67,10 @@
   - ClothingMaskBreathMedicalSecurity
   - ClothingMaskGasSecurity
   - ClothingBeltBandolier
-## EVA / Hardsuits
+## EVA / Hardsuits #CorvaxFrontier
   - ClothingOuterEVASuitMercenary
   - ClothingOuterEVASuitPrivateSec
-## Storage
+## Storage #CorvaxFrontier
   - MedkitCombat
   - WeaponCaseShort
   - WeaponCaseLong
@@ -142,7 +142,7 @@
   - ClothingUniformRandomPunkCroptopShorts
   - ClothingOuterCoatLettermanRandomized
   - ClothingOuterCoatBomberRandomized
-## EVA / Hardsuits
+## EVA / Hardsuits #CorvaxFrontier
   - ClothingOuterHardsuitCap
   - ClothingOuterHardsuitMercenary
   - ClothingOuterHardsuitPrivateSecurity
@@ -160,10 +160,10 @@
   - TimerTrigger
   - VoiceTrigger
   - TurboItemRechargerCircuitboard
-  - ClothingBackpackHolding
-  - ClothingBackpackSatchelHolding
-  - ClothingBackpackDuffelHolding
-  - ClothingBackpackMessengerHolding
+#  - ClothingBackpackHolding #CorvaxFrontier
+#  - ClothingBackpackSatchelHolding #CorvaxFrontier
+#  - ClothingBackpackDuffelHolding #CorvaxFrontier
+#  - ClothingBackpackMessengerHolding #CorvaxFrontier
   - FlashlightSecliteNF
 ## Weapons
   - WeaponGrapplingGun

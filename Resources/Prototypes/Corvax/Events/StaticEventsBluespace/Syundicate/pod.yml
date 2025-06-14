@@ -1,0 +1,101 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Notes:
+
+- type: pointOfInterest
+  id: PodA
+  name: Ячейка контрабанды A
+  minimumDistance: 2900
+  maximumDistance: 5000
+  gridPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+    readOnly: true
+  - type: Shuttle
+    angularDamping: 999999
+    linearDamping: 999999
+
+- type: gameMap
+  id: PodA
+  mapName: Ячейка контрабанды A
+  mapPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  minPlayers: 0
+  stations:
+    PodA:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Ячейка контрабанды A'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt
+
+- type: pointOfInterest
+  id: PodB
+  name: Ячейка контрабанды B
+  minimumDistance: 2900
+  maximumDistance: 5000
+  gridPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+    readOnly: true
+  - type: Shuttle
+    angularDamping: 999999
+    linearDamping: 999999
+
+- type: gameMap
+  id: PodB
+  mapName: Ячейка контрабанды B
+  mapPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  minPlayers: 0
+  stations:
+    PodB:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Ячейка контрабанды B'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt
+
+- type: pointOfInterest
+  id: PodC
+  name: Ячейка контрабанды C
+  minimumDistance: 2900
+  maximumDistance: 5000
+  gridPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+    readOnly: true
+  - type: Shuttle
+    angularDamping: 999999
+    linearDamping: 999999
+
+- type: gameMap
+  id: PodC
+  mapName: Ячейка контрабанды C
+  mapPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  minPlayers: 0
+  stations:
+    PodC:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Ячейка контрабанды C'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

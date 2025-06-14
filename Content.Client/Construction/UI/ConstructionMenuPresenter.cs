@@ -376,8 +376,15 @@ namespace Content.Client.Construction.UI
                 prototype.Description!,
                 proto,
                 prototype.Type != ConstructionType.Item,
-                !_favoritedRecipes.Contains(prototype));
+                !_favoritedRecipes.Contains(prototype)
+            );
+            //Corvax-Frontier start
+            var localizedName = Loc.TryGetString($"recipe-{prototype.ID}-name", out var name) ? name : prototype.Name;
 
+            var localizedDescription = Loc.TryGetString($"recipe-{prototype.ID}-desc", out var desc) ? desc : prototype.Description;
+
+            _constructionView.SetRecipeInfo(localizedName, localizedDescription, _spriteSystem.Frame0(prototype.Icon));
+            //Corvax-Frontier end
             var stepList = _constructionView.RecipeStepList;
             GenerateStepList(prototype, stepList);
         }

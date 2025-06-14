@@ -1,12 +1,12 @@
 
-- type: pirateBounty
-  id: PirateBountyMail
-  reward: 3
-  description: pirate-bounty-description-generic
-  entries:
-  - name: pirate-bounty-item-mail
-    amount: 3
-    id: Mail
+#- type: pirateBounty #CorvaxFrontier
+#  id: PirateBountyMail
+#  reward: 3
+#  description: pirate-bounty-description-generic
+#  entries:
+#  - name: pirate-bounty-item-mail
+#    amount: 3
+#    id: Mail
 
 - type: pirateBounty
   id: PirateBountyPDA
@@ -23,7 +23,7 @@
   description: pirate-bounty-description-generic
   entries:
   - name: pirate-bounty-item-extinguisher
-    amount: 4
+    amount: 3 #CorvaxFrontier
     id: FireExtinguisher
 
 - type: pirateBounty
@@ -33,17 +33,17 @@
   entries:
   - name: pirate-bounty-item-captainGloves
     amount: 2
-    id: ClothingHandsGlovesCaptain
+    id: ClothingHandsMercenaryGlovesCombat #CorvaxFrontier
 
-- type: pirateBounty
-  id: PirateBountyGyro
-  reward: 4
-  description: pirate-bounty-description-generic
-  spawnChest: false
-  entries:
-  - name: pirate-bounty-item-gyro
-    amount: 2
-    id: Gyroscope
+#- type: pirateBounty #CorvaxFrontier
+#  id: PirateBountyGyro
+#  reward: 4
+#  description: pirate-bounty-description-generic
+#  spawnChest: false
+#  entries:
+#  - name: pirate-bounty-item-gyro
+#    amount: 2
+#    id: Gyroscope
 
 - type: pirateBounty
   id: PirateBountyDefib
@@ -74,29 +74,29 @@
     amount: 3
     id: Thruster
 
-- type: pirateBounty
-  id: PirateBountyGravGen
-  reward: 5
-  description: pirate-bounty-description-generic
-  spawnChest: false
-  entries:
-  - name: pirate-bounty-item-gravGen
-    amount: 2
-    id: GravityGenerator
+#- type: pirateBounty #CorvaxFrontier
+#  id: PirateBountyGravGen
+#  reward: 5
+#  description: pirate-bounty-description-generic
+#  spawnChest: false
+#  entries:
+#  - name: pirate-bounty-item-gravGen
+#    amount: 2
+#    id: GravityGenerator
 
-- type: pirateBounty
-  id: PirateBountyVendingMachine
-  reward: 6
-  description: pirate-bounty-description-generic
-  spawnChest: false
-  entries:
-  - name: pirate-bounty-item-vendingmachine
-    amount: 3
-    id: VendingMachine
+#- type: pirateBounty #CorvaxFrontier
+#  id: PirateBountyVendingMachine
+#  reward: 6
+#  description: pirate-bounty-description-generic
+#  spawnChest: false
+#  entries:
+#  - name: pirate-bounty-item-vendingmachine
+#    amount: 3
+#    id: VendingMachine
 
 - type: pirateBounty
   id: PirateBountyCappy
-  reward: 10
+  reward: 15 #CorvaxFrontier
   description: pirate-bounty-description-generic
   entries:
   - name: pirate-bounty-item-cappy
@@ -105,7 +105,7 @@
 
 - type: pirateBounty
   id: PirateBountyCultistNecklace
-  reward: 4
+  reward: 7 #CorvaxFrontier
   description: pirate-bounty-description-generic
   entries:
   - name: pirate-bounty-item-cultistNeck
@@ -114,7 +114,7 @@
 
 - type: pirateBounty
   id: PirateBountyNfsdCampaign
-  reward: 4
+  reward: 6 #CorvaxFrontier
   description: pirate-bounty-description-generic
   entries:
   - name: pirate-bounty-item-nfsdCampaign
@@ -123,7 +123,7 @@
 
 - type: pirateBounty
   id: PirateBountyScafSuit
-  reward: 4
+  reward: 6 #CorvaxFrontier
   description: pirate-bounty-description-generic
   entries:
   - name: pirate-bounty-item-scafsuit
@@ -132,7 +132,7 @@
 
 - type: pirateBounty
   id: PirateBountyRTG
-  reward: 4
+  reward: 6 #CorvaxFrontier
   description: pirate-bounty-description-generic
   spawnChest: false
   entries:
@@ -146,7 +146,7 @@
   description: pirate-bounty-description-generic
   entries:
   - name: pirate-bounty-item-mercgas
-    amount: 3
+    amount: 2
     id: ClothingMaskGasMercenary
 
 - type: pirateBounty
@@ -158,14 +158,14 @@
     amount: 1
     id: ClothingOuterHardsuitRd
 
-- type: pirateBounty
-  id: PirateBountyMK58
-  reward: 5
-  description: pirate-bounty-description-generic
-  entries:
-  - name: pirate-bounty-item-mk58
-    amount: 2
-    id: WeaponPistolMk58
+#- type: pirateBounty #CorvaxFrontier
+#  id: PirateBountyMK58
+#  reward: 5
+#  description: pirate-bounty-description-generic
+#  entries:
+#  - name: pirate-bounty-item-mk58
+#    amount: 2
+#    id: WeaponPistolMk58
 
 - type: pirateBounty
   id: PirateBountyArtifactAnalyzer
@@ -176,15 +176,15 @@
     amount: 2
     id: ArtifactAnalyzerMachineCircuitboard
 
-- type: pirateBounty
-  id: PirateBountyHotplate
-  reward: 3
-  description: pirate-bounty-description-generic
-  spawnChest: false
-  entries:
-  - name: pirate-bounty-item-hotplate
-    amount: 1
-    id: ChemistryHotplate
+#- type: pirateBounty #CorvaxFrontier
+#  id: PirateBountyHotplate
+#  reward: 3
+#  description: pirate-bounty-description-generic
+#  spawnChest: false
+#  entries:
+#  - name: pirate-bounty-item-hotplate
+#    amount: 1
+#    id: ChemistryHotplate
 
 - type: pirateBounty
   id: PirateBountyDeepFryer
@@ -206,18 +206,18 @@
 #     amount: 3
 #     id: EncryptionKeyCommon
 
-- type: pirateBounty
-  id: PirateBountyMedicalFabBoard
-  reward: 3
-  description: pirate-bounty-description-generic
-  entries:
-  - name: pirate-bounty-item-medicalfabboard
-    amount: 1
-    id: MedicalTechFabCircuitboard
+#- type: pirateBounty #CorvaxFrontier
+#  id: PirateBountyMedicalFabBoard
+#  reward: 3
+#  description: pirate-bounty-description-generic
+#  entries:
+#  - name: pirate-bounty-item-medicalfabboard
+#    amount: 1
+#    id: MedicalTechFabCircuitboard
 
 - type: pirateBounty
   id: PirateBountyHypo
-  reward: 2
+  reward: 3 #CorvaxFrontier
   description: pirate-bounty-description-generic
   entries:
   - name: pirate-bounty-item-hypo
@@ -236,7 +236,7 @@
 
 - type: pirateBounty
   id: PirateBountyAutolathe
-  reward: 3
+  reward: 5 #CorvaxFrontier
   description: pirate-bounty-description-generic
   spawnChest: false
   entries:
@@ -264,12 +264,12 @@
 
 - type: pirateBounty
   id: PirateBountyPlasmaCanister
-  reward: 5
+  reward: 3 #CorvaxFrontier
   description: pirate-bounty-description-generic
   spawnChest: false
   entries:
   - name: pirate-bounty-item-plasmacanister
-    amount: 4
+    amount: 1 #CorvaxFrontier
     id: PlasmaCanister
 
 - type: pirateBounty
@@ -282,15 +282,15 @@
     amount: 3
     id: ContrabandCrate
 
-- type: pirateBounty
-  id: PirateBountyHydroTray
-  reward: 4
-  description: pirate-bounty-description-generic
-  spawnChest: false
-  entries:
-  - name: pirate-bounty-item-hydrotray
-    amount: 2
-    id: HydroponicsTray
+#- type: pirateBounty
+#  id: PirateBountyHydroTray
+#  reward: 4
+#  description: pirate-bounty-description-generic
+#  spawnChest: false
+#  entries:
+#  - name: pirate-bounty-item-hydrotray
+#    amount: 2
+#    id: HydroponicsTray
 
 - type: pirateBounty
   id: PirateBountyEnforcer
@@ -301,3 +301,59 @@
   - name: pirate-bounty-item-enforcer
     amount: 1
     id: Enforcer
+
+- type: pirateBounty #CorvaxFrontier
+  id: PirateBountyKitchenMicrowave
+  reward: 5
+  description: pirate-bounty-description-generic
+  spawnChest: false
+  entries:
+  - name: pirate-bounty-item-microwave
+    amount: 2
+    id: KitchenMicrowave
+
+- type: pirateBounty #CorvaxFrontier
+  id: PirateBountyDrinkSodaWaterCan
+  reward: 3
+  description: pirate-bounty-description-generic
+  entries:
+  - name: pirate-bounty-item-sodawatercan #Газированная вода
+    amount: 2
+    id: DrinkSodaWaterCan
+
+- type: pirateBounty #CorvaxFrontier
+  id: PirateBountySuitStorageBase
+  reward: 5
+  description: pirate-bounty-description-generic
+  spawnChest: false
+  entries:
+  - name: pirate-bounty-item-suitstoragebase
+    amount: 3
+    id: SuitStorageBase
+
+- type: pirateBounty #CorvaxFrontier
+  id: PirateBountyPlushieMoffRandom
+  reward: 4
+  description: pirate-bounty-description-generic
+  entries:
+  - name: pirate-bounty-item-plushiemoffrandom
+    amount: 4
+    id: PlushieMoffRandom
+
+- type: pirateBounty #CorvaxFrontier
+  id: PirateBountyBedsheetSyndie
+  reward: 3
+  description: pirate-bounty-description-generic
+  entries:
+  - name: pirate-bounty-item-bedsheetsyndie
+    amount: 1
+    id: BedsheetSyndie
+    
+- type: pirateBounty #CorvaxFrontier
+  id: PirateBountyGunSafe
+  reward: 4
+  description: pirate-bounty-description-generic
+  entries:
+  - name: pirate-bounty-item-gunsafe
+    amount: 3
+    id: GunSafe

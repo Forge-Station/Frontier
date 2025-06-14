@@ -79,3 +79,11 @@
   rules: ghost-role-information-nonantagonist-rules
   entityPrototype: NFMobHumanBuddy
   whitelisted: true
+
+- type: ghostRole #CorvaxFrontier
+  id: CatSigmis
+  name: ghost-role-information-sigmis-name
+  description: ghost-role-information-sigmis-description
+  rules:  ghost-role-sigmis-information-emotional-support-rules
+  entityPrototype: MobCatSigmis
+  whitelisted: true

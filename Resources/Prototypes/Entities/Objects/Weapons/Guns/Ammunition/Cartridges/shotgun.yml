@@ -94,7 +94,7 @@
   categories: [ HideSpawnMenu ] # Frontier
   id: ShellShotgunIncendiary
   name: shell (.50 incendiary)
-  parent: BaseShellShotgun # Frontier: remove BaseSecurityContraband
+  parent: [BaseShellShotgun, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   components:
   - type: Sprite
     layers:
@@ -177,7 +177,7 @@
   categories: [ HideSpawnMenu ] # Frontier
   id: ShellShotgunUranium
   name: uranium shotgun shell
-  parent: BaseShellShotgun # Frontier: remove BaseSecurityContraband
+  parent: [BaseShellShotgun, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   components:
     - type: Sprite
       layers:

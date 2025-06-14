@@ -769,7 +769,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtBlackElegantDress
-  name: black elegant dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -779,7 +778,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtRedElegantDress
-  name: red elegant dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -789,7 +787,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtGreenElegantDress
-  name: green elegant dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -799,7 +796,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtBlueElegantDress
-  name: blue elegant dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -809,7 +805,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtPurpleElegantDress
-  name: purple elegant dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -819,7 +814,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtCyanStripedDress
-  name: cyan striped dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -829,7 +823,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtRedStripedDress
-  name: red striped dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -839,7 +832,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtGreenStripedDress
-  name: green striped dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -849,7 +841,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtPinkStripedDress
-  name: pink striped dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -859,7 +850,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtOrangeStripedDress
-  name: orange striped dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -869,7 +859,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtPurpleTurtleneckDress
-  name: purple turtleneck dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -879,7 +868,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtRedTurtleneckDress
-  name: red turtleneck dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -889,7 +877,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtGreenTurtleneckDress
-  name: green turtleneck dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -899,7 +886,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtBlueTurtleneckDress
-  name: blue turtleneck dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -909,7 +895,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtYellowTurtleneckDress
-  name: yellow turtleneck dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -919,7 +904,6 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtYellowOldDress
-  name: yellow old dress
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -930,7 +914,7 @@
 # Punk stuff
 - type: loadout
   id: ContractorClothingUniformRandomPunkCroptop
-  name: punk croptop jumpsuit (random)
+  name: панк-комбинезон с коротким топом (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -940,7 +924,7 @@
 
 - type: loadout
   id: ContractorClothingUniformRandomPunkTanktop
-  name: punk tanktop jumpsuit (random)
+  name: панковский комбинезон (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -950,7 +934,7 @@
 
 - type: loadout
   id: ContractorClothingUniformRandomArmlessNoSkirt
-  name: sleeveless jumpsuit (random)
+  name: панковская безрукавка (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -960,7 +944,7 @@
 
 - type: loadout
   id: ContractorClothingUniformRandomPunkCroptopShorts
-  name: punk croptop with shorts (random)
+  name: укороченный топ с шортами (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -970,7 +954,7 @@
 
 - type: loadout
   id: ContractorClothingUniformRandomPunkTanktopShorts
-  name: punk tanktop with shorts (random)
+  name: панковская майка с шортами (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -1000,7 +984,7 @@
 
 - type: loadout
   id: ContractorClothingUniformRandomArmless
-  name: colorful sleeveless top and pants (random)
+  name: цветная безрукавка с брюками (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -1010,7 +994,7 @@
 
 - type: loadout
   id: ContractorClothingUniformRandomStandard
-  name: colorful top and pants (random)
+  name: яркий костюм (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -1020,7 +1004,7 @@
 
 - type: loadout
   id: ContractorClothingUniformRandomShorts
-  name: colorful pants (random)
+  name: яркие штаны (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -1030,7 +1014,7 @@
 
 - type: loadout
   id: ContractorClothingUniformRandomShirt
-  name: colorful patterned top and pants (random)
+  name: цветной узорчатый топ и брюки (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -1040,7 +1024,7 @@
 
 - type: loadout
   id: ContractorClothingSkirtUniformRandomArmless
-  name: colorful sleeveless top and skirt (random)
+  name: цветной топ без рукавов и юбка (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -1050,7 +1034,7 @@
 
 - type: loadout
   id: ContractorClothingSkirtUniformRandomStandard
-  name: colorful top and skirt (random)
+  name: цветной топ и юбка (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -1060,7 +1044,7 @@
 
 - type: loadout
   id: ContractorClothingSkirtUniformRandomBra
-  name: colorful bra and skirt (random)
+  name: цветной бюстгальтер и юбка (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -1070,7 +1054,7 @@
 
 - type: loadout
   id: ContractorClothingSkirtUniformRandomShorts
-  name: colorful skirt (random)
+  name: цветная юбка (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -1080,7 +1064,7 @@
 
 - type: loadout
   id: ContractorClothingSkirtUniformRandomShirt
-  name: colorful patterned top and skirt (random)
+  name: цветной узорчатый топ и юбка (случайно) #Corvax-Frontier
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1

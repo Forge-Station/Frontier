@@ -115,6 +115,25 @@
       capacity: 1
       count: 1
 
+- type: entity
+  parent: MobSyndicateNavalCaptainA
+  id: MobSyndicateNavalCaptainG
+  categories: [ HideSpawnMenu ]
+  components:
+  # Ghost role stuff
+  - type: BasicEntityAmmoProvider
+    proto: BulletMagnum
+    capacity: 1
+    count: 1
+  - type: GhostRole
+    allowMovement: true
+    name: ghost-role-information-syndie-boss-dungeon-name
+    description: ghost-role-information-syndie-boss-dungeon-description
+    rules: ghost-role-information-dungeon-boss-rules
+    raffle:
+      settings: default
+  - type: GhostTakeoverAvailable
+
 # Syndicate Engineer, "armed" with shotgun
 - type: entity
   name: syndicate engineer

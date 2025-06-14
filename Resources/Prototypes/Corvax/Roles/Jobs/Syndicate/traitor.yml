@@ -1,0 +1,13 @@
+- type: startingGear
+  id: SyndicateReinforcementSpySmugger
+  parent: SyndicateOperativeClothing
+  equipment:
+    id: SyndiPDACadet
+    ears: ClothingHeadsetAltSyndicate
+    gloves: ClothingHandsGlovesCombat
+    jumpsuit: ClothingUniformJumpsuitRecruitSyndie
+    head: ClothingHeadHatRedsoft
+    pocket1: WeaponPistolViper
+  storage:
+    back:
+    - ToolboxKadet

@@ -1,0 +1,17 @@
+- type: ghostRole
+  id: SyndicateAgentSpySmugger
+  name: ghost-role-information-syndicate-reinforcement-cadet-name
+  description: ghost-role-information-syndicate-reinforcement-cadet-description
+  rules: ghost-role-information-syndicate-reinforcement-rules
+  entityPrototype: MobHumanSyndicateAgentSpy
+  iconPrototype: ClothingMaskGasVoiceChameleon
+  whitelisted: true
+
+- type: entity
+  parent: MobHumanSyndicateAgent
+  id: MobHumanSyndicateAgentSpySmugger
+  name: syndicate spy
+  components:
+  - type: Loadout
+    prototypes: [SyndicateReinforcementSpySmugger]
+    roleLoadout: [ RoleSurvivalSyndicate ]

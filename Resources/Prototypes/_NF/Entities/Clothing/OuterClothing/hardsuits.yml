@@ -88,7 +88,7 @@
 
 # MAXIM Nerfed: used best stats from spationaut, mining and luxury hardsuits, additionally increased caustic resistance
 - type: entity
-  parent: ClothingOuterHardsuitMaxim
+  parent: [ClothingOuterHardsuitMaxim, BaseC1Contraband] #Corvax-Frontier КБ
   id: ClothingOuterHardsuitMaximPrototype
   name: experimental salvager hardsuit
   description: Fire. Heat. These things forge great weapons, they also forge great salvagers.
@@ -314,7 +314,7 @@
 
 # SCAF hardsuit
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, BaseC1Contraband]
   id: ClothingOuterHardsuitScaf
   name: SCAF hardsuit
   description: A green and brown combat hardsuit. Old yet sturdy nonetheless.
@@ -328,7 +328,7 @@
       coefficients:
         Blunt: 0.7
         Slash: 0.7
-        Piercing: 0.4
+        Piercing: 0.45
         Heat: 0.9
         Caustic: 0.9
   - type: ExplosionResistance
@@ -337,8 +337,8 @@
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 0.85
+    sprintModifier: 0.85
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitScaf

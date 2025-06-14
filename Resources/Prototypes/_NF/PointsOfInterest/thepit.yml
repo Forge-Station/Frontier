@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: ThePit
   parent: BasePOI
-  name: "The Pit"
+  name: "Бойцовская Яма"
   minimumDistance: 2200
   maximumDistance: 4200
   spawnGroup: Arena
@@ -23,6 +23,10 @@
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
+  - type: IFF
+    color: "#ffa600"
+  - type: ProtectedGrid
+    noGridCollision: true #CorvaxFrontier
 
 - type: gameMap
   id: ThePit

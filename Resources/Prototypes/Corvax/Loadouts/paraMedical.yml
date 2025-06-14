@@ -1,0 +1,46 @@
+- type: loadoutGroup
+  id: ParaMedicalJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - ParaMedicalClothingUniform1
+  - ParaMedicalClothingUniform2
+  - ParaMedicalClothingUniform3
+  - ParaMedicalClothingUniform4
+  - ParaMedicalClothingUniform5
+  fallbacks:
+  - ParaMedicalClothingUniform1
+
+- type: loadoutGroup
+  id: ParaMedicalBackpack
+  name: loadout-group-contractor-backpack
+  loadouts:
+  - ParaMedicalBackpack1
+  - ParaMedicalBackpack2
+  - ParaMedicalBackpack3
+  - ParaMedicalBackpack4
+  fallbacks:
+  - ParaMedicalBackpack1
+
+- type: loadoutGroup
+  id: ParaMedicalOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - ParaMedicalClothing1
+  - ParaMedicalClothing2
+  - ParaMedicalClothing3
+  - ParaMedicalClothing4
+  fallbacks:
+  - ParaMedicalClothing1
+
+- type: loadoutGroup
+  id: ParaMedicalShoes
+  name: loadout-group-contractor-shoes
+  minLimit: 1
+  loadouts:
+  - ParaMedicalShoes1
+  - ParaMedicalShoes2
+  - ParaMedicalShoes3
+  fallbacks:
+  - ParaMedicalShoes1
+

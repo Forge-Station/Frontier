@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: NorthPole
   parent: BasePOI
-  name: "The North Pole"
+  name: "Полярная Звезда"
   minimumDistance: 2150
   maximumDistance: 4850
   spawnGroup: Christmas
@@ -22,3 +22,5 @@
   - type: IFF
     color: "#C83737"
     flags: [HideLabel]
+  - type: ProtectedGrid
+    noGridCollision: true #CorvaxFrontier

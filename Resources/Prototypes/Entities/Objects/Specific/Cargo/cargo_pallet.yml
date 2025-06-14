@@ -6,6 +6,7 @@
   abstract: true
   components:
   - type: InteractionOutline
+  - type: CargoPallet # Corvax-Frontier
   - type: Anchorable
     flags:
     - Anchorable

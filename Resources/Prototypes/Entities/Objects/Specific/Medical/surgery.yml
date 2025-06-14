@@ -120,7 +120,7 @@
 - type: entity
   name: laser scalpel
   id: ScalpelLaser
-  parent: Scalpel
+  parent: [ Scalpel, BaseC1Contraband ] #Corvax-Frontier КБ
   description: A scalpel which uses a directed laser to slice instead of a blade, for more precise surgery while also cauterizing as it cuts.
   components:
   - type: Sprite

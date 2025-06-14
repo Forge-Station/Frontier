@@ -196,6 +196,8 @@
     contents:
     - id: CigaretteSyndicate
       amount: 10
+  - type: StaticPrice #CorvaxFrontier
+    price: 100
 
 - type: entity
   id: CigPackMixedMedical

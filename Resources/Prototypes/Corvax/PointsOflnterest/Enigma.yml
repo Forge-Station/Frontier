@@ -1,0 +1,49 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Notes:
+
+- type: pointOfInterest
+  id: Enigma
+  parent: BasePOI
+  name: 'Энигма'
+  minimumDistance: 17000
+  maximumDistance: 20000
+  spawnGroup: Required
+  gridPath: /Maps/Corvax/POI/Enigma.yml
+  addComponents:
+  - type: IFF
+    color: "#C83737"
+    flags: [HideLabel]
+  - type: ProtectedGrid
+    noGridCollision: True
+
+- type: gameMap
+  id: Enigma
+  mapName: 'Энигма'
+  mapPath: /Maps/Corvax/POI/Enigma.yml
+  minPlayers: 0
+  stations:
+    Enigma:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Аванпост Синдиката'
+        - type: ExtraStationInformation
+          iconPath: /Textures/_NF/Structures/Decoration/banner.rsi/banner_syndicate.png
+          stationSubtext: 'frontier-lobby-Syndicate-subtext'
+          stationDescription: 'frontier-lobby-Syndicate-description'
+          lobbySortOrder: 3
+        - type: StationJobs
+          availableJobs:
+            smuggler: [ 1, 1 ]
+            MedSyn: [ 1, 1 ]
+            Stormtrooper: [ 2, 2 ]
+            Commander: [ 1, 1 ]

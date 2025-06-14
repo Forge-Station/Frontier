@@ -11,30 +11,32 @@
 - type: pointOfInterest
   id: Cove
   parent: BasePOI
-  name: Pirate Cove
+  name: Пиратская Бухта
   minimumDistance: 10000
   maximumDistance: 15000
   spawnGamePreset: [ NFPirate ]
   spawnGroup: Required
-  gridPath: /Maps/_NF/POI/cove.yml
+  gridPath: /Maps/Corvax/POI/cove.yml #CorvaxFrontier
   hideWarp: true
   addComponents:
   - type: IFF
     color: "#C83737"
     flags: [HideLabel, Hide]
     readOnly: false
+  - type: ProtectedGrid
+    noGridCollision: true #CorvaxFrontier
 
 - type: gameMap
   id: Cove
-  mapName: 'Pirate Cove'
-  mapPath: /Maps/_NF/POI/cove.yml
+  mapName: 'Пиратская Бухта'
+  mapPath: /Maps/Corvax/POI/cove.yml #CorvaxFrontier
   minPlayers: 0
   stations:
     Cove:
       stationProto: RecordsFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Pirate Cove'
+          mapNameTemplate: 'Пиратская Бухта'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Interface/Pirate/piratelogo.png
           stationSubtext: 'frontier-lobby-pirate-subtext'
@@ -42,7 +44,7 @@
         - type: StationJobs
           availableJobs:
             NFPirateCaptain: [ 1, 1 ]
-            NFPirateFirstMate: [ 1, 1 ]
+            NFPirateFirstMate: [ 0, 0] #Corvax-Frontier
             NFPirate: [ 0, 0 ]
         - type: StationDeadDropReporting
           messageSet: Pirate

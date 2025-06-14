@@ -1,0 +1,59 @@
+- type: entity
+  id: ColiseumGrenadeBaton
+  name: сoliseum baton grenade
+  parent: GrenadeBaton
+  components:
+  - type: Tag
+    tags:
+    - ColiseumGrenade
+  - type: CargoSellBlacklist
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  id: ColiseumGrenadeBlast
+  name: сoliseum blast grenade
+  parent: GrenadeBlast
+  components:
+  - type: Tag
+    tags:
+    - ColiseumGrenade
+  - type: CargoSellBlacklist
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  id: ColiseumGrenadeFlash
+  name: сoliseum flash grenade
+  parent: GrenadeFlash
+  components:
+  - type: Tag
+    tags:
+    - ColiseumGrenade
+  - type: CargoSellBlacklist
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  id: ColiseumGrenadeFrag
+  name: сoliseum frag grenade
+  parent: GrenadeFrag
+  components:
+  - type: Tag
+    tags:
+    - ColiseumGrenade
+  - type: CargoSellBlacklist
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  id: ColiseumGrenadeEMP
+  name: сoliseum EMP grenade
+  parent: GrenadeEMP
+  components:
+  - type: Tag
+    tags:
+    - ColiseumGrenade
+  - type: CargoSellBlacklist
+  - type: StaticPrice
+    price: 200

@@ -1,0 +1,115 @@
+- type: entity
+  id: StairsPortal
+  parent: Stairs
+  components:
+  - type: Portal
+    canTeleportToOtherMaps: true
+    randomTeleport: false
+  - type: PortalAutoLink
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Tag
+    tags:
+      - Structure
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+
+- type: entity
+  id: StairStagePortal
+  parent: StairsPortal
+  suffix: Steel, stage, portal
+  components:
+  - type: Sprite
+    sprite: Structures/stairs.rsi
+    state: stairs_stage_steel
+    drawdepth: FloorTiles
+
+- type: entity
+  id: StairWhitePortal
+  parent: StairsPortal
+  suffix: White, portal
+  components:
+  - type: Sprite
+    sprite: Structures/stairs.rsi
+    state: stairs_white
+    drawdepth: FloorTiles
+
+- type: entity
+  id: StairStageWhitePortal
+  parent: StairsPortal
+  suffix: White, stage, portal
+  components:
+  - type: Sprite
+    sprite: Structures/stairs.rsi
+    state: stairs_stage_white
+    drawdepth: FloorTiles
+
+- type: entity
+  id: StairDarkPortal
+  parent: StairsPortal
+  suffix: Dark, portal
+  components:
+  - type: Sprite
+    sprite: Structures/stairs.rsi
+    state: stairs_dark
+    drawdepth: FloorTiles
+
+- type: entity
+  id: StairStageDarkPortal
+  parent: StairsPortal
+  suffix: Dark, stage, portal
+  components:
+  - type: Sprite
+    sprite: Structures/stairs.rsi
+    state: stairs_stage_dark
+    drawdepth: FloorTiles
+
+- type: entity
+  id: StairWoodPortal
+  parent: StairsPortal
+  suffix: Wood, portal
+  components:
+  - type: Sprite
+    sprite: Structures/stairs.rsi
+    state: stairs_wood
+    drawdepth: FloorTiles
+
+- type: entity
+  id: StairStageWoodPortal
+  parent: StairsPortal
+  suffix: Wood, stage, portal
+  components:
+  - type: Sprite
+    sprite: Structures/stairs.rsi
+    state: stairs_stage_wood
+    drawdepth: FloorTiles
+
+- type: entity
+  id: PortalAutoLinkRed
+  parent: PortalRed
+  suffix: Autolink
+  components:
+  - type: Portal
+    canTeleportToOtherMaps: true
+    randomTeleport: false
+  - type: PortalAutoLink
+
+- type: entity
+  id: PortalAutoLinkBlue
+  parent: PortalBlue
+  suffix: Autolink
+  components:
+  - type: Portal
+    canTeleportToOtherMaps: true
+    randomTeleport: false
+  - type: PortalAutoLink

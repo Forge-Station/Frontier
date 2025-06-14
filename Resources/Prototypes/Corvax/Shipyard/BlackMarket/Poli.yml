@@ -1,0 +1,38 @@
+# Author Info
+# GitHub: -
+# Discord:  terrafrog
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen 
+
+# Shuttle Notes:
+- type: vessel
+  id: Poli
+  parent: BaseVessel
+  name: Полюс
+  description: Среднегабаритный пиратский шаттл. Рекомендованный состав команды 2-8 человека.
+  price: 100000
+  category: Medium
+  group: BlackMarket
+  shuttlePath: /Maps/Corvax/Shuttles/BlackMarket/Poli.yml
+  addComponents:
+  - type: IFF
+    flags: [HideLabel]
+
+- type: gameMap
+  id: Poli
+  mapName: 'Poli'
+  mapPath: /Maps/Corvax/Shuttles/BlackMarket/Poli.yml
+  minPlayers: 0
+  stations:
+    Poli:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Полюс {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

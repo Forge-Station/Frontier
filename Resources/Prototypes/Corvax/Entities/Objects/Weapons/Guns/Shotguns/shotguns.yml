@@ -1,0 +1,69 @@
+- type: entity
+  parent: [ BaseWeaponShotgun, BaseC1Contraband ]
+  id: WeaponShotgunKS23
+  name: Shotgun KS23
+  components:
+  - type: Sprite
+    sprite: /Textures/Corvax/Objects/Weapons/Guns/Shotguns/ks23.rsi
+    scale: 0.8, 0.8
+    state: icon
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,3,0
+  - type: Clothing
+    sprite: /Textures/Corvax/Objects/Weapons/Guns/Shotguns/ks23.rsi
+  - type: Gun
+    fireRate: 1
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - ShellKS23
+    capacity: 4
+    proto: ShellKS23Base
+
+- type: entity
+  name: KD12
+  parent: BaseWeaponShotgun
+  id: WeaponShotgunKD12
+  description: The Compact Shotgun Model 12 is equipped with a three-round drum and a reload system. It was previously manufactured and supplied by TechnicLogistic as the primary weapon for convoy ships.
+  components:
+    - type: Sprite
+      sprite: /Textures/Corvax/Objects/Weapons/Guns/Shotguns/kd12.rsi
+      state: icon
+    - type: Clothing
+      sprite: /Textures/Corvax/Objects/Weapons/Guns/Shotguns/kd12.rsi
+    - type: Item
+      size: Small
+      sprite: /Textures/Corvax/Objects/Weapons/Guns/Shotguns/kd12_inhands_64x.rsi
+    - type: Gun
+      fireRate: 1.8
+    - type: BallisticAmmoProvider
+      whitelist:
+        tags:
+        - ShellKS23
+      capacity: 3
+      proto: ShellKS23Base
+
+- type: entity
+  name: KD12Medic
+  parent: BaseWeaponShotgun
+  id: WeaponShotgunKD12Medic
+  description: The Compact Shotgun Model 12 is equipped with a three-round drum and a reload system. It was previously manufactured and supplied by TechnicLogistic as the primary weapon for convoy ships.
+  components:
+    - type: Sprite
+      sprite: /Textures/Corvax/Objects/Weapons/Guns/Shotguns/kd12.rsi
+      state: icon
+    - type: Clothing
+      sprite: /Textures/Corvax/Objects/Weapons/Guns/Shotguns/kd12.rsi
+    - type: Item
+      size: Small
+      sprite: /Textures/Corvax/Objects/Weapons/Guns/Shotguns/kd12_inhands_64x.rsi
+    - type: Gun
+      fireRate: 1.8
+    - type: BallisticAmmoProvider
+      whitelist:
+        tags:
+        - ShellKS23
+      capacity: 3
+      proto: ShellKS23Beanbag

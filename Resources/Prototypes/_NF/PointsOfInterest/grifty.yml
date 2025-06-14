@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Grifty
   parent: BasePOI
-  name: "Grifty's Gas n Grub"
+  name: "Заправка Зекинса"
   minimumDistance: 3250
   maximumDistance: 5600
   spawnGroup: Scrapyard
@@ -23,10 +23,14 @@
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
+  - type: IFF
+    color: "#ffa600"
+  - type: ProtectedGrid
+    noGridCollision: true #CorvaxFrontier
 
 - type: gameMap
   id: Grifty
-  mapName: "Grifty's Gas n Grub"
+  mapName: "Заправка Зекинса"
   mapPath: /Maps/_NF/POI/grifty.yml
   minPlayers: 0
   stations:
@@ -34,5 +38,5 @@
       stationProto: DeadDropRecordsFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: "Grifty's Gas n Grub"
+          mapNameTemplate: "Заправка Зекинса"
         - type: BindToStationVariationPassExemption

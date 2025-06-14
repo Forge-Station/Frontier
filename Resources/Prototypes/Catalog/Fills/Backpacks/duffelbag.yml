@@ -212,6 +212,8 @@
         - id: ClothingHeadsetChameleon
         - id: ClothingShoesChameleon
         - id: BarberScissors
+    - type: StaticPrice #CorvaxFrontier
+      price: 300
 
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
@@ -227,6 +229,8 @@
       - id: ClothingHandsGlovesColorYellowBudget
       - id: DoubleEmergencyOxygenTankFilled
       - id: DoubleEmergencyNitrogenTankFilled
+  - type: StaticPrice #CorvaxFrontier
+    price: 700
 
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle

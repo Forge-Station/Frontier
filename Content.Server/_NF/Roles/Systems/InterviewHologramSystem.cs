@@ -139,7 +139,7 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
             ApplyAppearanceForSession(ent, session);
         }
 
-        // Notify all relevant captains if they have their PDA that someone is applying for a job. 
+        // Notify all relevant captains if they have their PDA that someone is applying for a job.
         if (!ent.Comp.NotificationsSent)
         {
             string jobTitle;

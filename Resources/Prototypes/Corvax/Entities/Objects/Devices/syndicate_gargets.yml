@@ -1,0 +1,15 @@
+- type: entity
+  parent: ReinforcementRadio
+  id: ReinforcementRadioSyndicateSmugger
+  components:
+  - type: GhostRole
+    prototype: SyndicateAgentSpySmugger
+    name: ghost-role-information-syndicate-reinforcement-cadet-name
+    description: ghost-role-information-syndicate-reinforcement-cadet-description
+    rules: ghost-role-information-syndicate-reinforcement-rules
+    mindRoles:
+    - MindRoleGhostRoleTeamAntagonist
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: MobHumanSyndicateAgentSpySmugger

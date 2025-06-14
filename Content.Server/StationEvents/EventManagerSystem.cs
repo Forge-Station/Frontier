@@ -280,6 +280,12 @@ public sealed class EventManagerSystem : EntitySystem
         {
             return false;
         }
+        // End Frontier
+
+        if (_roundEnd.IsRoundEndRequested() && !stationEvent.OccursDuringRoundEnd)
+        {
+            return false;
+        }
 
         // Frontier: require jobs to run event
         foreach (var (jobProtoId, numJobs) in stationEvent.RequiredJobs)

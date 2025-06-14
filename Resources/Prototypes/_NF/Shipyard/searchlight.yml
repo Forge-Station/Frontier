@@ -6,39 +6,38 @@
 # GitHub: erhardsteinhauer
 # Discord: erhardsteinhauer
 
-# Shuttle Notes:
-#
-- type: vessel
-  id: Searchlight
-  parent: BaseVessel
-  name: LVHI Searchlight
-  description: A small vessel outfitted for the search and recovery of wounded NT personnel. Manufactured by Langstad-Voigt Heavy Industries.
-  price: 33500 # ~$29100 on mapinit + ~$4500 from 15% markup
-  category: Small
-  group: Medical
-  shuttlePath: /Maps/_NF/Shuttles/searchlight.yml
-  guidebookPage: ShipyardSearchlight
-  class:
-  - Medical
-  engine:
-  - Uranium
+# # Shuttle Notes:
+# #
+# - type: vessel
+  # id: Searchlight
+  # name: LVHI Searchlight
+  # description: A small vessel outfitted for the search and recovery of wounded NT personnel. Manufactured by Langstad-Voigt Heavy Industries.
+  # price: 25700 # ~22400$ on mapinit + ~3360$ from 15% markup
+  # category: Small
+  # group: Shipyard
+  # shuttlePath: /Maps/_NF/Shuttles/searchlight.yml
+  # guidebookPage: ShipyardSearchlight
+  # class:
+  # - Medical
+  # engine:
+  # - Plasma
 
-- type: gameMap
-  id: Searchlight
-  mapName: 'Searchlight'
-  mapPath: /Maps/_NF/Shuttles/searchlight.yml
-  minPlayers: 0
-  stations:
-    Searchlight:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Searchlight {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            ContractorInterview: [ 0, 0 ]
-            PilotInterview: [ 0, 0 ]
-            MercenaryInterview: [ 0, 0 ]
+# - type: gameMap
+  # id: Searchlight
+  # mapName: 'Searchlight'
+  # mapPath: /Maps/_NF/Shuttles/searchlight.yml
+  # minPlayers: 0
+  # stations:
+    # Searchlight:
+      # stationProto: StandardFrontierVessel
+      # components:
+        # - type: StationNameSetup
+          # mapNameTemplate: 'Searchlight {1}'
+          # nameGenerator:
+            # !type:NanotrasenNameGenerator
+            # prefixCreator: '14'
+        # - type: StationJobs
+          # availableJobs:
+            # Contractor: [ 0, 0 ]
+            # Pilot: [ 0, 0 ]
+            # Mercenary: [ 0, 0 ]

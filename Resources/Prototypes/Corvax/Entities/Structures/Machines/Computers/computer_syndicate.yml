@@ -1,0 +1,12 @@
+- type: entity
+  parent: [BaseStructureComputerWallmount, ComputerIFF]
+  id: ComputerWallmountComputerIFF
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _NF/Structures/Machines/computer_wallmount.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_wallmount
+    - map: ["computerLayerScreen"]
+      state: screen_IFF

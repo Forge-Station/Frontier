@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: arimah
+# Discord: arimah
+
+# Maintainer Info
+# GitHub: arimah
+# Discord: arimah
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Baroness
+  parent: BaseVessel
+  name: SBB Баронесса
+  description: Небольшой люкс-шаттл для 1-2 сотрудников, с гостиной, спальней и потрясающим видом из кабины пилота.
+  price: 27000 # ~23,500 on purchase, ~15% markup
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/Corvax/Shuttles/Civilian/baroness.yml
+  guidebookPage: ShipyardBaroness
+  class:
+  - Civilian
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Baroness
+  mapName: 'SBB Baroness'
+  mapPath: /Maps/Corvax/Shuttles/Civilian/baroness.yml
+  minPlayers: 0
+  stations:
+    Baroness:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Баронесса {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

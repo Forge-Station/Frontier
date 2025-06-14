@@ -1,0 +1,28 @@
+- type: constructionGraph
+  id: PlushieNekoArk
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: NekoArk
+          steps:
+            - material: Plasma
+              amount: 5
+            - material: Glass
+              amount: 5
+            - material: Cloth
+              amount: 5
+            - material: Durathread
+              amount: 5
+            - material: Plastic
+              amount: 5
+            - material: Uranium
+              amount: 5
+            - material: Bananium
+              amount: 1
+            - material: Steel
+              amount: 5
+            - material: Gold
+              amount: 5
+    - node: NekoArk
+      entity: PlushieNekoArk

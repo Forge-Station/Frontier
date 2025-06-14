@@ -128,35 +128,32 @@
   category: cargoproduct-category-name-medical
   group: market
 
-- type: cargoProduct
+- type: cargoProduct # СorvaxFrontier
   id: ChemistryP
-  abstract: true # Frontier
   icon:
     sprite: Structures/Storage/Crates/chemcrate_secure.rsi
     state: icon
   product: CrateChemistryP
-  cost: 850
+  cost: 7500
   category: cargoproduct-category-name-medical
   group: market
 
-- type: cargoProduct
+- type: cargoProduct # СorvaxFrontier
   id: ChemistryS
-  abstract: true # Frontier
   icon:
     sprite: Structures/Storage/Crates/chemcrate_secure.rsi
     state: icon
   product: CrateChemistryS
-  cost: 750
+  cost: 5000
   category: cargoproduct-category-name-medical
   group: market
 
-- type: cargoProduct
+- type: cargoProduct # СorvaxFrontier
   id: CrateChemistryD
-  abstract: true # Frontier
   icon:
     sprite: Structures/Storage/Crates/chemcrate_secure.rsi
     state: icon
   product: CrateChemistryD
-  cost: 750
+  cost: 5000
   category: cargoproduct-category-name-medical
   group: market

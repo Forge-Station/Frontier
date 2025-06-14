@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingBackpackMilitarySatchel
+  id: ClothingBackpackMilitarySatchelFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Lighter
+      - id: CigPackBlack
+      - id: Flash

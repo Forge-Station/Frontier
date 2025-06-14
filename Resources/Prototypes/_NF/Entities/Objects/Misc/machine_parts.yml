@@ -110,6 +110,8 @@
       rating: 4
     - type: Stack
       stackType: BluespaceCapacitor
+    - type: MercenaryBountyItem # Corvax-Frontier
+      id: QuadraticCapacitor
 
 - type: entity
   id: FemtoManipulatorStockPart
@@ -125,6 +127,8 @@
       rating: 4
     - type: Stack
       stackType: BluespaceManipulator
+    - type: MercenaryBountyItem # Corvax-Frontier
+      id: FemtoManipulator
 
 - type: entity
   id: BluespaceMatterBinStockPart
@@ -140,6 +144,8 @@
       rating: 4
     - type: Stack
       stackType: BluespaceMatterBin
+    - type: MercenaryBountyItem # Corvax-Frontier
+      id: BluespaceMatterBin
 
 # Subspace stock parts (REMOVE THESE)
 

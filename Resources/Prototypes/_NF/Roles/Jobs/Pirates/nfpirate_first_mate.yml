@@ -9,7 +9,7 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 10800 # 3 hours
-  whitelisted: true
+  #whitelisted: true #CorvaxFrontier
   startingGear: NFPirateFirstMateGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true

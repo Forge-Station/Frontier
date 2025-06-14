@@ -1,0 +1,11 @@
+job-supervisors-sr = представителю фронтира
+job-supervisors-sheriff = шерифу
+job-supervisors-bailiff = помощнику шерифа
+job-supervisors-sergeant = лейтенанту
+job-supervisors-cadet = всему вышестоящему персоналу ДСБФ
+job-supervisors-prisoner = всему персоналу ДСБФ
+job-supervisors-nfsd = шерифу, помощнику шерифа  и капралам
+job-supervisors-pirate = боцману и капитану
+job-supervisors-nobody = никому
+job-supervisors-syndicate = Командиру Синдиката
+job-supervisors-MMO = Менеджеру Медицинских Операций

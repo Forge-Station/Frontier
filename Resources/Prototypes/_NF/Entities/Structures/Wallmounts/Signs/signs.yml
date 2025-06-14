@@ -78,7 +78,7 @@
   components:
   - type: Sprite
     state: direction_vend
- 
+
 # Directional Station Guide Signs
 - type: entity
   parent: BaseSign
@@ -87,7 +87,7 @@
   components:
     - type: Sprite
       sprite: _NF/Structures/Wallmounts/signs.rsi
-      
+
 - type: entity
   parent: NFBaseSign
   id: SignNfsd

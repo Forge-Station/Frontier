@@ -1,0 +1,305 @@
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierATMCorvax
+  suffix: Corvax Банкомат
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-ATM-Corvax
+    color: "#0077C1"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierShipyardCorvax
+  suffix: Corvax Верфь
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Shipyard-Corvax
+    color: "#0077C1"
+
+- type: entity
+  parent: DefaultStationBeaconCommand
+  id: DefaultStationBeaconFrontierSROfficeCorvax
+  suffix: Corvax Офис ПФ
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-SROffice-Corvax
+ 
+ 
+- type: entity
+  parent: DefaultStationBeaconCommand
+  id: DefaultStationBeaconFrontierSRQuartersCorvax
+  suffix: Corvax Мостик АФ
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-SRQuarters-Corvax
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax1
+  suffix: Corvax СБ
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax1
+    color: "#de3a3aff"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax2
+  suffix: Corvax Транспорт
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax2
+    color: "#BDB76BFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax3
+  suffix: Corvax ДСБФ_1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax3
+    color: "#B22222FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax4
+  suffix: Corvax ДСБФ_2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax4
+    color: "#B22222FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax5
+  suffix: Corvax Научный_1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax5
+    color: "#FF00FFFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax6
+  suffix: Corvax Научный_2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax6
+    color: "#FF00FFFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax7
+  suffix: Corvax Научный_3
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax7
+    color: "#FF00FFFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax8
+  suffix: Corvax ЭКСТРЕННЫЙ
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax8
+    color: "#DAA520FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax9
+  suffix: Corvax Сервисный_1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax9
+    color: "#00FF00FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax10
+  suffix: Corvax Сервисный_2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax10
+    color: "#00FF00FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax11
+  suffix: Corvax Сервисный_3
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax11
+    color: "#00FF00FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax12
+  suffix: Corvax Мед_1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax12
+    color: "#1E90FFFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax13
+  suffix: Corvax Мед_2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax13
+    color: "#1E90FFFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax14
+  suffix: Corvax Морг
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax14
+    color: "#52B4E9FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax15
+  suffix: Corvax Инженерный отдел
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax15
+    color: "#EFB341FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax16
+  suffix: Corvax Колизей
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax16
+    color: "#FFA07AFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax17
+  suffix: Corvax Наём/Эксп_1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax17
+    color: "#006400FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax18
+  suffix: Corvax Наём/Эксп_2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax18
+    color: "#006400FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax19
+  suffix: Corvax Наём/Эксп_3
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax19
+    color: "#006400FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax20
+  suffix: Corvax Торг_левый_1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax20
+    color: "#A0522DFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax21
+  suffix: Corvax Торг_левый_2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax21
+    color: "#A0522DFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax22
+  suffix: Corvax Торг_левый_3
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax22
+    color: "#A0522DFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax23
+  suffix: Corvax Торг_правый_1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax23
+    color: "#A0522DFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax24
+  suffix: Corvax Торг_правый_2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax24
+    color: "#A0522DFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax25
+  suffix: Corvax Торг_правый_3
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax25
+    color: "#A0522DFF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax26
+  suffix: Corvax Шахтёрский_1
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax26
+    color: "#FF8C00FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax27
+  suffix: Corvax Шахтёрский_2
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax27
+    color: "#FF8C00FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax28
+  suffix: Corvax Шахтёрский_3
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax28
+    color: "#FF8C00FF"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax29
+  suffix: Corvax Почтарь
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax29
+    color: "#D4D4D496"
+
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconFrontierCorvax30
+  suffix: Corvax Криосон
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Corvax30
+    color: "#ADD8E6FF"

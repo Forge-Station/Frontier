@@ -1,5 +1,6 @@
 using Content.Shared._NF.Interaction.Systems;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared._NF.Interaction.Components;
 

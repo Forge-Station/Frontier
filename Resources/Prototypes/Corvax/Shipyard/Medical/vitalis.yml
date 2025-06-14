@@ -1,0 +1,34 @@
+- type: vessel
+  id: Vitalis
+  name: CTC Виталис
+  description: Средний медицинский вспомогательный шаттл для медициского персонала, для использований криогенных условий.
+  price: 75000 #Appraisal is 53480
+  category: Medium
+  group: Medical
+  shuttlePath: /Maps/Corvax/Shuttles/Medical/vitalis.yml
+  guidebookPage: ShipyardVitalis
+  class:
+  - Medical
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Vitalis
+  mapName: 'CTC Vitalis'
+  mapPath: /Maps/Corvax/Shuttles/Medical/vitalis.yml
+  minPlayers: 0
+  stations:
+    Vitalis:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Виталис {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
+

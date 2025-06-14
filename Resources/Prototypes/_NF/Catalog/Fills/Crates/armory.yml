@@ -1,9 +1,11 @@
-# Registered (legal) weapon crates
 - type: entity
   id: CrateArmoryRifleGestio
-  parent: CrateFirearmsSecure
+  parent:
+  - BaseC2ExpeditionContraband
+  - CrateFirearmsSecure
   name: gestio rifle crate
-  description: Contains two old prototype, burst-fire rifles with six low capacity mags. Requires Armory access to open.
+  description: Contains two old prototype, burst-fire rifles with six low capacity mags. Requires Armory access to open. Unregistered.
+  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents:
@@ -12,7 +14,6 @@
       - id: NFMagazineLowCapacityRifle30
         amount: 6
 
-# Contraband (unregistered) weaponry crates for expeditions
 - type: entity
   id: CrateArmorySMGExpedition
   parent:
@@ -120,6 +121,20 @@
         amount: 2
       - id: NFMagazineClipRifle20
         amount: 6
+
+- type: entity
+  id: CrateArmoryEnergyGun
+  parent:
+  - BaseC2ExpeditionContraband
+  - CrateFirearmsSecure
+  name: energy gun crate
+  description: Contains 2 Energy guns. Requires Armory access to open. Unregistered.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponEnergyGun
+      amount: 2
 
 # Ammo crates
 ## .20 rifle

@@ -1,0 +1,48 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/FireFoxPhoenix
+# Discord: FireFoxPhoenix
+
+# Notes:
+
+- type: pointOfInterest
+  id: MercenaryBase
+  parent: BasePOI
+  name: 'База наёмников'
+  minimumDistance: 1650
+  maximumDistance: 3400
+  spawnGroup: Required
+  gridPath: /Maps/Corvax/POI/MercenaryBase.yml
+  addComponents:
+  - type: IFF
+    color: "#a68614"
+  - type: StationTransit
+  - type: ProtectedGrid
+    noGridCollision: True
+
+- type: gameMap
+  id: MercenaryBase
+  mapName: 'База наёмников'
+  mapPath: /Maps/Corvax/POI/MercenaryBase.yml
+  minPlayers: 0
+  stations:
+    MercenaryBase:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'База наёмников'
+        - type: ExtraStationInformation
+          iconPath: /Textures/_NF/Objects/Devices/pda.rsi/pda-mercenary.png
+          stationSubtext: 'frontier-lobby-mercenary-subtext'
+          stationDescription: 'frontier-lobby-mercenary-description'
+          lobbySortOrder: 3
+        - type: StationJobs
+          availableJobs:
+            Mercenary: [ -1, -1 ]
+        - type: StationDeadDrop
+          maxDeadDrops: 1 # Fewer here, players start here.

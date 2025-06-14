@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen 
+
+# Shuttle Notes:
+- type: vessel
+  id: methedor
+  parent: BaseVessel
+  name: Метедор
+  description: Небольшой челнок, созданный для контрабандистов различных группировок синдиката, рекомендуемый состав команды 1-3 человека.
+  price: 20000
+  category: Medium
+  group: Syndicate
+  shuttlePath: /Maps/Corvax/Shuttles/Syndicate/methedor.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+  guidebookPage: Null
+  class:
+  - Syndicate
+
+- type: gameMap
+  id: methedor
+  mapName: 'Метедор'
+  mapPath: /Maps/Corvax/Shuttles/Syndicate/methedor.yml
+  minPlayers: 0
+  stations:
+    methedor:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Метедор {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

@@ -7,8 +7,8 @@
 
 - type: stack
   id: AloeCream
-  name: stack-aloe-cream
-  icon: { sprite: "/Textures/Objects/Specific/Hydroponics/aloe.rsi", state: cream }
+  name: aloe cream
+  icon: { sprite: "/Textures/Objects/Specific/Medical/medical.rsi", state: cream }
   spawn: AloeCream
   maxCount: 10
 

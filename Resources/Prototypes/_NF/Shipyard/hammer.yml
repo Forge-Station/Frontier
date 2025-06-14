@@ -6,39 +6,38 @@
 # GitHub: arimah
 # Discord: arimah
 
-# Shuttle Notes:
-#
-- type: vessel
-  id: Hammer
-  parent: BaseVessel
-  name: BB Hammer
-  description: A mobile engineering platform for deep-space repairs, upgrades and remodelling.
-  price: 44000 # Appraises at 38257, ~15% markup
-  category: Medium
-  group: Shipyard
-  shuttlePath: /Maps/_NF/Shuttles/hammer.yml
-  guidebookPage: ShipyardHammer
-  class:
-  - Engineering
-  engine:
-  - Plasma
+# # Shuttle Notes:
+# #
+# - type: vessel
+  # id: Hammer
+  # name: SBB Hammer
+  # description: A mobile engineering platform for deep-space repairs, upgrades and remodelling.
+  # price: 40000
+  # category: Medium
+  # group: Shipyard
+  # shuttlePath: /Maps/_NF/Shuttles/hammer.yml
+  # guidebookPage: ShipyardHammer
+  # class:
+  # - Engineering
+  # engine:
+  # - Plasma
 
-- type: gameMap
-  id: Hammer
-  mapName: 'BB Hammer'
-  mapPath: /Maps/_NF/Shuttles/hammer.yml
-  minPlayers: 0
-  stations:
-    Hammer:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Hammer {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            ContractorInterview: [ 0, 0 ]
-            PilotInterview: [ 0, 0 ]
-            MercenaryInterview: [ 0, 0 ]
+# - type: gameMap
+  # id: Hammer
+  # mapName: 'SBB Hammer'
+  # mapPath: /Maps/_NF/Shuttles/hammer.yml
+  # minPlayers: 0
+  # stations:
+    # Hammer:
+      # stationProto: StandardFrontierVessel
+      # components:
+        # - type: StationNameSetup
+          # mapNameTemplate: 'Hammer {1}'
+          # nameGenerator:
+            # !type:NanotrasenNameGenerator
+            # prefixCreator: '14'
+        # - type: StationJobs
+          # availableJobs:
+            # Contractor: [ 0, 0 ]
+            # Pilot: [ 0, 0 ]
+            # Mercenary: [ 0, 0 ]

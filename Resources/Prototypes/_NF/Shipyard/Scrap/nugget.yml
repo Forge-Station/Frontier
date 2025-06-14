@@ -6,40 +6,39 @@
 # GitHub: ???
 # Discord: ???
 
-# Shuttle Notes:
-#
-- type: vessel
-  id: Nugget
-  parent: BaseVessel
-  name: SV Nugget
-  description: A flying hunk of wood and metal disguised as a kitchen shuttle. Not FDA approved.
-  price: 15950 # +1450 from 10% Markup
-  category: Small
-  group: Scrap
-  shuttlePath: /Maps/_NF/Shuttles/Scrap/nugget.yml
-  guidebookPage: Null
-  class:
-  - Scrapyard
-  - Kitchen
-  engine:
-  - Plasma
+# # Shuttle Notes:
+# #
+# - type: vessel
+  # id: Nugget
+  # name: SV Nugget
+  # description: A flying hunk of wood and metal disguised as a kitchen shuttle. Not FDA approved.
+  # price: 15950 # +1450 from 10% Markup
+  # category: Small
+  # group: Scrap
+  # shuttlePath: /Maps/_NF/Shuttles/Scrap/nugget.yml
+  # guidebookPage: Null
+  # class:
+  # - Scrapyard
+  # - Kitchen
+  # engine:
+  # - Plasma
 
-- type: gameMap
-  id: Nugget
-  mapName: 'SV Nugget'
-  mapPath: /Maps/_NF/Shuttles/Scrap/nugget.yml
-  minPlayers: 0
-  stations:
-    Nugget:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Nugget {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            ContractorInterview: [ 0, 0 ]
-            PilotInterview: [ 0, 0 ]
-            MercenaryInterview: [ 0, 0 ]
+# - type: gameMap
+  # id: Nugget
+  # mapName: 'SV Nugget'
+  # mapPath: /Maps/_NF/Shuttles/Scrap/nugget.yml
+  # minPlayers: 0
+  # stations:
+    # Nugget:
+      # stationProto: StandardFrontierVessel
+      # components:
+        # - type: StationNameSetup
+          # mapNameTemplate: 'Nugget {1}'
+          # nameGenerator:
+            # !type:NanotrasenNameGenerator
+            # prefixCreator: '14'
+        # - type: StationJobs
+          # availableJobs:
+            # Contractor: [ 0, 0 ]
+            # Pilot: [ 0, 0 ]
+            # Mercenary: [ 0, 0 ]

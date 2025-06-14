@@ -5,7 +5,7 @@
   unit: materials-unit-piece
   icon: { sprite: /Textures/Objects/Misc/monkeycube.rsi, state: cube }
   color: "#8A9A5B"
-  price: 0.1
+  price: 0.05 #CorvaxFrontier
 
 - type: material
   id: Cardboard
@@ -13,7 +13,7 @@
   name: materials-cardboard
   icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: cardboard }
   color: "#70736c"
-  price: 0.005 # Frontier: 0.025<0.005 TODO - materials rebalance
+  price: 0.00025 # Frontier: 0.025<0.005 TODO - materials rebalance #CorvaxFrontier
 
 - type: material
   id: Cloth
@@ -22,7 +22,7 @@
   unit: materials-unit-roll
   icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: cloth }
   color: "#e7e7de"
-  price: 0.05
+  price: 0.025 #CorvaxFrontier
 
 - type: material
   id: Durathread
@@ -32,7 +32,7 @@
   unit: materials-unit-sheet
   icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: durathread }
   color: "#8291a1"
-  price: 0.15 # 1-1 mix of plastic and cloth. # Frontier: 0.35<0.15 TODO - materials rebalance
+  price: 0.075 # 1-1 mix of plastic and cloth. # Frontier: 0.35<0.15 TODO - materials rebalance #CorvaxFrontier
 
 - type: material
   id: Paper
@@ -40,7 +40,7 @@
   name: materials-paper
   icon: { sprite: Objects/Materials/Sheets/other.rsi, state: paper }
   color: "#d9d9d9"
-  price: 0.01 # it's paper bro what do you expect?
+  price: 0.005 # it's paper bro what do you expect? #CorvaxFrontier
 
 - type: material
   id: Plasma
@@ -48,7 +48,7 @@
   name: materials-plasma
   icon: { sprite: Objects/Materials/Sheets/other.rsi, state: plasma }
   color: "#7e009e"
-  price: 0.2 # $35 for 1 unit # Frontier: 0.35<0.2 TODO - materials rebalance
+  price: 0.1 # $35 for 1 unit # Frontier: 0.35<0.2 TODO - materials rebalance #CorvaxFrontier
 
 - type: material
   id: Plastic
@@ -56,7 +56,7 @@
   name: materials-plastic
   icon: { sprite: Objects/Materials/Sheets/other.rsi, state: plastic }
   color: "#d9d9d9"
-  price: 0.1 # $20 for 1 unit # Frontier: 0.2<0.1 TODO - materials rebalance
+  price: 0.05 # $20 for 1 unit # Frontier: 0.2<0.1 TODO - materials rebalance #CorvaxFrontier
 
 - type: material
   id: Wood
@@ -65,7 +65,7 @@
   unit: materials-unit-plank
   icon: { sprite: Objects/Materials/materials.rsi, state: wood }
   color: "#966F33"
-  price: 0.10 # $10 for 1 unit
+  price: 0.05 # $10 for 1 unit #CorvaxFrontier
 
 - type: material
   id: Uranium
@@ -73,7 +73,7 @@
   name: materials-uranium
   icon: { sprite: Objects/Materials/Sheets/other.rsi, state: uranium }
   color: "#32a852"
-  price: 0.2 # $85 for 1 unit # Frontier: 0.85<0.2 TODO - materials rebalance
+  price: 0.1 # $85 for 1 unit # Frontier: 0.85<0.2 TODO - materials rebalance #CorvaxFrontier
 
 - type: material
   id: Bananium
@@ -90,7 +90,7 @@
   unit: materials-unit-slab
   icon: { sprite: Objects/Materials/Sheets/meaterial.rsi, state: meat }
   color: "#c53648"
-  price: 0.05
+  price: 0.0025 #CorvaxFrontier
 
 - type: material
   id: WebSilk
@@ -98,7 +98,7 @@
   unit: materials-unit-web
   icon: { sprite: Objects/Materials/silk.rsi, state: icon }
   color: "#eeeeee" #eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-  price: 0.005 # Frontier: 0<0.005 - same value as cardboard
+  price: 0.0025 # Frontier: 0<0.005 - same value as cardboard #CorvaxFrontier
 
 - type: material
   id: Cotton
@@ -114,7 +114,7 @@
   unit: materials-unit-piece
   icon: { sprite: Objects/Materials/materials.rsi, state: bones }
   color: "#896f5e"
-  price: 0.02 # Frontier: 0<0.02 - some marginal value
+  price: 0.01 # Frontier: 0<0.02 - some marginal value #CorvaxFrontier
 
 - type: material
   id: Coal
@@ -123,7 +123,7 @@
   unit: materials-unit-piece
   icon: { sprite: Objects/Materials/ore.rsi, state: coal }
   color: "#404040"
-  price: 0.03 # Frontier: 0.1<0.03 TODO - material rebalance
+  price: 0.015 # Frontier: 0.1<0.03 TODO - material rebalance #CorvaxFrontier
 
 - type: material
   id: Gunpowder
@@ -131,7 +131,7 @@
   unit: materials-unit-piece
   icon: { sprite: Objects/Misc/reagent_fillings.rsi, state: powderpile }
   color: "#A9A9A9"
-  price: 0.005 # Frontier: 0<0.005 - same value as cardboard
+  price: 0.0025 # Frontier: 0<0.005 - same value as cardboard #CorvaxFrontier
 
 - type: material
   id: Diamond
@@ -140,4 +140,4 @@
   unit: materials-unit-piece
   icon: { sprite: Objects/Materials/materials.rsi, state: diamond }
   color: "#80ffff"
-  price: 20 # big diamond gaslit us so hard diamonds actually became extremely rare
+  price: 10 # big diamond gaslit us so hard diamonds actually became extremely rare #CorvaxFrontier

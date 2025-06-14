@@ -1,0 +1,118 @@
+#Corvax-Frontier (by. Mersen and autsaider_m)
+- type: entity
+  id: BluespaceCargoniaShip
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
+    startAudio:
+      path: /Audio/Misc/notice1.ogg
+    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
+    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    earliestStart: 10
+    minimumPlayers: 15
+    weight: 2
+    duration: 3800
+    maxDuration: 6400
+    reoccurrenceDelay: 60
+  - type: BluespaceErrorRule
+    groups:
+      grid: !type:GridSpawnGroup
+        nameLoc:
+        - station-event-bluespace-name-UnidentifiedVessel
+        minimumDistance: 1500
+        maximumDistance: 2500
+        addComponents:
+        - type: Gravity
+          enabled: true
+          inherent: true
+        - type: IFF
+          color: "#E10F9B"
+        - type: Shuttle
+          angularDamping: 999999
+          linearDamping: 999999
+        paths:
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedHauler.yml 
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedBarge.yml 
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedCourser.yml 
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedComet.yml 
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedCrescent.yml 
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedInv.yml 
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedSprinter.yml 
+
+- type: entity
+  id: BluespaceSyndicate
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-bluespace-cache-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    warningAnnouncement: station-event-bluespace-cache-warning-announcement
+    endAnnouncement: station-event-bluespace-cache-end-announcement
+    earliestStart: 30
+    weight: 2 
+    duration: 1350
+    maxDuration: 1560
+    reoccurrenceDelay: 340 
+    requiredJobs:
+      Sheriff: 1
+  - type: BluespaceErrorRule
+    groups:
+      grid: !type:GridSpawnGroup
+        nameLoc:
+        - station-event-bluespace-name-SyndicateWeaponsCache
+        minimumDistance: 2500 
+        maximumDistance: 3500 
+        addComponents:
+        - type: Gravity
+          enabled: true
+          inherent: true
+        - type: IFF
+          color: "#E10F9B"
+        - type: Shuttle
+        - type: LinkedLifecycleGridParent
+        - type: ProtectedGrid
+          preventArtifactTriggers: true
+        - type: PreventPilot
+        - type: ForceAnchor 
+        paths:
+        - /Maps/Corvax/Events/Periodic/Syndicate/syndicateShuttle.yml
+    rewardAccounts:
+      Nfsd: 1.0
+
+- type: entity
+  id: BluespaceBrokenMcDelivery
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
+    startAudio:
+      path: /Audio/Misc/notice1.ogg
+    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
+    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    earliestStart: 20
+    maximumPlayers: 15 #Corvax-Frontier
+    weight: 5
+    duration: 900
+    maxDuration: 1800
+    reoccurrenceDelay: 240 # once per 4 hours
+  - type: BluespaceErrorRule
+    groups:
+      grid: !type:GridSpawnGroup
+        nameLoc:
+        - station-event-bluespace-name-BrokenMcDelivery
+        minCount: 2
+        maxCount: 3
+        minimumDistance: 1500
+        maximumDistance: 2500
+        addComponents:
+        - type: IFF
+        - type: LinkedLifecycleGridParent
+        - type: ProtectedGrid
+          preventArtifactTriggers: true
+        - type: PreventPilot
+        paths:
+        - /Maps/Corvax/Events/Periodic/Cargo/cargomc.yml
+        - /Maps/Corvax/Events/Periodic/Cargo/mcevent.yml
+ 

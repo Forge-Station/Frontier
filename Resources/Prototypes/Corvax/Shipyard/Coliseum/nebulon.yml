@@ -1,0 +1,38 @@
+﻿# Author Corvax
+# GitHub: -
+# Discord: -
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen and 
+
+# Shuttle Notes:
+
+#- type: vessel
+#  id: Nebulon
+#  parent: BaseVessel
+#  name: COL Небулон
+#  price: 25000
+#  category: Small
+#  group: Coliseum
+#  shuttlePath: /Maps/Corvax/Shuttles/Coliseum/nebulon.yml
+#  guidebookPage: Null
+
+#- type: gameMap
+#  id: Nebulon
+#  mapName: 'COL Небулон'
+#  mapPath: /Maps/Corvax/Shuttles/Coliseum/nebulon.yml
+#  minPlayers: 0
+#  stations:
+#    Nebulon:
+#      stationProto: StandardFrontierVessel
+#      components:
+#        - type: StationNameSetup
+#          mapNameTemplate: 'Небулон {1}'
+#          nameGenerator:
+#            !type:NanotrasenNameGenerator
+#            prefixCreator: '14'
+#        - type: StationJobs
+#          availableJobs: {}

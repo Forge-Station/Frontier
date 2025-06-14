@@ -180,6 +180,15 @@
     - NfsdPracticeStatic
     - NfsdAmmoStatic
     - ReportingStatic # DeltaV
+    - CorvaxAmmoStatic #Corvax-Frontier
+    dynamicPacks:
+    - NFNfsdTechfabDeprecated
+    - CorvaxShuttleGunsDynamic #Corvax-Frontier
+    - CorvaxAmmoDynamic #Corvax-Frontier
+    - CorvaxPracticAmmo #Corvax-Frontier
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - NFNfsdTechfabDeprecatedEmag
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -213,7 +222,13 @@
     runningState: icon
     staticPacks:
     - NFMercenaryTechfabDeprecatedStatic
+    dynamicPacks:
+    - CorvaxPracticAmmo #Corvax-Frontier
+    - NFMercenaryTechfabDeprecated
     - NfsdPracticeStatic
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - NFMercenaryTechfabDeprecatedEmag
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -261,6 +276,10 @@
     runningState: mercenary-hacked
     staticPacks:
     - NFHackedMercenaryTechfabDeprecatedStatic
+    - CorvaxAmmoStatic #Corvax-Frontier
+    dynamicPacks:
+    - NFHackedMercenaryTechfabDeprecated
+    - CorvaxPracticAmmo #Corvax-Frontier
   - type: BlueprintReceiver
     whitelist:
       tags:

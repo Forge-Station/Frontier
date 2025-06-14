@@ -250,6 +250,8 @@
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   - type: PreventDropOnDowned # Frontier: borgs don't drop items when falling (e.g. critical/dead)
+  - type: SpeechSynthesis # Corvax-Frontier-Barks
+    voice: BarksCitadelSynthetic2 # Corvax-Frontier-Barks
 
 - type: entity
   abstract: true
@@ -306,7 +308,7 @@
 
 - type: entity
   id: BaseBorgChassisSyndicate
-  parent: BaseBorgChassis
+  parent: [BaseBorgChassis, BaseC3Contraband] #Corvax-Frontier КБ
   abstract: true
   components:
   - type: NpcFactionMember

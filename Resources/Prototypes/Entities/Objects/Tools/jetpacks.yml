@@ -260,7 +260,7 @@
 #Empty void
 - type: entity
   id: JetpackVoid
-  parent: BaseJetpack
+  parent: [BaseJetpack, BaseC1Contraband] #Corvax-Frontier КБ
   name: void jetpack
   suffix: Empty
   components:

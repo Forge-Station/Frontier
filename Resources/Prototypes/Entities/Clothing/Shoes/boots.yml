@@ -11,7 +11,7 @@
   - type: Matchbox
 
 - type: entity
-  parent: [ClothingShoesMilitaryBase, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  parent: ClothingShoesMilitaryBase #Corvax-Frontier удалена строка КБ
   id: ClothingShoesBootsJack
   name: jackboots
   # description: Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time. # Frontier
@@ -48,7 +48,7 @@
     sprite: Clothing/Shoes/Boots/performer.rsi
 
 - type: entity
-  parent: [ClothingShoesMilitaryBase, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  parent: ClothingShoesMilitaryBase #Corvax-Frontier удалена строка КБ
   id: ClothingShoesBootsCombat
   name: combat boots
   description: Robust combat boots for combat scenarios or combat situations. All combat, all the time.

@@ -1,0 +1,48 @@
+- type: entity
+  parent: ClothingBackpackDuffelMilitary
+  id: ClothingBackpackDuffelMilitaryFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Lighter
+      - id: CigPackBlack
+      - id: Flash
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelWitchBundle
+  name: duffel bag
+  description: It looks rumpled, but it smells like flowers.
+  components:
+    - type: StorageFill
+      contents:
+        - id: PlumberClothingHeadHatWitch
+          amount: 1
+        - id: PlumberClothingNeckCloakWhitch
+          amount: 1
+        - id: PlumberClothingOuterWitch
+          amount: 1
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateFilledHristov
+  name: Набор "Христов"
+  description: "Снайперская винтовка Христов в комплекте с одной коробкой патронов, на случей если у вас на пути встало что-то крупнее наёмника"
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponSniperHristov
+      - id: MagazineBoxAntiMateriel
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateFilledAtreides
+  name: Набор "Атрэйдес"
+  description: "Изрешети всех непоорных! В комплекте ПП-Атрэйдес и 2 магазина к ней"
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponSubMachineGunAtreides
+      - id: MagazinePistolSubMachineGun
+        amount: 2

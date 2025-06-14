@@ -1,0 +1,151 @@
+- type: entity
+  id: BookSmygler
+  parent: BaseGuidebook
+  suffix: контрабандист
+  name: Протокол
+  description: Всё что написано в этой книге должно бесприкословно выполняться.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+    layers:
+    - state: paper
+    - state: cover_base
+      color: "#000000"
+    - state: decor_wingette
+      color: "#dd2020"
+    - state: icon_nuclear
+    - state: overlay_blood
+  - type: GuideHelp
+    guides:
+    - Smugler
+  - type: Tag
+    tags:
+     - Book
+     - BookSpaceLaw  #Frontier
+
+- type: entity
+  id: BookSCadet
+  parent: BaseGuidebook
+  suffix: кадет
+  name: Протокол
+  description: Всё что написано в этой книге должно бесприкословно выполняться.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+    layers:
+    - state: paper
+    - state: cover_base
+      color: "#000000"
+    - state: decor_wingette
+      color: "#dd2020"
+    - state: icon_nuclear
+    - state: overlay_blood
+  - type: GuideHelp
+    guides:
+    - SCadet
+  - type: Tag
+    tags:
+     - Book
+     - BookSpaceLaw  #Frontier
+
+- type: entity
+  id: BookSComa
+  parent: BaseGuidebook
+  suffix: кома "Жнецов"
+  name: Протокол
+  description: Всё что написано в этой книге должно бесприкословно выполняться.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+    layers:
+    - state: paper
+    - state: cover_base
+      color: "#000000"
+    - state: decor_wingette
+      color: "#dd2020"
+    - state: icon_nuclear
+    - state: overlay_blood
+  - type: GuideHelp
+    guides:
+    - SComa
+  - type: Tag
+    tags:
+     - Book
+     - BookSpaceLaw  #Frontier
+
+- type: entity
+  id: BookSParamed
+  parent: BaseGuidebook
+  suffix: Парамед "Жнецов"
+  name: syndicate-book-name
+  description: syndicate-book-description
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+    layers:
+    - state: paper
+    - state: cover_base
+      color: "#000000"
+    - state: decor_wingette
+      color: "#dd2020"
+    - state: icon_nuclear
+    - state: overlay_blood
+  - type: GuideHelp
+    guides:
+    - SParamed
+  - type: Tag
+    tags:
+     - Book
+     - BookSpaceLaw  #Frontier
+
+- type: entity
+  id: BookSShturm
+  parent: BaseGuidebook
+  suffix: штурмовик "Жнецов"
+  name: syndicate-book-name
+  description: syndicate-book-description
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+    layers:
+    - state: paper
+    - state: cover_base
+      color: "#000000"
+    - state: decor_wingette
+      color: "#dd2020"
+    - state: icon_nuclear
+    - state: overlay_blood
+  - type: GuideHelp
+    guides:
+    - SShturm
+  - type: Tag
+    tags:
+     - Book
+     - BookSpaceLaw  #Frontier
+
+- type: entity
+  id: BookParamedic
+  parent: BaseGuidebook
+  suffix: парамедик
+  name: paramedic-book-name
+  description: paramedic-book-description
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+    layers:
+    - state: paper
+    - state: cover_base
+      color: "#d7dadb"
+    - state: decor_wingette_circle
+      color: "#55b0d4"
+    - state: icon_medical_cross
+      color: "#55b0d4"
+    - state: detail_bookmark
+      color: "#55b0d4"
+  - type: GuideHelp
+    guides:
+    - Paramedic
+  - type: Tag
+    tags:
+     - Book
+     - BookSpaceLaw  #Frontier

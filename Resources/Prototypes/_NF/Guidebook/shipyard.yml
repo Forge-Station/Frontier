@@ -119,7 +119,7 @@
   id: ShipyardBulker
   name: guide-entry-shipyard-bulker
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Bulker.xml"
-  
+
 - type: guideEntry
   id: ShipyardCaladrius
   name: guide-entry-shipyard-caladrius
@@ -259,6 +259,11 @@
   id: ShipyardNightlight
   name: guide-entry-shipyard-nightlight
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Nightlight.xml"
+
+- type: guideEntry
+  id: ShipyardNook
+  name: guide-entry-shipyard-nook
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Nook.xml"
 
 - type: guideEntry
   id: ShipyardNook

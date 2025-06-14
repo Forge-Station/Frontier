@@ -25,7 +25,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Frontier Outpost STC"
+    name: "АФ - Диспетчерская" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -34,7 +34,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Frontier Outpost SR"
+    name: "АФ - Офис представителя" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -43,7 +43,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Frontier Outpost Guard"
+    name: "АФ - Охрана" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -52,7 +52,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Frontier Outpost Reception"
+    name: "АФ - Приёмная" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineCaptain]
@@ -61,7 +61,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Frontier Outpost Administration"
+    name: "АФ - Административная" #Corvax-Frontier
 
 # POI
 - type: entity
@@ -71,7 +71,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Omnichurch Beacon"
+    name: "Маяк ВсеЦеркви" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineSyndie, FaxMachineShipAntag]
@@ -80,7 +80,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Listening Point: Bravo"
+    name: "Прослушивающий Пункт: Браво" #Corvax-Frontier
   - type: ApcPowerReceiver
     powerDisabled: true #starts off
 
@@ -91,7 +91,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "The Lodge"
+    name: "Экспедиционная База" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -100,7 +100,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "The North Pole"
+    name: "Полярная Звезда" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -109,7 +109,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Tinnia's Rest"
+    name: "Ресторан Тринньки" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -118,7 +118,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Trade Outpost"
+    name: "Торговая Станция" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -127,7 +127,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Trade Outpost STC"
+    name: "Trade Outpost STC" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -136,7 +136,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Trade Mall STC"
+    name: "ТС - Диспетчерская" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -145,7 +145,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Trade Mall NFSD Post"
+    name: "ТС - Пост ДСБФ" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -154,7 +154,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Anomalous Lab"
+    name: "Аномальная Лаборатория" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -163,7 +163,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "The Pit"
+    name: "Бойцовская Яма" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -172,7 +172,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Casey's Casino"
+    name: "Казино" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -181,7 +181,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Courthouse"
+    name: "Суд" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineShipAntag]
@@ -190,7 +190,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Pirate's Cove"
+    name: "Пиратская Бухта" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -199,7 +199,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "NFSD Outpost Sheriff"
+    name: "ДСБФ - Офис Шерифа" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -208,7 +208,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "NFSD Outpost Lawyer"
+    name: "ДСБФ - ПЮД" #Corvax-Frontier
 
 - type: entity
   parent: FaxMachineBase
@@ -217,7 +217,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Bahama Mama's"
+    name: "Багамская Мама" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -226,7 +226,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Edison Power Plant"
+    name: "Электростанция Эдисона" #Corvax-Frontier
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -235,7 +235,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Medical Dispatch"
+    name: "Госпиталь" #Corvax-Frontier
 
 # Events
 - type: entity
@@ -245,6 +245,6 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "Unknown"
+    name: "Неизвестно" #Corvax-Frontier
   - type: ApcPowerReceiver
     powerDisabled: false #starts off

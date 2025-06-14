@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: ???
+# Discord: ???
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Helix
+  parent: BaseVessel
+  name: NM Спираль
+  description: Средний медицинский шаттл, оборудован химической лабораторией, клонирование и лечебным отделом.
+  price: 48000 # +5800 from 15% markup
+  category: Medium
+  group: Medical
+  shuttlePath: /Maps/Corvax/Shuttles/Medical/helix.yml
+  guidebookPage: Null
+  class:
+  - Medical
+  - Chemistry
+
+- type: gameMap
+  id: Helix
+  mapName: 'NM Helix'
+  mapPath: /Maps/Corvax/Shuttles/Medical/helix.yml
+  minPlayers: 0
+  stations:
+    Helix:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Спираль {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

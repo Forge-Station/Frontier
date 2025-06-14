@@ -1,0 +1,49 @@
+- type: entity
+  parent: [BaseStructureDisableToolUse, BaseLathe]
+  id: MercenaryExchanger
+  name: awards terminal
+  description: An old-style reward exchanger that operates on bluespace transfer and requires quantum crystals to operate.
+  components:
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 3
+    enabled: false
+    sound:
+      path: /Audio/Ambience/Objects/vending_machine_hum.ogg
+  - type: LitOnPowered
+  - type: ApcPowerReceiver
+    powerLoad: 100
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.4"
+    castShadows: false
+  - type: Transform
+    noRot: false
+  - type: Sprite
+    sprite:  Structures/Machines/VendingMachines/snack-green.rsi
+    snapCardinals: true
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Lathe
+    idleState: off
+    runningState: off
+    unlitIdleState: normal-unshaded
+    unlitRunningState: normal-unshaded
+    staticPacks:
+      - MercenaryExchangerStatic
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - MercenaryToken
+  - type: Godmode

@@ -503,35 +503,39 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
     private void SendPurchaseMessage(EntityUid uid, EntityUid player, string name, string shipyardChannel, bool secret)
     {
-        var channel = _prototypeManager.Index<RadioChannelPrototype>(shipyardChannel);
-
-        if (secret)
-        {
-            _radio.SendRadioMessage(uid, Loc.GetString("shipyard-console-docking-secret"), channel, uid);
-            _chat.TrySendInGameICMessage(uid, Loc.GetString("shipyard-console-docking-secret"), InGameICChatType.Speak, true);
-        }
-        else
-        {
-            _radio.SendRadioMessage(uid, Loc.GetString("shipyard-console-docking", ("owner", player), ("vessel", name)), channel, uid);
-            _chat.TrySendInGameICMessage(uid, Loc.GetString("shipyard-console-docking", ("owner", player!), ("vessel", name)), InGameICChatType.Speak, true);
-        }
+		var channel = _prototypeManager.Index<RadioChannelPrototype>(shipyardChannel);
+		if (TryComp<ActivatableUIComponent>(uid, out var uiComp) && uiComp.Key is ShipyardConsoleUiKey shipyardKey && shipyardKey.ToString() != "Debug")  // Corvax-Frontier
+		{
+			if (secret)
+			{
+				_radio.SendRadioMessage(uid, Loc.GetString("shipyard-console-docking-secret"), channel, uid);
+				_chat.TrySendInGameICMessage(uid, Loc.GetString("shipyard-console-docking-secret"), InGameICChatType.Speak, true);
+			}
+			else
+			{
+				_radio.SendRadioMessage(uid, Loc.GetString("shipyard-console-docking", ("owner", player), ("vessel", name)), channel, uid);
+				_chat.TrySendInGameICMessage(uid, Loc.GetString("shipyard-console-docking", ("owner", player!), ("vessel", name)), InGameICChatType.Speak, true);
+			}
+		}
     }
 
     private void SendSellMessage(EntityUid uid, string? player, string name, string shipyardChannel, EntityUid seller, bool secret)
     {
         var channel = _prototypeManager.Index<RadioChannelPrototype>(shipyardChannel);
-
-        if (secret)
-        {
-            _radio.SendRadioMessage(uid, Loc.GetString("shipyard-console-leaving-secret"), channel, uid);
-            _chat.TrySendInGameICMessage(uid, Loc.GetString("shipyard-console-leaving-secret"), InGameICChatType.Speak, true);
-        }
-        else
-        {
-            _radio.SendRadioMessage(uid, Loc.GetString("shipyard-console-leaving", ("owner", player!), ("vessel", name!), ("player", seller)), channel, uid);
-            _chat.TrySendInGameICMessage(uid, Loc.GetString("shipyard-console-leaving", ("owner", player!), ("vessel", name!), ("player", seller)), InGameICChatType.Speak, true);
-        }
-    }
+		if (TryComp<ActivatableUIComponent>(uid, out var uiComp) && uiComp.Key is ShipyardConsoleUiKey shipyardKey && shipyardKey.ToString() != "Debug")  // Corvax-Frontier
+		{
+			if (secret)
+			{
+				_radio.SendRadioMessage(uid, Loc.GetString("shipyard-console-leaving-secret"), channel, uid);
+				_chat.TrySendInGameICMessage(uid, Loc.GetString("shipyard-console-leaving-secret"), InGameICChatType.Speak, true);
+			}
+			else
+			{
+				_radio.SendRadioMessage(uid, Loc.GetString("shipyard-console-leaving", ("owner", player!), ("vessel", name!), ("player", seller)), channel, uid);
+				_chat.TrySendInGameICMessage(uid, Loc.GetString("shipyard-console-leaving", ("owner", player!), ("vessel", name!), ("player", seller)), InGameICChatType.Speak, true);
+			}
+		}
+	}
 
     private void PlayDenySound(EntityUid playerUid, EntityUid consoleUid, ShipyardConsoleComponent component)
     {
@@ -753,7 +757,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             // Check that the listing contains the shuttle or that the shuttle is in the group that the console is looking for
             if (listing?.Shuttles.Contains(vessel.ID) ?? false ||
                 key != null && key != ShipyardConsoleUiKey.Custom &&
-                vessel.Group == key)
+                vessel.Group == key || key == ShipyardConsoleUiKey.Debug) // shipyardConsoleUiKey.Debug from Corvax-Frontier
             {
                 if (hasAccess)
                     available.Add(vessel.ID);

@@ -1,0 +1,66 @@
+- type: entity
+  parent: BaseWeaponTurret
+  name: баллистическая турель
+  id: WeaponTurretSyndicateAntiMateriel
+  suffix: Синдикат .60калибр
+  components:
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+    - type: NpcFactionMember
+      factions:
+        - SyndicateNF
+    - type: Gun
+      fireRate: 0.5
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+    - type: BallisticAmmoProvider
+      proto: CartridgeAntiMateriel
+      capacity: 500
+
+- type: entity
+  parent: BaseWeaponTurret
+  name: баллистическая турель
+  id: WeaponTurretSyndicateMagnumAP
+  suffix: Синдикат .45калибрББ
+  components:
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+    - type: NpcFactionMember
+      factions:
+        - SyndicateNF
+    - type: Gun
+      fireRate: 1
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+    - type: BallisticAmmoProvider
+      proto: CartridgeMagnumAP
+      capacity: 500
+
+- type: entity
+  parent: BaseWeaponTurret
+  name: баллистическая турель
+  id: WeaponTurretSyndicateShotgun
+  suffix: Синдикат .50дробь
+  components:
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+    - type: NpcFactionMember
+      factions:
+        - SyndicateNF
+    - type: Gun
+      fireRate: 4
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+    - type: BallisticAmmoProvider
+      proto: ShellShotgun
+      capacity: 500
+

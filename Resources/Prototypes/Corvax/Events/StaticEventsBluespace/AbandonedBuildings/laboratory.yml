@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Notes:
+
+- type: pointOfInterest
+  id: Lab
+  name: Лаборатория 
+  minimumDistance: 3500
+  maximumDistance: 4500
+  gridPath: /Maps/Corvax/Events/Elementary/AbandonedBuildings/laboratory.yml
+  addComponents:
+  - type: IFF
+    color: "#9d1bde"
+    flags: [HideLabel]
+    readOnly: true
+  - type: Shuttle
+    angularDamping: 999999
+    linearDamping: 999999
+
+- type: gameMap
+  id: Lab
+  mapName: Лаборатория
+  mapPath: /Maps/Corvax/Events/Elementary/AbandonedBuildings/laboratory.yml
+  minPlayers: 0
+  stations:
+    Lab:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Лаборатория'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

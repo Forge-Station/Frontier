@@ -1,0 +1,52 @@
+- type: latheRecipe
+  id: WeaponMagmiteCrusher
+  result: WeaponMagmiteCrusher
+  completetime: 20
+  materials:
+    Plasteel: 9000
+    Glass: 4000
+    Gold: 6000
+    Silver: 6000
+    Magmite: 2500
+
+- type: latheRecipe
+  id: WeaponMagmitePlasmaCutter
+  result: WeaponMagmitePlasmaCutter
+  completetime: 20
+  materials:
+    Plasteel: 6000
+    Glass: 3000
+    Gold: 6000
+    Silver: 1000
+    Uranium: 700
+    Magmite: 1500
+
+- type: latheRecipe
+  id: WeaponMagmiteCrusherGlaive
+  result: WeaponMagmiteCrusherGlaive
+  completetime: 20
+  materials:
+    Plasteel: 11000
+    Glass: 2000
+    Gold: 3000
+    Silver: 6000
+    Magmite: 2000 
+
+- type: latheRecipe
+  id: JetpackMining
+  result: JetpackMining
+  completetime: 10
+  materials:
+    Steel: 12000
+    Plastic: 12000
+    Gold: 500
+
+- type: latheRecipe
+  id: ClothingShoesBootsJetBoots
+  result: ClothingShoesBootsJetBoots
+  completetime: 20
+  materials:
+    Steel: 6000
+    Gold: 1000
+    Silver: 2000
+    Uranium: 1500

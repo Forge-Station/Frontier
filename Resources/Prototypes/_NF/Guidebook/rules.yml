@@ -1,105 +1,106 @@
-- type: guideEntry
+- type: guideEntry                      #CorvaxFrontier Весь yml переделан под правила Corvax
   id: FrontierRuleset
   name: guide-entry-frontier-rules
-  text: "/ServerInfo/_NF/Guidebook/Rules/FrontierRuleset.xml"
+  text: "/ServerInfo/_NF/Guidebook/Rules/CorvaxFrontierRuleset.xml"
   priority: -2
   ruleEntry: true
   children:
-    - FrontierRuleZeroTolerance
-    - FrontierRule1
-    - FrontierRule2
-    - FrontierRule3
-    - FrontierRule4
-    - FrontierRule5
-    - FrontierRule6
-    - FrontierRule7
-    - FrontierRule8
-    - FrontierRule9
-    - FrontierRule10
-    - FrontierRule11
-    - FrontierRule12
-    - FrontierRule13
+    - CorvaxFrontierRuleZERO
+    - CorvaxFrontierRule1
+    - CorvaxFrontierRule2
+    - CorvaxFrontierRule3
+    - CorvaxFrontierRule4
+    - CorvaxFrontierRule5
+    - CorvaxFrontierRule6
+    - CorvaxFrontierRule7
+    - CorvaxFrontierRule8
 
 - type: guideEntry
-  id: FrontierRuleZeroTolerance
+  id: CorvaxFrontierRuleZERO
   name: guide-entry-frontier-rule-zero-tolerance
-  text: "/ServerInfo/_NF/Guidebook/Rules/Zero_Tolerance.xml"
+  text: "/ServerInfo/_NF/Guidebook/Rules/0_Admin.xml"
   ruleEntry: true
 
 - type: guideEntry
-  id: FrontierRule1
+  id: CorvaxFrontierRule1
   name: guide-entry-frontier-rule-1
-  text: "/ServerInfo/_NF/Guidebook/Rules/1_Community.xml"
+  text: "/ServerInfo/_NF/Guidebook/Rules/1_Griffing.xml"
   ruleEntry: true
 
 - type: guideEntry
-  id: FrontierRule2
+  id: CorvaxFrontierRule2
   name: guide-entry-frontier-rule-2
-  text: "/ServerInfo/_NF/Guidebook/Rules/2_ICInfo.xml"
+  text: "/ServerInfo/_NF/Guidebook/Rules/2_Murder.xml"
   ruleEntry: true
 
 - type: guideEntry
-  id: FrontierRule3
+  id: CorvaxFrontierRule3
   name: guide-entry-frontier-rule-3
-  text: "/ServerInfo/_NF/Guidebook/Rules/3_Escalation.xml"
+  text: "/ServerInfo/_NF/Guidebook/Rules/3_ViolationGA.xml"
   ruleEntry: true
 
 - type: guideEntry
-  id: FrontierRule4
+  id: CorvaxFrontierRule4
   name: guide-entry-frontier-rule-4
-  text: "/ServerInfo/_NF/Guidebook/Rules/4_Chat.xml"
+  text: "/ServerInfo/_NF/Guidebook/Rules/3-1_ICandLOOC.xml"
   ruleEntry: true
 
 - type: guideEntry
-  id: FrontierRule5
+  id: CorvaxFrontierRule5
   name: guide-entry-frontier-rule-5
-  text: "/ServerInfo/_NF/Guidebook/Rules/5_Roleplay.xml"
+  text: "/ServerInfo/_NF/Guidebook/Rules/3-2_Multiacc.xml"
   ruleEntry: true
 
 - type: guideEntry
-  id: FrontierRule6
+  id: CorvaxFrontierRule6
   name: guide-entry-frontier-rule-6
+  text: "/ServerInfo/_NF/Guidebook/Rules/3-3_Illiteracy.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule7
+  name: guide-entry-frontier-rule-7
+  text: "/ServerInfo/_NF/Guidebook/Rules/3-4_Environment.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule8
+  name: guide-entry-frontier-rule-8
+  text: "/ServerInfo/_NF/Guidebook/Rules/3-5_EndingRound.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule9
+  name: guide-entry-frontier-rule-9
+  text: "/ServerInfo/_NF/Guidebook/Rules/4_CharacterLogic.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule10
+  name: guide-entry-frontier-rule-10
+  text: "/ServerInfo/_NF/Guidebook/Rules/5_AntagsPlay.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule11
+  name: guide-entry-frontier-rule-11
+  text: "/ServerInfo/_NF/Guidebook/Rules/5-1_PlayAsPirate.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule12
+  name: guide-entry-frontier-rule-12
   text: "/ServerInfo/_NF/Guidebook/Rules/6_Safezone.xml"
   ruleEntry: true
 
 - type: guideEntry
-  id: FrontierRule7
-  name: guide-entry-frontier-rule-7
-  text: "/ServerInfo/_NF/Guidebook/Rules/7_Antag.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: FrontierRule8
-  name: guide-entry-frontier-rule-8
-  text: "/ServerInfo/_NF/Guidebook/Rules/8_PVP.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: FrontierRule9
-  name: guide-entry-frontier-rule-9
-  text: "/ServerInfo/_NF/Guidebook/Rules/9_Pirates.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: FrontierRule10
-  name: guide-entry-frontier-rule-10
-  text: "/ServerInfo/_NF/Guidebook/Rules/10_Crimes.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: FrontierRule11
-  name: guide-entry-frontier-rule-11
-  text: "/ServerInfo/_NF/Guidebook/Rules/11_Silicons.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: FrontierRule12
-  name: guide-entry-frontier-rule-12
-  text: "/ServerInfo/_NF/Guidebook/Rules/12_Security.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: FrontierRule13
+  id: CorvaxFrontierRule13
   name: guide-entry-frontier-rule-13
-  text: "/ServerInfo/_NF/Guidebook/Rules/13_Command.xml"
+  text: "/ServerInfo/_NF/Guidebook/Rules/7_ERP.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule14
+  name: guide-entry-frontier-rule-14
+  text: "/ServerInfo/_NF/Guidebook/Rules/8_Cheating.xml"
   ruleEntry: true

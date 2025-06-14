@@ -1,0 +1,43 @@
+# Author -
+# GitHub: -
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Infiltrator
+  parent: BaseVessel
+  name: Лазутчик
+  description: Среднегабаритный экспедиционный шаттл синдиката. Рекомендованный состав команды 2-5 человек.
+  price: 65000
+  category: Medium
+  group: Syndicate
+  shuttlePath: /Maps/Corvax/Shuttles/Syndicate/infiltrator.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+  guidebookPage: Null
+  class:
+  - Syndicate
+
+- type: gameMap
+  id: Infiltrator
+  mapName: 'Лазутчик'
+  mapPath: /Maps/Corvax/Shuttles/Syndicate/infiltrator.yml
+  minPlayers: 0
+  stations:
+    Infiltrator:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Лазутчик {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

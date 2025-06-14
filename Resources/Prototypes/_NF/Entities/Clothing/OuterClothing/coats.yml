@@ -11,13 +11,15 @@
   - type: Armor # ClothingOuterArmorBulletproof stats
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.4
-        Heat: 0.9
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.55 #CorvaxFrontier
+        Heat: 0.85
   - type: ExplosionResistance
     damageCoefficient: 0.80
-
+  - type: StaticPrice #CorvaxFrontier
+    price: 485
+    
 - type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatBishop

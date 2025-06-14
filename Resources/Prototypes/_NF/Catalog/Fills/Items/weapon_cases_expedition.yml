@@ -223,7 +223,20 @@
     - id: NFMagazineShotgunDrum
       amount: 2
 
-#region SMGs
+- type: entity #CorvaxFrontier
+  parent: WeaponCaseLong
+  id: WeaponCaseLongKD12
+  suffix: Dungeon, KD12
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponShotgunKD12Expedition
+      amount: 1
+    - id: BoxLethalshotKS23
+      amount: 4 #CorvaxFrontier
+
+# SMGs
 - type: entity
   parent: WeaponCaseLong
   id: WeaponCaseLongWT550Expedition
@@ -289,7 +302,37 @@
     - id: NFMagazineSubMachineGun35
       amount: 3
 
-#region Rifles
+- type: entity #CorvaxFrontier
+  parent: WeaponCaseLong
+  id: WeaponCaseSubMachineGunVector22
+  suffix: Dungeon, SubMachineGunVector22
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: SubMachineGunVector22Expedition
+      amount: 1
+    - id: MagazineVector22
+      amount: 2
+    - id: MagazineBoxVector22
+      amount: 2 #CorvaxFrontier
+
+- type: entity #CorvaxFrontier
+  parent: WeaponCaseLong
+  id: WeaponCaseWeaponSubMachineP90LRK
+  suffix: Dungeon, SubMachineGunVector22
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSubMachineP90LRKExpedition
+      amount: 1
+    - id: MagazineP90LRK
+      amount: 2
+    - id: MagazineBoxPistol
+      amount: 2 #CorvaxFrontier
+
+# Rifles
 - type: entity
   parent: WeaponCaseLong
   id: WeaponCaseLongGestioExpedition

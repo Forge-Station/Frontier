@@ -1,0 +1,47 @@
+- type: job
+  id: Commander
+  name: Командир
+  description: Глава штурмовой группы "Жнецы"
+  playTimeTracker: JobCommander
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 1 # 48 hours
+  whitelisted: true
+  access:
+  - SyndicateAgent
+  - NuclearOperative
+  startingGear: CommanderGear
+  alwaysUseSpawner: true
+  hideConsoleVisibility: true
+  canBeAntag: true
+  icon: "JobIconCommander"
+  supervisors: job-supervisors-nobody
+  weight: 40
+  displayWeight: 40
+  setPreference: true
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: MailDisabled
+    - type: SpecialSectorStationRecord
+      recordGeneration: FalseRecord
+    - type: NpcFactionMember
+      factions:
+      - SyndicateNF
+  - !type:AddImplantSpecial
+    implants: [ DeathRattleImplanter ]
+
+- type: startingGear
+  id: CommanderGear
+  equipment:
+    ears: ClothingHeadsetAltSyndicate
+    id: SyndiPDAComa
+    belt: ClothingBeltSheathFilled
+    pocket1: WeaponPistolCobra
+    mask: ClothingMaskGasSwat
+  storage:
+    back:
+    - NFBoxSurvivalExtended
+    - MagazinePistolCaselessRifle
+    - MagazineBoxCaselessRifle
+    - SyndicateDataMinerFlatpack

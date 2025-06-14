@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+- type: vessel
+  id: separatist
+  parent: BaseVessel
+  name: Сепаратист
+  description: Медицинский шаттл штурмового парамедика. Рекомендуемый экипаж 2-4 человека.
+  price: 48200
+  category: Medium
+  group: Syndicate
+  shuttlePath: /Maps/Corvax/Shuttles/Syndicate/separatist.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+  guidebookPage: Null
+  class:
+  - Syndicate
+
+- type: gameMap
+  id: separatist
+  mapName: 'Сепаратист'
+  mapPath: /Maps/Corvax/Shuttles/Syndicate/separatist.yml
+  minPlayers: 0
+  stations:
+    separatist:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Сепаратист {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

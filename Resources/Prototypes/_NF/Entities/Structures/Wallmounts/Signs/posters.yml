@@ -260,7 +260,7 @@
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
-    state: nf_poster18_contraband    
+    state: nf_poster18_contraband
 
 - type: entity
   parent: PosterBase
@@ -270,11 +270,11 @@
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
-    state: nf_poster20_contraband      
+    state: nf_poster20_contraband
   - type: PointLight
     radius: 1.5
     energy: 2
-    color: "#F8F6F0"    
+    color: "#F8F6F0"
 
 - type: entity
   parent: PosterBase
@@ -284,8 +284,8 @@
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
-    state: nf_poster19_contraband    
-    
+    state: nf_poster19_contraband
+
 - type: entity
   parent: PosterBase
   id: NFPosterContrabandFsbCaladrius

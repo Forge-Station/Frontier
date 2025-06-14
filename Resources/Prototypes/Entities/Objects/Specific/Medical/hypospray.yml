@@ -573,8 +573,10 @@
     transferAmount: 30
     onlyAffectsMobs: false
     injectOnly: true
-  - type: StaticPrice
+  - type: StaticPrice #CorvaxFrontier
     price: 500
+  - type: Tag
+    tags: []
 
 - type: entity
   name: hyperzine microinjector
@@ -702,6 +704,8 @@
     - id: Hypopen
     sound:
       path: /Audio/Effects/unwrap.ogg
+  - type: StaticPrice #CorvaxFrontier
+    price: 500
 
 - type: entity
   name: weh auto-injector

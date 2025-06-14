@@ -1,0 +1,10 @@
+ent-ToolboxMedic = подозрительный ящик неопределённости
+  .desc = Что же взять на этот раз?
+ent-NFPouchFirstAidMEdickMedipen = сумка первой помощи
+ent-Smugler = Контрабандист
+ent-SCadet = Кадет Контрабандиста
+ent-SComa = Командир отряда "Жнецы"
+ent-Paramed = Парамедик отряда "Жнецы"
+ent-SShturm = Шутрмовик отряда "Жнецы"
+ent-ToolbSyndicateTechFaboxMedic = ТехФаб Синдиката
+  .desc = ТехФаб созданный Синдикатом для ряда диверсионных групп сектора Фронтир.

@@ -242,6 +242,8 @@
     materialComposition:
       Glass: 500
       Steel: 200
+  - type: StaticPrice
+    price: 3 #CorvaxFrontier
 
 - type: entity
   name: broken floodlight

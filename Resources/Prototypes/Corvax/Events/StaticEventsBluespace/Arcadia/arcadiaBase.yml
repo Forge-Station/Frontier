@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen 
+
+# Shuttle Notes:
+
+- type: pointOfInterest
+  id: arcadiaBase
+  name: База Аркадии
+  minimumDistance: 3500
+  maximumDistance: 6000
+  gridPath: /Maps/Corvax/Events/Elementary/Arcadia/arcadiaBase.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+    readOnly: true
+  - type: Shuttle
+    angularDamping: 999999
+    linearDamping: 999999
+
+- type: gameMap
+  id: arcadiaBase
+  mapName: База Аркадии
+  mapPath: /Maps/Corvax/Events/Elementary/Arcadia/arcadiaBase.yml
+  minPlayers: 0
+  stations:
+    arcadiaBase:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'База Аркадии'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

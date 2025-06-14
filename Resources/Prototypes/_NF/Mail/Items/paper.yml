@@ -2,251 +2,251 @@
 # TODO: these should really be based on localization strings.
 - type: entity
   id: PaperMailNFPowerTool
-  name: Hazard Fraught advertisement
+  name: Опасная реклама
   categories: [ HideSpawnMenu ]
-  suffix: "power tool ad, formatted"
+  suffix: "реклама электроинструментов, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-                    [head=1]Hazard Fraught Tools[/head]
+                    [head=1](не)Опасные инструменты[/head]
 
-                  [head=2]Discount Tools at Quality Prices![/head]
+                  [head=2]Инструменты со скидкой по сниженным ценам![/head]
 
-                                [head=2]Fax us for a catalog at
-                      [color=#990000]ERROR: UNEXPECTED EOF[/color][/head]
+                                [head=2]Отправьте нам факс для получения каталога по адресу
+                      [color=#990000]ERROR 0x0000007b: НЕОЖИДАННОЕ ЗНАЧЕНИЕ[/color][/head]
 
 - type: entity
   id: PaperMailNFVagueThreat1
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 1, formatted"
+  suffix: "почтовая угроза 1, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-                     [head=1]I know what you did.[/head]
+                     [head=1]Я знаю, что [color=#000000]ТЫ[/color] сделал.[/head]
 
-            [head=3]You don't know what I'm going to do to you.[/head]
+            [head=3]И ты даже представить себе не сможешь, что [color=#800000]Я С ТОБОЙ СДЕЛАЮ![/color][/head]
 
 - type: entity
   id: PaperMailNFVagueThreat2
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 2, formatted"
+  suffix: "почтовая угроза 2, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-                        [head=1]I'm coming for you.[/head]
+                        [head=1]Я иду за тобой.[/head]
 
 - type: entity
   id: PaperMailNFVagueThreat3
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 3, formatted"
+  suffix: "почтовая угроза 3, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-                                      [head=1]You're next.[/head]
+                                      [head=1]Ты следующий.[/head]
 
 - type: entity
   id: PaperMailNFVagueThreat4
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 4, formatted"
+  suffix: "почтовая угроза 4, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-                                       [head=1]We see you.[/head]
+                                       [head=1]Мы наблюдаем за тобой.[/head]
 
 - type: entity
   id: PaperMailNFVagueThreat5
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 5, formatted"
+  suffix: "почтовая угроза 5, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-                   [head=2]I hope your affairs are in order.[/head]
+                   [head=2]Я надеюсь, у тебя всё хорошо. Потому что скоро тебе станет плохо.[/head]
 
 - type: entity
   id: PaperMailNFVagueThreat6
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 6, formatted"
+  suffix: "почтовая угроза 6, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-              [head=1]It's only a matter of time.[/head]
+              [head=1]Это всего лишь вопрос времени.[/head]
 
 
-                      [head=1]Enjoy it while it lasts.[/head]
+                      [head=1]Наслаждайся моментом, пока можешь.[/head]
 
 - type: entity
   id: PaperMailNFVagueThreat7
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 7, formatted"
+  suffix: "почтовая угроза 7, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-               [head=2]Who should we mail your pieces to?[/head]
+               [head=2]На чей адрес нам отправить твои ОтОрВаНнЫе ЧаСтИ тЕлА, пУпСиК? [color=#8B0000]>:3[/color][/head]
 
 - type: entity
   id: PaperMailNFVagueThreat8
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 8, formatted"
+  suffix: "почтовая угроза 8, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-      [head=2]Would you prefer to die slowly or quickly?
+      [head=2]Какую смерть ты предпочитаешь? Ме-е-е-едле-е-е-енну-у-у-у-ю или бстр?
       [/head]
-                                      [head=1]Just kidding.[/head]
+                                      [head=1]Расслабься, шучу.[/head]
 
-                     [head=2]We don't care what you think.[/head]
+                     [head=2]Мне всё равно, что ты подумаешь.[/head]
 
 - type: entity
   id: PaperMailNFVagueThreat9
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 9, formatted"
+  suffix: "почтовая угроза 9, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-          [head=3]I think your head would look nice on my mantel.[/head]
+          [head=3]Я весь день думаю о том, как хорошо бы смотрелась ТВОЯ голова на полочке МОЕГО камина...[/head]
 
 - type: entity
   id: PaperMailNFVagueThreat10
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 10, formatted"
+  suffix: "почтовая угроза 10, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-               [head=1]You should have paid up.[/head]
+               [head=1]Тебе стоило заплатить всю сумму...[/head]
 
 
-                              [head=1]It's too late now.[/head]
+                              [head=1]Но теперь уже поздно.[/head]
 
 - type: entity
   id: PaperMailNFVagueThreat11
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 11, formatted"
+  suffix: ""
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-                [head=3]Your family will miss you, but don't worry.[/head]
+                [head=3]Твоя мама будет очень скучать по тебе, но ты не волнуйся.[/head]
 
 
-         [head=1]We'll take care of them too.[/head]
+         [head=1]Мы хорошо позаботимся о ней.[/head]
 
 - type: entity
   id: PaperMailNFVagueThreat12
   categories: [ HideSpawnMenu ]
-  suffix: "vague mail threat 12, formatted"
+  suffix: "почтовая угроза 11, отформатированная"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-               [head=3]I have a bet that you're going to die today.[/head]
+               [head=3]Держу пари, ты сегодня сдохнешь.[/head]
 
 
-                  [head=1]I'm not afraid to cheat.[/head]
+                  [head=1]Я даже не побоюсь сжульничать.[/head]
 
 - type: entity
   id: PaperMailNFPwrGameAd
-  name: pwr game advertisement
+  name: рекламная листовка PWR GAME
   categories: [ HideSpawnMenu ]
-  suffix: "pwr game ad"
+  suffix: "реклама PWR GAME"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-                            [head=1]Drink Pwr Game![/head]
+                            [head=1]Пейте PWR GAME![/head]
 
-      [head=3]Proud sponsor of the NT Block Game Championship.[/head]
+      [head=3]Гордый спонсор чемпионата по тетрису от NanoTrasen[/head]
 
 - type: entity
   id: PaperMailNFRedBoolAd
-  name: red bool advertisement
+  name: рекламная листовка Ред Булеан
   categories: [ HideSpawnMenu ]
-  suffix: "red bool ad"
+  suffix: "Реклама РедБулл"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-                 [head=2]Try NEW Reformulated Red Bool![/head]
+                 [head=2]Попробуйте НОВЫЙ обновленный Ред Булеан![/head]
 
-                      [head=2]Over [color=#dd0000]1.5g[/color] of caffeine per can![/head]
+                      [head=2]Более [color=#dd0000]1,5 г[/color] кофеина в одной банке![/head]
 
-                 [head=2]Punch your heart into overdrive![/head]
+                 [head=2]Даже ваша девушка не заставит ваше сердце биться с такой скоростью![/head]
 
 - type: entity
   id: PaperMailNFSpaceColaAd
-  name: space cola advertisement
+  name: рекламная листовка Космической колы
   categories: [ HideSpawnMenu ]
-  suffix: "space cola ad"
+  suffix: "реклама Космической колы"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-            [head=2]The classic taste you love, Space Cola.[/head]
+            [head=2]Классический вкус, который вы так любите, - космическая кола.[/head]
 
-                             [head=2]Now certified lead-free.[/head]
+                             [head=2]Теперь сертифицировано как продукт, не содержащий свинца.[/head]
 
 - type: entity
   id: PaperMailNFSpaceMountainWindAd
-  name: space mountain wind advertisement
+  name: рекламная листовка Спейс Солар Вайнд
   categories: [ HideSpawnMenu ]
-  suffix: "space mountain wind ad"
+  suffix: "реклама Спейс Солар Вайнд"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-               [head=3]When it's time to game, there's one choice:[/head]
+               [head=3]Когда приходит время игры, есть один выбор:[/head]
 
-                     [head=1]Space Mountain Wind.[/head]
+                     [head=1]Спейс Солар Вайнд.[/head]
 
 - type: entity
   id: PaperMailNFSpaceUpAd
-  name: space up advertisement
+  name: рекламная листовка Спейс Ап
   categories: [ HideSpawnMenu ]
-  suffix: "space up ad"
+  suffix: "реклама Спейс Ап"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-            [head=3]The crisp, refreshing taste of lemon and lime.[/head]
+            [head=3]Свежий, освежающий вкус лимона и лайма.[/head]
 
 
-                                        [head=1]Space Up![/head]
+                                        [head=1]Спейс Ап![/head]
 
 
-        [head=2]Ask your barkeep for a Sui Dream today![/head]
+        [head=2]Попросите вашего бармена принести вам Сон Сью прямо сейчас![/head]
 
 - type: entity
   id: PaperMailNTSoapAd1
   categories: [ HideSpawnMenu ]
-  suffix: "soap ad 1"
+  suffix: "реклама мыла 1"
   parent: Paper
   components:
   - type: Paper
@@ -255,166 +255,166 @@
       stampedName: Christopher Cleanman
       stampType: Signature
     content: |2
-      [head=3]Hello Valued Customer,[/head]
-      You have been selected to receive a complimentary sampler of scented soaps that Nanotrasen has to offer.
+      [head=3]Здравствуйте, уважаемый клиент![/head]
+      Вы были выбраны для получения бесплатного образца ароматизированного мыла, предлагаемого Nanotrasen.
 
-      Why not enjoy a nice warm shower with our scented soaps?  Tested and effective vs. vent crud and mold.
+      Почему бы не насладиться приятным тёплым душем с нашим ароматным мылом? Проверено и эффективно защищает от грязи и плесени.
 
-      We hope you enjoy.
+      Мы надеемся, что вам понравится.
 
-      Sincerely,
-            Christopher Cleanman, Vice President, NT Habs - Toiletries Dept.
+      Искренне,
+            Кристофер КлинМен, вице-президент отдела туалетных принадлежностей "NT Habs".
 
 - type: entity
   id: PaperMailNTSoapAd2
   categories: [ HideSpawnMenu ]
-  suffix: "soap ad 2"
+  suffix: "реклама мыла 2"
   parent: Paper
   components:
   - type: Paper
     content: |2
-      [head=2]GREETINGS FRONTIER CITIZEN[/head]
+      [head=2]ПРИВЕТСТВУЮ ВАС, ГРАЖДАНИН ФРОНТИРА[/head]
 
-      OUR REPORTS INDICATE THAT:
-      1. YOU HAVE FAILED YOUR QUARTERLY HYGIENE INSPECTION.
-      2. THIS HAS REDUCED SECTOR EFFICIENCY BY [bold]0.02%[/bold].
+      НАШИ ОТЧЕТЫ УКАЗЫВАЮТ НА ТО, ЧТО:
+      1. ВЫ НЕ ПРОШЛИ ЕЖЕКВАРТАЛЬНЫЙ ГИГИЕНИЧЕСКИЙ ОСМОТР.
+      2. ЭТО ПРИВЕЛО К СНИЖЕНИЮ ЭФФЕКТИВНОСТИ СЕКТОРА НА [bold]0,02%[/bold].
 
-      ENCLOSED IS A SELECTION OF HYGIENE PRODUCTS SUITABLE FOR USE BY ORGANICS. WE HOPE THAT THIS SITUATION IS RESOLVED PROMPTLY.
+      К ПИСЬМУ ПРИЛАГАЕТСЯ ПОДБОРКА ГИГИЕНИЧЕСКИХ СРЕДСТВ, ПОДХОДЯЩИХ ДЛЯ ИСПОЛЬЗОВАНИЯ КОМПАНИЕЙ "ORGANICS". МЫ НАДЕЕМСЯ, ЧТО ЭТА СИТУАЦИЯ БУДЕТ БЫСТРО РАЗРЕШЕНА.
 
-      [italic]THIS IS AN AUTOMATED MESSAGE. DO NOT REPLY.[/italic]
+      [italic]ЭТО АВТОМАТИЧЕСКОЕ СООБЩЕНИЕ. НЕ ОТВЕЧАЙТЕ.[/italic]
 
 - type: entity
   id: PaperMailNTConscript
   categories: [ HideSpawnMenu ]
-  suffix: "conscript"
+  suffix: "призыв"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-                     [head=1]NOT ONE STEP BACK.[/head]
+                     [head=1]НИ ШАГУ НАЗАД.[/head]
 
 
-                       [head=1]FOR THE FRONTIER.[/head]
+                       [head=1]ВСЁ ДЛЯ ФРОНТИРА.[/head]
 
 - type: entity
   id: PaperMailNTMusket
   categories: [ HideSpawnMenu ]
-  suffix: "musket"
+  suffix: "мушкет"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-                  [head=2]Use a musket for sector defense,
-             like the founding fathers intended.[/head]
+                  [head=2]Используйте мушкет для обороны сектора,
+             как и задумывали отцы-основатели.[/head]
 
 - type: entity
   id: PaperMailNFPaperPusherAd
   categories: [ HideSpawnMenu ]
-  suffix: "paper pusher"
+  suffix: "раздача бумаги"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-          [head=2]Here is a pen for any letters you write.
+          [head=2]Вот ручка для любых писем, которые вы будете писать.
       [/head]
-            [head=1]Keep it close, use it often.[/head]
+            [head=1]Держите её при себе, почаще пользуйтесь ею.[/head]
 
-      [head=2]May you write well, neatly, and with style.[/head]
+      [head=2]Желаю вам писать грамотно, аккуратно и со стилем.[/head]
 
-            [head=3]Sincerely,
-               [italic]The Frontier Paper Pusher's Club[/italic][/head]
+            [head=3]Искренне,
+               [italic]Клуб торговцев бумагой Фронтира[/italic][/head]
 
 - type: entity
   id: PaperMailNFPetBedAssemblyManual
-  name: pet bed assembly manual
+  name: инструкция по сборке кровати для домашних животных
   categories: [ HideSpawnMenu ]
-  suffix: "pet bed assembly manual"
+  suffix: "кровать для животных"
   parent: Paper
   components:
   - type: Paper
     content: |2
       
-      [head=1]HÖGANÄS[/head]
+      [head=1]ХÖГАНÄС[/head]
 
-      [italic](There is a black and white picture of a pet bed on the first page.)[/italic]
+      [italic](На первой странице есть чёрно-белая фотография кровати для домашних животных.)[/italic]
 
-      [italic](On the next few pages, you see a list of materials and a happy stick figure assembling furniture.)[/italic]
+      [italic](На следующих нескольких страницах вы видите список материалов и фигурку счастливчика, собирающего мебель из палочек.)[/italic]
 
-      [italic](On the pages after that, you see a set of instructions to assemble a pet bed. You're sure you don't need them, how hard could it be?)[/italic]
+      [italic](На следующих страницах вы видите набор инструкций по сборке лежанки для домашних животных. Вы уверены, что они вам не нужны? Насколько это может быть сложно?)[/italic]
 
 - type: entity
   id: PaperMailNTBoxer
   categories: [ HideSpawnMenu ]
-  suffix: "boxer"
+  suffix: "бокс"
   parent: Paper
   components:
   - type: Paper
     content: |2
-          [head=2]You've gotta defend your belt, champ.
+          [head=2]Тебе придётся защищать свой пояс, чемпион.
       [/head]
-                [head=1]They're coming for you.[/head]
+                [head=1]Они идут за тобой, за твои поясом.[/head]
 
-                  [head=2]This should help. Knock 'em out.[/head]
+                  [head=2]Это должно помочь тебе ВЫРУБИТЬ их.[/head]
 
 # Placeholder for an arm-on-use, flashbang fakeout pipebomb
 - type: entity
   id: PaperMailNFPipebombIntern
   categories: [ HideSpawnMenu ]
-  suffix: "pipe bomb intern"
+  suffix: "стажёр по СВУ"
   parent: Paper
   components:
   - type: Paper
     stampedBy:
     - stampedColor: '#333333FF'
-      stampedName: craig
+      stampedName: Крейк
       stampType: Signature
     content: |2
-      [bold]hey uh, they told me to send you a pipebomb i guess?
+      [bold]эй, наверное, тебе я должен был отправить взрывчатку?
 
-      this is all i could find around here, hope that works
+      это всё, что я смог найти и собрать, надеюсь, это сработает
 
-      thanks[/bold]
+      удачи[/bold]
 
 - type: entity
   id: PaperMailNFAntivirus
-  name: Snortin Antivirus invoice
+  name: Счёт за использование антивируса Коксперски
   categories: [ HideSpawnMenu ]
-  suffix: "antivirus ad"
+  suffix: "реклама антивируса"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-          [head=1]Invoice[/head][head=3]
-          Snortin Antivirus Software[/head]
+          [head=1]Счёт[/head][head=3]
+          Программное Обеспечение Коксперски[/head]
 
-      [head=3]Order #41003
-      [bold][bullet/][/bold] 1x Snortin Total-275 Antivirus Install Disk[/head]
+      [head=3]Заказ #41003
+      [bold][bullet/][/bold] 1x установочный диск антивируса Коксперски, версии 2.75[/head]
 
-      [head=3]Total: 947381 Spesos[/head]
+      [head=3]Total: 947381 Кредитов[/head]
 
-      Thank you for making purchase from Snortin Antivirus Software.
-      We assuring you that our product is greatest.
-      Please sending payment at earliest convenience.
+      Благодарим вас за покупку Антивирусного Программного Обеспечения Коксперски.
+      Мы заверяем вас, что наш продукт – лучший.
+      Пожалуйста, совершите оплату как можно скорее.
 
 - type: entity
   id: PaperMailNFEMPPreparedness
   categories: [ HideSpawnMenu ]
-  name: EMP preparedness response form
-  suffix: "emp preparedness"
+  name: Форма ответа на вопрос о готовности к ЭМИ
+  suffix: "готовность к ЭМИ"
   parent: Paper
   components:
   - type: Paper
     content: |2
 
-        [head=1]EMP Preparedness Response[/head]
+        [head=1]Реагирование на обеспечение готовности к ЭМИ[/head]
 
-      You have been selected to receive a NT EMP Preparedness kit as a test. Note that this is only a test. In a real emergency, follow the instructions of your vessel's command staff.
+      Вас выбрали для получения комплекта готовности к NT ЭМИ в качестве теста. Обратите внимание, что это всего лишь тест. В реальной чрезвычайной ситуации следуйте инструкциям командного состава вашего судна.
 
-      As the recipient of this, please note [bold]any improvements[/bold] that could be made towards the EMP preparedness of the vessel you were aboard when opening and submit this form to your serving Captain or Station Representative.
+      Как получатель этого письма, пожалуйста, отметьте [bold]любые улучшения[/bold], которые можно было бы внести в готовность судна к ЭМИ, на борту которого вы находились во время открытия, и отправьте эту форму вашему действующему капитану или представителю станции.
 
       [bold]Date of test:[/bold]
       [bold]Number of affected items:[/bold]
@@ -424,32 +424,32 @@
 - type: entity
   id: PaperMailNFBuildABuddy
   categories: [ HideSpawnMenu ]
-  name: Build-a-Buddy adoption letter
-  suffix: "build-a-buddy"
+  name: Письмо "Собери Дружка!"
+  suffix: "Собери Дружка!"
   parent: Paper
   components:
   - type: Paper
     stampState: paper_stamp-generic
     stampedBy:
     - stampedColor: '#FF6699FF'
-      stampedName: Chief Friendship Officer
+      stampedName: Главный специалист по дружбе!
     - stampedColor: '#333333FF'
-      stampedName: Cuts-With-Scalpel
+      stampedName: Порезы-От-Скальпеля
       stampType: Signature
     content: |2
 
-      [head=1]Note of Adoption[/head]
+      [head=1]Примечание о посылке[/head]
 
-      You're now the proud owner of your very own Build-a-Buddy!
+      Теперь вы гордый обладатель собственного конструктора "Собери Дружка!"
 
-      We hope that your new friend can serve as a shoulder to lean on in the depths of space, and hopefully you won't be quite as lonely out there. Personally, I find putting them together to be rather therapeutic.
+      Мы надеемся, что ваш новый друг сможет послужить вам плечом, на которое вы сможете опереться в глубинах космоса, и, надеюсь, вы не будете там так одиноки. Лично я считаю, что сборка данного конструктора оказывает довольно благотворное воздействие!
 
-      [bold]Collect the whole set![/bold]
-      [bold][bullet/][/bold] Greta the Goblin
-      [bold][bullet/][/bold] Henry the Human
-      [bold][bullet/][/bold] Randy the Reptilian
-      [bold][bullet/][/bold] Steven the Slime
-      [bold][bullet/][/bold] Valerie the Vulpkanin
+      [bold]Соберите все наши наборы![/bold]
+      [bold][bullet/][/bold] [color=#228B22]Гоблин Грета[/color]
+      [bold][bullet/][/bold] [color=#FFE4C4]Человек Генри[/color]
+      [bold][bullet/][/bold] [color=#FF0000]Унатх Ренди[/color]
+      [bold][bullet/][/bold] [color=#4169E1]Слаймолюд Стивен[/color]
+      [bold][bullet/][/bold] [color=#FF00FF]Вульпканин Валерий[/color]
 
 - type: entity
   id: PaperMailNFSpaceLaw
@@ -461,27 +461,27 @@
     stampState: paper_stamp-centcom
     stampedBy:
     - stampedColor: '#006600FF'
-      stampedName: Central Admiralty of Frontier
+      stampedName: Центральное Адмиралтейство Фронтира
     content: |2
 
-            [head=1]Space Law is your shield.[/head]
+            [head=1]Космический закон — ваш щит.[/head]
 
-                  [head=2]With it, you guard the Frontier.[/head][head=3]
+                  [head=2]С ним вы охраняете Фронтир.[/head][head=3]
       [/head]
-        [head=1]Memorize it. Grasp it firmly.[/head]
+        [head=1]Запомните это. Хорошо запомните.[/head]
 
-          [head=2]The SOP is your sword, don't get rusty.[/head]
+          [head=2]Эта подачка - ваш новый меч, что никогда не заржавеет.[/head]
 
-       [head=2]Maintain your balance, and wield it well.[/head]
-
-
+       [head=2]Держа его в руках, сохраняйте равновесие и владейте им достойно.[/head]
 
 
 
 
 
 
-                              [head=3][italic]Internal Bureau of Propaganda[/italic][/head]
+
+
+                              [head=3][italic]Внутреннее бюро пропаганды[/italic][/head]
 
 - type: entity
   id: PaperMailNFClurger
@@ -493,26 +493,26 @@
     stampState: paper_stamp-centcom
     stampedBy:
     - stampedColor: '#006600FF'
-      stampedName: Central Admiralty of Frontier
+      stampedName: Центральное Адмиралтейство Фронтира
     - stampedColor: '#333333FF'
-      stampedName: Dusty Binn
+      stampedName: Дасти Бинн
       stampType: Signature
     content: |2
   
-        [head=1]Notice of Organic Upcycling[/head]
+        [head=1]Уведомление об органической переработке[/head]
 
-      [head=3]As part of Nanotrasen's sector-wide [color=#009900]Green Again[/color] policy, we have upcycled one of the station pets from a prior shift.
+      [head=3]В рамках общеотраслевой политики NanoTrasen "[color=#009900]Зелёный ренессанс[/color]" мы переработали одного из питомцев станции, оставшегося с прошлой смены.
 
-      Enclosed is an emergency sustenance ration.[/head]
+      Прилагается запас продовольствия на случай непредвиденных обстоятельств.[/head]
 
-      [bold]Subject:[/bold] NT-CAT-4183053 "Clippy"
-      [bold]DNA:[/bold] AACATATTACCGGCAT
-      [bold]Repurposing:[/bold] Sustenance
+      [bold]Субъект:[/bold] NT-КОТ-4183053 "Скрепка"
+      [bold]ДНК:[/bold] MEOWAACATAMEWTTACMEOWCGGCAT
+      [bold]Перепрофилирование:[/bold] Поддержка
 
 - type: entity
   id: PaperMailNFMime
   categories: [ HideSpawnMenu ]
-  suffix: "mime"
+  suffix: "Мим"
   parent: Paper
   components:
   - type: Paper
@@ -533,4 +533,4 @@
 
 
 
-                                     [head=1][color=#777777]Take the vow.[/color][/head]
+                                     [head=1][color=#777777]Прими обет молчания.[/color][/head]

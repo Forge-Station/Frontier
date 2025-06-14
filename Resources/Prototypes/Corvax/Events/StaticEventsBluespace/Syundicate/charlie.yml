@@ -1,0 +1,47 @@
+# Author Info
+# GitHub: mersen_tyn
+# Discord: kvasen and mersen
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Notes:
+# just a little loot n shoot POI. Pretty much the second POI to even exist
+
+- type: pointOfInterest
+  id: Charlie
+  name: 'Синдикатовcкий аванпост Чарли'
+  minimumDistance: 8150
+  maximumDistance: 13550
+  gridPath: /Maps/Corvax/Events/Elementary/Syndicate/charlie.yml
+  addComponents:
+  - type: IFF
+    color: "#C83737"
+    flags: [HideLabel, Hide]
+  - type: Shuttle
+    angularDamping: 999999
+    linearDamping: 999999
+  - type: SyndicateFOB # For pinpointer
+  - type: ProtectedGrid
+    preventEmpEvents: True
+    preventRCDUse: True
+    preventFloorPlacement: True
+    preventFloorRemoval: True
+    noGridCollision: True
+
+
+- type: gameMap
+  id: Charlie
+  mapName: 'Синдикатовcкий аванпост Чарли'
+  mapPath: /Maps/Corvax/Events/Elementary/Syndicate/charlie.yml
+  minPlayers: 0
+  stations:
+    Charlie:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Синдикатовcкий аванпост Чарли'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

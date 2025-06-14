@@ -249,6 +249,8 @@
   - type: HitscanBatteryAmmoProvider
     proto: NFRedMediumLaser # Frontier: RedLaser<NFRedMediumLaser
     fireCost: 62.5
+  - type: MercenaryBountyItem # Corvax-Frontier
+    id: WeaponLaserCarbine
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
@@ -422,7 +424,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: x-ray cannon
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseC3Contraband] # Frontier: added BaseSecurityContraband<BaseC3Contraband
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: added BaseSecurityContraband<BaseC3Contraband #Corvax-Frontier КБ
   id: WeaponXrayCannon
   description: An illegal and experimental weapon that uses concentrated x-ray energy against its target.
   components:

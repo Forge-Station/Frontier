@@ -1,0 +1,12 @@
+- type: entity
+  name: Spawn Mob Cat Signis
+  id: SpawnMobCatSignis
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobCatSigmis

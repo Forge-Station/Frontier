@@ -24,7 +24,7 @@
           steps:
             - component: ComputerTabletopBoard
               store: board
-              name: construction-graph-component-computer-tabletop-board
+              name: tabletop-computer-circuit-board #Corvax-Frontier
               icon:
                 sprite: "Objects/Misc/module.rsi"
                 state: "id_mod"

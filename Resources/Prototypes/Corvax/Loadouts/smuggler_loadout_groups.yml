@@ -1,0 +1,93 @@
+- type: loadoutGroup
+  id: SmugglerCaptainHead
+  name: loadout-group-contractor-head
+  minLimit: 1
+  loadouts:
+  - SmugglerClothingHead1
+  - SmugglerClothingHead2
+  - SmugglerClothingHead3
+  fallbacks:
+  - SmugglerClothingHead1
+
+- type: loadoutGroup
+  id: SmugglerJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  minLimit: 1
+  loadouts:
+  - SmugglerJumpsuit1
+  - SmugglerJumpsuit2
+  - SmugglerJumpsuit3
+  - SmugglerJumpsuit4
+  - SmugglerJumpsuit5
+  fallbacks:
+  - SmugglerJumpsuit1
+  - SmugglerJumpsuit2
+
+- type: loadoutGroup
+  id: SmugglerBags
+  name: loadout-group-contractor-backpack
+  minLimit: 1
+  loadouts:
+  - SmugglerClothingBackpack1
+  - SmugglerClothingBackpack2
+  - SmugglerClothingBackpack3
+  fallbacks:
+  - SmugglerClothingBackpack1
+
+- type: loadoutGroup
+  id: SmugglerGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 1
+  loadouts:
+  - SmugglerClothingHandsGloves1
+  - SmugglerClothingHandsGloves2
+  - SmugglerClothingHandsGloves3
+  fallbacks:
+  - SmugglerClothingHandsGloves1
+
+- type: loadoutGroup
+  id: SmugglerGlasses
+  name: loadout-group-contractor-glasses
+  minLimit: 1
+  loadouts:
+  - SmugglerClothingEyes1
+  - SmugglerClothingEyes2
+  - SmugglerClothingEyes3
+  fallbacks:
+  - SmugglerClothingEyes1
+
+- type: loadoutGroup
+  id: SmugglerShoes
+  name: loadout-group-contractor-shoes
+  minLimit: 0
+  loadouts:
+  - SmugglerClothingShoes1
+  - SmugglerClothingShoes2
+  - SmugglerClothingShoes3
+  - SmugglerClothingShoes4
+  fallbacks:
+  - SmugglerClothingShoes1
+
+- type: loadoutGroup
+  id: SmugglerNeck
+  name: loadout-group-contractor-neck
+  minLimit: 0
+  loadouts:
+  - SmugglerNeck1
+  - SmugglerNeck2
+  - SmugglerNeck3
+  - SmugglerNeck4
+  fallbacks:
+  - SmugglerNeck1
+
+- type: loadoutGroup
+  id: SmugglerOuterclothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - SmugglerOuterclothing1
+  - SmugglerOuterclothing2
+  - SmugglerOuterclothing3
+  - SmugglerOuterclothing4
+  - SmugglerOuterclothing5
+  - SmugglerOuterclothing6

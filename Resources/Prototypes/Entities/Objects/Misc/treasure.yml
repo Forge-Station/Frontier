@@ -18,6 +18,8 @@
     color: "#0000ff"
   - type: StaticPrice
     price: 500
+  - type: MercenaryBountyItem # Corvax-Frontier
+    id: DatadiskEncrypted
 
 - type: entity
   parent: BaseItem

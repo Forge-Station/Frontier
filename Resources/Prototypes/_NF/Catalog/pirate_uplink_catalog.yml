@@ -52,24 +52,24 @@
       whitelist:
         - NFPirateCaptain
 
-- type: listing
-  id: UplinkPirateCaptainCrateFilled
-  name:  uplink-pirate-crate-captain-name
-  description: uplink-pirate-crate-captain-desc
-  productEntity: CratePirateChestCaptain
-  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
-  cost:
-    Doubloon: 8
-  categories:
-    - UplinkPirateUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - NFPirateCaptain
+#- type: listing #CorvaxFrontier
+#  id: UplinkPirateCaptainCrateFilled
+#  name:  uplink-pirate-crate-captain-name
+#  description: uplink-pirate-crate-captain-desc
+#  productEntity: CratePirateChestCaptain
+#  icon: { sprite: Structures/Storage/Crates/piratechest.rsi, state: crate_icon }
+#  cost:
+#    Doubloon: 8
+#  categories:
+#    - UplinkPirateUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - PirateUplink
+#    - !type:BuyerJobCondition
+#      whitelist:
+#        - NFPirateCaptain
 
 - type: listing
   id: UplinkPirateCrateFilled
@@ -78,7 +78,7 @@
   productEntity: CratePirateChest
   icon: { sprite: _NF/Structures/Storage/Crates/piratechestgrey.rsi, state: crate_icon }
   cost:
-    Doubloon: 8
+    Doubloon: 13 #CorvaxFrontier
   categories:
     - UplinkPirateUtility
   conditions:
@@ -87,56 +87,37 @@
         tags:
           - PirateUplink
 
-- type: listing
-  id: UplinkPirateSatchelFilled
-  name:  uplink-pirate-satchel-name
-  description: uplink-pirate-satchel-desc
-  productEntity: ClothingBackpackPirateBundle
-  icon: { sprite: Clothing/Back/Satchels/leather.rsi, state: icon }
-  cost:
-    Doubloon: 6
-  categories:
-    - UplinkPirateUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
+#- type: listing
+#  id: UplinkPirateSatchelFilled
+#  name:  uplink-pirate-satchel-name
+#  description: uplink-pirate-satchel-desc
+#  productEntity: ClothingBackpackPirateBundle
+#  icon: { sprite: Clothing/Back/Satchels/leather.rsi, state: icon }
+#  cost:
+#    Doubloon: 3 #CorvaxFrontier
+#  categories:
+#    - UplinkPirateUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - PirateUplink
 
-- type: listing
-  id: UplinkPirateMagboots
-  name:  uplink-pirate-magboots-name
-  description: uplink-pirate-magboots-desc
-  productEntity: ClothingShoesBootsMagPirate
-  icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-pirate.rsi, state: icon }
-  cost:
-    Doubloon: 2
-  categories:
-    - UplinkPirateUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-
-- type: listing
-  id: UplinkPirateHoverbike
-  name:  uplink-pirate-hoverbike-name
-  description: uplink-pirate-hoverbike-desc
-  productEntity: VehicleHoverbikePirateKey
-  icon: { sprite: _NF/Objects/Vehicles/hoverbike.rsi, state: keys }
-  cost:
-    Doubloon: 10
-  categories:
-    - UplinkPirateUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - NFPirateCaptain
+# - type: listing #CorvaxFrontier
+#  id: UplinkPirateMagboots
+#  name:  uplink-pirate-magboots-name
+#  description: uplink-pirate-magboots-desc
+#  productEntity: ClothingShoesBootsMagPirate
+#  icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-pirate.rsi, state: icon }
+#  cost:
+#    Doubloon: 2
+#  categories:
+#    - UplinkPirateUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - PirateUplink
 
 - type: listing
   id: UplinkPirateBlunderbuss
@@ -212,7 +193,7 @@
   productEntity: EnergyCutlass
   icon: { sprite: Objects/Weapons/Melee/e_cutlass.rsi, state: e_cutlass }
   cost:
-    Doubloon: 2
+    Doubloon: 4 #CorvaxFrontier
   categories:
     - UplinkPirateWeapons
   conditions:
@@ -231,7 +212,7 @@
   productEntity: PirateBreachingAnchor
   icon: { sprite: _NF/Objects/Weapons/Melee/pirate_anchor.rsi, state: icon }
   cost:
-    Doubloon: 4
+    Doubloon: 3 #CorvaxFrontier
   categories:
     - UplinkPirateWeapons
   conditions:
@@ -244,12 +225,12 @@
   id: UplinkPirateRedGrenade
   name:  uplink-pirate-redgrenade-name
   description: uplink-pirate-redgrenade-desc
-  productEntity: PirateGrenadeFire
+  productEntity: BoxPirateGrenadeFire
   icon: { sprite: _NF/Objects/Weapons/Bombs/pirate_fire.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 1 #CorvaxFrontier
   categories:
-    - UplinkPirateWeapons
+    - UplinkPirateExplosives
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -260,12 +241,12 @@
   id: UplinkPirateGreenGrenade
   name:  uplink-pirate-greengrenade-name
   description: uplink-pirate-greengrenade-desc
-  productEntity: PirateGrenadeRadiation
+  productEntity: BoxPirateGrenadeRadiation
   icon: { sprite: _NF/Objects/Weapons/Bombs/pirate_caustic.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 1 #CorvaxFrontier
   categories:
-    - UplinkPirateWeapons
+    - UplinkPirateExplosives
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -276,12 +257,12 @@
   id: UplinkPirateGrayGrenade
   name:  uplink-pirate-graygrenade-name
   description: uplink-pirate-graygrenade-desc
-  productEntity: PirateGrenadeConcussion
+  productEntity: BoxPiratePirateGrenadeConcussion
   icon: { sprite: _NF/Objects/Weapons/Bombs/pirate_explosive.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 1 #CorvaxFrontier
   categories:
-    - UplinkPirateWeapons
+    - UplinkPirateExplosives
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -400,6 +381,117 @@
         tags:
           - PirateUplink
 
+- type: listing #CorvaxFrontier
+  id: UplinkPirateLaserGun
+  name:  Старомодный лазерный бластер
+  description: старый пистолет стреляющий концентрированным светом, что может быть круче?
+  productEntity: WeaponLaserGun
+  icon: { sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi, state: base }
+  cost:
+    Doubloon: 4
+  categories:
+    - UplinkPirateWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBreachingCharge
+  name:  Пробивающий заряд
+  description: Заряд способный пробить любую стену шаттлов корпоративных крыс!
+  productEntity: BreachingCharge
+  icon: { sprite: _DV/Objects/Weapons/Bombs/breaching.rsi, state: icon }
+  cost:
+    Doubloon: 2
+  categories:
+    - UplinkPirateExplosives
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxMRE
+  name:  Сухой паёк
+  description: Коробка старых военных ИРП, они на удивление не испортились.
+  productEntity: BoxMRE
+  cost:
+    Doubloon: 2
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxLightRifle
+  name:  Коробка винтовочных патрон
+  description: Коробка винтовочных патрон используемых некоторым пиратским оружием, пускай и не такие мощные, зато какие дешёвые!
+  productEntity: MagazineBoxLightRifle
+  cost:
+    Doubloon: 2
+  categories:
+    - UplinkPirateAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratSpeedLoaderMagnumAP
+  name:  Спидлоадер Бронебойных Патрон
+  description: Спидлоадер с шестью бронебойными патронами 45 калибра если необходимо пробить что по крепче шкур корпоративных крыс.
+  productEntity: SpeedLoaderMagnumAP
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon}
+  cost:
+    Doubloon: 9
+  categories:
+    - UplinkPirateAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxT2SuperCapacitor
+  name:  Набор Модификации Двигателей
+  description: Набор старых конденсаторов для модификации вашей посудины!
+  productEntity: BoxT2SuperCapacitor
+  cost:
+    Doubloon: 4
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxZiptiePirat
+  name:  Набор стяжек
+  description: Набор самодельных стяжек для успокоения самых буйных пиратов во время пьянки.
+  productEntity: BoxZiptiePirat
+  cost:
+    Doubloon: 3
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+
 - type: listing
   id: UplinkPirateAccessConfigurator
   name:  uplink-pirate-accessconfigurator-captain-name
@@ -427,13 +519,121 @@
   icon: { sprite: /Textures/Objects/Devices/encryption_keys.rsi, state: pirate_label }
   cost:
     Doubloon: 2
+  categories:
+  - UplinkPirateUtility
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxDeathRattleImplantsPirat
+  name:  Набор растворения
+  description: Нажми на место укола рукой с случае захвата корпоративными крысами и мы отправим тебе помощь!
+  productEntity: BoxDeathRattleImplantsPirat
+  cost:
+    Doubloon: 4
+  categories:
+    - UplinkPirateUtility
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
         tags:
           - PirateUplink
+    - !type:BuyerJobCondition
+
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratWeaponSubMachineGunTypewriter
+  name:  Пишущая машинка
+  description: Старый пистолет-пулемет используемый самыми опасными членами братства. Ярррр!
+  productEntity: WeaponSubMachineGunTypewriter
+  cost:
+    Doubloon: 6
   categories:
-  - UplinkPirateUtility
+    - UplinkPirateWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratMagazinePistolSubMachineGunEmpty
+  name:  Пишущая лента
+  description: Лента используемая пиратами для "печатных машинок". Ярррр!
+  productEntity: BoxMagazinePistolSubMachineGun
+  cost:
+    Doubloon: 3
+  categories:
+    - UplinkPirateAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratMagazineBoxPistol
+  name:  Коробка чернил
+  description: Коробка с чернилами для дозаправки "Пишущей машинки". Ярррр!
+  productEntity: MagazineBoxPistol
+  cost:
+    Doubloon: 2
+  categories:
+    - UplinkPirateAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxPirateAssault
+  name:  Набор для абордажа
+  description: набор из крюка, сканера и батарейки для начинающих абордажных групп.
+  productEntity: BoxPirateAssault
+  cost:
+    Doubloon: 5
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+
+- type: listing # Corvax-Frontier
+  id: UplinkPiratShuttleGunPirateCannonFlatpack
+  name:  Пушка пиратского корабля
+  description: упакованная стационарная пушка пиратского корабля на случай поломки основных орудий.
+  productEntity: ShuttleGunPirateCannonFlatpack
+  cost:
+    Doubloon: 15
+  categories:
+    - UplinkPirateWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+
+- type: listing # Corvax-Frontier
+  id: UplinkPiratCrateFunParty
+  name:  Набор для вечеринки
+  description: Отпразнуйте славную победу над корпоративными крысами! Ярррр!
+  productEntity: CrateFunParty
+  cost:
+    Doubloon: 4
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
 
 - type: listing
   id: UplinkPirateRepairKit

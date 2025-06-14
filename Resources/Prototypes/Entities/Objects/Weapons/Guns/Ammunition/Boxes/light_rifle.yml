@@ -23,6 +23,8 @@
     steps: 4
     zeroVisible: false
   - type: Appearance
+  - type: StaticPrice #CorvaxFrontier
+    price: 125
 
 # Boxes
 - type: entity
@@ -78,7 +80,7 @@
 - type: entity
   abstract: true # Frontier: use NF ammo
   id: MagazineBoxLightRifleIncendiary
-  parent: BaseMagazineBoxLightRifle
+  parent: [BaseMagazineBoxLightRifle, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   name: ammunition box (.30 rifle incendiary)
   description: A cardboard box of .30 rifle rounds. Intended to hold self-igniting incendiary ammunition.
   components:

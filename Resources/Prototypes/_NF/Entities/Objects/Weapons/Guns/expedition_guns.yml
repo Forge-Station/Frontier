@@ -123,6 +123,7 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverArgentiExpedition
 
+## Shotguns
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1
@@ -152,7 +153,8 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleBarlowsBoltExpedition
 
-- type: entity
+
+- type: entity #CorvaxFrontier
   parent:
   - BaseExpeditionWeaponTier1
   - NFWeaponRifleCeremonial
@@ -204,6 +206,7 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverLuckyExpedition
 
+## Energy
 - type: entity
   parent:
   - BaseExpeditionWeaponTier2Pirate

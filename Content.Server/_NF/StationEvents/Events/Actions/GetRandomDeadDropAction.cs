@@ -4,8 +4,8 @@ using Content.Server.StationEvents.Components;
 namespace Content.Server.StationEvents.Events;
 
 /// <summary>
-/// An action that gets a set number of dead drops from a 
-/// </summary> 
+/// An action that gets a set number of dead drops from a
+/// </summary>
 [DataDefinition]
 public sealed partial class GetRandomDeadDropAction : IPreFaxAction
 {

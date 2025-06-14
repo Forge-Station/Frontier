@@ -1,0 +1,35 @@
+- type: loadout
+  id: SmugglerClothingShoes1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsCombat
+
+- type: loadout
+  id: SmugglerClothingShoes2
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterSyndicate
+
+- type: loadout
+  id: SmugglerClothingShoes3
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 2000
+  equipment:
+    shoes: ClothingShoesBootsJackFilled
+
+- type: loadout
+  id: SmugglerClothingShoes4
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 2000
+  equipment:
+    shoes: ClothingShoesSwat

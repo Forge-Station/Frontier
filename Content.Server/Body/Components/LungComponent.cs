@@ -20,7 +20,7 @@ public sealed partial class LungComponent : Component
     /// <summary>
     /// The name/key of the solution on this entity which these lungs act on.
     /// </summary>
-    [DataField]
+    [ViewVariables]
     public string SolutionName = LungSystem.LungSolutionName;
 
     /// <summary>

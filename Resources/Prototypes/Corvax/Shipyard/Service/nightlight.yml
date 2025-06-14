@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
+
+# Maintainer Info
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Nightlight
+  parent: BaseVessel
+  name: FSB Ночник
+  description: Среднегабаритный шаттл-ресторан от компании "The Far Star Biotech". Рекомендованный размер команды 1-4 человек.
+  price: 45000 # Botany bay
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/Corvax/Shuttles/Service/nightlight.yml
+  guidebookPage: ShipyardNightlight
+  class:
+  - Kitchen
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Nightlight
+  mapName: 'FSB Nightlight'
+  mapPath: /Maps/Corvax/Shuttles/Service/nightlight.yml
+  minPlayers: 0
+  stations:
+    Nightlight:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Ночник {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

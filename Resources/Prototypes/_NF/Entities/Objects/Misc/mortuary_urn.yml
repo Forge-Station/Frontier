@@ -17,8 +17,8 @@
   - type: ItemSlots
     slots:
       ashes_slot:
-        insertVerbText: Put Ashes
-        ejectVerbText: Empty Ashes
+        insertVerbText: mortuary-urn-ashes-put #Corvax-Frontier
+        ejectVerbText: mortuary-urn-ashes-empty #Corvax-Frontier
         name: Urn Contents
         startingItem: null
         whitelist:

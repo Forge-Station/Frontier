@@ -26,6 +26,12 @@ LEGAL_OVERRIDES = [
     "PosterLegitPDAAd",
     "ShowcaseRobot" # decoration
 ]
+# List of specific legal entities that override the above.  Does not check suffixes.
+LEGAL_OVERRIDES = [
+    "ButtonFrameCautionSecurity", # red button
+    "PosterLegitPDAAd",
+    "ShowcaseRobot" # decoration
+]
 # List of matchers that are illegal to use, unless the map is a ship and the ship belongs to the keyed shipyard.
 CONDITIONALLY_ILLEGAL_MATCHES = {
     "Shipyard": [

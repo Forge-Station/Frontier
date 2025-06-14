@@ -424,7 +424,7 @@
   id: CrossbowBoltEMP
 
 - type: entity
-  parent: [ BaseC3ContrabandNoValue, BaseCrossbowBoltTrigger ]
+  parent: [BaseCrossbowBoltTrigger, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   id: CrossbowBoltEMP
   name: EMP bolt
   description: A bolt with small power cell attached to it.

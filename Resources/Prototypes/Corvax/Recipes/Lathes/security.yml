@@ -1,0 +1,32 @@
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BoxFlashbangKS23
+  result: BoxFlashbangKS23
+  materials:
+    Steel: 320
+    Plastic: 320
+    Glass: 160
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BoxSmokeKS23
+  result: BoxSmokeKS23
+  materials:
+    Steel: 160
+    Plastic: 240
+    Glass: 160
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BoxBeanbagKS23
+  result: BoxBeanbagKS23
+  materials:
+    Steel: 240
+    Plastic: 160
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BoxLethalshotKS23
+  result: BoxLethalshotKS23
+  materials:
+    Steel: 160

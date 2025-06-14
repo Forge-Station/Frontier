@@ -1,0 +1,42 @@
+- type: entity
+  name: Сигмис
+  parent: [NFMobPet, MobCatGhost, MobCatSpace]
+  id: MobCatSigmis
+  description: Множество успешных операций! Множество пролитой крови! Это всё про него! Его харизма и красота покорили не одну девушку но он так и остался холост! Ибо война ему жена, а дети ему порох.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: syndicat
+  - type: GhostRole
+    name: ghost-role-information-sigmis-name
+    description: ghost-role-information-sigmis-description
+    rules: ghost-role-information-sigmis-rules
+    prototype: CatSigmis
+    mindRoles: [ MindRoleGhostRoleTeamAntagonist ]
+  - type: Loadout
+    prototypes: [ MobSigmisGear ]
+  - type: RandomMetadata
+    nameSegments: null
+  - type: AutoImplant
+    implants:
+    - DeathRattleImplant
+    - MicroBombImplant
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Syndicate
+  - type: ActiveRadio
+    channels:
+    - Syndicate
+  - type: NpcFactionMember
+    factions:
+      - Cat
+      - Syndicate
+  - type: Speech
+    audioParams:
+      volume: -2
+      rolloffFactor: 4.5
+      pitch: 0.7
+  - type: Temperature
+    heatDamageThreshold: 423
+    coldDamageThreshold: 0

@@ -229,3 +229,59 @@
   - PowerCageHigh
   # technologyPrerequisites: # Frontier
   # - BasicShuttleArmament # Frontier
+  # - WeaponLaserSvalinn
+  # - NFBlueprintWeaponLaserSvalinn # Frontier
+
+# - type: technology #Frontier
+#  id: AdvancedShuttleWeapon
+#  name: research-technology-advanced-shuttle-weapon
+#  icon:
+#    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Grenade/grenade_cartridge.rsi
+#    state: icon
+#  discipline: Arsenal
+#  tier: 3
+#  cost: 15000
+#  recipeUnlocks:
+#  - GrenadeEMP
+#  - PowerCageHigh
+#  - ShuttleGunDusterCircuitboard # Frontier
+#  technologyPrerequisites:
+#  - BasicShuttleArmament
+
+- type: technology #Corvax-Frontier
+  id: VariousShuttleWeapons
+  name: research-technology-various-shuttle-weapons
+  icon:
+    sprite: Corvax/Objects/Weapons/Guns/Ammunition/Magazine/rifle_cartridges.rsi
+    state: 35base
+  discipline: Arsenal
+  tier: 3
+  cost: 30000
+  recipeUnlocks:
+    - ShuttleShotgunMachineCircuitboard
+    - ShuttleGunAntiMaterialMachineCircuitboard
+    - ShuttleLightRifleGunMachineCircuitboard
+    - ShuttleSMGRifleMachineCircuitboard
+    - ShuttleMagnumRifleMachineCircuitboard
+    - ShuttleShotgunShellsBox
+    - ShuttleSmgRifleAmmoBox
+    - ShuttleRifleAmmoBox
+    - ShuttleMagnumRifleAmmoBox
+  technologyPrerequisites:
+  - BasicShuttleArmament
+
+- type: technology # Corvax-Frontier
+  id: AdvancedSalvage
+  name: research-technology-advanced-salvage
+  icon:
+    sprite: Corvax/Objects/Weapons/Melee/magmitecrusher.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+    - WeaponMagmiteCrusher
+    - WeaponMagmiteCrusherGlaive
+  technologyPrerequisites:
+  - SalvageWeapons
+  - MagnetsTech

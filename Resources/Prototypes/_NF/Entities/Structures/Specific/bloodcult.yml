@@ -224,7 +224,7 @@
       shader: unshaded
 
 - type: entity
-  parent: Autolathe
+  parent: [Autolathe, BaseC3Contraband] #Corvax-Frontier КБ
   id: BloodCultProp02
   name: blood cult forge
   description: A forge for weapon and armor production.
@@ -256,7 +256,7 @@
     - NFBloodCultStatic
 
 - type: entity
-  parent: BloodCultProp01
+  parent: [BloodCultProp01, BaseC3Contraband] #Corvax-Frontier КБ
   id: BloodCultProp03
   name: blood cult shrine
   description: An occult shrine for imbuing objects with vile energies.
@@ -269,7 +269,7 @@
       shader: unshaded
 
 - type: entity
-  parent: BloodCultProp01
+  parent: [BloodCultProp01, BaseC3Contraband] #Corvax-Frontier КБ
   id: BloodCultProp04
   name: blood cult workbench
   description: An occult workbench with handy drawers. There is a severed hand in one.

@@ -211,6 +211,8 @@
   - type: NoSlip
   - type: Contraband # Frontier
     hideValues: true # Frontier
+  - type: StaticPrice #CorvaxFrontier
+    price: 250 
 
 - type: entity
   parent: ClothingShoesClown

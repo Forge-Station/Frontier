@@ -12,6 +12,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Content.Server._NF.Station.Systems;
 using Robust.Shared.EntitySerialization.Systems;
+using Robust.Server.GameObjects; /// Corvax-Frontier
 
 namespace Content.Server._NF.GameRule;
 
@@ -21,6 +22,7 @@ namespace Content.Server._NF.GameRule;
 //[Access(typeof(NfAdventureRuleSystem))]
 public sealed class PointOfInterestSystem : EntitySystem
 {
+    [Dependency] private readonly MapSystem _mapLoad = default!; /// Corvax-Frontier
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -238,6 +240,33 @@ public sealed class PointOfInterestSystem : EntitySystem
             }
         }
     }
+    /// Corvax-Frontier Добавил группу для спавна гридов на отдельной карте. Да, оно работает
+    public void GeneratNewMapsgGrid(MapId mapUid, List<PointOfInterestPrototype> poiPrototypes, out List<EntityUid> coliseiStations)
+    {
+        coliseiStations = new List<EntityUid>();
+
+        if (_ticker.CurrentPreset is null)
+            return;
+        var currentPreset = _ticker.CurrentPreset.ID;
+
+        var newMapId = _mapLoad.CreateMap(out var mapId);
+        Log.Info($"Создана новая карта {mapId} для системы SpawnPoiOnMap");
+
+        foreach (var proto in poiPrototypes)
+        {
+            if (proto.SpawnGamePreset.Length > 0 && !proto.SpawnGamePreset.Contains(currentPreset))
+                continue;
+
+            var offset = GetRandomPOICoord(proto.MinimumDistance, proto.MaximumDistance);
+
+            if (TrySpawnPoiGrid(mapId, proto, offset, out var poiUid) && poiUid is { Valid: true } uid)
+            {
+                coliseiStations.Add(uid);
+                AddStationCoordsToSet(offset);
+            }
+        }
+    }
+    /// Corvax-Frontier end
 
     private bool TrySpawnPoiGrid(MapId mapUid, PointOfInterestPrototype proto, Vector2 offset, out EntityUid? gridUid, string? overrideName = null)
     {

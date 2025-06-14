@@ -110,7 +110,7 @@
     sprite: _NF/Structures/Machines/VendingMachines/expeditionaryflatpackvend.rsi
 
 - type: entity
-  parent: [BaseStructureDisableAnchoring, StorePresetUplink, VendingMachine]
+  parent: [BaseStructureDisableAnchoring, StorePresetUplink, VendingMachine, BaseC3Contraband] #Corvax-Frontier КБ
   id: VendingMachineSyndieContraband
   name: ContraVend
   description: Wanted across multiple sectors!
@@ -150,12 +150,12 @@
     key: enum.StoreUiKey.Key
   - type: Store
     balance:
-      Telecrystal: 4 # Small initial balance
+      Telecrystal: 20 #CorvaxFrontier
   - type: AccessReader
     access: [["NuclearOperative"], ["SyndicateAgent"]]
 
 - type: entity
-  parent: VendingMachine
+  parent: [ VendingMachine, BaseC1Contraband ] #Corvax-Frontier КБ
   id: VendingMachineBountyVend
   name: BountyVend
   description: Essential gear for the bounty hunter on the go.
@@ -194,7 +194,7 @@
 - type: entity
   id: VendingMachineArcadia
   name: ArcadiaDrobe
-  parent: [ VendingMachine, BaseC3Contraband ]
+  parent: [ VendingMachine, BaseC1Contraband ]
   description: Selling clothes from another reality for cheap prices!
   components:
     - type: VendingMachine
@@ -311,8 +311,8 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-#  - type: Advertise
-#    pack: AutoTuneVendAds
+  - type: Advertise
+    pack: AutoTuneVendAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/autotunevend.rsi
     layers:
@@ -380,7 +380,7 @@
     color: "#EEEEFF"
 
 - type: entity
-  parent: [BaseStructureDisableAnchoring, VendingMachine]
+  parent: [BaseStructureDisableAnchoring, VendingMachine, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   id: VendingMachineNfsdDrobe
   name: NFSDDrobe
   description: A vending machine for NFSD and NFSD clothing!
@@ -480,6 +480,7 @@
 # Punk stuff
 - type: entity
   parent:
+  - BaseC1Contraband #Corvax-Frontier КБ
   - VendingMachine
   - PunkHoloGraffitiOverlay # Prototype can be located at \Resources\Prototypes\_NF\Entities\Structures\Holographic\graffiti.yml
   id: VendingMachineClothingPunk
@@ -621,6 +622,9 @@
   id: VendingMachineCiviMedPlus
   name: CiviMed Plus
   description: CiviMed Plus, distributing lifesaving meds harder than the rocks you break! Miners, DON'T DIE!
+  components:  #CorvaxFrontier
+  - type: MarketModifier  #CorvaxFrontier
+    mod: 40  #CorvaxFrontier
 
 - type: entity
   parent: [BaseCiviMedVend, BaseStructureDisableAnchoring, BaseStructureIndestructible, VendingMachineWallmount]

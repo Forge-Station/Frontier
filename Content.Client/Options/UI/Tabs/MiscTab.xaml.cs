@@ -1,5 +1,6 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Client.UserInterface.Screens;
+using Content.Shared.Corvax.CorvaxVars; // Corvax-Frontier
 using Content.Shared.CCVar;
 using Content.Shared._EE.CCVars; // EE - chat stack
 using Content.Shared.HUD;
@@ -63,6 +64,7 @@ public sealed partial class MiscTab : Control
         Control.AddOptionCheckBox(CCVars.ChatEnableFancyBubbles, FancySpeechBubblesCheckBox);
         Control.AddOptionCheckBox(CCVars.ChatFancyNameBackground, FancyNameBackgroundsCheckBox);
         Control.AddOptionCheckBox(CCVars.StaticStorageUI, StaticStorageUI);
+        Control.AddOptionCheckBox(CorvaxVars.OfferModeIndicatorsPointShow, ShowOfferModeIndicatorsCheckBox); // Corvax-Frontier
 
         Control.Initialize();
     }

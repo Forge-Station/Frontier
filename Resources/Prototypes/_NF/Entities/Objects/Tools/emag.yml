@@ -15,7 +15,7 @@
     size: Tiny
 
 - type: entity
-  parent: [BaseItem, BaseCommandContraband]
+  parent: [BaseItem, BaseC2ContrabandUnredeemable]
   id: DemagUnlimited
   name: cryptographic resequencer
   suffix: Unlimited

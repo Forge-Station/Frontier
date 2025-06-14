@@ -453,7 +453,7 @@
   - type: Flatpack
     entity: MedicalTechFab
   - type: StaticPrice
-    price: 250
+    price: 600  #CorvaxFrontier
   - type: Sprite
     layers:
     - state: medical_lathe
@@ -520,6 +520,8 @@
   components:
   - type: Flatpack
     entity: ChemistryHotplate
+  - type: StaticPrice #CorvaxFrontier
+    price: 250 #CorvaxFrontier
 
 - type: entity
   parent: MedicalTechFabFlatpack
@@ -873,7 +875,7 @@
     price: 2000
 
 - type: entity
-  parent: UniformPrinterFlatpack
+  parent: [UniformPrinterFlatpack, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   id: NfsdTechFabFlatpack
   name: NFSD techfab flatpack
   description: A flatpack used for constructing an NFSD techfab.
@@ -898,52 +900,53 @@
     price: 250
 
 #region Hoverbikes
-- type: entity
-  parent: BaseNFFlatpack
-  id: HoverbikeFlatpack
-  name: hoverbike flatpack
-  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
-  components:
-  - type: Flatpack
-    entity: NFVehicleHoverbikeKeys
-  - type: StaticPrice
-    price: 2000
-  - type: Sprite
-    layers:
-    - state: command_airlock
+# Corvax Frontier
+#- type: entity
+#  parent: BaseNFFlatpack
+#  id: HoverbikeFlatpack
+#  name: hoverbike flatpack
+#  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
+#  components:
+#  - type: Flatpack
+#    entity: NFVehicleHoverbikeKeys
+#  - type: StaticPrice
+#    price: 2000
+#  - type: Sprite
+#    layers:
+#    - state: command_airlock
 
-- type: entity
-  parent: HoverbikeFlatpack
-  id: HoverbikeMailcarrierFlatpack
-  name: mail carrier hoverbike flatpack
-  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
-  components:
-  - type: Flatpack
-    entity: VehicleHoverbikeMailcarrierKey
-  - type: StaticPrice
-    price: 75
+#- type: entity
+#  parent: HoverbikeFlatpack
+#  id: HoverbikeMailcarrierFlatpack
+#  name: mail carrier hoverbike flatpack
+#  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
+#  components:
+#  - type: Flatpack
+#    entity: VehicleHoverbikeMailcarrierKey
+#  - type: StaticPrice
+#    price: 75
 
-- type: entity
-  parent: HoverbikeFlatpack
-  id: HoverbikeNfsdFlatpack
-  name: NFSD hoverbike flatpack
-  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
-  components:
-  - type: Flatpack
-    entity: NFVehicleHoverbikeNfsdKey
-  - type: StaticPrice
-    price: 750
+#- type: entity
+#  parent: [HoverbikeFlatpack, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
+#  id: HoverbikeNfsdFlatpack
+#  name: NFSD hoverbike flatpack
+#  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
+#  components:
+#  - type: Flatpack
+#    entity: NFVehicleHoverbikeNfsdKey
+#  - type: StaticPrice
+#    price: 750
 
-- type: entity
-  parent: HoverbikeFlatpack
-  id: HoverbikeSyndicateFlatpack
-  name: syndicate hoverbike flatpack
-  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
-  components:
-  - type: Flatpack
-    entity: VehicleHoverbikeSyndicateKey
-  - type: StaticPrice
-    price: 750
+#- type: entity
+#  parent: [HoverbikeFlatpack, BaseC3Contraband] #Corvax-Frontier КБ
+#  id: HoverbikeSyndicateFlatpack
+#  name: syndicate hoverbike flatpack
+#  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
+#  components:
+#  - type: Flatpack
+#    entity: VehicleHoverbikeSyndicateKey
+#  - type: StaticPrice
+#    price: 750
 
 - type: entity
   parent: BaseNFFlatpack
@@ -1015,6 +1018,17 @@
 
 - type: entity
   parent: VendingMachineBoozeFlatpack
+  id: LockerBotanistFilledFlatpack
+  name: botanist's locker flatpack
+  description: A flatpack used for constructing a botanist's locker.
+  components:
+  - type: Flatpack
+    entity: LockerBotanistFilled
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  parent: [VendingMachineBoozeFlatpack, BaseC3Contraband] #Corvax-Frontier КБ
   id: VendingMachineSyndieContrabandFlatpack
   name: contravend flatpack
   description: A flatpack used for constructing a contravend vendomat.

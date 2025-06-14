@@ -1,9 +1,12 @@
 <Document>
-  # Goblins
+ # Гоблины
 
-  <Box>
-    <GuideEntityEmbed Entity="MobGoblin" Caption=""/>
-  </Box>
+ <Box>
+   <GuideEntityEmbed Entity="MobGoblin" Caption=""/>
+ </Box>
+ Их небольшой рост позволяет гоблинам нырять в унитазы и почтовые ящики. Им не нравится, когда их обрызгивают водой или космическим очистителем.
+
+ Без оружия их когти наносят [color=red]Рубящий[/color] урон вместо Дробящего.
 
   Goblins are a race of humanoid beings. They tend to be small, very loud and fragile.
 
@@ -35,4 +38,5 @@
   - Always triggers mousetraps, even when wearing shoes.
   - They don't like to be sprayed with water or space cleaner.
 
+ Из-за своих необычных пищевых предпочтений гоблины получают на [color=lime]20% меньше Токсичного урона[/color], но из-за своего маленького размера они получают на [color=#ffa500]10% больше Физического (Дробящего/Рубящего/Колющего) урона[/color].
 </Document>

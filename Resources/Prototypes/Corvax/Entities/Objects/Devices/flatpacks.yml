@@ -1,0 +1,61 @@
+- type: entity
+  parent: BaseNFFlatpack
+  id: SyndicateTechFabFlatpack
+  name: упакованный ТехФаб Синдиката
+  description: Упакованная версия ТехФаба Синидката.
+  components:
+  - type: Flatpack
+    entity: SyndicateTechFab
+  - type: Sprite
+    layers:
+    - state: power_generator
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: ShuttleGunSunsetFlatpack
+  name: упакованное корабельное орудие Закат
+  description: Упакованная версия корабельного орудия Закат.
+  components:
+  - type: Flatpack
+    entity: ShuttleGunSunset
+  - type: Sprite
+    layers:
+    - state: power_console_ame
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: WeaponTurretSyndicateFlatpack
+  name: упакованная баллистическая турель Синдиката
+  description: Упаковка содержащяя в себе баллистическую турель Синдиката.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretSyndicate
+  - type: Sprite
+    layers:
+    - state: power_console_ame
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: ExchangerSyndicateFlatpack
+  name: упакованный обменник контрабандиста
+  description: Упакованная версия обменника контрабандиста.
+  components:
+  - type: Flatpack
+    entity: ExchangerSyndicate
+  - type: StaticPrice
+    price: 55
+  - type: Sprite
+    layers:
+    - state: power_charger
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: SyndicateDataMinerFlatpack
+  name: упакованный дата майнер синдиката
+  description: упакованный дата майнер пассивно генерарующий доход, для сниятия поспользуйтесь мультитулом.
+  components:
+  - type: Flatpack
+    entity: SyndicateDataMiner
+  - type: Sprite
+    layers:
+    - state: power_console_ame

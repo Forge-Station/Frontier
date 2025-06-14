@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Lodge
   parent: BasePOI
-  name: 'Expeditionary Lodge'
+  name: 'Экспедиционная База'
   minimumDistance: 1650
   maximumDistance: 3400
   spawnGroup: Required
@@ -22,10 +22,14 @@
   - type: StationTransit
     routes:
       SpawnPoints: 20
+  - type: ProtectedGrid
+    preventEmpEvents: true #CorvaxFrontier
+    preventRCDUse: true #CorvaxFrontier
+    noGridCollision: true #CorvaxFrontier
 
 - type: gameMap
   id: Lodge
-  mapName: 'Expeditionary Lodge'
+  mapName: 'Экспедиционная База'
   mapPath: /Maps/_NF/POI/lodge.yml
   minPlayers: 0
   stations:
@@ -33,7 +37,7 @@
       stationProto: RecordsFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Expeditionary Lodge'
+          mapNameTemplate: 'Экпедиционная База'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Markers/jobs.rsi/mercenary.png
           stationSubtext: 'frontier-lobby-exped-subtext'

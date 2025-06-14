@@ -161,7 +161,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: pirate revolver
-  parent: [BaseWeaponRevolver, BaseC3PirateContraband] # Frontier: BaseMinorContraband<BaseC3PirateContraband
+  parent: [BaseWeaponRevolver, BaseC1Contraband] # Frontier: BaseMinorContraband<BaseC3PirateContraband #Crovax-Frontier
   id: WeaponRevolverPirate
   description: A crude single-action revolver handmade by a space pirate. Old and covered in rust, it somehow still works. Loads 5 rounds of .45 magnum.
   components:

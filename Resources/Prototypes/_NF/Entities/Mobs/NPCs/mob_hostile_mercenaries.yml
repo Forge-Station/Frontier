@@ -40,6 +40,8 @@
     rechargeCooldown: 1.5
     rechargeSound:
       path: /Audio/_NF/Effects/silence.ogg
+  - type: Speech #CorvaxFrontier
+    speechSounds: Alto
   - type: MeleeWeapon
     attackRate: 1.0
     altDisarm: false

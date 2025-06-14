@@ -1,5 +1,5 @@
 - type: entity
-  parent: FoodBakedCroissant
+  parent: [FoodBakedCroissant, BaseC3Contraband] #Corvax-Frontier КБ
   id: WeaponCroissant
   suffix: Weapon
   components:

@@ -68,6 +68,8 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+    - type: MercenaryBountyItem # Corvax-Frontier
+      id: MercenaryFabHackedCircuitboard
 
 - type: entity
   id: NFScrapProcessorCircuitboard
@@ -122,7 +124,7 @@
 # TechFab
 - type: entity
   id: NfsdTechFabCircuitboard
-  parent: SecurityTechFabCircuitboard
+  parent: [SecurityTechFabCircuitboard, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   name: NFSD techfab machine board
   description: A machine printed circuit board for an NFSD techfab.
   components:

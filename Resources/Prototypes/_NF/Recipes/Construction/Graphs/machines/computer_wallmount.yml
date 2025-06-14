@@ -22,7 +22,7 @@
           steps:
             - component: ComputerWallmountBoard
               store: board
-              name: construction-graph-component-computer-wallmount-board
+              name: wallmount-computer-circuit-board #Corvax-Frontier
               icon:
                 sprite: "Objects/Misc/module.rsi"
                 state: "id_mod"

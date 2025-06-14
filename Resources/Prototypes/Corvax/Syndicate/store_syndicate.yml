@@ -1,0 +1,44 @@
+- type: entity
+  id: CrateSyndicateSurplusBundle50
+  parent: [ CrateSyndicate, StorePresetUplinkSmugger ] 
+  name: Syndicate surplus crate
+  description: Contains 50 telecrystals worth of completely random Syndicate items. It can be useless junk or really good.
+  components:
+    - type: SurplusBundle
+      totalPrice: 100
+
+- type: entity
+  id: CrateSyndicateSurplusBundle100
+  parent: [ CrateSyndicate, StorePresetUplinkSmugger ] 
+  name: Syndicate surplus crate
+  description: Contains 50 telecrystals worth of completely random Syndicate items. It can be useless junk or really good.
+  components:
+    - type: SurplusBundle
+      totalPrice: 200
+
+- type: entity
+  id: CrateSyndicateSurplusBundle150
+  parent: [ CrateSyndicate, StorePresetUplinkSmugger ] 
+  name: Syndicate surplus crate
+  description: Contains 50 telecrystals worth of completely random Syndicate items. It can be useless junk or really good.
+  components:
+    - type: SurplusBundle
+      totalPrice: 300
+
+- type: entity
+  id: CrateSyndicateSurplusBundle200
+  parent: [ CrateSyndicate, StorePresetUplinkSmugger ] 
+  name: Syndicate surplus crate
+  description: Contains 50 telecrystals worth of completely random Syndicate items. It can be useless junk or really good.
+  components:
+    - type: SurplusBundle
+      totalPrice: 400
+
+- type: entity
+  id: CrateSyndicateSurplusBundle250
+  parent: [ CrateSyndicate, StorePresetUplinkSmugger ] 
+  name: Syndicate surplus crate
+  description: Contains 50 telecrystals worth of completely random Syndicate items. It can be useless junk or really good.
+  components:
+    - type: SurplusBundle
+      totalPrice: 500

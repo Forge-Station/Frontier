@@ -1,0 +1,38 @@
+﻿# Author Corvax
+# GitHub: -
+# Discord: -
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn and https://github.com/FireFoxPhoenix
+# Discord: mersen and FireFoxPhoenix
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Tobacco
+  parent: BaseVessel
+  name: COL Табак
+  price: 25000
+  category: Small
+  group: Coliseum
+  shuttlePath: /Maps/Corvax/Shuttles/Coliseum/tobacco.yml
+  guidebookPage: Null
+
+- type: gameMap
+  id: Tobacco
+  mapName: 'COL Табак'
+  mapPath: /Maps/Corvax/Shuttles/Coliseum/tobacco.yml
+  minPlayers: 0
+  stations:
+    Tobacco:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Табак {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

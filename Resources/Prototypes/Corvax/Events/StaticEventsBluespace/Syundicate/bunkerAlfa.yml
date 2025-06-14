@@ -1,0 +1,48 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+
+- type: pointOfInterest
+  id: Bunkeralfa
+  name: Бункер Альфа 
+  minimumDistance: 6000
+  maximumDistance: 9000
+  gridPath: /Maps/Corvax/Events/Elementary/Syndicate/bunkerAlfa.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+    readOnly: true
+  - type: Shuttle
+    angularDamping: 999999
+    linearDamping: 999999
+  - type: SyndicateFOB # For pinpointer
+  - type: ProtectedGrid
+    preventEmpEvents: True
+    preventRCDUse: True
+    preventFloorPlacement: True
+    preventFloorRemoval: True
+    noGridCollision: True
+
+- type: gameMap
+  id: Bunkeralfa
+  mapName: Бункер Альфа
+  mapPath: /Maps/Corvax/Events/Elementary/Syndicate/bunkerAlfa.yml
+  minPlayers: 0
+  stations:
+    Bunkeralfa:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Бункер Альфа'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

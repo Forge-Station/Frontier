@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Bahama
   parent: BasePOI
-  name: "Bahama Mama's"
+  name: "Багамская Мама"
   minimumDistance: 1200
   maximumDistance: 2900
   spawnGamePreset: [ NFAdventure, NFPirate ]
@@ -24,10 +24,12 @@
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
+  - type: ProtectedGrid
+    noGridCollision: true #CorvaxFrontier
 
 - type: gameMap
   id: Bahama
-  mapName: "Bahama Mama's"
+  mapName: "Багамская Мама"
   mapPath: /Maps/_NF/POI/bahama.yml
   minPlayers: 0
   stations:
@@ -35,4 +37,4 @@
       stationProto: DeadDropFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: "Bahama Mama's"
+          mapNameTemplate: "Багамская Мама"

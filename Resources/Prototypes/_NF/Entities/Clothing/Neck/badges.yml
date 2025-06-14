@@ -1,5 +1,5 @@
 - type: entity # Base Badge
-  parent: ClothingNeckBase
+  parent: [ClothingNeckBase, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   id: ClothingNeckNfsdBadge
   name: NFSD badge
   description: Respect my authority!
@@ -29,7 +29,7 @@
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silver_badge.rsi
   - type: Clothing
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silver_badge.rsi
-    
+
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSecurityBrigmedic

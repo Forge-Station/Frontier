@@ -6,40 +6,39 @@
 # GitHub: dustylens (https://github.com/dustylens)
 # Discord: dustylens
 
-# Shuttle Notes:
-#
-- type: vessel
-  id: Apothecary
-  parent: BaseVessel
-  name: FSB Apothecary
-  description: A small medical and chemistry support vessel. Deployed by the Far Star Biotech company to provide aid and medical services to the Frontier.
-  price: 36000 # 15% markup for Tier 2 Med + .5 botany
-  category: Small
-  group: Medical
-  shuttlePath: /Maps/_NF/Shuttles/apothecary.yml
-  guidebookPage: ShipyardApothecary
-  class:
-  - Medical
-  - Chemistry
-  engine:
-  - Uranium
+# # Shuttle Notes:
+# #
+# - type: vessel
+  # id: Apothecary
+  # name: FSB Apothecary
+  # description: A small medical and chemistry support vessel. Deployed by the Far Star Biotech company to provide aid and medical services to the Frontier.
+  # price: 35500 # TODO: fix this value, gettings to pass - Whatstone
+  # category: Small
+  # group: Shipyard
+  # shuttlePath: /Maps/_NF/Shuttles/apothecary.yml
+  # guidebookPage: ShipyardApothecary
+  # class:
+  # - Medical
+  # - Chemistry
+  # engine:
+  # - Uranium
 
-- type: gameMap
-  id: Apothecary
-  mapName: 'FSB Apothecary'
-  mapPath: /Maps/_NF/Shuttles/apothecary.yml
-  minPlayers: 0
-  stations:
-    Apothecary:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Apothecary {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            ContractorInterview: [ 0, 0 ]
-            PilotInterview: [ 0, 0 ]
-            MercenaryInterview: [ 0, 0 ]
+# - type: gameMap
+  # id: Apothecary
+  # mapName: 'FSB Apothecary'
+  # mapPath: /Maps/_NF/Shuttles/apothecary.yml
+  # minPlayers: 0
+  # stations:
+    # Apothecary:
+      # stationProto: StandardFrontierVessel
+      # components:
+        # - type: StationNameSetup
+          # mapNameTemplate: 'Apothecary {1}'
+          # nameGenerator:
+            # !type:NanotrasenNameGenerator
+            # prefixCreator: '14'
+        # - type: StationJobs
+          # availableJobs:
+            # Contractor: [ 0, 0 ]
+            # Pilot: [ 0, 0 ]
+            # Mercenary: [ 0, 0 ]

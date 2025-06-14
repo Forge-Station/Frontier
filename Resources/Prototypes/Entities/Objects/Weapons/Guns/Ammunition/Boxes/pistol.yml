@@ -23,6 +23,8 @@
     steps: 3
     zeroVisible: false
   - type: Appearance
+  - type: StaticPrice #CorvaxFrontier
+    price: 125
 
 # Boxes
 - type: entity
@@ -78,7 +80,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   id: MagazineBoxPistolUranium
-  parent: BaseMagazineBoxPistol
+  parent: [BaseMagazineBoxPistol, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   name: ammunition box (.35 auto uranium)
   description: A cardboard box of .35 auto rounds. Intended to hold exotic uranium-core ammunition.
   components:

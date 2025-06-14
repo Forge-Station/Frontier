@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+
+#- type: vessel
+#  id: dreadnought
+#  parent: BaseVessel
+#  name: TL Дредноут
+#  description: Среднегабаритный Экспедиционный крейсер старого образца, рекомендуемый состав команды 3-5 человек.
+#  price: 169000
+#  category: Medium
+#  group: Expedition
+#  shuttlePath: /Maps/Corvax/Shuttles/Expedition/dreadnought.yml
+#  class:
+#  - Expedition
+
+#- type: gameMap
+#  id: dreadnought
+#  mapName: 'TL Дредноут'
+#  mapPath: /Maps/Corvax/Shuttles/Expedition/dreadnought.yml
+#  minPlayers: 0
+#  stations:
+#    dreadnought:
+#      stationProto: StandardFrontierExpeditionVessel
+#      components:
+#        - type: StationNameSetup
+#          mapNameTemplate: 'Дредноут {1}'
+#          nameGenerator:
+#            !type:NanotrasenNameGenerator
+#            prefixCreator: '14'
+#        - type: StationJobs
+#          availableJobs:
+#            Contractor: [ 0, 0 ]
+#            Pilot: [ 0, 0 ]
+#            Mercenary: [ 0, 0 ]

@@ -12,7 +12,11 @@
     - HeadTop
     - HeadSide
     undergarmentBottom: UndergarmentBottomBoxersReptilian
-  - type: Hunger
+  - type: Hunger # Corvax-Frontier
+    starvationDamage:
+      types:
+        Cold: 0.15
+        Bloodloss: 0.15
   - type: Puller
     needsHands: false
   - type: Thirst

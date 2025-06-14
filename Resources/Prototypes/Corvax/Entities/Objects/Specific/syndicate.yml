@@ -1,0 +1,88 @@
+- type: entity
+  name: Поврежденный телекристалл
+  parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  id: TelecrystalDamaged
+  suffix: 20 TC
+  description: Похоже, он переливается более тускло...
+  components:
+  - type: Sprite
+    sprite: Corvax/Objects/Specific/Syndicate/telecrystal.rsi
+    state: telecrystal
+  - type: Item
+    sprite: Corvax/Objects/Specific/Syndicate/telecrystal.rsi
+    size: Tiny
+  - type: Stack
+    count: 20
+    stackType: Telecrystal
+  - type: StaticPrice
+    price: 0
+  - type: StackPrice
+    price: 200
+  - type: Currency
+    price:
+      TelecrystalDamaged: 1
+
+- type: entity
+  parent: TelecrystalDamaged
+  id: TelecrystalDamaged1
+  suffix: 1 TC
+  components:
+  - type: Stack
+    count: 1
+
+- type: entity
+  parent: TelecrystalDamaged
+  id: TelecrystalDamaged5
+  suffix: 5 TC
+  components:
+  - type: Stack
+    count: 5
+
+- type: entity
+  parent: TelecrystalDamaged
+  id: TelecrystalDamaged10
+  suffix: 10 TC
+  components:
+  - type: Stack
+    count: 10
+
+- type: entity
+  parent: TelecrystalDamaged
+  id: TelecrystalDamaged200
+  suffix: 200 TC
+  components:
+  - type: Stack
+    count: 200
+
+- type: entity
+  parent: [BaseItem, StorePresetUplinkSmugger, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  id: SmuggerUplinkRadio
+  name: аплинк Контрабандиста
+  description: Suspiciously looking old radio...
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    layers:
+    - state: old-radio
+  - type: Item
+    sprite: Objects/Devices/communication.rsi
+    heldPrefix: old-radio
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Store
+    balance:
+      TelecrystalDamaged: 0
+
+- type: entity
+  parent: SmuggerUplinkRadio
+  id: SmuggerUplinkRadio200TC
+  suffix: 200 TC
+  components:
+  - type: Store
+    balance:
+      TelecrystalDamaged: 200

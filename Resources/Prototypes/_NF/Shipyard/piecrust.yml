@@ -6,39 +6,38 @@
 # GitHub: https://github.com/MoistBiscuits
 # Discord: moistbiscuits
 
-# Shuttle Notes:
-#
-- type: vessel
-  id: Piecrust
-  parent: BaseVessel
-  name: NC Piecrust
-  description: A combination animal ranch and pie bakery
-  price: 35000 # TODO: fix this value, getting tests to pass - Whatstone
-  category: Small
-  group: Shipyard
-  shuttlePath: /Maps/_NF/Shuttles/piecrust.yml
-  guidebookPage: Null
-  class:
-  - Kitchen
-  engine:
-  - Plasma
+# # Shuttle Notes:
+# #
+# - type: vessel
+  # id: Piecrust
+  # name: NC Piecrust
+  # description: A combination animal ranch and pie bakery
+  # price: 33000 # TODO: fix this value, getting tests to pass - Whatstone
+  # category: Small
+  # group: Shipyard
+  # shuttlePath: /Maps/_NF/Shuttles/piecrust.yml
+  # guidebookPage: Null
+  # class:
+  # - Kitchen
+  # engine:
+  # - Plasma
 
-- type: gameMap
-  id: Piecrust
-  mapName: 'NT Piecrust'
-  mapPath: /Maps/_NF/Shuttles/piecrust.yml
-  minPlayers: 0
-  stations:
-    Piecrust:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Piecrust {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            ContractorInterview: [ 0, 0 ]
-            PilotInterview: [ 0, 0 ]
-            MercenaryInterview: [ 0, 0 ]
+# - type: gameMap
+  # id: Piecrust
+  # mapName: 'NT Piecrust'
+  # mapPath: /Maps/_NF/Shuttles/piecrust.yml
+  # minPlayers: 0
+  # stations:
+    # Piecrust:
+      # stationProto: StandardFrontierVessel
+      # components:
+        # - type: StationNameSetup
+          # mapNameTemplate: 'Piecrust {1}'
+          # nameGenerator:
+            # !type:NanotrasenNameGenerator
+            # prefixCreator: '14'
+        # - type: StationJobs
+          # availableJobs:
+            # Contractor: [ 0, 0 ]
+            # Pilot: [ 0, 0 ]
+            # Mercenary: [ 0, 0 ]

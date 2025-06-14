@@ -6,37 +6,36 @@
 # GitHub: erhardsteinhauer
 # Discord: erhardsteinhauer
 
-# Shuttle Notes:
-#
-- type: vessel
-  id: Menace
-  parent: BaseVesselAntag
-  name: Menace
-  description: 'Mail is no longer an option: you either receive it or you die.'
-  price: 21000
-  category: Small
-  group: BlackMarket
-  shuttlePath: /Maps/_NF/Shuttles/BlackMarket/menace.yml
-  guidebookPage: Null
-  class:
-  - Pirate
-  engine:
-  - Plasma
+# # Shuttle Notes:
+# #
+# - type: vessel
+  # id: Menace
+  # name: Menace
+  # description: 'Mail is no longer an option: you either receive it or you die.'
+  # price: 21000
+  # category: Small
+  # group: BlackMarket
+  # shuttlePath: /Maps/_NF/Shuttles/BlackMarket/menace.yml
+  # guidebookPage: Null
+  # class:
+  # - Pirate
+  # engine:
+  # - Plasma
 
-- type: gameMap
-  id: Menace
-  mapName: 'Menace'
-  mapPath: /Maps/_NF/Shuttles/BlackMarket/menace.yml
-  minPlayers: 0
-  stations:
-    Menace:
-      stationProto: StandardFrontierAntagVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Parcel {1}' # Fake name eh?
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            NFPirate: [ 0, 0 ]
+# - type: gameMap
+  # id: Menace
+  # mapName: 'Menace'
+  # mapPath: /Maps/_NF/Shuttles/BlackMarket/menace.yml
+  # minPlayers: 0
+  # stations:
+    # Menace:
+      # stationProto: StandardFrontierVessel
+      # components:
+        # - type: StationNameSetup
+          # mapNameTemplate: 'Parcel {1}' # Fake name eh?
+          # nameGenerator:
+            # !type:NanotrasenNameGenerator
+            # prefixCreator: '14'
+        # - type: StationJobs
+          # availableJobs:
+           # NFPirate: [ 0, 0 ]

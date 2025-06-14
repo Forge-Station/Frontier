@@ -109,15 +109,18 @@
     prototypes: [ NFMobAghostGear ] # Frontier MobAghostGear<NFMobAghostGear
   - type: BypassInteractionChecks
   - type: BankAccount # Frontier
-
+  # Corvax-Frontier
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 45
+  # Corvax-Frontier
 - type: entity
   id: ActionAGhostShowSolar
   name: Solar Control Interface
   description: View a Solar Control Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
-    iconOn: Structures/Machines/parts.rsi/box_2.png
+    icon: Interface/AdminPanel/solar.png # Corvax-Resprite
+    iconOn: Interface/AdminPanel/solar.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -10
     event: !type:ToggleIntrinsicUIEvent { key: enum.SolarControlConsoleUiKey.Key }
@@ -128,8 +131,8 @@
   description: View a Communications Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Interface/Actions/actions_ai.rsi, state: comms_console }
-    iconOn: Interface/Actions/actions_ai.rsi/comms_console.png
+    icon: Interface/AdminPanel/communications.png # Corvax-Resprite
+    iconOn: Interface/AdminPanel/communications.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -4
     event: !type:ToggleIntrinsicUIEvent { key: enum.CommunicationsConsoleUiKey.Key }
@@ -140,8 +143,8 @@
   description: View a Mass Scanner Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Interface/Actions/actions_ai.rsi, state: mass_scanner }
-    iconOn: Interface/Actions/actions_ai.rsi/mass_scanner.png
+    icon: Interface/AdminPanel/radar.png # Corvax-Resprite
+    iconOn: Interface/AdminPanel/radar.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -6
     event: !type:ToggleIntrinsicUIEvent { key: enum.RadarConsoleUiKey.Key }
@@ -152,8 +155,8 @@
   description: View a Cargo Ordering Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
-    iconOn: Structures/Machines/parts.rsi/box_2.png
+    icon: Interface/AdminPanel/cargo.png # Corvax-Resprite
+    iconOn: Interface/AdminPanel/cargo.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -10
     event: !type:ToggleIntrinsicUIEvent { key: enum.CargoConsoleUiKey.Orders }
@@ -164,8 +167,8 @@
   description: View a Crew Monitoring Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Interface/Actions/actions_ai.rsi, state: crew_monitor }
-    iconOn: Interface/Actions/actions_ai.rsi/crew_monitor.png
+    icon: Interface/AdminPanel/monitoring.png # Corvax-Resprite
+    iconOn: Interface/AdminPanel/monitoring.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -8
     event: !type:ToggleIntrinsicUIEvent { key: enum.CrewMonitoringUIKey.Key }
@@ -176,8 +179,8 @@
   description: View a Station Records Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Interface/Actions/actions_ai.rsi, state: station_records }
-    iconOn: Interface/Actions/actions_ai.rsi/station_records.png
+    icon: Interface/AdminPanel/records.png # Corvax-Resprite
+    iconOn: Interface/AdminPanel/records.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -7
     event: !type:ToggleIntrinsicUIEvent { key: enum.GeneralStationRecordConsoleKey.Key }

@@ -5,8 +5,8 @@
   components:
     - type: GameRule
       delay:
-        min:  30
-        max:  40
+        min:  40 #CorvaxFrontier
+        max:  50 #CorvaxFrontier
 
 - type: entity
   id: NFBluespaceCargoCrate

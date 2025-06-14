@@ -65,7 +65,7 @@
     netsync: false
   - type: Appearance
   - type: StaticPrice
-    price: 15.5 # Frontier: 40<15.5
+    price: 6.5 # Frontier: 40<15.5 #CorvaxFrontier
   - type: StealTarget
     stealGroup: LAMP
   - type: Clothing
@@ -73,7 +73,6 @@
     quickEquip: false
     slots:
       - Belt
-
 - type: entity
   name: seclite
   parent: [FlashlightLantern, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable

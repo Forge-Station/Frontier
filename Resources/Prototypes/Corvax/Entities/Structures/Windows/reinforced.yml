@@ -1,0 +1,98 @@
+- type: entity
+  parent: BaseStructure
+  id: ReinforcedWindowColiseum
+  name: reinforced window
+  suffix: "Coliseum"
+  description: Don't smudge up the glass down there.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmack
+  - type: WallMount
+    arc: 360
+  - type: Tag
+    tags:
+      - ForceFixRotations
+      - Window
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: _NF/Structures/Windows/window.rsi
+  - type: Icon
+    sprite: _NF/Structures/Windows/window.rsi
+    state: full
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb {}
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Airtight
+  - type: IconSmooth
+    key: walls
+    base: window
+  - type: InteractionPopup
+    interactSuccessString: comp-window-knock
+    messagePerceivedByOthers: comp-window-knock
+    interactSuccessSound:
+      path: /Audio/Effects/glass_knock.ogg
+  - type: Appearance
+  - type: StaticPrice
+    price: 100
+  - type: BlockWeather
+  - type: DeleteOnTrigger
+  - type: SpawnOnTrigger
+    proto: ReinforcedWindow
+  - type: RepeatingTrigger
+    delay: 60
+
+- type: entity
+  parent: BaseStructure
+  id: ReinforcedWindowDiagonalColiseum
+  suffix: "diagonal, Coliseum"
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: Sprite
+    sprite: Structures/Windows/directional.rsi
+    state: reinforced_window
+  - type: IconSmooth
+    mode: Diagonal
+    base: state
+  - type: Icon
+    sprite: Structures/Windows/directional.rsi
+    state: reinforced_window
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PolygonShape
+            vertices:
+            - "-0.5,-0.5"
+            - "0.5,0.5"
+            - "0.5,-0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+    airBlockedDirection:
+    - South
+    - East
+  - type: DeleteOnTrigger
+  - type: SpawnOnTrigger
+    proto: ReinforcedWindowDiagonal
+  - type: RepeatingTrigger
+    delay: 60

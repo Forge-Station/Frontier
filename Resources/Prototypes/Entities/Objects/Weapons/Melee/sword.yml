@@ -145,7 +145,7 @@
 
 - type: entity
   name: energy katana
-  parent: Katana
+  parent: [Katana, BaseC3Contraband] #Corvax-Frontier КБ
   id: EnergyKatana
   description: A katana infused with strong energy.
   components:

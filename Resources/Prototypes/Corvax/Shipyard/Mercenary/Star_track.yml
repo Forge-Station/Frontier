@@ -1,0 +1,40 @@
+# Author -
+# GitHub: -
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Star_track
+  parent: BaseVessel
+  name: SBI Энтерпрайз
+  description: Малогабаритный шаттл для наёмников, рекомендуемый состав экипажа 2 человека.
+  price: 145000
+  category: Small
+  group: Mercenary
+  shuttlePath: /Maps/Corvax/Shuttles/Mercenary/Star_track.yml
+
+- type: gameMap
+  id: Star_track
+  mapName: 'SBI Энтерпрайз'
+  mapPath: /Maps/Corvax/Shuttles/Mercenary/Star_track.yml
+  minPlayers: 0
+  stations:
+    Star_track:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Энтерпрайз {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
+        - type: MercenaryBountyDatabase
+          bounties: []

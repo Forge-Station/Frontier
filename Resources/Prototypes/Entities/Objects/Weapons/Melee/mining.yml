@@ -39,6 +39,13 @@
     materialComposition:
       Steel: 100
       Wood: 100
+  - type: StaticPrice #CorvaxFrontier
+    price: 10
+  - type: Clothing #CorvaxFrontier
+    quickEquip: false #CorvaxFrontier
+    slots: #CorvaxFrontier
+    - Back #CorvaxFrontierв
+    - suitStorage #CorvaxFrontier
 
 - type: entity
   name: mining drill

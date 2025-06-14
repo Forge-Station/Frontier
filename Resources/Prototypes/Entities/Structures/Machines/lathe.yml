@@ -229,6 +229,7 @@
     - NFService # Frontier
     - NFScience # Frontier
     - NFPouches # Frontier
+    - CorvaxEquipment #Corvax-Frontier
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - NfsdAmmoStatic # Frontier: SecurityAmmo<NfsdAmmoStatic
@@ -698,6 +699,7 @@
       staticPacks:
       - OreSmelting
       # - RGlassSmelting # Frontier: raw mats only
+      - CorvaxMaterialsStatic #Corvax-Frontier
     - type: PlaceableSurface # DeltaV: Allow ore bags to dump into it directly
       isPlaceable: false # but not place on it if you just click it with a random item
 
@@ -718,6 +720,7 @@
     - OreSmelting
     - RGlassSmelting
     - AdvancedSmelting
+    - CorvaxMaterialsStatic #Corvax-Frontier
 
 - type: entity
   parent: BaseLathe

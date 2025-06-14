@@ -1,0 +1,576 @@
+- type: latheRecipe
+  id: Telecrystal1Recipe
+  result: TelecrystalDamaged1
+  completetime: 1
+  materials:
+    Credit: 1000
+
+# обменик
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateFilledShotgunRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponShotgunBulldog
+  completetime: 1
+  materials:
+    Credit: 44000
+
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateFilledSMGRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponSubMachineGunC20r
+  completetime: 1
+  materials:
+    Credit: 38000
+
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateFilledHristovRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponSniperHristov
+  completetime: 1
+  materials:
+    Credit: 26000
+
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateFilledLMGRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponLightMachineGunL6
+  completetime: 1
+  materials:
+    Credit: 68000
+
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateFilledEmpGrenadeLauncherRecipe
+  result: WeaponLauncherChinaLakeEmp
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  completetime: 1
+  materials:
+    Credit: 55000
+
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateFilledCarbineRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponRifleM90GrenadeLauncher
+  completetime: 1
+  materials:
+    Credit: 32000
+
+- type: latheRecipe
+  id: WeaponSubMachineGunDrozdRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponSubMachineGunDrozd
+  completetime: 1
+  materials:
+    Credit: 36000
+
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateFilledAtreidesRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponSubMachineGunAtreides
+  completetime: 1
+  materials:
+    Credit: 42000
+
+- type: latheRecipe
+  id: WeaponPistolViperRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponPistolViper
+  completetime: 1
+  materials:
+    Credit: 5000
+
+- type: latheRecipe
+  id: ShuttleGunSunsetFlatpackRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: ShuttleGunSunsetFlatpack
+  completetime: 1
+  materials:
+    Credit: 55000
+
+- type: latheRecipe
+  id: WeaponTurretSyndicateFlatpackRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponTurretSyndicateFlatpack
+  completetime: 1
+  materials:
+    Credit: 44000
+
+- type: latheRecipe
+  id: WeaponRevolverPythonRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponRevolverPython
+  completetime: 1
+  materials:
+    Credit: 7000
+
+- type: latheRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons]
+  id: WeaponAntiqueLaserRecipe
+  result: WeaponAntiqueLaser
+  completetime: 1
+  materials:
+    Credit: 9500
+
+- type: latheRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons]
+  id: WeaponLaserSvalinnRecipe
+  result: WeaponLaserSvalinn
+  completetime: 1
+  materials:
+    Credit: 4500
+
+- type: latheRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons]
+  id: WeaponLaserCarbineRecipe
+  result: WeaponLaserCarbine
+  completetime: 1
+  materials:
+    Credit: 25000
+
+- type: latheRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons]
+  id: WeaponXrayCannonRecipe
+  result: WeaponXrayCannon
+  completetime: 1
+  materials:
+    Credit: 31000
+
+- type: latheRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons]
+  id: WeaponLaserCannonRecipe
+  result: WeaponLaserCannon
+  completetime: 1
+  materials:
+    Credit: 29000
+
+- type: latheRecipe
+  id: WeaponEnergyGunRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons]
+  result: WeaponEnergyGun
+  completetime: 1
+  materials:
+    Credit: 33000
+
+- type: latheRecipe
+  id: WeaponEnergyShotgunRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons]
+  result: WeaponEnergyShotgun
+  completetime: 1
+  materials:
+    Credit: 134542
+
+- type: latheRecipe
+  id: EnergySwordDoubleRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons, SyndicateTradingConsoleMeleeWeapons]
+  result: EnergySwordDouble
+  completetime: 1
+  materials:
+    Credit: 82350
+
+- type: latheRecipe
+  id: EnergySwordRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons, SyndicateTradingConsoleMeleeWeapons]
+  result: EnergySword
+  completetime: 1
+  materials:
+    Credit: 32450
+
+- type: latheRecipe
+  id: EnergyDaggerLoudRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons, SyndicateTradingConsoleMeleeWeapons]
+  result: EnergyDaggerLoud
+  completetime: 1
+  materials:
+    Credit: 12000
+
+- type: latheRecipe
+  id: WeaponEmpEmitterRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons]
+  result: WeaponEmpEmitter
+  completetime: 1
+  materials:
+    Credit: 7200
+
+- type: latheRecipe
+  id: WeaponPistolCHIMPUpgradedRecipe
+  categories: [SyndicateTradingConsoleLaserArmsWeapons]
+  result: WeaponPistolCHIMPUpgraded
+  completetime: 1
+  materials:
+    Credit: 6500
+
+- type: latheRecipe
+  id: ClothingHandsGlovesNorthStarRecipe
+  categories: [SyndicateTradingConsoleMeleeWeapons]
+  result: ClothingHandsGlovesNorthStar
+  completetime: 1
+  materials:
+    Credit: 10000
+
+- type: latheRecipe
+  id: ThrowingKnifeRecipe
+  categories: [SyndicateTradingConsoleMeleeWeapons]
+  result: ThrowingKnife
+  completetime: 1
+  materials:
+    Credit: 6000
+
+- type: latheRecipe
+  id: KanabouRecipe
+  categories: [SyndicateTradingConsoleMeleeWeapons]
+  result: Kanabou
+  completetime: 1
+  materials:
+    Credit: 8000
+
+- type: latheRecipe
+  id: Rickenbacker4001InstrumentRecipe
+  categories: [SyndicateTradingConsoleMeleeWeapons]
+  result: Rickenbacker4001Instrument
+  completetime: 1
+  materials:
+    Credit: 8000
+
+- type: latheRecipe
+  id: HypoDartBoxRecipe
+  categories: [SyndicateTradingConsoleMeleeWeapons]
+  result: HypoDartBox
+  completetime: 1
+  materials:
+    Credit: 4000
+
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateRaidBundleRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingBackpackDuffelSyndicateRaidBundle
+  completetime: 1
+  materials:
+    Credit: 48000
+
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateEliteHardsuitBundleRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingBackpackDuffelSyndicateEliteHardsuitBundle
+  completetime: 1
+  materials:
+    Credit: 32000
+
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateHardsuitBundleRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingBackpackDuffelSyndicateHardsuitBundle
+  completetime: 1
+  materials:
+    Credit: 28000
+
+- type: latheRecipe
+  id: ClothingShoesBootsMagSyndieRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingShoesBootsMagSyndie
+  completetime: 1
+  materials:
+    Credit: 4000
+
+- type: latheRecipe
+  id: JetpackBlackFilledRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: JetpackBlackFilled
+  completetime: 1
+  materials:
+    Credit: 2000
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitTacticalMaidRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingOuterHardsuitTacticalMaid
+  completetime: 1
+  materials:
+    Credit: 6969
+
+- type: latheRecipe
+  id: ClothingOuterVestWebRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingOuterVestWeb
+  completetime: 1
+  materials:
+    Credit: 8000
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitJuggernautRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingOuterHardsuitJuggernaut
+  completetime: 1
+  materials:
+    Credit: 129999
+
+- type: latheRecipe
+  id: GrenadeShrapnelRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: GrenadeShrapnel
+  completetime: 1
+  materials:
+    Credit: 4200
+
+- type: latheRecipe
+  id: EmpGrenadeRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: EmpGrenade
+  completetime: 1
+  materials:
+    Credit: 750
+
+- type: latheRecipe
+  id: WhiteholeGrenadeRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: WhiteholeGrenade
+  completetime: 1
+  materials:
+    Credit: 3100
+
+- type: latheRecipe
+  id: BreachingChargeRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: BreachingCharge
+  completetime: 1
+  materials:
+    Credit: 3200
+
+- type: latheRecipe
+  id: SmokeGrenadeRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: SmokeGrenade
+  completetime: 1
+  materials:
+    Credit: 500
+
+- type: latheRecipe
+  id: GrenadeIncendiaryRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: GrenadeIncendiary
+  completetime: 1
+  materials:
+    Credit: 2500
+
+- type: latheRecipe
+  id: TearGasGrenadeRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: TearGasGrenade
+  completetime: 1
+  materials:
+    Credit: 1000
+
+- type: latheRecipe
+  id: GrenadeFlashBangRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: GrenadeFlashBang
+  completetime: 1
+  materials:
+    Credit: 750
+
+- type: latheRecipe
+  id: C4Recipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: C4
+  completetime: 1
+  materials:
+    Credit: 4000
+
+- type: latheRecipe
+  id: CleanerGrenadeRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: CleanerGrenade
+  completetime: 1
+  materials:
+    Credit: 1000
+
+- type: latheRecipe
+  id: SingularityGrenadeRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: SingularityGrenade
+  completetime: 1
+  materials:
+    Credit: 4100
+
+- type: latheRecipe
+  id: ClusterGrenadeRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: ClusterGrenade
+  completetime: 1
+  materials:
+    Credit: 8500
+
+- type: latheRecipe
+  id: ClusterBananaPeelRecipe
+  categories: [SyndicateTradingConsoleBoom]
+  result: ClusterBananaPeel
+  completetime: 1
+  materials:
+    Credit: 6550
+
+- type: latheRecipe
+  id: WehMedipenRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: WehMedipen
+  completetime: 1
+  materials:
+    Credit: 5000
+
+- type: latheRecipe
+  id: CombatMedipenRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: CombatMedipen
+  completetime: 1
+  materials:
+    Credit: 7500
+
+
+- type: latheRecipe
+  id: EmergencyMedipenRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: EmergencyMedipen
+  completetime: 1
+  materials:
+    Credit: 2000
+
+- type: latheRecipe
+  id: MedkitRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: MedkitFilled
+  completetime: 1
+  materials:
+    Credit: 1500
+
+- type: latheRecipe
+  id: MedkitAdvancedRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: MedkitAdvancedFilled
+  completetime: 1
+  materials:
+    Credit: 4500
+
+- type: latheRecipe
+  id: BurnAutoInjectorRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: BurnAutoInjector
+  completetime: 1
+  materials:
+    Credit: 4500
+
+- type: latheRecipe
+  id: BruteAutoInjectorRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: BruteAutoInjector
+  completetime: 1
+  materials:
+    Credit: 4500
+
+- type: latheRecipe
+  id: MedkitRadiationRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: MedkitRadiationFilled
+  completetime: 1
+  materials:
+    Credit: 1000
+
+- type: latheRecipe
+  id: MedkitToxinRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: MedkitToxinFilled
+  completetime: 1
+  materials:
+    Credit: 1000
+
+- type: latheRecipe
+  id: BruizAutoInjectorRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: BruizAutoInjector
+  completetime: 1
+  materials:
+    Credit: 5000
+
+- type: latheRecipe
+  id: PunctAutoInjectorRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: PunctAutoInjector
+  completetime: 1
+  materials:
+    Credit: 5000
+
+- type: latheRecipe
+  id: PyraAutoInjectorRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: PyraAutoInjector
+  completetime: 1
+  materials:
+    Credit: 5000
+
+- type: latheRecipe
+  id: HemostasisAutoInjectorRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: HemostasisAutoInjector
+  completetime: 1
+  materials:
+    Credit: 5000
+
+- type: latheRecipe
+  id: LacerAutoInjectorRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: LacerAutoInjector
+  completetime: 1
+  materials:
+    Credit: 5000
+
+- type: latheRecipe
+  id: StimpackRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: Stimpack
+  completetime: 1
+  materials:
+    Credit: 6500
+
+- type: latheRecipe
+  id: StimpackMiniRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: StimpackMini
+  completetime: 1
+  materials:
+    Credit: 2500
+
+- type: latheRecipe
+  id: CigPackSyndicateRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: CigPackSyndicate
+  completetime: 1
+  materials:
+    Credit: 5000
+
+- type: latheRecipe
+  id: VestineChemistryVialRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: VestineChemistryVial
+  completetime: 1
+  materials:
+    Credit: 5000
+
+- type: latheRecipe
+  id: SpaceCashSyndicateESRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: SpaceCash1000
+  completetime: 1
+  materials:
+    Credit: 750
+
+- type: latheRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  id: WeaponRifleJackdawRecipe
+  result: WeaponRifleJackdaw
+  completetime: 1
+  materials:
+    Credit: 40450
+
+- type: latheRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  id: WeaponSubMachineP90LRKRecipe
+  result: WeaponSubMachineP90LRK
+  completetime: 1
+  materials:
+    Credit: 64200

@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Edison
   parent: BasePOI
-  name: 'Edison Power Plant'
+  name: 'Электростанция Эдисона'
   minimumDistance: 2650
   maximumDistance: 5400
   spawnGroup: Required
@@ -25,6 +25,8 @@
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
+  - type: ProtectedGrid
+    noGridCollision: true #CorvaxFrontier
 
 - type: gameMap
   id: Edison

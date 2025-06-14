@@ -267,3 +267,14 @@
     guides:
     - Botany
     - Chemicals
+- type: entity # Corvax-Frontier
+  parent: BaseFlatpack
+  id: ShuttleGunPirateCannonFlatpack
+  name: Упакованная пушка пиратского корабля
+  description: This is a packaged pirate ship cannon.
+  components:
+  - type: Sprite
+    layers:
+    - state: pirate-gun
+  - type: Flatpack
+    entity: ShuttleGunPirateCannon

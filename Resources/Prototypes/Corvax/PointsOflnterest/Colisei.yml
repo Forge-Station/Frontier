@@ -1,0 +1,48 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+
+- type: pointOfInterest
+  id: coliseum
+  parent: BasePOI
+  name: 'Колизей'
+  minimumDistance: 750
+  maximumDistance: 1000
+  spawnGroup: NewMapsgGrid
+  gridPath: /Maps/Corvax/POI/coliseum.yml #CorvaxFrontier
+  addComponents:
+  - type: IFF
+    color: "#8e6444"
+  - type: ProtectedGrid
+    preventArtifactTriggers: True
+    preventExplosions: True
+    preventEmpEvents: True
+    preventRCDUse: True
+    preventFloorPlacement: True
+    preventFloorRemoval: True
+    killHostileMobs: True
+    noGridCollision: True
+
+
+- type: gameMap
+  id: coliseum
+  mapName: Колизей
+  mapPath: /Maps/Corvax/POI/coliseum.yml
+  minPlayers: 0
+  stations:
+    coliseum:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Колизей'
+        - type: StationJobs
+          availableJobs:
+            Mercenary: [ -1, -1 ]

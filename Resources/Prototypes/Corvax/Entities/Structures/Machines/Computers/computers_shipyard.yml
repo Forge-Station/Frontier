@@ -1,0 +1,117 @@
+- type: entity
+  id: ComputerShipyardMercenary
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
+  name: mercenary shipyard console
+#  description: # TODO: придумайте чет креативное
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_nfsd
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Mercenary
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Mercenary:
+       type: ShipyardConsoleBoundUserInterface
+
+- type: entity
+  id: ComputerShipyardSalvage
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
+  name: salvage shipyard console
+  description: This shipyard console created for miners.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_mining
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Salvage
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Salvage:
+       type: ShipyardConsoleBoundUserInterface
+
+- type: entity
+  id: ComputerShipyardColiseum
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseComputer]
+  name: coliseum shipyard console
+  description: Buy a shuttle and go into battle!
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_coliseum
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+  - type: ShipyardConsole
+    targetIdSlot:
+      name: id-card-console-target-id
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+      ejectOnBreak: true
+      swap: true
+      whitelist:
+        components:
+        - ShipyardVoucher
+    newAccessLevels: [Captain]
+    newJobTitle: Captain
+  - type: ActivatableUI
+    singleUser: true
+    key: enum.ShipyardConsoleUiKey.Coliseum
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Coliseum:
+        type: ShipyardConsoleBoundUserInterface
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+      ShipyardConsole-targetId: !type:ContainerSlot
+  - type: Computer
+    board: Null
+
+- type: entity
+  id: ComputerShipyardDebug
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
+  name: centcom shipyard console
+  description: Shipyard console with all shuttles.
+  suffix: Debug
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_sr
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_sr
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Debug
+    adminOnly: true
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Debug:
+       type: ShipyardConsoleBoundUserInterface

@@ -13464,13 +13464,13 @@ entities:
     - type: Transform
       pos: 12.5,30.5
       parent: 1653
-- proto: SpawnVehicleHoverbikeNF
-  entities:
-  - uid: 1739
-    components:
-    - type: Transform
-      pos: 12.5,32.5
-      parent: 1653
+#- proto: SpawnVehicleHoverbikeNF
+#  entities:
+#  - uid: 1739
+#    components:
+#    - type: Transform
+#      pos: 12.5,32.5
+#      parent: 1653
 - proto: StasisBed
   entities:
   - uid: 1450
@@ -14496,14 +14496,14 @@ entities:
       rot: 3.141592653589793 rad
       pos: 5.6247253,30.470661
       parent: 1653
-- proto: VehicleKeyHoverbikeNF
-  entities:
-  - uid: 1988
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.7341003,30.626911
-      parent: 1653
+#- proto: VehicleKeyHoverbikeNF
+#  entities:
+#  - uid: 1988
+#    components:
+#    - type: Transform
+#      rot: 3.141592653589793 rad
+#      pos: 5.7341003,30.626911
+#      parent: 1653
 - proto: VendingMachineNutri
   entities:
   - uid: 1499

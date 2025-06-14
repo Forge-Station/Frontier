@@ -51,7 +51,8 @@
     layers:
       - state: box
       - state: holo
-
+  - type: StaticPrice #CorvaxFrontier
+    price: 3000
 - type: entity
   name: holoclown box
   suffix: Ghost # Frontier

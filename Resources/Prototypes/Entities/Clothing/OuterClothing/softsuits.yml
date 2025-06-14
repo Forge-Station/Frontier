@@ -34,7 +34,14 @@
     - SuitEVA
     - MonkeyWearable
     - WhitelistChameleon
-
+  - type: Armor #CorvaxFrontier
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.65
+        Heat: 0.4
+        Caustic: 0.75
 #Emergency EVA
 - type: entity
   parent: NFClothingOuterEVASuitBase # Frontier: ClothingOuterEVASuitBase<NFClothingOuterEVASuitBase
@@ -103,12 +110,12 @@
   description: A void suit made for paramedics.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
+    sprite: Corvax/Clothing/OuterClothing/Hardsuits/paramed.rsi #Corvax-Frontier-Resprite
     layers:
     - state: icon
   - type: Appearance
   - type: Clothing
-    sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
+    sprite: Corvax/Clothing/OuterClothing/Hardsuits/paramed.rsi #Corvax-Frontier-Resprite
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -122,9 +129,12 @@
   - type: Armor
     modifiers:
       coefficients:
-        Heat: 0.90
-        Radiation: 0.75
-        Caustic: 0.5
+        Radiation: 0.75 #CorvaxFrontier
+        Caustic: 0.5 #CorvaxFrontier
+        Blunt: 0.80 #CorvaxFrontier
+        Slash: 0.80 #CorvaxFrontier
+        Piercing: 0.75 #CorvaxFrontier
+        Heat: 0.8 #CorvaxFrontier
   - type: GroupExamine
   - type: StealTarget
     stealGroup: ClothingOuterHardsuitVoidParamed

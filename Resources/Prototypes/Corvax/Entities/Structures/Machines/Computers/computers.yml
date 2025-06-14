@@ -1,0 +1,73 @@
+- type: entity
+  id: ComputerMercenaryBounty
+  parent: BaseComputer
+  name: mercenary bounty computer
+  description: Avast, get ye mercenary bounties here.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: contraband
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+  - type: MercenaryBountyConsole
+    spawnChestSound:
+      path: /Audio/Effects/Lightning/lightningbolt.ogg
+      params:
+        volume: -5
+        variation: 0.2
+  - type: ActivatableUI
+    key: enum.MercenaryConsoleUiKey.Bounty
+  - type: UserInterface
+    interfaces:
+      enum.MercenaryConsoleUiKey.Bounty:
+        type: MercenaryBountyConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: Null # Really shouldn't spawn anything on destruction
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+
+- type: entity
+  name: mercenary bounty redemption computer
+  parent: [BaseStructureDisableToolUse, BaseComputer]
+  id: ComputerMercenaryBountyRedemption
+  description: Back from a voyage? Redeem yer bounties here, matey.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/computers.rsi
+    layers:
+    - map: [ "computerLayerBody" ]
+      state: computer
+    - map: [ "computerLayerKeyboard" ]
+      state: generic_keyboard
+    - map: [ "computerLayerScreen" ]
+      state: aiupload
+    - map: [ "computerLayerKeys" ]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: MercenaryBountyRedemptionConsole
+  - type: ActivatableUI
+    key: enum.MercenaryConsoleUiKey.BountyRedemption
+  - type: UserInterface
+    interfaces:
+      enum.MercenaryConsoleUiKey.BountyRedemption:
+        type: MercenaryBountyRedemptionConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: Null
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: Godmode

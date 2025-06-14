@@ -67,9 +67,11 @@ namespace Content.Shared.Humanoid
             }
         }
 
-        public string GetLastName(SpeciesPrototype speciesProto)
+        // Corvax-LastnameGender-Start: Added custom gender split logic
+        public string GetLastName(SpeciesPrototype speciesProto, Gender? gender = null)
         {
             return _random.Pick(_prototypeManager.Index(speciesProto.LastNames));
         }
+        // Corvax-LastnameGender-End
     }
 }

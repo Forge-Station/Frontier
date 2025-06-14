@@ -389,6 +389,18 @@
   components:
   - type: Pda
     id: NFPirateIDCard
+    bookSlot: #corvax frontier
+      startingItem: HyperlinkBookPirateCode #corvax frontier
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+        - BookPirateCode
+    penSlot: #corvax frontier
+      startingItem: LuxuryPen #corvax frontier
+      whitelist:
+        tags:
+        - LuxuryPen
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -403,6 +415,18 @@
   components:
   - type: Pda
     id: NFPirateCaptainIDCard
+    bookSlot: #corvax frontier
+      startingItem: HyperlinkBookPirateCode #corvax frontier
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+        - BookPirateCode
+    penSlot: #corvax frontier
+      startingItem: LuxuryPen #corvax frontier
+      whitelist:
+        tags:
+        - LuxuryPen
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -417,6 +441,18 @@
   components:
   - type: Pda
     id: NFPirateFirstMateIDCard
+    bookSlot: #corvax frontier
+      startingItem: HyperlinkBookPirateCode #corvax frontier
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+        - BookPirateCode
+    penSlot: #corvax frontier
+      startingItem: LuxuryPen #corvax frontier
+      whitelist:
+        tags:
+        - LuxuryPen
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:

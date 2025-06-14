@@ -1,0 +1,56 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Notes:
+
+- type: pointOfInterest
+  id: MiningBase
+  parent: BasePOI
+  name: 'База Шахтёров'
+  minimumDistance: 1650
+  maximumDistance: 3400
+  spawnGroup: Required
+  gridPath: /Maps/Corvax/POI/MiningBase.yml
+  addComponents:
+  - type: IFF
+    color: "#a68614"
+  - type: StationTransit
+  - type: ProtectedGrid
+    preventArtifactTriggers: True
+    preventExplosions: True
+    preventEmpEvents: True
+    preventRCDUse: True
+    preventFloorPlacement: True
+    preventFloorRemoval: True
+    killHostileMobs: True
+    noGridCollision: True
+
+- type: gameMap
+  id: MiningBase
+  mapName: 'База Шахтёров'
+  mapPath: /Maps/Corvax/POI/MiningBase.yml
+  minPlayers: 0
+  stations:
+    MiningBase:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'База Шахтёров'
+        - type: ExtraStationInformation
+          iconPath: /Textures/Objects/Weapons/Melee/pickaxe.rsi/pickaxe.png
+          stationSubtext: 'frontier-lobby-mining-subtext'
+          stationDescription: 'frontier-lobby-mining-description'
+          lobbySortOrder: 3
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ -1, -1 ]
+            Mercenary: [ -1, -1 ]
+        - type: StationDeadDrop
+          maxDeadDrops: 1 # Fewer here, players start here.

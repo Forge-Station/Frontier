@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: Tych0theSynth
+# Discord: Tych0
+
+# Maintainer Info
+# GitHub: Tych0theSynth
+# Discord: Tych0
+
+# Shuttle Notes:
+# Keeping watch for Ragnarök. As soon as someone adds ship horns they better make a Gjallarhorn for this thing. 
+- type: vessel
+  id: Heimdall
+  name: NSF Хеймдалль
+  parent: BaseVessel
+  description: Небольшой детективный шаттл для сбора разведданных и судебно-медицинской экспертизы.
+  price: 27000 # Approx 20% markup applied to the appraisal price of 22500 due to the presence of advanced radar.
+  category: Small
+  group: Security
+  access: Detective
+  shuttlePath: /Maps/Corvax/Shuttles/Nfsd/heimdall.yml
+  guidebookPage: Null
+  class:
+  - Detective
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Heimdall
+  mapName: 'NSF Heimdall'
+  mapPath: /Maps/_NF/Shuttles/Nfsd/heimdall.yml
+  minPlayers: 0
+  stations:
+    Heimdall:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Хеймдалль {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}
