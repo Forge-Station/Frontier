@@ -1,0 +1,8 @@
+- type: loadout
+  id: Contractorrepairkit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 5000
+  inhand:
+    - repairkit

@@ -528,24 +528,32 @@ namespace Content.Shared.Preferences
                 speciesPrototype = prototypeManager.Index(Species);
 
             }
-            // Corvax-frontier-blacklistrace
+// Corvax-frontier-blacklistrace
+#if !DEBUG
             if (speciesPrototype.JobWhitelist != null)
             {
-                foreach (var jobId in _jobPriorities.Keys.ToList())
-                    if (!speciesPrototype.JobWhitelist.Contains(jobId))
-                        _jobPriorities.Remove(jobId);
+                foreach (var jid in _jobPriorities.Keys.ToList())
+                {
+                    if (!speciesPrototype.JobWhitelist.Contains(jid))
+                        _jobPriorities.Remove(jid);
+                }
             }
             else if (speciesPrototype.JobBlacklist != null)
             {
-                foreach (var jobId in _jobPriorities.Keys.ToList())
-                    if (speciesPrototype.JobBlacklist.Contains(jobId))
-                        _jobPriorities.Remove(jobId);
+                foreach (var jid in _jobPriorities.Keys.ToList())
+                {
+                    if (speciesPrototype.JobBlacklist.Contains(jid))
+                        _jobPriorities.Remove(jid);
+                }
             }
-            
+
             if (_jobPriorities.Count == 0)
                 PreferenceUnavailable = PreferenceUnavailableMode.StayInLobby;
-                
-             // Corvax-frontier-blacklistrace
+#endif
+// Corvax-frontier-blacklistrace
+
+
+
             var sex = Sex switch
             {
                 Sex.Male => Sex.Male,

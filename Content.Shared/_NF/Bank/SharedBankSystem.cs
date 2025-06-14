@@ -24,7 +24,15 @@ public abstract partial class SharedBankSystem : EntitySystem
         SubscribeLocalEvent<StationBankATMComponent, ComponentInit>(OnComponentInit);
         SubscribeLocalEvent<StationBankATMComponent, ComponentRemove>(OnComponentRemove);
     }
+    // Corvax Frontier
+    public void SetBalance(EntityUid uid, int amount)
+    {
+        if (!TryComp<BankAccountComponent>(uid, out var account))
+            return;
 
+        account.Balance = amount;
+    }
+    // Corvax Frontier
     private void OnComponentInit(EntityUid uid, BankATMComponent component, ComponentInit args)
     {
         _itemSlotsSystem.AddItemSlot(uid, BankATMComponent.CashSlotId, component.CashSlot);

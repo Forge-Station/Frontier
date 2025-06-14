@@ -4,8 +4,8 @@ meta:
   engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/28/2025 10:50:28
-  entityCount: 968
+  time: 06/10/2025 11:00:58
+  entityCount: 969
 maps: []
 grids:
 - 2
@@ -2321,14 +2321,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 0.5,-15.5
       parent: 2
-- proto: CargoPallet
-  entities:
-  - uid: 151
-    components:
-    - type: Transform
-      pos: 7.5,-9.5
-      parent: 2
-  - uid: 218
     components:
     - type: Transform
       pos: 8.5,-9.5
@@ -2342,6 +2334,11 @@ entities:
     components:
     - type: Transform
       pos: -6.5,-9.5
+      parent: 2
+  - uid: 969
+    components:
+    - type: Transform
+      pos: -1.5,10.5
       parent: 2
 - proto: Catwalk
   entities:
@@ -2568,14 +2565,6 @@ entities:
     components:
     - type: Transform
       pos: -2.5,-4.5
-      parent: 2
-- proto: ComputerSalvageExpedition
-  entities:
-  - uid: 205
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -3.5,-5.5
       parent: 2
 - proto: ComputerShuttle
   entities:
@@ -4338,6 +4327,40 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5,-13.5
       parent: 2
+- proto: NFMagnetBoxOre
+  entities:
+  - uid: 385
+    components:
+    - type: Transform
+      anchored: True
+      pos: 1.5,-11.5
+      parent: 2
+    - type: Physics
+      bodyType: Static
+  - uid: 386
+    components:
+    - type: Transform
+      anchored: True
+      pos: 0.5,-11.5
+      parent: 2
+    - type: Physics
+      bodyType: Static
+  - uid: 387
+    components:
+    - type: Transform
+      anchored: True
+      pos: -0.5,-11.5
+      parent: 2
+    - type: Physics
+      bodyType: Static
+  - uid: 388
+    components:
+    - type: Transform
+      anchored: True
+      pos: -1.5,-11.5
+      parent: 2
+    - type: Physics
+      bodyType: Static
 - proto: NFSignShield
   entities:
   - uid: 858
@@ -4375,40 +4398,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: OreBox
-  entities:
-  - uid: 385
-    components:
-    - type: Transform
-      anchored: True
-      pos: 1.5,-11.5
-      parent: 2
-    - type: Physics
-      bodyType: Static
-  - uid: 386
-    components:
-    - type: Transform
-      anchored: True
-      pos: 0.5,-11.5
-      parent: 2
-    - type: Physics
-      bodyType: Static
-  - uid: 387
-    components:
-    - type: Transform
-      anchored: True
-      pos: -0.5,-11.5
-      parent: 2
-    - type: Physics
-      bodyType: Static
-  - uid: 388
-    components:
-    - type: Transform
-      anchored: True
-      pos: -1.5,-11.5
-      parent: 2
-    - type: Physics
-      bodyType: Static
 - proto: OreProcessor
   entities:
   - uid: 879

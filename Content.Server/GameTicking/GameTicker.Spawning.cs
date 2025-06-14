@@ -260,15 +260,17 @@ namespace Content.Server.GameTicking
 
 
             var jobPrototype = _prototypeManager.Index<JobPrototype>(jobId);
-            // Forge-Frontier: Species job whitelist/blacklist start
+
+// Forge-Frontier: Species job whitelist/blacklist
+#if !DEBUG
             var speciesPrototype = _prototypeManager.Index<SpeciesPrototype>(character.Species);
+
             if (speciesPrototype.JobWhitelist != null && !speciesPrototype.JobWhitelist.Contains(jobId))
             {
                 if (LobbyEnabled)
                     PlayerJoinLobby(player);
                 else
                     JoinAsObserver(player);
-
                 return;
             }
             else if (speciesPrototype.JobBlacklist != null && speciesPrototype.JobBlacklist.Contains(jobId))
@@ -279,7 +281,10 @@ namespace Content.Server.GameTicking
                     JoinAsObserver(player);
                 return;
             }
-            // Forge-Frontier: Species job whitelist/blacklist end
+#endif
+// Forge-Frontier end
+
+
 
             PlayerJoinGame(player, silent);
 

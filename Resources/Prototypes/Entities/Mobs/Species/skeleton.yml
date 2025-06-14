@@ -33,14 +33,6 @@
       0: Alive
       100: Critical
       150: Dead
-  - type: TransferMindOnGib
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 150
-      behaviors:
-      - !type:GibBehavior { }
   - type: SlowOnDamage #modified speeds because they're so weak
     speedModifierThresholds:
       60: 0.9
@@ -110,6 +102,22 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+  - type: SkeletonReformOnDeath
+    polymorphId: SkeletonCollapsePolymorph
+
+- type: polymorph
+  id: SkeletonCollapsePolymorph
+  configuration:
+    entity: HeadSkeleton
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: false
+    transferDamage: false
+    revertOnDeath: false
+    revertOnCrit: false
+    inventory: None
+
+
 
 - type: entity
   parent: BaseSpeciesDummy

@@ -21,3 +21,5 @@ ent-DogtagsDeputy = жетоны
   .desc = Набор армейских жетонов, подвешенных на небольшом куске шнура для ношения.
 ent-DogtagsCoroner = жетоны
   .desc = Набор армейских жетонов, подвешенных на небольшом куске шнура для ношения.
+uplink-security-contraband-forensics-M4A1 = M4A1
+uplink-security-contraband-forensics-M4A1-desc = Винтовка штурмовых подразделений сил ДСБФ использующая боеприпасы калибра .20. Поставлялась силам дсбф компанией TechnicLogistic по специальному заказу.

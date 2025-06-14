@@ -257,4 +257,21 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/sigrideverybodyknows.ogg
-    
+
+- type: entity
+  parent: BaseBoomBoxTape
+  id: BaseBoomBoxTapeAivelStarHope
+  name: Aivel - Star Hope
+  description: Музыка
+  components:
+    - type: BoomBoxTape
+      soundPath: /Audio/BoomBox/Star_Hope.ogg
+
+- type: entity
+  parent: BaseBoomBoxTape
+  id: BaseBoomBoxTapeAivelAthara
+  name: Aivel - Athara
+  description: Музыка
+  components:
+    - type: BoomBoxTape
+      soundPath: /Audio/BoomBox/Athara.ogg  

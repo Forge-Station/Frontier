@@ -1,0 +1,35 @@
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongM4A1
+  name: Ящик M4A1
+  suffix: Аплинк ДСБФ, M4A1
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponInterstellarRifleM4A1
+      amount: 1
+    - id: MagazineRifle
+      amount: 2
+    - id: MagazineBoxRifle
+      amount: 2
+
+- type: entity
+  id: CrateEngineeringDSBF
+  parent: CrateEngineeringSecure
+  name: Ящик материалов
+  description: Ящик базовых ресурсов для сил дсбф.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SheetSteel
+        amount: 3
+      - id: SheetPlasteel
+        amount: 2
+      - id: SheetUranium
+        amount: 2
+      - id: SheetPlasma
+        amount: 2
+      - id: SheetPlastic
+        amount: 2
+      - id: SheetGlass
+        amount: 1
