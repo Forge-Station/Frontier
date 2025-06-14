@@ -6,90 +6,110 @@ using Content.Shared.Humanoid;
 using Content.Shared.Inventory;
 using Content.Shared.PDA;
 using Content.Shared.Roles;
-using Robust.Shared.Timing;
+using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs.Systems;
+using Content.Server.Popups;
+
 
 namespace Content.Server._Corvax.AutoSalarySystem;
 
-
 public sealed class AutoSalarySystem : EntitySystem
 {
-    [Dependency] private readonly InventorySystem _inv   = default!;
-    [Dependency] private readonly BankSystem      _bank  = default!;
-    [Dependency] private readonly IGameTiming     _time  = default!;
+    [Dependency] private readonly InventorySystem _inv = default!;
+    [Dependency] private readonly BankSystem _bank = default!;
+    [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
 
-    private static readonly TimeSpan PayInterval = TimeSpan.FromSeconds(1200);
+
+    // ВРЕМЯ ВЫПЛАТЫ ЗАРПЛАТЫ (секунды)
+    private static readonly TimeSpan PayInterval = TimeSpan.FromSeconds(1200); // 20 минут
 
     [ValidatePrototypeId<DepartmentPrototype>]
-    private const string SecurityDep  = "Security";
+    private const string SecurityDep = "Security";
     [ValidatePrototypeId<DepartmentPrototype>]
-    private const string FrontierDep  = "Frontier";
+    private const string FrontierDep = "Frontier";
 
-    private readonly Dictionary<EntityUid, TimeSpan> _next = new();
+    private readonly Dictionary<EntityUid, TimeSpan> _elapsed = new();
 
-    private readonly Dictionary<string, int> _salary = new();
+    private readonly Dictionary<string, int> _salary = new()
+    {
+        { "job-name-bailiff",         13500 },
+        { "job-name-brigmedic",       11000 },
+        { "job-name-cadet-nf",         8000 },
+        { "job-name-deputy",          10000 },
+        { "job-name-nf-detective",    11000 },
+        { "job-name-security-guard",  10000 },
+        { "job-name-sheriff",         17000 },
+        { "job-name-stc",              6000 },
+        { "job-name-sr",              14000 },
+        { "job-name-pal",             12000 },
+        { "job-name-doc",             10000 },
+        { "job-name-senior-officer",  12000 },
+        { "job-name-janitor",          7000 },
+        { "job-name-mail-carrier",     8000 }
+    };
 
     public override void Initialize()
     {
-        void Add(string locKey, int pay) => _salary[Loc.GetString(locKey)] = pay;
-
-        Add("job-name-bailiff",        13_500);
-        Add("job-name-brigmedic",      11_000);
-        Add("job-name-cadet-nf",        8_000);
-        Add("job-name-deputy",         10_000);
-        Add("job-name-nf-detective",   11_000);
-        Add("job-name-security-guard", 10_000);
-        Add("job-name-sheriff",        17_000);
-        Add("job-name-stc",             6_000);
-        Add("job-name-sr",             14_000);
-        Add("job-name-pal",            12_000);
-        Add("job-name-doc",            10_000);
-        Add("job-name-senior-officer", 12_000);
-        Add("job-name-janitor",         7_000);
+        var addLocalized = new Dictionary<string, int>();
+        foreach (var kv in _salary)
+        {
+            var localized = Loc.GetString(kv.Key);
+            if (!string.IsNullOrEmpty(localized) && !_salary.ContainsKey(localized))
+                addLocalized[localized] = kv.Value;
+        }
+        foreach (var kv in addLocalized)
+        {
+            _salary[kv.Key] = kv.Value;
+        }
 
         SubscribeLocalEvent<RoundRestartCleanupEvent>(_ =>
         {
-            _next.Clear();
+            _elapsed.Clear();
             Log.Info("[AutoSalary] round restart — timers reset");
         });
     }
 
     public override void Update(float frameTime)
     {
-        var now = _time.CurTime;
-
         var query = EntityQueryEnumerator<BankAccountComponent, HumanoidAppearanceComponent>();
         while (query.MoveNext(out var body, out _, out _))
         {
-            if (!TryGetActiveJob(body, out var title))
+            if (!TryComp<MobStateComponent>(body, out var mobState))
+                continue;
+            if (_mobState.IsDead(body, mobState))
+                continue;
+
+            if (!TryGetActiveJobTitleHybrid(body, out var jobKey))
             {
-                _next.Remove(body);
+                _elapsed.Remove(body);
                 continue;
             }
 
-            if (!_salary.TryGetValue(title, out var pay))
+            if (!_salary.TryGetValue(jobKey, out var pay))
                 continue;
 
-            if (!_next.TryGetValue(body, out var due))
-                due = now + PayInterval;
-
-            if (now < due)
+            var t = _elapsed.GetValueOrDefault(body, TimeSpan.Zero) + TimeSpan.FromSeconds(frameTime);
+            while (t >= PayInterval)
             {
-                _next[body] = due;
-                continue;
+                if (_bank.TryBankDeposit(body, pay))
+                {
+                    Log.Info($"[AutoSalary] +{pay} Cr → {jobKey} ({body})");
+                    _popup.PopupEntity($"Вам начислена зарплата: {pay} кредитов.", body, body);
+                }
+                else
+                {
+                    Log.Warning($"[AutoSalary] deposit FAIL {pay} Cr → {body} ({jobKey})");
+                }
+                t -= PayInterval;
             }
-
-            if (_bank.TryBankDeposit(body, pay))
-                Log.Info("[AutoSalary] round restart — timers reset");
-            else
-                Log.Warning($"[AutoSalary] deposit FAIL {pay} Cr → {body} ({title})");
-
-            _next[body] = now + PayInterval;
+            _elapsed[body] = t;
         }
     }
 
-    private bool TryGetActiveJob(EntityUid body, out string title)
+    private bool TryGetActiveJobTitleHybrid(EntityUid body, out string jobKey)
     {
-        title = string.Empty;
+        jobKey = string.Empty;
 
         if (!_inv.TryGetSlotEntity(body, "id", out var idUid))
             return false;
@@ -99,12 +119,22 @@ public sealed class AutoSalarySystem : EntitySystem
 
         if (!EntityManager.TryGetComponent(idUid, out IdCardComponent? id))
             return false;
+
         foreach (var dep in id.JobDepartments)
         {
             if (dep == SecurityDep || dep == FrontierDep)
             {
-                title = id.LocalizedJobTitle ?? string.Empty;
-                return title.Length > 0;
+                if (id.JobTitle != null && _salary.ContainsKey(id.JobTitle.Value))
+                {
+                    jobKey = id.JobTitle.Value;
+                    return true;
+                }
+                if (!string.IsNullOrEmpty(id.LocalizedJobTitle) && _salary.ContainsKey(id.LocalizedJobTitle))
+                {
+                    jobKey = id.LocalizedJobTitle;
+                    return true;
+                }
+                return false;
             }
         }
         return false;
