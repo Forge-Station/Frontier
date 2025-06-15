@@ -1,0 +1,126 @@
+- type: entity
+  name: pulse sniper
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable]
+  id: WeaponPulseCarbineSniper
+  components:
+  - type: Sprite
+    sprite: Corvax/Objects/Weapons/Guns/Battery/pulse_sniper.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+  - type: Clothing
+    sprite: Corvax/Objects/Weapons/Guns/Battery/pulse_sniper.rsi
+  - type: Gun
+    selectedMode: FullAuto
+    fireRate: 0.65
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: PulseSniper
+    fireCost: 1000
+  - type: Battery
+    maxCharge: 7000
+    startingCharge: 7000
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3
+    pvsIncrease: 0.3
+
+- type: hitscan
+  id: PulseSniper
+  damage:
+    types:
+      Heat: 100
+      Structural: 300
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_blue
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam_blue
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_blue
+
+#- type: entity
+#  name: Owl
+#  parent: [ BaseWeaponPowerCellSmall, BaseC1Contraband ]
+#  id: WeaponLaserOwl
+#  description: A cheap and widely used laser pistol.
+#  components:
+#  - type: Sprite
+#    sprite: Corvax/Objects/Weapons/Guns/Battery/owl.rsi
+#    layers:
+#    - state: base
+#      map: ["enum.GunVisualLayers.Base"]
+#    - state: mag-0
+#      map: ["enum.GunVisualLayers.Mag"]
+#  - type: Item
+#    sprite: Objects/Weapons/Guns/Battery/owl.rsi
+#  - type: MagazineVisuals
+#    magState: mag
+#    steps: 5
+#    zeroVisible: true
+
+- type: entity
+  name: Sign
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable]
+  id: WeaponSniperSign
+  components:
+  - type: Sprite
+    sprite: Corvax/Objects/Weapons/Guns/Battery/sign.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Appearance
+  - type: Clothing
+    sprite: Corvax/Objects/Weapons/Guns/Battery/sign.rsi
+  - type: Gun
+    selectedMode: FullAuto
+    fireRate: 0.65
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: SniperSign
+    fireCost: 1000
+  - type: Battery
+    maxCharge: 5000
+    startingCharge: 5000
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3
+    pvsIncrease: 0.3
+
+- type: hitscan
+  id: SniperSign
+  damage:
+    types:
+      Heat: 42
+      Structural: 80
+  muzzleFlash:
+    sprite: Corvax/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+    state: muzzle_sign
+  travelFlash:
+    sprite: Corvax/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+    state: sign
+  impactFlash:
+    sprite: Corvax/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+    state: impact_sign
