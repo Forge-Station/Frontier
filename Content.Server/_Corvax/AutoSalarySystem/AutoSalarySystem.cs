@@ -1,4 +1,5 @@
 using Content.Server._NF.Bank;
+using Content.Server.Mind;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared.Access.Components;
 using Content.Shared.GameTicking;
@@ -15,11 +16,12 @@ namespace Content.Server._Corvax.AutoSalarySystem;
 
 public sealed class AutoSalarySystem : EntitySystem
 {
-    [Dependency] private readonly InventorySystem    _inv      = default!;
-    [Dependency] private readonly BankSystem         _bank     = default!;
-    [Dependency] private readonly PopupSystem        _popup    = default!;
-    [Dependency] private readonly MobStateSystem     _mobState = default!;
-    [Dependency] private readonly IPrototypeManager  _protoMan = default!;
+    [Dependency] private readonly InventorySystem   _inv        = default!;
+    [Dependency] private readonly BankSystem        _bank       = default!;
+    [Dependency] private readonly PopupSystem       _popup      = default!;
+    [Dependency] private readonly MobStateSystem    _mobState   = default!;
+    [Dependency] private readonly IPrototypeManager _protoMan   = default!;
+    [Dependency] private readonly MindSystem        _mindSystem = default!;
 
     private TimeSpan _payInterval = TimeSpan.FromSeconds(1200);
     private readonly Dictionary<EntityUid, TimeSpan> _elapsed = new();
@@ -37,6 +39,16 @@ public sealed class AutoSalarySystem : EntitySystem
         _payInterval = _protoMan.TryIndex<AutoSalaryConfigPrototype>("AutoSalaryConfig", out var config)
             ? TimeSpan.FromSeconds(config.PayIntervalSeconds)
             : TimeSpan.FromSeconds(1200);
+    }
+    private bool HasActivePlayer(EntityUid body)
+    {
+        if (!_mindSystem.TryGetMind(body, out _, out var mind))
+            return false;
+        if (mind.Session == null)
+            return false;
+        if (mind.IsVisitingEntity)
+            return false;
+        return true;
     }
 
     private void LoadSalaryPrototypes()
@@ -76,6 +88,8 @@ public sealed class AutoSalarySystem : EntitySystem
     {
         pay = 0;
         if (IsEntityDead(body))
+            return true;
+        if (!HasActivePlayer(body))
             return true;
         if (!TryGetJobKey(body, out var jobKey))
             return true;
