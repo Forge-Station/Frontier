@@ -15,12 +15,16 @@
       state: shipyard_nfsd
     - map: ["computerLayerKeys"]
       state: telesci_key
+  - type: ShipyardConsole
+    newJobTitle: null
+    shipyardChannel: Nfsd
+    newAccessLevels: [Captain, Security, Brig]
   - type: ShipyardListing
     shuttles:
     - Warrior
     - Templar
     - hammer
-    
+
 - type: entity
   id: SkatMothershipComputer
   parent: BaseMothershipComputer
@@ -37,6 +41,10 @@
       state: shipyard_nfsd
     - map: ["computerLayerKeys"]
       state: telesci_key
+  - type: ShipyardConsole
+    newJobTitle: null
+    shipyardChannel: Nfsd
+    newAccessLevels: [Captain, Security, Brig]
   - type: ShipyardListing
     shuttles:
     - Warrior

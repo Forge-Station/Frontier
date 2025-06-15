@@ -1,0 +1,46 @@
+- type: entity
+  parent: BaseBlueprintExpedition
+  id: BlueprintRifleUranium
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - BoxShotgunIncendiary
+    - BoxShotgunUranium
+    - MagazineBoxLightRifleIncendiary
+    - MagazineBoxLightRifleUranium
+    - MagazineBoxMagnumIncendiary
+    - MagazineBoxMagnumUranium
+    - MagazineBoxPistolIncendiary
+    - MagazineBoxPistolUranium
+    - MagazineBoxRifleIncendiary
+    - MagazineBoxRifleUranium
+    - MagazineLightRifleIncendiary
+    - MagazineLightRifleUranium
+    - MagazinePistolIncendiary
+    - MagazinePistolUranium
+    - MagazineRifleIncendiary
+    - MagazineRifleUranium
+    - MagazineShotgunIncendiary
+    - SpeedLoaderMagnumIncendiary
+    - SpeedLoaderMagnumUranium
+    - SpeedLoaderRifleHeavyIncendiary
+    - SpeedLoaderRifleHeavyUranium
+
+- type: entity
+  parent: BaseBlueprintExpedition
+  id: BlueprintGrenade
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - GrenadeBlast
+    - GrenadeEMP
+    - MagazineGrenadeEmpty
+
+- type: entity
+  parent: BaseBlueprintExpedition
+  id: BaseBlueprintWeaponXrayCannon
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - WeaponXrayCannon
+    - WeaponLaserCannon

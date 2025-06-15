@@ -13,7 +13,7 @@ namespace Content.Server.Shuttles.Components
         /// Минимальная разница скоростей между двумя телами, при которой происходит "удар" шаттла.
         /// </summary>
         [DataField("minimumImpactVelocity")]
-        public int MinimumImpactVelocity = 15;
+        public int MinimumImpactVelocity = 21;
 
         /// <summary>
         /// Кинетическая энергия, необходимая для разрушения одной плитки.

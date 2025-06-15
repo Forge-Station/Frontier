@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 247.2.0
+  engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/02/2025 07:15:56
+  time: 06/05/2025 10:27:24
   entityCount: 380
 maps: []
 grids:
@@ -266,6 +266,7 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: flash
+    - type: ShuttleImpact
 - proto: AirlockExternalShuttleSyndicateLocked
   entities:
   - uid: 19
@@ -1772,6 +1773,13 @@ entities:
       powerLoad: 0
     - type: DamageOnInteract
       isDamageActive: False
+- proto: ShuttleGunSunset
+  entities:
+  - uid: 25
+    components:
+    - type: Transform
+      pos: 8.5,7.5
+      parent: 1
 - proto: SignalButtonWindows
   entities:
   - uid: 252
@@ -1866,14 +1874,6 @@ entities:
     components:
     - type: Transform
       pos: 13.5,7.5
-      parent: 1
-- proto: SpawnMobWeaponTurretSyndicateMagnumAP
-  entities:
-  - uid: 25
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 8.5,7.5
       parent: 1
 - proto: SubstationWallBasic
   entities:

@@ -1,0 +1,180 @@
+# Brigmedic
+- type: entity
+  parent: CrateNfsdBrigmedic
+  id: CrateNfsdBrigmedic1
+  components:
+  - type: AccessReader
+    access: [["Brigmedic"]]
+  - type: StorageFill
+    contents:
+    - id: MedkitCombatFilled
+      amount: 1
+    - id: MedkitFilled
+      amount: 2
+    - id: DefibrillatorCompact
+      amount: 1
+    - id: WeaponSubMachineGunScorpion
+      amount: 1
+    - id: MagazineRifle
+      amount: 2
+    - id: MedkitAdvancedFilled
+      amount: 1
+
+- type: entity
+  parent: CrateNfsdBrigmedic1
+  id: CrateNfsdBrigmedic2
+  components:
+  - type: StorageFill
+    contents:
+    - id: StimulantAutoInjector
+      amount: 3
+    - id: MedkitFilled
+      amount: 1
+    - id: WeaponSubMachineGunDrozd
+      amount: 1
+    - id: MagazinePistolSubMachineGun
+      amount: 3
+
+- type: entity
+  parent: CrateNfsdBrigmedic1
+  id: CrateNfsdBrigmedic3
+  components:
+  - type: StorageFill
+    contents:
+    - id: HypoBrigmedicPlus
+      amount: 1
+    - id: BruizAutoInjector
+      amount: 2
+    - id: CrisisAutoInjector
+      amount: 1
+    - id: HemostasisAutoInjector
+      amount: 3
+    - id: MedicalAssemblerFlatpack
+      amount: 1
+
+# Deputy
+- type: entity
+  parent: CrateNfsdSecure2
+  id: CrateNfsdDeputy1
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingBackpackDuffelNfsdEmpBundle
+      amount: 1
+    - id: ClothingOuterHardsuitNfsdBronze
+      amount: 1
+    - id: WeaponSubMachineGunScorpion
+      amount: 1
+    - id: MagazineRifle
+      amount: 3
+    - id: BoxSmokeGrenades
+      amount: 1
+    - id: ClothingShoesBootsMagNfsd
+      amount: 1
+
+- type: entity
+  parent: CrateNfsdSecure2
+  id: CrateNfsdDeputy2
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterHardsuitNfsdSilver
+      amount: 1
+    - id: BoxMagazineRifle
+      amount: 1
+    - id: BoxStingerGrenadesNfsd
+      amount: 1
+    - id: BoxSmokeGrenades
+      amount: 1
+    - id: WeaponRifleLecter
+      amount: 1
+    - id: ClothingShoesBootsMagNfsd
+      amount: 1
+
+- type: entity
+  parent: CrateNfsdSecure2
+  id: CrateNfsdDeputy3
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterHardsuitNfsdSilver
+      amount: 1
+    - id: WeaponShotgunEnforcer
+      amount: 1
+    - id: MagazineShotgun
+      amount: 2
+    - id: MagazineShotgunSlug
+      amount: 1
+    - id: BoxStingerGrenadesNfsd
+      amount: 1
+    - id: BoxSmokeGrenades
+      amount: 1
+    - id: ClothingShoesBootsMagNfsd
+      amount: 1
+
+- type: entity
+  parent: CrateNfsdSecure2
+  id: CrateNfsdDeputy4
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterHardsuitNfsdGold
+      amount: 1
+    - id: BoxShrapnelGrenadesNfsd
+      amount: 1
+    - id: WeaponRevolverMateba
+      amount: 1
+    - id: SpeedLoaderMagnumAP
+      amount: 2
+    - id: SpeedLoaderMagnum
+      amount: 2
+    - id: ClothingShoesBootsMagNfsd
+      amount: 1
+
+# Cadet
+- type: entity
+  parent: CrateNfsdSecure2
+  id: CrateNfsdCadet1
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterHardsuitNfsdBronze
+      amount: 1
+    - id: MedkitFilled
+      amount: 2
+    - id: WeaponPistolMoonWhisper
+      amount: 1
+    - id: BoxMagazinePistol
+      amount: 2
+    - id: ClothingShoesBootsMagNfsd
+      amount: 1
+
+- type: entity
+  parent: CrateNfsdSecure2
+  id: CrateNfsdCadet2
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterHardsuitNfsdBronze
+      amount: 1
+    - id: WeaponSubMachineGunScorpion
+      amount: 1
+    - id: BoxMagazineRifle
+      amount: 1
+    - id: ClothingShoesBootsMagNfsd
+      amount: 1
+
+- type: entity
+  parent: CrateNfsdSecure2
+  id: CrateNfsdCadet3
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterHardsuitNfsdBronze
+      amount: 1
+    - id: WeaponShotgunKammerer
+      amount: 1
+    - id: BoxLethalshot
+      amount: 1
+    - id: ClothingShoesBootsMagNfsd
+      amount: 1

@@ -1,0 +1,308 @@
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongM4A1
+  name: Кейс с Дакотой
+  suffix: Аплинк ДСБФ, M4A1
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponInterstellarRifleM4A1
+      amount: 1
+    - id: MagazineRifle
+      amount: 2
+    - id: MagazineBoxRifle
+      amount: 2
+
+- type: entity
+  id: CrateEngineeringDSBF
+  parent: CrateEngineeringSecure
+  name: Кейс материалов
+  description: Кейс базовых ресурсов для сил дсбф.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SheetSteel
+        amount: 3
+      - id: SheetPlasteel
+        amount: 2
+      - id: SheetUranium
+        amount: 2
+      - id: SheetPlasma
+        amount: 2
+      - id: SheetPlastic
+        amount: 2
+      - id: SheetGlass
+        amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongAD12
+  name: Кейс с Отбойником
+  suffix: Аплинк ДСБФ, Отбойник
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponShotgunAD12
+      amount: 1
+    - id: MagazineShotgun
+      amount: 2
+    - id: BoxLethalshot
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongDagger
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleDagger
+      amount: 1
+    - id: MagazineLightRifle
+      amount: 2
+    - id: MagazineBoxLightRifle
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseLongWeaponRevolverInspector
+  name: Кейс с Инспектором
+  suffix: Аплинк ДСБФ, Инспектор
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRevolverInspector
+      amount: 1
+    - id: SpeedLoaderMagnum
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseLongWeaponPistolMk58
+  name: Кейс с MK58
+  suffix: Аплинк ДСБФ, MK58
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponPistolMk58
+      amount: 1
+    - id: MagazinePistol
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponShotgunKS23
+  name: Кейс с KS23
+  suffix: Аплинк ДСБФ, KS23
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponShotgunKS23
+      amount: 1
+    - id: BoxLethalshotKS23
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponRifleVulcan
+  name: Кейс с Вулканом
+  suffix: Аплинк ДСБФ, Вулкан
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleVulcan
+      amount: 1
+    - id: MagazineLightRifle
+      amount: 2
+    - id: MagazineBoxLightRifle
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponLaserCarbine
+  name: Кейс с Лазерной винтовкой
+  suffix: Аплинк ДСБФ, Лазерная винтовка
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponLaserCarbine
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponRifleLecter
+  name: Кейс с Лектером
+  suffix: Аплинк ДСБФ, Лектер
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleLecter
+      amount: 1
+    - id: MagazineRifle
+      amount: 2
+    - id: MagazineBoxRifle
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseLongWeaponSubMachineGunScorpion
+  name: Кейс с Скорпионом
+  suffix: Аплинк ДСБФ, Скорпион
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSubMachineGunScorpion
+      amount: 1
+    - id: MagazineRifle
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponShotgunEnforcer
+  name: Кейс с Силовиком
+  suffix: Аплинк ДСБФ, Силовик
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponShotgunEnforcer
+      amount: 1
+    - id: BoxLethalshot
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseLongWeaponRevolverMateba
+  name: Кейс с Матебой
+  suffix: Аплинк ДСБФ, Матеба
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRevolverMateba
+      amount: 1
+    - id: SpeedLoaderMagnum
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponEnergyGun
+  name: Кейс с Энергетической винтовкой
+  suffix: Аплинк ДСБФ, Энергетическая винтовка
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponEnergyGun
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponSubMachineGunWt550
+  name: Кейс с WT550
+  suffix: Аплинк ДСБФ, WT550
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSubMachineGunWt550
+      amount: 1
+    - id: MagazinePistolSubMachineGunTopMounted
+      amount: 2
+    - id: MagazineBoxPistol
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseLongEnergySwordNfsd
+  name: Кейс с Энергетическим мечём ДСБФ
+  suffix: Аплинк ДСБФ, Энергетический меч ДСБФ
+  components:
+  - type: StorageFill
+    contents:
+    - id: EnergySwordNfsd
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponDisablerSMG
+  name: Кейс с Станнер-пулемётом
+  suffix: Аплинк ДСБФ, Станнер-пулемёт
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponDisablerSMG
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponLauncherRocketEmp
+  name: Кейс с РПГ
+  suffix: Аплинк ДСБФ, РПГ
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponLauncherRocketEmp
+      amount: 1
+    - id: CartridgeRocket
+      amount: 2
+    - id: CartridgeRocketEmp
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponRifleScar12
+  name: Кейс с SCAR12
+  suffix: Аплинк ДСБФ, SCAR12
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleScar12
+      amount: 1
+    - id: MagazineLightRifle
+      amount: 2
+    - id: MagazineBoxLightRifle
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponLightMachineGunL2RPK
+  name: Кейс с РПК-L2
+  suffix: Аплинк ДСБФ, РПК-L2
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponLightMachineGunL2RPK
+      amount: 1
+    - id: MagazineLightRifleBox
+      amount: 2
+    - id: MagazineBoxLightRifle
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponPulseCarbine
+  name: Кейс с Импульсным карабином
+  suffix: Аплинк ДСБФ, Импульсный карабин
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponPulseCarbine
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponPulseCarbineSniper
+  name: Кейс с Импульсной снайперской винтовкой
+  suffix: Аплинк ДСБФ, Импульсная снайперская винтовка
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponPulseCarbineSniper
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseLongWeaponPulsePistol
+  name: Кейс с Импульсным пистолетом
+  suffix: Аплинк ДСБФ, Импульсный пистолет
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponPulsePistol
+      amount: 1

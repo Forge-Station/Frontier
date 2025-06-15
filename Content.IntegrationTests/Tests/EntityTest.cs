@@ -107,9 +107,19 @@ namespace Content.IntegrationTests.Tests
                     .Select(p => p.ID)
                     .ToList();
                 foreach (var protoId in protoIds)
+                // Corvax-Forge-Start
                 {
-                    entityMan.SpawnEntity(protoId, map.GridCoords);
+                    try
+                    {
+                        entityMan.SpawnEntity(protoId, map.GridCoords);
+                    }
+                    catch (Exception ex)
+                    {
+                        Assert.Fail($"Failed to spawn entity {protoId}:\n{ex}");
+                        continue;
+                    }
                 }
+                // Corvax-Forge-End
             });
             await server.WaitRunTicks(15);
             await server.WaitPost(() =>

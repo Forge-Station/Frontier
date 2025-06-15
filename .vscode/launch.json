@@ -35,7 +35,7 @@
             "name": "YAML Linter",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build-yaml-linter",
+            "preLaunchTask": "build-release",
             "program": "${workspaceFolder}/bin/Content.YAMLLinter/Content.YAMLLinter.dll",
             "cwd": "${workspaceFolder}/Content.YAMLLinter",
             "console": "internalConsole",

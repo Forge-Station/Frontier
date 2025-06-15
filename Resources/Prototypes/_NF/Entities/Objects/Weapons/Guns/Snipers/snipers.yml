@@ -21,7 +21,8 @@
   - type: StaticPrice
     price: 500
   - type: Gun #Corvax-Frontier
-    fireRate: 1.1
+    fireRate: 1.32
+    projectileSpeed: 32
     examineCaliber: gun-examine-caliber-45 # Frontier
   - type: BallisticAmmoProvider
     whitelist:

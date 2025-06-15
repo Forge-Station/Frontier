@@ -8,35 +8,35 @@
 
 # Shuttle Notes:
 
-- type: vessel
-  id: Trident
-  parent: BaseVessel
-  name: NSF Трезубец
-  description: Среднегабаритный патрульный шаттл. Рекомендованный состав команды 3-6 человек.
-  price: 49300
-  category: Medium
-  group: Security
-  access: Bailiff
-  shuttlePath: /Maps/Corvax/Shuttles/Nfsd/trident.yml
-  guidebookPage: Null
-  class:
-  - Capital
+#- type: vessel
+#  id: Trident
+#  parent: BaseVessel
+#  name: NSF Трезубец
+#  description: Среднегабаритный патрульный шаттл. Рекомендованный состав команды 3-6 человек.
+#  price: 49300
+#  category: Medium
+#  group: Security
+#  access: Bailiff
+#  shuttlePath: /Maps/Corvax/Shuttles/Nfsd/trident.yml
+#  guidebookPage: Null
+#  class:
+#  - Capital
 
-- type: gameMap
-  id: Trident
-  mapName: 'NSF Трезубец'
-  mapPath: /Maps/Corvax/Shuttles/Nfsd/trident.yml
-  minPlayers: 0
-  stations:
-    Trident:
-      stationProto: StandardFrontierSecurityVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: '{0} Трезубец {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            PrisonGuard: [ 0, 0 ]
-            SecurityOfficer: [ 0, 0 ]
+#- type: gameMap
+#  id: Trident
+#  mapName: 'NSF Трезубец'
+#  mapPath: /Maps/Corvax/Shuttles/Nfsd/trident.yml
+#  minPlayers: 0
+#  stations:
+#    Trident:
+#      stationProto: StandardFrontierSecurityVessel
+#      components:
+#        - type: StationNameSetup
+#          mapNameTemplate: '{0} Трезубец {1}'
+#          nameGenerator:
+#            !type:NanotrasenNameGenerator
+#            prefixCreator: '14'
+#        - type: StationJobs
+#          availableJobs:
+#            PrisonGuard: [ 0, 0 ]
+#            SecurityOfficer: [ 0, 0 ]

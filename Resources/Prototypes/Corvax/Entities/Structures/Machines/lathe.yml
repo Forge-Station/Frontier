@@ -1,6 +1,6 @@
 - type: entity
   id: SyndicateTechFab
-  parent: [ BlueprintReceiverBase, SecurityTechFab, BaseC3ContrabandUnredeemable] 
+  parent: [ BlueprintReceiverBase, SecurityTechFab, BaseC3ContrabandUnredeemable]
   name: ТехФаб Синдиката
   description: ТехФаб созданный Синдикатом для ряда диверсионных групп сектора Фронтир.
   components:
@@ -24,10 +24,10 @@
     runningState: icon
     staticPacks:
     - SyndicateTechfabStatic
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - NFNfsdTechfabDeprecatedEmag
   - type: MaterialStorage
     whitelist:
       tags:
-        - SpaceCash
+        - SSpaceCash
+        - Sheet
+        - RawMaterial
+        - Ingot

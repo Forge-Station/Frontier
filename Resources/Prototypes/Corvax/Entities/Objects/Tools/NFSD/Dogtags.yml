@@ -1,0 +1,49 @@
+- type: entity
+  id: DogtagsKit
+  name: jetton
+  categories: [ HideSpawnMenu ]
+  parent: [ CDDogtags, BaseC2ContrabandUnredeemable ] # Frontier: BaseMinorContraband<BaseC3SyndicateContraband
+  components:
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+
+- type: entity
+  id: DogtagsCoroner
+  suffix: coroner
+  parent: DogtagsKit
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - NfsdBrigmedic1Set
+    - NfsdBrigmedic2Set
+    - NfsdBrigmedic3Set
+
+- type: entity
+  id: DogtagsDeputy
+  suffix: Deputy
+  parent: DogtagsKit
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - NfsdDeputy1Set
+    - NfsdDeputy2Set
+    - NfsdDeputy3Set
+    - NfsdDeputy4Set
+
+- type: entity
+  id: DogtagsCadet
+  suffix: Cadet
+  parent: DogtagsKit
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - NfsdCadet1Set
+    - NfsdCadet2Set
+    - NfsdCadet3Set

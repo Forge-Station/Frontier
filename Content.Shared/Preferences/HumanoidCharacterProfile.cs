@@ -526,7 +526,33 @@ namespace Content.Shared.Preferences
             {
                 Species = SharedHumanoidAppearanceSystem.DefaultSpecies;
                 speciesPrototype = prototypeManager.Index(Species);
+
             }
+// Corvax-frontier-blacklistrace
+#if !DEBUG
+            if (speciesPrototype.JobWhitelist != null)
+            {
+                foreach (var jid in _jobPriorities.Keys.ToList())
+                {
+                    if (!speciesPrototype.JobWhitelist.Contains(jid))
+                        _jobPriorities.Remove(jid);
+                }
+            }
+            else if (speciesPrototype.JobBlacklist != null)
+            {
+                foreach (var jid in _jobPriorities.Keys.ToList())
+                {
+                    if (speciesPrototype.JobBlacklist.Contains(jid))
+                        _jobPriorities.Remove(jid);
+                }
+            }
+
+            if (_jobPriorities.Count == 0)
+                PreferenceUnavailable = PreferenceUnavailableMode.StayInLobby;
+#endif
+// Corvax-frontier-blacklistrace
+
+
 
             var sex = Sex switch
             {

@@ -1,0 +1,13 @@
+- type: entity
+  name: Спавнер погрузчика
+  id: CFSpawnVehicleMechEmuCargo
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _NF/Objects/Vehicles/hoverbike.rsi
+      state: vehicle
+  - type: ConditionalSpawner
+    prototypes:
+    - MechEmuCargo

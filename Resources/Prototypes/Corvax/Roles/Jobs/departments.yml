@@ -12,6 +12,7 @@
 
 - type: department
   id: MedicalDepartment
+  primary: false
   name: department-medical
   description: department-medical-description
   color: "#DE3A3A"

@@ -7,10 +7,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitContractor
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -20,10 +20,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitPilot
-    - id: ClothingMaskPilot
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -33,10 +33,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitSr
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -46,10 +46,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitCaptain
-    - id: ClothingMaskGasCaptain
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -59,10 +59,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitEngineer
-    - id: ClothingMaskGas
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -72,10 +72,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitAtmosTech
-    - id: ClothingMaskGasAtmos
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -85,10 +85,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitCargo
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -98,11 +98,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitSalvage
-    - id: ClothingMaskGasExplorer
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -112,10 +111,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitMedic
-    - id: ClothingMaskBreathMedical
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -125,11 +124,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterHardsuitVoidParamed
-    - id: ClothingMaskBreathMedical
     - id: JetpackMiniFilled
-    - id: FlashlightLantern
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -139,10 +137,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitScientist
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -152,10 +150,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitJanitor
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -165,10 +163,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitServiceWorker
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -178,11 +176,11 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitChaplain
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
     - id: Lantern
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -192,12 +190,11 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitBoxerRed
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
     - id: ClothingHandsGlovesBoxingRed
-    - id: ShardCrystalRed
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -207,12 +204,11 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitBoxerGreen
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
     - id: ClothingHandsGlovesBoxingGreen
-    - id: ShardCrystalGreen
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -222,12 +218,11 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitBoxerBlue
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
     - id: ClothingHandsGlovesBoxingBlue
-    - id: ShardCrystalBlue
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -237,12 +232,11 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitBoxerYellow
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
     - id: ClothingHandsGlovesBoxingYellow
-    - id: ShardCrystalOrange
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -252,12 +246,11 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitBoxerRandom
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
     - id: ClothingHandsGlovesBoxingBlue
-    - id: ShardCrystalBlue
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -267,10 +260,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitHydro
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -280,10 +273,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitMailman
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -293,11 +286,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: DoubleEmergencyAirTankFilled
     - id: ClothingOuterEVASuitMercenary
-    - id: ClothingMaskGasMercenary
     - id: JetpackMiniFilled
-    - id: FlashlightSeclite
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -307,11 +299,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: DoubleEmergencyAirTankFilled
     - id: ClothingOuterEVASuitPrivateSec
-    - id: ClothingMaskGasSecurity
     - id: JetpackMiniFilled
-    - id: FlashlightSeclite
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -321,11 +312,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: DoubleEmergencyAirTankFilled
     - id: ClothingOuterEVASuitNfsd
-    - id: ClothingMaskGasNfsd
     - id: JetpackNfsdFilled
-    - id: FlashlightNfsdLite
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 # Other EVA Suits
 - type: entity
@@ -336,11 +326,11 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitGoblin
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
     - id: Lantern
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 # Emergency
 - type: entity
@@ -350,11 +340,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterSuitEmergency
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
-    - id: FlashlightLantern
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 # Player factions
 - type: entity
@@ -364,10 +353,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitLvhi
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -376,7 +365,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: AirTankFilled
     - id: ClothingOuterEVASuitFsb
-    - id: ClothingMaskBreath
     - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled

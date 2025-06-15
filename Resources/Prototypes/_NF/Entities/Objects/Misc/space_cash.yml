@@ -94,6 +94,9 @@
         - ItemMask
   - type: Appearance
   - type: CargoSellBlacklist
+  - type: Tag
+    tags:
+    - SSpaceCash
 
 - type: material
   id: CreditCounterfeit
@@ -112,7 +115,7 @@
 - type: currency
   id: Spesso
   displayName: bank-currency-display-spesos-fake
-  cash: 
+  cash:
     1: SpaceCashCounterfeit
   canWithdraw: true # I guess?
 

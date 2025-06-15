@@ -1,0 +1,68 @@
+- type: reagent
+  parent: Blood
+  id: DemonBlood
+  name: reagent-name-demon-blood
+  group: Biological
+  desc: reagent-desc-demon-blood
+  flavor: bitter
+  color: "#b43313ca"
+  recognizable: true
+  physicalDesc: reagent-physical-desc-pungent
+  slippery: false
+  footstepSound:
+    collection: FootstepBlood
+    params:
+      volume: 6
+  metabolisms:
+    Medicine:
+      effects:
+        # Лечит всех, кроме демонов
+        - !type:HealthChange
+          damage:
+            types:
+              Blunt: -1
+              Slash: -1
+              Piercing: -1
+              Poison: -1
+              Heat: -1
+              Shock: -1
+              Cold: -1
+              Caustic: -1
+              Asphyxiation: -1
+              Bloodloss: -1
+          conditions:
+            - !type:OrganType
+              type: Demon
+              shouldHave: false
+        # Демонам наносит урон
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 1
+          conditions:
+            - !type:OrganType
+              type: Demon
+              shouldHave: true
+        # Демоны блюют
+        - !type:ChemVomit
+          probability: 0.5
+          conditions:
+            - !type:OrganType
+              type: Demon
+              shouldHave: true
+        # Только не-демоны могут утолить жажду
+        - !type:SatiateThirst
+          factor: 4
+          conditions:
+            - !type:OrganType
+              type: Demon
+              shouldHave: false
+        # Только не-демоны восстанавливают уровень крови
+        - !type:ModifyBloodLevel
+          amount: 4
+          conditions:
+            - !type:OrganType
+              type: Demon
+              shouldHave: false
+
+

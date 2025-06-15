@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 247.2.0
+  engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/28/2025 06:46:08
-  entityCount: 365
+  time: 06/05/2025 10:23:47
+  entityCount: 367
 maps: []
 grids:
 - 1
@@ -243,6 +243,7 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Hunter
+    - type: ShuttleImpact
 - proto: AirAlarm
   entities:
   - uid: 2
@@ -1131,14 +1132,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -0.5,-9.5
       parent: 1
-- proto: ChairOfficeDark
-  entities:
-  - uid: 145
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,-0.5
-      parent: 1
 - proto: ChairPilotSeat
   entities:
   - uid: 146
@@ -1952,6 +1945,26 @@ entities:
     components:
     - type: Transform
       pos: 3.5,-9.5
+      parent: 1
+- proto: SpawnMobWeaponTurretSyndicateMagnumAP
+  entities:
+  - uid: 145
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -4.5,-0.5
+      parent: 1
+  - uid: 366
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 5.5,-0.5
+      parent: 1
+  - uid: 367
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,-13.5
       parent: 1
 - proto: SpawnPointLatejoin
   entities:

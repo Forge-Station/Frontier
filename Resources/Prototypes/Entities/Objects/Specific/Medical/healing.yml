@@ -323,18 +323,18 @@
     lingering: true
     count: 10
 
-#- type: entity
-#  name: aloe cream
-#  description: A topical cream for burns.
-#  parent: Ointment ##Yes it's a direct reskin
-#  id: AloeCream
-#  components:
-#  - type: Sprite
-#    sprite: Objects/Specific/Hydroponics/aloe.rsi
-#    state: cream
-#  - type: Stack
-#    stackType: AloeCream
-#    count: 10
+- type: entity
+  name: aloe cream
+  description: A topical cream for burns.
+  parent: Ointment ##Yes it's a direct reskin
+  id: AloeCream
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/aloe.rsi
+    state: cream
+  - type: Stack
+    stackType: AloeCream
+    count: 10
 
 - type: entity
   parent: BaseHealingItem

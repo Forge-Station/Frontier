@@ -8,33 +8,33 @@
 
 # Shuttle Notes:
 #
-- type: vessel
-  id: Bottleneck
-  parent: BaseVessel
-  name: NT Горлышко бутылки
-  description: Личный транспорт и мобильный офис для представителя Фронтиры
-  price: 20000 #Appraises at ~14477, margin of ~10% - TODO: fix this value, getting tests to pass - Whatstone
-  category: Small
-  group: Sr
-  access: HeadOfPersonnel
-  shuttlePath: /Maps/_NF/Shuttles/Sr/bottleneck.yml
-  guidebookPage: Null
-  class:
-  - Civilian
-  engine:
-  - Plasma
+#- type: vessel
+#  id: Bottleneck
+#  parent: BaseVessel
+#  name: NT Горлышко бутылки
+#  description: Личный транспорт и мобильный офис для представителя Фронтиры
+#  price: 20000 #Appraises at ~14477, margin of ~10% - TODO: fix this value, getting tests to pass - Whatstone
+#  category: Small
+#  group: Sr
+#  access: HeadOfPersonnel
+#  shuttlePath: /Maps/Corvax/Shuttles/Sr/bottleneck.yml
+#  guidebookPage: Null
+#  class:
+#  - Civilian
+#  engine:
+#  - Plasma
 
-- type: gameMap
-  id: Bottleneck
-  mapName: 'NT Горлышко бутылки'
-  mapPath: /Maps/_NF/Shuttles/Sr/bottleneck.yml
-  minPlayers: 0
-  stations:
-    Bottleneck:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Горлышко бутылки {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
+#- type: gameMap
+#  id: Bottleneck
+#  mapName: 'NT Горлышко бутылки'
+#  mapPath: /Maps/Corvax/Shuttles/Sr/bottleneck.yml
+#  minPlayers: 0
+#  stations:
+#    Bottleneck:
+#      stationProto: StandardFrontierVessel
+#      components:
+#        - type: StationNameSetup
+#          mapNameTemplate: 'Горлышко бутылки {1}'
+#          nameGenerator:
+#            !type:NanotrasenNameGenerator
+#            prefixCreator: '14'

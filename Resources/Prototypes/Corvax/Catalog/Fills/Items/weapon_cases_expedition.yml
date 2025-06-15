@@ -1,0 +1,165 @@
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponRifleCascadeExpedition
+  suffix: Dungeon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleCascade
+      amount: 1
+    - id: MagazineLightRifle
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponRifleDaggerExpedition
+  suffix: Dungeon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleDagger
+      amount: 1
+    - id: MagazineLightRifle
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponShotgunSuppressorExpedition
+  suffix: Dungeon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponShotgunSuppressor
+      amount: 1
+    - id: MagazineShotgun
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponShotgunAD12Expedition
+  suffix: Dungeon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponShotgunAD12
+      amount: 1
+    - id: MagazineShotgun
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponSniperDawnExpedition
+  suffix: Dungeon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSniperDawn
+      amount: 1
+    - id: MagazineAntiMateriel
+      amount: 2
+    - id: MagazineBoxAntiMateriel
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponSniperSignExpedition
+  suffix: Dungeon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSniperSign
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponWeaponPistolSwiftExpedition
+  suffix: Dungeon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponPistolSwift
+      amount: 1
+    - id: MagazinePistol
+      amount: 2
+    - id: MagazineBoxPistol
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponSubMachineGunScorpionExpedition
+  suffix: Dungeon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSubMachineGunScorpion
+      amount: 1
+    - id: MagazineRifle
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponSubMachineGunGalemExpedition
+  suffix: Dungeon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSubMachineGunGalem
+      amount: 1
+    - id: MagazinePistolSubMachineGun
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongJackdaw1
+  suffix: Dungeon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleJackdawExpedition
+      amount: 1
+    - id: MagazineCaselessRifle
+      amount: 2
+
+- type: entity
+  name: random weapon
+  id: SpawnDungeonLootGunT6
+  parent: MarkerBasePlaceFree
+  suffix: "Dungeon, Gun, T3"
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
+      state: icon
+    - sprite: Effects/crayondecals.rsi
+      state: 3
+      color: red
+  - type: RandomSpawner
+    prototypes:
+    - WeaponCaseLongJackdaw1
+    - WeaponCaseLongWeaponRifleCascadeExpedition
+    - WeaponCaseLongWeaponRifleDaggerExpedition
+    - WeaponCaseLongWeaponShotgunSuppressorExpedition
+    - WeaponCaseLongWeaponSubMachineGunGalemExpedition
+    - WeaponCaseLongWeaponSubMachineGunScorpionExpedition
+    - WeaponCaseLongWeaponSniperSignExpedition
+    - WeaponCaseLongWeaponWeaponPistolSwiftExpedition
+    - WeaponCaseLongWeaponSniperDawnExpedition
+    chance: 1.0
+    offset: 0.0
+    rarePrototypes:
+    - SpawnDungeonLootGunT4
+    rareChance: 0.15
+

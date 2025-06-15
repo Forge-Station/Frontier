@@ -1,11 +1,11 @@
-meta:
+meta: #
   format: 7
   category: Grid
-  engineVersion: 247.2.0
+  engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/10/2025 05:34:37
-  entityCount: 2250
+  time: 05/15/2025 05:28:50
+  entityCount: 2257
 maps: []
 grids:
 - 3
@@ -1018,6 +1018,7 @@ entities:
     - type: BecomesStation
       id: MercenaryBase
     - type: NavMap
+    - type: ShuttleImpact
 - proto: AcousticGuitarInstrument
   entities:
   - uid: 835
@@ -1132,7 +1133,7 @@ entities:
       pos: 50.5,13.5
       parent: 3
     - type: Door
-      secondsUntilStateChange: -2920.9915
+      secondsUntilStateChange: -2998.5732
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1214,7 +1215,7 @@ entities:
       pos: 33.5,9.5
       parent: 3
     - type: Door
-      secondsUntilStateChange: -2500.2253
+      secondsUntilStateChange: -2577.8071
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11777,6 +11778,43 @@ entities:
     - type: Transform
       pos: 23.5,19.5
       parent: 3
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 2251
+    components:
+    - type: Transform
+      pos: 6.5,25.5
+      parent: 3
+  - uid: 2252
+    components:
+    - type: Transform
+      pos: 6.5,30.5
+      parent: 3
+  - uid: 2253
+    components:
+    - type: Transform
+      pos: 19.5,18.5
+      parent: 3
+  - uid: 2254
+    components:
+    - type: Transform
+      pos: 18.5,18.5
+      parent: 3
+  - uid: 2255
+    components:
+    - type: Transform
+      pos: 17.5,18.5
+      parent: 3
+  - uid: 2256
+    components:
+    - type: Transform
+      pos: 38.5,26.5
+      parent: 3
+  - uid: 2257
+    components:
+    - type: Transform
+      pos: 36.5,26.5
+      parent: 3
 - proto: SpawnPointMercenary
   entities:
   - uid: 1754
@@ -11793,16 +11831,6 @@ entities:
     components:
     - type: Transform
       pos: 9.5,30.5
-      parent: 3
-  - uid: 2239
-    components:
-    - type: Transform
-      pos: 11.5,28.5
-      parent: 3
-  - uid: 2240
-    components:
-    - type: Transform
-      pos: 11.5,24.5
       parent: 3
   - uid: 2241
     components:
@@ -11833,26 +11861,6 @@ entities:
     components:
     - type: Transform
       pos: 9.5,28.5
-      parent: 3
-  - uid: 2247
-    components:
-    - type: Transform
-      pos: 11.5,29.5
-      parent: 3
-  - uid: 2248
-    components:
-    - type: Transform
-      pos: 11.5,25.5
-      parent: 3
-  - uid: 2249
-    components:
-    - type: Transform
-      pos: 11.5,26.5
-      parent: 3
-  - uid: 2250
-    components:
-    - type: Transform
-      pos: 11.5,27.5
       parent: 3
 - proto: SpiderWeb
   entities:
@@ -12188,14 +12196,6 @@ entities:
     components:
     - type: Transform
       pos: 16.5,22.5
-      parent: 3
-- proto: VehicleKeyHoverbikeNF
-  entities:
-  - uid: 1086
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 22.439495,20.66906
       parent: 3
 - proto: VendingMachineAmmoPOI
   entities:

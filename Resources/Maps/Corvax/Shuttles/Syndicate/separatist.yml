@@ -4,8 +4,8 @@ meta:
   engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/11/2025 12:00:56
-  entityCount: 596
+  time: 06/05/2025 10:22:43
+  entityCount: 598
 maps: []
 grids:
 - 1
@@ -355,124 +355,6 @@ entities:
     - type: BecomesStation
       id: separatist
     - type: ShuttleImpact
-  - uid: 244
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - beaker
-    - type: Transform
-      parent: 243
-    - type: Solution
-      solution:
-        maxVol: 50
-        name: beaker
-        reagents: []
-    - type: ContainedSolution
-      containerName: beaker
-      container: 243
-  - uid: 246
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - beaker
-    - type: Transform
-      parent: 245
-    - type: Solution
-      solution:
-        maxVol: 50
-        name: beaker
-        reagents: []
-    - type: ContainedSolution
-      containerName: beaker
-      container: 245
-  - uid: 249
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - injector
-    - type: Transform
-      parent: 248
-    - type: Solution
-      solution:
-        maxVol: 5
-        name: injector
-        reagents: []
-    - type: ContainedSolution
-      containerName: injector
-      container: 248
-  - uid: 251
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - beaker
-    - type: Transform
-      parent: 250
-    - type: Solution
-      solution:
-        maxVol: 30
-        name: beaker
-        reagents: []
-    - type: ContainedSolution
-      containerName: beaker
-      container: 250
-  - uid: 253
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - beaker
-    - type: Transform
-      parent: 252
-    - type: Solution
-      solution:
-        maxVol: 30
-        name: beaker
-        reagents:
-        - data: []
-          ReagentId: Vestine
-          Quantity: 30
-    - type: ContainedSolution
-      containerName: beaker
-      container: 252
-  - uid: 255
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - beaker
-    - type: Transform
-      parent: 254
-    - type: Solution
-      solution:
-        maxVol: 30
-        name: beaker
-        reagents: []
-    - type: ContainedSolution
-      containerName: beaker
-      container: 254
-  - uid: 257
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - injector
-    - type: Transform
-      parent: 256
-    - type: Solution
-      solution:
-        maxVol: 15
-        name: injector
-        reagents:
-        - data: []
-          ReagentId: Stimulants
-          Quantity: 15
-    - type: ContainedSolution
-      containerName: injector
-      container: 256
 - proto: AirlockExternalGlassShuttleSyndicateLocked
   entities:
   - uid: 3
@@ -773,46 +655,6 @@ entities:
       parent: 1
 - proto: BaseChemistryEmptyVial
   entities:
-  - uid: 250
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 242
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - beaker
-    - type: MeleeWeapon
-      nextAttack: -1.4341329
-    - type: EmitSoundOnCollide
-      nextSound: -641.4334939
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@beaker: !type:ContainerSlot
-          ent: 251
-  - uid: 254
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 242
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - beaker
-    - type: MeleeWeapon
-      nextAttack: -4.667463
-    - type: EmitSoundOnCollide
-      nextSound: -641.4334939
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@beaker: !type:ContainerSlot
-          ent: 255
   - uid: 269
     components:
     - type: Transform
@@ -827,54 +669,6 @@ entities:
       parent: 1
 - proto: Beaker
   entities:
-  - uid: 243
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 242
-    - type: Tag
-      tags:
-      - GlassBeaker
-      - Trash
-    - type: MeleeWeapon
-      nextAttack: -641.4334939
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - beaker
-    - type: EmitSoundOnCollide
-      nextSound: -641.4334939
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@beaker: !type:ContainerSlot
-          ent: 244
-  - uid: 245
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 242
-    - type: Tag
-      tags:
-      - GlassBeaker
-      - Trash
-    - type: MeleeWeapon
-      nextAttack: -641.4334939
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - beaker
-    - type: EmitSoundOnCollide
-      nextSound: -641.4334939
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@beaker: !type:ContainerSlot
-          ent: 246
   - uid: 278
     components:
     - type: Transform
@@ -1787,65 +1581,10 @@ entities:
 - proto: ChemicalSynthesisKit
   entities:
   - uid: 242
-    mapInit: true
-    paused: true
     components:
     - type: Transform
-      pos: 10.574477,13.607471
+      pos: 10.508904,13.550825
       parent: 1
-    - type: Storage
-      storedItems:
-        243:
-          position: 0,0
-          _rotation: South
-        245:
-          position: 1,0
-          _rotation: South
-        247:
-          position: 2,0
-          _rotation: East
-        248:
-          position: 2,1
-          _rotation: South
-        250:
-          position: 3,1
-          _rotation: South
-        252:
-          position: 0,2
-          _rotation: South
-        254:
-          position: 1,2
-          _rotation: South
-        256:
-          position: 2,2
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 243
-          - 245
-          - 247
-          - 248
-          - 252
-          - 256
-          - 254
-          - 250
-    - type: EmitSoundOnCollide
-      nextSound: -641.4334939
-    - type: UseDelay
-      delays:
-        default:
-          endTime: 626.6660409
-          startTime: 625.6660409
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage:
-          endTime: 625.6660409
-          startTime: 625.6660409
 - proto: ChemistryEmptyBottle01
   entities:
   - uid: 284
@@ -1889,16 +1628,6 @@ entities:
       parent: 1
 - proto: ClothingEyesGlassesChemical
   entities:
-  - uid: 247
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 242
-    - type: EmitSoundOnCollide
-      nextSound: -641.4334939
-    - type: Physics
-      canCollide: False
   - uid: 275
     components:
     - type: Transform
@@ -1935,26 +1664,6 @@ entities:
       parent: 308
     - type: Physics
       canCollide: False
-- proto: Dropper
-  entities:
-  - uid: 248
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 242
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - injector
-    - type: EmitSoundOnCollide
-      nextSound: -641.4334939
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@injector: !type:ContainerSlot
-          ent: 249
 - proto: EmergencyRollerBed
   entities:
   - uid: 289
@@ -2654,6 +2363,20 @@ entities:
       parent: 274
     - type: Physics
       canCollide: False
+- proto: LockerWallMaterialsFuelUraniumFilled2
+  entities:
+  - uid: 110
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 4.5,4.5
+      parent: 1
+  - uid: 111
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 8.5,4.5
+      parent: 1
 - proto: MachineCentrifuge
   entities:
   - uid: 267
@@ -2705,16 +2428,10 @@ entities:
 - proto: Multitool
   entities:
   - uid: 456
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: 9.371081,6.5880566
       parent: 1
-    - type: NetworkConfigurator
-      lastUseAttempt: -641.4334939
-    - type: EmitSoundOnCollide
-      nextSound: -142.9015042
 - proto: NitrogenCanister
   entities:
   - uid: 453
@@ -2789,17 +2506,17 @@ entities:
     - type: Transform
       pos: 12.5,11.5
       parent: 1
-- proto: PortableGeneratorPacmanShuttle
+- proto: PortableGeneratorSuperPacmanShuttle
   entities:
   - uid: 318
     components:
     - type: Transform
-      pos: 3.5,5.5
+      pos: 9.5,5.5
       parent: 1
   - uid: 319
     components:
     - type: Transform
-      pos: 9.5,5.5
+      pos: 3.5,5.5
       parent: 1
 - proto: Poweredlight
   entities:
@@ -3115,6 +2832,20 @@ entities:
           - 310
           - 309
           - 311
+- proto: ShuttleGunSunset
+  entities:
+  - uid: 597
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 4.5,21.5
+      parent: 1
+  - uid: 598
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 8.5,21.5
+      parent: 1
 - proto: SignalButtonWindows
   entities:
   - uid: 459
@@ -3167,18 +2898,6 @@ entities:
     components:
     - type: Transform
       pos: 3.5,7.5
-      parent: 1
-- proto: SpawnMobWeaponTurretSyndicateMagnumAP
-  entities:
-  - uid: 110
-    components:
-    - type: Transform
-      pos: 4.5,21.5
-      parent: 1
-  - uid: 111
-    components:
-    - type: Transform
-      pos: 8.5,21.5
       parent: 1
 - proto: StairDark
   entities:
@@ -3273,32 +2992,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 7.5,18.5
       parent: 1
-- proto: SyringeStimulants
-  entities:
-  - uid: 256
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: шприц стимулятора (гиперзин)
-    - type: Transform
-      parent: 242
-    - type: Label
-      currentLabel: гиперзин
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - injector
-    - type: EmitSoundOnCollide
-      nextSound: -641.4334939
-    - type: Physics
-      canCollide: False
-    - type: NameModifier
-      baseName: шприц стимулятора
-    - type: ContainerContainer
-      containers:
-        solution@injector: !type:ContainerSlot
-          ent: 257
 - proto: TableReinforced
   entities:
   - uid: 207
@@ -3462,34 +3155,6 @@ entities:
     - type: Transform
       pos: 2.5,9.5
       parent: 1
-- proto: VestineChemistryVial
-  entities:
-  - uid: 252
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: пробирка вестина (вестин)
-    - type: Transform
-      parent: 242
-    - type: Label
-      currentLabel: вестин
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - beaker
-    - type: MeleeWeapon
-      nextAttack: -641.4334939
-    - type: EmitSoundOnCollide
-      nextSound: -641.4334939
-    - type: Physics
-      canCollide: False
-    - type: NameModifier
-      baseName: пробирка вестина
-    - type: ContainerContainer
-      containers:
-        solution@beaker: !type:ContainerSlot
-          ent: 253
 - proto: WallPlastitanium
   entities:
   - uid: 4

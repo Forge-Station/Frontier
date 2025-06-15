@@ -1,7 +1,7 @@
 - type: species
   id: Skeleton
   name: species-name-skeleton
-  roundStart: false
+  roundStart: true
   prototype: MobSkeletonPerson
   sprites: MobSkeletonSprites
   defaultSkinTone: "#fff9e2"
@@ -10,6 +10,10 @@
   femaleFirstNames: NamesSkeletonFirst
   dollPrototype: MobSkeletonPersonDummy
   skinColoration: TintedHues
+  jobWhitelist:
+  - NFPirate
+  - NFPirateCaptain
+  - NFPirateFirstMate
 
 - type: speciesBaseSprites
   id: MobSkeletonSprites

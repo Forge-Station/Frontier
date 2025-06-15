@@ -148,7 +148,7 @@
   id: UplinkSecurityMK58
   name:  uplink-security-mk58-name
   description: uplink-security-mk58-desc
-  productEntity: WeaponPistolMk58
+  productEntity: WeaponCaseLongWeaponPistolMk58
   icon: { sprite: Objects/Weapons/Guns/Pistols/mk58.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 2
@@ -212,7 +212,7 @@
   id: UplinkSecurityEnforcer
   name:  uplink-security-enforcer-name
   description: uplink-security-enforcer-desc
-  productEntity: WeaponShotgunEnforcer
+  productEntity: WeaponCaseLongWeaponShotgunEnforcer
   icon: { sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 3
@@ -233,7 +233,7 @@
   id: UplinkSecurityLecter
   name:  uplink-security-lecter-name
   description: uplink-security-lecter-desc
-  productEntity: WeaponRifleLecter
+  productEntity: WeaponCaseLongWeaponRifleLecter
   icon: { sprite: Objects/Weapons/Guns/Rifles/lecter.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 3
@@ -254,7 +254,7 @@
   id: UplinkSecurityVulcan
   name:  uplink-security-vulcan-name
   description: uplink-security-vulcan-desc
-  productEntity: WeaponRifleVulcan
+  productEntity: WeaponCaseLongWeaponRifleVulcan
   icon: { sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 3
@@ -275,7 +275,7 @@
   id: UplinkSecurityLaserCarbine
   name:  uplink-security-lasercarbine-name
   description: uplink-security-lasercarbine-desc
-  productEntity: WeaponLaserCarbine
+  productEntity: WeaponCaseLongWeaponLaserCarbine
   icon: { sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 3
@@ -296,7 +296,7 @@
   id: UplinkSecurityDisablerSMG
   name:  uplink-security-disablersmg-name
   description: uplink-security-disablersmg-desc
-  productEntity: WeaponDisablerSMG
+  productEntity: WeaponCaseLongWeaponDisablerSMG
   icon: { sprite: Objects/Weapons/Guns/Battery/disabler_smg.rsi, state: base }
   cost:
     FrontierUplinkCoin: 3
@@ -317,7 +317,7 @@
   id: UplinkSecurityEnergySword
   name:  uplink-security-energysword-name
   description: uplink-security-energysword-desc
-  productEntity: EnergySwordNfsd
+  productEntity: WeaponCaseLongEnergySwordNfsd
   icon: { sprite: Objects/Weapons/Melee/e_sword.rsi, state: e_sword }
   cost:
     FrontierUplinkCoin: 5
@@ -336,7 +336,7 @@
   id: UplinkSecurityWT550
   name:  uplink-security-wt550-name
   description: uplink-security-wt550-desc
-  productEntity: WeaponSubMachineGunWt550
+  productEntity: WeaponCaseLongWeaponSubMachineGunWt550
   icon: { sprite: Objects/Weapons/Guns/SMGs/wt550.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 4
@@ -356,7 +356,7 @@
   id: UplinkSecurityWeaponLightMachineGunL2RPK
   name:  uplink-security-WeaponLightMachineGunL2RPK-name
   description: uplink-security-WeaponLightMachineGunL2RPK-desc
-  productEntity: WeaponLightMachineGunL2RPK
+  productEntity: WeaponCaseLongWeaponLightMachineGunL2RPK
   icon: { sprite: Corvax/Objects/Weapons/Guns/LMGs/L2RPK.rsi, state: base }
   cost:
     FrontierUplinkCoin: 20
@@ -377,7 +377,7 @@
   id: UplinkSecurityWeaponSubMachineGunScorpion
   name:  uplink-security-WeaponSubMachineGunScorpion-name
   description: uplink-security-WeaponSubMachineGunScorpion-desc
-  productEntity: WeaponSubMachineGunScorpion
+  productEntity: WeaponCaseLongWeaponSubMachineGunScorpion
   icon: { sprite: Corvax/Objects/Weapons/Guns/SMGs/scorpion.rsi, state: base }
   cost:
     FrontierUplinkCoin: 3
@@ -398,7 +398,7 @@
   id: UplinkSecurityWeaponRifleScar12
   name:  uplink-security-WeaponRifleScar12-name
   description: uplink-security-WeaponRifleScar12-desc
-  productEntity: WeaponRifleScar12
+  productEntity: WeaponCaseLongWeaponRifleScar12
   icon: { sprite: Corvax/Objects/Weapons/Guns/Rifles/scar12.rsi, state: base }
   cost:
     FrontierUplinkCoin: 7
@@ -419,7 +419,7 @@
   id: UplinkSecurityEnergyGun
   name:  uplink-security-energygun-name
   description: uplink-security-energygun-desc
-  productEntity: WeaponEnergyGun
+  productEntity: WeaponCaseLongWeaponEnergyGun
   icon: { sprite: _DV/Objects/Weapons/Guns/Battery/energygun.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 4
@@ -439,7 +439,7 @@
   id: UplinkSecurityEmpRpg
   name:  uplink-security-emprpg-name
   description: uplink-security-emprpg-desc
-  productEntity: WeaponLauncherRocketEmp
+  productEntity: WeaponCaseLongWeaponLauncherRocketEmp
   icon: { sprite: Objects/Weapons/Guns/Launchers/rocket.rsi, state: base }
   cost:
     FrontierUplinkCoin: 5
@@ -458,7 +458,7 @@
   id: UplinkSecurityKS23
   name:  uplink-security-ks23-name
   description: uplink-security-ks23-desc
-  productEntity: WeaponShotgunKS23
+  productEntity: WeaponCaseLongWeaponShotgunKS23
   icon: { sprite: /Textures/Corvax/Objects/Weapons/Guns/Shotguns/ks23.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 3
@@ -833,7 +833,7 @@
   id: UplinkSecurityInspector
   name:  uplink-security-inspector-name
   description: uplink-security-inspector-desc
-  productEntity: WeaponRevolverInspector
+  productEntity: WeaponCaseLongWeaponRevolverInspector
   icon: { sprite: Objects/Weapons/Guns/Revolvers/inspector.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 1
@@ -849,7 +849,7 @@
   id: UplinkSecurityMateba
   name:  uplink-security-mateba-name
   description: uplink-security-mateba-desc
-  productEntity: WeaponRevolverMateba
+  productEntity: WeaponCaseLongWeaponRevolverMateba
   icon: { sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 3
@@ -918,7 +918,7 @@
   id: UplinkSecurityPulsePistol
   name:  uplink-security-pulsepistol-name
   description: uplink-security-pulsepistol-desc
-  productEntity: WeaponPulsePistol
+  productEntity: WeaponCaseLongWeaponPulsePistol
   icon: { sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi, state: base }
   cost:
     FrontierUplinkCoin: 12
@@ -939,7 +939,7 @@
   id: UplinkSecurityPulseCarbine
   name:  uplink-security-pulsecarbine-name
   description: uplink-security-pulsecarbine-desc
-  productEntity: WeaponPulseCarbine
+  productEntity: WeaponCaseLongWeaponPulseCarbine
   icon: { sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi, state: base }
   cost:
     FrontierUplinkCoin: 20
@@ -1475,8 +1475,8 @@
     - !type:BuyerJobCondition
       whitelist:
         - Sheriff
-
-- type: listing # Corvax-Frontier
+# Corvax-Frontier
+- type: listing 
   id: UplinkSecurityResearchDisk10000
   name:  uplink-security-research-disk-10000-name
   description: uplink-security-research-disk-10000-desc
@@ -1486,6 +1486,223 @@
     FrontierUplinkCoin: 5
   categories:
     - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityAmmoUran
+  productEntity: BlueprintRifleUranium
+  icon: { sprite: Objects/Specific/Research/researchdisk.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 34
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityBlueprintGrenade
+  productEntity: BlueprintGrenade
+  icon: { sprite: Objects/Specific/Research/researchdisk.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 60
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityBlueprintWeaponXrayCannon
+  productEntity: BaseBlueprintWeaponXrayCannon
+  icon: { sprite: Objects/Specific/Research/researchdisk.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 26
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityRPED
+  productEntity: RPED
+  icon: { sprite: _NF/Objects/Specific/Research/rped.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityWeaponCaseHeavyCdet
+  name:  uplink-security-contraband-forensics-AKET
+  productEntity: WeaponCaseHeavyCdet
+  icon: { sprite: _NF/Objects/Storage/Cases/guncaseheavy.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 22
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityWeaponCaseHeavySlat
+  name:  uplink-security-contraband-forensics-SALT
+  productEntity: WeaponCaseHeavySlat
+  icon: { sprite: _NF/Objects/Storage/Cases/guncaseheavy.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 32
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityWeaponCaseHeavyAsmgt
+  name:  uplink-security-contraband-forensics-ASPT
+  productEntity: WeaponCaseHeavyAsmgt
+  icon: { sprite: _NF/Objects/Storage/Cases/guncaseheavy.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 19
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityM4A1
+  name:  uplink-security-contraband-forensics-M4A1
+  description: uplink-security-contraband-forensics-M4A1-desc
+  productEntity: WeaponCaseLongM4A1
+  icon: { sprite: Corvax/Objects/Weapons/Guns/Rifles/m4a1.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 20
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityCrateEngineeringDSBF
+  productEntity: CrateEngineeringDSBF
+  cost:
+    FrontierUplinkCoin: 5
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityAD12
+  name:  uplink-security-contraband-forensics-AD12
+  description: uplink-security-contraband-forensics-AD12-desc
+  productEntity: WeaponCaseLongAD12
+  icon: { sprite: Corvax/Objects/Weapons/Guns/Shotguns/ad12.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 11
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityWeaponPulseCarbineSniper
+  name:  uplink-security-contraband-forensics-CarbineSniper
+  description: uplink-security-contraband-forensics-CarbineSniper-desc
+  productEntity: WeaponCaseLongWeaponPulseCarbineSniper
+  icon: { sprite: Corvax/Objects/Weapons/Guns/Battery/pulse_sniper.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 20
+  categories:
+    - UplinkSecurityWeapons
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:

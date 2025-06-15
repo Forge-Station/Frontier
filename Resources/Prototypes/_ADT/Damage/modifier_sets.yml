@@ -1,0 +1,13 @@
+- type: damageModifierSet
+  id: Demon # Обмен сопротивлений ну и они склонны к раку(?)
+  coefficients:
+    Blunt: 1
+    Piercing: 1.1
+    Slash: 1.05
+    Cold: 0.7
+    Heat: 0.85
+    Poison: 0.8
+    Cellular: 1.5
+
+
+
