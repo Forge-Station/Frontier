@@ -11,6 +11,7 @@ using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Nutrition.Components;
 using Content.Shared.Popups;
 using Content.Shared.GameTicking;
+using Content.Server.Damage.Systems;
 
 namespace Content.Server.Corvax.Elzuosa
 {

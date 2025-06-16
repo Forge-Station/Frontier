@@ -17,10 +17,13 @@ using Robust.Shared.Containers;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using Content.Shared.Stacks;
+using Content.Server._NF.Cargo.Systems;
+using Content.Shared.Labels.EntitySystems;
+using Content.Server.Cargo.Systems;
 
-namespace Content.Server.Cargo.Systems; // Needs to collide with base namespace
+namespace Content.Server._NF.Cargo.Systems; // Needs to collide with base namespace
 
-public sealed partial class CargoSystem
+public sealed partial class NFCargoSystem
 {
     [ValidatePrototypeId<NameIdentifierGroupPrototype>]
     private const string MercenaryBountyNameIdentifierGroup = "Bounty"; // Use the bounty name ID group (0-999) for now.

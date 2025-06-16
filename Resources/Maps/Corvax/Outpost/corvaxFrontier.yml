@@ -47426,14 +47426,6 @@ entities:
     - type: Transform
       pos: -18.5,-5.5
       parent: 2
-- proto: MagazineBoxCaselessRifle10x24
-  entities:
-  - uid: 3107
-    components:
-    - type: Transform
-      parent: 3105
-    - type: Physics
-      canCollide: False
 - proto: MailBag
   entities:
   - uid: 6336
@@ -48055,7 +48047,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 14.353407,3.3849247
       parent: 2
-- proto: PlushieMoff
+- proto: PlushieMoffRandom
   entities:
   - uid: 6419
     components:

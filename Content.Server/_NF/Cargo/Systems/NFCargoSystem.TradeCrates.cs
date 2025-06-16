@@ -10,7 +10,7 @@ using Timer = Robust.Shared.Timing.Timer;
 
 namespace Content.Server._NF.Cargo.Systems;
 
-public sealed partial class NFCargoSystem
+public partial class NFCargoSystem
 {
     [Dependency] private GameTicker _gameTicker = default!;
     [Dependency] private LabelSystem _label = default!;

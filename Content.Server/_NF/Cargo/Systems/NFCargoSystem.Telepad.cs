@@ -11,7 +11,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Server._NF.Cargo.Systems;
 
-public sealed partial class NFCargoSystem
+public partial class NFCargoSystem
 {
     private void InitializeTelepad()
     {

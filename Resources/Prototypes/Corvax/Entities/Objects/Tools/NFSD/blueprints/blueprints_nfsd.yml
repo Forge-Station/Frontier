@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: BlueprintRifleUranium
   components:
   - type: Blueprint
@@ -27,7 +27,7 @@
     - SpeedLoaderRifleHeavyUranium
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: BlueprintGrenade
   components:
   - type: Blueprint
@@ -37,7 +37,7 @@
     - MagazineGrenadeEmpty
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: BaseBlueprintWeaponXrayCannon
   components:
   - type: Blueprint

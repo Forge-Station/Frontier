@@ -15,7 +15,7 @@ using Robust.Shared.Map;
 
 namespace Content.Server._NF.Cargo.Systems;
 
-public sealed partial class NFCargoSystem
+public partial class NFCargoSystem
 {
     /// <summary>
     /// How much time to wait (in seconds) before processing database orders.

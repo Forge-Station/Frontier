@@ -21,7 +21,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Server._NF.Cargo.Systems;
 
-public sealed partial class NFCargoSystem
+public partial class NFCargoSystem
 {
     [Dependency] private readonly NameIdentifierSystem _nameIdentifier = default!;
 

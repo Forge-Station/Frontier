@@ -16,7 +16,7 @@ namespace Content.Server._NF.Cargo.Systems;
 /// Handles cargo pallet (sale) mechanics.
 /// Based off of Wizden's CargoSystem.
 /// </summary>
-public sealed partial class NFCargoSystem
+public partial class NFCargoSystem
 {
     // The maximum distance from the console to look for pallets.
     private const int DefaultPalletDistance = 8;

@@ -20,10 +20,9 @@ using Content.Shared.GameTicking;
 using Content.Shared.Whitelist;
 using Content.Server._NF.Bank;
 using Robust.Server.Containers;
-
 namespace Content.Server._NF.Cargo.Systems;
 
-public sealed partial class NFCargoSystem : SharedNFCargoSystem
+public partial class NFCargoSystem : SharedNFCargoSystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
@@ -47,6 +46,12 @@ public sealed partial class NFCargoSystem : SharedNFCargoSystem
     [Dependency] private readonly MetaDataSystem _meta = default!;
     [Dependency] private readonly SectorServiceSystem _sectorService = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!; // Frontier-corvax
+    [Dependency] private readonly UserInterfaceSystem _uiSystem = default!; // Frontier-corvax
+    [Dependency] private readonly IPrototypeManager _protoMan = default!; // Frontier-corvax
+    [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!; // Frontier-corvax
+    [Dependency] private readonly MetaDataSystem _metaSystem = default!; // Frontier-corvax
+    [Dependency] private readonly PaperSystem _paperSystem = default!; // Frontier-corvax
 
     private EntityQuery<TransformComponent> _xformQuery;
     private EntityQuery<CargoSellBlacklistComponent> _blacklistQuery;
@@ -68,6 +73,7 @@ public sealed partial class NFCargoSystem : SharedNFCargoSystem
         InitializeTelepad();
         InitializePirateBounty();
         InitializeTradeCrates();
+        InitializeMercenaryBounty(); //corvax-Frontier
     }
 
     public override void Update(float frameTime)
