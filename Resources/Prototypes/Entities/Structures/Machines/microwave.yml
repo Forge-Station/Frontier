@@ -4,6 +4,8 @@
   name: microwave
   description: It's magic.
   components:
+  - type: PirateBountyItem
+    id: KitchenMicrowave
   - type: Microwave
     capacity: 10
     canMicrowaveIdsSafely: false # Frontier: true<false

@@ -69,6 +69,15 @@ guide-entry-medicalrecipes = Медицинские рецепты
 # Medical entries
 guide-entry-medical-bounties = Медицинские премии
 guide-entry-medical-doc = Менеджер Медицинских Операций
+guide-entry-CParamed = Парамедик
 
 # Security entries
 guide-entry-nfsd-smuggling = Контрабанда
+
+# Антаги
+guide-entry-nfantag = Антаганисты фронтира
+guide-entry-Shturm = Штурмовик
+guide-entry-SParamed = Штурмовой Парамедик
+guide-entry-Commander = Командир "Жнецов"
+guide-entry-Cadet = Кадет Синдиката
+guide-entry-Smugler = Контрабандист Синдиката

@@ -1,29 +1,41 @@
 - type: guideEntry
+  id: NFAntag
+  name: guide-entry-nfantag
+  text: "/ServerInfo/_NF/Guidebook/SectorTopology.xml"
+  priority: 7
+  children:
+  - Smugler
+  - SCadet
+  - SComa
+  - SParamed
+  - SShturm
+
+- type: guideEntry
   id: Smugler
-  name: Smugler
+  name: guide-entry-Smugler
   text: "/ServerInfo/Guidebook/Antagonist/Samuguler.xml"
 #  priority: 7
 
 - type: guideEntry
   id: SCadet
-  name: Cadet
+  name: guide-entry-Cadet
   text: "/ServerInfo/Guidebook/Antagonist/SCadet.xml"
 #  priority: 8
 
 - type: guideEntry
   id: SComa
-  name: Commander
+  name: guide-entry-Commander
   text: "/ServerInfo/Guidebook/Antagonist/SComa.xml"
 #  priority: 9
 
 - type: guideEntry
   id: SParamed
-  name: Paramed
+  name: guide-entry-SParamed
   text: "/ServerInfo/Guidebook/Antagonist/SParamed.xml"
 #  priority: 10
 
 - type: guideEntry
   id: SShturm
-  name: Shturm
+  name: guide-entry-Shturm
   text: "/ServerInfo/Guidebook/Antagonist/SShturm.xml"
 #  priority: 11

@@ -356,7 +356,7 @@
   id: UplinkSecurityWeaponLightMachineGunL2RPK
   name:  uplink-security-WeaponLightMachineGunL2RPK-name
   description: uplink-security-WeaponLightMachineGunL2RPK-desc
-  productEntity: WeaponLightMachineGunL2RPK
+  productEntity: WeaponCaseLongWeaponLightMachineGunL2RPK
   icon: { sprite: Corvax/Objects/Weapons/Guns/LMGs/L2RPK.rsi, state: base }
   cost:
     FrontierUplinkCoin: 20
@@ -377,7 +377,7 @@
   id: UplinkSecurityWeaponSubMachineGunScorpion
   name:  uplink-security-WeaponSubMachineGunScorpion-name
   description: uplink-security-WeaponSubMachineGunScorpion-desc
-  productEntity: WeaponSubMachineGunScorpion
+  productEntity: WeaponCaseLongWeaponSubMachineGunScorpion
   icon: { sprite: Corvax/Objects/Weapons/Guns/SMGs/scorpion.rsi, state: base }
   cost:
     FrontierUplinkCoin: 3
@@ -398,7 +398,7 @@
   id: UplinkSecurityWeaponRifleScar12
   name:  uplink-security-WeaponRifleScar12-name
   description: uplink-security-WeaponRifleScar12-desc
-  productEntity: WeaponRifleScar12
+  productEntity: WeaponCaseLongWeaponRifleScar12
   icon: { sprite: Corvax/Objects/Weapons/Guns/Rifles/scar12.rsi, state: base }
   cost:
     FrontierUplinkCoin: 7
@@ -459,7 +459,7 @@
   id: UplinkSecurityKS23
   name:  uplink-security-ks23-name
   description: uplink-security-ks23-desc
-  productEntity: WeaponShotgunKS23
+  productEntity: WeaponCaseLongWeaponShotgunKS23
   icon: { sprite: /Textures/Corvax/Objects/Weapons/Guns/Shotguns/ks23.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 3
@@ -1361,6 +1361,11 @@
       whitelist:
         tags:
           - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
 
 - type: listing
   id: UplinkSecurityBlueprintGrenade
@@ -1375,6 +1380,11 @@
       whitelist:
         tags:
           - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
 
 - type: listing
   id: UplinkSecurityBlueprintWeaponXrayCannon
@@ -1389,6 +1399,11 @@
       whitelist:
         tags:
           - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
 
 - type: listing
   id: UplinkSecurityRPED
@@ -1403,6 +1418,11 @@
       whitelist:
         tags:
           - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
 
 - type: listing
   id: UplinkSecurityWeaponCaseHeavyCdet
@@ -1418,6 +1438,11 @@
       whitelist:
         tags:
           - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
 
 - type: listing
   id: UplinkSecurityWeaponCaseHeavySlat
@@ -1433,6 +1458,11 @@
       whitelist:
         tags:
           - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
 
 - type: listing
   id: UplinkSecurityWeaponCaseHeavyAsmgt
@@ -1448,6 +1478,11 @@
       whitelist:
         tags:
           - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
 
 - type: listing
   id: UplinkSecurityM4A1
@@ -1464,6 +1499,11 @@
       whitelist:
         tags:
           - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
 
 - type: listing
   id: UplinkSecurityCrateEngineeringDSBF
