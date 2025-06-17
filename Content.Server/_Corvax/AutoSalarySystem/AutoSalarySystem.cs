@@ -44,8 +44,6 @@ public sealed class AutoSalarySystem : EntitySystem
     {
         if (!_mindSystem.TryGetMind(body, out _, out var mind))
             return false;
-        if (mind.Session == null)
-            return false;
         if (mind.IsVisitingEntity)
             return false;
         return true;

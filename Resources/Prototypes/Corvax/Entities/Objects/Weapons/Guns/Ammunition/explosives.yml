@@ -1,7 +1,7 @@
 - type: entity
   id: ColiseumGrenadeBaton
   name: сoliseum baton grenade
-  parent: GrenadeBaton
+  parent: NFGrenadeBaton
   components:
   - type: Tag
     tags:
@@ -13,7 +13,7 @@
 - type: entity
   id: ColiseumGrenadeBlast
   name: сoliseum blast grenade
-  parent: GrenadeBlast
+  parent: NFGrenadeBlast
   components:
   - type: Tag
     tags:
@@ -25,7 +25,7 @@
 - type: entity
   id: ColiseumGrenadeFlash
   name: сoliseum flash grenade
-  parent: GrenadeFlash
+  parent: NFGrenadeFlash
   components:
   - type: Tag
     tags:
@@ -37,7 +37,7 @@
 - type: entity
   id: ColiseumGrenadeFrag
   name: сoliseum frag grenade
-  parent: GrenadeFrag
+  parent: NFGrenadeFrag
   components:
   - type: Tag
     tags:
@@ -49,7 +49,7 @@
 - type: entity
   id: ColiseumGrenadeEMP
   name: сoliseum EMP grenade
-  parent: GrenadeEMP
+  parent: NFGrenadeEMP
   components:
   - type: Tag
     tags:

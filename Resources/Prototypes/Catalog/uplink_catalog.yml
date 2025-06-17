@@ -485,7 +485,7 @@
   id: UplinkPistol9mmMagazine
   name: uplink-pistol-magazine-name
   description: uplink-pistol-magazine-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/pistol_mag.rsi, state: red-icon }
   # productEntity: MagazinePistol # Frontier
   cost:
     Telecrystal: 1
@@ -498,7 +498,7 @@
   id: UplinkMagazinePistolSubMachineGun
   name: uplink-pistol-magazine-c20r-name
   description: uplink-pistol-magazine-c20r-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/smg_mag.rsi, state: red-icon }
   # productEntity: MagazinePistolSubMachineGun # Frontier
   cost:
     Telecrystal: 2

@@ -849,7 +849,7 @@
 
 - type: entity
   parent: MarkerBasePlaceFree
-  id: PlushieMoffRandom
+  id: NFPlushieMoffRandom
   name: moth plushie
   suffix: Random
   categories:
@@ -879,7 +879,7 @@
 
 - type: entity
   parent: PlushieMoth
-  id: PlushieMoffsician
+  id: NFPlushieMoffsician
   name: moth musician plushie
   description: A plushie depicting an adorable mothperson with a tiny synthesizer and tiny glasses.
   components:
@@ -892,7 +892,7 @@
 
 - type: entity
   parent: PlushieMoth
-  id: PlushieMoffbar
+  id: NFPlushieMoffbar
   name: moth bartender plushie
   description: A plushie depicting an adorable mothperson with a tiny tophat and tiny kevlar vest.
   components:
