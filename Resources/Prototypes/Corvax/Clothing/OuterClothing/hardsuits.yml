@@ -1,7 +1,7 @@
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseC1Contraband]
   id: ClothingOuterHardsuitMercenaryElite
-  name: SCAF “Elite Mercenary” Hardsuit
+  name: SCAF “Bounty Hunter” Hardsuit
   description: A battle-worn green and brown combat suit with reinforced plating, ready for any situation.
   components:
   - type: Sprite
@@ -24,7 +24,7 @@
     heatingCoefficient: 0.001
     coolingCoefficient: 0.001
   - type: ExplosionResistance
-    damageCoefficient: 0.2
+    damageCoefficient: 0.5
   - type: FireProtection
     reduction: 0.8
   - type: ClothingSpeedModifier

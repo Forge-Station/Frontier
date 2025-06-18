@@ -319,7 +319,17 @@
   id: ClothingOuterHardsuitScaf
   parent: NFBaseHardSuitArmoredRecipe
   result: ClothingOuterHardsuitScaf
+# Corvax
+- type: latheRecipe
+  id: ClothingOuterHardsuitMercenaryElite
+  parent: NFBaseHardSuitArmoredRecipe
+  result: ClothingOuterHardsuitMercenaryElite
 
+- type: latheRecipe
+  id: ClothingOuterHardsuitMaxim
+  parent: NFBaseHardSuitArmoredRecipe
+  result: ClothingOuterHardsuitMaxim
+# Corvax end
 - type: latheRecipe
   id: ClothingOuterHardsuitEngineeringWhite
   parent: NFBaseHardSuitArmoredRecipe
