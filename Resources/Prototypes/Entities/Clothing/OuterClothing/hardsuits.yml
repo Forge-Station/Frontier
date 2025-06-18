@@ -224,7 +224,11 @@
         Piercing: 0.45 # Corvax
         Heat: 0.3
         Radiation: 0.1
-  - type: ExplosionResistance
+        Caustic: 0.6
+  - type: ClothingSpeedModifier # Corvax
+    walkModifier: 0.90
+    sprintModifier: 0.90
+  - type: ExplosionResistance # Corvax
     damageCoefficient: 0.2
   - type: TemperatureProtection
     heatingCoefficient: 0.001
