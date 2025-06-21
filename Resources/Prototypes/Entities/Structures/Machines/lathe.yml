@@ -85,7 +85,7 @@
   components:
   - type: Lathe
     materialUseMultiplier: 0.5
-    timeMultiplier: 3 # Frontier: 1.5<3 (we double dip on time with lube and machine parts)
+    timeMultiplier: 1.5 # Frontier: 1.5<3 (we double dip on time with lube and machine parts) # FrontierCorvax 1.5
   - type: LatheHeatProducing
   - type: ReagentSpeed
     modifiers:

@@ -324,12 +324,25 @@
   id: ClothingOuterHardsuitMercenaryElite
   parent: NFBaseHardSuitArmoredRecipe
   result: ClothingOuterHardsuitMercenaryElite
+  materials:
+    Glass: 1000
+    Plastic: 4000
+    Plasteel: 6000
+    Durathread: 4000
+    Silver: 2000
+    Gold: 4000
 
 - type: latheRecipe
   id: ClothingOuterHardsuitMaxim
   parent: NFBaseHardSuitArmoredRecipe
   result: ClothingOuterHardsuitMaxim
-# Corvax end
+  materials:
+    Glass: 500
+    Plastic: 3000
+    Plasteel: 4000
+    Durathread: 2000
+    Silver: 1500
+    Gold: 3000
 - type: latheRecipe
   id: ClothingOuterHardsuitEngineeringWhite
   parent: NFBaseHardSuitArmoredRecipe

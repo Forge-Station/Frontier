@@ -218,7 +218,7 @@
       coefficients:
         Blunt: 0.5 # Corvax
         Slash: 0.5 # Corvax
-        Piercing: 0.45 # Corvax
+        Piercing: 0.5 # Corvax
         Heat: 0.3
         Radiation: 0.1
         Caustic: 0.6
@@ -226,7 +226,7 @@
     walkModifier: 0.90
     sprintModifier: 0.90
   - type: ExplosionResistance # Corvax
-    damageCoefficient: 0.2
+    damageCoefficient: 0.5
   - type: TemperatureProtection
     heatingCoefficient: 0.001
     coolingCoefficient: 0.001
