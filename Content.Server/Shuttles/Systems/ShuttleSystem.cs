@@ -36,6 +36,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Content.Server._NF.Shuttles.Components; // Frontier
+using Content.Shared.Maps;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -77,6 +78,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly GameTicker _ticker = default!; //Frontier: needed to get the main map in FTL
 
     public const float TileDensityMultiplier = 0.5f; // Forge-Change
+    [Dependency] private readonly TurfSystem _turf = default!;
 
     private EntityQuery<BuckleComponent> _buckleQuery;
     private EntityQuery<MapGridComponent> _gridQuery;
