@@ -213,20 +213,19 @@
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5 # Corvax
-        Slash: 0.5 # Corvax
-        Piercing: 0.5 # Corvax
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.5
         Heat: 0.3
         Radiation: 0.1
-        Caustic: 0.6
-  - type: ClothingSpeedModifier # Corvax
-    walkModifier: 0.90
-    sprintModifier: 0.90
-  - type: ExplosionResistance # Corvax
-    damageCoefficient: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.2
   - type: TemperatureProtection
     heatingCoefficient: 0.001
     coolingCoefficient: 0.001

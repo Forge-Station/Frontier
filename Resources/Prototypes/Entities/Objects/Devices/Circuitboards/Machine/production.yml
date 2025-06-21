@@ -81,6 +81,7 @@
     prototype: Biofabricator
     requirements: # Frontier
       MatterBin: 4 # Frontier stackRequirements<requirements
+      Manipulator: 2 # СorvaxFrontier
     stackRequirements:
       Glass: 1
 
@@ -221,6 +222,7 @@
     prototype: Biogenerator
     requirements: # Frontier
       MatterBin: 2 # Frontier stackRequirements<requirements
+      Manipulator: 1 # Frontier
     tagRequirements:
       GlassBeaker:
         amount: 1
