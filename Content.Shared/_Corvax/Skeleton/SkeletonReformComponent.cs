@@ -2,19 +2,11 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared._Corvax.Skeleton;
 
-
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent] [NetworkedComponent]
 public sealed partial class SkeletonReformComponent : Component
 {
-
-    [DataField]
-    public string PopupText = "species-reform-default-popup";
-
-    [DataField]
-    public bool ShouldStun;
-
-    [DataField]
-    public float ReformTime;
+    [ViewVariables]
+    public EntityUid? ActionEntity;
 
 
     [DataField]
@@ -22,14 +14,18 @@ public sealed partial class SkeletonReformComponent : Component
 
 
     [DataField]
-    public bool StartDelayed;
+    public EntityUid? OriginalBody;
+
+    [DataField]
+    public string PopupText = "species-reform-default-popup";
+
+    [DataField]
+    public float ReformTime;
+
+    [DataField]
+    public bool ShouldStun;
 
 
     [DataField]
-    public EntityUid? OriginalBody;
-
-
-    [ViewVariables]
-    public EntityUid? ActionEntity;
+    public bool StartDelayed;
 }
-
