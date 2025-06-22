@@ -37,10 +37,10 @@
   - type: RevolverAmmoProvider
     whitelist:
       tags:
-        - CartridgeMagnum
+        - NFCartridgePistol45
         - SpeedLoaderMagnum
     mayTransfer: true # Frontier
-    # proto: CartridgeMagnum # Frontier
+    # proto: NFCartridgePistol45 # Frontier
     capacity: 6
     chambers: [ True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null ]
@@ -119,7 +119,7 @@
   suffix: armor-piercing
   components:
   - type: RevolverAmmoProvider
-    # proto: CartridgeMagnumAP # Frontier
+    # proto: NFCartridgePistol45AP # Frontier
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
@@ -153,9 +153,9 @@
   - type: RevolverAmmoProvider
     whitelist:
       tags:
-        - CartridgeMagnum
+        - NFCartridgePistol45
         - SpeedLoaderMagnum
-    # proto: CartridgeMagnumAP # Frontier
+    # proto: NFCartridgePistol45AP # Frontier
 
 
 - type: entity
@@ -189,4 +189,4 @@
     capacity: 5
     chambers: [ null, null, null, null, null ]
     ammoSlots: [ null, null, null, null, null ]
-    
+

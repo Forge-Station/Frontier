@@ -17,7 +17,7 @@
     reoccurrenceDelay: 60
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
         minimumDistance: 1500
@@ -28,17 +28,14 @@
           inherent: true
         - type: IFF
           color: "#E10F9B"
-        - type: Shuttle
-          angularDamping: 999999
-          linearDamping: 999999
         paths:
-        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedHauler.yml 
-        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedBarge.yml 
-        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedCourser.yml 
-        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedComet.yml 
-        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedCrescent.yml 
-        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedInv.yml 
-        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedSprinter.yml 
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedHauler.yml
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedBarge.yml
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedCourser.yml
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedComet.yml
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedCrescent.yml
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedInv.yml
+        - /Maps/Corvax/Events/Periodic/DestroyedShuttles/RuinedSprinter.yml
 
 - type: entity
   id: BluespaceSyndicate
@@ -51,19 +48,19 @@
     warningAnnouncement: station-event-bluespace-cache-warning-announcement
     endAnnouncement: station-event-bluespace-cache-end-announcement
     earliestStart: 30
-    weight: 2 
+    weight: 2
     duration: 1350
     maxDuration: 1560
-    reoccurrenceDelay: 340 
+    reoccurrenceDelay: 340
     requiredJobs:
       Sheriff: 1
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-SyndicateWeaponsCache
-        minimumDistance: 2500 
-        maximumDistance: 3500 
+        minimumDistance: 2500
+        maximumDistance: 3500
         addComponents:
         - type: Gravity
           enabled: true
@@ -75,7 +72,7 @@
         - type: ProtectedGrid
           preventArtifactTriggers: true
         - type: PreventPilot
-        - type: ForceAnchor 
+        - type: ForceAnchor
         paths:
         - /Maps/Corvax/Events/Periodic/Syndicate/syndicateShuttle.yml
     rewardAccounts:
@@ -99,7 +96,7 @@
     reoccurrenceDelay: 240 # once per 4 hours
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-BrokenMcDelivery
         minCount: 2
@@ -115,4 +112,3 @@
         paths:
         - /Maps/Corvax/Events/Periodic/Cargo/cargomc.yml
         - /Maps/Corvax/Events/Periodic/Cargo/mcevent.yml
- 

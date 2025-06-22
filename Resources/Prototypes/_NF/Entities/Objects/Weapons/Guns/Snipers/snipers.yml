@@ -5,7 +5,7 @@
   suffix: Non-lethal
   components:
   - type: BallisticAmmoProvider # Inherit whitelist, capacity from parent
-    proto: CartridgeLightRifleRubber
+    proto: NFCartridgeRifle30Rubber
 
 # Frontier
 - type: entity
@@ -27,6 +27,6 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-      - CartridgeMagnum
+      - NFCartridgePistol45
     capacity: 7
-    proto: CartridgeMagnum
+    proto: NFCartridgePistol45

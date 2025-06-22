@@ -11,7 +11,7 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-        - CartridgeMagnum
+        - NFCartridgePistol45
     capacity: 6
   - type: Sprite
   - type: ContainerContainer
@@ -27,7 +27,7 @@
   description: Designed to quickly refill an empty revolver, it fits up to six rounds. Intended to hold general-purpose kinetic ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnum
+    proto: NFCartridgePistol45
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
     layers:
@@ -83,7 +83,7 @@
   description: Designed to quickly refill an empty revolver, it fits up to six rounds. Intended to hold self-igniting incendiary ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumIncendiary
+    proto: NFCartridgePistol45Incendiary
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
@@ -93,7 +93,7 @@
   description: Designed to quickly refill an empty revolver, it fits up to six rounds. Intended to hold non-harmful chalk ammunition, perfect for practicing your quick draw.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumPractice
+    proto: NFCartridgePistol45Practice
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
     layers:
@@ -127,7 +127,7 @@
   description: Designed to quickly refill an empty revolver, it fits up to six rounds. Intended to hold rare armor-piercing ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumAP
+    proto: NFCartridgePistol45AP
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
     layers:
@@ -161,7 +161,7 @@
   description: Designed to quickly refill an empty revolver, it fits up to six rounds. Intended to hold exotic uranium-core ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumUranium
+    proto: NFCartridgePistol45Uranium
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
     layers:

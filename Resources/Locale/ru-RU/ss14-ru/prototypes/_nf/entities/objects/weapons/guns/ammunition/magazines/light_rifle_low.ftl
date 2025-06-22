@@ -1,6 +1,6 @@
 ent-MagazineLightRifleLowCapacityEmpty = магазин малого объёма (.30 винтовочный, любой)
     .suffix = пустой
-    .desc = { ent-MagazineLightRifle.desc }
+    .desc = { ent-NFMagazineRifle30.desc }
 ent-MagazineLightRifleLowCapacity = магазин малого объёма (.30 винтовочный)
     .desc = { ent-BaseMagazineLightRifle.desc }
 ent-MagazineLightRifleLowCapacityPractice = магазин малого объёма (.30 винтовочный, тренировочные)

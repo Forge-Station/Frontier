@@ -17,7 +17,7 @@
       Sheriff: 1
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-SyndicateWeaponsCache
         minimumDistance: 1500
@@ -58,7 +58,7 @@
       Sheriff: 1
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-SecureNTVault
         minimumDistance: 1500
@@ -99,7 +99,7 @@
       Sheriff: 1
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-SecureNTVault
         minimumDistance: 1500
@@ -138,7 +138,7 @@
     reoccurrenceDelay: 360 # 6 hours
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
         minimumDistance: 1500
@@ -175,7 +175,7 @@
     reoccurrenceDelay: 360 # 6 hours
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
         minimumDistance: 1500
@@ -212,7 +212,7 @@
     reoccurrenceDelay: 360 # 6 hours
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
         minimumDistance: 1500
@@ -248,7 +248,7 @@
     maxOccurrences: 1
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-Cave
         minimumDistance: 1500
@@ -284,7 +284,7 @@
     reoccurrenceDelay: 240 # once per 4 hours
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-BrokenMcDelivery
         minCount: 2

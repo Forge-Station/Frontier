@@ -29,21 +29,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        # startingItem: MagazineLightRifle # Frontier
+        # startingItem: NFMagazineRifle30 # Frontier
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - NFMagazineRifle30
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        # startingItem: CartridgeLightRifle # Frontier
+        # startingItem: NFCartridgeRifle30 # Frontier
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - NFCartridgeRifle30
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -76,21 +76,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        # startingItem: MagazineLightRifle # Frontier
+        # startingItem: NFMagazineRifle30 # Frontier
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - NFMagazineRifle30
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        # startingItem: CartridgeLightRifle # Frontier
+        # startingItem: NFCartridgeRifle30 # Frontier
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - NFCartridgeRifle30
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

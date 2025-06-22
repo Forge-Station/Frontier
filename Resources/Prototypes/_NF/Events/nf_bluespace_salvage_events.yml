@@ -16,7 +16,7 @@
     maxDuration: 1800 # 30 minutes
   - type: BluespaceErrorRule
     groups:
-      grid: !type:GridSpawnGroup
+      grid: !type:BluespaceGridSpawnGroup
         nameDataset: NamesScrap
         nameDatasetType: Nanotrasen # they're shuttles
         minCount: 2

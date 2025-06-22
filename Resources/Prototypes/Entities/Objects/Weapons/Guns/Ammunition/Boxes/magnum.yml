@@ -7,8 +7,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeMagnum
-    # proto: CartridgeMagnum # Frontier
+        - NFCartridgePistol45
+    # proto: NFCartridgePistol45 # Frontier
     capacity: 12
   - type: Item
     size: Small
@@ -33,7 +33,7 @@
   description: A cardboard box of .45 magnum rounds. Intended to hold general-purpose kinetic ammunition.
   components:
   - type: BallisticAmmoProvider
-    # proto: CartridgeMagnum # Frontier
+    # proto: NFCartridgePistol45 # Frontier
   - type: Sprite
     layers:
     - state: base
@@ -48,7 +48,7 @@
   description: A cardboard box of .45 magnum rounds. Intended to hold non-harmful chalk ammunition.
   components:
   - type: BallisticAmmoProvider
-    # proto: CartridgeMagnumPractice # Frontier
+    # proto: NFCartridgePistol45Practice # Frontier
   - type: Sprite
     layers:
     - state: base
@@ -64,7 +64,7 @@
   description: A cardboard box of .45 magnum rounds. Intended to hold self-igniting incendiary ammunition.
   components:
   - type: BallisticAmmoProvider
-    # proto: CartridgeMagnumIncendiary # Frontier
+    # proto: NFCartridgePistol45Incendiary # Frontier
   - type: Sprite
     layers:
     - state: base
@@ -80,7 +80,7 @@
   description: A cardboard box of .45 magnum rounds. Intended to hold exotic uranium-core ammunition.
   components:
   - type: BallisticAmmoProvider
-    # proto: CartridgeMagnumUranium # Frontier
+    # proto: NFCartridgePistol45Uranium # Frontier
   - type: Sprite
     layers:
     - state: base
@@ -96,7 +96,7 @@
   description: A cardboard box of .45 magnum rounds. Intended to hold rare armor-piercing ammunition.
   components:
   - type: BallisticAmmoProvider
-    # proto: CartridgeMagnumAP # Frontier
+    # proto: NFCartridgePistol45AP # Frontier
   - type: Sprite
     layers:
     - state: base
