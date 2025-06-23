@@ -9,7 +9,7 @@
 - type: latheRecipe
   id: MagazineBoxPistolRubberRecipe
   categories: [SyndicateTexSyn1]
-  result: MagazineBoxPistolRubber
+  result: NFAmmunitionBoxPistol35Rubber
   completetime: 1
   materials:
     CreditCounterfeit: 1000
@@ -17,7 +17,7 @@
 - type: latheRecipe
   id: MagazineBoxRifleRubberRecipe
   categories: [SyndicateTexSyn1]
-  result: MagazineBoxRifleRubber
+  result: NFAmmunitionBoxRifle20Rubber
   completetime: 1
   materials:
     CreditCounterfeit: 1000
@@ -33,7 +33,7 @@
 - type: latheRecipe
   id: MagazineBoxMagnumRubberRecipe
   categories: [SyndicateTexSyn1]
-  result: MagazineBoxMagnumRubber
+  result: NFAmmunitionBoxPistol45
   completetime: 1
   materials:
     CreditCounterfeit: 1000
@@ -41,7 +41,7 @@
 - type: latheRecipe
   id: MagazineBoxCaselessRifleRubberRecipe
   categories: [SyndicateTexSyn1]
-  result: MagazineBoxCaselessRifleRubber
+  result: NFCartridgeRifle25
   completetime: 1
   materials:
     CreditCounterfeit: 1000
@@ -193,7 +193,7 @@
 - type: latheRecipe
   id: MagazineBoxPistolEmpRecipe
   categories: [SyndicateTexSyn4]
-  result: MagazineBoxPistolEmp
+  result: NFAmmunitionBoxPistol35Emp
   completetime: 1
   materials:
     CreditCounterfeit: 5000
@@ -321,7 +321,7 @@
 - type: latheRecipe
   id: MagazineLightRifleLowCapacityEmptyRecipe
   categories: [SyndicateTexSynAmmo]
-  result: MagazineLightRifleLowCapacityEmpty
+  result: NFMagazineLowCapacityRifle30Empty
   completetime: 1
   materials:
     CreditCounterfeit: 2000

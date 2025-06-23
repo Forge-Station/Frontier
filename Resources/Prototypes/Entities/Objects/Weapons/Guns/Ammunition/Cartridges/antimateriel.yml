@@ -24,7 +24,7 @@
 - type: entity
   id: BaseMagazineAntiMateriel
   name: "magazine (.60 AntiMateriel)"
-  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] 
+  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ]
   abstract: true
   components:
   - type: Tag
@@ -34,8 +34,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeAntiMateriel
-    proto: CartridgeAntiMateriel
+        - NFCartridgeRifle60
+    proto: NFCartridgeRifle60
     capacity: 5
   - type: Item
     size: Small
@@ -61,7 +61,7 @@
   parent: BaseMagazineAntiMateriel
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeAntiMateriel
+    proto: NFCartridgeRifle60
   - type: Sprite
     sprite: Corvax/Objects/Weapons/Guns/Ammunition/Magazine/antiMateriel.rsi
     layers:

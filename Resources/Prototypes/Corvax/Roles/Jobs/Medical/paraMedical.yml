@@ -26,7 +26,7 @@
     - type: SpecialSectorStationRecord
       recordGeneration: FalseRecord
   - !type:AddImplantSpecial
-    implants: [ MedicalTrackingImplanterLabeled ]
+    implants: [ MedicalTrackingImplanter ]
 
 - type: startingGear
   id: ParaMedicalGear

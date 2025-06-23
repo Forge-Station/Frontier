@@ -182,13 +182,13 @@
     - ReportingStatic # DeltaV
     - CorvaxAmmoStatic #Corvax-Frontier
     dynamicPacks:
-    - NFNfsdTechfabDeprecated
+#    - NFNfsdTechfabDeprecated
     - CorvaxShuttleGunsDynamic #Corvax-Frontier
     - CorvaxAmmoDynamic #Corvax-Frontier
     - CorvaxPracticAmmo #Corvax-Frontier
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - NFNfsdTechfabDeprecatedEmag
+#  - type: EmagLatheRecipes
+#    emagStaticPacks:
+#    - NFNfsdTechfabDeprecatedEmag
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -224,11 +224,11 @@
     - NFMercenaryTechfabDeprecatedStatic
     dynamicPacks:
     - CorvaxPracticAmmo #Corvax-Frontier
-    - NFMercenaryTechfabDeprecated
+#    - NFMercenaryTechfabDeprecated
     - NfsdPracticeStatic
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - NFMercenaryTechfabDeprecatedEmag
+#  - type: EmagLatheRecipes
+#    emagStaticPacks:
+#    - NFMercenaryTechfabDeprecatedEmag
   - type: BlueprintReceiver
     whitelist:
       tags:

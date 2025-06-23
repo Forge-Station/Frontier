@@ -2,7 +2,6 @@
   name: dawn
   parent: [BaseWeaponRifle  , BaseC3SyndicateContraband]
   id: WeaponSniperDawn
-  description: 
   components:
   - type: Sprite
     sprite: Corvax/Objects/Weapons/Guns/Snipers/dawn.rsi
@@ -39,7 +38,7 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeAntiMateriel
+        startingItem: NFCartridgeRifle60
         priority: 1
         whitelist:
           tags:

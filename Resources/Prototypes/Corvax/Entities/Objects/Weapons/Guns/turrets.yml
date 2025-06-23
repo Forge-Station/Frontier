@@ -9,7 +9,7 @@
         ballistic-ammo: !type:Container
     - type: NpcFactionMember
       factions:
-        - SyndicateNF
+        - NFSyndicate
     - type: Gun
       fireRate: 0.5
       selectedMode: FullAuto
@@ -31,7 +31,7 @@
         ballistic-ammo: !type:Container
     - type: NpcFactionMember
       factions:
-        - SyndicateNF
+        - NFSyndicate
     - type: Gun
       fireRate: 1
       selectedMode: FullAuto
@@ -39,7 +39,7 @@
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
     - type: BallisticAmmoProvider
-      proto: NFCartridgePistol45AP
+      proto: NFCartridgePistol45
       capacity: 500
 
 - type: entity
@@ -53,7 +53,7 @@
         ballistic-ammo: !type:Container
     - type: NpcFactionMember
       factions:
-        - SyndicateNF
+        - NFSyndicate
     - type: Gun
       fireRate: 4
       selectedMode: FullAuto

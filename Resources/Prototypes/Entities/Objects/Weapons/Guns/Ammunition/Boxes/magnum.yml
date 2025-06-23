@@ -96,7 +96,7 @@
   description: A cardboard box of .45 magnum rounds. Intended to hold rare armor-piercing ammunition.
   components:
   - type: BallisticAmmoProvider
-    # proto: NFCartridgePistol45AP # Frontier
+    # proto: NFCartridgePistol45 # Frontier
   - type: Sprite
     layers:
     - state: base

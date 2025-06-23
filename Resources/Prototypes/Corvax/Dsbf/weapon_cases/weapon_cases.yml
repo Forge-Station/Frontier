@@ -189,7 +189,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponEnergyGun
+    - id: NFWeaponEnergySubMachineGunDeltaV
       amount: 1
 
 - type: entity
@@ -237,11 +237,11 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponLauncherRocketEmp
+    - id: NFWeaponLauncherRocketEmp
       amount: 1
     - id: CartridgeRocket
       amount: 2
-    - id: CartridgeRocketEmp
+    - id: NFCartridgeRocketEmp
       amount: 1
 
 - type: entity

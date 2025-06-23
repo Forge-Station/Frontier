@@ -109,7 +109,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineShotgun
+        startingItem: NFMagazineShotgunDrum
         priority: 2
         whitelist:
           tags:
@@ -172,7 +172,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineShotgun
+        startingItem: NFMagazineShotgunDrum
         priority: 2
         whitelist:
           tags:

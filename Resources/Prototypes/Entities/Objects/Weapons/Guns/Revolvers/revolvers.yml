@@ -119,7 +119,7 @@
   suffix: armor-piercing
   components:
   - type: RevolverAmmoProvider
-    # proto: NFCartridgePistol45AP # Frontier
+    # proto: NFCartridgePistol45 # Frontier
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
@@ -155,7 +155,7 @@
       tags:
         - NFCartridgePistol45
         - SpeedLoaderMagnum
-    # proto: NFCartridgePistol45AP # Frontier
+    # proto: NFCartridgePistol45 # Frontier
 
 
 - type: entity

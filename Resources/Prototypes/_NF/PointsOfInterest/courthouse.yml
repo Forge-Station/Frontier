@@ -20,9 +20,6 @@
   - type: IFF
     color: "#8e6444"
     readOnly: true
-  - type: Shuttle
-    angularDamping: 999999
-    linearDamping: 999999
   - type: ProtectedGrid
     noGridCollision: true #CorvaxFrontier
   - type: StationTransit

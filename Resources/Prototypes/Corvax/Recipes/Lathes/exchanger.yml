@@ -26,12 +26,6 @@
   materials:
     MercenaryToken: 14
 
-- type: latheRecipe
-  id: NFBlueprintJawsOfLifeExchangeRecipe
-  result: NFBlueprintJawsOfLife
-  completetime: 1
-  materials:
-    MercenaryToken: 12
 
 - type: latheRecipe
   id: TelescopicShieldExchangeRecipe
@@ -133,21 +127,21 @@
 
 - type: latheRecipe
   id: WeaponEnergyGunExchangeRecipe
-  result: WeaponEnergyGun
+  result: NFWeaponEnergySubMachineGunDeltaV
   completetime: 1
   materials:
     MercenaryToken: 8
 
 - type: latheRecipe
   id: WeaponRifleGestioExchangeRecipe
-  result: WeaponRifleGestio
+  result: NFWeaponRifleAssaultGestio
   completetime: 1
   materials:
     MercenaryToken: 7
 
 - type: latheRecipe
   id: WeaponRifleNovaliteC1ExchangeRecipe
-  result: WeaponRifleNovaliteC1
+  result: NFWeaponRifleAssaultNovaliteC1
   completetime: 1
   materials:
     MercenaryToken: 7
