@@ -11,6 +11,7 @@ using Content.Server.Database;
 using Content.Server.Discord;
 using Content.Server.GameTicking;
 using Content.Server.Players.RateLimiting;
+using Content.Server.Preferences.Managers;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
@@ -45,6 +46,7 @@ namespace Content.Server.Administration.Systems
         [Dependency] private readonly PlayerRateLimitManager _rateLimit = default!;
         [Dependency] private readonly IPlayerLocator _locator = default!;
         [Dependency] private readonly IServerDbManager _db = default!;
+        [Dependency] private readonly IServerPreferencesManager _prefs = default!;
 
         [GeneratedRegex(@"^https://(?:(?:canary|ptb)\.)?discord\.com/api/webhooks/(\d+)/((?!.*/).*)$")]
         private static partial Regex DiscordRegex();
@@ -682,6 +684,7 @@ namespace Content.Server.Administration.Systems
             var escapedText = FormattedMessage.EscapeText(message.Text);
 
             string bwoinkText;
+            var adminColor = _config.GetCVar(CCVars.AdminBwoinkColor); // Frontier-Change
             string adminPrefix = "";
 
             //Getting an administrator position
@@ -689,6 +692,14 @@ namespace Content.Server.Administration.Systems
             {
                 adminPrefix = $"[bold]\\[{senderAdmin.Title}\\][/bold] ";
             }
+
+            // Frontier-Change-Start
+            if (_config.GetCVar(CCVars.UseAdminOOCColorInBwoinks))
+            {
+                var prefs = _prefs.GetPreferences(message.UserId);
+                adminColor = prefs.AdminOOCColor.ToHex();
+            }
+            // Frontier-Change-End
 
             if (senderAdmin is not null &&
                 senderAdmin.Flags ==
@@ -698,7 +709,7 @@ namespace Content.Server.Administration.Systems
             }
             else if (fromWebhook || senderAdmin is not null && senderAdmin.HasFlag(AdminFlags.Adminhelp)) // Frontier: anything sent via webhooks are from an admin.
             {
-                bwoinkText = $"[color=red]{adminPrefix}{senderName}[/color]";
+                bwoinkText = $"[color={adminColor}]{adminPrefix}{senderName}[/color]"; // Frontier-Change
             }
             else
             {
