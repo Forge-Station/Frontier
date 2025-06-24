@@ -8,7 +8,6 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
 using Robust.Server.Containers;
-using Robust.Server.GameObjects;
 
 namespace Content.Server._Corvax.Skeleton;
 
@@ -21,7 +20,6 @@ public sealed class SkeletonReformSystem : EntitySystem
     [Dependency] private readonly MindSystem _mind = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly MobStateSystem _state = default!;
-    [Dependency] private readonly TransformSystem _xform = default!;
 
 
     public override void Initialize()
@@ -40,24 +38,15 @@ public sealed class SkeletonReformSystem : EntitySystem
             return;
         }
 
-        if (!_cont.Remove(body, pocket, true, true))
-        {
-            _popup.PopupEntity("Не удалось извлечь тело!", skull, skull);
+        if (!_ent.TryGetComponent(body, out TransformComponent? bodyXform) ||
+            !_ent.TryGetComponent(body, out MetaDataComponent? bodyMeta))
             return;
-        }
 
-        if (_ent.TryGetComponent<MetaDataComponent>(body, out var meta) &&
-            _ent.TryGetComponent<TransformComponent>(body, out var xform))
+        var eBody = new Entity<TransformComponent?, MetaDataComponent?>(body, bodyXform, bodyMeta);
+        while (_cont.TryGetContainingContainer(eBody, out var container))
         {
-            var entity = new Entity<TransformComponent?, MetaDataComponent?>(body, xform, meta);
-            while (_cont.TryGetContainingContainer(entity, out var containing))
-            {
-                _cont.RemoveEntity(containing.Owner, body);
-            }
+            _cont.Remove(eBody, container, true, true);
         }
-
-        var pos = _ent.GetComponent<TransformComponent>(skull).Coordinates;
-        _xform.SetCoordinates(body, pos);
 
         if (_ent.TryGetComponent(body, out DamageableComponent? dmg))
             _dmg.SetAllDamage(body, dmg, FixedPoint2.Zero);
@@ -73,8 +62,8 @@ public sealed class SkeletonReformSystem : EntitySystem
         var txt = string.IsNullOrWhiteSpace(comp.PopupText)
             ? "Скелет восстал!"
             : Loc.GetString(comp.PopupText, ("name", body));
-
         _popup.PopupEntity(txt, body, skull);
+
         QueueDel(skull);
     }
 }
