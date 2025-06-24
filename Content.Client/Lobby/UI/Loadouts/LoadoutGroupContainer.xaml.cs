@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Corvax.Interfaces.Shared; // Corvax-Loadouts
 using Content.Shared.Clothing;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
@@ -67,7 +68,15 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         var selected = loadout.SelectedLoadouts[_groupProto.ID];
 
-        foreach (var loadoutProto in _groupProto.Loadouts)
+        // Corvax-Loadouts-Start
+        var groupLoadouts = _groupProto.Loadouts;
+        if (collection.TryResolveType<ISharedLoadoutsManager>(out var loadoutsManager) && _groupProto.ID == "Inventory")
+        {
+            groupLoadouts = loadoutsManager.GetClientPrototypes().Select(id => (ProtoId<LoadoutPrototype>)id).ToList();
+        }
+        // Corvax-Loadouts-End
+
+        foreach (var loadoutProto in groupLoadouts) // Corvax-Loadouts
         {
             if (!protoMan.TryIndex(loadoutProto, out var loadProto))
                 continue;

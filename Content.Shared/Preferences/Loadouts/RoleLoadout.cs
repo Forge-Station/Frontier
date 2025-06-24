@@ -1,8 +1,10 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Corvax.Interfaces.Shared;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Random;
 using Robust.Shared.Collections;
+using Robust.Shared.Network; // Corvax-Loadouts
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -59,6 +61,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
     {
         var groupRemove = new ValueList<string>();
         var protoManager = collection.Resolve<IPrototypeManager>();
+        var netManager = collection.Resolve<INetManager>(); // Corvax-Loadouts
 
         if (!protoManager.TryIndex(Role, out var roleProto))
         {
@@ -118,6 +121,23 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
                 groupRemove.Add(group);
                 continue;
             }
+
+            // Corvax-Loadouts-Start
+            if (collection.TryResolveType<ISharedLoadoutsManager>(out var loadoutsManager) && group.Id == "Inventory")
+            {
+                var prototypes = new List<string>();
+                if (netManager.IsClient)
+                {
+                    prototypes = loadoutsManager.GetClientPrototypes();
+                }
+                else if (session != null && loadoutsManager.TryGetServerPrototypes(session.UserId, out var protos))
+                {
+                    prototypes = protos;
+                }
+
+                groupProto.Loadouts.AddRange(prototypes.Select(id => (ProtoId<LoadoutPrototype>)id));
+            }
+            // Corvax-Loadouts-End
 
             var loadouts = groupLoadouts[..Math.Min(groupLoadouts.Count, groupProto.MaxLimit)];
 
@@ -347,13 +367,13 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
 
         foreach (var effect in loadoutProto.Effects)
         {
-            valid = valid && effect.Validate(profile, this, session, collection, out reason);
+            valid = valid && effect.Validate(profile, this, loadoutProto, session, collection, out reason); // Corvax-Sponsors
         }
 
         // Frontier: add hide effects
         foreach (var effect in loadoutProto.HideEffects)
         {
-            valid = valid && effect.Validate(profile, this, session, collection, out reason);
+            valid = valid && effect.Validate(profile, this, loadoutProto, session, collection, out reason); // Corvax-Sponsors
         }
         // End Frontier
 
@@ -381,7 +401,8 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
         // Frontier: add hide effects
         foreach (var effect in loadoutProto.HideEffects)
         {
-            if (!effect.Validate(profile, this, session, collection, out var _)) {
+            if (!effect.Validate(profile, this, loadoutProto, session, collection, out var _)) // Corvax-Sponsors
+            {
                 return true;
             }
         }
