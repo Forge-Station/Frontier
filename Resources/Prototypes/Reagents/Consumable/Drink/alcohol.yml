@@ -23,6 +23,29 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.3
+    Narcotic: # The green fairy
+      metabolismRate : 0.01
+      effects:
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.05
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        type: Add
+        time: 5
+        refresh: false
+      - !type:PopupMessage
+        type: Local
+        messages:
+        - absinthe-effect-hear-voice
+        - absinthe-effect-feel-tulips
+        probability: 0.02
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
 
 - type: reagent
   id: Ale
