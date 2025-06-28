@@ -2,7 +2,7 @@
   parent: PlushieOrangeFox
   id: HolyPlushieOrangeFox
   name: holy fox plushie
-  description: A cute plushie that look like a foxxo! Hmm.. This is very strange.. 
+  description: A cute plushie that look like a foxxo! Hmm.. This is very strange..
   components:
   - type: PointLight
     color: "#FFD700FF"
@@ -29,7 +29,7 @@
 - type: entity
   parent: BasePlushie
   id: PlushieNekoArk
-  name: Neko Ark
+  name: NekoArk
   description: With lowe from Anenerbe CORP.
   components:
   - type: EmitSoundOnUse

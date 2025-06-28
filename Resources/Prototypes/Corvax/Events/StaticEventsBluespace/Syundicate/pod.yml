@@ -48,9 +48,6 @@
     color: "#850d09"
     flags: [HideLabel]
     readOnly: true
-  - type: Shuttle
-    angularDamping: 999999
-    linearDamping: 999999
 
 - type: gameMap
   id: PodB
@@ -78,9 +75,6 @@
     color: "#850d09"
     flags: [HideLabel]
     readOnly: true
-  - type: Shuttle
-    angularDamping: 999999
-    linearDamping: 999999
 
 - type: gameMap
   id: PodC
