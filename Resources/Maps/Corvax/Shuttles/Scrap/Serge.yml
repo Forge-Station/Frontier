@@ -599,8 +599,6 @@ entities:
     - type: ShuttleDeed
     - type: ShuttleImpact
   - uid: 3
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - drink
@@ -623,8 +621,6 @@ entities:
 - proto: ActionToggleInternals
   entities:
   - uid: 6
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 5
@@ -632,8 +628,6 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 5
   - uid: 8
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 7
@@ -641,8 +635,6 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 7
   - uid: 10
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 9
@@ -1023,8 +1015,6 @@ entities:
 - proto: DrinkVacuumFlask
   entities:
   - uid: 2
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: -0.21707058,-2.6299744

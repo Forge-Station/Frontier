@@ -514,8 +514,6 @@ entities:
     - type: ShuttleDeed
     - type: ShuttleImpact
   - uid: 3
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - smokable
@@ -790,8 +788,6 @@ entities:
 - proto: CigaretteWeldingFuel
   entities:
   - uid: 2
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: -0.36466217,-2.447361

@@ -4,8 +4,8 @@ meta:
   engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/27/2025 11:35:31
-  entityCount: 4647
+  time: 06/28/2025 12:48:22
+  entityCount: 4629
 maps: []
 grids:
 - 1
@@ -190,117 +190,6 @@ entities:
             1113: 2,-7
             1136: -2,-7
             1137: 0,-7
-        - node:
-            color: '#FFFFFFFF'
-            id: Basalt1
-          decals:
-            3499: -10.175189,-10.287615
-            3502: -7.158083,-14.128149
-            3504: 0.84933186,-11.259437
-            3507: -0.2487526,-1.5160799
-            3517: -4.5820713,2.0802746
-            3521: -6.455501,9.205711
-            3524: -7.1004863,5.6287594
-            3525: -12.078825,1.0242462
-            3526: -12.92035,-4.9302664
-            3531: -17.35272,-8.29464
-            3535: -11.482422,-8.971723
-            3541: -14.573235,-23.039932
-            3546: -11.767006,-26.038084
-            3557: 1.1084404,-21.531628
-            3565: 2.9039936,-21.885796
-            3568: -0.028657913,-21.718008
-            3571: -7.017247,-32.924694
-            3578: -5.337078,-17.900316
-            3581: -8.034576,-10.054013
-        - node:
-            color: '#FFFFFFFF'
-            id: Basalt2
-          decals:
-            3501: -11.889061,-8.987755
-            3514: -11.401506,1.9552746
-            3523: -8.241556,7.4348774
-            3529: -16.894386,-10.289182
-            3534: -11.503256,-9.159223
-            3538: -11.905304,-18.094952
-            3539: -12.979485,-21.950775
-            3550: -6.953377,-23.040287
-            3553: -4.38046,-21.995592
-            3561: -1.0165596,-20.86496
-            3575: -14.631346,-39.103897
-            3579: -6.9020634,-16.994066
-            3580: -7.0033264,-8.007138
-        - node:
-            color: '#FFFFFFFF'
-            id: Basalt3
-          decals:
-            3515: -10.911923,-0.25305843
-            3520: -2.369092,8.330711
-            3530: -14.38397,-12.263213
-            3555: -4.50546,-23.901844
-            3560: 0.5355239,-22.198296
-            3573: -7.001622,-30.987194
-        - node:
-            color: '#FFFFFFFF'
-            id: Basalt5
-          decals:
-            3503: 0.82091427,-8.478186
-            3508: 0.95728207,1.9561005
-            3513: -6.719286,2.2573586
-            3527: -13.037737,-6.089136
-            3532: -14.027971,-9.242557
-            3537: -12.113638,-18.54287
-            3540: -13.083651,-23.529514
-            3545: -10.196045,-26.371418
-            3549: -5.9325433,-26.81112
-            3554: -5.41171,-22.058092
-            3559: 0.09802389,-22.58371
-            3566: 2.8519096,-23.02121
-            3567: 0.6744671,-24.108633
-            3576: -13.943846,-38.791397
-            3577: -7.347792,-18.087816
-        - node:
-            color: '#FFFFFFFF'
-            id: Basalt6
-          decals:
-            3509: -2.5880637,-2.070767
-            3519: -2.212842,8.309877
-            3533: -10.253255,-8.95089
-            3548: -5.9970045,-27.044445
-            3558: -0.3082261,-21.14621
-            3562: 1.0667734,-23.312878
-            3572: -7.267247,-29.830944
-        - node:
-            color: '#FFFFFFFF'
-            id: Basalt7
-          decals:
-            3506: -2.4395733,-6.599493
-            3510: -2.1663742,-0.9041004
-            3512: -6.5084944,-5.295678
-            3516: -8.50976,2.3302746
-            3522: -8.16864,7.0286274
-            3543: -9.981611,-22.644096
-            3544: -9.972568,-26.850584
-            3551: -7.015877,-23.602787
-            3552: -3.78671,-22.089342
-            3564: 2.0706596,-22.062878
-            3569: 0.92056084,-20.030508
-            3570: -5.876622,-30.19032
-        - node:
-            color: '#FFFFFFFF'
-            id: Basalt8
-          decals:
-            3500: -10.721586,-12.841921
-            3505: -3.0020733,-8.964077
-            3511: -5.3001614,-1.8819075
-            3518: -5.040405,6.0598774
-            3528: -15.391904,-6.5801477
-            3536: -11.894888,-14.941372
-            3542: -9.398277,-23.008682
-            3547: -12.981698,-29.784029
-            3556: -0.9782119,-21.933092
-            3563: 0.47690964,-23.000378
-            3574: -14.912596,-38.119522
         - node:
             color: '#FF610693'
             id: Box
@@ -3910,13 +3799,6 @@ entities:
             828: -5.476363,6.527916
         - node:
             cleanable: True
-            color: '#89670693'
-            id: brush
-          decals:
-            3487: -13.769037,-7.255012
-            3488: -13.446121,-6.755012
-        - node:
-            cleanable: True
             color: '#AE610693'
             id: e
           decals:
@@ -5078,31 +4960,6 @@ entities:
             747: -5.8757215,9.2544365
         - node:
             cleanable: True
-            color: '#89670693'
-            id: shortline
-          decals:
-            3498: -13.598062,-8.18851
-        - node:
-            cleanable: True
-            color: '#89670693'
-            id: smallbrush
-          decals:
-            3492: -12.998203,-6.911262
-        - node:
-            cleanable: True
-            color: '#89670693'
-            id: splatter
-          decals:
-            3489: -13.852371,-6.692512
-            3490: -13.258621,-7.2133455
-            3491: -13.029453,-6.6091785
-            3493: -13.571121,-7.763998
-            3494: -13.16036,-6.12601
-            3495: -13.712444,-6.21976
-            3496: -14.25411,-7.15726
-            3497: -12.556395,-6.3239264
-        - node:
-            cleanable: True
             color: '#AE610693'
             id: splatter
           decals:
@@ -5172,8 +5029,7 @@ entities:
             0: 57280
             1: 1
           -4,-2:
-            0: 60407
-            4: 1024
+            0: 61431
           -5,-2:
             0: 207
             1: 4352
@@ -5184,8 +5040,7 @@ entities:
           -3,-3:
             0: 63351
           -3,-2:
-            0: 46855
-            4: 16384
+            0: 63239
           -3,-1:
             0: 30503
           -4,0:
@@ -5318,8 +5173,8 @@ entities:
           -3,-6:
             0: 16383
           -3,-8:
-            5: 544
-            6: 2176
+            4: 544
+            5: 2176
           -2,-6:
             0: 36606
           -2,-8:
@@ -5459,21 +5314,6 @@ entities:
           - 0
           - 0
         - volume: 2500
-          temperature: 293.14996
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
           temperature: 293.15
           moles:
           - 6666.982
@@ -5514,8 +5354,8 @@ entities:
     - type: IFF
     - type: ShuttleImpact
   - uid: 4
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5533,8 +5373,8 @@ entities:
       containerName: food
       container: 3
   - uid: 6
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5552,8 +5392,8 @@ entities:
       containerName: food
       container: 5
   - uid: 9
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5571,8 +5411,8 @@ entities:
       containerName: food
       container: 8
   - uid: 14
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5590,8 +5430,8 @@ entities:
       containerName: food
       container: 13
   - uid: 28
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5609,8 +5449,8 @@ entities:
       containerName: food
       container: 27
   - uid: 32
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5628,8 +5468,8 @@ entities:
       containerName: food
       container: 31
   - uid: 36
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5647,8 +5487,8 @@ entities:
       containerName: food
       container: 35
   - uid: 40
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5666,8 +5506,8 @@ entities:
       containerName: food
       container: 39
   - uid: 44
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5685,8 +5525,8 @@ entities:
       containerName: food
       container: 43
   - uid: 70
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5704,8 +5544,8 @@ entities:
       containerName: food
       container: 69
   - uid: 73
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5723,8 +5563,8 @@ entities:
       containerName: food
       container: 72
   - uid: 76
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5742,8 +5582,8 @@ entities:
       containerName: food
       container: 75
   - uid: 78
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5761,8 +5601,8 @@ entities:
       containerName: food
       container: 77
   - uid: 80
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5780,8 +5620,8 @@ entities:
       containerName: food
       container: 79
   - uid: 82
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5799,8 +5639,8 @@ entities:
       containerName: food
       container: 81
   - uid: 84
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5818,8 +5658,8 @@ entities:
       containerName: food
       container: 83
   - uid: 86
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5837,8 +5677,8 @@ entities:
       containerName: food
       container: 85
   - uid: 88
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5856,8 +5696,8 @@ entities:
       containerName: food
       container: 87
   - uid: 91
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5875,8 +5715,8 @@ entities:
       containerName: food
       container: 90
   - uid: 105
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - saltore
@@ -5897,8 +5737,8 @@ entities:
       containerName: saltore
       container: 104
   - uid: 107
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - saltore
@@ -5919,8 +5759,8 @@ entities:
       containerName: saltore
       container: 106
   - uid: 111
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - plasteel
@@ -5945,8 +5785,8 @@ entities:
       containerName: plasteel
       container: 110
   - uid: 128
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -5973,8 +5813,8 @@ entities:
       containerName: food
       container: 127
   - uid: 130
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - saltore
@@ -5995,8 +5835,8 @@ entities:
       containerName: saltore
       container: 129
   - uid: 132
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - saltore
@@ -6017,8 +5857,8 @@ entities:
       containerName: saltore
       container: 131
   - uid: 134
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -6036,8 +5876,8 @@ entities:
       containerName: food
       container: 133
   - uid: 138
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - saltore
@@ -6058,8 +5898,8 @@ entities:
       containerName: saltore
       container: 137
   - uid: 140
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - saltore
@@ -6080,8 +5920,8 @@ entities:
       containerName: saltore
       container: 139
   - uid: 142
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - saltore
@@ -6102,8 +5942,8 @@ entities:
       containerName: saltore
       container: 141
   - uid: 144
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - saltore
@@ -6124,8 +5964,8 @@ entities:
       containerName: saltore
       container: 143
   - uid: 146
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - saltore
@@ -6146,8 +5986,8 @@ entities:
       containerName: saltore
       container: 145
   - uid: 148
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -6165,8 +6005,8 @@ entities:
       containerName: food
       container: 147
   - uid: 150
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -6184,8 +6024,8 @@ entities:
       containerName: food
       container: 149
   - uid: 152
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -6203,8 +6043,8 @@ entities:
       containerName: food
       container: 151
   - uid: 154
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - saltore
@@ -6225,8 +6065,8 @@ entities:
       containerName: saltore
       container: 153
   - uid: 158
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - injector
@@ -6241,8 +6081,8 @@ entities:
       containerName: injector
       container: 157
   - uid: 161
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: solution - food
@@ -6262,8 +6102,8 @@ entities:
 - proto: ActionToggleInternals
   entities:
   - uid: 94
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 93
@@ -6271,8 +6111,8 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 93
   - uid: 97
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 96
@@ -6280,8 +6120,8 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 96
   - uid: 163
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 162
@@ -6289,8 +6129,8 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 162
   - uid: 166
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 165
@@ -6298,8 +6138,8 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 165
   - uid: 168
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 167
@@ -6307,8 +6147,8 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 167
   - uid: 174
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 173
@@ -6318,8 +6158,8 @@ entities:
 - proto: ActionToggleJetpack
   entities:
   - uid: 95
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 93
@@ -6327,8 +6167,8 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 93
   - uid: 169
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 167
@@ -6336,8 +6176,8 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 167
   - uid: 175
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 173
@@ -6347,8 +6187,8 @@ entities:
 - proto: ActionToggleLight
   entities:
   - uid: 177
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 176
@@ -6358,8 +6198,8 @@ entities:
 - proto: ActionToggleMagboots
   entities:
   - uid: 92
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 90
@@ -6369,8 +6209,8 @@ entities:
 - proto: ActionToggleSuitPiece
   entities:
   - uid: 29
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 26
@@ -6379,8 +6219,8 @@ entities:
       container: 26
       entIcon: 27
   - uid: 33
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 30
@@ -6389,8 +6229,8 @@ entities:
       container: 30
       entIcon: 31
   - uid: 37
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 34
@@ -6399,8 +6239,8 @@ entities:
       container: 34
       entIcon: 35
   - uid: 41
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 38
@@ -6409,8 +6249,8 @@ entities:
       container: 38
       entIcon: 39
   - uid: 45
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 42
@@ -6830,8 +6670,8 @@ entities:
 - proto: AirTankFilled
   entities:
   - uid: 96
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 89
@@ -6851,8 +6691,8 @@ entities:
           - 97
     - type: InsideEntityStorage
   - uid: 165
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 164
@@ -10054,8 +9894,8 @@ entities:
 - proto: BoxInflatable
   entities:
   - uid: 74
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       rot: 0.004935108125209808 rad
@@ -10128,19 +9968,11 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BoxLethalshotKS23
-  entities:
-  - uid: 869
-    components:
-    - type: Transform
-      parent: 868
-    - type: Physics
-      canCollide: False
 - proto: BoxLightbulb
   entities:
   - uid: 112
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 109
@@ -10225,8 +10057,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 883
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 881
@@ -10382,8 +10214,8 @@ entities:
 - proto: Brutepack
   entities:
   - uid: 10
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 2
@@ -12389,7 +12221,7 @@ entities:
   - uid: 1310
     components:
     - type: Transform
-      pos: -3.930584,6.20057
+      pos: -3.1982594,6.0958366
       parent: 1
   - uid: 1311
     components:
@@ -12404,11 +12236,6 @@ entities:
       parent: 1312
     - type: Physics
       canCollide: False
-  - uid: 4639
-    components:
-    - type: Transform
-      pos: -13.394906,-5.2553873
-      parent: 1
 - proto: CableApcStack10
   entities:
   - uid: 1314
@@ -12433,7 +12260,7 @@ entities:
   - uid: 1332
     components:
     - type: Transform
-      pos: -3.1701672,6.32557
+      pos: -3.3545094,6.1739616
       parent: 1
   - uid: 1334
     components:
@@ -14891,13 +14718,13 @@ entities:
   - uid: 1833
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5972507,6.054737
+      pos: -4.3388844,5.2833366
       parent: 1
   - uid: 1834
     components:
     - type: Transform
-      pos: -4.368084,5.63807
+      rot: -1.5707963267948966 rad
+      pos: -3.8388844,6.0489616
       parent: 1
   - uid: 1835
     components:
@@ -15567,8 +15394,8 @@ entities:
 - proto: CDDogtags
   entities:
   - uid: 13
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 12
@@ -15876,16 +15703,6 @@ entities:
     - type: Transform
       pos: -7.4046006,-18.458286
       parent: 1
-- proto: ChemicalBarrelOil
-  entities:
-  - uid: 2143
-    components:
-    - type: Transform
-      rot: -0.008860388770699501 rad
-      pos: -12.76977,-5.903758
-      parent: 1
-    - type: Pullable
-      prevFixedRotation: True
 - proto: ChemistryEmptyBottle03
   entities:
   - uid: 2003
@@ -16245,7 +16062,6 @@ entities:
         entries:
         - message: >-
             Обеспечивает следующую защиту:
-
             - [color=orange]Взрывной[/color] урон [color=white]к содержимому[/color] снижается на [color=lightblue]10%[/color].
           priority: 0
           component: Armor
@@ -16387,7 +16203,6 @@ entities:
         entries:
         - message: >-
             Обеспечивает следующую защиту:
-
             - [color=orange]Взрывной[/color] урон [color=white]к содержимому[/color] снижается на [color=lightblue]10%[/color].
           priority: 0
           component: Armor
@@ -16471,7 +16286,6 @@ entities:
         entries:
         - message: >-
             Обеспечивает следующую защиту:
-
             - [color=orange]Взрывной[/color] урон [color=white]к содержимому[/color] снижается на [color=lightblue]10%[/color].
           priority: 0
           component: Armor
@@ -16558,7 +16372,6 @@ entities:
         entries:
         - message: >-
             Обеспечивает следующую защиту:
-
             - [color=orange]Взрывной[/color] урон [color=white]к содержимому[/color] снижается на [color=lightblue]10%[/color].
           priority: 0
           component: Armor
@@ -16605,7 +16418,6 @@ entities:
         entries:
         - message: >-
             Обеспечивает следующую защиту:
-
             - [color=orange]Взрывной[/color] урон [color=white]к содержимому[/color] снижается на [color=lightblue]10%[/color].
           priority: 0
           component: Armor
@@ -16640,7 +16452,6 @@ entities:
         entries:
         - message: >-
             Обеспечивает следующую защиту:
-
             - [color=orange]Взрывной[/color] урон [color=white]к содержимому[/color] снижается на [color=lightblue]10%[/color].
           priority: 0
           component: Armor
@@ -16898,8 +16709,8 @@ entities:
 - proto: ClothingHeadHelmetEVALarge
   entities:
   - uid: 27
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 26
@@ -16918,8 +16729,8 @@ entities:
     - type: AttachedClothing
       attachedUid: 26
   - uid: 31
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 30
@@ -16938,8 +16749,8 @@ entities:
     - type: AttachedClothing
       attachedUid: 30
   - uid: 35
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 34
@@ -16958,8 +16769,8 @@ entities:
     - type: AttachedClothing
       attachedUid: 34
   - uid: 39
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 38
@@ -16978,8 +16789,8 @@ entities:
     - type: AttachedClothing
       attachedUid: 38
   - uid: 43
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 42
@@ -17028,8 +16839,8 @@ entities:
 - proto: ClothingMaskBreath
   entities:
   - uid: 46
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17039,8 +16850,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 47
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17050,8 +16861,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 48
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17061,8 +16872,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 49
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17072,8 +16883,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 50
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17083,8 +16894,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 51
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17111,8 +16922,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 52
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17122,8 +16933,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 53
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17133,8 +16944,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 54
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17144,8 +16955,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 55
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17171,8 +16982,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 98
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 89
@@ -17182,8 +16993,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 170
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 164
@@ -17301,19 +17112,12 @@ entities:
           component: ClothingSpeedModifier
         - message: >-
             Обеспечивает следующую защиту:
-
             - [color=yellow]Ударный[/color] урон снижается на [color=lightblue]30%[/color].
-
             - [color=yellow]Режущий[/color] урон снижается на [color=lightblue]30%[/color].
-
             - [color=yellow]Колющий[/color] урон снижается на [color=lightblue]50%[/color].
-
             - [color=yellow]Высокотемпературный[/color] урон снижается на [color=lightblue]30%[/color].
-
             - [color=yellow]Радиационный[/color] урон снижается на [color=lightblue]70%[/color].
-
             - [color=yellow]Кислотный[/color] урон снижается на [color=lightblue]20%[/color].
-
             - [color=orange]Взрывной[/color] урон снижается на [color=lightblue]70%[/color].
           priority: 0
           component: Armor
@@ -17342,8 +17146,8 @@ entities:
 - proto: ClothingOuterSuitEmergency
   entities:
   - uid: 26
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17368,8 +17172,8 @@ entities:
     - type: ActionsContainer
     - type: InsideEntityStorage
   - uid: 30
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17394,8 +17198,8 @@ entities:
     - type: ActionsContainer
     - type: InsideEntityStorage
   - uid: 34
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17420,8 +17224,8 @@ entities:
     - type: ActionsContainer
     - type: InsideEntityStorage
   - uid: 38
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17446,8 +17250,8 @@ entities:
     - type: ActionsContainer
     - type: InsideEntityStorage
   - uid: 42
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -17531,8 +17335,8 @@ entities:
 - proto: ClothingShoesBootsMag
   entities:
   - uid: 90
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 89
@@ -17813,7 +17617,7 @@ entities:
       parent: 1
 - proto: ComputerStationRecords
   entities:
-  - uid: 2131
+  - uid: 2143
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -18092,8 +17896,8 @@ entities:
 - proto: CrateElectrical
   entities:
   - uid: 2186
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 2185
@@ -18144,61 +17948,6 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-  - uid: 4637
-    components:
-    - type: Transform
-      pos: -12.363656,-3.4324703
-      parent: 1
-  - uid: 4638
-    components:
-    - type: Transform
-      pos: -13.394906,-5.2553873
-      parent: 1
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.4,-0.4
-            - 0.4,-0.4
-            - 0.4,0.29
-            - -0.4,0.29
-          mask:
-          - Impassable
-          - HighImpassable
-          - LowImpassable
-          layer:
-          - BulletImpassable
-          - Opaque
-          density: 50
-          hard: True
-          restitution: 0
-          friction: 0.4
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14923
-        moles:
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-      open: True
-      removedMasks: 20
-    - type: PlaceableSurface
-      isPlaceable: True
-    - type: Pullable
-      prevFixedRotation: True
 - proto: CrateEmergencyRadiation
   entities:
   - uid: 2194
@@ -18400,8 +18149,8 @@ entities:
 - proto: CrateGenericSteel
   entities:
   - uid: 25
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       pos: -8.044554,-14.417423
@@ -18464,8 +18213,8 @@ entities:
     - type: Pullable
       prevFixedRotation: True
   - uid: 109
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 102
@@ -18509,8 +18258,8 @@ entities:
       fingerprints:
       - B73885CB8CE962D179DFB5CA1C1DA581
   - uid: 126
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 102
@@ -18555,8 +18304,8 @@ entities:
       fingerprints:
       - B73885CB8CE962D179DFB5CA1C1DA581
   - uid: 136
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 135
@@ -18914,42 +18663,11 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-  - uid: 4636
-    components:
-    - type: Transform
-      pos: -9.602767,-4.609554
-      parent: 1
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.4,-0.4
-            - 0.4,-0.4
-            - 0.4,0.29
-            - -0.4,0.29
-          mask:
-          - Impassable
-          - HighImpassable
-          - LowImpassable
-          layer:
-          - BulletImpassable
-          - Opaque
-          density: 50
-          hard: True
-          restitution: 0
-          friction: 0.4
-    - type: EntityStorage
-      open: True
-      removedMasks: 20
-    - type: PlaceableSurface
-      isPlaceable: True
 - proto: CratePrivateSecure
   entities:
   - uid: 103
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 102
@@ -19049,13 +18767,6 @@ entities:
           showEnts: False
           occludes: True
           ent: 856
-  - uid: 4635
-    components:
-    - type: Transform
-      pos: -10.898697,-4.303881
-      parent: 1
-    - type: Lock
-      locked: False
 - proto: CrateServiceReplacementLights
   entities:
   - uid: 2260
@@ -19068,8 +18779,8 @@ entities:
 - proto: CrateStorageRack
   entities:
   - uid: 102
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       pos: -11.5,-15.5
@@ -19084,8 +18795,8 @@ entities:
           - 109
           - 126
   - uid: 135
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       pos: -2.5,-7.5
@@ -19106,8 +18817,8 @@ entities:
       fingerprints:
       - B73885CB8CE962D179DFB5CA1C1DA581
   - uid: 2185
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       pos: -11.5,-11.5
@@ -19250,8 +18961,8 @@ entities:
 - proto: CrayonOrange
   entities:
   - uid: 75
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 74
@@ -19278,8 +18989,8 @@ entities:
         solution@food: !type:ContainerSlot
           ent: 76
   - uid: 79
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 74
@@ -19306,8 +19017,8 @@ entities:
         solution@food: !type:ContainerSlot
           ent: 80
   - uid: 81
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 74
@@ -19336,8 +19047,8 @@ entities:
 - proto: CrayonRed
   entities:
   - uid: 83
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 74
@@ -19366,8 +19077,8 @@ entities:
 - proto: CrayonWhite
   entities:
   - uid: 77
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 74
@@ -19396,8 +19107,8 @@ entities:
 - proto: CrayonYellow
   entities:
   - uid: 85
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 74
@@ -19424,8 +19135,8 @@ entities:
         solution@food: !type:ContainerSlot
           ent: 86
   - uid: 87
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 74
@@ -20273,9 +19984,6 @@ entities:
         871:
           position: 2,0
           _rotation: North
-        869:
-          position: 2,3
-          _rotation: North
         874:
           position: 6,2
           _rotation: East
@@ -20309,7 +20017,6 @@ entities:
           - 876
           - 871
           - 879
-          - 869
           - 873
 - proto: DrinkAbsintheBottleFull
   entities:
@@ -21318,8 +21025,8 @@ entities:
 - proto: FoodCondimentPacketSalt
   entities:
   - uid: 133
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 126
@@ -21469,8 +21176,8 @@ entities:
 - proto: FoodMothBeanStew
   entities:
   - uid: 127
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 126
@@ -21492,8 +21199,8 @@ entities:
 - proto: FoodPacketChocolateTrash
   entities:
   - uid: 2532
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       pos: -7.5747714,-13.616375
@@ -21615,8 +21322,8 @@ entities:
 - proto: FoodTinBeans
   entities:
   - uid: 147
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 136
@@ -21634,8 +21341,8 @@ entities:
           ent: 148
     - type: InsideEntityStorage
   - uid: 149
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 136
@@ -21653,8 +21360,8 @@ entities:
           ent: 150
     - type: InsideEntityStorage
   - uid: 151
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 136
@@ -21714,8 +21421,8 @@ entities:
 - proto: FoodTinBeansTrash
   entities:
   - uid: 108
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 103
@@ -21725,8 +21432,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 155
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 136
@@ -24304,8 +24011,8 @@ entities:
 - proto: Gauze
   entities:
   - uid: 11
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 2
@@ -25781,8 +25488,8 @@ entities:
 - proto: HandLabeler
   entities:
   - uid: 3148
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       pos: -5.625199,-12.450394
@@ -25968,8 +25675,8 @@ entities:
 - proto: JetpackMiniFilled
   entities:
   - uid: 93
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 89
@@ -26008,8 +25715,8 @@ entities:
 - proto: JetpackMiningFilled
   entities:
   - uid: 167
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 164
@@ -26102,8 +25809,8 @@ entities:
 - proto: LightBulb
   entities:
   - uid: 113
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26112,8 +25819,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 114
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26122,8 +25829,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 115
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26132,8 +25839,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 116
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26142,8 +25849,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 117
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26152,8 +25859,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 118
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26162,8 +25869,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 119
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26172,8 +25879,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 120
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26182,8 +25889,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 121
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26192,8 +25899,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 122
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26202,8 +25909,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 123
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26212,8 +25919,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 124
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 112
@@ -26222,8 +25929,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 884
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 883
@@ -26232,8 +25939,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 885
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 883
@@ -26242,8 +25949,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 886
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 883
@@ -26309,8 +26016,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 887
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 883
@@ -26376,8 +26083,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 888
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 883
@@ -26386,8 +26093,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 889
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 883
@@ -26396,8 +26103,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 890
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 883
@@ -26406,8 +26113,8 @@ entities:
     - type: Physics
       canCollide: False
   - uid: 891
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 883
@@ -26479,12 +26186,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -2.5000994,-27.549774
-      parent: 1
-  - uid: 4084
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -3.582331,5.73182
       parent: 1
 - proto: LightBulbCrystalRed
   entities:
@@ -27012,8 +26713,8 @@ entities:
 - proto: MechEquipmentGrabberSmall
   entities:
   - uid: 125
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 109
@@ -27032,8 +26733,8 @@ entities:
 - proto: MedkitBrute
   entities:
   - uid: 2
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       pos: -15.49731,-7.4848003
@@ -27083,13 +26784,6 @@ entities:
     components:
     - type: Transform
       pos: -16.725151,-7.0418987
-      parent: 1
-- proto: MetalBarrelBlack
-  entities:
-  - uid: 4153
-    components:
-    - type: Transform
-      pos: -13.165173,-6.6169386
       parent: 1
 - proto: MetalFoamGrenade
   entities:
@@ -27144,8 +26838,8 @@ entities:
 - proto: MiningDrillDiamond
   entities:
   - uid: 156
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 136
@@ -27253,13 +26947,13 @@ entities:
       parent: 1
 - proto: NansenMothershipComputer
   entities:
-  - uid: 2132
+  - uid: 869
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -2.5,-23.5
       parent: 1
-  - uid: 2448
+  - uid: 2131
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -27527,7 +27221,6 @@ entities:
         entries:
         - message: >-
             Обеспечивает следующую защиту:
-
             - [color=orange]Взрывной[/color] урон [color=white]к содержимому[/color] снижается на [color=lightblue]10%[/color].
           priority: 0
           component: Armor
@@ -27807,8 +27500,8 @@ entities:
 - proto: NFPouchSalvage
   entities:
   - uid: 2079
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       pos: -2.358873,-9.176332
@@ -27867,8 +27560,8 @@ entities:
 - proto: NitrogenTankFilled
   entities:
   - uid: 56
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -27880,8 +27573,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 57
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -27893,8 +27586,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 58
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -27906,8 +27599,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 59
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -27919,8 +27612,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 60
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -27932,8 +27625,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 61
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -28094,8 +27787,8 @@ entities:
 - proto: OxygenTankFilled
   entities:
   - uid: 62
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -28107,8 +27800,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 63
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -28120,8 +27813,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 64
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -28133,8 +27826,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 65
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -28146,8 +27839,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 66
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -28159,8 +27852,8 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 67
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 25
@@ -28174,8 +27867,8 @@ entities:
 - proto: Paper
   entities:
   - uid: 69
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 68
@@ -28228,8 +27921,8 @@ entities:
         solution@food: !type:ContainerSlot
           ent: 70
   - uid: 72
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 71
@@ -28312,8 +28005,6 @@ entities:
     - type: Paper
       content: >-
         Не открывайте ящик с бортовыми записями Капитана! 
-
-
         Да, Йохан, особенно ты!
     - type: Physics
       canCollide: False
@@ -28373,13 +28064,12 @@ entities:
       parent: 1
     - type: Paper
       content: >2-
-
         Это старый агитационный плакат, на котором вы можете разобрать лишь: "Свободу 91-ому сектору!"
 - proto: PaperCargoInvoice
   entities:
   - uid: 160
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       desc: Одна единица бюрократии.
@@ -28389,15 +28079,10 @@ entities:
     - type: Paper
       content: >-
         Заказ #1493
-
         Товар: бочка керосина
-
         Кол-во: 8
-
         Запросил: Эндрю Крайзер
-
         Причина: Заправка шаттла
-
         Одобрил: Эндрю Крайзер
     - type: SolutionContainerManager
       solutions: null
@@ -28948,8 +28633,8 @@ entities:
 - proto: PillCanister
   entities:
   - uid: 7
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: баночка для таблеток (iron 10u)
@@ -29012,8 +28697,8 @@ entities:
 - proto: PillIron
   entities:
   - uid: 3
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: таблетка (iron 10u)
@@ -29034,8 +28719,8 @@ entities:
         solution@food: !type:ContainerSlot
           ent: 4
   - uid: 5
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: таблетка (iron 10u)
@@ -29056,8 +28741,8 @@ entities:
         solution@food: !type:ContainerSlot
           ent: 6
   - uid: 8
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: MetaData
       name: таблетка (iron 10u)
@@ -29788,7 +29473,7 @@ entities:
   - uid: 3545
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      rot: -1.5707963267948966 rad
       pos: -3.5,5.5
       parent: 1
   - uid: 3546
@@ -29947,8 +29632,8 @@ entities:
 - proto: PrefilledSyringe
   entities:
   - uid: 157
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       pos: -14.524865,-12.304172
@@ -30033,8 +29718,8 @@ entities:
       pos: -4.2331963,-23.071808
       parent: 1
   - uid: 3576
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -30053,8 +29738,8 @@ entities:
       channels:
       - Handheld
   - uid: 3577
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       pos: -3.8835251,7.6098022
@@ -30419,26 +30104,6 @@ entities:
     - type: Transform
       pos: -1.5,-16.5
       parent: 1
-  - uid: 4641
-    components:
-    - type: Transform
-      pos: -12.5,-21.5
-      parent: 1
-  - uid: 4643
-    components:
-    - type: Transform
-      pos: -2.5,-27.5
-      parent: 1
-  - uid: 4644
-    components:
-    - type: Transform
-      pos: 1.5,-20.5
-      parent: 1
-  - uid: 4646
-    components:
-    - type: Transform
-      pos: 3.5,-9.5
-      parent: 1
 - proto: RandomSpawner100
   entities:
   - uid: 3637
@@ -30510,26 +30175,6 @@ entities:
     components:
     - type: Transform
       pos: -0.5,-18.5
-      parent: 1
-  - uid: 4640
-    components:
-    - type: Transform
-      pos: -6.5,-17.5
-      parent: 1
-  - uid: 4642
-    components:
-    - type: Transform
-      pos: -1.5,-29.5
-      parent: 1
-  - uid: 4645
-    components:
-    - type: Transform
-      pos: -0.5,-21.5
-      parent: 1
-  - uid: 4647
-    components:
-    - type: Transform
-      pos: 6.5,-8.5
       parent: 1
 - proto: ReagentContainerSalt
   entities:
@@ -30649,8 +30294,8 @@ entities:
 - proto: Salt1
   entities:
   - uid: 104
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 103
@@ -30668,8 +30313,8 @@ entities:
           ent: 105
     - type: InsideEntityStorage
   - uid: 129
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 126
@@ -30687,8 +30332,8 @@ entities:
           ent: 130
     - type: InsideEntityStorage
   - uid: 137
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 136
@@ -30708,8 +30353,8 @@ entities:
           ent: 138
     - type: InsideEntityStorage
   - uid: 139
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 136
@@ -30729,8 +30374,8 @@ entities:
           ent: 140
     - type: InsideEntityStorage
   - uid: 141
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 136
@@ -30748,8 +30393,8 @@ entities:
           ent: 142
     - type: InsideEntityStorage
   - uid: 143
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 136
@@ -31510,8 +31155,8 @@ entities:
 - proto: Salt5
   entities:
   - uid: 106
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 103
@@ -31529,8 +31174,8 @@ entities:
           ent: 107
     - type: InsideEntityStorage
   - uid: 153
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 136
@@ -31580,8 +31225,8 @@ entities:
 - proto: SaltOre
   entities:
   - uid: 131
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 126
@@ -31599,8 +31244,8 @@ entities:
           ent: 132
     - type: InsideEntityStorage
   - uid: 145
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 136
@@ -32353,8 +31998,8 @@ entities:
 - proto: SheetPlasteel10
   entities:
   - uid: 110
-    mapInit: true
-    paused: true
+    
+    
     components:
     - type: Transform
       parent: 109
@@ -32791,13 +32436,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ShellKS23Base
-  entities:
-  - uid: 3872
-    components:
-    - type: Transform
-      pos: -13.314809,1.4339037
-      parent: 1
 - proto: ShellShotgunFlare
   entities:
   - uid: 907
@@ -34940,9 +34578,9 @@ entities:
     - type: Transform
       pos: -6.5,8.5
       parent: 1
-- proto: TelecomServerFilledShuttle
+- proto: TelecomServer
   entities:
-  - uid: 4120
+  - uid: 2132
     components:
     - type: Transform
       pos: -3.5,5.5

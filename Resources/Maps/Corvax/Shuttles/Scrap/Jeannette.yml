@@ -837,8 +837,6 @@ entities:
     - type: ShuttleDeed
     - type: ShuttleImpact
   - uid: 5
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - food
@@ -856,8 +854,6 @@ entities:
       containerName: food
       container: 4
   - uid: 7
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - food
@@ -875,8 +871,6 @@ entities:
       containerName: food
       container: 6
   - uid: 9
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - food
@@ -894,8 +888,6 @@ entities:
       containerName: food
       container: 8
   - uid: 11
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - food
@@ -913,8 +905,6 @@ entities:
       containerName: food
       container: 10
   - uid: 16
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - injector
@@ -932,8 +922,6 @@ entities:
       containerName: injector
       container: 15
   - uid: 18
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - food
@@ -957,8 +945,6 @@ entities:
       containerName: food
       container: 17
   - uid: 22
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: solution - Welder
@@ -978,8 +964,6 @@ entities:
 - proto: ActionToggleLight
   entities:
   - uid: 12
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 8
@@ -987,8 +971,6 @@ entities:
       originalIconColor: '#FFFFFFFF'
       container: 8
   - uid: 13
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 8
@@ -1674,8 +1656,6 @@ entities:
 - proto: ClothingBeltUtilityEngineering
   entities:
   - uid: 20
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 2
@@ -1726,8 +1706,6 @@ entities:
 - proto: ClothingHandsGlovesColorYellow
   entities:
   - uid: 6
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 2
@@ -1749,8 +1727,6 @@ entities:
 - proto: ClothingHeadHelmetAtmosFire
   entities:
   - uid: 8
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 2
@@ -1789,8 +1765,6 @@ entities:
 - proto: ClothingMaskGasExplorer
   entities:
   - uid: 28
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 2
@@ -1848,8 +1822,6 @@ entities:
 - proto: CrowbarYellow
   entities:
   - uid: 23
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 20
@@ -1887,8 +1859,6 @@ entities:
 - proto: FoodPizzaMoldySlice
   entities:
   - uid: 17
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 14
@@ -1916,8 +1886,6 @@ entities:
 - proto: GasAnalyzer
   entities:
   - uid: 30
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 2
@@ -2224,8 +2192,6 @@ entities:
 - proto: HolofanProjector
   entities:
   - uid: 3
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 2
@@ -2270,8 +2236,6 @@ entities:
 - proto: LockerSalvageSpecialist
   entities:
   - uid: 2
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: 4.262814,-7.495075
@@ -2339,8 +2303,6 @@ entities:
 - proto: MedkitO2
   entities:
   - uid: 14
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 2
@@ -2379,8 +2341,6 @@ entities:
 - proto: Multitool
   entities:
   - uid: 24
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 20
@@ -2495,8 +2455,6 @@ entities:
 - proto: PillCanister
   entities:
   - uid: 19
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 14
@@ -2535,8 +2493,6 @@ entities:
 - proto: PowerCellMedium
   entities:
   - uid: 4
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 3
@@ -2553,8 +2509,6 @@ entities:
         solution@food: !type:ContainerSlot
           ent: 5
   - uid: 10
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 8
@@ -2632,8 +2586,6 @@ entities:
 - proto: Screwdriver
   entities:
   - uid: 25
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 20
@@ -2761,8 +2713,6 @@ entities:
 - proto: SyringeInaprovaline
   entities:
   - uid: 15
-    mapInit: true
-    paused: true
     components:
     - type: MetaData
       name: шприц инапровалина (инапровалин)
@@ -2831,8 +2781,6 @@ entities:
 - proto: trayScanner
   entities:
   - uid: 32
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 2
@@ -3122,8 +3070,6 @@ entities:
 - proto: Welder
   entities:
   - uid: 21
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 20
@@ -3155,8 +3101,6 @@ entities:
 - proto: Wirecutter
   entities:
   - uid: 26
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 20
@@ -3173,8 +3117,6 @@ entities:
 - proto: Wrench
   entities:
   - uid: 27
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 20

@@ -2944,8 +2944,6 @@ entities:
 - proto: Wrench
   entities:
   - uid: 338
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: 1.7323322,-0.26066208
