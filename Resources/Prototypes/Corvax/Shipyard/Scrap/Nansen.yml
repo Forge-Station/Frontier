@@ -1,0 +1,47 @@
+# Author -
+# GitHub: -
+# Discord: letstrythisone.
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes: Что-ж, работа в одиночестве того стоила... 
+
+- type: vessel
+  id: Nansen
+  parent: BaseVessel
+  name: ST Капитан Нансен
+  description: Огромный, непоколебимый бастион шахтерской деятельности и независимости, видавший свои лучшие годы... Размер команды от 8 до 12 человек.
+  price: 260000 # (147 843)
+  category: Large
+  group: Scrap
+  shuttlePath: /Maps/Corvax/Shuttles/Scrap/Nansen.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Expedition
+  - Salvage
+  - Cargo
+
+- type: gameMap
+  id: Nansen
+  mapName: 'ST Капитан Нансен'
+  mapPath: /Maps/Corvax/Shuttles/Scrap/Nansen.yml
+  minPlayers: 0
+  stations:
+    Nansen:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Капитан Нансен {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
