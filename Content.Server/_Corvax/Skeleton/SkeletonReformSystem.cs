@@ -8,20 +8,18 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
 using Robust.Server.Containers;
-using Robust.Server.GameObjects;
 
 namespace Content.Server._Corvax.Skeleton;
 
 public sealed class SkeletonReformSystem : EntitySystem
 {
-    [Dependency] private readonly PopupSystem      _popup = default!;
-    [Dependency] private readonly MindSystem       _mind  = default!;
-    [Dependency] private readonly IEntityManager   _ent   = default!;
-    [Dependency] private readonly ContainerSystem  _cont  = default!;
-    [Dependency] private readonly TransformSystem  _xform = default!;
-    [Dependency] private readonly DamageableSystem _dmg   = default!;
-    [Dependency] private readonly MobStateSystem   _state = default!;
-    [Dependency] private readonly SharedBankSystem _bank  = default!;
+    [Dependency] private readonly SharedBankSystem _bank = default!;
+    [Dependency] private readonly ContainerSystem _cont = default!;
+    [Dependency] private readonly DamageableSystem _dmg = default!;
+    [Dependency] private readonly IEntityManager _ent = default!;
+    [Dependency] private readonly MindSystem _mind = default!;
+    [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private readonly MobStateSystem _state = default!;
 
 
     public override void Initialize()
@@ -40,21 +38,22 @@ public sealed class SkeletonReformSystem : EntitySystem
             return;
         }
 
-        if (!_cont.Remove(body, pocket, true, true))
-        {
-            _popup.PopupEntity("Не удалось извлечь тело!", skull, skull);
+        if (!_ent.TryGetComponent(body, out TransformComponent? bodyXform) ||
+            !_ent.TryGetComponent(body, out MetaDataComponent? bodyMeta))
             return;
-        }
 
-        var pos = _ent.GetComponent<TransformComponent>(skull).Coordinates;
-        _xform.SetCoordinates(body, pos);
+        var eBody = new Entity<TransformComponent?, MetaDataComponent?>(body, bodyXform, bodyMeta);
+        while (_cont.TryGetContainingContainer(eBody, out var container))
+        {
+            _cont.Remove(eBody, container, true, true);
+        }
 
         if (_ent.TryGetComponent(body, out DamageableComponent? dmg))
             _dmg.SetAllDamage(body, dmg, FixedPoint2.Zero);
 
         _state.ChangeMobState(body, MobState.Alive);
 
-        if (_mind.TryGetMind(skull, out var mindUid, out var _))
+        if (_mind.TryGetMind(skull, out var mindUid, out _))
             _mind.TransferTo(mindUid, body);
 
         if (_ent.TryGetComponent(skull, out BankAccountComponent? bank))
@@ -63,8 +62,8 @@ public sealed class SkeletonReformSystem : EntitySystem
         var txt = string.IsNullOrWhiteSpace(comp.PopupText)
             ? "Скелет восстал!"
             : Loc.GetString(comp.PopupText, ("name", body));
-
         _popup.PopupEntity(txt, body, skull);
+
         QueueDel(skull);
     }
 }

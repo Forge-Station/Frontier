@@ -26,7 +26,7 @@ public sealed partial class CCVars
     /// <seealso cref="AdminUseCustomNamesAdminRank"/>
     /// <seealso cref="AhelpAdminPrefixWebhook"/>
     public static readonly CVarDef<bool> AhelpAdminPrefix =
-        CVarDef.Create("ahelp.admin_prefix", false, CVar.SERVERONLY);
+        CVarDef.Create("ahelp.admin_prefix", true, CVar.SERVERONLY); // Frontier-Change
 
     /// <summary>
     ///     Should the administrator's position be displayed in the webhook.
@@ -36,4 +36,19 @@ public sealed partial class CCVars
     /// <seealso cref="AhelpAdminPrefix"/>
     public static readonly CVarDef<bool> AhelpAdminPrefixWebhook =
         CVarDef.Create("ahelp.admin_prefix_webhook", false, CVar.SERVERONLY);
+
+    // Frontier-Change-Start
+    /// <summary>
+    ///     The color of the names of admins. This is the fallback color for admins.
+    /// </summary>
+    public static readonly CVarDef<string> AdminBwoinkColor =
+        CVarDef.Create("admin.admin_bwoink_color", "red", CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Use the admin's Admin OOC color in bwoinks.
+    ///     If either the ooc color or this is not set, uses the admin.admin_bwoink_color value.
+    /// </summary>
+    public static readonly CVarDef<bool> UseAdminOOCColorInBwoinks =
+        CVarDef.Create("admin.bwoink_use_admin_ooc_color", true, CVar.SERVERONLY);
+    // Frontier-Change-End
 }

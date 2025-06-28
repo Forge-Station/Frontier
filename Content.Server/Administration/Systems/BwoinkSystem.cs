@@ -11,6 +11,7 @@ using Content.Server.Database;
 using Content.Server.Discord;
 using Content.Server.GameTicking;
 using Content.Server.Players.RateLimiting;
+using Content.Server.Preferences.Managers;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
@@ -37,14 +38,13 @@ namespace Content.Server.Administration.Systems
         [Dependency] private readonly IAdminManager _adminManager = default!;
         [Dependency] private readonly IConfigurationManager _config = default!;
         [Dependency] private readonly IGameTiming _timing = default!;
-        [Dependency] private readonly IPlayerLocator _playerLocator = default!;
         [Dependency] private readonly GameTicker _gameTicker = default!;
         [Dependency] private readonly SharedMindSystem _minds = default!;
         [Dependency] private readonly IAfkManager _afkManager = default!;
         [Dependency] private readonly IServerDbManager _dbManager = default!;
         [Dependency] private readonly PlayerRateLimitManager _rateLimit = default!;
         [Dependency] private readonly IPlayerLocator _locator = default!;
-        [Dependency] private readonly IServerDbManager _db = default!;
+        [Dependency] private readonly IServerPreferencesManager _prefs = default!;
 
         [GeneratedRegex(@"^https://(?:(?:canary|ptb)\.)?discord\.com/api/webhooks/(\d+)/((?!.*/).*)$")]
         private static partial Regex DiscordRegex();
@@ -112,7 +112,7 @@ namespace Content.Server.Administration.Systems
             SubscribeNetworkEvent<BwoinkClientTypingUpdated>(OnClientTypingUpdated);
             SubscribeLocalEvent<RoundRestartCleanupEvent>(_ => _activeConversations.Clear());
 
-        	_rateLimit.Register(
+            _rateLimit.Register(
                 RateLimitKey,
                 new RateLimitRegistration(CCVars.AhelpRateLimitPeriod,
                     CCVars.AhelpRateLimitCount,
@@ -404,7 +404,7 @@ namespace Content.Server.Administration.Systems
             // If there is no existing embed, or it is getting too long, we create a new embed
             if (!exists || tooLong)
             {
-                var lookup = await _playerLocator.LookupIdAsync(userId);
+                var lookup = await _locator.LookupIdAsync(userId);
 
                 if (lookup == null)
                 {
@@ -680,9 +680,9 @@ namespace Content.Server.Administration.Systems
             _activeConversations[message.UserId] = DateTime.Now;
 
             var escapedText = FormattedMessage.EscapeText(message.Text);
-
-            string bwoinkText;
+            var adminColor = _config.GetCVar(CCVars.AdminBwoinkColor); // Frontier-Change
             string adminPrefix = "";
+            var bwoinkText = $"{senderName}"; // Frontier-Change
 
             //Getting an administrator position
             if (_config.GetCVar(CCVars.AhelpAdminPrefix) && senderAdmin is not null && senderAdmin.Title is not null)
@@ -690,20 +690,27 @@ namespace Content.Server.Administration.Systems
                 adminPrefix = $"[bold]\\[{senderAdmin.Title}\\][/bold] ";
             }
 
-            if (senderAdmin is not null &&
-                senderAdmin.Flags ==
-                AdminFlags.Adminhelp) // Mentor. Not full admin. That's why it's colored differently.
+            // Frontier-Change-Start
+            if (!fromWebhook
+                && _config.GetCVar(CCVars.UseAdminOOCColorInBwoinks)
+                && senderAdmin is not null)
             {
-                bwoinkText = $"[color=purple]{adminPrefix}{senderName}[/color]";
+                var prefs = _prefs.GetPreferences(senderId);
+                adminColor = prefs.AdminOOCColor.ToHex();
             }
-            else if (fromWebhook || senderAdmin is not null && senderAdmin.HasFlag(AdminFlags.Adminhelp)) // Frontier: anything sent via webhooks are from an admin.
+
+            if (senderAdmin is not null)
             {
-                bwoinkText = $"[color=red]{adminPrefix}{senderName}[/color]";
+                if (senderAdmin.Flags ==
+                    AdminFlags.Adminhelp) // Mentor. Not full admin. That's why it's colored differently.
+                    bwoinkText = $"[color=purple]{adminPrefix}{senderName}[/color]";
+                else if (fromWebhook || senderAdmin.HasFlag(AdminFlags.Adminhelp)) // Frontier: anything sent via webhooks are from an admin.
+                    bwoinkText = $"[color={adminColor}]{adminPrefix}{senderName}[/color]";
             }
-            else
-            {
-                bwoinkText = $"{senderName}";
-            }
+
+            if (fromWebhook)
+                bwoinkText = $"{bwoinkText}";
+            // Frontier-Change-End
 
             bwoinkText = $"{(message.AdminOnly ? Loc.GetString("bwoink-message-admin-only") : !message.PlaySound ? Loc.GetString("bwoink-message-silent") : "")}{(fromWebhook ? Loc.GetString("bwoink-message-discord") : "")} {bwoinkText}: {escapedText}";
 

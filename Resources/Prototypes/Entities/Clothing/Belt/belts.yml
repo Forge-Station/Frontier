@@ -549,7 +549,7 @@
 # Belts without visualizers
 
 - type: entity
-  parent: [ClothingBeltAmmoProviderBase] #Corvax-Frontier удалена строка КБ
+  parent: ClothingBeltBase #Corvax-Frontier удалена строка КБ и заменено ClothingBeltAmmoProviderBase на ClothingBeltBase
   id: ClothingBeltBandolier
   name: bandolier
   description: A bandolier for holding shotgun ammunition.
@@ -558,13 +558,30 @@
     sprite: Clothing/Belt/bandolier.rsi
   - type: Clothing
     sprite: Clothing/Belt/bandolier.rsi
-  #- type: Item # Frontier
-    #size: Huge # Frontier
-  - type: BallisticAmmoProvider
+  - type: Item
+    size: Ginormous # Frontier
+  - type: Storage # Frontier вместо механики обоймы - хранилище
+    grid:
+    - 0,0,5,5
+    maxItemSize: Huge
     whitelist:
       tags:
         - ShellShotgun
-    capacity: 14
+  - type: ContainerContainer # Frontier
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface # Frontier
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: UseDelay # Frontier
+    delay: 0.5
+#  - type: BallisticAmmoProvider # Frontier
+#    whitelist:
+#      tags:
+#        - ShellShotgun
+#    capacity: 14
 
 - type: entity
   parent: ClothingBeltBase

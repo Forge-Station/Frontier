@@ -73,6 +73,7 @@
 
 - type: randomHumanoidSettings
   id: MedicalBounty
+  speciesBlacklist: [ Skeleton ] # CorvaxFrontier
   components:
   - type: StinkyTrait
   - type: Carriable # Carrying system from nyanotrasen.

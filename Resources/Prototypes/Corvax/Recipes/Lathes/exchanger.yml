@@ -3,6 +3,13 @@
   result: ClothingOuterHardsuitScaf
   completetime: 1
   materials:
+    MercenaryToken: 20
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitMercenaryEliteExchangeRecipe
+  result: ClothingOuterHardsuitMercenaryElite
+  completetime: 1
+  materials:
     MercenaryToken: 40
 
 - type: latheRecipe

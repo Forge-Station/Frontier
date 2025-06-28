@@ -1,0 +1,30 @@
+- type: entity
+  parent: NFClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitMercenaryElite
+  name: Elite Mercenary Hardsuit Helmet
+  description: A sturdy combat helmet with a Kevlar frame.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: Corvax/Clothing/Head/Hardsuits/mercenaryelitehelm.rsi
+  - type: Clothing
+    sprite: Corvax/Clothing/Head/Hardsuits/mercenaryelitehelm.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.005
+    coolingCoefficient: 0.005
+  - type: FireProtection
+    reduction: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.8
+        Heat: 0.9
+  - type: PointLight
+    radius: 7
+    energy: 3

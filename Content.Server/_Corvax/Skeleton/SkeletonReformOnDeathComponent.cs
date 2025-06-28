@@ -24,16 +24,16 @@ public sealed partial class SkeletonReformOnDeathComponent : Component
 
 public sealed class SkeletonReformOnDeathSystem : EntitySystem
 {
-    [Dependency] private readonly IGameTiming         _tim   = default!;
-    [Dependency] private readonly HandsSystem         _hands = default!;
-    [Dependency] private readonly InventorySystem     _inv   = default!;
-    [Dependency] private readonly MetaDataSystem      _meta  = default!;
-    [Dependency] private readonly MindSystem          _mind  = default!;
-    [Dependency] private readonly IEntityManager      _ent   = default!;
-    [Dependency] private readonly ContainerSystem     _cont  = default!;
-    [Dependency] private readonly IPrototypeManager   _proto = default!;
-    [Dependency] private readonly SharedBankSystem    _bank  = default!;
-    [Dependency] private readonly SharedActionsSystem _acts  = default!;
+    [Dependency] private readonly SharedActionsSystem _acts = default!;
+    [Dependency] private readonly SharedBankSystem _bank = default!;
+    [Dependency] private readonly ContainerSystem _cont = default!;
+    [Dependency] private readonly IEntityManager _ent = default!;
+    [Dependency] private readonly HandsSystem _hands = default!;
+    [Dependency] private readonly InventorySystem _inv = default!;
+    [Dependency] private readonly MetaDataSystem _meta = default!;
+    [Dependency] private readonly MindSystem _mind = default!;
+    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private readonly IGameTiming _tim = default!;
 
 
     public override void Initialize()
@@ -70,9 +70,8 @@ public sealed class SkeletonReformOnDeathSystem : EntitySystem
         }
 
 
-
         var coords = _ent.GetComponent<TransformComponent>(body).Coordinates;
-        var skull  = _ent.SpawnEntity(skullProto, coords);
+        var skull = _ent.SpawnEntity(skullProto, coords);
 
         _ent.EnsureComponent<ContainerManagerComponent>(skull);
         var pocket = _cont.EnsureContainer<Container>(skull, "SkeletonBody");
