@@ -1,1 +1,1 @@
-coin-coliseum = { materials-coliseum-coin }
+stack-coin-coliseum = колизейный жетон

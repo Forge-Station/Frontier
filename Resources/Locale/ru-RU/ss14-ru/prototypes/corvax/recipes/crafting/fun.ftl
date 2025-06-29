@@ -1,3 +1,3 @@
-recipe-PlushieNekoArk-name = { ent-PlushieNekoArk }
-recipe-PlushieNekoArk-desc = { ent-PlushieNekoArk.desc }
+recipe-PlushieNekoArk-name = Неко Арк
+recipe-PlushieNekoArk-desc = С любовью от Аненербе CORP
 
