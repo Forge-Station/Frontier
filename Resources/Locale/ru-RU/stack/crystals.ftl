@@ -1,1 +1,1 @@
-stack-crystal-quantum = квантовый кристалл
+crystal-quantum = { materials-mercenary-token }

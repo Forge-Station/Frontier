@@ -1,1 +1,1 @@
-stack-magmite-ore = магмитовая руда
+stack-magmite-ore = { materials-raw-magmite }
