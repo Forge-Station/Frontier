@@ -1,0 +1,1 @@
+crystal-quantum = { ent-MercenaryToken }

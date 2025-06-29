@@ -1,0 +1,1 @@
+stack-magmite = { ent-Magmite }

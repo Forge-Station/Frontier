@@ -1,11 +1,11 @@
 - type: construction
-  name: DefibrillatorCabinet
+  name: recipe-DefibrillatorCabinet-name
   id: DefibrillatorCabinetConst
   graph: DefibrillatorCabinetGraph
   startNode: start
   targetNode: DefibrillatorCabinet
   category: construction-category-structures
-  description: A small wall mounted cabinet designed to hold a defibrillator.
+  description: recipe-DefibrillatorCabinet-desc
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
