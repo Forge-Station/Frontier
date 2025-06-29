@@ -1,7 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.InteropServices;
-using Content.Corvax.Interfaces.Shared; // Corvax-Sponsors
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Systems;
@@ -45,7 +44,6 @@ internal sealed partial class ChatManager : IChatManager
     [Dependency] private readonly INetConfigurationManager _netConfigManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly PlayerRateLimitManager _rateLimitManager = default!;
-    private ISharedSponsorsManager? _sponsorsManager; // Corvax-Sponsors
 
     /// <summary>
     /// The maximum length a player-sent message can be sent
@@ -59,7 +57,6 @@ internal sealed partial class ChatManager : IChatManager
 
     public void Initialize()
     {
-        IoCManager.Instance!.TryResolveType(out _sponsorsManager); // Corvax-Sponsors
         _netManager.RegisterNetMessage<MsgChatMessage>();
         _netManager.RegisterNetMessage<MsgDeleteChatMessagesBy>();
 
@@ -258,13 +255,6 @@ internal sealed partial class ChatManager : IChatManager
         {
             wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", patronColor),("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
         }
-
-        // Corvax-Sponsors-Start
-        if (_sponsorsManager != null && _sponsorsManager.TryGetServerOocColor(player.UserId, out var oocColor))
-        {
-            wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", oocColor),("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
-        }
-        // Corvax-Sponsors-End
 
         //TODO: player.Name color, this will need to change the structure of the MsgChatMessage
         ChatMessageToAll(ChatChannel.OOC, message, wrappedMessage, EntityUid.Invalid, hideChat: false, recordReplay: true, colorOverride: colorOverride, author: player.UserId);

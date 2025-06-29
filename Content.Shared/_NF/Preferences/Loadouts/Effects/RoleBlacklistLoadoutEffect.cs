@@ -13,8 +13,7 @@ public sealed partial class RoleBlacklistLoadoutEffect : LoadoutEffect
     [DataField(required: true)]
     public List<ProtoId<RoleLoadoutPrototype>> Blacklist = default!;
 
-    public override bool Validate(HumanoidCharacterProfile profile, RoleLoadout loadout, LoadoutPrototype proto, ICommonSession? session, IDependencyCollection collection, // Corvax-Sponsors
-        [NotNullWhen(false)] out FormattedMessage? reason)
+    public override bool Validate(HumanoidCharacterProfile profile, RoleLoadout loadout, ICommonSession? session, IDependencyCollection collection, [NotNullWhen(false)] out FormattedMessage? reason)
     {
         if (Blacklist.Contains(loadout.Role))
         {
