@@ -1,11 +1,9 @@
 - type: construction
-  name: recipe-DefibrillatorCabinet-name
   id: DefibrillatorCabinetConst
   graph: DefibrillatorCabinetGraph
   startNode: start
   targetNode: DefibrillatorCabinet
   category: construction-category-structures
-  description: recipe-DefibrillatorCabinet-desc
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
