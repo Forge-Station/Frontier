@@ -1,1 +1,1 @@
-stack-magmite = { ent-Magmite }
+stack-magmite = { materials-magmite }
