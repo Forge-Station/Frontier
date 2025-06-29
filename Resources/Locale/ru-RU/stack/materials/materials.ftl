@@ -1,1 +1,1 @@
-stack-magmite = { materials-magmite }
+stack-magmite = магмитовая сталь
