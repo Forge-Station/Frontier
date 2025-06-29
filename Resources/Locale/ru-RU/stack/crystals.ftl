@@ -1,1 +1,1 @@
-crystal-quantum = { ent-MercenaryToken }
+crystal-quantum = { materials-mercenary-token }

@@ -1,3 +1,3 @@
-recipe-NekoArk-name = { ent-NekoArk }
-recipe-NekoArk-desc = { ent-NekoArk.desc }
+recipe-NekoArk-name = { ent-PlushieNekoArk }
+recipe-NekoArk-desc = { ent-PlushieNekoArk.desc }
 
