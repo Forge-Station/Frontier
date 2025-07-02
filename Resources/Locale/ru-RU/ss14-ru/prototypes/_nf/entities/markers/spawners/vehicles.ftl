@@ -1,2 +1,2 @@
-ent-SpawnVehicleHoverbikeNF = спавнер ховербайка
+ent-NFSpawnVehicleHoverbike = спавнер ховербайка
     .desc = { ent-MarkerBase.desc }
