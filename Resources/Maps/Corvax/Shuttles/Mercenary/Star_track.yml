@@ -13126,15 +13126,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: MagazinePistolHighCapacityRubber
-  entities:
-  - uid: 1007
-    components:
-    - type: Transform
-      parent: 1005
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: MaterialCloth
   entities:
   - uid: 387
