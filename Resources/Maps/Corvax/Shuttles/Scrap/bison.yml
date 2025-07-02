@@ -2340,9 +2340,6 @@ entities:
       parent: 1
 - proto: AirAlarm
   entities:
-<<<<<<<< HEAD:Resources/Maps/_NF/Shuttles/caladrius.yml
-  - uid: 3
-========
   - uid: 598
     components:
     - type: Transform
