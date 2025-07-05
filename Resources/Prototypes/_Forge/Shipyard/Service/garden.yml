@@ -16,7 +16,7 @@
   price: 28750
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Corvax/Shuttles/Service/garden.yml
+  shuttlePath: /Maps/Forge/Shuttles/Service/garden.yml
   guidebookPage: ShipyardGarden
   class:
   - Botany
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Garden
   mapName: 'HS Розарий'
-  mapPath: /Maps/Corvax/Shuttles/Service/garden.yml
+  mapPath: /Maps/Forge/Shuttles/Service/garden.yml
   minPlayers: 0
   stations:
     Garden:

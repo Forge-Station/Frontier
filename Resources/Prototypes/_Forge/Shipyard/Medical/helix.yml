@@ -16,7 +16,7 @@
   price: 48000 # +5800 from 15% markup
   category: Medium
   group: Medical
-  shuttlePath: /Maps/Corvax/Shuttles/Medical/helix.yml
+  shuttlePath: /Maps/Forge/Shuttles/Medical/helix.yml
   guidebookPage: Null
   class:
   - Medical
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Helix
   mapName: 'NM Helix'
-  mapPath: /Maps/Corvax/Shuttles/Medical/helix.yml
+  mapPath: /Maps/Forge/Shuttles/Medical/helix.yml
   minPlayers: 0
   stations:
     Helix:

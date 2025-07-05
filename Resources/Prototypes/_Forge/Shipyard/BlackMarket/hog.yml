@@ -6,7 +6,7 @@
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
-# Discord: mersen 
+# Discord: mersen
 
 # Shuttle Notes:
 
@@ -18,7 +18,7 @@
   price: 80000
   category: Medium
   group: BlackMarket
-  shuttlePath: /Maps/Corvax/Shuttles/BlackMarket/hog.yml
+  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/hog.yml
   addComponents:
   - type: IFF
     flags: [HideLabel]
@@ -26,7 +26,7 @@
 - type: gameMap
   id: hog
   mapName: 'Боров'
-  mapPath: /Maps/Corvax/Shuttles/BlackMarket/hog.yml
+  mapPath: /Maps/Forge/Shuttles/BlackMarket/hog.yml
   minPlayers: 0
   stations:
     hog:

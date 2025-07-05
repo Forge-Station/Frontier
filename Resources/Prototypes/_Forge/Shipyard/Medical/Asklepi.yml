@@ -18,14 +18,14 @@
   price: 52000
   category: Medium
   group: Medical
-  shuttlePath: /Maps/Corvax/Shuttles/Medical/Asklepi.yml
+  shuttlePath: /Maps/Forge/Shuttles/Medical/Asklepi.yml
   class:
   - Medical
 
 - type: gameMap
   id: Asklepi
   mapName: 'NMS Асклеп'
-  mapPath: /Maps/Corvax/Shuttles/Medical/Asklepi.yml
+  mapPath: /Maps/Forge/Shuttles/Medical/Asklepi.yml
   minPlayers: 0
   stations:
     Asklepi:

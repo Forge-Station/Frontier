@@ -16,14 +16,14 @@
   price: 23500 #меньше не поставлю, ибо нефиг
   category: Small
   group: Medical
-  shuttlePath: /Maps/Corvax/Shuttles/Medical/konserv.yml
+  shuttlePath: /Maps/Forge/Shuttles/Medical/konserv.yml
   class:
   - Medical
 
 - type: gameMap
   id: konserva
   mapName: 'NMS Консерва'
-  mapPath: /Maps/Corvax/Shuttles/Medical/konserv.yml
+  mapPath: /Maps/Forge/Shuttles/Medical/konserv.yml
   minPlayers: 0
   stations:
     konserva:

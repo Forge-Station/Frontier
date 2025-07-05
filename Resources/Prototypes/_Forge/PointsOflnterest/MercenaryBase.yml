@@ -17,7 +17,7 @@
   minimumDistance: 1650
   maximumDistance: 3400
   spawnGroup: Required
-  gridPath: /Maps/Corvax/POI/MercenaryBase.yml
+  gridPath: /Maps/Forge/POI/MercenaryBase.yml
   addComponents:
   - type: IFF
     color: "#a68614"
@@ -28,7 +28,7 @@
 - type: gameMap
   id: MercenaryBase
   mapName: 'База наёмников'
-  mapPath: /Maps/Corvax/POI/MercenaryBase.yml
+  mapPath: /Maps/Forge/POI/MercenaryBase.yml
   minPlayers: 0
   stations:
     MercenaryBase:

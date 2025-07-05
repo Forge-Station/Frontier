@@ -16,7 +16,7 @@
   price: 65000
   category: Medium
   group: Syndicate
-  shuttlePath: /Maps/Corvax/Shuttles/Syndicate/infiltrator.yml
+  shuttlePath: /Maps/Forge/Shuttles/Syndicate/infiltrator.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Infiltrator
   mapName: 'Лазутчик'
-  mapPath: /Maps/Corvax/Shuttles/Syndicate/infiltrator.yml
+  mapPath: /Maps/Forge/Shuttles/Syndicate/infiltrator.yml
   minPlayers: 0
   stations:
     Infiltrator:

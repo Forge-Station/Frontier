@@ -14,7 +14,7 @@
   name: Ретранслятор Эпсилон
   minimumDistance: 4500
   maximumDistance: 6500
-  gridPath: /Maps/Corvax/Events/Elementary/Syndicate/epsilon.yml
+  gridPath: /Maps/Forge/Events/Elementary/Syndicate/epsilon.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -33,7 +33,7 @@
 - type: gameMap
   id: Epsilon
   mapName: Ретранслятор Эпсилон
-  mapPath: /Maps/Corvax/Events/Elementary/Syndicate/epsilon.yml
+  mapPath: /Maps/Forge/Events/Elementary/Syndicate/epsilon.yml
   minPlayers: 0
   stations:
     Epsilon:

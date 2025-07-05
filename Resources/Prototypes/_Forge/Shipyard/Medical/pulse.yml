@@ -13,7 +13,7 @@
    price: 20500
    category: Small
    group: Medical
-   shuttlePath: /Maps/Corvax/Shuttles/Medical/pulse.yml
+   shuttlePath: /Maps/Forge/Shuttles/Medical/pulse.yml
    guidebookPage: Null
    class:
    - Medical
@@ -21,7 +21,7 @@
  - type: gameMap
    id: Pulse
    mapName: 'NM Пульс'
-   mapPath: /Maps/Corvax/Shuttles/Medical/pulse.yml
+   mapPath: /Maps/Forge/Shuttles/Medical/pulse.yml
    minPlayers: 0
    stations:
      Pulse:

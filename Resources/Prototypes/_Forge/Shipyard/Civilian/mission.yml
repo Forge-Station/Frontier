@@ -16,7 +16,7 @@
   price: 24000
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Corvax/Shuttles/Civilian/mission.yml
+  shuttlePath: /Maps/Forge/Shuttles/Civilian/mission.yml
   guidebookPage: Null
   class:
   - Civilian
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Mission
   mapName: 'NC Мессия'
-  mapPath: /Maps/Corvax/Shuttles/Civilian/mission.yml
+  mapPath: /Maps/Forge/Shuttles/Civilian/mission.yml
   minPlayers: 0
   stations:
     Mission:

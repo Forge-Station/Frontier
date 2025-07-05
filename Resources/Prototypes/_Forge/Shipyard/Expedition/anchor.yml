@@ -16,7 +16,7 @@
   price: 175300 # $81000 +30%
   category: Large
   group: Expedition
-  shuttlePath: /Maps/Corvax/Shuttles/Expedition/anchor.yml
+  shuttlePath: /Maps/Forge/Shuttles/Expedition/anchor.yml
   guidebookPage: Null
   class:
   - Expedition
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Anchor
   mapName: 'KC Якорь'
-  mapPath: /Maps/Corvax/Shuttles/Expedition/anchor.yml
+  mapPath: /Maps/Forge/Shuttles/Expedition/anchor.yml
   minPlayers: 0
   stations:
     Anchor:

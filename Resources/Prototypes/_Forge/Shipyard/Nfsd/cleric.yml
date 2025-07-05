@@ -18,7 +18,7 @@
   group: Custom
   access: Security
   mapchecker_group_override: Security  # Treat this as a security vessel for mapchecker purposes
-  shuttlePath: /Maps/Corvax/Shuttles/Nfsd/cleric.yml
+  shuttlePath: /Maps/Forge/Shuttles/Nfsd/cleric.yml
   guidebookPage: Null
   class:
   - Medical
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Cleric
   mapName: 'NSF Пастырь'
-  mapPath: /Maps/Corvax/Shuttles/Nfsd/cleric.yml
+  mapPath: /Maps/Forge/Shuttles/Nfsd/cleric.yml
   minPlayers: 0
   stations:
     Cleric:

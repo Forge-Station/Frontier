@@ -16,7 +16,7 @@
   price: 40000
   category: Small
   group: Syndicate
-  shuttlePath: /Maps/Corvax/Shuttles/Syndicate/hunter.yml
+  shuttlePath: /Maps/Forge/Shuttles/Syndicate/hunter.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Hunter
   mapName: 'Охотник'
-  mapPath: /Maps/Corvax/Shuttles/Syndicate/hunter.yml
+  mapPath: /Maps/Forge/Shuttles/Syndicate/hunter.yml
   minPlayers: 0
   stations:
     Hunter:

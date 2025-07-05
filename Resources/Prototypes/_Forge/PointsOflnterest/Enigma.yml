@@ -17,7 +17,7 @@
   minimumDistance: 17000
   maximumDistance: 20000
   spawnGroup: Required
-  gridPath: /Maps/Corvax/POI/Enigma.yml
+  gridPath: /Maps/Forge/POI/Enigma.yml
   addComponents:
   - type: IFF
     color: "#C83737"
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Enigma
   mapName: 'Энигма'
-  mapPath: /Maps/Corvax/POI/Enigma.yml
+  mapPath: /Maps/Forge/POI/Enigma.yml
   minPlayers: 0
   stations:
     Enigma:

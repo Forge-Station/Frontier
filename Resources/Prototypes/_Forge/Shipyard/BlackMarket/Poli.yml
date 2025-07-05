@@ -6,7 +6,7 @@
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
-# Discord: mersen 
+# Discord: mersen
 
 # Shuttle Notes:
 - type: vessel
@@ -17,7 +17,7 @@
   price: 100000
   category: Medium
   group: BlackMarket
-  shuttlePath: /Maps/Corvax/Shuttles/BlackMarket/Poli.yml
+  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/Poli.yml
   addComponents:
   - type: IFF
     flags: [HideLabel]
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Poli
   mapName: 'Poli'
-  mapPath: /Maps/Corvax/Shuttles/BlackMarket/Poli.yml
+  mapPath: /Maps/Forge/Shuttles/BlackMarket/Poli.yml
   minPlayers: 0
   stations:
     Poli:

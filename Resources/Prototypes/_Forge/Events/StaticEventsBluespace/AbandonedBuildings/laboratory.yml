@@ -15,7 +15,7 @@
   name: Лаборатория 
   minimumDistance: 3500
   maximumDistance: 4500
-  gridPath: /Maps/Corvax/Events/Elementary/AbandonedBuildings/laboratory.yml
+  gridPath: /Maps/Forge/Events/Elementary/AbandonedBuildings/laboratory.yml
   addComponents:
   - type: IFF
     color: "#9d1bde"
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Lab
   mapName: Лаборатория
-  mapPath: /Maps/Corvax/Events/Elementary/AbandonedBuildings/laboratory.yml
+  mapPath: /Maps/Forge/Events/Elementary/AbandonedBuildings/laboratory.yml
   minPlayers: 0
   stations:
     Lab:

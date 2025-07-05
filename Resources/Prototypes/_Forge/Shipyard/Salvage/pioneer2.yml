@@ -16,7 +16,7 @@
   price: 12200 # ~10600$ on mapinit + ~1600$ from 15% markup
   category: Small
   group: Salvage
-  shuttlePath: /Maps/Corvax/Shuttles/Salvage/pioneer.yml
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/pioneer.yml
   guidebookPage: ShipyardPioneer
   class:
   - Salvage
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Pioneer1
   mapName: 'Пионер'
-  mapPath: /Maps/Corvax/Shuttles/Salvage/pioneer.yml
+  mapPath: /Maps/Forge/Shuttles/Salvage/pioneer.yml
   minPlayers: 0
   stations:
     Pioneer1:

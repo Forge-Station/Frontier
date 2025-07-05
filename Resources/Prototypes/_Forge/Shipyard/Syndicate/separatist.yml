@@ -17,7 +17,7 @@
   price: 48200
   category: Medium
   group: Syndicate
-  shuttlePath: /Maps/Corvax/Shuttles/Syndicate/separatist.yml
+  shuttlePath: /Maps/Forge/Shuttles/Syndicate/separatist.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -29,7 +29,7 @@
 - type: gameMap
   id: separatist
   mapName: 'Сепаратист'
-  mapPath: /Maps/Corvax/Shuttles/Syndicate/separatist.yml
+  mapPath: /Maps/Forge/Shuttles/Syndicate/separatist.yml
   minPlayers: 0
   stations:
     separatist:

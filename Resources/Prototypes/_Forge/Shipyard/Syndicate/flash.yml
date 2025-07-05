@@ -17,7 +17,7 @@
   price: 26200
   category: Medium
   group: Syndicate
-  shuttlePath: /Maps/Corvax/Shuttles/Syndicate/flash.yml
+  shuttlePath: /Maps/Forge/Shuttles/Syndicate/flash.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -29,7 +29,7 @@
 - type: gameMap
   id: flash
   mapName: 'Вспышка'
-  mapPath: /Maps/Corvax/Shuttles/Syndicate/flash.yml
+  mapPath: /Maps/Forge/Shuttles/Syndicate/flash.yml
   minPlayers: 0
   stations:
     flash:

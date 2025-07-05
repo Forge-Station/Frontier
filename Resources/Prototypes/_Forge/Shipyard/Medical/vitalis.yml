@@ -5,7 +5,7 @@
   price: 75000 #Appraisal is 53480
   category: Medium
   group: Medical
-  shuttlePath: /Maps/Corvax/Shuttles/Medical/vitalis.yml
+  shuttlePath: /Maps/Forge/Shuttles/Medical/vitalis.yml
   guidebookPage: ShipyardVitalis
   class:
   - Medical
@@ -15,7 +15,7 @@
 - type: gameMap
   id: Vitalis
   mapName: 'CTC Vitalis'
-  mapPath: /Maps/Corvax/Shuttles/Medical/vitalis.yml
+  mapPath: /Maps/Forge/Shuttles/Medical/vitalis.yml
   minPlayers: 0
   stations:
     Vitalis:

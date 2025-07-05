@@ -16,7 +16,7 @@
   price: 20500
   category: Small
   group: Medical
-  shuttlePath: /Maps/Corvax/Shuttles/Medical/spirit.yml
+  shuttlePath: /Maps/Forge/Shuttles/Medical/spirit.yml
   guidebookPage: ShipyardSpirit
   class:
   - Medical
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Spirit
   mapName: 'NM Дух'
-  mapPath: /Maps/Corvax/Shuttles/Medical/spirit.yml
+  mapPath: /Maps/Forge/Shuttles/Medical/spirit.yml
   minPlayers: 0
   stations:
     Spirit:

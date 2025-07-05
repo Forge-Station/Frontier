@@ -18,14 +18,14 @@
   price: 36450
   category: Medium
   group: Salvage
-  shuttlePath: /Maps/Corvax/Shuttles/Salvage/theScavenger.yml
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/theScavenger.yml
   class:
   - Salvage
 
 - type: gameMap
   id: theScavenger
   mapName: 'NMS Мусорщик'
-  mapPath: /Maps/Corvax/Shuttles/Salvage/theScavenger.yml
+  mapPath: /Maps/Forge/Shuttles/Salvage/theScavenger.yml
   minPlayers: 0
   stations:
     theScavenger:

@@ -18,7 +18,7 @@
   price: 68400 #57000 + 20%
   category: Medium
   group: Scrap
-  shuttlePath: /Maps/Corvax/Shuttles/Scrap/diesel.yml
+  shuttlePath: /Maps/Forge/Shuttles/Scrap/diesel.yml
   class:
   - Scrapyard
   - Civilian
@@ -27,7 +27,7 @@
 - type: gameMap
   id: diesel
   mapName: 'SV Дизель'
-  mapPath: /Maps/Corvax/Shuttles/Scrap/diesel.yml
+  mapPath: /Maps/Forge/Shuttles/Scrap/diesel.yml
   minPlayers: 0
   stations:
     diesel:

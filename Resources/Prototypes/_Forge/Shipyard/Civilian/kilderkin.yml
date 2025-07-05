@@ -16,7 +16,7 @@
   price: 48900 # ~41730$ on mapinit + ~4170$ from 10% markup
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Corvax/Shuttles/Civilian/kilderkin.yml
+  shuttlePath: /Maps/Forge/Shuttles/Civilian/kilderkin.yml
   guidebookPage: ShipyardKilderkin
   class:
   - Civilian
@@ -24,7 +24,7 @@
 - type: gameMap
   id: kilderkin
   mapName: 'Бочка'
-  mapPath: /Maps/Corvax/Shuttles/Civilian/kilderkin.yml
+  mapPath: /Maps/Forge/Shuttles/Civilian/kilderkin.yml
   minPlayers: 0
   stations:
     kilderkin:

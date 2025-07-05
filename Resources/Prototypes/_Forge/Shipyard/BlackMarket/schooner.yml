@@ -16,7 +16,7 @@
   price: 60000
   category: Medium
   group: BlackMarket
-  shuttlePath: /Maps/Corvax/Shuttles/BlackMarket/schooner.yml
+  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/schooner.yml
   class:
   - Pirate
   engine:
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Schooner
   mapName: 'Schooner'
-  mapPath: /Maps/Corvax/Shuttles/BlackMarket/schooner.yml
+  mapPath: /Maps/Forge/Shuttles/BlackMarket/schooner.yml
   minPlayers: 0
   stations:
     Schooner:

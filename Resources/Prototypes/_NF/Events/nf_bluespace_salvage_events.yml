@@ -31,20 +31,20 @@
           preventArtifactTriggers: true
         - type: PreventPilot
         paths:
-        - /Maps/Corvax/Shuttles/Scrap/bison.yml
-#        - /Maps/Corvax/Shuttles/Scrap/canister.yml # Too small
-        - /Maps/Corvax/Shuttles/Scrap/disciple.yml
-        - /Maps/Corvax/Shuttles/Scrap/nugget.yml
-        - /Maps/Corvax/Shuttles/Scrap/orange.yml
-        - /Maps/Corvax/Shuttles/Scrap/point.yml
-        - /Maps/Corvax/Shuttles/Scrap/tide.yml
-        - /Maps/Corvax/Shuttles/Scrap/scrap-investigator.yml # Please replace all this maps ones we finish some automated system
-        - /Maps/Corvax/Shuttles/Scrap/scrap-hauler.yml
-        - /Maps/Corvax/Shuttles/Scrap/scrap-crescent.yml
-        - /Maps/Corvax/Shuttles/Scrap/scrap-barge.yml
-        - /Maps/Corvax/Shuttles/Scrap/scrap-courserx.yml
-        - /Maps/Corvax/Shuttles/Scrap/scrap-comet.yml
-        - /Maps/Corvax/Shuttles/Scrap/scrap-sprinter.yml
+        - /Maps/Forge/Shuttles/Scrap/bison.yml
+#        - /Maps/Forge/Shuttles/Scrap/canister.yml # Too small
+        - /Maps/Forge/Shuttles/Scrap/disciple.yml
+        - /Maps/Forge/Shuttles/Scrap/nugget.yml
+        - /Maps/Forge/Shuttles/Scrap/orange.yml
+        - /Maps/Forge/Shuttles/Scrap/point.yml
+        - /Maps/Forge/Shuttles/Scrap/tide.yml
+        - /Maps/Forge/Shuttles/Scrap/scrap-investigator.yml # Please replace all this maps ones we finish some automated system
+        - /Maps/Forge/Shuttles/Scrap/scrap-hauler.yml
+        - /Maps/Forge/Shuttles/Scrap/scrap-crescent.yml
+        - /Maps/Forge/Shuttles/Scrap/scrap-barge.yml
+        - /Maps/Forge/Shuttles/Scrap/scrap-courserx.yml
+        - /Maps/Forge/Shuttles/Scrap/scrap-comet.yml
+        - /Maps/Forge/Shuttles/Scrap/scrap-sprinter.yml
   - type: ActiveRadio
     channels:
     - Engineering

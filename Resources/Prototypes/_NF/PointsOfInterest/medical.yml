@@ -15,7 +15,7 @@
   minimumDistance: 1650
   maximumDistance: 2400 #CorvaxFrontier
   spawnGroup: Required
-  gridPath: /Maps/Corvax/POI/medical.yml #CorvaxFrontier
+  gridPath: /Maps/Forge/POI/medical.yml #CorvaxFrontier
   addComponents:
   - type: IFF
     color: "#00b7eb"
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Medical
   mapName: 'Medical Dispatch'
-  mapPath: /Maps/Corvax/POI/medical.yml #CorvaxFrontier
+  mapPath: /Maps/Forge/POI/medical.yml #CorvaxFrontier
   minPlayers: 0
   stations:
     Medical:

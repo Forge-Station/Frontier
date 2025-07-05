@@ -6,7 +6,7 @@
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
-# Discord: mersen 
+# Discord: mersen
 
 # Shuttle Notes:
 - type: vessel
@@ -17,7 +17,7 @@
   price: 27000
   category: Medium
   group: Syndicate
-  shuttlePath: /Maps/Corvax/Shuttles/Syndicate/milestone.yml
+  shuttlePath: /Maps/Forge/Shuttles/Syndicate/milestone.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -29,7 +29,7 @@
 - type: gameMap
   id: milestone
   mapName: 'Рубеж'
-  mapPath: /Maps/Corvax/Shuttles/Syndicate/milestone.yml
+  mapPath: /Maps/Forge/Shuttles/Syndicate/milestone.yml
   minPlayers: 0
   stations:
     milestone:

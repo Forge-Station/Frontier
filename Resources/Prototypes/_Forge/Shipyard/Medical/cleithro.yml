@@ -12,7 +12,7 @@
   price: 33000 # 10+% up from sell
   category: Medium
   group: Medical
-  shuttlePath: /Maps/Corvax/Shuttles/Medical/cleithro.yml
+  shuttlePath: /Maps/Forge/Shuttles/Medical/cleithro.yml
   guidebookPage: Null
   class:
   - Medical # HEH
@@ -20,7 +20,7 @@
 - type: gameMap
   id: Cleithro
   mapName: 'DC Клейтро'
-  mapPath: /Maps/Corvax/Shuttles/Medical/cleithro.yml
+  mapPath: /Maps/Forge/Shuttles/Medical/cleithro.yml
   minPlayers: 0
   stations:
     Cleithro:

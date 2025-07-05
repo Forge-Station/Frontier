@@ -17,7 +17,7 @@
   category: Small
   group: Security
   access: Security
-  shuttlePath: /Maps/Corvax/Shuttles/Nfsd/hospitaller.yml
+  shuttlePath: /Maps/Forge/Shuttles/Nfsd/hospitaller.yml
   guidebookPage: Null
   class:
   - Medical
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Hospitaller
   mapName: 'NSF Лазарет'
-  mapPath: /Maps/Corvax/Shuttles/Nfsd/hospitaller.yml
+  mapPath: /Maps/Forge/Shuttles/Nfsd/hospitaller.yml
   minPlayers: 0
   stations:
     Hospitaller:

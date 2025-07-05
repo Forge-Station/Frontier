@@ -16,7 +16,7 @@
   price: 106000
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Corvax/Shuttles/Expedition/venera.yml
+  shuttlePath: /Maps/Forge/Shuttles/Expedition/venera.yml
   class:
   - Expedition
   - Civilian
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Venera
   mapName: 'NC Венера'
-  mapPath: /Maps/Corvax/Shuttles/Expedition/venera.yml
+  mapPath: /Maps/Forge/Shuttles/Expedition/venera.yml
   minPlayers: 0
   stations:
     Venera:

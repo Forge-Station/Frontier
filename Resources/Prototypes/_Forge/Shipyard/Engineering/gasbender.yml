@@ -16,17 +16,17 @@
   price: 88500 # ~68140$ on mapinit + 20500$ from 30% markup
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Corvax/Shuttles/Engineering/gasbender.yml
+  shuttlePath: /Maps/Forge/Shuttles/Engineering/gasbender.yml
   guidebookPage: ShipyardGasbender
   class:
   - Atmospherics
   engine:
-  - AME  
+  - AME
 
 - type: gameMap
   id: gasbender
   mapName: 'NT Газовый Гигант'
-  mapPath: /Maps/Corvax/Shuttles/Engineering/gasbender.yml
+  mapPath: /Maps/Forge/Shuttles/Engineering/gasbender.yml
   minPlayers: 0
   stations:
     gasbender:

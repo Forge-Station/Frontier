@@ -15,7 +15,7 @@
   minimumDistance: 750
   maximumDistance: 1000
   spawnGroup: Required
-  gridPath: /Maps/Corvax/POI/nfsd.yml #CorvaxFrontier
+  gridPath: /Maps/Forge/POI/nfsd.yml #CorvaxFrontier
   addComponents:
   - type: IFF
     color: "#8e6444"
@@ -30,7 +30,7 @@
 - type: gameMap
   id: Nfsd
   mapName: 'Аванпост ДСБФ'
-  mapPath: /Maps/Corvax/POI/nfsd.yml #CorvaxFrontier
+  mapPath: /Maps/Forge/POI/nfsd.yml #CorvaxFrontier
   minPlayers: 0
   stations:
     Nfsd:

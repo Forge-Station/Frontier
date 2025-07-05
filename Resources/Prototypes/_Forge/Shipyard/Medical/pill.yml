@@ -18,14 +18,14 @@
   price: 17500 #меньше не поставлю, ибо нефиг
   category: Small
   group: Medical
-  shuttlePath: /Maps/Corvax/Shuttles/Medical/pill.yml
+  shuttlePath: /Maps/Forge/Shuttles/Medical/pill.yml
   class:
   - Medical
 
 - type: gameMap
   id: pill
   mapName: 'NMS Таблетка'
-  mapPath: /Maps/Corvax/Shuttles/Medical/pill.yml
+  mapPath: /Maps/Forge/Shuttles/Medical/pill.yml
   minPlayers: 0
   stations:
     pill:

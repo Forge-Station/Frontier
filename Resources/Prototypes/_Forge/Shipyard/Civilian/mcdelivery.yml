@@ -13,7 +13,7 @@
   price: 10500
   category: Micro
   group: Custom
-  shuttlePath: /Maps/Corvax/Shuttles/Civilian/mcdelivery.yml
+  shuttlePath: /Maps/Forge/Shuttles/Civilian/mcdelivery.yml
   guidebookPage: ShipyardMcDelivery
   class:
   - Civilian
@@ -21,7 +21,7 @@
 - type: gameMap
   id: McDelivery
   mapName: 'DC Курьер'
-  mapPath: /Maps/Corvax/Shuttles/Civilian/mcdelivery.yml
+  mapPath: /Maps/Forge/Shuttles/Civilian/mcdelivery.yml
   minPlayers: 0
   stations:
     McDelivery:

@@ -16,7 +16,7 @@
   price: 10500
   category: Micro
   group: Shipyard
-  shuttlePath: /Maps/Corvax/Shuttles/Engineering/construct.yml
+  shuttlePath: /Maps/Forge/Shuttles/Engineering/construct.yml
   guidebookPage: ShipyardConstruct
   class:
   - Engineering
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Construct
   mapName: 'NT Каркас'
-  mapPath: /Maps/Corvax/Shuttles/Engineering/construct.yml
+  mapPath: /Maps/Forge/Shuttles/Engineering/construct.yml
   minPlayers: 0
   stations:
     Construct:

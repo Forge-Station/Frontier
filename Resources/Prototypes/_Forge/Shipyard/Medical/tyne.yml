@@ -16,14 +16,14 @@
   price: 22000 #~5-6% markup as it's a med ship. Grid values at 17372.
   category: Small
   group: Medical
-  shuttlePath: /Maps/Corvax/Shuttles/Medical/tyne.yml
+  shuttlePath: /Maps/Forge/Shuttles/Medical/tyne.yml
   class:
   - Medical
 
 - type: gameMap
   id: Tyne
   mapName: 'SBB Тайна'
-  mapPath: /Maps/Corvax/Shuttles/Medical/tyne.yml
+  mapPath: /Maps/Forge/Shuttles/Medical/tyne.yml
   minPlayers: 0
   stations:
     Tyne:

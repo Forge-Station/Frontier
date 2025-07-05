@@ -16,7 +16,7 @@
   maximumDistance: 15000
   spawnGamePreset: [ NFPirate ]
   spawnGroup: Required
-  gridPath: /Maps/Corvax/POI/cove.yml #CorvaxFrontier
+  gridPath: /Maps/Forge/POI/cove.yml #CorvaxFrontier
   hideWarp: true
   addComponents:
   - type: IFF
@@ -29,7 +29,7 @@
 - type: gameMap
   id: Cove
   mapName: 'Пиратская Бухта'
-  mapPath: /Maps/Corvax/POI/cove.yml #CorvaxFrontier
+  mapPath: /Maps/Forge/POI/cove.yml #CorvaxFrontier
   minPlayers: 0
   stations:
     Cove:

@@ -16,7 +16,7 @@
   price: 29050 # ~26400$ on mapinit + ~2640$ from 10% markup
   category: Small
   group: Medical
-  shuttlePath: /Maps/Corvax/Shuttles/Medical/searchlight.yml
+  shuttlePath: /Maps/Forge/Shuttles/Medical/searchlight.yml
   guidebookPage: ShipyardSearchlight
   class:
   - Medical
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Searchlight
   mapName: 'Прожектор'
-  mapPath: /Maps/Corvax/Shuttles/Medical/searchlight.yml
+  mapPath: /Maps/Forge/Shuttles/Medical/searchlight.yml
   minPlayers: 0
   stations:
     Searchlight:

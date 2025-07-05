@@ -17,7 +17,7 @@
   category: Small
   group: Security
   access: Detective
-  shuttlePath: /Maps/Corvax/Shuttles/Nfsd/interceptor.yml
+  shuttlePath: /Maps/Forge/Shuttles/Nfsd/interceptor.yml
   guidebookPage: Null
   class:
   - Detective
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Interceptor
   mapName: 'NSF Перехватчик'
-  mapPath: /Maps/Corvax/Shuttles/Nfsd/interceptor.yml
+  mapPath: /Maps/Forge/Shuttles/Nfsd/interceptor.yml
   minPlayers: 0
   stations:
     Interceptor:

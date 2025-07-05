@@ -18,14 +18,14 @@
   price: 70500 # 13.5% markup (+2350 from init)
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Corvax/Shuttles/Service/kontrashef.yml
+  shuttlePath: /Maps/Forge/Shuttles/Service/kontrashef.yml
   class:
   - Kitchen
 
 - type: gameMap
   id: kontrashef
   mapName: 'NC Эскимо'
-  mapPath: /Maps/Corvax/Shuttles/Service/kontrashef.yml
+  mapPath: /Maps/Forge/Shuttles/Service/kontrashef.yml
   minPlayers: 0
   stations:
     kontrashef:

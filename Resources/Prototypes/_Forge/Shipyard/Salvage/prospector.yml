@@ -16,7 +16,7 @@
   price: 24500
   category: Small
   group: Salvage
-  shuttlePath: /Maps/Corvax/Shuttles/Salvage/prospector.yml
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/prospector.yml
   guidebookPage: ShipyardProspector
   class:
   - Salvage
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Prospector
   mapName: 'NC Старатель'
-  mapPath: /Maps/Corvax/Shuttles/Salvage/prospector.yml
+  mapPath: /Maps/Forge/Shuttles/Salvage/prospector.yml
   minPlayers: 0
   stations:
     Prospector:

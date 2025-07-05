@@ -15,7 +15,7 @@
   name: Ячейка контрабанды A
   minimumDistance: 2900
   maximumDistance: 5000
-  gridPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  gridPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -28,7 +28,7 @@
 - type: gameMap
   id: PodA
   mapName: Ячейка контрабанды A
-  mapPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  mapPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
   minPlayers: 0
   stations:
     PodA:
@@ -45,7 +45,7 @@
   name: Ячейка контрабанды B
   minimumDistance: 2900
   maximumDistance: 5000
-  gridPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  gridPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -58,7 +58,7 @@
 - type: gameMap
   id: PodB
   mapName: Ячейка контрабанды B
-  mapPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  mapPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
   minPlayers: 0
   stations:
     PodB:
@@ -75,7 +75,7 @@
   name: Ячейка контрабанды C
   minimumDistance: 2900
   maximumDistance: 5000
-  gridPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  gridPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -88,7 +88,7 @@
 - type: gameMap
   id: PodC
   mapName: Ячейка контрабанды C
-  mapPath: /Maps/Corvax/Events/Elementary/Syndicate/pod.yml
+  mapPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
   minPlayers: 0
   stations:
     PodC:

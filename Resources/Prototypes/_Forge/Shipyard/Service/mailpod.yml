@@ -17,7 +17,7 @@
   category: Micro
   group: Sr
   access: Mail
-  shuttlePath: /Maps/Corvax/Shuttles/Service/mailpod.yml
+  shuttlePath: /Maps/Forge/Shuttles/Service/mailpod.yml
   guidebookPage: Null
   class:
   - Cargo
@@ -25,7 +25,7 @@
 - type: gameMap
   id: MailPod
   mapName: 'NC Ямщик'
-  mapPath: /Maps/Corvax/Shuttles/Service/mailpod.yml
+  mapPath: /Maps/Forge/Shuttles/Service/mailpod.yml
   minPlayers: 0
   stations:
     MailPod:

@@ -15,7 +15,7 @@
   name: Обломок
   minimumDistance: 4500
   maximumDistance: 6500
-  gridPath: /Maps/Corvax/Events/Elementary/Syndicate/chip.yml
+  gridPath: /Maps/Forge/Events/Elementary/Syndicate/chip.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -28,7 +28,7 @@
 - type: gameMap
   id: chip
   mapName: Обломок
-  mapPath: /Maps/Corvax/Events/Elementary/Syndicate/chip.yml
+  mapPath: /Maps/Forge/Events/Elementary/Syndicate/chip.yml
   minPlayers: 0
   stations:
     chip:

@@ -11,7 +11,7 @@
   price: 70000 #Selling price is 22520
   category: Medium
   group: BlackMarket
-  shuttlePath: /Maps/Corvax/Shuttles/BlackMarket/falcon.yml
+  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/falcon.yml
   guidebookPage: Null
   class:
   - Pirate
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Falcon
   mapName: 'Falcon'
-  mapPath: /Maps/Corvax/Shuttles/BlackMarket/falcon.yml
+  mapPath: /Maps/Forge/Shuttles/BlackMarket/falcon.yml
   minPlayers: 0
   stations:
     Falcon:

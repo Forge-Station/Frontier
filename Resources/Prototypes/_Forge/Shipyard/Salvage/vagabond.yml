@@ -17,7 +17,7 @@
   price: 60000
   category: Medium
   group: Salvage
-  shuttlePath: /Maps/Corvax/Shuttles/Salvage/vagabond.yml
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/vagabond.yml
   guidebookPage: ShipyardVagabond
   class:
   - Salvage
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Vagabond
   mapName: 'NT Бродяга'
-  mapPath: /Maps/Corvax/Shuttles/Salvage/vagabond.yml
+  mapPath: /Maps/Forge/Shuttles/Salvage/vagabond.yml
   minPlayers: 0
   stations:
     Vagabond:

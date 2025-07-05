@@ -14,7 +14,7 @@
   name: 'Синдикатовcкий аванпост Чарли'
   minimumDistance: 8150
   maximumDistance: 13550
-  gridPath: /Maps/Corvax/Events/Elementary/Syndicate/charlie.yml
+  gridPath: /Maps/Forge/Events/Elementary/Syndicate/charlie.yml
   addComponents:
   - type: IFF
     color: "#C83737"
@@ -34,7 +34,7 @@
 - type: gameMap
   id: Charlie
   mapName: 'Синдикатовcкий аванпост Чарли'
-  mapPath: /Maps/Corvax/Events/Elementary/Syndicate/charlie.yml
+  mapPath: /Maps/Forge/Events/Elementary/Syndicate/charlie.yml
   minPlayers: 0
   stations:
     Charlie:

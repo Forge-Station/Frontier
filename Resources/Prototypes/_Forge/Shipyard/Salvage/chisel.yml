@@ -16,7 +16,7 @@
   price: 34615 # on init 30100$, 15% markup 4515$
   category: Small
   group: Salvage
-  shuttlePath: /Maps/Corvax/Shuttles/Salvage/chisel.yml
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/chisel.yml
   guidebookPage: ShipyardChisel
   class:
   - Salvage
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Chisel
   mapName: 'ICR Зубило'
-  mapPath: /Maps/Corvax/Shuttles/Salvage/chisel.yml
+  mapPath: /Maps/Forge/Shuttles/Salvage/chisel.yml
   minPlayers: 0
   stations:
     Chisel:

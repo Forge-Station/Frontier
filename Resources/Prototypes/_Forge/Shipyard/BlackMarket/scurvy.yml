@@ -6,7 +6,7 @@
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
-# Discord: mersen 
+# Discord: mersen
 
 # Shuttle Notes:
 
@@ -18,7 +18,7 @@
   price: 39000
   category: Small
   group: BlackMarket
-  shuttlePath: /Maps/Corvax/Shuttles/BlackMarket/scurvy.yml
+  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/scurvy.yml
   addComponents:
   - type: IFF
     flags: [HideLabel]
@@ -26,7 +26,7 @@
 - type: gameMap
   id: scurvy
   mapName: 'scurvy'
-  mapPath: /Maps/Corvax/Shuttles/BlackMarket/scurvy.yml
+  mapPath: /Maps/Forge/Shuttles/BlackMarket/scurvy.yml
   minPlayers: 0
   stations:
     scurvy:

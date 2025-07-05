@@ -35,7 +35,7 @@
         - type: PreventPilot
         - type: ForceAnchor # Added post-FTL, so anchoring is fine.
         paths:
-        - /Maps/Corvax/Events/Periodic/Syndicate/syndicateVault.yml #Corvax-Frontier
+        - /Maps/Forge/Events/Periodic/Syndicate/syndicateVault.yml #Corvax-Frontier
     rewardAccounts:
       Nfsd: 1.0
 
@@ -75,7 +75,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Corvax/Events/Periodic/NanoTrasen/storageNt.yml #Corvax-Frontier
+        - /Maps/Forge/Events/Periodic/NanoTrasen/storageNt.yml #Corvax-Frontier
     rewardAccounts:
       Nfsd: 1.0
 
@@ -116,7 +116,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Corvax/Events/Periodic/NanoTrasen/storageNtSmall.yml #Corvax-Frontier
+        - /Maps/Forge/Events/Periodic/NanoTrasen/storageNtSmall.yml #Corvax-Frontier
     rewardAccounts:
       Nfsd: 1.0
 
@@ -155,7 +155,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Corvax/Events/Periodic/Syndicate/syndieftlintercept.yml #Corvax-Frontier
+        - /Maps/Forge/Events/Periodic/Syndicate/syndieftlintercept.yml #Corvax-Frontier
 
 - type: entity
   id: BluespaceWizardFederationScout
@@ -192,7 +192,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Corvax/Events/Periodic/Magic/shuttleFederationMages.yml #Corvax-Frontier
+        - /Maps/Forge/Events/Periodic/Magic/shuttleFederationMages.yml #Corvax-Frontier
 
 - type: entity
   id: BluespaceBloodMoon
@@ -229,7 +229,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Corvax/Events/Periodic/Cult/bloodmoon.yml #Corvax-Frontier
+        - /Maps/Forge/Events/Periodic/Cult/bloodmoon.yml #Corvax-Frontier
 
 - type: entity
   id: BluespaceCave
@@ -264,7 +264,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Corvax/Events/Periodic/Caves/cave.yml #Corvax-Frontier
+        - /Maps/Forge/Events/Periodic/Caves/cave.yml #Corvax-Frontier
 
 - type: entity
   id: NFBluespaceBrokenMcDelivery
@@ -298,4 +298,4 @@
           preventArtifactTriggers: true
         - type: PreventPilot
         paths:
-        - /Maps/Corvax/Events/Periodic/Cargo/mcevent.yml #Corvax-Frontier
+        - /Maps/Forge/Events/Periodic/Cargo/mcevent.yml #Corvax-Frontier

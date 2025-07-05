@@ -16,14 +16,14 @@
   price: 36125 # ~31020$ on mapinit + ~3100$ from 10% markup
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Corvax/Shuttles/Civilian/lantern.yml
+  shuttlePath: /Maps/Forge/Shuttles/Civilian/lantern.yml
   class:
   - Civilian
 
 - type: gameMap
   id: lantern
   mapName: 'Кадило'
-  mapPath: /Maps/Corvax/Shuttles/Civilian/lantern.yml
+  mapPath: /Maps/Forge/Shuttles/Civilian/lantern.yml
   minPlayers: 0
   stations:
     lantern:

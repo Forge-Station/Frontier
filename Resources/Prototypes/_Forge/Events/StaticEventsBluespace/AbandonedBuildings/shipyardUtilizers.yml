@@ -15,7 +15,7 @@
   name: Заброшенная Верфь
   minimumDistance: 2000
   maximumDistance: 3000
-  gridPath: /Maps/Corvax/Events/Elementary/AbandonedBuildings/shipyardUtilizers.yml
+  gridPath: /Maps/Forge/Events/Elementary/AbandonedBuildings/shipyardUtilizers.yml
   addComponents:
   - type: IFF
     color: "#a88732"
@@ -28,7 +28,7 @@
 - type: gameMap
   id: shipyardUtilizers
   mapName: Заброшенная Верфь
-  mapPath: /Maps/Corvax/Events/Elementary/AbandonedBuildings/shipyardUtilizers.yml
+  mapPath: /Maps/Forge/Events/Elementary/AbandonedBuildings/shipyardUtilizers.yml
   minPlayers: 0
   stations:
     shipyardUtilizers:

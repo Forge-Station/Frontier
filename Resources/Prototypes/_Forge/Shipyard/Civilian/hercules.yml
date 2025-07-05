@@ -18,7 +18,7 @@
   price: 39900
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Corvax/Shuttles/Civilian/hercules.yml
+  shuttlePath: /Maps/Forge/Shuttles/Civilian/hercules.yml
   class:
   - Cargo
   - Civilian
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Hercules
   mapName: 'NCS Геркулес'
-  mapPath: /Maps/Corvax/Shuttles/Civilian/hercules.yml
+  mapPath: /Maps/Forge/Shuttles/Civilian/hercules.yml
   minPlayers: 0
   stations:
     Hercules:

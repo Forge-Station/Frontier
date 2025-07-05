@@ -13,7 +13,7 @@
   price: 78000
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Corvax/Shuttles/Service/mccargo.yml
+  shuttlePath: /Maps/Forge/Shuttles/Service/mccargo.yml
   guidebookPage: ShipyardMcCargo
   class:
   - Kitchen
@@ -21,7 +21,7 @@
 - type: gameMap
   id: McCargo
   mapName: 'DC Каргония'
-  mapPath: /Maps/Corvax/Shuttles/Service/mccargo.yml
+  mapPath: /Maps/Forge/Shuttles/Service/mccargo.yml
   minPlayers: 0
   stations:
     McCargo:

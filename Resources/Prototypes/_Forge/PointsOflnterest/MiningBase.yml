@@ -17,7 +17,7 @@
   minimumDistance: 1650
   maximumDistance: 3400
   spawnGroup: Required
-  gridPath: /Maps/Corvax/POI/MiningBase.yml
+  gridPath: /Maps/Forge/POI/MiningBase.yml
   addComponents:
   - type: IFF
     color: "#a68614"
@@ -35,7 +35,7 @@
 - type: gameMap
   id: MiningBase
   mapName: 'База Шахтёров'
-  mapPath: /Maps/Corvax/POI/MiningBase.yml
+  mapPath: /Maps/Forge/POI/MiningBase.yml
   minPlayers: 0
   stations:
     MiningBase:

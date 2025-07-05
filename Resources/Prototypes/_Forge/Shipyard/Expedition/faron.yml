@@ -18,12 +18,12 @@
   price: 78000 # 50% tax
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Corvax/Shuttles/Expedition/faron.yml
+  shuttlePath: /Maps/Forge/Shuttles/Expedition/faron.yml
 
 - type: gameMap
   id: faron
   mapName: 'NLE Фарон'
-  mapPath: /Maps/Corvax/Shuttles/Expedition/faron.yml
+  mapPath: /Maps/Forge/Shuttles/Expedition/faron.yml
   minPlayers: 0
   stations:
     faron:

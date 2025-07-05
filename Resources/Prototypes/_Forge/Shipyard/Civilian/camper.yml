@@ -16,7 +16,7 @@
   price: 15000
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Corvax/Shuttles/Civilian/camper.yml
+  shuttlePath: /Maps/Forge/Shuttles/Civilian/camper.yml
   guidebookPage: ShipyardCamper
   class:
   - Civilian
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Camper
   mapName: 'SSS Кемпер'
-  mapPath: /Maps/Corvax/Shuttles/Civilian/camper.yml
+  mapPath: /Maps/Forge/Shuttles/Civilian/camper.yml
   minPlayers: 0
   stations:
     Camper:

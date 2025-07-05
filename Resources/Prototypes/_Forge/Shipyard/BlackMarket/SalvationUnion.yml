@@ -16,7 +16,7 @@
   price: 39000
   category: Small
   group: BlackMarket
-  shuttlePath: /Maps/Corvax/Shuttles/BlackMarket/SalvationUnion.yml
+  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/SalvationUnion.yml
   addComponents:
   - type: IFF
     flags: [HideLabel]
@@ -24,7 +24,7 @@
 - type: gameMap
   id: SalvationUnion
   mapName: 'SalvationUnion'
-  mapPath: /Maps/Corvax/Shuttles/BlackMarket/SalvationUnion.yml
+  mapPath: /Maps/Forge/Shuttles/BlackMarket/SalvationUnion.yml
   minPlayers: 0
   stations:
     SalvationUnion:

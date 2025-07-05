@@ -16,7 +16,7 @@
   price: 20000
   category: Small
   group: Medical
-  shuttlePath: /Maps/Corvax/Shuttles/Medical/placebo.yml
+  shuttlePath: /Maps/Forge/Shuttles/Medical/placebo.yml
   guidebookPage: Null
   class:
   - Medical
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Placebo
   mapName: 'NC Плацебо'
-  mapPath: /Maps/Corvax/Shuttles/Medical/placebo.yml
+  mapPath: /Maps/Forge/Shuttles/Medical/placebo.yml
   minPlayers: 0
   stations:
     Placebo:

@@ -16,7 +16,7 @@
   price: 47000 # +4800 from 15% markup
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Corvax/Shuttles/Science/sparrow.yml
+  shuttlePath: /Maps/Forge/Shuttles/Science/sparrow.yml
   guidebookPage: Null
   class:
   - Science
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Sparrow
   mapName: 'NR Воробей'
-  mapPath: /Maps/Corvax/Shuttles/Science/sparrow.yml
+  mapPath: /Maps/Forge/Shuttles/Science/sparrow.yml
   minPlayers: 0
   stations:
     Sparrow:
