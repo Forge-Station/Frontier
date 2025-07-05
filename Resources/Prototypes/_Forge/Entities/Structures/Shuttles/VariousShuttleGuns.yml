@@ -85,11 +85,11 @@
     minAngle: 0
     maxAngle: 17
     soundGunshot:
-      path: /Audio/Corvax/Weapons/Guns/Gunshots/shuttleshotgun.ogg
+      path: /Audio/Forge/Weapons/Guns/Gunshots/shuttleshotgun.ogg
       params:
         pitch: 0.5
     soundEmpty:
-      path: /Audio/Corvax/Weapons/Guns/Empty/EmptySHR.ogg
+      path: /Audio/Forge/Weapons/Guns/Empty/EmptySHR.ogg
   #- type: MagazineAmmoProvider
   #- type: MagazineVisuals
     #magState: mag
@@ -106,7 +106,7 @@
           tags:
           - ShuttleShotgunShellsBox
         insertSound:
-          path: /Audio/Corvax/Weapons/Guns/MagIn/MagInSHR.ogg
+          path: /Audio/Forge/Weapons/Guns/MagIn/MagInSHR.ogg
           params:
             pitch: 1
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
@@ -142,11 +142,11 @@
     minAngle: 0
     maxAngle: 6
     soundGunshot:
-      path: /Audio/Corvax/Weapons/Guns/Gunshots/amrifle.ogg
+      path: /Audio/Forge/Weapons/Guns/Gunshots/amrifle.ogg
       params:
         pitch: 0.5
     soundEmpty:
-      path: /Audio/Corvax/Weapons/Guns/Empty/EmptySHR.ogg
+      path: /Audio/Forge/Weapons/Guns/Empty/EmptySHR.ogg
   - type: Machine
     board: ShuttleGunAntiMaterialMachineCircuitboard
   - type: BallisticAmmoProvider
@@ -155,7 +155,7 @@
         - CartridgeAntiMateriel
     capacity: 16
     soundInsert:
-      path: /Audio/Corvax/Weapons/Guns/MagIn/Reload60Cartridge.ogg
+      path: /Audio/Forge/Weapons/Guns/MagIn/Reload60Cartridge.ogg
       params:
         pitch: 0.91
 
@@ -193,11 +193,11 @@
     minAngle: 0
     maxAngle: 11
     soundGunshot:
-      path: /Audio/Corvax/Weapons/Guns/Gunshots/LightSHR.ogg
+      path: /Audio/Forge/Weapons/Guns/Gunshots/LightSHR.ogg
       params:
         pitch: 0.5
     soundEmpty:
-      path: /Audio/Corvax/Weapons/Guns/Empty/EmptySHR.ogg
+      path: /Audio/Forge/Weapons/Guns/Empty/EmptySHR.ogg
   - type: MagazineAmmoProvider
   - type: MagazineVisuals
     magState: mag
@@ -214,7 +214,7 @@
           tags:
           - ShuttleRifleAmmoBox
         insertSound:
-          path: /Audio/Corvax/Weapons/Guns/MagIn/MagInSHR.ogg
+          path: /Audio/Forge/Weapons/Guns/MagIn/MagInSHR.ogg
           params:
             pitch: 1
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
@@ -253,11 +253,11 @@
     minAngle: 0
     maxAngle: 12
     soundGunshot:
-      path: /Audio/Corvax/Weapons/Guns/Gunshots/35SHR.ogg
+      path: /Audio/Forge/Weapons/Guns/Gunshots/35SHR.ogg
       params:
         pitch: 0.5
     soundEmpty:
-      path: /Audio/Corvax/Weapons/Guns/Empty/EmptySHR.ogg
+      path: /Audio/Forge/Weapons/Guns/Empty/EmptySHR.ogg
   - type: MagazineAmmoProvider
   - type: MagazineVisuals
     magState: mag
@@ -274,7 +274,7 @@
           tags:
           - ShuttleSmgRifleAmmoBox
         insertSound:
-          path: /Audio/Corvax/Weapons/Guns/MagIn/MagInSHR.ogg
+          path: /Audio/Forge/Weapons/Guns/MagIn/MagInSHR.ogg
           params:
             pitch: 1
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
@@ -313,11 +313,11 @@
     minAngle: 1
     maxAngle: 10
     soundGunshot:
-      path: /Audio/Corvax/Weapons/Guns/Gunshots/45SHR.ogg
+      path: /Audio/Forge/Weapons/Guns/Gunshots/45SHR.ogg
       params:
         pitch: 0.5
     soundEmpty:
-      path: /Audio/Corvax/Weapons/Guns/Empty/EmptySHR.ogg
+      path: /Audio/Forge/Weapons/Guns/Empty/EmptySHR.ogg
   - type: MagazineAmmoProvider
   - type: MagazineVisuals
     magState: mag
@@ -334,7 +334,7 @@
           tags:
           - ShuttleMagnumRifleAmmoBox
         insertSound:
-          path: /Audio/Corvax/Weapons/Guns/MagIn/MagInSHR.ogg
+          path: /Audio/Forge/Weapons/Guns/MagIn/MagInSHR.ogg
           params:
             pitch: 1
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
