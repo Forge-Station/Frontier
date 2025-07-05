@@ -11,7 +11,7 @@ using Robust.Client.UserInterface;
 using Robust.Shared.GameStates;
 using Robust.Shared.Timing;
 using Robust.Shared.Player;
-using Content.Client._Corvax.Respawn; // Frontier
+using Content.Client._Forge.Respawn; // Frontier
 
 namespace Content.Client.Ghost
 {

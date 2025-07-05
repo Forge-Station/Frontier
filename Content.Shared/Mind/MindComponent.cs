@@ -4,7 +4,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Content.Shared._Corvax.Respawn; // Frontier
+using Content.Shared._Forge.Respawn; // Frontier
 
 namespace Content.Shared.Mind;
 

@@ -21,7 +21,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
-using Content.Server._Corvax.Respawn; // Frontier
+using Content.Server._Forge.Respawn; // Frontier
 using Content.Shared._NF.Roles.Components; // Frontier
 using Content.Shared.Humanoid.Prototypes; // Frontier
 namespace Content.Server.GameTicking

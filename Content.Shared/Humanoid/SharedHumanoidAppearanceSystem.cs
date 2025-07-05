@@ -9,8 +9,8 @@ using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
 using Content.Shared.Preferences;
-using Content.Shared._Corvax.Speech.Synthesis; // Corvax-Frontier-Barks
-using Content.Shared._Corvax.Speech.Synthesis.Components; // Corvax-Frontier-Barks
+using Content.Shared._Forge.Speech.Synthesis; // Corvax-Frontier-Barks
+using Content.Shared._Forge.Speech.Synthesis.Components; // Corvax-Frontier-Barks
 using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.GameObjects.Components.Localization;

@@ -1,4 +1,4 @@
-using Content.Server.Corvax.Elzuosa; //Corvax-Frontier
+using Content.Server._Forge.Elzuosa; //Corvax-Frontier
 using Content.Server.Entry;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Power.Components;
