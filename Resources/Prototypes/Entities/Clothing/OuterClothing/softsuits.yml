@@ -108,12 +108,12 @@
   description: A void suit made for paramedics.
   components:
   - type: Sprite
-    sprite: Corvax/Clothing/OuterClothing/Hardsuits/paramed.rsi #Corvax-Frontier-Resprite
+    sprite: Forge/Clothing/OuterClothing/Hardsuits/paramed.rsi #Corvax-Frontier-Resprite
     layers:
     - state: icon
   - type: Appearance
   - type: Clothing
-    sprite: Corvax/Clothing/OuterClothing/Hardsuits/paramed.rsi #Corvax-Frontier-Resprite
+    sprite: Forge/Clothing/OuterClothing/Hardsuits/paramed.rsi #Corvax-Frontier-Resprite
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000

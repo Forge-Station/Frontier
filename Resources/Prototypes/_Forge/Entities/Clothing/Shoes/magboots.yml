@@ -1,0 +1,25 @@
+- type: entity
+  parent: ClothingShoesBootsMagSyndie
+  id: ClothingShoesBootsJetBoots
+  name: jump boots
+  description: One moment and you are already here.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/jetboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/jetboots.rsi
+  - type: Magboots
+    magbootsAlert: ActionToggleJetBoots
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: NoSlip
+
+- type: alert
+  id: ActionToggleJetBoots
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/jetboots.rsi
+    state: icon
+  name: alerts-magboots-name
+  description: alerts-magboots-desc

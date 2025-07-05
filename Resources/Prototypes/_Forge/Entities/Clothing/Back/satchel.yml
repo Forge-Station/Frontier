@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackMilitarySatchel
+  name: army satchel
+  description: A tactical satchel for army related needs.
+  components:
+  - type: Sprite
+    sprite: Forge/Back/Satchels/military.rsi
+  - type: Storage
+    grid:
+    - 0,0,1,3
+    - 3,0,6,3
+    - 8,0,9,3
+    maxItemSize: Huge

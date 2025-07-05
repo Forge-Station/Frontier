@@ -1,0 +1,47 @@
+- type: entity
+  parent: [BaseStructureDisableToolUse, BaseLathe]
+  id: ColiseumExchanger
+  name: exchanger
+  description: Here you can exchange coins from the coliseum for money.
+  components:
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 3
+    enabled: false
+    sound:
+      path: /Audio/Ambience/Objects/vending_machine_hum.ogg
+  - type: LitOnPowered
+  - type: ApcPowerReceiver
+    powerLoad: 100
+  - type: Advertise
+    pack: CuddlyCritterAds
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.4"
+    castShadows: false
+  - type: Transform
+    noRot: false
+  - type: Sprite
+    sprite: Forge/Structures/Machines/coliseumexchanger.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticPacks:
+      - CorvaxExchangerStatic
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - ColiseumCoin

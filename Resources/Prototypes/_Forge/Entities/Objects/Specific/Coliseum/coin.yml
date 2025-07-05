@@ -1,0 +1,72 @@
+- type: entity
+  id: ColiseumCoin
+  parent: BaseItem
+  name: coliseum coin
+  description: Can be exchanged for money.
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Materials/Coliseum/coliseum_coin.rsi
+    state: coin
+  - type: Item
+    sprite: Forge/Objects/Materials/Coliseum/coliseum_coin.rsi
+    size: Tiny
+  - type: PointLight
+    color: "#00FF00"
+    radius: 1.5
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      ColiseumCoin: 1
+  - type: Tag
+    tags:
+    - Sheet
+    - ColiseumCoin
+  - type: Stack
+    count: 1
+    stackType: ColiseumCoin
+
+- type: entity
+  id: ColiseumCoinBlocked
+  name: blocked coliseum coin
+  description: Can be exchanged for money. But it blocked, wait a time for unlock it.
+  suffix: blocked
+  components:
+  - type: Sprite
+    drawdepth: Items
+    noRot: false
+    sprite: Forge/Objects/Materials/Coliseum/coliseum_coin.rsi
+    state: coin
+  - type: DeleteOnTrigger
+  - type: SpawnOnTrigger
+    proto: ColiseumCoin
+  - type: PointLight
+    color: "#FF0000"
+    radius: 1.5
+  - type: RepeatingTrigger
+    delay: 300
+  - type: Clickable
+  - type: InteractionOutline
+  - type: MovedByPressure
+  - type: EmitSoundOnCollide
+    sound:
+      collection: WeakHit
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/drop.ogg
+      params:
+        volume: 2
+  - type: CollisionWake
+  - type: Physics
+    bodyType: Dynamic
+    fixedRotation: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2

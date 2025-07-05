@@ -23,7 +23,7 @@
 - type: entity
   id: BaseMagazineAntiMateriel
   name: "magazine (.60 AntiMateriel)"
-  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] 
+  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ]
   abstract: true
   components:
   - type: Tag
@@ -42,7 +42,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Corvax/Objects/Weapons/Guns/Ammunition/Magazine/antiMateriel.rsi
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/antiMateriel.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -62,7 +62,7 @@
   - type: BallisticAmmoProvider
     proto: CartridgeAntiMateriel
   - type: Sprite
-    sprite: Corvax/Objects/Weapons/Guns/Ammunition/Magazine/antiMateriel.rsi
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/antiMateriel.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

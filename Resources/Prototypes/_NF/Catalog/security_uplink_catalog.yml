@@ -357,7 +357,7 @@
   name:  uplink-security-WeaponLightMachineGunL2RPK-name
   description: uplink-security-WeaponLightMachineGunL2RPK-desc
   productEntity: WeaponCaseLongWeaponLightMachineGunL2RPK
-  icon: { sprite: Corvax/Objects/Weapons/Guns/LMGs/L2RPK.rsi, state: base }
+  icon: { sprite: Forge/Objects/Weapons/Guns/LMGs/L2RPK.rsi, state: base }
   cost:
     FrontierUplinkCoin: 20
   categories:
@@ -378,7 +378,7 @@
   name:  uplink-security-WeaponSubMachineGunScorpion-name
   description: uplink-security-WeaponSubMachineGunScorpion-desc
   productEntity: WeaponCaseLongWeaponSubMachineGunScorpion
-  icon: { sprite: Corvax/Objects/Weapons/Guns/SMGs/scorpion.rsi, state: base }
+  icon: { sprite: Forge/Objects/Weapons/Guns/SMGs/scorpion.rsi, state: base }
   cost:
     FrontierUplinkCoin: 3
   categories:
@@ -399,7 +399,7 @@
   name:  uplink-security-WeaponRifleScar12-name
   description: uplink-security-WeaponRifleScar12-desc
   productEntity: WeaponCaseLongWeaponRifleScar12
-  icon: { sprite: Corvax/Objects/Weapons/Guns/Rifles/scar12.rsi, state: base }
+  icon: { sprite: Forge/Objects/Weapons/Guns/Rifles/scar12.rsi, state: base }
   cost:
     FrontierUplinkCoin: 7
   categories:
@@ -459,7 +459,7 @@
   name:  uplink-security-ks23-name
   description: uplink-security-ks23-desc
   productEntity: WeaponCaseLongWeaponShotgunKS23
-  icon: { sprite: /Textures/Corvax/Objects/Weapons/Guns/Shotguns/ks23.rsi, state: icon }
+  icon: { sprite: Forge/Objects/Weapons/Guns/Shotguns/ks23.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 3
   categories:
@@ -1476,7 +1476,7 @@
       whitelist:
         - Sheriff
 # Corvax-Frontier
-- type: listing 
+- type: listing
   id: UplinkSecurityResearchDisk10000
   name:  uplink-security-research-disk-10000-name
   description: uplink-security-research-disk-10000-desc
@@ -1638,7 +1638,7 @@
   name:  uplink-security-contraband-forensics-M4A1
   description: uplink-security-contraband-forensics-M4A1-desc
   productEntity: WeaponCaseLongM4A1
-  icon: { sprite: Corvax/Objects/Weapons/Guns/Rifles/m4a1.rsi, state: icon }
+  icon: { sprite: Forge/Objects/Weapons/Guns/Rifles/m4a1.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 20
   categories:
@@ -1677,7 +1677,7 @@
   name:  uplink-security-contraband-forensics-AD12
   description: uplink-security-contraband-forensics-AD12-desc
   productEntity: WeaponCaseLongAD12
-  icon: { sprite: Corvax/Objects/Weapons/Guns/Shotguns/ad12.rsi, state: icon }
+  icon: { sprite: Forge/Objects/Weapons/Guns/Shotguns/ad12.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 11
   categories:
@@ -1698,7 +1698,7 @@
   name:  uplink-security-contraband-forensics-CarbineSniper
   description: uplink-security-contraband-forensics-CarbineSniper-desc
   productEntity: WeaponCaseLongWeaponPulseCarbineSniper
-  icon: { sprite: Corvax/Objects/Weapons/Guns/Battery/pulse_sniper.rsi, state: icon }
+  icon: { sprite: Forge/Objects/Weapons/Guns/Battery/pulse_sniper.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 20
   categories:
