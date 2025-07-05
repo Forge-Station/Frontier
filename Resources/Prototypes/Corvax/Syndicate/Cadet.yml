@@ -28,7 +28,7 @@
 # Доп предметы
 - type: entity
   name: CadetWeaponDisabler
-  parent: [ WeaponDisablerPractice, BaseC1Contraband ] # Frontier: BaseSecurityCommandContraband<BaseC1Contraband
+  parent: [ NFWeaponEnergyPistolDisablerPractice, BaseC1Contraband ] # Frontier: BaseSecurityCommandContraband<BaseC1Contraband
   id: CadetWeaponDisabler
   description: CadetWeaponDisabler
   components:

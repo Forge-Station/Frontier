@@ -135,7 +135,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponRifleLecter
+    - id: NFWeaponRifleAssaultLecter
       amount: 1
     - id: MagazineRifle
       amount: 2
@@ -226,7 +226,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponDisablerSMG
+    - id: NFWeaponEnergySubMachineGunDisabler
       amount: 1
 
 - type: entity

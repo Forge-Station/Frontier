@@ -44704,7 +44704,7 @@ entities:
     - type: Transform
       pos: 14.5,-22.5
       parent: 2
-- proto: WeaponDisabler
+- proto: NFWeaponEnergyPistolDisabler
   entities:
   - uid: 2353
     components:
@@ -44716,7 +44716,7 @@ entities:
     - type: Transform
       pos: 20.6548,-16.756947
       parent: 2
-- proto: WeaponDisablerPractice
+- proto: NFWeaponEnergyPistolDisablerPractice
   entities:
   - uid: 2629
     components:
@@ -44730,7 +44730,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 28.254305,-3.4225373
       parent: 2
-- proto: WeaponDisablerSMG
+- proto: NFWeaponEnergySubMachineGunDisabler
   entities:
   - uid: 2083
     components:
@@ -44776,7 +44776,7 @@ entities:
     - type: Transform
       pos: 23.669132,-16.699274
       parent: 2
-- proto: WeaponRevolverInspector
+- proto: NFWeaponRevolverInspector
   entities:
   - uid: 2387
     components:

@@ -59022,14 +59022,14 @@ entities:
           ents:
           - 8052
           - 8053
-- proto: WeaponDisablerPractice
+- proto: NFWeaponEnergyPistolDisablerPractice
   entities:
   - uid: 3360
     components:
     - type: Transform
       pos: -49.665825,0.54401183
       parent: 1
-- proto: WeaponDisablerSMG
+- proto: NFWeaponEnergySubMachineGunDisabler
   entities:
   - uid: 4384
     components:
@@ -59153,7 +59153,7 @@ entities:
       parent: 7640
     - type: Physics
       canCollide: False
-- proto: WeaponRevolverInspector
+- proto: NFWeaponRevolverInspector
   entities:
   - uid: 4684
     components:
@@ -59187,7 +59187,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -4.6690435,-20.511557
       parent: 1
-- proto: WeaponRifleLecter
+- proto: NFWeaponRifleAssaultLecter
   entities:
   - uid: 4342
     components:

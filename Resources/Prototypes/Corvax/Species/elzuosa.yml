@@ -28,6 +28,7 @@
 
 - type: markingPoints
   id: MobElzuosaMarkingLimits
+  onlyWhitelisted: true
   points:
     Tail:
       points: 1

@@ -10428,7 +10428,7 @@ entities:
     - type: Transform
       pos: 0.5,5.5
       parent: 1
-- proto: WeaponDisabler
+- proto: NFWeaponEnergyPistolDisabler
   entities:
   - uid: 1411
     components:
@@ -10440,7 +10440,7 @@ entities:
     - type: Transform
       pos: 8.735733,-9.55246
       parent: 1
-- proto: WeaponRifleLecter
+- proto: NFWeaponRifleAssaultLecter
   entities:
   - uid: 856
     components:
