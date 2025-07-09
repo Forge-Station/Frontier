@@ -21,8 +21,6 @@
     color: "#5a137d"
     readOnly: true
   - type: Shuttle
-    angularDamping: 999999
-    linearDamping: 999999
   - type: ProtectedGrid
     preventArtifactTriggers: True
     noGridCollision: True

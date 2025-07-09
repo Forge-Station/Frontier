@@ -22,8 +22,6 @@
     flags: [HideLabel]
     readOnly: true
   - type: Shuttle
-    angularDamping: 999999
-    linearDamping: 999999
 
 - type: gameMap
   id: PodA
@@ -52,8 +50,6 @@
     flags: [HideLabel]
     readOnly: true
   - type: Shuttle
-    angularDamping: 999999
-    linearDamping: 999999
 
 - type: gameMap
   id: PodB
@@ -82,8 +78,6 @@
     flags: [HideLabel]
     readOnly: true
   - type: Shuttle
-    angularDamping: 999999
-    linearDamping: 999999
 
 - type: gameMap
   id: PodC

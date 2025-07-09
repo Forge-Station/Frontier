@@ -1,6 +1,6 @@
 - type: entity
   id: SyndicateTechFab
-  parent: [ BlueprintReceiverBase, SecurityTechFab, BaseC3ContrabandUnredeemable]
+  parent: [ NFBlueprintReceiverBase, SecurityTechFab, BaseC3ContrabandUnredeemable]
   name: ТехФаб Синдиката
   description: ТехФаб созданный Синдикатом для ряда диверсионных групп сектора Фронтир.
   components:

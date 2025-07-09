@@ -9,7 +9,7 @@
         ballistic-ammo: !type:Container
     - type: NpcFactionMember
       factions:
-        - SyndicateNF
+        - NFSyndicate
     - type: Gun
       fireRate: 0.5
       selectedMode: FullAuto
@@ -31,7 +31,7 @@
         ballistic-ammo: !type:Container
     - type: NpcFactionMember
       factions:
-        - SyndicateNF
+        - NFSyndicate
     - type: Gun
       fireRate: 1
       selectedMode: FullAuto
@@ -53,7 +53,7 @@
         ballistic-ammo: !type:Container
     - type: NpcFactionMember
       factions:
-        - SyndicateNF
+        - NFSyndicate
     - type: Gun
       fireRate: 4
       selectedMode: FullAuto

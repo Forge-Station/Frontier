@@ -47,7 +47,7 @@
       - suitStorage
       - Belt
   - type: ProjectileBatteryAmmoProvider
-    proto: BulletDisabler
+    proto: NFBulletDisabler
     fireCost: 50
   - type: BatterySelfRecharger
     autoRecharge: true

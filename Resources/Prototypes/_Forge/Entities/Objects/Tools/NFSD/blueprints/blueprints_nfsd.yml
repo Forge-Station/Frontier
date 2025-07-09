@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: BlueprintRifleUranium
   components:
   - type: Blueprint
@@ -23,21 +23,19 @@
     - MagazineShotgunIncendiary
     - SpeedLoaderMagnumIncendiary
     - SpeedLoaderMagnumUranium
-    - SpeedLoaderRifleHeavyIncendiary
-    - SpeedLoaderRifleHeavyUranium
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: BlueprintGrenade
   components:
   - type: Blueprint
     providedRecipes:
-    - GrenadeBlast
-    - GrenadeEMP
+    - NFGrenadeBlast
+    - NFGrenadeEMP
     - MagazineGrenadeEmpty
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: BaseBlueprintWeaponXrayCannon
   components:
   - type: Blueprint

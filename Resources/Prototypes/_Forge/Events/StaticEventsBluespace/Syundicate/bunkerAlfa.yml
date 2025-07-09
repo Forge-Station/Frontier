@@ -12,7 +12,7 @@
 
 - type: pointOfInterest
   id: Bunkeralfa
-  name: Бункер Альфа 
+  name: Бункер Альфа
   minimumDistance: 6000
   maximumDistance: 9000
   gridPath: /Maps/Forge/Events/Elementary/Syndicate/bunkerAlfa.yml
@@ -22,8 +22,6 @@
     flags: [HideLabel]
     readOnly: true
   - type: Shuttle
-    angularDamping: 999999
-    linearDamping: 999999
   - type: SyndicateFOB # For pinpointer
   - type: ProtectedGrid
     preventEmpEvents: True

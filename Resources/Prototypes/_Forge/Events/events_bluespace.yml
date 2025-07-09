@@ -29,8 +29,6 @@
         - type: IFF
           color: "#E10F9B"
         - type: Shuttle
-          angularDamping: 999999
-          linearDamping: 999999
         paths:
         - /Maps/Forge/Events/Periodic/DestroyedShuttles/RuinedHauler.yml
         - /Maps/Forge/Events/Periodic/DestroyedShuttles/RuinedBarge.yml

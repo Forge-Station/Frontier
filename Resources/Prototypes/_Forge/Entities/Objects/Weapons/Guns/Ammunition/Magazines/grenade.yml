@@ -144,7 +144,7 @@
   parent: TinyMagazineGrenade
   components:
   - type: BallisticAmmoProvider
-    proto: GrenadeFrag
+    proto: NFGrenadeFrag
 
 - type: entity
   id: TMagazineGrenadeEMP
@@ -152,7 +152,7 @@
   parent: TinyMagazineGrenade
   components:
   - type: BallisticAmmoProvider
-    proto: GrenadeEMP
+    proto: NFGrenadeEMP
 
 - type: entity
   id: TMagazineGrenadeBlast
@@ -160,4 +160,4 @@
   parent: TinyMagazineGrenade
   components:
   - type: BallisticAmmoProvider
-    proto: GrenadeBlast
+    proto: NFGrenadeBlast

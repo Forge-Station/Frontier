@@ -116,7 +116,7 @@
   components:
   # Ghost role stuff
   - type: BasicEntityAmmoProvider
-    proto: BulletMagnum
+    proto: NFBulletPistol45
     capacity: 1
     count: 1
   - type: GhostRole

@@ -416,8 +416,8 @@
   - type: Sprite
     sprite: _NF/Guidebook/shuttle_maps/128x96.rsi
     state: prospector
-    scale: 1.2, 1.2    
- 
+    scale: 1.2, 1.2
+
 - type: entity
   parent: PosterBase
   id: ShuttleMapPulsar
@@ -428,18 +428,6 @@
   - type: Sprite
     sprite: _NF/Guidebook/shuttle_maps/128x96.rsi
     state: pulsar
-    scale: 1.2, 1.2
-
-- type: entity
-  parent: PosterBase
-  id: ShuttleMapRetort
-  name: "FSB Retort"
-  description: "Detailed map of a Retort shuttle."
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    sprite: _NF/Guidebook/shuttle_maps/128x96.rsi
-    state: retort
     scale: 1.2, 1.2
 
 - type: entity

@@ -201,7 +201,7 @@
 - type: latheRecipe
   id: GrenadeEMPRecipe
   categories: [SyndicateTexSyn4]
-  result: GrenadeEMP
+  result: NFGrenadeEMP
   completetime: 1
   materials:
     CreditCounterfeit: 5000
@@ -209,7 +209,7 @@
 - type: latheRecipe
   id: GrenadeFlashRecipe
   categories: [SyndicateTexSyn4]
-  result: GrenadeFlash
+  result: NFGrenadeFlash
   completetime: 1
   materials:
     CreditCounterfeit: 5000
@@ -225,7 +225,7 @@
 - type: latheRecipe
   id: GrenadeFragRecipe
   categories: [SyndicateTexSyn4]
-  result: GrenadeFrag
+  result: NFGrenadeFrag
   completetime: 1
   materials:
     CreditCounterfeit: 7500
@@ -233,7 +233,7 @@
 - type: latheRecipe
   id: GrenadeBlastRecipe
   categories: [SyndicateTexSyn4]
-  result: GrenadeBlast
+  result: NFGrenadeBlast
   completetime: 1
   materials:
     CreditCounterfeit: 7500
@@ -241,7 +241,7 @@
 - type: latheRecipe
   id: GrenadeBatonRecipe
   categories: [SyndicateTexSyn4]
-  result: GrenadeBaton
+  result: NFGrenadeBaton
   completetime: 1
   materials:
     CreditCounterfeit: 7500
@@ -298,14 +298,6 @@
   id: TinyMagazineGrenadeRecipe
   categories: [SyndicateTexSynAmmo]
   result: TinyMagazineGrenade
-  completetime: 1
-  materials:
-    CreditCounterfeit: 2000
-
-- type: latheRecipe
-  id: MagazineCaselessRifleRecipe
-  categories: [SyndicateTexSynAmmo]
-  result: MagazineCaselessRifle
   completetime: 1
   materials:
     CreditCounterfeit: 2000
