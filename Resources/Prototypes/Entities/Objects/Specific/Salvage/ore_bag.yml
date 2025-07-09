@@ -56,8 +56,8 @@
           True: { visible: True }
           False: { visible: False }
   # End DeltaV Additions
-  - type: StaticPrice #CorvaxFrontier
-    price: 8 #CorvaxFrontier
+  - type: StaticPrice # Forge-Change
+    price: 8 # Forge-Change
 
 - type: entity
   parent: OreBag

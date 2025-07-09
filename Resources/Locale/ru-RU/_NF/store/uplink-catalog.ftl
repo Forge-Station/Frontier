@@ -225,3 +225,58 @@ uplink-security-20riflemagazine-rubber-name = Коробка магазинов 
 uplink-security-20riflemagazine-rubber-desc = Коробка, содержащая 4 полных магазина калибра .20 (Резина)
 uplink-security-magazinepistol-rubber-name = Коробка магазинов калибра .35 (резина)
 uplink-security-magazinepistol-rubber-desc = Коробка, содержащая 4 полных магазина .35 (Резина)
+uplink-security-mk32-name = MK32
+uplink-security-mk32-desc = Пистолет Mark 32 для наступательных операций.
+
+uplink-security-vulcan-name = Vulcan
+uplink-security-vulcan-desc = Тяжелая штурмовая винтовка с возможностью выбора режима огня. Использует патроны калибра .30.
+
+uplink-security-lasercanon-name = Лазерная Пушка
+uplink-security-lasercanon-desc = Мощная снайперская лазерная винтовка повышенной мощности.
+
+uplink-security-contraband-forensics-module-name = Контрабанда: Криминалистический Модуль
+uplink-security-contraband-forensics-module-desc = Программа для сканирования и обнаружения контрабандных тайников и капсул для получения наград. Устанавливается в криминалистический сканер.
+
+uplink-pirate-accessconfigurator-captain-name = Конфигуратор Доступа Черного Рынка
+uplink-pirate-accessconfigurator-captain-desc = Конфигуратор доступа, продающийся на черном рынке. Защити свою добычу пиратским доступом!
+
+uplink-pirate-pmag-name = Освободитель Машин
+uplink-pirate-pmag-desc = Удаляет DRM-защиту станционных машин. Лучший друг пирата.
+
+uplink-pirate-repair-kit-name = Пиратский Ремонтный Набор
+uplink-pirate-repair-kit-desc = Набор инструментов для починки пиратских компьютеров. На случай полосы невезения.
+
+uplink-pirate-ionized-dust-bag-name = Ионизированная Блюспейс Пыль
+uplink-pirate-ionized-dust-bag-desc = Мешок с пылью, которая может сбить пинпоинтеры с цели.
+
+uplink-pirate-pinpointer-target-scanner-name = Сканер Целей Пинпоинтера
+uplink-pirate-pinpointer-target-scanner-desc = Кустарный сканер, находящий объекты, на которые нацелены пинпоинтеры. Батарейки в комплекте.
+
+uplink-pirate-pirate-stitcher-name = Пиратский Станкок
+uplink-pirate-pirate-stitcher-desc = Плата для пиратского станка. Собирается для производства пиратской одежды и снаряжения!
+
+uplink-pirate-pouch-captain-name = Сумка Пиратского Капитана
+uplink-pirate-pouch-captain-desc = Эта сумка подчеркивает ваш статус капитана. Также удобна для хранения мелочей.
+
+uplink-pirate-pouch-name = Пиратская Сумка
+uplink-pirate-pouch-desc = Сумка для хранения различных предметов.
+
+uplink-spaceblade-syndicate-name = Контрабандный Космоклинок
+uplink-spaceblade-syndicate-desc = Сделан из настоящего металла!
+
+uplink-emag-pass-name = Одноразовый Эмаг
+uplink-emag-pass-desc = Карта для взлома устройств. Можно использовать три раза.
+
+uplink-revolver-ritland-name = Ритланд-45
+uplink-revolver-ritland-desc = Надежный тяжелый револьвер. Чувствуешь себя везучим, засранец?
+
+uplink-pistol-cobra45-desc = Прочный, надежный пистолет оперативника со встроенным глушителем. Использует патроны .45.
+
+uplink-pistol-magazine-cobra-name = Магазин для Cobra .45
+uplink-pistol-magazine-cobra-desc = Заполненный магазин для пистолета Cobra .45.
+
+uplink-speedloader-magnum-non-ap-name = Быстрый Зарядник .45
+uplink-speedloader-magnum-non-ap-desc = Быстрый зарядник на 6 патронов калибра .45.
+
+uplink-syndicate-segway-name = Синдикатский Сигвей
+uplink-syndicate-segway-desc = Передвигайся со стилем, не пачкая свои кроваво-красные ботинки.

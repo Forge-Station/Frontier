@@ -5,6 +5,7 @@ ghost-role-information-clippy-name = Скрепыш
 ghost-role-information-clippy-description = Верный труженик Представительства Станции, пахнущий картоном и бумагой.
 ghost-role-information-clarpy-name = Кларпи
 ghost-role-information-clarpy-description = Эй, на абордаж почты! Разыскивается Нанотрейзен за преступления против мышей.
+ghost-role-information-clarpy-rules = Ты — старый [color={role-type-pirate-color}][bold]{role-type-pirate-name}[/bold][/color] кот. Помогай другим пиратам и не забывай принимать свои таблетки.
 ghost-role-information-cappy-name = Каппи
 ghost-role-information-cappy-description = Прекратите сопротивление! Сертифицирован в применении смертоносной силы и тактиках обороны.
 ghost-role-information-crispy-name = Подгорелыш
