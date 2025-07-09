@@ -67,9 +67,6 @@ public sealed partial class CargoSystem : SharedCargoSystem
         InitializeShuttle();
         InitializeTelepad();
         InitializeBounty();
-        // Frontier: add specific initialization calls here.
-        InitializeMercenaryBounty();
-        // End Frontier
         InitializeFunds();
     }
 

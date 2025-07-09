@@ -11,17 +11,19 @@ using Content.Shared.Mobs.Systems;
 using Content.Server.Popups;
 using Content.Shared._Forge.AutoSalarySystem;
 using Robust.Shared.Prototypes;
+using Robust.Server.Player;
 
 namespace Content.Server._Forge.AutoSalarySystem;
 
 public sealed class AutoSalarySystem : EntitySystem
 {
-    [Dependency] private readonly InventorySystem   _inv        = default!;
-    [Dependency] private readonly BankSystem        _bank       = default!;
-    [Dependency] private readonly PopupSystem       _popup      = default!;
-    [Dependency] private readonly MobStateSystem    _mobState   = default!;
-    [Dependency] private readonly IPrototypeManager _protoMan   = default!;
-    [Dependency] private readonly MindSystem        _mindSystem = default!;
+    [Dependency] private readonly IPrototypeManager _protoMan = default!;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
+    [Dependency] private readonly MindSystem _mindSystem = default!;
+    [Dependency] private readonly InventorySystem _inv = default!;
+    [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private readonly BankSystem _bank = default!;
 
     private TimeSpan _payInterval = TimeSpan.FromSeconds(1200);
     private readonly Dictionary<EntityUid, TimeSpan> _elapsed = new();
@@ -44,7 +46,7 @@ public sealed class AutoSalarySystem : EntitySystem
     {
         if (!_mindSystem.TryGetMind(body, out _, out var mind))
             return false;
-        if (mind.Session == null)
+        if (!_playerManager.TryGetSessionByEntity(body, out var session) && session == null)
             return false;
         if (mind.IsVisitingEntity)
             return false;

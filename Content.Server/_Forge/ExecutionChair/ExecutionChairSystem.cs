@@ -1,6 +1,6 @@
 // Port From SS14 Corvax-Next
 
-using Content.Server.DeviceLinking.Events;
+using Content.Shared.DeviceLinking.Events;
 using Content.Server.DeviceLinking.Systems;
 using Content.Server.Electrocution;
 using Content.Server.Power.EntitySystems;

@@ -1,8 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Server._NF.Contraband.Components;
 using Content.Server._Forge.Mercenary.Components;
-using Content.Server.Labels;
+using Content.Shared.Labels.EntitySystems;
 using Content.Shared._NF.Bank;
 using Content.Shared._Forge.Mercenary;
 using Content.Shared._Forge.Mercenary.Components;
@@ -17,10 +16,11 @@ using Robust.Shared.Containers;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using Content.Shared.Stacks;
+using Content.Server.Cargo.Systems;
 
-namespace Content.Server.Cargo.Systems; // Needs to collide with base namespace
+namespace Content.Server._NF.Cargo.Systems; // Needs to collide with base namespace
 
-public sealed partial class CargoSystem
+public sealed partial class NFCargoSystem
 {
     [ValidatePrototypeId<NameIdentifierGroupPrototype>]
     private const string MercenaryBountyNameIdentifierGroup = "Bounty"; // Use the bounty name ID group (0-999) for now.
@@ -52,7 +52,7 @@ public sealed partial class CargoSystem
             return;
 
         var untilNextSkip = bountyDb.NextSkipTime - _timing.CurTime;
-        _uiSystem.SetUiState(uid, MercenaryConsoleUiKey.Bounty, new MercenaryBountyConsoleState(bountyDb.Bounties, untilNextSkip));
+        _ui.SetUiState(uid, MercenaryConsoleUiKey.Bounty, new MercenaryBountyConsoleState(bountyDb.Bounties, untilNextSkip));
     }
 
     private void OnMercenaryBountyAccept(EntityUid uid, MercenaryBountyConsoleComponent component, MercenaryBountyAcceptMessage args)
@@ -74,7 +74,7 @@ public sealed partial class CargoSystem
 
         var bountyObj = bounty.Value;
 
-        if (bountyObj.Accepted || !_protoMan.TryIndex(bountyObj.Bounty, out var bountyPrototype))
+        if (bountyObj.Accepted || !_proto.TryIndex(bountyObj.Bounty, out var bountyPrototype))
             return;
 
         MercenaryBountyData bountyData = new MercenaryBountyData(bountyPrototype!, bountyObj.Id, true);
@@ -119,7 +119,7 @@ public sealed partial class CargoSystem
             return;
 
         if (TryComp<AccessReaderComponent>(uid, out var accessReaderComponent) &&
-            !_accessReaderSystem.IsAllowed(mob, uid, accessReaderComponent))
+            !_accessReader.IsAllowed(mob, uid, accessReaderComponent))
         {
             _audio.PlayPvs(component.DenySound, uid);
             return;
@@ -135,13 +135,13 @@ public sealed partial class CargoSystem
             db.NextSkipTime = _timing.CurTime + db.CancelDelay;
 
         var untilNextSkip = db.NextSkipTime - _timing.CurTime;
-        _uiSystem.SetUiState(uid, MercenaryConsoleUiKey.Bounty, new MercenaryBountyConsoleState(db.Bounties, untilNextSkip));
+        _ui.SetUiState(uid, MercenaryConsoleUiKey.Bounty, new MercenaryBountyConsoleState(db.Bounties, untilNextSkip));
         _audio.PlayPvs(component.SkipSound, uid);
     }
 
     private void SetupMercenaryBountyChest(EntityUid uid, MercenaryBountyData bounty, MercenaryBountyPrototype prototype)
     {
-        _metaSystem.SetEntityName(uid, Loc.GetString("mercenary-bounty-chest-name", ("id", bounty.Id)));
+        _meta.SetEntityName(uid, Loc.GetString("mercenary-bounty-chest-name", ("id", bounty.Id)));
 
         FormattedMessage message = new FormattedMessage();
         message.TryAddMarkup(Loc.GetString("mercenary-bounty-chest-description-start"), out var _);
@@ -155,7 +155,7 @@ public sealed partial class CargoSystem
         message.PushNewline();
         message.TryAddMarkup(Loc.GetString("mercenary-bounty-console-manifest-reward", ("reward", BankSystemExtensions.ToMercenaryTokenString(prototype.Reward))), out var _);
 
-        _metaSystem.SetEntityDescription(uid, message.ToMarkup());
+        _meta.SetEntityDescription(uid, message.ToMarkup());
 
         if (TryComp<MercenaryBountyLabelComponent>(uid, out var label))
             label.Id = bounty.Id;
@@ -163,7 +163,7 @@ public sealed partial class CargoSystem
 
     private void SetupMercenaryBountyManifest(EntityUid uid, MercenaryBountyData bounty, MercenaryBountyPrototype prototype, PaperComponent? paper = null)
     {
-        _metaSystem.SetEntityName(uid, Loc.GetString("mercenary-bounty-manifest-name", ("id", bounty.Id)));
+        _meta.SetEntityName(uid, Loc.GetString("mercenary-bounty-manifest-name", ("id", bounty.Id)));
 
         if (!Resolve(uid, ref paper))
             return;
@@ -181,7 +181,7 @@ public sealed partial class CargoSystem
             msg.PushNewline();
         }
         msg.TryAddMarkup(Loc.GetString("mercenary-bounty-console-manifest-reward", ("reward", BankSystemExtensions.ToMercenaryTokenString(prototype.Reward))), out var _);
-        _paperSystem.SetContent((uid, paper), msg.ToMarkup());
+        _paper.SetContent((uid, paper), msg.ToMarkup());
     }
 
     private bool TryGetMercenaryBountyLabel(EntityUid uid,
@@ -240,7 +240,7 @@ public sealed partial class CargoSystem
         if (!Resolve(serviceId, ref component))
             return false;
 
-        var allBounties = _protoMan.EnumeratePrototypes<MercenaryBountyPrototype>().ToList();
+        var allBounties = _proto.EnumeratePrototypes<MercenaryBountyPrototype>().ToList();
         var filteredBounties = new List<MercenaryBountyPrototype>();
         foreach (var proto in allBounties)
         {
@@ -257,7 +257,7 @@ public sealed partial class CargoSystem
     [PublicAPI]
     public bool TryAddMercenaryBounty(EntityUid serviceId, string bountyId, MercenaryBountyDatabaseComponent? component = null)
     {
-        if (!_protoMan.TryIndex<MercenaryBountyPrototype>(bountyId, out var bounty))
+        if (!_proto.TryIndex<MercenaryBountyPrototype>(bountyId, out var bounty))
             return false;
 
         return TryAddMercenaryBounty(serviceId, bounty, component);
@@ -356,7 +356,7 @@ public sealed partial class CargoSystem
         while (query.MoveNext(out var uid, out _, out var ui))
         {
             var untilNextSkip = db.NextSkipTime - _timing.CurTime;
-            _uiSystem.SetUiState((uid, ui), MercenaryConsoleUiKey.Bounty, new MercenaryBountyConsoleState(db.Bounties, untilNextSkip));
+            _ui.SetUiState((uid, ui), MercenaryConsoleUiKey.Bounty, new MercenaryBountyConsoleState(db.Bounties, untilNextSkip));
         }
     }
 
@@ -380,7 +380,7 @@ public sealed partial class CargoSystem
         {
             if (bounty.Accepted)
             {
-                if (!_protoMan.TryIndex(bounty.Bounty, out var bountyPrototype))
+                if (!_proto.TryIndex(bounty.Bounty, out var bountyPrototype))
                     continue;
                 if (bountyPrototype.SpawnChest)
                 {

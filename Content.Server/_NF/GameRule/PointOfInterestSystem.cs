@@ -256,12 +256,12 @@ public sealed class PointOfInterestSystem : EntitySystem
             if (proto.SpawnGamePreset.Length > 0 && !proto.SpawnGamePreset.Contains(currentPreset))
                 continue;
 
-            var offset = GetRandomPOICoord(proto.MinimumDistance, proto.MaximumDistance);
+            var offset = GetRandomPOICoord(proto.MinimumDistance, proto.MaximumDistance, proto.MinimumClearance);
 
             if (TrySpawnPoiGrid(mapId, proto, offset, out var poiUid) && poiUid is { Valid: true } uid)
             {
                 coliseiStations.Add(uid);
-                AddStationCoordsToSet(offset);
+                AddStationCoordsToSet(offset, proto.MinimumClearance);
             }
         }
     }

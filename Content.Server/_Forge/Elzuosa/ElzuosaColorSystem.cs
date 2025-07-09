@@ -1,8 +1,8 @@
-﻿using Content.Shared.Humanoid;
+﻿using Content.Server.Damage.Systems;
+using Content.Shared.Humanoid;
 using Content.Shared.Preferences;
 using Robust.Server.GameObjects;
 using Content.Shared.Damage.Components;
-using Content.Shared.Damage.Systems;
 using Content.Shared.Emag.Systems;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Light;
