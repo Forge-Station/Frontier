@@ -85,11 +85,6 @@
     - state: cpu_super
   - type: Item
     size: Tiny
-  - type: PhysicalComposition
-    materialComposition: # big mats if you don't sell it
-      Steel: 500
-      Glass: 1000
-      Silver: 300
   - type: StaticPrice
     price: 750
 
@@ -157,9 +152,6 @@
     state: coin_iron
   - type: Item
     size: Tiny
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 300
   - type: StackPrice # Frontier: Static<Stack
     price: 75
   - type: Stack # Frontier
@@ -173,12 +165,8 @@
   components:
   - type: Sprite
     state: coin_silver
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 100 # coins are fake on the inside
-      Silver: 200
   - type: StackPrice # Frontier: Static<Stack
-    price: 135
+    price: 125
   - type: Stack # Frontier
     stackType: TreasureCoinSilver # Frontier
     count: 1 # Frontier
@@ -189,10 +177,6 @@
   components:
   - type: Sprite
     state: coin_gold
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 100
-      Gold: 200
   - type: StackPrice # Frontier: Static<Stack
     price: 175
   - type: Stack # Frontier
@@ -205,10 +189,6 @@
   components:
   - type: Sprite
     state: coin_adamantine
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 400
-      Diamond: 5
   - type: StackPrice # Frontier: Static<Stack
     price: 250
   - type: Stack # Frontier
@@ -221,10 +201,6 @@
   components:
   - type: Sprite
     state: coin_diamond
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 300
-      Diamond: 15
   - type: StackPrice # Frontier: Static<Stack
     price: 500
   - type: Stack # Frontier

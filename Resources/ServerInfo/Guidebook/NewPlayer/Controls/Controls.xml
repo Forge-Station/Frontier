@@ -59,4 +59,104 @@
 Аналогично, вы можете [color=cyan]вращать[/color] её влево и вправо с помощью [color=yellow][bold][keybind="CameraRotateLeft"][/bold][/color] и [color=yellow][bold][keybind="CameraRotateRight"][/bold][/color].
 Вы можете выровнять её в соответствии с поворотом грида с помощью [color=yellow][bold][keybind="CameraReset"][/bold][/color].
 
+## Основные взаимодействия
+  Вы также можете использовать [color=yellow][bold][keybind="Drop"][/bold][/color] чтобы отпустить объект, который вы тащите.
+
+  ## Типы взаимодействий
+  В игре существует [bold]шесть[/bold] типов контекстных взаимодействий, доступных разными способами.
+
+  ### Стандартное и альтернативное
+  Нажатие [color=yellow][bold][keybind="Use"][/bold][/color] выполняет [color=cyan]стандартное взаимодействие[/color].
+  Оно зависит от предмета в вашей активной руке и объекта, на который вы нажимаете.
+
+  Примеры стандартных взаимодействий:
+  - Размещение предметов на [bold]столах[/bold]
+  - [bold]Использование[/bold] объектов пустыми руками
+  - Применение предметов к мобам или другим объектам
+
+  В некоторых случаях можно напрямую [color=cyan]менять предметы местами[/color], например, при клике колбой на аппарат с другой колбой.
+
+  Некоторые предметы имеют [color=cyan]альтернативные взаимодействия[/color] - используйте [color=yellow][bold][keybind="AltActivateItemInWorld"][/bold][/color] для:
+  - [bold]Блокировки[/bold] шкафов
+  - [bold]Извлечения[/bold] батарей и других компонентов
+
+  ### Активация
+  Взаимодействуйте с объектами, даже когда руки заняты, используя [color=cyan]активацию[/color] [color=yellow][bold][keybind="ActivateItemInWorld"][/bold][/color].
+  Это позволяет:
+  - [bold]Открывать контейнеры[/bold] без их поднятия
+  - [bold]Открывать двери[/bold] без использования предмета в руке
+  - [bold]Переключать режимы[/bold] оружия
+
+  Также используйте это действие на мобе для открытия [color=cyan]меня раздевания[/color] и просмотра его инвентаря.
+
+  ### Использование в руке
+  Многие предметы поддерживают [bold]использование в руке[/bold]:
+  - Открытие бутылок
+  - [bold]Перехват[/bold] двуручного оружия
+  - [bold]Переключение[/bold] режимов оружия
+
+  Используйте горячие клавиши:
+  - [color=yellow][bold][keybind="ActivateItemInHand"][/bold][/color] - стандартное
+  - [color=yellow][bold][keybind="AltActivateItemInHand"][/bold][/color] - альтернативное
+
+  ### Перетаскивание
+  Чтобы "использовать" моба [italic]на[/italic] объекте, перетащите его с зажатым [color=yellow][bold][keybind="Use"][/bold][/color].
+  Примеры:
+  - [color=cyan]Посадить[/color] моба на стул/кровать
+  - [color=cyan]Залезть[/color] на стол (или использовать [color=yellow][bold][keybind="AltActivateItemInWorld"][/bold][/color])
+  - Открыть [color=cyan]меню раздевания[/color] перетаскиванием
+
+  ### Указание
+  Используйте [color=yellow][bold][keybind="Point"][/bold][/color] чтобы [color=cyan]указать[/color] на место в мире, создавая временную стрелку.
+
+  ## Контекстные меню
+  Нажмите [color=yellow][bold][keybind="UIRightClick"/][/bold][/color] для открытия [color=cyan]контекстного меню[/color] с дополнительными действиями:
+  - Перемещение всех предметов между контейнерами
+  - Разделение стаков
+  - Точный перенос жидкостей
+  - Просмотр шагов разборки
+
+  Для куч предметов открывается [color=cyan]меню объектов[/color] со списком взаимодействий.
+
+  ### Осмотр
+  Используйте [color=yellow][bold][keybind="ExamineEntity"][/bold][/color] для [color=cyan]осмотра[/color] объектов и мобов.
+  В меню осмотра доступны:
+  - Ссылка на руководство (иконка "?")
+  - Статистика предмета (молния)
+  - Состояние здоровья (сердце)
+
+  ## Инвентарь и одежда
+  Для экипировки используйте [color=yellow][bold][keybind="Use"][/bold][/color] на соответствующем слоте.
+
+  [color=cyan]Надеть[/color] одежду можно через [color=yellow][bold][keybind="ActivateItemInHand"][/bold][/color].
+  [bold]Некоторые предметы одежды имеют внутренние инвентари.[/bold]
+
+  ### Управление стаками
+  Используйте [color=yellow][bold][keybind="AltActivateItemInWorld"][/bold][/color] чтобы [color=cyan]разделить[/color] стак пополам.
+
+  ### Рюкзак и пояс
+  Открывайте инвентари через:
+  - [color=yellow][bold][keybind="ActivateItemInWorld"][/bold][/color]
+  - Мини-иконки в правом нижнем углу
+  - Горячие клавиши [color=yellow][bold][keybind="OpenBackpack"][/bold][/color] и [color=yellow][bold][keybind="OpenBelt"][/bold][/color]
+
+  Быстрое перемещение предметов:
+  - [color=yellow][bold][keybind="SmartEquipBackpack"][/bold][/color] - в рюкзак/из рюкзака
+  - [color=yellow][bold][keybind="SmartEquipBelt"][/bold][/color] - для пояса
+
+  ### Организация инвентаря
+  - Перемещение: [color=yellow][bold][keybind="MoveStoredItem"][/bold][/color]
+  - Поворот: [color=yellow][bold][keybind="RotateStoredItem"][/bold][/color]
+  - Сохранение позиции: [color=yellow][bold][keybind="SaveItemLocation"][/bold][/color]
+
+  ## Управление камерой
+  - Масштаб: [color=yellow][bold][keybind="ZoomIn"][/bold][/color]/[color=yellow][bold][keybind="ZoomOut"][/bold][/color]
+  - Сброс: [color=yellow][bold][keybind="ResetZoom"][/bold][/color]
+  - Поворот: [color=yellow][bold][keybind="CameraRotateLeft"][/bold][/color]/[color=yellow][bold][keybind="CameraRotateRight"][/bold][/color]
+  - Сброс: [color=yellow][bold][keybind="CameraReset"][/bold][/color]
+
+  [italic]Примечание: карты рассчитаны на стандартный поворот камеры.[/italic]
+
+  Подробнее о управлении можно узнать на [color=cyan]Вики[/color].
+</Document>
 </Document>

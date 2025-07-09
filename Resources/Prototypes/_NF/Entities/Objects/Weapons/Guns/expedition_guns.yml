@@ -59,6 +59,13 @@
 
 - type: entity
   parent:
+  - BaseC3PirateContraband
+  - BaseExpeditionWeaponTier3
+  id: BaseExpeditionWeaponTier3Pirate
+  abstract: true
+
+- type: entity
+  parent:
   - BaseC3SyndicateContraband
   - BaseExpeditionWeaponTier2
   id: BaseExpeditionWeaponTier2Syndicate
@@ -85,127 +92,66 @@
   id: BaseExpeditionWeaponTier5Syndicate
   abstract: true
 
-# region Tier 1 weapons
+# region Tier 1
 ## Pistols
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1
-  - WeaponPistolMk58
+  - NFWeaponPistolMk58
   categories: [ HideSpawnMenu ]
-  id: WeaponPistolMk58Expedition
+  id: NFWeaponPistolMk58Expedition
 
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1
-  - WeaponPistolPollock
+  - NFWeaponPistolPollockHighCapacityMag
   categories: [ HideSpawnMenu ]
-  id: WeaponPistolPollockExpedition
+  id: NFWeaponPistolPollockExpedition
 
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1
-  - WeaponPistolUniversal
+  - NFWeaponPistolUniversal
   categories: [ HideSpawnMenu ]
-  id: WeaponPistolUniversalExpedition
+  id: NFWeaponPistolUniversalExpedition
 
 ## Revolvers
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1
-  - WeaponRevolverArgenti
+  - NFWeaponRevolverArgenti
   categories: [ HideSpawnMenu ]
-  id: WeaponRevolverArgentiExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier1
-  - WeaponRevolverFaith
-  categories: [ HideSpawnMenu ]
-  id: WeaponRevolverFaithExpedition
+  id: NFWeaponRevolverArgentiExpedition
 
 ## Shotguns
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1
-  - WeaponShotgunSawn
+  - NFWeaponRevolverFaith
   categories: [ HideSpawnMenu ]
-  id: WeaponShotgunSawnExpedition
+  id: NFWeaponRevolverFaithExpedition
 
-## Snipers
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier1
+  - NFWeaponRevolverDeckard
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRevolverDeckardExpedition
+
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1Syndicate
-  - WeaponSniperMosin
+  - NFWeaponRevolverRitland45
   categories: [ HideSpawnMenu ]
-  id: WeaponSniperMosinExpedition
+  id: NFWeaponRevolverRitland45Expedition
 
+## Rifles
 - type: entity
   parent:
-  - BaseExpeditionWeaponTier1
-  - WeaponSniperCeremonial
+  - BaseExpeditionWeaponTier1Syndicate
+  - NFWeaponRifleBarlowsBolt
   categories: [ HideSpawnMenu ]
-  id: WeaponSniperCeremonialExpedition
-
-## Energy
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier1
-  - WeaponNFLaserPistol
-  categories: [ HideSpawnMenu ]
-  id: WeaponLaserGunExpedition
-
-# region Tier 2 weapons
-## Pistols
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2Syndicate
-  - WeaponPistolViper
-  categories: [ HideSpawnMenu ]
-  id: WeaponPistolViperExpedition
-
-## Revolvers
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2
-  - WeaponRevolverDeckard
-  categories: [ HideSpawnMenu ]
-  id: WeaponRevolverDeckardExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2
-  - WeaponRevolverFitz
-  categories: [ HideSpawnMenu ]
-  id: WeaponRevolverFitzExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2
-  - WeaponRevolverLucky
-  categories: [ HideSpawnMenu ]
-  id: WeaponRevolverLuckyExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2Pirate
-  - WeaponRevolverPirate
-  categories: [ HideSpawnMenu ]
-  id: WeaponRevolverPirateExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2Syndicate
-  - WeaponRevolverPython
-  categories: [ HideSpawnMenu ]
-  id: WeaponRevolverPythonExpedition
-
-## Shotguns
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2
-  - WeaponShotgunKammerer
-  categories: [ HideSpawnMenu ]
-  id: WeaponShotgunKammererExpedition
+  id: NFWeaponRifleBarlowsBoltExpedition
 
 
 - type: entity #CorvaxFrontier
@@ -219,17 +165,26 @@
 
 - type: entity
   parent:
-  - BaseC2ExpeditionContraband
-  - WeaponRifleNovaliteC1
+  - BaseExpeditionWeaponTier1
+  - NFWeaponRifleRepeater
   categories: [ HideSpawnMenu ]
-  id: WeaponRifleNovaliteC1Expedition
+  id: NFWeaponRifleRepeaterExpedition
+
+# region Tier 2
+## Pistols
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2Syndicate
+  - NFWeaponPistolCobra
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponPistolCobraExpedition
 
 - type: entity
   parent:
   - BaseExpeditionWeaponTier2
-  - WeaponRifleSVS
+  - NFWeaponPistolN1984
   categories: [ HideSpawnMenu ]
-  id: WeaponRifleSVSExpedition
+  id: NFWeaponPistolN1984Expedition
 
 - type: entity #CorvaxFrontier
   parent:
@@ -238,192 +193,58 @@
   categories: [ HideSpawnMenu ]
   id: SubMachineGunVector22Expedition #CorvaxFrontier
 
-# SMGs
 - type: entity
   parent:
-  - BaseExpeditionWeaponTier2
-  - WeaponSniperRepeater
+  - BaseExpeditionWeaponTier2Syndicate
+  - NFWeaponPistolViper
   categories: [ HideSpawnMenu ]
-  id: WeaponSniperRepeaterExpedition
-
-## Energy
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2
-  - WeaponEnergyGun
-  categories: [ HideSpawnMenu ]
-  id: WeaponEnergyGunExpedition
-
-# region Tier 3 weapons
-## Pistols
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier3Syndicate
-  - WeaponPistolCobra
-  categories: [ HideSpawnMenu ]
-  id: WeaponPistolCobraExpedition
+  id: NFWeaponPistolViperExpedition
 
 ## Revolvers
 - type: entity
   parent:
-  - BaseExpeditionWeaponTier3
-  - WeaponRevolverMateba
+  - BaseExpeditionWeaponTier2
+  - NFWeaponRevolverFitz
   categories: [ HideSpawnMenu ]
-  id: WeaponRevolverMatebaExpedition
-
-## Rifles
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier3
-  - WeaponRifleGestio
-  categories: [ HideSpawnMenu ]
-  id: WeaponRifleGestioExpedition
+  id: NFWeaponRevolverFitzExpedition
 
 - type: entity
   parent:
-  - BaseExpeditionWeaponTier3
-  - WeaponRifleLecter
+  - BaseExpeditionWeaponTier2
+  - NFWeaponRevolverLucky
   categories: [ HideSpawnMenu ]
-  id: WeaponRifleLecterExpedition
-
-## Snipers
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier3
-  - WeaponSniperHristov
-  categories: [ HideSpawnMenu ]
-  id: WeaponSniperHristovExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier3
-  - Musket
-  categories: [ HideSpawnMenu ]
-  id: WeaponMusketExpedition
-
-## SMGs
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier3
-  - WeaponSubMachineGunWt550
-  categories: [ HideSpawnMenu ]
-  id: WeaponSubMachineGunWt550Expedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier3
-  - WeaponSubMachineGunDrozd
-  categories: [ HideSpawnMenu ]
-  id: WeaponSubMachineGunDrozdExpedition
+  id: NFWeaponRevolverLuckyExpedition
 
 ## Energy
 - type: entity
   parent:
-  - BaseExpeditionWeaponTier3
-  - WeaponLaserCarbine
+  - BaseExpeditionWeaponTier2Pirate
+  - NFWeaponRevolverPirate
   categories: [ HideSpawnMenu ]
-  id: WeaponLaserCarbineExpedition
+  id: NFWeaponRevolverPirateExpedition
 
 - type: entity
   parent:
-  - BaseExpeditionWeaponTier3
-  - WeaponLaserSvalinn
+  - BaseExpeditionWeaponTier2
+  - NFWeaponRevolverWard45
   categories: [ HideSpawnMenu ]
-  id: WeaponLaserSvalinnExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier3
-  - WeaponAdvancedLaser
-  categories: [ HideSpawnMenu ]
-  id: WeaponAdvancedLaserExpedition
-
-# region Tier 4 weapons
-## Pistols
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier4
-  - WeaponPistolN1984
-  categories: [ HideSpawnMenu ]
-  id: WeaponPistolN1984Expedition
+  id: NFWeaponRevolverWard45Expedition
 
 ## Shotguns
 - type: entity
   parent:
-  - BaseExpeditionWeaponTier4
-  - WeaponShotgunEnforcer
+  - BaseExpeditionWeaponTier2
+  - NFWeaponShotgunKammerer
   categories: [ HideSpawnMenu ]
-  id: WeaponShotgunEnforcerExpedition
-
-## Rifles
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier4Syndicate
-  - WeaponRifleAk
-  categories: [ HideSpawnMenu ]
-  id: WeaponRifleAkExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier4Syndicate
-  - WeaponRifleM90GrenadeLauncher
-  categories: [ HideSpawnMenu ]
-  id: WeaponRifleM90GrenadeLauncherExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier4
-  - WeaponRifleVulcan
-  categories: [ HideSpawnMenu ]
-  id: WeaponRifleVulcanExpedition
+  id: NFWeaponShotgunKammererExpedition
 
 ## SMGs
 - type: entity
   parent:
-  - BaseExpeditionWeaponTier4Syndicate
-  - WeaponSubMachineGunC20r
+  - BaseExpeditionWeaponTier2Syndicate
+  - NFWeaponSubMachineGunC20r
   categories: [ HideSpawnMenu ]
-  id: WeaponSubMachineGunC20rExpedition
-
-## Energy
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier4
-  - WeaponLaserCannon
-  categories: [ HideSpawnMenu ]
-  id: WeaponLaserCannonExpedition
-
-# region Tier 5 weapons
-# Shotguns
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier5Syndicate
-  - WeaponShotgunBulldog
-  categories: [ HideSpawnMenu ]
-  id: WeaponShotgunBulldogExpedition
-
-# Rifles
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier5
-  - WeaponRifleJackdaw
-  categories: [ HideSpawnMenu ]
-  id: WeaponRifleJackdawExpedition
-
-# SMGs
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier5Syndicate
-  - WeaponSubMachineGunAtreides
-  categories: [ HideSpawnMenu ]
-  id: WeaponSubMachineGunAtreidesExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier5Syndicate
-  - WeaponSubMachineGunTypewriter
-  categories: [ HideSpawnMenu ]
-  id: WeaponSubMachineGunTypewriterExpedition
+  id: NFWeaponSubMachineGunC20rExpedition
 
 - type: entity #CorvaxFrontier
   parent:
@@ -432,33 +253,222 @@
   categories: [ HideSpawnMenu ]
   id: WeaponSubMachineP90LRKExpedition #CorvaxFrontier
 
-# Energy
+## Assault Rifles
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - NFWeaponRifleAssaultNovaliteC1
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleAssaultNovaliteC1Expedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - NFWeaponRifleAssaultJackdaw
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleAssaultJackdawExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - NFWeaponRifleAssaultGestio
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleAssaultGestioExpedition
+
+## Rifles
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - NFWeaponRifleSVS
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleSVSExpedition
+
+## Energy
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - NFWeaponEnergyPistolLaser
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponEnergyPistolLaserExpedition
+
+# region Tier 3
+## Assault Rifles
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - NFWeaponRifleAssaultLecter
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleAssaultLecterExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3Syndicate
+  - NFWeaponRifleAssaultM90GrenadeLauncher
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleAssaultM90GrenadeLauncherExpedition
+
+## Snipers
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3Syndicate
+  - NFWeaponRifleSniperHristov
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleSniperHristovExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3Pirate
+  - NFWeaponRifleMusket
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleMusketExpedition
+
+## SMGs
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - NFWeaponSubMachineGunWt550
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponSubMachineGunWt550Expedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - NFWeaponSubMachineGunDrozd
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponSubMachineGunDrozdExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3Syndicate
+  - NFWeaponSubMachineGunAtreides
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponSubMachineGunAtreidesExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - NFWeaponSubMachineGunTypewriter
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponSubMachineGunTypewriterExpedition
+
+## Energy
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - NFWeaponEnergyPistolLaserSvalinn
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponEnergyPistolLaserSvalinnExpedition
+
+# region Tier 4
+## Shotguns
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4
+  - NFWeaponShotgunEnforcer
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponShotgunEnforcerExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4Syndicate
+  - NFWeaponShotgunBulldog
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponShotgunBulldogExpedition
+
+## Rifles
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4Syndicate
+  - NFWeaponRifleAssaultSm
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleAssaultSmExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4
+  - NFWeaponRifleAssaultVulcan
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleAssaultVulcanExpedition
+
+## Energy
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4
+  - NFWeaponEnergyRifleCarbine
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponEnergyRifleCarbineExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4
+  - NFWeaponEnergyPistolLaserAdvanced
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponEnergyPistolLaserAdvancedExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4
+  - NFWeaponEnergyPistolLaserAntique
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponEnergyPistolLaserAntiqueExpedition
+
+# region Tier 5
+# Turrets
 - type: entity
   parent:
   - BaseExpeditionWeaponTier5
-  - WeaponXrayCannon
+  - WeaponTurretAsmgtHostileUniversallyPacked
   categories: [ HideSpawnMenu ]
-  id: WeaponXrayCannonExpedition
+  id: WeaponTurretAsmgtHostileUniversallyPackedExpedition
 
 # Launchers
 - type: entity
   parent:
   - BaseExpeditionWeaponTier5
-  - WeaponLauncherRocket
+  - NFWeaponLauncherRocket
   categories: [ HideSpawnMenu ]
-  id: WeaponLauncherRocketExpedition
+  id: NFWeaponLauncherRocketExpedition
 
 - type: entity
   parent:
   - BaseExpeditionWeaponTier5Syndicate
-  - WeaponLauncherChinaLake
+  - NFWeaponLauncherChinaLake
   categories: [ HideSpawnMenu ]
-  id: WeaponLauncherChinaLakeExpedition
+  id: NFWeaponLauncherChinaLakeExpedition
 
 # LMGs
 - type: entity
   parent:
   - BaseExpeditionWeaponTier5Syndicate
-  - WeaponLightMachineGunL6
+  - NFWeaponLightMachineGunL6
   categories: [ HideSpawnMenu ]
-  id: WeaponLightMachineGunL6Expedition
+  id: NFWeaponLightMachineGunL6Expedition
+
+# Energy
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier5
+  - NFWeaponEnergySubMachineGunDeltaV
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponEnergySubMachineGunDeltaVExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier5
+  - NFWeaponEnergyRifleSniperXrayCannon
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponEnergyRifleSniperXrayCannonExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier5
+  - NFWeaponEnergyRifleSniperCannon
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponEnergyRifleSniperCannonExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier5
+  - NFWeaponEnergyRifleTemperature
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponEnergyRifleTemperatureExpedition

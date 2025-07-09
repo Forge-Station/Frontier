@@ -1,27 +1,27 @@
 <Document>
-  # GASBENDER-CLASS ENGINEERING SHUTTLE
+  # ИНЖЕНЕРНЫЙ ШАТТЛ КЛАССА "ГАЗОИЗВРАЩАТЕЛЬ"
   <Box>
-  <GuideEntityEmbed Entity="NFPosterContrabandLvhiSpace" Caption=""/>
+  <GuideEntityEmbed Entity="NFPosterContrabandLvhiPlanetCore" Caption=""/>
   </Box>
   <Box>
   <GuideEntityEmbed Entity="ShuttleMapGasbender" Caption=""/>
   </Box>
-    [color=#a4885c]Ship Size:[/color] Medium
+    [color=#a4885c]Размер судна:[/color] Средний
 
-	[color=#a4885c]Recommended Crew:[/color] 3-6
+	[color=#a4885c]Рекомендуемый экипаж:[/color] 3-6
 
-	[color=#a4885c]Power Gen Type:[/color] Bananium
+	[color=#a4885c]Тип генератора:[/color] Бананиум
 
-	[color=#a4885c]Expeditions:[/color] None
+	[color=#a4885c]Экспедиции:[/color] Не поддерживаются
 
-	[color=#a4885c]IFF Console:[/color] None
+	[color=#a4885c]Консоль IFF:[/color] Отсутствует
 
-  "The Gasbender is a medium-sized engineering vessel outfitted for deep space construction projects and gas mining. Features atmospherics setup with mixing/ignition chamber. Designed to work in pair with smaller salvage ship. Manufactured by Langstad-Voigt Heavy Industries."
+  "Газоизвращатель" - шаттл средних размеров, оснащённый для строительных работ в глубоком космосе и добычи газов. Оснащён системой атмосферики с камерой смешивания/воспламенения. Предназначен для работы в паре с малым судном для сальважа. Производитель: Langstad-Voigt Heavy Industries."
 
-  # Tips on running LVHI Gasbender shuttles
-  - The total power load for the shuttle in standard complectation is 49 [bold]kW[/bold]. For more general info on the power grid, see the guidebook article [textlink="Power" link="Power"], and for more info about the Antimatter Engine, see the guidebook article [textlink="AME" link="AME"].
-  - The shuttle comes with necessary equipment for Offshore Gas Mining. To learn the basics, see the guidebook article [textlink="Offshore Gas Mining" link="OffshoreGasMining"].
-  - For more general info on atmospherics see the guidebook article about [textlink="Atmospherics" link="Atmospherics"].
-  - For basics of shuttle piloting see [textlink="Piloting" link="Piloting"].
+  # Советы по эксплуатации шаттлов LVHI "Газоизвращатель"
+  - Стандартная энергонагрузка шаттла составляет 49 [bold]кВт[/bold]. Подробнее о энергосистемах см. в статье [textlink="Энергосистемы" link="Power"], а об антиматериальном двигателе - в статье [textlink="АМД" link="AME"].
+  - Шаттл укомплектован оборудованием для офшорной добычи газов. Основы процесса описаны в статье [textlink="Офшорная добыча газов" link="OffshoreGasMining"].
+  - Общая информация по системам атмосферики доступна в статье [textlink="Атмосферика" link="Atmospherics"].
+  - Основы пилотирования шаттлов см. в руководстве [textlink="Пилотирование" link="Piloting"].
 
 </Document>

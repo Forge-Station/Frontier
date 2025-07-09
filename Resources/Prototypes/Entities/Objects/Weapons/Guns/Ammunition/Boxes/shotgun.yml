@@ -33,12 +33,13 @@
       price: 125 #CorvaxFrontier
 # Shotgun Shells
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   parent: AmmoProviderShotgunShell
   id: BoxBeanbag
   name: ammunition box (.50 beanbag)
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgunBeanbag
+      # proto: ShellShotgunBeanbag # Frontier
     - type: MagazineVisuals
       magState: mag-beanbag
       steps: 5
@@ -52,12 +53,13 @@
       - state: beanbag
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   name: ammunition box (.50 pellet)
   parent: AmmoProviderShotgunShell
   id: BoxLethalshot
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun
+      # proto: ShellShotgun # Frontier
     - type: Sprite
       layers:
       - state: base
@@ -67,12 +69,13 @@
       - state: lethal
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   name: ammunition box (.50 slug)
   parent: AmmoProviderShotgunShell
   id: BoxShotgunSlug
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgunSlug
+      # proto: ShellShotgunSlug # Frontier
     - type: MagazineVisuals
       magState: mag-slug
       steps: 5
@@ -86,12 +89,13 @@
       - state: slug
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   name: ammunition box (.50 flare)
   parent: AmmoProviderShotgunShell
   id: BoxShotgunFlare
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgunFlare
+      # proto: ShellShotgunFlare # Frontier
     - type: MagazineVisuals
       magState: mag-flare
       steps: 5
@@ -105,12 +109,13 @@
       - state: flare
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   name: ammunition box (.50 incendiary)
   parent: [AmmoProviderShotgunShell, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   id: BoxShotgunIncendiary
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgunIncendiary
+      # proto: ShellShotgunIncendiary # Frontier
     - type: MagazineVisuals
       magState: mag-incend
       steps: 5
@@ -124,12 +129,13 @@
       - state: incendiary
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   name: ammunition box (.50 uranium)
   parent: [AmmoProviderShotgunShell, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   id: BoxShotgunUranium
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgunUranium
+      # proto: ShellShotgunUranium # Frontier
     - type: MagazineVisuals
       magState: mag-uranium
       steps: 5
@@ -143,12 +149,13 @@
       - state: uranium
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   name: ammunition box (.50 practice)
   parent: AmmoProviderShotgunShell
   id: BoxShotgunPractice
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgunPractice
+      # proto: ShellShotgunPractice # Frontier
     - type: MagazineVisuals
       magState: mag-practice
       steps: 5
@@ -162,12 +169,13 @@
       - state: practice
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   name: ammunition box (.50 tranquilizer)
   parent: AmmoProviderShotgunShell
   id: BoxShellTranquilizer
   components:
     - type: BallisticAmmoProvider
-      proto: ShellTranquilizer
+      # proto: ShellTranquilizer # Frontier
     - type: MagazineVisuals
       magState: mag-tranq
       steps: 5

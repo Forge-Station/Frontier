@@ -131,6 +131,18 @@
 
 - type: entity
   abstract: true
+  id: StorageFillEVASuitParamedicAlt
+  description: Contains a standard issue paramedic EVA kit.
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterEVASuitParamedic
+    - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
+
+- type: entity
+  abstract: true
   id: StorageFillEVASuitScientist
   name: StorageFillEVASuitScientist
   description: Contains a standard issue scientist EVA kit.
@@ -366,6 +378,19 @@
   - type: StorageFill
     contents:
     - id: ClothingOuterEVASuitFsb
+    - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
+
+# Stc
+- type: entity
+  abstract: true
+  id: StorageFillEVASuitStc
+  description: Contains a standard issue station traffic controller EVA kit.
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterEVASuitStc
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
