@@ -8,11 +8,11 @@
     tags:
       - MagazineP90LRK
   - type: BallisticAmmoProvider
-    proto: CartridgePistol
+    proto: NFCartridgePistol35
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgePistol
+        - NFCartridgePistol35
     capacity: 50
   - type: Item
     size: Small

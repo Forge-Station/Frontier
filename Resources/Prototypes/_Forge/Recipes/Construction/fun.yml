@@ -1,10 +1,7 @@
 - type: construction
-  name: Neko Ark
   id: PlushieNekoArk
   graph: PlushieNekoArk
   startNode: start
   targetNode: NekoArk
   category: construction-category-misc
-  description: With lowe from Anenerbe CORP.
-  icon: { sprite: Forge/Objects/Fun/nekoark_craft.rsi, state: craft}
   objectType: Item

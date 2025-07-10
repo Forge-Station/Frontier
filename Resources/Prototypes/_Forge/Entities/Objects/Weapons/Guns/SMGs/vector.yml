@@ -1,6 +1,6 @@
 - type: entity #FrontierCorvax
   name: Vector (.22 LR)
-  parent: [ BaseWeaponSubMachineGun, BaseC1Contraband ]
+  parent: [ NFBaseWeaponFrameSubMachineGun, BaseC1Contraband ]
   id: WeaponSubMachineGunVector22
   description: An illegal version of the legendary submachine gun for sport shooting. He might even be able to shoot a squirrel. Uses .22lr ammunition.
   components:
@@ -54,7 +54,7 @@
 
 - type: entity #FrontierCorvax
   name: Vector (.45 ACP)
-  parent: [ BaseWeaponSubMachineGun, BaseC1Contraband ]
+  parent: [ NFBaseWeaponFrameSubMachineGun, BaseC1Contraband ]
   id: WeaponSubMachineGunVector45
   description: A legal civilian version of the already legendary and forgotten submachine gun. Uses caliber cartridges .45 ACP. Automatic fire is not included in the package.
   components:

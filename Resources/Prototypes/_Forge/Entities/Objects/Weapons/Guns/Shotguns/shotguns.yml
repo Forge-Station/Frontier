@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ BaseWeaponShotgun, BaseC1Contraband ]
+  parent: [ NFBaseWeaponFrameShotgun, BaseC1Contraband ]
   id: WeaponShotgunKS23
   name: Shotgun KS23
   components:
@@ -24,7 +24,7 @@
 
 - type: entity
   name: KD12
-  parent: BaseWeaponShotgun
+  parent: NFBaseWeaponFrameShotgun
   id: WeaponShotgunKD12
   description: The Compact Shotgun Model 12 is equipped with a three-round drum and a reload system. It was previously manufactured and supplied by TechnicLogistic as the primary weapon for convoy ships.
   components:
@@ -47,7 +47,7 @@
 
 - type: entity
   name: KD12Medic
-  parent: BaseWeaponShotgun
+  parent: NFBaseWeaponFrameShotgun
   id: WeaponShotgunKD12Medic
   description: The Compact Shotgun Model 12 is equipped with a three-round drum and a reload system. It was previously manufactured and supplied by TechnicLogistic as the primary weapon for convoy ships.
   components:
@@ -70,7 +70,7 @@
 
 - type: entity
   name: Отбойник
-  parent: [BaseItem, BaseGunWieldable, BaseC2Contraband]
+  parent: [BaseItem, NFBaseWeaponFrameShotgunWieldable, BaseC2Contraband]
   id: WeaponShotgunAD12
   description:  Автоматический Дробовик 12 модели поставляется ограниченными партиями для сил дсбф компанией TechnicLogistic, барабанная система подачи боеприпасов позволяет оружию развить чудовищную скорострельность и убойную силу.
   components:
@@ -109,7 +109,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineShotgun
+        startingItem: NFMagazineShotgunDrum
         priority: 2
         whitelist:
           tags:
@@ -135,7 +135,7 @@
 
 - type: entity
   name: Подавитель
-  parent: [BaseItem, BaseGunWieldable, BaseC2Contraband]
+  parent: [BaseItem, NFBaseWeaponFrameShotgunWieldable, BaseC2Contraband]
   id: WeaponShotgunSuppressor
   description: Автоматический Дробовик 16 модели нового поколения TechnicLogistic, барабанная система подачи боеприпасов позволяет оружию развить чудовищную скорострельность и убойную силу.
   components:
@@ -172,7 +172,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineShotgun
+        startingItem: NFMagazineShotgunDrum
         priority: 2
         whitelist:
           tags:

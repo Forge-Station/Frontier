@@ -5,7 +5,7 @@
   productEntity: WeaponPistolViper
   discountCategory: rareDiscounts
   discountDownTo:
-    TelecrystalDamaged: 4 
+    TelecrystalDamaged: 4
   cost:
     TelecrystalDamaged: 6
   categories:
@@ -464,7 +464,7 @@
   name: uplink-pistol-magazine-name
   description: uplink-pistol-magazine-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
-  productEntity: MagazinePistol
+  productEntity: NFMagazinePistol35
   cost:
     TelecrystalDamaged: 2
   categories:
@@ -476,7 +476,7 @@
   name: uplink-pistol-magazine-c20r-name
   description: uplink-pistol-magazine-c20r-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
-  productEntity: MagazinePistolSubMachineGun
+  productEntity: NFMagazineSubMachineGun35
   cost:
     TelecrystalDamaged: 4
   categories:
@@ -488,7 +488,7 @@
   name: uplink-pistol-magazine-caseless-name
   description: uplink-pistol-magazine-caseless-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: red-icon }
-  productEntity: MagazinePistolCaselessRifle
+  productEntity: NFMagazinePistol45
   cost:
     TelecrystalDamaged: 2
   categories:
@@ -511,7 +511,7 @@
   id: SmuggerUplinkMosinAmmo
   name: uplink-mosin-ammo-name
   description: uplink-mosin-ammo-desc
-  productEntity: MagazineBoxLightRifle
+  productEntity: NFAmmunitionBoxRifle30
   cost:
     TelecrystalDamaged: 2
   categories:
@@ -522,7 +522,7 @@
   id: SmuggerUplinkHristovAmmo
   name: uplink-sniper-ammo-name
   description: uplink-sniper-ammo-desc
-  productEntity: MagazineBoxAntiMateriel
+  productEntity: NFAmmunitionBoxRifle60
   cost:
     TelecrystalDamaged: 4
   categories:
@@ -1610,7 +1610,7 @@
   name: uplink-syndie-raid-name
   description: uplink-syndie-raid-desc
   icon: { sprite: /Textures/Clothing/OuterClothing/Armor/syndie-raid.rsi, state: icon }
-  productEntity: ClothingBackpackDuffelSyndicateRaidBundle
+  productEntity: ClothingBackpackSyndicateRaidBundle
   cost:
     TelecrystalDamaged: 16
   categories:
@@ -1867,7 +1867,7 @@
     TelecrystalDamaged: 20 # Frontier: 6<10 (all the time in the world)
   categories:
   - UplinkWeaponrySmugger # Frontier: UplinkJobSmugger<UplinkWeaponrySmugger
-  # conditions: # Frontier: 
+  # conditions: # Frontier:
   # - !type:BuyerJobCondition
   #   whitelist:
   #   - Botanist
@@ -1975,7 +1975,7 @@
 #     TelecrystalDamaged: 2
 #   categories:
 #   - UplinkJobSmugger
-#   conditions: 
+#   conditions:
 #   - !type:BuyerJobCondition
 #     whitelist:
 #     - Clown

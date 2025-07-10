@@ -432,7 +432,7 @@
   id: UplinkPiratBoxLightRifle
   name:  Коробка винтовочных патрон
   description: Коробка винтовочных патрон используемых некоторым пиратским оружием, пускай и не такие мощные, зато какие дешёвые!
-  productEntity: MagazineBoxLightRifle
+  productEntity: NFAmmunitionBoxRifle30
   cost:
     Doubloon: 2
   categories:
@@ -543,7 +543,7 @@
   id: UplinkPiratWeaponSubMachineGunTypewriter
   name:  Пишущая машинка
   description: Старый пистолет-пулемет используемый самыми опасными членами братства. Ярррр!
-  productEntity: WeaponSubMachineGunTypewriter
+  productEntity: NFWeaponSubMachineGunTypewriter
   cost:
     Doubloon: 6
   categories:
@@ -560,7 +560,7 @@
   id: UplinkPiratMagazinePistolSubMachineGunEmpty
   name:  Пишущая лента
   description: Лента используемая пиратами для "печатных машинок". Ярррр!
-  productEntity: BoxMagazinePistolSubMachineGun
+  productEntity: NFMagazineSubMachineGun35
   cost:
     Doubloon: 3
   categories:
@@ -574,10 +574,10 @@
 
 
 - type: listing #CorvaxFrontier
-  id: UplinkPiratMagazineBoxPistol
+  id: UplinkPiratNFAmmunitionBoxPistol35
   name:  Коробка чернил
   description: Коробка с чернилами для дозаправки "Пишущей машинки". Ярррр!
-  productEntity: MagazineBoxPistol
+  productEntity: NFAmmunitionBoxPistol35
   cost:
     Doubloon: 2
   categories:

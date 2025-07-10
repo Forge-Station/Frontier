@@ -34,13 +34,6 @@
     MercenaryToken: 14
 
 - type: latheRecipe
-  id: NFBlueprintJawsOfLifeExchangeRecipe
-  result: NFBlueprintJawsOfLife
-  completetime: 1
-  materials:
-    MercenaryToken: 12
-
-- type: latheRecipe
   id: TelescopicShieldExchangeRecipe
   result: TelescopicShield
   completetime: 1
@@ -146,22 +139,22 @@
     MercenaryToken: 8
 
 - type: latheRecipe
-  id: WeaponRifleGestioExchangeRecipe
-  result: WeaponRifleGestio
+  id: NFWeaponRifleAssaultGestioExchangeRecipe
+  result: NFWeaponRifleAssaultGestio
   completetime: 1
   materials:
     MercenaryToken: 7
 
 - type: latheRecipe
-  id: WeaponRifleNovaliteC1ExchangeRecipe
-  result: WeaponRifleNovaliteC1
+  id: NFWeaponRifleAssaultNovaliteC1ExchangeRecipe
+  result: NFWeaponRifleAssaultNovaliteC1
   completetime: 1
   materials:
     MercenaryToken: 7
 
 - type: latheRecipe
-  id: WeaponSubMachineGunTypewriterExchangeRecipe
-  result: WeaponSubMachineGunTypewriter
+  id: NFWeaponSubMachineGunTypewriterExchangeRecipe
+  result: NFWeaponSubMachineGunTypewriter
   completetime: 1
   materials:
     MercenaryToken: 7
@@ -175,7 +168,7 @@
 
 - type: latheRecipe
   id: BoxMagazinePistolSubMachineGunTopMountedExchangeRecipe
-  result: BoxMagazinePistolSubMachineGunTopMounted
+  result: NFMagazineSubMachineGunTopMounted35
   completetime: 1
   materials:
     MercenaryToken: 5

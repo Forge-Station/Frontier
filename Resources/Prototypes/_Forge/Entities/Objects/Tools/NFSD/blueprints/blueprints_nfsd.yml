@@ -4,16 +4,14 @@
   components:
   - type: Blueprint
     providedRecipes:
-    - BoxShotgunIncendiary
-    - BoxShotgunUranium
-    - MagazineBoxLightRifleIncendiary
-    - MagazineBoxLightRifleUranium
-    - MagazineBoxMagnumIncendiary
-    - MagazineBoxMagnumUranium
-    - MagazineBoxPistolIncendiary
-    - MagazineBoxPistolUranium
-    - MagazineBoxRifleIncendiary
-    - MagazineBoxRifleUranium
+    - NFAmmunitionBoxShellShotgunIncendiary
+    - NFAmmunitionBoxShellShotgunUranium
+    - NFAmmunitionBoxRifle30Incendiary
+    - NFAmmunitionBoxRifle30Uranium
+    - NFAmmunitionBoxPistol45Incendiary
+    - NFAmmunitionBoxPistol45Uranium
+    - NFAmmunitionBoxRifle20Incendiary
+    - NFAmmunitionBoxRifle20Uranium
     - MagazineLightRifleIncendiary
     - MagazineLightRifleUranium
     - MagazinePistolIncendiary

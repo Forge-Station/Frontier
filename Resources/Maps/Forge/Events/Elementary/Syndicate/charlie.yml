@@ -28813,7 +28813,7 @@ entities:
         path: /Audio/Weapons/Guns/Gunshots/smg.ogg
     - type: BallisticAmmoProvider
       entities: []
-      proto: CartridgeMagnumAP
+      proto: NFCartridgePistol45
       soundInsert: !type:SoundPathSpecifier
         path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
       soundRack: !type:SoundPathSpecifier
@@ -28848,7 +28848,7 @@ entities:
         path: /Audio/Weapons/Guns/Gunshots/smg.ogg
     - type: BallisticAmmoProvider
       entities: []
-      proto: CartridgeMagnumAP
+      proto: NFCartridgePistol45
       soundInsert: !type:SoundPathSpecifier
         path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
       soundRack: !type:SoundPathSpecifier
@@ -28885,7 +28885,7 @@ entities:
       parent: 2
     - type: BallisticAmmoProvider
       entities: []
-      proto: ShellShotgun
+      proto: NFShellShotgunBuckshot
       soundInsert: !type:SoundPathSpecifier
         path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
       soundRack: !type:SoundPathSpecifier
@@ -28934,7 +28934,7 @@ entities:
       parent: 2
     - type: BallisticAmmoProvider
       entities: []
-      proto: ShellShotgun
+      proto: NFShellShotgunBuckshot
       soundInsert: !type:SoundPathSpecifier
         path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
       soundRack: !type:SoundPathSpecifier

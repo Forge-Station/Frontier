@@ -1,6 +1,6 @@
 - type: entity
   name: dawn
-  parent: [BaseWeaponRifle  , BaseC3SyndicateContraband]
+  parent: [ NFBaseWeaponRifleChamber60, BaseC3SyndicateContraband, NFBaseWeaponFrameRifleSniper ]
   id: WeaponSniperDawn
   description:
   components:
@@ -29,7 +29,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineAntiMateriel
+        startingItem: NFCartridgeRifle60
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
@@ -39,11 +39,11 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeAntiMateriel
+        startingItem: NFCartridgeRifle60
         priority: 1
         whitelist:
           tags:
-            - CartridgeAntiMateriel
+            - NFCartridgeRifle60
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

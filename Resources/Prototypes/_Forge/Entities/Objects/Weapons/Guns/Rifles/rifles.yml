@@ -1,6 +1,6 @@
 - type: entity
   name: Scar12
-  parent: [NFBaseWeaponRifleChamber20, BaseC2ContrabandUnredeemable]
+  parent: [NFBaseWeaponRifleChamber20, BaseC2ContrabandUnredeemable, NFBaseWeaponEncumbranceRifle]
   id: WeaponRifleScar12
   description: The Scar-12 battle rifle, developed by TechnicLogistic for its own army, is one of the most commonly found models on the black market due to its efficiency and accuracy. Currently, it is supplied to DSBF forces under a special order from NT.
   components:
@@ -33,21 +33,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifle
+        startingItem: NFMagazineRifle30
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - NFMagazineRifle30
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: NFCartridgeRifle30
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - NFCartridgeRifle30
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -65,7 +65,7 @@
 
 - type: entity
   name: Dakota
-  parent: [NFBaseWeaponRifleChamber30, BaseC2ContrabandUnredeemable]
+  parent: [NFBaseWeaponRifleChamber30, BaseC2ContrabandUnredeemable, NFBaseWeaponEncumbranceRifle]
   id: WeaponInterstellarRifleM4A1
   components:
   - type: Sprite
@@ -100,21 +100,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineRifle
+        startingItem: NFMagazineRifle20
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineRifle
+            - NFMagazineRifle20
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeRifle
+        startingItem: NFCartridgeRifle20
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+            - NFCartridgeRifle20
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -127,7 +127,7 @@
 
 - type: entity
   name: dagger
-  parent: [NFBaseWeaponRifleChamber20, BaseC2ContrabandUnredeemable]
+  parent: [NFBaseWeaponRifleChamber20, BaseC2ContrabandUnredeemable, NFBaseWeaponEncumbranceRifle]
   id: WeaponRifleDagger
   components:
   - type: Sprite
@@ -160,21 +160,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifle
+        startingItem: NFMagazineRifle30
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - NFMagazineRifle30
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: NFCartridgeRifle30
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - NFCartridgeRifle30
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -195,7 +195,7 @@
 
 - type: entity
   name: Cascade
-  parent: [NFBaseWeaponRifleChamber30, BaseC2ContrabandUnredeemable]
+  parent: [NFBaseWeaponRifleChamber30, BaseC2ContrabandUnredeemable, NFBaseWeaponEncumbranceRifle]
   id: WeaponRifleCascade
   components:
   - type: Sprite
@@ -228,21 +228,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifle
+        startingItem: NFMagazineRifle30
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - NFMagazineRifle30
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: NFCartridgeRifle30
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - NFCartridgeRifle30
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

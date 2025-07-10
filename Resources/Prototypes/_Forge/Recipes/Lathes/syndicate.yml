@@ -40,7 +40,7 @@
 
 - type: latheRecipe
   id: ClothingBackpackDuffelSyndicateFilledEmpGrenadeLauncherRecipe
-  result: WeaponLauncherChinaLakeEmp
+  result: NFWeaponLauncherChinaLakeEmp
   categories: [SyndicateTradingConsoleFirearmsWeapons]
   completetime: 1
   materials:
@@ -239,9 +239,9 @@
     CreditCounterfeit: 4000
 
 - type: latheRecipe
-  id: ClothingBackpackDuffelSyndicateRaidBundleRecipe
+  id: ClothingBackpackSyndicateRaidBundleRecipe
   categories: [SyndicateTradingConsoleMeleeArmor]
-  result: ClothingBackpackDuffelSyndicateRaidBundle
+  result: ClothingBackpackSyndicateRaidBundle
   completetime: 1
   materials:
     CreditCounterfeit: 48000
@@ -561,8 +561,8 @@
 
 - type: latheRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
-  id: WeaponRifleJackdawRecipe
-  result: WeaponRifleJackdaw
+  id: NFWeaponRifleAssaultJackdaw
+  result: NFWeaponRifleAssaultJackdaw
   completetime: 1
   materials:
     CreditCounterfeit: 40450

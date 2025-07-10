@@ -182,13 +182,9 @@
     - ReportingStatic # DeltaV
     - CorvaxAmmoStatic #Corvax-Frontier
     dynamicPacks:
-    - NFNfsdTechfabDeprecated
     - CorvaxShuttleGunsDynamic #Corvax-Frontier
     - CorvaxAmmoDynamic #Corvax-Frontier
     - CorvaxPracticAmmo #Corvax-Frontier
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - NFNfsdTechfabDeprecatedEmag
   - type: BlueprintReceiver
     whitelist:
       tags:

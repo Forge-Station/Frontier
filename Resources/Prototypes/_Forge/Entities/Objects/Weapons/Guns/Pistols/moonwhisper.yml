@@ -1,6 +1,6 @@
 - type: entity
   name: Whisper of the Moon
-  parent: [BaseWeaponPistol, BaseC1Contraband]
+  parent: [NFBaseWeaponPistolChamber35, BaseC1Contraband, NFBaseWeaponEncumbrancePistol]
   id: WeaponPistolMoonWhisper
   description: This is a restoration of an unknown but very old model pistol, transformed into an elegant weapon with a built-in silencer. The slide is decorated with an engraving of the moon. You will look elegant with it.
   components:

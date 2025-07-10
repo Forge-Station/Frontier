@@ -17,7 +17,7 @@
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
     - type: BallisticAmmoProvider
-      proto: CartridgeAntiMateriel
+      proto: NFCartridgeRifle60
       capacity: 500
 
 - type: entity
@@ -39,7 +39,7 @@
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
     - type: BallisticAmmoProvider
-      proto: CartridgeMagnumAP
+      proto: NFCartridgePistol45
       capacity: 500
 
 - type: entity
@@ -61,6 +61,6 @@
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
     - type: BallisticAmmoProvider
-      proto: ShellShotgun
+      proto: NFShellShotgunBuckshot
       capacity: 500
 

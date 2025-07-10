@@ -6,47 +6,38 @@
 - type: latheRecipePack
   id: SyndicateTechfabStatic
   recipes:
-  - BoxBeanbagRecipe
-  - MagazineBoxPistolRubberRecipe
-  - MagazineBoxRifleRubberRecipe
-  - MagazineBoxLightRifleRubberRecipe
-  - MagazineBoxMagnumRubberRecipe
-  - MagazineBoxCaselessRifleRubberRecipe
-  - BoxShotgunSlugRecipe
-  - BoxShellTranquilizerRecipe
-  - BoxLethalshotRecipe
-  - MagazineBoxMagnumRecipe
-  - MagazineBoxPistolRecipe
-  - MagazineBoxRifleRecipe
-  - MagazineBoxCaselessRifleRecipe
-  - MagazineBoxLightRifleRecipe
-  - BoxShotgunUraniumRecipe
-  - MagazineBoxMagnumUraniumRecipe
-  - MagazineBoxPistolUraniumRecipe
-  - MagazineBoxRifleUraniumRecipe
-  - MagazineBoxLightRifleUraniumRecipe
-  - BoxShotgunIncendiaryRecipe
-  - MagazineBoxRifleIncendiaryRecipe
-  - MagazineBoxMagnumIncendiaryRecipe
-  - MagazineBoxPistolIncendiaryRecipe
-  - MagazineBoxLightRifleIncendiaryRecipe
-  - MagazineBoxPistolEmpRecipe
+  - NFAmmunitionBoxShellShotgunBeanbagRecipe
+  - NFAmmunitionBoxPistol35RubberRecipe
+  - NFAmmunitionBoxRifle20RubberRecipe
+  - NFAmmunitionBoxRifle30Recipe
+  - NFAmmunitionBoxPistol45Recipe
+  - NFAmmunitionBoxShellShotgunSlugRecipe
+  - NFAmmunitionBoxShellShotgunTranquilizerRecipe
+  - NFAmmunitionBoxShellShotgunBuckshotRecipe
+  - NFAmmunitionBoxPistol35Recipe
+  - NFAmmunitionBoxRifle20Recipe
+  - NFAmmunitionBoxShellShotgunUraniumRecipe
+  - NFAmmunitionBoxPistol45UraniumRecipe
+  - NFAmmunitionBoxRifle20UraniumRecipe
+  - NFAmmunitionBoxRifle30UraniumRecipe
+  - NFAmmunitionBoxShellShotgunIncendiaryRecipe
+  - NFAmmunitionBoxRifle20IncendiaryRecipe
+  - NFAmmunitionBoxPistol45IncendiaryRecipe
+  - NFAmmunitionBoxRifle30IncendiaryRecipe
+  - NFAmmunitionBoxPistol35EmpRecipe
   - GrenadeEMPRecipe
   - GrenadeFlashRecipe
-  - MagazineBoxMagnumAPRecipe
   - GrenadeFragRecipe
   - GrenadeBlastRecipe
   - GrenadeBatonRecipe
-  - MagazineBoxAntiMaterielRecipe
-  - MagazinePistolEmptyRecipe
-  - MagazinePistolCaselessRifleRecipe
+  - NFAmmunitionBoxRifle60Recipe
+  - NFMagazinePistol35EmptyRecipe
+  - NFMagazinePistol45Recipe
   - MagazineP90LRKEmptyRecipe
-  - SpeedLoaderLightRifleRecipe
-  - MagazinePistolHighCapacityEmptyRecipe
-  - TinyMagazineGrenadeRecipe
-  - MagazineLightRifleEmptyRecipe
-  - MagazineLightRifleLowCapacityEmptyRecipe
-  - MagazineShotgunEmptydsRecipe
-  - MagazinePistolSubMachineGunTopMountedEmptyRecipe
-  - MagazinePistolSubMachineGunEmptyRecipe
-  - SpeedLoaderMagnumEmptyRecipe
+  - NFMagazineHighCapacityPistol35EmptyRecipe
+  - NFMagazineRifle30EmptyRecipe
+  - NFMagazineLowCapacityRifle30EmptyRecipe
+  - NFMagazineShotgunDrumEmptydsRecipe
+  - NFMagazineSubMachineGunTopMounted35EmptyRecipe
+  - NFMagazineSubMachineGun35EmptyRecipe
+  - NFSpeedLoaderPistol45EmptyRecipe

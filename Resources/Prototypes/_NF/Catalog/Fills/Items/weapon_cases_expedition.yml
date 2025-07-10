@@ -329,7 +329,7 @@
       amount: 1
     - id: MagazineP90LRK
       amount: 2
-    - id: MagazineBoxPistol
+    - id: NFAmmunitionBoxPistol35
       amount: 2 #CorvaxFrontier
 
 #region Rifles
@@ -600,7 +600,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponRifleCeremonialExpedition
+    - id: NFWeaponRifleCeremonial
       amount: 1
     - id: NFAmmunitionBoxRifle30
       amount: 2

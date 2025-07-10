@@ -1,6 +1,6 @@
 - type: entity
   name: Swift
-  parent: [BaseWeaponPistol, BaseC1Contraband]
+  parent: [NFBaseWeaponPistolChamber35, BaseC1Contraband, NFBaseWeaponEncumbrancePistol]
   id: WeaponPistolSwift
   components:
   - type: Sprite

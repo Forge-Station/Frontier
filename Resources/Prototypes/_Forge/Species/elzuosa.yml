@@ -29,6 +29,9 @@
 - type: markingPoints
   id: MobElzuosaMarkingLimits
   points:
+    hair:
+      points: 0
+      required: false
     Tail:
       points: 1
       required: false
