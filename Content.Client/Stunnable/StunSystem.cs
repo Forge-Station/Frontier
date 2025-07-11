@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Shared.CombatMode;
 using Content.Shared.Interaction;
+using Content.Shared.Mobs;
 using Content.Shared.Stunnable;
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
@@ -8,8 +9,12 @@ using Robust.Shared.Animations;
 using Robust.Shared.Input;
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Random;
+using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 
-namespace Content.Client.Stunnable
+namespace Content.Client.Stunnable;
+
+public sealed class StunSystem : SharedStunSystem
 {
     [Dependency] private readonly SharedCombatModeSystem _combat = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -171,4 +176,9 @@ namespace Content.Client.Stunnable
             }
         };
     }
+}
+
+public enum StunVisualLayers : byte
+{
+    StamCrit,
 }
