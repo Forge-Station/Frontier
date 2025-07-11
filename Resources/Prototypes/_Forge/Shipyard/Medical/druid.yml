@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
+
+# Maintainer Info
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Druid
+  parent: BaseVessel
+  name: FSB Друид
+  description: Судно среднего класса, предоставляющее ботанические и химические услуги для удовлетворения потребностей приграничья. Спроектировано, разработано и внедрено биотехнологической компанией Far Star для оказания помощи везде, где это необходимо.
+  price: 45000 # 15% t2.
+  category: Medium
+  group: Medical
+  shuttlePath: /Maps/Forge/Shuttles/Medical/druid.yml
+  guidebookPage: ShipyardDruid
+  class:
+  - Botany
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Druid
+  mapName: 'FSB Друид'
+  mapPath: /Maps/Forge/Shuttles/Medical/druid.yml
+  minPlayers: 0
+  stations:
+    Druid:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Друид {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

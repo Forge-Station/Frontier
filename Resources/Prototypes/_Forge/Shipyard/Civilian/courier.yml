@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
+
+# Maintainer Info
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Courier
+  parent: BaseVessel
+  name: FSB Курьер
+  description: Малогабаритный грузовой шаттл, предназначенное для перевозки грузов.
+  price: 31000 # base 21000 + 10k EMU rental because Whatstone is a reasonable person who makes reasonable choices. 
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/Forge/Shuttles/Civilian/courier.yml
+  guidebookPage: ShipyardCourier
+  class:
+  - Cargo
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Courier
+  mapName: 'FSB Курьер'
+  mapPath: /Maps/Forge/Shuttles/Civilian/courier.yml
+  minPlayers: 0
+  stations:
+    Courier:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Курьер {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

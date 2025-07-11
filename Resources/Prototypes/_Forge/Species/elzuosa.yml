@@ -28,6 +28,7 @@
 
 - type: markingPoints
   id: MobElzuosaMarkingLimits
+  onlyWhitelisted: true
   points:
     hair:
       points: 0
