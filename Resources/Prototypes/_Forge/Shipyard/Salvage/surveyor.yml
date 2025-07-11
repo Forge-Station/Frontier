@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
+
+# Maintainer Info
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Surveyor
+  parent: BaseVessel
+  name: FSB Геодезист
+  description: Бюджетный шаттл для добычи и восстановления полезных ископаемых для корпораций, не желающих работать в условиях ограниченного бюджета. Биотехнологическая корпорация "Фар Стар" предлагает вам этот проект!
+  price: 19000 # 17518 0.06 18569.08
+  category: Small
+  group: Salvage
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/surveyor.yml
+  guidebookPage: ShipyardSurveyor
+  class:
+  - Salvage
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Surveyor
+  mapName: 'FSB Геодезист'
+  mapPath: /Maps/Forge/Shuttles/Salvage/surveyor.yml
+  minPlayers: 0
+  stations:
+    Surveyor:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Геодезист {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

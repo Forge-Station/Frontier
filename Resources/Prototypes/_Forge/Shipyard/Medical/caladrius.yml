@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
+
+# Maintainer Info
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
+
+# Shuttle Notes:
+#
+
+- type: vessel
+  id: Caladrius
+  parent: BaseVessel
+  name: FSB Каладрий
+  description: Медицинский шаттл, произведенный биотехнологической корпорацией "Фар Стар". Предназначен для крупномасштабной поддержки колонизации, оказания гуманитарной помощи и проведения операций по расследованию и восстановлению после стихийных бедствий.
+  price: 200000 # 133217 0.5 199825.5
+  category: Large
+  group: Medical
+  shuttlePath: /Maps/Forge/Shuttles/Medical/caladrius.yml
+  guidebookPage: ShipyardCaladrius
+  class:
+  - Medical
+  engine:
+  - Bananium
+
+- type: gameMap
+  id: Caladrius
+  mapName: 'FSB Каладрий'
+  mapPath: /Maps/Forge/Shuttles/Medical/caladrius.yml
+  minPlayers: 0
+  stations:
+    Caladrius:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Каладрий {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: erhardsteinhauer
+# Discord: erhardsteinhauer
+
+# Maintainer Info
+# GitHub: erhardsteinhauer
+# Discord: erhardsteinhauer
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Copperhead
+  parent: BaseVessel
+  name: LVHI Щитомордник
+  description: Щитомордник - это доступный по цене, универсальный, небольшой шаттл с возможностью настройки, оптимизированный для выполнения задач по добыче полезных ископаемых и спасательных работ. Независимо от того, работает ли он в составе флота или автономно, его конструкция представляет собой компромисс между скоростью, которая важна для путешествий на средние и дальние расстояния, и маневренностью, которая имеет решающее значение для навигации по полям астероидов. Производится компанией Langstad-Voigt Heavy Industries.
+  price: 23500 # ~21724 0.05 22810.2
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/copperhead.yml
+  guidebookPage: ShipyardCopperhead
+  class:
+  - Salvage
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Copperhead
+  mapName: 'Щитомордник'
+  mapPath: /Maps/Forge/Shuttles/Salvage/copperhead.yml
+  minPlayers: 0
+  stations:
+    Copperhead:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Щитомордник {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]
