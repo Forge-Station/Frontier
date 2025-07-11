@@ -5080,13 +5080,13 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-#- proto: CrateFunHoverbikeNFPirate
-#  entities:
-#  - uid: 684
-#    components:
-#    - type: Transform
-#      pos: 0.5,11.5
-#      parent: 1
+- proto: CrateFunHoverbikeNFPirate
+  entities:
+  - uid: 684
+    components:
+    - type: Transform
+      pos: 0.5,11.5
+      parent: 1
 - proto: CrateFunParty
   entities:
   - uid: 125

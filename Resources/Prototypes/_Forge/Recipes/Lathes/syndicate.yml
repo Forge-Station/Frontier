@@ -73,7 +73,7 @@
 - type: latheRecipe
   id: WeaponPistolViperRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
-  result: WeaponPistolViper
+  result: NFWeaponPistolViper
   completetime: 1
   materials:
     CreditCounterfeit: 5000
@@ -121,7 +121,7 @@
 - type: latheRecipe
   categories: [SyndicateTradingConsoleLaserArmsWeapons]
   id: WeaponLaserCarbineRecipe
-  result: WeaponLaserCarbine
+  result: NFWeaponEnergyRifleCarbine
   completetime: 1
   materials:
     CreditCounterfeit: 25000

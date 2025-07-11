@@ -32,8 +32,8 @@
   entries:
   - name: mercenary-bounty-item-laser-carbine
     amount: 1
-    id: WeaponLaserCarbine
-    
+    id: NFWeaponEnergyRifleCarbine
+
 - type: mercenaryBounty
   id: MercenaryBountyStaffDarkBolt1
   description: mercenary-bounty-description-generic
@@ -186,7 +186,7 @@
   - name: mercenary-bounty-item-armor-elite-punk
     amount: 1
     id: ArmorElitePunk
-    
+
 - type: mercenaryBounty
   id: MercenaryBountyDatadiskEncrypted1
   description: mercenary-bounty-description-generic
@@ -230,7 +230,7 @@
   entries:
   - name: mercenary-bounty-item-arcadia-visor
     amount: 1
-    id: ArcadiaVisor 
+    id: ArcadiaVisor
 
 - type: mercenaryBounty
   id: MercenaryBountyMercenaryFabHackedCircuitboard1
@@ -285,7 +285,7 @@
   - name: mercenary-bounty-item-fire-axe
     amount: 1
     id: FireAxe
-    
+
 - type: mercenaryBounty
   id: MercenaryBountyToolboxGold
   description: mercenary-bounty-description-generic

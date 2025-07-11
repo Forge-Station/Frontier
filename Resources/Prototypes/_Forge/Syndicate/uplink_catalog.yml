@@ -2,7 +2,7 @@
   id: SmuggerUplinkPistolViper
   name: uplink-pistol-viper-name
   description: uplink-pistol-viper-desc
-  productEntity: WeaponPistolViper
+  productEntity: NFWeaponPistolViper
   discountCategory: rareDiscounts
   discountDownTo:
     TelecrystalDamaged: 4
@@ -15,7 +15,7 @@
   id: SmuggerUplinkRevolverPython
   name: uplink-revolver-python-name
   description: uplink-revolver-python-desc
-  productEntity: WeaponRevolverPythonAP
+  productEntity: NFWeaponRevolverRitland45
   discountCategory: rareDiscounts
   discountDownTo:
     TelecrystalDamaged: 4
@@ -29,7 +29,7 @@
   id: SmuggerUplinkPistolCobra
   name: uplink-pistol-cobra-name
   description: uplink-pistol-cobra-desc
-  productEntity: WeaponPistolCobra
+  productEntity: NFWeaponPistolCobra
   discountCategory: rareDiscounts
   discountDownTo:
     TelecrystalDamaged: 4
@@ -43,7 +43,7 @@
   id: SmuggerUplinkRifleMosin
   name: uplink-rifle-mosin-name
   description: uplink-rifle-mosin-desc
-  productEntity: WeaponSniperMosin
+  productEntity: NFWeaponRifleBarlowsBolt
   cost:
     TelecrystalDamaged: 2
   categories:
@@ -500,7 +500,7 @@
   name: uplink-speedloader-magnum-name
   description: uplink-speedloader-magnu-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
-  productEntity: SpeedLoaderMagnumAP
+  productEntity: NFSpeedLoaderPistol45
   cost:
     TelecrystalDamaged: 6
   categories:

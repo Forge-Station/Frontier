@@ -54,6 +54,20 @@
         whitelist:
           tags:
             - NFCartridgePistol35
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+      gun_magazine: !type:ContainerSlot
+        showEnts: False
+        occludes: True
+        ent: null
+      gun_chamber: !type:ContainerSlot
+        showEnts: False
+        occludes: True
+        ent: null
   - type: MagazineVisuals
     magState: mag
     steps: 6

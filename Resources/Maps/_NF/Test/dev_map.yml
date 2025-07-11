@@ -11507,34 +11507,7 @@ entities:
     - type: Transform
       pos: -8.590513,-1.4515159
       parent: 179
-<<<<<<< HEAD
-- proto: WeaponEnergyGun
-  entities:
-  - uid: 1496
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.0939138,-3.48032
-      parent: 179
-- proto: WeaponEnergyShotgun
-  entities:
-  - uid: 128
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.4845388,-3.464695
-      parent: 179
-- proto: WeaponLaserCarbine
-  entities:
-  - uid: 188
-    components:
-    - type: Transform
-      pos: -3.5226438,-0.45543313
-      parent: 179
-- proto: WeaponNFLaserPistol
-=======
 - proto: NFWeaponEnergyPistolLaser
->>>>>>> upstream
   entities:
   - uid: 1202
     components:

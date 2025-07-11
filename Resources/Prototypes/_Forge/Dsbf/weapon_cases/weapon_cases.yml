@@ -70,9 +70,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponRevolverInspector
+    - id: NFWeaponRevolverInspector
       amount: 1
-    - id: SpeedLoaderMagnum
+    - id: NFSpeedLoaderPistol45
       amount: 2
 
 - type: entity
@@ -83,7 +83,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponPistolMk58
+    - id: NFWeaponPistolMk58
       amount: 1
     - id: NFMagazinePistol35
       amount: 2
@@ -124,7 +124,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponLaserCarbine
+    - id: NFWeaponEnergyRifleCarbine
       amount: 1
 
 - type: entity
@@ -135,7 +135,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponRifleLecter
+    - id: NFWeaponRifleAssaultLecter
       amount: 1
     - id: NFMagazineRifle20
       amount: 2
@@ -163,7 +163,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponShotgunEnforcer
+    - id: NFWeaponShotgunEnforcer
       amount: 1
     - id: NFAmmunitionBoxShellShotgunBuckshot
       amount: 2
@@ -176,9 +176,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponRevolverMateba
+    - id: NFWeaponRevolverWard45
       amount: 1
-    - id: SpeedLoaderMagnum
+    - id: NFSpeedLoaderPistol45
       amount: 2
 
 - type: entity
@@ -200,9 +200,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponSubMachineGunWt550
+    - id: NFWeaponSubMachineGunWt550
       amount: 1
-    - id: MagazinePistolSubMachineGunTopMounted
+    - id: NFMagazineSubMachineGunTopMounted35
       amount: 2
     - id: NFAmmunitionBoxPistol35
       amount: 1
@@ -226,7 +226,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponDisablerSMG
+    - id: NFWeaponEnergySubMachineGunDisabler
       amount: 1
 
 - type: entity
@@ -269,7 +269,7 @@
     contents:
     - id: WeaponLightMachineGunL2RPK
       amount: 1
-    - id: MagazineLightRifleBox
+    - id: NFMagazineBoxRifle20
       amount: 2
     - id: NFAmmunitionBoxRifle30
       amount: 1
@@ -282,7 +282,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponPulseCarbine
+    - id: NFWeaponEnergyRifleAssaultPulseCarbine
       amount: 1
 
 - type: entity
@@ -304,5 +304,5 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponPulsePistol
+    - id: NFWeaponEnergyPistolPulse
       amount: 1
