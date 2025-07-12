@@ -238,8 +238,6 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: StaticPrice
-    price: 19
   - type: PhysicalComposition
     materialComposition:
       Glass: 500

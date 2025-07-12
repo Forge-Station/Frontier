@@ -7051,6 +7051,14 @@ entities:
     - type: Transform
       pos: -7.3013268,-0.20142174
       parent: 2
+- proto: NFBlueprintJawsOfLife
+  entities:
+  - uid: 685
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -0.68390274,12.6667795
+      parent: 2
 - proto: NFPosterContrabandLvhiLogo
   entities:
   - uid: 211
@@ -8170,6 +8178,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.6264534,8.792667
+      parent: 2
+- proto: ShipyardPioneerInfo
+  entities:
+  - uid: 1896
+    components:
+    - type: Transform
+      pos: 0.6417999,-3.3096642
       parent: 2
 - proto: SignDirectionalBar
   entities:

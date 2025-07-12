@@ -123,7 +123,6 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverArgentiExpedition
 
-## Shotguns
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1
@@ -153,15 +152,12 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleBarlowsBoltExpedition
 
-
-- type: entity #CorvaxFrontier
+- type: entity
   parent:
-  - BaseC3ExpeditionContraband
-  - WeaponShotgunKD12
+  - BaseExpeditionWeaponTier1
+  - NFWeaponRifleCeremonial
   categories: [ HideSpawnMenu ]
-  id: WeaponShotgunKD12Expedition #CorvaxFrontier
-
-# Rifles
+  id: NFWeaponRifleCeremonialExpedition
 
 - type: entity
   parent:
@@ -169,6 +165,13 @@
   - NFWeaponRifleRepeater
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleRepeaterExpedition
+
+- type: entity #CorvaxFrontier
+  parent:
+  - BaseC3ExpeditionContraband
+  - WeaponShotgunKD12
+  categories: [ HideSpawnMenu ]
+  id: WeaponShotgunKD12Expedition #CorvaxFrontier
 
 # region Tier 2
 ## Pistols
@@ -215,7 +218,6 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverLuckyExpedition
 
-## Energy
 - type: entity
   parent:
   - BaseExpeditionWeaponTier2Pirate
