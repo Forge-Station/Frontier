@@ -99,33 +99,43 @@ public sealed partial class NavMapSystem : SharedNavMapSystem
         return chunk;
     }
 
+    // Forge-Change-Start
+
     private void OnTileChanged(ref TileChangedEvent ev)
     {
-        if (!ev.EmptyChanged || !_navQuery.TryComp(ev.NewTile.GridUid, out var navMap))
+        if (!_navQuery.TryComp(ev.Entity, out var navMap))
             return;
 
-        var tile = ev.NewTile.GridIndices;
-        var chunkOrigin = SharedMapSystem.GetChunkIndices(tile, ChunkSize);
-
-        var chunk = EnsureChunk(navMap, chunkOrigin);
-
-        // This could be easily replaced in the future to accommodate diagonal tiles
-        var relative = SharedMapSystem.GetChunkRelative(tile, ChunkSize);
-        ref var tileData = ref chunk.TileData[GetTileIndex(relative)];
-
-        if (ev.NewTile.IsSpace(_tileDefManager))
+        foreach (var change in ev.Changes)
         {
-            tileData = 0;
-            if (PruneEmpty((ev.NewTile.GridUid, navMap), chunk))
-                return;
-        }
-        else
-        {
-            tileData = FloorMask;
-        }
+            if (!change.EmptyChanged)
+                continue;
 
-        DirtyChunk((ev.NewTile.GridUid, navMap), chunk);
+            var tile = change.GridIndices;
+            var chunkOrigin = SharedMapSystem.GetChunkIndices(tile, ChunkSize);
+
+            var chunk = EnsureChunk(navMap, chunkOrigin);
+
+            // This could be easily replaced in the future to accommodate diagonal tiles
+            var relative = SharedMapSystem.GetChunkRelative(tile, ChunkSize);
+            ref var tileData = ref chunk.TileData[GetTileIndex(relative)];
+
+            if (change.NewTile.IsSpace(_tileDefManager))
+            {
+                tileData = 0;
+                if (PruneEmpty((ev.Entity, navMap), chunk))
+                    continue;
+            }
+            else
+            {
+                tileData = FloorMask;
+            }
+
+            DirtyChunk((ev.Entity, navMap), chunk);
+        }
     }
+
+    // Forge-Change-End
 
     private void DirtyChunk(Entity<NavMapComponent> entity, NavMapChunk chunk)
     {
@@ -293,7 +303,7 @@ public sealed partial class NavMapSystem : SharedNavMapSystem
                 continue;
 
             var directions = (int)airtight.AirBlockedDirection;
-            tileData |= directions << (int) category;
+            tileData |= directions << (int)category; // Forge-Change
         }
 
         // Remove walls that intersect with doors (unless they can both physically fit on the same tile)
@@ -301,7 +311,7 @@ public sealed partial class NavMapSystem : SharedNavMapSystem
         // Is this for blast-doors or something?
 
         // Shift airlock bits over to the wall bits
-        var shiftedAirlockBits = (tileData & AirlockMask) >> ((int) NavMapChunkType.Airlock - (int) NavMapChunkType.Wall);
+        var shiftedAirlockBits = (tileData & AirlockMask) >> ((int)NavMapChunkType.Airlock - (int)NavMapChunkType.Wall); // Forge-Change
 
         // And then mask door bits
         tileData &= ~shiftedAirlockBits;

@@ -74,6 +74,8 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly GameTicker _ticker = default!; //frontier edit to get the main map in FTL
 
+    public const float TileDensityMultiplier = 0.5f; // Forge-Change
+
     private EntityQuery<BuckleComponent> _buckleQuery;
     private EntityQuery<MapGridComponent> _gridQuery;
     private EntityQuery<PhysicsComponent> _physicsQuery;
@@ -118,7 +120,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     {
         foreach (var fixture in args.NewFixtures)
         {
-            _physics.SetDensity(uid, fixture.Key, fixture.Value, TileMassMultiplier, false, manager);
+            _physics.SetDensity(uid, fixture.Key, fixture.Value, TileDensityMultiplier, false, manager); // Forge-Change
             _fixtures.SetRestitution(uid, fixture.Key, fixture.Value, 0.1f, false, manager);
         }
     }
@@ -129,7 +131,6 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
             return;
 
         EntityManager.EnsureComponent<ShuttleComponent>(ev.EntityUid);
-        EnsureComp<ShuttleImpactComponent>(ev.EntityUid); //Corvax-Frontier - mersen
     }
 
     private void OnShuttleStartup(EntityUid uid, ShuttleComponent component, ComponentStartup args)

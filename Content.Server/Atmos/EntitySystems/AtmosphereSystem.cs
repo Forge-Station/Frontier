@@ -81,10 +81,15 @@ public sealed partial class AtmosphereSystem : SharedAtmosphereSystem
         ShutdownCommands();
     }
 
+    // Forge-Change-Start
     private void OnTileChanged(ref TileChangedEvent ev)
     {
-        InvalidateTile(ev.NewTile.GridUid, ev.NewTile.GridIndices);
+        foreach (var change in ev.Changes)
+        {
+            InvalidateTile(ev.Entity.Owner, change.GridIndices);
+        }
     }
+    // Forge-Change-End
 
     private void OnPrototypesReloaded(PrototypesReloadedEventArgs ev)
     {
