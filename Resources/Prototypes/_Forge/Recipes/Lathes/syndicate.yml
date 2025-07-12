@@ -9,7 +9,7 @@
 - type: latheRecipe
   id: ClothingBackpackDuffelSyndicateFilledShotgunRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
-  result: WeaponShotgunBulldog
+  result: NFWeaponShotgunBulldog
   completetime: 1
   materials:
     CreditCounterfeit: 44000
@@ -17,7 +17,7 @@
 - type: latheRecipe
   id: ClothingBackpackDuffelSyndicateFilledSMGRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
-  result: WeaponSubMachineGunC20r
+  result: NFWeaponSubMachineGunC20r
   completetime: 1
   materials:
     CreditCounterfeit: 38000
@@ -25,7 +25,7 @@
 - type: latheRecipe
   id: ClothingBackpackDuffelSyndicateFilledHristovRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
-  result: WeaponSniperHristov
+  result: NFWeaponRifleSniperHristov
   completetime: 1
   materials:
     CreditCounterfeit: 26000
@@ -33,7 +33,7 @@
 - type: latheRecipe
   id: ClothingBackpackDuffelSyndicateFilledLMGRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
-  result: WeaponLightMachineGunL6
+  result: NFWeaponLightMachineGunL6
   completetime: 1
   materials:
     CreditCounterfeit: 68000
@@ -49,7 +49,7 @@
 - type: latheRecipe
   id: ClothingBackpackDuffelSyndicateFilledCarbineRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
-  result: WeaponRifleM90GrenadeLauncher
+  result: NFWeaponRifleAssaultM90GrenadeLauncher
   completetime: 1
   materials:
     CreditCounterfeit: 32000
@@ -65,7 +65,7 @@
 - type: latheRecipe
   id: ClothingBackpackDuffelSyndicateFilledAtreidesRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
-  result: WeaponSubMachineGunAtreides
+  result: NFWeaponSubMachineGunAtreides
   completetime: 1
   materials:
     CreditCounterfeit: 42000
@@ -97,7 +97,7 @@
 - type: latheRecipe
   id: WeaponRevolverPythonRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
-  result: WeaponRevolverPython
+  result: NFWeaponRevolverRitland45
   completetime: 1
   materials:
     CreditCounterfeit: 7000
@@ -105,7 +105,7 @@
 - type: latheRecipe
   categories: [SyndicateTradingConsoleLaserArmsWeapons]
   id: WeaponAntiqueLaserRecipe
-  result: WeaponAntiqueLaser
+  result: NFWeaponEnergyPistolLaserAntique
   completetime: 1
   materials:
     CreditCounterfeit: 9500
@@ -113,7 +113,7 @@
 - type: latheRecipe
   categories: [SyndicateTradingConsoleLaserArmsWeapons]
   id: WeaponLaserSvalinnRecipe
-  result: WeaponLaserSvalinn
+  result: NFWeaponEnergyPistolLaserSvalinn
   completetime: 1
   materials:
     CreditCounterfeit: 4500
@@ -129,7 +129,7 @@
 - type: latheRecipe
   categories: [SyndicateTradingConsoleLaserArmsWeapons]
   id: WeaponXrayCannonRecipe
-  result: WeaponXrayCannon
+  result: NFWeaponEnergyRifleSniperXrayCannon
   completetime: 1
   materials:
     CreditCounterfeit: 31000
@@ -137,7 +137,7 @@
 - type: latheRecipe
   categories: [SyndicateTradingConsoleLaserArmsWeapons]
   id: WeaponLaserCannonRecipe
-  result: WeaponLaserCannon
+  result: NFWeaponEnergyRifleSniperCannon
   completetime: 1
   materials:
     CreditCounterfeit: 29000
@@ -149,14 +149,6 @@
   completetime: 1
   materials:
     CreditCounterfeit: 33000
-
-- type: latheRecipe
-  id: WeaponEnergyShotgunRecipe
-  categories: [SyndicateTradingConsoleLaserArmsWeapons]
-  result: WeaponEnergyShotgun
-  completetime: 1
-  materials:
-    CreditCounterfeit: 134542
 
 - type: latheRecipe
   id: EnergySwordDoubleRecipe
@@ -193,7 +185,7 @@
 - type: latheRecipe
   id: WeaponPistolCHIMPUpgradedRecipe
   categories: [SyndicateTradingConsoleLaserArmsWeapons]
-  result: WeaponPistolCHIMPUpgraded
+  result: NFWeaponPistolCHIMPUpgraded
   completetime: 1
   materials:
     CreditCounterfeit: 6500

@@ -32,7 +32,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: WeaponSniperHristov
+      - id: NFWeaponRifleSniperHristov
       - id: NFAmmunitionBoxRifle60
 
 - type: entity
@@ -43,6 +43,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: WeaponSubMachineGunAtreides
+      - id: NFWeaponSubMachineGunAtreides
       - id: NFMagazineSubMachineGun35
         amount: 2

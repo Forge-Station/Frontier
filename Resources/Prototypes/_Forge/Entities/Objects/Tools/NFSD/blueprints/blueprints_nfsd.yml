@@ -12,15 +12,6 @@
     - NFAmmunitionBoxPistol45Uranium
     - NFAmmunitionBoxRifle20Incendiary
     - NFAmmunitionBoxRifle20Uranium
-    - MagazineLightRifleIncendiary
-    - MagazineLightRifleUranium
-    - MagazinePistolIncendiary
-    - MagazinePistolUranium
-    - MagazineRifleIncendiary
-    - MagazineRifleUranium
-    - MagazineShotgunIncendiary
-    - SpeedLoaderMagnumIncendiary
-    - SpeedLoaderMagnumUranium
 
 - type: entity
   parent: NFBaseBlueprintExpedition
@@ -30,7 +21,7 @@
     providedRecipes:
     - NFGrenadeBlast
     - NFGrenadeEMP
-    - MagazineGrenadeEmpty
+    - NFMagazineGrenadeEmpty
 
 - type: entity
   parent: NFBaseBlueprintExpedition
@@ -38,5 +29,5 @@
   components:
   - type: Blueprint
     providedRecipes:
-    - WeaponXrayCannon
-    - WeaponLaserCannon
+    - NFWeaponEnergyRifleSniperXrayCannon
+    - NFWeaponEnergyRifleSniperCannon
