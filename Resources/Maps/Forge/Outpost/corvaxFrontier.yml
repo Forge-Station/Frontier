@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 255.1.0
+  engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/11/2025 16:23:56
-  entityCount: 8876
+  time: 05/14/2025 04:37:49
+  entityCount: 8879
 maps:
 - 1
 grids:
@@ -233,7 +233,8 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
-      dampingModifier: 0.25
+      angularDamping: 999999
+      linearDamping: 999999
     - type: GridPathfinding
     - type: WorldGenDistanceCarver
       distanceThresholds:
@@ -7538,7 +7539,7 @@ entities:
       pos: -8.5,17.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -15542.185
+      secondsUntilStateChange: -15385.708
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8178,7 +8179,7 @@ entities:
       pos: 38.5,-20.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -94451.48
+      secondsUntilStateChange: -94295
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8189,7 +8190,7 @@ entities:
       pos: 38.5,-19.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -94451.69
+      secondsUntilStateChange: -94295.21
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8200,7 +8201,7 @@ entities:
       pos: 38.5,-18.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -94451.92
+      secondsUntilStateChange: -94295.445
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8256,7 +8257,7 @@ entities:
       pos: 22.5,52.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -93866.99
+      secondsUntilStateChange: -93710.516
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8267,7 +8268,7 @@ entities:
       pos: 23.5,52.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -93866.31
+      secondsUntilStateChange: -93709.836
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8278,7 +8279,7 @@ entities:
       pos: 24.5,52.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -93866.83
+      secondsUntilStateChange: -93710.35
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8605,7 +8606,7 @@ entities:
       pos: 19.5,54.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -3645.2722
+      secondsUntilStateChange: -3488.7954
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9096,7 +9097,7 @@ entities:
       pos: 18.5,-51.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -1468.4076
+      secondsUntilStateChange: -1311.9308
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -24094,6 +24095,33 @@ entities:
         actions: !type:Container
           ents:
           - 10
+- proto: ClothingOuterVestWeb
+  entities:
+  - uid: 3105
+    components:
+    - type: Transform
+      pos: 16.740847,-5.2665253
+      parent: 2
+    - type: Storage
+      storedItems:
+        3106:
+          position: 0,0
+          _rotation: South
+        3108:
+          position: 0,0
+          _rotation: North
+        3107:
+          position: 2,0
+          _rotation: South
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 3106
+          - 3108
+          - 3107
 - proto: ClothingUniformJumpsuitMusician
   entities:
   - uid: 3109
@@ -24164,6 +24192,14 @@ entities:
     - type: Transform
       pos: 5.5,-10.5
       parent: 2
+- proto: CombatMedipen
+  entities:
+  - uid: 3106
+    components:
+    - type: Transform
+      parent: 3105
+    - type: Physics
+      canCollide: False
 - proto: ComfyChair
   entities:
   - uid: 3121
@@ -46893,7 +46929,7 @@ entities:
       pos: 17.5,22.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -186131.27
+      secondsUntilStateChange: -185974.78
       state: Opening
   - uid: 6294
     components:
@@ -46901,7 +46937,7 @@ entities:
       pos: 19.5,22.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -186131.64
+      secondsUntilStateChange: -185975.16
       state: Opening
   - uid: 6295
     components:
@@ -46914,7 +46950,7 @@ entities:
       pos: 20.5,18.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -186132.36
+      secondsUntilStateChange: -185975.88
       state: Opening
   - uid: 6297
     components:
@@ -46922,7 +46958,7 @@ entities:
       pos: 12.5,22.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -187597.33
+      secondsUntilStateChange: -187440.84
       state: Opening
   - uid: 6298
     components:
@@ -46930,7 +46966,7 @@ entities:
       pos: 14.5,22.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -187596.88
+      secondsUntilStateChange: -187440.39
       state: Opening
   - uid: 6299
     components:
@@ -47122,14 +47158,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         7266:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
         7268:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
         7267:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
   - uid: 6324
     components:
     - type: Transform
@@ -47141,11 +47174,9 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         7265:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
         7264:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
 - proto: LockableButtonSecurity
   entities:
   - uid: 6325
@@ -47157,11 +47188,9 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         1177:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
         1178:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
   - uid: 6326
     components:
     - type: Transform
@@ -47171,11 +47200,9 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         1179:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
         1180:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
   - uid: 6327
     components:
     - type: Transform
@@ -47185,17 +47212,13 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         1173:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
         1175:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
         1176:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
         1174:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
 - proto: LockerAtmosphericsFilledHardsuit
   entities:
   - uid: 6328
@@ -47403,6 +47426,14 @@ entities:
     - type: Transform
       pos: -18.5,-5.5
       parent: 2
+- proto: MagazineBoxCaselessRifle10x24
+  entities:
+  - uid: 3107
+    components:
+    - type: Transform
+      parent: 3105
+    - type: Physics
+      canCollide: False
 - proto: MailBag
   entities:
   - uid: 6336
@@ -47478,13 +47509,6 @@ entities:
     components:
     - type: Transform
       pos: 12.5,20.5
-      parent: 2
-- proto: MiniStationAnchor
-  entities:
-  - uid: 3105
-    components:
-    - type: Transform
-      pos: -4.5,12.5
       parent: 2
 - proto: MopBucket
   entities:
@@ -47638,52 +47662,6 @@ entities:
     - type: Transform
       pos: -31.5,-2.5
       parent: 2
-- proto: NFSpeedLoaderPistol45
-  entities:
-  - uid: 6283
-    components:
-    - type: Transform
-      parent: 6282
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 6284
-    components:
-    - type: Transform
-      parent: 6282
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: NFWeaponEnergyPistolDisabler
-  entities:
-  - uid: 7513
-    components:
-    - type: Transform
-      parent: 7512
-    - type: Physics
-      canCollide: False
-  - uid: 7514
-    components:
-    - type: Transform
-      parent: 7512
-    - type: Physics
-      canCollide: False
-- proto: NFWeaponLauncherMail
-  entities:
-  - uid: 8758
-    components:
-    - type: Transform
-      pos: 21.558159,-13.07286
-      parent: 2
-- proto: NFWeaponRevolverWard45
-  entities:
-  - uid: 6285
-    components:
-    - type: Transform
-      parent: 6282
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: NitrogenCanister
   entities:
   - uid: 6391
@@ -48077,7 +48055,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 14.353407,3.3849247
       parent: 2
-- proto: PlushieMoffbar
+- proto: PlushieMoff
   entities:
   - uid: 6419
     components:
@@ -48175,6 +48153,14 @@ entities:
       rot: 3.141592653589793 rad
       pos: -21.5,-16.5
       parent: 2
+- proto: PosterContrabandLustyExomorph
+  entities:
+  - uid: 6430
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -19.5,-11.5
+      parent: 2
 - proto: PosterContrabandNuclearDeviceInformational
   entities:
   - uid: 6431
@@ -48189,14 +48175,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -9.5,-5.5
-      parent: 2
-- proto: PosterContrabandRealExomorph
-  entities:
-  - uid: 6430
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -19.5,-11.5
       parent: 2
 - proto: PosterContrabandRevolt
   entities:
@@ -48561,6 +48539,24 @@ entities:
     components:
     - type: Transform
       pos: -15.5,-18.5
+      parent: 2
+- proto: PowerCellRecharger
+  entities:
+  - uid: 6493
+    components:
+    - type: Transform
+      pos: 14.5,21.5
+      parent: 2
+  - uid: 6494
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 8.5,-1.5
+      parent: 2
+  - uid: 6495
+    components:
+    - type: Transform
+      pos: -5.5,22.5
       parent: 2
 - proto: Poweredlight
   entities:
@@ -52937,14 +52933,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         7269:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
         7271:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
         7270:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
   - uid: 7273
     components:
     - type: Transform
@@ -52992,8 +52985,7 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         1184:
-        - - Pressed
-          - Toggle
+        - Pressed: Toggle
 - proto: SignAtmos
   entities:
   - uid: 7280
@@ -53852,6 +53844,22 @@ entities:
     - type: Transform
       pos: 1.5,4.5
       parent: 2
+- proto: SpeedLoaderMagnumAP
+  entities:
+  - uid: 6283
+    components:
+    - type: Transform
+      parent: 6282
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
+  - uid: 6284
+    components:
+    - type: Transform
+      parent: 6282
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: SpiderWeb
   entities:
   - uid: 7424
@@ -55596,40 +55604,25 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         3173:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3172:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         6921:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3174:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3175:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
   - uid: 7692
     components:
     - type: Transform
@@ -55638,243 +55631,141 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         3193:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3192:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3194:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3190:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3189:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3185:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3184:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3180:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3186:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3182:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3181:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3176:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3187:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3188:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3177:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3183:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3191:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3195:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3198:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3196:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3197:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3199:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3201:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3202:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3209:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3204:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3203:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3200:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3205:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3206:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3207:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3208:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3179:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3178:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
   - uid: 7693
     components:
     - type: Transform
@@ -55883,243 +55774,141 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         3183:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3177:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3188:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3187:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3176:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3181:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3182:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3186:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3180:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3184:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3185:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3189:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3190:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3194:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3192:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3193:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3191:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3195:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3198:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3196:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3197:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3199:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3200:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3201:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3202:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3203:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3209:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3204:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3205:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3206:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3207:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3208:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3179:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
         3178:
-        - - Left
-          - Forward
-        - - Right
-          - Reverse
-        - - Middle
-          - Off
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
 - proto: VehicleKeyHoverbikeNF
   entities:
   - uid: 7694
@@ -61815,27 +61604,49 @@ entities:
       parent: 2
 - proto: WeaponCapacitorRecharger
   entities:
-  - uid: 6493
-    components:
-    - type: Transform
-      pos: 14.5,21.5
-      parent: 2
-  - uid: 6494
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 8.5,-1.5
-      parent: 2
-  - uid: 6495
-    components:
-    - type: Transform
-      pos: -5.5,22.5
-      parent: 2
   - uid: 8757
     components:
     - type: Transform
       pos: -19.5,-16.5
       parent: 2
+- proto: WeaponDisabler
+  entities:
+  - uid: 7513
+    components:
+    - type: Transform
+      parent: 7512
+    - type: Physics
+      canCollide: False
+  - uid: 7514
+    components:
+    - type: Transform
+      parent: 7512
+    - type: Physics
+      canCollide: False
+- proto: WeaponMailLake
+  entities:
+  - uid: 8758
+    components:
+    - type: Transform
+      pos: 21.558159,-13.07286
+      parent: 2
+- proto: WeaponPistolCobra
+  entities:
+  - uid: 3108
+    components:
+    - type: Transform
+      parent: 3105
+    - type: Physics
+      canCollide: False
+- proto: WeaponRevolverMateba
+  entities:
+  - uid: 6285
+    components:
+    - type: Transform
+      parent: 6282
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: WeaponTurretSyndicateBroken
   entities:
   - uid: 8759
@@ -61883,7 +61694,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -129911.5
+      secondsUntilStateChange: -129755.02
       state: Opening
   - uid: 8766
     components:

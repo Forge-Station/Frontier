@@ -2536,6 +2536,20 @@ entities:
     - type: Transform
       pos: 18.299313,15.35953
       parent: 1
+- proto: NFBlueprintAdvancedMineralScannerEmpty
+  entities:
+  - uid: 692
+    components:
+    - type: Transform
+      pos: 12.959491,19.216515
+      parent: 1
+- proto: NFBlueprintPowerCellMicroreactor
+  entities:
+  - uid: 691
+    components:
+    - type: Transform
+      pos: 11.328265,6.1001997
+      parent: 1
 - proto: OreBox
   entities:
   - uid: 269
@@ -3043,7 +3057,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 15.526751,11.992101
       parent: 1
-- proto: NFShellShotgunBuckshot
+- proto: ShellShotgun
   entities:
   - uid: 517
     components:

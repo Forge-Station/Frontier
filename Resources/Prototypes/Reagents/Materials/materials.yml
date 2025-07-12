@@ -110,15 +110,6 @@
   price: 0.01 #Who knew cotton was infinitely more valuable than silk
 
 - type: material
-  id: Cotton
-  stackEntity: MaterialCotton1 # Frontier
-  name: materials-cotton
-  unit: materials-unit-boll
-  icon: { sprite: Objects/Materials/materials.rsi, state: cotton }
-  color: "#cccccc"
-  price: 0.01 #Who knew cotton was infinitely more valuable than silk
-
-- type: material
   id: Bones
   stackEntity: MaterialBones1 # Frontier
   name: materials-bones
