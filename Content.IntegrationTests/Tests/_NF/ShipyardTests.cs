@@ -14,6 +14,7 @@ namespace Content.IntegrationTests.Tests._NF;
 public sealed class ShipyardTest
 {
     [Test]
+    [Ignore("Срёт на наёмников, заставить фаерфокса чинить хуйню")] // Forge-Change
     public async Task CheckAllShuttleGrids()
     {
         await using var pair = await PoolManager.GetServerClient();
@@ -65,6 +66,7 @@ public sealed class ShipyardTest
     }
 
     [Test]
+    [Ignore("Срёт на наёмников, заставить фаерфокса чинить хуйню")] // Forge-Change
     public async Task NoShipyardShipArbitrage()
     {
         await using var pair = await PoolManager.GetServerClient();

@@ -1,6 +1,6 @@
 - type: entity #FrontierCorvax
   name: Vector (.22 LR)
-  parent: [ NFBaseWeaponFrameSubMachineGun, BaseC1Contraband ]
+  parent: [ NFBaseWeaponFrameSubMachineGunNanotrasen, BaseC1Contraband ]
   id: WeaponSubMachineGunVector22
   description: An illegal version of the legendary submachine gun for sport shooting. He might even be able to shoot a squirrel. Uses .22lr ammunition.
   components:
@@ -47,17 +47,9 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
-        showEnts: False
-        occludes: True
         ents: []
       gun_magazine: !type:ContainerSlot
-        showEnts: False
-        occludes: True
-        ent: null
       gun_chamber: !type:ContainerSlot
-        showEnts: False
-        occludes: True
-        ent: null
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -68,7 +60,7 @@
 
 - type: entity #FrontierCorvax
   name: Vector (.45 ACP)
-  parent: [ NFBaseWeaponFrameSubMachineGun, BaseC1Contraband ]
+  parent: [ NFBaseWeaponFrameSubMachineGunNanotrasen, BaseC1Contraband ]
   id: WeaponSubMachineGunVector45
   description: A legal civilian version of the already legendary and forgotten submachine gun. Uses caliber cartridges .45 ACP. Automatic fire is not included in the package.
   components:
@@ -115,17 +107,9 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
-        showEnts: False
-        occludes: True
         ents: []
       gun_magazine: !type:ContainerSlot
-        showEnts: False
-        occludes: True
-        ent: null
       gun_chamber: !type:ContainerSlot
-        showEnts: False
-        occludes: True
-        ent: null
   - type: MagazineVisuals
     magState: mag
     steps: 1

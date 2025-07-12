@@ -1,6 +1,6 @@
 - type: entity
   name: Scar12
-  parent: [NFBaseWeaponRifleChamber20, BaseC2ContrabandUnredeemable, NFBaseWeaponEncumbranceRifle]
+  parent: [NFBaseWeaponRifleAssaultChamber20, BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssaultNanotrasen]
   id: WeaponRifleScar12
   description: The Scar-12 battle rifle, developed by TechnicLogistic for its own army, is one of the most commonly found models on the black market due to its efficiency and accuracy. Currently, it is supplied to DSBF forces under a special order from NT.
   components:
@@ -51,17 +51,9 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
-        showEnts: False
-        occludes: True
         ents: []
       gun_magazine: !type:ContainerSlot
-        showEnts: False
-        occludes: True
-        ent: null
       gun_chamber: !type:ContainerSlot
-        showEnts: False
-        occludes: True
-        ent: null
   - type: GunWieldBonus
     minAngle: -17
     maxAngle: -22
@@ -75,7 +67,7 @@
 
 - type: entity
   name: Dakota
-  parent: [NFBaseWeaponRifleChamber30, BaseC2ContrabandUnredeemable, NFBaseWeaponEncumbranceRifle]
+  parent: [NFBaseWeaponRifleAssaultChamber30, BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssaultNanotrasen]
   id: WeaponInterstellarRifleM4A1
   components:
   - type: Sprite
@@ -147,7 +139,7 @@
 
 - type: entity
   name: dagger
-  parent: [NFBaseWeaponRifleChamber20, BaseC2ContrabandUnredeemable, NFBaseWeaponEncumbranceRifle]
+  parent: [NFBaseWeaponRifleAssaultChamber20, BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssaultCybersun]
   id: WeaponRifleDagger
   components:
   - type: Sprite
@@ -225,7 +217,7 @@
 
 - type: entity
   name: Cascade
-  parent: [NFBaseWeaponRifleChamber30, BaseC2ContrabandUnredeemable, NFBaseWeaponEncumbranceRifle]
+  parent: [NFBaseWeaponRifleAssaultChamber30, BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssaultCybersun]
   id: WeaponRifleCascade
   components:
   - type: Sprite

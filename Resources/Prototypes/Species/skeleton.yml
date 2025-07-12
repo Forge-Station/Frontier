@@ -5,7 +5,7 @@
   prototype: MobSkeletonPerson
   sprites: MobSkeletonSprites
   defaultSkinTone: "#fff9e2"
-  markingLimits: MobHumanMarkingLimits
+  markingLimits: MobSkeletonMarkingLimits
   maleFirstNames: NamesSkeletonFirst
   femaleFirstNames: NamesSkeletonFirst
   dollPrototype: MobSkeletonPersonDummy
@@ -28,6 +28,14 @@
     RLeg: MobSkeletonRLeg
     LFoot: MobSkeletonLFoot
     RFoot: MobSkeletonRFoot
+
+- type: markingPoints
+  id: MobSkeletonMarkingLimits
+  onlyWhitelisted: true
+  points:
+    hair:
+      points: 0
+      required: false
 
 - type: humanoidBaseSprite
   id: MobSkeletonHead
