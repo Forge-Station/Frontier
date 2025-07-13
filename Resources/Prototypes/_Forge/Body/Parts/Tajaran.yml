@@ -1,0 +1,176 @@
+# TODO: Add descriptions (many)
+# TODO BODY: Part damage
+- type: entity
+  id: PartTajaran
+  parent: BaseItem
+  name: "tajaran body part"
+  abstract: true
+  components:
+  - type: Damageable
+  - type: BodyPart
+  - type: ContainerContainer
+    containers:
+      bodypart: !type:Container
+        ents: []
+  - type: StaticPrice #DynamicPrice
+    price: 100
+  - type: Tag
+    tags:
+      - Trash
+
+- type: entity
+  id: TorsoTajaran
+  name: "tajaran torso"
+  parent: PartTajaran
+  components:
+    - type: Sprite
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "torso_m"
+    - type: Icon
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "torso_m"
+
+
+- type: entity
+  id: HeadTajaran
+  name: "tajaran head"
+  parent: PartTajaran
+  components:
+    - type: Sprite
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "head_m"
+    - type: Icon
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "head_m"
+    - type: BodyPart
+      partType: Head
+      vital: true
+    - type: Input
+      context: "ghost"
+    - type: InputMover
+    - type: GhostOnMove
+    - type: Tag
+      tags:
+        - Head
+
+- type: entity
+  id: LeftArmTajaran
+  name: "left tajaran arm"
+  parent: PartTajaran
+  components:
+    - type: Sprite
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "l_arm"
+    - type: Icon
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "l_arm"
+    - type: BodyPart
+      partType: Arm
+      symmetry: Left
+
+- type: entity
+  id: RightArmTajaran
+  name: "right tajaran arm"
+  parent: PartTajaran
+  components:
+    - type: Sprite
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "r_arm"
+    - type: Icon
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "r_arm"
+    - type: BodyPart
+      partType: Arm
+      symmetry: Right
+
+- type: entity
+  id: LeftHandTajaran
+  name: "left tajaran hand"
+  parent: PartTajaran
+  components:
+    - type: Sprite
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "l_hand"
+    - type: Icon
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "l_hand"
+    - type: BodyPart
+      partType: Hand
+      symmetry: Left
+
+- type: entity
+  id: RightHandTajaran
+  name: "right tajaran hand"
+  parent: PartTajaran
+  components:
+    - type: Sprite
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "r_hand"
+    - type: Icon
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "r_hand"
+    - type: BodyPart
+      partType: Hand
+      symmetry: Right
+
+- type: entity
+  id: LeftLegTajaran
+  name: "left tajaran leg"
+  parent: PartTajaran
+  components:
+    - type: Sprite
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "l_leg"
+    - type: Icon
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "l_leg"
+    - type: BodyPart
+      partType: Leg
+      symmetry: Left
+    - type: MovementBodyPart
+
+- type: entity
+  id: RightLegTajaran
+  name: "right tajaran leg"
+  parent: PartTajaran
+  components:
+    - type: Sprite
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "r_leg"
+    - type: Icon
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "r_leg"
+    - type: BodyPart
+      partType: Leg
+      symmetry: Right
+    - type: MovementBodyPart
+
+- type: entity
+  id: LeftFootTajaran
+  name: "left tajaran foot"
+  parent: PartTajaran
+  components:
+    - type: Sprite
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "l_foot"
+    - type: Icon
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "l_foot"
+    - type: BodyPart
+      partType: Foot
+      symmetry: Left
+
+- type: entity
+  id: RightFootTajaran
+  name: "right tajaran foot"
+  parent: PartTajaran
+  components:
+    - type: Sprite
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "r_foot"
+    - type: Icon
+      sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+      state: "r_foot"
+    - type: BodyPart
+      partType: Foot
+      symmetry: Right
