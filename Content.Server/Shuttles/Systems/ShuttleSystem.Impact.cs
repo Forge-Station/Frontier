@@ -20,6 +20,9 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using System.Numerics;
+using Content.Server.Explosion.Components;
+using Content.Shared.Explosion.Components;
+using Content.Shared.Tiles; //Forge-Change
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -94,6 +97,13 @@ public sealed partial class ShuttleSystem
             || TerminatingOrDeleted(args.OtherEntity) || EntityManager.IsQueuedForDeletion(args.OtherEntity)
         )
             return;
+
+        //Forge-Change-Start
+        if (TryComp<ProtectedGridComponent>(args.OurEntity, out var ourProt) && ourProt.NoGridCollision ||
+            TryComp<ProtectedGridComponent>(args.OtherEntity, out var otherProt) && otherProt.NoGridCollision
+        )
+            return;
+        //Forge-Change-End
 
         if (!_gridQuery.TryComp(args.OurEntity, out var ourGrid) ||
             !_gridQuery.TryComp(args.OtherEntity, out var otherGrid)
@@ -210,16 +220,16 @@ public sealed partial class ShuttleSystem
 
         // throw every entity on grid if the impulse is not negligible
         if (deltaV.Length() > _minImpulseVelocity)
-            ThrowEntitiesOnGrid(ent, xform, -deltaV);
+            ThrowEntitiesOnGrid(ent, xform, -deltaV, energy);
     }
 
     /// <summary>
     /// Knocks and throws all unbuckled entities on the specified grid.
     /// </summary>
-    private void ThrowEntitiesOnGrid(EntityUid gridUid, TransformComponent xform, Vector2 direction)
+    private void ThrowEntitiesOnGrid(EntityUid gridUid, TransformComponent xform, Vector2 direction, float energy)
     {
         var movedByPressureQuery = GetEntityQuery<MovedByPressureComponent>();
-        var knockdownTime = TimeSpan.FromSeconds(5);
+        var stunTime = TimeSpan.FromSeconds(Math.Min(10, energy * 0.25f)); //Forge-Change
 
         var minsq = _minThrowVelocity * _minThrowVelocity;
         // iterate all entities on the grid
@@ -239,9 +249,11 @@ public sealed partial class ShuttleSystem
             if (movedByPressureQuery.TryComp(uid, out var moved) && !moved.Enabled)
                 continue;
 
+            if (stunTime.TotalSeconds > 1.0f) //Forge-Change
+                _stuns.TryStun(uid, stunTime, true); //Forge-Change
+
             if (direction.LengthSquared() > minsq)
             {
-                _stuns.TryKnockdown(uid, knockdownTime, true);
                 _throwing.TryThrow(uid, direction, physics, Transform(uid), _projQuery, direction.Length(), playSound: false);
             }
             else
@@ -396,7 +408,19 @@ public sealed partial class ShuttleSystem
             // Mark tiles for breaking/effects
             var def = (ContentTileDefinition)_tileDefManager[_mapSystem.GetTileRef(uid, grid, tileData.Tile).Tile.TypeId];
             if (tileData.Energy > def.Mass * _tileBreakEnergyMultiplier)
+            {
                 brokenTiles.Add((tileData.Tile, Tile.Empty));
+
+                // Detonate explosives on broken tiles
+                foreach (var localEnt in entitiesOnTile)
+                {
+                    if (TerminatingOrDeleted(localEnt) || EntityManager.IsQueuedForDeletion(localEnt))
+                        continue;
+
+                    if (TryComp<ExplosiveComponent>(localEnt, out var explosive))
+                        _explosion.TriggerExplosive(localEnt, explosive);
+                }
+            }
 
         }
     }
