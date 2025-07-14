@@ -1,14 +1,12 @@
 - type: entity
   save: false
   name: Urist McTajar
-  parent: BaseMobSpeciesOrganic
+  parent: BaseMobHuman
   id: BaseMobTajaran
   abstract: true
   components:
   - type: HumanoidAppearance
     species: Tajaran
-  - type: Hunger
-    baseDecayRate: 0.02
   - type: Thirst
     baseDecayRate: 0.15
   - type: Icon
@@ -70,6 +68,16 @@
   - type: Wagging
   - type: NightVision
     color: "#808080"
+  - type: Carriable # Frontier: Carrying system from nyanotrasen.
+  - type: ShortWhitelist # Frontier
+    scale: 0.8 # Frontier
+    density: 140 # Frontier
+    pseudoItem: true # Frontier
+    cosmeticOnly: false # Frontier
+  - type: TallWhitelist # Frontier
+    scale: 1.2 # Frontier
+  - type: Puller
+    needsHands: false
 
 - type: entity
   save: false

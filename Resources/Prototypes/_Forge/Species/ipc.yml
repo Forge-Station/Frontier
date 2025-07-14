@@ -2,7 +2,6 @@
   id: Ipc
   name: species-name-Ipc
   roundStart: true
-  sponsorOnly: true # Forge-Sponsors
   prototype: MobIpc
   sprites: MobIpcSprites
   defaultSkinTone: "#eb943d"
@@ -11,8 +10,8 @@
   skinColoration: Hues
   maleFirstNames: NamesIpcFirstMale
   femaleFirstNames: NamesIpcFirstFemale
-  maleLastNames: NamesIpcLast # Forge-LastnameGender
-  femaleLastNames: NamesIpcLast # Forge-LastnameGender
+  maleLastNames: NamesIpcLast # Corvax-LastnameGender
+  femaleLastNames: NamesIpcLast # Corvax-LastnameGender
 
 - type: speciesBaseSprites
   id: MobIpcSprites

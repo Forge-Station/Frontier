@@ -67,7 +67,7 @@
     cellSlotId: cell_slot
     fitsInCharger: true
   - type: PowerCellDraw
-    drawRate: 0.8
+    drawRate: 0.2
   # no ToggleCellDraw since dont want to lose access when power is gone
   - type: AccessReader
     access: [ ["Ipc"] ]
