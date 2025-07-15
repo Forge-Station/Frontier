@@ -1,0 +1,15 @@
+- type: listing
+  id: UplinkNFClothingEyesNightVisionGogglePirate
+  name:  uplink-pirate-nightvision-name
+  description: uplink-pirate-nightvision-desc
+  productEntity: NFClothingEyesNightVisionGogglePirate
+  icon: { sprite: Forge/Clothing/Eyes/Goggles/diagnostic_nightvision.rsi, state: icon }
+  cost:
+    Doubloon: 6
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink

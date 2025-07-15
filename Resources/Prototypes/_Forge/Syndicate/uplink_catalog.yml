@@ -1538,6 +1538,45 @@
   - UplinkWearablesSmugger
 
 - type: listing
+  id: SmuggerUplinkgNFClothingEyesNightVisionGoggleChameleon
+  name: uplink-clothing-nightvision-name
+  description: uplink-clothing-nightvision-desc
+  productEntity: NFClothingEyesNightVisionGoggleChameleon
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    TelecrystalDamaged: 6
+  cost:
+    TelecrystalDamaged: 12
+  categories:
+  - UplinkWearablesSmugger
+
+- type: listing
+  id: SmuggerUplinkgNFClothingEyesNightVisionGoggleChameleonNuke
+  name: uplink-clothing-nightvisionplus-name
+  description: uplink-clothing-nightvisionplus-desc
+  productEntity: NFClothingEyesNightVisionGoggleChameleonNuke
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    TelecrystalDamaged: 6
+  cost:
+    TelecrystalDamaged: 20
+  categories:
+  - UplinkWearablesSmugger
+
+- type: listing
+  id: SmuggerUplinkgClothingEyesThermalVisionGogglesSyndie
+  name: uplink-clothing-thermalvision-name
+  description: uplink-clothing-thermalvision-desc
+  productEntity: ClothingEyesThermalVisionGogglesSyndie
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    TelecrystalDamaged: 12
+  cost:
+    TelecrystalDamaged: 24
+  categories:
+  - UplinkWearablesSmugger
+
+- type: listing
   id: SmuggerUplinkClothingOuterVestWeb
   name: uplink-clothing-outer-vest-web-name
   description: uplink-clothing-outer-vest-web-desc
