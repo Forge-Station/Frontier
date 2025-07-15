@@ -465,6 +465,7 @@
   cost: 15000
   recipeUnlocks:
   - ClothingOuterHardsuitMaximPrototype
+  - ClothingOuterHardsuitMaxims
   prerequisiteLineType: Tree
   technologyPrerequisites:
   - NFHardsuitsExperimentalRD
@@ -480,6 +481,7 @@
   cost: 20000
   recipeUnlocks:
   - ClothingOuterHardsuitScaf
+  - ClothingOuterHardsuitMercenaryElite #CorvaxFrontier
   technologyPrerequisites:
   - NFHardsuitsArmored
   position: 5, 9

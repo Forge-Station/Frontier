@@ -1,31 +1,4 @@
 - type: emote
-  id: Purrs
-  name: chat-emote-name-purrs
-  category: Vocal
-  available: false
-  icon: Forge/Interface/Emotes/purr.png
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: ["chat-emote-msg-purrs"]
-  chatTriggers:
-  - purr
-  - purr.
-  - purr!
-  - purrs
-  - purrs.
-  - purrs!
-  - мурчит
-  - мурчит.
-  - мурчит!
-  - мурлычет
-  - мурлычет.
-  - мурлычет!
-
-- type: emote
   id: BeepIpc
   name: chat-emote-name-beep
   category: Hands
