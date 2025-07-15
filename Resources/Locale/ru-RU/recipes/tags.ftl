@@ -142,3 +142,4 @@ construction-graph-tag-fire-helmet = пожарный шлем
 
 # Утиль
 construction-graph-tag-spationaut-hardsuit = скафандр космонавта
+construction-graph-tag-night-vision = очки ночного виденья

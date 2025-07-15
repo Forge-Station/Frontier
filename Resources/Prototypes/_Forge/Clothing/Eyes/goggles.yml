@@ -13,6 +13,13 @@
   - type: FlashImmunity
   - type: StaticPrice
     price: 30
+  - type: Tag
+    tags:
+    - NightVisionGoggles
+  - type: NightVision
+    color: "#77DD77"
+    flashDurationMultiplier: 2
+    isEquipment: true
 
 - type: entity
   parent: ClothingEyesNightVisionGoggles
@@ -28,6 +35,13 @@
   - type: StaticPrice
     price: 30
   - type: ShowHealthBars
+  - type: Construction
+    graph: HudMedSec
+    node: NightVisionGogglesMed
+  - type: NightVision
+    color: "#42AAFF"
+    flashDurationMultiplier: 2
+    isEquipment: true
 
 - type: entity
   parent: [ClothingEyesNightVisionGoggles, ShowSecurityIcons, BaseC2ContrabandUnredeemable]
@@ -43,6 +57,10 @@
   - type: StaticPrice
     price: 30
   - type: ShowHealthBars
+  - type: NightVision
+    color: "#AB4E52"
+    flashDurationMultiplier: 2
+    isEquipment: true
 
 - type: entity
   parent: [ClothingEyesNightVisionGoggles, ShowSecurityIcons, BaseC2ContrabandUnredeemable]
@@ -59,6 +77,10 @@
   - type: StaticPrice
     price: 30
   - type: ShowHealthBars
+  - type: NightVision
+    color: "#ddba00"
+    flashDurationMultiplier: 2
+    isEquipment: true
 
 - type: entity
   parent: [ClothingEyesNightVisionGoggles, ShowSecurityIcons, BaseC2ContrabandUnredeemable]
@@ -67,14 +89,18 @@
   description: Now you can see in the dark!
   components:
   - type: Sprite
-    sprite: _White/Clothing/Eyes/Goggles/nightvision.rsi
+    sprite: _White/Clothing/Eyes/Goggles/snightvision.rsi
   - type: Clothing
-    sprite: _White/Clothing/Eyes/Goggles/nightvision.rsi
+    sprite: _White/Clothing/Eyes/Goggles/snightvision.rsi
   - type: FlashImmunity
   - type: EyeProtection
   - type: StaticPrice
     price: 30
   - type: ShowHealthBars
+  - type: NightVision
+    color: "#2E8B57"
+    flashDurationMultiplier: 2
+    isEquipment: true
 
 - type: entity
   parent: ClothingEyesNightVisionGoggles
@@ -98,6 +124,10 @@
     interfaces:
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
+  - type: NightVision
+    color: "#808080"
+    flashDurationMultiplier: 2
+    isEquipment: true
 
 - type: entity
   parent: [ClothingEyesNightVisionGoggles, ShowSecurityIcons]
@@ -121,3 +151,7 @@
     interfaces:
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
+  - type: NightVision
+    color: "#808080"
+    flashDurationMultiplier: 2
+    isEquipment: true
