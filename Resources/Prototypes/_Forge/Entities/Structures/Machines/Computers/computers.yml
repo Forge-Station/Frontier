@@ -8,11 +8,11 @@
     sprite: _NF/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      state: computer_me
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: mercenery_keyboard
     - map: ["computerLayerScreen"]
-      state: contraband
+      state: shipyard_mercenery
     - map: ["computerLayerKeys"]
       state: generic_keys
   - type: MercenaryBountyConsole
@@ -43,14 +43,14 @@
   description: Back from a voyage? Redeem yer bounties here, matey.
   components:
   - type: Sprite
-    sprite: Structures/Machines/computers.rsi
+    sprite: _NF/Structures/Machines/computers.rsi
     layers:
     - map: [ "computerLayerBody" ]
-      state: computer
+      state: computer_me
     - map: [ "computerLayerKeyboard" ]
-      state: generic_keyboard
+      state: mercenery_keyboard
     - map: [ "computerLayerScreen" ]
-      state: aiupload
+      state: shipyard_bounty
     - map: [ "computerLayerKeys" ]
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
