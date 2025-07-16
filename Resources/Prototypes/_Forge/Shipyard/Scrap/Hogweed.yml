@@ -1,0 +1,45 @@
+# Author MrIzo
+# GitHub: -
+# Discord: letstrythisone.
+# License: CC-BY-NC-ND-3.0
+# Corvax-Frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Hogweed
+  parent: BaseVessel
+  name: ST Борщевик
+  description: "Старый ботанический(?) шаттл явно не местного производства... Он выглядит довольно вычурно по сегодняшним меркам. Средний размер команды от 2 до 4 человек."
+  price: 27000 # (20679)
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/Forge/Shuttles/Scrap/Hogweed.yml
+  class:
+  - Scrapyard
+  - Civilian
+  - Botany
+
+- type: gameMap
+  id: Hogweed
+  mapName: 'ST Борщевик'
+  mapPath: /Maps/Forge/Shuttles/Scrap/Hogweed.yml
+  minPlayers: 0
+  stations:
+    Hogweed:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Борщевик {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

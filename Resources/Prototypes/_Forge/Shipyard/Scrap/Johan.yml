@@ -1,0 +1,44 @@
+# Author -
+# GitHub: -
+# Discord: letstrythisone.
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle notes:
+
+- type: vessel
+  id: Johan
+  parent: BaseVessel
+  name: ST Йохан
+  description: Микро-шаттл для перевозки газов с целью из последующей продажи, вам стоит надеяться, что он не взорвется по пути к "Эдисону". Средний размер команды от 1 до 2 человек.
+  price: 11000 # (5626)
+  category: Micro
+  group: Custom
+  shuttlePath: /Maps/Forge/Shuttles/Scrap/Johan.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Atmospherics
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Johan
+  mapName: 'ST Йохан'
+  mapPath: /Maps/Forge/Shuttles/Scrap/Johan.yml
+  minPlayers: 0
+  stations:
+    Johan:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Йохан {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

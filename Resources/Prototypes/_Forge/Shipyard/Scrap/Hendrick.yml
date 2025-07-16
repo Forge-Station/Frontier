@@ -1,0 +1,42 @@
+# Author -
+# GitHub: -
+# Discord: letstrythisone.
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle notes:
+
+- type: vessel
+  id: Hendrick
+  parent: BaseVessel
+  name: ST Хендрик
+  description: Микро-шаттл для добычи руды из астероидов при помощи РТК. Средний размер команды от 0.5 до 1 человека.
+  price: 11000 # (6306)
+  category: Micro
+  group: Custom
+  shuttlePath: /Maps/Forge/Shuttles/Scrap/Hendrick.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Salvage
+
+- type: gameMap
+  id: Hendrick
+  mapName: 'ST Хендрик'
+  mapPath: /Maps/Forge/Shuttles/Scrap/Hendrick.yml
+  minPlayers: 0
+  stations:
+    Hendrick:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Хендрик {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}
