@@ -58,8 +58,6 @@ public sealed class EmpSystem : SharedEmpSystem
         foreach (var uid in _lookup.GetEntitiesInRange(coordinates, range))
         {
             // Frontier: Block EMP on grid
-            if (!TryComp(uid, out TransformComponent? xform))  // Forge
-                continue;  // Forge
             var gridUid = Transform(uid).GridUid;
             if (gridUid != null &&
                 (immuneGrids != null && immuneGrids.Contains(gridUid.Value) ||
