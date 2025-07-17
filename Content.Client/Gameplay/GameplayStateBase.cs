@@ -16,6 +16,7 @@ using Robust.Client.UserInterface.CustomControls;
 using Robust.Shared.Console;
 using Robust.Shared.Graphics;
 using Robust.Shared.Input;
+using Content.Shared.Damage; // Forge Change
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
@@ -104,6 +105,12 @@ namespace Content.Client.Gameplay
             return GetClickedEntity(coordinates, _eyeManager.CurrentEye);
         }
 
+        public EntityUid? GetDamageableClickedEntity(MapCoordinates coordinates) // Forge Change
+        {
+            var first = GetClickableEntities(coordinates, _eyeManager.CurrentEye)
+                .FirstOrDefault(e => _entityManager.HasComponent<DamageableComponent>(e));
+            return first.IsValid() ? first : null;
+        } // Forge Change
         public EntityUid? GetClickedEntity(MapCoordinates coordinates, IEye? eye)
         {
             if (eye == null)

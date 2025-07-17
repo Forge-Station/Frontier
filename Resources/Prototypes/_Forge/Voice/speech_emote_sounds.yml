@@ -1,0 +1,124 @@
+# species
+- type: emoteSounds
+  id: MaleTajaran
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/Forge/Effects/Tajaran/scream.ogg
+    Laugh:
+      path: /Audio/Forge/Effects/Tajaran/laugh.ogg
+    Sneeze:
+      path: /Audio/Forge/Effects/Tajaran/sneeze.ogg
+    Purr:
+      collection: FelinidPurrs
+    Cough:
+      collection: MaleCoughs
+    Yawn:
+      collection: MaleYawn
+    Snore:
+      collection: Snores
+    Sigh:
+      path: /Audio/Forge/Effects/Tajaran/sigh.ogg
+    Crying:
+      path: /Audio/Forge/Effects/Tajaran/cry.ogg
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Gasp:
+      path: /Audio/Forge/Effects/Tajaran/gasp.ogg
+    DefaultDeathgasp:
+      collection: MaleDeathGasp
+
+- type: emoteSounds
+  id: FemaleTajaran
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/Forge/Effects/Tajaran/scream.ogg
+    Laugh:
+      path: /Audio/Forge/Effects/Tajaran/laugh.ogg
+    Sneeze:
+      path: /Audio/Forge/Effects/Tajaran/sneeze.ogg
+    Purr:
+      collection: FelinidPurrs
+    Cough:
+      collection: FemaleCoughs
+    Yawn:
+      collection: FemaleYawn
+    Snore:
+      collection: Snores
+    Sigh:
+      path: /Audio/Forge/Effects/Tajaran/sigh.ogg
+    Crying:
+      path: /Audio/Forge/Effects/Tajaran/cry.ogg
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Gasp:
+      path: /Audio/Forge/Effects/Tajaran/gasp.ogg
+    DefaultDeathgasp:
+      collection: FemaleDeathGasp
+
+# species
+- type: emoteSounds
+  id: MaleIpc
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/Forge/Effects/Ipc/scream.ogg
+    Laugh:
+      path: /Audio/Forge/Effects/Ipc/laugh.ogg
+    Snore:
+      path: /Audio/Machines/buzz-two.ogg
+    Crying:
+      path: /Audio/Forge/Effects/Ipc/cry.ogg
+    Weh:
+      collection: Weh
+
+
+- type: emoteSounds
+  id: FemaleIpc
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/Forge/Effects/Ipc/scream.ogg
+    Laugh:
+      path: /Audio/Forge/Effects/Ipc/laugh.ogg
+    Snore:
+      path: /Audio/Machines/buzz-two.ogg
+    Crying:
+      path: /Audio/Forge/Effects/Ipc/cry.ogg
+    Weh:
+      collection: Weh
+
+- type: emoteSounds
+  id: IpcEmotes
+  sounds:
+    BeepIpc:
+      path: /Audio/Machines/twobeep.ogg
+    ChimeIpc:
+      path: /Audio/Machines/chime.ogg
+    BuzzIpc:
+      path: /Audio/Machines/buzz-sigh.ogg
+    Buzz-TwoIpc:
+      path: /Audio/Machines/buzz-two.ogg
+    HonkIpc:
+      path: /Audio/Items/bikehorn.ogg
+    PingIpc:
+      path: /Audio/Effects/Cargo/ping.ogg
+    Clap:
+      collection: Claps
+    ClapSingle:
+      collection: ClapSingle
+    Snap:
+      collection: Snaps
+      params:
+        volume: -6
+    Salute:
+      collection: Salutes

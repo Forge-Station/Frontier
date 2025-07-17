@@ -1,4 +1,4 @@
-﻿#nullable enable
+#nullable enable
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -111,9 +111,16 @@ public sealed partial class TestPair
         HashSet<string>? ignored = null,
         bool ignoreAbstract = true,
         bool ignoreTestPrototypes = true)
-        where T : IComponent
+        where T : IComponent, new()
     {
-        var id = Server.ResolveDependency<IComponentFactory>().GetComponentName(typeof(T));
+        if (!Server.ResolveDependency<IComponentFactory>().TryGetRegistration<T>(out var reg)
+            && !Client.ResolveDependency<IComponentFactory>().TryGetRegistration<T>(out reg))
+        {
+            Assert.Fail($"Unknown component: {typeof(T).Name}");
+            return new();
+        }
+
+        var id = reg.Name;
         var list = new List<(EntityPrototype, T)>();
         foreach (var proto in Server.ProtoMan.EnumeratePrototypes<EntityPrototype>())
         {
@@ -167,7 +174,7 @@ public sealed partial class TestPair
     public async Task SetAntagPreference(ProtoId<AntagPrototype> id, bool value, NetUserId? user = null)
     {
         user ??= Client.User!.Value;
-        if (user is not {} userId)
+        if (user is not { } userId)
             return;
 
         var prefMan = Server.ResolveDependency<IServerPreferencesManager>();
@@ -176,7 +183,7 @@ public sealed partial class TestPair
         // Automatic preference resetting only resets slot 0.
         Assert.That(prefs.SelectedCharacterIndex, Is.EqualTo(0));
 
-        var profile = (HumanoidCharacterProfile) prefs.Characters[0];
+        var profile = (HumanoidCharacterProfile)prefs.Characters[0];
         var newProfile = profile.WithAntagPreference(id, value);
         _modifiedProfiles.Add(userId);
         await Server.WaitPost(() => prefMan.SetProfile(userId, 0, newProfile).Wait());
@@ -204,7 +211,7 @@ public sealed partial class TestPair
 
         var prefMan = Server.ResolveDependency<IServerPreferencesManager>();
         var prefs = prefMan.GetPreferences(user);
-        var profile = (HumanoidCharacterProfile) prefs.Characters[0];
+        var profile = (HumanoidCharacterProfile)prefs.Characters[0];
         var dictionary = new Dictionary<ProtoId<JobPrototype>, JobPriority>(profile.JobPriorities);
 
         // Automatic preference resetting only resets slot 0.

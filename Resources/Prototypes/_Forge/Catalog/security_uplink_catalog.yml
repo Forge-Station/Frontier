@@ -1,0 +1,16 @@
+#region hardsuits
+- type: listing
+  id: UplinkNFClothingEyesNightVisionGoggleDSBF
+  name:  uplink-security-nightvision-name
+  description: uplink-security-nightvision-desc
+  productEntity: NFClothingEyesNightVisionGoggleDSBF
+  icon: { sprite: _White/Clothing/Eyes/Goggles/snightvision.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 6
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink

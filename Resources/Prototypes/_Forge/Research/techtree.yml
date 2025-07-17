@@ -1,0 +1,25 @@
+- type: technology
+  id: NFNightVision
+  name: nf-research-technology-nightvision-goggles
+  entityIcon: NFClothingEyesNightVisionGoggles
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - NFClothingEyesNightVisionGoggles
+  technologyPrerequisites:
+  - NFBountyHunting
+  position: 1, 41
+
+- type: technology
+  id: NFThermalVision
+  name: nf-research-technology-thermal-vision-goggles
+  entityIcon: ClothingEyesThermalVisionGoggles
+  discipline: NFArsenalMercenary
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - ClothingEyesThermalVisionGoggles
+  technologyPrerequisites:
+  - NFNightVision
+  position: 1, 40

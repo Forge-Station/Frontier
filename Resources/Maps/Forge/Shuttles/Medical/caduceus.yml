@@ -1495,26 +1495,12 @@ entities:
     - type: Transform
       pos: 13.5,-16.5
       parent: 1
-- proto: BorgModuleDefibrillator
-  entities:
-  - uid: 1425
-    components:
-    - type: Transform
-      pos: 16.515665,-11.488084
-      parent: 1
 - proto: BorgModuleDiagnosis
   entities:
   - uid: 1427
     components:
     - type: Transform
       pos: 16.528864,-11.765128
-      parent: 1
-- proto: BorgModuleTreatment
-  entities:
-  - uid: 1426
-    components:
-    - type: Transform
-      pos: 16.502464,-11.250617
       parent: 1
 - proto: BoxBeaker
   entities:
