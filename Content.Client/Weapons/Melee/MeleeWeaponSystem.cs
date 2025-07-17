@@ -136,20 +136,20 @@ public sealed partial class MeleeWeaponSystem : SharedMeleeWeaponSystem
         // Heavy attack.
         if (altDown == BoundKeyState.Down)
         {
-            // If it's an unarmed attack then do a disarm
             if (weapon.AltDisarm && weaponUid == entity)
             {
-                EntityUid? target = null; // Goob begin edit
-
+                EntityUid? target = null; // Goob Edition
                 if (_stateManager.CurrentState is GameplayStateBase screen)
-                {
                     target = screen.GetDamageableClickedEntity(mousePos);
-                }
+                EntityManager.RaisePredictiveEvent(
+                    new DisarmAttackEvent(GetNetEntity(target), GetNetCoordinates(coordinates)));
+                return;
+            }  // Goob Edition
 
-                EntityManager.RaisePredictiveEvent(new DisarmAttackEvent(GetNetEntity(target), GetNetCoordinates(coordinates))); // Goob edit End
+            ClientHeavyAttack(entity, coordinates, weaponUid, weapon);
             return;
-            }
         }
+
         // Light attack
         if (useDown == BoundKeyState.Down)
         {
