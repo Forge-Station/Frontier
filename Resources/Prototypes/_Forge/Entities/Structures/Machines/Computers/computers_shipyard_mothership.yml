@@ -78,13 +78,14 @@
     - Apothecary
     - Tyne
 
+# Консоль Нансена
 - type: entity
   id: NansenMothershipComputer
   parent: BaseMothershipComputer
   name: Captain Nansen shipyard console
   components:
   - type: Sprite
-    sprite: Forge/Structures/Machines/computers.rsi
+    sprite: Corvax/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
       state: computer
