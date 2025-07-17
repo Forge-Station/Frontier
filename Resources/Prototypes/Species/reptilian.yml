@@ -28,10 +28,10 @@
     RArm: MobReptilianRArm
     LHand: MobReptilianLHand
     RHand: MobReptilianRHand
-    LLeg: MobReptilianLLeg
-    RLeg: MobReptilianRLeg
-    LFoot: MobReptilianLFoot
-    RFoot: MobReptilianRFoot
+    LLeg: MobReptilianLLegDigi # Forge-Digitigrade
+    RLeg: MobReptilianRLegDigi # Forge-Digitigrade
+    LFoot: MobReptilianLFootDigi # Forge-Digitigrade
+    RFoot: MobReptilianRFootDigi # Forge-Digitigrade
 
 - type: markingPoints
   id: MobReptilianMarkingLimits
@@ -112,7 +112,7 @@
 - type: humanoidBaseSprite
   id: MobReptilianLLeg
   baseSprite:
-    sprite: Mobs/Species/Reptilian/parts.rsi
+    sprite: Forge/Mobs/Species/Reptilian/parts.rsi # Forge
     state: l_leg
 
 - type: humanoidBaseSprite
@@ -130,13 +130,13 @@
 - type: humanoidBaseSprite
   id: MobReptilianLFoot
   baseSprite:
-    sprite: Mobs/Species/Reptilian/parts.rsi
+    sprite: Forge/Mobs/Species/Reptilian/parts.rsi # Forge
     state: l_foot
 
 - type: humanoidBaseSprite
   id: MobReptilianRLeg
   baseSprite:
-    sprite: Mobs/Species/Reptilian/parts.rsi
+    sprite: Forge/Mobs/Species/Reptilian/parts.rsi # Forge
     state: r_leg
 
 - type: humanoidBaseSprite
@@ -154,5 +154,5 @@
 - type: humanoidBaseSprite
   id: MobReptilianRFoot
   baseSprite:
-    sprite: Mobs/Species/Reptilian/parts.rsi
+    sprite: Forge/Mobs/Species/Reptilian/parts.rsi # Forge
     state: r_foot
