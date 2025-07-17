@@ -113,7 +113,7 @@
   id: MobReptilianLLeg
   baseSprite:
     sprite: Forge/Mobs/Species/Reptilian/parts.rsi # Forge
-    state: l_leg
+    state: l_leg_digi # Forge
 
 - type: humanoidBaseSprite
   id: MobReptilianLHand
@@ -131,13 +131,13 @@
   id: MobReptilianLFoot
   baseSprite:
     sprite: Forge/Mobs/Species/Reptilian/parts.rsi # Forge
-    state: l_foot
+    state: l_foot_digi # Forge
 
 - type: humanoidBaseSprite
   id: MobReptilianRLeg
   baseSprite:
     sprite: Forge/Mobs/Species/Reptilian/parts.rsi # Forge
-    state: r_leg
+    state: r_leg_digi # Forge
 
 - type: humanoidBaseSprite
   id: MobReptilianRHand
@@ -155,4 +155,4 @@
   id: MobReptilianRFoot
   baseSprite:
     sprite: Forge/Mobs/Species/Reptilian/parts.rsi # Forge
-    state: r_foot
+    state: r_foot_digi # Forge
