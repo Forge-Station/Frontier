@@ -19,8 +19,10 @@
   group: Security
   category: Small
   access: Security
-  mapchecker_group_override: Security  # Treat this as a security vessel for mapchecker purposes
+  mapchecker_group_override: Security
   shuttlePath: /Maps/Forge/Shuttles/Nfsd/hammer.yml
+  class:
+  - Fighter
 
 - type: gameMap
   id: hammer

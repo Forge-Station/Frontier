@@ -1,34 +1,35 @@
-# Author -
+# Author Info
 # GitHub: -
-# Discord: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
 
 # Maintainer Info
-# GitHub: -
-# Discord: -
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen 
 
 # Shuttle Notes:
-
 - type: vessel
-  id: Star_track
+  id: Dreadnought
   parent: BaseVessel
-  name: SBI Энтерпрайз
+  name: SBI Дредноут
   description: Крупногабаритный шаттл для наёмников, рекомендуемый состав экипажа 4 человека.
-  price: 145000
+  price: 125000
   category: Small
   group: Mercenary
-  shuttlePath: /Maps/Forge/Shuttles/Mercenary/Star_track.yml
+  shuttlePath: /Maps/Forge/Shuttles/Mercenary/dreadnought.yml
 
 - type: gameMap
-  id: Star_track
-  mapName: 'SBI Энтерпрайз'
-  mapPath: /Maps/Forge/Shuttles/Mercenary/Star_track.yml
+  id: Dreadnought
+  mapName: 'SBI Дредноут'
+  mapPath: /Maps/Forge/Shuttles/Mercenary/dreadnought.yml
   minPlayers: 0
   stations:
-    Star_track:
+    Dreadnought:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Энтерпрайз {1}'
+          mapNameTemplate: 'Дредноут {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
