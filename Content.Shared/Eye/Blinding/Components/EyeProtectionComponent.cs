@@ -1,9 +1,10 @@
-namespace Content.Shared.Eye.Blinding.Components;
+using Robust.Shared.GameStates; // Forge edit
 
+namespace Content.Shared.Eye.Blinding.Components;
 /// <summary>
 /// For welding masks, sunglasses, etc.
 /// </summary>
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState] // Forge edit
 public sealed partial class EyeProtectionComponent : Component
 {
     /// <summary>
@@ -11,5 +12,6 @@ public sealed partial class EyeProtectionComponent : Component
     /// of blindness, do not blind.
     /// </summary>
     [DataField("protectionTime")]
+    [AutoNetworkedField] // Forge edit
     public TimeSpan ProtectionTime = TimeSpan.FromSeconds(10);
 }

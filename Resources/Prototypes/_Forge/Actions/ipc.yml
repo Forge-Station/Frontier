@@ -1,0 +1,10 @@
+- type: entity
+  id: ActionDrainBattery
+  name: Drain battery
+  description: Drain battery
+  components:
+  - type: InstantAction
+    icon: { sprite: Forge/Interface/ipcactions.rsi, state: off }
+    iconOn: { sprite: Forge/Interface/ipcactions.rsi, state: on }
+    itemIconStyle: NoItem
+    event: !type:ToggleDrainActionEvent

@@ -30,7 +30,7 @@
     Glass: 2000
     Gold: 3000
     Silver: 6000
-    Magmite: 2000 
+    Magmite: 2000
 
 - type: latheRecipe
   id: JetpackMining
@@ -50,3 +50,23 @@
     Gold: 1000
     Silver: 2000
     Uranium: 1500
+
+- type: latheRecipe
+  id: NFClothingEyesNightVisionGoggles
+  result: NFClothingEyesNightVisionGoggles
+  completetime: 10
+  materials:
+    Steel: 5000
+    Glass: 5000
+    Gold: 2000
+    Silver: 2000
+
+- type: latheRecipe
+  id: ClothingEyesThermalVisionGoggles
+  result: ClothingEyesThermalVisionGoggles
+  completetime: 10
+  materials:
+    Steel: 10000
+    Glass: 10000
+    Gold: 2000
+    Silver: 2000

@@ -40,6 +40,10 @@
             "directions": 4
         },
         {
+            "name": "mercenery_keyboard",
+            "directions": 4
+        },
+        {
             "name": "scrap_keyboard",
             "directions": 4
         },
@@ -57,6 +61,14 @@
         },
         {
             "name": "computer_sr",
+            "directions": 4
+        },
+        {
+            "name": "computer_me",
+            "directions": 4
+        },
+        {
+            "name": "computer_scrapmer",
             "directions": 4
         },
         {
@@ -90,11 +102,103 @@
             ]
         },
         {
+            "name": "shipyard_mercenery",
+            "directions": 4,
+            "delays": [
+                [
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45
+                ],
+                [
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45
+                ],
+                [
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45
+                ],
+                [
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45
+                ]
+            ]
+        },
+        {
             "name": "gas_sale_point",
             "directions": 4
         },
         {
             "name": "shipyard",
+            "directions": 4,
+            "delays": [
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ]
+            ]
+        },
+        {
+            "name": "shipyard_bounty",
             "directions": 4,
             "delays": [
                 [

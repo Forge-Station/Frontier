@@ -1,0 +1,25 @@
+- type: constructionGraph
+  id: NFClothingEyesNightVisionGogglesMed
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: NightVisionGogglesMed
+          steps:
+            - tag: HudMedical
+              name: construction-graph-tag-medical-hud
+              icon:
+                sprite: Clothing/Eyes/Hud/med.rsi
+                state: icon
+              doAfter: 5
+            - tag: NightVisionGoggles
+              name: construction-graph-tag-night-vision
+              icon:
+                sprite: Forge/Clothing/Eyes/Goggles/nightvision.rsi
+                state: icon
+              doAfter: 5
+            - material: Capacitor
+              amount: 2
+              doAfter: 5
+    - node: NightVisionGogglesMed
+      entity: NFClothingEyesNightVisionGogglesMed

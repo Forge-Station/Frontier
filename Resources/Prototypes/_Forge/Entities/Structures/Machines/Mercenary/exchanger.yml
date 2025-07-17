@@ -25,12 +25,12 @@
   - type: Transform
     noRot: false
   - type: Sprite
-    sprite:  Structures/Machines/VendingMachines/snack-green.rsi
+    sprite: Forge/Structures/Machines/terminal_bounty.rsi
     snapCardinals: true
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
-    - state: "off"
+    - state: "normal-unshaded"
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
