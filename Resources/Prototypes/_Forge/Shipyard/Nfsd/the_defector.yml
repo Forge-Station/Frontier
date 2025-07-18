@@ -15,10 +15,12 @@
   description: Малогабаритный патрульный шаттл ДСБФ. Рекомендуемый состав команды 1-3 человек.
   price: 20500
   category: Small
-  group: Security
   access: Security
-  mapchecker_group_override: Security  # Treat this as a security vessel for mapchecker purposes
+  mapchecker_group_override: Security
+  group: Security
   shuttlePath: /Maps/Forge/Shuttles/Nfsd/the_defector.yml
+  class:
+  - Patrol
 
 - type: gameMap
   id: the_defector

@@ -10,29 +10,29 @@
 
 # Shuttle Notes:
 - type: vessel
-  id: Stalker
+  id: Bant
   parent: BaseVessel
-  name: TL Сталкер
-  description: Среднегабаритный экспедиционный крейсер.
-  price: 96000
-  category: Medium
-  group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/Stalker.yml
+  name: LVHI Бант
+  description: Одноместный грузовой контейнер, переоборудованный под выход в открытый космос.
+  price: 27200 
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/bant.yml
+  guidebookPage: null
   class:
-  - Expedition
-  - Civilian
+  - Salvage
 
 - type: gameMap
-  id: Stalker
-  mapName: 'TL Сталкер'
-  mapPath: /Maps/Forge/Shuttles/Expedition/Stalker.yml
+  id: Bant
+  mapName: 'Бант'
+  mapPath: /Maps/Forge/Shuttles/Salvage/bant.yml
   minPlayers: 0
   stations:
-    Stalker:
-      stationProto: StandardFrontierExpeditionVessel
+    Bant:
+      stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Сталкер {1}'
+          mapNameTemplate: 'Бант {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
