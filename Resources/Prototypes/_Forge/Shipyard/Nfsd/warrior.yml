@@ -16,13 +16,11 @@
   name: NSF Вариор
   description: Шаттл перехватчик Вариор. Произведено частной военно-производственной компаний Vitezstvi по спец. заказу НТ. Рекомендуемый состав команды 1-2 человека.
   price: 32500
-  group: Security 
+  group: Security
   category: Small
   access: Security
   mapchecker_group_override: Security
   shuttlePath: /Maps/Forge/Shuttles/Nfsd/warrior.yml
-  class:
-  - Fighter
 
 - type: gameMap
   id: Warrior
