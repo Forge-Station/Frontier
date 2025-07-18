@@ -10,8 +10,7 @@
   skinColoration: HumanToned #Possible values: TintedHues, Hues, HumanToned
   maleFirstNames: NamesGoblinFirstMale
   femaleFirstNames: NamesGoblinFirstFemale # Corvax-Frontier
-  maleLastNames: NamesGoblinLast # Corvax-LastnameGender
-  femaleLastNames: NamesGoblinLast # Corvax-LastnameGender
+  lastNames: NamesGoblinLast # Corvax-LastnameGender
 
 - type: speciesBaseSprites
   id: MobGoblinSprites
