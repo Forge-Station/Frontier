@@ -33,6 +33,10 @@ public abstract partial class SharedHandsSystem
         InitializeDrop();
         InitializePickup();
         InitializeRelay();
+        InitializeEventListeners();
+
+        SubscribeLocalEvent<HandsComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<HandsComponent, MapInitEvent>(OnMapInit);
     }
 
     public override void Shutdown()
@@ -137,18 +141,29 @@ public abstract partial class SharedHandsSystem
         return false;
     }
 
-    public bool TryGetActiveHand(Entity<HandsComponent?> entity, [NotNullWhen(true)] out Hand? hand)
+    /// <summary>
+    ///     Does this entity have any empty hands, and how many?
+    /// </summary>
+    public int GetEmptyHandCount(Entity<HandsComponent?> entity)
     {
-        if (!Resolve(entity, ref entity.Comp, false))
+        if (!Resolve(entity, ref entity.Comp, false) || entity.Comp.Count == 0)
+            return 0;
+
+        var hands = 0;
+
+        foreach (var hand in EnumerateHands(entity))
         {
-            hand = null;
-            return false;
+            if (!HandIsEmpty(entity, hand))
+                continue;
+            hands++;
         }
 
-        hand = entity.Comp.ActiveHand;
-        return hand != null;
+        return hands;
     }
 
+    /// <summary>
+    /// Attempts to retrieve the item held in the entity's active hand.
+    /// </summary>
     public bool TryGetActiveItem(Entity<HandsComponent?> entity, [NotNullWhen(true)] out EntityUid? item)
     {
         if (!TryGetActiveHand(entity, out var hand))
