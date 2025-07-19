@@ -28,3 +28,34 @@
   - type: MercenaryBountyLabel
   - type: DisableToolUse
     screwing: true
+
+- type: entity
+  parent: CrateGeneric
+  id: CrateMinersBounty
+  name: miners bounty chest
+  description: A chest for storing looted goods.
+  components:
+  - type: Sprite
+    sprite: Structures/Storage/Crates/engineering.rsi
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: paper
+      sprite: Structures/Storage/Crates/labels.rsi
+      offset: "0.0,-0.09375"
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: open
+    stateDoorClosed: closed
+  - type: Icon
+    sprite: _NF/Structures/Storage/Crates/secure_mercenary.rsi
+    state: icon
+  - type: MinersBountyLabel
+  - type: DisableToolUse
+    screwing: true

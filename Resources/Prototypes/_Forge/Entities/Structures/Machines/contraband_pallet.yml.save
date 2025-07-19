@@ -1,0 +1,12 @@
+- type: entity
+  id: ContrabandPalletCivillian
+  name: plunder exchange pallet
+  description: Exchange items from quests here.
+  parent: ContrabandPallet
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/piratebounty_pallet.rsi
+    layers:
+    - state: base
+    - state: unshaded
+      shader: unshaded
