@@ -183,7 +183,6 @@ entities:
           - 0
         chunkSize: 4
     - type: GasTileOverlay
-    - type: MercenaryBountyDatabase
     - type: RadiationGridResistance
 - proto: AirCanister
   entities:
@@ -495,7 +494,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,2.5
       parent: 1
-- proto: ContrabandPalletPirate
+- proto: ContrabandPalleteCivillian
   entities:
   - uid: 110
     components:

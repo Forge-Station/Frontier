@@ -1,12 +1,12 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Server._Forge.Mercenary.Components;
+using Content.Server._Forge.Miners.Components;
 using Content.Shared.Labels.EntitySystems;
 using Content.Shared._NF.Bank;
-using Content.Shared._Forge.Mercenary;
-using Content.Shared._Forge.Mercenary.Components;
-using Content.Shared._Forge.Mercenary.Prototypes;
-using Content.Shared._Forge.Mercenary.Events;
+using Content.Shared._Forge.Miners;
+using Content.Shared._Forge.Miners.Components;
+using Content.Shared._Forge.Miners.Prototypes;
+using Content.Shared._Forge.Miners.Events;
 using Content.Shared.Access.Components;
 using Content.Shared.Database;
 using Content.Shared.NameIdentifier;
@@ -22,27 +22,25 @@ namespace Content.Server._NF.Cargo.Systems; // Needs to collide with base namesp
 
 public sealed partial class NFCargoSystem
 {
-    [Dependency] private readonly IEntityManager _ent = default!;
-
     [ValidatePrototypeId<NameIdentifierGroupPrototype>]
-    private const string MercenaryBountyNameIdentifierGroup = "Bounty"; // Use the bounty name ID group (0-999) for now.
+    private const string MinersBountyNameIdentifierGroup = "Bounty"; // Use the bounty name ID group (0-999) for now.
 
-    private EntityQuery<MercenaryBountyLabelComponent> _mercenaryBountyLabelQuery;
+    private EntityQuery<MinersBountyLabelComponent> _minersBountyLabelQuery;
 
-    private void InitializeMercenaryBounty()
+    private void InitializeMinersBounty()
     {
-        SubscribeLocalEvent<MercenaryBountyConsoleComponent, BoundUIOpenedEvent>(OnMercenaryBountyConsoleOpened);
-        SubscribeLocalEvent<MercenaryBountyConsoleComponent, MercenaryBountyAcceptMessage>(OnMercenaryBountyAccept);
-        SubscribeLocalEvent<MercenaryBountyConsoleComponent, MercenaryBountySkipMessage>(OnSkipMercenaryBountyMessage);
+        SubscribeLocalEvent<MinersBountyConsoleComponent, BoundUIOpenedEvent>(OnMinersBountyConsoleOpened);
+        SubscribeLocalEvent<MinersBountyConsoleComponent, MinersBountyAcceptMessage>(OnMinersBountyAccept);
+        SubscribeLocalEvent<MinersBountyConsoleComponent, MinersBountySkipMessage>(OnSkipMinersBountyMessage);
 
-        SubscribeLocalEvent<MercenaryBountyRedemptionConsoleComponent, MercenaryBountyRedemptionMessage>(OnRedeemBounty);
+        SubscribeLocalEvent<MinersBountyRedemptionConsoleComponent, MinersBountyRedemptionMessage>(OnRedeemBounty);
 
-        SubscribeLocalEvent<MercenaryBountyConsoleComponent, MapInitEvent>(OnMercenaryMapInit);
+        SubscribeLocalEvent<MinersBountyConsoleComponent, MapInitEvent>(OnMinersMapInit);
 
-        _mercenaryBountyLabelQuery = GetEntityQuery<MercenaryBountyLabelComponent>();
+        _minersBountyLabelQuery = GetEntityQuery<MinersBountyLabelComponent>();
     }
 
-    private void OnMercenaryBountyConsoleOpened(EntityUid uid, MercenaryBountyConsoleComponent component, BoundUIOpenedEvent args)
+    private void OnMinersBountyConsoleOpened(EntityUid uid, MinersBountyConsoleComponent component, BoundUIOpenedEvent args)
     {
         var service = _sectorService.GetServiceEntity();
         var gridUid = Transform(uid).GridUid;
@@ -50,14 +48,14 @@ public sealed partial class NFCargoSystem
         if (gridUid == null)
             return;
 
-        if (!TryComp<MercenaryBountyDatabaseComponent>(gridUid, out var bountyDb))
+        if (!TryComp<MinersBountyDatabaseComponent>(gridUid, out var bountyDb))
             return;
 
         var untilNextSkip = bountyDb.NextSkipTime - _timing.CurTime;
-        _ui.SetUiState(uid, MercenaryConsoleUiKey.Bounty, new MercenaryBountyConsoleState(bountyDb.Bounties, untilNextSkip));
+        _ui.SetUiState(uid, MinersConsoleUiKey.Bounty, new MinersBountyConsoleState(bountyDb.Bounties, untilNextSkip));
     }
 
-    private void OnMercenaryBountyAccept(EntityUid uid, MercenaryBountyConsoleComponent component, MercenaryBountyAcceptMessage args)
+    private void OnMinersBountyAccept(EntityUid uid, MinersBountyConsoleComponent component, MinersBountyAcceptMessage args)
     {
         if (_timing.CurTime < component.NextPrintTime)
             return;
@@ -68,10 +66,10 @@ public sealed partial class NFCargoSystem
         if (gridUid == null)
             return;
 
-        if (!TryComp<MercenaryBountyDatabaseComponent>(gridUid, out var bountyDb))
+        if (!TryComp<MinersBountyDatabaseComponent>(gridUid, out var bountyDb))
             return;
 
-        if (!TryGetMercenaryBountyFromId(service, args.BountyId, out var bounty, bountyDb))
+        if (!TryGetMinersBountyFromId(service, args.BountyId, out var bounty, bountyDb))
             return;
 
         var bountyObj = bounty.Value;
@@ -79,28 +77,28 @@ public sealed partial class NFCargoSystem
         if (bountyObj.Accepted || !_proto.TryIndex(bountyObj.Bounty, out var bountyPrototype))
             return;
 
-        MercenaryBountyData bountyData = new MercenaryBountyData(bountyPrototype!, bountyObj.Id, true);
+        MinersBountyData bountyData = new MinersBountyData(bountyPrototype!, bountyObj.Id, true);
 
-        TryOverwriteMercenaryBountyFromId(service, bountyData, bountyDb); // bountyDb
+        TryOverwriteMinersBountyFromId(service, bountyData, bountyDb); // bountyDb
 
         if (bountyPrototype.SpawnChest)
         {
             var chest = Spawn(component.BountyCrateId, Transform(uid).Coordinates);
-            SetupMercenaryBountyChest(chest, bountyData, bountyPrototype);
+            SetupMinersBountyChest(chest, bountyData, bountyPrototype);
             _audio.PlayPvs(component.SpawnChestSound, uid);
         }
         else
         {
             var label = Spawn(component.BountyLabelId, Transform(uid).Coordinates);
-            SetupMercenaryBountyManifest(label, bountyData, bountyPrototype);
+            SetupMinersBountyManifest(label, bountyData, bountyPrototype);
             _audio.PlayPvs(component.PrintSound, uid);
         }
 
         component.NextPrintTime = _timing.CurTime + component.PrintDelay;
-        UpdateMercenaryBountyConsoles(bountyDb);
+        UpdateMinersBountyConsoles(bountyDb);
     }
 
-    private void OnSkipMercenaryBountyMessage(EntityUid uid, MercenaryBountyConsoleComponent component, MercenaryBountySkipMessage args)
+    private void OnSkipMinersBountyMessage(EntityUid uid, MinersBountyConsoleComponent component, MinersBountySkipMessage args)
     {
         var service = _sectorService.GetServiceEntity();
         var gridUid = Transform(uid).GridUid;
@@ -108,13 +106,13 @@ public sealed partial class NFCargoSystem
         if (gridUid == null)
             return;
 
-        if (!TryComp<MercenaryBountyDatabaseComponent>(gridUid, out var db))
+        if (!TryComp<MinersBountyDatabaseComponent>(gridUid, out var db))
             return;
 
         if (_timing.CurTime < db.NextSkipTime)
             return;
 
-        if (!TryGetMercenaryBountyFromId(service, args.BountyId, out var bounty, db))
+        if (!TryGetMinersBountyFromId(service, args.BountyId, out var bounty, db))
             return;
 
         if (args.Actor is not { Valid: true } mob)
@@ -127,68 +125,68 @@ public sealed partial class NFCargoSystem
             return;
         }
 
-        if (!TryRemoveMercenaryBounty(service, bounty.Value.Id, db))
+        if (!TryRemoveMinersBounty(service, bounty.Value.Id, db))
             return;
 
-        FillMercenaryBountyDatabase(service, db);
+        FillMinersBountyDatabase(service, db);
         if (bounty.Value.Accepted)
             db.NextSkipTime = _timing.CurTime + db.SkipDelay;
         else
             db.NextSkipTime = _timing.CurTime + db.CancelDelay;
 
         var untilNextSkip = db.NextSkipTime - _timing.CurTime;
-        _ui.SetUiState(uid, MercenaryConsoleUiKey.Bounty, new MercenaryBountyConsoleState(db.Bounties, untilNextSkip));
+        _ui.SetUiState(uid, MinersConsoleUiKey.Bounty, new MinersBountyConsoleState(db.Bounties, untilNextSkip));
         _audio.PlayPvs(component.SkipSound, uid);
     }
 
-    private void SetupMercenaryBountyChest(EntityUid uid, MercenaryBountyData bounty, MercenaryBountyPrototype prototype)
+    private void SetupMinersBountyChest(EntityUid uid, MinersBountyData bounty, MinersBountyPrototype prototype)
     {
-        _meta.SetEntityName(uid, Loc.GetString("mercenary-bounty-chest-name", ("id", bounty.Id)));
+        _meta.SetEntityName(uid, Loc.GetString("miners-bounty-chest-name", ("id", bounty.Id)));
 
         FormattedMessage message = new FormattedMessage();
-        message.TryAddMarkup(Loc.GetString("mercenary-bounty-chest-description-start"), out var _);
+        message.TryAddMarkup(Loc.GetString("miners-bounty-chest-description-start"), out var _);
         foreach (var entry in prototype.Entries)
         {
             message.PushNewline();
-            message.TryAddMarkup($"- {Loc.GetString("mercenary-bounty-console-manifest-entry",
+            message.TryAddMarkup($"- {Loc.GetString("miners-bounty-console-manifest-entry",
                 ("amount", entry.Amount),
                 ("item", Loc.GetString(entry.Name)))}", out var _);
         }
         message.PushNewline();
-        message.TryAddMarkup(Loc.GetString("mercenary-bounty-console-manifest-reward", ("reward", BankSystemExtensions.ToMercenaryTokenString(prototype.Reward))), out var _);
+        message.TryAddMarkup(Loc.GetString("miners-bounty-console-manifest-reward", ("reward", BankSystemExtensions.ToSpesoString(prototype.Reward))), out var _);
 
         _meta.SetEntityDescription(uid, message.ToMarkup());
 
-        if (TryComp<MercenaryBountyLabelComponent>(uid, out var label))
+        if (TryComp<MinersBountyLabelComponent>(uid, out var label))
             label.Id = bounty.Id;
     }
 
-    private void SetupMercenaryBountyManifest(EntityUid uid, MercenaryBountyData bounty, MercenaryBountyPrototype prototype, PaperComponent? paper = null)
+    private void SetupMinersBountyManifest(EntityUid uid, MinersBountyData bounty, MinersBountyPrototype prototype, PaperComponent? paper = null)
     {
-        _meta.SetEntityName(uid, Loc.GetString("mercenary-bounty-manifest-name", ("id", bounty.Id)));
+        _meta.SetEntityName(uid, Loc.GetString("miners-bounty-manifest-name", ("id", bounty.Id)));
 
         if (!Resolve(uid, ref paper))
             return;
 
         var msg = new FormattedMessage();
-        msg.AddText(Loc.GetString("mercenary-bounty-manifest-header", ("id", bounty.Id)));
+        msg.AddText(Loc.GetString("miners-bounty-manifest-header", ("id", bounty.Id)));
         msg.PushNewline();
-        msg.AddText(Loc.GetString("mercenary-bounty-manifest-list-start"));
+        msg.AddText(Loc.GetString("miners-bounty-manifest-list-start"));
         msg.PushNewline();
         foreach (var entry in prototype.Entries)
         {
-            msg.TryAddMarkup($"- {Loc.GetString("mercenary-bounty-console-manifest-entry",
+            msg.TryAddMarkup($"- {Loc.GetString("miners-bounty-console-manifest-entry",
                 ("amount", entry.Amount),
                 ("item", Loc.GetString(entry.Name)))}", out var _);
             msg.PushNewline();
         }
-        msg.TryAddMarkup(Loc.GetString("mercenary-bounty-console-manifest-reward", ("reward", BankSystemExtensions.ToMercenaryTokenString(prototype.Reward))), out var _);
+        msg.TryAddMarkup(Loc.GetString("miners-bounty-console-manifest-reward", ("reward", BankSystemExtensions.ToSpesoString(prototype.Reward))), out var _);
         _paper.SetContent((uid, paper), msg.ToMarkup());
     }
 
-    private bool TryGetMercenaryBountyLabel(EntityUid uid,
+    private bool TryGetMinersBountyLabel(EntityUid uid,
         [NotNullWhen(true)] out EntityUid? labelEnt,
-        [NotNullWhen(true)] out MercenaryBountyLabelComponent? labelComp)
+        [NotNullWhen(true)] out MinersBountyLabelComponent? labelComp)
     {
         labelEnt = null;
         labelComp = null;
@@ -200,7 +198,7 @@ public sealed partial class NFCargoSystem
             return false;
 
         if (container.ContainedEntities.FirstOrNull() is not { } label ||
-            !_mercenaryBountyLabelQuery.TryGetComponent(label, out var component))
+            !_minersBountyLabelQuery.TryGetComponent(label, out var component))
             return false;
 
         labelEnt = label;
@@ -208,40 +206,40 @@ public sealed partial class NFCargoSystem
         return true;
     }
 
-    private void OnMercenaryMapInit(EntityUid uid, MercenaryBountyConsoleComponent component, MapInitEvent args)
+    private void OnMinersMapInit(EntityUid uid, MinersBountyConsoleComponent component, MapInitEvent args)
     {
         var gridUid = Transform(uid).GridUid;
         if (gridUid == null)
             return;
 
-        if (!_ent.TryGetComponent(gridUid, out MercenaryBountyDatabaseComponent? bountyDb))
+        if (!_ent.TryGetComponent(gridUid, out MinersBountyDatabaseComponent? bountyDb))
             return;
 
-        FillMercenaryBountyDatabase(uid, bountyDb);
+        FillMinersBountyDatabase(uid, bountyDb);
     }
 
-    public void FillMercenaryBountyDatabase(EntityUid serviceId, MercenaryBountyDatabaseComponent? component = null)
+    public void FillMinersBountyDatabase(EntityUid serviceId, MinersBountyDatabaseComponent? component = null)
     {
         if (!Resolve(serviceId, ref component))
             return;
 
         while (component?.Bounties.Count < component?.MaxBounties)
         {
-            if (!TryAddMercenaryBounty(serviceId, component))
+            if (!TryAddMinersBounty(serviceId, component))
                 break;
         }
 
-        UpdateMercenaryBountyConsoles();
+        UpdateMinersBountyConsoles();
     }
 
     [PublicAPI]
-    public bool TryAddMercenaryBounty(EntityUid serviceId, MercenaryBountyDatabaseComponent? component = null)
+    public bool TryAddMinersBounty(EntityUid serviceId, MinersBountyDatabaseComponent? component = null)
     {
         if (!Resolve(serviceId, ref component))
             return false;
 
-        var allBounties = _proto.EnumeratePrototypes<MercenaryBountyPrototype>().ToList();
-        var filteredBounties = new List<MercenaryBountyPrototype>();
+        var allBounties = _proto.EnumeratePrototypes<MinersBountyPrototype>().ToList();
+        var filteredBounties = new List<MinersBountyPrototype>();
         foreach (var proto in allBounties)
         {
             if (component.Bounties.Any(b => b.Bounty == proto.ID))
@@ -251,19 +249,19 @@ public sealed partial class NFCargoSystem
 
         var pool = filteredBounties.Count == 0 ? allBounties : filteredBounties;
         var bounty = _random.Pick(pool);
-        return TryAddMercenaryBounty(serviceId, bounty, component);
+        return TryAddMinersBounty(serviceId, bounty, component);
     }
 
     [PublicAPI]
-    public bool TryAddMercenaryBounty(EntityUid serviceId, string bountyId, MercenaryBountyDatabaseComponent? component = null)
+    public bool TryAddMinersBounty(EntityUid serviceId, string bountyId, MinersBountyDatabaseComponent? component = null)
     {
-        if (!_proto.TryIndex<MercenaryBountyPrototype>(bountyId, out var bounty))
+        if (!_proto.TryIndex<MinersBountyPrototype>(bountyId, out var bounty))
             return false;
 
-        return TryAddMercenaryBounty(serviceId, bounty, component);
+        return TryAddMinersBounty(serviceId, bounty, component);
     }
 
-    public bool TryAddMercenaryBounty(EntityUid serviceId, MercenaryBountyPrototype bounty, MercenaryBountyDatabaseComponent? component = null)
+    public bool TryAddMinersBounty(EntityUid serviceId, MinersBountyPrototype bounty, MinersBountyDatabaseComponent? component = null)
     {
         if (!Resolve(serviceId, ref component))
             return false;
@@ -271,23 +269,23 @@ public sealed partial class NFCargoSystem
         if (component.Bounties.Count >= component.MaxBounties)
             return false;
 
-        _nameIdentifier.GenerateUniqueName(serviceId, MercenaryBountyNameIdentifierGroup, out var randomVal); // Need a string ID for internal name, probably doesn't need to be outward facing.
-        component.Bounties.Add(new MercenaryBountyData(bounty, randomVal, false));
-        _adminLogger.Add(LogType.Action, LogImpact.Low, $"Added mercenary bounty \"{bounty.ID}\" (id:{component.TotalBounties}) to service {ToPrettyString(serviceId)}");
+        _nameIdentifier.GenerateUniqueName(serviceId, MinersBountyNameIdentifierGroup, out var randomVal); // Need a string ID for internal name, probably doesn't need to be outward facing.
+        component.Bounties.Add(new MinersBountyData(bounty, randomVal, false));
+        _adminLogger.Add(LogType.Action, LogImpact.Low, $"Added miners bounty \"{bounty.ID}\" (id:{component.TotalBounties}) to service {ToPrettyString(serviceId)}");
         component.TotalBounties++;
         return true;
     }
 
     [PublicAPI]
-    public bool TryRemoveMercenaryBounty(EntityUid serviceId, string dataId, MercenaryBountyDatabaseComponent? component = null)
+    public bool TryRemoveMinersBounty(EntityUid serviceId, string dataId, MinersBountyDatabaseComponent? component = null)
     {
-        if (!TryGetMercenaryBountyFromId(serviceId, dataId, out var data, component))
+        if (!TryGetMinersBountyFromId(serviceId, dataId, out var data, component))
             return false;
 
-        return TryRemoveMercenaryBounty(serviceId, data.Value, component);
+        return TryRemoveMinersBounty(serviceId, data.Value, component);
     }
 
-    public bool TryRemoveMercenaryBounty(EntityUid serviceId, MercenaryBountyData data, MercenaryBountyDatabaseComponent? component = null)
+    public bool TryRemoveMinersBounty(EntityUid serviceId, MinersBountyData data, MinersBountyDatabaseComponent? component = null)
     {
         if (!Resolve(serviceId, ref component))
             return false;
@@ -304,11 +302,11 @@ public sealed partial class NFCargoSystem
         return false;
     }
 
-    public bool TryGetMercenaryBountyFromId(
+    public bool TryGetMinersBountyFromId(
         EntityUid uid,
         string id,
-        [NotNullWhen(true)] out MercenaryBountyData? bounty,
-        MercenaryBountyDatabaseComponent? component = null)
+        [NotNullWhen(true)] out MinersBountyData? bounty,
+        MinersBountyDatabaseComponent? component = null)
     {
         bounty = null;
         if (!Resolve(uid, ref component))
@@ -325,10 +323,10 @@ public sealed partial class NFCargoSystem
         return bounty != null;
     }
 
-    private bool TryOverwriteMercenaryBountyFromId(
+    private bool TryOverwriteMinersBountyFromId(
         EntityUid uid,
-        MercenaryBountyData bounty,
-        MercenaryBountyDatabaseComponent? component = null)
+        MinersBountyData bounty,
+        MinersBountyDatabaseComponent? component = null)
     {
         if (!Resolve(uid, ref component))
             return false;
@@ -344,9 +342,9 @@ public sealed partial class NFCargoSystem
         return false;
     }
 
-    public void UpdateMercenaryBountyConsoles(MercenaryBountyDatabaseComponent? db = null)
+    public void UpdateMinersBountyConsoles(MinersBountyDatabaseComponent? db = null)
     {
-        var query = EntityQueryEnumerator<MercenaryBountyConsoleComponent, UserInterfaceComponent>();
+        var query = EntityQueryEnumerator<MinersBountyConsoleComponent, UserInterfaceComponent>();
 
         var serviceId = _sectorService.GetServiceEntity();
 
@@ -356,11 +354,11 @@ public sealed partial class NFCargoSystem
         while (query.MoveNext(out var uid, out _, out var ui))
         {
             var untilNextSkip = db.NextSkipTime - _timing.CurTime;
-            _ui.SetUiState((uid, ui), MercenaryConsoleUiKey.Bounty, new MercenaryBountyConsoleState(db.Bounties, untilNextSkip));
+            _ui.SetUiState((uid, ui), MinersConsoleUiKey.Bounty, new MinersBountyConsoleState(db.Bounties, untilNextSkip));
         }
     }
 
-    private void OnRedeemBounty(EntityUid uid, MercenaryBountyRedemptionConsoleComponent component, MercenaryBountyRedemptionMessage args)
+    private void OnRedeemBounty(EntityUid uid, MinersBountyRedemptionConsoleComponent component, MinersBountyRedemptionMessage args)
     {
         var amount = 0;
 
@@ -371,10 +369,10 @@ public sealed partial class NFCargoSystem
         if (gridUid == EntityUid.Invalid)
             return;
 
-        if (!TryComp<MercenaryBountyDatabaseComponent>(gridUid, out var bountyDb))
+        if (!TryComp<MinersBountyDatabaseComponent>(gridUid, out var bountyDb))
             return;
 
-        MercenaryBountyEntitySearchState bountySearchState = new MercenaryBountyEntitySearchState();
+        MinersBountyEntitySearchState bountySearchState = new MinersBountyEntitySearchState();
 
         foreach (var bounty in bountyDb.Bounties)
         {
@@ -384,7 +382,7 @@ public sealed partial class NFCargoSystem
                     continue;
                 if (bountyPrototype.SpawnChest)
                 {
-                    var newState = new MercenaryBountyState(bounty, bountyPrototype);
+                    var newState = new MinersBountyState(bounty, bountyPrototype);
                     foreach (var entry in bountyPrototype.Entries)
                     {
                         newState.Entries[entry.Name] = 0;
@@ -393,7 +391,7 @@ public sealed partial class NFCargoSystem
                 }
                 else
                 {
-                    var newState = new MercenaryBountyState(bounty, bountyPrototype);
+                    var newState = new MinersBountyState(bounty, bountyPrototype);
                     foreach (var entry in bountyPrototype.Entries)
                     {
                         newState.Entries[entry.Name] = 0;
@@ -416,7 +414,7 @@ public sealed partial class NFCargoSystem
                     xform.Anchored)
                     continue;
 
-                CheckEntityForMercenaryBounties(ent, ref bountySearchState);
+                CheckEntityForMinersBounties(ent, ref bountySearchState);
             }
         }
 
@@ -440,9 +438,9 @@ public sealed partial class NFCargoSystem
             if (bountyMet)
             {
                 bountiesRemoved = true;
-                redeemedBounties = Loc.GetString("mercenary-bounty-redemption-append", ("bounty", id), ("empty", string.IsNullOrEmpty(redeemedBounties) ? 0 : 1), ("prev", redeemedBounties));
+                redeemedBounties = Loc.GetString("miners-bounty-redemption-append", ("bounty", id), ("empty", string.IsNullOrEmpty(redeemedBounties) ? 0 : 1), ("prev", redeemedBounties));
 
-                TryRemoveMercenaryBounty(_sectorService.GetServiceEntity(), id, bountyDb); // bountyDb
+                TryRemoveMinersBounty(_sectorService.GetServiceEntity(), id, bountyDb); // bountyDb
                 amount += prototype.Reward;
                 foreach (var entity in bounty.Entities)
                 {
@@ -468,9 +466,9 @@ public sealed partial class NFCargoSystem
             if (bountyMet)
             {
                 bountiesRemoved = true;
-                redeemedBounties = Loc.GetString("mercenary-bounty-redemption-append", ("bounty", id), ("empty", string.IsNullOrEmpty(redeemedBounties) ? 0 : 1), ("prev", redeemedBounties));
+                redeemedBounties = Loc.GetString("miners-bounty-redemption-append", ("bounty", id), ("empty", string.IsNullOrEmpty(redeemedBounties) ? 0 : 1), ("prev", redeemedBounties));
 
-                TryRemoveMercenaryBounty(_sectorService.GetServiceEntity(), id, bountyDb); // bountyDb
+                TryRemoveMinersBounty(_sectorService.GetServiceEntity(), id, bountyDb); // bountyDb
                 amount += prototype.Reward;
                 foreach (var entity in bounty.Entities)
                 {
@@ -481,47 +479,47 @@ public sealed partial class NFCargoSystem
 
         if (amount > 0)
         {
-            _stack.SpawnMultiple("MercenaryToken", amount, Transform(uid).Coordinates);
+            _stack.SpawnMultiple("MinersToken", amount, Transform(uid).Coordinates);
             _audio.PlayPvs(component.AcceptSound, uid);
-            _popup.PopupEntity(Loc.GetString("mercenary-bounty-redemption-success", ("bounties", redeemedBounties), ("amount", amount)), args.Actor);
+            _popup.PopupEntity(Loc.GetString("miners-bounty-redemption-success", ("bounties", redeemedBounties), ("amount", amount)), args.Actor);
         }
         else
         {
             _audio.PlayPvs(component.DenySound, uid);
-            _popup.PopupEntity(Loc.GetString("mercenary-bounty-redemption-deny"), args.Actor);
+            _popup.PopupEntity(Loc.GetString("miners-bounty-redemption-deny"), args.Actor);
         }
 
         // Bounties removed, restore database list
         if (bountiesRemoved)
         {
-            FillMercenaryBountyDatabase(_sectorService.GetServiceEntity(), bountyDb); //bountyDb
+            FillMinersBountyDatabase(_sectorService.GetServiceEntity(), bountyDb); //bountyDb
         }
         component.LastRedeemAttempt = _timing.CurTime;
     }
 
-    sealed class MercenaryBountyState
+    sealed class MinersBountyState
     {
-        public readonly MercenaryBountyData Data;
-        public MercenaryBountyPrototype Prototype;
+        public readonly MinersBountyData Data;
+        public MinersBountyPrototype Prototype;
         public HashSet<EntityUid> Entities = new();
         public Dictionary<string, int> Entries = new();
         public bool Calculating = false; // Relevant only for crate bounties (due to tree traversal)
 
-        public MercenaryBountyState(MercenaryBountyData data, MercenaryBountyPrototype prototype)
+        public MinersBountyState(MinersBountyData data, MinersBountyPrototype prototype)
         {
             Data = data;
             Prototype = prototype;
         }
     }
 
-    sealed class MercenaryBountyEntitySearchState
+    sealed class MinersBountyEntitySearchState
     {
         public HashSet<EntityUid> HandledEntities = new();
-        public Dictionary<string, MercenaryBountyState> LooseObjectBounties = new();
-        public Dictionary<string, MercenaryBountyState> CrateBounties = new();
+        public Dictionary<string, MinersBountyState> LooseObjectBounties = new();
+        public Dictionary<string, MinersBountyState> CrateBounties = new();
     }
 
-    private void CheckEntityForMercenaryCrateBounty(EntityUid uid, ref MercenaryBountyEntitySearchState state, string id)
+    private void CheckEntityForMinersCrateBounty(EntityUid uid, ref MinersBountyEntitySearchState state, string id)
     {
         // Sanity check: entity previously handled, this subtree is done.
         if (state.HandledEntities.Contains(uid))
@@ -545,9 +543,9 @@ public sealed partial class NFCargoSystem
                 foreach (var ent in container.ContainedEntities)
                 {
                     // Subtree has a separate label, run check on that label
-                    if (TryComp<MercenaryBountyLabelComponent>(ent, out var label))
+                    if (TryComp<MinersBountyLabelComponent>(ent, out var label))
                     {
-                        CheckEntityForMercenaryCrateBounty(ent, ref state, label.Id);
+                        CheckEntityForMinersCrateBounty(ent, ref state, label.Id);
                     }
                     else
                     {
@@ -561,15 +559,15 @@ public sealed partial class NFCargoSystem
     }
 
     // Return two lists: a list of non-labelled entities (nodes), and a list of labelled entities (subtrees)
-    private void CheckEntityForMercenaryBounties(EntityUid uid, ref MercenaryBountyEntitySearchState state)
+    private void CheckEntityForMinersBounties(EntityUid uid, ref MinersBountyEntitySearchState state)
     {
         // Entity previously handled, this subtree is done.
         if (state.HandledEntities.Contains(uid))
             return;
 
         // 3a. If tagged as labelled, check contents against crate bounties.  If it satisfies any of them, note it as solved.
-        if (TryComp<MercenaryBountyLabelComponent>(uid, out var label))
-            CheckEntityForMercenaryCrateBounty(uid, ref state, label.Id);
+        if (TryComp<MinersBountyLabelComponent>(uid, out var label))
+            CheckEntityForMinersCrateBounty(uid, ref state, label.Id);
         else
         {
             // 3b. If not tagged as labelled, check contents against non-create bounties.  If it satisfies any of them, increase the quantity.
@@ -583,7 +581,7 @@ public sealed partial class NFCargoSystem
     }
 
     // Checks an object against a bounty, adjusts the bounty's state and returns true if it matches.
-    private bool AdjustBountyForEntity(EntityUid target, MercenaryBountyState bounty)
+    private bool AdjustBountyForEntity(EntityUid target, MinersBountyState bounty)
     {
         foreach (var entry in bounty.Prototype.Entries)
         {
@@ -595,7 +593,7 @@ public sealed partial class NFCargoSystem
             }
 
             // Check whitelists for the pirate bounty.
-            if (TryComp<MercenaryBountyItemComponent>(target, out var targetBounty) && targetBounty.ID == entry.ID)
+            if (TryComp<MinersBountyItemComponent>(target, out var targetBounty) && targetBounty.ID == entry.ID)
             {
                 if (TryComp<StackComponent>(target, out var stack))
                     bounty.Entries[entry.Name] += stack.Count;

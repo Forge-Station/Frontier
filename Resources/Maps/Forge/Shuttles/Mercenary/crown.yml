@@ -344,7 +344,6 @@ entities:
           - 0
         chunkSize: 4
     - type: GasTileOverlay
-    - type: MercenaryBountyDatabase
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Crown
@@ -914,7 +913,7 @@ entities:
     - type: Transform
       pos: 0.5,5.5
       parent: 1
-- proto: ContrabandPalletPirate
+- proto: ContrabandPalleteCivillian
   entities:
   - uid: 228
     components:

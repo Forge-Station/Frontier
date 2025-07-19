@@ -71,3 +71,77 @@
     energy: 1.6
     color: "#b89f25"
   - type: Godmode
+
+- type: entity
+  id: ComputerMinersBounty
+  parent: BaseComputer
+  name: miners bounty computer
+  description: Avast, get ye mercenary bounties here.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: contraband
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+  - type: MinersBountyConsole
+    spawnChestSound:
+      path: /Audio/Effects/Lightning/lightningbolt.ogg
+      params:
+        volume: -5
+        variation: 0.2
+  - type: ActivatableUI
+    key: enum.MinersConsoleUiKey.Bounty
+  - type: UserInterface
+    interfaces:
+      enum.MinersConsoleUiKey.Bounty:
+        type: MinersBountyConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: Null # Really shouldn't spawn anything on destruction
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+
+- type: entity
+  name: miners bounty redemption computer
+  parent: [BaseStructureDisableToolUse, BaseComputer]
+  id: ComputerMinersBountyRedemption
+  description: Back from a voyage? Redeem yer bounties here, matey.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/computers.rsi
+    layers:
+    - map: [ "computerLayerBody" ]
+      state: computer
+    - map: [ "computerLayerKeyboard" ]
+      state: generic_keyboard
+    - map: [ "computerLayerScreen" ]
+      state: aiupload
+    - map: [ "computerLayerKeys" ]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: MinersBountyRedemptionConsole
+  - type: ActivatableUI
+    key: enum.MinersConsoleUiKey.BountyRedemption
+  - type: UserInterface
+    interfaces:
+      enum.MinersConsoleUiKey.BountyRedemption:
+        type: MinersBountyRedemptionConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: Null
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: Godmode
