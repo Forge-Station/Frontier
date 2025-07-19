@@ -32,7 +32,7 @@
 - type: startingGear
   id: DocGear
   equipment:
-    pocket1: HypoMini
+    pocket1: Hypospray #Forge
     pocket2: MedicalAppraisalTool
   storage:
     back:
@@ -40,3 +40,6 @@
     - MobileComputerTabletopCommsFlatpack
     - BoxFolderMedicalDoctor
     - RubberStampDoc
+    - DefibrillatorCompact #Forge
+    - MedTekCartridge #Forge
+    - NFClothingEyesNightVisionGogglesMed

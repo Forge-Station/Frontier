@@ -184,7 +184,6 @@
     dynamicPacks:
     - CorvaxShuttleGunsDynamic #Corvax-Frontier
     - CorvaxAmmoDynamic #Corvax-Frontier
-    - CorvaxPracticAmmo #Corvax-Frontier
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -219,8 +218,6 @@
     staticPacks:
     - NFMercenaryTechfabDeprecatedStatic
     - NfsdPracticeStatic
-    dynamicPacks:
-    - CorvaxPracticAmmo #Corvax-Frontier
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -269,8 +266,6 @@
     staticPacks:
     - NFHackedMercenaryTechfabDeprecatedStatic
     - CorvaxAmmoStatic #Corvax-Frontier
-    dynamicPacks:
-    - CorvaxPracticAmmo #Corvax-Frontier
   - type: BlueprintReceiver
     whitelist:
       tags:

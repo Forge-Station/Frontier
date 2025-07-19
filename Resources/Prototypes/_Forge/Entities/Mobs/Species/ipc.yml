@@ -129,12 +129,12 @@
         sprite: Mobs/Effects/burn_damage.rsi
   - type: ProtectedFromStepTriggers
   - type: EyeProtection
-
+  - type: Carriable # Frontier: Carrying system from nyanotrasen.
+  - type: OfferItem # Corvax-Frontier
 
 - type: entity
   save: false
   parent:
-  - MobFlammable
   - BaseMob
   - MobDamageable
   - MobPolymorphable
