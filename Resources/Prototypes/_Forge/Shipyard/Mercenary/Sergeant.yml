@@ -17,6 +17,9 @@
   category: Small
   group: Mercenary
   shuttlePath: /Maps/Forge/Shuttles/Mercenary/Sergeant.yml
+  addComponents:
+  - type: MercenaryBountyDatabase
+    bounties: []
 
 - type: gameMap
   id: Sergeant
@@ -25,7 +28,7 @@
   minPlayers: 0
   stations:
     Sergeant:
-      stationProto: StandardFrontierVessel
+      stationProto: MercenaryFrontierVessel
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Гильза {1}'
@@ -36,5 +39,3 @@
           availableJobs:
             Pilot: [ 0, 0 ]
             Mercenary: [ 0, 0 ]
-        - type: MercenaryBountyDatabase
-          bounties: []

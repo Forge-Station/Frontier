@@ -35,7 +35,7 @@ public sealed partial class NFCargoSystem
 
         SubscribeLocalEvent<MinersBountyRedemptionConsoleComponent, MinersBountyRedemptionMessage>(OnRedeemBounty);
 
-        SubscribeLocalEvent<MinersBountyConsoleComponent, MapInitEvent>(OnMinersMapInit);
+        SubscribeLocalEvent<MinersBountyDatabaseComponent, ComponentAdd>(OnBountyDbAdded);
 
         _minersBountyLabelQuery = GetEntityQuery<MinersBountyLabelComponent>();
     }
@@ -206,16 +206,9 @@ public sealed partial class NFCargoSystem
         return true;
     }
 
-    private void OnMinersMapInit(EntityUid uid, MinersBountyConsoleComponent component, MapInitEvent args)
+    private void OnBountyDbAdded(EntityUid uid, MinersBountyDatabaseComponent component, ComponentAdd args)
     {
-        var gridUid = Transform(uid).GridUid;
-        if (gridUid == null)
-            return;
-
-        if (!_ent.TryGetComponent(gridUid, out MinersBountyDatabaseComponent? bountyDb))
-            return;
-
-        FillMinersBountyDatabase(uid, bountyDb);
+        FillMinersBountyDatabase(uid, component);
     }
 
     public void FillMinersBountyDatabase(EntityUid serviceId, MinersBountyDatabaseComponent? component = null)
@@ -229,7 +222,7 @@ public sealed partial class NFCargoSystem
                 break;
         }
 
-        UpdateMinersBountyConsoles();
+        UpdateMinersBountyConsoles(component);
     }
 
     [PublicAPI]
@@ -344,15 +337,16 @@ public sealed partial class NFCargoSystem
 
     public void UpdateMinersBountyConsoles(MinersBountyDatabaseComponent? db = null)
     {
-        var query = EntityQueryEnumerator<MinersBountyConsoleComponent, UserInterfaceComponent>();
-
-        var serviceId = _sectorService.GetServiceEntity();
-
         if (db == null)
             return;
 
+        var gridUid = db.Owner;
+        var query = EntityQueryEnumerator<MinersBountyConsoleComponent, UserInterfaceComponent>();
+
         while (query.MoveNext(out var uid, out _, out var ui))
         {
+            if (Transform(uid).GridUid != gridUid)
+                continue;
             var untilNextSkip = db.NextSkipTime - _timing.CurTime;
             _ui.SetUiState((uid, ui), MinersConsoleUiKey.Bounty, new MinersBountyConsoleState(db.Bounties, untilNextSkip));
         }
