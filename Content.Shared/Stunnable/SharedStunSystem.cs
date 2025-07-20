@@ -19,7 +19,6 @@ using Content.Shared.Throwing;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Physics.Events;
-using Robust.Shared.Physics.Systems;
 using Robust.Shared.Timing;
 
 namespace Content.Shared.Stunnable;
@@ -34,7 +33,6 @@ public abstract partial class SharedStunSystem : EntitySystem
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] protected readonly SharedAppearanceSystem Appearance = default!;
-    [Dependency] private readonly StandingStateSystem _standingState = default!;
     [Dependency] protected readonly SharedDoAfterSystem DoAfter = default!;
     [Dependency] protected readonly SharedStaminaSystem Stamina = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
@@ -48,7 +46,6 @@ public abstract partial class SharedStunSystem : EntitySystem
         SubscribeLocalEvent<StunnedComponent, ComponentStartup>(UpdateCanMove);
         SubscribeLocalEvent<StunnedComponent, ComponentShutdown>(OnStunShutdown);
 
-        SubscribeLocalEvent<StunOnContactComponent, ComponentStartup>(OnStunOnContactStartup);
         SubscribeLocalEvent<StunOnContactComponent, StartCollideEvent>(OnStunOnContactCollide);
 
         // Attempt event subscriptions.
@@ -112,12 +109,6 @@ public abstract partial class SharedStunSystem : EntitySystem
     private void UpdateCanMove(EntityUid uid, StunnedComponent component, EntityEventArgs args)
     {
         Blocker.UpdateCanMove(uid);
-    }
-
-    private void OnStunOnContactStartup(Entity<StunOnContactComponent> ent, ref ComponentStartup args)
-    {
-        if (TryComp<PhysicsComponent>(ent, out var body))
-            _broadphase.RegenerateContacts((ent, body));
     }
 
     private void OnStunOnContactCollide(Entity<StunOnContactComponent> ent, ref StartCollideEvent args)

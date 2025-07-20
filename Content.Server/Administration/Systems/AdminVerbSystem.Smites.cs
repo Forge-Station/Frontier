@@ -970,7 +970,7 @@ public sealed partial class AdminVerbSystem
                 if (!hadSlipComponent)
                 {
                     slipComponent.SlipData.SuperSlippery = true;
-                    slipComponent.SlipData.ParalyzeTime = TimeSpan.FromSeconds(10);
+                    slipComponent.SlipData.StunTime = TimeSpan.FromSeconds(5);
                     slipComponent.SlipData.LaunchForwardsMultiplier = 1;
                 }
 

@@ -1,3 +1,4 @@
+using Content.Server.EntityEffects.Effects.StatusEffects;
 using Content.Shared.StatusEffectNew;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
