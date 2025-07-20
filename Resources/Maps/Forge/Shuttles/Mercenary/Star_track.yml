@@ -12951,7 +12951,6 @@ entities:
           occludes: True
           ents:
           - 1006
-          - 1007
           - 1008
         paper_label: !type:ContainerSlot
           showEnts: False
@@ -13118,15 +13117,6 @@ entities:
 - proto: MagazinePistolHighCapacity
   entities:
   - uid: 1006
-    components:
-    - type: Transform
-      parent: 1005
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: MagazinePistolHighCapacityRubber
-  entities:
-  - uid: 1007
     components:
     - type: Transform
       parent: 1005
