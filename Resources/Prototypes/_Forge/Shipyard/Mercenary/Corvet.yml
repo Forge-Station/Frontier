@@ -17,6 +17,10 @@
   category: Small
   group: Mercenary
   shuttlePath: /Maps/Forge/Shuttles/Mercenary/Corvet.yml
+  addComponents:
+  - type: MercenaryBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: Corvet
@@ -25,7 +29,7 @@
   minPlayers: 0
   stations:
     Corvet:
-      stationProto: StandardFrontierVessel
+      stationProto: MercenaryFrontierVessel
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Корвет {1}'
@@ -36,5 +40,3 @@
           availableJobs:
             Pilot: [ 0, 0 ]
             Mercenary: [ 0, 0 ]
-        - type: MercenaryBountyDatabase
-          bounties: []

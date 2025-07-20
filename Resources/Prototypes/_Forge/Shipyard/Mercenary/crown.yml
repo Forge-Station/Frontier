@@ -17,6 +17,9 @@
   category: Small
   group: Mercenary
   shuttlePath: /Maps/Forge/Shuttles/Mercenary/crown.yml
+  addComponents:
+  - type: MercenaryBountyDatabase
+    bounties: []
 
 - type: gameMap
   id: Crown
@@ -25,7 +28,7 @@
   minPlayers: 0
   stations:
     Crown:
-      stationProto: StandardFrontierVessel
+      stationProto: MercenaryFrontierVessel
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Ворон {1}'
@@ -37,5 +40,3 @@
             Contractor: [ 0, 0 ]
             Pilot: [ 0, 0 ]
             Mercenary: [ 0, 0 ]
-        - type: MercenaryBountyDatabase
-          bounties: []
