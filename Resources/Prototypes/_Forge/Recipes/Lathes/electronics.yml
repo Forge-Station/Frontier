@@ -1,0 +1,21 @@
+- type: latheRecipe
+  parent: [BaseGoldCircuitboardRecipe, BaseEngineeringMachineRecipeCategory]
+  id: MachineBluespaceHarvesterCircuitboard
+  result: MachineBluespaceHarvesterCircuitboard
+  completetime: 10
+  materials:
+    Steel: 100
+    Glass: 900
+    Gold: 300
+    Silver: 300
+
+- type: latheRecipe
+  parent: [BaseGoldCircuitboardRecipe, BaseEngineeringMachineRecipeCategory]
+  id: MachineBluespaceTransitorCircuitboard
+  result: MachineBluespaceTransitorCircuitboard
+  completetime: 10
+  materials:
+    Steel: 100
+    Glass: 900
+    Gold: 300
+    Silver: 300
