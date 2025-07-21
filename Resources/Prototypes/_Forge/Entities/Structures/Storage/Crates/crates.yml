@@ -59,3 +59,78 @@
   - type: MinersBountyLabel
   - type: DisableToolUse
     screwing: true
+
+- type: entity
+  parent: CrateBaseSecure
+  id: CrateIndustrialSecure
+  name: bluespace industrial crate
+  components:
+  - type: CargoSellBlacklist
+  - type: Icon
+    sprite: Forge/Bluespace/Crates/industrial_secure.rsi
+  - type: Sprite
+    sprite: Forge/Bluespace/Crates/industrial_secure.rsi
+  - type: StorageFill
+    contents:
+    - id: SpaceCash15000
+      amount: 1
+
+- type: entity
+  parent: CrateBaseSecure
+  id: CrateTechnologicalSecure
+  name: bluespace technological crate
+  components:
+  - type: CargoSellBlacklist
+  - type: Icon
+    sprite: Forge/Bluespace/Crates/technological_secure.rsi
+  - type: Sprite
+    sprite: Forge/Bluespace/Crates/technological_secure.rsi
+  - type: StorageFill
+    contents:
+    - id: SpaceCash20000
+      amount: 1
+
+- type: entity
+  parent: CrateBaseSecure
+  id: CrateBiologicalSecure
+  name: bluespace biological crate
+  components:
+  - type: CargoSellBlacklist
+  - type: Icon
+    sprite: Forge/Bluespace/Crates/biological_secure.rsi
+  - type: Sprite
+    sprite: Forge/Bluespace/Crates/biological_secure.rsi
+  - type: StorageFill
+    contents:
+    - id: SpaceCash10000
+      amount: 1
+
+- type: entity
+  parent: CrateBaseSecure
+  id: CrateDestructionSecure
+  name: bluespace destruction crate
+  components:
+  - type: CargoSellBlacklist
+  - type: Icon
+    sprite: Forge/Bluespace/Crates/destruction_secure.rsi
+  - type: Sprite
+    sprite: Forge/Bluespace/Crates/destruction_secure.rsi
+  - type: StorageFill
+    contents:
+    - id: SpaceCash25000
+      amount: 1
+
+- type: entity
+  parent: CrateBaseSecure
+  id: CrateLimitedSecure
+  name: bluespace limited crate
+  components:
+  - type: CargoSellBlacklist
+  - type: Icon
+    sprite: Forge/Bluespace/Crates/limited_secure.rsi
+  - type: Sprite
+    sprite: Forge/Bluespace/Crates/limited_secure.rsi
+  - type: StorageFill
+    contents:
+    - id: SpaceCash25000
+      amount: 2

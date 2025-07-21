@@ -23,3 +23,17 @@
   technologyPrerequisites:
   - NFNightVision
   position: 1, 40
+
+- type: technology
+  id: BluespaceHarvester
+  name: nf-research-technology-bluespace
+  entityIcon: BluespaceHarvester
+  discipline: NFScience
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - MachineBluespaceHarvesterCircuitboard
+  - MachineBluespaceTransitorCircuitboard
+  technologyPrerequisites:
+  - NFBluespaceTimeManipulation
+  position: 5, 5
