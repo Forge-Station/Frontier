@@ -55,7 +55,7 @@ namespace Content.IntegrationTests.Tests.Lobby
 
                 Assert.That(clientCharacters, Is.Not.Null);
                 Assert.That(clientCharacters, Has.Count.EqualTo(2));
-                Assert.That(clientCharacters[1].MemberwiseEquals(profile));
+                Assert.That(clientCharacters[1].MemberwiseEquals(profile, out var error), message: error); // Forge-Change
             });
 
             await PoolManager.WaitUntil(server, () => serverPrefManager.GetPreferences(clientNetId).Characters.Count == 2, maxTicks: 60);
@@ -65,7 +65,7 @@ namespace Content.IntegrationTests.Tests.Lobby
                 var serverCharacters = serverPrefManager.GetPreferences(clientNetId).Characters;
 
                 Assert.That(serverCharacters, Has.Count.EqualTo(2));
-                Assert.That(serverCharacters[1].MemberwiseEquals(profile));
+                Assert.That(serverCharacters[1].MemberwiseEquals(profile, out var error), message: error); // Forge-Change
             });
 
             await client.WaitAssertion(() =>
@@ -96,7 +96,7 @@ namespace Content.IntegrationTests.Tests.Lobby
 
                 Assert.That(clientCharacters, Is.Not.Null);
                 Assert.That(clientCharacters, Has.Count.EqualTo(2));
-                Assert.That(clientCharacters[1].MemberwiseEquals(profile));
+                Assert.That(clientCharacters[1].MemberwiseEquals(profile, out var error), message: error); // Forge-Change
             });
 
             await PoolManager.WaitUntil(server, () => serverPrefManager.GetPreferences(clientNetId).Characters.Count == 2, maxTicks: 60);
@@ -106,7 +106,7 @@ namespace Content.IntegrationTests.Tests.Lobby
                 var serverCharacters = serverPrefManager.GetPreferences(clientNetId).Characters;
 
                 Assert.That(serverCharacters, Has.Count.EqualTo(2));
-                Assert.That(serverCharacters[1].MemberwiseEquals(profile));
+                Assert.That(serverCharacters[1].MemberwiseEquals(profile, out var error), message: error); // Forge-Change
             });
             await pair.CleanReturnAsync();
         }
