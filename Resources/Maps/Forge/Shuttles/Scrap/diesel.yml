@@ -4260,17 +4260,6 @@ entities:
         - 0
         - 0
         - 0
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 514
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
 - proto: CrateEngineering
   entities:
   - uid: 47
@@ -6180,22 +6169,6 @@ entities:
     components:
     - type: Transform
       pos: 8.691951,-6.311109
-      parent: 1
-- proto: NFBlueprintPortableRecharger
-  entities:
-  - uid: 514
-    components:
-    - type: Transform
-      parent: 513
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: NFBlueprintPowerCellMediumPrinted
-  entities:
-  - uid: 713
-    components:
-    - type: Transform
-      pos: -5.5971885,0.66730714
       parent: 1
 - proto: NitrogenCanister
   entities:

@@ -7885,13 +7885,6 @@ entities:
           friction: 0.4
     - type: PlaceableSurface
       isPlaceable: True
-- proto: CrateServiceJanitorialSupplies2
-  entities:
-  - uid: 747
-    components:
-    - type: Transform
-      pos: 13.5,-32.5
-      parent: 1
 - proto: CrateTrashCart
   entities:
   - uid: 3017

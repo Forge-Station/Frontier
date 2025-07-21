@@ -110,7 +110,7 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
             Color.Black,
             Color.Black,
             skinColor,
-            new ()
+            new()
         );
     }
 
@@ -167,7 +167,7 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
                 break;
         }
 
-        return new HumanoidCharacterAppearance(newHairStyle, newHairColor, newFacialHairStyle, newHairColor, newEyeColor, newSkinColor, new ());
+        return new HumanoidCharacterAppearance(newHairStyle, newHairColor, newFacialHairStyle, newHairColor, newEyeColor, newSkinColor, new());
 
         float RandomizeColor(float channel)
         {
@@ -228,18 +228,53 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
             markingSet.GetForwardEnumerator().ToList());
     }
 
-    public bool MemberwiseEquals(ICharacterAppearance maybeOther)
+    // Forge-Change-Start
+    public bool MemberwiseEquals(ICharacterAppearance maybeOther, out string? error)
     {
-        if (maybeOther is not HumanoidCharacterAppearance other) return false;
-        if (HairStyleId != other.HairStyleId) return false;
-        if (!HairColor.Equals(other.HairColor)) return false;
-        if (FacialHairStyleId != other.FacialHairStyleId) return false;
-        if (!FacialHairColor.Equals(other.FacialHairColor)) return false;
-        if (!EyeColor.Equals(other.EyeColor)) return false;
-        if (!SkinColor.Equals(other.SkinColor)) return false;
-        if (!Markings.SequenceEqual(other.Markings)) return false;
+        if (maybeOther is not HumanoidCharacterAppearance other)
+        {
+            error = $"Не является профилем {maybeOther}";
+            return false;
+        }
+        if (HairStyleId != other.HairStyleId)
+        {
+            error = $"Причёски не совпадают {HairStyleId} != {other.HairStyleId}";
+            return false;
+        }
+        if (!ColorApproximatelyEqual(HairColor, other.HairColor))
+        {
+            error = $"Цвет волос не совпадает {HairColor} != {other.HairColor}";
+            return false;
+        }
+        if (FacialHairStyleId != other.FacialHairStyleId)
+        {
+            error = $"Усы не совпадают {FacialHairStyleId} != {other.FacialHairStyleId}";
+            return false;
+        }
+        if (!ColorApproximatelyEqual(FacialHairColor, other.FacialHairColor))
+        {
+            error = $"Цвет усов не совпадает {FacialHairColor} != {other.FacialHairColor}";
+            return false;
+        }
+        if (!ColorApproximatelyEqual(EyeColor, other.EyeColor))
+        {
+            error = $"Цвет глаз не совпадает {EyeColor} != {other.EyeColor}";
+            return false;
+        }
+        if (!ColorApproximatelyEqual(SkinColor, other.SkinColor))
+        {
+            error = $"Цвет кожи не совпадает {SkinColor} != {other.SkinColor}";
+            return false;
+        }
+        if (!Markings.SequenceEqual(other.Markings))
+        {
+            error = $"Татуировки не совпадают {Markings} != {other.Markings}";
+            return false;
+        }
+        error = null;
         return true;
     }
+    // Forge-Change-End
 
     public bool Equals(HumanoidCharacterAppearance? other)
     {
@@ -268,4 +303,15 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
     {
         return new(this);
     }
+
+    // Forge-Change-Start
+    private static bool ColorApproximatelyEqual(Color a, Color b)
+    {
+        const float colorTolerance = 0.01f;
+        return Math.Abs(a.R - b.R) < colorTolerance &&
+               Math.Abs(a.G - b.G) < colorTolerance &&
+               Math.Abs(a.B - b.B) < colorTolerance &&
+               Math.Abs(a.A - b.A) < colorTolerance;
+    }
+    // Forge-Change-End
 }
