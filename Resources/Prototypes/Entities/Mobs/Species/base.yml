@@ -120,7 +120,7 @@
   - type: StatusEffects
     allowed:
     - Stun
-    - Friction
+    - Friction # Forge-Change
     - SlowedDown
     - Stutter
     - Electrocution
@@ -281,7 +281,7 @@
         Asphyxiation: -1.0
   - type: FireVisuals
     alternateState: Standing
-  - type: StunVisuals
+  - type: StunVisuals # Forge-Change
 
 - type: entity
   save: false

@@ -3,6 +3,8 @@ using Content.Shared.Stunnable;
 
 namespace Content.Shared.Hands.EntitySystems;
 
+// Forge-Change full (refactory b.y. wizard)
+
 /// <summary>
 /// This is for events that don't affect normal hand functions but do care about hands.
 /// </summary>

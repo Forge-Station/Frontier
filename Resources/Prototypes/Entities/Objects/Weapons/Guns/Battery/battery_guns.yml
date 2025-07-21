@@ -593,9 +593,8 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
-
+# Forge-Change-Start
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: elite taser
   parent: [ BaseCentcommContraband, WeaponTaser ]
   id: WeaponTaserSuper
@@ -611,7 +610,7 @@
   - type: ProjectileBatteryAmmoProvider
     proto: BulletTaserSuper
     fireCost: 200
-
+# Forge-Change-End
 - type: entity
   name: antique laser pistol
   parent: [BaseWeaponBatterySmall, BaseC1Contraband] # Frontier: BaseGrandTheftContraband<BaseC1Contraband

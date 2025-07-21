@@ -5,7 +5,7 @@
 # Adding new status effects under the old system is NOT RECOMMENDED.
 
 - type: statusEffect
-  id: Stun
+  id: Stun # Forge-Change
   alert: Stun
 
 - type: statusEffect

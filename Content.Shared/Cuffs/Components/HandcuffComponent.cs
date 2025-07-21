@@ -37,19 +37,19 @@ public sealed partial class HandcuffComponent : Component
     ///     Modifier for the amount of time it takes an entity to stand up if cuffed.
     /// </summary>
     [DataField]
-    public float StandupMod = 5f;
+    public float StandupMod = 5f; // Forge-Change
 
     /// <summary>
     ///     Modifier to the speed of an entity who is cuffed, does not stack with KnockedMovementMod
     /// </summary>
     [DataField]
-    public float MovementMod = 1f;
+    public float MovementMod = 1f; // Forge-Change
 
     /// <summary>
     ///     Modifier to the knocked down speed of an entity who is cuffed
     /// </summary>
     [DataField]
-    public float KnockedMovementMod = 0.4f;
+    public float KnockedMovementMod = 0.4f; // Forge-Change
 
     /// <summary>
     ///     Will the cuffs break when removed?

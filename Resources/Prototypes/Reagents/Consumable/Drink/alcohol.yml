@@ -1,6 +1,6 @@
 
 # Base Alcohol
-
+# Forge-Change-Start
 - type: reagent
   id: Absinthe
   name: reagent-name-absinthe
@@ -46,7 +46,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 10
-
+# Forge-Change-End
 - type: reagent
   id: Ale
   name: reagent-name-ale

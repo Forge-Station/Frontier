@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Alert;
 using Content.Shared.Rejuvenate;
-using Content.Shared.StatusEffectNew;
+using Content.Shared.StatusEffectNew; // Forge-Change
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;

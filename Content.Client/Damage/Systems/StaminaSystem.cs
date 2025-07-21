@@ -7,6 +7,7 @@ using Robust.Client.GameObjects;
 
 namespace Content.Client.Damage.Systems;
 
+// Forge-Change full (refactory b.y. wizard)
 public sealed partial class StaminaSystem : SharedStaminaSystem
 {
     [Dependency] private readonly AnimationPlayerSystem _animation = default!;

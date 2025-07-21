@@ -5,6 +5,8 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared.Stunnable;
 
+// Forge-Change full (refactory b.y. wizard)
+
 /// <summary>
 /// This contains all the events raised by the SharedStunSystem
 /// </summary>

@@ -398,7 +398,7 @@ public abstract partial class SharedGunSystem : EntitySystem
         Shoot(gunUid, gun, ev.Ammo, fromCoordinates, toCoordinates.Value, out var userImpulse, user, throwItems: attemptEv.ThrowItems);
         var shotEv = new GunShotEvent(user, ev.Ammo);
         RaiseLocalEvent(gunUid, ref shotEv);
-
+        // Forge-Change-Start
         if (!userImpulse || !TryComp<PhysicsComponent>(user, out var userPhysics))
             return;
 
@@ -407,6 +407,7 @@ public abstract partial class SharedGunSystem : EntitySystem
 
         if (shooterEv.Push || _gravity.IsWeightless(user, userPhysics))
             CauseImpulse(fromCoordinates, toCoordinates.Value, user, userPhysics);
+        // Forge-Change-End
     }
 
     public void Shoot(
@@ -658,7 +659,7 @@ public record struct AttemptShootEvent(EntityUid User, string? Message, bool Can
 /// <param name="User">The user that fired this gun.</param>
 [ByRefEvent]
 public record struct GunShotEvent(EntityUid User, List<(EntityUid? Uid, IShootable Shootable)> Ammo);
-
+// Forge-Change-Start
 /// <summary>
 /// Raised on an entity after firing a gun to see if any components or systems would allow this entity to be pushed
 /// by the gun they're firing. If true, GunSystem will create an impulse on our entity.
@@ -668,7 +669,7 @@ public record struct ShooterImpulseEvent()
 {
     public bool Push;
 };
-
+// Forge-Change-End
 public enum EffectLayers : byte
 {
     Unshaded,

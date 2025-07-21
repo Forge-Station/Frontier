@@ -83,8 +83,8 @@
         key: Jitter
         time: 3.0
         type: Remove
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectDrowsiness # Forge-Change
         time: 1.5
         type: Add
         refresh: false
@@ -746,8 +746,8 @@
         key: KnockedDown
         time: 3.0
         type: Remove
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectSeeingRainbow # Forge-Change
         time: 15.0
         type: Remove
 
@@ -923,8 +923,8 @@
       - !type:GenericStatusEffect
         key: Stutter
         component: StutteringAccent
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectDrowsiness # Forge-Change
         time: 10
         type: Remove
       - !type:ResetNarcolepsy
@@ -948,8 +948,8 @@
   metabolisms:
     Medicine:
       effects:
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectDrowsiness # Forge-Change
         time: 10
         type: Remove
       - !type:ResetNarcolepsy
@@ -1323,8 +1323,8 @@
         damage:
           types:
             Poison: 2
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectSeeingRainbow # Forge-Change
         conditions:
         - !type:ReagentThreshold
           min: 30
@@ -1391,8 +1391,8 @@
         emote: Yawn
         showInChat: true
         probability: 0.1
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectDrowsiness # Forge-Change
         time: 4
         type: Add
         refresh: false
@@ -1400,8 +1400,8 @@
         key: Jitter
         time: 4.0
         type: Remove
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectSeeingRainbow # Forge-Change
         time: 10.0
         type: Remove
       - !type:AdjustReagent

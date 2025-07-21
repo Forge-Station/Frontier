@@ -1,6 +1,6 @@
 using Content.Shared.CCVar;
 using Content.Shared.Drugs;
-using Content.Shared.StatusEffectNew;
+using Content.Shared.StatusEffectNew; // Forge-Change
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Configuration;
@@ -17,8 +17,8 @@ public sealed class RainbowOverlay : Overlay
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IEntitySystemManager _sysMan = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    private readonly StatusEffectsSystem _statusEffects = default!;
+    [Dependency] private readonly IGameTiming _timing = default!; // Forge-Change
+    private readonly StatusEffectsSystem _statusEffects = default!; // Forge-Change
 
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
     public override bool RequestScreenTexture => true;
@@ -36,7 +36,7 @@ public sealed class RainbowOverlay : Overlay
     {
         IoCManager.InjectDependencies(this);
 
-        _statusEffects = _sysMan.GetEntitySystem<StatusEffectsSystem>();
+        _statusEffects = _sysMan.GetEntitySystem<StatusEffectsSystem>(); // Forge-Change
 
         _rainbowShader = _prototypeManager.Index<ShaderPrototype>("Rainbow").InstanceUnique();
     }
@@ -48,11 +48,11 @@ public sealed class RainbowOverlay : Overlay
         if (playerEntity == null)
             return;
 
-        if (!_statusEffects.TryGetEffectsEndTimeWithComp<SeeingRainbowsStatusEffectComponent>(playerEntity, out var endTime))
+        if (!_statusEffects.TryGetEffectsEndTimeWithComp<SeeingRainbowsStatusEffectComponent>(playerEntity, out var endTime)) // Forge-Change
             return;
 
-        endTime ??= TimeSpan.MaxValue;
-        var timeLeft = (float)(endTime - _timing.CurTime).Value.TotalSeconds;
+        endTime ??= TimeSpan.MaxValue; // Forge-Change
+        var timeLeft = (float)(endTime - _timing.CurTime).Value.TotalSeconds; // Forge-Change
 
         TimeTicker += args.DeltaSeconds;
         if (timeLeft - TimeTicker > timeLeft / 16f)

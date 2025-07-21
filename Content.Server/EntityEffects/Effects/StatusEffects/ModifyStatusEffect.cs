@@ -5,6 +5,8 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared.EntityEffects.Effects.StatusEffects;
 
+// Forge-Change full (refactory b.y. wizard)
+
 /// <summary>
 /// Changes status effects on entities: Adds, removes or sets time.
 /// </summary>

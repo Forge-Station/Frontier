@@ -82,7 +82,7 @@
   meltingPoint: 18.2
   tileReactions:
   - !type:SpillTileReaction
-  friction: 0.05
+  friction: 0.05 # Forge-Change
 
 - type: reagent
   id: SpaceGlue
@@ -106,10 +106,10 @@
   metabolisms:
     Narcotic:
       effects:
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectSeeingRainbow # Forge-Change
         time: 5
-        type: Add
+        type: Add 
         refresh: false
     Drink:
       effects:

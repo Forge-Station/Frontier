@@ -254,8 +254,8 @@
     state: clown
   - type: Slippery
     slipData:
-      stunTime: 0
-      knockdownTime: 0.7
+      stunTime: 0 # Forge-Change
+      knockdownTime: 0.7 # Forge-Change
       launchForwardsMultiplier: 0.5
   - type: StepTrigger
     intersectRatio: 0.2

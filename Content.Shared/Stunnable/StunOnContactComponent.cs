@@ -22,13 +22,13 @@ public sealed partial class StunOnContactComponent : Component
     /// Should the stun applied refresh?
     /// </summary>
     [DataField]
-    public bool Refresh = true;
+    public bool Refresh = true; // Forge-Change 
 
     /// <summary>
     /// Should the stunned entity try to stand up when knockdown ends?
     /// </summary>
     [DataField]
-    public bool AutoStand = true;
+    public bool AutoStand = true; // Forge-Change 
 
     [DataField]
     public EntityWhitelist Blacklist = new();

@@ -4,6 +4,8 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared.StatusEffectNew;
 
+// Forge-Change full (refactory b.y. wizard)
+
 public sealed partial class StatusEffectsSystem
 {
     /// <summary>

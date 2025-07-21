@@ -5,6 +5,8 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Movement.Systems;
 
+// Forge-Change full (refactory b.y. wizard)
+
 /// <summary>
 /// This handles the application of movement and friction modifiers to an entity as status effects.
 /// </summary>

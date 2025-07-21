@@ -217,19 +217,19 @@
   - type: Projectile
     damage:
       types:
-        Shock: 1
+        Shock: 1 # Forge-Change
     soundHit:
       path: "/Audio/Weapons/Guns/Hits/taser_hit.ogg"
     forceSound: true
-  - type: TimedDespawn
+  - type: TimedDespawn # Forge-Change
     lifetime: 0.170 # Very short range
-  - type: StunOnCollide
+  - type: StunOnCollide # Forge-Change
     stunAmount: 0
     knockdownAmount: 2.5 # Enough to subdue and follow up with a stun batong
     slowdownAmount: 2.5
     walkSpeedModifier: 0.5
     sprintSpeedModifier: 0.5
-
+# Forge-Change-Start
 - type: entity
   parent: BulletTaser
   id: BulletTaserSuper
@@ -257,7 +257,7 @@
     slowdownAmount: 10
     walkSpeedModifier: 0.5
     sprintSpeedModifier: 0.5
-
+# Forge-Change-End
 - type: entity
   name : disabler bolt
   id: BulletDisabler

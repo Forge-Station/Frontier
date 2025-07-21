@@ -3,6 +3,8 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared.Movement.Components;
 
+// Forge-Change full (refactory b.y. wizard)
+
 /// <summary>
 /// This is used to apply a friction modifier to an entity temporarily
 /// </summary>

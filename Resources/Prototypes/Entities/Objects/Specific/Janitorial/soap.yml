@@ -127,9 +127,9 @@
   - type: SolutionContainerVisuals
     fillBaseName: syndie-
   - type: Slippery
-    staminaDamage: 50
+    staminaDamage: 50 # Forge-Change
     slipData:
-      knockdownTime: 3
+      knockdownTime: 3 # Forge-Change
       launchForwardsMultiplier: 3
   - type: Item
     heldPrefix: syndie
@@ -218,9 +218,9 @@
   - type: SolutionContainerVisuals
     fillBaseName: omega-
   - type: Slippery
-    staminaDamage: 50
+    staminaDamage: 50 # Forge-Change
     slipData:
-      knockdownTime: 5.0
+      knockdownTime: 5.0 # Forge-Change
       launchForwardsMultiplier: 3.0
   - type: Item
     heldPrefix: omega

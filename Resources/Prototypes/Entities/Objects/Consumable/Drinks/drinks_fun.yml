@@ -80,7 +80,7 @@
   - type: Lube
   - type: TrashOnSolutionEmpty
     solution: drink
-
+# Forge-Change-Start
 - type: entity
   parent: BluespaceBeaker
   id: BottomlessLube
@@ -101,7 +101,7 @@
       reagents:
       - ReagentId: SpaceLube
         Quantity: 200
-
+# Forge-Change-End
 # Mopwata
 - type: weightedRandomFillSolution
   id: RandomFillMopwata

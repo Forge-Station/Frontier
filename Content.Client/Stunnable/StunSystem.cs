@@ -14,6 +14,8 @@ using Robust.Shared.Utility;
 
 namespace Content.Client.Stunnable;
 
+// Forge-Change full (refactory b.y. wizard)
+
 public sealed class StunSystem : SharedStunSystem
 {
     [Dependency] private readonly SharedCombatModeSystem _combat = default!;

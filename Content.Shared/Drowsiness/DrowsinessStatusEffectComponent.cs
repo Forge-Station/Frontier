@@ -5,6 +5,8 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Shared.Drowsiness;
 
+// Forge-Change full (refactory b.y. wizard)
+
 /// <summary>
 /// Exists for use as a status effect. Adds a shader to the client that scales with the effect duration.
 /// Use only in conjunction with <see cref="StatusEffectComponent"/>, on the status effect entity.

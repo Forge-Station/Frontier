@@ -7,6 +7,8 @@ using Robust.Shared.Timing;
 
 namespace Content.Server.Drowsiness;
 
+// Forge-Change full (refactory b.y. wizard)
+
 public sealed class DrowsinessSystem : SharedDrowsinessSystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;

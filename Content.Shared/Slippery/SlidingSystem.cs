@@ -8,6 +8,8 @@ using Robust.Shared.Physics.Systems;
 
 namespace Content.Shared.Slippery;
 
+// Forge-Change full (refactory b.y. wizard)
+
 public sealed class SlidingSystem : EntitySystem
 {
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;

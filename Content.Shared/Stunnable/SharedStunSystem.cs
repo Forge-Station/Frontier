@@ -1,13 +1,13 @@
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration.Logs;
-using Content.Shared.Alert;
+using Content.Shared.Alert; // Forge-Change
 using Content.Shared.Interaction.Events;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Item;
 using Content.Shared.Damage.Components;
-using Content.Shared.Damage.Systems;
+using Content.Shared.Damage.Systems; // Forge-Change
 using Content.Shared.Database;
-using Content.Shared.DoAfter;
+using Content.Shared.DoAfter; // Forge-Change
 using Content.Shared.Hands;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
@@ -19,32 +19,32 @@ using Content.Shared.Throwing;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Physics.Events;
-using Robust.Shared.Timing;
+using Robust.Shared.Timing; // Forge-Change
 
 namespace Content.Shared.Stunnable;
 
-public abstract partial class SharedStunSystem : EntitySystem
+public abstract partial class SharedStunSystem : EntitySystem // Forge-Change (patrial)
 {
-    [Dependency] protected readonly ActionBlockerSystem Blocker = default!;
-    [Dependency] protected readonly AlertsSystem Alerts = default!;
-    [Dependency] protected readonly IGameTiming GameTiming = default!;
+    [Dependency] protected readonly ActionBlockerSystem Blocker = default!; // Forge-Change
+    [Dependency] protected readonly AlertsSystem Alerts = default!; // Forge-Change
+    [Dependency] protected readonly IGameTiming GameTiming = default!; // Forge-Change
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly EntityWhitelistSystem _entityWhitelist = default!;
+    [Dependency] private readonly EntityWhitelistSystem _entityWhitelist = default!; // Forge-Change
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] protected readonly SharedAppearanceSystem Appearance = default!;
-    [Dependency] protected readonly SharedDoAfterSystem DoAfter = default!;
-    [Dependency] protected readonly SharedStaminaSystem Stamina = default!;
+    [Dependency] protected readonly SharedAppearanceSystem Appearance = default!; // Forge-Change
+    [Dependency] protected readonly SharedDoAfterSystem DoAfter = default!; // Forge-Change
+    [Dependency] protected readonly SharedStaminaSystem Stamina = default!; // Forge-Change
     [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
 
     public override void Initialize()
     {
         SubscribeLocalEvent<SlowedDownComponent, ComponentInit>(OnSlowInit);
         SubscribeLocalEvent<SlowedDownComponent, ComponentShutdown>(OnSlowRemove);
-        SubscribeLocalEvent<SlowedDownComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovespeed);
+        SubscribeLocalEvent<SlowedDownComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovespeed); // Forge-Change
 
         SubscribeLocalEvent<StunnedComponent, ComponentStartup>(UpdateCanMove);
-        SubscribeLocalEvent<StunnedComponent, ComponentShutdown>(OnStunShutdown);
+        SubscribeLocalEvent<StunnedComponent, ComponentShutdown>(OnStunShutdown); // Forge-Change
 
         SubscribeLocalEvent<StunOnContactComponent, StartCollideEvent>(OnStunOnContactCollide);
 
@@ -61,8 +61,8 @@ public abstract partial class SharedStunSystem : EntitySystem
         SubscribeLocalEvent<StunnedComponent, IsUnequippingAttemptEvent>(OnUnequipAttempt);
         SubscribeLocalEvent<MobStateComponent, MobStateChangedEvent>(OnMobStateChanged);
 
-        InitializeKnockdown();
-        InitializeAppearance();
+        InitializeKnockdown(); // Forge-Change
+        InitializeAppearance(); // Forge-Change
     }
 
     private void OnAttemptInteract(Entity<StunnedComponent> ent, ref InteractionAttemptEvent args)
@@ -98,7 +98,7 @@ public abstract partial class SharedStunSystem : EntitySystem
         }
 
     }
-
+    // Forge-Change-Start
     private void OnStunShutdown(Entity<StunnedComponent> ent, ref ComponentShutdown args)
     {
         // This exists so the client can end their funny animation if they're playing one.
@@ -110,7 +110,7 @@ public abstract partial class SharedStunSystem : EntitySystem
     {
         Blocker.UpdateCanMove(uid);
     }
-
+    // Forge-Change-End
     private void OnStunOnContactCollide(Entity<StunOnContactComponent> ent, ref StartCollideEvent args)
     {
         if (args.OurFixtureId != ent.Comp.FixtureId)
@@ -123,7 +123,7 @@ public abstract partial class SharedStunSystem : EntitySystem
             return;
 
         TryStun(args.OtherEntity, ent.Comp.Duration, true, status);
-        TryKnockdown(args.OtherEntity, ent.Comp.Duration, ent.Comp.Refresh, ent.Comp.AutoStand);
+        TryKnockdown(args.OtherEntity, ent.Comp.Duration, ent.Comp.Refresh, ent.Comp.AutoStand); // Forge-Change
     }
 
     private void OnSlowInit(EntityUid uid, SlowedDownComponent component, ComponentInit args)
@@ -143,7 +143,7 @@ public abstract partial class SharedStunSystem : EntitySystem
     /// <summary>
     ///     Stuns the entity, disallowing it from doing many interactions temporarily.
     /// </summary>
-    public bool TryStun(EntityUid uid, TimeSpan time, bool refresh, StatusEffectsComponent? status = null)
+    public bool TryStun(EntityUid uid, TimeSpan time, bool refresh, StatusEffectsComponent? status = null) // Forge-Change
     {
         if (time <= TimeSpan.Zero)
             return false;
@@ -164,21 +164,21 @@ public abstract partial class SharedStunSystem : EntitySystem
     /// <summary>
     ///     Knocks down the entity, making it fall to the ground.
     /// </summary>
-    public bool TryKnockdown(EntityUid uid, TimeSpan time, bool refresh, bool autoStand = true, bool drop = true)
+    public bool TryKnockdown(EntityUid uid, TimeSpan time, bool refresh, bool autoStand = true, bool drop = true) // Forge-Change
     {
         if (time <= TimeSpan.Zero)
             return false;
 
         // Can't fall down if you can't actually be downed.
-        if (!HasComp<StandingStateComponent>(uid))
+        if (!HasComp<StandingStateComponent>(uid)) // Forge-Change
             return false;
 
-        var evAttempt = new KnockDownAttemptEvent(autoStand, drop);
-        RaiseLocalEvent(uid, ref evAttempt);
+        var evAttempt = new KnockDownAttemptEvent(autoStand, drop); // Forge-Change
+        RaiseLocalEvent(uid, ref evAttempt); // Forge-Change
 
-        if (evAttempt.Cancelled)
-            return false;
-
+        if (evAttempt.Cancelled) // Forge-Change
+            return false; 
+        // Forge-Change-Start
         // Initialize our component with the relevant data we need if we don't have it
         if (EnsureComp<KnockedDownComponent>(uid, out var component))
         {
@@ -206,7 +206,7 @@ public abstract partial class SharedStunSystem : EntitySystem
         Alerts.ShowAlert(uid, KnockdownAlert, null, (GameTiming.CurTime, component.NextUpdate));
 
         _adminLogger.Add(LogType.Stamina, LogImpact.Medium, $"{ToPrettyString(uid):user} knocked down for {time.Seconds} seconds");
-
+        // Forge-Change-End
         return true;
     }
 
@@ -219,14 +219,14 @@ public abstract partial class SharedStunSystem : EntitySystem
         if (!Resolve(uid, ref status, false))
             return false;
 
-        return TryKnockdown(uid, time, refresh) && TryStun(uid, time, refresh, status);
+        return TryKnockdown(uid, time, refresh) && TryStun(uid, time, refresh, status); // Forge-Change
     }
 
     /// <summary>
     ///     Slows down the mob's walking/running speed temporarily
     /// </summary>
     public bool TrySlowdown(EntityUid uid, TimeSpan time, bool refresh,
-        float walkSpeedMod = 1f, float sprintSpeedMod = 1f,
+        float walkSpeedMod = 1f, float sprintSpeedMod = 1f, // Forge-Change
         StatusEffectsComponent? status = null)
     {
         if (!Resolve(uid, ref status, false))
@@ -239,11 +239,11 @@ public abstract partial class SharedStunSystem : EntitySystem
         {
             var slowed = Comp<SlowedDownComponent>(uid);
             // Doesn't make much sense to have the "TrySlowdown" method speed up entities now does it?
-            walkSpeedMod = Math.Clamp(walkSpeedMod, 0f, 1f);
-            sprintSpeedMod = Math.Clamp(sprintSpeedMod, 0f, 1f);
+            walkSpeedMod = Math.Clamp(walkSpeedMod, 0f, 1f); // Forge-Change
+            sprintSpeedMod = Math.Clamp(sprintSpeedMod, 0f, 1f); // Forge-Change
 
-            slowed.WalkSpeedModifier *= walkSpeedMod;
-            slowed.SprintSpeedModifier *= sprintSpeedMod;
+            slowed.WalkSpeedModifier *= walkSpeedMod; // Forge-Change
+            slowed.SprintSpeedModifier *= sprintSpeedMod; // Forge-Change
 
             _movementSpeedModifier.RefreshMovementSpeedModifiers(uid);
             return true;
@@ -303,11 +303,11 @@ public abstract partial class SharedStunSystem : EntitySystem
         UpdateStunModifiers(ent, speedModifier, speedModifier);
     }
 
-    #region friction and movement listeners
+    #region friction and movement listeners 
 
-    private void OnRefreshMovespeed(EntityUid ent, SlowedDownComponent comp, RefreshMovementSpeedModifiersEvent args)
+    private void OnRefreshMovespeed(EntityUid ent, SlowedDownComponent comp, RefreshMovementSpeedModifiersEvent args) // Forge-Change
     {
-        args.ModifySpeed(comp.WalkSpeedModifier, comp.SprintSpeedModifier);
+        args.ModifySpeed(comp.WalkSpeedModifier, comp.SprintSpeedModifier); // Forge-Change
     }
 
     #endregion

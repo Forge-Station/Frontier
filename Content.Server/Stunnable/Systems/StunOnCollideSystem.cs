@@ -22,14 +22,14 @@ namespace Content.Server.Stunnable
 
         private void TryDoCollideStun(EntityUid uid, StunOnCollideComponent component, EntityUid target)
         {
-            if (!TryComp<StatusEffectsComponent>(target, out var status))
-                return;
+            if (!TryComp<StatusEffectsComponent>(target, out var status)) // Forge-Change
+                return; // Forge-Change
 
-            _stunSystem.TryStun(target, component.StunAmount, component.Refresh, status);
+            _stunSystem.TryStun(target, component.StunAmount, component.Refresh, status); // Forge-Change
 
-            _stunSystem.TryKnockdown(target, component.KnockdownAmount, component.Refresh, component.AutoStand);
+            _stunSystem.TryKnockdown(target, component.KnockdownAmount, component.Refresh, component.AutoStand); // Forge-Change
 
-            _stunSystem.TrySlowdown(target, component.SlowdownAmount, component.Refresh, component.WalkSpeedModifier, component.SprintSpeedModifier, status);
+            _stunSystem.TrySlowdown(target, component.SlowdownAmount, component.Refresh, component.WalkSpeedModifier, component.SprintSpeedModifier, status); // Forge-Change
         }
         private void HandleCollide(EntityUid uid, StunOnCollideComponent component, ref StartCollideEvent args)
         {

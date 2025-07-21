@@ -8,6 +8,8 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Shared.Damage.Components;
 
+// Forge-Change full (refactory b.y. wizard)
+
 /// <summary>
 /// Add to an entity to paralyze it whenever it reaches critical amounts of Stamina DamageType.
 /// </summary>

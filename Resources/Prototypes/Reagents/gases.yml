@@ -380,7 +380,7 @@
           shouldHave: false
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
-      - !type:ModifyStatusEffect
+      - !type:ModifyStatusEffect # Forge-Change
         conditions:
         - !type:ReagentThreshold
           reagent: NitrousOxide
@@ -388,7 +388,7 @@
         - !type:OrganType
           type: Slime
           shouldHave: false
-        effectProto: StatusEffectForcedSleeping
+        effectProto: StatusEffectForcedSleeping # Forge-Change
         time: 3
         type: Add
       - !type:HealthChange
@@ -422,8 +422,8 @@
         damage:
           types:
             Cellular: 1
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectSeeingRainbow # Forge-Change
         type: Add
         time: 100
         refresh: false
@@ -458,12 +458,12 @@
         damage:
           types:
             Cellular: 0.5
-      - !type:ModifyStatusEffect
+      - !type:ModifyStatusEffect # Forge-Change
         conditions:
         - !type:ReagentThreshold
           reagent: Frezon
           min: 1
-        effectProto: StatusEffectSeeingRainbow
+        effectProto: StatusEffectSeeingRainbow # Forge-Change
         type: Add
         time: 500
         refresh: false

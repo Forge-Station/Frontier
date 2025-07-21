@@ -5,6 +5,8 @@ using Robust.Shared.Player;
 
 namespace Content.Shared.StatusEffectNew;
 
+// Forge-Change full (refactory b.y. wizard)
+
 public sealed partial class StatusEffectsSystem
 {
     private void InitializeRelay()

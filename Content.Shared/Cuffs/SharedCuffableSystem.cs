@@ -20,7 +20,7 @@ using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Item;
 using Content.Shared.Movement.Events;
 using Content.Shared.Movement.Pulling.Events;
-using Content.Shared.Movement.Systems;
+using Content.Shared.Movement.Systems; // Forge-Change
 using Content.Shared.Popups;
 using Content.Shared.Pulling.Events;
 using Content.Shared.Rejuvenate;
@@ -46,7 +46,7 @@ namespace Content.Shared.Cuffs
         [Dependency] private readonly ISharedAdminLogManager _adminLog = default!;
         [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
         [Dependency] private readonly AlertsSystem _alerts = default!;
-        [Dependency] private readonly MovementSpeedModifierSystem _move = default!;
+        [Dependency] private readonly MovementSpeedModifierSystem _move = default!; // Forge-Change
         [Dependency] private readonly SharedAudioSystem _audio = default!;
         [Dependency] private readonly SharedContainerSystem _container = default!;
         [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
@@ -58,13 +58,13 @@ namespace Content.Shared.Cuffs
         [Dependency] private readonly UseDelaySystem _delay = default!;
         [Dependency] private readonly SharedCombatModeSystem _combatMode = default!;
 
-        private EntityQuery<HandcuffComponent> _cuffQuery;
+        private EntityQuery<HandcuffComponent> _cuffQuery; // Forge-Change
 
         public override void Initialize()
         {
             base.Initialize();
 
-            _cuffQuery = GetEntityQuery<HandcuffComponent>();
+            _cuffQuery = GetEntityQuery<HandcuffComponent>(); // Forge-Change
 
             SubscribeLocalEvent<CuffableComponent, HandCountChangedEvent>(OnHandCountChanged);
             SubscribeLocalEvent<UncuffAttemptEvent>(OnUncuffAttempt);
@@ -95,9 +95,9 @@ namespace Content.Shared.Cuffs
             SubscribeLocalEvent<HandcuffComponent, MeleeHitEvent>(OnCuffMeleeHit);
             SubscribeLocalEvent<HandcuffComponent, AddCuffDoAfterEvent>(OnAddCuffDoAfter);
             SubscribeLocalEvent<HandcuffComponent, VirtualItemDeletedEvent>(OnCuffVirtualItemDeleted);
-            SubscribeLocalEvent<CuffableComponent, GetStandUpTimeEvent>(OnCuffableStandupArgs);
-            SubscribeLocalEvent<CuffableComponent, KnockedDownRefreshEvent>(OnCuffableKnockdownRefresh);
-            SubscribeLocalEvent<CuffableComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovementSpeedModifiers);
+            SubscribeLocalEvent<CuffableComponent, GetStandUpTimeEvent>(OnCuffableStandupArgs); // Forge-Change
+            SubscribeLocalEvent<CuffableComponent, KnockedDownRefreshEvent>(OnCuffableKnockdownRefresh); // Forge-Change
+            SubscribeLocalEvent<CuffableComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovementSpeedModifiers); // Forge-Change
         }
 
         private void CheckInteract(Entity<CuffableComponent> ent, ref InteractionAttemptEvent args)
@@ -376,8 +376,8 @@ namespace Content.Shared.Cuffs
                         $"{ToPrettyString(user):player} has cuffed {ToPrettyString(target):player}");
                 }
 
-                if (!MathHelper.CloseTo(component.MovementMod, 1f))
-                    _move.RefreshMovementSpeedModifiers(target);
+                if (!MathHelper.CloseTo(component.MovementMod, 1f)) // Forge-Change
+                    _move.RefreshMovementSpeedModifiers(target); // Forge-Change
             }
             else
             {
@@ -427,7 +427,7 @@ namespace Content.Shared.Cuffs
                 UpdateCuffState(ent.Owner, ent.Comp);
             }
         }
-
+        // Forge-Change-Start
         /// <summary>
         ///     Takes longer to stand up when cuffed
         /// </summary>
@@ -493,7 +493,7 @@ namespace Content.Shared.Cuffs
 
             args.ModifySpeed(mod);
         }
-
+        // Forge-Change-End
         /// <summary>
         ///     Adds virtual cuff items to the user's hands.
         /// </summary>
@@ -807,8 +807,8 @@ namespace Content.Shared.Cuffs
                 shoved = true;
             }
 
-            if (!MathHelper.CloseTo(cuff.MovementMod, 1f))
-                _move.RefreshMovementSpeedModifiers(target);
+            if (!MathHelper.CloseTo(cuff.MovementMod, 1f)) // Forge-Change
+                _move.RefreshMovementSpeedModifiers(target); // Forge-Change
 
             if (cuffable.CuffedHandCount == 0)
             {

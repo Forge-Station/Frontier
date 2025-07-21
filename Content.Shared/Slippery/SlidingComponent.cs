@@ -2,6 +2,8 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared.Slippery;
 
+// Forge-Change full (refactory b.y. wizard)
+
 /// <summary>
 /// Applies continuous movement to the attached entity when colliding with super slipper entities.
 /// </summary>

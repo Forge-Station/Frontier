@@ -7,6 +7,8 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared.StatusEffectNew;
 
+// Forge-Change full (refactory b.y. wizard)
+
 /// <summary>
 /// This system controls status effects, their lifetime, and provides an API for adding them to entities,
 /// removing them from entities, or getting information about current effects on entities.

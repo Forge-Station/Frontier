@@ -21,6 +21,8 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Stunnable;
 
+// Forge-Change full (refactory b.y. wizard)
+
 /// <summary>
 /// This contains the knockdown logic for the stun system for organization purposes.
 /// </summary>

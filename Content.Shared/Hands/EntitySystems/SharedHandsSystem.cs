@@ -12,6 +12,8 @@ using Robust.Shared.Input.Binding;
 
 namespace Content.Shared.Hands.EntitySystems;
 
+// Forge-Change full (refactory b.y. wizard)
+
 public abstract partial class SharedHandsSystem
 {
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;

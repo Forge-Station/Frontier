@@ -1,5 +1,5 @@
 using Content.Shared.Drowsiness;
-using Content.Shared.StatusEffectNew;
+using Content.Shared.StatusEffectNew; // Forge-Change
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Enums;
@@ -15,7 +15,7 @@ public sealed class DrowsinessOverlay : Overlay
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IEntitySystemManager _sysMan = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    private readonly StatusEffectsSystem _statusEffects = default!;
+    private readonly StatusEffectsSystem _statusEffects = default!; // Forge-Change
 
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
     public override bool RequestScreenTexture => true;
@@ -31,7 +31,7 @@ public sealed class DrowsinessOverlay : Overlay
     {
         IoCManager.InjectDependencies(this);
 
-        _statusEffects = _sysMan.GetEntitySystem<StatusEffectsSystem>();
+        _statusEffects = _sysMan.GetEntitySystem<StatusEffectsSystem>(); // Forge-Change
 
         _drowsinessShader = _prototypeManager.Index<ShaderPrototype>("Drowsiness").InstanceUnique();
     }
@@ -43,11 +43,10 @@ public sealed class DrowsinessOverlay : Overlay
         if (playerEntity == null)
             return;
 
-        if (!_statusEffects.TryGetEffectsEndTimeWithComp<DrowsinessStatusEffectComponent>(playerEntity, out var endTime))
-            return;
+        if (!_statusEffects.TryGetEffectsEndTimeWithComp<DrowsinessStatusEffectComponent>(playerEntity, out var endTime)) // Forge-Change
 
-        endTime ??= TimeSpan.MaxValue;
-        var timeLeft = (float)(endTime - _timing.CurTime).Value.TotalSeconds;
+        endTime ??= TimeSpan.MaxValue; // Forge-Change
+        var timeLeft = (float)(endTime - _timing.CurTime).Value.TotalSeconds; // Forge-Change
         CurrentPower += 8f * (0.5f * timeLeft - CurrentPower) * args.DeltaSeconds / (timeLeft + 1);
     }
 
