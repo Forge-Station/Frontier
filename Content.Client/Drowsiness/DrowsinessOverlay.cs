@@ -44,6 +44,7 @@ public sealed class DrowsinessOverlay : Overlay
             return;
 
         if (!_statusEffects.TryGetEffectsEndTimeWithComp<DrowsinessStatusEffectComponent>(playerEntity, out var endTime)) // Forge-Change
+            return;
 
         endTime ??= TimeSpan.MaxValue; // Forge-Change
         var timeLeft = (float)(endTime - _timing.CurTime).Value.TotalSeconds; // Forge-Change
