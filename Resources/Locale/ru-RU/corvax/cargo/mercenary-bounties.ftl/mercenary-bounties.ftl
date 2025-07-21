@@ -17,6 +17,6 @@ mercenary-bounty-item-fire-axe = Пожарный топор
 mercenary-bounty-item-toolbox-gold = Золотой ящик для инструментов
 mercenary-bounty-item-bluespace-beaker = Блюспейс мензурка
 mercenary-bounty-item-syringe-bluespace = Блюспейс-шприц
-mercenary-bounty-item-dragon-egg = Драконье яйцп
+mercenary-bounty-item-dragon-egg = Драконье яйцо
 mercenary-bounty-item-coat-syndie = Бронированный тренч Синдиката
 mercenary-bounty-item-energy-pickaxe = Энергетическая кирка

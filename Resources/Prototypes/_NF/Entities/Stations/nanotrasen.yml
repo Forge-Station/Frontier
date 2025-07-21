@@ -147,3 +147,21 @@
   - StandardFrontierVessel
   - BaseStationExpeditions
   categories: [ HideSpawnMenu ]
+
+# Forge-Change-Start
+- type: entity
+  id: MercenaryBountyStationComponents
+  abstract: true
+  components:
+  - type: MercenaryBountyDatabase
+    bounties: []
+
+- type: entity
+  id: MercenaryFrontierVessel
+  categories: [ HideSpawnMenu ]
+  parent:
+  - StandardFrontierVessel
+  - MercenaryBountyStationComponents
+  components:
+  - type: Transform
+# Forge-Change-End

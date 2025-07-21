@@ -11,7 +11,7 @@ namespace Content.Shared.Preferences
 
         ICharacterAppearance CharacterAppearance { get; }
 
-        bool MemberwiseEquals(ICharacterProfile other);
+        bool MemberwiseEquals(ICharacterProfile other, out string? error); // Forge-Change
 
         /// <summary>
         ///     Makes this profile valid so there's no bad data like negative ages.
