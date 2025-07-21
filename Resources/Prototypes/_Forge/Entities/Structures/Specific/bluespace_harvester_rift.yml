@@ -1,0 +1,100 @@
+- type: entity
+  id: BluespaceHarvesterRift
+  name: redspace rift
+  description: Run! Run while you can! Just run!
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: BluespaceHarvesterRift
+    passiveSpawn:
+    - MobFleshJaredExpeditions
+    - MobFleshGolemExpeditions
+    - MobFleshClampExpeditions
+    - MobFleshLoverExpeditions
+    - NFMobShark
+    spawn:
+      # Flesh
+      - id: MobFleshJaredExpeditions
+        cost: 30
+      - id: MobFleshGolemExpeditions
+        cost: 30
+      - id: MobFleshClampExpeditions
+        cost: 30
+      - id: MobFleshLoverExpeditions
+        cost: 30
+      - id: NFMobXeno
+        cost: 30
+      - id: NFMobXenoDrone
+        cost: 30
+      - id: NFMobXenoPraetorian
+        cost: 30
+      # Slimes
+      - id: ReagentSlimeSpawner
+        cost: 60
+      # Carps
+      - id: MobCarp
+        cost: 70
+      - id: MobCarpMagic
+        cost: 90
+      - id: NFMobShark
+        cost: 100
+      # Space
+      - id: MobKangarooSpace
+        cost: 35
+      - id: MobBearSpace
+        cost: 35
+      - id: NFMobPurpleSnake
+        cost: 35
+      - id: MobTick
+        cost: 35
+      - id: MobWatcherLavaland
+        cost: 100
+      # Spiders
+      - id: MobSpiderSpace
+        cost: 50
+      # DEATH
+      - id: SpawnMobBehonker
+        cost: 600
+      - id: NFMobDragonDungeon
+        cost: 700
+      - id: NFMobXenoQueen
+        cost: 800
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Fixtures
+  - type: Sprite
+    layers:
+    - sprite: Structures/Specific/carp_rift.rsi
+      state: icon
+      color: "#ff0000"
+      shader: unshaded
+  - type: InteractionOutline
+  - type: Clickable
+  - type: PointLight
+    enabled: true
+    color: "#ff0000"
+    radius: 12.0
+    energy: 5.0
+    netsync: false
+  - type: NavMapBeacon
+    color: "#ff0000"
+    text: redspace rift
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
+  - type: TimedDespawn
+    lifetime: 60

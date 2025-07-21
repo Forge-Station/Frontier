@@ -1,5 +1,6 @@
 - type: roleLoadout
   id: Jobsmuggler
+  canCustomizeName: true
   groups:
   - SmugglerCaptainHead
   - SmugglerJumpsuit
@@ -12,6 +13,7 @@
 
 - type: roleLoadout
   id: JobMedSyn
+  canCustomizeName: true
   groups:
   - SmugglerCaptainHead
   - MedSynJumpsuit
@@ -23,6 +25,7 @@
 
 - type: roleLoadout
   id: JobStormtrooper
+  canCustomizeName: true
   groups:
   - StormtrooperCaptainHead
   - StormtrooperJumpsuit
@@ -34,6 +37,7 @@
 
 - type: roleLoadout
   id: JobCommander
+  canCustomizeName: true
   groups:
   - CommanderCaptainHead
   - CommanderJumpsuit
