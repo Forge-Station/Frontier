@@ -10,10 +10,6 @@ ent-BluespaceHarvester = блюспейс харвестер
 ent-BluespaceTransitor = блюспейс Т.Р.А.Н.З.И.Т.
     .desc = Технологии мгновенной передачи электроэнергии, использующие провода как квантово-запутанную систему. Разработаны для обеспечения машин, предназначения которым, вам лучше не знать.
 
-research-technology-bluespace-mining = Блюспейс Добыча
-
-research-technology-bluespace = Блюспейс
-
-research-technology-bluespace-mining = Блюспейс Добыча
+nf-research-technology-bluespace = Блюспейс
 
 wires-board-name-bluespace-harvester = БСХ

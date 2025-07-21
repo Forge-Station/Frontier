@@ -1,15 +1,5 @@
 # Industrial Loot
 - type: entity
-  id: CrateHarvesterSingularity
-  parent: CrateLimitedSecure
-  description: You've got a bad feeling about this.
-  suffix: Bluespace Harvester, Singularity, DO NOT MAP
-  components:
-  - type: BluespaceHarvesterBundle
-    contents:
-    - id: Singularity
-
-- type: entity
   id: CrateHarvesterSingularityFake
   parent: CrateLimitedSecure
   description: You've got a bad feeling about this.
@@ -18,7 +8,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: SingularityToy
-      amount: 1
+      amount: 10
 
 - type: entity
   id: CrateHarvesterMaterials
@@ -28,7 +18,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterMaterials
-      amount: 5
+      amount: 20
 
 - type: entity
   id: CrateHarvesterPowerCell
@@ -38,17 +28,17 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterPowerCell
-      amount: 3
+      amount: 6
 
 - type: entity
-  id: CrateHarvesterBeer
+  id: CrateHarvesterScrapOre
   parent: CrateIndustrialSecure
   suffix: Bluespace Harvester, Beer
   components:
   - type: BluespaceHarvesterBundle
     contents:
-    - id: RandomHarvesterBeer
-      amount: 30
+    - id: RandomHarvesterScrapOre
+      amount: 29
 
 - type: entity
   id: CrateHarvesterTools
@@ -68,7 +58,8 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterBackpackHolding
-      amount: 2
+      amount: 3
+
 
 - type: entity
   id: CrateHarvesterAmeJar
@@ -77,8 +68,8 @@
   components:
   - type: BluespaceHarvesterBundle
     contents:
-    - id: AmeJar
-      amount: 10
+    - id: AmeJarBig
+      amount: 5
 
 - type: entity
   id: CrateHarvesterCircuitboard
@@ -102,14 +93,14 @@
       amount: 4
 
 - type: entity
-  id: CrateHarvesterTechnologyDisk
+  id: CrateHarvesterStockPart
   parent: CrateTechnologicalSecure
   suffix: Bluespace Harvester, TechnologyDisk
   components:
   - type: BluespaceHarvesterBundle
     contents:
-    - id: RandomHarvesterTechnologyDisk
-      amount: 7
+    - id: RandomHarvesterStockPart
+      amount: 20
 
 - type: entity
   id: CrateHarvesterAnomaly
@@ -119,7 +110,6 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomAnomalySpawner
-      amount: 1
 
 - type: entity
   id: CrateHarvesterArtifact
@@ -129,7 +119,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomArtifactSpawner
-      amount: 1
+      amount: 2
 
 - type: entity
   id: CrateHarvesterAnomalyKit
@@ -149,7 +139,6 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterEncryptionKey
-      amount: 5
 
 - type: entity
   id: CrateHarvesterBorg
@@ -159,7 +148,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterBorg
-      amount: 3
+      amount: 2
 
 - type: entity
   id: CrateHarvesterMech
@@ -169,7 +158,6 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterMech
-      amount: 2
 
 - type: entity
   id: CrateHarvesterReagentSlime
@@ -179,7 +167,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: ReagentSlimeSpawner
-      amount: 16
+      amount: 5
 
 - type: entity
   id: CrateHarvesterReagentPointSource
@@ -209,7 +197,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterImplanter
-      amount: 7
+      amount: 5
 
 - type: entity
   id: CrateHarvesterMedkit
@@ -222,16 +210,14 @@
       amount: 10
 
 - type: entity
-  id: CrateHarvesterRomerol
-  parent: CrateLimitedSecure
-  suffix: Bluespace Harvester, Romerol
+  id: CrateHarvesterChemVend
+  parent: CrateBiologicalSecure
+  suffix: Bluespace Harvester, ChemVend
   components:
   - type: BluespaceHarvesterBundle
     contents:
-    - id: SyringeRomerol
-      amount: 3
-    - id: PillRomerol
-      amount: 10
+    - id: VendingMachineChemicalsFlatpack
+    - id: VendingMachineRestockChemVend
 
 - type: entity
   id: CrateHarvesterDoctorsDelight
@@ -241,8 +227,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterDoctorsDelight
-      amount: 30
-
+      amount: 28
 
 - type: entity
   id: CrateHarvesterSeeds
@@ -263,7 +248,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: SpawnMobBehonker
-      amount: 6
+      amount: 2
 
 - type: entity
   id: CrateHarvesterWeaponElite
@@ -273,7 +258,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterWeaponElite
-      amount: 3
+      amount: 5
 
 - type: entity
   id: CrateHarvesterWeaponLaser
@@ -293,7 +278,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterWeaponShotgun
-      amount: 4
+      amount: 6
 
 - type: entity
   id: CrateHarvesterWeaponRifle
@@ -303,7 +288,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterWeaponRifle
-      amount: 3
+      amount: 7
 
 - type: entity
   id: CrateHarvesterWeaponLight
@@ -313,7 +298,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterWeaponLight
-      amount: 5
+      amount: 1
 
 - type: entity
   id: CrateHarvesterWeaponDisabler

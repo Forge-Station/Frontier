@@ -7,30 +7,28 @@
   components:
   - type: BluespaceHarvesterRift
     passiveSpawn:
-    - MobFleshJared
-    - MobFleshGolem
-    - MobFleshClamp
-    - MobFleshLover
-    - FleshBlocker
+    - MobFleshJaredExpeditions
+    - MobFleshGolemExpeditions
+    - MobFleshClampExpeditions
+    - MobFleshLoverExpeditions
+    - NFMobShark
     spawn:
       # Flesh
-      - id: MobFleshJared
+      - id: MobFleshJaredExpeditions
         cost: 30
-      - id: MobFleshGolem
+      - id: MobFleshGolemExpeditions
         cost: 30
-      - id: MobFleshClamp
+      - id: MobFleshClampExpeditions
         cost: 30
-      - id: MobFleshLover
+      - id: MobFleshLoverExpeditions
         cost: 30
-      - id: FleshBlocker
+      - id: NFMobXeno
+        cost: 30
+      - id: NFMobXenoDrone
+        cost: 30
+      - id: NFMobXenoPraetorian
         cost: 30
       # Slimes
-      - id: MobAdultSlimesBlueAngry
-        cost: 40
-      - id: MobAdultSlimesYellowAngry
-        cost: 40
-      - id: MobAdultSlimesGreenAngry
-        cost: 40
       - id: ReagentSlimeSpawner
         cost: 60
       # Carps
@@ -38,12 +36,14 @@
         cost: 70
       - id: MobCarpMagic
         cost: 90
+      - id: NFMobShark
+        cost: 100
       # Space
       - id: MobKangarooSpace
         cost: 35
       - id: MobBearSpace
         cost: 35
-      - id: MobPurpleSnake
+      - id: NFMobPurpleSnake
         cost: 35
       - id: MobTick
         cost: 35
@@ -52,17 +52,13 @@
       # Spiders
       - id: MobSpiderSpace
         cost: 50
-      - id: MobGiantSpiderAngry
-        cost: 55
-      - id: MobClownSpider
-        cost: 55
       # DEATH
-      - id: FleshKudzu
-        cost: 300
       - id: SpawnMobBehonker
         cost: 600
-      - id: MobDragon
+      - id: NFMobDragonDungeon
         cost: 700
+      - id: NFMobXenoQueen
+        cost: 800
   - type: Transform
     anchored: true
   - type: Physics
@@ -101,4 +97,4 @@
     sound:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
   - type: TimedDespawn
-    lifetime: 120
+    lifetime: 60

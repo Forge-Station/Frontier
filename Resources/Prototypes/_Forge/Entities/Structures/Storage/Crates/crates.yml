@@ -70,8 +70,10 @@
     sprite: Forge/Bluespace/Crates/industrial_secure.rsi
   - type: Sprite
     sprite: Forge/Bluespace/Crates/industrial_secure.rsi
-  - type: AccessReader
-    access: [["Engineering"]]
+  - type: StorageFill
+    contents:
+    - id: SpaceCash15000
+      amount: 1
 
 - type: entity
   parent: CrateBaseSecure
@@ -83,8 +85,10 @@
     sprite: Forge/Bluespace/Crates/technological_secure.rsi
   - type: Sprite
     sprite: Forge/Bluespace/Crates/technological_secure.rsi
-  - type: AccessReader
-    access: [["Research"]]
+  - type: StorageFill
+    contents:
+    - id: SpaceCash20000
+      amount: 1
 
 - type: entity
   parent: CrateBaseSecure
@@ -96,8 +100,10 @@
     sprite: Forge/Bluespace/Crates/biological_secure.rsi
   - type: Sprite
     sprite: Forge/Bluespace/Crates/biological_secure.rsi
-  - type: AccessReader
-    access: [["Research"], ["Chemistry"]]
+  - type: StorageFill
+    contents:
+    - id: SpaceCash10000
+      amount: 1
 
 - type: entity
   parent: CrateBaseSecure
@@ -109,8 +115,10 @@
     sprite: Forge/Bluespace/Crates/destruction_secure.rsi
   - type: Sprite
     sprite: Forge/Bluespace/Crates/destruction_secure.rsi
-  - type: AccessReader
-    access: [["Armory"]]
+  - type: StorageFill
+    contents:
+    - id: SpaceCash25000
+      amount: 1
 
 - type: entity
   parent: CrateBaseSecure
@@ -122,5 +130,7 @@
     sprite: Forge/Bluespace/Crates/limited_secure.rsi
   - type: Sprite
     sprite: Forge/Bluespace/Crates/limited_secure.rsi
-  - type: AccessReader
-    access: [["Command"]]
+  - type: StorageFill
+    contents:
+    - id: SpaceCash25000
+      amount: 2

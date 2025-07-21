@@ -42,7 +42,7 @@
     prototypes:
     - CrateHarvesterMaterials
     - CrateHarvesterPowerCell
-    - CrateHarvesterBeer
+    - CrateHarvesterScrapOre
     - CrateHarvesterTools
     - RandomHarvesterBackpackHolding
     - CrateHarvesterAmeJar
@@ -50,7 +50,6 @@
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - CrateHarvesterSingularity # Death
     - CrateHarvesterSingularityFake
     rareChance: 0.1
 
@@ -70,7 +69,7 @@
     prototypes:
     - CrateHarvesterAnomaly
     - CrateHarvesterArtifact
-    - CrateHarvesterTechnologyDisk
+    - CrateHarvesterStockPart
     - CrateHarvesterResearchDisk
     - CrateHarvesterAnomalyKit
     - CrateHarvesterEncryptionKey
@@ -101,8 +100,8 @@
     - CrateHarvesterInjection
     - CrateHarvesterMedkit
     - CrateHarvesterSeeds
+    - CrateHarvesterChemVend
     rarePrototypes:
-    - CrateHarvesterRomerol # Death
     - CrateHarvesterDoctorsDelight
     chance: 1.0
     offset: 0.0
@@ -127,19 +126,17 @@
     - SheetSteel
     - SheetPlasteel
     - SheetGlass
-    - SheetRGlass
-    - SheetPGlass
-    - SheetRPGlass
-    chance: 1.0
-    offset: 0.0
-    rarePrototypes:
+    - SheetPlasma
     - IngotSilver
     - IngotGold
     - SheetUranium
-    - SheetUGlass
-    - SheetRUGlass
-    - MaterialSheetMeat
-    rareChance: 0.4
+    chance: 1.0
+    offset: 0.0
+    rarePrototypes:
+    - MaterialBananium
+    - MaterialDiamond
+    - MaterialBluespace
+    rareChance: 0.1
 
 - type: entity
   id: RandomHarvesterPowerCell
@@ -155,17 +152,16 @@
       state: hyper
   - type: RandomSpawner
     prototypes:
-    - PowerCellMediumPrinted
-    - PowerCellHigh
+    - PowerCellHyper
+    - PowerCellMicroreactor
     chance: 1.0
     offset: 0.0
     rarePrototypes:
     - PowerCellAntiqueProto
-    - PowerCellHigh
-    rareChance: 0.1
+    rareChance: 0.4
 
 - type: entity
-  id: RandomHarvesterBeer
+  id: RandomHarvesterScrapOre
   name: random harvester beer spawner
   suffix: Bluespace Harvester, DO NOT MAP
   parent: MarkerBase
@@ -178,12 +174,12 @@
       state: icon
   - type: RandomSpawner
     prototypes:
-    - DrinkBeerBottleFull
+    - ScrapOre
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - DrinkSingulo
-    rareChance: 0.05
+    - ScrapOreTech
+    rareChance: 0.1
 
 - type: entity
   id: RandomHarvesterTools
@@ -202,14 +198,21 @@
     - WelderExperimental
     - PowerDrill
     - JawsOfLife
-    - RCD
-    - RPD
+    - EngineeringTechFabCircuitboard
+    - MedicalTechFabCircuitboard
+    - MercenaryTechFabCircuitboardNF
+    - ServiceTechFabCircuitboard
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - RCDRecharging
+    - AccessConfiguratorAntag
     - AccessConfigurator
-    rareChance: 0.075
+    - SyndicateJawsOfLife
+    - Emag
+    - AccessBreaker
+    - ToolboxSyndicateFilled
+    - NfsdTechFabCircuitboard
+    rareChance: 0.1
 
 - type: entity
   id: RandomHarvesterBackpackHolding
@@ -228,12 +231,12 @@
     - ClothingBackpackSatchelHolding
     - ClothingBackpackDuffelHolding
     - ClothingBackpackHolding
+    - ClothingBackpackMessengerHolding
+    - OreBagOfHolding
+    - ConstructionBagOfHolding
+    - PlantBagOfHolding
     chance: 1.0
     offset: 0.0
-    rarePrototypes:
-    - ClosetBluespace
-    - ClosetBluespaceUnstable
-    rareChance: 0.3
 
 - type: entity
   id: RandomHarvesterCircuitboard
@@ -249,26 +252,23 @@
       state: cpuboard
   - type: RandomSpawner
     prototypes:
-    - SecurityTechFabCircuitboard
     - MedicalTechFabCircuitboard
-    - TelecomServerCircuitboard
     - AmmoTechFabCircuitboard
-    - CargoBountyComputerCircuitboard
-    - CargoRequestComputerCircuitboard
-    chance: 1.0
-    offset: 0.0
-    rarePrototypes:
-    - ResearchAndDevelopmentServerMachineCircuitboard
-    - IDComputerCircuitboard
-    - CommsComputerCircuitboard
     - BodyScannerComputerCircuitboard
     - CloningConsoleComputerCircuitboard
     - CloningPodMachineCircuitboard
+    chance: 1.0
+    offset: 0.0
+    rarePrototypes:
+    - SyndicateCommsComputerCircuitboard
+    - NfsdTechFabCircuitboard
+    - GyroscopeSyndicateMachineCircuitboard
+    - ThrusterSyndicateMachineCircuitboard
     rareChance: 0.2
 
 # Technological
 - type: entity
-  id: RandomHarvesterTechnologyDisk
+  id: RandomHarvesterStockPart
   name: random harvester technology disk spawner
   suffix: Bluespace Harvester, DO NOT MAP
   parent: MarkerBase
@@ -281,12 +281,16 @@
       state: datadisk_label
   - type: RandomSpawner
     prototypes:
-    - TechnologyDisk
+    - SuperMatterBinStockPart
+    - PicoManipulatorStockPart
+    - SuperCapacitorStockPart
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - TechnologyDiskRare
-    rareChance: 0.3
+    - BluespaceMatterBinStockPart
+    - QuadraticCapacitorStockPart
+    - FemtoManipulatorStockPart
+    rareChance: 0.5
 
 - type: entity
   id: RandomHarvesterResearchDisk
@@ -303,6 +307,7 @@
   - type: RandomSpawner
     prototypes:
     - ResearchDisk5000
+    - ResearchDisk
     chance: 1.0
     offset: 0.0
     rarePrototypes:
@@ -330,7 +335,7 @@
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - WeaponPistolCHIMPUpgraded
+    - NFWeaponPistolCHIMPUpgraded
     rareChance: 0.3
 
 - type: entity
@@ -347,15 +352,7 @@
       state: crypt_gold
   - type: RandomSpawner
     prototypes:
-    - BoxEncryptionKeyService
-    - BoxEncryptionKeySecurity
-    - BoxEncryptionKeyScience
-    - BoxEncryptionKeyRobo
-    - BoxEncryptionKeyPassenger
-    - BoxEncryptionKeyMedical
-    - BoxEncryptionKeyMedicalScience
-    - BoxEncryptionKeyEngineering
-    - BoxEncryptionKeyCargo
+    - EncryptionKeyBinary
     chance: 1.0
     offset: 0.0
     rarePrototypes:
@@ -379,13 +376,13 @@
       state: engineer
   - type: RandomSpawner
     prototypes:
-    - BorgChassisMining
-    - BorgChassisEngineer
-    - BorgChassisJanitor
-    - BorgChassisService
-    - BorgChassisMedical
+    - PlayerBorgBattery
+    - PlayerBorgBattery
     chance: 1.0
     offset: 0.0
+    rarePrototypes:
+    - PlayerBorgSyndicateSaboteurGhostRole
+    rareChance: 0.05
 
 - type: entity
   id: RandomHarvesterMech
@@ -424,8 +421,9 @@
     prototypes:
     - BluespaceBeaker
     - SyringeBluespace
-    - BodyBagBluespaceFolded
-    - AnomalyCoreBluespace
+    - JugBluespace
+    - FireExtinguisherBluespace
+    - VialBluespace
     chance: 1.0
     offset: 0.0
     rarePrototypes:
@@ -449,21 +447,20 @@
     prototypes:
     - BikeHornImplanter
     - LightImplanter
-    - MindShieldImplanter
     - SadTromboneImplanter
-    - TrackingImplanter
+    - MedicalTrackingImplanter
     chance: 1.0
     offset: 0.0
     rarePrototypes:
+    - MindShieldImplanter
     - MacroBombImplanter
     - MicroBombImplanter
     - StorageImplanter
     - EmpImplanter
     - FreedomImplanter
     - DeathRattleImplanter
-    - UplinkImplanter
     - DnaScramblerImplanter
-    rareChance: 0.01
+    rareChance: 0.1
 
 - type: entity
   id: RandomHarvesterMedkit
@@ -490,7 +487,7 @@
     offset: 0.0
     rarePrototypes:
     - StimkitFilled
-    rareChance: 0.01
+    rareChance: 0.1
 
 - type: entity
   id: RandomHarvesterSeeds
@@ -533,7 +530,7 @@
     offset: 0.0
     rarePrototypes:
     - ChemistryBottleOmnizine
-    rareChance: 0.2
+    rareChance: 0.5
 
 # Destruction Loot
 - type: entity
@@ -550,15 +547,16 @@
       state: icon
   - type: RandomSpawner
     prototypes:
-    - WeaponLaserCarbine
-    - WeaponLaserCannon
-    - WeaponMakeshiftLaser
-    - WeaponLaserGun
-    - WeaponXrayCannon
+    - NFWeaponEnergyRifleCarbine
+    - NFWeaponEnergyRifleSniperCannon
+    - NFWeaponEnergyPistolLaserMakeshift
+    - NFWeaponEnergySubMachineGunDeltaV
+    - NFWeaponEnergyRifleSniperXrayCannon
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - WeaponAdvancedLaser
+    - NFWeaponEnergyPistolLaserAntique
+    - NFWeaponEnergyLightMachineGunTurbo
     rareChance: 0.2
 
 - type: entity
@@ -575,17 +573,13 @@
       state: icon
   - type: RandomSpawner
     prototypes:
-    - WeaponShotgunEnforcer
-    - WeaponShotgunKammerer
-    - WeaponShotgunDoubleBarreled
-    - WeaponShotgunImprovised
-    - WeaponProtoKineticShotgun
-    - WeaponShotgunSawn
+    - SpawnDungeonLootGunT2
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - WeaponShotgunBulldog
-    rareChance: 0.05
+    - WeaponShotgunAD12
+    - WeaponShotgunSuppressor
+    rareChance: 0.1
 
 - type: entity
   id: RandomHarvesterWeaponRifle
@@ -601,18 +595,9 @@
       state: icon
   - type: RandomSpawner
     prototypes:
-    - WeaponRifleLecter
-    - WeaponSubMachineGunWt550
-    - WeaponPistolFlintlock
-    - WeaponSniperMosin
-    - Musket
-    - WeaponSubMachineGunDrozd
+    - SpawnDungeonLootGunT1
     chance: 1.0
     offset: 0.0
-    rarePrototypes:
-    - WeaponRifleAk
-    - WeaponSubMachineGunC20r
-    rareChance: 0.05
 
 - type: entity
   id: RandomHarvesterWeaponLight
@@ -628,18 +613,11 @@
       state: icon
   - type: RandomSpawner
     prototypes:
-    - WeaponRevolverInspector
-    - WeaponRevolverMateba
-    - WeaponPistolMk58
-    - WeaponRevolverPirate
-    - WeaponPistolFlintlock
+    - SpawnDungeonLootGunT5
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - WeaponRevolverDeckard
-    - WeaponRevolverPython
-    - WeaponPistolCobra
-    - WeaponPistolViper
+    - SpawnDungeonLootGunT4
     rareChance: 0.05
 
 - type: entity
@@ -656,17 +634,9 @@
       state: icon
   - type: RandomSpawner
     prototypes:
-    - Stunbaton
-    - WeaponDisabler
-    - WeaponDisablerSMG
-    - WeaponDisablerPractice
-    - TelescopicBaton
+    - SpawnDungeonLootGunT4
     chance: 1.0
     offset: 0.0
-    rarePrototypes:
-    - WeaponTaser
-    - Stunprod
-    rareChance: 0.05
 
 - type: entity
   id: RandomHarvesterWeaponElite
@@ -682,19 +652,13 @@
       state: icon
   - type: RandomSpawner
     prototypes:
-    - WeaponLaserCannon
-    - WeaponLaserSvalinn
-    - WeaponPulsePistol
-    - WeaponAdvancedLaser
-    - WeaponLightMachineGunL6
-    - WeaponSniperHristov
+    - SpawnDungeonLootGunT3
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - WeaponPulseRifle
-    - WeaponPulseCarbine
-    - WeaponMinigun
-    - WeaponLauncherMultipleRocket
+    - NFWeaponEnergyRifleAssaultPulseCarbine
+    - NFWeaponEnergyPistolPulse
+    - NFWeaponEnergyRiflePulse
     rareChance: 0.05
 
 - type: entity
@@ -711,15 +675,9 @@
       state: icon
   - type: RandomSpawner
     prototypes:
-    - ExGrenade
-    - GrenadeFlashBang
-    - TrainingBomb
+    - SpawnDungeonLootExplosivesT4
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - SyndicateBomb
-    - SyndieMiniBomb
-    - HolyHandGrenade
-    - C4
-    - EmpGrenade
+    - SpawnDungeonLootExplosivesT5
     rareChance: 0.05
