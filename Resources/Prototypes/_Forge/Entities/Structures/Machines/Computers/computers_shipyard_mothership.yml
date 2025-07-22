@@ -81,7 +81,7 @@
 - type: entity
   id: VostokMothershipComputer
   parent: BaseMothershipComputer
-  name: консоль верфи "Восток"
+  name: консоль верфи Востока
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/computers.rsi
@@ -107,7 +107,7 @@
 - type: entity
   id: DredMothershipComputer
   parent: BaseMothershipComputer
-  name: консоль верфи "Дредноут"
+  name: консоль верфи Дредноута
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/computers.rsi
@@ -127,7 +127,7 @@
 - type: entity
   id: ZenichMothershipComputer
   parent: BaseMothershipComputer
-  name: консоль верфи "Зенит"
+  name: консоль верфи Зенита
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/computers.rsi
