@@ -44,3 +44,12 @@
   fallbacks:
   - ParaMedicalShoes1
 
+- type: loadoutGroup
+  id: ParaMedicalHead
+  name: loadout-group-contractor-head
+  minLimit: 1
+  loadouts:
+  - ParaMedicalClothingHeadHatParamedicsoft
+  - ParaMedicalClothingHeadHatParamedicsoftFlipped
+  fallbacks:
+  - ParaMedicalClothingHeadHatParamedicsoft

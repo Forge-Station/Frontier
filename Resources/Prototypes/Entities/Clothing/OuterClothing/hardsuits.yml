@@ -369,9 +369,9 @@
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
   - type: FireProtection
-    reduction: 0.8
+    reduction: 0.1 #Frontier
   - type: ExplosionResistance
-    damageCoefficient: 0.2
+    damageCoefficient: 0.1 # Frontier
   - type: Armor
     modifiers:
       coefficients:
@@ -379,7 +379,7 @@
         Slash: 0.8
         Piercing: 0.8
         Heat: 0.4
-        Radiation: 0.05 # Frontier - 0<0.05
+        Radiation: 0.0
         Caustic: 0.7
   - type: ClothingSpeedModifier
     walkModifier: 0.75

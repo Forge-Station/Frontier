@@ -37,7 +37,7 @@ public sealed partial class NFCargoSystem
 
         SubscribeLocalEvent<MercenaryBountyRedemptionConsoleComponent, MercenaryBountyRedemptionMessage>(OnRedeemBounty);
 
-        SubscribeLocalEvent<MercenaryBountyConsoleComponent, MapInitEvent>(OnMercenaryMapInit);
+        SubscribeLocalEvent<MercenaryBountyDatabaseComponent, ComponentAdd>(OnBountyDbAdded);
 
         _mercenaryBountyLabelQuery = GetEntityQuery<MercenaryBountyLabelComponent>();
     }
@@ -208,16 +208,9 @@ public sealed partial class NFCargoSystem
         return true;
     }
 
-    private void OnMercenaryMapInit(EntityUid uid, MercenaryBountyConsoleComponent component, MapInitEvent args)
+   private void OnBountyDbAdded(EntityUid uid, MercenaryBountyDatabaseComponent component, ComponentAdd args)
     {
-        var gridUid = Transform(uid).GridUid;
-        if (gridUid == null)
-            return;
-
-        if (!_ent.TryGetComponent(gridUid, out MercenaryBountyDatabaseComponent? bountyDb))
-            return;
-
-        FillMercenaryBountyDatabase(uid, bountyDb);
+        FillMercenaryBountyDatabase(uid, component);
     }
 
     public void FillMercenaryBountyDatabase(EntityUid serviceId, MercenaryBountyDatabaseComponent? component = null)
@@ -231,7 +224,7 @@ public sealed partial class NFCargoSystem
                 break;
         }
 
-        UpdateMercenaryBountyConsoles();
+        UpdateMercenaryBountyConsoles(component);
     }
 
     [PublicAPI]
@@ -346,15 +339,17 @@ public sealed partial class NFCargoSystem
 
     public void UpdateMercenaryBountyConsoles(MercenaryBountyDatabaseComponent? db = null)
     {
-        var query = EntityQueryEnumerator<MercenaryBountyConsoleComponent, UserInterfaceComponent>();
-
-        var serviceId = _sectorService.GetServiceEntity();
-
         if (db == null)
             return;
 
+        var gridUid = db.Owner;
+        var query = EntityQueryEnumerator<MercenaryBountyConsoleComponent, UserInterfaceComponent>();
+
         while (query.MoveNext(out var uid, out _, out var ui))
         {
+            if (Transform(uid).GridUid != gridUid)
+                continue;
+                
             var untilNextSkip = db.NextSkipTime - _timing.CurTime;
             _ui.SetUiState((uid, ui), MercenaryConsoleUiKey.Bounty, new MercenaryBountyConsoleState(db.Bounties, untilNextSkip));
         }

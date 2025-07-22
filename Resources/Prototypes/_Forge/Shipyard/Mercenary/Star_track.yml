@@ -17,6 +17,9 @@
   category: Small
   group: Mercenary
   shuttlePath: /Maps/Forge/Shuttles/Mercenary/Star_track.yml
+  addComponents:
+  - type: MercenaryBountyDatabase
+    bounties: []
 
 - type: gameMap
   id: Star_track
@@ -25,7 +28,7 @@
   minPlayers: 0
   stations:
     Star_track:
-      stationProto: StandardFrontierVessel
+      stationProto: MercenaryFrontierVessel
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Энтерпрайз {1}'

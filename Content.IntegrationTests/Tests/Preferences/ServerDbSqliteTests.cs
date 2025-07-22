@@ -88,7 +88,7 @@ namespace Content.IntegrationTests.Tests.Preferences
             var originalProfile = CharlieCharlieson();
             await db.InitPrefsAsync(username, originalProfile);
             var prefs = await db.GetPlayerPreferencesAsync(username);
-            Assert.That(prefs.Characters.Single(p => p.Key == slot).Value.MemberwiseEquals(originalProfile));
+            Assert.That(prefs.Characters.Single(p => p.Key == slot).Value.MemberwiseEquals(originalProfile, out var error), message: error); // Forge-Change
             await pair.CleanReturnAsync();
         }
 

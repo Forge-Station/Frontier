@@ -709,7 +709,8 @@ namespace Content.Client.Lobby.UI
         private void SetDirty()
         {
             // If it equals default then reset the button.
-            if (Profile == null || _preferencesManager.Preferences?.SelectedCharacter.MemberwiseEquals(Profile) == true)
+            if (Profile == null ||
+                _preferencesManager.Preferences?.SelectedCharacter.MemberwiseEquals(Profile, out _) == true) // Forge-Change
             {
                 IsDirty = false;
                 return;
@@ -1663,7 +1664,7 @@ namespace Content.Client.Lobby.UI
                 profile = profile.WithBankBalance(oldProfile.BankBalance); // Frontier: no free money (enforce import, don't care about import)
                 SetProfile(profile, CharacterSlot);
 
-                IsDirty = !profile.MemberwiseEquals(oldProfile);
+                IsDirty = !profile.MemberwiseEquals(oldProfile, out _);
             }
             catch (Exception exc)
             {
