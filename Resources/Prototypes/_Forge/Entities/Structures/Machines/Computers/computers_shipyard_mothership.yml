@@ -120,10 +120,26 @@
       state: shipyard_nfsd
     - map: ["computerLayerKeys"]
       state: telesci_key
-  - type: ShipyardConsole
-    newJobTitle: null
-    shipyardChannel: Nfsd
-    newAccessLevels: [Captain, Security, Brig]
+  - type: ShipyardListing
+    shuttles:
+    - Owl
+
+- type: entity
+  id: ZenichMothershipComputer
+  parent: BaseMothershipComputer
+  name: консоль верфи "Зенит"
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_mining
+    - map: ["computerLayerKeys"]
+      state: telesci_key
   - type: ShipyardListing
     shuttles:
     - Owl
