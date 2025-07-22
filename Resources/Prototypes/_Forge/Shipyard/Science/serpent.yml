@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: Wolfhauler
+# Discord: wolfhauler
+
+# Maintainer Info
+# GitHub: ThatOneGoblin25
+# Discord: thedaarkgoblin
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Serpent
+  parent: BaseVessel
+  name: TL Змей
+  description: Крупногабаритный научный шаттл компании TL. Рекомендуемый экипаж 3-5 человек.
+  price: 185000
+  category: Large
+  group: Shipyard
+  shuttlePath: /Maps/Forge/Shuttles/Science/serpent.yml
+  guidebookPage: Null
+  class:
+  - Science
+
+- type: gameMap
+  id: Serpent
+  mapName: 'TL Змей'
+  mapPath: /Maps/Forge/Shuttles/Science/serpent.yml
+  minPlayers: 0
+  stations:
+    Serpent:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Змей {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
