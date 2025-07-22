@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/22/2025 12:02:18
-  entityCount: 4692
+  time: 07/19/2025 09:54:58
+  entityCount: 4691
 maps: []
 grids:
 - 1
@@ -14688,13 +14688,6 @@ entities:
     - type: Transform
       pos: -6.5,-18.5
       parent: 1
-- proto: Candle
-  entities:
-  - uid: 4692
-    components:
-    - type: Transform
-      pos: -4.8772836,8.454998
-      parent: 1
 - proto: Catwalk
   entities:
   - uid: 1827
@@ -17442,17 +17435,19 @@ entities:
       parent: 1
     - type: Physics
       bodyType: Dynamic
-  - uid: 2136
-    components:
-    - type: Transform
-      pos: -4.5,8.5
-      parent: 1
 - proto: ComputerTabletopRadar
   entities:
   - uid: 2135
     components:
     - type: Transform
       pos: -6.5,11.5
+      parent: 1
+- proto: ComputerTabletopSalvageExpedition
+  entities:
+  - uid: 2136
+    components:
+    - type: Transform
+      pos: -4.5,8.5
       parent: 1
 - proto: ComputerTabletopShuttle
   entities:

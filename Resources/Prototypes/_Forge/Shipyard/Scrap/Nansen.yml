@@ -8,14 +8,14 @@
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
-# Shuttle Notes: Что-ж, работа в одиночестве того стоила... 
+# Shuttle Notes: Что-ж, каждому постоянству нужны свои перемены...
 
 - type: vessel
   id: Nansen
   parent: BaseVessel
   name: ST Капитан Нансен
   description: Огромный, непоколебимый бастион шахтерской деятельности и независимости, видавший свои лучшие годы... Размер команды от 8 и более человек.
-  price: 391000 # (197 342)
+  price: 291000 # (197 342)
   category: Large
   group: Scrap
   shuttlePath: /Maps/Forge/Shuttles/Scrap/Nansen.yml
@@ -35,7 +35,7 @@
   minPlayers: 0
   stations:
     Nansen:
-      stationProto: StandardFrontierExpeditionVessel
+      stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Капитан Нансен {1}'
