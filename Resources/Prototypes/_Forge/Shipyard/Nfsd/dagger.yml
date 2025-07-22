@@ -16,10 +16,7 @@
   name: TL Кинжал
   description: Шаттл перехватчик Кинжал. Произведено частной военно-производственной компаний TechnicLogistic по спец. заказу НТ. Рекомендуемый состав команды 1-2 человека.
   price: 27500
-  group: Security
   category: Small
-  access: Security
-  mapchecker_group_override: Security
   shuttlePath: /Maps/Forge/Shuttles/Nfsd/dagger.yml
   class:
   - Fighter
