@@ -1378,14 +1378,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 15.5,6.5
       parent: 2
-- proto: AmmoTechFabCircuitboard
-  entities:
-  - uid: 503
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.405353,30.34036
-      parent: 2
 - proto: APCBasic
   entities:
   - uid: 601
@@ -6792,18 +6784,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 10.5,28.5
-      parent: 2
-- proto: SpawnDungeonLootVaultGuns
-  entities:
-  - uid: 1131
-    components:
-    - type: Transform
-      pos: 16.164656,23.657408
-      parent: 2
-  - uid: 1132
-    components:
-    - type: Transform
-      pos: 12.555281,29.157408
       parent: 2
 - proto: SpawnDungeonRandomHumanCorpse
   entities:
