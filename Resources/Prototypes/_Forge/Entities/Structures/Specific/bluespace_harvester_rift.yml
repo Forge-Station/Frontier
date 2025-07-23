@@ -7,58 +7,43 @@
   components:
   - type: BluespaceHarvesterRift
     passiveSpawn:
-    - MobFleshJaredExpeditions
-    - MobFleshGolemExpeditions
-    - MobFleshClampExpeditions
-    - MobFleshLoverExpeditions
-    - NFMobShark
+    - NFMobBearSpaceRift
     spawn:
       # Flesh
-      - id: MobFleshJaredExpeditions
-        cost: 30
-      - id: MobFleshGolemExpeditions
-        cost: 30
-      - id: MobFleshClampExpeditions
-        cost: 30
-      - id: MobFleshLoverExpeditions
-        cost: 30
-      - id: NFMobXeno
-        cost: 30
-      - id: NFMobXenoDrone
-        cost: 30
-      - id: NFMobXenoPraetorian
-        cost: 30
-      # Slimes
-      - id: ReagentSlimeSpawner
-        cost: 60
-      # Carps
-      - id: MobCarp
-        cost: 70
-      - id: MobCarpMagic
-        cost: 90
-      - id: NFMobShark
-        cost: 100
-      # Space
-      - id: MobKangarooSpace
-        cost: 35
-      - id: MobBearSpace
-        cost: 35
-      - id: NFMobPurpleSnake
-        cost: 35
-      - id: MobTick
-        cost: 35
-      - id: MobWatcherLavaland
-        cost: 100
-      # Spiders
-      - id: MobSpiderSpace
+      - id: NFMobXenoRift
         cost: 50
+      - id: NFMobXenoDroneRift
+        cost: 60
+      - id: NFMobXenoPraetorianRift
+        cost: 70
+      # Carps
+      - id: NFMobCarpMagicRift
+        cost: 50
+      - id: NFMobCarpHoloRift
+      - cost: 60
+      - id: NFMobSharkRift
+        cost: 120
+      # Space
+      - id: NFMobKangarooSpaceRift
+        cost: 55
+      - id: NFMobBearSpaceRift
+        cost: 50
+      - id: NFMobPurpleSnakeRift
+        cost: 50
+      - id: NFMobTickRift
+        cost: 50
+      - id: MobWatcherLavalandRift
+        cost: 130
+      # Spiders
+      - id: NFMobSpiderSpaceRift
+        cost: 80
       # DEATH
-      - id: SpawnMobBehonker
-        cost: 600
-      - id: NFMobDragonDungeon
-        cost: 700
-      - id: NFMobXenoQueen
+      - id: MobBehonkerGravRift
         cost: 800
+      - id: NFMobDragonDungeonRift
+        cost: 900
+      - id: NFMobXenoQueenRift
+        cost: 1000
   - type: Transform
     anchored: true
   - type: Physics
@@ -89,7 +74,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 60
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -97,4 +82,4 @@
     sound:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
   - type: TimedDespawn
-    lifetime: 60
+    lifetime: 50

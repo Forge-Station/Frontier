@@ -10,11 +10,11 @@ public sealed class BluespaceHarvesterRiftSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<_Forge.BluespaceHarvester.BluespaceHarvesterRiftComponent, TransformComponent>();
+        var query = EntityQueryEnumerator<BluespaceHarvesterRiftComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var comp, out var xform))
         {
             comp.PassiveSpawnAccumulator += frameTime;
-          if (comp.PassiveSpawnAccumulator >= comp.PassiveSpawnCooldown)
+            if (comp.PassiveSpawnAccumulator >= comp.PassiveSpawnCooldown)
             {
                 comp.PassiveSpawnAccumulator -= comp.PassiveSpawnCooldown;
                 comp.PassiveSpawnAccumulator += _random.NextFloat(comp.PassiveSpawnCooldown / 2f);
@@ -35,36 +35,37 @@ public sealed class BluespaceHarvesterRiftSystem : EntitySystem
         }
     }
 
-    private void UpdateSpawn(Entity<_Forge.BluespaceHarvester.BluespaceHarvesterRiftComponent, TransformComponent> ent)
+    private void UpdateSpawn(Entity<BluespaceHarvesterRiftComponent, TransformComponent> ent)
     {
         var rift = ent.Comp1;
-        var xfrom = ent.Comp2;
+        var xform = ent.Comp2;
+
+        if (rift.SpawnedMobs >= rift.MaxTotalMobs)
+            return;
 
         var count = 0;
-        while (rift.Danger != 0 && count < 3)
+        while (rift.Danger != 0 && count < 3 && rift.SpawnedMobs < rift.MaxTotalMobs)
         {
             count++;
 
-            var pickable = new List<_Forge.BluespaceHarvester.EntitySpawn>();
+            var pickable = new List<EntitySpawn>();
             foreach (var spawn in rift.Spawn)
             {
                 if (spawn.Cost <= rift.Danger)
                     pickable.Add(spawn);
             }
 
-            // If we cannot choose anything, this means that we have used up all the danger sufficient before spawn.
             if (pickable.Count == 0)
             {
-                rift.Danger = 0; // This will disable pointless spawn attempts.
+                rift.Danger = 0;
                 break;
             }
 
-            // In order for there to be a dangerous mob,
-            // it should still be a good story,
-            // because they still have a whole cart of ordinary ones.
             var pick = _random.Pick(pickable);
-            rift.Danger -= pick.Cost; // Deduct the risk spent on the purchase.
-            Spawn(pick.Id, xfrom.Coordinates);
+
+            rift.Danger -= pick.Cost;
+            Spawn(pick.Id, xform.Coordinates);
+            rift.SpawnedMobs++;
         }
     }
 }

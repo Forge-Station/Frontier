@@ -7,26 +7,24 @@ using Content.Shared._Forge.BluespaceHarvester;
 using Content.Shared.Audio;
 using Content.Shared.Destructible;
 using Content.Shared.Emag.Components;
+using Content.Shared.Emag.Systems;
 using Content.Shared.Maps;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-using Robust.Shared.Utility;
 
 namespace Content.Server._Forge.BluespaceHarvester;
 
 public sealed class BluespaceHarvesterSystem : EntitySystem
 {
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly TransformSystem _transform = default!;
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly UserInterfaceSystem _ui = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    private const float UpdateTime = 1.0f;
     [Dependency] private readonly SharedAmbientSoundSystem _ambientSound = default!;
+    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly EntityLookupSystem _lookup = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
 
     private readonly List<BluespaceHarvesterTap> _taps =
     [
@@ -38,127 +36,97 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         new() { Level = 20, Visual = BluespaceHarvesterVisuals.Tap5 },
     ];
 
-    private float _updateTimer;
-    private const float UpdateTime = 1.0f;
+    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly TransformSystem _transform = default!;
+    [Dependency] private readonly UserInterfaceSystem _ui = default!;
 
-    private EntityQuery<_Forge.BluespaceHarvester.BluespaceHarvesterComponent> _harvesterQuery;
+
+    private float _updateTimer;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        _harvesterQuery = GetEntityQuery<_Forge.BluespaceHarvester.BluespaceHarvesterComponent>();
-
-        SubscribeLocalEvent<_Forge.BluespaceHarvester.BluespaceHarvesterComponent, ComponentStartup>(OnStartup);
-        SubscribeLocalEvent<_Forge.BluespaceHarvester.BluespaceHarvesterComponent, ComponentRemove>(OnRemove);
-
-        SubscribeLocalEvent<_Forge.BluespaceHarvester.BluespaceHarvesterComponent, PowerConsumerReceivedChanged>(ReceivedChanged);
-        SubscribeLocalEvent<_Forge.BluespaceHarvester.BluespaceHarvesterComponent, BluespaceHarvesterTargetLevelMessage>(OnTargetLevel);
-        SubscribeLocalEvent<_Forge.BluespaceHarvester.BluespaceHarvesterComponent, BluespaceHarvesterBuyMessage>(OnBuy);
-        SubscribeLocalEvent<_Forge.BluespaceHarvester.BluespaceHarvesterComponent, DestructionEventArgs>(OnDestruction);
+        SubscribeLocalEvent<BluespaceHarvesterComponent, PowerConsumerReceivedChanged>(ReceivedChanged);
+        SubscribeLocalEvent<BluespaceHarvesterComponent, BluespaceHarvesterTargetLevelMessage>(OnTargetLevel);
+        SubscribeLocalEvent<BluespaceHarvesterComponent, BluespaceHarvesterBuyMessage>(OnBuy);
+        SubscribeLocalEvent<BluespaceHarvesterComponent, DestructionEventArgs>(OnDestruction);
+        SubscribeLocalEvent<BluespaceHarvesterComponent, GotEmaggedEvent>(OnEmagged);
     }
 
-    private void OnStartup(Entity<_Forge.BluespaceHarvester.BluespaceHarvesterComponent> ent, ref ComponentStartup args)
+    private void OnEmagged(EntityUid uid, BluespaceHarvesterComponent comp, ref GotEmaggedEvent args)
     {
-        UpdateCount();
+        if (HasComp<EmaggedComponent>(uid))
+            return;
+
+        args.Handled = true;
     }
 
-    private void OnRemove(Entity<_Forge.BluespaceHarvester.BluespaceHarvesterComponent> ent, ref ComponentRemove args)
-    {
-        UpdateCount();
-    }
-
-    private void UpdateCount()
-    {
-        var dictionary = new Dictionary<MapId, List<EntityUid>>();
-
-        var query = EntityQueryEnumerator<_Forge.BluespaceHarvester.BluespaceHarvesterComponent>();
-        while (query.MoveNext(out var entityUid, out _))
-        {
-            var mapId = Transform(entityUid).MapID;
-            var list = dictionary.GetOrNew(mapId);
-            list.Add(entityUid);
-        }
-
-        query = EntityQueryEnumerator<_Forge.BluespaceHarvester.BluespaceHarvesterComponent>();
-        while (query.MoveNext(out var entityUid, out var harvester))
-        {
-            var mapId = Transform(entityUid).MapID;
-            harvester.Harvesters = dictionary[mapId].Count;
-        }
-    }
-
-    private void ReceivedChanged(Entity<_Forge.BluespaceHarvester.BluespaceHarvesterComponent> ent, ref PowerConsumerReceivedChanged args)
+    private void ReceivedChanged(Entity<BluespaceHarvesterComponent> ent, ref PowerConsumerReceivedChanged args)
     {
         ent.Comp.ReceivedPower = args.ReceivedPower;
         ent.Comp.DrawRate = args.DrawRate;
     }
 
     public override void Update(float frameTime)
-{
-    base.Update(frameTime);
-
-    _updateTimer += frameTime;
-    if (_updateTimer < UpdateTime)
-        return;
-    _updateTimer -= UpdateTime;
-
-    var query = EntityQueryEnumerator<
-        _Forge.BluespaceHarvester.BluespaceHarvesterComponent,
-        PowerConsumerComponent>();
-
-    while (query.MoveNext(out var uid, out var harvester, out var consumer))
     {
-        var need = GetUsagePower(harvester.CurrentLevel);
+        base.Update(frameTime);
 
-        if (harvester.CurrentLevel > 0 && harvester.ReceivedPower < need)
+        _updateTimer += frameTime;
+        if (_updateTimer < UpdateTime)
+            return;
+        _updateTimer -= UpdateTime;
+
+        var query = EntityQueryEnumerator<
+            BluespaceHarvesterComponent,
+            PowerConsumerComponent>();
+
+        while (query.MoveNext(out var uid, out var harvester, out var consumer))
         {
-            Reset(uid, harvester);
-            consumer.DrawRate = 0;
-            continue;
+            var need = GetUsagePower(harvester.CurrentLevel);
+
+            if (harvester.CurrentLevel > 0 && harvester.ReceivedPower < need)
+            {
+                Reset(uid, harvester);
+                consumer.DrawRate = 0;
+                continue;
+            }
+
+            if (harvester.CurrentLevel < harvester.TargetLevel)
+                harvester.CurrentLevel++;
+            else if (harvester.CurrentLevel > harvester.TargetLevel)
+                harvester.CurrentLevel = harvester.TargetLevel;
+
+            consumer.DrawRate =
+                harvester.CurrentLevel > 0 ? GetUsagePower(harvester.CurrentLevel) : 0;
+
+            var gen = GetPointGeneration(uid, harvester);
+            harvester.Points += gen;
+            harvester.TotalPoints += gen;
+
+            harvester.Danger += GetDangerPointGeneration(uid, harvester);
+            if (harvester.Danger < 0)
+                harvester.Danger = 0;
+
+            if (harvester.Danger > harvester.DangerLimit &&
+                _random.NextFloat() <= GetRiftChance(uid, harvester))
+                SpawnRifts(uid, harvester);
+
+            if (TryComp<AmbientSoundComponent>(uid, out var ambient))
+                _ambientSound.SetAmbience(uid, harvester.Reset, ambient);
+
+            UpdateAppearance(uid, harvester);
+            UpdateUI(uid, harvester);
         }
-
-        if (harvester.CurrentLevel < harvester.TargetLevel)
-        {
-            harvester.CurrentLevel++;
-        }
-        else if (harvester.CurrentLevel > harvester.TargetLevel)
-        {
-            harvester.CurrentLevel = harvester.TargetLevel;
-        }
-
-        consumer.DrawRate =
-            harvester.CurrentLevel > 0 ? GetUsagePower(harvester.CurrentLevel) : 0;
-
-        var gen = GetPointGeneration(uid, harvester);
-        harvester.Points       += gen;
-        harvester.TotalPoints  += gen;
-
-        harvester.Danger += GetDangerPointGeneration(uid, harvester);
-        if (harvester.Danger < 0)
-            harvester.Danger = 0;
-
-        if (harvester.Danger > harvester.DangerLimit &&
-            _random.NextFloat() <= GetRiftChance(uid, harvester))
-        {
-            SpawnRifts(uid, harvester);
-        }
-
-        if (TryComp<AmbientSoundComponent>(uid, out var ambient))
-            _ambientSound.SetAmbience(uid, harvester.Reset, ambient);
-
-        UpdateAppearance(uid, harvester);
-        UpdateUI(uid, harvester);
     }
-}
 
 
-    private void OnDestruction(Entity<_Forge.BluespaceHarvester.BluespaceHarvesterComponent> harvester, ref DestructionEventArgs args)
+    private void OnDestruction(Entity<BluespaceHarvesterComponent> harvester, ref DestructionEventArgs args)
     {
         SpawnRifts(harvester.Owner, harvester.Comp);
     }
 
-    private void OnTargetLevel(Entity<_Forge.BluespaceHarvester.BluespaceHarvesterComponent> harvester,
+    private void OnTargetLevel(Entity<BluespaceHarvesterComponent> harvester,
         ref BluespaceHarvesterTargetLevelMessage args)
     {
         if (!harvester.Comp.Reset)
@@ -168,7 +136,7 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         UpdateUI(harvester.Owner, harvester.Comp);
     }
 
-    private void OnBuy(Entity<_Forge.BluespaceHarvester.BluespaceHarvesterComponent> harvester, ref BluespaceHarvesterBuyMessage args)
+    private void OnBuy(Entity<BluespaceHarvesterComponent> harvester, ref BluespaceHarvesterBuyMessage args)
     {
         if (!harvester.Comp.Reset)
             return;
@@ -176,7 +144,7 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         if (!TryGetCategory(harvester.Owner, args.Category, out var info, harvester.Comp))
             return;
 
-        var category = (BluespaceHarvesterCategoryInfo) info;
+        var category = (BluespaceHarvesterCategoryInfo)info;
 
         if (harvester.Comp.Points < category.Cost)
             return;
@@ -185,7 +153,7 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         SpawnLoot(harvester.Owner, category.PrototypeId, harvester.Comp);
     }
 
-    private void UpdateAppearance(EntityUid uid, _Forge.BluespaceHarvester.BluespaceHarvesterComponent? harvester = null)
+    private void UpdateAppearance(EntityUid uid, BluespaceHarvesterComponent? harvester = null)
     {
         if (!Resolve(uid, ref harvester))
             return;
@@ -207,14 +175,14 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
             return;
 
         if (Emagged(uid))
-            _appearance.SetData(uid, BluespaceHarvesterVisualLayers.Base, (int) harvester.RedspaceTap);
+            _appearance.SetData(uid, BluespaceHarvesterVisualLayers.Base, (int)harvester.RedspaceTap);
         else
-            _appearance.SetData(uid, BluespaceHarvesterVisualLayers.Base, (int) max.Visual);
+            _appearance.SetData(uid, BluespaceHarvesterVisualLayers.Base, (int)max.Visual);
 
         _appearance.SetData(uid, BluespaceHarvesterVisualLayers.Effects, level != 0);
     }
 
-    private void UpdateUI(EntityUid uid, _Forge.BluespaceHarvester.BluespaceHarvesterComponent? harvester = null)
+    private void UpdateUI(EntityUid uid, BluespaceHarvesterComponent? harvester = null)
     {
         if (!Resolve(uid, ref harvester))
             return;
@@ -222,16 +190,16 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         _ui.SetUiState(uid,
             BluespaceHarvesterUiKey.Key,
             new BluespaceHarvesterBoundUserInterfaceState(
-            harvester.TargetLevel,
-            harvester.CurrentLevel,
-            harvester.MaxLevel,
-            GetUsagePower(harvester.CurrentLevel),
-            GetUsageNextPower(harvester.CurrentLevel),
-            harvester.Points,
-            harvester.TotalPoints,
-            GetPointGeneration(uid, harvester),
-            harvester.Categories
-        ));
+                harvester.TargetLevel,
+                harvester.CurrentLevel,
+                harvester.MaxLevel,
+                GetUsagePower(harvester.CurrentLevel),
+                GetUsageNextPower(harvester.CurrentLevel),
+                harvester.Points,
+                harvester.TotalPoints,
+                GetPointGeneration(uid, harvester),
+                harvester.Categories
+            ));
     }
 
     private uint GetUsageNextPower(int level)
@@ -248,7 +216,7 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
     /// <summary>
     /// Finds a free point in space and creates a prototype there, similar to a bluespace anomaly.
     /// </summary>
-    private EntityUid? SpawnLoot(EntityUid uid, string prototype, _Forge.BluespaceHarvester.BluespaceHarvesterComponent? harvester = null)
+    private EntityUid? SpawnLoot(EntityUid uid, string prototype, BluespaceHarvesterComponent? harvester = null)
     {
         if (!Resolve(uid, ref harvester))
             return null;
@@ -257,10 +225,10 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         var coords = xform.Coordinates;
 
         var validTiles = new List<EntityCoordinates>();
-        int maxRadius = harvester.SpawnRadius > 0 ? (int)Math.Ceiling(harvester.SpawnRadius) : 8;
+        var maxRadius = harvester.SpawnRadius > 0 ? (int)Math.Ceiling(harvester.SpawnRadius) : 8;
 
-        for (int dx = -maxRadius; dx <= maxRadius; dx++)
-        for (int dy = -maxRadius; dy <= maxRadius; dy++)
+        for (var dx = -maxRadius; dx <= maxRadius; dx++)
+        for (var dy = -maxRadius; dy <= maxRadius; dy++)
         {
             var offset = new Vector2(dx, dy);
             if (offset.Length() > harvester.SpawnRadius)
@@ -295,7 +263,7 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
     }
 
 
-    private int GetPointGeneration(EntityUid uid, _Forge.BluespaceHarvester.BluespaceHarvesterComponent? harvester = null)
+    private int GetPointGeneration(EntityUid uid, BluespaceHarvesterComponent? harvester = null)
     {
         if (!Resolve(uid, ref harvester))
             return 0;
@@ -303,22 +271,21 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         return harvester.CurrentLevel * 4 * (Emagged(uid) ? 2 : 1) * (harvester.ResetTime == TimeSpan.Zero ? 1 : 0);
     }
 
-    private int GetDangerPointGeneration(EntityUid uid, _Forge.BluespaceHarvester.BluespaceHarvesterComponent? harvester = null)
+    private int GetDangerPointGeneration(EntityUid uid, BluespaceHarvesterComponent? harvester = null)
     {
         if (!Resolve(uid, ref harvester))
             return 0;
 
         var stable = GetStableLevel(uid, harvester);
-        if (harvester.CurrentLevel < stable && harvester.CurrentLevel != 0)
-            return -1;
 
-        if (harvester.CurrentLevel == stable)
+        if (harvester.CurrentLevel <= stable)
             return 0;
 
         return (harvester.CurrentLevel - stable) * 4;
     }
 
-    private float GetRiftChance(EntityUid uid, _Forge.BluespaceHarvester.BluespaceHarvesterComponent? harvester = null)
+
+    private float GetRiftChance(EntityUid uid, BluespaceHarvesterComponent? harvester = null)
     {
         if (!Resolve(uid, ref harvester))
             return 0;
@@ -326,18 +293,18 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         return Emagged(uid) ? harvester.EmaggedRiftChance : harvester.RiftChance;
     }
 
-    private int GetStableLevel(EntityUid uid, _Forge.BluespaceHarvester.BluespaceHarvesterComponent? harvester = null)
+    private int GetStableLevel(EntityUid uid, BluespaceHarvesterComponent? harvester = null)
     {
         if (!Resolve(uid, ref harvester))
-            return 0;
-
-        if (harvester.Harvesters > 1)
             return 0;
 
         return Emagged(uid) ? harvester.EmaggedStableLevel : harvester.StableLevel;
     }
 
-    private bool TryGetCategory(EntityUid uid, BluespaceHarvesterCategory target, [NotNullWhen(true)] out BluespaceHarvesterCategoryInfo? info, _Forge.BluespaceHarvester.BluespaceHarvesterComponent? harvester = null)
+    private bool TryGetCategory(EntityUid uid,
+        BluespaceHarvesterCategory target,
+        [NotNullWhen(true)] out BluespaceHarvesterCategoryInfo? info,
+        BluespaceHarvesterComponent? harvester = null)
     {
         info = null;
         if (!Resolve(uid, ref harvester))
@@ -355,7 +322,7 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         return false;
     }
 
-    private void Reset(EntityUid uid, _Forge.BluespaceHarvester.BluespaceHarvesterComponent? harvester = null)
+    private void Reset(EntityUid uid, BluespaceHarvesterComponent? harvester = null)
     {
         if (!Resolve(uid, ref harvester))
             return;
@@ -372,25 +339,28 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         return HasComp<EmaggedComponent>(uid);
     }
 
-    private void SpawnRifts(EntityUid uid, _Forge.BluespaceHarvester.BluespaceHarvesterComponent? harvester = null, int? danger = null)
+    private void SpawnRifts(EntityUid uid, BluespaceHarvesterComponent? harvester = null, int? danger = null)
     {
-        if (!Resolve(uid, ref harvester))
+        if (!Resolve(uid, ref harvester) || harvester.RiftCount <= 0)
             return;
 
-        int currentDanger = danger ?? harvester.Danger;
+        var currentDanger = danger ?? harvester.Danger;
 
-        var count = _random.Next(harvester.RiftCount);
+        var count = _random.Next(1, harvester.RiftCount + 1);
+
+        var dangerPerRift = currentDanger / count;
+        var remainder = currentDanger % count;
+
         for (var i = 0; i < count; i++)
         {
-            // Haha loot!
             var entity = SpawnLoot(uid, harvester.Rift, harvester);
             if (entity == null)
                 continue;
 
-            EnsureComp<_Forge.BluespaceHarvester.BluespaceHarvesterRiftComponent>((EntityUid) entity).Danger = currentDanger / count;
+            var comp = EnsureComp<BluespaceHarvesterRiftComponent>((EntityUid)entity);
+            comp.Danger = dangerPerRift + (i < remainder ? 1 : 0);
         }
 
-        // We gave all the danger to the rifts.
         harvester.Danger = 0;
     }
 }
