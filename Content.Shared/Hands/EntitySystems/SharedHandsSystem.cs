@@ -12,6 +12,8 @@ using Robust.Shared.Input.Binding;
 
 namespace Content.Shared.Hands.EntitySystems;
 
+// Forge-Change full (refactory b.y. wizard)
+
 public abstract partial class SharedHandsSystem
 {
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
@@ -33,12 +35,56 @@ public abstract partial class SharedHandsSystem
         InitializeDrop();
         InitializePickup();
         InitializeRelay();
+        InitializeEventListeners();
+
+        InitializeLifeCycle();
     }
 
     public override void Shutdown()
     {
         base.Shutdown();
         CommandBinds.Unregister<SharedHandsSystem>();
+    }
+
+    private void InitializeLifeCycle()
+    {
+        SubscribeLocalEvent<HandsComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<HandsComponent, MapInitEvent>(OnMapInit);
+    }
+
+    private void OnInit(EntityUid uid, HandsComponent component, ComponentInit args)
+    {
+        // We want to keep the hands sorted by name.
+        // So we have to do this.
+        // TODO: Maybe something better?
+        component.SortedHands.Sort();
+
+        // Ensure that the active hand is valid.
+        if (component.ActiveHand != null && !component.Hands.ContainsKey(component.ActiveHand.Name))
+            component.ActiveHand = null;
+
+        // If we have no active hand, find a new one.
+        if (component.ActiveHand == null && component.Hands.Count > 0)
+        {
+            var hand = component.Hands.Values.First();
+            SetActiveHand(uid, hand, component);
+        }
+    }
+
+    private void OnMapInit(EntityUid uid, HandsComponent hands, MapInitEvent args)
+    {
+        // On map init, we want to ensure that all of our hands are up to date.
+        // This is because they may have been created on component add, but not initialized yet.
+        // So we do this to ensure that they are all valid.
+        foreach (var hand in hands.Hands.Values)
+        {
+            if (hand.Container is not null)
+                continue;
+
+            var container = ContainerSystem.EnsureContainer<ContainerSlot>(uid, hand.Name);
+            container.OccludesLight = false;
+            hand.Container = container;
+        }
     }
 
     public virtual void AddHand(EntityUid uid, string handName, HandLocation handLocation, HandsComponent? handsComp = null)
@@ -137,18 +183,40 @@ public abstract partial class SharedHandsSystem
         return false;
     }
 
-    public bool TryGetActiveHand(Entity<HandsComponent?> entity, [NotNullWhen(true)] out Hand? hand)
+    /// <summary>
+    ///     Does this entity have any empty hands, and how many?
+    /// </summary>
+    public int GetEmptyHandCount(Entity<HandsComponent?> entity)
     {
-        if (!Resolve(entity, ref entity.Comp, false))
+        if (!Resolve(entity, ref entity.Comp, false) || entity.Comp.Count == 0)
+            return 0;
+
+        var hands = 0;
+
+        foreach (var hand in EnumerateHands(entity))
         {
-            hand = null;
-            return false;
+            if (!HandIsEmpty(entity, hand))
+                continue;
+            hands++;
         }
 
-        hand = entity.Comp.ActiveHand;
-        return hand != null;
+        return hands;
     }
 
+    /// <summary>
+    ///     Checks if a hand is empty.
+    /// </summary>
+    public bool HandIsEmpty(Entity<HandsComponent?> entity, Hand hand)
+    {
+        if (!Resolve(entity, ref entity.Comp, false))
+            return false;
+
+        return hand.IsEmpty;
+    }
+
+    /// <summary>
+    /// Attempts to retrieve the item held in the entity's active hand.
+    /// </summary>
     public bool TryGetActiveItem(Entity<HandsComponent?> entity, [NotNullWhen(true)] out EntityUid? item)
     {
         if (!TryGetActiveHand(entity, out var hand))
@@ -159,6 +227,21 @@ public abstract partial class SharedHandsSystem
 
         item = hand.HeldEntity;
         return item != null;
+    }
+
+    /// <summary>
+    /// Attempts to retrieve the entity's active hand.
+    /// </summary>
+    public bool TryGetActiveHand(Entity<HandsComponent?> entity, [NotNullWhen(true)] out Hand? hand)
+    {
+        if (!Resolve(entity, ref entity.Comp, false))
+        {
+            hand = null;
+            return false;
+        }
+
+        hand = entity.Comp.ActiveHand;
+        return hand != null;
     }
 
     /// <summary>

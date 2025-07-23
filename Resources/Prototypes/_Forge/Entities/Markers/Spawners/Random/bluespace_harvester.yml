@@ -329,7 +329,7 @@
   - type: RandomSpawner
     prototypes:
     - AnomalyScanner
-    - WeaponPistolCHIMP
+    - NFWeaponPistolCHIMP
     - AnomalyLocator
     - AnomalyLocatorWide
     chance: 1.0

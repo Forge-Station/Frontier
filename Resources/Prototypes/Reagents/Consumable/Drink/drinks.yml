@@ -12,9 +12,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectDrowsiness # Forge-Change
+        time: 2 # Forge-Change
         type: Remove
       - !type:AdjustReagent
         reagent: Theobromine
@@ -105,9 +105,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectDrowsiness # Forge-Change
+        time: 2 # Forge-Change
         type: Remove
 
 - type: reagent
@@ -163,9 +163,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectDrowsiness # Forge-Change
+        time: 2 # Forge-Change
         type: Remove
 
 - type: reagent
@@ -344,10 +344,10 @@
       effects:
       - !type:SatiateThirst
         factor: 6
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 3.0
-        type: Remove
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectDrowsiness # Forge-Change
+        time: 3 # Forge-Change
+        type: Remove 
     Poison:
       effects:
       - !type:HealthChange
@@ -385,9 +385,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect # Forge-Change
+        effectProto: StatusEffectDrowsiness # Forge-Change
+        time: 2 # Forge-Change
         type: Remove
 
 - type: reagent

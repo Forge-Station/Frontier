@@ -120,23 +120,20 @@
   - type: StatusEffects
     allowed:
     - Stun
-    - KnockedDown
+    - Friction # Forge-Change
     - SlowedDown
     - Stutter
-    - SeeingRainbows
     - Electrocution
     - Drunk
     - SlurredSpeech
     - RatvarianLanguage
     - PressureImmunity
     - Muted
-    - ForcedSleep
     - TemporaryBlindness
     - Pacified
     - StaminaModifier
     - Flashed
     - RadiationProtection
-    - Drowsiness
     - Adrenaline
   - type: Body
     prototype: Human
@@ -284,6 +281,7 @@
         Asphyxiation: -1.0
   - type: FireVisuals
     alternateState: Standing
+  - type: StunVisuals # Forge-Change
 
 - type: entity
   save: false
