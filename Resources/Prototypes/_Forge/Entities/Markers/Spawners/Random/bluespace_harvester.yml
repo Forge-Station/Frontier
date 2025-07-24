@@ -44,7 +44,7 @@
     - CrateHarvesterPowerCell
     - CrateHarvesterScrapOre
     - CrateHarvesterTools
-    - RandomHarvesterBackpackHolding
+    - CrateHarvesterBackpackHolding
     - CrateHarvesterAmeJar
     - CrateHarvesterCircuitboard
     chance: 1.0
@@ -613,11 +613,13 @@
       state: icon
   - type: RandomSpawner
     prototypes:
-    - SpawnDungeonLootGunT5
+    - SpawnDungeonLootGunT3
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - SpawnDungeonLootGunT4
+    - NFWeaponEnergyRifleAssaultPulseCarbine
+    - NFWeaponEnergyPistolPulse
+    - NFWeaponEnergyRiflePulse
     rareChance: 0.05
 
 - type: entity
@@ -652,13 +654,11 @@
       state: icon
   - type: RandomSpawner
     prototypes:
-    - SpawnDungeonLootGunT3
+    - SpawnDungeonLootGunT5
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-    - NFWeaponEnergyRifleAssaultPulseCarbine
-    - NFWeaponEnergyPistolPulse
-    - NFWeaponEnergyRiflePulse
+    - SpawnDungeonLootGunT5
     rareChance: 0.05
 
 - type: entity
@@ -676,6 +676,7 @@
   - type: RandomSpawner
     prototypes:
     - SpawnDungeonLootExplosivesT4
+    - SpawnDungeonLootExplosivesT3
     chance: 1.0
     offset: 0.0
     rarePrototypes:
