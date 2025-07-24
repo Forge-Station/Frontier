@@ -27,14 +27,3 @@
       state: cpu_command
     - type: ComputerBoard
       prototype: ComputerGunneryConsole
-
-- type: entity
-  parent: BaseComputerCircuitboard
-  id: StationRadarCircuitboard
-  name: overwatch radar computer board
-  description: A computer printed circuit board for a station radar computer.
-  components:
-  - type: Sprite
-    state: cpu_command
-  - type: ComputerBoard
-    prototype: ComputerStationRadar

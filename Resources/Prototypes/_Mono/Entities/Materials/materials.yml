@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: 2025 starch
+# SPDX-FileCopyrightText: 2025 tonotom
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: material
+  id: Synthalloy
+  stackEntity: MaterialSynthalloy1
+  name: materials-synthalloy
+  unit: materials-unit-sheet
+  icon: { sprite: /Textures/_Mono/Objects/Materials/synthalloy.rsi, state: synthalloy }
+  color: "#FFFFFF"
+  price: 5 # 500/sheet
+
+- type: entity
+  parent: MaterialBase
+  id: MaterialSynthalloy
+  name: synthalloy
+  description: An experimental polymer developed by the TSF for high-stress applications. Reinforced with a plasteel nanoweave, and infused with gaseous plasma.
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: Synthalloy
+    count: 50
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/synthalloy.rsi
+    layers:
+    - state: synthalloy
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Synthalloy: 100
+
+- type: entity
+  parent: MaterialSynthalloy
+  id: MaterialSynthalloy1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: entity
+  parent: MaterialSynthalloy
+  id: MaterialSynthalloy10
+  suffix: 10
+  components:
+  - type: Stack
+    count: 10
+
+- type: entity
+  parent: MaterialDiamond
+  id: MaterialDiamond5
+  suffix: Salvage
+  components:
+  - type: Stack
+    count: 5

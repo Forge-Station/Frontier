@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Redrover1760
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+
+- type: entity
+  parent: BaseComputerAiAccess
+  id: ComputerStationRadar
+  name: overwatch radar computer
+  description: A visual uplink to a station's advanced, long-range intelligence suite, allowing commanders to have eyes on unfolding combat at all times.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: eris_control
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: RadarConsole
+    maxRange: 1536
+    maxIffRange: 1536
+  - type: ActivatableUI
+    key: enum.RadarConsoleUiKey.Key # ideally would be in a similar interface to the shuttle console (with draggable mass scanner area), but I need to figure out how to do that - can come in a future pr
+  - type: UserInterface
+    interfaces:
+      enum.RadarConsoleUiKey.Key:
+        type: RadarConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: StationRadarCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#bd95e6"
