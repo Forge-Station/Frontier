@@ -1,0 +1,43 @@
+- type: entity
+  parent: BaseFlatpack
+  id: L58Flatpack
+  name: L85 flatpack
+  description: A flatpack used for constructing an L85 20mm autocannon.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretL85Autocannon
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  parent: BaseFlatpack
+  id: AK570Flatpack
+  name: AK570 flatpack
+  description: A flatpack used for constructing an AK570 90mm autocannon.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretAK570
+  - type: StaticPrice
+    price: 2500
+
+- type: entity
+  parent: BaseFlatpack
+  id: Type35Flatpack
+  name: MARAUDER flatpack
+  description: A flatpack used for constructing an MARAUDER-type plasma weapon.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretType35
+  - type: StaticPrice
+    price: 3500
+
+- type: entity
+  parent: BaseFlatpack
+  id: M381Flatpack
+  name: M381 CHARON flatpack
+  description: A flatpack used for constructing an M381 CHARON mass driver. How the fuck did they make this into a flatpack?
+  components:
+  - type: Flatpack
+    entity: WeaponTurretCharon
+  - type: StaticPrice
+    price: 10000

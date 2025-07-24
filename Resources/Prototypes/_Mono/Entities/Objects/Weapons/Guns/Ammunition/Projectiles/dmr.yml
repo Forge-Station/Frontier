@@ -1,0 +1,10 @@
+- type: entity
+  id: BulletDMR
+  name: bullet (8x65mm SKR)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 45

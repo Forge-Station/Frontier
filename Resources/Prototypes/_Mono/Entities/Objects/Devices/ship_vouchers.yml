@@ -1,0 +1,15 @@
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherDebug
+  name: evil debug pirate ship voucher
+  description: put in console = free ship!!
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: voucherbailiff
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: BlackMarket
+    access:
+    - Pirate

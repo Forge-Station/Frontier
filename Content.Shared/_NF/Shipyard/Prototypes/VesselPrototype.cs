@@ -95,6 +95,25 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     [DataField]
     [AlwaysPushInheritance]
     public ComponentRegistry AddComponents { get; set; } = new();
+
+    /// <summary> Mono Begin
+    /// Whether this ship can suppress IFF flags of other ships.
+    /// </summary>
+    [DataField]
+    public bool CloakHunter;
+
+    /// <summary>
+    /// List of company names whose ships this vessel will not suppress IFF flags for.
+    /// </summary>
+    [DataField]
+    public List<string> Company = new();
+
+    /// <summary>
+    ///     The amount of this ship that can active at any given time.
+    ///     0 for unlimited.
+    /// </summary> Mono End
+    [DataField("limit")] public int LimitActive;
+
 }
 
 public enum VesselSize : byte

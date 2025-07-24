@@ -1,0 +1,31 @@
+- type: entity
+  id: MonoAISTCShuttleSpawnerScheduler
+  parent: BaseGameRule
+  components:
+    - type: BasicStationEventScheduler
+      scheduledGameRules: !type:NestedSelector
+        tableId: MonoAISTCEventsTable
+      minimumTimeUntilFirstEvent: 10800 # 180 minutes
+      minMaxEventTiming:
+        min: 5400 # 90 minutes between events
+        max: 9000 # 150 minutes between events
+
+- type: entityTable
+  id: MonoAISTCEventsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+      - id: UnknownShuttleZenith
+      - id: UnknownShuttleRazor
+
+- type: entity
+  abstract: true
+  parent: BaseGameRule
+  id: BaseRandomShuttleRule
+  components:
+  - type: StationEvent
+    weight: 10
+    reoccurrenceDelay: 90
+    duration: 1
+    maxOccurrences: 2 # should be the same as [copies] in ship_spawns.yml
+  - type: RuleGrids
+  - type: LoadMapRule

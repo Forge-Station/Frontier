@@ -1,0 +1,43 @@
+- type: entity
+  parent: BaseC2ContrabandUnredeemable
+  id: BaseC2ContrabandMercenary
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Class2Restricted
+    allowedDepartments: [ PMC, Security, Command, CentralCommand ]
+
+- type: entity
+  parent: BaseC3Contraband
+  id: BaseC3ChemContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Class3Chem
+
+# These are compatibility prototypes to work with ported definitions
+# They simply map to the appropriate NF/Mono contraband equivalents
+
+# non-stealth syndicate stuff
+- type: entity
+  id: BaseSyndicateContraband
+  parent: BaseC3SyndicateContraband
+  abstract: true
+
+# base department restricted contraband
+- type: entity
+  id: BaseRestrictedContraband
+  parent: BaseC2ContrabandUnredeemable
+  abstract: true
+
+# civilian department contraband
+- type: entity
+  id: BaseCivilianContraband
+  parent: BaseC1Contraband
+  abstract: true
+
+# cargo department contraband
+- type: entity
+  id: BaseCargoContraband
+  parent: BaseC1Contraband
+  abstract: true

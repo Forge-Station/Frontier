@@ -91,6 +91,8 @@ public sealed partial class ShuttleDockControl : BaseShuttleControl
 
     protected override void Draw(DrawingHandleScreen handle)
     {
+        UseCircleMaskShader(handle); // Mono
+
         base.Draw(handle);
 
         DrawBacking(handle);
@@ -320,6 +322,7 @@ public sealed partial class ShuttleDockControl : BaseShuttleControl
         // Draw the dock itself
         handle.DrawRect(ourDock, dockColor.WithAlpha(0.2f));
         handle.DrawRect(ourDock, dockColor, filled: false);
+        ClearShader(handle); // Mono
     }
 
     private void HideDocks()

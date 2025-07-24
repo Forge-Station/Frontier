@@ -27,4 +27,10 @@ public sealed partial class ShuttleDeedComponent : Component
 
     [DataField, AutoNetworkedField]
     public bool PurchasedWithVoucher;
+
+    /// <summary>
+    /// The ID card entity that holds this deed
+    /// </summary> Mono
+    [DataField]
+    public EntityUid? DeedHolder;
 }

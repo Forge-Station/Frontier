@@ -145,6 +145,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
     }
     protected override void Draw(DrawingHandleScreen handle)
     {
+        UseCircleMaskShader(handle); //Mono
         base.Draw(handle);
 
         DrawBacking(handle);
@@ -495,6 +496,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                 DrawBlipShape(handle, blipPosInView, blip.Scale * 3f, blip.Color.WithAlpha(0.8f), blip.Shape);
             }
         }
+        ClearShader(handle);
         // End Frontier
     }
 

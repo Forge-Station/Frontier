@@ -1,0 +1,31 @@
+
+- type: entity
+  name: VT-7 HF blade
+  parent: [Katana, BaseC3SyndicateContraband] # we dont want the construction node, so we dont copy off the other HF katana
+  id: WeaponVT7
+  description: An advanced HF blade, evidently modified from a very high quality sword.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
+  - type: MeleeWeapon
+    attackRate: 1.5
+    wideAnimationRotation: -60
+    damage:
+      types:
+        Slash: 19.5
+        Shock: 6.5
+        Structural: 55
+  - type: Item
+    sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
+    slots:
+    - Back
+    - Belt
+    - suitStorage
+  - type: Reflect
+    reflectProb: 0.40
+  - type: DisarmMalus
+    malus: 0.9
+  - type: StaticPrice
+    price: 5000

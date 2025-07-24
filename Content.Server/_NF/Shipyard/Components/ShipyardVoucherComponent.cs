@@ -34,4 +34,10 @@ public sealed partial class ShipyardVoucherComponent : Component
     /// </summary>
     [DataField(required: true)]
     public ShipyardConsoleUiKey ConsoleType;
+
+    /// <summary> Mono
+    ///  The company name associated with this voucher. Used to transfer company information to purchased ships.
+    /// </summary>
+    [DataField]
+    public string? CompanyName;
 }
