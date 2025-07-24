@@ -1,13 +1,21 @@
-- type: entity
-  parent: BaseComputerCircuitboard
-  id: ShieldControlComputerCircuitboard
-  name: shield control computer board
-  description: A computer printed circuit board for a shield control computer.
-  components:
-    - type: Sprite
-      state: cpu_security
-    - type: ComputerBoard
-      prototype: CircularShieldConsole
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Onezero0
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 bluebrouny
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+#- type: entity
+#  parent: BaseComputerCircuitboard
+#  id: ShieldControlComputerCircuitboard
+#  name: shield control computer board
+#  description: A computer printed circuit board for a shield control computer.
+#  components:
+#    - type: Sprite
+#      state: cpu_security
+#    - type: ComputerBoard
+#      prototype: CircularShieldConsole
 
 - type: entity
   parent: BaseComputerCircuitboard
@@ -19,3 +27,14 @@
       state: cpu_command
     - type: ComputerBoard
       prototype: ComputerGunneryConsole
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: StationRadarCircuitboard
+  name: overwatch radar computer board
+  description: A computer printed circuit board for a station radar computer.
+  components:
+  - type: Sprite
+    state: cpu_command
+  - type: ComputerBoard
+    prototype: ComputerStationRadar
