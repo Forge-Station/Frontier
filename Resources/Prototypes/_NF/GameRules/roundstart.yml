@@ -4,6 +4,12 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: NFAdventureRule
+  # Forge-Contractor-start
+  - type: SubGamemodes
+    rules:
+    - id: Contractor
+      prob: 0.5
+  # Forge-Contractor-end
 
 - type: entity
   id: BluespaceEventScheduler

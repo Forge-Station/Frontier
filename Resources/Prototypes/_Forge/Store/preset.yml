@@ -21,3 +21,16 @@
     - TelecrystalDamaged
     balance:
       TelecrystalDamaged: 0
+
+- type: entity
+  id: StorePresetContractorUplink
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-uplink
+    categories:
+    - Debug
+    currencyWhitelist:
+    - Telecrystal
+    balance:
+      Telecrystal: 0
