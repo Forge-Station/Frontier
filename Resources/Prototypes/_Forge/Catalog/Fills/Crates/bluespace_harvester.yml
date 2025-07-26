@@ -58,7 +58,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterBackpackHolding
-      amount: 3
+      amount: 1
 
 
 - type: entity
@@ -207,7 +207,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterMedkit
-      amount: 10
+      amount: 4
 
 - type: entity
   id: CrateHarvesterChemVend
@@ -216,8 +216,7 @@
   components:
   - type: BluespaceHarvesterBundle
     contents:
-    - id: VendingMachineChemicalsFlatpack
-    - id: VendingMachineRestockChemVend
+    - id: RandomHarvesterChemVend
 
 - type: entity
   id: CrateHarvesterDoctorsDelight
@@ -248,7 +247,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: SpawnMobBehonker
-      amount: 2
+      amount: 8
 
 - type: entity
   id: CrateHarvesterWeaponElite
@@ -268,7 +267,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterWeaponLaser
-      amount: 6
+      amount: 4
 
 - type: entity
   id: CrateHarvesterWeaponShotgun
@@ -278,7 +277,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterWeaponShotgun
-      amount: 6
+      amount: 4
 
 - type: entity
   id: CrateHarvesterWeaponRifle
@@ -288,7 +287,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterWeaponRifle
-      amount: 7
+      amount: 6
 
 - type: entity
   id: CrateHarvesterWeaponLight
@@ -298,7 +297,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterWeaponLight
-      amount: 6
+      amount: 2
 
 - type: entity
   id: CrateHarvesterWeaponDisabler
@@ -308,7 +307,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterWeaponDisabler
-      amount: 8
+      amount: 2
 
 - type: entity
   id: CrateHarvesterBomb
@@ -318,4 +317,4 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: RandomHarvesterBomb
-      amount: 8
+      amount: 2

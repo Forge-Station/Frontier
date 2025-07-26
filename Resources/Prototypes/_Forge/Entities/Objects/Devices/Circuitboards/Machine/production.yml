@@ -116,10 +116,14 @@
   - type: MachineBoard
     prototype: BluespaceHarvester
     stackRequirements:
-      Glass: 20
-      Steel: 20
+      Glass: 300
+      Steel: 300
+      Plasma: 90
+      Gold: 90
+      Silver: 90
+      Uranium: 90
       CableHV: 5
-      Bluespace: 4
+      Bluespace: 10
   - type: Item
     size: Normal
 
@@ -135,8 +139,13 @@
   - type: MachineBoard
     prototype: BluespaceTransitor
     stackRequirements:
-      Steel: 15
+      Glass: 300
+      Steel: 300
+      Plasma: 90
+      Gold: 90
+      Silver: 90
+      Uranium: 90
       CableHV: 30
-      Bluespace: 4
+      Bluespace: 8
   - type: Item
     size: Normal
