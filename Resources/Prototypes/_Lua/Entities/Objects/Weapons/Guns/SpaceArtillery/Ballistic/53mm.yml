@@ -1,0 +1,95 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: BaseWeaponNavalBallisctic
+  id: Weapon53mmBase
+  name: Пулемёт "53мм"
+  description: Средний пулемёт, использует снаряды 53мм.
+  suffix: НЕ МАППИТЬ!, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: RadarBlip
+      radarColor: "#229e51"
+      scale: 1
+    - type: Sprite
+      sprite: _Lua/Objects/Weapons/Guns/Turrets/turrets53mm.rsi
+      drawdepth: Mobs
+      layers:
+        - state: turrets53mm
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          whitelist:
+            tags:
+              - Magazine53mm
+        gun_chamber:
+          whitelist:
+            tags:
+              - Cartridge53mm
+    - type: Gun
+      fireRate: 6
+      projectileSpeed: 60
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+    - type: ChamberMagazineAmmoProvider
+      boltClosed: null
+    - type: ContainerContainer
+      containers:
+        gun_magazine: !type:ContainerSlot
+        gun_chamber: !type:ContainerSlot
+        machine_board: !type:Container
+        machine_parts: !type:Container
+
+- type: entity
+  parent: Weapon53mmBase
+  id: Weapon53mm
+  suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          startingItem: MagazineBox53mmAP
+          whitelist:
+            tags:
+              - Magazine53mm
+        gun_chamber:
+          startingItem: Cartridge53mmAP
+          whitelist:
+            tags:
+              - Cartridge53mm
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, Weapon53mm, Weapon53mmBase ]
+  id: Weapon53mmUnanchor
+  suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, Weapon53mmBase]
+  id: Weapon53mmUnanchorEmpty
+  suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: Weapon53mmBaseFlatpack
+  name: упакованный средний пулемёт
+  description: Упакованный Средний Пулемёт (.53мм)
+  components:
+  - type: Flatpack
+    entity: Weapon53mmBase
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    sprite: _Lua/Flatpack/flatpack.rsi
+    layers:
+    - state: ship_weapon

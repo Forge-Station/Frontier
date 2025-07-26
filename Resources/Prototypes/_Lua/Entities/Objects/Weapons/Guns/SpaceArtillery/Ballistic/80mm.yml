@@ -1,0 +1,95 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: BaseWeaponNavalBallisctic
+  id: Weapon80mmBase
+  name: Пулемёт "80мм"
+  description: Тяжёлый пулемёт, использует снаряды 80мм.
+  suffix: НЕ МАППИТЬ!, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: RadarBlip
+      radarColor: "#229e51"
+      scale: 1
+    - type: Sprite
+      sprite: _Lua/Objects/Weapons/Guns/Turrets/turrets80mm.rsi
+      drawdepth: Mobs
+      layers:
+        - state: turrets80mm
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          whitelist:
+            tags:
+              - Magazine80mm
+        gun_chamber:
+          whitelist:
+            tags:
+              - Cartridge80mm
+    - type: Gun
+      fireRate: 1
+      projectileSpeed: 60
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+    - type: ChamberMagazineAmmoProvider
+      boltClosed: null
+    - type: ContainerContainer
+      containers:
+        gun_magazine: !type:ContainerSlot
+        gun_chamber: !type:ContainerSlot
+        machine_board: !type:Container
+        machine_parts: !type:Container
+
+- type: entity
+  parent: Weapon80mmBase
+  id: Weapon80mm
+  suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          startingItem: MagazineBox80mmAP
+          whitelist:
+            tags:
+              - Magazine80mm
+        gun_chamber:
+          startingItem: Cartridge80mmAP
+          whitelist:
+            tags:
+              - Cartridge80mm
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, Weapon80mm, Weapon80mmBase]
+  id: Weapon80mmUnanchor
+  suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, Weapon80mmBase]
+  id: Weapon80mmUnanchorEmpty
+  suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: Weapon80mmBaseFlatpack
+  name: упакованный тяжёлый пулемёт
+  description: Упакованный Средний Пулемёт (.80мм)
+  components:
+  - type: Flatpack
+    entity: Weapon80mmBase
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    sprite: _Lua/Flatpack/flatpack.rsi
+    layers:
+    - state: ship_weapon

@@ -1,0 +1,65 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: BaseWeaponMissile
+  id: WeaponMissileLauncherNightHunter
+  name: Артиллерийская установка "Ночной Хищник"
+  description: Компактная установка, предназначенная для маневренных космических боев. Снаряд "Томагавк" с легкостью пробивает броню врага, оставляя лишь обломки.
+  suffix: НЕ МАППИТЬ!, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: RadarBlip
+    radarColor: "#ca2477"
+    scale: 1
+  - type: Sprite
+    sprite: _Lua/Objects/ShuttleWeapons/50cal.rsi
+    drawdepth: Mobs
+    layers:
+      - state: space_artillery
+  - type: Gun
+    projectileSpeed: 40
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: null
+        whitelist:
+          tags: []
+      gun_chamber:
+        startingItem: MissileTomahawk
+        whitelist:
+          tags:
+          - MissileNightHunter
+
+- type: entity
+  parent: WeaponMissileLauncherNightHunter
+  id: WeaponMissileLauncherNightHunterEmpty
+  suffix: Пустой, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: null
+        whitelist:
+          tags: []
+      gun_chamber:
+        startingItem: null
+        whitelist:
+          tags:
+          - MissileNightHunter

@@ -1,0 +1,23 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: MedipenTechFabCircuitboard
+  parent: BaseMachineCircuitboard
+  name: медипен техфаб (машинная плата)
+  description: Машинная плата техфаба медипенов
+  components:
+    - type: Sprite
+      state: medical
+    - type: MachineBoard
+      prototype: MedipenTechfab
+      requirements:
+        MatterBin: 2
+        Manipulator: 2
+      tagRequirements:
+        GlassBeaker:
+          amount: 2
+          defaultPrototype: Beaker
+    - type: StealTarget
+      stealGroup: MedipenTechFabCircuitboard

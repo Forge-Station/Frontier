@@ -1,0 +1,139 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: BasePDA
+  id: SeniorSalvagePDA
+  name: senior salvage PDA
+  description: Smells like ash.
+  components:
+  - type: Pda
+    id: SeniorSalvageIDCard
+  - type: PdaBorderColor
+    borderColor: "#735321"
+    accentHColor: "#62237F"
+    accentVColor: "#62237F"
+  # - type: IconSeniorSalvagePDA
+  #   state: pda-seniorminer
+
+- type: entity
+  parent: BasePDA
+  id: SeniorServicePDA
+  name: senior service PDA
+  description: Smells like service dep.
+  components:
+  - type: Pda
+    id: SeniorServiceIDCard
+  - type: PdaBorderColor
+    borderColor: "#789876"
+    accentHColor: "#CEC155"
+  - type: Icon
+    sprite: Objects/Devices/pda.rsi
+    state: pda-seniorservice
+
+- type: entity
+  parent: CentcomPDA
+  id: CentcomAdministratorPDA
+  components:
+  - type: Pda
+    id: CentcomAdministratorIDCard
+
+- type: entity
+  parent: CBURNPDA
+  id: CBURNLeaderPDA
+  components:
+  - type: Pda
+    id: CBURNLeaderIDcard
+
+- type: entity
+  parent: CBURNPDA
+  id: CBURNSierraPDA
+  components:
+  - type: Pda
+    id: CBURNSierraIDcard
+
+- type: entity
+  parent: CBURNPDA
+  id: CBURNSierraLeaderPDA
+  components:
+  - type: Pda
+    id: CBURNSierraLeaderIDcard
+
+- type: entity
+  parent: ERTLeaderPDA
+  id: ERTLeaderRedPDA
+  components:
+  - type: Pda
+    id: ERTLeaderRedIDCard
+
+- type: entity
+  parent: ERTLeaderPDA
+  id: ERTLeaderGammaPDA
+  components:
+  - type: Pda
+    id: ERTLeaderGammaIDCard
+
+- type: entity
+  parent: CentcomPDA
+  id: CentcomOfficialPDA
+  components:
+  - type: Pda
+    id: CentcomOfficialIDCard
+
+- type: entity
+  parent: CentcomPDA
+  id: CentcomOperatorPDA
+  components:
+  - type: Pda
+    id: CentcomOperatorIDCard
+
+- type: entity
+  parent: CentcomPDA
+  id: CentcomSpecialOperationsOfficerPDA
+  components:
+  - type: Pda
+    id: CentcomSpecialOperationsOfficerIDCard
+
+- type: entity
+  parent: BasePDA
+  id: PathologistPDA
+  name: pathologist PDA
+  description: I wonder whose pulse is on the screen? I hope he doesn't stop...
+  components:
+  - type: Pda
+    id: PathologistIDCard
+  - type: PdaBorderColor
+    borderColor: "#212121"
+    accentHColor: "#EAEAEA"
+    accentVColor: "#EAEAEA"
+  - type: Icon
+    sprite: Objects/Devices/pda.rsi
+    state: pda-pathologist
+
+- type: entity
+  parent: BasePDA
+  id: SecurityPilotPDA
+  name: security pilot PDA
+  description: Smells like space shuttles.
+  components:
+  - type: Pda
+    id: SecurityPilotIDCard
+  - type: PdaBorderColor
+    borderColor: "#772d32"
+  - type: Icon
+    state: pda-security
+
+- type: entity
+  parent: ERTLeaderPDA
+  id: FSFCommanderBravoPDA
+  components:
+  - type: Pda
+    id: FSFCommanderBravoIDCard
+
+- type: entity
+  parent: ERTLeaderPDA
+  id: FSFCommanderCharliePDA
+  components:
+  - type: Pda
+    id: FSFCommanderCharlieIDCard
