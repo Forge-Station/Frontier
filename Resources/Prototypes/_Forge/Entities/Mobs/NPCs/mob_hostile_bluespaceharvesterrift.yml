@@ -25,7 +25,7 @@
   components:
   - type: TimedDespawn
     lifetime: 120
-    
+
 - type: entity
   id: MobBehonkerGravRift
   parent: MobBehonkerGrav
@@ -36,6 +36,13 @@
 - type: entity
   id: NFMobXenoQueenRift
   parent: NFMobXenoQueen
+  components:
+  - type: TimedDespawn
+    lifetime: 120
+
+- type: entity
+  id: NFMobDragonDungeonRift
+  parent: NFMobDragonDungeon
   components:
   - type: TimedDespawn
     lifetime: 120
