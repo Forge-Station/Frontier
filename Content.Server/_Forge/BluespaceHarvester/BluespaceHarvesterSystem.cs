@@ -268,8 +268,21 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         if (!Resolve(uid, ref harvester))
             return 0;
 
-        return harvester.CurrentLevel * 4 * (Emagged(uid) ? 2 : 1) * (harvester.ResetTime == TimeSpan.Zero ? 1 : 0);
+        var stable = GetStableLevel(uid, harvester);
+        var level = harvester.CurrentLevel;
+
+        int pointsPerLevel;
+
+        if (level >= harvester.TriplePointMinLevel && level <= harvester.TriplePointMaxLevel)
+            pointsPerLevel = 3;
+        else
+            pointsPerLevel = level <= stable ? 2 : 4;
+
+        return level * pointsPerLevel * (Emagged(uid) ? 2 : 1) *
+               (harvester.ResetTime == TimeSpan.Zero ? 1 : 0);
     }
+
+
 
     private int GetDangerPointGeneration(EntityUid uid, BluespaceHarvesterComponent? harvester = null)
     {

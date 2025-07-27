@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Server._NF.Radar;
 using Content.Server.Cargo.Systems;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Weapons.Ranged.Components;
@@ -26,6 +27,7 @@ using Content.Server.PowerCell;
 using Content.Shared.Interaction; // Frontier
 using Content.Shared.Examine; // Frontier
 using Content.Shared.Power; // Frontier
+using Content.Shared.Hands.Components; // Frontier
 
 namespace Content.Server.Weapons.Ranged.Systems;
 
@@ -201,7 +203,7 @@ public sealed partial class GunSystem : SharedGunSystem
                             var hit = result.HitEntity;
                             lastHit = hit;
 
-                            FireEffects(fromEffect, result.Distance, dir.Normalized().ToAngle(), hitscan, hit);
+                            FireEffects(fromEffect, result.Distance, dir.Normalized().ToAngle(), hitscan, user);
 
                             var ev = new HitScanReflectAttemptEvent(user, gunUid, hitscan.Reflective, dir, false);
                             RaiseLocalEvent(hit, ref ev);
@@ -256,7 +258,7 @@ public sealed partial class GunSystem : SharedGunSystem
                     }
                     else
                     {
-                        FireEffects(fromEffect, hitscan.MaxLength, dir.ToAngle(), hitscan);
+                        FireEffects(fromEffect, hitscan.MaxLength, dir.ToAngle(), hitscan, null, user); //Mono
                     }
 
                     Audio.PlayPredicted(gun.SoundGunshotModified, gunUid, user);
@@ -404,8 +406,13 @@ public sealed partial class GunSystem : SharedGunSystem
     // TODO: Pseudo RNG so the client can predict these.
     #region Hitscan effects
 
-    private void FireEffects(EntityCoordinates fromCoordinates, float distance, Angle angle, HitscanPrototype hitscan, EntityUid? hitEntity = null)
+    private void FireEffects(EntityCoordinates fromCoordinates, float distance, Angle angle, HitscanPrototype hitscan, EntityUid? hitEntity = null, EntityUid? user = null)
     {
+        // Raise custom event for radar tracking
+        // Use the actual user as shooter instead of trying to derive from coordinates
+        var shooter = user ?? GetShooterFromCoordinates(fromCoordinates);
+        var radarEv = new HitscanRadarSystem.HitscanFireEffectEvent(fromCoordinates, distance, angle, hitscan, hitEntity, shooter);
+        RaiseLocalEvent(radarEv);
         // Lord
         // Forgive me for the shitcode I am about to do
         // Effects tempt me not
@@ -463,6 +470,27 @@ public sealed partial class GunSystem : SharedGunSystem
             }, Filter.Pvs(fromCoordinates, entityMan: EntityManager));
         }
     }
+    private EntityUid? GetShooterFromCoordinates(EntityCoordinates coordinates) //Mono
+    {
+        var entity = coordinates.EntityId;
 
+        // Check if the entity is a gun
+        if (HasComp<GunComponent>(entity))
+            return entity;
+
+        // Try to find a parent that might be the shooter
+        if (TryComp<TransformComponent>(entity, out var transform) && transform.ParentUid != EntityUid.Invalid)
+        {
+            if (HasComp<GunComponent>(transform.ParentUid))
+                return transform.ParentUid;
+
+            // If parent has hands, it might be the shooter
+            if (HasComp<HandsComponent>(transform.ParentUid))
+                return transform.ParentUid;
+        }
+
+        // Default to the entity itself
+        return entity;
+    } //Mono
     #endregion
 }

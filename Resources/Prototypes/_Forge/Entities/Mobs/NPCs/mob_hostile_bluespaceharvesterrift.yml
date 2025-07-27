@@ -1,83 +1,27 @@
 - type: entity
-  id: NFMobBearSpaceRift
-  parent: NFMobBearSpace
+  id: MobArgocyteFounderExpeditionsRift
+  parent: MobArgocyteFounderExpeditions
   components:
   - type: TimedDespawn
     lifetime: 120
 
 - type: entity
-  id: NFMobXenoRift
-  parent: NFMobXeno
+  id: MobArgocyteEnforcerExpeditionsRift
+  parent: MobArgocyteEnforcerExpeditions
   components:
   - type: TimedDespawn
     lifetime: 120
 
 - type: entity
-  id: NFMobXenoDroneRift
-  parent: NFMobXenoDrone
+  id: MobArgocyteSwiperExpeditionsRift
+  parent: MobArgocyteSwiperExpeditions
   components:
   - type: TimedDespawn
     lifetime: 120
 
 - type: entity
-  id: NFMobXenoPraetorianRift
-  parent: NFMobXenoPraetorian
-  components:
-  - type: TimedDespawn
-    lifetime: 120
-
-- type: entity
-  id: NFMobSharkRift
-  parent: NFMobShark
-  components:
-  - type: TimedDespawn
-    lifetime: 120
-
-- type: entity
-  id: NFMobCarpHoloRift
-  parent: NFMobCarpHolo
-  components:
-  - type: TimedDespawn
-    lifetime: 120
-
-- type: entity
-  id: NFMobCarpMagicRift
-  parent: NFMobCarpMagic
-  components:
-  - type: TimedDespawn
-    lifetime: 120
-
-- type: entity
-  id: NFMobTickRift
-  parent: NFMobTick
-  components:
-  - type: TimedDespawn
-    lifetime: 120
-
-- type: entity
-  id: NFMobPurpleSnakeRift
-  parent: NFMobPurpleSnake
-  components:
-  - type: TimedDespawn
-    lifetime: 120
-
-- type: entity
-  id: NFMobKangarooSpaceRift
-  parent: NFMobKangarooSpace
-  components:
-  - type: TimedDespawn
-    lifetime: 120
-
-- type: entity
-  id: MobWatcherLavalandRift
-  parent: MobWatcherLavaland
-  components:
-  - type: TimedDespawn
-    lifetime: 120
-
-- type: entity
-  id: NFMobSpiderSpaceRift
-  parent: NFMobSpiderSpace
+  id: MobArgocyteCrawlerExpeditionsRift
+  parent: MobArgocyteCrawlerExpeditions
   components:
   - type: TimedDespawn
     lifetime: 120
@@ -99,6 +43,13 @@
 - type: entity
   id: NFMobDragonDungeonRift
   parent: NFMobDragonDungeon
+  components:
+  - type: TimedDespawn
+    lifetime: 120
+
+- type: entity
+  id: MobArgocyteLeviathingExpeditionsRift
+  parent: MobArgocyteLeviathingExpeditions
   components:
   - type: TimedDespawn
     lifetime: 120

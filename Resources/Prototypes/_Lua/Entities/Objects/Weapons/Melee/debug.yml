@@ -1,0 +1,88 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  name: VIE sword 10
+  parent: BaseItem
+  id: DebugVIE10
+  description: BEHOLD, THE VEIL GOD'S REALM SPLITTER!
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: _Lua/Objects/Weapons/Melee/vie-sword.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        VeilIndividualExposure: 10
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    size: Normal
+    sprite: _Lua/Objects/Weapons/Melee/vie-sword.rsi
+  - type: DisarmMalus
+
+- type: entity
+  name: VIE sword 100
+  parent: DebugVIE10
+  id: DebugVIE100
+  description: BEHOLD, THE VEIL GOD'S REALM SPLITTER!!
+  components:
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        VeilIndividualExposure: 100
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+
+- type: entity
+  name: VIE sword 200
+  parent: DebugVIE10
+  id: DebugVIE200
+  description: BEHOLD, THE VEIL GOD'S REALM SPLITTER!!!
+  components:
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        VeilIndividualExposure: 200
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+
+- type: entity
+  name: VIE healer 10
+  parent: BaseItem
+  id: DebugVIEhealer10
+  description: BEHOLD, THE VEIL-RIPPER'S MEGASTAFF!
+  components:
+  - type: Sprite
+    sprite: _Lua/Objects/Weapons/Melee/vie-healer.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        VeilIndividualExposure: -10
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    size: Normal
+    sprite: _Lua/Objects/Weapons/Melee/vie-healer.rsi
+  - type: DisarmMalus
+
+- type: entity
+  name: VIE healer 200
+  parent: DebugVIEhealer10
+  id: DebugVIEhealer200
+  description: BEHOLD, THE VEIL-RIPPER'S MEGASTAFF!!!
+  components:
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        VeilIndividualExposure: -200
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg

@@ -75,7 +75,7 @@ public sealed partial class BluespaceHarvesterComponent : Component
     /// Similar to StableLevel, but replaces it when hacked by a Emag.
     /// </summary>
     [DataField] [ViewVariables(VVAccess.ReadWrite)]
-    public int EmaggedStableLevel = 7;
+    public int EmaggedStableLevel = 3;
 
     /// <summary>
     /// The level above which it is impossible not to set TargetLevel.
@@ -142,7 +142,7 @@ public sealed partial class BluespaceHarvesterComponent : Component
     /// The level above which the Danger begin to rise.
     /// </summary>
     [DataField] [ViewVariables(VVAccess.ReadWrite)]
-    public int StableLevel = 11;
+    public int StableLevel = 5;
 
     /// <summary>
     /// The level to which the harvester always strives if possible. It is installed by the player, but during the reset, this
@@ -156,6 +156,12 @@ public sealed partial class BluespaceHarvesterComponent : Component
     /// </summary>
     [DataField] [ViewVariables(VVAccess.ReadWrite)]
     public int TotalPoints;
+
+    [DataField("triplePointMinLevel")]
+    public int TriplePointMinLevel = 6;
+
+    [DataField("triplePointMaxLevel")]
+    public int TriplePointMaxLevel = 10;
 }
 
 [Serializable]

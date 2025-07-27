@@ -59,19 +59,29 @@ public sealed class FtlArrivalOverlay : Overlay
                 continue;
 
             var texture = _sprites.GetFrame(comp.Sprite, TimeSpan.FromSeconds(comp.Elapsed), loop: false);
-            comp.Elapsed += (float) _timing.FrameTime.TotalSeconds;
-
+            comp.Elapsed += (float)_timing.FrameTime.TotalSeconds;
             // Need to manually transform the viewport in terms of the visualizer entity as the grid isn't in position.
             var (_, _, worldMatrix, invMatrix) = _transforms.GetWorldPositionRotationMatrixWithInv(uid);
             args.WorldHandle.SetTransform(worldMatrix);
             var localAABB = invMatrix.TransformBox(args.WorldBounds);
+         //Forge Begin
+            var tileSize = mapGrid.TileSize;
+            var width = (int)Math.Ceiling(localAABB.Width / tileSize);
+            var height = (int)Math.Ceiling(localAABB.Height / tileSize);
+            const int maxTiles = 200;
+            if (width > maxTiles || height > maxTiles)
+                continue;
 
+            const int iterMax = 10_000;
+            int iter = 0;  //Forge End
             var tilesEnumerator = _maps.GetLocalTilesEnumerator(grid, mapGrid, localAABB);
 
             while (tilesEnumerator.MoveNext(out var tile))
             {
-                var bounds = _lookups.GetLocalBounds(tile, mapGrid.TileSize);
+                if (++iter > iterMax)  //Forge Change Begin
+                    break;
 
+                var bounds = _lookups.GetLocalBounds(tile, tileSize);  //Forge Change End
                 args.WorldHandle.DrawTextureRect(texture, bounds);
             }
         }

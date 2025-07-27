@@ -1,0 +1,39 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: BulletMachineGunImpulseTurret
+  name: импульсный лазер
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 175
+        Radiation: 35
+        Heat: 40
+        Blunt: 20
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 12
+    intensitySlope: 3
+    totalIntensity: 4
+    maxTileBreak: 2
+  - type: PointLight
+    radius: 3.5
+    color: red
+    energy: 0.5
+  - type: Sprite
+    sprite: _Lua/Objects/SpaceArtillery/laserturret.rsi
+    layers:
+      - state: base-projectile
+  - type: RadarBlip
+    scale: 0.35
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 20
+  - type: ShipWeaponProjectile

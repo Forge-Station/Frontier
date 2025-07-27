@@ -1,0 +1,94 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: BaseWeaponNavalBallisctic
+  id: Weapon120mmBase
+  name: Миномёт "120мм"
+  description: Средний миномёт, использует снаряды 120мм.
+  suffix: НЕ МАППИТЬ!, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: RadarBlip
+      radarColor: "#229e51"
+      scale: 1
+    - type: Sprite
+      sprite: _Lua/Objects/Weapons/Guns/Turrets/turrets120mm.rsi
+      drawdepth: Mobs
+      layers:
+        - state: turrets120mm
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          whitelist:
+            tags: []
+        gun_chamber:
+          whitelist:
+            tags: []
+    - type: BallisticAmmoProvider
+      whitelist:
+        tags:
+          - Cartridge120mm
+      capacity: 2
+    - type: Gun
+      fireRate: 0.05
+      projectileSpeed: 80
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+    - type: ChamberMagazineAmmoProvider
+      boltClosed: null
+    - type: ContainerContainer
+      containers:
+        gun_magazine: !type:ContainerSlot
+        gun_chamber: !type:ContainerSlot
+        machine_board: !type:Container
+        machine_parts: !type:Container
+        ballistic-ammo: !type:Container
+
+- type: entity
+  parent: Weapon120mmBase
+  id: Weapon120mm
+  suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: BallisticAmmoProvider
+      whitelist:
+        tags:
+          - Cartridge120mm
+      proto: Cartridge120mm
+      capacity: 2
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, Weapon120mm, Weapon120mmBase]
+  id: Weapon120mmUnanchor
+  suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, Weapon120mmBase]
+  id: Weapon120mmUnanchorEmpty
+  suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: Weapon120mmBaseFlatpack
+  name: упакованный средний миномёт
+  description: Упакованный Средний Миномёт (.120мм)
+  components:
+  - type: Flatpack
+    entity: Weapon120mmBase
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    sprite: _Lua/Flatpack/flatpack.rsi
+    layers:
+    - state: ship_weapon
+

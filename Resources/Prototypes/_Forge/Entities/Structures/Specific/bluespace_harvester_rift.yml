@@ -7,42 +7,25 @@
   components:
   - type: BluespaceHarvesterRift
     passiveSpawn:
-    - NFMobBearSpaceRift
+    - MobArgocyteEnforcerExpeditionsRift
     spawn:
       # Flesh
-      - id: NFMobXenoRift
+      - id: MobArgocyteFounderExpeditionsRift
         cost: 50
-      - id: NFMobXenoDroneRift
-        cost: 60
-      - id: NFMobXenoPraetorianRift
-        cost: 70
-      # Carps
-      - id: NFMobCarpMagicRift
+      - id: MobArgocyteSwiperExpeditionsRift
         cost: 50
-      - id: NFMobCarpHoloRift
-      - cost: 60
-      - id: NFMobSharkRift
-        cost: 120
-      # Space
-      - id: NFMobKangarooSpaceRift
-        cost: 55
-      - id: NFMobBearSpaceRift
+      - id: MobArgocyteSwiperExpeditionsRift
         cost: 50
-      - id: NFMobPurpleSnakeRift
+      - id: MobArgocyteCrawlerExpeditionsRift
         cost: 50
-      - id: NFMobTickRift
-        cost: 50
-      - id: MobWatcherLavalandRift
-        cost: 130
-      # Spiders
-      - id: NFMobSpiderSpaceRift
-        cost: 80
       # DEATH
       - id: MobBehonkerGravRift
         cost: 800
       - id: NFMobDragonDungeonRift
         cost: 900
       - id: NFMobXenoQueenRift
+        cost: 1000
+      - id: MobArgocyteLeviathingExpeditionsRift
         cost: 1000
   - type: Transform
     anchored: true
