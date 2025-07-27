@@ -55,9 +55,6 @@
   - type: RadarBlip
     radarColor: "#229e51"
     scale: 1
-  - type: NpcFactionMember
-    factions:
-    - PointDefenseGun
   - type: BallisticAmmoProvider
     proto: Cartridge20mm
     capacity: 1500
