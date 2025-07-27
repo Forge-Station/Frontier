@@ -209,37 +209,4 @@
       - id: Weapon140mmBaseFlatpack
         amount: 1
 
-- type: entity
-  id: CrateWeaponTargetingPadFlatpack
-  parent: CrateShipWeaponBase
-  name: ящик с упакованной консолью управления огнём и сервером
-  description: Содержит 1 упакованную консоль управления огнём и 1 сервер вооружения
-  components:
-  - type: StorageFill
-    contents:
-      - id: ComputerGunneryConsoleFlatpack
-        amount: 1
-      - id: GunneryServerFlatpack
-        amount: 1
 
-- type: entity
-  id: CrateMachineFTLDrive600Flatpack
-  parent: CrateShipWeaponBase
-  name: ящик с упакованным FSS-600 блюспейс двигателем
-  description: Содержит 1 упакованный FSS-600 блюспейс двигатель
-  components:
-  - type: StorageFill
-    contents:
-      - id: MachineFTLDrive600Flatpack
-        amount: 1
-
-- type: entity
-  id: CratePlayerStationAiVesselFlatpack
-  parent: CrateShipWeaponBase
-  name: ящик с упакованным ИИ шаттла
-  description: Содержит 1 упакованный ИИ шаттла.
-  components:
-  - type: StorageFill
-    contents:
-      - id: PlayerStationAiVesselFlatpack
-        amount: 1
