@@ -16,13 +16,14 @@ public sealed partial class BluespaceHarvesterMenu : FancyWindow
 
         _owner = owner;
 
-        InputLevelBar.OnTextEntered += (args) =>
+        InputLevelBar.OnTextEntered += args =>
         {
             if (!int.TryParse(args.Text, out var level) || level < 0 || level > 20)
             {
                 InputLevelBar.Text = "0";
                 return;
             }
+
             _owner.SendTargetLevel(level);
         };
 
@@ -33,7 +34,7 @@ public sealed partial class BluespaceHarvesterMenu : FancyWindow
     {
         TargetLevel.Text = $"{state.TargetLevel}";
         CurrentLevel.Text = $"{state.CurrentLevel}";
-        DesiredBar.Value = ((float)state.CurrentLevel) / ((float)state.MaxLevel);
+        DesiredBar.Value = state.CurrentLevel / (float)state.MaxLevel;
 
         PowerUsageLabel.Text = Loc.GetString("power-monitoring-window-value", ("value", state.PowerUsage));
         PowerUsageNextLabel.Text = Loc.GetString("power-monitoring-window-value", ("value", state.PowerUsageNext));

@@ -12,21 +12,21 @@ public sealed class BluespaceHarvesterBundleSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<_Forge.BluespaceHarvester.BluespaceHarvesterBundleComponent, StorageBeforeOpenEvent>(OnOpen);
-        SubscribeLocalEvent<_Forge.BluespaceHarvester.BluespaceHarvesterBundleComponent, DestructionEventArgs>(OnDestruction);
+        SubscribeLocalEvent<BluespaceHarvesterBundleComponent, StorageBeforeOpenEvent>(OnOpen);
+        SubscribeLocalEvent<BluespaceHarvesterBundleComponent, DestructionEventArgs>(OnDestruction);
     }
 
-    private void OnOpen(Entity<_Forge.BluespaceHarvester.BluespaceHarvesterBundleComponent> bundle, ref StorageBeforeOpenEvent args)
+    private void OnOpen(Entity<BluespaceHarvesterBundleComponent> bundle, ref StorageBeforeOpenEvent args)
     {
         CreateLoot(bundle);
     }
 
-    private void OnDestruction(Entity<_Forge.BluespaceHarvester.BluespaceHarvesterBundleComponent> bundle, ref DestructionEventArgs args)
+    private void OnDestruction(Entity<BluespaceHarvesterBundleComponent> bundle, ref DestructionEventArgs args)
     {
         CreateLoot(bundle);
     }
 
-    private void CreateLoot(Entity<_Forge.BluespaceHarvester.BluespaceHarvesterBundleComponent> bundle)
+    private void CreateLoot(Entity<BluespaceHarvesterBundleComponent> bundle)
     {
         if (bundle.Comp.Spawned)
             return;

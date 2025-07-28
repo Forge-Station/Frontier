@@ -1,0 +1,55 @@
+- type: entity
+  id: MobArgocyteFounderExpeditionsRift
+  parent: MobArgocyteFounderExpeditions
+  components:
+  - type: TimedDespawn
+    lifetime: 120
+
+- type: entity
+  id: MobArgocyteEnforcerExpeditionsRift
+  parent: MobArgocyteEnforcerExpeditions
+  components:
+  - type: TimedDespawn
+    lifetime: 120
+
+- type: entity
+  id: MobArgocyteSwiperExpeditionsRift
+  parent: MobArgocyteSwiperExpeditions
+  components:
+  - type: TimedDespawn
+    lifetime: 120
+
+- type: entity
+  id: MobArgocyteCrawlerExpeditionsRift
+  parent: MobArgocyteCrawlerExpeditions
+  components:
+  - type: TimedDespawn
+    lifetime: 120
+
+- type: entity
+  id: MobBehonkerGravRift
+  parent: MobBehonkerGrav
+  components:
+  - type: TimedDespawn
+    lifetime: 120
+
+- type: entity
+  id: NFMobXenoQueenRift
+  parent: NFMobXenoQueen
+  components:
+  - type: TimedDespawn
+    lifetime: 120
+
+- type: entity
+  id: NFMobDragonDungeonRift
+  parent: NFMobDragonDungeon
+  components:
+  - type: TimedDespawn
+    lifetime: 120
+
+- type: entity
+  id: MobArgocyteLeviathingExpeditionsRift
+  parent: MobArgocyteLeviathingExpeditions
+  components:
+  - type: TimedDespawn
+    lifetime: 120

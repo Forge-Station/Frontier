@@ -1,0 +1,267 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 Disguised Bear
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 kyres1
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# MARAUDER
+
+- type: entity
+  id: WeaponTurretType35
+  name: MARAUDER-type plasma weapon
+  parent: BallisticArtillery
+  description: Launches magnetically contained balls of plasma at targets. Can be remotely activated, or linked up to a GCS.
+  components:
+  - type: StaticPrice
+    price: 2500
+  - type: Sprite
+    sprite: _Mono/Objects/ShuttleWeapons/t35.rsi
+    layers:
+    - state: space_artillery
+  - type: Appearance
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 40000
+    startingCharge: 40000
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Gun
+    fireRate: 0.5
+    projectileSpeed: 180
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 350
+  - type: SpaceArtillery
+    powerChargeRate: 350
+    powerUsePassive: 500
+    powerUseActive: 0
+  - type: FireControlRotate
+  - type: Actions
+  - type: ProjectileBatteryAmmoProvider
+    proto: ShipMediumPlasmaProjectile
+    fireCost: 500
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: RadarBlip
+    radarColor: "#C92BCC"
+    scale: 2
+  - type: ShipGunType
+    shipType: Energy
+  - type: ShipGunClass
+    shipClass: Medium
+
+ # M25
+
+- type: entity
+  id: WeaponTurretM25
+  name: M25 mining pulser
+  parent: BallisticArtillery
+  description: Uses mechanisms to launch... something. Destroys rock easily.
+  components:
+  - type: StaticPrice
+    price: 1500
+  - type: Sprite
+    sprite: _Mono/Objects/ShuttleWeapons/m25.rsi
+    layers:
+    - state: space_artillery
+  - type: Appearance
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 40000
+    startingCharge: 40000
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: FireControlRotate
+  - type: Gun
+    fireRate: 4.0
+    projectileSpeed: 40
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 350
+  - type: SpaceArtillery
+    powerChargeRate: 350
+    powerUsePassive: 500
+    powerUseActive: 0
+  - type: Actions
+  - type: ProjectileBatteryAmmoProvider
+    proto: ShipM25Projectile
+    fireCost: 100
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 800
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: RadarBlip
+    radarColor: "#C92BCC"
+    scale: 1
+  - type: ShipGunType
+    shipType: Energy
+  - type: ShipGunClass
+    shipClass: Superlight
+
+# RUBICON
+
+- type: entity
+  id: WeaponTurretM220
+  name: M220 RUBICON EMP launcher
+  parent: BallisticArtillery
+  description: Launches EMP projectiles at ships, disabling systems with powerful electromagnetic pulses. Ideal for non-lethal engagements and can be remotely activated or linked to a GCS.
+  components:
+  - type: StaticPrice
+    price: 5000
+  - type: Sprite
+    sprite: _Mono/Objects/ShuttleWeapons/rubicon.rsi
+    layers:
+    - state: space_artillery
+  - type: Appearance
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 40000
+    startingCharge: 40000
+  - type: ExaminableBattery
+  - type: FireControlRotate
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Gun
+    fireRate: 0.2
+    projectileSpeed: 180
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 350
+  - type: SpaceArtillery
+    powerChargeRate: 350
+    powerUsePassive: 1250
+    powerUseActive: 0
+  - type: Actions
+  - type: ProjectileBatteryAmmoProvider
+    proto: ShipRubiconProjectile
+    fireCost: 500
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 800
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: RadarBlip
+    radarColor: "#035EFC"
+    scale: 2
+  - type: ShipGunType
+    shipType: Energy
+  - type: ShipGunClass
+    shipClass: Medium
+
+# DYMERE
+
+- type: entity
+  id: WeaponTurretDymere
+  name: ADEX-9 DYMERE Turbolaser
+  parent: BallisticArtilleryUnanchorable
+  description: Aetherion Dynamics' most iconic supercapital battery. Fires enormous ionized gas projectiles that melt through the toughest ship armor. Can be remotely activated or linked to a GCS.
+  components:
+  - type: StaticPrice
+    price: 60000
+  - type: Sprite
+    sprite: _Mono/Objects/ShuttleWeapons/dymere.rsi
+    layers:
+    - state: space_artillery
+    scale: 1, 1
+  - type: Appearance
+  - type: AmmoCounter
+  - type: FireControlRotate
+  - type: Battery
+    maxCharge: 40800
+    startingCharge: 40800
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.75,-0.75,0.75,0.75"
+        density: 1500
+  - type: Gun
+    projectileSpeed: 285
+    fireRate: 0.75
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/Gunshots/laserfire.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: BatterySelfRecharger
+    autoRechargePause: true
+    autoRechargePauseTime: 60
+    autoRecharge: true
+    autoRechargeRate: 81600
+  - type: SpaceArtillery
+    powerChargeRate: 81600
+    powerUsePassive: 25000
+    powerUseActive: 0
+  - type: Actions
+  - type: ProjectileBatteryAmmoProvider
+    proto: ShipDymereProjectile
+    fireCost: 2400
+  - type: RadarBlip
+    radarColor: "#C92BCC"
+    scale: 3
+  - type: ShipGunType
+    shipType: Energy
+  - type: ShipGunClass
+    shipClass: Superheavy

@@ -1,0 +1,92 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: BaseWeaponNavalBallisctic
+  id: Weapon140mmBase
+  name: Миномёт "140мм"
+  description: Тяжёлый миномёт, использует снаряды 140мм.
+  suffix: НЕ МАППИТЬ!, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: RadarBlip
+      radarColor: "#229e51"
+      scale: 1
+    - type: Sprite
+      sprite: _Lua/Objects/Weapons/Guns/Turrets/turrets140mm.rsi
+      drawdepth: Mobs
+      layers:
+        - state: turrets140mm
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          whitelist:
+            tags: []
+        gun_chamber:
+          whitelist:
+            tags:
+              - Cartridge140mm
+    - type: Gun
+      fireRate: 0.01
+      projectileSpeed: 80
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+    - type: ChamberMagazineAmmoProvider
+      boltClosed: null
+    - type: ContainerContainer
+      containers:
+        gun_magazine: !type:ContainerSlot
+        gun_chamber: !type:ContainerSlot
+        machine_board: !type:Container
+        machine_parts: !type:Container
+
+- type: entity
+  parent: Weapon140mmBase
+  id: Weapon140mm
+  suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          whitelist:
+            tags: []
+        gun_chamber:
+          startingItem: Cartridge140mm
+          whitelist:
+            tags:
+              - Cartridge140mm
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, Weapon140mm, Weapon140mmBase]
+  id: Weapon140mmUnanchor
+  suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, Weapon140mmBase]
+  id: Weapon140mmUnanchorEmpty
+  suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: Weapon140mmBaseFlatpack
+  name: упакованный тяжёлый миномёт
+  description: Упакованный Тяжёлый Миномёт (.140мм)
+  components:
+  - type: Flatpack
+    entity: Weapon140mmBase
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    sprite: _Lua/Flatpack/flatpack.rsi
+    layers:
+    - state: ship_weapon

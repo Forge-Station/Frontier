@@ -1,0 +1,83 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: [BaseWeaponNavalEnergy, BaseStructure]
+  id: ImpulseLaserBase
+  name: Импульсный Лазер
+  description: Лёгий лазер, использует для питания энергоячейки импульсного лазера.
+  suffix: НЕ МАППИТЬ!, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: RadarBlip
+      radarColor: "#1a4a88"
+      scale: 1
+    - type: ContainerContainer
+      containers:
+        gun_magazine: !type:ContainerSlot
+        machine_board: !type:Container
+        machine_parts: !type:Container
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+          whitelist:
+            tags:
+              - PowerCartridgeImpulse
+    - type: MagazineAmmoProvider
+    - type: ChamberMagazineAmmoProvider
+      boltClosed: null
+    - type: Sprite
+      sprite: _Lua/Objects/Weapons/Guns/Turrets/impulselaser.rsi
+      drawdepth: Mobs
+      layers:
+        - map: ["enum.DamageStateVisualLayers.Base"]
+        - state: impulselaser
+          sprite: _Lua/Objects/Weapons/Guns/Turrets/impulselaser.rsi
+        - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+          state: impulselaser-unshaded
+          sprite: _Lua/Objects/Weapons/Guns/Turrets/impulselaser.rsi
+          shader: unshaded
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: impulselaser
+          BaseUnshaded: impulselaser-unshaded
+        Critical:
+          Base: impulselaser-unshaded
+        Dead:
+          Base: impulselaser
+          BaseUnshaded: impulselaser
+    - type: Gun
+      fireRate: 2
+      projectileSpeed: 110
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/_Lua/Weapons/Guns/Gunshots/lasergatling.ogg
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, ImpulseLaserBase]
+  id: ImpulseLaserUnanchor
+  suffix: Неоткрепляемый для кораблей, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: ImpulseLaserBaseFlatpack
+  name: упакованный импульсный лазер
+  description: Упакованный лёгий лазер, использует для питания энергоячейки импульсного лазера.
+  components:
+  - type: Flatpack
+    entity: ImpulseLaserBase
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    sprite: _Lua/Flatpack/flatpack.rsi
+    layers:
+    - state: ship_weapon

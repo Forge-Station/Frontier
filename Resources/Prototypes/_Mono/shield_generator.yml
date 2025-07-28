@@ -1,0 +1,179 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 ark1368
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# POI
+- type: entity
+  id: ShieldGeneratorPOI
+  parent: ShieldGenerator
+  name: FS-421 "Fortress" Shield Generator
+  components:
+  - type: ShipShieldEmitter
+    healPerSecond: 5000
+    damageExp: 0.5
+    baseDraw: 80000
+    maxDraw: 150000
+    unpoweredBonus: 8
+    damageLimit: 200000
+    damageOverloadTimePunishment: 30
+    shieldColor: "#FF9933"
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/fobshield.rsi
+    snapCardinals: true
+    layers:
+    - state: fobshield
+    - state: fobshield_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      color: "#FF9933"
+  - type: ApcPowerReceiver
+    powerLoad: 40000
+  - type: PointLight
+    enabled: false
+    castShadows: true
+    radius: 2
+    energy: 1.5
+    color: "#FF9933"
+
+# High-End
+- type: entity
+  id: ShieldGenerator
+  parent: BaseMachinePowered
+  name: MS-500 "Titan" Shield Generator
+  components:
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -5
+    range: 30
+    enabled: false
+    sound:
+      path: /Audio/Ambience/Objects/anomaly_generator.ogg
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/shield.rsi
+    snapCardinals: true
+    layers:
+    - state: control
+    - state: control_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      color: "#FF3333"
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+    snapCardinals: true
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    noRot: true
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+  - type: Repairable
+    doAfterDelay: 8
+  - type: PointLight
+    enabled: false
+    castShadows: true
+    radius: 2
+    energy: 1.5
+    color: "#FF3333"
+  - type: AnimationPlayer
+  - type: LitOnPowered
+  - type: PowerSwitch
+  - type: ApcPowerReceiver
+    powerLoad: 60000
+  - type: Appearance
+  - type: ShipShieldEmitter
+    damageLimit: 50000
+    damageOverloadTimePunishment: 120
+    shieldColor: "#FF3333"
+    powerUpSound: !type:SoundPathSpecifier
+        path: "/Audio/Effects/teleport_arrival.ogg"
+        params:
+          pitch: 0.5
+    powerDownSound: !type:SoundPathSpecifier
+        path: "/Audio/Effects/teleport_departure.ogg"
+        params:
+          pitch: 0.5
+
+# Medium-End
+- type: entity
+  id: ShieldGeneratorMedium
+  parent: ShieldGenerator
+  name: MS-250 "Aegis" Shield Generator
+  components:
+  - type: ShipShieldEmitter
+    healPerSecond: 400 # Base is 250
+    damageExp: 1.15 # Base is 1.1
+    baseDraw: 40000 # Base is 50000
+    maxDraw: 80000 # Base is 150000
+    unpoweredBonus: 3 # Base is 6
+    damageLimit: 30000
+    damageOverloadTimePunishment: 100
+    shieldColor: "#9933FF"
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/shield.rsi
+    snapCardinals: true
+    layers:
+    - state: control
+    - state: control_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      color: "#9933FF"
+  - type: ApcPowerReceiver
+    powerLoad: 40000
+  - type: PointLight
+    enabled: false
+    castShadows: true
+    radius: 2
+    energy: 1.5
+    color: "#9933FF"
+
+# Low-End
+- type: entity
+  id: ShieldGeneratorSmall
+  parent: ShieldGenerator
+  name: MS-100 "Sentinel" Shield Generator
+  components:
+  - type: ShipShieldEmitter
+    healPerSecond: 200 # Mono
+    damageExp: 1.2 # Mono
+    baseDraw: 20000
+    maxDraw: 60000
+    unpoweredBonus: 2.5
+    damageLimit: 15000 # Mono
+    damageOverloadTimePunishment: 80
+    shieldColor: "#3399FF"
+  - type: Sprite
+    sprite: _Mono/Structures/ShuttleComponents/shield.rsi
+    snapCardinals: true
+    layers:
+    - state: control
+    - state: control_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      color: "#3399FF"
+  - type: ApcPowerReceiver
+    powerLoad: 20000
+  - type: PointLight
+    enabled: false
+    castShadows: true
+    radius: 2
+    energy: 1.5
+    color: "#3399FF"

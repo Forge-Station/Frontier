@@ -1,0 +1,80 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: BaseWeaponMissile
+  id: WeaponMissileLauncherStarColosus
+  name: Ядерная артиллерийская установка "Звездный Колосс"
+  description: Артиллерийская установка, рассчитанная на глобальные разрушения. Ядерный снаряд "Инферно" распространяет ударную волну, которая поглощает всё в радиусе действия, разрушая корабли и станции.
+  suffix: НЕ МАППИТЬ!, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: RadarBlip
+    radarColor: "#850000"
+    scale: 1
+  - type: Sprite
+    sprite: _Lua/Objects/ShuttleWeapons/bigfuckinglaser.rsi
+    drawdepth: Mobs
+    layers:
+      - state: space_artillery
+  - type: Gun
+    projectileSpeed: 40
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: null
+        whitelist:
+          tags: []
+      gun_chamber:
+        startingItem: MissileTND
+        whitelist:
+          tags:
+          - MissileStarColosus
+
+- type: entity
+  parent: WeaponMissileLauncherStarColosus
+  id: WeaponMissileLauncherStarColosusEmpty
+  suffix: Пустой, ShuttleGun
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: null
+        whitelist:
+          tags: []
+      gun_chamber:
+        startingItem: null
+        whitelist:
+          tags:
+          - MissileStarColosus
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: WeaponMissileLauncherStarColosusFlatpack
+  name: упакованная ядерная артиллерийская установка "Звездный Колосс"
+  description: Упакованная ядерная артиллерийская установка "Звездный Колосс", использует ядерный снаряд "Инферно".
+  components:
+  - type: Flatpack
+    entity: WeaponMissileLauncherStarColosusEmpty
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    sprite: _Lua/Flatpack/flatpack.rsi
+    layers:
+    - state: ship_weapon

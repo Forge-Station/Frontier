@@ -27,3 +27,9 @@
   id: DoNotMap
   name: entity-category-name-donotmap
   suffix: entity-category-suffix-donotmap
+# Forge-Change-Start
+- type: entityCategory
+  id: StatusEffects
+  name: entity-category-name-status-effects
+  hideSpawnMenu: true
+# Forge-Change-End

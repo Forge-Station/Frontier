@@ -1,0 +1,89 @@
+- type: entity
+  parent: BaseStructure
+  id: WeaponTurretBaseLaser
+  abstract: true
+  components:
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Actions
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.45,-0.45,0.45,0.45"
+          density: 60
+          mask:
+            - MachineMask
+          layer:
+            - MachineLayer
+    - type: Sprite
+      sprite: _Lua/Objects/Weapons/Guns/Turrets/laserluatech.rsi
+      drawdepth: Mobs
+      layers:
+        - map: ["enum.DamageStateVisualLayers.Base"]
+        - state: impulselaser
+          sprite: _Lua/Objects/Weapons/Guns/Turrets/laserluatech.rsi
+        - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+          state: impulselaser-unshaded
+          sprite: _Lua/Objects/Weapons/Guns/Turrets/laserluatech.rsi
+          shader: unshaded
+    - type: InteractionPopup
+      interactDelay: 0.2
+      successChance: 0.8
+      interactSuccessString: petting-success-generic
+      interactFailureString: petting-failure-generic
+      interactSuccessSound:
+        path: /Audio/Effects/double_beep.ogg
+    - type: CombatMode
+      toggleMouseRotator: false
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 600
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 300
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetSteel1:
+                  min: 3
+                  max: 5
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 80
+    - type: Gun
+      fireRate: 1
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot:
+        path: /Audio/_Lua/Weapons/Guns/Gunshots/laser_shot.ogg
+        params:
+          volume: -2
+    - type: Battery
+      maxCharge: 2000
+      startingCharge: 2000
+    - type: MouseRotator
+      angleTolerance: 6
+      rotationSpeed: 300
+      simple4DirMode: false
+    - type: NoRotateOnInteract
+    - type: NoRotateOnMove
+    - type: Input
+      context: "human"
+    - type: StaticPrice
+      price: 750
+

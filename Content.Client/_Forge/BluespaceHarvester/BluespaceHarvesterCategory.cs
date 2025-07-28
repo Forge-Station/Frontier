@@ -12,7 +12,9 @@ public sealed partial class BluespaceHarvesterCategory : Control
     {
         RobustXamlLoader.Load(this);
 
-        CategoryLabel.Text = Loc.GetString($"bluespace-harvester-category-{Enum.GetName(typeof(Shared._Forge.BluespaceHarvester.BluespaceHarvesterCategory), category.Type)}");
+        CategoryLabel.Text =
+            Loc.GetString(
+                $"bluespace-harvester-category-{Enum.GetName(typeof(Shared._Forge.BluespaceHarvester.BluespaceHarvesterCategory), category.Type)}");
 
         CategoryButton.Text = $"{category.Cost}";
         CategoryButton.Disabled = !canBuy;

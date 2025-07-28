@@ -112,7 +112,9 @@
     mode: SnapgridCenter
   components:
   - type: Clickable
-  - type: Slippery
+  - type: Slippery # Forge-Change
+    staminaDamage: 0
+    frictionStatusTime: 0 # Don't apply friction twice
   - type: Transform
     noRot: true
     anchored: true

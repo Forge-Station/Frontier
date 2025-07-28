@@ -3,23 +3,30 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Forge.BluespaceHarvester;
 
-[Serializable, NetSerializable]
+[Serializable] [NetSerializable]
 public sealed class BluespaceHarvesterBoundUserInterfaceState : BoundUserInterfaceState
 {
-    public readonly int TargetLevel;
+    public readonly List<BluespaceHarvesterCategoryInfo> Categories;
     public readonly int CurrentLevel;
     public readonly int MaxLevel;
 
-    public readonly uint PowerUsage;
-    public readonly uint PowerUsageNext;
-
     public readonly int Points;
-    public readonly int TotalPoints;
     public readonly int PointsGen;
 
-    public readonly List<BluespaceHarvesterCategoryInfo> Categories;
+    public readonly uint PowerUsage;
+    public readonly uint PowerUsageNext;
+    public readonly int TargetLevel;
+    public readonly int TotalPoints;
 
-    public BluespaceHarvesterBoundUserInterfaceState(int targetLevel, int currentLevel, int maxLevel, uint powerUsage, uint powerUsageNext, int points, int totalPoints, int pointsGen, List<BluespaceHarvesterCategoryInfo> categories)
+    public BluespaceHarvesterBoundUserInterfaceState(int targetLevel,
+        int currentLevel,
+        int maxLevel,
+        uint powerUsage,
+        uint powerUsageNext,
+        int points,
+        int totalPoints,
+        int pointsGen,
+        List<BluespaceHarvesterCategoryInfo> categories)
     {
         TargetLevel = targetLevel;
         CurrentLevel = currentLevel;
@@ -36,7 +43,7 @@ public sealed class BluespaceHarvesterBoundUserInterfaceState : BoundUserInterfa
     }
 }
 
-[Serializable, NetSerializable]
+[Serializable] [NetSerializable]
 public sealed class BluespaceHarvesterTargetLevelMessage : BoundUserInterfaceMessage
 {
     public readonly int TargetLevel;
@@ -47,7 +54,7 @@ public sealed class BluespaceHarvesterTargetLevelMessage : BoundUserInterfaceMes
     }
 }
 
-[Serializable, NetSerializable]
+[Serializable] [NetSerializable]
 public sealed class BluespaceHarvesterBuyMessage : BoundUserInterfaceMessage
 {
     public readonly BluespaceHarvesterCategory Category;
@@ -58,13 +65,13 @@ public sealed class BluespaceHarvesterBuyMessage : BoundUserInterfaceMessage
     }
 }
 
-[Serializable, NetSerializable]
+[Serializable] [NetSerializable]
 public enum BluespaceHarvesterUiKey : byte
 {
     Key,
 }
 
-[Serializable, NetSerializable]
+[Serializable] [NetSerializable]
 public enum BluespaceHarvesterVisuals : byte
 {
     Tap0,
@@ -76,14 +83,14 @@ public enum BluespaceHarvesterVisuals : byte
     TapRedspace,
 }
 
-[Serializable, NetSerializable]
+[Serializable] [NetSerializable]
 public enum BluespaceHarvesterVisualLayers : byte
 {
     Base,
     Effects,
 }
 
-[Serializable, NetSerializable, DataDefinition]
+[Serializable] [NetSerializable] [DataDefinition]
 public partial struct BluespaceHarvesterCategoryInfo
 {
     [DataField("id")]
@@ -96,8 +103,7 @@ public partial struct BluespaceHarvesterCategoryInfo
     public BluespaceHarvesterCategory Type;
 }
 
-
-[Serializable, NetSerializable]
+[Serializable] [NetSerializable]
 public enum BluespaceHarvesterCategory : byte
 {
     Industrial,

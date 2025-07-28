@@ -1,0 +1,212 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: CrateBaseSecure
+  suffix: Корабельное вооружение
+  id: CrateShipWeaponBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+
+- type: entity
+  id: CrateArmoryWeapon20mmAP
+  parent: CrateShipWeaponBase
+  name: ящик бронебойных обойм лёгкого пулемёта (.20мм)
+  description: Содержит 3 обоймы бронебойных снарядов для лёгкого пулемёта (.20мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineBox20mmAP
+        amount: 3
+
+- type: entity
+  id: CrateArmoryWeapon53mmAP
+  parent: CrateShipWeaponBase
+  name: ящик бронебойных обойм среднего пулемёта (.53мм)
+  description: Содержит 3 обоймы бронебойных снарядов для среднего пулемёта (.53мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineBox53mmAP
+        amount: 3
+
+- type: entity
+  id: CrateArmoryWeapon80mmAP
+  parent: CrateShipWeaponBase
+  name: ящик бронебойных обойм тяжёлого пулемёта (.80мм)
+  description: Содержит 3 обоймы бронебойных снарядов для тяжёлого пулемёта (.80мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineBox80mmAP
+        amount: 3
+
+- type: entity
+  id: CrateArmoryWeapon105mmAP
+  parent: CrateShipWeaponBase
+  name: ящик бронебойных картриджей малого миномёта (.105мм)
+  description: Содержит 30 картриджей бронебойных снарядов для малого миномёта (.105мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge105mmAP
+        amount: 30
+
+- type: entity
+  id: CrateArmoryWeapon120mmAP
+  parent: CrateShipWeaponBase
+  name: ящик бронебойных картриджей среднего миномёта (.120мм)
+  description: Содержит 30 картриджей бронебойных снарядов для среднего миномёта (.120мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge120mmAP
+        amount: 30
+
+- type: entity
+  id: CrateArmoryWeapon140mmAP
+  parent: CrateShipWeaponBase
+  name: ящик бронебойных картриджей тяжёлого миномёта (.140мм)
+  description: Содержит 30 картриджей бронебойных снарядов для тяжёлого миномёта (.140мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge140mmAP
+        amount: 30
+
+- type: entity
+  id: CrateArmoryWeaponImpulseLaser
+  parent: CrateShipWeaponBase
+  name: ящик с упакованным импульсным лазером
+  description: Содержит 1 упакованный лёгий лазер, использует для питания энергоячейки импульсного лазера.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ImpulseLaserBaseFlatpack
+        amount: 1
+
+- type: entity
+  id: CrateArmoryPowerCartridgeImpulse
+  parent: CrateShipWeaponBase
+  name: ящик с энергоячейками импульсного лазера
+  description: Содержит 3 энергоячейки импульсного лазера.
+  components:
+  - type: StorageFill
+    contents:
+      - id: PowerCartridgeImpulse
+        amount: 3
+
+- type: entity
+  id: CrateArmoryWeaponTeslaTurret
+  parent: CrateShipWeaponBase
+  name: ящик с упакованной тесла турелью
+  description: Содержит 1 упакованную тесла турель, использует для питания энергоячейки тесла турели.
+  components:
+  - type: StorageFill
+    contents:
+      - id: TeslaTurretBaseFlatpack
+        amount: 1
+
+- type: entity
+  id: CrateArmoryPowerCartridgeTesla
+  parent: CrateShipWeaponBase
+  name: ящик с энергоячейками тесла турели
+  description: Содержит 3 энергоячейки тесла турели.
+  components:
+  - type: StorageFill
+    contents:
+      - id: PowerCartridgeTesla
+        amount: 3
+
+- type: entity
+  id: CrateWeaponMissileLauncherStarColosusFlatpack
+  parent: CrateShipWeaponBase
+  name: ящик с упакованной ядерной артиллерийской установкой "Звездный Колосс"
+  description: Содержит 1 ядерную артиллерийскую установку "Звездный Колосс", использует ядерный снаряд "Инферно".
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponMissileLauncherStarColosusFlatpack
+        amount: 1
+
+- type: entity
+  id: CrateWeaponMissileStarColosus
+  parent: CrateShipWeaponBase
+  name: ящик с ядерной ракетой класса "Инферно"
+  description: Содержит 1 ядерную ракету класса "Инферно" для ядерной артиллерийской установки "Звездный Колосс".
+  components:
+  - type: StorageFill
+    contents:
+      - id: MissileTND
+        amount: 1
+
+- type: entity
+  id: CrateArmoryWeapon20mmBase
+  parent: CrateShipWeaponBase
+  name: ящик с лёгким пулемётом (.20мм)
+  description: Содержит 1 упакованный лёгкий пулемёт (.20мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Weapon20mmBaseFlatpack
+        amount: 1
+
+- type: entity
+  id: CrateArmoryWeapon53mmBase
+  parent: CrateShipWeaponBase
+  name: ящик с средним пулемётом (.53мм)
+  description: Содержит 1 упакованный средний пулемёт (.53мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Weapon53mmBaseFlatpack
+        amount: 1
+
+- type: entity
+  id: CrateArmoryWeapon80mmBase
+  parent: CrateShipWeaponBase
+  name: ящик с тяжёлым пулемётом (.80мм)
+  description: Содержит 1 упакованный тяжёлый пулемёт (.80мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Weapon80mmBaseFlatpack
+        amount: 1
+
+- type: entity
+  id: CrateArmoryWeapon105mmBase
+  parent: CrateShipWeaponBase
+  name: ящик с малым миномётом (.105мм)
+  description: Содержит 1 упакованный малый миномёт (.105мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Weapon105mmBaseFlatpack
+        amount: 1
+
+- type: entity
+  id: CrateArmoryWeapon120mmBase
+  parent: CrateShipWeaponBase
+  name: ящик с средним миномётом (.120мм)
+  description: Содержит 1 упакованный средний миномёт (.120мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Weapon120mmBaseFlatpack
+        amount: 1
+
+- type: entity
+  id: CrateArmoryWeapon140mmBase
+  parent: CrateShipWeaponBase
+  name: ящик с тяжёлым миномётом (.140мм)
+  description: Содержит 1 упакованный тяжёлый миномёт (.140мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Weapon140mmBaseFlatpack
+        amount: 1
+
+

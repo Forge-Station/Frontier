@@ -9,9 +9,6 @@
       Acidic: [Touch]
   - type: Damageable
     damageContainer: Inorganic
-  - type: MovementSpeedModifier
-    baseWalkSpeed : 3
-    baseSprintSpeed : 4
   - type: NpcFactionMember
     factions:
     - SimpleNeutral
