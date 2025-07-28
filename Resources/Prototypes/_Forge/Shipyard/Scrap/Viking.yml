@@ -1,0 +1,49 @@
+# Author -
+# GitHub: -
+# Discord: letstrythisone.
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle notes:
+
+- type: vessel
+  id: Viking
+  parent: BaseVessel
+  name: ST Викинг
+  description: По-настоящему "Мусорный" шаттл, предназначенный для переработки космического хлама в более полезный космический хлам. Средний размер команды от 3 до 5 человек.
+  price: 40000 # (34197)
+  category: Medium
+  group: Custom
+  shuttlePath: /Maps/Forge/Shuttles/Scrap/Viking.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Salvage
+  - Expedition
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Viking
+  mapName: 'ST Викинг'
+  mapPath: /Maps/Forge/Shuttles/Scrap/Viking.yml
+  minPlayers: 0
+  stations:
+    Viking:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Викинг {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
+
