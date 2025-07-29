@@ -19,3 +19,92 @@
       sprite: Forge/Clothing/Uniforms/Jumpskirts/schoolskirt.rsi
     - type: Clothing
       sprite: Forge/Clothing/Uniforms/Jumpskirts/schoolskirt.rsi
+
+- type: entity
+  parent: [BaseC3SyndicateContraband, UnsensoredClothingUniformSkirtBase, ContrabandClothing ]
+  id: ClothingUniformJumpskirtSmuggler
+  name: school skirt
+  description: Stylish and comfortable school skirt.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpskirts/smugglerskirt.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpskirts/smugglerskirt.rsi
+
+- type: entity
+  parent: [BaseC3SyndicateContraband, UnsensoredClothingUniformSkirtBase, ContrabandClothing ]
+  id: ClothingUniformJumpskirtCommander
+  name: school skirt
+  description: Stylish and comfortable school skirt.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpskirts/commanderskirt.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpskirts/commanderskirt.rsi
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitSmuggler
+  name: school skirt
+  description: Stylish and comfortable school skirt.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuit.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuit.rsi
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitSmugglerTactical
+  name: school skirt
+  description: Stylish and comfortable school skirt.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuittactical.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuittactical.rsi
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitCommander
+  name: school skirt
+  description: Stylish and comfortable school skirt.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/commanderjumpsuit.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/commanderjumpsuit.rsi
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitStormtrooper
+  name: school skirt
+  description: Stylish and comfortable school skirt.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/stormtrooperjumpsuit.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/stormtrooperjumpsuit.rsi
+
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitMedSyn
+  name: school skirt
+  description: Stylish and comfortable school skirt.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/medsynjumpsuit.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/medsynjumpsuit.rsi
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitEngineerSyn
+  name: school skirt
+  description: Stylish and comfortable school skirt.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/engineersynjumpsuit.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/engineersynjumpsuit.rsi

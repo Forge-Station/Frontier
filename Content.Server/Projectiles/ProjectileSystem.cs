@@ -18,6 +18,7 @@ using Robust.Shared.Physics.Systems;
 using Robust.Shared.Physics.Components;
 using System.Linq;
 using System.Numerics;
+using Content.Shared._Mono;
 using Content.Shared.Physics;
 using Robust.Shared.Physics;
 
@@ -60,6 +61,15 @@ public sealed class ProjectileSystem : SharedProjectileSystem
             return;
 
         var target = args.OtherEntity;
+        if (TryComp<ProjectileGridPhaseComponent>(uid, out var phaseComp) &&
+            TryComp<TransformComponent>(target, out var targetXform) &&
+            phaseComp.SourceGrid != EntityUid.Invalid &&
+            targetXform.GridUid != null && // GridUid — nullable!
+            phaseComp.SourceGrid == targetXform.GridUid)
+        {
+            return;
+        }
+
         // it's here so this check is only done once before possible hit
         var attemptEv = new ProjectileReflectAttemptEvent(uid, component, false);
         RaiseLocalEvent(target, ref attemptEv);
@@ -203,6 +213,14 @@ public sealed class ProjectileSystem : SharedProjectileSystem
                 var closestHit = hits.First();
 
                 var hitEntity = closestHit.HitEntity;
+                if (TryComp<ProjectileGridPhaseComponent>(uid, out var phaseComp) &&
+                    TryComp<TransformComponent>(hitEntity, out var hitXform) &&
+                    phaseComp.SourceGrid != EntityUid.Invalid &&
+                    hitXform.GridUid != null &&
+                    phaseComp.SourceGrid == hitXform.GridUid)
+                {
+                    continue;
+                }
                 var hitDistance = closestHit.Distance;
                 var hitPosition = lastPosition + rayDirection * hitDistance;
 

@@ -1,0 +1,23 @@
+- type: entity
+  parent: [ClothingBackpackSatchel, BaseC3Contraband, ContrabandClothing]
+  id: ClothingBackpackSatchelSyndicate
+  name: syndicate satchel bag
+  description: A large duffel bag for holding various traitor goods.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Back/Satchels/syndicate.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+
+
+- type: entity
+  parent: [ClothingBackpackSatchel, BaseC3Contraband, ContrabandClothing]
+  id: ClothingBackpackSatchelSyndicateMed
+  name: syndicate satchel bag
+  description: A large duffel bag for holding various traitor goods.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Back/Satchels/syndicatemed.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+
