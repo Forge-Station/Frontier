@@ -6,7 +6,7 @@
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
-# Discord: mersen 
+# Discord: mersen
 
 # Shuttle Notes:
 - type: vessel
@@ -14,13 +14,17 @@
   parent: BaseVessel
   name: TL Азимут
   description: Одноместный истребитель, переоборудованный под гражданские нужды.
-  price: 22200 
+  price: 22200
   category: Small
   group: Salvage
   shuttlePath: /Maps/Forge/Shuttles/Salvage/azimuth.yml
   guidebookPage: null
   class:
   - Salvage
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: Azimuth

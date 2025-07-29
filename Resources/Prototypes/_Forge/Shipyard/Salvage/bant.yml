@@ -6,7 +6,7 @@
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
-# Discord: mersen 
+# Discord: mersen
 
 # Shuttle Notes:
 - type: vessel
@@ -14,13 +14,16 @@
   parent: BaseVessel
   name: LVHI Бант
   description: Одноместный грузовой контейнер, переоборудованный под выход в открытый космос.
-  price: 27200 
+  price: 27200
   category: Small
   group: Shipyard
   shuttlePath: /Maps/Forge/Shuttles/Salvage/bant.yml
   guidebookPage: null
   class:
   - Salvage
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
 
 - type: gameMap
   id: Bant

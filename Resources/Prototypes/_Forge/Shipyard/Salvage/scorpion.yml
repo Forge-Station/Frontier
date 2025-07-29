@@ -13,13 +13,16 @@
   parent: BaseVessel
   name: TL Скорпион
   description: Одноместный шахтерский шаттл. Является перестроенным истребителем TL.
-  price: 16200 
+  price: 16200
   category: Small
   group: Salvage
   shuttlePath: /Maps/Forge/Shuttles/Salvage/scorpion.yml
   guidebookPage: null
   class:
   - Salvage
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
 
 - type: gameMap
   id: Scorpion1

@@ -21,6 +21,10 @@
   shuttlePath: /Maps/Forge/Shuttles/Salvage/Pot.yml
   class:
   - Salvage
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: Pot

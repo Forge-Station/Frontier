@@ -5,7 +5,7 @@
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
-# Discord: mersen 
+# Discord: mersen
 
 # Shuttle Notes:
 - type: vessel
@@ -21,6 +21,10 @@
   class:
   - Cargo
   - Salvage
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: Zenith

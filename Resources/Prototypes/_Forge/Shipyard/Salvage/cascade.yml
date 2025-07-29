@@ -6,20 +6,24 @@
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
-# Discord: mersen 
+# Discord: mersen
 
 # Shuttle Notes:
 - type: vessel
   id: Сascade1
   parent: BaseVessel
   name: TL Каскад
-  description: пересобранный под гражданские нужды тяжелый бомбардировщик TechnicLogistic. Рекомендованный экипаж 1-3 человека. 
-  price: 32200 
+  description: пересобранный под гражданские нужды тяжелый бомбардировщик TechnicLogistic. Рекомендованный экипаж 1-3 человека.
+  price: 32200
   category: Small
   group: Salvage
   shuttlePath: /Maps/Forge/Shuttles/Salvage/cascade.yml
   class:
   - Salvage
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: Сascade1

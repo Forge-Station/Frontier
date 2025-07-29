@@ -13,13 +13,17 @@
   parent: BaseVessel
   name: TL Жук
   description: Одноместный шахтерский шаттл. Является перестроенным истребителем TL.
-  price: 15200 
+  price: 15200
   category: Small
   group: Salvage
   shuttlePath: /Maps/Forge/Shuttles/Salvage/bug.yml
   guidebookPage: null
   class:
   - Salvage
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: Bug

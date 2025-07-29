@@ -9116,8 +9116,6 @@ entities:
       pos: 1.5,-13.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7
       - 5
@@ -9152,8 +9150,6 @@ entities:
       pos: 3.5,-14.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7
       - 5
@@ -9166,8 +9162,6 @@ entities:
       pos: -2.5,-14.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7
       - 5
@@ -9221,8 +9215,6 @@ entities:
       pos: -0.5,7.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 5
     - type: AtmosPipeColor
@@ -9236,8 +9228,6 @@ entities:
       pos: 1.5,-14.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 7
       - 5
@@ -9315,8 +9305,6 @@ entities:
       pos: 1.5,7.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 5
     - type: AtmosPipeColor

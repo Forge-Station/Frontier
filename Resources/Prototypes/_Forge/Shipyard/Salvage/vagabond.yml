@@ -22,6 +22,10 @@
   class:
   - Salvage
   - Cargo
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: Vagabond

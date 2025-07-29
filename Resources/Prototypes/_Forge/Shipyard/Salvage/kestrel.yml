@@ -20,6 +20,10 @@
   guidebookPage: ShipyardKestrel
   class:
   - Salvage
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: Kestrel

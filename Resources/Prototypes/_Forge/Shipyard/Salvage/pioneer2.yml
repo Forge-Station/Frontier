@@ -20,6 +20,10 @@
   guidebookPage: null
   class:
   - Salvage
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: Pioneer1

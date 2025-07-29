@@ -21,6 +21,10 @@
   class:
   - Cargo
   - Salvage
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: hauler

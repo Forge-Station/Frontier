@@ -20,6 +20,10 @@
   guidebookPage: Null
   class:
   - Salvage
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: RosebudMKI

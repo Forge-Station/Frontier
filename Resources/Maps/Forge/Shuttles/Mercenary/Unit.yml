@@ -719,8 +719,6 @@ entities:
       pos: 8.5,20.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 175
       - 235
@@ -1916,8 +1914,6 @@ entities:
       pos: 9.5,19.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 175
       - 235
@@ -1978,8 +1974,6 @@ entities:
       pos: 8.5,19.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 175
       - 235

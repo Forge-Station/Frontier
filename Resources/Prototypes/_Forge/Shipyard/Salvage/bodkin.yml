@@ -22,6 +22,10 @@
   - Salvage
   engine:
   - Uranium
+  addComponents:
+  - type: MinersBountyDatabase
+    bounties: []
+
 
 - type: gameMap
   id: Bodkin
