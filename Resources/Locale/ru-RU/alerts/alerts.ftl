@@ -34,6 +34,8 @@ alerts-health-name = Здоровье
 alerts-health-desc = [color=green]Синий и зелёный[/color] хорошо. [color=red]Красный[/color] плохо.
 alerts-battery-name = Батарея
 alerts-battery-desc = Если батарея разрядится, вы не сможете использовать свои способности.
+alerts-knockdown-name = [color=yellow]Упал на пол[/color]
+alerts-knockdown-desc = Вы [color=yellow]упали на пол[/color]! Кто-то вас сбил с ног или подскользнулись, тем самым, затрудняет движение.
 alerts-no-battery-name = Нет батареи
 alerts-no-battery-desc = У вас нет батареи, в результате чего вы не можете заряжаться или использовать свои способности.
 alerts-internals-name = Переключить баллон
