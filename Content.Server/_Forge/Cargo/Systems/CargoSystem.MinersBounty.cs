@@ -473,7 +473,7 @@ public sealed partial class NFCargoSystem
 
         if (amount > 0)
         {
-            _stack.SpawnMultiple("MinersToken", amount, Transform(uid).Coordinates);
+            _stack.SpawnMultiple("SpaceCash", amount, Transform(uid).Coordinates);
             _audio.PlayPvs(component.AcceptSound, uid);
             _popup.PopupEntity(Loc.GetString("miners-bounty-redemption-success", ("bounties", redeemedBounties), ("amount", amount)), args.Actor);
         }
