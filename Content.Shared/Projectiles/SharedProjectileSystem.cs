@@ -300,7 +300,11 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         if (component.EmbeddedIntoUid is not null)
         {
             if (TryComp<EmbeddedContainerComponent>(component.EmbeddedIntoUid.Value, out var embeddedContainer))
+            {
                 embeddedContainer.EmbeddedObjects.Remove(uid);
+                if (embeddedContainer.EmbeddedObjects.Count == 0)
+                    RemComp<EmbeddedContainerComponent>(component.EmbeddedIntoUid.Value);
+            }
         }
 
         var xform = Transform(uid);
