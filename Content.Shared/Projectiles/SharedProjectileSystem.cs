@@ -68,6 +68,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         SubscribeLocalEvent<ProjectileComponent, ComponentStartup>(OnProjectileMetaStartup);
         SubscribeLocalEvent<EmbeddableProjectileComponent, EntityTerminatingEvent>(OnEmbeddedEntityTerminating);
     }
+
     /// <summary>
     /// Initialize the origin grid for phasing projectiles.
     /// </summary>
@@ -191,14 +192,28 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 
         return ev.Cancelled;
     }
-    private void OnEmbeddedEntityTerminating(EntityUid uid, EmbeddableProjectileComponent comp, ref EntityTerminatingEvent args)
+
+    private void RemoveContainerIfEmpty(EntityUid containerUid)
+    {
+        if (!TryComp<EmbeddedContainerComponent>(containerUid, out var cont))
+            return;
+
+        if (cont.EmbeddedObjects.Count == 0)
+            RemComp<EmbeddedContainerComponent>(containerUid);
+    }
+
+    private void OnEmbeddedEntityTerminating(EntityUid uid,
+        EmbeddableProjectileComponent comp,
+        ref EntityTerminatingEvent args)
     {
         if (comp.EmbeddedIntoUid is { } containerUid &&
             TryComp<EmbeddedContainerComponent>(containerUid, out var container))
         {
             container.EmbeddedObjects.Remove(uid);
+            RemoveContainerIfEmpty(containerUid);
         }
     }
+
     private void OnEmbedActivate(Entity<EmbeddableProjectileComponent> embeddable, ref ActivateInWorldEvent args)
     {
         // Unremovable embeddables moment
@@ -283,7 +298,9 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         embeddedContainer.EmbeddedObjects.Add(uid);
     }
 
-    public void EmbedDetach(EntityUid uid, EmbeddableProjectileComponent? component, EntityUid? user = null)
+    public void EmbedDetach(EntityUid uid,
+        EmbeddableProjectileComponent? component,
+        EntityUid? user = null)
     {
         if (TerminatingOrDeleted(uid))
             return;
@@ -293,18 +310,22 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 
         if (component.DeleteOnRemove)
         {
+            if (component.EmbeddedIntoUid is { } containerUid &&
+                TryComp<EmbeddedContainerComponent>(containerUid, out var cont))
+            {
+                cont.EmbeddedObjects.Remove(uid);
+                RemoveContainerIfEmpty(containerUid);
+            }
+
             QueueDel(uid);
             return;
         }
 
-        if (component.EmbeddedIntoUid is not null)
+        if (component.EmbeddedIntoUid is { } targetUid &&
+            TryComp<EmbeddedContainerComponent>(targetUid, out var embeddedContainer))
         {
-            if (TryComp<EmbeddedContainerComponent>(component.EmbeddedIntoUid.Value, out var embeddedContainer))
-            {
-                embeddedContainer.EmbeddedObjects.Remove(uid);
-                if (embeddedContainer.EmbeddedObjects.Count == 0)
-                    RemComp<EmbeddedContainerComponent>(component.EmbeddedIntoUid.Value);
-            }
+            embeddedContainer.EmbeddedObjects.Remove(uid);
+            RemoveContainerIfEmpty(targetUid);
         }
 
         var xform = Transform(uid);
@@ -318,25 +339,23 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         component.EmbeddedIntoUid = null;
         Dirty(uid, component);
 
-        // Reset whether the projectile has damaged anything if it successfully was removed
         if (TryComp<ProjectileComponent>(uid, out var projectile))
         {
             projectile.Shooter = null;
             projectile.Weapon = null;
             projectile.ProjectileSpent = false;
-
             Dirty(uid, projectile);
         }
 
         if (user != null)
         {
-            // Land it just coz uhhh yeah
             var landEv = new LandEvent(user, true);
             RaiseLocalEvent(uid, ref landEv);
         }
 
         _physics.WakeBody(uid, body: physics);
     }
+
 
     private void OnEmbeddableTermination(Entity<EmbeddedContainerComponent> container, ref EntityTerminatingEvent args)
     {
@@ -345,7 +364,6 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 
     public void DetachAllEmbedded(Entity<EmbeddedContainerComponent> container)
     {
-
         foreach (var embedded in container.Comp.EmbeddedObjects.ToArray())
         {
             if (TerminatingOrDeleted(embedded))
@@ -358,6 +376,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         }
 
         container.Comp.EmbeddedObjects.Clear();
+        RemoveContainerIfEmpty(container.Owner);
     }
 
     private void PreventCollision(EntityUid uid, ProjectileComponent component, ref PreventCollideEvent args)
@@ -442,7 +461,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         Dirty(id, component);
     }
 
-    [Serializable, NetSerializable]
+    [Serializable] [NetSerializable]
     private sealed partial class RemoveEmbeddedProjectileEvent : DoAfterEvent
     {
         public override DoAfterEvent Clone()
