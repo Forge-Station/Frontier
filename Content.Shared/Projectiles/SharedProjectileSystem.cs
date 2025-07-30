@@ -1,4 +1,5 @@
 using System.Collections.Concurrent;
+using System.Linq;
 using System.Numerics;
 using Content.Shared._Mono;
 using Content.Shared.Damage;
@@ -277,6 +278,9 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 
     public void EmbedDetach(EntityUid uid, EmbeddableProjectileComponent? component, EntityUid? user = null)
     {
+        if (TerminatingOrDeleted(uid))
+            return;
+
         if (!Resolve(uid, ref component))
             return;
 
@@ -330,13 +334,19 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 
     public void DetachAllEmbedded(Entity<EmbeddedContainerComponent> container)
     {
-        foreach (var embedded in container.Comp.EmbeddedObjects)
+
+        foreach (var embedded in container.Comp.EmbeddedObjects.ToArray())
         {
+            if (TerminatingOrDeleted(embedded))
+                continue;
+
             if (!TryComp<EmbeddableProjectileComponent>(embedded, out var embeddedComp))
                 continue;
 
             EmbedDetach(embedded, embeddedComp);
         }
+
+        container.Comp.EmbeddedObjects.Clear();
     }
 
     private void PreventCollision(EntityUid uid, ProjectileComponent component, ref PreventCollideEvent args)
