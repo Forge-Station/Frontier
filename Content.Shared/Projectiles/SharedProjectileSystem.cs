@@ -66,8 +66,8 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         SubscribeLocalEvent<ProjectileGridPhaseComponent, ComponentStartup>(OnProjectileGridPhaseStartup);
         // Subscribe to ensure MetaDataComponent on projectile entities for networking
         SubscribeLocalEvent<ProjectileComponent, ComponentStartup>(OnProjectileMetaStartup);
+        SubscribeLocalEvent<EmbeddableProjectileComponent, EntityTerminatingEvent>(OnEmbeddedEntityTerminating);
     }
-
     /// <summary>
     /// Initialize the origin grid for phasing projectiles.
     /// </summary>
@@ -191,7 +191,14 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 
         return ev.Cancelled;
     }
-
+    private void OnEmbeddedEntityTerminating(EntityUid uid, EmbeddableProjectileComponent comp, ref EntityTerminatingEvent args)
+    {
+        if (comp.EmbeddedIntoUid is { } containerUid &&
+            TryComp<EmbeddedContainerComponent>(containerUid, out var container))
+        {
+            container.EmbeddedObjects.Remove(uid);
+        }
+    }
     private void OnEmbedActivate(Entity<EmbeddableProjectileComponent> embeddable, ref ActivateInWorldEvent args)
     {
         // Unremovable embeddables moment
