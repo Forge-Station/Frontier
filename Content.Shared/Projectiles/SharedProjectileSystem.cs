@@ -421,7 +421,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         Dirty(id, component);
     }
 
-    [Serializable] [NetSerializable]
+    [Serializable, NetSerializable]
     public sealed class RemoveEmbeddedProjectileEvent : DoAfterEvent
     {
         public override DoAfterEvent Clone()
