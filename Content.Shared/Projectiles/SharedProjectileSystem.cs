@@ -77,6 +77,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         var xform = Transform(uid);
         component.SourceGrid = xform.GridUid ?? EntityUid.Invalid;
     }
+
     /// <summary>
     /// Ensures that a MetaDataComponent exists on projectiles for network serialization.
     /// </summary>
@@ -292,9 +293,13 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         }
 
         var xform = Transform(uid);
+        if (TerminatingOrDeleted(xform.GridUid) && TerminatingOrDeleted(xform.MapUid))
+            return;
+
         TryComp<PhysicsComponent>(uid, out var physics);
         _physics.SetBodyType(uid, BodyType.Dynamic, body: physics, xform: xform);
         _transform.AttachToGridOrMap(uid, xform);
+
         component.EmbeddedIntoUid = null;
         Dirty(uid, component);
 
@@ -360,6 +365,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
             args.Cancelled = true;
             return;
         }
+
         // Add collision check to queue for batch processing if we have enough
         if (_pendingCollisionChecks.Count >= MinProjectilesForParallel / 2)
         {
@@ -416,7 +422,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
     }
 
     [Serializable] [NetSerializable]
-    public sealed partial class RemoveEmbeddedProjectileEvent : DoAfterEvent
+    public sealed class RemoveEmbeddedProjectileEvent : DoAfterEvent
     {
         public override DoAfterEvent Clone()
         {
@@ -442,7 +448,8 @@ public sealed class ImpactEffectEvent : EntityEventArgs
 /// Raised when an entity is just about to be hit with a projectile but can reflect it
 /// </summary>
 [ByRefEvent]
-public record struct ProjectileReflectAttemptEvent(EntityUid ProjUid, ProjectileComponent Component, bool Cancelled) : IInventoryRelayEvent
+public record struct ProjectileReflectAttemptEvent(EntityUid ProjUid, ProjectileComponent Component, bool Cancelled)
+    : IInventoryRelayEvent
 {
     SlotFlags IInventoryRelayEvent.TargetSlots => SlotFlags.WITHOUT_POCKET;
 }
