@@ -1,0 +1,9 @@
+atmos-pipe-layers-component-layer-primary = первичный
+atmos-pipe-layers-component-layer-secondary = вторичный
+atmos-pipe-layers-component-layer-tertiary = третичный
+atmos-pipe-layers-component-change-layer = Установлен {$layerName} режим.
+atmos-pipe-layers-component-current-layer = Текущий режим: {$layerName}.
+atmos-pipe-layers-component-select-layer = {CAPITALIZE($layerName)} режим.
+atmos-pipe-layers-component-tool-missing = Требуется {$toolName}.
+atmos-pipe-layers-component-pipes-are-covered = Трубы накрыты.
+atmos-pipe-layers-component-cannot-adjust-pipes = Вам нужно раскрыть трубы, прежде чем их можно будет отрегулировать.
