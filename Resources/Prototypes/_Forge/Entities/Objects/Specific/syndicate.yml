@@ -62,12 +62,11 @@
   suffix: Empty
   components:
   - type: Sprite
-    sprite: Objects/Devices/communication.rsi
+    sprite: Forge/Objects/Devices/ContraUplink.rsi
     layers:
-    - state: old-radio
+    - state: icon
   - type: Item
-    sprite: Objects/Devices/communication.rsi
-    heldPrefix: old-radio
+    sprite: Forge/Objects/Devices/ContraUplink.rsi
   - type: UserInterface
     interfaces:
       enum.StoreUiKey.Key:

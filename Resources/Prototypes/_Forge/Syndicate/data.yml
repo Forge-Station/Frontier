@@ -5,9 +5,12 @@
   description: Data collecting and processing machine produced by Cybersun.
   components:
   - type: Sprite
-    sprite: _NF/Structures/Specific/Syndicate/cybersundataminer.rsi
+    sprite: Forge/Structures/Specific/Syndicate/syndicatedataminer.rsi
+    noRot: true
     layers:
-    - state: dataminer
-    - state: unshaded
-      shader: unshaded
+    - state: server
+    - state: server_o
+      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+    - state: device-on
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
   - type: DataMinerSyndicate

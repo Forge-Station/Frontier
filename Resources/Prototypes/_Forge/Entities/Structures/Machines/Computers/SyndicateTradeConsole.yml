@@ -5,18 +5,16 @@
   description: Используеться для оформления заказов на нелегальные предметы
   components:
   - type: Sprite
-    sprite: Structures/Machines/computers.rsi
+    sprite: Forge/Structures/Machines/terminal_syndicatechange.rsi
+    noRot: true
     layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: comm_syndie
-    - map: ["computerLayerKeys"]
-      state: syndie_key
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
+    - state: "off"
+      map: [ "enum.VendingMachineVisualLayers.Base" ]
+    - state: "normal-unshaded"
+      map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
+      shader: unshaded
+    - state: panel
+      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
   - type: Machine
     board: AutolatheMachineCircuitboard
   - type: Lathe
