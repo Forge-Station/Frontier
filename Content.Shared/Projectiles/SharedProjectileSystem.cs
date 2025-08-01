@@ -29,7 +29,6 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 {
     public const string ProjectileFixture = "projectile";
     private const int MinProjectilesForParallel = 8;
-    private const int ProjectileBatchSize = 16;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
@@ -374,10 +373,8 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 
             EmbedDetach(embedded, embeddedComp);
         }
-
-        container.Comp.EmbeddedObjects.Clear();
-        RemoveContainerIfEmpty(container.Owner);
     }
+
 
     private void PreventCollision(EntityUid uid, ProjectileComponent component, ref PreventCollideEvent args)
     {
