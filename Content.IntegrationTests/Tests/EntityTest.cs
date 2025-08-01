@@ -108,8 +108,9 @@ namespace Content.IntegrationTests.Tests
                     .Where(p => !p.Components.ContainsKey("RoomFill")) // This comp can delete all entities, and spawn others
                     .Select(p => p.ID)
                     .ToList();
-                foreach (var protoId in protoIds)
                 // Corvax-Forge-Start
+                var failedProtos = new List<string>();
+                foreach (var protoId in protoIds)
                 {
                     try
                     {
@@ -117,9 +118,13 @@ namespace Content.IntegrationTests.Tests
                     }
                     catch (Exception ex)
                     {
-                        Assert.Fail($"Failed to spawn entity {protoId}:\n{ex}");
-                        continue;
+                        Logger.Warning($"[TEST] Failed to spawn entity {protoId}: {ex.GetType().Name} - {ex.Message}");
+                        failedProtos.Add(protoId);
                     }
+                }
+                if (failedProtos.Count > 0)
+                {
+                    Assert.Fail($"Failed to spawn the following entities:\n{string.Join("\n", failedProtos)}");
                 }
                 // Corvax-Forge-End
             });
