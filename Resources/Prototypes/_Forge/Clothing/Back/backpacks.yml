@@ -1,8 +1,8 @@
 - type: entity
   parent: [NFClothingBackpack, BaseC3Contraband, ContrabandClothing]
   id: ClothingBackpackSyndicateForge
-  name: syndicate backpack bag
-  description: A large duffel bag for holding various traitor goods.
+  name: рюкзак синдиката
+  description: удобный красный рюкзак.
   components:
   - type: Sprite
     sprite: Forge/Clothing/Back/Backpacks/syndicate.rsi
@@ -15,13 +15,13 @@
 - type: entity
   parent: [NFClothingBackpack, BaseC3Contraband, ContrabandClothing]
   id: ClothingBackpackSyndicateMed
-  name: syndicate backpack med bag
-  description: A large duffel bag for holding various traitor goods.
+  name: рюкзак синдиката медицинский
+  description: удобный медицинский красный рюкзак.
   components:
   - type: Sprite
     sprite: Forge/Clothing/Back/Backpacks/syndicatemed.rsi
   - type: ExplosionResistance
-    damageCoefficient: 0.1
+    damageCoefficient: 0
   - type: Storage
     grid:
     - 0,0,7,4

@@ -17,14 +17,9 @@
   - SmugglerJumpsuit1
   - SmugglerJumpsuit2
   - SmugglerJumpsuit3
-  - SmugglerJumpsuit4
-  - SmugglerJumpsuit5
-  - SmugglerJumpsuit6
-  - SmugglerJumpsuit7
-  - SmugglerJumpsuit8
   fallbacks:
-  - SmugglerJumpsuit6
-  - SmugglerJumpsuit7
+  - SmugglerJumpsuit1
+  - SmugglerJumpsuit2
 
 - type: loadoutGroup
   id: SmugglerBags
@@ -34,6 +29,8 @@
   - SmugglerClothingBackpack1
   - SmugglerClothingBackpack2
   - SmugglerClothingBackpack3
+  - SmugglerClothingBackpack4
+  - SmugglerClothingBackpack5
   fallbacks:
   - SmugglerClothingBackpack1
 
@@ -43,8 +40,6 @@
   minLimit: 1
   loadouts:
   - SmugglerClothingHandsGloves1
-  - SmugglerClothingHandsGloves2
-  - SmugglerClothingHandsGloves3
   fallbacks:
   - SmugglerClothingHandsGloves1
 

@@ -59,6 +59,7 @@
     sprite: Forge/Objects/Devices/NFSDUplink.rsi
     layers:
     - state: icon
+      scale: "0.7,0.7"
   - type: Item
     sprite: Forge/Objects/Devices/NFSDUplink.rsi
   - type: UserInterface

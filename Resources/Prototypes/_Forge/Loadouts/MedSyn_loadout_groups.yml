@@ -15,22 +15,19 @@
   minLimit: 1
   loadouts:
   - MedSynJumpsuit1
-  - MedSynJumpsuit2
-  - MedSynJumpsuit3
-  - MedSynJumpsuit4
   fallbacks:
-  - MedSynJumpsuit4
+  - MedSynJumpsuit1
 
 - type: loadoutGroup
   id: MedSynBack
   name: loadout-group-contractor-backpack
   minLimit: 1
   loadouts:
-  - SmugglerClothingBackpack1
-  - SmugglerClothingBackpack2
-  - SmugglerClothingBackpack3
+  - MedSynClothingBackpack1
+  - MedSynClothingBackpack2
+  - MedSynClothingBackpack3
   fallbacks:
-  - SmugglerClothingBackpack1
+  - MedSynClothingBackpack1
 
 - type: loadoutGroup
   id: MedSynGloves
@@ -38,8 +35,6 @@
   minLimit: 1
   loadouts:
   - SmugglerClothingHandsGloves1
-  - SmugglerClothingHandsGloves2
-  - SmugglerClothingHandsGloves3
   fallbacks:
   - SmugglerClothingHandsGloves1
 
@@ -50,8 +45,6 @@
   loadouts:
   - MedSynClothingEyes1
   - MedSynClothingEyes2
-  - MedSynClothingEyes3
-  - MedSynClothingEyes4
   fallbacks:
   - MedSynClothingEyes1
 
