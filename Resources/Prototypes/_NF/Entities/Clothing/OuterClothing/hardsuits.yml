@@ -28,7 +28,8 @@
     sprintModifier: 0.8
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMercenary
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitMercenary
 
 - type: entity
   parent: ClothingOuterHardsuitMercenary
@@ -41,7 +42,8 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/private_security.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitPrivateSecurity
+    clothingPrototypes: 
+      head: ClothingHeadHelmetHardsuitPrivateSecurity
 
 # Pilot Hardsuit - Spationaut stats
 - type: entity
@@ -70,7 +72,8 @@
     sprintModifier: 0.8
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitPilot
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitPilot
 
 #ERT Mail Carrier Hardsuit
 - type: entity
@@ -84,7 +87,8 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/ERTSuits/ertmailcarrier.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitERTMailCarrier
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitERTMailCarrier
 
 # MAXIM Nerfed: used best stats from spationaut, mining and luxury hardsuits, additionally increased caustic resistance
 - type: entity
@@ -113,7 +117,8 @@
     sprintModifier: 0.9
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMaximPrototype
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitMaximPrototype
 
 # Syndicate NPC hard suit, unremoveable
 - type: entity
@@ -156,7 +161,8 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_bronze.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitNfsdBronze
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitNfsdBronze
   - type: ExplosionResistance
     damageCoefficient: 0.5
   - type: Armor
@@ -183,7 +189,8 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_silver.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitNfsdSilver
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitNfsdSilver
 
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
@@ -196,7 +203,8 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_gold.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitNfsdGold
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitNfsdGold
 
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
@@ -209,7 +217,8 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_sheriff.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitNfsdSheriff
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitNfsdSheriff
 
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
@@ -222,7 +231,8 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_brigmed.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitNfsdBrigmedic
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitNfsdBrigmedic
 
 - type: entity
   parent: [BaseC2ContrabandUnredeemable, ClothingOuterHardsuitJuggernaut] # Jugger Suit
@@ -235,7 +245,8 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitNfsdExperimental
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitNfsdExperimental
   - type: PressureProtection
     highPressureMultiplier: 0.2
     lowPressureMultiplier: 1000
@@ -268,7 +279,8 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitNfsdCombat
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitNfsdCombat
   - type: ExplosionResistance
     damageCoefficient: 0.4
   - type: Armor
@@ -296,7 +308,8 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_command.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitNfsdCommand
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitNfsdCommand
   - type: ExplosionResistance
     damageCoefficient: 0.4
   - type: Armor
@@ -341,7 +354,8 @@
     sprintModifier: 0.85
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitScaf
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitScaf
   - type: PirateBountyItem
     id: ClothingOuterHardsuitScaf
 
@@ -377,7 +391,8 @@
     footstepSoundCollection:
       path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitTacticalMaid
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitTacticalMaid
 
 - type: entity
   parent: [BaseC3PirateContraband, ClothingOuterHardsuitBaseNF, ContrabandClothing]
@@ -390,7 +405,8 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Hardsuits/pirate_elite.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitPirateElite
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitPirateElite
   - type: ExplosionResistance
     damageCoefficient: 0.4
   - type: Armor
@@ -436,4 +452,5 @@
     sprintModifier: 0.5
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitWizardBrick
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitWizardBrick

@@ -132,7 +132,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetHydro
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetHydro
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -186,7 +187,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetMailman
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetMailman
 
 #region Contractors
 - type: entity
@@ -241,7 +243,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetContractor
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetContractor
 
 #region Command
 - type: entity
@@ -296,7 +299,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetSr
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetSr
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -350,7 +354,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetStc
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetStc
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -404,7 +409,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetCaptain
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetCaptain
 
 #region Engineering
 - type: entity
@@ -467,7 +473,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetEngineer
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetEngineer
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -521,7 +528,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetAtmosTech
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetAtmosTech
 
 #region Supply
 - type: entity
@@ -576,7 +584,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetCargo
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetCargo
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -630,7 +639,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetSalvage
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetSalvage
 
 #region Medical
 - type: entity
@@ -685,7 +695,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetMedic
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetMedic
 
 - type: entity
   parent: NFDepartmentalEVASuitShoulderLight
@@ -747,7 +758,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetParamedic
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetParamedic
 
 #region Science
 - type: entity
@@ -802,7 +814,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetScientist
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetScientist
 
 #region Service
 - type: entity
@@ -857,7 +870,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetJanitor
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetJanitor
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -911,7 +925,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetValet
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetValet
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -965,7 +980,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetServiceWorker
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetServiceWorker
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -1019,7 +1035,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetChaplain
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetChaplain
 
 #region Boxing
 - type: entity
@@ -1075,7 +1092,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetBoxerRed
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetBoxerRed
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -1130,7 +1148,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetBoxerGreen
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetBoxerGreen
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -1185,7 +1204,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetBoxerBlue
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetBoxerBlue
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -1240,7 +1260,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetBoxerYellow
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetBoxerYellow
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -1297,7 +1318,8 @@
       - state: inhand-right-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetBoxerRandom
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetBoxerRandom
 
 #region Wildcards
 - type: entity
@@ -1352,7 +1374,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetPilot
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetPilot
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -1406,7 +1429,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetMercenary
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetMercenary
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -1460,7 +1484,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetPrivateSec
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetPrivateSec
 
 #region NFSD
 - type: entity
@@ -1523,7 +1548,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetNfsd
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetNfsd
 
 #region Pirate
 - type: entity
@@ -1586,7 +1612,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetPirate
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetPirate
 
 #region Prisoner
 - type: entity
@@ -1641,7 +1668,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetPrisoner
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetPrisoner
 
 #region Player Factions
 - type: entity
@@ -1702,7 +1730,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetLvhi
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetLvhi
 
 - type: entity
   parent: NFDepartmentalEVASuit
@@ -1768,4 +1797,5 @@
         state: decor_base_OuterClothing_armor_05
         color: "#8f1717"
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetArcadia
+    clothingPrototypes:
+      head: ClothingHeadEVAHelmetArcadia

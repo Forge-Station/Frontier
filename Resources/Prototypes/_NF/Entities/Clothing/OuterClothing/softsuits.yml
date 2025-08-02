@@ -21,7 +21,7 @@
     #unequipDelay: 2
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:Container {}
       storagebase: !type:Container
         ents: []
   - type: PhysicalComposition
@@ -46,5 +46,5 @@
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Suits/fsb_voidsuit.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitFSB
-    slot: head
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitFSB

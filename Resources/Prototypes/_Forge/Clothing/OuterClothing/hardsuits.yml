@@ -32,7 +32,8 @@
     sprintModifier: 0.90
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMercenaryElite
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitMercenaryElite
 
 
 - type: entity
@@ -66,4 +67,5 @@
     heatingCoefficient: 0.001
     coolingCoefficient: 0.001
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMaxim
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitMaxim

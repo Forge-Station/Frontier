@@ -40,6 +40,12 @@ public sealed partial class DoAfterArgs
 
     public NetEntity? NetUsed;
 
+    // Goobstation - Show doAfter progress bar to another entity
+    [NonSerialized]
+    [DataField]
+    public EntityUid? ShowTo;
+
+    public NetEntity? NetShowTo;
     /// <summary>
     /// Whether the progress bar for this DoAfter should be hidden from other players.
     /// </summary>
@@ -199,7 +205,8 @@ public sealed partial class DoAfterArgs
         DoAfterEvent @event,
         EntityUid? eventTarget,
         EntityUid? target = null,
-        EntityUid? used = null)
+        EntityUid? used = null,
+        EntityUid? showTo = null) // Goobstation - Show doAfter popup to another entity
     {
         User = user;
         Delay = delay;
@@ -207,10 +214,12 @@ public sealed partial class DoAfterArgs
         Used = used;
         EventTarget = eventTarget;
         Event = @event;
+        ShowTo = showTo; // Goobstation
 
         NetUser = entManager.GetNetEntity(User);
         NetTarget = entManager.GetNetEntity(Target);
         NetUsed = entManager.GetNetEntity(Used);
+        NetShowTo = entManager.GetNetEntity(ShowTo); // Goobstation - Show doAfter popup to another entity
     }
 
     private DoAfterArgs()

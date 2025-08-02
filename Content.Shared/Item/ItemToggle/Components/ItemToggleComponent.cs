@@ -32,19 +32,12 @@ public sealed partial class ItemToggleComponent : Component
     [DataField]
     public bool OnUse = true;
 
-    // Frontier: allow alt-verbs
     /// <summary>
-    /// If this is set to true, the item can be toggled by pressing alt+Z.
+    /// Goobstation
+    /// Don't toggle on wielding/unwielding if false
     /// </summary>
     [DataField]
-    public bool OnAltUse = false;
-
-    /// <summary>
-    /// The priority of the alternative verb if enabled.
-    /// </summary>
-    [DataField]
-    public int AltPriority;
-    // End Frontier
+    public bool WieldToggle = true;
 
     /// <summary>
     ///     The localized text to display in the verb to activate.

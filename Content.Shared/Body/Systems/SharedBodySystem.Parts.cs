@@ -306,9 +306,21 @@ public partial class SharedBodySystem
         return TryCreatePartSlot(parentId, slotId, partType, out _, parent)
                && AttachPart(parentId, slotId, childId, parent, child);
     }
-
+//Goob Station Begin
+    public bool TryGetPartFromSlotContainer(string slot, [NotNullWhen(true)] out BodyPartType? partType)
+    {
+        partType = slot switch
+        {
+            "innerclothing" or "outerclothing" => BodyPartType.Torso,
+            "gloves" => BodyPartType.Hand,
+            "shoes" => BodyPartType.Foot,
+            "eyes" or "ears" or "head" or "mask" => BodyPartType.Head,
+            _ => null,
+        };
+        return partType is not null;
+    }
     #endregion
-
+//Goob Station End
     #region RootPartManagement
 
     /// <summary>

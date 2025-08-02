@@ -8,7 +8,7 @@
     sprite: _NF/Clothing/Neck/Cloaks/nfsdsheriff.rsi
   - type: StealTarget
     stealGroup: HeadCloak
-    
+
 - type: entity
   parent: ClothingNeckCloakHop
   id: ClothingNeckCloakSr
@@ -27,13 +27,14 @@
   - type: Sprite
     sprite: _NF/Clothing/Neck/Cloaks/rosy.rsi
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodRosyCloak
+    clothingPrototypes: 
+      head: ClothingHeadHatHoodRosyCloak
     requiredSlot:
     - neck
     slot: head
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:Container {}
   - type: Construction
     graph: ClothingNeckCloakRosyGraph
     node: ClothingNeckCloakRosy

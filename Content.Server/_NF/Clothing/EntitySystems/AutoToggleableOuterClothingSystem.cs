@@ -20,10 +20,11 @@ public sealed class AutoToggleableOuterClothingSystem : EntitySystem
 
     private void OnStartingGear(EntityUid uid, AutoToggleableOuterClothingComponent component, ref StartingGearEquippedEvent args)
     {
-        if (TryComp(uid, out InventoryComponent? comp) && _inventory.TryGetSlotEntity(uid, "outerClothing", out var outerClothingEntity, comp) &&
-            TryComp<ToggleableClothingComponent>(outerClothingEntity, out var outerClothingSuit))
+        if (TryComp(uid, out InventoryComponent? comp)      //Goob station begin
+            && _inventory.TryGetSlotEntity(uid, "outerClothing", out var outerClothingEntity, comp)
+            && TryComp<ToggleableClothingComponent>(outerClothingEntity, out _))
         {
-            _clothing.ToggleClothing(uid, outerClothingEntity.Value, outerClothingSuit);
+            _clothing.ToggleClothing(uid, outerClothingEntity.Value, outerClothingEntity.Value); //Goob station End
         }
     }
 }

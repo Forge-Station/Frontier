@@ -29,4 +29,7 @@ public sealed partial class ComponentTogglerComponent : Component
     /// </summary>
     [DataField]
     public bool Parent;
+    //Goob Station
+    [ViewVariables]
+    public EntityUid? Target; // <- Добавь это поле!
 }
