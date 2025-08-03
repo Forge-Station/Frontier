@@ -342,6 +342,10 @@ namespace Content.Shared.Atmos
         /// </summary>
         public const float BreathMolesToReagentMultiplier = 1144;
 
+        /// <summary>
+        ///     37ºC in K --GOOB EDIT--
+        /// </summary>
+        public const float T37C = 310.1f;
         #region Pipes
 
         /// <summary>

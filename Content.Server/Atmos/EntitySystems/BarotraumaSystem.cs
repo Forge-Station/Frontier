@@ -27,8 +27,8 @@ namespace Content.Server.Atmos.EntitySystems
         {
             SubscribeLocalEvent<PressureProtectionComponent, GotEquippedEvent>(OnPressureProtectionEquipped);
             SubscribeLocalEvent<PressureProtectionComponent, GotUnequippedEvent>(OnPressureProtectionUnequipped);
-            SubscribeLocalEvent<PressureProtectionComponent, ComponentInit>(OnUpdateResistance);
-            SubscribeLocalEvent<PressureProtectionComponent, ComponentRemove>(OnUpdateResistance);
+            SubscribeLocalEvent<PressureProtectionComponent, ComponentInit>(OnPressureProtectionChanged); // Goobstation - Update component state on toggle
+            SubscribeLocalEvent<PressureProtectionComponent, ComponentRemove>(OnPressureProtectionChanged); // Goobstation - Update component state on toggle
 
             SubscribeLocalEvent<PressureImmunityComponent, ComponentInit>(OnPressureImmuneInit);
             SubscribeLocalEvent<PressureImmunityComponent, ComponentRemove>(OnPressureImmuneRemove);
@@ -49,7 +49,26 @@ namespace Content.Server.Atmos.EntitySystems
                 barotrauma.HasImmunity = false;
             }
         }
+        // Goobstation - Modsuits - Update component state on toggle
+        private void OnPressureProtectionChanged(EntityUid uid, PressureProtectionComponent pressureProtection, EntityEventArgs args)
+        {
+            var protectionTarget = uid;
+            string? slotTarget = null;
 
+            if (_inventorySystem.TryGetContainingEntity(uid, out var entity) && _inventorySystem.TryGetContainingSlot(uid, out var slot))
+            {
+                protectionTarget = entity.Value;
+                slotTarget = slot.Name;
+            }
+
+            if (TryComp<BarotraumaComponent>(protectionTarget, out var barotrauma))
+            {
+                if (slotTarget != null && !barotrauma.ProtectionSlots.Contains(slotTarget))
+                    return;
+
+                UpdateCachedResistances(protectionTarget, barotrauma);
+            }
+        }
         /// <summary>
         /// Generic method for updating resistance on component Lifestage events
         /// </summary>
@@ -168,7 +187,7 @@ namespace Content.Server.Atmos.EntitySystems
         }
 
         public bool TryGetPressureProtectionValues(
-            Entity<PressureProtectionComponent?> ent,
+            EntityUid ent, // Goob edit
             [NotNullWhen(true)] out float? highMultiplier,
             [NotNullWhen(true)] out float? highModifier,
             [NotNullWhen(true)] out float? lowMultiplier,
@@ -178,17 +197,25 @@ namespace Content.Server.Atmos.EntitySystems
             highModifier = null;
             lowMultiplier = null;
             lowModifier = null;
-            if (!Resolve(ent, ref ent.Comp, false))
-                return false;
 
-            var comp = ent.Comp;
+            // Goob edit start
             var ev = new GetPressureProtectionValuesEvent
             {
-                HighPressureMultiplier = comp.HighPressureMultiplier,
-                HighPressureModifier = comp.HighPressureModifier,
-                LowPressureMultiplier = comp.LowPressureMultiplier,
-                LowPressureModifier = comp.LowPressureModifier
+                HighPressureMultiplier = 1f,
+                HighPressureModifier = 0f,
+                LowPressureMultiplier = 1f,
+                LowPressureModifier = 0f
             };
+
+            if (TryComp(ent, out PressureProtectionComponent? comp))
+            {
+                ev.HighPressureMultiplier = comp.HighPressureMultiplier;
+                ev.HighPressureModifier = comp.HighPressureModifier;
+                ev.LowPressureMultiplier = comp.LowPressureMultiplier;
+                ev.LowPressureModifier = comp.LowPressureModifier;
+            }
+            // Goob edit end
+
             RaiseLocalEvent(ent, ref ev);
             highMultiplier = ev.HighPressureMultiplier;
             highModifier = ev.HighPressureModifier;

@@ -103,6 +103,25 @@ public sealed class ItemToggleSystem : EntitySystem
         });
     }
 
+    // Frontier: alt-verb toggle
+    private void OnAlternateVerb(Entity<ItemToggleComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
+    {
+        if (!args.CanAccess || !args.CanInteract || !ent.Comp.OnAltUse)
+            return;
+
+        var user = args.User;
+
+        args.Verbs.Add(new AlternativeVerb()
+        {
+            Text = !ent.Comp.Activated ? Loc.GetString(ent.Comp.VerbToggleOn) : Loc.GetString(ent.Comp.VerbToggleOff),
+            Priority = ent.Comp.AltPriority,
+            Act = () =>
+            {
+                Toggle((ent.Owner, ent.Comp), user, predicted: ent.Comp.Predictable);
+            }
+        });
+    }
+    // End Frontier
     private void OnActivate(Entity<ItemToggleComponent> ent, ref ActivateInWorldEvent args)
     {
         if (args.Handled || !ent.Comp.OnActivate)
