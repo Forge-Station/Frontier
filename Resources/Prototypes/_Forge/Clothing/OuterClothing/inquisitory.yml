@@ -241,7 +241,7 @@
   - type: DoAfter
   - type: SealableClothingControl
     sealAction: ActionClothingSeal
-    requiredControlSlot: back
+    requiredSlot: back
   - type: SealableClothingVisuals
     spriteLayer: sealed
     clothingVisuals:
