@@ -504,6 +504,9 @@ public sealed class ToggleableClothingSystem : EntitySystem
     {
         var comp = toggleable.Comp;
 
+        if (comp.ClothingPrototypes == null || comp.ClothingPrototypes.Count == 0)
+            return;
+
         if (comp.Container!.Count != 0)
         {
             DebugTools.Assert(comp.ClothingUids.Count != 0, "Unexpected entity present inside of a toggleable clothing container.");

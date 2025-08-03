@@ -218,7 +218,6 @@
       storagebase: !type:Container
         ents: []
       toggleable-clothing: !type:Container
-      cell_slot: !type:ContainerSlot
   - type: UserInterface
     interfaces:
       enum.StorageUiKey.Key:

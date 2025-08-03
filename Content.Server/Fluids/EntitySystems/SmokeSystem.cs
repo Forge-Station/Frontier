@@ -21,7 +21,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using System.Linq;
-
+using Content.Server.Nutrition.Components;  // Goobstation
+using Content.Shared.Inventory;  // Goobstation
 using TimedDespawnComponent = Robust.Shared.Spawners.TimedDespawnComponent;
 
 namespace Content.Server.Fluids.EntitySystems;
@@ -44,6 +45,7 @@ public sealed class SmokeSystem : EntitySystem
     [Dependency] private readonly SharedBroadphaseSystem _broadphase = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
+    [Dependency] private readonly InventorySystem _inventory = default!; // Goobstation
 
     private EntityQuery<SmokeComponent> _smokeQuery;
     private EntityQuery<SmokeAffectedComponent> _smokeAffectedQuery;
@@ -268,6 +270,12 @@ public sealed class SmokeSystem : EntitySystem
             return;
 
         var blockIngestion = _internals.AreInternalsWorking(entity);
+        if (_inventory.TryGetSlotEntity(entity, "mask", out var maskUid) && // Goobstation
+            EntityManager.TryGetComponent<IngestionBlockerComponent>(maskUid, out var blocker) && // Goobstation
+            blocker is { Enabled: true, BlockSmokeIngestion: true }) // Goobstation
+        {
+            blockIngestion = true; // Goobstation
+        }
 
         var cloneSolution = solution.Clone();
         var availableTransfer = FixedPoint2.Min(cloneSolution.Volume, component.TransferRate);

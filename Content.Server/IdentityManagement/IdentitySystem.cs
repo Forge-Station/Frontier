@@ -28,6 +28,7 @@ public sealed class IdentitySystem : SharedIdentitySystem
     [Dependency] private readonly HumanoidAppearanceSystem _humanoid = default!;
     [Dependency] private readonly CriminalRecordsConsoleSystem _criminalRecordsConsole = default!;
     [Dependency] private readonly GrammarSystem _grammarSystem = default!;
+    [Dependency] private readonly InventorySystem _inventorySystem = default!; // Goobstation - Update component state on component toggle
 
     private HashSet<EntityUid> _queuedIdentityUpdates = new();
 
@@ -42,6 +43,8 @@ public sealed class IdentitySystem : SharedIdentitySystem
         SubscribeLocalEvent<IdentityComponent, WearerMaskToggledEvent>((uid, _, _) => QueueIdentityUpdate(uid));
         SubscribeLocalEvent<IdentityComponent, EntityRenamedEvent>((uid, _, _) => QueueIdentityUpdate(uid));
         SubscribeLocalEvent<IdentityComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<IdentityBlockerComponent, ComponentInit>(BlockerUpdateIdentity); // Goobstation - Update component state on component toggle
+        SubscribeLocalEvent<IdentityBlockerComponent, ComponentRemove>(BlockerUpdateIdentity); // Goobstation - Update component state on component toggle
     }
 
     public override void Update(float frameTime)
@@ -176,5 +179,15 @@ public sealed class IdentitySystem : SharedIdentitySystem
         return new(trueName, gender, ageString, presumedName, presumedJob);
     }
 
+    // Goobstation - Update component state on component toggle
+    private void BlockerUpdateIdentity(EntityUid uid, IdentityBlockerComponent component, EntityEventArgs args)
+    {
+        var target = uid;
+
+        if (_inventorySystem.TryGetContainingEntity(uid, out var containing))
+            target = containing.Value;
+
+        QueueIdentityUpdate(target);
+    }
     #endregion
 }
