@@ -1,0 +1,57 @@
+# Author Info
+# GitHub: https://github.com/MrIzodem
+# Discord: MrIzo aka letstrythisone.
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Notes: Бастилии в 3025-ом году исполнилось 253 года...
+
+- type: pointOfInterest
+  id: BastilleOutpost
+  parent: BasePOI
+  name: 'Транспортное депо Бастилия'
+  minimumDistance: 2900
+  maximumDistance: 3500
+  spawnGroup: Required
+  gridPath: /Maps/Forge/POI/Bastille.yml
+  addComponents:
+  - type: IFF
+    color: "#ff8c00"
+  - type: StationTransit
+  - type: ProtectedGrid
+    preventArtifactTriggers: True
+    preventExplosions: False
+    preventEmpEvents: True
+    preventRCDUse: True
+    preventFloorPlacement: True
+    preventFloorRemoval: True
+    killHostileMobs: False
+    noGridCollision: True
+
+- type: gameMap
+  id: BastilleOutpost
+  mapName: 'Транспортное депо Бастилия'
+  mapPath: /Maps/Forge/POI/Bastille.yml
+  minPlayers: 0
+  stations:
+    BastilleOutpost:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Транспортное депо Бастилия'
+        - type: ExtraStationInformation
+          iconPath: /Textures/_NF/Objects/Storage/Barrels/black.rsi/icon.png
+          stationSubtext: 'frontier-lobby-Bastille-subtext'
+          stationDescription: 'frontier-lobby-Bastille-description'
+          lobbySortOrder: 4
+        - type: StationJobs
+          availableJobs:
+            Pilot: [ -1, -1 ]
+            Contractor: [ -1, -1 ]
+            Mercenary: [ -1, -1 ]
+        - type: StationDeadDrop
+          maxDeadDrops: 1 # Fewer here, players start here.
