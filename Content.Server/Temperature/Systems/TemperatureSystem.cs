@@ -1,10 +1,10 @@
 using System.Linq;
-using Content.Server._Goobstation.Temperature;
-using Content.Server._Goobstation.Temperature.Components;
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Body.Components;
 using Content.Server.Temperature.Components;
+using Content.Shared._Goobstation.Temperature; //Goob Edit
+using Content.Shared._Goobstation.Temperature.Components; //Goob Edit
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
 using Content.Shared.Damage;
