@@ -16950,7 +16950,7 @@ entities:
       actionEntity: 29
     - type: ContainerContainer
       containers:
-        toggleable-clothing: !type:ContainerSlot
+        toggleable-clothing: !type:Container
           showEnts: False
           occludes: True
           ent: 27
@@ -16976,7 +16976,7 @@ entities:
       actionEntity: 33
     - type: ContainerContainer
       containers:
-        toggleable-clothing: !type:ContainerSlot
+        toggleable-clothing: !type:Container
           showEnts: False
           occludes: True
           ent: 31
@@ -17002,7 +17002,7 @@ entities:
       actionEntity: 37
     - type: ContainerContainer
       containers:
-        toggleable-clothing: !type:ContainerSlot
+        toggleable-clothing: !type:Container
           showEnts: False
           occludes: True
           ent: 35
@@ -17028,7 +17028,7 @@ entities:
       actionEntity: 41
     - type: ContainerContainer
       containers:
-        toggleable-clothing: !type:ContainerSlot
+        toggleable-clothing: !type:Container
           showEnts: False
           occludes: True
           ent: 39
@@ -17054,7 +17054,7 @@ entities:
       actionEntity: 45
     - type: ContainerContainer
       containers:
-        toggleable-clothing: !type:ContainerSlot
+        toggleable-clothing: !type:Container
           showEnts: False
           occludes: True
           ent: 43

@@ -4321,7 +4321,7 @@ entities:
       actionEntity: 57
     - type: ContainerContainer
       containers:
-        toggleable-clothing: !type:ContainerSlot
+        toggleable-clothing: !type:Container
           showEnts: False
           occludes: True
           ent: 58
