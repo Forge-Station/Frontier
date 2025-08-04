@@ -7,6 +7,7 @@
 
 using Content.Server.Popups;
 using Content.Shared._Goobstation.Clothing;
+using Content.Shared._Goobstation.Clothing.Components;
 using Content.Shared.Actions;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
@@ -56,12 +57,12 @@ public sealed partial class ClothingAutoinjectorSystem : EntitySystem
         args.Handled = true;
     }
 
-    private bool TryInjectReagents(EntityUid uid, Dictionary<string, FixedPoint2> reagents)
+    private bool TryInjectReagents(EntityUid uid, List<ReagentQuantity> reagents)
     {
         var solution = new Solution();
         foreach (var reagent in reagents)
         {
-            solution.AddReagent(reagent.Key, reagent.Value);
+            solution.AddReagent(reagent.Reagent, reagent.Quantity);
         }
 
         if (!_solution.TryGetInjectableSolution(uid, out var targetSolution, out _))
@@ -69,6 +70,7 @@ public sealed partial class ClothingAutoinjectorSystem : EntitySystem
 
         return _solution.TryAddSolution(targetSolution.Value, solution);
     }
+
 
     private void OnMobStateChange(MobStateChangedEvent args)
     {

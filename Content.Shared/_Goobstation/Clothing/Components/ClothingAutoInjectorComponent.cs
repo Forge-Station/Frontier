@@ -19,8 +19,8 @@ public sealed partial class ClothingAutoInjectComponent : Component
     /// Dictionary of reagents and their quantities to be injected.
     /// Key: Reagent ID, Value: Quantity to inject.
     /// </summary>
-    [DataField(required: true)]
-    public Dictionary<string, FixedPoint2> Reagents = new();
+    [DataField("reagents", required: true)]
+    public List<ReagentQuantity> Reagents = new();
 
     [DataField]
     public bool AutoInjectOnCrit = true;
@@ -53,4 +53,15 @@ public sealed partial class ClothingAutoInjectComponent : Component
 
     [ViewVariables]
     public EntityUid? ActionEntity;
+}
+
+
+[DataDefinition]
+public sealed partial class ReagentQuantity
+{
+    [DataField("reagent", required: true)]
+    public string Reagent = default!;
+
+    [DataField("quantity", required: true)]
+    public FixedPoint2 Quantity;
 }
