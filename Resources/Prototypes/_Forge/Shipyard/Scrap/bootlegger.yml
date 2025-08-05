@@ -11,20 +11,20 @@
 - type: vessel
   id: bootlegger
   parent: BaseVessel
-  name: NC Бутлегер
+  name: ST Бутлегер
   description: "Этот экземпляр прошел через множество ремонтов и проблем, но все же-он здесь! Этот торговый шаттл, воскрешенный SV, ныне доступен вам для продажи. Рекомендуемый экипаж: 2-3 человек"
-  price: 23000 # 20 000 + 15%
+  price: 24000 # (19697)
   category: Small
-  group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Service/bootlegger.yml
+  group: Scrap
+  shuttlePath: /Maps/Forge/Shuttles/Scrap/bootlegger.yml
   guidebookPage: Null
   class:
   - Kitchen
 
 - type: gameMap
   id: bootlegger
-  mapName: 'NC Бутлегер'
-  mapPath: /Maps/Forge/Shuttles/Service/bootlegger.yml
+  mapName: 'ST Бутлегер'
+  mapPath: /Maps/Forge/Shuttles/Scrap/bootlegger.yml
   minPlayers: 0
   stations:
     bootlegger:
