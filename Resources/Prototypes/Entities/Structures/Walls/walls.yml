@@ -919,8 +919,8 @@
   - type: Icon
     sprite: Structures/Walls/shuttle_diagonal.rsi
     state: state0
-  - type: Reflect
-    reflectProb: 1
+    #- type: Reflect
+    #reflectProb: 1
   - type: Airtight
     noAirWhenFullyAirBlocked: false
     airBlockedDirection:
@@ -1041,8 +1041,6 @@
     fx: EffectRCDDeconstruct8 #Frontier
 #  - type: Reflect # Frontier
 #    reflectProb: 1 # Frontier
-  - type: Reflect
-    reflectProb: 1
   - type: Fixtures
     fixtures:
       fix1:

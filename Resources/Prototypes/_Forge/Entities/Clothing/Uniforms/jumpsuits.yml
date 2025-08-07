@@ -19,3 +19,92 @@
       sprite: Forge/Clothing/Uniforms/Jumpskirts/schoolskirt.rsi
     - type: Clothing
       sprite: Forge/Clothing/Uniforms/Jumpskirts/schoolskirt.rsi
+
+- type: entity
+  parent: [BaseC3SyndicateContraband, UnsensoredClothingUniformSkirtBase, ContrabandClothing ]
+  id: ClothingUniformJumpskirtSmuggler
+  name: деловая юбка контрабандиста
+  description: юбка наивысшего качества ткани для деловых встреч.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpskirts/smugglerskirt.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpskirts/smugglerskirt.rsi
+
+- type: entity
+  parent: [BaseC3SyndicateContraband, UnsensoredClothingUniformSkirtBase, ContrabandClothing ]
+  id: ClothingUniformJumpskirtCommander
+  name: юбка-комбинезон командира жнецов
+  description: юбка-комбинезон представлена командиром жнецов, украшена золотыми вставками. Не замедляет передвижения, притягиваем к себе взгляд.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpskirts/commanderskirt.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpskirts/commanderskirt.rsi
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitSmuggler
+  name: деловой костюм контрабандиста
+  description: костюм наивысшего качества ткани для деловых встреч.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuit.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuit.rsi
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitSmugglerTactical
+  name: тактический костюм контрабандиста
+  description: костюм наивысшего качества ткани для деловых встреч. Очень удобный.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuittactical.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuittactical.rsi
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitCommander
+  name: комбинезон командира жнецов
+  description: комбинезон представлена командиром жнецов, украшена золотыми вставками. Не замедляет передвижения, притягиваем к себе взгляд.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/commanderjumpsuit.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/commanderjumpsuit.rsi
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitStormtrooper
+  name: комбинезон штурмовика жнецов
+  description: теплый и уютный комбинезон, создан для кровавых битв.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/stormtrooperjumpsuit.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/stormtrooperjumpsuit.rsi
+
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitMedSyn
+  name: комбинезон санитара жнецов
+  description: практичный комбинезон санитара для полевых условий.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/medsynjumpsuit.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/medsynjumpsuit.rsi
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingUniformJumpsuitEngineerSyn
+  name: комбинезон техник жнецов
+  description: прочный комбинезон защищающий владельца в любых условиях.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/engineersynjumpsuit.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/engineersynjumpsuit.rsi

@@ -1,21 +1,10 @@
 - type: loadout
   id: MedSynClothingEyes1
   equipment:
-    eyes: ClothingEyesHudMedSec
+    eyes: ClothingEyesHudSyndicateAgent
 
 - type: loadout
   id: MedSynClothingEyes2
+  price: 30000
   equipment:
-    eyes: ClothingEyesHudBountyHunter
-
-- type: loadout
-  id: MedSynClothingEyes3
-  price: 7500
-  equipment:
-    eyes: ClothingEyesHudSyndicate
-
-- type: loadout
-  id: MedSynClothingEyes4
-  price: 7500
-  equipment:
-    eyes: ClothingEyesHudSyndicateAgent
+    eyes: NFClothingEyesNightVisionGoggleSyndicate

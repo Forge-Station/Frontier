@@ -122,14 +122,14 @@
         amount: 3
 
 - type: entity
-  id: CrateWeaponMissileLauncherStarColosusFlatpack
+  id: CrateWeaponNavalCannonMissileLauncherStarColosusFlatpack
   parent: CrateShipWeaponBase
   name: ящик с упакованной ядерной артиллерийской установкой "Звездный Колосс"
   description: Содержит 1 ядерную артиллерийскую установку "Звездный Колосс", использует ядерный снаряд "Инферно".
   components:
   - type: StorageFill
     contents:
-      - id: WeaponMissileLauncherStarColosusFlatpack
+      - id: WeaponNavalCannonMissileLauncherStarColosusFlatpack
         amount: 1
 
 - type: entity
@@ -155,58 +155,58 @@
         amount: 1
 
 - type: entity
-  id: CrateArmoryWeapon53mmBase
+  id: CrateArmoryWeaponNavalCannon53mmBase
   parent: CrateShipWeaponBase
   name: ящик с средним пулемётом (.53мм)
   description: Содержит 1 упакованный средний пулемёт (.53мм)
   components:
   - type: StorageFill
     contents:
-      - id: Weapon53mmBaseFlatpack
+      - id: WeaponNavalCannon53mmBaseFlatpack
         amount: 1
 
 - type: entity
-  id: CrateArmoryWeapon80mmBase
+  id: CrateArmoryWeaponNavalCannon80mmBase
   parent: CrateShipWeaponBase
   name: ящик с тяжёлым пулемётом (.80мм)
   description: Содержит 1 упакованный тяжёлый пулемёт (.80мм)
   components:
   - type: StorageFill
     contents:
-      - id: Weapon80mmBaseFlatpack
+      - id: WeaponNavalCannon80mmBaseFlatpack
         amount: 1
 
 - type: entity
-  id: CrateArmoryWeapon105mmBase
+  id: CrateArmoryWeaponNavalCannon105mmBase
   parent: CrateShipWeaponBase
   name: ящик с малым миномётом (.105мм)
   description: Содержит 1 упакованный малый миномёт (.105мм)
   components:
   - type: StorageFill
     contents:
-      - id: Weapon105mmBaseFlatpack
+      - id: WeaponNavalCannon105mmBaseFlatpack
         amount: 1
 
 - type: entity
-  id: CrateArmoryWeapon120mmBase
+  id: CrateArmoryWeaponNavalCannon120mmBase
   parent: CrateShipWeaponBase
   name: ящик с средним миномётом (.120мм)
   description: Содержит 1 упакованный средний миномёт (.120мм)
   components:
   - type: StorageFill
     contents:
-      - id: Weapon120mmBaseFlatpack
+      - id: WeaponNavalCannon120mmBaseFlatpack
         amount: 1
 
 - type: entity
-  id: CrateArmoryWeapon140mmBase
+  id: CrateArmoryWeaponNavalCannon140mmBase
   parent: CrateShipWeaponBase
   name: ящик с тяжёлым миномётом (.140мм)
   description: Содержит 1 упакованный тяжёлый миномёт (.140мм)
   components:
   - type: StorageFill
     contents:
-      - id: Weapon140mmBaseFlatpack
+      - id: WeaponNavalCannon140mmBaseFlatpack
         amount: 1
 
 

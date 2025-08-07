@@ -1,0 +1,27 @@
+- type: entity
+  parent: [NFClothingBackpack, BaseC3Contraband, ContrabandClothing]
+  id: ClothingBackpackSyndicateForge
+  name: рюкзак синдиката
+  description: удобный красный рюкзак.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Back/Backpacks/syndicate.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,7,4
+
+- type: entity
+  parent: [NFClothingBackpack, BaseC3Contraband, ContrabandClothing]
+  id: ClothingBackpackSyndicateMed
+  name: рюкзак синдиката медицинский
+  description: удобный медицинский красный рюкзак.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Back/Backpacks/syndicatemed.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0
+  - type: Storage
+    grid:
+    - 0,0,7,4

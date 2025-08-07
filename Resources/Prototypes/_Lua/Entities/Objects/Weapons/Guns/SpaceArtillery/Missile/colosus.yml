@@ -4,7 +4,7 @@
 
 - type: entity
   parent: BaseWeaponMissile
-  id: WeaponMissileLauncherStarColosus
+  id: WeaponNavalCannonMissileLauncherStarColosus
   name: Ядерная артиллерийская установка "Звездный Колосс"
   description: Артиллерийская установка, рассчитанная на глобальные разрушения. Ядерный снаряд "Инферно" распространяет ударную волну, которая поглощает всё в радиусе действия, разрушая корабли и станции.
   suffix: НЕ МАППИТЬ!, ShuttleGun
@@ -46,8 +46,8 @@
           - MissileStarColosus
 
 - type: entity
-  parent: WeaponMissileLauncherStarColosus
-  id: WeaponMissileLauncherStarColosusEmpty
+  parent: WeaponNavalCannonMissileLauncherStarColosus
+  id: WeaponNavalCannonMissileLauncherStarColosusEmpty
   suffix: Пустой, ShuttleGun
   placement:
     mode: SnapgridCenter
@@ -66,12 +66,12 @@
 
 - type: entity
   parent: BaseNFFlatpack
-  id: WeaponMissileLauncherStarColosusFlatpack
+  id: WeaponNavalCannonMissileLauncherStarColosusFlatpack
   name: упакованная ядерная артиллерийская установка "Звездный Колосс"
   description: Упакованная ядерная артиллерийская установка "Звездный Колосс", использует ядерный снаряд "Инферно".
   components:
   - type: Flatpack
-    entity: WeaponMissileLauncherStarColosusEmpty
+    entity: WeaponNavalCannonMissileLauncherStarColosusEmpty
   - type: StaticPrice
     price: 250
   - type: Sprite

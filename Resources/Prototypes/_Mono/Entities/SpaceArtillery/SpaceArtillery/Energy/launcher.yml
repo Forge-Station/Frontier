@@ -12,7 +12,7 @@
 # MARAUDER
 
 - type: entity
-  id: WeaponTurretType35
+  id: WeaponNavalCannonTurretType35
   name: MARAUDER-type plasma weapon
   parent: BallisticArtillery
   description: Launches magnetically contained balls of plasma at targets. Can be remotely activated, or linked up to a GCS.
@@ -78,7 +78,7 @@
  # M25
 
 - type: entity
-  id: WeaponTurretM25
+  id: WeaponNavalCannonM25
   name: M25 mining pulser
   parent: BallisticArtillery
   description: Uses mechanisms to launch... something. Destroys rock easily.
@@ -144,7 +144,7 @@
 # RUBICON
 
 - type: entity
-  id: WeaponTurretM220
+  id: WeaponNavalCannonTurretM220
   name: M220 RUBICON EMP launcher
   parent: BallisticArtillery
   description: Launches EMP projectiles at ships, disabling systems with powerful electromagnetic pulses. Ideal for non-lethal engagements and can be remotely activated or linked to a GCS.
@@ -210,7 +210,7 @@
 # DYMERE
 
 - type: entity
-  id: WeaponTurretDymere
+  id: WeaponNavalCannonDymere
   name: ADEX-9 DYMERE Turbolaser
   parent: BallisticArtilleryUnanchorable
   description: Aetherion Dynamics' most iconic supercapital battery. Fires enormous ionized gas projectiles that melt through the toughest ship armor. Can be remotely activated or linked to a GCS.

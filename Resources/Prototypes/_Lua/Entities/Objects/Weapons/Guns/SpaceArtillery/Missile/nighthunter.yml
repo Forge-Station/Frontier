@@ -4,7 +4,7 @@
 
 - type: entity
   parent: BaseWeaponMissile
-  id: WeaponMissileLauncherNightHunter
+  id: WeaponNavalCannonMissileLauncherNightHunter
   name: Артиллерийская установка "Ночной Хищник"
   description: Компактная установка, предназначенная для маневренных космических боев. Снаряд "Томагавк" с легкостью пробивает броню врага, оставляя лишь обломки.
   suffix: НЕ МАППИТЬ!, ShuttleGun
@@ -46,8 +46,8 @@
           - MissileNightHunter
 
 - type: entity
-  parent: WeaponMissileLauncherNightHunter
-  id: WeaponMissileLauncherNightHunterEmpty
+  parent: WeaponNavalCannonMissileLauncherNightHunter
+  id: WeaponNavalCannonMissileLauncherNightHunterEmpty
   suffix: Пустой, ShuttleGun
   placement:
     mode: SnapgridCenter

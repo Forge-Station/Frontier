@@ -21,12 +21,11 @@ public sealed class IpcSystem : EntitySystem
     [Dependency] private readonly SharedActionsSystem _action = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly SharedBatteryDrainerSystem _batteryDrainer = default!;
+    [Dependency] private readonly DamageableSystem _damageable = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
+    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly PowerCellSystem _powerCell = default!;
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-
 
 
     public override void Initialize()
@@ -60,7 +59,6 @@ public sealed class IpcSystem : EntitySystem
             return;
 
         UpdateBatteryAlert((uid, component));
-
     }
 
     private void OnToggleAction(EntityUid uid, IpcComponent component, ToggleDrainActionEvent args)
@@ -72,7 +70,7 @@ public sealed class IpcSystem : EntitySystem
         _action.SetToggled(component.ActionEntity, component.DrainActivated);
         args.Handled = true;
 
-        if (component.DrainActivated && _powerCell.TryGetBatteryFromSlot(uid, out var battery, out var _))
+        if (component.DrainActivated && _powerCell.TryGetBatteryFromSlot(uid, out var battery, out _))
         {
             EnsureComp<BatteryDrainerComponent>(uid);
             _batteryDrainer.SetBattery(uid, battery);
@@ -81,13 +79,16 @@ public sealed class IpcSystem : EntitySystem
             RemComp<BatteryDrainerComponent>(uid);
 
         var message = component.DrainActivated ? "ipc-component-ready" : "ipc-component-disabled";
+
+        if (!HasComp<TransformComponent>(uid) || Deleted(uid))
+            return;
         _popup.PopupEntity(Loc.GetString(message), uid, uid);
     }
+
     private void UpdateBatteryAlert(Entity<IpcComponent> ent, PowerCellSlotComponent? slot = null)
     {
-
-
-        if (!_powerCell.TryGetBatteryFromSlot(ent, out var battery, slot) || battery.CurrentCharge / battery.MaxCharge < 0.01f)
+        if (!_powerCell.TryGetBatteryFromSlot(ent, out var battery, slot) ||
+            battery.CurrentCharge / battery.MaxCharge < 0.01f)
         {
             _alerts.ClearAlert(ent, ent.Comp.BatteryAlert);
             _alerts.ShowAlert(ent, ent.Comp.NoBatteryAlert);
@@ -96,7 +97,7 @@ public sealed class IpcSystem : EntitySystem
             return;
         }
 
-        var chargePercent = (short) MathF.Round(battery.CurrentCharge / battery.MaxCharge * 10f);
+        var chargePercent = (short)MathF.Round(battery.CurrentCharge / battery.MaxCharge * 10f);
 
         if (chargePercent == 0 && _powerCell.HasDrawCharge(ent, cell: slot))
             chargePercent = 1;
@@ -108,12 +109,13 @@ public sealed class IpcSystem : EntitySystem
         _alerts.ShowAlert(ent, ent.Comp.BatteryAlert, chargePercent);
     }
 
-    private void OnRefreshMovementSpeedModifiers(EntityUid uid, IpcComponent comp, RefreshMovementSpeedModifiersEvent args)
+    private void OnRefreshMovementSpeedModifiers(EntityUid uid,
+        IpcComponent comp,
+        RefreshMovementSpeedModifiersEvent args)
     {
-        if (!_powerCell.TryGetBatteryFromSlot(uid, out var battery) || battery.CurrentCharge / battery.MaxCharge < 0.01f)
-        {
+        if (!_powerCell.TryGetBatteryFromSlot(uid, out var battery) ||
+            battery.CurrentCharge / battery.MaxCharge < 0.01f)
             args.ModifySpeed(0.2f);
-        }
     }
 
     private void OnEmpPulse(EntityUid uid, IpcComponent component, ref EmpPulseEvent args)
@@ -123,7 +125,6 @@ public sealed class IpcSystem : EntitySystem
         var damage = new DamageSpecifier();
         damage.DamageDict.Add("Shock", 30);
         _damageable.TryChangeDamage(uid, damage);
-
     }
 
     private void OnMobStateChanged(EntityUid uid, IpcComponent component, ref MobStateChangedEvent args)
@@ -137,8 +138,6 @@ public sealed class IpcSystem : EntitySystem
             sound.PopUp = Loc.GetString("sleep-ipc");
         }
         else
-        {
             RemComp<SpamEmitSoundComponent>(uid);
-        }
     }
 }

@@ -2,8 +2,12 @@
   id: DogtagsKit
   name: jetton
   categories: [ HideSpawnMenu ]
-  parent: [ CDDogtags, BaseC2ContrabandUnredeemable ] # Frontier: BaseMinorContraband<BaseC3SyndicateContraband
+  parent: [ BaseC2ContrabandUnredeemable, BaseItem ]  # Frontier: BaseMinorContraband<BaseC3SyndicateContraband
   components:
+  - type: Sprite
+    sprite: Forge/Objects/Misc/NFSDbox.rsi
+    layers:
+    - state: icon
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
   - type: UserInterface

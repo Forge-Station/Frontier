@@ -4,7 +4,7 @@
 
 - type: entity
   parent: BaseWeaponNavalBallisctic
-  id: Weapon120mmBase
+  id: WeaponNavalCannon120mmBase
   name: Миномёт "120мм"
   description: Средний миномёт, использует снаряды 120мм.
   suffix: НЕ МАППИТЬ!, ShuttleGun
@@ -50,7 +50,7 @@
         ballistic-ammo: !type:Container
 
 - type: entity
-  parent: Weapon120mmBase
+  parent: WeaponNavalCannon120mmBase
   id: Weapon120mm
   suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
   placement:
@@ -64,14 +64,14 @@
       capacity: 2
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, Weapon120mm, Weapon120mmBase]
+  parent: [BaseStructureDisableToolUse, Weapon120mm, WeaponNavalCannon120mmBase]
   id: Weapon120mmUnanchor
   suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
   placement:
     mode: SnapgridCenter
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, Weapon120mmBase]
+  parent: [BaseStructureDisableToolUse, WeaponNavalCannon120mmBase]
   id: Weapon120mmUnanchorEmpty
   suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
   placement:
@@ -79,12 +79,12 @@
 
 - type: entity
   parent: BaseNFFlatpack
-  id: Weapon120mmBaseFlatpack
+  id: WeaponNavalCannon120mmBaseFlatpack
   name: упакованный средний миномёт
   description: Упакованный Средний Миномёт (.120мм)
   components:
   - type: Flatpack
-    entity: Weapon120mmBase
+    entity: WeaponNavalCannon120mmBase
   - type: StaticPrice
     price: 250
   - type: Sprite

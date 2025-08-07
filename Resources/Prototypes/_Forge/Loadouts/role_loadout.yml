@@ -6,10 +6,10 @@
   - SmugglerJumpsuit
   - SmugglerBags
   - SmugglerGloves
-  - SmugglerGlasses
   - SmugglerShoes
   - SmugglerNeck
   - SmugglerOuterclothing
+  - SmugglerGlasses
 
 - type: roleLoadout
   id: JobMedSyn
@@ -17,11 +17,12 @@
   groups:
   - SmugglerCaptainHead
   - MedSynJumpsuit
-  - SmugglerBags
+  - MedSynBack
   - MedSynGlasses
   - SmugglerShoes
   - SmugglerNeck
   - SmugglerOuterclothing
+  - MedSynGloves
 
 - type: roleLoadout
   id: JobStormtrooper
@@ -34,6 +35,7 @@
   - StormtrooperShoes
   - StormtrooperNeck
   - StormtrooperOuterclothing
+  - StormtrooperGlasses
 
 - type: roleLoadout
   id: JobCommander
@@ -46,6 +48,7 @@
   - CommanderShoes
   - CommanderNeck
   - CommanderOuterclothing
+  - CommanderGloves
 
 - type: roleLoadout
   id: JobparaMedical
