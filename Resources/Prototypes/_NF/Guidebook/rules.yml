@@ -1,106 +1,140 @@
 - type: guideEntry                      #CorvaxFrontier Весь yml переделан под правила Corvax
   id: FrontierRuleset
   name: guide-entry-frontier-rules
-  text: "/ServerInfo/_NF/Guidebook/Rules/CorvaxFrontierRuleset.xml"
+  text: "/ServerInfo/_Forge/Rules/CorvaxFrontierRuleset.xml"
   priority: -2
   ruleEntry: true
   children:
     - CorvaxFrontierRuleZERO
     - CorvaxFrontierRule1
     - CorvaxFrontierRule2
+    - CorvaxFrontierRule2_1
     - CorvaxFrontierRule3
+    - CorvaxFrontierRule3_1
+    - CorvaxFrontierRule3_2
+    - CorvaxFrontierRule3_3
+    - CorvaxFrontierRule3_4
+    - CorvaxFrontierRule3_5
+    - CorvaxFrontierRule3_6
     - CorvaxFrontierRule4
+    - CorvaxFrontierRule4_1
     - CorvaxFrontierRule5
+    - CorvaxFrontierRule5_1
     - CorvaxFrontierRule6
     - CorvaxFrontierRule7
     - CorvaxFrontierRule8
+    - CorvaxFrontierRule9
 
 - type: guideEntry
   id: CorvaxFrontierRuleZERO
   name: guide-entry-frontier-rule-zero-tolerance
-  text: "/ServerInfo/_NF/Guidebook/Rules/0_Admin.xml"
+  text: "/ServerInfo/_Forge/Rules/0_Admin.xml"
   ruleEntry: true
 
 - type: guideEntry
   id: CorvaxFrontierRule1
   name: guide-entry-frontier-rule-1
-  text: "/ServerInfo/_NF/Guidebook/Rules/1_Griffing.xml"
+  text: "/ServerInfo/_Forge/Rules/1_Griffing.xml"
   ruleEntry: true
 
 - type: guideEntry
   id: CorvaxFrontierRule2
   name: guide-entry-frontier-rule-2
-  text: "/ServerInfo/_NF/Guidebook/Rules/2_Murder.xml"
+  text: "/ServerInfo/_Forge/Rules/2_Murder.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule2_1
+  name: guide-entry-frontier-rule-2.1
+  text: "/ServerInfo/_Forge/Rules/2-1_Escalation.xml"
   ruleEntry: true
 
 - type: guideEntry
   id: CorvaxFrontierRule3
   name: guide-entry-frontier-rule-3
-  text: "/ServerInfo/_NF/Guidebook/Rules/3_ViolationGA.xml"
+  text: "/ServerInfo/_Forge/Rules/3_ViolationGA.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule3_1
+  name: guide-entry-frontier-rule-3.1
+  text: "/ServerInfo/_Forge/Rules/3-1_ICandLOOC.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule3_2
+  name: guide-entry-frontier-rule-3.2
+  text: "/ServerInfo/_Forge/Rules/3-2_Multiacc.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule3_3
+  name: guide-entry-frontier-rule-3.3
+  text: "/ServerInfo/_Forge/Rules/3-3_Illiteracy.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule3_4
+  name: guide-entry-frontier-rule-3.4
+  text: "/ServerInfo/_Forge/Rules/3-4_Environment.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule3_5
+  name: guide-entry-frontier-rule-3.5
+  text: "/ServerInfo/_Forge/Rules/3-5_EndingRound.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule3_6
+  name: guide-entry-frontier-rule-3.6
+  text: "/ServerInfo/_Forge/Rules/3-6_ExitingTheRole.xml"
   ruleEntry: true
 
 - type: guideEntry
   id: CorvaxFrontierRule4
   name: guide-entry-frontier-rule-4
-  text: "/ServerInfo/_NF/Guidebook/Rules/3-1_ICandLOOC.xml"
+  text: "/ServerInfo/_Forge/Rules/4_CharacterLogic.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule4_1
+  name: guide-entry-frontier-rule-4.1
+  text: "/ServerInfo/_Forge/Rules/4-1_Metagaming.xml"
   ruleEntry: true
 
 - type: guideEntry
   id: CorvaxFrontierRule5
   name: guide-entry-frontier-rule-5
-  text: "/ServerInfo/_NF/Guidebook/Rules/3-2_Multiacc.xml"
+  text: "/ServerInfo/_Forge/Rules/5_AntagsPlay.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule5_1
+  name: guide-entry-frontier-rule-5.1
+  text: "/ServerInfo/_Forge/Rules/5-1_PlayAsPirate.xml"
   ruleEntry: true
 
 - type: guideEntry
   id: CorvaxFrontierRule6
   name: guide-entry-frontier-rule-6
-  text: "/ServerInfo/_NF/Guidebook/Rules/3-3_Illiteracy.xml"
+  text: "/ServerInfo/_Forge/Rules/6_SectorZones.xml"
   ruleEntry: true
 
 - type: guideEntry
   id: CorvaxFrontierRule7
   name: guide-entry-frontier-rule-7
-  text: "/ServerInfo/_NF/Guidebook/Rules/3-4_Environment.xml"
+  text: "/ServerInfo/_Forge/Rules/7_ERP.xml"
   ruleEntry: true
 
 - type: guideEntry
   id: CorvaxFrontierRule8
   name: guide-entry-frontier-rule-8
-  text: "/ServerInfo/_NF/Guidebook/Rules/3-5_EndingRound.xml"
+  text: "/ServerInfo/_Forge/Rules/8_Cheating.xml"
   ruleEntry: true
 
 - type: guideEntry
   id: CorvaxFrontierRule9
   name: guide-entry-frontier-rule-9
-  text: "/ServerInfo/_NF/Guidebook/Rules/4_CharacterLogic.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: CorvaxFrontierRule10
-  name: guide-entry-frontier-rule-10
-  text: "/ServerInfo/_NF/Guidebook/Rules/5_AntagsPlay.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: CorvaxFrontierRule11
-  name: guide-entry-frontier-rule-11
-  text: "/ServerInfo/_NF/Guidebook/Rules/5-1_PlayAsPirate.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: CorvaxFrontierRule12
-  name: guide-entry-frontier-rule-12
-  text: "/ServerInfo/_NF/Guidebook/Rules/6_Safezone.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: CorvaxFrontierRule13
-  name: guide-entry-frontier-rule-13
-  text: "/ServerInfo/_NF/Guidebook/Rules/7_ERP.xml"
-  ruleEntry: true
-
-- type: guideEntry
-  id: CorvaxFrontierRule14
-  name: guide-entry-frontier-rule-14
-  text: "/ServerInfo/_NF/Guidebook/Rules/8_Cheating.xml"
+  text: "/ServerInfo/_Forge/Rules/9_Maraud.xml"
   ruleEntry: true

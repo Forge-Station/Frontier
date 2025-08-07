@@ -1,0 +1,34 @@
+<Document>
+  <ColorBox Color="#333333" OutlineColor="#555555" OutlineThickness="2" Margin="5">
+    <Box Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
+      # 6. Зоны сектора Фронтир
+
+      <ColorBox Color="#224422" OutlineColor="#335533" OutlineThickness="1" Margin="0 0 0 0">
+        <Box Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
+          [bold]Зелёная зона (Аванпост Фронтира)[/bold]
+          - [bold]Запрещена любая антагонистическая деятельность:[/bold] драки, убийства, кражи, мошенничество, взлом, повреждение структур, угон кораблей и т.д.
+          - [bold]Эскалация[/bold] с применением силы запрещена.
+          - [bold]Пиратам[/bold] запрещено находиться в этой зоне (исключение: состояние "Мести").
+          - [bold]Запрещено повреждать[/bold], модифицировать или выносить оборудование общего пользования.
+        </Box>
+      </ColorBox>
+
+      <ColorBox Color="#444422" OutlineColor="#555533" OutlineThickness="1" Margin="0 0 0 0">
+        <Box Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
+          [bold]Желтая зона (4 км от Аванпоста)[/bold]
+          - [bold]Запрещены провокации[/bold] конфликта со стороны не-антагонистов.
+          - [bold]Пираты[/bold] и [bold]штурмовая группа "Жнецы"[/bold] действуют со строгими ограничениями согласно их кодексам и протоколам.
+        </Box>
+      </ColorBox>
+
+      <ColorBox Color="#442222" OutlineColor="#553333" OutlineThickness="1" Margin="0 0 0 0">
+        <Box Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
+          [bold]Красная Зона (дальше 4 км от Аванпоста, 300м вокруг POI)[/bold]
+          - [bold]Провокация ДСБФ[/bold] разрешает им применять летальную силу.
+          - [bold]Правила 2 (Убийство) и 4 (Логика персонажа) ослаблены.[/bold] Допускается мелкий антагонизм (мелкие кражи, локальные конфликты).
+          - [bold]Важно:[/bold] Намеренное раздувание конфликта с целью устроить резню по-прежнему [bold]запрещено[/bold].
+        </Box>
+      </ColorBox>
+    </Box>
+  </ColorBox>
+</Document>
