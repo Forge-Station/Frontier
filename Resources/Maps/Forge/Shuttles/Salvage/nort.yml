@@ -1606,21 +1606,6 @@ entities:
     - type: Transform
       pos: -11.479811,13.630549
       parent: 1051
-- proto: ComputerMinersBounty
-  entities:
-  - uid: 379
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -10.5,2.5
-      parent: 1051
-- proto: ComputerMinersBountyRedemption
-  entities:
-  - uid: 256
-    components:
-    - type: Transform
-      pos: -9.5,4.5
-      parent: 1051
 - proto: ComputerTabletopPowerMonitoring
   entities:
   - uid: 51

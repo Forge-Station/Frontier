@@ -2813,21 +2813,6 @@ entities:
     - type: Transform
       pos: 8.561269,-1.4435716
       parent: 249
-- proto: ComputerMinersBounty
-  entities:
-  - uid: 860
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 1.5,19.5
-      parent: 249
-- proto: ComputerMinersBountyRedemption
-  entities:
-  - uid: 580
-    components:
-    - type: Transform
-      pos: 6.5,7.5
-      parent: 249
 - proto: ComputerPowerMonitoring
   entities:
   - uid: 174

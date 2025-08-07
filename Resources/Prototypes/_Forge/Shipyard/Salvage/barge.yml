@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: NC Баржа
   description: Среднегабаритный добывающий шаттл. Рекомендованный размер команды 3-6 человек.
-  price: 48300
+  price: 100800
   category: Medium
   group: Salvage
   shuttlePath: /Maps/Forge/Shuttles/Salvage/barge.yml
@@ -21,9 +21,7 @@
   class:
   - Cargo
   - Salvage
-  addComponents:
-  - type: MinersBountyDatabase
-    bounties: []
+
 
 
 - type: gameMap

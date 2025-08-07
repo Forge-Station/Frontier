@@ -684,22 +684,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -1.5,0.5
       parent: 1
-- proto: ComputerMinersBounty
-  entities:
-  - uid: 24
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,-2.5
-      parent: 1
-- proto: ComputerMinersBountyRedemption
-  entities:
-  - uid: 2
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -2.5,-3.5
-      parent: 1
 - proto: ComputerShuttle
   entities:
   - uid: 51

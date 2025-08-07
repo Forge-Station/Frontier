@@ -3206,22 +3206,6 @@ entities:
     - type: Transform
       pos: -1.5,-11.5
       parent: 1
-- proto: ComputerMinersBounty
-  entities:
-  - uid: 423
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,-5.5
-      parent: 1
-- proto: ComputerMinersBountyRedemption
-  entities:
-  - uid: 424
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,-4.5
-      parent: 1
 - proto: ComputerShuttle
   entities:
   - uid: 425
@@ -7595,7 +7579,7 @@ entities:
       parent: 735
     - type: Physics
       canCollide: False
-- proto: WeaponTurretM25
+- proto: WeaponNavalCannonM25
   entities:
   - uid: 1028
     components:
