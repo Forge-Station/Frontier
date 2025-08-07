@@ -4,7 +4,7 @@
 
 - type: entity
   parent: BaseWeaponMissile
-  id: WeaponMissileLauncherLancer
+  id: WeaponNavalCannonMissileLauncherLancer
   name: Артиллерийская установка "Лансер-14"
   description: Точная артиллерийская установка, созданная для ведения боя на средней дистанции. Снаряд "Копьё" пробивает броню, оставляя после себя значительные разрушения.
   suffix: НЕ МАППИТЬ!, ShuttleGun
@@ -46,8 +46,8 @@
           - MissileLancer
 
 - type: entity
-  parent: WeaponMissileLauncherLancer
-  id: WeaponMissileLauncherLancerEmpty
+  parent: WeaponNavalCannonMissileLauncherLancer
+  id: WeaponNavalCannonMissileLauncherLancerEmpty
   suffix: Пустой, ShuttleGun
   placement:
     mode: SnapgridCenter

@@ -14,7 +14,7 @@
 # L85 20mm
 
 - type: entity
-  id: WeaponTurretL85Autocannon
+  id: WeaponNavalCannonL85Autocannon
   name: L85 20mm autocannon
   parent: BallisticArtillery
   description: A light 20mm ballistic autocannon designed for rapid fire and suppressing smaller targets at close range. Cheap, light, and can be remotely activated or linked up to a GCS.
@@ -71,7 +71,7 @@
 # DRAVON 57mm
 
 - type: entity
-  id: WeaponTurretDravon
+  id: WeaponNavalCannonDravon
   name: ADBP-7 DRAVON 57mm Autocannon
   parent: BallisticArtillery
   description: A single-barrel autocannon made by Aetherion Dynamics. Medium artillery piece with high fire rate but relatively low impact, firing HEAT shells to damage ship armor and systems. Can be remotely activated or linked up to a GCS.
@@ -120,7 +120,7 @@
 # AK570 90mm
 
 - type: entity
-  id: WeaponTurretAK570
+  id: WeaponNavalCannontAK570
   name: AK570 90mm heavy autocannon
   parent: BallisticArtillery
   description: A dual-barrel, heavy 90mm autocannon firing general-purpose APHE rounds, effective for sustained fire against medium targets. Can be remotely activated or linked up to a GCS.
@@ -174,7 +174,7 @@
 # CYREXA 220mm
 
 - type: entity
-  id: WeaponTurretCyrexa
+  id: WeaponNavalCannonCyrexa
   name: CYREXA 220mm cannon
   parent: BallisticArtilleryUnanchorable
   description: A main battery with dual barrels, delivering rapid, punishing salvos at extreme range. Fires 220mm auto shells with slightly reduced brute strength. Can be remotely activated or linked up to a GCS.
@@ -240,7 +240,7 @@
 # HADES 305mm
 
 - type: entity
-  id: WeaponTurretHades
+  id: WeaponNavalCannonHades
   name: HADES 305mm cannon
   parent: BallisticArtilleryUnanchorable
   description: One of the largest chemical-based kinetic weapons in the sector. Its power is only rivaled by mass drivers such as the M381.
@@ -306,7 +306,7 @@
 # MiniCHARON
 
 - type: entity
-  id: WeaponTurretCharonette
+  id: WeaponNavalCannonCharonette
   name: M194 CHARONETTE mass driver
   parent: BallisticArtilleryUnanchorable
   description: A smaller, more compact railgun that fires a large slug at rapid velocity, capable of big damage to enemy ships. Medium linear accelerator, can be remotely activated or linked up to a GCS.
@@ -383,7 +383,7 @@
 # Bofors 255mm
 
 - type: entity
-  id: WeaponTurretBofors
+  id: WeaponNavalCannonBofors
   name: Bofors 255mm cannon
   parent: BallisticArtilleryUnanchorable
   description: A single-barrel, heavy artillery cannon designed for cruisers, delivering massive impact with each long-range shot. Can be remotely activated or linked up to a GCS.
@@ -445,7 +445,7 @@
 # Kargil 203mm
 
 - type: entity
-  id: WeaponTurretKargil
+  id: WeaponNavalCannonKargil
   name: Kargil 203mm cannon
   parent: BallisticArtilleryUnanchorable
   description: A cruiser artillery cannon that launches devastating 203mm shells for long-range ship-to-ship combat. Can be remotely activated or linked up to a GCS.

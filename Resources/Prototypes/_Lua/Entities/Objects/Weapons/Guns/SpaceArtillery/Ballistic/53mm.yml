@@ -4,7 +4,7 @@
 
 - type: entity
   parent: BaseWeaponNavalBallisctic
-  id: Weapon53mmBase
+  id: WeaponNavalCannon53mmBase
   name: Пулемёт "53мм"
   description: Средний пулемёт, использует снаряды 53мм.
   suffix: НЕ МАППИТЬ!, ShuttleGun
@@ -46,7 +46,7 @@
         machine_parts: !type:Container
 
 - type: entity
-  parent: Weapon53mmBase
+  parent: WeaponNavalCannon53mmBase
   id: Weapon53mm
   suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
   placement:
@@ -66,14 +66,14 @@
               - Cartridge53mm
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, Weapon53mm, Weapon53mmBase ]
+  parent: [BaseStructureDisableToolUse, Weapon53mm, WeaponNavalCannon53mmBase ]
   id: Weapon53mmUnanchor
   suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
   placement:
     mode: SnapgridCenter
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, Weapon53mmBase]
+  parent: [BaseStructureDisableToolUse, WeaponNavalCannon53mmBase]
   id: Weapon53mmUnanchorEmpty
   suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
   placement:
@@ -81,12 +81,12 @@
 
 - type: entity
   parent: BaseNFFlatpack
-  id: Weapon53mmBaseFlatpack
+  id: WeaponNavalCannon53mmBaseFlatpack
   name: упакованный средний пулемёт
   description: Упакованный Средний Пулемёт (.53мм)
   components:
   - type: Flatpack
-    entity: Weapon53mmBase
+    entity: WeaponNavalCannon53mmBase
   - type: StaticPrice
     price: 250
   - type: Sprite

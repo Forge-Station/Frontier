@@ -4,7 +4,7 @@
 
 - type: entity
   parent: BaseWeaponNavalBallisctic
-  id: Weapon105mmBase
+  id: WeaponNavalCannon105mmBase
   name: Миномёт "105мм"
   description: Малый миномёт, использует снаряды 105мм.
   suffix: НЕ МАППИТЬ!, ShuttleGun
@@ -46,7 +46,7 @@
         machine_parts: !type:Container
 
 - type: entity
-  parent: Weapon105mmBase
+  parent: WeaponNavalCannon105mmBase
   id: Weapon105mm
   suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
   placement:
@@ -66,14 +66,14 @@
               - Cartridge105mm
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, Weapon105mm, Weapon105mmBase]
+  parent: [BaseStructureDisableToolUse, Weapon105mm, WeaponNavalCannon105mmBase]
   id: Weapon105mmUnanchor
   suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
   placement:
     mode: SnapgridCenter
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, Weapon105mmBase]
+  parent: [BaseStructureDisableToolUse, WeaponNavalCannon105mmBase]
   id: Weapon105mmUnanchorEmpty
   suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
   placement:
@@ -81,12 +81,12 @@
 
 - type: entity
   parent: BaseNFFlatpack
-  id: Weapon105mmBaseFlatpack
+  id: WeaponNavalCannon105mmBaseFlatpack
   name: упакованный малый миномёт
   description: Упакованный Малый Миномёт (.105мм)
   components:
   - type: Flatpack
-    entity: Weapon105mmBase
+    entity: WeaponNavalCannon105mmBase
   - type: StaticPrice
     price: 250
   - type: Sprite

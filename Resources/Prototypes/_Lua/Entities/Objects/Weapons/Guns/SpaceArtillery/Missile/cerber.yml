@@ -4,7 +4,7 @@
 
 - type: entity
   parent: BaseWeaponMissile
-  id: WeaponMissileLauncherCerber
+  id: WeaponNavalCannonMissileLauncherCerber
   name: Артиллерийская установка "Цербер-Х"
   description: Мощное космическое орудие для уничтожения вражеских флотов. Снаряд "Анаконда" разворачивается при ударе, охватывая огромную площадь и вызывая разрушения на всей территории поражения.
   suffix: НЕ МАППИТЬ!, ShuttleGun
@@ -46,8 +46,8 @@
           - MissileCerber
 
 - type: entity
-  parent: WeaponMissileLauncherCerber
-  id: WeaponMissileLauncherCerberEmpty
+  parent: WeaponNavalCannonMissileLauncherCerber
+  id: WeaponNavalCannonMissileLauncherCerberEmpty
   suffix: Пустой, ShuttleGun
   placement:
     mode: SnapgridCenter

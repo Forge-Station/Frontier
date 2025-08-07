@@ -4,7 +4,7 @@
 
 - type: entity
   parent: BaseWeaponNavalBallisctic
-  id: Weapon80mmBase
+  id: WeaponNavalCannon80mmBase
   name: Пулемёт "80мм"
   description: Тяжёлый пулемёт, использует снаряды 80мм.
   suffix: НЕ МАППИТЬ!, ShuttleGun
@@ -46,7 +46,7 @@
         machine_parts: !type:Container
 
 - type: entity
-  parent: Weapon80mmBase
+  parent: WeaponNavalCannon80mmBase
   id: Weapon80mm
   suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
   placement:
@@ -66,14 +66,14 @@
               - Cartridge80mm
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, Weapon80mm, Weapon80mmBase]
+  parent: [BaseStructureDisableToolUse, Weapon80mm, WeaponNavalCannon80mmBase]
   id: Weapon80mmUnanchor
   suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
   placement:
     mode: SnapgridCenter
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, Weapon80mmBase]
+  parent: [BaseStructureDisableToolUse, WeaponNavalCannon80mmBase]
   id: Weapon80mmUnanchorEmpty
   suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
   placement:
@@ -81,12 +81,12 @@
 
 - type: entity
   parent: BaseNFFlatpack
-  id: Weapon80mmBaseFlatpack
+  id: WeaponNavalCannon80mmBaseFlatpack
   name: упакованный тяжёлый пулемёт
   description: Упакованный Средний Пулемёт (.80мм)
   components:
   - type: Flatpack
-    entity: Weapon80mmBase
+    entity: WeaponNavalCannon80mmBase
   - type: StaticPrice
     price: 250
   - type: Sprite
