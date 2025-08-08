@@ -9524,18 +9524,6 @@ entities:
     - type: Transform
       pos: 4.5,-1.5
       parent: 1
-- proto: SpawnDungeonLootVaultGuns
-  entities:
-  - uid: 212
-    components:
-    - type: Transform
-      pos: 13.48961,3.5899572
-      parent: 1
-  - uid: 222
-    components:
-    - type: Transform
-      pos: 12.55211,7.308707
-      parent: 1
 - proto: SpawnPointLatejoin
   entities:
   - uid: 1731

@@ -9315,18 +9315,7 @@ entities:
     - type: Transform
       pos: -0.40817523,5.591854
       parent: 2
-- proto: SpawnDungeonLootVaultGuns
-  entities:
-  - uid: 1
-    components:
-    - type: Transform
-      pos: 9.70294,6.578225
-      parent: 2
-  - uid: 3
-    components:
-    - type: Transform
-      pos: 8.48419,8.5626
-      parent: 2
+
 - proto: SpawnMobBear
   entities:
   - uid: 1712

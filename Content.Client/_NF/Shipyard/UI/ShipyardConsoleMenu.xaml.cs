@@ -85,19 +85,28 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
         _engine = id == 0 ? null : _engineStrings[id];
         Engines.SelectId(id);
     }
+
+    // Forge method
+    private void SortVesselsByPrice(List<VesselPrototype?> vessels)
+    {
+        vessels.Sort((x, y) => x!.Price.CompareTo(y!.Price));
+    }
+
     /// <summary>
     ///     Populates the list of products that will actually be shown, using the current filters.
     /// </summary>
     public void PopulateProducts(List<string> availablePrototypes, List<string> unavailablePrototypes, bool free, bool canPurchase)
     {
         Vessels.RemoveAllChildren();
-
         var search = SearchBar.Text.Trim().ToLowerInvariant();
 
         var newVessels = GetVesselPrototypesFromIds(availablePrototypes);
-        AddVesselsToControls(newVessels, search, free, canPurchase);
-
         var newUnavailableVessels = GetVesselPrototypesFromIds(unavailablePrototypes);
+
+        SortVesselsByPrice(newVessels); // Forge-Change
+        SortVesselsByPrice(newUnavailableVessels); // Forge-Change
+        
+        AddVesselsToControls(newVessels, search, free, canPurchase);
         AddVesselsToControls(newUnavailableVessels, search, free, false);
 
         _lastAvailableProtos = availablePrototypes;
@@ -113,8 +122,8 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
             .Where(it => it != null)
             .ToList();
 
-        vesselList.Sort((x, y) =>
-            string.Compare(x!.Name, y!.Name, StringComparison.CurrentCultureIgnoreCase));
+        //vesselList.Sort((x, y) => Forge-Change
+            //string.Compare(x!.Name, y!.Name, StringComparison.CurrentCultureIgnoreCase)); Forge-Change
         return vesselList;
     }
 

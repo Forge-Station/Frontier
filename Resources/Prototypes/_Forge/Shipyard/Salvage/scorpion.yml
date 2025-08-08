@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: erhardsteinhauer
+# Discord: erhardsteinhauer
+
+# Maintainer Info
+# GitHub: erhardsteinhauer
+# Discord: erhardsteinhauer
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Scorpion1
+  parent: BaseVessel
+  name: TL Скорпион
+  description: Одноместный шахтерский шаттл. Является перестроенным истребителем TL.
+  price: 16200
+  category: Small
+  group: Salvage
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/scorpion.yml
+  guidebookPage: null
+  class:
+  - Salvage
+
+
+- type: gameMap
+  id: Scorpion1
+  mapName: 'Скорпион'
+  mapPath: /Maps/Forge/Shuttles/Salvage/scorpion.yml
+  minPlayers: 0
+  stations:
+    Scorpion1:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Скорпион {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

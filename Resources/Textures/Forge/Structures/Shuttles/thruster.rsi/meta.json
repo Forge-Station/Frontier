@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "copyright": "Taken from https://github.com/Autsaider-IM",
+  "license": "CC-BY-SA-3.0",
+  "states": [
+    {
+      "name": "base",
+      "directions": 4
+    },
+    {
+      "name": "base_sec",
+      "directions": 4
+    },
+    {
+      "name": "base_nfsd",
+      "directions": 4
+    },
+    {
+      "name": "base_small",
+      "directions": 4
+    },
+    {
+      "name": "thrust_small",
+      "directions": 4,
+      "delays": [
+            [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ]
+        ]
+    },
+    {
+      "name": "thrust",
+      "directions": 4,
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "thrust_burn_unshaded",
+      "directions": 4,
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

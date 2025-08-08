@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+- type: vessel
+  id: Bant
+  parent: BaseVessel
+  name: LVHI Бант
+  description: Одноместный грузовой контейнер, переоборудованный под выход в открытый космос.
+  price: 27200
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/bant.yml
+  guidebookPage: null
+  class:
+  - Salvage
+
+
+- type: gameMap
+  id: Bant
+  mapName: 'Бант'
+  mapPath: /Maps/Forge/Shuttles/Salvage/bant.yml
+  minPlayers: 0
+  stations:
+    Bant:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Бант {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

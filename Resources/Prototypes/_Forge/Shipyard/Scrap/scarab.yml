@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen 
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Scarab
+  parent: BaseVessel
+  name: TL Скарабей
+  description: Кусок неизвестного шаттла компании TL. Не рекомендуется к эксплуатации.
+  price: 24000
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/Forge/Shuttles/Scrap/scarab.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+
+- type: gameMap
+  id: Scarab
+  mapName: 'TL Скарабей'
+  mapPath: /Maps/Forge/Shuttles/Scrap/scarab.yml
+  minPlayers: 0
+  stations:
+    Scarab:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: ' Скарабей {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

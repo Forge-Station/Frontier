@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Nort
+  parent: BaseVessel
+  name: TL Север
+  description: Среднегабаритный добывающий шаттл. Рекомендуемый состав команды 2-6 человек.
+  price: 42200
+  category: Small
+  group: Salvage
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/nort.yml
+  class:
+  - Salvage
+
+- type: gameMap
+  id: Nort
+  mapName: 'TL Север'
+  mapPath: /Maps/Forge/Shuttles/Salvage/nort.yml
+  minPlayers: 0
+  stations:
+    Nort:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Север {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

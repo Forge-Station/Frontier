@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: erhardsteinhauer
+# Discord: erhardsteinhauer
+
+# Maintainer Info
+# GitHub: erhardsteinhauer
+# Discord: erhardsteinhauer
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Bug
+  parent: BaseVessel
+  name: TL Жук
+  description: Одноместный шахтерский шаттл. Является перестроенным истребителем TL.
+  price: 15200
+  category: Small
+  group: Salvage
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/bug.yml
+  guidebookPage: null
+  class:
+  - Salvage
+
+
+
+- type: gameMap
+  id: Bug
+  mapName: 'Жук'
+  mapPath: /Maps/Forge/Shuttles/Salvage/bug.yml
+  minPlayers: 0
+  stations:
+    Bug:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Жук {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

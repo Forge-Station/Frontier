@@ -5308,18 +5308,6 @@ entities:
     - type: Transform
       pos: 15.440962,7.4039454
       parent: 3
-- proto: SpawnDungeonLootVaultGuns
-  entities:
-  - uid: 1
-    components:
-    - type: Transform
-      pos: 15.628462,5.4195704
-      parent: 3
-  - uid: 976
-    components:
-    - type: Transform
-      pos: 14.5702,6.535988
-      parent: 3
 - proto: SpawnMobSpaceSpider
   entities:
   - uid: 194

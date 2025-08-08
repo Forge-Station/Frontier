@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 251.0.0
+  engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 05/28/2025 06:30:31
+  time: 07/15/2025 12:34:14
   entityCount: 2801
 maps: []
 grids:
@@ -109,6 +109,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -2280,9 +2281,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         10:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
         9:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
   - uid: 8
     components:
     - type: Transform
@@ -2291,9 +2294,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         9:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
         10:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
   - uid: 9
     components:
     - type: Transform
@@ -2302,9 +2307,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         7:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
         8:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
   - uid: 10
     components:
     - type: Transform
@@ -2313,9 +2320,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         7:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
         8:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
 - proto: AirlockNfsdDetectiveGlassLocked
   entities:
   - uid: 990
@@ -2335,9 +2344,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         33:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
         34:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
   - uid: 32
     components:
     - type: Transform
@@ -2346,9 +2357,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         33:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
         34:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
   - uid: 33
     components:
     - type: Transform
@@ -2357,9 +2370,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         32:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
         22:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
   - uid: 34
     components:
     - type: Transform
@@ -2368,9 +2383,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         22:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
         32:
-        - DoorStatus: Close
+        - - DoorStatus
+          - Close
   - uid: 57
     components:
     - type: Transform
@@ -3681,13 +3698,6 @@ entities:
     components:
     - type: Transform
       pos: -3.2727077,11.743489
-      parent: 1
-- proto: BoxMagazinePistolRubber
-  entities:
-  - uid: 342
-    components:
-    - type: Transform
-      pos: -6.832316,9.630411
       parent: 1
 - proto: BoxZiptie
   entities:
@@ -6642,12 +6652,6 @@ entities:
       parent: 1
 - proto: ComputerCriminalRecords
   entities:
-  - uid: 26
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,0.5
-      parent: 1
   - uid: 287
     components:
     - type: Transform
@@ -6676,7 +6680,7 @@ entities:
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 1.5,0.5
+      pos: 0.5,0.5
       parent: 1
   - uid: 413
     components:
@@ -6696,7 +6700,15 @@ entities:
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 0.5,0.5
+      pos: -0.5,0.5
+      parent: 1
+- proto: ComputerShipyardNfsd
+  entities:
+  - uid: 26
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,0.5
       parent: 1
 - proto: ComputerStationRecords
   entities:
@@ -13677,23 +13689,32 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         924:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         923:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         922:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         926:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         925:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         932:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         931:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         930:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         2237:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
 - proto: LockerJanitorFilled
   entities:
   - uid: 114
@@ -13811,82 +13832,6 @@ entities:
     - type: Transform
       pos: -17.5,22.5
       parent: 1
-- proto: MagazineBoxPistol
-  entities:
-  - uid: 74
-    components:
-    - type: Transform
-      rot: -6.283185307179586 rad
-      pos: 5.0687227,13.463688
-      parent: 1
-  - uid: 387
-    components:
-    - type: Transform
-      rot: -6.283185307179586 rad
-      pos: 4.8708057,13.567927
-      parent: 1
-- proto: MagazineBoxPistolPractice
-  entities:
-  - uid: 1234
-    components:
-    - type: Transform
-      pos: 6.5934086,25.738373
-      parent: 1
-- proto: MagazineBoxPistolRubber
-  entities:
-  - uid: 62
-    components:
-    - type: Transform
-      rot: -6.283185307179586 rad
-      pos: 4.3499727,13.609623
-      parent: 1
-  - uid: 340
-    components:
-    - type: Transform
-      pos: -7.66252,9.684582
-      parent: 1
-  - uid: 341
-    components:
-    - type: Transform
-      pos: -7.445945,9.558185
-      parent: 1
-- proto: MagazineBoxRifleBig
-  entities:
-  - uid: 281
-    components:
-    - type: Transform
-      rot: -6.283185307179586 rad
-      pos: 5.5374727,13.620047
-      parent: 1
-- proto: MagazineBoxRiflePractice
-  entities:
-  - uid: 1115
-    components:
-    - type: Transform
-      pos: 5.6567416,25.725475
-      parent: 1
-- proto: MagazineBoxRifleRubber
-  entities:
-  - uid: 76
-    components:
-    - type: Transform
-      rot: -6.283185307179586 rad
-      pos: 4.5270557,13.557503
-      parent: 1
-- proto: MagazinePistolPractice
-  entities:
-  - uid: 1235
-    components:
-    - type: Transform
-      pos: 6.956201,25.571316
-      parent: 1
-- proto: MagazineRiflePractice
-  entities:
-  - uid: 1236
-    components:
-    - type: Transform
-      pos: 6.1035366,25.557804
-      parent: 1
 - proto: MaterialReclaimer
   entities:
   - uid: 2409
@@ -13939,6 +13884,75 @@ entities:
     - type: Transform
       pos: 10.5,13.5
       parent: 1
+- proto: NFAmmunitionBoxBigRifle20
+  entities:
+  - uid: 281
+    components:
+    - type: Transform
+      rot: -6.283185307179586 rad
+      pos: 5.5374727,13.620047
+      parent: 1
+- proto: NFAmmunitionBoxPistol35
+  entities:
+  - uid: 74
+    components:
+    - type: Transform
+      rot: -6.283185307179586 rad
+      pos: 5.0687227,13.463688
+      parent: 1
+  - uid: 387
+    components:
+    - type: Transform
+      rot: -6.283185307179586 rad
+      pos: 4.8708057,13.567927
+      parent: 1
+- proto: NFAmmunitionBoxPistol35Practice
+  entities:
+  - uid: 1234
+    components:
+    - type: Transform
+      pos: 6.5934086,25.738373
+      parent: 1
+- proto: NFAmmunitionBoxPistol35Rubber
+  entities:
+  - uid: 62
+    components:
+    - type: Transform
+      rot: -6.283185307179586 rad
+      pos: 4.3499727,13.609623
+      parent: 1
+  - uid: 340
+    components:
+    - type: Transform
+      pos: -7.66252,9.684582
+      parent: 1
+  - uid: 341
+    components:
+    - type: Transform
+      pos: -7.445945,9.558185
+      parent: 1
+- proto: NFAmmunitionBoxRifle20Practice
+  entities:
+  - uid: 1115
+    components:
+    - type: Transform
+      pos: 5.6567416,25.725475
+      parent: 1
+- proto: NFAmmunitionBoxRifle20Rubber
+  entities:
+  - uid: 76
+    components:
+    - type: Transform
+      rot: -6.283185307179586 rad
+      pos: 4.5270557,13.557503
+      parent: 1
+- proto: NFBoxMagazinePistol35Rubber
+  entities:
+  - uid: 342
+    components:
+    - type: Transform
+      pos: -6.832316,9.630411
+      parent: 1
 - proto: NFClosetBombFilled
   entities:
   - uid: 865
@@ -13966,6 +13980,27 @@ entities:
     components:
     - type: Transform
       pos: -3.5,7.5
+      parent: 1
+- proto: NFMagazinePistol35Practice
+  entities:
+  - uid: 1235
+    components:
+    - type: Transform
+      pos: 6.956201,25.571316
+      parent: 1
+- proto: NFMagazineRifle20Practice
+  entities:
+  - uid: 1236
+    components:
+    - type: Transform
+      pos: 6.1035366,25.557804
+      parent: 1
+- proto: NFRevolverCapGun
+  entities:
+  - uid: 2682
+    components:
+    - type: Transform
+      pos: 2.4312053,8.810738
       parent: 1
 - proto: NFSpawnPointDetective
   entities:
@@ -14022,6 +14057,30 @@ entities:
     components:
     - type: Transform
       pos: 16.5,2.5
+      parent: 1
+- proto: NFWeaponEnergyPistolDisablerPractice
+  entities:
+  - uid: 872
+    components:
+    - type: Transform
+      pos: 5.1535187,25.563894
+      parent: 1
+  - uid: 894
+    components:
+    - type: Transform
+      pos: 4.9859314,25.770258
+      parent: 1
+- proto: NFWeaponEnergyRifleCarbinePractice
+  entities:
+  - uid: 871
+    components:
+    - type: Transform
+      pos: 4.1222115,25.705769
+      parent: 1
+  - uid: 903
+    components:
+    - type: Transform
+      pos: 4.341365,25.48651
       parent: 1
 - proto: NitrogenCanister
   entities:
@@ -14918,14 +14977,6 @@ entities:
     - type: Transform
       pos: 11.5,9.5
       parent: 1
-- proto: PowerCellRecharger
-  entities:
-  - uid: 682
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 19.5,4.5
-      parent: 1
 - proto: Poweredlight
   entities:
   - uid: 64
@@ -15457,13 +15508,6 @@ entities:
     - type: Transform
       pos: -2.5,20.5
       parent: 1
-- proto: RevolverCapGun
-  entities:
-  - uid: 2682
-    components:
-    - type: Transform
-      pos: 2.4312053,8.810738
-      parent: 1
 - proto: SellOnlyMothershipComputer
   entities:
   - uid: 428
@@ -15551,8 +15595,10 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         1337:
-        - On: Forward
-        - Off: Off
+        - - On
+          - Forward
+        - - Off
+          - Off
 - proto: SignDirectionalCryo
   entities:
   - uid: 35
@@ -16151,6 +16197,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -6.5,22.5
       parent: 1
+    - type: Conveyed
 - proto: TargetSyndicate
   entities:
   - uid: 447
@@ -16161,6 +16208,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -7.5,24.5
       parent: 1
+    - type: Conveyed
   - uid: 1285
     components:
     - type: MetaData
@@ -16243,45 +16291,75 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         849:
-        - Left: Forward
-        - Right: Forward
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Forward
+        - - Middle
+          - Off
         355:
-        - Left: Forward
-        - Right: Forward
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Forward
+        - - Middle
+          - Off
         356:
-        - Left: Forward
-        - Right: Forward
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Forward
+        - - Middle
+          - Off
         388:
-        - Left: Forward
-        - Right: Forward
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Forward
+        - - Middle
+          - Off
         989:
-        - Left: Forward
-        - Right: Forward
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Forward
+        - - Middle
+          - Off
         751:
-        - Left: Forward
-        - Right: Forward
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Forward
+        - - Middle
+          - Off
         994:
-        - Left: Forward
-        - Right: Forward
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Forward
+        - - Middle
+          - Off
         749:
-        - Left: Forward
-        - Right: Forward
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Forward
+        - - Middle
+          - Off
         999:
-        - Left: Forward
-        - Right: Forward
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Forward
+        - - Middle
+          - Off
         963:
-        - Left: Forward
-        - Right: Forward
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Forward
+        - - Middle
+          - Off
   - uid: 2681
     components:
     - type: Transform
@@ -16290,9 +16368,12 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         2407:
-        - Left: Forward
-        - Right: Forward
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Forward
+        - - Middle
+          - Off
 - proto: VendingMachineAmmoPOI
   entities:
   - uid: 594
@@ -18996,6 +19077,12 @@ entities:
       parent: 1
 - proto: WeaponCapacitorRecharger
   entities:
+  - uid: 682
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 19.5,4.5
+      parent: 1
   - uid: 1232
     components:
     - type: Transform
@@ -19007,30 +19094,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,25.5
-      parent: 1
-- proto: WeaponDisablerPractice
-  entities:
-  - uid: 872
-    components:
-    - type: Transform
-      pos: 5.1535187,25.563894
-      parent: 1
-  - uid: 894
-    components:
-    - type: Transform
-      pos: 4.9859314,25.770258
-      parent: 1
-- proto: WeaponLaserCarbinePractice
-  entities:
-  - uid: 871
-    components:
-    - type: Transform
-      pos: 4.1222115,25.705769
-      parent: 1
-  - uid: 903
-    components:
-    - type: Transform
-      pos: 4.341365,25.48651
       parent: 1
 - proto: WindoorSecureArmoryLocked
   entities:

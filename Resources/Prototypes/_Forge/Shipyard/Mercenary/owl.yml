@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen 
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Owl
+  parent: BaseVessel
+  name: SBI Сова
+  description: Малогабаритный шаттл для наёмников, рекомендуемый состав экипажа 1 человек.
+  price: 21000
+  category: Small
+  group: Mercenary
+  shuttlePath: /Maps/Forge/Shuttles/Mercenary/owl.yml
+  addComponents:
+  - type: MercenaryBountyDatabase
+    bounties: []
+
+- type: gameMap
+  id: Owl
+  mapName: 'SBI Сова'
+  mapPath: /Maps/Forge/Shuttles/Mercenary/owl.yml
+  minPlayers: 0
+  stations:
+    Owl:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Сова {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: MercenaryBountyDatabase
+          bounties: []
