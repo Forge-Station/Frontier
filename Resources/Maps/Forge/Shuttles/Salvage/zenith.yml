@@ -2851,33 +2851,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,19.5
       parent: 249
-- proto: ContrabandPalletCivillian
-  entities:
-  - uid: 974
-    components:
-    - type: Transform
-      pos: 6.5,5.5
-      parent: 249
-  - uid: 975
-    components:
-    - type: Transform
-      pos: 6.5,6.5
-      parent: 249
-  - uid: 976
-    components:
-    - type: Transform
-      pos: 7.5,5.5
-      parent: 249
-  - uid: 977
-    components:
-    - type: Transform
-      pos: 7.5,6.5
-      parent: 249
-  - uid: 978
-    components:
-    - type: Transform
-      pos: 7.5,7.5
-      parent: 249
 - proto: ConveyorBelt
   entities:
   - uid: 176
