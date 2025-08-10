@@ -3,18 +3,45 @@ using Content.Shared.CCVar;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Events;
+using Robust.Shared.Timing; // Forge-Change
 
 namespace Content.Server.Shuttles.Systems;
 
 public sealed partial class ShuttleSystem
 {
+    private float _stealthDuration; // Forge-Change
+    private float _stealthCooldown; // Forge-Change
+
     private void InitializeIFF()
     {
         SubscribeLocalEvent<IFFConsoleComponent, AnchorStateChangedEvent>(OnIFFConsoleAnchor);
         SubscribeLocalEvent<IFFConsoleComponent, IFFShowIFFMessage>(OnIFFShow);
         SubscribeLocalEvent<IFFConsoleComponent, IFFShowVesselMessage>(OnIFFShowVessel);
         SubscribeLocalEvent<GridSplitEvent>(OnGridSplit);
+
+        Subs.CVar(_cfg, CCVars.StealthDuration, value => _stealthDuration = value, true); // Forge-Change
+        Subs.CVar(_cfg, CCVars.StealthCooldown, value => _stealthCooldown = value, true); // Forge-Change
     }
+
+    // Forge-Change-start
+    private void UpdateIFF(float frameTime)
+    {
+        var query = EntityQueryEnumerator<ShuttleStealthComponent, IFFComponent>();
+        var curTime = _gameTiming.CurTime;
+
+        while (query.MoveNext(out var uid, out var stealth, out var iff))
+        {
+            if (stealth.HideEndTime.HasValue && stealth.HideEndTime < curTime)
+            {
+                // Stealth has expired, turn it off and start cooldown.
+                RemoveIFFFlag(uid, IFFFlags.Hide, iff);
+                stealth.HideEndTime = null;
+                stealth.HideCooldownEndTime = curTime + TimeSpan.FromSeconds(_stealthCooldown);
+                Dirty(uid, stealth);
+            }
+        }
+    }
+    // Forge-Change-End
 
     private void OnGridSplit(ref GridSplitEvent ev)
     {
@@ -61,14 +88,44 @@ public sealed partial class ShuttleSystem
             return;
         }
 
-        if (!args.Show)
+        var gridUid = xform.GridUid.Value;
+        var iff = EnsureComp<IFFComponent>(gridUid);
+        var stealth = EnsureComp<ShuttleStealthComponent>(gridUid);
+        var curTime = _gameTiming.CurTime;
+
+        if (!args.Show) // This means "hide vessel", i.e., turn ON the Hide flag
         {
-            AddIFFFlag(xform.GridUid.Value, IFFFlags.Hide);
+            // Already hidden, do nothing.
+            if ((iff.Flags & IFFFlags.Hide) != 0)
+            {
+                return;
+            }
+
+            if (stealth.HideCooldownEndTime.HasValue && stealth.HideCooldownEndTime > curTime)
+            {
+                var remaining = (stealth.HideCooldownEndTime.Value - curTime).TotalSeconds;
+                _popup.PopupEntity(Loc.GetString("shuttle-iff-cooldown", ("seconds", Math.Ceiling(remaining))), uid, args.Actor);
+                return;
+            }
+
+            AddIFFFlag(gridUid, IFFFlags.Hide, iff);
+            stealth.HideEndTime = curTime + TimeSpan.FromSeconds(_stealthDuration);
+            stealth.HideCooldownEndTime = null;
         }
-        else
+        else // This means "show vessel", i.e., turn OFF the Hide flag
         {
-            RemoveIFFFlag(xform.GridUid.Value, IFFFlags.Hide);
+            // Already visible, do nothing.
+            if ((iff.Flags & IFFFlags.Hide) == 0)
+            {
+                return;
+            }
+
+            RemoveIFFFlag(gridUid, IFFFlags.Hide, iff);
+            stealth.HideEndTime = null;
+            stealth.HideCooldownEndTime = curTime + TimeSpan.FromSeconds(_stealthCooldown);
         }
+
+        Dirty(gridUid, stealth); // Forge-Change
     }
 
     private void OnIFFConsoleAnchor(EntityUid uid, IFFConsoleComponent component, ref AnchorStateChangedEvent args)
@@ -82,14 +139,19 @@ public sealed partial class ShuttleSystem
             {
                 AllowedFlags = component.AllowedFlags,
                 Flags = IFFFlags.None,
+                HideEndTime = null, // Forge-Change
+                HideCooldownEndTime = null, // Forge-Change
             });
         }
         else
         {
+            TryComp<ShuttleStealthComponent>(xform.GridUid, out var stealth); // Forge-Change
             _uiSystem.SetUiState(uid, IFFConsoleUiKey.Key, new IFFConsoleBoundUserInterfaceState()
             {
                 AllowedFlags = component.AllowedFlags,
                 Flags = iff.Flags,
+                HideEndTime = stealth?.HideEndTime, // Forge-Change
+                HideCooldownEndTime = stealth?.HideCooldownEndTime, // Forge-Change
             });
         }
     }
@@ -97,7 +159,7 @@ public sealed partial class ShuttleSystem
     protected override void UpdateIFFInterfaces(EntityUid gridUid, IFFComponent component)
     {
         base.UpdateIFFInterfaces(gridUid, component);
-
+        TryComp<ShuttleStealthComponent>(gridUid, out var stealth);
         var query = AllEntityQuery<IFFConsoleComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var comp, out var xform))
         {
@@ -108,6 +170,8 @@ public sealed partial class ShuttleSystem
             {
                 AllowedFlags = comp.AllowedFlags,
                 Flags = component.Flags,
+                HideEndTime = stealth?.HideEndTime, // Forge-Change
+                HideCooldownEndTime = stealth?.HideCooldownEndTime, // Forge-Change
             });
         }
     }

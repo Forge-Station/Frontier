@@ -1,10 +1,13 @@
 using Content.Shared.Shuttles.Systems;
 using Robust.Shared.GameStates;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom; // Forge-Change
 
 namespace Content.Shared.Shuttles.Components;
 
 /// <summary>
 /// Handles what a grid should look like on radar.
+/// Stores Identify Friend or Foe (IFF) flags for a grid.
+/// This controls how the grid appears on radar systems.
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 [Access(typeof(SharedShuttleSystem))]
@@ -31,7 +34,6 @@ public sealed partial class IFFComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
     public Color Color = IFFColor;
-
     // Frontier: POI IFF protection
     /// <summary>
     /// Whether or not this entity's IFF can be changed.
@@ -40,6 +42,7 @@ public sealed partial class IFFComponent : Component
     public bool ReadOnly;
     // End Frontier
 }
+
 
 [Flags]
 public enum IFFFlags : byte
