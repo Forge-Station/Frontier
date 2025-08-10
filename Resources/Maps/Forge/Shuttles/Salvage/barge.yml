@@ -3228,18 +3228,6 @@ entities:
     - type: Transform
       pos: 0.5,-11.5
       parent: 1
-- proto: ContrabandPalletCivillian
-  entities:
-  - uid: 428
-    components:
-    - type: Transform
-      pos: 4.5,-3.5
-      parent: 1
-  - uid: 429
-    components:
-    - type: Transform
-      pos: 3.5,-3.5
-      parent: 1
 - proto: ConveyorBelt
   entities:
   - uid: 430

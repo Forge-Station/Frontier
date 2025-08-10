@@ -1519,14 +1519,6 @@ entities:
     - type: Transform
       pos: 4.5,-4.5
       parent: 2
-- proto: ContrabandPalletCivillian
-  entities:
-  - uid: 457
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.5,-5.5
-      parent: 2
 - proto: ConveyorBelt
   entities:
   - uid: 65
