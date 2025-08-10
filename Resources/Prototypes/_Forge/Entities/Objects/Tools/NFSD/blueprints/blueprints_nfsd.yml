@@ -12,9 +12,13 @@
     - NFAmmunitionBoxPistol45Uranium
     - NFAmmunitionBoxRifle20Incendiary
     - NFAmmunitionBoxRifle20Uranium
+  - type: Tag
+    tags:
+    - NFBlueprintMercenaryTechfab
+    - NFBlueprintNfsdTechfab
 
 - type: entity
-  parent: NFBaseBlueprintExpedition
+  parent: NFBlueprintArsenalNfsd
   id: BlueprintGrenade
   components:
   - type: Blueprint
@@ -22,6 +26,10 @@
     - NFGrenadeBlast
     - NFGrenadeEMP
     - NFMagazineGrenadeEmpty
+  - type: Tag
+    tags:
+    - NFBlueprintMercenaryTechfab
+    - NFBlueprintNfsdTechfab
 
 - type: entity
   parent: NFBaseBlueprintExpedition
@@ -31,3 +39,7 @@
     providedRecipes:
     - NFWeaponEnergyRifleSniperXrayCannon
     - NFWeaponEnergyRifleSniperCannon
+  - type: Tag
+    tags:
+    - NFBlueprintMercenaryTechfab
+    - NFBlueprintNfsdTechfab

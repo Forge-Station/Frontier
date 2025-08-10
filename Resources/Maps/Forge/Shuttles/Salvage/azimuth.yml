@@ -1616,23 +1616,6 @@ entities:
     - type: Transform
       pos: -7.5,23.5
       parent: 1051
-- proto: ContrabandPalletCivillian
-  entities:
-  - uid: 258
-    components:
-    - type: Transform
-      pos: -10.5,3.5
-      parent: 1051
-  - uid: 259
-    components:
-    - type: Transform
-      pos: -9.5,3.5
-      parent: 1051
-  - uid: 260
-    components:
-    - type: Transform
-      pos: -9.5,2.5
-      parent: 1051
 - proto: ConveyorBelt
   entities:
   - uid: 266
@@ -3322,7 +3305,7 @@ entities:
           - Reverse
         - - Middle
           - Off
-- proto: VendingMachineBoozeSyndicate
+- proto: VendingMachineBooze
   entities:
   - uid: 294
     components:
