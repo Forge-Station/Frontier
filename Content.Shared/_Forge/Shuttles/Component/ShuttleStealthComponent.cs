@@ -13,6 +13,21 @@ namespace Content.Shared.Shuttles.Components;
 public sealed partial class ShuttleStealthComponent : Component
 {
     /// <summary>
+    /// How long shuttle stealth lasts, in seconds.
+    /// If not set, defaults to the value of the shuttle.stealth_duration CVar.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public float StealthDuration = -1f;
+
+    /// <summary>
+    /// How long the cooldown for shuttle stealth is, in seconds.
+    /// If not set, defaults to the value of the shuttle.stealth_cooldown CVar.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public float StealthCooldown = -1f;
+    /// <summary>
     /// When the full stealth functionality will automatically turn off.
     /// </summary>
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField]

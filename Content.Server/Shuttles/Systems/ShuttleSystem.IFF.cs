@@ -9,18 +9,13 @@ namespace Content.Server.Shuttles.Systems;
 
 public sealed partial class ShuttleSystem
 {
-    private float _stealthDuration; // Forge-Change
-    private float _stealthCooldown; // Forge-Change
-
     private void InitializeIFF()
     {
         SubscribeLocalEvent<IFFConsoleComponent, AnchorStateChangedEvent>(OnIFFConsoleAnchor);
         SubscribeLocalEvent<IFFConsoleComponent, IFFShowIFFMessage>(OnIFFShow);
         SubscribeLocalEvent<IFFConsoleComponent, IFFShowVesselMessage>(OnIFFShowVessel);
         SubscribeLocalEvent<GridSplitEvent>(OnGridSplit);
-
-        Subs.CVar(_cfg, CCVars.StealthDuration, value => _stealthDuration = value, true); // Forge-Change
-        Subs.CVar(_cfg, CCVars.StealthCooldown, value => _stealthCooldown = value, true); // Forge-Change
+        SubscribeLocalEvent<ShuttleStealthComponent, ComponentStartup>(OnStealthStartup);
     }
 
     // Forge-Change-start
@@ -36,10 +31,19 @@ public sealed partial class ShuttleSystem
                 // Stealth has expired, turn it off and start cooldown.
                 RemoveIFFFlag(uid, IFFFlags.Hide, iff);
                 stealth.HideEndTime = null;
-                stealth.HideCooldownEndTime = curTime + TimeSpan.FromSeconds(_stealthCooldown);
+                stealth.HideCooldownEndTime = curTime + TimeSpan.FromSeconds(stealth.StealthCooldown);
                 Dirty(uid, stealth);
             }
         }
+    }
+
+    private void OnStealthStartup(EntityUid uid, ShuttleStealthComponent component, ComponentStartup args)
+    {
+        if (component.StealthDuration < 0)
+            component.StealthDuration = _cfg.GetCVar(CCVars.StealthDuration);
+
+        if (component.StealthCooldown < 0)
+            component.StealthCooldown = _cfg.GetCVar(CCVars.StealthCooldown);
     }
     // Forge-Change-End
 
@@ -109,7 +113,7 @@ public sealed partial class ShuttleSystem
             }
 
             AddIFFFlag(gridUid, IFFFlags.Hide, iff);
-            stealth.HideEndTime = curTime + TimeSpan.FromSeconds(_stealthDuration);
+            stealth.HideEndTime = curTime + TimeSpan.FromSeconds(stealth.StealthDuration);
             stealth.HideCooldownEndTime = null;
         }
         else // This means "show vessel", i.e., turn OFF the Hide flag
@@ -122,7 +126,7 @@ public sealed partial class ShuttleSystem
 
             RemoveIFFFlag(gridUid, IFFFlags.Hide, iff);
             stealth.HideEndTime = null;
-            stealth.HideCooldownEndTime = curTime + TimeSpan.FromSeconds(_stealthCooldown);
+            stealth.HideCooldownEndTime = curTime + TimeSpan.FromSeconds(stealth.StealthCooldown);
         }
 
         Dirty(gridUid, stealth); // Forge-Change
