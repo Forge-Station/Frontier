@@ -368,7 +368,7 @@
       - enum.SubfloorLayers.FirstLayer
     - type: Sprite
       drawdepth: FloorObjects
-      sprite: _NF/Structures/Piping/Atmospherics/vent.rsi # Frontier
+      sprite: Forge/Structures/Piping/Atmospherics/vent.rsi # Forge-Change
       layers:
         - sprite: Structures/Piping/Atmospherics/pipe.rsi
           state: pipeBinaryConnectors

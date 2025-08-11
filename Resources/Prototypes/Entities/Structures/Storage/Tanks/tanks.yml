@@ -10,7 +10,7 @@
   - type: StaticPrice
     price: 750
   - type: Sprite
-    sprite: Structures/Storage/tanks.rsi
+    sprite: Forge/Structures/Storage/tanks.rsi # Forge-Change
     layers:
       - state: fueltank-2
       - state: fueltank-2-1
@@ -56,7 +56,7 @@
   - type: StaticPrice
     price: 2500
   - type: Sprite
-    sprite: Structures/Storage/tanks.rsi
+    sprite: Forge/Structures/Storage/tanks.rsi # Forge-Change
     layers:
       - state: highfueltank-2
       - state: highfueltank-2-1
@@ -88,7 +88,7 @@
   - type: StaticPrice
     price: 500
   - type: Sprite
-    sprite: Structures/Storage/tanks.rsi
+    sprite: Forge/Structures/Storage/tanks.rsi # Forge-Change
     layers:
       - state: watertank-2
       - state: watertank-2-1
@@ -181,7 +181,7 @@
   - type: StaticPrice
     price: 2500
   - type: Sprite
-    sprite: Structures/Storage/tanks.rsi
+    sprite: Forge/Structures/Storage/tanks.rsi # Forge-Change
     layers:
       - state: highwatertank-2
       - state: highwatertank-2-1
@@ -213,7 +213,7 @@
     - type: StaticPrice
       price: 500
     - type: Sprite
-      sprite: Structures/Storage/tanks.rsi
+      sprite: Forge/Structures/Storage/tanks.rsi # Forge-Change
       layers:
         - state: generictank-1
         - state: watertank-2-1

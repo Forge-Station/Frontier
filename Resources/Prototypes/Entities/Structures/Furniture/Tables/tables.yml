@@ -6,9 +6,9 @@
   description: Pieces of metal that make the frame of a table.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/frame.rsi
+    sprite: Forge/Structures/Furniture/Tables/frame.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/frame.rsi
+    sprite: Forge/Structures/Furniture/Tables/frame.rsi # Forge-Change
     state: full
   - type: Fixtures
     fixtures:
@@ -63,9 +63,9 @@
   components:
   - type: SpriteFade
   - type: Sprite
-    sprite: Structures/Furniture/Tables/frame.rsi
+    sprite: Forge/Structures/Furniture/Tables/frame.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/frame.rsi
+    sprite: Forge/Structures/Furniture/Tables/frame.rsi # Forge-Change
     state: full
   - type: Fixtures
     fixtures:
@@ -117,9 +117,9 @@
   description: Pieces of metal that make the frame of a table.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/frame.rsi
+    sprite: Forge/Structures/Furniture/Tables/frame.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/frame.rsi
+    sprite: Forge/Structures/Furniture/Tables/frame.rsi # Forge-Change
     state: full
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -162,9 +162,9 @@
   description: A square piece of metal standing on four metal legs.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/generic.rsi
+    sprite: Forge/Structures/Furniture/Tables/generic.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/generic.rsi
+    sprite: Forge/Structures/Furniture/Tables/generic.rsi # Forge-Change
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic
@@ -206,9 +206,9 @@
   description: A square piece of metal standing on four metal legs. Extra robust.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/reinforced.rsi
+    sprite: Forge/Structures/Furniture/Tables/reinforced.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/reinforced.rsi
+    sprite: Forge/Structures/Furniture/Tables/reinforced.rsi # Forge-Change
   - type: Destructible
     thresholds:
     - trigger:
@@ -253,9 +253,9 @@
   description: A square piece of glass, standing on four metal legs.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/glass.rsi
+    sprite: Forge/Structures/Furniture/Tables/glass.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/glass.rsi
+    sprite: Forge/Structures/Furniture/Tables/glass.rsi # Forge-Change
   - type: GlassTable
     climberDamage:
       types:
@@ -307,9 +307,9 @@
   description: A square piece of glass, standing on four metal legs. Extra robust.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/r_glass.rsi
+    sprite: Forge/Structures/Furniture/Tables/r_glass.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/r_glass.rsi
+    sprite: Forge/Structures/Furniture/Tables/r_glass.rsi # Forge-Change
   - type: GlassTable
     climberDamage:
       types:
@@ -364,9 +364,9 @@
   description: A square piece of plasma glass, standing on four metal legs. Pretty!
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/plasma.rsi
+    sprite: Forge/Structures/Furniture/Tables/plasma.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/plasma.rsi
+    sprite: Forge/Structures/Furniture/Tables/plasma.rsi # Forge-Change
   - type: GlassTable
     climberDamage:
       types:
@@ -421,9 +421,9 @@
   description: A shiny, corrosion resistant brass table. Steampunk!
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/brass.rsi
+    sprite: Forge/Structures/Furniture/Tables/brass.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/brass.rsi
+    sprite: Forge/Structures/Furniture/Tables/brass.rsi # Forge-Change
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic
@@ -464,9 +464,9 @@
   description: Do not apply fire to this. Rumour says it burns easily.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/wood.rsi
+    sprite: Forge/Structures/Furniture/Tables/wood.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/wood.rsi
+    sprite: Forge/Structures/Furniture/Tables/wood.rsi # Forge-Change
   - type: Damageable
     damageModifierSet: Wood
   - type: Destructible
@@ -513,9 +513,9 @@
   description: Play em' cowboy.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/carpet.rsi
+    sprite: Forge/Structures/Furniture/Tables/carpet.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/carpet.rsi
+    sprite: Forge/Structures/Furniture/Tables/carpet.rsi # Forge-Change
   - type: Damageable
     damageModifierSet: Wood
   - type: Destructible
@@ -556,9 +556,9 @@
   description: Literally the sturdiest thing you have ever seen.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/stone.rsi
+    sprite: Forge/Structures/Furniture/Tables/stone.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/stone.rsi
+    sprite: Forge/Structures/Furniture/Tables/stone.rsi # Forge-Change
   - type: Destructible
     thresholds:
     - trigger:
@@ -585,9 +585,9 @@
   - type: Damageable
     damageModifierSet: Web
   - type: Sprite
-    sprite: Structures/Furniture/Tables/web.rsi
+    sprite: Forge/Structures/Furniture/Tables/web.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/web.rsi
+    sprite: Forge/Structures/Furniture/Tables/web.rsi # Forge-Change
   - type: Destructible
     thresholds:
     - trigger:
@@ -655,9 +655,9 @@
   suffix: Blue
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/Fancy/blue.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/blue.rsi # Forge-Change # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/Fancy/blue.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/blue.rsi # Forge-Change # Forge-Change
   - type: Construction
     graph: Table
     node: TableFancyBlue
@@ -670,9 +670,9 @@
   suffix: Cyan
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/Fancy/cyan.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/cyan.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/Fancy/cyan.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/cyan.rsi # Forge-Change
   - type: Construction
     graph: Table
     node: TableFancyCyan
@@ -685,9 +685,9 @@
   suffix: Black
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/Fancy/black.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/black.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/Fancy/black.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/black.rsi # Forge-Change
   - type: Construction
     graph: Table
     node: TableFancyBlack
@@ -700,9 +700,9 @@
   suffix: Red
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/Fancy/red.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/red.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/Fancy/red.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/red.rsi # Forge-Change
   - type: Construction
     graph: Table
     node: TableFancyRed
@@ -715,9 +715,9 @@
   suffix: Purple
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/Fancy/purple.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/purple.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/Fancy/purple.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/purple.rsi # Forge-Change
   - type: Construction
     graph: Table
     node: TableFancyPurple
@@ -730,9 +730,9 @@
   suffix: Pink
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/Fancy/pink.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/pink.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/Fancy/pink.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/pink.rsi # Forge-Change
   - type: Construction
     graph: Table
     node: TableFancyPink
@@ -745,9 +745,9 @@
   suffix: Green
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/Fancy/green.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/green.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/Fancy/green.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/green.rsi # Forge-Change
   - type: Construction
     graph: Table
     node: TableFancyGreen
@@ -760,9 +760,9 @@
   suffix: Orange
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/Fancy/orange.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/orange.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/Fancy/orange.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/orange.rsi # Forge-Change
   - type: Construction
     graph: Table
     node: TableFancyOrange
@@ -775,9 +775,9 @@
   suffix: White
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/Fancy/white.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/white.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/Fancy/white.rsi
+    sprite: Forge/Structures/Furniture/Tables/Fancy/white.rsi # Forge-Change
   - type: Construction
     graph: Table
     node: TableFancyWhite
@@ -797,9 +797,9 @@
     tags:
       - Debug
   - type: Sprite
-    sprite: Structures/Furniture/Tables/debug.rsi
+    sprite: Forge/Structures/Furniture/Tables/debug.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/debug.rsi
+    sprite: Forge/Structures/Furniture/Tables/debug.rsi # Forge-Change
   - type: Destructible
     thresholds:
     - trigger:
@@ -818,9 +818,9 @@
   description: Do not apply fire to this. Rumour says it burns easily.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/counterwood.rsi
+    sprite: Forge/Structures/Furniture/Tables/counterwood.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/counterwood.rsi
+    sprite: Forge/Structures/Furniture/Tables/counterwood.rsi # Forge-Change
     state: full
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -864,9 +864,9 @@
   description: Looks like a good place to put a drink down.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/countermetal.rsi
+    sprite: Forge/Structures/Furniture/Tables/countermetal.rsi # Forge-Change
   - type: Icon
-    sprite: Structures/Furniture/Tables/countermetal.rsi
+    sprite: Forge/Structures/Furniture/Tables/countermetal.rsi # Forge-Change
     state: full
   - type: Damageable
     damageContainer: StructuralInorganic
