@@ -45,7 +45,7 @@ public sealed class ContractsSystem : EntitySystem
 
     // Validation in case of changes
     [ValidatePrototypeId<NpcFactionPrototype>]
-    private const string Pirate = "PirateNF";
+    private const string Pirate = "NFPirate";
     [ValidatePrototypeId<NpcFactionPrototype>]
     private const string Syndicate = "NFSyndicate";
 
@@ -58,7 +58,6 @@ public sealed class ContractsSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ContractsComponent, ComponentInit>(OnInit);
         SubscribeLocalEvent<ContractsComponent, BoundUIOpenedEvent>(OnUIOpened);
         SubscribeLocalEvent<ContractsComponent, AcceptContractMessage>(OnAcceptContract);
         SubscribeLocalEvent<ContractsComponent, CompleteContractMessage>(OnCompleteContract);
@@ -75,6 +74,13 @@ public sealed class ContractsSystem : EntitySystem
         var query = EntityQueryEnumerator<ContractsComponent>();
         while (query.MoveNext(out var uid, out var comp))
         {
+            if (comp.NextUpdateTime == TimeSpan.Zero)
+            {
+                comp.NextUpdateTime = _gameTiming.CurTime + comp.UpdateInterval;
+                GenerateNewContracts(uid, comp);
+                continue;
+            }
+
             if (_gameTiming.CurTime >= comp.NextUpdateTime)
             {
                 GenerateNewContracts(uid, comp);
@@ -82,15 +88,6 @@ public sealed class ContractsSystem : EntitySystem
 
             UpdateActiveContracts(uid, comp);
         }
-    }
-
-    /// <summary>
-    /// Handles initialization of the contracts component, sets the next update time and generates contracts.
-    /// </summary>
-    private void OnInit(EntityUid uid, ContractsComponent component, ComponentInit args)
-    {
-        component.NextUpdateTime = _gameTiming.CurTime + component.UpdateInterval;
-        GenerateNewContracts(uid, component);
     }
 
     /// <summary>

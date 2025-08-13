@@ -47,7 +47,7 @@ namespace Content.Server.GameTicking.Rules
 
         // Validation in case of changes
         [ValidatePrototypeId<NpcFactionPrototype>]
-        private const string Pirate = "PirateNF";
+        private const string Pirate = "NFPirate";
         [ValidatePrototypeId<NpcFactionPrototype>]
         private const string Syndicate = "NFSyndicate";
 
