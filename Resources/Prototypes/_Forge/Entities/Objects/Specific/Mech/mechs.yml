@@ -548,8 +548,8 @@
         Blunt: 30
         Structural: 200
   - type: MovementSpeedModifier
-    baseWalkSpeed: 2.2
-    baseSprintSpeed: 3.7
+    baseWalkSpeed: 2
+    baseSprintSpeed: 3.5
   - type: Damageable
     damageModifierSet: DarkGygaxArmor
   - type: MechThrusters
@@ -619,14 +619,14 @@
         Blunt: 50
         Structural: 400
   - type: MovementSpeedModifier
-    baseWalkSpeed: 1
-    baseSprintSpeed: 1.5
+    baseWalkSpeed: 2
+    baseSprintSpeed: 2.5
   - type: Damageable
     damageModifierSet: HeavyArmor
   - type: MechThrusters
   - type: Repairable
-    fuelCost: 50
-    doAfterDelay: 25
+    fuelCost: 35
+    doAfterDelay: 15
   - type: PointLight
     color: red
 
@@ -678,7 +678,7 @@
     baseState: blackpearal
     openState: blackpearal-open
     brokenState: blackpearal-broken
-    mechToPilotDamageMultiplier: 0.1
+    mechToPilotDamageMultiplier: 0.05
     airtight: true
     maxIntegrity: 320
     maxEquipmentAmount: 4

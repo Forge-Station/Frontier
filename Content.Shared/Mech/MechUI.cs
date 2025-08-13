@@ -107,6 +107,8 @@ public sealed class MechSoundboardPlayMessage : MechEquipmentUiMessage
 public sealed class MechBoundUiState : BoundUserInterfaceState
 {
     public Dictionary<NetEntity, BoundUserInterfaceState> EquipmentStates = new();
+    
+    public List<NetEntity> Equipment = new(); // Forge-Change
 }
 
 [Serializable, NetSerializable]

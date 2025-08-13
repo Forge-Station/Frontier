@@ -275,3 +275,12 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/Athara.ogg  
+
+- type: entity
+  parent: BaseBoomBoxTape
+  id: BaseBoomBoxTapeAivelNova
+  name: Aivel - Nova
+  description: Музыка
+  components:
+    - type: BoomBoxTape
+      soundPath: /Audio/BoomBox/Nova.ogg  
