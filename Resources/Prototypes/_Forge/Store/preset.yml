@@ -29,7 +29,17 @@
   - type: Store
     name: store-preset-name-uplink
     categories:
-    - Debug
+    - ContractorUplinkWeaponry
+    - ContractorUplinkAmmo
+    - ContractorUplinkExplosives
+    - ContractorUplinkChemicals
+    - ContractorUplinkDeception
+    - ContractorUplinkDisruption
+    - ContractorUplinkImplants
+    - ContractorUplinkAllies
+    - ContractorUplinkWearables
+    - ContractorUplinkJob
+    - ContractorUplinkPointless
     currencyWhitelist:
     - Telecrystal
     balance:

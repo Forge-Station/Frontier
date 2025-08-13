@@ -1,0 +1,41 @@
+- type: entity
+  id: RandomContractorFirstItem
+  parent: MarkerBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: RandomSpawner
+    prototypes:
+    - EnergyDagger
+    - SoapSyndie
+    - C4
+
+- type: entity
+  id: RandomContractorSecondItem
+  parent: MarkerBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: RandomSpawner
+    prototypes:
+    - ElectricalDisruptionKit
+    # Добавьте сюда ещё если надо
+
+- type: entity
+  id: RandomContractorThirdItem
+  parent: MarkerBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: RandomSpawner
+    prototypes:
+    - FoodBoxDonkpocket
+    - ClothingShoesChameleonNoSlips
+    - ToolboxSyndicateFilled
+    - FreedomImplanter

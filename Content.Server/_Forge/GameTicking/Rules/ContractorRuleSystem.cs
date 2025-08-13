@@ -196,7 +196,7 @@ namespace Content.Server.GameTicking.Rules
                 _role.MindAddRole(mindId, MindRole);
             if (mind is { UserId: not null } && _player.TryGetSessionById(mind.UserId, out var session))
                 _antag.SendBriefing(session, Loc.GetString("contractor-role-greeting"), Color.OrangeRed,
-                    new SoundPathSpecifier("/Audio/Ambience/Antag/traitor_start.ogg")); // Change it if you can create new sounds
+                    new SoundPathSpecifier("/Audio/_Forge/Ambience/Antag/contractor_spawn.ogg"));
 
             var uplink = Spawn(Uplink, Transform(contractor).Coordinates);
             EnsureComp<ContractsComponent>(uplink).UplinkOwner = contractor;

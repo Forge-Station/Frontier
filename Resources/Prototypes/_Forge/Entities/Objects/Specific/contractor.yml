@@ -61,3 +61,34 @@
   - type: Pinpointer
     updateTargetName: true
     canTargetMobs: true
+
+- type: entity
+  parent: BaseItem
+  id: BoxContractorBundle
+  name: box
+  description: An unremarkable box.
+  suffix: DO NOT MAP
+  components:
+  - type: Sprite
+    sprite: Objects/Storage/boxes.rsi
+    layers:
+    - state: box_of_doom
+    - state: writing_of_doom
+  - type: Item
+    sprite: Objects/Storage/boxes.rsi
+    size: Large
+    shape:
+    - 0,0,2,2
+  - type: SpawnItemsOnUse
+    items:
+      - id: PinpointerContractor
+      - id: Stunbaton
+      - id: ClothingBackpackChameleonFill
+      - id: AgentIDCard
+      - id: CigPackSyndicate
+      - id: FlippoLighter
+      - id: RandomContractorFirstItem
+      - id: RandomContractorSecondItem
+      - id: RandomContractorThirdItem
+    sound:
+      path: /Audio/Effects/unwrap.ogg

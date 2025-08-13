@@ -6,3 +6,6 @@ ent-ContractorEvacuationPortal = { ent-BasePortal }
 ent-PinpointerContractor = { ent-PinpointerNuclear }
     .desc = { ent-PinpointerNuclear.desc }
     .suffix = НЕ МАППИТЬ
+ent-BoxContractorBundle = коробка
+    .desc = Ничем не примечательная коробка.
+    .suffix = НЕ МАППИТЬ
