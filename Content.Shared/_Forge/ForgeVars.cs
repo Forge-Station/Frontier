@@ -28,4 +28,10 @@ public sealed class ForgeVars
     /// </summary>
     public static readonly CVarDef<float> BarksVolume =
         CVarDef.Create("voice.barks_volume", 1f, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    ///     Whether or not players can use mech guns outside of mechs.
+    /// </summary>
+    public static readonly CVarDef<bool> MechGunOutsideMech =
+        CVarDef.Create("mech.gun_outside_mech", false, CVar.SERVER | CVar.REPLICATED);
 }

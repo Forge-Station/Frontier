@@ -14,3 +14,210 @@
       whitelist:
         tags:
           - SecurityUplink
+
+#region mechs
+- type: listing
+  id: UplinkNFMechAres
+  name: uplink-security-mech-ares-name
+  description: uplink-security-mech-ares-desc
+  productEntity: MechAresBattery
+  icon: { sprite: Forge/Objects/Specific/Mech/mecha.rsi, state: ares }
+  cost:
+    FrontierUplinkCoin: 120
+  categories:
+    - UplinkSecurityMech
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+
+- type: listing
+  id: UplinkNFMechCombatDisabler
+  name: uplink-security-mech-disabler-name
+  description: uplink-security-mech-disabler-desc
+  productEntity: WeaponMechCombatDisabler
+  icon: { sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_disabler }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityMech
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkNFMechCombatFiredart
+  name: uplink-security-mech-firedart-name
+  description: uplink-security-mech-firedart-desc
+  productEntity: WeaponMechCombatFiredartLaser
+  icon: { sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_firedart }
+  cost:
+    FrontierUplinkCoin: 12
+  categories:
+    - UplinkSecurityMech
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkNFMechCombatSolaris
+  name: uplink-security-mech-solaris-name
+  description: uplink-security-mech-solaris-desc
+  productEntity: WeaponMechCombatSolarisLaser
+  icon: { sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_solaris }
+  cost:
+    FrontierUplinkCoin: 16
+  categories:
+    - UplinkSecurityMech
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkNFMechCombatImmolation
+  name: uplink-security-mech-immolation-name
+  description: uplink-security-mech-immolation-desc
+  productEntity: WeaponMechCombatImmolationGun
+  icon: { sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_immolator }
+  cost:
+    FrontierUplinkCoin: 18
+  categories:
+    - UplinkSecurityMech
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+
+- type: listing
+  id: UplinkNFMechCombatUltraRifle
+  name: uplink-security-mech-rifle-name
+  description: uplink-security-mech-rifle-desc
+  productEntity: WeaponMechCombatUltraRifle
+  icon: { sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_uac2 }
+  cost:
+    FrontierUplinkCoin: 22
+  categories:
+    - UplinkSecurityMech
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkNFMechCombatShotgun
+  name: uplink-security-mech-shotgun-name
+  description: uplink-security-mech-shotgun-desc
+  productEntity: WeaponMechCombatShotgun
+  icon: { sprite: Objects/Specific/Mech/mecha_equipment.rsi, state: mecha_scatter }
+  cost:
+    FrontierUplinkCoin: 26
+  categories:
+    - UplinkSecurityMech
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkNFMechCombatShotgunIncendiary
+  name: uplink-security-mech-shotgun-incendiary-name
+  description: uplink-security-mech-shotgun-incendiary-desc
+  productEntity: WeaponMechCombatShotgunIncendiary
+  icon: { sprite: Objects/Specific/Mech/mecha_equipment.rsi, state: mecha_carbine }
+  cost:
+    FrontierUplinkCoin: 29
+  categories:
+    - UplinkSecurityMech
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+
+- type: listing
+  id: UplinkNFMechCombatMissileRack8
+  name: uplink-security-mech-missile-8-name
+  description: uplink-security-mech-missile-8-desc
+  productEntity: WeaponMechCombatMissileRack8
+  icon: { sprite: Objects/Specific/Mech/mecha_equipment.rsi, state: mecha_missilerack }
+  cost:
+    FrontierUplinkCoin: 34
+  categories:
+    - UplinkSecurityMech
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkNFMechCombatMissileRack6
+  name: uplink-security-mech-missile-6-name
+  description: uplink-security-mech-missile-6-desc
+  productEntity: WeaponMechCombatMissileRack6
+  icon: { sprite: Objects/Specific/Mech/mecha_equipment.rsi, state: mecha_missilerack_six }
+  cost:
+    FrontierUplinkCoin: 40
+  categories:
+    - UplinkSecurityMech
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff

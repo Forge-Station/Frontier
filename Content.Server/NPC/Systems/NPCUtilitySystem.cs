@@ -308,7 +308,9 @@ public sealed class NPCUtilitySystem : EntitySystem
             {
                 if (!TryComp(targetUid, out DamageableComponent? damage))
                     return 0f;
-                if (con.TargetState != MobState.Invalid && _thresholdSystem.TryGetPercentageForState(targetUid, con.TargetState, damage.TotalDamage, out var percentage))
+                if (!TryComp(targetUid, out MobThresholdsComponent? thresholds)) // Forge-Change
+                    return 1f; // a bit of a hack but works
+                if (con.TargetState != MobState.Invalid && _thresholdSystem.TryGetPercentageForState(targetUid, con.TargetState, damage.TotalDamage, out var percentage, thresholds)) // Forge-Change
                     return Math.Clamp((float)(1 - percentage), 0f, 1f);
                 if (_thresholdSystem.TryGetIncapPercentage(targetUid, damage.TotalDamage, out var incapPercentage))
                     return Math.Clamp((float)(1 - incapPercentage), 0f, 1f);

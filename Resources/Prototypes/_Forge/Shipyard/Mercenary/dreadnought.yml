@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen 
+
+# Shuttle Notes:
+- type: vessel
+  id: Dreadnought
+  parent: BaseVessel
+  name: SBI Дредноут
+  description: Крупногабаритный шаттл для наёмников, рекомендуемый состав экипажа 4 человека.
+  price: 125000
+  category: Small
+  group: Mercenary
+  shuttlePath: /Maps/Forge/Shuttles/Mercenary/dreadnought.yml
+  addComponents:
+  - type: MercenaryBountyDatabase
+    bounties: []
+
+- type: gameMap
+  id: Dreadnought
+  mapName: 'SBI Дредноут'
+  mapPath: /Maps/Forge/Shuttles/Mercenary/dreadnought.yml
+  minPlayers: 0
+  stations:
+    Dreadnought:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Дредноут {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

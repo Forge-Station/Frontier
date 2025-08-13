@@ -1,16 +1,16 @@
 - type: loadout
   id: CommanderClothingEyes1
   equipment:
-    eyes: ClothingEyesHudBountyHunter
-
-- type: loadout
-  id: CommanderClothingEyes2
-  price: 7500
-  equipment:
     eyes: ClothingEyesHudSyndicate
 
 - type: loadout
-  id: CommanderClothingEyes3
-  price: 7500
+  id: CommanderClothingEyes2
+  price: 3000
   equipment:
     eyes: ClothingEyesHudSyndicateAgent
+
+- type: loadout
+  id: CommanderClothingEyes3
+  price: 30000
+  equipment:
+    eyes: NFClothingEyesNightVisionGoggleSyndicate

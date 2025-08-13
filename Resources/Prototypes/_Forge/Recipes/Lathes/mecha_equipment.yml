@@ -1,0 +1,150 @@
+- type: latheRecipe
+  abstract: true
+  id: BaseMechEquipmentRecipe
+  categories:
+  - MechEquipment
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentHonkerBananaMortar
+  result: WeaponMechSpecialBananaMortar
+  materials:
+    Steel: 1150
+    Bananium: 800
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentHonkerMousetrapMortar
+  result: WeaponMechSpecialMousetrapMortar
+  materials:
+    Steel: 1200
+    Bananium: 300
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentDrill
+  result: WeaponMechMelleDrill
+  completetime: 3
+  materials:
+    Steel: 900
+    Plastic: 250
+
+- type: latheRecipe
+  parent: MechEquipmentDrill
+  id: MechEquipmentDrillDiamond
+  result: WeaponMechMelleDrillDiamond
+  materials:
+    Steel: 1200
+    Plastic: 800
+    Silver: 1000
+    Diamond: 500
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentKineticAccelerator
+  result: WeaponMechIndustrialKineticAccelerator
+  materials:
+    Steel: 4000
+    Glass: 1500
+    Plastic: 800
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechAirTank
+  result: MechAirTank
+  materials:
+    Steel: 1000
+    Glass: 150
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechThruster
+  result: MechThruster
+  materials:
+    Steel: 1200
+    Glass: 150
+
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentUltraRifle
+  result: WeaponMechCombatUltraRifle
+  materials:
+    Steel: 4000
+    Glass: 1500
+    Plastic: 800
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentShotgun
+  result: WeaponMechCombatShotgun
+  materials:
+    Steel: 4000
+    Glass: 1500
+    Plastic: 800
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentShotgunIncendiary
+  result: WeaponMechCombatShotgunIncendiary
+  materials:
+    Steel: 3100
+    Glass: 1500
+    Plastic: 2000
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentMissileRack8
+  result: WeaponMechCombatMissileRack8
+  materials:
+    Steel: 4000
+    Glass: 1500
+    Plastic: 800
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentMissileRack6
+  result: WeaponMechCombatMissileRack6
+  materials:
+    Steel: 4000
+    Glass: 1500
+    Plastic: 800
+  
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentFiredartLaser
+  result: WeaponMechCombatFiredartLaser
+  materials:
+    Steel: 3000
+    Glass: 2000
+    Plastic: 800
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentSolarisLaser
+  result: WeaponMechCombatSolarisLaser
+  materials:
+    Steel: 4000
+    Glass: 2000
+    Plastic: 1600
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentImmolationGun
+  result: WeaponMechCombatImmolationGun
+  materials:
+    Steel: 4000
+    Glass: 3000
+    Plastic: 3000
+    Diamond: 600
+
+- type: latheRecipe
+  parent: BaseMechEquipmentRecipe
+  id: MechEquipmentXRayProjector
+  result: WeaponMechCombatXRayProjector
+  materials:
+    Steel: 4500
+    Glass: 3000
+    Plastic: 1500
+    Uranium: 1500

@@ -5556,18 +5556,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,-4.5
       parent: 1
-- proto: SpawnDungeonLootVaultGuns
-  entities:
-  - uid: 773
-    components:
-    - type: Transform
-      pos: 3.6119585,-15.449352
-      parent: 1
-  - uid: 802
-    components:
-    - type: Transform
-      pos: 1.5494587,-11.511852
-      parent: 1
 - proto: SpawnPointLatejoin
   entities:
   - uid: 137

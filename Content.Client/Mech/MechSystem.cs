@@ -40,6 +40,11 @@ public sealed class MechSystem : SharedMechSystem
             drawDepth = DrawDepth.SmallMobs;
         }
 
+        if (args.Sprite.LayerMapTryGet(MechVisualLayers.Light, out var lightId) && args.Sprite.TryGetLayer(lightId, out var lightLayer) && _appearance.TryGetData<bool>(uid, MechVisuals.Light, out var light, args.Component))
+        {
+            lightLayer.Visible = light;
+        }
+
         layer.SetState(state);
         args.Sprite.DrawDepth = (int) drawDepth;
     }

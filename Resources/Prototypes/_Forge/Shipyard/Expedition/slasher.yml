@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen 
+
+# Shuttle Notes:
+- type: vessel
+  id: Slasher
+  parent: BaseVessel
+  name: NC Слэшер
+  description: Среднегабаритная экспедиционная баржа. Рекомендованный размер команды 6-8 человек.
+  price: 112000
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/Forge/Shuttles/Expedition/slasher.yml
+  class:
+  - Expedition
+  - Civilian
+
+- type: gameMap
+  id: Slasher
+  mapName: 'NC Слэшер'
+  mapPath: /Maps/Forge/Shuttles/Expedition/slasher.yml
+  minPlayers: 0
+  stations:
+    Slasher:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Слэшер {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

@@ -1,0 +1,39 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen 
+
+# Shuttle Notes:
+- type: vessel
+  id: Vostok
+  parent: BaseVessel
+  name: TL Восток
+  description: Тяжелый авианосец сил дсбф для подавления крупных восстаний.
+  price: 187000
+  category: Large
+  group: Security
+  access: Bailiff
+  shuttlePath: /Maps/Forge/Shuttles/Nfsd/vostok.yml
+  guidebookPage: Null
+  class:
+  - Capital
+
+- type: gameMap
+  id: Vostok
+  mapName: 'TL Восток'
+  mapPath: /Maps/Forge/Shuttles/Nfsd/vostok.yml
+  minPlayers: 0
+  stations:
+    Vostok:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Восток {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

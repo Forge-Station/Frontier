@@ -1,6 +1,7 @@
-using System.Linq;
 using System.Numerics;
 using Robust.Shared.GameStates;
+using System; // Forge-Change
+using Robust.Shared.Serialization; // Forge-Change
 
 namespace Content.Shared.Light.Components;
 
@@ -25,11 +26,31 @@ public sealed partial class SunShadowCycleComponent : Component
     /// Time to have each direction applied. Will lerp from the current value to the next one.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public List<(float Ratio, Vector2 Direction, float Alpha)> Directions = new()
+    public List<SunShadowDirection> Directions = new() // Forge-Change
     {
-        (0f, new Vector2(0f, 3f), 0f),
-        (0.25f, new Vector2(-3f, -0.1f), 0.5f),
-        (0.5f, new Vector2(0f, -3f), 0.8f),
-        (0.75f, new Vector2(3f, -0.1f), 0.5f),
+        new() { Ratio = 0f, Direction = new(0f, 3f), Alpha = 0f }, // Forge-Change
+        new() { Ratio = 0.25f, Direction = new(-3f, -0.1f), Alpha = 0.5f }, // Forge-Change
+        new() { Ratio = 0.5f, Direction = new(0f, -3f), Alpha = 0.8f }, // Forge-Change
+        new() { Ratio = 0.75f, Direction = new(3f, -0.1f), Alpha = 0.5f }, // Forge-Change
     };
 }
+
+// Forge-Change-Start
+
+/// <summary>
+/// A single keyframe for the sun's shadow direction over time.
+/// Replaces a ValueTuple to allow for serialization.
+/// </summary>
+[DataDefinition, Serializable, NetSerializable]
+public partial struct SunShadowDirection
+{
+    [DataField("ratio", required: true)]
+    public float Ratio;
+
+    [DataField("direction", required: true)]
+    public Vector2 Direction;
+
+    [DataField("alpha", required: true)]
+    public float Alpha;
+}
+ // Forge-Change-End

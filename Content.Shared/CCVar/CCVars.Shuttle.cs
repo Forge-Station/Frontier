@@ -282,4 +282,24 @@ public sealed partial class CCVars
         CVarDef.Create("shuttle.impact.inertia_scaling", 0.5f, CVar.SERVERONLY);
 
     #endregion
+
+    // Forge-Change-Start
+    #region stealth
+
+    /// <summary>
+    /// How long shuttle stealth lasts, in seconds.
+    /// </summary>
+    [CVarControl(AdminFlags.VarEdit)]
+    public static readonly CVarDef<float> StealthDuration =
+        CVarDef.Create("shuttle.stealth_duration", 120f, CVar.SERVERONLY);
+
+    /// <summary>
+    /// How long the cooldown for shuttle stealth is, in seconds.
+    /// </summary>
+    [CVarControl(AdminFlags.VarEdit)]
+    public static readonly CVarDef<float> StealthCooldown =
+        CVarDef.Create("shuttle.stealth_cooldown", 300f, CVar.SERVERONLY);
+
+    #endregion
+    // Forge-Change-End
 }

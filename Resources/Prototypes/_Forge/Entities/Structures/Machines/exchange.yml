@@ -27,15 +27,17 @@
   - type: Transform
     noRot: false
   - type: Sprite
-    sprite: _NF/Structures/Machines/atm/illegal_atm.rsi
+    sprite: Forge/Structures/Machines/smugglerexchange.rsi
+    noRot: true
     layers:
-    - map: ["computerLayerBody"]
-      state: icon
-    - map: ["computerLayerScreen"]
-      state: unshaded
+    - state: icon
+      map: [ "enum.LatheVisualLayers.IsRunning" ]
+    - state: unshaded
+      shader: unshaded
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
   - type: Lathe
     idleState: icon
-    runningState: icon
+    runningState: printing
     staticPacks:
       - CorvaxSyndicatExchanger
   - type: MaterialStorage

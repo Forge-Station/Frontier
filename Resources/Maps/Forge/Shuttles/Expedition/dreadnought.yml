@@ -7892,13 +7892,6 @@ entities:
     - type: Transform
       pos: 16.390488,19.707104
       parent: 1
-- proto: SpawnDungeonLootVaultGuns
-  entities:
-  - uid: 1303
-    components:
-    - type: Transform
-      pos: 26.456146,10.563104
-      parent: 1
 - proto: SpawnPointContractor
   entities:
   - uid: 1466
@@ -8523,7 +8516,7 @@ entities:
     - type: Transform
       pos: 25.46031,8.747873
       parent: 1
-- proto: VendingMachineBoozeSyndicate
+- proto: VendingMachineBooze
   entities:
   - uid: 1340
     components:

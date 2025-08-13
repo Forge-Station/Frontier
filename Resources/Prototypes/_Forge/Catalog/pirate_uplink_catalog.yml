@@ -13,3 +13,22 @@
       whitelist:
         tags:
           - PirateUplink
+
+- type: listing
+  id: UplinkNFMechGygaxPirate
+  name: uplink-security-mech-bpearl-name
+  description: uplink-security-mech-bpearl-desc
+  productEntity: MechGygaxPirateBattery
+  icon: { sprite: Forge/Objects/Specific/Mech/mecha.rsi, state: blackpearal }
+  cost:
+    Doubloon: 80
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain

@@ -19,3 +19,43 @@
     Glass: 900
     Gold: 300
     Silver: 300
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseClarkeRecipeCategory ]
+  id: ClarkeCentralElectronics
+  result: ClarkeCentralElectronics
+
+- type: latheRecipe
+  parent: ClarkeCentralElectronics
+  id: ClarkePeripheralsElectronics
+  result: ClarkePeripheralsElectronics
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseGygaxRecipeCategory ]
+  id: GygaxCentralElectronics
+  result: GygaxCentralElectronics
+
+- type: latheRecipe
+  parent: GygaxCentralElectronics
+  id: GygaxPeripheralsElectronics
+  result: GygaxPeripheralsElectronics
+
+- type: latheRecipe
+  parent: GygaxCentralElectronics
+  id: GygaxTargetingElectronics
+  result: GygaxTargetingElectronics
+
+- type: latheRecipe
+  parent: [ BaseSilverCircuitboardRecipe, BaseDurandRecipeCategory ]
+  id: DurandCentralElectronics
+  result: DurandCentralElectronics
+
+- type: latheRecipe
+  parent: DurandCentralElectronics
+  id: DurandPeripheralsElectronics
+  result: DurandPeripheralsElectronics
+
+- type: latheRecipe
+  parent: DurandCentralElectronics
+  id: DurandTargetingElectronics
+  result: DurandTargetingElectronics

@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Sword
+  parent: BaseVessel
+  name: TL Меч
+  description: Шаттл перехватчик Меч. Произведено частной военно-производственной компаний TechnicLogistic по спец. заказу НТ. Рекомендуемый состав команды 1-2 человека.
+  price: 27500
+  category: Small
+  group: Custom
+  shuttlePath: /Maps/Forge/Shuttles/Nfsd/sword.yml
+  class:
+  - Fighter
+
+- type: gameMap
+  id: Sword
+  mapName: 'TL Меч'
+  mapPath: /Maps/Forge/Shuttles/Nfsd/sword.yml
+  minPlayers: 0
+  stations:
+    Sword:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Меч {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

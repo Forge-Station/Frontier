@@ -1,0 +1,42 @@
+# Author -
+# GitHub: -
+# Discord: letstrythisone.
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle notes:
+
+- type: vessel
+  id: Serge
+  parent: BaseVessel
+  name: ST Сердж
+  description: Микро-шаттл для загрузки и перевозки руды с добытых астероидов, и надейтесь, что он не взорвется по пути к авианосцу. Средний размер команды от 1 до 2 человек.
+  price: 11000 # (5964)
+  category: Micro
+  group: Custom
+  shuttlePath: /Maps/Forge/Shuttles/Scrap/Serge.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Cargo
+
+- type: gameMap
+  id: Serge
+  mapName: 'ST Сердж'
+  mapPath: /Maps/Forge/Shuttles/Scrap/Serge.yml
+  minPlayers: 0
+  stations:
+    Serge:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Сердж {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

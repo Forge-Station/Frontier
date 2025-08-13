@@ -1,6 +1,6 @@
 - type: entity
   id: MechEquipmentFork
-  parent: BaseMechEquipment
+  parent: [ BaseMechEquipment, IndustrialMechEquipment ] # Forge-Change: +IndustrialMechEquipment
   name: power fork
   description: Gives a mech the ability to pick up crates and insert them onto racks.
   components:

@@ -1723,6 +1723,26 @@
   categories:
     - UplinkWearablesSmugger
 
+- type: listing
+  id: SmuggerUplinkgMechGygaxSyndieBattery
+  name: uplink-security-mech-dgygax-name
+  description: uplink-security-mech-dgygax-desc
+  productEntity: MechGygaxSyndieBattery
+  cost:
+    TelecrystalDamaged: 200
+  categories:
+  - UplinkWearablesSmugger
+
+- type: listing
+  id: SmuggerUplinkgMechMaulerSyndieBattery
+  name: uplink-security-mech-mauler-name
+  description: uplink-security-mech-mauler-desc
+  productEntity: MechMaulerSyndieBattery
+  cost:
+    TelecrystalDamaged: 300
+  categories:
+  - UplinkWearablesSmugger
+
  # Pointless
 
 - type: listing
@@ -2249,4 +2269,3 @@
     blacklist:
       components:
       - SurplusBundle
-

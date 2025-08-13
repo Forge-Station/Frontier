@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+- type: vessel
+  id: Zenith
+  parent: BaseVessel
+  name: TL Зенит
+  description: Среднегабаритный добывающий авианосец. Рекомендованный размер команды 3-6 человек.
+  price: 79300
+  category: Medium
+  group: Salvage
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/zenith.yml
+  guidebookPage: Null
+  class:
+  - Cargo
+  - Salvage
+
+
+
+- type: gameMap
+  id: Zenith
+  mapName: 'TL Зенит'
+  mapPath: /Maps/Forge/Shuttles/Salvage/zenith.yml
+  minPlayers: 0
+  stations:
+    Zenith:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Зенит {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

@@ -30,10 +30,236 @@
   entityIcon: BluespaceHarvester
   discipline: NFScience
   tier: 3
-  cost: 20000
+  cost: 40000
   recipeUnlocks:
   - MachineBluespaceHarvesterCircuitboard
   - MachineBluespaceTransitorCircuitboard
   technologyPrerequisites:
   - NFBluespaceTimeManipulation
   position: 5, 5
+
+- type: technology
+  id: NFHonkerEquipment
+  name: nf-research-technology-honker-equipment
+  entityIcon: WeaponMechSpecialBananaMortar
+  discipline: NFEngineering
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - MechEquipmentHonkerMousetrapMortar
+  - MechEquipmentHonkerBananaMortar
+  technologyPrerequisites:
+  - NFHONKMech
+  - NFPushHorn
+  position: 3, 18
+
+- type: technology
+  id: NFRipley2Mech
+  name: nf-research-technology-ripley-mkii
+  entityIcon: MechRipley2
+  discipline: NFEngineering
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - RipleyMKIIHarness
+  - RipleyUpgradeKit
+  technologyPrerequisites:
+  - NFRipleyAPLU
+  position: 2, 16
+
+- type: technology
+  id: NFClarkeMech
+  name: nf-research-technology-clarke-mech
+  entityIcon: MechClarke
+  discipline: NFSalvage
+  secondaryDiscipline: NFEngineering
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - ClarkeHarness
+  - ClarkeHead
+  - ClarkeLArm
+  - ClarkeRArm
+  - ClarkeTreads
+  - ClarkeCentralElectronics
+  - ClarkePeripheralsElectronics
+  technologyPrerequisites:
+  - NFRipley2Mech
+  position: 3, 16
+
+- type: technology
+  id: NFMechDrill
+  name: nf-research-technology-mech-drill
+  entityIcon: WeaponMechMelleDrill
+  discipline: NFSalvage
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - MechEquipmentDrill
+  technologyPrerequisites:
+  - NFRipley2Mech
+  position: 3, 15
+
+- type: technology
+  id: NFMechDiamondDrill
+  name: nf-research-technology-mech-diamond-drill
+  entityIcon: WeaponMechMelleDrillDiamond
+  discipline: NFSalvage
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - MechEquipmentDrillDiamond
+  technologyPrerequisites:
+  - NFMechDrill
+  position: 4, 15
+
+- type: technology
+  id: NFMechKineticAccelerator
+  name: nf-research-technology-mech-kinetic-accelerator
+  entityIcon: WeaponMechIndustrialKineticAccelerator
+  discipline: NFSalvage
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - MechEquipmentKineticAccelerator
+  technologyPrerequisites:
+  - NFMechDrill
+  position: 5, 15
+
+- type: technology
+  id: NFGygaxMech
+  name: nf-research-technology-gygax-mech
+  entityIcon: MechGygax
+  discipline: NFArsenalMercenary
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - GygaxHarness
+  - GygaxArmor
+  - GygaxHead
+  - GygaxLArm
+  - GygaxLLeg
+  - GygaxRArm
+  - GygaxRLeg
+  - GygaxCentralElectronics
+  - GygaxPeripheralsElectronics
+  - GygaxTargetingElectronics
+  technologyPrerequisites:
+  - NFClarkeMech
+  position: 4, 16
+
+- type: technology
+  id: NFBaseWeaponMech
+  name: nf-research-technology-mech-base-weapon
+  entityIcon: WeaponMechCombatUltraRifle
+  discipline: NFArsenalMercenary
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - MechEquipmentUltraRifle
+  - MechEquipmentShotgun
+  technologyPrerequisites:
+  - NFGygaxMech
+  position: 5, 16
+
+- type: technology
+  id: NFShotgunIncendiaryMech
+  name: nf-research-technology-mech-shotgun-incendiary
+  entityIcon: WeaponMechCombatShotgunIncendiary
+  discipline: NFArsenalMercenary
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - MechEquipmentShotgunIncendiary
+  technologyPrerequisites:
+  - NFBaseWeaponMech
+  position: 6, 16
+
+- type: technology
+  id: NFDurandMech
+  name: nf-research-technology-durand-mech
+  entityIcon: MechDurand
+  discipline: NFArsenalMercenary
+  secondaryDiscipline: NFArsenalNfsd
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - DurandHarness
+  - DurandArmor
+  - DurandHead
+  - DurandLArm
+  - DurandLLeg
+  - DurandRArm
+  - DurandRLeg
+  - DurandCentralElectronics
+  - DurandPeripheralsElectronics
+  - DurandTargetingElectronics
+  technologyPrerequisites:
+  - NFGygaxMech
+  position: 4, 17
+
+- type: technology
+  id: NFBaseLaserWeaponMech
+  name: nf-research-technology-mech-base-laser-weapon
+  entityIcon: WeaponMechCombatSolarisLaser
+  discipline: NFArsenalMercenary
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - MechEquipmentFiredartLaser
+  - MechEquipmentSolarisLaser
+  technologyPrerequisites:
+  - NFDurandMech
+  position: 5, 17
+
+- type: technology
+  id: NFImmolationGunMech
+  name: nf-research-technology-mech-immolation-laser
+  entityIcon: WeaponMechCombatImmolationGun
+  discipline: NFArsenalMercenary
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - MechEquipmentImmolationGun
+  technologyPrerequisites:
+  - NFBaseLaserWeaponMech
+  position: 6, 17
+
+- type: technology
+  id: NFXRayGunMech
+  name: nf-research-technology-mech-xray-laser
+  entityIcon: WeaponMechCombatXRayProjector
+  discipline: NFArsenalMercenary
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - MechEquipmentXRayProjector
+  technologyPrerequisites:
+  - NFImmolationGunMech
+  position: 6, 18
+
+- type: technology
+  id: NFBaseMissileRackMech
+  name: nf-research-technology-mech-base-missile-weapon
+  entityIcon: WeaponMechCombatMissileRack8
+  discipline: NFArsenalMercenary
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - MechEquipmentMissileRack8
+  technologyPrerequisites:
+  - NFDurandMech
+  position: 4, 18
+
+- type: technology
+  id: NFMissileRack6Mech
+  name: nf-research-technology-mech-missile-weapon
+  entityIcon: WeaponMechCombatMissileRack6
+  discipline: NFArsenalNfsd
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - MechEquipmentMissileRack6
+  technologyPrerequisites:
+  - NFBaseMissileRackMech
+  position: 5, 18

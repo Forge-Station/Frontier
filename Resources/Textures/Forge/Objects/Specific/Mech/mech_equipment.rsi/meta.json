@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/tgstation at https://github.com/tgstation/tgstation/commit/40d89d11ea4a5cb81d61dc1018b46f4e7d32c62a, Clamp/Honker Inhands by TiniestShark (Github), Mech ChainSword by NULL882 (GitHub)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "mecha_bola"
+    },
+    {
+      "name": "mecha_carbine"
+    },
+    {
+      "name": "mecha_grenadelnchr"
+    },
+    {
+      "name": "mecha_ion"
+    },
+    {
+      "name": "mecha_laser"
+    },
+    {
+      "name": "mecha_missilerack"
+    },
+    {
+      "name": "mecha_pulse"
+    },
+    {
+      "name": "mecha_scatter"
+    },
+    {
+      "name": "mecha_uac2"
+    },
+    {
+      "name": "mecha_xray"
+    },
+    {
+      "name": "mecha_taser",
+      "delays": [
+        [
+          0.3,
+          0.225,
+          0.2,
+          0.175,
+          0.15,
+          0.1,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.1,
+          0.15,
+          0.125,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "mecha_teslacannon",
+      "delays": [
+        [
+          2.5,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "mecha_solaris",
+      "delays": [
+        [
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.1,
+          0.1,
+          0.1,
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05
+        ]
+      ]
+    },
+    {
+      "name": "mecha_disabler",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "mecha_immolator",
+      "delays": [
+        [
+          2.5,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.3,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "mecha_firedart",
+      "delays": [
+        [
+          1.8,
+          0.2,
+          0.05
+        ]
+      ]
+    },
+    {
+      "name": "mecha_missilerack_six"
+    },
+    {
+      "name": "mining_launcher"
+    },
+    {
+      "name": "mecha_disabler_shotgun",
+      "delays": [
+        [
+          0.6,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

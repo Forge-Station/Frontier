@@ -278,3 +278,67 @@
   materials:
     CreditCounterfeit: 2000
 
+
+- type: latheRecipe
+  id: WeaponMechCombatFiredartLaserRecipe
+  categories: [SyndicateTexMechAmmo]
+  result: WeaponMechCombatFiredartLaser
+  completetime: 1
+  materials:
+    CreditCounterfeit: 30000
+
+- type: latheRecipe
+  id: WeaponMechCombatSolarisLaserRecipe
+  categories: [SyndicateTexMechAmmo]
+  result: WeaponMechCombatSolarisLaser
+  completetime: 1
+  materials:
+    CreditCounterfeit: 40000
+
+- type: latheRecipe
+  id: WeaponMechCombatImmolationGunRecipe
+  categories: [SyndicateTexMechAmmo]
+  result: WeaponMechCombatImmolationGun
+  completetime: 1
+  materials:
+    CreditCounterfeit: 85000
+
+- type: latheRecipe
+  id: WeaponMechCombatUltraRifleRecipe
+  categories: [SyndicateTexMechAmmo]
+  result: WeaponMechCombatUltraRifle
+  completetime: 1
+  materials:
+    CreditCounterfeit: 55000
+
+- type: latheRecipe
+  id: WeaponMechCombatShotgunRecipe
+  categories: [SyndicateTexMechAmmo]
+  result: WeaponMechCombatShotgun
+  completetime: 1
+  materials:
+    CreditCounterfeit: 65000
+
+- type: latheRecipe
+  id: WeaponMechCombatShotgunIncendiaryRecipe
+  categories: [SyndicateTexMechAmmo]
+  result: WeaponMechCombatShotgunIncendiary
+  completetime: 1
+  materials:
+    CreditCounterfeit: 72500
+
+- type: latheRecipe
+  id: WeaponMechCombatMissileRack8Recipe
+  categories: [SyndicateTexMechAmmo]
+  result: WeaponMechCombatMissileRack8
+  completetime: 1
+  materials:
+    CreditCounterfeit: 85000
+
+- type: latheRecipe
+  id: WeaponMechCombatMissileRack6Recipe
+  categories: [SyndicateTexMechAmmo]
+  result: WeaponMechCombatMissileRack6
+  completetime: 1
+  materials:
+    CreditCounterfeit: 100000

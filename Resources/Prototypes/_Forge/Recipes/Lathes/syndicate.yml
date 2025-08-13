@@ -303,6 +303,22 @@
     CreditCounterfeit: 129999
 
 - type: latheRecipe
+  id: MechGygaxSyndieBatteryRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: MechGygaxSyndieBattery
+  completetime: 1
+  materials:
+    CreditCounterfeit: 250000
+
+- type: latheRecipe
+  id: MechMaulerSyndieBatteryRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: MechMaulerSyndieBattery
+  completetime: 1
+  materials:
+    CreditCounterfeit: 350000
+
+- type: latheRecipe
   id: GrenadeShrapnelRecipe
   categories: [SyndicateTradingConsoleBoom]
   result: GrenadeShrapnel

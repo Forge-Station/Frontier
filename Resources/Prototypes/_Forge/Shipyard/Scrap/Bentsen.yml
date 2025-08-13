@@ -1,0 +1,44 @@
+# Author -
+# GitHub: -
+# Discord: letstrythisone.
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle notes: 
+
+- type: vessel
+  id: Bentsen
+  parent: BaseVessel
+  name: ST Бентсен
+  description: Небольшой, нацеленный на добычу шаттл. Надеемся, что он не развалится во время полета. Средний размер команды от 2 до 4 человек.
+  price: 22000 # (17023)
+  category: Small
+  group: Custom
+  shuttlePath: /Maps/Forge/Shuttles/Scrap/Bentsen.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Salvage
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Bentsen
+  mapName: 'ST Бентсен'
+  mapPath: /Maps/Forge/Shuttles/Scrap/Bentsen.yml
+  minPlayers: 0
+  stations:
+    Bentsen:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Бентсен {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

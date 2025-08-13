@@ -1,0 +1,42 @@
+# Author MrIzo
+# GitHub: -
+# Discord: letstrythisone.
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Corvax-Frontier
+
+- type: vessel
+  id: bootlegger
+  parent: BaseVessel
+  name: ST Бутлегер
+  description: "Этот экземпляр прошел через множество ремонтов и проблем, но все же-он здесь! Этот торговый шаттл, воскрешенный ST, ныне доступен вам для продажи. Рекомендуемый экипаж: 2-3 человек"
+  price: 25500 # (19697)
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/Forge/Shuttles/Scrap/bootlegger.yml
+  guidebookPage: Null
+  class:
+  - Kitchen
+
+- type: gameMap
+  id: bootlegger
+  mapName: 'ST Бутлегер'
+  mapPath: /Maps/Forge/Shuttles/Scrap/bootlegger.yml
+  minPlayers: 0
+  stations:
+    bootlegger:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Бутлегер {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

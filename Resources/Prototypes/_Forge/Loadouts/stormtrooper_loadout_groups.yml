@@ -15,13 +15,8 @@
   minLimit: 1
   loadouts:
   - StormtrooperJumpsuit1
-  - StormtrooperJumpsuit2
-  - StormtrooperJumpsuit3
-  - StormtrooperJumpsuit4
-  - StormtrooperJumpsuit5
   fallbacks:
   - StormtrooperJumpsuit1
-  - StormtrooperJumpsuit2
 
 - type: loadoutGroup
   id: StormtrooperBags
@@ -31,6 +26,8 @@
   - StormtrooperClothingBackpack1
   - StormtrooperClothingBackpack2
   - StormtrooperClothingBackpack3
+  - StormtrooperClothingBackpack4
+  - StormtrooperClothingBackpack5
   fallbacks:
   - StormtrooperClothingBackpack1
 

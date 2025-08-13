@@ -12,10 +12,14 @@
   - type: GuideHelp
     guides:
     - Robotics
+  - type: ClothingSpeedModifier # Forge-Change
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: MultiHandedItem # Forge-Change
 
 - type: entity
   id: MechEquipmentGrabber
-  parent: BaseMechEquipment
+  parent: [ BaseMechEquipment, IndustrialMechEquipment ] # Forge-Change: +IndustrialMechEquipment
   name: hydraulic clamp
   description: Gives the mech the ability to grab things and drag them around.
   components:
@@ -37,7 +41,7 @@
 
 - type: entity
   id: MechEquipmentGrabberSmall
-  parent: BaseMechEquipment
+  parent: [ BaseMechEquipment, SmallMechEquipment ] # Forge-Change: +SmallMechEquipment
   name: small hydraulic clamp
   description: Gives the mech the ability to grab things and drag them around.
   components:
@@ -64,7 +68,7 @@
 
 - type: entity
   id: MechEquipmentHorn
-  parent: BaseMechEquipment
+  parent: [ BaseMechEquipment, SpecialMechEquipment ]
   name: mech horn
   description: An enhanced bike horn that plays a hilarious array of sounds for the enjoyment of the crew. HONK!
   components:
@@ -82,4 +86,3 @@
     ui: !type:MechSoundboardUi
   - type: UseDelay
     delay: 0.5
-  # TODO: tag as being for H.O.N.K. only!!!

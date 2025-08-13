@@ -16,9 +16,6 @@
   loadouts:
   - CommanderJumpsuit1
   - CommanderJumpsuit2
-  - CommanderJumpsuit3
-  - CommanderJumpsuit4
-  - CommanderJumpsuit5
   fallbacks:
   - CommanderJumpsuit1
   - CommanderJumpsuit2
@@ -31,6 +28,8 @@
   - CommanderClothingBackpack1
   - CommanderClothingBackpack2
   - CommanderClothingBackpack3
+  - CommanderClothingBackpack4
+  - CommanderClothingBackpack5
   fallbacks:
   - CommanderClothingBackpack1
 
@@ -40,8 +39,6 @@
   minLimit: 1
   loadouts:
   - CommanderClothingHandsGloves1
-  - CommanderClothingHandsGloves2
-  - CommanderClothingHandsGloves3
   fallbacks:
   - CommanderClothingHandsGloves1
 

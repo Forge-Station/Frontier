@@ -15,9 +15,12 @@
   parent: PinpointerSyndicateNuclear
   suffix: Syndicate FOB
   components:
-  - type: Pinpointer
-    component: SyndicateFOB
-    targetName: unknown
+#  - type: Pinpointer #Forge-Change
+#    component: SyndicateFOB
+#    targetName: unknown
+   - type: ExtendedPinpointer #Forge-Change
+     targetId: Charlie
+     targetName: unknown
 
 # Dead Drop
 - type: entity
@@ -41,3 +44,4 @@
   - type: Pinpointer
     component: DeadDrop
     targetName: DeadDrop
+
