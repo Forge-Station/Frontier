@@ -41,7 +41,7 @@
       - enum.SubfloorLayers.FirstLayer
     - type: Sprite
       drawdepth: FloorObjects
-      sprite: _NF/Structures/Piping/Atmospherics/vent.rsi # Frontier
+      sprite: Forge/Structures/Piping/Atmospherics/vent.rsi # Forge-Change
       noRot: true # Frontier
       layers:
         - sprite: Structures/Piping/Atmospherics/pipe.rsi
@@ -92,7 +92,7 @@
       - enum.SubfloorLayers.FirstLayer
     - type: Sprite
       drawdepth: FloorObjects
-      sprite: _NF/Structures/Piping/Atmospherics/vent.rsi # Frontier
+      sprite: Forge/Structures/Piping/Atmospherics/vent.rsi # Forge-Change
       noRot: true # Frontier
       layers:
         - sprite: Structures/Piping/Atmospherics/pipe.rsi
@@ -133,7 +133,7 @@
       - enum.SubfloorLayers.FirstLayer
     - type: Sprite
       drawdepth: FloorObjects
-      sprite: _NF/Structures/Piping/Atmospherics/scrubber.rsi # Frontier
+      sprite: Forge/Structures/Piping/Atmospherics/scrubber.rsi # Forge-Change
       noRot: true # Frontier
       layers:
         - sprite: Structures/Piping/Atmospherics/pipe.rsi

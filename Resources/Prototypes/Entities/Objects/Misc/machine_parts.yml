@@ -6,7 +6,7 @@
   abstract: true
   components:
     - type: Sprite
-      sprite: _NF/Objects/Misc/stock_parts.rsi # Frontier
+      sprite: Forge/Objects/Misc/stock_parts.rsi # Forge-Change
     - type: Item
       size: Tiny
     - type: GuideHelp

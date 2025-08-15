@@ -636,9 +636,9 @@
   name: reinforced wall
   components:
   - type: Sprite
-    sprite: _NF/Structures/Walls/solid.rsi # Frontier
+    sprite: Forge/Structures/Walls/solid.rsi # Forge-Change
   - type: Icon
-    sprite: _NF/Structures/Walls/solid.rsi # Frontier
+    sprite: Forge/Structures/Walls/solid.rsi # Forge-Change
     state: rgeneric
   - type: Construction
     graph: Girder

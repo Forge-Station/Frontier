@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from BeeStation at commit https://github.com/BeeStation/BeeStation-Hornet/commit/3eed41635791f62b3f7b60f411e3c4427d842a15б, triphasic_scan_module.png modified by github:Morb0",
+  "states": [
+    {
+      "name": "adv_capacitor"
+    },
+    {
+      "name": "advanced_matter_bin"
+    },
+    {
+      "name": "bluespace_matter_bin",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "capacitor"
+    },
+    {
+      "name": "super_capacitor"
+    },
+    {
+      "name": "femto_mani",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "matter_bin"
+    },
+    {
+      "name": "micro_mani"
+    },
+    {
+      "name": "nano_mani"
+    },
+    {
+      "name": "pico_mani"
+    },
+    {
+      "name": "quadratic_capacitor",
+      "delays": [
+        [
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ]
+      ]
+    },
+    {
+      "name": "super_matter_bin"
+    }
+  ]
+}

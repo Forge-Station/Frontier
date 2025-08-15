@@ -106,7 +106,8 @@
         node: start
       - !type:DoActsBehavior
         acts: ["Destruction"]
-  - type: PointLight # Forge-Change
+    # Forge-Change start
+  - type: PointLight
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
     radius: 6
@@ -122,6 +123,8 @@
     radarColor: "#ff8800"
     highlightedRadarColor: "#000000"
     requireNoGrid: true
+  - type: Magboots
+    # Forge-Change end
 
 # Ripley MK-I
 - type: entity

@@ -66,3 +66,12 @@ accent-pirate-replaced-31 = оружие
 accent-pirate-replacement-31 = мушкеты
 accent-pirate-replaced-32 = патрон
 accent-pirate-replacement-32 = порох
+
+accent-pirate-replaced-33 = мех
+accent-pirate-replacement-33 = боевая машина
+accent-pirate-replaced-34 = меха
+accent-pirate-replacement-34 = боевой машины
+accent-pirate-replaced-35 = мехов
+accent-pirate-replacement-35 = боевых машин
+accent-pirate-replaced-36 = мехи
+accent-pirate-replacement-36 = боевые машины
