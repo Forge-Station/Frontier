@@ -24,6 +24,7 @@
     flags: [HideLabel]
   - type: ProtectedGrid
     noGridCollision: True
+  - type: BlockEvacuation
 
 - type: gameMap
   id: Enigma

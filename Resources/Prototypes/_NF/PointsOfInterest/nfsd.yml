@@ -15,22 +15,23 @@
   minimumDistance: 750
   maximumDistance: 1000
   spawnGroup: Required
-  gridPath: /Maps/Forge/POI/nfsd.yml #CorvaxFrontier
+  gridPath: /Maps/Forge/POI/nfsd.yml #Forge-Change
   addComponents:
   - type: IFF
     color: "#8e6444"
   - type: ProtectedGrid
-    preventEmpEvents: true #CorvaxFrontier
-    preventRCDUse: true #CorvaxFrontier
-    noGridCollision: true #CorvaxFrontier
+    preventEmpEvents: true #Forge-Change
+    preventRCDUse: true #Forge-Change
+    noGridCollision: true #Forge-Change
   - type: StationTransit
     routes:
       SpawnPoints: 10
+  - type: BlockEvacuation #Forge-Change
 
 - type: gameMap
   id: Nfsd
   mapName: 'Аванпост ДСБФ'
-  mapPath: /Maps/Forge/POI/nfsd.yml #CorvaxFrontier
+  mapPath: /Maps/Forge/POI/nfsd.yml #Forge-Change
   minPlayers: 0
   stations:
     Nfsd:

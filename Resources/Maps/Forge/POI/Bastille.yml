@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/04/2025 16:18:26
-  entityCount: 8209
+  time: 08/16/2025 12:28:06
+  entityCount: 8178
 maps: []
 grids:
 - 1
@@ -7639,32 +7639,6 @@ entities:
     - type: ContainedSolution
       containerName: drink
       container: 13
-  - uid: 17
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 16
-    - type: Solution
-      solution:
-        maxVol: 20
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Nutriment
-          Quantity: 3
-        - data: []
-          ReagentId: Protein
-          Quantity: 6
-        - data: []
-          ReagentId: Vitamin
-          Quantity: 2
-        - data: []
-          ReagentId: Flavorol
-          Quantity: 5
-    - type: ContainedSolution
-      containerName: food
-      container: 16
   - uid: 21
     components:
     - type: MetaData
@@ -9527,7 +9501,7 @@ entities:
       pos: 13.5,-29.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -12970.954
+      secondsUntilStateChange: -13001.42
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -15781,56 +15755,6 @@ entities:
       count: 2
     - type: Physics
       canCollide: False
-- proto: BodyBagFolded
-  entities:
-  - uid: 18
-    components:
-    - type: Transform
-      parent: 15
-    - type: Physics
-      canCollide: False
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14917
-        moles:
-        - 1.606311
-        - 6.042789
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-  - uid: 19
-    components:
-    - type: Transform
-      parent: 15
-    - type: Physics
-      canCollide: False
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.1491
-        moles:
-        - 1.4778061
-        - 5.559366
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
 - proto: Bonfire
   entities:
   - uid: 1544
@@ -15875,37 +15799,6 @@ entities:
     - type: Transform
       pos: -6.622527,6.4853106
       parent: 1
-    - type: Storage
-      storedItems:
-        16:
-          position: 0,2
-          _rotation: East
-        18:
-          position: 1,0
-          _rotation: South
-        19:
-          position: 2,0
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 18
-          - 19
-          - 16
-    - type: UseDelay
-      delays:
-        default:
-          endTime: 126086.2405813
-          startTime: 126085.2405813
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage:
-          endTime: 126085.2405813
-          startTime: 126085.2405813
 - proto: BoxBottle
   entities:
   - uid: 1476
@@ -16001,85 +15894,13 @@ entities:
     - type: Transform
       pos: -13.586472,13.622928
       parent: 1
-    - type: Storage
-      storedItems:
-        1563:
-          position: 2,1
-          _rotation: North
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 1563
-    - type: UseDelay
-      delays:
-        default:
-          endTime: 124385.1422824
-          startTime: 124384.1422824
-          length: 1
-        quickInsert:
-          endTime: 124385.6422814
-          startTime: 124385.1422814
-          length: 0.5
-        storage:
-          endTime: 124384.1422824
-          startTime: 124384.1422824
 - proto: BoxEnvelope
   entities:
-  - uid: 1564
+  - uid: 16
     components:
     - type: Transform
-      pos: 6.9287906,15.154896
+      pos: 6.9834166,15.178802
       parent: 1
-    - type: Storage
-      storedItems:
-        1565:
-          position: 0,0
-          _rotation: South
-        1566:
-          position: 1,0
-          _rotation: South
-        1567:
-          position: 2,0
-          _rotation: South
-        1568:
-          position: 0,1
-          _rotation: South
-        1569:
-          position: 2,1
-          _rotation: South
-        1570:
-          position: 1,2
-          _rotation: South
-        1571:
-          position: 2,2
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 1565
-          - 1566
-          - 1567
-          - 1568
-          - 1569
-          - 1570
-          - 1571
-    - type: UseDelay
-      delays:
-        default:
-          endTime: 180482.6528515
-          startTime: 180481.6528515
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage:
-          endTime: 180481.6528515
-          startTime: 180481.6528515
 - proto: BoxExteriorLightTube
   entities:
   - uid: 1478
@@ -16562,56 +16383,8 @@ entities:
     components:
     - type: Transform
       parent: 1644
-    - type: Storage
-      storedItems:
-        1646:
-          position: 0,0
-          _rotation: South
-        1647:
-          position: 1,0
-          _rotation: South
-        1648:
-          position: 2,0
-          _rotation: South
-        1649:
-          position: 0,1
-          _rotation: South
-        1650:
-          position: 1,1
-          _rotation: South
-        1651:
-          position: 2,1
-          _rotation: South
-        1652:
-          position: 0,2
-          _rotation: South
-        1653:
-          position: 1,2
-          _rotation: East
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 1646
-          - 1647
-          - 1648
-          - 1649
-          - 1650
-          - 1651
-          - 1652
-          - 1653
     - type: Physics
       canCollide: False
-    - type: UseDelay
-      delays:
-        default:
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage: {}
-    - type: InsideEntityStorage
   - uid: 1654
     components:
     - type: Transform
@@ -26572,14 +26345,6 @@ entities:
     - type: Transform
       pos: 8.982853,14.674572
       parent: 1
-- proto: CleanerGrenade
-  entities:
-  - uid: 1563
-    components:
-    - type: Transform
-      parent: 1562
-    - type: Physics
-      canCollide: False
 - proto: ClockworkWindow
   entities:
   - uid: 3605
@@ -27403,37 +27168,8 @@ entities:
     components:
     - type: Transform
       parent: 1482
-    - type: Storage
-      storedItems:
-        1484:
-          position: 4,2
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 1484
     - type: Physics
       canCollide: False
-    - type: GroupExamine
-      group:
-      - hoverMessage: ""
-        contextText: verb-examine-group-other
-        icon: /Textures/Interface/examine-star.png
-        components:
-        - Armor
-        - ClothingSpeedModifier
-        entries:
-        - message: >-
-            Обеспечивает следующую защиту:
-
-            - [color=orange]Взрывной[/color] урон [color=white]к содержимому[/color] снижается на [color=lightblue]10%[/color].
-          priority: 0
-          component: Armor
-        title: null
-    - type: InsideEntityStorage
 - proto: ClothingBeltSalvageWebbing
   entities:
   - uid: 3661
@@ -29454,7 +29190,6 @@ entities:
           occludes: True
           ents:
           - 3896
-          - invalid
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -30190,7 +29925,7 @@ entities:
   - uid: 3953
     components:
     - type: MetaData
-      name: ценный экпресс-ящик с товарами (Грузовое Депо C)
+      name: ценный экпресс-ящик с товарами (Торговая Станция)
     - type: Transform
       pos: -12.00574,-6.13781
       parent: 1
@@ -30270,7 +30005,7 @@ entities:
     - type: Pullable
       prevFixedRotation: True
     - type: Label
-      currentLabel: Грузовое Депо C
+      currentLabel: Торговая Станция
     - type: NameModifier
       baseName: ценный экпресс-ящик с товарами
     missingComponents:
@@ -31922,328 +31657,6 @@ entities:
       parent: 1
 - proto: Envelope
   entities:
-  - uid: 1565
-    components:
-    - type: Transform
-      parent: 1564
-    - type: Paper
-      content: >-
-        ОТ: 
-
-
-        КОМУ:
-    - type: Physics
-      canCollide: False
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        flammable:
-          shape: !type:PhysShapeCircle
-            radius: 0.35
-            position: 0,0
-          mask:
-          - TableLayer
-          - HighImpassable
-          - LowImpassable
-          - BulletImpassable
-          - InteractImpassable
-          - Opaque
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-  - uid: 1566
-    components:
-    - type: Transform
-      parent: 1564
-    - type: Paper
-      content: >-
-        ОТ: 
-
-
-        КОМУ:
-    - type: Physics
-      canCollide: False
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        flammable:
-          shape: !type:PhysShapeCircle
-            radius: 0.35
-            position: 0,0
-          mask:
-          - TableLayer
-          - HighImpassable
-          - LowImpassable
-          - BulletImpassable
-          - InteractImpassable
-          - Opaque
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-  - uid: 1567
-    components:
-    - type: Transform
-      parent: 1564
-    - type: Paper
-      content: >-
-        ОТ: 
-
-
-        КОМУ:
-    - type: Physics
-      canCollide: False
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        flammable:
-          shape: !type:PhysShapeCircle
-            radius: 0.35
-            position: 0,0
-          mask:
-          - TableLayer
-          - HighImpassable
-          - LowImpassable
-          - BulletImpassable
-          - InteractImpassable
-          - Opaque
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-  - uid: 1568
-    components:
-    - type: Transform
-      parent: 1564
-    - type: Paper
-      content: >-
-        ОТ: 
-
-
-        КОМУ:
-    - type: Physics
-      canCollide: False
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        flammable:
-          shape: !type:PhysShapeCircle
-            radius: 0.35
-            position: 0,0
-          mask:
-          - TableLayer
-          - HighImpassable
-          - LowImpassable
-          - BulletImpassable
-          - InteractImpassable
-          - Opaque
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-  - uid: 1569
-    components:
-    - type: Transform
-      parent: 1564
-    - type: Paper
-      content: >-
-        ОТ: 
-
-
-        КОМУ:
-    - type: Physics
-      canCollide: False
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        flammable:
-          shape: !type:PhysShapeCircle
-            radius: 0.35
-            position: 0,0
-          mask:
-          - TableLayer
-          - HighImpassable
-          - LowImpassable
-          - BulletImpassable
-          - InteractImpassable
-          - Opaque
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-  - uid: 1570
-    components:
-    - type: Transform
-      parent: 1564
-    - type: Paper
-      content: >-
-        ОТ: 
-
-
-        КОМУ:
-    - type: Physics
-      canCollide: False
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        flammable:
-          shape: !type:PhysShapeCircle
-            radius: 0.35
-            position: 0,0
-          mask:
-          - TableLayer
-          - HighImpassable
-          - LowImpassable
-          - BulletImpassable
-          - InteractImpassable
-          - Opaque
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-  - uid: 1571
-    components:
-    - type: Transform
-      parent: 1564
-    - type: Paper
-      content: >-
-        ОТ: 
-
-
-        КОМУ:
-    - type: Physics
-      canCollide: False
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        flammable:
-          shape: !type:PhysShapeCircle
-            radius: 0.35
-            position: 0,0
-          mask:
-          - TableLayer
-          - HighImpassable
-          - LowImpassable
-          - BulletImpassable
-          - InteractImpassable
-          - Opaque
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
   - uid: 1588
     components:
     - type: Transform
@@ -32256,11 +31669,6 @@ entities:
           ent: 1589
     - type: Physics
       canCollide: False
-  - uid: 4208
-    components:
-    - type: Transform
-      pos: 1.4331913,0.6889586
-      parent: 1
 - proto: EvidenceMarkerFive
   entities:
   - uid: 4209
@@ -33308,22 +32716,6 @@ entities:
       containers:
         solution@food: !type:ContainerSlot
           ent: 157
-- proto: FoodBurgerRat
-  entities:
-  - uid: 16
-    components:
-    - type: Transform
-      parent: 15
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 17
 - proto: FoodCondimentPacketKetchup
   entities:
   - uid: 4346
@@ -45020,6 +44412,13 @@ entities:
     - Prayable
 - proto: Pickaxe
   entities:
+  - uid: 1655
+    components:
+    - type: Transform
+      parent: 1644
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
   - uid: 5553
     components:
     - type: Transform
@@ -45030,168 +44429,6 @@ entities:
     - type: Transform
       pos: 35.483276,6.6444044
       parent: 1
-- proto: PillAmbuzol
-  entities:
-  - uid: 1485
-    components:
-    - type: Transform
-      parent: 1484
-    - type: Physics
-      canCollide: False
-- proto: PillCanister
-  entities:
-  - uid: 1484
-    components:
-    - type: Transform
-      parent: 1483
-    - type: Storage
-      storedItems:
-        1485:
-          position: 3,1
-          _rotation: South
-        1486:
-          position: 2,0
-          _rotation: South
-        1487:
-          position: 2,1
-          _rotation: South
-        1488:
-          position: 1,1
-          _rotation: South
-        1489:
-          position: 3,0
-          _rotation: South
-        1490:
-          position: 4,0
-          _rotation: South
-        1491:
-          position: 4,1
-          _rotation: South
-        1492:
-          position: 1,0
-          _rotation: South
-        1493:
-          position: 0,1
-          _rotation: South
-        1494:
-          position: 0,0
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 1485
-          - 1486
-          - 1487
-          - 1488
-          - 1489
-          - 1490
-          - 1491
-          - 1492
-          - 1493
-          - 1494
-    - type: Physics
-      canCollide: False
-  - uid: 1646
-    components:
-    - type: Transform
-      parent: 1645
-    - type: Physics
-      canCollide: False
-    - type: UseDelay
-      delays:
-        default:
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage: {}
-  - uid: 1647
-    components:
-    - type: Transform
-      parent: 1645
-    - type: Physics
-      canCollide: False
-    - type: UseDelay
-      delays:
-        default:
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage: {}
-  - uid: 1648
-    components:
-    - type: Transform
-      parent: 1645
-    - type: Physics
-      canCollide: False
-    - type: UseDelay
-      delays:
-        default:
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage: {}
-  - uid: 1649
-    components:
-    - type: Transform
-      parent: 1645
-    - type: Physics
-      canCollide: False
-    - type: UseDelay
-      delays:
-        default:
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage: {}
-  - uid: 1650
-    components:
-    - type: Transform
-      parent: 1645
-    - type: Physics
-      canCollide: False
-    - type: UseDelay
-      delays:
-        default:
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage: {}
-  - uid: 1651
-    components:
-    - type: Transform
-      parent: 1645
-    - type: Physics
-      canCollide: False
-    - type: UseDelay
-      delays:
-        default:
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage: {}
-  - uid: 1652
-    components:
-    - type: Transform
-      parent: 1645
-    - type: Physics
-      canCollide: False
-    - type: UseDelay
-      delays:
-        default:
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage: {}
-  - uid: 1655
-    components:
-    - type: Transform
-      parent: 1644
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: PillCanisterCharcoal
   entities:
   - uid: 5555
@@ -50682,62 +49919,6 @@ entities:
     - type: Transform
       pos: 9.7108135,25.82411
       parent: 1
-- proto: StrangePill
-  entities:
-  - uid: 1486
-    components:
-    - type: Transform
-      parent: 1484
-    - type: Physics
-      canCollide: False
-  - uid: 1487
-    components:
-    - type: Transform
-      parent: 1484
-    - type: Physics
-      canCollide: False
-  - uid: 1488
-    components:
-    - type: Transform
-      parent: 1484
-    - type: Physics
-      canCollide: False
-  - uid: 1489
-    components:
-    - type: Transform
-      parent: 1484
-    - type: Physics
-      canCollide: False
-  - uid: 1490
-    components:
-    - type: Transform
-      parent: 1484
-    - type: Physics
-      canCollide: False
-  - uid: 1491
-    components:
-    - type: Transform
-      parent: 1484
-    - type: Physics
-      canCollide: False
-  - uid: 1492
-    components:
-    - type: Transform
-      parent: 1484
-    - type: Physics
-      canCollide: False
-  - uid: 1493
-    components:
-    - type: Transform
-      parent: 1484
-    - type: Physics
-      canCollide: False
-  - uid: 1494
-    components:
-    - type: Transform
-      parent: 1484
-    - type: Physics
-      canCollide: False
 - proto: SubstationBasic
   entities:
   - uid: 6350
@@ -61089,7 +60270,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -49817.88
+      secondsUntilStateChange: -49848.344
       state: Opening
     - type: Airlock
       autoClose: False
