@@ -2,7 +2,7 @@ using System.Linq;
 using Content.Shared.Disease;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Set;
 
-namespace Content.Server.Disease.Components
+namespace Content.Shared.Disease.Components
 {
     /// <summary>
     /// Allows the entity to be infected with diseases.

@@ -5,7 +5,6 @@
   id: BaseMobSheleg
   abstract: true
   components:
-  - type: Carriable # Forge-Change
   - type: DiseaseCarrier # Forge-Change
   - type: Sprite
     scale: 1.15, 1.2 # tall but dont make it too thin or its going to look bad

@@ -205,6 +205,9 @@
     - !type:DiseaseSnough
       probability: 0.025
       emote: Yawn
+  cures:
+    - !type:DiseaseBedrestCure
+      maxLength: 90
 
 - type: disease
   id: BleedersBite

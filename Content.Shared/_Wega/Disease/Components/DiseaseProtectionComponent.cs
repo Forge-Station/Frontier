@@ -1,4 +1,4 @@
-namespace Content.Server.Disease.Components
+namespace Content.Shared.Disease.Components
 {
     /// <summary>
     /// Value added to clothing to give its wearer

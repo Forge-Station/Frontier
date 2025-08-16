@@ -2,7 +2,7 @@ using Content.Shared.Disease;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
-namespace Content.Server.Disease.Components
+namespace Content.Shared.Disease.Components
 {
     /// <summary>
     /// For shared behavior between both disease machines

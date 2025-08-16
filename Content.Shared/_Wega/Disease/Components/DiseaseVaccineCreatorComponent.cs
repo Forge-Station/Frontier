@@ -1,4 +1,4 @@
-namespace Content.Server.Disease.Components
+namespace Content.Shared.Disease.Components
 {
     /// <summary>
     /// Controls disease machine behavior specific to the

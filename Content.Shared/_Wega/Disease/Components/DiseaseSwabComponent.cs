@@ -1,6 +1,6 @@
 using Content.Shared.Disease;
 
-namespace Content.Server.Disease.Components
+namespace Content.Shared.Disease.Components
 {
     /// <summary>
     /// For mouth swabs used to collect and process

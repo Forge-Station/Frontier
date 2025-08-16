@@ -2,6 +2,7 @@ using Content.Shared.EntityEffects;
 using Content.Server.Disease;
 using Robust.Shared.Prototypes;
 using JetBrains.Annotations;
+using Content.Shared.Disease.Events;
 
 namespace Content.Server.Chemistry.ReagentEffects
 {

@@ -60,7 +60,8 @@ using Robust.Shared.Audio.Systems; // Frontier
 using Robust.Shared.Audio; // Frontier
 using Content.Server._NF.Speech.Components; // Frontier
 using Content.Shared.Damage.Prototypes; // Frontier
-using Content.Shared.Bed.Sleep; // Frontier
+using Content.Shared.Bed.Sleep;
+using Content.Shared.Disease.Components; // Frontier
 
 namespace Content.Server.Administration.Systems;
 

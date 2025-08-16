@@ -6,6 +6,7 @@ using Content.Shared.Power;
 using Content.Server.Station.Systems;
 using Content.Shared.Paper;
 using Content.Shared.Disease;
+using Content.Shared.Disease.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.Hands.Components;
@@ -14,10 +15,11 @@ using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 using Content.Shared.Swab;
 using Content.Shared.Tools.Components;
+using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Content.Shared.Nutrition.Components;
 
 namespace Content.Server.Disease
 {
@@ -154,7 +156,7 @@ namespace Content.Server.Disease
 
             _addQueue.Enqueue(uid);
             UpdateAppearance(uid, true, true);
-            _audio.PlayGlobal("/Audio/Machines/diagnoser_printing.ogg", Filter.Pvs(uid), true);
+            _audio.PlayPvs(new SoundPathSpecifier("/Audio/Machines/diagnoser_printing.ogg"), uid, AudioParams.Default.WithLoop(false));
             EntityManager.DeleteEntity(args.Used);
         }
 
@@ -185,7 +187,7 @@ namespace Content.Server.Disease
 
             _addQueue.Enqueue(uid);
             UpdateAppearance(uid, true, true);
-            _audio.PlayGlobal("/Audio/Machines/vaccinator_running.ogg", Filter.Pvs(uid), true);
+            _audio.PlayPvs(new SoundPathSpecifier("/Audio/Machines/vaccinator_running.ogg"), uid, AudioParams.Default.WithLoop(false));
             EntityManager.DeleteEntity(args.Used);
         }
 

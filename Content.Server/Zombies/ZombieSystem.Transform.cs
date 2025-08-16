@@ -39,6 +39,7 @@ using Content.Shared.Ghost.Roles.Components;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Content.Shared.Disease.Components;
 
 namespace Content.Server.Zombies;
 

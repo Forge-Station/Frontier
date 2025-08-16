@@ -1,7 +1,7 @@
 using System.Threading;
 using Content.Shared.Disease;
 
-namespace Content.Server.Disease.Components
+namespace Content.Shared.Disease.Components
 {
     /// <summary>
     /// For disease vaccines
