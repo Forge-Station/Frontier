@@ -124,3 +124,190 @@
   impactFlash:
     sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
     state: impact_sign
+
+- type: entity
+  id: WeaponSyndieEnergyRifleCarbine
+  parent: [ BaseWeaponEnergyRifleFireModesSyndie, BaseWeaponFrameEnergyRifleAssaultSyndie, BaseC3Contraband ]
+  name: syndie laser carbine
+  suffix: Frontier
+  description: |-
+    Modified laser carbine made for Syndicate operatives
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Battery/laser_gun_syndie.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Battery/laser_gun_syndie.rsi
+
+- type: entity
+  id: BaseWeaponEnergyRifleFireModesSyndie
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-energybolt-high
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletLaserHeavySyndie
+    fireCost: 160
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletLaserHeavySyndie
+      fireCost: 160
+    - proto: NFBulletDisabler
+      fireCost: 80
+
+- type: entity
+  id: BaseWeaponEnergyPistolFireModesSyndie
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-energybolt-high
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletLaserSyndie
+    fireCost: 120
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletLaserSyndie
+      fireCost: 120
+    - proto: NFBulletDisabler
+      fireCost: 80
+
+- type: entity
+  id: BaseWeaponFrameEnergyRifleAssaultSyndie
+  parent: [ NFBaseWeaponEncumbranceRifleAssault, BaseWeaponBattery ]
+  suffix: Frontier
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunRequiresWield
+  - type: GunWieldBonus
+    minAngle: -0 # Set to 0 because GunRequiresWield
+    maxAngle: -0
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 1.5
+    maxAngle: 7.5
+    angleIncrease: 0.4
+    angleDecay: 2
+    fireRate: 3
+    selectedMode: FullAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+  - type: SpeedModifiedOnWield
+    walkModifier: 1
+    sprintModifier: 1
+  # - type: CursorOffsetRequiresWield
+  # - type: EyeCursorOffset
+    # maxOffset: 2.5
+    # pvsIncrease: 0.25
+  - type: Battery # Default: 30 shots with 80 fireCost
+    maxCharge: 2400
+    startingCharge: 2400
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 12
+  - type: NFWeaponDetails
+    class: weapon-details-class-assault-rifle
+
+- type: entity
+  id: BaseWeaponFrameEnergyPistolSyndie
+  parent: [ NFBaseWeaponFrameEnergyPistol, BaseWeaponBattery ]
+  suffix: Frontier
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 1.5
+    maxAngle: 7.5
+    angleIncrease: 0.4
+    angleDecay: 2
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: SpeedModifiedOnWield
+    walkModifier: 1
+    sprintModifier: 1
+  # - type: CursorOffsetRequiresWield
+  # - type: EyeCursorOffset
+    # maxOffset: 2.5
+    # pvsIncrease: 0.25
+  - type: Battery # Default: 30 shots with 80 fireCost
+    maxCharge: 2400
+    startingCharge: 2400
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 12
+  - type: NFWeaponDetails
+    class: weapon-details-class-pistol
+
+- type: entity
+  id: BulletLaserHeavySyndie
+  parent: NFBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 15
+
+- type: entity
+  id: BulletLaserSyndie
+  parent: NFBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 10
+
+- type: entity
+  id: WeaponSyndieEnergyFalconPistolLaser
+  parent: [ BaseWeaponEnergyPistolFireModesSyndie, BaseWeaponFrameEnergyPistolSyndie, BaseC3Contraband ]
+  name: pistol "Falcon"
+  description: |-
+    Powerful laser pistol specially designed by Vitezstvi for the Gorlax Marauders
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Battery/laser_pistol_syndie.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Battery/laser_pistol_syndie.rsi
+  - type: Battery # 26 shots
+    maxCharge: 1560
+    startingCharge: 1560
+  - type: BatterySelfRecharger # Recharges 1 shot per 2 seconds
+    autoRecharge: true
+    autoRechargeRate: 30
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Item

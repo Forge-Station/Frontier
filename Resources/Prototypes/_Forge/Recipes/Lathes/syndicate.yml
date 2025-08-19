@@ -112,14 +112,6 @@
 
 - type: latheRecipe
   categories: [SyndicateTradingConsoleLaserArmsWeapons]
-  id: WeaponAntiqueLaserRecipe
-  result: NFWeaponEnergyPistolLaserAntique
-  completetime: 1
-  materials:
-    CreditCounterfeit: 9500
-
-- type: latheRecipe
-  categories: [SyndicateTradingConsoleLaserArmsWeapons]
   id: WeaponLaserSvalinnRecipe
   result: NFWeaponEnergyPistolLaserSvalinn
   completetime: 1
@@ -590,3 +582,19 @@
   completetime: 1
   materials:
     CreditCounterfeit: 64200
+
+- type: latheRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  id: WeaponSyndieEnergyRifleCarbineRecipe
+  result: WeaponSyndieEnergyRifleCarbine
+  completetime: 1
+  materials:
+    CreditCounterfeit: 44000
+
+- type: latheRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  id: WeaponSyndieEnergyFalconPistolLaserRecipe
+  result: WeaponSyndieEnergyFalconPistolLaser
+  completetime: 1
+  materials:
+    CreditCounterfeit: 12000

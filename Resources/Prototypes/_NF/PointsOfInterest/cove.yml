@@ -25,6 +25,7 @@
     readOnly: false
   - type: ProtectedGrid
     noGridCollision: true #CorvaxFrontier
+  - type: BlockEvacuation #Forge-Change
 
 - type: gameMap
   id: Cove

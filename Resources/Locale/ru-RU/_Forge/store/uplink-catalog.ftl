@@ -35,3 +35,9 @@ uplink-security-mech-missile-8-name = Залповая ракетная уста
 uplink-security-mech-missile-8-desc = Запускает малоразмерные разрывные ракеты.
 uplink-security-mech-missile-6-name = Ракетная установка BRM-6
 uplink-security-mech-missile-6-desc = Запускает разрывные ракеты, хорошо подходят для больших технических отверстий в стенах.
+
+
+uplink-syndie-laser-name = лазерная винтовка синдиката
+uplink-syndie-laser-desc = Новейшая поставка с рынков Vitezstvi. Продвинутая лазерная винтовка сделанная по особому заказу для мародёров Горлакса. Имеет встроенную микрореакторную батарейку, повышающую эффективность самозарядки.
+uplink-syndie-laser-pistol-name = пистолет "Сокол"
+uplink-syndie-laser-pistol-desc = Новейшая поставка с рынков Vitezstvi. Мощный лазерный пистолет, кандидат на лучшее вторичное оружие для мародёров Горлакса.
