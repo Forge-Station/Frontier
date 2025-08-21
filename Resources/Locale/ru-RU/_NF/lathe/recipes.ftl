@@ -30,3 +30,5 @@ lathe-recipe-NFFoodBoxSushi-name = контейнер для роллов (пу�
 lathe-recipe-DrinkKegSteel-name = кега (стальная)
 lathe-recipe-DrinkKegWood-name = кега (деревянная)
 lathe-recipe-DrinkKegPlastic-name = кега (пластиковая)
+lathe-recipe-NFSheetPaperFromWood-name = бумага (дерево)
+lathe-recipe-NFSheetPaperFromCardboard-name = бумага (картон)

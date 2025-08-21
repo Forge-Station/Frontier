@@ -24,3 +24,9 @@ markings-category-Arms = Руки
 markings-category-Legs = Ноги
 markings-category-Tail = Хвост
 markings-category-Overlay = Наложение
+marking-slot = Slot {$number}
+
+# Categories
+markings-category-Special = Особое
+markings-category-UndergarmentTop = Нижнее белье (топ)
+markings-category-UndergarmentBottom = Нижнее белье (низ)

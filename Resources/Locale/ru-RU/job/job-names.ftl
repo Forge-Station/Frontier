@@ -94,3 +94,19 @@ JobWarden = смотритель
 JobVisitor = посетитель
 JobBoxer = боксёр
 JobZookeeper = зоотехник
+job-name-cburn = Офицер карантинной службы центком
+job-name-deathsquad = Агент Центкома
+job-name-station-ai = Искуственный интеллект
+job-name-geneticist = Генетик
+job-name-no-id = Нет айди
+job-name-roboticist = Робототехник
+job-name-syndicate = Синдикат
+job-name-unknown = Неизвестный
+job-name-virologist = Вирусолог
+job-name-zombie = Зомби
+
+# Job titles
+job-title-visitor = Посетитель
+job-title-cluwne = Клувень
+job-title-universal = Универсальный
+JobStationAi = Станционный ИИ

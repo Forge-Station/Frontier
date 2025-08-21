@@ -28,3 +28,7 @@ ui-custom-stack-split-title = Разделить сумму
 ui-custom-stack-split-line-edit-placeholder = Количество
 ui-custom-stack-split-apply = Разделить
 # End cherry-pick from ss14#32938
+# End cherry-pick from ss14
+#32938
+
+comp-stack-split-custom = Разделенная сумма ...

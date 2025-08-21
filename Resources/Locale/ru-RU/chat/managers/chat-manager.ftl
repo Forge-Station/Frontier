@@ -121,3 +121,7 @@ chat-speech-verb-name-electricity = Электричество
 chat-speech-verb-electricity-1 = трещит
 chat-speech-verb-electricity-2 = гудит
 chat-speech-verb-electricity-3 = скрипит
+chat-speech-verb-name-goat = Козел
+chat-speech-verb-goat-1 = блеет
+chat-speech-verb-goat-2 = хрюкает
+chat-speech-verb-goat-3 = плачет

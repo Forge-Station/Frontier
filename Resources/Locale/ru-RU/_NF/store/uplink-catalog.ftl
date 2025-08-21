@@ -295,3 +295,5 @@ uplink-clothing-nightvisionplus-desc = Я вижу все.
 
 uplink-clothing-thermalvision-name = термальные очки
 uplink-clothing-thermalvision-desc = Видно теперь все!
+uplink-security-30riflemagazine-name = .30 винтовочные магизины
+uplink-security-30riflemagazine-desc = Коробка с 4 заполненными магазинами для винтовки .30.

@@ -22,3 +22,5 @@ particle-accelerator-radio-message-on = Питание ускорителя ча
 particle-accelerator-radio-message-off = Питание ускорителя частиц выключено.
 particle-accelerator-radio-message-num = Сила ускорителя частиц установлена на уровень { $level }.
 particle-accelerator-control-menu-draw = Мощность: { $watts }/{ $lastReceive }
+particle-accelerator-control-menu-flavor-left = Пожалуйста, держите клоуна подальше от этой консоли!
+particle-accelerator-control-menu-flavor-right = v 1.6

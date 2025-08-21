@@ -7,3 +7,4 @@ plant-attribute-mutation-level = уровень мутации
 plant-attribute-pests = уровень вредителей
 plant-attribute-mutation-mod = модификатор мутации
 plant-attribute-health = здоровье
+plant-attribute-potency = Потенция

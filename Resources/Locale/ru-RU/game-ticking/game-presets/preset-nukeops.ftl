@@ -27,3 +27,4 @@ nukeops-no-one-ready = Нет готовых игроков! Нельзя зап
 nukeops-role-commander = Командир
 nukeops-role-agent = Агент
 nukeops-role-operator = Оператор
+nukeops-briefing = Ваша задача проста. Доставьте ядерную боеголовку и уйдите до её подрыва. Начать выполнение миссии.

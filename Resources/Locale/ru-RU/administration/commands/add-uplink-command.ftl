@@ -4,3 +4,4 @@ add-uplink-command-completion-1 = Username (по-умолчанию это вы 
 add-uplink-command-completion-2 = Uplink uid (по-умолчанию это КПК)
 add-uplink-command-error-1 = Выбранный игрок не имеет подконтрольную сущность
 add-uplink-command-error-2 = Не удалось добавить аплинк игроку
+add-uplink-command-completion-3 = Скидки?

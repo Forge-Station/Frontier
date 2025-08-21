@@ -39,3 +39,4 @@ materials-raw-bananium = руда бананиума
 material-reclaimer-upgrade-process-rate = скорость обработки
 materials-raw-salt = каменная соль
 materials-raw-diamond = необработанные алмазы
+materials-cotton = хлопок

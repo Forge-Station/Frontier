@@ -35,3 +35,20 @@ JobSeniorEngineer = Ведущий Инженер
 JobSeniorOfficer = Лейтенант
 JobSeniorPhysician = Старший Врач
 JobSeniorResearcher = Ведущий Учёный
+job-name-contractor-interview = Кандидат на аванюриста
+job-name-mercenary-interview = Кандидат на наемника
+job-name-pilot-interview = Кандидат на пилота
+job-name-nf-pirate = Пират
+job-name-nf-pirate-captain = Пиратский капитан
+job-name-nf-pirate-first-mate = Пиратский Боцман
+job-name-plant-manager = Старший Инженер Э.Э.
+job-name-plant-technician = Инженер Э.Э.
+job-title-ert-mail-carrier = Почтальон ОБР
+
+# Role timers - Keep these alphabetical, please
+JobContractorInterview = Кандидат на аванюриста
+JobMercenaryInterview = Кандидат на наемника
+JobPilotInterview = Кандидат на пилота
+JobPlantManager = Старший инженер Э.Э.
+JobPlantTechnician = Инженер Э.Э.
+JobPublicAffairsLiaison = Представитель Юр. департамента

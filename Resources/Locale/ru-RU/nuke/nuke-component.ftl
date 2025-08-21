@@ -40,3 +40,4 @@ nuke-codes-fax-paper-name = коды ядерной аутентификации
 nuke-slot-component-slot-name-disk = Диск
 nuke-examine-armed = Эй, а почему эта [color=red]красная лампочка[/color] мигает?
 nuke-examine-exploding = Ага... Похоже, уже слишком поздно, приятель.
+nuke-component-cant-anchor-toggle = Для переключения болтов необходим диск ядерной аутентификации!

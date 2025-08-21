@@ -74,3 +74,10 @@ admin-remarks-command-error = Админ замечания были отклю�
 admin-remarks-title = Админ замечания
 # Misc
 system-user = [Система]
+admin-note-button-minutes = Минут
+admin-note-button-hours = Часов
+admin-note-button-days = Дней
+admin-note-button-weeks = Недель
+admin-note-button-months = Месяцев
+admin-note-button-years = Лет
+admin-note-button-centuries = Веков

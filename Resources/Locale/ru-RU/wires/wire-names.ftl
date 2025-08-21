@@ -67,3 +67,11 @@ wire-name-bomb-bolt = БОЛТ
 wire-name-speech = ДНМК
 wire-name-listen = МИКР
 wire-name-log = ЛОГ
+wires-board-name-jukebox = Музыкальный автомат
+wires-board-name-computer = Компьютер
+wires-board-name-holopad = Голопад
+wires-board-name-barsign = Барная вывеска
+wires-board-name-weapon-energy-turret = Охранная турель
+wires-board-name-turret-controls = Панель управления охранной турелью
+
+# names that get displayed in the wire hacking hud & admin logs.

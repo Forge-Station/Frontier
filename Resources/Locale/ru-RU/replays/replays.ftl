@@ -38,4 +38,7 @@ replay-verb-spectate = Наблюдать
 cmd-replay-spectate-help = replay_spectate [сущность (опционально)]
 cmd-replay-spectate-desc = Прикрепляет или открепляет локального игрока к заданному uid сущности.
 cmd-replay-spectate-hint = Опциональный EntityUid
-cmd-replay-toggleui-desc = Toggles the replay control UI.
+cmd-replay-toggleui-desc = Переключить панель управления реплеем.
+replay-loading-cancel = Отмена
+
+# Main Menu

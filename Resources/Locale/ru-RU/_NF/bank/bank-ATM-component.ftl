@@ -34,3 +34,4 @@ bank-atm-menu-cash-error = ERR: ОШИБКА
 
 bank-ATM-cashSlot = Купюроприёмник
 station-bank-ATM-cashSlot = Купюроприёмник
+station-bank-work-order = Рабочий заказ

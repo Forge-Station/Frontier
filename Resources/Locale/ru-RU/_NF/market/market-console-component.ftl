@@ -16,3 +16,5 @@ market-search = Поиск товаров:
 market-no-crate-machine-available = Нет доступных устройств для упаковки
 market-insufficient-funds = Недостаточно средств
 market-no-cart-found = Отсутствует упаковочная машина
+market-price-each = {$total} ({$unitPrice} за штуку)
+market-item-count = {$count}/{$capacity}
