@@ -33,7 +33,7 @@ namespace Content.Server.Solar.EntitySystems
         [Dependency] private readonly SharedJammerSystem _jammerSystem = default!;
         [Dependency] private readonly IGameTiming _timing = default!;
         [Dependency] protected readonly SharedPopupSystem Popup = default!;
-        private const float _cooldownTimerValue = 40;
+        private const float _cooldownTimerValue = 15;
         private const float _effectTimer = 30;
         public override void Initialize()
         {
