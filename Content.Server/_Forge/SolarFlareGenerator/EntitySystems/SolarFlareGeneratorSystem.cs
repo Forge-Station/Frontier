@@ -102,9 +102,8 @@ namespace Content.Server.Solar.EntitySystems
         {
             if (args.Handled)
                 return;
-            EnsureComp<SolarFlareGeneratorComponent>(entity, out var component);
 
-            if (component.IsReady)
+            if (entity.Comp.IsReady)
             {
                 var state = Loc.GetString("radio-jammer-component-on-state");
                 var message = Loc.GetString("radio-jammer-component-on-use", ("state", state));
@@ -116,8 +115,7 @@ namespace Content.Server.Solar.EntitySystems
 
         private void OnActivate(Entity<SolarFlareGeneratorComponent> entity, InteractHandEvent args)
         {
-            EnsureComp<SolarFlareGeneratorComponent>(entity, out var component);
-            StartSolarFlareGenerator(component);
+            StartSolarFlareGenerator(entity.Comp);
             args.Handled = true;
         }
 
