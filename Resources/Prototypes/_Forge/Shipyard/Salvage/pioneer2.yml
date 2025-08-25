@@ -8,37 +8,37 @@
 
 # Shuttle Notes:
 #
-- type: vessel
-  id: Pioneer1
-  parent: BaseVessel
-  name: LVHI Пионер
-  description: Одноместный грузовой контейнер, переоборудованный под выход в открытый космос.
-  price: 12200 # ~10600$ on mapinit + ~1600$ from 15% markup
-  category: Small
-  group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/pioneer.yml
-  guidebookPage: null
-  class:
-  - Salvage
+# - type: vessel
+#   id: Pioneer1
+#   parent: BaseVessel
+#   name: LVHI Пионер
+#   description: Одноместный грузовой контейнер, переоборудованный под выход в открытый космос.
+#   price: 12200 # ~10600$ on mapinit + ~1600$ from 15% markup
+#   category: Small
+#   group: Salvage
+#   shuttlePath: /Maps/Forge/Shuttles/Salvage/pioneer.yml
+#   guidebookPage: null
+#   class:
+#   - Salvage
 
 
 
-- type: gameMap
-  id: Pioneer1
-  mapName: 'Пионер'
-  mapPath: /Maps/Forge/Shuttles/Salvage/pioneer.yml
-  minPlayers: 0
-  stations:
-    Pioneer1:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Пионер {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+# - type: gameMap
+#   id: Pioneer1
+#   mapName: 'Пионер'
+#   mapPath: /Maps/Forge/Shuttles/Salvage/pioneer.yml
+#   minPlayers: 0
+#   stations:
+#     Pioneer1:
+#       stationProto: StandardFrontierVessel
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: 'Пионер {1}'
+#           nameGenerator:
+#             !type:NanotrasenNameGenerator
+#             prefixCreator: '14'
+#         - type: StationJobs
+#           availableJobs:
+#             Contractor: [ 0, 0 ]
+#             Pilot: [ 0, 0 ]
+#             Mercenary: [ 0, 0 ]

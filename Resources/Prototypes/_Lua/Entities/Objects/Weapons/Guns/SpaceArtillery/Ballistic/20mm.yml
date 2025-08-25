@@ -3,9 +3,9 @@
 # See AGPLv3.txt for details.
 
 - type: entity
-  parent: BaseWeaponNavalBallisctic
-  id: Weapon20mmBase
-  name: Пулемёт "20мм"
+  parent: [ BaseWeaponNavalBallisctic, BaseC1Contraband ]
+  id: WeaponNavalCannon20mmBase
+  name: пулемёт 20мм типа Гатлинг
   description: Лёгий пулемёт, использует снаряды 20мм.
   suffix: НЕ МАППИТЬ!, ShuttleGun
   placement:
@@ -46,8 +46,8 @@
         machine_parts: !type:Container
 
 - type: entity
-  parent: [BaseWeaponNavalBallisctic, Weapon20mmBase]
-  id: Weapon20mmPD
+  parent: [BaseWeaponNavalBallisctic, WeaponNavalCannon20mmBase]
+  id: WeaponNavalCannon20mmPD
   name: Пулемёт Д "20мм"
   description: Это автоматическое оружие, предназначенное для защиты ключевых объектов или зон от близкорасположенных целей.
   suffix: ShuttleGun, Оборона
@@ -87,8 +87,8 @@
         100.0
 
 - type: entity
-  parent: Weapon20mmBase
-  id: Weapon20mm
+  parent: WeaponNavalCannon20mmBase
+  id: WeaponNavalCannon20mm
   suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
   placement:
     mode: SnapgridCenter
@@ -107,27 +107,27 @@
               - Cartridge20mm
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, Weapon20mm, Weapon20mmBase ]
-  id: Weapon20mmUnanchor
+  parent: [BaseStructureDisableToolUse, WeaponNavalCannon20mm, WeaponNavalCannon20mmBase ]
+  id: WeaponNavalCannon20mmUnanchor
   suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
   placement:
     mode: SnapgridCenter
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, Weapon20mmBase]
-  id: Weapon20mmUnanchorEmpty
+  parent: [BaseStructureDisableToolUse, WeaponNavalCannon20mmBase]
+  id: WeaponNavalCannon20mmUnanchorEmpty
   suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
   placement:
     mode: SnapgridCenter
 
 - type: entity
   parent: BaseNFFlatpack
-  id: Weapon20mmBaseFlatpack
+  id: WeaponNavalCannon20mmBaseFlatpack
   name: упакованный лёгкий пулемёт
   description: Упакованный Лёгкий Пулемёт (.20мм)
   components:
   - type: Flatpack
-    entity: Weapon20mmBase
+    entity: WeaponNavalCannon20mmUnanchor
   - type: StaticPrice
     price: 250
   - type: Sprite

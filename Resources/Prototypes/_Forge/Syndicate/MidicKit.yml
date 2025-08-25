@@ -63,6 +63,10 @@
   - type: Blueprint
     providedRecipes:
     - CrossbowBoltSponge
+  - type: Tag
+    tags:
+    - NFBlueprintProtolathe
+    - BlueprintAutolathe
 
 # Filled versions
 - type: entity

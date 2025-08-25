@@ -9,38 +9,38 @@
 # Shuttle Notes:
 #
 
-- type: vessel
-  id: Vagabond
-  parent: BaseVessel
-  name: NT Бродяга
-  description: Среднегабаритный добывающий-грузовой шаттл. Рекомендуемый состав команды 3-6 человек.
-  price: 60000
-  category: Medium
-  group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/vagabond.yml
-  guidebookPage: ShipyardVagabond
-  class:
-  - Salvage
-  - Cargo
+# - type: vessel
+#   id: Vagabond
+#   parent: BaseVessel
+#   name: NT Бродяга
+#   description: Среднегабаритный добывающий-грузовой шаттл. Рекомендуемый состав команды 3-6 человек.
+#   price: 60000
+#   category: Medium
+#   group: Salvage
+#   shuttlePath: /Maps/Forge/Shuttles/Salvage/vagabond.yml
+#   guidebookPage: ShipyardVagabond
+#   class:
+#   - Salvage
+#   - Cargo
 
 
 
-- type: gameMap
-  id: Vagabond
-  mapName: 'NT Бродяга'
-  mapPath: /Maps/Forge/Shuttles/Salvage/vagabond.yml
-  minPlayers: 0
-  stations:
-    Vagabond:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Бродяга {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+# - type: gameMap
+#   id: Vagabond
+#   mapName: 'NT Бродяга'
+#   mapPath: /Maps/Forge/Shuttles/Salvage/vagabond.yml
+#   minPlayers: 0
+#   stations:
+#     Vagabond:
+#       stationProto: StandardFrontierVessel
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: 'Бродяга {1}'
+#           nameGenerator:
+#             !type:NanotrasenNameGenerator
+#             prefixCreator: '14'
+#         - type: StationJobs
+#           availableJobs:
+#             Contractor: [ 0, 0 ]
+#             Pilot: [ 0, 0 ]
+#             Mercenary: [ 0, 0 ]

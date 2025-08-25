@@ -65,7 +65,28 @@
 - type: entity
   parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]
   id: VendingMachineAmmoPOIMedic
-  suffix: POI
+  suffix: POI, Медики
   components:
   - type: VendingMachine
     pack: WeaponryWorksVendPOIInventoryMedic
+
+- type: entity
+  parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]
+  id: VendingMachineAmmoPOIMers
+  name: ПулеМат наёмников
+  suffix: POI, Наёмники
+  components:
+  - type: VendingMachine
+    pack: WeaponryWorksVendPOIInventoryMers
+
+- type: entity
+  parent: [VendingMachinePickNPack, BaseStructureDisableAnchoring]
+  id: VendingMachinePickNPackPOIMers
+  name: ОружеМат
+  suffix: POI, Наёмники
+  components:
+  - type: VendingMachine
+    pack: PickNPackPOIInventoryMers
+  - type: AccessReader
+    access: [["Mercenary"], ["Security"], ["HeadOfPersonnel"], ["HeadOfSecurity"]]
+  - type: ActivatableUIRequiresAccess

@@ -8,42 +8,42 @@
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
-# Shuttle Notes: Что-ж, каждому постоянству нужны свои перемены...
+# Shuttle Notes: Спокойной ночи, Капитан.
 
-- type: vessel
-  id: Nansen
-  parent: BaseVessel
-  name: ST Капитан Нансен
-  description: Огромный, непоколебимый бастион шахтерской деятельности и независимости, видавший свои лучшие годы... Размер команды от 8 и более человек.
-  price: 291000 # (197 342)
-  category: Large
-  group: Scrap
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/Nansen.yml
-  guidebookPage: Null
-  class:
-  - Scrapyard
-  - Expedition
-  - Salvage
-  - Cargo
-  engine:
-  - Uranium
-
-- type: gameMap
-  id: Nansen
-  mapName: 'ST Капитан Нансен'
-  mapPath: /Maps/Forge/Shuttles/Scrap/Nansen.yml
-  minPlayers: 0
-  stations:
-    Nansen:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Капитан Нансен {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+#- type: vessel
+#  id: Nansen
+#  parent: BaseVessel
+#  name: ST Капитан Нансен
+#  description: Огромный, непоколебимый бастион шахтерской деятельности и независимости, видавший свои лучшие годы... Размер команды от 8 и более человек.
+#  price: 291000 # (197 342)
+#  category: Large
+#  group: Scrap
+#  shuttlePath: /Maps/Forge/Shuttles/Scrap/Nansen.yml
+#  guidebookPage: Null
+#  class:
+#  - Scrapyard
+#  - Expedition
+#  - Salvage
+#  - Cargo
+#  engine:
+#  - Uranium
+#
+#- type: gameMap
+#  id: Nansen
+#  mapName: 'ST Капитан Нансен'
+#  mapPath: /Maps/Forge/Shuttles/Scrap/Nansen.yml
+#  minPlayers: 0
+#  stations:
+#    Nansen:
+#      stationProto: StandardFrontierVessel
+#      components:
+#        - type: StationNameSetup
+#          mapNameTemplate: 'Капитан Нансен {1}'
+#          nameGenerator:
+#            !type:NanotrasenNameGenerator
+#            prefixCreator: '14'
+#        - type: StationJobs
+#          availableJobs:
+#            Contractor: [ 0, 0 ]
+#            Pilot: [ 0, 0 ]
+#            Mercenary: [ 0, 0 ]

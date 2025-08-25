@@ -1,0 +1,1222 @@
+- type: listing
+  id: ContractorUplinkPistolViper
+  name: uplink-pistol-viper-name
+  description: uplink-pistol-viper-desc
+  productEntity: NFWeaponPistolViper
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 6
+  categories:
+  - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkRevolverPython
+  name: uplink-revolver-python-name
+  description: uplink-revolver-python-desc
+  productEntity: NFWeaponRevolverRitland45
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8 # Originally was 13 and then 8 TC but was not used due to high cost
+  categories:
+  - ContractorUplinkWeaponry
+
+# Inbuilt suppressor so it's sneaky + more expensive.
+- type: listing
+  id: ContractorUplinkPistolCobra
+  name: uplink-pistol-cobra-name
+  description: uplink-pistol-cobra-desc
+  productEntity: NFWeaponPistolCobra
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkWeaponry
+
+# Poor accuracy, slow to fire, cheap option
+- type: listing
+  id: ContractorUplinkRifleMosin
+  name: uplink-rifle-mosin-name
+  description: uplink-rifle-mosin-desc
+  productEntity: NFWeaponRifleBarlowsBolt
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkEsword
+  name: uplink-esword-name
+  description: uplink-esword-desc
+  icon: { sprite: /Textures/Objects/Weapons/Melee/e_sword.rsi, state: icon }
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  productEntity: EnergySword
+  cost:
+    Telecrystal: 16
+  categories:
+  - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkEnergyDagger
+  name: uplink-edagger-name
+  description: uplink-edagger-desc
+  icon: { sprite: /Textures/Objects/Weapons/Melee/e_dagger.rsi, state: icon }
+  productEntity: EnergyDaggerBox
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkThrowingKnivesKit
+  name: uplink-knives-kit-name
+  description: uplink-knives-kit-desc
+  icon: { sprite: /Textures/Objects/Storage/boxicons.rsi, state: throwing_knives }
+  productEntity: ThrowingKnivesKit
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 12
+  categories:
+    - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkGlovesNorthStar
+  name: uplink-gloves-north-star-name
+  description: uplink-gloves-north-star-desc
+  productEntity: ClothingHandsGlovesNorthStar
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 16
+  categories:
+  - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkEshield
+  name: uplink-eshield-name
+  description: uplink-eshield-desc
+  icon: { sprite: /Textures/Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
+  productEntity: EnergyShield
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 16
+  categories:
+  - ContractorUplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: ContractorUplinkSniperBundle
+  name: uplink-sniper-bundle-name
+  description: uplink-sniper-bundle-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Snipers/heavy_sniper.rsi, state: base }
+  productEntity: BriefcaseSyndieSniperBundleFilled
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 12
+  cost:
+    Telecrystal: 24
+  categories:
+  - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkC20RBundle
+  name: uplink-c20r-bundle-name
+  description: uplink-c20r-bundle-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/SMGs/c20r.rsi, state: icon }
+  productEntity: ClothingBackpackDuffelSyndicateFilledSMG
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 20
+  cost:
+    Telecrystal: 34
+  categories:
+  - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkBulldogBundle
+  name: uplink-buldog-bundle-name
+  description: uplink-buldog-bundle-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Shotguns/bulldog.rsi, state: icon }
+  productEntity: ClothingBackpackDuffelSyndicateFilledShotgun
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 24
+  cost:
+    Telecrystal: 40
+  categories:
+  - ContractorUplinkWeaponry
+
+# Explosives
+
+- type: listing
+  id: ContractorUplinkExplosiveGrenadeFlash
+  name: uplink-flash-grenade-name
+  description: uplink-flash-grenade-desc
+  productEntity: GrenadeFlashBang
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkExplosives
+
+- type: listing
+  id: ContractorUplinkSmokeGrenade
+  name: uplink-smoke-grenade-name
+  description: uplink-smoke-grenade-desc
+  productEntity: SmokeGrenade
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkExplosives
+
+- type: listing
+  id: ContractorUplinkEmpGrenade
+  name: uplink-emp-grenade-name
+  description: uplink-emp-grenade-desc
+  productEntity: EmpGrenade
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkExplosives
+
+- type: listing
+  id: ContractorUplinkGrenadeShrapnel
+  name: uplink-shrapnel-grenade-name
+  description: uplink-shrapnel-grenade-desc
+  productEntity: GrenadeShrapnel
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkExplosives
+
+- type: listing # Frontier
+  id: ContractorUplinkC4
+  name: uplink-c4-name
+  description: uplink-c4-desc
+  productEntity: C4
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkExplosives
+
+- type: listing
+  id: ContractorUplinkEmpKit
+  name: uplink-emp-kit-name
+  description: uplink-emp-kit-desc
+  productEntity: ElectricalDisruptionKit
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 12
+  categories:
+    - ContractorUplinkExplosives
+
+- type: listing # Frontier
+  id: ContractorUplinkC4Bundle
+  name: uplink-c4-bundle-name
+  description: uplink-c4-bundle-desc
+  productEntity: ClothingBackpackDuffelSyndicateC4tBundle
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 20
+  cost:
+    Telecrystal: 25
+  categories:
+  - ContractorUplinkExplosives
+
+# Ammo
+
+- type: listing
+  id: ContractorUplinkPistol9mmMagazine
+  name: uplink-pistol-magazine-name
+  description: uplink-pistol-magazine-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
+  productEntity: NFMagazinePistol35
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkAmmo
+
+# For the C20R
+- type: listing
+  id: ContractorUplinkMagazinePistolSubMachineGun
+  name: uplink-pistol-magazine-c20r-name
+  description: uplink-pistol-magazine-c20r-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
+  productEntity: NFMagazineSubMachineGun35
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkAmmo
+
+# For the Cobra
+- type: listing
+  id: ContractorUplinkMagazinePistolCaselessRifle
+  name: uplink-pistol-magazine-caseless-name
+  description: uplink-pistol-magazine-caseless-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: red-icon }
+  productEntity: NFMagazinePistol45
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkAmmo
+
+# For the Python
+- type: listing
+  id: ContractorUplinkSpeedLoaderMagnumAP
+  name: uplink-speedloader-magnum-name
+  description: uplink-speedloader-magnu-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
+  productEntity: NFSpeedLoaderPistol45
+  cost:
+    Telecrystal: 6
+  categories:
+  - ContractorUplinkAmmo
+
+# For the mosin
+- type: listing
+  id: ContractorUplinkMosinAmmo
+  name: uplink-mosin-ammo-name
+  description: uplink-mosin-ammo-desc
+  productEntity: NFAmmunitionBoxRifle30
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkAmmo
+
+# for the hristov
+- type: listing
+  id: ContractorUplinkHristovAmmo
+  name: uplink-sniper-ammo-name
+  description: uplink-sniper-ammo-desc
+  productEntity: NFAmmunitionBoxRifle60
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkAmmo
+
+- type: listing
+  id: ContractorUplinkAmmoBundle
+  name: uplink-ammo-bundle-name
+  description: uplink-ammo-bundle-desc
+  productEntity: ClothingBackpackDuffelSyndicateAmmoFilled
+  cost:
+    Telecrystal: 30
+  categories:
+  - ContractorUplinkAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
+
+#Chemicals
+
+- type: listing
+  id: ContractorUplinkHypopen
+  name: uplink-hypopen-name
+  description: uplink-hypopen-desc
+  icon: { sprite: /Textures/Objects/Misc/pens.rsi, state: pen }
+  productEntity: HypopenBox
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 12
+  categories:
+  - ContractorUplinkChemicals
+
+- type: listing
+  id: ContractorUplinkHypoDart
+  name: uplink-hypodart-name
+  description: uplink-hypodart-desc
+  icon: { sprite: /Textures/Objects/Fun/Darts/dart_red.rsi, state: icon }
+  productEntity: HypoDartBox
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkChemicals
+
+- type: listing
+  id: ContractorUplinkChemistryKitBundle
+  name: uplink-chemistry-kit-name
+  description: uplink-chemistry-kit-desc
+  icon: { sprite: /Textures/Objects/Storage/boxicons.rsi, state: vials }
+  productEntity: ChemicalSynthesisKit
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 25
+  cost:
+    Telecrystal: 30
+  categories:
+  - ContractorUplinkChemicals
+
+- type: listing
+  id: ContractorUplinkCombatMedkit
+  name: uplink-combat-medkit-name
+  description: uplink-combat-medkit-desc
+  productEntity: MedkitCombatFilled
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 15
+  categories:
+  - ContractorUplinkChemicals
+
+- type: listing
+  id: ContractorUplinkCombatMedipen
+  name: uplink-combat-medipen-name
+  description: uplink-combat-medipen-desc
+  productEntity: CombatMedipen
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkChemicals
+
+- type: listing
+  id: ContractorUplinkStimpack
+  name: uplink-stimpack-name
+  description: uplink-stimpack-desc
+  productEntity: Stimpack
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkChemicals
+
+- type: listing
+  id: ContractorUplinkStimkit
+  name: uplink-stimkit-name
+  description: uplink-stimkit-desc
+  productEntity: StimkitFilled
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 16
+  cost:
+    Telecrystal: 24
+  categories:
+  - ContractorUplinkChemicals
+
+- type: listing
+  id: ContractorUplinkCigarettes
+  name: uplink-cigarettes-name
+  description: uplink-cigarettes-desc
+  productEntity: CigPackSyndicate
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkChemicals
+
+- type: listing
+  id: ContractorUplinkMedsBundle
+  name: uplink-meds-bundle-name
+  description: uplink-meds-bundle-desc
+  productEntity: ClothingBackpackDuffelSyndicateMedicalBundleFilled
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 32
+  cost:
+    Telecrystal: 48
+  categories:
+  - ContractorUplinkChemicals
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
+
+# Deception
+
+- type: listing
+  id: ContractorUplinkStealthBox
+  name: uplink-stealth-box-name
+  description: uplink-stealth-box-desc
+  productEntity: StealthBox
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 10
+  categories:
+  - ContractorUplinkDeception
+
+- type: listing
+  id: ContractorUplinkChameleonProjector
+  name: uplink-chameleon-projector-name
+  description: uplink-chameleon-projector-desc
+  productEntity: ChameleonProjector
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 14
+  categories:
+  - ContractorUplinkDeception
+
+- type: listing
+  id: ContractorUplinkCyberpen
+  name: uplink-cyberpen-name
+  description: uplink-cyberpen-desc
+  productEntity: CyberPen
+  cost:
+    Telecrystal: 16 # Frontier: 1<8 - same price as an emag, should be more useful here
+  categories:
+  - ContractorUplinkDeception
+
+# Disruption
+
+- type: listing
+  id: ContractorUplinkEmag
+  name: uplink-emag-name
+  description: uplink-emag-desc
+  productEntity: Emag
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 10
+  categories:
+  - ContractorUplinkDisruption
+
+- type: listing
+  id: ContractorUplinkRadioJammer
+  name: uplink-radio-jammer-name
+  description: uplink-radio-jammer-desc
+  productEntity: RadioJammer
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 6
+  categories:
+  - ContractorUplinkDisruption
+
+- type: listing
+  id: ContractorUplinkSoapSyndie
+  name: uplink-soap-name
+  description: uplink-soap-desc
+  productEntity: SoapSyndie
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkDisruption
+
+- type: listing
+  id: ContractorUplinkSlipocalypseClusterSoap
+  name: uplink-slipocalypse-clustersoap-name
+  description: uplink-slipocalypse-clustersoap-desc
+  productEntity: SlipocalypseClusterSoap
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkDisruption
+
+- type: listing
+  id: ContractorUplinkSyndicateJawsOfLife
+  name: uplink-syndicate-jaws-of-life-name
+  description: uplink-syndicate-jaws-of-life-desc
+  productEntity: SyndicateJawsOfLife
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkDisruption
+
+# You may need it later
+# - type: listing
+#   id: ContractorUplinkDuffelSurgery
+#   name: uplink-duffel-surgery-name
+#   description: uplink-duffel-surgery-desc
+#   productEntity: ClothingBackpackDuffelSyndicateFilledMedical
+#   discountCategory: usualDiscounts
+#   discountDownTo:
+#     Telecrystal: 4
+#   cost:
+#     Telecrystal: 8
+#   categories:
+#   - ContractorUplinkDisruption
+
+# Allies
+
+- type: listing
+  id: ContractorUplinkHoloparaKit
+  name: uplink-holopara-kit-name
+  description: uplink-holopara-kit-desc
+  icon: { sprite: /Textures/Objects/Misc/guardian_info.rsi, state: icon }
+  productEntity: BoxHoloparasite
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 16
+  cost:
+    Telecrystal: 28
+  categories:
+  - ContractorUplinkAllies
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: ContractorUplinkCarpDehydrated
+  name: uplink-carp-dehydrated-name
+  description: uplink-carp-dehydrated-desc
+  productEntity: DehydratedSpaceCarp
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkAllies
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: ContractorUplinkSyndicatePersonalAI
+  name: uplink-syndicate-pai-name
+  description: uplink-syndicate-pai-desc
+  icon: { sprite: /Textures/Objects/Fun/pai.rsi, state: syndicate-icon-pai-off }
+  productEntity: SyndicatePersonalAI
+  cost:
+    Telecrystal: 2
+  categories:
+    - ContractorUplinkAllies
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+# Implants
+
+- type: listing
+  id: ContractorUplinkStorageImplanter
+  name: uplink-storage-implanter-name
+  description: uplink-storage-implanter-desc
+  icon: { sprite: /Textures/Clothing/Back/Backpacks/backpack.rsi, state: icon }
+  productEntity: StorageImplanter
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 16
+  categories:
+    - ContractorUplinkImplants
+  conditions:
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
+
+- type: listing
+  id: ContractorUplinkFreedomImplanter
+  name: uplink-freedom-implanter-name
+  description: uplink-freedom-implanter-desc
+  icon: { sprite: /Textures/Actions/Implants/implants.rsi, state: freedom }
+  productEntity: FreedomImplanter
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 10
+  categories:
+    - ContractorUplinkImplants
+
+- type: listing
+  id: ContractorUplinkDnaScramblerImplant
+  name: uplink-dna-scrambler-implanter-name
+  description: uplink-dna-scrambler-implanter-desc
+  icon: { sprite: /Textures/Mobs/Species/Human/parts.rsi, state: full }
+  productEntity: DnaScramblerImplanter
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 10
+  categories:
+    - ContractorUplinkImplants
+
+- type: listing
+  id: ContractorUplinkEmpImplanter
+  name: uplink-emp-implanter-name
+  description: uplink-emp-implanter-desc
+  icon: { sprite: /Textures/Objects/Magic/magicactions.rsi, state: shield }
+  productEntity: EmpImplanter
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+    - ContractorUplinkImplants
+
+- type: listing
+  id: ContractorUplinkDeathRattle
+  name: uplink-deathrattle-implant-name
+  description: uplink-deathrattle-implant-desc
+  productEntity: BoxDeathRattleImplants
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkImplants
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
+
+- type: listing
+  id: ContractorUplinkFakeMindshield
+  name: uplink-fake-mindshield-name
+  description: uplink-fake-mindshield-desc
+  icon: { sprite: Interface/Actions/actions_fakemindshield.rsi, state: icon-on }
+  productEntity: FakeMindShieldImplanter
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkImplants
+
+# Wearables
+
+- type: listing
+  id: ContractorUplinkJetpack
+  name: uplink-black-jetpack-name
+  description: uplink-black-jetpack-desc
+  productEntity: JetpackBlackFilled
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkVoiceMask
+  name: uplink-voice-mask-name
+  description: uplink-voice-mask-desc
+  productEntity: ClothingMaskGasVoiceChameleon
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkHolster
+  name: uplink-holster-name
+  description: uplink-holster-desc
+  productEntity: ClothingBeltSyndieHolster
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkChestRig
+  name: uplink-chest-rig-name
+  description: uplink-chest-rig-desc
+  productEntity: ClothingBeltMilitaryWebbing
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkChameleon
+  name: uplink-chameleon-name
+  description: uplink-chameleon-desc
+  productEntity: ClothingBackpackChameleonFill
+  icon: { sprite: /Textures/Clothing/Uniforms/Jumpsuit/rainbow.rsi, state: icon }
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+    - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkClothingNoSlipsShoes
+  name: uplink-clothing-no-slips-shoes-name
+  description: uplink-clothing-no-slips-shoes-desc
+  productEntity: ClothingShoesChameleonNoSlips
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkgClothingThievingGloves
+  name: uplink-clothing-thieving-gloves-name
+  description: uplink-clothing-thieving-gloves-desc
+  productEntity: ThievingGloves
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkgNFClothingEyesNightVisionGoggleChameleon
+  name: uplink-clothing-nightvision-name
+  description: uplink-clothing-nightvision-desc
+  productEntity: NFClothingEyesNightVisionGoggleChameleon
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 12
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkgNFClothingEyesNightVisionGoggleChameleonNuke
+  name: uplink-clothing-nightvisionplus-name
+  description: uplink-clothing-nightvisionplus-desc
+  productEntity: NFClothingEyesNightVisionGoggleChameleonNuke
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 20
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkgClothingEyesThermalVisionGogglesSyndie
+  name: uplink-clothing-thermalvision-name
+  description: uplink-clothing-thermalvision-desc
+  productEntity: ClothingEyesThermalVisionGogglesSyndie
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 12
+  cost:
+    Telecrystal: 24
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkClothingOuterVestWeb
+  name: uplink-clothing-outer-vest-web-name
+  description: uplink-clothing-outer-vest-web-desc
+  productEntity: ClothingOuterVestWeb
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkClothingOuterVestWebElite
+  name: uplink-clothing-outer-vest-web-elite-name
+  description: uplink-clothing-outer-vest-web-elite-desc
+  productEntity: ClothingOuterVestWebElite
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 6
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkClothingShoesBootsMagSyndie
+  name: uplink-clothing-shoes-boots-mag-syndie-name
+  description: uplink-clothing-shoes-boots-mag-syndie-desc
+  productEntity: ClothingShoesBootsMagSyndie
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkEVASyndie
+  name: uplink-eva-syndie-name
+  description: uplink-eva-syndie-desc
+  icon: { sprite: /Textures/Clothing/OuterClothing/Suits/eva_syndicate.rsi, state: icon }
+  productEntity: ClothingBackpackDuffelSyndicateEVABundle
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkHardsuitCarp
+  name: uplink-hardsuit-carp-name
+  description: uplink-hardsuit-carp-desc
+  icon: { sprite: /Textures/Clothing/OuterClothing/Suits/carpsuit.rsi, state: icon }
+  productEntity: ClothingOuterHardsuitCarp
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkClothingEyesHudSyndicate
+  name: uplink-clothing-eyes-hud-syndicate-name
+  description: uplink-clothing-eyes-hud-syndicate-desc
+  productEntity: ClothingEyesHudSyndicate
+  cost:
+    Telecrystal: 4
+  categories:
+    - ContractorUplinkWearables
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
+
+- type: listing
+  id: ContractorUplinkClothingConductingGloves
+  name: uplink-clothing-conducting-gloves-name
+  description: uplink-clothing-conducting-gloves-desc
+  productEntity: ClothingHandsGlovesConducting
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkBackpackSyndicate
+  name: uplink-backpack-syndicate-name
+  description: uplink-backpack-syndicate-desc
+  productEntity: ClothingBackpackSyndicate
+  cost:
+    Telecrystal: 4
+  categories:
+    - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkBackpackSatchelSyndicate
+  name: uplink-satchel-syndicate-name
+  description: uplink-satchel-syndicate-desc
+  productEntity: ClothingBackpackSatchelSyndicate
+  cost:
+    Telecrystal: 4
+  categories:
+    - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkBackpackDuffelSyndicate
+  name: uplink-duffel-syndicate-name
+  description: uplink-duffel-syndicate-desc
+  productEntity: ClothingBackpackDuffelSyndicate
+  cost:
+    Telecrystal: 4
+  categories:
+    - ContractorUplinkWearables
+
+ # Pointless
+
+- type: listing
+  id: ContractorUplinkBarberScissors
+  name: uplink-barber-scissors-name
+  description: uplink-barber-scissors-desc
+  productEntity: BarberScissors
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkRevolverCapGun
+  name: uplink-revolver-cap-gun-name
+  description: uplink-revolver-cap-gun-desc
+  productEntity: NFRevolverCapGun
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkSyndicateStamp
+  name: uplink-syndicate-stamp-name
+  description: uplink-syndicate-stamp-desc
+  productEntity: RubberStampSyndicate
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkCatEars
+  name: uplink-cat-ears-name
+  description: uplink-cat-ears-desc
+  productEntity: ClothingHeadHatCatEars
+  cost:
+    Telecrystal: 52
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkOutlawHat
+  name: uplink-outlaw-hat-name
+  description: uplink-outlaw-hat-desc
+  productEntity: ClothingHeadHatOutlawHat
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkOutlawGlasses
+  name: uplink-outlaw-glasses-name
+  description: uplink-outlaw-glasses-desc
+  productEntity: ClothingEyesGlassesOutlawGlasses
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkCostumePyjama
+  name: uplink-costume-pyjama-name
+  description: uplink-costume-pyjama-desc
+  productEntity: ClothingBackpackDuffelSyndicatePyjamaBundle
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkCarpSuitBundle
+  name: uplink-carp-suit-bundle-name
+  description: uplink-carp-suit-bundle-desc
+  productEntity: ClothingBackpackDuffelSyndicateCarpSuit
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkOperativeSuit
+  name: uplink-operative-suit-name
+  description: uplink-operative-suit-desc
+  productEntity: ClothingUniformJumpsuitOperative
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkOperativeSkirt
+  name: uplink-operative-skirt-name
+  description: uplink-operative-skirt-desc
+  productEntity: ClothingUniformJumpskirtOperative
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkBalloon
+  name: uplink-balloon-name
+  description: uplink-balloon-desc
+  productEntity: BalloonSyn
+  cost:
+    Telecrystal: 40
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkScarfSyndieRed
+  name: uplink-scarf-syndie-red-name
+  description: uplink-scarf-syndie-red-desc
+  productEntity: ClothingNeckScarfStripedSyndieRed
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkScarfSyndieGreen
+  name: uplink-scarf-syndie-green-name
+  description: uplink-scarf-syndie-green-desc
+  productEntity: ClothingNeckScarfStripedSyndieGreen
+  cost:
+    Telecrystal: 2
+  categories:
+    - ContractorUplinkPointless
+
+- type: listing
+  id: ContractorUplinkSyndicateBusinessCard
+  name: uplink-business-card-name
+  description: uplink-business-card-desc
+  productEntity: SyndicateBusinessCard
+  categories:
+    - ContractorUplinkPointless
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
+
+# Job Specific
+
+- type: listing
+  id: ContractorUplinkGatfruitSeeds
+  name: uplink-gatfruit-seeds-name
+  description: uplink-gatfruit-seeds-desc
+  productEntity: GatfruitSeeds
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 10 # Frontier: 3<5
+  cost:
+    Telecrystal: 20 # Frontier: 6<10 (all the time in the world)
+  categories:
+  - ContractorUplinkWeaponry
+- type: listing
+  id: ContractorUplinkRiggedBoxingGlovesPassenger
+  name: uplink-rigged-boxing-gloves-name
+  description: uplink-rigged-boxing-gloves-desc
+  productEntity: ClothingHandsGlovesBoxingRigged
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 12
+  categories:
+    - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkRevolverCapGunFake
+  name: uplink-revolver-cap-gun-fake-name
+  description: uplink-revolver-cap-gun-fake-desc
+  productEntity: NFRevolverCapGunFake
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 10
+  categories:
+  - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkHoloclownKit
+  name: uplink-holoclown-kit-name
+  description: uplink-holoclown-kit-desc
+  icon: { sprite: /Textures/Objects/Fun/figurines.rsi, state: holoclown }
+  productEntity: BoxHoloclown
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 16 # Frontier: 6<8 (holoparasite parity)
+  cost:
+    Telecrystal: 28 # Frontier: 12<14 (holoparasite parity)
+  categories:
+  - ContractorUplinkAllies
+
+- type: listing
+  id: ContractorUplinkChimpUpgradeKit
+  name: uplink-chimp-upgrade-kit-name
+  description: uplink-chimp-upgrade-kit-desc
+  productEntity: WeaponPistolCHIMPUpgradeKit
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkCaneBlade
+  name: uplink-cane-blade-name
+  description: uplink-cane-blade-desc
+  icon: { sprite:  Objects/Weapons/Melee/cane.rsi, state: cane}
+  productEntity: CaneSheathFilled
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 10
+  categories:
+  - ContractorUplinkWeaponry
+  conditions:
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle

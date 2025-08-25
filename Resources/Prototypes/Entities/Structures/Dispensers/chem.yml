@@ -6,7 +6,7 @@
   description: An industrial grade chemical dispenser.
   components:
   - type: Sprite
-    sprite: Structures/dispensers.rsi
+    sprite: _Mono/Structures/dispensers.rsi
     state: industrial-working
     snapCardinals: true
   - type: ReagentDispenser

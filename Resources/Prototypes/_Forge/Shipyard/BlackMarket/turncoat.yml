@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: Mace70903
+# Discord: mace_70903
+
+# Maintainer Info
+# GitHub: Mace70903
+# Discord: mace_70903
+
+# Shuttle Notes:
+- type: vessel
+  id: Turncoat
+  parent: BaseVesselAntag
+  name: Перебезчик
+  description: Разбойник, но подождите, что то тут не так...
+  price: 55000
+  category: Medium
+  group: BlackMarket
+  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/turncoat.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Turncoat
+  mapName: 'Перебезчик'
+  mapPath: /Maps/Forge/Shuttles/BlackMarket/turncoat.yml
+  minPlayers: 0
+  stations:
+    Turncoat:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Brigand {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            NFPirate: [ 0, 0 ]

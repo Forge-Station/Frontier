@@ -13,3 +13,6 @@ handheld-radio-flavor-text-left = СвязНой, 1000-3000 kHz
 
 # Nuclear-14-End
 
+handheld-radio-component-toggle = Переключить микрофон
+
+# Nuclear-14-Start

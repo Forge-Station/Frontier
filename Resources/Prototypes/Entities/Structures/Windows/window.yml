@@ -20,9 +20,9 @@
       - Window
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/window.rsi # Frontier
+    sprite: Forge/Structures/Windows/window.rsi # Forge-Change
   - type: Icon
-    sprite: _NF/Structures/Windows/window.rsi # Frontier
+    sprite: Forge/Structures/Windows/window.rsi # Forge-Change
     state: full
   - type: Physics
     bodyType: Static
@@ -88,7 +88,7 @@
     damageDivisor: 2
     trackAllDamage: true
     damageOverlay:
-      sprite: Structures/Windows/cracks.rsi
+      sprite: Forge/Structures/Windows/cracks.rsi # Forge-Change
   - type: StaticPrice
     price: 100
   - type: BlockWeather
@@ -100,9 +100,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/tinted_window.rsi # Frontier
+    sprite: Forge/Structures/Windows/tinted_window.rsi # Forge-Change
   - type: Icon
-    sprite: _NF/Structures/Windows/tinted_window.rsi # Frontier
+    sprite: Forge/Structures/Windows/tinted_window.rsi # Forge-Change
   - type: IconSmooth
     base: twindow
   - type: Construction
@@ -141,10 +141,10 @@
         collection: GlassSmack
   - type: Sprite
     drawdepth: Mobs
-    sprite: Structures/Windows/directional.rsi
+    sprite: Forge/Structures/Windows/directional.rsi # Forge-Change
     state: window
   - type: Icon
-    sprite: Structures/Windows/directional.rsi
+    sprite: Forge/Structures/Windows/directional.rsi # Forge-Change
     state: window
   - type: InteractionPopup
     interactSuccessString: comp-window-knock
@@ -210,7 +210,7 @@
     thresholds: [5, 10, 20]
     trackAllDamage: true
     damageOverlay:
-      sprite: Structures/Windows/cracks_directional.rsi
+      sprite: Forge/Structures/Windows/cracks_directional.rsi # Forge-Change
   - type: StaticPrice
     price: 15
 
@@ -233,10 +233,10 @@
     - Window
   components:
   - type: Sprite
-    sprite: Structures/Windows/directional.rsi
+    sprite: Forge/Structures/Windows/directional.rsi # Forge-Change
     state: frosted_window
-  - type: Icon
-    sprite: Structures/Windows/directional.rsi
+  - type: Icon 
+    sprite: Forge/Structures/Windows/directional.rsi # Forge-Change
     state: frosted_window
   # - type: StaticPrice # Frontier
   #   price: 35 # Frontier
@@ -252,7 +252,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/window_diagonal.rsi # Frontier
+    sprite: Forge/Structures/Windows/window_diagonal.rsi # Forge-Change
     state: state0
   - type: Tag
     tags:
@@ -261,7 +261,7 @@
     mode: Diagonal
     base: state
   - type: Icon
-    sprite: _NF/Structures/Windows/window_diagonal.rsi # Frontier
+    sprite: Forge/Structures/Windows/window_diagonal.rsi # Forge-Change
     state: state0
   - type: Fixtures
     fixtures:
@@ -283,7 +283,7 @@
     - East
   - type: DamageVisuals
     damageOverlay:
-      sprite: Structures/Windows/cracks_diagonal.rsi
+      sprite: Forge/Structures/Windows/cracks_diagonal.rsi # Forge-Change
   - type: Construction
     graph: WindowDiagonal
     node: windowDiagonal

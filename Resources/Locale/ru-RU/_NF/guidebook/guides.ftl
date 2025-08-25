@@ -115,3 +115,15 @@ guide-entry-SParamed = Штурмовой Парамедик
 guide-entry-Commander = Командир "Жнецов"
 guide-entry-Cadet = Кадет Синдиката
 guide-entry-Smugler = Контрабандист Синдиката
+guide-entry-startinggear = Стартовое снаряжение
+guide-entry-interviews = Интервью
+guide-entry-sector-topology = Топология сектора
+guide-entry-cargo-hauling = Перевозка грузов
+guide-entry-offshore-gas-mining = Добыча газа в открытом космосе
+
+# Security entries
+guide-entry-weapons-ranged-archetypes = Архетипы дальнобойного оружия
+guide-entry-weapons-color-codes-ammo = Цветовые коды боеприпасов
+
+# Expedition faction entries
+guide-entry-frontier-rule-zero-tolerance = Нулевая терпимость

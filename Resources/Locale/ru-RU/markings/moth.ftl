@@ -246,3 +246,5 @@ marking-MothLArmWitchwing-witchwing_l_arm = Левая Рука
 marking-MothLArmWitchwing = Ниан, Левая рука (Ведьмино крыло)
 marking-MothRArmWitchwing-witchwing_r_arm = Правая Рука
 marking-MothRArmWitchwing = Ниан, Правая рука (Ведьмино крыло)
+marking-MothWingsMaple-maple_primary = Основной цвет
+marking-MothWingsMaple-maple_secondary = Вторичный цвет

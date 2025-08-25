@@ -1,17 +1,21 @@
-- type: vendingMachineInventory
+- type: vendingMachineInventory #CorvaxFrontier
   id: RepDrobeInventory
   startingInventory:
-    ClothingUniformJumpsuitReporter: 2
-    ClothingUniformJumpsuitBH: 2 # Frontier
-    ClothingUniformJumpskirtBH: 2 # Frontier
-    ClothingShoesColorBrown: 2
-    ClothingShoesColorBlack: 2
-    ClothingShoesColorWhite: 2
-#    ClothingOuterVestDetective: 2 # Frontier - Detective gear, need to replace this.
-    ClothingHeadHatFedoraBrown: 2
-    ClothingUniformJumpsuitBHGrey: 2 # Frontier
-    ClothingUniformJumpskirtBHGrey: 2 # Frontier
-    ClothingNeckTieBH: 2 # Frontier
-    ClothingHeadHatFedoraGrey: 2
-    ClothingHandsGlovesColorBlack: 2
-    RadioHandheldNF: 2 # Frontier: RadioHandheld<RadioHandheldNF
+    ClothingUniformJumpsuitReporter: 4
+    ClothingUniformJumpsuitBH: 4 # Frontier
+    ClothingUniformJumpskirtBH: 4 # Frontier
+    ClothingShoesColorBrown: 4
+    ClothingShoesColorBlack: 4
+    ClothingShoesColorWhite: 4
+#    ClothingOuterVestDetective: 4 # Frontier - Detective gear, need to replace this.
+    ClothingHeadHatFedoraBrown: 4
+    ClothingUniformJumpsuitBHGrey: 4 # Frontier
+    ClothingUniformJumpskirtBHGrey: 4 # Frontier
+    ClothingNeckTieBH: 4 # Frontier
+    ClothingHeadHatFedoraGrey: 4
+    ClothingHandsGlovesColorBlack: 4
+    RadioHandheldNF: 4 # Frontier: RadioHandheld<RadioHandheldNF
+    ClothingNeckPonchoCowboyWhite: 4
+    ClothingNeckPonchoCowboy: 4
+    ClothingNeckPonchoCowboyRed: 4
+    ClothingNeckPonchoCowboyGrey: 4

@@ -66,3 +66,11 @@ salvage-map-proto-RuinCargoBase = Разрушенный склад снабже
 salvage-map-proto-SecurityChunk = Кусок отдела охраны
 salvage-map-proto-EngineeringChunk = Кусок инженерного отсека
 salvage-map-proto-OutpostArm = Рукав захваченного аванпоста
+salvage-magnet-debris-ChunkDebris = Space debris
+
+# Asteroids
+salvage-map-wreck = Утилизация
+salvage-map-wreck-desc-size = Размер:
+salvage-map-wreck-size-small = [color=lime]Маленький[/color]
+salvage-map-wreck-size-medium = [color=cornflowerblue]Средний[/color]
+salvage-map-wreck-size-large = [color=orchid]Большой[/color]

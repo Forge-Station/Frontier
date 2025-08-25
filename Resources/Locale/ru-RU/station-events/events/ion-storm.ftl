@@ -81,3 +81,5 @@ ion-storm-law-concept-verb = { $concept } ЭТО { $verb } { $subjects }
 
 # leaving out renaming since its annoying for players to keep track of
 
+ion-storm-people = ЛЮДИ
+ion-storm-law-nf-needs-help = {$joined} {$subjects} НУЖДАЮТСЯ В ВАШЕЙ ПОМОЩИ

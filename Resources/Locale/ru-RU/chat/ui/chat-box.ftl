@@ -29,3 +29,7 @@ hud-chatbox-channel-Server = Сервер
 hud-chatbox-channel-Visual = Визуальный
 hud-chatbox-channel-Damage = Повреждения
 hud-chatbox-channel-Unspecified = Неопределённый
+hud-chatbox-highlights = Выделения:
+hud-chatbox-highlights-button = Применить
+hud-chatbox-highlights-tooltip = Слова разделяются новой строкой,
+hud-chatbox-highlights-placeholder = Текст

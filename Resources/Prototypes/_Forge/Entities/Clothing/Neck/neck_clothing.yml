@@ -1,0 +1,89 @@
+- type: entity
+  parent: ClothingNeckBase # Frontier - Change to neck
+  id: ClothingNeckPonchoCowboy
+  name: коричневое пончо ковбоя
+  description: Ты заново рождаешься в мире моды.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_brown.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_brown.rsi
+  - type: Construction
+    graph: ClothingNeckPonchoWebGraph
+    node: ClothingNeckPonchoWebNode
+  - type: Butcherable
+    spawned:
+    - id: MaterialWebSilk1
+      amount: 5
+
+- type: entity
+  parent: ClothingNeckBase # Frontier - Change to neck
+  id: ClothingNeckPonchoCowboyGrey
+  name: серое пончо ковбоя
+  description: Ты заново рождаешься в мире моды.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_grey.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_grey.rsi
+  - type: Construction
+    graph: ClothingNeckPonchoWebGraph
+    node: ClothingNeckPonchoWebNode
+  - type: Butcherable
+    spawned:
+    - id: MaterialWebSilk1
+      amount: 5
+
+- type: entity
+  parent: ClothingNeckBase # Frontier - Change to neck
+  id: ClothingNeckPonchoCowboyRed
+  name: красное пончо ковбоя
+  description: Ты заново рождаешься в мире моды.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_red.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_red.rsi
+  - type: Construction
+    graph: ClothingNeckPonchoWebGraph
+    node: ClothingNeckPonchoWebNode
+  - type: Butcherable
+    spawned:
+    - id: MaterialWebSilk1
+      amount: 5
+
+- type: entity
+  parent: ClothingNeckBase # Frontier - Change to neck
+  id: ClothingNeckPonchoCowboyWhite
+  name: белое пончо ковбоя
+  description: Ты заново рождаешься в мире моды.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Misc/poncho_web_white.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Misc/poncho_web_white.rsi
+  - type: Construction
+    graph: ClothingNeckPonchoWebGraph
+    node: ClothingNeckPonchoWebNode
+  - type: Butcherable
+    spawned:
+    - id: MaterialWebSilk1
+      amount: 5
+
+# - type: entity
+#   parent: ClothingNeckBase # Frontier - Change to neck
+#   id: ClothingNeckPonchoCowboyDark
+#   name: черное пончо ковбоя
+#   description: Ты заново рождаешься в мире моды.
+#   components:
+#   - type: Sprite
+#     sprite: Forge/Clothing/Neck/Misc/poncho_web_dark.rsi
+#   - type: Clothing
+#     sprite: Forge/Clothing/Neck/Misc/poncho_web_dark.rsi
+#   - type: Construction
+#     graph: ClothingNeckPonchoWebGraph
+#     node: ClothingNeckPonchoWebNode
+#   - type: Butcherable
+#     spawned:
+#     - id: MaterialWebSilk1
+#       amount: 5

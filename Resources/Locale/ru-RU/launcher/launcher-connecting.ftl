@@ -19,3 +19,4 @@ connecting-state-ResolvingHost = Определение хоста
 connecting-state-EstablishingConnection = Установка соединения
 connecting-state-Handshake = Handshake
 connecting-state-Connected = Подключён
+connecting-copy = Копировать сообщение

@@ -35,3 +35,6 @@ ghost-roles-window-no-roles-available-label = В настоящее время �
 ghost-roles-window-rules-footer = Кнопка станет доступна через { $time } секунд (эта задержка нужна, чтобы убедиться, что вы прочитали правила).
 ghost-return-to-body-title = Вернуться в тело
 ghost-return-to-body-text = Вас воскрешают! Вернуться в своё тело?
+ghost-gui-toggle-ghost-visibility-popup-on = Видимость призраков включена.
+ghost-gui-toggle-ghost-visibility-popup-off = Видимость призраков отключена.
+ghost-roles-window-available-button = Доступно ({$rolesCount})

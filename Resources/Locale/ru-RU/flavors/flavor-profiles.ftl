@@ -324,3 +324,32 @@ flavor-complex-bottledlightning = как молния в бутылке
 flavor-complex-punishment = как наказание
 flavor-weh = как вех
 flavor-hew = как хев
+flavor-base-trashy = мусорно
+
+# Complex flavors. Put a flavor here when you want something that's more
+# specific.
+flavor-complex-pear = как груша
+flavor-complex-crush-depth = как баротравма
+flavor-complex-electric-shark = как челюсти в тропиках
+flavor-complex-tortuga = как сладкий чай
+flavor-complex-jack-rose = как дача показаний
+flavor-complex-jungle-bird = как будто вы в вольере тропических птиц
+flavor-complex-kalimotxo = как шикарная, шипучая кола
+flavor-complex-vampiro = фруктово, пикантно и пряно
+flavor-complex-bronx = как умеренно сладкий алкогольный фрукт
+flavor-complex-monkey-business = как будто вы становитесь обезьяной
+flavor-complex-alien-brain-hemorrhage = как внеземная рана
+flavor-complex-caipirinha = как Бразилия
+flavor-complex-deathintheafternoon = как анис и шампанское
+flavor-complex-empress75 = как царственный пурпур
+flavor-complex-espressomartini = как водка и кофе
+flavor-complex-mayojito = как расстройство желудка
+flavor-complex-mimeosa = как тишина и апельсины
+flavor-complex-mimosa = как ранний бранч
+flavor-complex-moscowmule = как водка и имбирный эль
+flavor-complex-thesunalsorises = как абсент-дайкири
+flavor-complex-whiskeysour = как сладкий виски и яйцо
+flavor-complex-eggnog = как растопленный заварной крем
+flavor-complex-dark-and-stormy = как имбирный эль с ромом
+flavor-complex-radler = как шипучий лимонад
+flavor-complex-bacchus-blessing = как кирпичная стена

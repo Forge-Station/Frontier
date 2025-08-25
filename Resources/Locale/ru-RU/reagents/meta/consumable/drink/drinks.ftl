@@ -64,3 +64,5 @@ reagent-name-white-gilgamesh = белый Гильгамеш
 reagent-desc-white-gilgamesh = Тошнотворная смесь молока и пива. Вызывает ощущение одеревенелости.
 reagent-name-mopwata = швабода
 reagent-desc-mopwata = Грязная, застоявшаяся вода из-под швабры, швабровая вода.
+reagent-name-tea-powder = чайный порошок
+reagent-desc-tea-powder = Тонко молотые чайные листья, используемые для приготовления чая.

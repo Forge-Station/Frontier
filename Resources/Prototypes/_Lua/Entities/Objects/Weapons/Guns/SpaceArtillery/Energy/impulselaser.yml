@@ -4,7 +4,7 @@
 
 - type: entity
   parent: [BaseWeaponNavalEnergy, BaseStructure]
-  id: ImpulseLaserBase
+  id: WeaponNavalCannonImpulseLaserBase
   name: Импульсный Лазер
   description: Лёгий лазер, использует для питания энергоячейки импульсного лазера.
   suffix: НЕ МАППИТЬ!, ShuttleGun
@@ -61,20 +61,20 @@
       soundGunshot: /Audio/_Lua/Weapons/Guns/Gunshots/lasergatling.ogg
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, ImpulseLaserBase]
-  id: ImpulseLaserUnanchor
+  parent: [BaseStructureDisableToolUse, WeaponNavalCannonImpulseLaserBase]
+  id: WeaponNavalCannonImpulseLaserUnanchor
   suffix: Неоткрепляемый для кораблей, ShuttleGun
   placement:
     mode: SnapgridCenter
 
 - type: entity
   parent: BaseNFFlatpack
-  id: ImpulseLaserBaseFlatpack
+  id: WeaponNavalCannonImpulseLaserBaseFlatpack
   name: упакованный импульсный лазер
   description: Упакованный лёгий лазер, использует для питания энергоячейки импульсного лазера.
   components:
   - type: Flatpack
-    entity: ImpulseLaserBase
+    entity: WeaponNavalCannonImpulseLaserBase
   - type: StaticPrice
     price: 250
   - type: Sprite

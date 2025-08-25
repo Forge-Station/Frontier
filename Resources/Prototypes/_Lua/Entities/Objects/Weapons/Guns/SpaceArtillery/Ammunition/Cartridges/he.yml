@@ -4,7 +4,7 @@
 
 - type: entity
   id: Cartridge20mm
-  name: картридж фугасных снарядов .20мм
+  name: фугасный снаряд .20мм
   parent: BaseCartridge
   components:
     - type: Tag
@@ -22,7 +22,7 @@
 
 - type: entity
   id: Cartridge53mm
-  name: картридж фугасных снарядов .53мм
+  name: фугасный снаряд .53мм
   parent: BaseCartridge
   components:
     - type: Tag
@@ -40,7 +40,7 @@
 
 - type: entity
   id: Cartridge80mm
-  name: картридж фугасных снарядов .80мм
+  name: фугасный снаряд .80мм
   parent: BaseCartridge
   components:
     - type: Tag
@@ -58,7 +58,7 @@
 
 - type: entity
   id: Cartridge105mm
-  name: картридж фугасных снарядов .105мм
+  name: фугасный снаряд .105мм
   parent: BaseCartridge
   components:
     - type: Tag
@@ -76,7 +76,7 @@
 
 - type: entity
   id: Cartridge120mm
-  name: картридж фугасных снарядов .120мм
+  name: фугасный снаряд .120мм
   parent: BaseCartridge
   components:
     - type: Tag
@@ -94,7 +94,7 @@
 
 - type: entity
   id: Cartridge140mm
-  name: картридж фугасных снарядов .140мм
+  name: фугасный снаряд .140мм
   parent: BaseCartridge
   components:
     - type: Tag

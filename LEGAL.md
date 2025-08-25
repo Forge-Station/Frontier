@@ -1,62 +1,84 @@
-﻿# Legal Info
+﻿# Юридическая информация
 
-## Definitions
+## Определения
 
-Namespace refers to a subdirectory beginning with `_` indicating the authorship of its contents.
+**Пространство имён (Namespace)** - поддиректория, начинающаяся с `_`, указывающая на авторство содержимого.
 
-Code refers to any C# source code files and compiled assemblies, YML files in `Resources` and any scripts these may require such as the `Tools` subdirectory.
+**Код** - любые файлы исходного кода C#, скомпилированные сборки, YML-файлы в `Resources` и связанные скрипты (включая поддиректорию `Tools`).
 
-## Copyright
+## Авторские права
 
-The Authors retain all copyright to their respective work here submitted.
+Авторы сохраняют все права на свои работы, представленные в этом репозитории. Это означает, что они могут свободно распространять свой контент где угодно.
 
-This means they remain at liberty to contribute their work anywhere they please.
+## Лицензии кода
 
-## Code license
+Проект в целом лицензирован по условиям [AGPLv3](https://github.com/Forge-Station/Frontier/blob/master/LICENSE-AGPLv3.txt), которые должны соблюдаться независимо от родительских лицензий.
 
-The project as a whole is licensed under the terms of the [AGPLv3](https://github.com/new-frontiers-14/frontier-station-14/blob/master/LICENSE-AGPLv3.txt) and must be followed regardless of parent licenses.
+Для кода других авторов необходимо соблюдать условия как AGPLv3, так и их исходной лицензии (см. таблицу атрибуции ниже). Информация об авторских правах для кода под AGPLv3 приведена в [COPYRIGHT-AGPLv3.txt](https://github.com/Forge-Station/Frontier/blob/master/COPYRIGHT-AGPLv3.txt).
 
-Where code from other authors is used, you must follow the terms of both the AGPLv3 and their license as given in the Attributions table below. Copyright information for all AGPLv3-licensed code is listed in [COPYRIGHT-AGPLv3.txt](https://github.com/new-frontiers-14/frontier-station-14/blob/master/COPYRIGHT-AGPLv3.txt).
+Для кода под лицензией MIT запрещается удалять копию лицензии MIT из любых дистрибутивов.
 
-For code taken under the MIT license, this means you must not remove the copy of the MIT license from any distribution.
+Код, созданный участниками Frontier, находится в пространствах имён `_NF`.
 
-Code created by Frontier contributors is found in _NF Namespaces.
+Исходный код из [Space Station 14](https://github.com/space-wizards/space-station-14) взят под [лицензией MIT](https://github.com/Forge-Station/Frontier/blob/master/LICENSE-MIT.txt). Весь код вне конкретных пространств имён (за исключением поддиректорий Nyanotrasen) распространяется как MIT + AGPLv3 от Space Wizards Federation.
 
-Upstream code from [Space Station 14](https://github.com/space-wizards/space-station-14) was taken under [the MIT license](https://github.com/new-frontiers-14/frontier-station-14/blob/master/LICENSE-MIT.txt). Any code not in a specific Namespace, excluding Nyanotrasen subdirectories, is sublicensed as MIT plus AGPLv3 from the Space Wizards Federation.
+## Особые требования к ассетам
 
-Assets have distinct licenses in attributions.yml and meta.json files which must be followed individually.
+1. **Ассеты с пометкой "All Rights Reserved"**:
+   - Строго запрещено использование в любых производных работах
+   - Обязательны к немедленному удалению при использовании этой сборки
+   - Не подлежат распространению даже в некоммерческих целях
 
-## Attributions
+2. **Некоммерческие ассеты** (CC-BY-NC и аналоги):
+   - Допускаются только в некоммерческих сборках
+   - Требуют явного указания авторства
+   - Должны быть удалены для коммерческого использования
 
-The table below lists all Namespaces (along with the Nyanotrasen subdirectory) in the repository, includes a link to the source repository, and the original license that code was taken under.
+Лицензии ассетов указаны в файлах attributions.yml и meta.json - соблюдайте их индивидуально.
 
-| Subdirectory | Fork Name | Source Repository | Original License |
-|--------------|-----------|-------------------|------------------|
+## Таблица атрибуции
+
+В таблице перечислены все пространства имён (включая поддиректорию Nyanotrasen) с указанием исходных репозиториев и лицензий.
+
+| Поддиректория | Форк | Исходный репозиторий | Лицензия |
+|--------------|-------|-----------------------|----------|
 | `_NF` | Frontier Station | https://github.com/new-frontiers-14/frontier-station-14 | AGPL 3.0 |
 | `_CD` | Cosmatic Drift | https://github.com/cosmatic-drift-14/cosmatic-drift | MIT |
 | `_Corvax` | Corvax | https://github.com/space-syndicate/space-station-14 | MIT |
-| `_Corvax` | Corvax Frontier | https://github.com/Corvax-Frontier/Frontier | AGPL 3.0 |
+| `_Corvax / _Forge` | Corvax Frontier | https://github.com/Corvax-Frontier/Frontier | AGPL 3.0 |
 | `_DV` | Delta-V | https://github.com/DeltaV-Station/Delta-v | AGPL 3.0 |
 | `_EE` | Einstein Engines | https://github.com/Simple-Station/Einstein-Engines | AGPL 3.0 |
-| `_Emberfall` | Emberfall | https://github.com/emberfall-14/emberfall | [MIT (with permission)](https://github.com/new-frontiers-14/frontier-station-14/pull/3607) |
+| `_Emberfall` | Emberfall | https://github.com/emberfall-14/emberfall | [MIT (с разрешения)](https://github.com/new-frontiers-14/frontier-station-14/pull/3607) |
 | `_EstacaoPirata` | Estacao Pirata | https://github.com/estacao-pirata/estacao-pirata | AGPL 3.0 |
 | `_Goobstation` | Goob Station | https://github.com/Goob-Station/Goob-Station | AGPL 3.0 |
 | `_Impstation` | Impstation | https://github.com/impstation/imp-station-14 | AGPL 3.0 |
 | `_NC14` | Nuclear 14 | https://github.com/Vault-Overseers/nuclear-14 | AGPL 3.0 |
 | `Nyanotrasen` | Nyanotrasen | https://github.com/Nyanotrasen/Nyanotrasen | MIT |
 
-Additional repositories with ported code without Namespaces (denoted by comments) are listed below.
+Дополнительные репозитории с портированным кодом (без пространств имён):
 
-| Fork Name | Source Repository | Original License |
-|-----------|-------------------|------------------|
+| Форк | Исходный репозиторий | Лицензия |
+|------|-----------------------|----------|
 | Monolith | https://github.com/Monolith-Station/Monolith | AGPL 3.0 |
 | Space Station 14 ("Wizden"/"Upstream") | https://github.com/space-wizards/space-station-14 | MIT |
 | White Dream | https://github.com/WWhiteDreamProject/wwdpublic | AGPL 3.0 |
 
-## Warranty
+## Отказ от гарантий
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ. АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЕТЕНЗИИ, УБЫТКИ ИЛИ ИНЫЕ ОБЯЗАТЕЛЬСТВА.
 
-## Legacy code
+## Устаревший код
 
-If you do not agree to the terms of these software licenses you may use legacy code from before [this commit](https://github.com/new-frontiers-14/frontier-station-14/commit/2fca06eaba205ae6fe3aceb8ae2a0594f0effee0) which may be used under the MIT license.
+Если вы не согласны с условиями этих лицензий, вы можете использовать код до [этого коммита](https://github.com/new-frontiers-14/frontier-station-14/commit/2fca06eaba205ae6fe3aceb8ae2a0594f0effee0), доступный под лицензией MIT.
+
+## Важные примечания
+
+1. **Контент с полным сохранением прав (All Rights Reserved)**:
+   - Категорически запрещён к использованию в любых производных работах
+   - Должен быть удалён перед использованием кода в других проектах
+   - Нарушение этих требований может повлечь юридическую ответственность
+
+2. **Коммерческое использование**:
+   - Требует тщательной проверки всех ассетов
+   - Необходимо удалить весь контент с пометками "All Rights Reserved" и некоммерческими лицензиями
+   - Рекомендуется консультация с юристом перед публикацией

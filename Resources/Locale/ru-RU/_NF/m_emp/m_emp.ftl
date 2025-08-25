@@ -25,3 +25,4 @@ m_emp-menu-note3 = Используя это оружие
 m_emp-menu-note4 = вы соглашаетесь нести ответственность.
 m_emp-request-button = Запросить одобрение
 m_emp-activate-button = Активировать Б_ЭМИ
+emp-generator-window-title = Мобильный генератор ЭМИ

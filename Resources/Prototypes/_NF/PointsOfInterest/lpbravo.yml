@@ -15,7 +15,7 @@
   minimumDistance: 4000
   maximumDistance: 6000
   spawnGroup: SyndicateFOB
-  gridPath: /Maps/Forge/POI/lpbravo.yml #CorvaxFrontier
+  gridPath: /Maps/Forge/POI/lpbravo.yml #Forge-Change
   hideWarp: true
   addComponents:
   - type: IFF
@@ -27,12 +27,13 @@
     trackOnInit: true
     doNotCull: true
   - type: ProtectedGrid
-    noGridCollision: true #CorvaxFrontier
+    noGridCollision: true #Forge-Change
+  - type: BlockEvacuation #Forge-Change
 
 - type: gameMap
   id: LPBravo
   mapName: 'Прослушивающий пункт Браво'
-  mapPath: /Maps/Forge/POI/lpbravo.yml #CorvaxFrontier
+  mapPath: /Maps/Forge/POI/lpbravo.yml #Forge-Change
   minPlayers: 0
   stations:
     LPBravo:

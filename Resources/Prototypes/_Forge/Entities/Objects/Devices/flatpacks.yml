@@ -59,3 +59,17 @@
   - type: Sprite
     layers:
     - state: power_console_ame
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: ShuttleGunM25Flatpack
+  name: упакованная шахтерская добывающая установка M25
+  description: Упакованная шахтерская добывающая установка M25.
+  components:
+  - type: Flatpack
+    entity: WeaponNavalCannonM25
+  - type: Sprite
+    layers:
+    - state: power_console_ame
+  - type: StaticPrice
+    price: 2100

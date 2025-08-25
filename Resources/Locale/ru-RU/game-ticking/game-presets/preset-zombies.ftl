@@ -25,3 +25,5 @@ zombie-round-end-survivor-count =
        *[other] Осталось всего { $count } выживших, это:
     }
 zombie-round-end-user-was-survivor = - [color=White]{ $name }[/color] ([color=gray]{ $username }[/color]) пережил заражение.
+zombieteors-title = Зомбитеоры
+zombieteors-description = Нежить заполонила станцию среди катастрофического метеоритного дождя! Работайте вместе с экипажем, чтобы выжить!

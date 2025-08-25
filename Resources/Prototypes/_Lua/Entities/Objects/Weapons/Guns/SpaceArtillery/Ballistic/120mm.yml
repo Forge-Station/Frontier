@@ -65,14 +65,14 @@
 
 - type: entity
   parent: [BaseStructureDisableToolUse, Weapon120mm, WeaponNavalCannon120mmBase]
-  id: Weapon120mmUnanchor
+  id: WeaponNavalCannon120mmUnanchor
   suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
   placement:
     mode: SnapgridCenter
 
 - type: entity
   parent: [BaseStructureDisableToolUse, WeaponNavalCannon120mmBase]
-  id: Weapon120mmUnanchorEmpty
+  id: WeaponNavalCannon120mmUnanchorEmpty
   suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
   placement:
     mode: SnapgridCenter

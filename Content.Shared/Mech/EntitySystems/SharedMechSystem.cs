@@ -22,6 +22,7 @@ using Content.Shared.Mech.Equipment.Components;
 using Content.Shared.Mech.Events; // Forge-Change
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
+using Content.Shared.Movement.Events; // Forge-Change
 using Content.Shared.Popups;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Ranged.Events; // Forge-Change
@@ -82,9 +83,32 @@ public abstract class SharedMechSystem : EntitySystem
         SubscribeLocalEvent<MechPilotComponent, GetMeleeWeaponEvent>(OnGetMeleeWeapon);
         SubscribeLocalEvent<MechPilotComponent, CanAttackFromContainerEvent>(OnCanAttackFromContainer);
         SubscribeLocalEvent<MechPilotComponent, AttackAttemptEvent>(OnAttackAttempt);
-        SubscribeLocalEvent<MechPilotComponent, EntGotRemovedFromContainerMessage>(OnEntGotRemovedFromContainer);
+        SubscribeLocalEvent<MechPilotComponent, EntGotRemovedFromContainerMessage>(OnPilotRemoved); // Forge-Change
+
+        SubscribeLocalEvent<MechComponent, UpdateCanMoveEvent>(OnMechMoveEvent); // Forge-Change
+        SubscribeLocalEvent<MechPilotComponent, UpdateCanMoveEvent>(OnPilotMoveEvent); // Forge-Change
+        SubscribeLocalEvent<MechComponent, ChangeDirectionAttemptEvent>(OnMechMoveEvent); // Forge-Change
+
         SubscribeLocalEvent<MechEquipmentComponent, ShotAttemptedEvent>(OnShotAttempted); // Forge-Change
         Subs.CVar(_config, ForgeVars.MechGunOutsideMech, value => _canUseMechGunOutside = value, true); // Forge-Change
+    }
+
+    private void OnPilotMoveEvent(EntityUid uid, MechPilotComponent component, UpdateCanMoveEvent args) // Forge-Change
+    {
+        if (component.LifeStage > ComponentLifeStage.Running || !TryComp<MechComponent>(component.Mech, out var mech))
+            return;
+
+        if (mech.Broken || mech.Integrity <= 0 || mech.Energy <= 0)
+            args.Cancel();
+    }
+    
+    private void OnMechMoveEvent(EntityUid uid, MechComponent component, CancellableEntityEventArgs args) // Forge-Change
+    {
+        if (component.LifeStage > ComponentLifeStage.Running)
+            return;
+
+        if (component.Broken || component.Integrity <= 0 || component.Energy <= 0)
+            args.Cancel();
     }
 
     // Forge-Change: Fixes scram implants or teleports locking the pilot out of being able to move.
@@ -332,7 +356,6 @@ public abstract class SharedMechSystem : EntitySystem
         _container.Insert(toInsert, component.EquipmentContainer);
         var ev = new MechEquipmentInsertedEvent(uid);
         RaiseLocalEvent(toInsert, ref ev);
-        UpdateUserInterface(uid, component);
         if (component.PilotSlot.ContainedEntity != null)
             UpdateActions(uid, component.PilotSlot.ContainedEntity.Value, component);
     }
@@ -370,7 +393,6 @@ public abstract class SharedMechSystem : EntitySystem
 
         equipmentComponent.EquipmentOwner = null;
         _container.Remove(toRemove, component.EquipmentContainer);
-        UpdateUserInterface(uid, component);
     }
 
     /// <summary>
@@ -532,9 +554,13 @@ public abstract class SharedMechSystem : EntitySystem
         if (pilot == null) // Forge-Change edit
             return false;
 
+        if (HasComp<NoRotateOnMoveComponent>(uid)) // Forge-Change
+            RemComp<NoRotateOnMoveComponent>(uid);
+
         RemoveUser(uid, pilot.Value); // Forge-Change edit
         _container.RemoveEntity(uid, pilot.Value); // Forge-Change edit
         UpdateAppearance(uid, component);
+
         // <Forge-Change>
         UpdateHands(pilot.Value, uid, false);
 
@@ -550,6 +576,14 @@ public abstract class SharedMechSystem : EntitySystem
         // Frontier
 
         return true;
+    }
+
+    private void OnPilotRemoved(EntityUid uid, MechPilotComponent component, EntGotRemovedFromContainerMessage args)
+    {
+        RemoveUser(component.Mech, uid);
+
+        if (TryComp<MechComponent>(component.Mech, out var mechComp))
+            UpdateAppearance(component.Mech, mechComp);
     }
 
     // Forge-Change Change Start

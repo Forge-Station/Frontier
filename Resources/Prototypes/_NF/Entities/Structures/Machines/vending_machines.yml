@@ -704,7 +704,7 @@
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachinePickNPack
-  name: Pick-n-Pack
+  name: ОружеМат #CorvaxFrontier
   description: Putting arms in your hands since 2549.
   components:
   - type: VendingMachine

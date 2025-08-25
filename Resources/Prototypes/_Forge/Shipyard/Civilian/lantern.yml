@@ -8,34 +8,34 @@
 
 # Shuttle Notes:
 #
-- type: vessel
-  id: lantern
-  parent: BaseVessel
-  name: LVHI Кадило
-  description: Среднегабаритный шаттл-церковь. Рекомендованный состав команды 2-3 человека.
-  price: 36125 # ~31020$ on mapinit + ~3100$ from 10% markup
-  category: Medium
-  group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/lantern.yml
-  class:
-  - Civilian
+# - type: vessel
+#   id: lantern
+#   parent: BaseVessel
+#   name: LVHI Кадило
+#   description: Среднегабаритный шаттл-церковь. Рекомендованный состав команды 2-3 человека.
+#   price: 36125 # ~31020$ on mapinit + ~3100$ from 10% markup
+#   category: Medium
+#   group: Shipyard
+#   shuttlePath: /Maps/Forge/Shuttles/Civilian/lantern.yml
+#   class:
+#   - Civilian
 
-- type: gameMap
-  id: lantern
-  mapName: 'Кадило'
-  mapPath: /Maps/Forge/Shuttles/Civilian/lantern.yml
-  minPlayers: 0
-  stations:
-    lantern:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Кадило {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+# - type: gameMap
+#   id: lantern
+#   mapName: 'Кадило'
+#   mapPath: /Maps/Forge/Shuttles/Civilian/lantern.yml
+#   minPlayers: 0
+#   stations:
+#     lantern:
+#       stationProto: StandardFrontierVessel
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: 'Кадило {1}'
+#           nameGenerator:
+#             !type:NanotrasenNameGenerator
+#             prefixCreator: '14'
+#         - type: StationJobs
+#           availableJobs:
+#             Contractor: [ 0, 0 ]
+#             Pilot: [ 0, 0 ]
+#             Mercenary: [ 0, 0 ]

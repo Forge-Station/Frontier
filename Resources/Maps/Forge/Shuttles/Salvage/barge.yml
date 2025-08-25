@@ -2,10 +2,10 @@ meta:
   format: 7
   category: Grid
   engineVersion: 262.0.0
-  forkId: frontier_mapping
-  forkVersion: 5c2bad342bcb946499e5dcf78376a0ca5cfb7aee
-  time: 07/28/2025 17:09:28
-  entityCount: 1037
+  forkId: ""
+  forkVersion: ""
+  time: 08/12/2025 02:43:30
+  entityCount: 1035
 maps: []
 grids:
 - 1
@@ -3227,18 +3227,6 @@ entities:
     components:
     - type: Transform
       pos: 0.5,-11.5
-      parent: 1
-- proto: ContrabandPalletCivillian
-  entities:
-  - uid: 428
-    components:
-    - type: Transform
-      pos: 4.5,-3.5
-      parent: 1
-  - uid: 429
-    components:
-    - type: Transform
-      pos: 3.5,-3.5
       parent: 1
 - proto: ConveyorBelt
   entities:
@@ -7581,6 +7569,18 @@ entities:
       canCollide: False
 - proto: WeaponNavalCannonM25
   entities:
+  - uid: 423
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -4.5,8.5
+      parent: 1
+  - uid: 424
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 3.5,8.5
+      parent: 1
   - uid: 1028
     components:
     - type: Transform

@@ -1564,3 +1564,138 @@
         - Bailiff
         - SeniorOfficer
         - Sheriff
+
+- type: listing
+  id: UplinkSecurity80BGrenadeAmmo
+  name:  Картридж бесконтактных боеприпасов .80мм
+  description: Картридж содержащий бесконтактные боеприпасы калибра .80мм
+  productEntity: MagazineBox80mmPF
+  cost:
+    FrontierUplinkCoin: 3 #CorvaxFrontier
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurity80BBGrenadeAmmo
+  name:  Картридж бронебойных боеприпасов .80мм
+  description: Картридж содержащий бронебойные боеприпасы калибра .80мм
+  productEntity: MagazineBox80mmAP
+  cost:
+    FrontierUplinkCoin: 3 #CorvaxFrontier
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurity80FGrenadeAmmo
+  name:  Картридж фугасных боеприпасов .80мм
+  description: Картридж содержащий фугасные боеприпасы калибра .80мм
+  productEntity: MagazineBox80mm
+  cost:
+    FrontierUplinkCoin: 3 #CorvaxFrontier
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurity105BGrenadeAmmo
+  name:  Картридж бесконтактных боеприпасов .105мм
+  description: Картридж содержащий бесконтактные боеприпасы калибра .105мм
+  productEntity: MagazineBox105mmPF
+  cost:
+    FrontierUplinkCoin: 4 #CorvaxFrontier
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurity105BBGrenadeAmmo
+  name:  Картридж бронебойных боеприпасов .105мм
+  description: Картридж содержащий бронебойные боеприпасы калибра .105мм
+  productEntity: MagazineBox105mmAP
+  cost:
+    FrontierUplinkCoin: 4 #CorvaxFrontier
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurity105FGrenadeAmmo
+  name:  Картридж фугасных боеприпасов .105мм
+  description: Картридж содержащий фугасные боеприпасы калибра .105мм
+  productEntity: MagazineBox105mmHE
+  cost:
+    FrontierUplinkCoin: 4 #CorvaxFrontier
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurity140FGrenadeAmmo
+  name:  Ящик фугасных боеприпасов .140мм
+  description: Ящик содержащий фугасные боеприпасы калибра .140мм
+  productEntity: CrateArmoryWeaponNavalCannon140mmHE
+  cost:
+    FrontierUplinkCoin: 5 #CorvaxFrontier
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurity140BGrenadeAmmo
+  name:  Ящик бесконтактных боеприпасов .140мм
+  description: Ящик содержащий бесконтактные боеприпасы калибра .140мм
+  productEntity: CrateArmoryWeaponNavalCannon140mmPF
+  cost:
+    FrontierUplinkCoin: 5 #CorvaxFrontier
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurity140BBGrenadeAmmo
+  name:  Ящик бронебойных боеприпасов .140мм
+  description: Ящик содержащий бронебойные боеприпасы калибра .140мм
+  productEntity: CrateArmoryWeaponNavalCannon140mmAP
+  cost:
+    FrontierUplinkCoin: 5 #CorvaxFrontier
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink

@@ -20,3 +20,5 @@ marking-VoxHairShortQuills = Вокс, Короткие перья
 marking-VoxHairSurf = Вокс, Сёрфер
 marking-VoxHairTielQuills = Вокс, Тилские перья
 marking-VoxHairYasu = Вокс, Ясухиро
+marking-VoxHairWiseBraid = Мудрые косы Вокса
+marking-VoxHairSpotty = Пятнистые волосы Вокса

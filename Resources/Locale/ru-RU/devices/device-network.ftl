@@ -42,3 +42,10 @@ device-net-id-wireless = Беспроводные
 device-net-id-apc = ЛКП
 device-net-id-atmos-devices = Атмос-устройства
 device-net-id-reserved = Резерв
+device-frequency-prototype-name-turret = Охранная турель
+device-frequency-prototype-name-turret-control = Панель управления охранной турелью
+device-frequency-prototype-name-xenoborg = Ксенборг
+device-frequency-prototype-name-mothership = Материнский корабль
+
+## camera frequencies
+device-address-prefix-turret = ТРЛ-

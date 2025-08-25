@@ -12,7 +12,7 @@
     sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
 
 - type: entity
-  id: CrateArmoryWeapon20mmAP
+  id: CrateArmoryWeaponNavalCannon20mmAP
   parent: CrateShipWeaponBase
   name: ящик бронебойных обойм лёгкого пулемёта (.20мм)
   description: Содержит 3 обоймы бронебойных снарядов для лёгкого пулемёта (.20мм)
@@ -23,7 +23,7 @@
         amount: 3
 
 - type: entity
-  id: CrateArmoryWeapon53mmAP
+  id: CrateArmoryWeaponNavalCannon53mmAP
   parent: CrateShipWeaponBase
   name: ящик бронебойных обойм среднего пулемёта (.53мм)
   description: Содержит 3 обоймы бронебойных снарядов для среднего пулемёта (.53мм)
@@ -34,7 +34,7 @@
         amount: 3
 
 - type: entity
-  id: CrateArmoryWeapon80mmAP
+  id: CrateArmoryWeaponNavalCannon80mmAP
   parent: CrateShipWeaponBase
   name: ящик бронебойных обойм тяжёлого пулемёта (.80мм)
   description: Содержит 3 обоймы бронебойных снарядов для тяжёлого пулемёта (.80мм)
@@ -45,37 +45,81 @@
         amount: 3
 
 - type: entity
-  id: CrateArmoryWeapon105mmAP
+  id: CrateArmoryWeaponNavalCannon105mmAP
   parent: CrateShipWeaponBase
   name: ящик бронебойных картриджей малого миномёта (.105мм)
-  description: Содержит 30 картриджей бронебойных снарядов для малого миномёта (.105мм)
+  description: Содержит 15 картриджей бронебойных снарядов для малого миномёта (.105мм)
   components:
   - type: StorageFill
     contents:
       - id: Cartridge105mmAP
-        amount: 30
+        amount: 15
 
 - type: entity
   id: CrateArmoryWeapon120mmAP
   parent: CrateShipWeaponBase
   name: ящик бронебойных картриджей среднего миномёта (.120мм)
-  description: Содержит 30 картриджей бронебойных снарядов для среднего миномёта (.120мм)
+  description: Содержит 15 картриджей бронебойных снарядов для среднего миномёта (.120мм)
   components:
   - type: StorageFill
     contents:
       - id: Cartridge120mmAP
-        amount: 30
+        amount: 15
 
 - type: entity
-  id: CrateArmoryWeapon140mmAP
+  id: CrateArmoryWeapon120mm
+  parent: CrateShipWeaponBase
+  name: ящик фугасных картриджей среднего миномёта (.120мм)
+  description: Содержит 15 картриджей фугасных снарядов для среднего миномёта (.120мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge120mm
+        amount: 15
+
+- type: entity
+  id: CrateArmoryWeapon120mmPF
+  parent: CrateShipWeaponBase
+  name: ящик бесконтактных картриджей среднего миномёта (.120мм)
+  description: Содержит 15 картриджей бесконтактных снарядов для среднего миномёта (.120мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge120mmPF
+        amount: 15
+
+- type: entity
+  id: CrateArmoryWeaponNavalCannon140mmAP
   parent: CrateShipWeaponBase
   name: ящик бронебойных картриджей тяжёлого миномёта (.140мм)
-  description: Содержит 30 картриджей бронебойных снарядов для тяжёлого миномёта (.140мм)
+  description: Содержит 15 картриджей бронебойных снарядов для тяжёлого миномёта (.140мм)
   components:
   - type: StorageFill
     contents:
       - id: Cartridge140mmAP
-        amount: 30
+        amount: 15
+
+- type: entity
+  id: CrateArmoryWeaponNavalCannon140mmPF
+  parent: CrateShipWeaponBase
+  name: ящик бесконтактных картриджей тяжёлого миномёта (.140мм)
+  description: Содержит 15 картриджей бесконтактных снарядов для тяжёлого миномёта (.140мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge140mmPF
+        amount: 15
+
+- type: entity
+  id: CrateArmoryWeaponNavalCannon140mmHE
+  parent: CrateShipWeaponBase
+  name: ящик фугасных картриджей тяжёлого миномёта (.140мм)
+  description: Содержит 15 картриджей фугасных снарядов для тяжёлого миномёта (.140мм)
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge140mm
+        amount: 15
 
 - type: entity
   id: CrateArmoryWeaponImpulseLaser
@@ -85,7 +129,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: ImpulseLaserBaseFlatpack
+      - id: WeaponNavalCannonImpulseLaserBaseFlatpack
         amount: 1
 
 - type: entity
@@ -144,15 +188,17 @@
         amount: 1
 
 - type: entity
-  id: CrateArmoryWeapon20mmBase
+  id: CrateArmoryWeaponNavalCannon20mmBase
   parent: CrateShipWeaponBase
   name: ящик с лёгким пулемётом (.20мм)
   description: Содержит 1 упакованный лёгкий пулемёт (.20мм)
   components:
   - type: StorageFill
     contents:
-      - id: Weapon20mmBaseFlatpack
+      - id: WeaponNavalCannon20mmBaseFlatpack
         amount: 1
+  - type: StaticPrice
+    price: 4600
 
 - type: entity
   id: CrateArmoryWeaponNavalCannon53mmBase

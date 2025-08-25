@@ -14,5 +14,6 @@ reagent-name-cucumber-water = огуречная вода
 reagent-desc-cucumber-water = Самая причудливая из водоемов.
 reagent-name-honey = мёд
 reagent-desc-honey = Густой, золотистый и липкий, оригинальный подсластитель.
-reagent-name-honey-iced-tea = холодный чай с медом
 reagent-desc-honey-iced-tea = Чай с капелькой меда.
+reagent-name-wassail = Вассейл
+reagent-desc-wassail = Горячий, пряный эль. Рождество!

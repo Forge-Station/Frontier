@@ -27,3 +27,5 @@ cuffable-component-remove-cuffs-partial-success-message =
 cuffable-component-remove-cuffs-fail-message = Вам не удалось снять наручники.
 # UncuffVerb
 uncuff-verb-get-data-text = Освободить
+cuffable-component-start-uncuffing-self-observer = {$user} начинает снимать наручники с {REFLEXIVE($target)}!
+cuffable-component-remove-cuffs-push-success-message = Вы успешно сняли наручники и толкнули {$otherName}.

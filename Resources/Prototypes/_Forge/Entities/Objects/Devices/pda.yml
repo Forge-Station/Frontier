@@ -43,7 +43,7 @@
   description: Ok, time to be a productive member of- oh cool I'm a bad guy time to kill people!
   components:
   - type: Pda
-    id: SyndicateIDCard
+    id: SyndicateIDCardComa
     bookSlot:
       startingItem: BookSComa
       priority: -2
@@ -119,7 +119,7 @@
   description: Ok, time to be a productive member of- oh cool I'm a bad guy time to kill people!
   components:
   - type: Pda
-    id: SyndicateIDCard
+    id: SyndicateIDCardMedSyn
     bookSlot:
       startingItem: BookSParamed
       priority: -2
@@ -157,7 +157,7 @@
   description: Ok, time to be a productive member of- oh cool I'm a bad guy time to kill people!
   components:
   - type: Pda
-    id: SyndicateIDCard
+    id: SyndicateIDCardStormtrooper
     bookSlot:
       startingItem: BookSShturm
       priority: -2

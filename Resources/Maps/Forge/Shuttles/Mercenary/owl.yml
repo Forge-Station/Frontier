@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/21/2025 14:13:59
-  entityCount: 198
+  time: 08/11/2025 04:14:16
+  entityCount: 199
 maps: []
 grids:
 - 1573
@@ -278,7 +278,20 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: MercenaryBountyDatabase
-      bounties: []
+      totalBounties: 6
+      bounties:
+      - bounty: MercenaryBountyCoatSyndieArmored2
+        id: ARR-269
+      - bounty: MercenaryBountyQuadraticCapacitor1
+        id: ARR-386
+      - bounty: MercenaryBountyBluespaceMatterBin3
+        id: ARR-389
+      - bounty: MercenaryBountySyringeBluespace1
+        id: ARR-703
+      - bounty: MercenaryBountyStaffDarkBolt2
+        id: ARR-027
+      - bounty: MercenaryBountyNFEnergyPickaxe
+        id: ARR-105
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Owl
@@ -793,12 +806,28 @@ entities:
       rot: 3.141592653589793 rad
       pos: -1.5,4.5
       parent: 1573
+- proto: ComputerGunneryConsole
+  entities:
+  - uid: 29
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,3.5
+      parent: 1573
 - proto: ComputerTabletopShuttle
   entities:
   - uid: 1648
     components:
     - type: Transform
       pos: -1.5,5.5
+      parent: 1573
+- proto: DefibrillatorCabinetFilled
+  entities:
+  - uid: 31
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.5,-1.5
       parent: 1573
 - proto: EmergencyLight
   entities:
@@ -984,6 +1013,17 @@ entities:
     - type: Transform
       pos: 2.5,4.5
       parent: 1573
+- proto: GunneryServerLow
+  entities:
+  - uid: 19
+    components:
+    - type: Transform
+      pos: 1.5,3.5
+      parent: 1573
+    - type: Battery
+      startingCharge: 0
+    - type: ApcPowerReceiver
+      powerLoad: 5
 - proto: Gyroscope
   entities:
   - uid: 1646
@@ -1054,15 +1094,15 @@ entities:
       parent: 1573
 - proto: Rack
   entities:
-  - uid: 19
-    components:
-    - type: Transform
-      pos: -2.5,7.5
-      parent: 1573
   - uid: 24
     components:
     - type: Transform
       pos: 0.5,7.5
+      parent: 1573
+  - uid: 30
+    components:
+    - type: Transform
+      pos: -2.5,7.5
       parent: 1573
   - uid: 1688
     components:
@@ -1159,32 +1199,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,6.5
-      parent: 1573
-- proto: ShuttleLightRifleGun
-  entities:
-  - uid: 26
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,8.5
-      parent: 1573
-  - uid: 27
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -2.5,8.5
-      parent: 1573
-- proto: ShuttleRifleAmmoBox
-  entities:
-  - uid: 29
-    components:
-    - type: Transform
-      pos: -2.5323853,7.428694
-      parent: 1573
-  - uid: 30
-    components:
-    - type: Transform
-      pos: 0.42073965,7.397444
       parent: 1573
 - proto: SignalButtonWindows
   entities:
@@ -1494,5 +1508,19 @@ entities:
     components:
     - type: Transform
       pos: -4.5,5.5
+      parent: 1573
+- proto: WeaponNavalCannon20mm
+  entities:
+  - uid: 26
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -2.5,8.5
+      parent: 1573
+  - uid: 27
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,8.5
       parent: 1573
 ...

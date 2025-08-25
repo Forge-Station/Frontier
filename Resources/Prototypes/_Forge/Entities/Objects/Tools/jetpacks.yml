@@ -32,3 +32,39 @@
       moles:
         - 1.025689525 # oxygen
         - 1.025689525 # nitrogen
+
+#Empty paramed
+- type: entity
+  id: JetpackParamed
+  parent: JetpackSecurity
+  name: paramedical jetpack
+  suffix: Empty
+  components:
+  - type: Item
+    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+  - type: Sprite
+    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+  - type: Tag
+    tags:
+      - HideContextMenu
+      - EmagImmune
+
+#Filled paramed
+- type: entity
+  id: JetpackParamedFilled
+  parent: JetpackSecurityFilled
+  name: paramedical jetpack
+  suffix: Filled
+  components:
+  - type: Item
+    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+  - type: Sprite
+    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+  - type: Tag
+    tags:
+      - HideContextMenu
+      - EmagImmune

@@ -28,7 +28,9 @@
         tags:
           - Cartridge20mm
       proto: Cartridge20mmAP
-      capacity: 500
+      capacity: 200
+    - type: StaticPrice
+      price: 500
 
 - type: entity
   id: MagazineBox53mmAP
@@ -56,7 +58,7 @@
         tags:
           - Cartridge53mm
       proto: Cartridge53mmAP
-      capacity: 500
+      capacity: 100
 
 - type: entity
   id: MagazineBox80mmAP
@@ -84,7 +86,7 @@
         tags:
           - Cartridge80mm
       proto: Cartridge80mmAP
-      capacity: 250
+      capacity: 50
 
 - type: entity
   id: MagazineBox105mmAP

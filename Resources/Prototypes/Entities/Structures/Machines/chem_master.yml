@@ -7,15 +7,16 @@
     mode: SnapgridCenter
   components:
   - type: Sprite
-    sprite: Structures/Machines/mixer.rsi
+    sprite: _Mono/Structures/Machines/mixer.rsi
     snapCardinals: true
     layers:
     - state: mixer_empty
     - state: mixer_screens
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
       shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
   - type: Icon
-    sprite: Structures/Machines/mixer.rsi
+    sprite: _Mono/Structures/Machines/mixer.rsi
     state: mixer_empty
   - type: ItemMapper
     containerWhitelist: [beakerSlot]

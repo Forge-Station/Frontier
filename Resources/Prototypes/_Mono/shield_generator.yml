@@ -7,7 +7,7 @@
 # POI
 - type: entity
   id: ShieldGeneratorPOI
-  parent: ShieldGenerator
+  parent: [ ShieldGenerator, BaseStructureDisableToolUse, BaseStructureIndestructible ]
   name: FS-421 "Fortress" Shield Generator
   components:
   - type: ShipShieldEmitter

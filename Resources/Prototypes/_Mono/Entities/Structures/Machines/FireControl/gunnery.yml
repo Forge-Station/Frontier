@@ -12,7 +12,7 @@
 - type: entity
   id: GunneryServerBase
   parent: BaseMachinePowered
-  name: gunnery control server
+  name: базовый сервер управления стрельбой
   description: Manages the remote operation of ship weapons.
   components:
   - type: Sprite
@@ -55,7 +55,7 @@
 - type: entity
   id: GunneryServerLow
   parent: GunneryServerBase
-  name: low-power gunnery control server
+  name: сервер управления стрельбой низкой мощности
   components:
   - type: Machine
     board: MachineGCSLowCircuitboard
@@ -74,7 +74,7 @@
 - type: entity
   id: GunneryServerMedium
   parent: GunneryServerBase
-  name: medium-power gunnery control server
+  name: сервер управления стрельбой средней мощности
   components:
   - type: Machine
     board: MachineGCSMediumCircuitboard
@@ -93,7 +93,7 @@
 - type: entity
   id: GunneryServerHigh
   parent: GunneryServerBase
-  name: high-power gunnery control server
+  name: сервер управления стрельбой высокой мощности
   components:
   - type: Machine
     board: MachineGCSHighCircuitboard
@@ -112,7 +112,7 @@
 - type: entity
   id: GunneryServerUltra
   parent: [GunneryServerBase] # removed BaseStructureDisableToolUse
-  name: ultra-high-power gunnery control server
+  name: сервер управления стрельбой ультра высокой мощности
   components:
   - type: Machine
     board: MachineGCSUltraCircuitboard
@@ -133,7 +133,7 @@
 - type: entity
   id: GunneryServerOmega
   parent: [BaseStructureDisableToolUse, GunneryServerBase]
-  name: omega-high-power gunnery control server
+  name: сервер управления стрельбой омега высокой мощности
   components:
   - type: Machine
     board: MachineGCSUltraCircuitboard
@@ -154,7 +154,8 @@
 - type: entity
   id: GunneryServerStation
   parent: [BaseStructureDisableToolUse, GunneryServerBase]
-  name: station gunnery control server
+  name: сервер управления стрельбой станционной мощности
+  suffix: Для POI
   components:
   - type: Machine
     board: MachineGCSStationCircuitboard
@@ -172,35 +173,35 @@
   - type: Anchorable
     flags: Anchorable
 
-- type: entity
-  id: GunneryServerStationConsolesEnforced
-  parent: [BaseStructureDisableToolUse, GunneryServerBase]
-  name: station gunnery control server
-  suffix: Enforced Max Consoles
-  components:
-  - type: Machine
-    board: MachineGCSStationCircuitboard
-  - type: FireControlServer
-    processingPower: 3000
-    enforceMaxConsoles: true
-    maxConsoles: 2
-  - type: Battery
-    maxCharge: 2500
-    startingCharge: 2500
-  - type: ApcPowerReceiver
-    powerLoad: 5000
-  - type: ApcPowerReceiverBattery
-    idleLoad: 50
-    batteryRechargeRate: 6000
-    batteryRechargeEfficiency: 0.95
-  - type: Anchorable
-    flags: Anchorable
+# - type: entity
+#   id: GunneryServerStationConsolesEnforced
+#   parent: [BaseStructureDisableToolUse, GunneryServerBase]
+#   name: сервер управления стрельбой станционной мощности
+#   suffix: Enforced Max Consoles
+#   components:
+#   - type: Machine
+#     board: MachineGCSStationCircuitboard
+#   - type: FireControlServer
+#     processingPower: 3000
+#     enforceMaxConsoles: true
+#     maxConsoles: 2
+#   - type: Battery
+#     maxCharge: 2500
+#     startingCharge: 2500
+#   - type: ApcPowerReceiver
+#     powerLoad: 5000
+#   - type: ApcPowerReceiverBattery
+#     idleLoad: 50
+#     batteryRechargeRate: 6000
+#     batteryRechargeEfficiency: 0.95
+#   - type: Anchorable
+#     flags: Anchorable
 
 # Monolith : Gunnery Computer
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerGunneryConsole
-  name: gunnery control console
+  name: консоль управления орудиями
   description: Interfaces with the gunnery control server to operate ship weapons.
   placement:
     mode: SnapgridCenter

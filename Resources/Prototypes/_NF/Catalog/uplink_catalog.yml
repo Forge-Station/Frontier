@@ -156,3 +156,25 @@
     Telecrystal: 25
   categories:
     - UplinkPointless
+
+- type: listing
+  id: UplinkSyndieLaser
+  name: uplink-syndie-laser-name
+  description: uplink-syndie-laser-desc
+  icon: { sprite: Forge/Objects/Weapons/Guns/Battery/laser_gun_syndie.rsi, state: icon }
+  productEntity: WeaponSyndieEnergyRifleCarbine
+  cost:
+    Telecrystal: 17
+  categories:
+  - UplinkWeaponry
+
+- type: listing
+  id: UplinkSyndieLaserPistol
+  name: uplink-syndie-laser-pistol-name
+  description: uplink-syndie-laser-pistol-desc
+  icon: { sprite: Forge/Objects/Weapons/Guns/Battery/laser_pistol_syndie.rsi, state: icon }
+  productEntity: WeaponSyndieEnergyFalconPistolLaser
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkWeaponry

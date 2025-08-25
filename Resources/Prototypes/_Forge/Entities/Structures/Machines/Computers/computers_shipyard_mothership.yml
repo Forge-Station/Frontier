@@ -21,7 +21,6 @@
     newAccessLevels: [Captain, Security, Brig]
   - type: ShipyardListing
     shuttles:
-    - Warrior
     - Templar
     - hammer
 
@@ -47,7 +46,6 @@
     newAccessLevels: [Captain, Security, Brig]
   - type: ShipyardListing
     shuttles:
-    - Warrior
     - Rogue
     - hammer
     - Templar
@@ -143,6 +141,7 @@
   - type: ShipyardListing
     shuttles:
     - Owl
+    - Sergeant
 
 # Консоль Нансена
 - type: entity
@@ -168,3 +167,24 @@
     - Serge
     - Fram
     - Jeannette
+
+- type: entity
+  id: StarMothershipComputer
+  parent: BaseMothershipComputer
+  name: консоль верфи Энтерпрайза
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_nfsd
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ShipyardListing
+    shuttles:
+    - Owl
+    - Sergeant

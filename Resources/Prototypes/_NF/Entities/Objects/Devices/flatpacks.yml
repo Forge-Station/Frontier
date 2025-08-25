@@ -466,6 +466,15 @@
   - type: Flatpack
     entity: CryoPod
 
+- type: entity #CorvaxFrontier
+  parent: MedicalTechFabFlatpack
+  id: CryoFlatpack
+  name: упакованная капсула криогенного сна
+  description: A flatpack used for constructing a cryo pod.
+  components:
+  - type: Flatpack
+    entity: CryogenicSleepUnit
+
 - type: entity
   parent: MedicalTechFabFlatpack
   id: ChemMasterFlatpack

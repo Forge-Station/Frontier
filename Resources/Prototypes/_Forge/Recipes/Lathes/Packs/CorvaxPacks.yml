@@ -124,7 +124,6 @@
 - type: latheRecipePack
   id: SyndicateTradingConsoleWeapons
   recipes:
-  - WeaponAntiqueLaserRecipe
   - WeaponLaserSvalinnRecipe
   - WeaponLaserCannonRecipe
   - ClothingBackpackDuffelSyndicateFilledShotgunRecipe
@@ -148,6 +147,8 @@
   - Rickenbacker4001InstrumentRecipe
   - KanabouRecipe
   - ClothingHandsGlovesNorthStarRecipe
+  - WeaponSyndieEnergyRifleCarbineRecipe
+  - WeaponSyndieEnergyFalconPistolLaserRecipe
 
 - type: latheRecipePack
   id: SyndicateTradingConsoleArmor

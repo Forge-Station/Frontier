@@ -1,0 +1,10 @@
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleContractor
+  name: Contractor Role
+#  description: mind-role-contractor-description
+  components:
+  - type: MindRole
+    antagPrototype: Contractor
+    roleType: FreeAgent
+  - type: ContractorRole

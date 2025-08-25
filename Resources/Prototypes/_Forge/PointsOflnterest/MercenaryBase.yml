@@ -10,39 +10,39 @@
 
 # Notes:
 
-- type: pointOfInterest
-  id: MercenaryBase
-  parent: BasePOI
-  name: 'База наёмников'
-  minimumDistance: 1650
-  maximumDistance: 3400
-  spawnGroup: Required
-  gridPath: /Maps/Forge/POI/MercenaryBase.yml
-  addComponents:
-  - type: IFF
-    color: "#a68614"
-  - type: StationTransit
-  - type: ProtectedGrid
-    noGridCollision: True
+# - type: pointOfInterest
+#   id: MercenaryBase
+#   parent: BasePOI
+#   name: 'Аванпост наёмников Рубеж'
+#   minimumDistance: 1650
+#   maximumDistance: 3400
+#   spawnGroup: Required
+#   gridPath: /Maps/Forge/POI/MercenaryBase.yml
+#   addComponents:
+#   - type: IFF
+#     color: "#5beb34"
+#   - type: StationTransit
+#   - type: ProtectedGrid
+#     noGridCollision: True
 
-- type: gameMap
-  id: MercenaryBase
-  mapName: 'База наёмников'
-  mapPath: /Maps/Forge/POI/MercenaryBase.yml
-  minPlayers: 0
-  stations:
-    MercenaryBase:
-      stationProto: RecordsFrontierOutpost
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'База наёмников'
-        - type: ExtraStationInformation
-          iconPath: /Textures/_NF/Objects/Devices/pda.rsi/pda-mercenary.png
-          stationSubtext: 'frontier-lobby-mercenary-subtext'
-          stationDescription: 'frontier-lobby-mercenary-description'
-          lobbySortOrder: 3
-        - type: StationJobs
-          availableJobs:
-            Mercenary: [ -1, -1 ]
-        - type: StationDeadDrop
-          maxDeadDrops: 1 # Fewer here, players start here.
+# - type: gameMap
+#   id: MercenaryBase
+#   mapName: 'Аванпост наёмников Рубеж'
+#   mapPath: /Maps/Forge/POI/MercenaryBase.yml
+#   minPlayers: 0
+#   stations:
+#     MercenaryBase:
+#       stationProto: RecordsFrontierOutpost
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: 'Аванпост наёмников Рубеж'
+#         - type: ExtraStationInformation
+#           iconPath: /Textures/_NF/Objects/Devices/pda.rsi/pda-mercenary.png
+#           stationSubtext: 'frontier-lobby-mercenary-subtext'
+#           stationDescription: 'frontier-lobby-mercenary-description'
+#           lobbySortOrder: 3
+#         - type: StationJobs
+#           availableJobs:
+#             Mercenary: [ -1, -1 ]
+#         - type: StationDeadDrop
+#           maxDeadDrops: 1 # Fewer here, players start here.

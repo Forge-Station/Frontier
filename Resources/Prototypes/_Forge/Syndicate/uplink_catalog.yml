@@ -1732,6 +1732,11 @@
     TelecrystalDamaged: 200
   categories:
   - UplinkWearablesSmugger
+  conditions:
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
 
 - type: listing
   id: SmuggerUplinkgMechMaulerSyndieBattery
@@ -1742,6 +1747,11 @@
     TelecrystalDamaged: 300
   categories:
   - UplinkWearablesSmugger
+  conditions:
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
 
  # Pointless
 
@@ -2269,3 +2279,23 @@
     blacklist:
       components:
       - SurplusBundle
+
+- type: listing
+  id: SmuggerUplinkSyndieLaser
+  name: uplink-syndie-laser-name
+  description: uplink-syndie-laser-desc
+  productEntity: WeaponSyndieEnergyRifleCarbine
+  cost:
+    TelecrystalDamaged: 34
+  categories:
+  - UplinkWeaponrySmugger
+
+- type: listing
+  id: SmuggerUplinkWeaponSyndieEnergyFalconPistolLaser
+  name: uplink-syndie-laser-pistol-name
+  description: uplink-syndie-laser-pistol-desc
+  productEntity: WeaponSyndieEnergyFalconPistolLaser
+  cost:
+    TelecrystalDamaged: 16
+  categories:
+  - UplinkWeaponrySmugger

@@ -7,6 +7,7 @@ using Content.Server.Explosion.EntitySystems; //Forge-Change
 using Content.Server.GameTicking;
 using Content.Server.Parallax;
 using Content.Server.Procedural;
+using Content.Server.Popups; // Forge-Change
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Station.Systems;
@@ -50,6 +51,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ITileDefinitionManager _tileDefManager = default!;
+    [Dependency] private readonly PopupSystem _popup = default!; // Forge-Change
     [Dependency] private readonly BiomeSystem _biomes = default!;
     [Dependency] private readonly BodySystem _bobby = default!;
     [Dependency] private readonly ExplosionSystem _explosion = default!; //Forge-Change
@@ -116,6 +118,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     {
         base.Update(frameTime);
         UpdateHyperspace();
+        UpdateIFF(frameTime); // Forge-Change
     }
 
     private void OnGridFixtureChange(EntityUid uid, FixturesComponent manager, GridFixtureChangeEvent args)

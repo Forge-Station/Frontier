@@ -17,3 +17,10 @@ comms-console-announcement-unknown-sender = Неизвестный
 comms-console-announcement-title-station = Консоль связи
 comms-console-announcement-title-centcom = Центральное командование
 comms-console-announcement-title-nukie = Ядерные оперативники Синдиката
+comms-console-menu-announcement-button-tooltip = Отправить ваше сообщение как общесекторное радиооповещение.
+comms-console-menu-broadcast-button-tooltip = Транслировать сообщение на настенные экраны по всему сектору. Примечание: вмещают только 10 символов!
+# Frontier: station<sector
+comms-console-menu-alert-level-button-tooltip = Изменить уровень угрозы в секторе. Применяется немедленно после выбора.
+comms-console-menu-emergency-shuttle-button-tooltip = Вызывает или отзывает эвакуационный шаттл. Отзыв возможен только при достаточном количестве времени до прибытия шаттла.
+comms-console-announcement-title-station-ai = Станционный ИИ
+comms-console-announcement-title-wizard = Волшебник

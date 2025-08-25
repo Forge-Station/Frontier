@@ -1,0 +1,94 @@
+- type: entity
+  parent: [ BaseItem, StorePresetContractorUplink, BaseC3SyndicateContraband ]
+  id: ContractorUplink
+  name: contractor uplink
+  description: "An advanced tablet from Deep Contract Net™, a company that produces equipment for urgent orders."
+  suffix: DO NOT MAP
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Specific/Syndicate/contractor_uplink.rsi
+    state: icon
+  - type: ActivatableUI
+    key: enum.ContractsUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ContractsUiKey.Key:
+        type: ContractsBoundUserInterface
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: Contracts
+
+- type: entity
+  id: ContractorEvacuationPortal
+  name: bluespace portal
+  description: "This one looks more like a redspace portal."
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+    anchored: True
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: /Textures/Effects/portal.rsi
+    layers:
+    - state: portal-red
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+  - type: EvacuationPortal
+  - type: PointLight
+    color: OrangeRed
+    radius: 3
+    energy: 1
+    netsync: false
+
+- type: entity
+  name: pinpointer
+  id: PinpointerContractor
+  parent: [ BaseC2ContrabandUnredeemable, PinpointerBase ] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
+  suffix: DO NOT MAP
+  components:
+  - type: Pinpointer
+    updateTargetName: true
+    canTargetMobs: true
+
+- type: entity
+  parent: BaseItem
+  id: BoxContractorBundle
+  name: box
+  description: An unremarkable box.
+  suffix: DO NOT MAP
+  components:
+  - type: Sprite
+    sprite: Objects/Storage/boxes.rsi
+    layers:
+    - state: box_of_doom
+    - state: writing_of_doom
+  - type: Item
+    sprite: Objects/Storage/boxes.rsi
+    size: Large
+    shape:
+    - 0,0,2,2
+  - type: SpawnItemsOnUse
+    items:
+      - id: PinpointerContractor
+      - id: Stunbaton
+      - id: ClothingBackpackChameleonFill
+      - id: AgentIDCard
+      - id: CigPackSyndicate
+      - id: FlippoLighter
+      - id: RandomContractorFirstItem
+      - id: RandomContractorSecondItem
+      - id: RandomContractorThirdItem
+    sound:
+      path: /Audio/Effects/unwrap.ogg

@@ -2,10 +2,10 @@ meta:
   format: 7
   category: Grid
   engineVersion: 262.0.0
-  forkId: frontier_mapping
-  forkVersion: 65bd4e631c2715a080f21eac0f437f2a61b00a5b
-  time: 07/21/2025 14:09:24
-  entityCount: 385
+  forkId: ""
+  forkVersion: ""
+  time: 08/11/2025 04:23:16
+  entityCount: 388
 maps: []
 grids:
 - 1
@@ -682,7 +682,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -1709.06
+      secondsUntilStateChange: -1833.624
       state: Opening
 - proto: AirSensor
   entities:
@@ -1513,6 +1513,14 @@ entities:
     - type: Transform
       pos: 9.5,12.5
       parent: 1
+- proto: ComputerGunneryConsole
+  entities:
+  - uid: 343
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 8.5,20.5
+      parent: 1
 - proto: ComputerMercenaryBounty
   entities:
   - uid: 162
@@ -2051,6 +2059,17 @@ entities:
     - type: Transform
       pos: 12.5,15.5
       parent: 1
+- proto: GunneryServerLow
+  entities:
+  - uid: 373
+    components:
+    - type: Transform
+      pos: 9.5,14.5
+      parent: 1
+    - type: Battery
+      startingCharge: 0
+    - type: ApcPowerReceiver
+      powerLoad: 5
 - proto: Gyroscope
   entities:
   - uid: 227
@@ -2162,15 +2181,21 @@ entities:
   - uid: 240
     components:
     - type: Transform
+      anchored: True
       pos: 11.5,17.5
       parent: 1
+    - type: Physics
+      bodyType: Static
 - proto: OxygenCanister
   entities:
   - uid: 241
     components:
     - type: Transform
+      anchored: True
       pos: 10.5,17.5
       parent: 1
+    - type: Physics
+      bodyType: Static
 - proto: PaperBin5
   entities:
   - uid: 242
@@ -3259,6 +3284,14 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+- proto: WeaponNavalCannon20mmUnanchor
+  entities:
+  - uid: 388
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,22.5
+      parent: 1
 - proto: WindoorSecureMercenaryLocked
   entities:
   - uid: 382

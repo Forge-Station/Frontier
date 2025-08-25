@@ -1,44 +1,34 @@
 - type: vendingMachineInventory
   id: WeaponryWorksVendInventory
   startingInventory:
-  # Weapons
-    NFWeaponEnergyPistolLaser: 1
-    NFWeaponRevolverArgenti: 1
-    NFWeaponRevolverFitz: 1
-    NFWeaponRifleRepeater: 1
-    NFWeaponShotgunDoubleBarreled: 1
-    ClothingHandsKnuckleDusters: 1
-    SurvivalKnife: 1
-    WeaponSubMachineGunVector45: 1 #CorvaxFrontier
-    MagazineVector45Empty: 1 #CorvaxFrontier
   # Magazines
-    NFSpeedLoaderPistol35Empty: 1
-    NFSpeedLoaderPistol45Empty: 1
+    NFSpeedLoaderPistol35Empty: 3
+    NFSpeedLoaderPistol45Empty: 3
+    MagazineVector45Empty: 3 #CorvaxFrontier
+    NFMagazinePistol35Empty: 3 #CorvaxFrontier
+    NFMagazineLowCapacityRifle30Empty: 3 #CorvaxFrontier
+    NFMagazineClipRifle20Empty: 3 #CorvaxFrontier
   # Ammo boxes
     NFAmmunitionBoxPistol35: 2
     NFAmmunitionBoxPistol45: 2
     NFAmmunitionBoxRifle20: 2
-  emaggedInventory:
-    NFWeaponPistolViper: 1
+    NFAmmunitionBoxRifle30: 6
+    NFAmmunitionBoxShellShotgunBuckshot: 6
+    NFAmmunitionBoxShellShotgunBeanbag: 6
 
 - type: vendingMachineInventory
   id: WeaponryWorksVendPOIInventory
   startingInventory:
-  # Weapons
-    NFWeaponEnergyPistolLaser: 4294967295
-    NFWeaponRevolverArgenti: 4294967295
-    NFWeaponRevolverFitz: 4294967295
-    NFWeaponRifleRepeater: 4294967295
-    NFWeaponShotgunDoubleBarreled: 4294967295
-    ClothingHandsKnuckleDusters: 4294967295
-    SurvivalKnife: 4294967295
-    WeaponSubMachineGunVector45: 4294967295 #CorvaxFrontier
   # Magazines
+    NFMagazinePistol35Empty: 4294967295
+    NFMagazineClipRifle20Empty: 4294967295
+    NFMagazineLowCapacityRifle30Empty: 4294967295
     NFSpeedLoaderPistol35Empty: 4294967295
     NFSpeedLoaderPistol45Empty: 4294967295
     MagazineVector45Empty: 4294967295 #CorvaxFrontier
   # Ammo boxes
     NFAmmunitionBoxPistol35: 4294967295
+    NFAmmunitionBoxRifle30: 4294967295
     NFAmmunitionBoxPistol45: 4294967295
     NFAmmunitionBoxRifle20: 4294967295
     NFAmmunitionBoxShellShotgunBuckshot: 4294967295

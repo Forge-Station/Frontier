@@ -21,3 +21,26 @@
     - TelecrystalDamaged
     balance:
       TelecrystalDamaged: 0
+
+- type: entity
+  id: StorePresetContractorUplink
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-uplink
+    categories:
+    - ContractorUplinkWeaponry
+    - ContractorUplinkAmmo
+    - ContractorUplinkExplosives
+    - ContractorUplinkChemicals
+    - ContractorUplinkDeception
+    - ContractorUplinkDisruption
+    - ContractorUplinkImplants
+    - ContractorUplinkAllies
+    - ContractorUplinkWearables
+    - ContractorUplinkJob
+    - ContractorUplinkPointless
+    currencyWhitelist:
+    - Telecrystal
+    balance:
+      Telecrystal: 0

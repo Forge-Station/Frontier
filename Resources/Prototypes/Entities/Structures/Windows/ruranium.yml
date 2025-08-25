@@ -5,9 +5,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/reinforced_uranium_window.rsi # Frontier
+    sprite: Forge/Structures/Windows/reinforced_uranium_window.rsi # Forge-Change
   - type: Icon
-    sprite: _NF/Structures/Windows/reinforced_uranium_window.rsi # Frontier
+    sprite: Forge/Structures/Windows/reinforced_uranium_window.rsi # Forge-Change
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: RGlass
@@ -47,7 +47,7 @@
     damageDivisor: 6
     trackAllDamage: true
     damageOverlay:
-      sprite: Structures/Windows/cracks.rsi
+      sprite: Forge/Structures/Windows/cracks.rsi # Forge-Change
   - type: StaticPrice
     price: 140 # Frontier: 215<140 - TODO: material value rework
   - type: RadiationBlocker
@@ -64,10 +64,10 @@
     - Window
   components:
   - type: Sprite
-    sprite: Structures/Windows/directional.rsi
+    sprite: Forge/Structures/Windows/directional.rsi # Forge-Change
     state: uranium_reinforced_window
   - type: Icon
-    sprite: Structures/Windows/directional.rsi
+    sprite: Forge/Structures/Windows/directional.rsi # Forge-Change
     state: uranium_reinforced_window
   - type: Construction
     graph: WindowDirectional
@@ -78,7 +78,7 @@
     damageDivisor: 3
     trackAllDamage: true
     damageOverlay:
-      sprite: Structures/Windows/cracks_directional.rsi
+      sprite: Forge/Structures/Windows/cracks_directional.rsi # Forge-Change
   - type: Destructible
     thresholds:
     - trigger:
@@ -120,7 +120,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/reinforced_uranium_diagonal.rsi # Frontier
+    sprite: Forge/Structures/Windows/reinforced_uranium_diagonal.rsi # Forge-Change
     state: state0
   - type: Tag
     tags:
@@ -130,7 +130,7 @@
     key: walls # Frontier: windows<walls
     base: state
   - type: Icon
-    sprite: _NF/Structures/Windows/reinforced_uranium_diagonal.rsi # Frontier
+    sprite: Forge/Structures/Windows/reinforced_uranium_diagonal.rsi # Forge-Change
     state: state0
   - type: Fixtures
     fixtures:
@@ -152,7 +152,7 @@
     - East
   - type: DamageVisuals
     damageOverlay:
-      sprite: Structures/Windows/cracks_diagonal.rsi
+      sprite: Forge/Structures/Windows/cracks_diagonal.rsi # Forge-Change
   - type: Construction
     graph: WindowDiagonal
     node: reinforcedUraniumWindowDiagonal

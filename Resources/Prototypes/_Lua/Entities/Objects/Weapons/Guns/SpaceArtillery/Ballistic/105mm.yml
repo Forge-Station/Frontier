@@ -47,7 +47,7 @@
 
 - type: entity
   parent: WeaponNavalCannon105mmBase
-  id: Weapon105mm
+  id: WeaponNavalCannon105mm
   suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
   placement:
     mode: SnapgridCenter
@@ -66,15 +66,15 @@
               - Cartridge105mm
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, Weapon105mm, WeaponNavalCannon105mmBase]
-  id: Weapon105mmUnanchor
+  parent: [BaseStructureDisableToolUse, WeaponNavalCannon105mm, WeaponNavalCannon105mmBase]
+  id: WeaponNavalCannon105mmUnanchor
   suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
   placement:
     mode: SnapgridCenter
 
 - type: entity
   parent: [BaseStructureDisableToolUse, WeaponNavalCannon105mmBase]
-  id: Weapon105mmUnanchorEmpty
+  id: WeaponNavalCannon105mmUnanchorEmpty
   suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
   placement:
     mode: SnapgridCenter

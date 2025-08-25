@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesNitrileInsulated
+  name: nitrile insulated gloves
+  description: High-quality nitrile insulated gloves. Expensive medical PPE.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Hands/Gloves/isolnitrile.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Hands/Gloves/isolnitrile.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nitrile
+  - type: FingerprintMask
+  - type: Insulated

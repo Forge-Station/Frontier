@@ -2,7 +2,7 @@
   parent: JobIcon
   id: JobIconStormtrooper
   icon:
-    sprite: Forge/Interface/Misc/job_icons.rsi
+    sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
     state: stormtrooper
   jobName: job-name-stormtrooper
   allowSelection: false # Frontier
@@ -11,7 +11,7 @@
   parent: JobIcon
   id: JobIconCommander
   icon:
-    sprite: Forge/Interface/Misc/job_icons.rsi
+    sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
     state: commander
-  jobName: job-name-сommander
+  jobName: job-name-commander
   allowSelection: false # Frontier

@@ -2,3 +2,5 @@ ensnare-component-try-free = Вы пытаетесь освободить сво
 ensnare-component-try-free-complete = Вы успешно освобождаете свои ноги от { $ensnare }!
 ensnare-component-try-free-fail = Вам не удаётся освободить свои ноги от { $ensnare }!
 ensnare-component-try-free-other = Вы пытаетесь освободить ноги { $user } от { $ensnare }!
+ensnare-component-try-free-complete-other = Вы освободили {$user} из {$ensnare}!
+ensnare-component-try-free-fail-other = Не удалось освободить {$user} из {$ensnare}!

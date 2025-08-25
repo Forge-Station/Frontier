@@ -41,3 +41,40 @@ artifact-trigger-hint-plasma = Газообразная плазма
 artifact-trigger-hint-land = Активное замедление
 artifact-trigger-hint-examine = Внимательное изучение
 artifact-trigger-hint-medical = Терапевтические химикаты
+xenoarch-trigger-tip-music = Звуковые вибрации
+xenoarch-trigger-tip-heat = Высотемпературный газ
+xenoarch-trigger-tip-cold = Низкотемпературный газ
+xenoarch-trigger-tip-no-oxygen = Безвоздушная среда
+xenoarch-trigger-tip-water = Вода
+xenoarch-trigger-tip-co2 = Углекислый газ
+xenoarch-trigger-tip-plasma = Газообразная плазма
+xenoarch-trigger-tip-tritium = Тритий
+xenoarch-trigger-tip-ammonia = Аммиак
+xenoarch-trigger-tip-n2o = Оксид азота
+xenoarch-trigger-tip-frezon = Фрезон
+xenoarch-trigger-tip-radiation = Излучение
+xenoarch-trigger-tip-brute-damage = Физические повреждения
+xenoarch-trigger-tip-interaction = Физическое взаимодействие
+xenoarch-trigger-tip-wrenching = Закручивание
+xenoarch-trigger-tip-prying = Монтирование
+xenoarch-trigger-tip-screwing = Ввинчивание
+xenoarch-trigger-tip-pulsing = Прозвон мультитулом
+xenoarch-trigger-tip-pressure-low = Низкое давление
+xenoarch-trigger-tip-pressure-high = Высокое давление
+xenoarch-trigger-tip-examine = Внимательное изучение
+xenoarch-trigger-tip-timer = Регулярная самостоятельная активация
+xenoarch-trigger-tip-blood = Взаимодействие с гематологической жидкостью
+xenoarch-trigger-tip-throw = Активное замедление
+xenoarch-trigger-tip-death = Эссенция жизни
+xenoarch-trigger-tip-magnet = Магнитные волны
+
+### Description hints
+xenoarch-trigger-examine-wrenching = Что-то в нём вращается!
+xenoarch-trigger-examine-prying = Панель вылезает на поверхность.
+xenoarch-trigger-examine-screwing = На нём имеется выступающая секция.
+xenoarch-trigger-examine-pulsing = Открытый контакт выходит на поверхность артефакта.
+xenoarch-trigger-examine-timer = Поверхность покрыта царапинами и порезами... Вы едва разбираете цифру: [italic]{$time}[/italic]
+
+### Effects hints
+xenoarch-effect-puddle = Выплёскивает наружу целую лужу из: {$reagent}
+xenoarch-effect-foam = Образует пену из: {$reagent}

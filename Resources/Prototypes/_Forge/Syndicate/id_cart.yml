@@ -1,8 +1,10 @@
 - type: entity
-  parent: [IDCardStandard, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
+  parent: [SyndicateIDCard, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
   id: SyndicateIDCardSmuggler
   name: syndicate ID card
   components:
+  - type: PresetIdCard
+    job: smuggler
   - type: Sprite
     layers:
     - state: syndie
@@ -17,3 +19,45 @@
   components:
   - type: PresetIdCard
     name: Сигмис
+
+- type: entity
+  parent: [SyndicateIDCard, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
+  id: SyndicateIDCardComa
+  name: syndicate ID card
+  components:
+  - type: PresetIdCard
+    job: Commander
+  - type: Sprite
+    layers:
+    - state: syndie
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: entity
+  parent: [SyndicateIDCard, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
+  id: SyndicateIDCardStormtrooper
+  name: syndicate ID card
+  components:
+  - type: PresetIdCard
+    job: Stormtrooper
+  - type: Sprite
+    layers:
+    - state: syndie
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: entity
+  parent: [SyndicateIDCard, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
+  id: SyndicateIDCardMedSyn
+  name: syndicate ID card
+  components:
+  - type: PresetIdCard
+    job: MedSyn
+  - type: Sprite
+    layers:
+    - state: syndie
+  - type: Access
+    tags:
+    - SyndicateAgent

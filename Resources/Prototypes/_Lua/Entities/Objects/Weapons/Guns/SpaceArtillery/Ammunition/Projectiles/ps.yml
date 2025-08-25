@@ -42,9 +42,9 @@
     - type: ExplodeOnTrigger
     - type: Explosive
       explosionType: Default
-      totalIntensity: 50.0
+      totalIntensity: 12.5
       intensitySlope: 4
-      maxIntensity: 100
+      maxIntensity: 25
       maxTileBreak: 1
     - type: TriggerOnEnterGrid
     - type: RadarBlip

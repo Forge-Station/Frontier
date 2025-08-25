@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/22/2025 02:37:59
-  entityCount: 1182
+  time: 08/11/2025 09:08:02
+  entityCount: 1184
 maps: []
 grids:
 - 1
@@ -945,6 +945,9 @@ entities:
     - type: Transform
       pos: -5.5,-2.5
       parent: 1
+    - type: PointLight
+      radius: 1
+      enabled: True
   - uid: 77
     components:
     - type: Transform
@@ -981,8 +984,23 @@ entities:
       pos: -6.5,-2.5
       parent: 1
     - type: PointLight
-      radius: 2
+      radius: 1
       enabled: True
+  - uid: 982
+    components:
+    - type: Transform
+      pos: -4.5,-3.5
+      parent: 1
+  - uid: 983
+    components:
+    - type: Transform
+      pos: -4.5,-2.5
+      parent: 1
+  - uid: 1183
+    components:
+    - type: Transform
+      pos: -4.5,-1.5
+      parent: 1
 - proto: APCBasic
   entities:
   - uid: 377
@@ -6453,6 +6471,13 @@ entities:
     - type: Transform
       pos: 1.527169,-1.8055165
       parent: 1
+- proto: ShieldGeneratorSmall
+  entities:
+  - uid: 1184
+    components:
+    - type: Transform
+      pos: -4.5,-0.5
+      parent: 1
 - proto: ShipyardCharonInfo
   entities:
   - uid: 1074
@@ -7008,13 +7033,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.5,12.5
       parent: 1
-- proto: SurveillanceCameraRouterGeneral
-  entities:
-  - uid: 983
-    components:
-    - type: Transform
-      pos: -4.5,-3.5
-      parent: 1
 - proto: Table
   entities:
   - uid: 258
@@ -7118,13 +7136,6 @@ entities:
     components:
     - type: Transform
       pos: -7.5,5.5
-      parent: 1
-- proto: TelecomServerFilledShuttle
-  entities:
-  - uid: 982
-    components:
-    - type: Transform
-      pos: -3.5,-3.5
       parent: 1
 - proto: Thruster
   entities:

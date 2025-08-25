@@ -21,6 +21,7 @@
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
+  - type: BlockEvacuation #Forge-Change
 
 - type: gameMap
   id: BarrierGate
