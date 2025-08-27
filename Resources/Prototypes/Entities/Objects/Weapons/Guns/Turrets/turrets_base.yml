@@ -76,6 +76,10 @@
   - type: NoRotateOnMove
   - type: Input
     context: "human"
+  - type: TurretControllable #Forge Change Begin
+  - type: DeviceLinkSink
+    ports:
+    - On
 
 - type: entity
   parent: BaseWeaponTurret
@@ -97,7 +101,7 @@
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25 # Frontier: CartridgeCaselessRifle<NFCartridgeRifle25 (caseless)
     capacity: 500
-      
+
 - type: entity
   parent: BaseWeaponTurret
   id: BaseWeaponEnergyTurret

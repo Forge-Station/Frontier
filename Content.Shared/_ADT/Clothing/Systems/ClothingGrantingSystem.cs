@@ -1,3 +1,4 @@
+using Content.Shared._ADT.Clothing.Components;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Tag;
@@ -15,35 +16,38 @@ public sealed class ClothingGrantingSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<_ADT.Clothing.Components.ClothingGrantComponentComponent, GotEquippedEvent>(OnCompEquip);
-        SubscribeLocalEvent<_ADT.Clothing.Components.ClothingGrantComponentComponent, GotUnequippedEvent>(OnCompUnequip);
+        SubscribeLocalEvent<ClothingGrantComponentComponent, GotEquippedEvent>(OnCompEquip);
+        SubscribeLocalEvent<ClothingGrantComponentComponent, GotUnequippedEvent>(OnCompUnequip);
 
-        SubscribeLocalEvent<_ADT.Clothing.Components.ClothingGrantTagComponent, GotEquippedEvent>(OnTagEquip);
-        SubscribeLocalEvent<_ADT.Clothing.Components.ClothingGrantTagComponent, GotUnequippedEvent>(OnTagUnequip);
+        SubscribeLocalEvent<ClothingGrantTagComponent, GotEquippedEvent>(OnTagEquip);
+        SubscribeLocalEvent<ClothingGrantTagComponent, GotUnequippedEvent>(OnTagUnequip);
     }
 
-    private void OnCompEquip(EntityUid uid, _ADT.Clothing.Components.ClothingGrantComponentComponent component, GotEquippedEvent args)
+    private void OnCompEquip(EntityUid uid, ClothingGrantComponentComponent component, GotEquippedEvent args)
     {
-        if (!TryComp<ClothingComponent>(uid, out var clothing)) return;
+        if (!TryComp<ClothingComponent>(uid, out var clothing))
+            return;
 
-        if (!clothing.Slots.HasFlag(args.SlotFlags)) return;
+        if (!clothing.Slots.HasFlag(args.SlotFlags))
+            return;
 
         if (component.Components.Count > 1)
         {
-            Logger.Error("Although a component registry supports multiple components, we cannot bookkeep more than 1 component for ClothingGrantComponent at this time.");
+            Logger.Error(
+                "Although a component registry supports multiple components, we cannot bookkeep more than 1 component for ClothingGrantComponent at this time.");
             return;
         }
 
         foreach (var (name, data) in component.Components)
         {
-            var newComp = (Component) _componentFactory.GetComponent(name);
+            var newComp = (Component)_componentFactory.GetComponent(name);
 
             if (HasComp(args.Equipee, newComp.GetType()))
                 continue;
 
             newComp.Owner = args.Equipee;
 
-            var temp = (object) newComp;
+            var temp = (object)newComp;
             _serializationManager.CopyTo(data.Component, ref temp);
             EntityManager.AddComponent(args.Equipee, (Component)temp!);
 
@@ -51,13 +55,14 @@ public sealed class ClothingGrantingSystem : EntitySystem
         }
     }
 
-    private void OnCompUnequip(EntityUid uid, _ADT.Clothing.Components.ClothingGrantComponentComponent component, GotUnequippedEvent args)
+    private void OnCompUnequip(EntityUid uid, ClothingGrantComponentComponent component, GotUnequippedEvent args)
     {
-        if (!component.IsActive) return;
+        if (!component.IsActive)
+            return;
 
         foreach (var (name, data) in component.Components)
         {
-            var newComp = (Component) _componentFactory.GetComponent(name);
+            var newComp = (Component)_componentFactory.GetComponent(name);
 
             RemComp(args.Equipee, newComp.GetType());
         }
@@ -66,7 +71,7 @@ public sealed class ClothingGrantingSystem : EntitySystem
     }
 
 
-    private void OnTagEquip(EntityUid uid, _ADT.Clothing.Components.ClothingGrantTagComponent component, GotEquippedEvent args)
+    private void OnTagEquip(EntityUid uid, ClothingGrantTagComponent component, GotEquippedEvent args)
     {
         if (!TryComp<ClothingComponent>(uid, out var clothing))
             return;
@@ -80,7 +85,7 @@ public sealed class ClothingGrantingSystem : EntitySystem
         component.IsActive = true;
     }
 
-    private void OnTagUnequip(EntityUid uid, _ADT.Clothing.Components.ClothingGrantTagComponent component, GotUnequippedEvent args)
+    private void OnTagUnequip(EntityUid uid, ClothingGrantTagComponent component, GotUnequippedEvent args)
     {
         if (!component.IsActive)
             return;

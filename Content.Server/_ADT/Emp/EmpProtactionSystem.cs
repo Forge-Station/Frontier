@@ -6,38 +6,45 @@ namespace Content.Server._ADT.Emp;
 public sealed class EmpProtactionSystem : EntitySystem
 {
     [Dependency] private readonly ItemSlotsSystem _slot = default!;
+
     public override void Initialize()
     {
-        SubscribeLocalEvent<_ADT.Emp.EmpContainerProtactionComponent, ItemSlotInsertAttemptEvent>(OnInserted);
-        SubscribeLocalEvent<_ADT.Emp.EmpContainerProtactionComponent, ItemSlotEjectedEvent>(OnEjected);
-        SubscribeLocalEvent<_ADT.Emp.EmpContainerProtactionComponent, ComponentShutdown>(OnShutdown);
-        SubscribeLocalEvent<_ADT.Emp.EmpContainerProtactionComponent, MapInitEvent>(OnInit);
+        SubscribeLocalEvent<EmpContainerProtactionComponent, ItemSlotInsertAttemptEvent>(OnInserted);
+        SubscribeLocalEvent<EmpContainerProtactionComponent, ItemSlotEjectedEvent>(OnEjected);
+        SubscribeLocalEvent<EmpContainerProtactionComponent, ComponentShutdown>(OnShutdown);
+        SubscribeLocalEvent<EmpContainerProtactionComponent, MapInitEvent>(OnInit);
     }
-    private void OnInserted(EntityUid uid, _ADT.Emp.EmpContainerProtactionComponent component, ref ItemSlotInsertAttemptEvent args)
+
+    private void OnInserted(EntityUid uid,
+        EmpContainerProtactionComponent component,
+        ref ItemSlotInsertAttemptEvent args)
     {
         if (args.Cancelled)
             return;
-        EnsureComp<EmpProtectionComponent>(args.Item);
+        EnsureComp<EmpAdtProtectionComponent>(args.Item);
         component.BatteryUid = args.Item;
     }
-    private void OnEjected(EntityUid uid, _ADT.Emp.EmpContainerProtactionComponent component, ref ItemSlotEjectedEvent args)
+
+    private void OnEjected(EntityUid uid, EmpContainerProtactionComponent component, ref ItemSlotEjectedEvent args)
     {
         if (args.Cancelled)
             return;
-        RemComp<EmpProtectionComponent>(args.Item);
+        RemComp<EmpAdtProtectionComponent>(args.Item);
         component.BatteryUid = null;
     }
-    private void OnShutdown(EntityUid uid, _ADT.Emp.EmpContainerProtactionComponent component, ComponentShutdown args)
+
+    private void OnShutdown(EntityUid uid, EmpContainerProtactionComponent component, ComponentShutdown args)
     {
         if (component.BatteryUid == null)
             return;
-        RemComp<EmpProtectionComponent>(component.BatteryUid.Value);
+        RemComp<EmpAdtProtectionComponent>(component.BatteryUid.Value);
     }
-    private void OnInit(EntityUid uid, _ADT.Emp.EmpContainerProtactionComponent component, MapInitEvent args)
+
+    private void OnInit(EntityUid uid, EmpContainerProtactionComponent component, MapInitEvent args)
     {
         var battery = _slot.GetItemOrNull(uid, component.ContainerId);
         if (battery == null)
             return;
-        EnsureComp<EmpProtectionComponent>(battery.Value);
+        EnsureComp<EmpAdtProtectionComponent>(battery.Value);
     }
 }
