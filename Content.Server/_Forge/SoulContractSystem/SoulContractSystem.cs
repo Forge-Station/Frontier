@@ -51,11 +51,11 @@ namespace Content.Server._Forge.SoulContractSystem
 
         private void OnDoAfter(Entity<SoulContractComponent> entity, ref SoulContractDoAfterEvent args)
         {
-            if (args.Cancelled || args.Handled || args.Args.Target == null)
+            if (args.Cancelled)
                 return;
 
             Del(entity.Owner);
-            args.Handled = _bank.TryBankDeposit(args.Args.User, entity.Comp.Reward) && TryGib(entity, args.Args.User);
+            args.Handled = _bank.TryBankDeposit(args.Args.User, entity.Comp.Reward, true) && TryGib(entity, args.Args.User);
         }
 
         private bool TryGib(Entity<SoulContractComponent> entity, EntityUid user)
