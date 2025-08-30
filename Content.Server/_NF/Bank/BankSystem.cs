@@ -129,8 +129,8 @@ public sealed partial class BankSystem : SharedBankSystem
             _log.Info($"TryBankDeposit: {mobUid} has no cached prefs");
             return false;
         }
-        // Forge-Механика
-        // Forge-Механика-start
+        // Forge-SoulContract
+        // Forge-SoulContract-start
         var profile = prefs.SelectedCharacter as HumanoidCharacterProfile;
 
         if (sendToRandomCharacter)
@@ -143,7 +143,7 @@ public sealed partial class BankSystem : SharedBankSystem
         }
 
         if (profile is null)
-        // Forge-Механика-end
+        // Forge-SoulContract-end
         {
             _log.Info($"TryBankDeposit: {mobUid} has the wrong prefs type");
             return false;
