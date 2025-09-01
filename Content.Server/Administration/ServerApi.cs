@@ -17,6 +17,7 @@ using Content.Server.RoundEnd;
 using Content.Shared.Administration;
 using Content.Shared.Administration.Managers;
 using Content.Shared.CCVar;
+using Content.Shared.Database;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Prototypes;
 using Robust.Server.ServerStatus;
@@ -85,6 +86,7 @@ public sealed partial class ServerApi : IPostInjectInit
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/round/end", ActionRoundEnd);
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/round/restartnow", ActionRoundRestartNow);
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/kick", ActionKick);
+        RegisterActorHandler(HttpMethod.Post, "/admin/actions/ban", ActionBan); // Forge-Change
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/add_game_rule", ActionAddGameRule);
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/end_game_rule", ActionEndGameRule);
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/force_preset", ActionForcePreset);
@@ -348,6 +350,41 @@ public sealed partial class ServerApi : IPostInjectInit
             _sawmill.Info($"Kicked player {player.Name} ({player.UserId}) for {reason} by {FormatLogActor(actor)}");
         });
     }
+
+    // Forge-Change-Start
+    private async Task ActionBan(IStatusHandlerContext context, Actor actor)
+    {
+        var body = await ReadJson<BanActionBody>(context);
+        if (body == null)
+            return;
+
+        await RunOnMainThread(async () =>
+        {
+            var data = await _locator.LookupIdByNameOrIdAsync($"{body.TargetUsername}");
+
+            if (data == null)
+            {
+                await context.RespondErrorAsync(HttpStatusCode.BadRequest);
+                return;
+            }
+
+            var targetHWid = data.LastHWId;
+            var targetId = data.UserId;
+            var targetUsername = data.Username;
+            var reason = body.Reason ?? "No reason supplied";
+            reason += " (banned by admin)";
+
+            if (body.Reason != null)
+                _bans.CreateServerBan(targetId, targetUsername, new NetUserId(actor.Guid),null, targetHWid, (uint)body.Minutes, (NoteSeverity)body.Severity, body.Reason);
+            else
+                _bans.CreateServerBan(targetId, targetUsername, new NetUserId(actor.Guid),null, targetHWid, (uint)body.Minutes, (NoteSeverity)body.Severity, "No reason");
+
+            await RespondOk(context);
+
+            _sawmill.Info($"Banned player {data.Username} ({data.UserId}) for {reason} by {FormatLogActor(actor)} to {body.Minutes}");
+        });
+    }
+    // Forge-Change-End
 
     private async Task ActionRoundStart(IStatusHandlerContext context, Actor actor)
     {
@@ -693,6 +730,16 @@ public sealed partial class ServerApi : IPostInjectInit
         public required Guid Guid { get; init; }
         public string? Reason { get; init; }
     }
+
+    // Forge-Change-Start
+    private sealed class BanActionBody
+    {
+        public int Minutes { get; init; }
+        public int Severity { get; init; }
+        public string? TargetUsername { get; init; }
+        public string? Reason { get; init; }
+    }
+    // Forge-Change-End
 
     private sealed class GameRuleActionBody
     {
