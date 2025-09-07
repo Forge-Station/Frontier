@@ -165,8 +165,6 @@
   - type: Projectile
     damage:
       types:
-        Structural: 7500
-        Heat: 30
         Ion: 2500
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/hybrid_missile.rsi
@@ -187,16 +185,10 @@
     color: orange
     energy: 0.5
   - type: EmpOnTrigger
-    range: 5
-    energyConsumption: 2700000
-    disableDuration: 5
+    range: 6
+    energyConsumption: 3000000
+    disableDuration: 6
   - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 100
-    intensitySlope: 10
-    maxIntensity: 50
-    maxTileBreak: 1
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
