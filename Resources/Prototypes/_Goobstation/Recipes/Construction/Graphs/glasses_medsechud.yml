@@ -19,14 +19,29 @@
                 sprite: Clothing/Eyes/Glasses/sunglasses.rsi
                 state: icon
               doAfter: 5
-            - tag: HudMedicalSecurity
-              name: construction-graph-tag-medsec-hud
+            - tag: HudMedical
+              name: construction-graph-tag-medical-hud
               icon:
-                sprite: Clothing/Eyes/Hud/medsec.rsi
+                sprite: Clothing/Eyes/Hud/med.rsi
+                state: icon
+              doAfter: 5
+            - tag: HudSecurity
+              name: construction-graph-tag-security-hud
+              icon:
+                sprite: Clothing/Eyes/Hud/sec.rsi
                 state: icon
               doAfter: 5
             - material: Cable
               amount: 5
+              doAfter: 5
+            - tag: Radio
+              name: construction-graph-tag-radio
+              icon:
+                sprite: _NF/Objects/Devices/communication.rsi # Frontier
+                state: base # Frontier
+              doAfter: 5
+            - material: Manipulator
+              amount: 2
               doAfter: 5
 
     - node: glassesMedSec

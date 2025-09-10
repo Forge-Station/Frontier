@@ -356,11 +356,6 @@
     - 0,0,3,1
     sprite: Objects/Weapons/Guns/Battery/inhands_64x.rsi
     heldPrefix: energy
-  - type: Tag
-    tags:
-    - HighRiskItem
-  - type: StealTarget
-    stealGroup: ForgeWeaponEnergyShotgun
   - type: GunRequiresWield
   - type: Battery
     maxCharge: 2400
