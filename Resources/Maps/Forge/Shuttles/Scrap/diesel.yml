@@ -1252,28 +1252,6 @@ entities:
     - type: Transform
       pos: 3.8895273,7.834339
       parent: 1
-- proto: ActionToggleInternals
-  entities:
-  - uid: 12
-    components:
-    - type: Transform
-      parent: 11
-    - type: InstantAction
-      container: 11
-  - uid: 15
-    components:
-    - type: Transform
-      parent: 14
-    - type: InstantAction
-      container: 14
-- proto: ActionToggleLight
-  entities:
-  - uid: 19
-    components:
-    - type: Transform
-      parent: 18
-    - type: InstantAction
-      container: 18
 - proto: AirAlarm
   entities:
   - uid: 20
@@ -6041,22 +6019,8 @@ entities:
     - type: Transform
       pos: -7.50848,0.8925705
       parent: 1
-    - type: HandheldLight
-      toggleActionEntity: 19
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 19
     - type: Physics
       canCollide: True
-    - type: ActionsContainer
 - proto: LightBulbBroken
   entities:
   - uid: 699
@@ -6199,14 +6163,6 @@ entities:
     - type: Transform
       pos: -0.5,1.5
       parent: 1
-    - type: GasTank
-      toggleActionEntity: 12
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 12
   - uid: 495
     components:
     - type: Transform
@@ -6250,16 +6206,8 @@ entities:
     components:
     - type: Transform
       parent: 13
-    - type: GasTank
-      toggleActionEntity: 15
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 15
     - type: InsideEntityStorage
   - uid: 496
     components:

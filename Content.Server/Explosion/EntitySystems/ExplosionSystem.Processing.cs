@@ -300,7 +300,7 @@ public sealed partial class ExplosionSystem
     /// <summary>
     ///     Same as <see cref="ExplodeTile"/>, but for SPAAAAAAACE.
     /// </summary>
-    internal void ExplodeSpace(Entity<BroadphaseComponent> lookup, // Forge-Change
+    internal void ExplodeSpace(Entity<BroadphaseComponent> lookup,
         Matrix3x2 spaceMatrix,
         Matrix3x2 invSpaceMatrix,
         Vector2i tile,
@@ -318,7 +318,6 @@ public sealed partial class ExplosionSystem
         var state = (list, processed, invSpaceMatrix, lookup.Owner, EntityManager.TransformQuery, gridBox, _transformSystem);
 
         // get entities:
-
         lookup.Comp.DynamicTree.QueryAabb(ref state, SpaceQueryCallback, worldBox, true);
         lookup.Comp.StaticTree.QueryAabb(ref state, SpaceQueryCallback, worldBox, true);
         lookup.Comp.SundriesTree.QueryAabb(ref state, SpaceQueryCallback, worldBox, true);
@@ -336,8 +335,8 @@ public sealed partial class ExplosionSystem
         // Also, throw any entities that were spawned as shrapnel. Compared to entity spawning & destruction, this extra
         // lookup is relatively minor computational cost, and throwing is disabled for nukes anyways.
         list.Clear();
-        lookup.Comp.DynamicTree.QueryAabb(ref state, SpaceQueryCallback, worldBox, true); // Forge-Change
-        lookup.Comp.SundriesTree.QueryAabb(ref state, SpaceQueryCallback, worldBox, true); // Forge-Change
+        lookup.Comp.DynamicTree.QueryAabb(ref state, SpaceQueryCallback, worldBox, true);
+        lookup.Comp.SundriesTree.QueryAabb(ref state, SpaceQueryCallback, worldBox, true);
 
         foreach (var (uid, xform) in list)
         {
@@ -570,12 +569,12 @@ sealed class Explosion
         /// <summary>
         ///     Lookup component for this grid (or space/map).
         /// </summary>
-        public Entity<BroadphaseComponent> Lookup; // Forge-Change
+        public Entity<BroadphaseComponent> Lookup;
 
         /// <summary>
         ///     The actual grid that this corresponds to. If null, this implies space.
         /// </summary>
-        public Entity<MapGridComponent>? MapGrid; // Forge-Change
+        public Entity<MapGridComponent>? MapGrid;
     }
 
     private readonly List<ExplosionData> _explosionData = new();
@@ -626,8 +625,8 @@ sealed class Explosion
 #if DEBUG
     private DamageSpecifier? _expectedDamage;
 #endif
-    private Entity<BroadphaseComponent> _currentLookup = default!; // Forge-Change
-    private Entity<MapGridComponent>? _currentGrid; // Forge-Change
+    private Entity<BroadphaseComponent> _currentLookup = default!;
+    private Entity<MapGridComponent>? _currentGrid;
     private float _currentIntensity;
     private float _currentThrowForce;
     private List<Vector2i>.Enumerator _currentEnumerator;
@@ -637,7 +636,7 @@ sealed class Explosion
     ///     The set of tiles that need to be updated when the explosion has finished processing. Used to avoid having
     ///     the explosion trigger chunk regeneration & shuttle-system processing every tick.
     /// </summary>
-    private readonly Dictionary<Entity<MapGridComponent>, List<(Vector2i, Tile)>> _tileUpdateDict = new(); // Forge-Change
+    private readonly Dictionary<Entity<MapGridComponent>, List<(Vector2i, Tile)>> _tileUpdateDict = new();
 
     // Entity Queries
     private readonly EntityQuery<TransformComponent> _xformQuery;
@@ -721,7 +720,7 @@ sealed class Explosion
             _explosionData.Add(new()
             {
                 TileLists = spaceData.TileLists,
-                Lookup = (mapUid, entMan.GetComponent<BroadphaseComponent>(mapUid)), // Forge-Change
+                Lookup = (mapUid, entMan.GetComponent<BroadphaseComponent>(mapUid)),
                 MapGrid = null
             });
 
@@ -734,7 +733,7 @@ sealed class Explosion
             _explosionData.Add(new ExplosionData
             {
                 TileLists = grid.TileLists,
-                Lookup = (grid.Grid, entMan.GetComponent<BroadphaseComponent>(grid.Grid)), // Forge-Change
+                Lookup = (grid.Grid, entMan.GetComponent<BroadphaseComponent>(grid.Grid)),
                 MapGrid = grid.Grid,
             });
         }
@@ -785,7 +784,7 @@ sealed class Explosion
                 _currentDataIndex++;
 
                 // sanity checks, in case something changed while the explosion was being processed over several ticks.
-                if (_currentLookup.Comp.Deleted || _currentGrid != null && !_entMan.EntityExists(_currentGrid.Value)) // Forge-Change
+                if (_currentLookup.Comp.Deleted || _currentGrid != null && !_entMan.EntityExists(_currentGrid.Value))
                     continue;
 
                 return true;
@@ -840,20 +839,20 @@ sealed class Explosion
             }
 
             // Is the current tile on a grid (instead of in space)?
-            if (_currentGrid is { } currentGrid && // Forge-Change
-                _mapSystem.TryGetTileRef(currentGrid, currentGrid.Comp, _currentEnumerator.Current, out var tileRef) && // Forge-Change
+            if (_currentGrid is { } currentGrid &&
+                _mapSystem.TryGetTileRef(currentGrid, currentGrid.Comp, _currentEnumerator.Current, out var tileRef) &&
                 !tileRef.Tile.IsEmpty)
             {
-                if (!_tileUpdateDict.TryGetValue(currentGrid, out var tileUpdateList)) // Forge-Change
+                if (!_tileUpdateDict.TryGetValue(currentGrid, out var tileUpdateList))
                 {
                     tileUpdateList = new();
-                    _tileUpdateDict[currentGrid] = tileUpdateList; // Forge-Change
+                    _tileUpdateDict[currentGrid] = tileUpdateList;
                 }
 
                 // damage entities on the tile. Also figures out whether there are any solid entities blocking the floor
                 // from being destroyed.
                 var canDamageFloor = _system.ExplodeTile(_currentLookup,
-                    currentGrid, // Forge-Change
+                    currentGrid,
                     _currentEnumerator.Current,
                     _currentThrowForce,
                     _currentDamage,

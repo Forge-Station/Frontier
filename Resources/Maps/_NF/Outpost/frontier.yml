@@ -4034,14 +4034,6 @@ entities:
     - type: Parallax
       parallax: FrontierStation
     - type: OccluderTree
-- proto: ActionToggleLight
-  entities:
-  - uid: 2428
-    components:
-    - type: Transform
-      parent: 1474
-    - type: InstantAction
-      container: 1474
 - proto: AirAlarm
   entities:
   - uid: 1836
@@ -27513,22 +27505,8 @@ entities:
     - type: Transform
       pos: 27.432009,17.068443
       parent: 2173
-    - type: HandheldLight
-      toggleActionEntity: 2428
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 2428
     - type: Physics
       canCollide: True
-    - type: ActionsContainer
   - uid: 4975
     components:
     - type: Transform

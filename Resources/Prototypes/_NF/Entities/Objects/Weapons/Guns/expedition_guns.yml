@@ -166,13 +166,6 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleRepeaterExpedition
 
-- type: entity #CorvaxFrontier
-  parent:
-  - BaseC3ExpeditionContraband
-  - WeaponShotgunKD12
-  categories: [ HideSpawnMenu ]
-  id: WeaponShotgunKD12Expedition #CorvaxFrontier
-
 # region Tier 2
 ## Pistols
 - type: entity
@@ -182,19 +175,19 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponPistolCobraExpedition
 
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2
-  - NFWeaponPistolN1984
-  categories: [ HideSpawnMenu ]
-  id: NFWeaponPistolN1984Expedition
-
 - type: entity #CorvaxFrontier
   parent:
   - BaseC3ExpeditionContraband
   - WeaponSubMachineGunVector22
   categories: [ HideSpawnMenu ]
   id: SubMachineGunVector22Expedition #CorvaxFrontier
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - NFWeaponPistolN1984
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponPistolN1984Expedition
 
 - type: entity
   parent:
@@ -360,6 +353,14 @@
   - NFWeaponEnergyPistolLaserSvalinn
   categories: [ HideSpawnMenu ]
   id: NFWeaponEnergyPistolLaserSvalinnExpedition
+
+## Shotguns
+- type: entity #CorvaxFrontier
+  parent:
+  - BaseC3ExpeditionContraband
+  - WeaponShotgunKD12
+  categories: [ HideSpawnMenu ]
+  id: WeaponShotgunKD12Expedition #CorvaxFrontier
 
 # region Tier 4
 ## Shotguns
