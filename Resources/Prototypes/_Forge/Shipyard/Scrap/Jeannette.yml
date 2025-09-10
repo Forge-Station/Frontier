@@ -10,35 +10,35 @@
 
 # Shuttle notes:
 
-- type: vessel
-  id: Jeannette
-  parent: BaseVessel
-  name: ST Жаннетта
-  description: Маленький шаттл для варки и перевозки газов, вам повезет, если стекло не лопнет под давлением. Средний размер команды от 1 до 3 человек.
-  price: 17000 # (14681)
-  category: Small
-  group: Custom
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/Jeannette.yml
-  guidebookPage: Null
-  class:
-  - Scrapyard
-  - Atmospherics
-  engine:
-  - Plasma
+#- type: vessel
+#  id: Jeannette
+#  parent: BaseVessel
+#  name: ST Жаннетта
+#  description: Маленький шаттл для варки и перевозки газов, вам повезет, если стекло не лопнет под давлением. Средний размер команды от 1 до 3 человек.
+#  price: 17000 # (14681)
+#  category: Small
+#  group: Custom
+#  shuttlePath: /Maps/Forge/Shuttles/Scrap/Jeannette.yml
+#  guidebookPage: Null
+#  class:
+#  - Scrapyard
+#  - Atmospherics
+#  engine:
+#  - Plasma
 
-- type: gameMap
-  id: Jeannette
-  mapName: 'ST Жаннетта'
-  mapPath: /Maps/Forge/Shuttles/Scrap/Jeannette.yml
-  minPlayers: 0
-  stations:
-    Jeannette:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Жаннетта {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs: {}
+#- type: gameMap
+#  id: Jeannette
+#  mapName: 'ST Жаннетта'
+#  mapPath: /Maps/Forge/Shuttles/Scrap/Jeannette.yml
+#  minPlayers: 0
+#  stations:
+#    Jeannette:
+#      stationProto: StandardFrontierVessel
+#      components:
+#        - type: StationNameSetup
+#          mapNameTemplate: 'Жаннетта {1}'
+#          nameGenerator:
+#            !type:NanotrasenNameGenerator
+#            prefixCreator: '14'
+#        - type: StationJobs
+#          availableJobs: {}

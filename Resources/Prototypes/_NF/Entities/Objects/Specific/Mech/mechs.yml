@@ -46,7 +46,9 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHigh
+      - PowerCageHigh
+      mech-capacitor-slot:
+      - CapacitorStockPart
 
 - type: entity
   id: MechEmuCargo
@@ -57,4 +59,6 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellMedium
+      - PowerCageMedium
+      mech-capacitor-slot:
+      - CapacitorStockPart

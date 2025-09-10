@@ -1,17 +1,6 @@
 meta:
-  format: 7
-  category: Grid
-  engineVersion: 247.2.0
-  forkId: ""
-  forkVersion: ""
-  time: 05/06/2025 11:34:16
-  entityCount: 963
-maps: []
-grids:
-- 1
-orphans:
-- 1
-nullspace: []
+  format: 6
+  postmapinit: false
 tilemap:
   0: Space
   14: FloorBar
@@ -2249,7 +2238,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,2.5
       parent: 1
-- proto: CargoPallet
+- proto: Catwalk
   entities:
   - uid: 148
     components:

@@ -612,6 +612,7 @@
     fireCost: 200
 # Forge-Change-End
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   name: antique laser pistol
   parent: [BaseWeaponBatterySmall, BaseC1Contraband] # Frontier: BaseGrandTheftContraband<BaseC1Contraband
   id: WeaponAntiqueLaser

@@ -326,14 +326,6 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Asstedia
-- proto: ActionToggleLight
-  entities:
-  - uid: 183
-    components:
-    - type: Transform
-      parent: 159
-    - type: InstantAction
-      container: 159
 - proto: AirAlarm
   entities:
   - uid: 221
@@ -908,20 +900,6 @@ entities:
     - type: Transform
       pos: 6.5857153,-2.1528163
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 183
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 207
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 183
-    - type: ActionsContainer
 - proto: GasPassiveVent
   entities:
   - uid: 214
@@ -1351,14 +1329,6 @@ entities:
     - type: Transform
       pos: -3.5,2.5
       parent: 2
-- proto: PowerCellPotato
-  entities:
-  - uid: 207
-    components:
-    - type: Transform
-      parent: 159
-    - type: Physics
-      canCollide: False
 - proto: Poweredlight
   entities:
   - uid: 83

@@ -204,7 +204,7 @@
     - type: Implanter
       implant: StorageImplant
     - type: StaticPrice #CorvaxFrontier
-      price: 300 
+      price: 300
 - type: entity
   id: FreedomImplanter
   name: freedom implanter
@@ -252,6 +252,14 @@
   components:
     - type: Implanter
       implant: DnaScramblerImplant
+
+- type: entity
+  id: ChameleonControllerImplanter
+  suffix: chameleon controller
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+  - type: Implanter
+    implant: ChameleonControllerImplant
 
 #Nuclear Operative/Special implanters
 

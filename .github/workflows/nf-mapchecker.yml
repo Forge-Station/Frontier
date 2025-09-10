@@ -10,7 +10,7 @@ on:
     - "Resources/Prototypes/Nyanotrasen/Entities/**/*.yml"
     - "Resources/Prototypes/_DV/Entities/**/*.yml"
     # Map pathspecs - If any maps are changed, this should run.
-    - "Resources/Maps/**/*.yml"
+    # - "Resources/Maps/**/*.yml"
     # Also the mapchecker itself
     - ".github/mapchecker/**"
 

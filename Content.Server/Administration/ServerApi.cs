@@ -17,6 +17,7 @@ using Content.Server.RoundEnd;
 using Content.Shared.Administration;
 using Content.Shared.Administration.Managers;
 using Content.Shared.CCVar;
+using Content.Shared.Database;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Prototypes;
 using Robust.Server.ServerStatus;
@@ -85,6 +86,8 @@ public sealed partial class ServerApi : IPostInjectInit
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/round/end", ActionRoundEnd);
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/round/restartnow", ActionRoundRestartNow);
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/kick", ActionKick);
+        RegisterActorHandler(HttpMethod.Post, "/admin/actions/ban", ActionBan); // Forge-Change
+        RegisterActorHandler(HttpMethod.Post, "/admin/actions/pardon", ActionPardon); // Forge-Change
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/add_game_rule", ActionAddGameRule);
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/end_game_rule", ActionEndGameRule);
         RegisterActorHandler(HttpMethod.Post, "/admin/actions/force_preset", ActionForcePreset);
@@ -348,6 +351,118 @@ public sealed partial class ServerApi : IPostInjectInit
             _sawmill.Info($"Kicked player {player.Name} ({player.UserId}) for {reason} by {FormatLogActor(actor)}");
         });
     }
+
+    // Forge-Change-Start
+    private async Task ActionBan(IStatusHandlerContext context, Actor actor)
+    {
+        var body = await ReadJson<BanActionBody>(context);
+        if (body == null)
+            return;
+
+        await RunOnMainThread(async () =>
+        {
+            var data = await _locator.LookupIdByNameOrIdAsync($"{body.TargetUsername}");
+            if (data == null)
+            {
+                await context.RespondJsonAsync(
+                    new { Error = "Player not found", },
+                    HttpStatusCode.NotFound);
+                return;
+            }
+
+            var admin = await _locator.LookupIdByNameOrIdAsync($"{actor.Guid}");
+            if (admin == null)
+            {
+                await context.RespondJsonAsync(
+                    new { Error = "Admin not found", },
+                    HttpStatusCode.NotFound);
+                return;
+            }
+
+            var adminData = await _db.GetAdminDataForAsync(admin.UserId);
+            if (adminData == null)
+            {
+                await context.RespondJsonAsync(
+                    new { Error = "Is not admin", },
+                    HttpStatusCode.NotFound);
+                return;
+            }
+
+            var targetHWid = data.LastHWId;
+            var targetId = data.UserId;
+            var targetUsername = data.Username;
+            var reason = body.Reason ?? "No reason supplied";
+            reason += " (banned by admin)";
+
+            if (body.Reason != null)
+                _bans.CreateServerBan(targetId, targetUsername, admin.UserId,null, targetHWid, (uint)body.Minutes, (NoteSeverity)body.Severity, body.Reason);
+            else
+                _bans.CreateServerBan(targetId, targetUsername, admin.UserId,null, targetHWid, (uint)body.Minutes, (NoteSeverity)body.Severity, "No reason");
+
+            await RespondOk(context);
+
+            _sawmill.Info($"Banned player {data.Username} ({data.UserId}) for {reason} by {FormatLogActor(actor)} to {body.Minutes}");
+        });
+    }
+
+    private async Task ActionPardon(IStatusHandlerContext context, Actor actor)
+    {
+        var body = await ReadJson<PardonActionBody>(context);
+        if (body == null)
+        {
+            await context.RespondErrorAsync(HttpStatusCode.BadRequest);
+            return;
+        }
+
+        await RunOnMainThread(async () =>
+        {
+            var admin = await _locator.LookupIdByNameOrIdAsync($"{actor.Guid}");
+            if (admin == null)
+            {
+                await context.RespondJsonAsync(
+                    new { Error = "Admin not found", },
+                    HttpStatusCode.NotFound);
+                return;
+            }
+
+            var adminData = await _db.GetAdminDataForAsync(admin.UserId);
+            if (adminData == null)
+            {
+                await context.RespondJsonAsync(
+                    new { Error = "Is not admin", },
+                    HttpStatusCode.NotFound);
+                return;
+            }
+
+            var banId = body.BanId;
+
+            var ban = await _db.GetServerBanAsync(banId);
+
+            if (ban == null)
+            {
+                await context.RespondJsonAsync(
+                    new { Error = "Ban not found", },
+                    HttpStatusCode.NotFound);
+                return;
+            }
+
+            if (ban.Unban != null)
+            {
+                await context.RespondJsonAsync(
+                    new { Error = "Ban already pardoned", },
+                    HttpStatusCode.Conflict);
+                return;
+            }
+
+            await _db.AddServerUnbanAsync(new ServerUnbanDef(banId, admin.UserId, DateTimeOffset.Now));
+
+            await context.RespondJsonAsync(
+                new { Message = "Ban successfully pardoned", });
+
+            _sawmill.Info($"Ban {banId} pardoned by {admin}");
+        });
+    }
+    // Forge-Change-End
 
     private async Task ActionRoundStart(IStatusHandlerContext context, Actor actor)
     {
@@ -693,6 +808,21 @@ public sealed partial class ServerApi : IPostInjectInit
         public required Guid Guid { get; init; }
         public string? Reason { get; init; }
     }
+
+    // Forge-Change-Start
+    private sealed class BanActionBody
+    {
+        public int Minutes { get; init; }
+        public int Severity { get; init; }
+        public string? TargetUsername { get; init; }
+        public string? Reason { get; init; }
+    }
+
+    private sealed class PardonActionBody
+    {
+        public int BanId { get; init; }
+    }
+    // Forge-Change-End
 
     private sealed class GameRuleActionBody
     {

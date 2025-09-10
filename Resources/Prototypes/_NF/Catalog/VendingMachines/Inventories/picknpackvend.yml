@@ -15,6 +15,16 @@
     ClothingHandsKnuckleDusters: 3 #CorvaxFrontier
     SurvivalKnife: 3 #CorvaxFrontier
     WeaponSubMachineGunVector45: 3 #CorvaxFrontier
+  # Magazines
+    NFMagazinePistol35Empty: 6
+    NFMagazineLowCapacityRifle30Empty: 6
+    NFMagazineClipRifle20Empty: 6
+  # Ammo boxes
+    NFAmmunitionBoxPistol35: 6
+    NFAmmunitionBoxRifle20: 6
+    NFAmmunitionBoxRifle30: 6
+    NFAmmunitionBoxShellShotgunBuckshot: 6
+    NFAmmunitionBoxShellShotgunBeanbag: 6
 
 - type: vendingMachineInventory
   id: PickNPackPOIInventory

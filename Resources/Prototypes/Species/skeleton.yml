@@ -28,13 +28,21 @@
     RLeg: MobSkeletonRLeg
     LFoot: MobSkeletonLFoot
     RFoot: MobSkeletonRFoot
+    UndergarmentTop: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
 
 - type: markingPoints
   id: MobSkeletonMarkingLimits
   onlyWhitelisted: true
   points:
-    hair:
+    Hair:
       points: 0
+      required: false
+    UndergarmentTop:
+      points: 1
+      required: false
+    UndergarmentBottom:
+      points: 1
       required: false
 
 - type: humanoidBaseSprite

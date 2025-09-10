@@ -12,14 +12,12 @@
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/absintheglass.rsi
     state: icon_empty
-  metamorphicMaxFillLevels: 5
+  metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   metabolisms:
     Drink:
       effects:
-      - !type:SatiateThirst
-        factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.3
@@ -29,11 +27,12 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.05
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
+      - !type:GenericStatusEffect
         conditions:
         - !type:ReagentThreshold
           min: 10
+        key: SeeingRainbows
+        component: SeeingRainbows
         type: Add
         time: 5
         refresh: false
@@ -46,7 +45,6 @@
         conditions:
         - !type:ReagentThreshold
           min: 10
-# Forge-Change-End
 - type: reagent
   id: Ale
   name: reagent-name-ale

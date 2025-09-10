@@ -2072,7 +2072,7 @@ entities:
       parent: 1
     missingComponents:
     - Construction
-    - Destructible 
+    - Destructible
 - proto: AirlockHatchMaintenance
   entities:
   - uid: 41
@@ -9460,18 +9460,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 17.5,1.5
-      parent: 1
-- proto: ComputerShipyardColiseum
-  entities:
-  - uid: 956
-    components:
-    - type: Transform
-      pos: 12.5,8.5
-      parent: 1
-  - uid: 957
-    components:
-    - type: Transform
-      pos: 14.5,8.5
       parent: 1
 - proto: ComputerTabletopRadar
   entities:

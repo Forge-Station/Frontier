@@ -358,12 +358,13 @@
 - type: technology
   id: NFHardsuitsBasic
   name: nf-research-technology-hardsuits-basic
-  entityIcon: ClothingOuterHardsuitBasic
+  entityIcon: ClothingOuterHardsuitSpatio
   discipline: NFEngineering
   tier: 1
   cost: 2500
   recipeUnlocks:
-  - ClothingOuterHardsuitBasic
+  - ClothingOuterHardsuitSpatio
+  - ClothingOuterHardsuitPilot
   position: 0, 8
 
 - type: technology
@@ -375,8 +376,6 @@
   cost: 5000
   recipeUnlocks:
   - ClothingOuterHardsuitSalvage
-  - ClothingOuterHardsuitSpatio
-  - ClothingOuterHardsuitPilot
   technologyPrerequisites:
   - NFHardsuitsBasic
   position: 1, 8
@@ -465,7 +464,6 @@
   cost: 15000
   recipeUnlocks:
   - ClothingOuterHardsuitMaximPrototype
-  - ClothingOuterHardsuitMaxims
   prerequisiteLineType: Tree
   technologyPrerequisites:
   - NFHardsuitsExperimentalRD
@@ -481,7 +479,6 @@
   cost: 20000
   recipeUnlocks:
   - ClothingOuterHardsuitScaf
-  - ClothingOuterHardsuitMercenaryElite #CorvaxFrontier
   technologyPrerequisites:
   - NFHardsuitsArmored
   position: 5, 9
@@ -568,6 +565,7 @@
   recipeUnlocks:
   - MedicalAssemblerMachineCircuitboard
   - HotplateMachineCircuitboard
+  - DefibrillatorCompact
   technologyPrerequisites:
   - NFBasicMedicine
   position: 2, 11
@@ -807,7 +805,7 @@
   - HonkerTargetingElectronics
   technologyPrerequisites:
   - NFRipleyAPLU
-  position: 2, 17
+  position: 2, 16
 
 - type: technology
   id: NFHornRoboticsEquipment
@@ -820,7 +818,7 @@
   - MechEquipmentHorn
   technologyPrerequisites:
   - NFHONKMech
-  position: 3, 17
+  position: 2, 17
 
 # region Entertainment & Comms
 
@@ -1064,6 +1062,7 @@
   - ElectricGrillMachineCircuitboard
   - BoozeDispenserMachineCircuitboard
   - SodaDispenserMachineCircuitboard
+  - ImpCoffeeMachineCircuitboard
   technologyPrerequisites:
   - NFAdvancedHydroponicsEquipment
   position: 1, 24
@@ -1641,6 +1640,18 @@
   - NFBluespaceOreStorage
   position: 4, 38
 
+- type: technology
+  id: NFBluespaceGasTanks
+  name: nf-research-technology-bluespace-gas-tanks
+  entityIcon: BluespaceAirTank
+  discipline: NFSalvage
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - BluespaceAirTank
+  technologyPrerequisites:
+  - NFBluespaceStorage
+  position: 4, 3
 # region Munitions
 
 - type: technology

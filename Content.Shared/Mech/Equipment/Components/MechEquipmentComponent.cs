@@ -22,6 +22,9 @@ public sealed partial class MechEquipmentComponent : Component
     /// The mech that the equipment is inside of.
     /// </summary>
     [ViewVariables] public EntityUid? EquipmentOwner;
+
+    [DataField("canBeUsed")] // Forge-Change
+    public bool CanBeUsed = true;
 }
 
 // Forge-Change-Start

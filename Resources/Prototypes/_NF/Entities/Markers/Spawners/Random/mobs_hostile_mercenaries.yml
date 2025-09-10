@@ -73,6 +73,9 @@
     offset: 0.0
     rarePrototypes:
     - SpawnMobMercenaryT3
+    # Forge-Change Mechs
+    - MobMercenaryGygax
+    - MobMercenaryDurand
     rareChance: 0.1
 
 - type: entity
@@ -144,6 +147,9 @@
     offset: 0.0
     rarePrototypes:
     - SpawnMobMercenaryEVAT3
+    # Forge-Change Mechs
+    - MobMercenaryGygax
+    - MobMercenaryDurand
     rareChance: 0.05
 
 - type: entity

@@ -245,14 +245,6 @@ entities:
     - type: BecomesStation
       id: Interceptor
     - type: SpreaderGrid
-- proto: ActionToggleLight
-  entities:
-  - uid: 131
-    components:
-    - type: Transform
-      parent: 120
-    - type: InstantAction
-      container: 120
 - proto: AirlockGlassShuttleNfsdLocked
   entities:
   - uid: 7
@@ -1151,29 +1143,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -9.5,-2.5
       parent: 1
-- proto: LampInterrogator
-  entities:
-  - uid: 120
-    components:
-    - type: Transform
-      pos: -3.0243516,-1.0670333
-      parent: 1
-    - type: HandheldLight
-      toggleActionEntity: 131
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 131
-    - type: Physics
-      canCollide: True
-    - type: ActionsContainer
 - proto: LockerNfsdEvidence
   entities:
   - uid: 77
