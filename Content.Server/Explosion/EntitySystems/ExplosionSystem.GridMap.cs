@@ -31,7 +31,7 @@ public sealed partial class ExplosionSystem
 
         foreach (var tileRef in _map.GetAllTiles(ev.EntityUid, grid))
         {
-            if (IsEdge((ev.EntityUid, grid), tileRef.GridIndices, out var dir)) // Forge-Change
+            if (IsEdge((ev.EntityUid, grid), tileRef.GridIndices, out var dir))
                 edges.Add(tileRef.GridIndices, dir);
         }
     }
@@ -310,7 +310,7 @@ public sealed partial class ExplosionSystem
         for (var i = 0; i < NeighbourVectors.Length; i++)
         {
             if (!_mapSystem.TryGetTileRef(grid, grid.Comp, index + NeighbourVectors[i], out var neighborTile) || neighborTile.Tile.IsEmpty)
-                spaceDirections |= (NeighborFlag)(1 << i);
+                spaceDirections |= (NeighborFlag) (1 << i);
         }
 
         return spaceDirections != NeighborFlag.Invalid;

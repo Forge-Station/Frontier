@@ -105,6 +105,12 @@
       - id: NFWeaponRifleAssaultM90GrenadeLauncher # Frontier: WeaponRifleM90GrenadeLauncher<NFWeaponRifleAssaultM90GrenadeLauncher
       - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
         amount: 2
+      - id: NFGrenadeBlast # Frontier: GrenadeBlast<NFGrenadeBlast
+        amount: 2
+      - id: NFGrenadeFlash # Frontier: GrenadeFlash<NFGrenadeFlash
+        amount: 2
+      - id: NFGrenadeFrag # Frontier: GrenadeFrag<NFGrenadeFrag
+        amount: 2
       # - id: NFGrenadeBlast # Forge-Change
       #   amount: 2
       # - id: NFGrenadeFlash # Forge-Change
@@ -211,7 +217,7 @@
         - id: ClothingEyesChameleon
         - id: ClothingHeadsetChameleon
         - id: ClothingShoesChameleon
-        - id: BarberScissors
+        - id: ChameleonControllerImplanter
     - type: StaticPrice #CorvaxFrontier
       price: 300
 
@@ -328,3 +334,23 @@
         amount: 2
       - id: SyndieTrickyBomb
         amount: 2
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateFilledStarterKit
+  name: basic operative bundle
+  description: "Contains a weapon, medical supplies, breaching tools, spare ammo, and some simple utilities."
+  components:
+  - type: StorageFill
+    contents:
+      - id: NFWeaponSubMachineGunC20r # Frontier: WeaponSubMachineGunC20r<NFWeaponSubMachineGunC20r
+      - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
+        amount: 2 # Frontier: 3<2
+      - id: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+      - id: SyndicateJawsOfLife
+      - id: C4
+        amount: 2
+      - id: MedkitCombatFilled
+      - id: EmpImplanter
+      - id: ClothingShoesBootsMagSyndie
+      - id: AgentIDCard

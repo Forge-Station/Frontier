@@ -67,6 +67,16 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 12
 
+      - tag: CapacitorStockPart
+        name: construction-graph-component-capacitor
+        store: capacitor-container
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+
+      - tool: Screwing
+        doAfter: 1
+
 #i omitted the steps involving inserting machine parts because
 #currently mechs don't support upgrading. add them back in once that's squared away.
 
@@ -87,6 +97,16 @@
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 14
+
+      - tag: MechAirTank
+        name: construction-graph-component-exosuit-air-tank
+        store: gas-tank-container
+        icon:
+          sprite: Objects/Specific/Mech/mecha_equipment.rsi
+          state: mecha_air_tank
+
+      - tool: Anchoring
+        doAfter: 1
 
       - material: Steel
         amount: 5

@@ -1,7 +1,10 @@
+using Content.Server._NF.Mech.Equipment.Components; // Forge-Change
+using Content.Server.Mech.Equipment.Components; // Forge-Change
 using Content.Server.Popups;
 using Content.Shared.Popups; // Forge-Change
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
+using Content.Shared.Mech; // Forge-Change
 using Content.Shared.Mech.Components;
 using Content.Shared.Mech.Equipment.Components;
 using Content.Shared.Whitelist;
@@ -23,6 +26,8 @@ public sealed class MechEquipmentSystem : EntitySystem
     {
         SubscribeLocalEvent<MechEquipmentComponent, AfterInteractEvent>(OnUsed);
         SubscribeLocalEvent<MechEquipmentComponent, InsertEquipmentEvent>(OnInsertEquipment);
+
+        SubscribeLocalEvent<MechEquipmentComponent, MechEquipmentUiStateReadyEvent>(OnGetUIState); // Forge-Change
     }
 
     private void OnUsed(EntityUid uid, MechEquipmentComponent component, AfterInteractEvent args)
@@ -65,5 +70,13 @@ public sealed class MechEquipmentSystem : EntitySystem
         _mech.InsertEquipment(args.Args.Target.Value, uid);
 
         args.Handled = true;
+    }
+
+    private void OnGetUIState(EntityUid uid, MechEquipmentComponent component, MechEquipmentUiStateReadyEvent args) // Forge-Change
+    {
+        if (HasComp<MechGrabberComponent>(uid) || HasComp<MechSoundboardComponent>(uid) || HasComp<MechForkComponent>(uid))
+            return;
+
+        args.States.Add(GetNetEntity(uid), null);
     }
 }

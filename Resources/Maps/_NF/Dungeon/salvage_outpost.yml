@@ -13462,13 +13462,6 @@ entities:
     - type: Transform
       pos: 12.5,30.5
       parent: 1653
-- proto: SpawnVehicleHoverbikeNF
-  entities:
-  - uid: 1739
-    components:
-    - type: Transform
-      pos: 12.5,32.5
-      parent: 1653
 - proto: StasisBed
   entities:
   - uid: 1450

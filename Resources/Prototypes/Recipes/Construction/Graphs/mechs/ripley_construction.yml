@@ -67,6 +67,16 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 12
 
+      - tag: CapacitorStockPart
+        name: construction-graph-component-capacitor
+        store: capacitor-container
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+
+      - tool: Screwing
+        doAfter: 1
+
 #i omitted the steps involving inserting machine parts because
 #currently mechs don't support upgrading. add them back in once that's squared away.
 

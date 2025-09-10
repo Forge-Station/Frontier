@@ -34,16 +34,16 @@
     state: mecha_immolator
   - type: Gun
     fireRate: 1
-    selectedMode: SemiAuto
+    selectedMode: FullAuto
     availableModes:
-      - SemiAuto
+      - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
-    proto: NFRedSpecialLaser
-    fireCost: 40
+    proto: ImmolationLaser
+    fireCost: 100
   - type: Battery
-    maxCharge: 40
+    maxCharge: 100
   - type: Appearance
 
 - type: entity
@@ -64,7 +64,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
   - type: HitscanBatteryAmmoProvider
-    proto: NFRedHeavyLaser
+    proto: FiredartLaser
     fireCost: 30
   - type: Battery
     maxCharge: 30
@@ -88,7 +88,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
   - type: HitscanBatteryAmmoProvider
-    proto: NFRedMediumLaser
+    proto: FiredartLaser
     fireCost: 10
   - type: Battery
     maxCharge: 10
@@ -112,7 +112,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
   - type: HitscanBatteryAmmoProvider
-    proto: NFXrayLaser
+    proto: ForgeXrayLaser
     fireCost: 120
   - type: Appearance
   - type: Battery

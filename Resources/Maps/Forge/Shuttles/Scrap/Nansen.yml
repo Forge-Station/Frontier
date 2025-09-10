@@ -5696,23 +5696,6 @@ entities:
     - type: ContainedSolution
       containerName: food
       container: 87
-  - uid: 91
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 90
-    - type: Solution
-      solution:
-        maxVol: 10
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Fiber
-          Quantity: 10
-    - type: ContainedSolution
-      containerName: food
-      container: 90
   - uid: 105
     components:
     - type: MetaData
@@ -6062,133 +6045,6 @@ entities:
     - type: ContainedSolution
       containerName: food
       container: 160
-- proto: ActionToggleInternals
-  entities:
-  - uid: 94
-    components:
-    - type: Transform
-      parent: 93
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 93
-  - uid: 97
-    components:
-    - type: Transform
-      parent: 96
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 96
-  - uid: 163
-    components:
-    - type: Transform
-      parent: 162
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 162
-  - uid: 166
-    components:
-    - type: Transform
-      parent: 165
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 165
-  - uid: 168
-    components:
-    - type: Transform
-      parent: 167
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 167
-  - uid: 174
-    components:
-    - type: Transform
-      parent: 173
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 173
-- proto: ActionToggleJetpack
-  entities:
-  - uid: 95
-    components:
-    - type: Transform
-      parent: 93
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 93
-  - uid: 169
-    components:
-    - type: Transform
-      parent: 167
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 167
-  - uid: 175
-    components:
-    - type: Transform
-      parent: 173
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 173
-- proto: ActionToggleLight
-  entities:
-  - uid: 177
-    components:
-    - type: Transform
-      parent: 176
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 176
-- proto: ActionToggleMagboots
-  entities:
-  - uid: 92
-    components:
-    - type: Transform
-      parent: 90
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 90
-- proto: ActionToggleSuitPiece
-  entities:
-  - uid: 29
-    components:
-    - type: Transform
-      parent: 26
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 26
-      entIcon: 27
-  - uid: 33
-    components:
-    - type: Transform
-      parent: 30
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 30
-      entIcon: 31
-  - uid: 37
-    components:
-    - type: Transform
-      parent: 34
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 34
-      entIcon: 35
-  - uid: 41
-    components:
-    - type: Transform
-      parent: 38
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 38
-      entIcon: 39
-  - uid: 45
-    components:
-    - type: Transform
-      parent: 42
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 42
-      entIcon: 43
 - proto: AdvancedMineralScanner
   entities:
   - uid: 178
@@ -6612,31 +6468,15 @@ entities:
     components:
     - type: Transform
       parent: 89
-    - type: GasTank
-      toggleActionEntity: 97
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 97
     - type: InsideEntityStorage
   - uid: 165
     components:
     - type: Transform
       parent: 164
-    - type: GasTank
-      toggleActionEntity: 166
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 166
     - type: InsideEntityStorage
 - proto: APCBasic
   entities:
@@ -16567,88 +16407,6 @@ entities:
       parent: 1985
     - type: Physics
       canCollide: False
-- proto: ClothingHeadHelmetEVALarge
-  entities:
-  - uid: 27
-    components:
-    - type: Transform
-      parent: 26
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 28
-    - type: AttachedClothing
-      attachedUid: 26
-  - uid: 31
-    components:
-    - type: Transform
-      parent: 30
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 32
-    - type: AttachedClothing
-      attachedUid: 30
-  - uid: 35
-    components:
-    - type: Transform
-      parent: 34
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 36
-    - type: AttachedClothing
-      attachedUid: 34
-  - uid: 39
-    components:
-    - type: Transform
-      parent: 38
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 40
-    - type: AttachedClothing
-      attachedUid: 38
-  - uid: 43
-    components:
-    - type: Transform
-      parent: 42
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 44
-    - type: AttachedClothing
-      attachedUid: 42
 - proto: ClothingHeadsetAltCargo
   entities:
   - uid: 2085
@@ -16945,131 +16703,36 @@ entities:
     components:
     - type: Transform
       parent: 25
-    - type: ToggleableClothing
-      clothingUid: 27
-      actionEntity: 29
-    - type: ContainerContainer
-      containers:
-        toggleable-clothing: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 27
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 29
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
     - type: InsideEntityStorage
   - uid: 30
     components:
     - type: Transform
       parent: 25
-    - type: ToggleableClothing
-      clothingUid: 31
-      actionEntity: 33
-    - type: ContainerContainer
-      containers:
-        toggleable-clothing: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 31
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 33
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
     - type: InsideEntityStorage
   - uid: 34
     components:
     - type: Transform
       parent: 25
-    - type: ToggleableClothing
-      clothingUid: 35
-      actionEntity: 37
-    - type: ContainerContainer
-      containers:
-        toggleable-clothing: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 35
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 37
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
     - type: InsideEntityStorage
   - uid: 38
     components:
     - type: Transform
       parent: 25
-    - type: ToggleableClothing
-      clothingUid: 39
-      actionEntity: 41
-    - type: ContainerContainer
-      containers:
-        toggleable-clothing: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 39
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 41
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
     - type: InsideEntityStorage
   - uid: 42
     components:
     - type: Transform
       parent: 25
-    - type: ToggleableClothing
-      clothingUid: 43
-      actionEntity: 45
-    - type: ContainerContainer
-      containers:
-        toggleable-clothing: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 43
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 45
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
     - type: InsideEntityStorage
 - proto: ClothingOuterSuitRad
   entities:
@@ -17134,24 +16797,8 @@ entities:
     components:
     - type: Transform
       parent: 89
-    - type: ToggleClothing
-      actionEntity: 92
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 92
-        solution@food: !type:ContainerSlot
-          ent: 91
-    - type: Actions
-      actions: []
     - type: InsideEntityStorage
   - uid: 829
     components:
@@ -25475,19 +25122,8 @@ entities:
     components:
     - type: Transform
       parent: 89
-    - type: GasTank
-      toggleActionEntity: 94
-    - type: Jetpack
-      toggleActionEntity: 95
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 95
-          - 94
     - type: InsideEntityStorage
 - proto: JetpackMining
   entities:
@@ -25507,36 +25143,14 @@ entities:
     components:
     - type: Transform
       parent: 164
-    - type: GasTank
-      toggleActionEntity: 168
-    - type: Jetpack
-      toggleActionEntity: 169
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 169
-          - 168
     - type: InsideEntityStorage
   - uid: 173
     components:
     - type: Transform
       pos: -0.27175903,1.1165342
       parent: 1
-    - type: GasTank
-      toggleActionEntity: 174
-    - type: Jetpack
-      toggleActionEntity: 175
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 175
-          - 174
   - uid: 3179
     components:
     - type: Transform
@@ -25573,20 +25187,6 @@ entities:
     - type: Transform
       pos: -15.007082,-8.282196
       parent: 1
-    - type: HandheldLight
-      toggleActionEntity: 177
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 177
-    - type: ActionsContainer
 - proto: LightBulb
   entities:
   - uid: 113
@@ -28652,14 +28252,6 @@ entities:
     - type: Transform
       pos: -0.61998963,-2.3637195
       parent: 1
-    - type: GasTank
-      toggleActionEntity: 163
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 163
   - uid: 3468
     components:
     - type: Transform

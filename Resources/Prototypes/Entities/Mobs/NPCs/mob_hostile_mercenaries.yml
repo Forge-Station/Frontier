@@ -1,0 +1,244 @@
+#region Tier 3
+- type: entity
+  name: gygax
+  categories: [ HideSpawnMenu ]
+  parent:
+  - MobStaminaSpecial
+  - MobMercenaryBase
+  #- MobLaserReflect # Added to prevent laser abuse from players
+  id: MobMercenaryGygax
+  description: |-
+   While lightly armored, the Gygax has incredible mobility thanks to its ability that lets it smash through walls at high speeds.
+  components:
+  - type: Loadout
+    prototypes:
+    - MobHumanoidExplorerGearMechT3
+  - type: Damageable
+    damageModifierSet: MobRogueSiliconDamageModifierSet
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Objects/Specific/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: gygax
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: gygax
+      Critical:
+        Base: gygax-broken
+      Dead:
+        Base: gygax-broken
+  - type: Bloodstream
+    bloodReagent: WeldingFuel
+    bloodMaxVolume: 100
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      205: Dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SpawnMobMercenaryT2:
+            min: 1
+            max: 1
+          GygaxChassis:
+            min: 1
+            max: 1
+          GygaxCentralElectronics:
+            min: 1
+            max: 1
+          GygaxPeripheralsElectronics:
+            min: 1
+            max: 1
+          GygaxTargetingElectronics:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: PointLight
+    color: green
+    radius: 5
+    energy: 2
+  - type: Gun
+    fireRate: 6
+    shotsPerBurst: 3
+    burstCooldown: 4.5
+    selectedMode: Burst
+    availableModes:
+      - Burst
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+  - type: BasicEntityAmmoProvider
+    proto: NFCartridgeRifle30
+    capacity: 6
+    count: 6
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 3.5
+
+- type: entity
+  name: durand
+  categories: [ HideSpawnMenu ]
+  parent:
+  - MobStaminaSpecial
+  - MobMercenaryBase
+  #- MobLaserReflect # Added to prevent laser abuse from players
+  id: MobMercenaryDurand
+  description: |-
+   A slow but beefy combat exosuit that is extra scary in confined spaces due to its punches. Xenos hate it!
+  components:
+  - type: Loadout
+    prototypes:
+    - MobHumanoidExplorerGearMechT3
+  - type: Damageable
+    damageModifierSet: MobRogueSiliconDamageModifierSet
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Objects/Specific/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: durand
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: durand
+      Critical:
+        Base: durand-broken
+      Dead:
+        Base: durand-broken
+  - type: Bloodstream
+    bloodReagent: WeldingFuel
+    bloodMaxVolume: 100
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      255: Dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SpawnMobMercenaryT2:
+            min: 1
+            max: 1
+          DurandChassis:
+            min: 1
+            max: 1
+          DurandCentralElectronics:
+            min: 1
+            max: 1
+          DurandPeripheralsElectronics:
+            min: 1
+            max: 1
+          DurandTargetingElectronics:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: PointLight
+    color: green
+    radius: 5
+    energy: 2
+  - type: BasicEntityAmmoProvider
+    proto: NFShellShotgunBuckshot
+    capacity: 2
+    count: 2
+  - type: Gun
+    showExamineText: false
+    fireRate: 1.5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.5
+    baseSprintSpeed: 2
+
+#region Space, T3
+- type: entity
+  id: MobMercenaryGygaxEVA
+  parent: MobMercenaryGygax
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 155
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SpawnMobMercenaryEVAT2:
+            min: 1
+            max: 1
+          GygaxChassis:
+            min: 1
+            max: 1
+          GygaxCentralElectronics:
+            min: 1
+            max: 1
+          GygaxPeripheralsElectronics:
+            min: 1
+            max: 1
+          GygaxTargetingElectronics:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: MobMercenaryDurandEVA
+  parent: MobMercenaryDurand
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 155
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SpawnMobMercenaryEVAT2:
+            min: 1
+            max: 1
+          DurandChassis:
+            min: 1
+            max: 1
+          DurandCentralElectronics:
+            min: 1
+            max: 1
+          DurandPeripheralsElectronics:
+            min: 1
+            max: 1
+          DurandTargetingElectronics:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

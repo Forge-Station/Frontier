@@ -48,6 +48,10 @@
           Quantity: 10
   - type: Item
     heldPrefix: gold
+  - type: Tag
+    tags:
+    - Ore
+    - OreGold
   - type: PirateBountyItem # Frontier
     id: Gold # Frontier
   - type: MinersBountyItem # Frontier
@@ -160,6 +164,10 @@
           Quantity: 10
   - type: Item
     heldPrefix: plasma
+  - type: Tag
+    tags:
+    - Ore
+    - OrePlasma
   - type: NFFuel # Frontier
   - type: MinersBountyItem # Frontier
     id: PlasmaOre
@@ -198,6 +206,10 @@
     heldPrefix: silver
   - type: MinersBountyItem # Frontier
     id: SilverOre
+  - type: Tag
+    tags:
+    - Ore
+    - OreSilver
 
 - type: entity
   parent: SilverOre
@@ -274,6 +286,10 @@
         canReact: false
   - type: Item
     heldPrefix: uranium
+  - type: Tag
+    tags:
+    - Ore
+    - OreUranium
   - type: NFFuel # Frontier
   - type: MinersBountyItem # Frontier
     id: UraniumOre
@@ -319,6 +335,10 @@
           Quantity: 5
   - type: Item
     heldPrefix: bananium
+  - type: Tag
+    tags:
+    - Ore
+    - OreBananium
   - type: NFFuel # Frontier
   - type: MinersBountyItem # Frontier
     id: BananiumOre
@@ -430,3 +450,4 @@
   components:
   - type: Stack
     count: 1
+

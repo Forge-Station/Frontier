@@ -6,6 +6,12 @@
   - type: MobMover
   - type: Mech
     maxEquipmentAmount: 2
+    batteryWhitelist:
+      tags:
+        - PowerCage
+    gasTankWhitelist:
+      tags:
+        - MechAirTank
   - type: MechAir
   - type: AirFilter
     # everything except oxygen and nitrogen
@@ -84,6 +90,8 @@
       mech-pilot-slot: !type:ContainerSlot
       mech-equipment-container: !type:Container
       mech-battery-slot: !type:ContainerSlot
+      mech-gas-tank-slot: !type:ContainerSlot  # Forge-Change
+      mech-capacitor-slot: !type:ContainerSlot # Forge-Change
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: BaseArmor
@@ -107,6 +115,18 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
     # Forge-Change start
+  - type: ItemSlots
+    slots:
+      mech-battery-slot:
+        disableEject: true
+        whitelist:
+          tags:
+            - PowerCage
+      mech-gas-tank-slot:
+        disableEject: true
+        whitelist:
+          tags:
+            - MechAirTank
   - type: PointLight
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
@@ -169,7 +189,9 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHigh
+      - PowerCageSmall # Forge-Change
+      mech-capacitor-slot: # Forge-Change
+      - CapacitorStockPart
 
 # H.O.N.K.
 - type: entity
@@ -209,9 +231,11 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHigh
+      - PowerCageSmall # Forge-Change
       mech-gas-tank-slot: # Forge-Change
       - MechAirTankFilled
+      mech-capacitor-slot: # Forge-Change
+      - CapacitorStockPart
 
 # HAMTR
 - type: entity
@@ -259,7 +283,9 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHigh
+      - PowerCageSmall # Forge-Change
+      mech-capacitor-slot: # Forge-Change
+      - CapacitorStockPart
 
 # Vim!!!!!!!
 
@@ -332,4 +358,6 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHigh
+      - PowerCageSmall # Forge-Change
+      mech-capacitor-slot: # Forge-Change
+      - CapacitorStockPart

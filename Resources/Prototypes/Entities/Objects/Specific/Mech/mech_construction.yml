@@ -144,7 +144,8 @@
   - type: ContainerContainer
     containers:
       battery-container: !type:Container
-      gas-tank-container: !type:Container
+      gas-tank-container: !type:Container  # Forge-Change
+      capacitor-container: !type:Container # Forge-Change
   - type: MechAssemblyVisuals
     statePrefix: ripley
   - type: Sprite
@@ -273,7 +274,8 @@
   - type: ContainerContainer
     containers:
       battery-container: !type:Container
-      gas-tank-container: !type:Container
+      gas-tank-container: !type:Container  # Forge-Change
+      capacitor-container: !type:Container # Forge-Change
   - type: MechAssemblyVisuals
     statePrefix: honker
   - type: Sprite
@@ -402,7 +404,8 @@
   - type: ContainerContainer
     containers:
       battery-container: !type:Container
-      gas-tank-container: !type:Container
+      gas-tank-container: !type:Container  # Forge-Change
+      capacitor-container: !type:Container # Forge-Change
   - type: MechAssemblyVisuals
     statePrefix: hamtr
   - type: Sprite
@@ -479,7 +482,8 @@
   - type: ContainerContainer
     containers:
       battery-container: !type:Container
-      gas-tank-container: !type:Container
+      gas-tank-container: !type:Container  # Forge-Change
+      capacitor-container: !type:Container # Forge-Change
   - type: MechAssemblyVisuals
     statePrefix: vim
   - type: Sprite
