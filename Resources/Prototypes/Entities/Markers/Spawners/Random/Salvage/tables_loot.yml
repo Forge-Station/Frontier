@@ -296,8 +296,8 @@
   table: !type:GroupSelector
     children:
     - id: AdvancedMineralScanner
-#    - id: BlueprintFulton # Frontier
-#    - id: BlueprintSeismicCharge # Frontier
+    - id: BlueprintFulton # Frontier
+    - id: BlueprintSeismicCharge # Frontier
     - id: WeaponCrusherGlaive
     - id: ClothingOuterHardsuitSalvage
     - id: ChemistryBottleOmnizine

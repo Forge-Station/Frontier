@@ -22,8 +22,8 @@
     tags:
     - BlueprintAutolathe
 
-- type: entity
-  parent: BaseBlueprint
+- type: entity #Forge, Corvax Frontier
+  parent: NFBaseBlueprint
   id: BlueprintFulton
   name: fulton blueprint
   description: A blueprint with a schematic of a fulton. It can be inserted into an autolathe.
@@ -32,9 +32,16 @@
     providedRecipes:
     - Fulton
     - FultonBeacon
+  - type: Tag
+    tags:
+    - NFBlueprintProtolathe
+    - BlueprintAutolathe
+    - NFBlueprintMercenaryTechfab
+    - Document
+    - Paper
 
-- type: entity
-  parent: BaseBlueprint
+- type: entity #Forge, Corvax Frontier
+  parent: NFBaseBlueprint
   id: BlueprintSeismicCharge
   name: seismic charge blueprint
   description: A blueprint with a schematic of a seismic charge. It can be inserted into an autolathe.
@@ -42,6 +49,14 @@
   - type: Blueprint
     providedRecipes:
     - SeismicCharge
+  - type: Tag
+    tags:
+    - NFBlueprintProtolathe
+    - BlueprintAutolathe
+    - NFBlueprintMercenaryTechfab
+    - Document
+    - Paper
+
 
 - type: entity
   parent: BaseBlueprint

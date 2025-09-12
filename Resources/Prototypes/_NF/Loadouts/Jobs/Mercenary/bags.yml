@@ -33,3 +33,29 @@
   price: 0
   equipment:
     back: ClothingBackpackMessengerPrivateSecurity
+
+
+#Forge-Change
+- type: loadout
+  id: MercenaryClothingBackpackArcadia
+  price: 1500
+  equipment:
+    back: ClothingBackpackArcadia
+
+- type: loadout
+  id: MercenaryClothingBackpackDuffelArcadia
+  price: 1500
+  equipment:
+    back: ClothingBackpackDuffelArcadia    
+  
+- type: loadout
+  id: MercenaryClothingBackpackSatchelArcadia
+  price: 1500
+  equipment:
+    back: ClothingBackpackSatchelArcadia   
+
+- type: loadout
+  id: MercenaryClothingBackpackMessengerArcadia
+  price: 1500
+  equipment:
+    back: ClothingBackpackMessengerArcadia  

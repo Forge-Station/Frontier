@@ -85,3 +85,32 @@
   price: 1250
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryPilot
+
+#Forge-Change
+- type: loadout
+  id: MercenaryClothingUniformJumpskirtArcadia
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 1250
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtArcadia
+
+- type: loadout
+  id: MercenaryClothingUniformJumpsuitArcadia
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 1250
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitArcadia
+
+- type: loadout
+  id: MercenaryClothingUniformJumpsuitMilitaryArcadiaTac
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 1750
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryArcadiaTac
+

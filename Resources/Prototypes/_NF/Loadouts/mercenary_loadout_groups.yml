@@ -12,6 +12,9 @@
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenary
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryMedic
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryCaptain
+  - MercenaryClothingUniformJumpskirtArcadia #Forge-Change
+  - MercenaryClothingUniformJumpsuitArcadia #Forge-Change
+  - MercenaryClothingUniformJumpsuitMilitaryArcadiaTac #Forge-Change
   subgroups:
   - PilotJumpsuit
   - ContractorJumpsuit
@@ -29,6 +32,10 @@
   - MercenaryClothingBackpackMessengerMercenary
   - MercenaryClothingBackpackDuffelPrivateSecurity
   - MercenaryClothingBackpackMessengerPrivateSecurity
+  - MercenaryClothingBackpackArcadia #Corvax Frontier
+  - MercenaryClothingBackpackDuffelArcadia #Forge-Change
+  - MercenaryClothingBackpackSatchelArcadia #Forge-Change
+  - MercenaryClothingBackpackMessengerArcadia #Forge-Change
   - SecurityBackpack
   - SecuritySatchel
   - SecurityDuffel
@@ -50,6 +57,9 @@
   - MercenaryClothingOuterArmorPunkRed # Punkish (Static visuals)
   - MercenaryClothingOuterArmorPunkRandomized # Punkish (Randomized visuals)
   - MercenaryClothingOuterArmorCaptainCarapace
+  - MercenaryClothingOuterEVASuitArcadia #Forge-Change
+  - MercenaryClothingOuterWinterArcadia #Forge-Change
+  - MercenaryClothingOuterCoatArcadiaTrench #Forge-Change
   subgroups:
   - PilotOuterClothing
   - ContractorOuterClothing
@@ -109,6 +119,7 @@
   - MercenaryClothingHandsGlovesMercFingerless
   - MercenaryClothingHandsMercenaryGlovesCombat
   - MercenaryClothingHandsGlovesCombat
+  - MercenaryClothingHandsGlovesArcadiaCombat #Forge-Change
   subgroups:
   - PilotGloves
   - ContractorGloves
@@ -131,6 +142,7 @@
   loadouts:
   - MercenaryClothingEyesGlassesMercenary
   - MercenaryClothingEyesGlassesSunglasses
+  - MercenaryClothingEyesArcadiaVisor #Forge-Change
   subgroups:
   - PilotGlasses
   - ContractorGlasses
@@ -141,6 +153,7 @@
   loadouts:
   - MercenaryClothingMaskGasMercenary
   - MercenaryClothingMaskGasSecurity
+  - MercenaryClothingMaskArcadia #Forge-Change
   subgroups:
   - PilotFace
   - ContractorFace
@@ -156,5 +169,6 @@
   - MercenaryClothingBeltMilitaryWebbing
   - MercenaryClothingBeltMilitaryWebbingMed
   - MercenaryClothingBeltSecurity
+  - MercenaryClothingBeltArcadia #Forge-Change
   subgroups:
   - ContractorBelt
