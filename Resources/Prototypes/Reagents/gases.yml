@@ -424,6 +424,9 @@
             Cellular: 1
       - !type:ModifyStatusEffect # Forge-Change
         effectProto: StatusEffectSeeingRainbow # Forge-Change
+      - !type:GenericStatusEffect
+        key: SeeingRainbows
+        component: SeeingRainbows
         type: Add
         time: 100
         refresh: false

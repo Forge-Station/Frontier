@@ -11,8 +11,8 @@
   - Igniter
   - ModularReceiver
   - MicroManipulatorStockPart
-  - MatterBinStockPart
-  - CapacitorStockPart
+  - MatterBinStockPart # Frontier
+  - CapacitorStockPart # Frontier
   - ConveyorBeltAssembly
 
 - type: latheRecipePack
@@ -51,7 +51,7 @@
   - SignallerAdvanced
   - NFClothingEyesNightVisionGoggles # Forge
   - ClothingEyesThermalVisionGoggles  # Forge
-
+  - BluespaceAirTank
 - type: latheRecipePack
   id: SalvageSecurityBoards
   recipes: [] # Frontier: empty list

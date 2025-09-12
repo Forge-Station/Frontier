@@ -65,7 +65,7 @@
   - RipleyUpgradeKit
   technologyPrerequisites:
   - NFRipleyAPLU
-  position: 2, 16
+  position: 2, 18
 
 - type: technology
   id: NFClarkeMech
@@ -166,7 +166,7 @@
   id: NFShotgunIncendiaryMech
   name: nf-research-technology-mech-shotgun-incendiary
   entityIcon: WeaponMechCombatShotgunIncendiary
-  discipline: NFArsenalMercenary
+  discipline: NFArsenalNfsd
   tier: 2
   cost: 7500
   recipeUnlocks:
@@ -180,7 +180,6 @@
   name: nf-research-technology-durand-mech
   entityIcon: MechDurand
   discipline: NFArsenalMercenary
-  secondaryDiscipline: NFArsenalNfsd
   tier: 3
   cost: 20000
   recipeUnlocks:
@@ -216,7 +215,7 @@
   id: NFImmolationGunMech
   name: nf-research-technology-mech-immolation-laser
   entityIcon: WeaponMechCombatImmolationGun
-  discipline: NFArsenalMercenary
+  discipline: NFArsenalNfsd
   tier: 3
   cost: 15000
   recipeUnlocks:
@@ -229,7 +228,7 @@
   id: NFXRayGunMech
   name: nf-research-technology-mech-xray-laser
   entityIcon: WeaponMechCombatXRayProjector
-  discipline: NFArsenalMercenary
+  discipline: NFArsenalNfsd
   tier: 3
   cost: 20000
   recipeUnlocks:

@@ -66,26 +66,26 @@
   - BoxSmokeKS23 # Forge-Change
   - BoxFlashbangKS23 # Forge-Change
 
-# - type: technology
-#   id: UraniumMunitions
-#   name: research-technology-uranium-munitions
-#   icon:
-#     sprite: Objects/Materials/Sheets/other.rsi
-#     state: uranium
-#   discipline: Arsenal
-#   tier: 1
-#   cost: 7500
-#   recipeUnlocks:
-#   - MagazineRifleUranium
-#   - MagazinePistolUranium
-#   - MagazinePistolSubMachineGunUranium
-#   - MagazineLightRifleUranium
-#   - SpeedLoaderMagnumUranium
-#   - MagazineBoxPistolUranium
-#   - MagazineBoxMagnumUranium
-#   - MagazineBoxLightRifleUranium
-#   - MagazineBoxRifleUranium
-#   - BoxShotgunUranium
+- type: technology
+  id: UraniumMunitions
+  name: research-technology-uranium-munitions
+  icon:
+    sprite: Objects/Materials/Sheets/other.rsi
+    state: uranium
+  discipline: Arsenal
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - MagazineRifleUranium
+  - MagazinePistolUranium
+  - MagazinePistolSubMachineGunUranium
+  - MagazineLightRifleUranium
+  - SpeedLoaderMagnumUranium
+  - MagazineBoxPistolUranium
+  - MagazineBoxMagnumUranium
+  - MagazineBoxLightRifleUranium
+  - MagazineBoxRifleUranium
+  - BoxShotgunUranium
 
 - type: technology
   id: AdvancedRiotControl
@@ -221,21 +221,21 @@
   recipeUnlocks:
   - WeaponTemperatureGun
 
-# - type: technology #Frontier
-#  id: AdvancedShuttleWeapon
-#  name: research-technology-advanced-shuttle-weapon
-#  icon:
-#    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Grenade/grenade_cartridge.rsi
-#    state: icon
-#  discipline: Arsenal
-#  tier: 3
-#  cost: 15000
-#  recipeUnlocks:
-#  - GrenadeEMP
-#  - PowerCageHigh
-#  - ShuttleGunDusterCircuitboard # Frontier
-#  technologyPrerequisites:
-#  - BasicShuttleArmament
+- type: technology
+  id: AdvancedShuttleWeapon
+  name: research-technology-advanced-shuttle-weapon
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Grenade/grenade_cartridge.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - GrenadeEMP
+  - PowerCageHigh
+  - ShuttleGunDusterCircuitboard
+  technologyPrerequisites:
+  - BasicShuttleArmament
 
 - type: technology #Corvax-Frontier
   id: VariousShuttleWeapons

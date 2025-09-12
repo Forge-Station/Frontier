@@ -141,8 +141,6 @@
     runningState: icon
     staticPacks:
     - NFSalvageTechfabDeprecatedStatic
-    dynamicPacks:
-    - NFSalvageTechfabDeprecatedDynamic
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFSalvageTechfabDeprecatedEmag
@@ -184,7 +182,6 @@
     - ReportingStatic # DeltaV
     - CorvaxAmmoStatic #Corvax-Frontier
     dynamicPacks:
-    - CorvaxMechsWeaponsNFSDDynamic #Corvax-Frontier
     - CorvaxShuttleGunsDynamic #Corvax-Frontier
     - CorvaxAmmoDynamic #Corvax-Frontier
   - type: BlueprintReceiver
@@ -221,8 +218,6 @@
     staticPacks:
     - NFMercenaryTechfabDeprecatedStatic
     - NfsdPracticeStatic
-    dynamicPacks:
-    - CorvaxMechsWeaponsDynamic #Corvax-Frontier
   - type: BlueprintReceiver
     whitelist:
       tags:

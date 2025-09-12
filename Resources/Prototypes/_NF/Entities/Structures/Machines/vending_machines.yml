@@ -592,6 +592,8 @@
   components:
   - type: VendingMachine
     pack: CiviMedVendInventory
+    taxAccounts:
+      Medical: 0.4
     offState: off
     brokenState: broken
     normalState: normal-unshaded
@@ -704,7 +706,7 @@
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachinePickNPack
-  name: ОружеМат #CorvaxFrontier
+  name: Оруж-е-Мат #CorvaxFrontier
   description: Putting arms in your hands since 2549.
   components:
   - type: VendingMachine

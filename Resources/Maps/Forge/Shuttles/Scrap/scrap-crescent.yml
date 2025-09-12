@@ -1927,14 +1927,6 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Crescent
-- proto: ActionToggleLight
-  entities:
-  - uid: 1130
-    components:
-    - type: Transform
-      parent: 2230
-    - type: InstantAction
-      container: 2230
 - proto: Airlock
   entities:
   - uid: 2
@@ -14884,22 +14876,8 @@ entities:
     - type: Transform
       pos: 5.526666,14.968742
       parent: 1
-    - type: HandheldLight
-      toggleActionEntity: 1130
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 1130
     - type: Physics
       canCollide: True
-    - type: ActionsContainer
 - proto: LockerAtmosphericsFilledHardsuit
   entities:
   - uid: 444

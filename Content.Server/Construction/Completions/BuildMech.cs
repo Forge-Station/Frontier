@@ -25,8 +25,11 @@ public sealed partial class BuildMech : IGraphAction
     [DataField("batteryContainer")]
     public string BatteryContainer = "battery-container";
 
-    [DataField("gasTankContainer")]
+    [DataField("gasTankContainer")] // Forge-Change
     public string GasTankContainer = "gas-tank-container";
+
+    [DataField("CapacitorContainer")] // Forge-Change
+    public string CapacitorContainer = "capacitor-container";
 
     // TODO use or generalize ConstructionSystem.ChangeEntity();
     public void PerformAction(EntityUid uid, EntityUid? userUid, IEntityManager entityManager)
@@ -40,7 +43,8 @@ public sealed partial class BuildMech : IGraphAction
         }
 
         TryTransferContainerContents(uid, entityManager, BatteryContainer, mechComp.BatterySlot);
-        TryTransferContainerContents(uid, entityManager, GasTankContainer, mechComp.GasTankSlot);
+        TryTransferContainerContents(uid, entityManager, GasTankContainer, mechComp.GasTankSlot);   // Forge-Change
+        TryTransferContainerContents(uid, entityManager, CapacitorContainer, mechComp.CapacitorSlot); // Forge-Change
 
         var entChangeEv = new ConstructionChangeEntityEvent(newMech, uid);
         entityManager.EventBus.RaiseLocalEvent(uid, entChangeEv);

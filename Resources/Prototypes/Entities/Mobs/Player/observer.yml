@@ -101,22 +101,24 @@
   name: Boo!
   description: Scare your crew members because of boredom!
   components:
-  - type: InstantAction
+  - type: Action
     icon: Interface/Actions/scream.png
     checkCanInteract: false
-    event: !type:BooActionEvent
     startDelay: true
     useDelay: 120
+  - type: InstantAction
+    event: !type:BooActionEvent
 
 - type: entity
   id: ActionToggleLighting
   name: Toggle Lighting
   description: Toggle light rendering to better observe dark areas.
   components:
-  - type: InstantAction
+  - type: Action
     icon: Interface/VerbIcons/light.svg.192dpi.png
     clientExclusive: true
     checkCanInteract: false
+  - type: InstantAction
     event: !type:ToggleLightingActionEvent
 
 # Frontier: radar action
@@ -124,7 +126,7 @@
   id: ActionObserverShowRadar
   parent: ActionAGhostShowRadar
   components:
-  - type: InstantAction
+  - type: Action
     checkCanInteract: false
 # End Frontier
 
@@ -133,10 +135,11 @@
   name: Toggle FoV
   description: Toggles field-of-view in order to see what players see.
   components:
-  - type: InstantAction
+  - type: Action
     icon: Interface/VerbIcons/vv.svg.192dpi.png
     clientExclusive: true
     checkCanInteract: false
+  - type: InstantAction
     event: !type:ToggleFoVActionEvent
 
 - type: entity
@@ -144,10 +147,11 @@
   name: Toggle Ghosts
   description: Toggle the visibility of other ghosts.
   components:
-  - type: InstantAction
+  - type: Action
     icon: { sprite: Mobs/Ghosts/ghost_human.rsi, state: icon }
     clientExclusive: true
     checkCanInteract: false
+  - type: InstantAction
     event: !type:ToggleGhostsActionEvent
 
 - type: entity
@@ -155,10 +159,11 @@
   name: Toggle Ghost Hearing
   description: Toggle between hearing all messages and hearing only radio & nearby messages.
   components:
-  - type: InstantAction
+  - type: Action
     checkCanInteract: false
     icon:
       sprite: Clothing/Ears/Headsets/base.rsi
       state: icon
     iconOn: Interface/Actions/ghostHearingToggled.png
+  - type: InstantAction
     event: !type:ToggleGhostHearingActionEvent

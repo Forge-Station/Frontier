@@ -617,29 +617,6 @@ entities:
     - type: ContainedSolution
       containerName: drink
       container: 2
-- proto: ActionToggleInternals
-  entities:
-  - uid: 6
-    components:
-    - type: Transform
-      parent: 5
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 5
-  - uid: 8
-    components:
-    - type: Transform
-      parent: 7
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 7
-  - uid: 10
-    components:
-    - type: Transform
-      parent: 9
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 9
 - proto: AirlockShuttleSyndicate
   entities:
   - uid: 15
@@ -1001,16 +978,8 @@ entities:
     components:
     - type: Transform
       parent: 4
-    - type: GasTank
-      toggleActionEntity: 10
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 10
 - proto: DrinkVacuumFlask
   entities:
   - uid: 2
@@ -1176,16 +1145,8 @@ entities:
     components:
     - type: Transform
       parent: 4
-    - type: GasTank
-      toggleActionEntity: 6
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 6
 - proto: OreBag
   entities:
   - uid: 80
@@ -1209,16 +1170,8 @@ entities:
     components:
     - type: Transform
       parent: 4
-    - type: GasTank
-      toggleActionEntity: 8
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 8
 - proto: PoweredSmallLight
   entities:
   - uid: 83

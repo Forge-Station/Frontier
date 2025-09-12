@@ -1,17 +1,6 @@
 meta:
-  format: 7
-  category: Grid
-  engineVersion: 247.2.0
-  forkId: ""
-  forkVersion: ""
-  time: 05/06/2025 12:32:52
-  entityCount: 450
-maps: []
-grids:
-- 1
-orphans:
-- 1
-nullspace: []
+  format: 6
+  postmapinit: false
 tilemap:
   0: Space
   30: FloorDark
@@ -1063,7 +1052,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 3.5,-2.5
       parent: 1
-- proto: CargoPallet
+- proto: Catwalk
   entities:
   - uid: 158
     components:
@@ -2583,13 +2572,6 @@ entities:
     components:
     - type: Transform
       pos: 4.5,-2.5
-      parent: 1
-- proto: SpawnDungeonLootArmoryGuns
-  entities:
-  - uid: 378
-    components:
-    - type: Transform
-      pos: -2.6241956,-2.6623015
       parent: 1
 - proto: SpawnPointLatejoin
   entities:

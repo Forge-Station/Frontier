@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/08/2025 14:08:49
-  entityCount: 1262
+  time: 09/09/2025 13:22:47
+  entityCount: 1261
 maps: []
 grids:
 - 1
@@ -1122,6 +1122,7 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Poli
+    - type: ImplicitRoof
   - uid: 26
     components:
     - type: MetaData
@@ -1289,49 +1290,6 @@ entities:
     - type: Transform
       pos: -1.4078515,-8.17872
       parent: 1
-- proto: ActionToggleInternals
-  entities:
-  - uid: 50
-    components:
-    - type: Transform
-      parent: 49
-    - type: InstantAction
-      container: 49
-  - uid: 52
-    components:
-    - type: Transform
-      parent: 51
-    - type: InstantAction
-      container: 51
-  - uid: 55
-    components:
-    - type: Transform
-      parent: 54
-    - type: InstantAction
-      container: 54
-  - uid: 69
-    components:
-    - type: Transform
-      parent: 68
-    - type: InstantAction
-      container: 68
-- proto: ActionToggleJetpack
-  entities:
-  - uid: 53
-    components:
-    - type: Transform
-      parent: 51
-    - type: InstantAction
-      container: 51
-- proto: ActionToggleSuitPiece
-  entities:
-  - uid: 57
-    components:
-    - type: Transform
-      parent: 56
-    - type: InstantAction
-      container: 56
-      entIcon: 58
 - proto: AirAlarm
   entities:
   - uid: 76
@@ -4324,14 +4282,6 @@ entities:
         solution@food: !type:ContainerSlot
           ent: 40
     - type: InsideEntityStorage
-- proto: ClothingHeadHelmetHardsuitPirateEVA
-  entities:
-  - uid: 58
-    components:
-    - type: Transform
-      parent: 56
-    - type: AttachedClothing
-      attachedUid: 56
 - proto: ClothingMaskGas
   entities:
   - uid: 59
@@ -4354,52 +4304,8 @@ entities:
     components:
     - type: Transform
       parent: 45
-    - type: ToggleableClothing
-      clothingUid: 58
-      actionEntity: 57
-    - type: ContainerContainer
-      containers:
-        toggleable-clothing: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 58
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 57
-    - type: GroupExamine
-      group:
-      - hoverMessage: ""
-        contextText: verb-examine-group-other
-        icon: /Textures/Interface/examine-star.png
-        components:
-        - Armor
-        - ClothingSpeedModifier
-        entries:
-        - message: Понижает вашу скорость на [color=yellow]40%[/color].
-          priority: 0
-          component: ClothingSpeedModifier
-        - message: >-
-            Обеспечивает следующую защиту:
-
-            - [color=yellow]Ударный[/color] урон снижается на [color=lightblue]20%[/color].
-
-            - [color=yellow]Режущий[/color] урон снижается на [color=lightblue]20%[/color].
-
-            - [color=yellow]Колющий[/color] урон снижается на [color=lightblue]10%[/color].
-
-            - [color=yellow]Высокотемпературный[/color] урон снижается на [color=lightblue]60%[/color].
-
-            - [color=yellow]Кислотный[/color] урон снижается на [color=lightblue]25%[/color].
-
-            - [color=orange]Взрывной[/color] урон снижается на [color=lightblue]30%[/color].
-          priority: 0
-          component: Armor
-        title: null
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
     - type: InsideEntityStorage
   - uid: 606
     components:
@@ -4849,7 +4755,7 @@ entities:
       pos: 4.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -10092.306
+      secondsUntilStateChange: -10131.973
       state: Opening
 - proto: CurtainsPurple
   entities:
@@ -5023,16 +4929,8 @@ entities:
     components:
     - type: Transform
       parent: 45
-    - type: GasTank
-      toggleActionEntity: 55
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 55
     - type: InsideEntityStorage
   - uid: 608
     components:
@@ -5047,16 +4945,8 @@ entities:
     components:
     - type: Transform
       parent: 45
-    - type: GasTank
-      toggleActionEntity: 50
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 50
     - type: InsideEntityStorage
   - uid: 609
     components:
@@ -6751,19 +6641,8 @@ entities:
     components:
     - type: Transform
       parent: 45
-    - type: GasTank
-      toggleActionEntity: 52
-    - type: Jetpack
-      toggleActionEntity: 53
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 53
-          - 52
     - type: InsideEntityStorage
   - uid: 611
     components:
@@ -6772,13 +6651,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: JukeboxShip
-  entities:
-  - uid: 885
-    components:
-    - type: Transform
-      pos: -1.5,-7.5
-      parent: 1
 - proto: KitchenReagentGrinder
   entities:
   - uid: 886
@@ -7182,16 +7054,8 @@ entities:
     components:
     - type: Transform
       parent: 67
-    - type: GasTank
-      toggleActionEntity: 69
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 69
 - proto: PaintingFireaxeCabinet
   entities:
   - uid: 921
@@ -9646,14 +9510,6 @@ entities:
           startTime: 253705.5018406
           length: 0.5
         storage: {}
-- proto: WeaponNavalCannon53mmUnanchor
-  entities:
-  - uid: 13
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -7.5,2.5
-      parent: 1
 - proto: WeaponNavalCannon53mm
   entities:
   - uid: 12
@@ -9667,6 +9523,14 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -7.5,0.5
+      parent: 1
+- proto: WeaponNavalCannon53mmUnanchor
+  entities:
+  - uid: 13
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -7.5,2.5
       parent: 1
 - proto: WindoorSecure
   entities:
@@ -9707,7 +9571,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -11908.031
+      secondsUntilStateChange: -11947.698
       state: Opening
 - proto: WindowReinforcedDirectional
   entities:

@@ -13,7 +13,7 @@ public enum MechUiKey : byte
 /// </summary>
 public sealed class MechEquipmentUiStateReadyEvent : EntityEventArgs
 {
-    public Dictionary<NetEntity, BoundUserInterfaceState> States = new();
+    public Dictionary<NetEntity, BoundUserInterfaceState?> States = new(); // Forge-Change
 }
 
 /// <summary>
@@ -22,7 +22,6 @@ public sealed class MechEquipmentUiStateReadyEvent : EntityEventArgs
 public sealed class MechEquipmentUiMessageRelayEvent : EntityEventArgs
 {
     public MechEquipmentUiMessage Message;
-
     public MechEquipmentUiMessageRelayEvent(MechEquipmentUiMessage message)
     {
         Message = message;
@@ -30,7 +29,7 @@ public sealed class MechEquipmentUiMessageRelayEvent : EntityEventArgs
 }
 
 /// <summary>
-/// UI event raised to remove a piece of equipment from a mech
+/// /// UI event raised to remove a piece of equipment from a mech
 /// </summary>
 [Serializable, NetSerializable]
 public sealed class MechEquipmentRemoveMessage : BoundUserInterfaceMessage
@@ -106,8 +105,8 @@ public sealed class MechSoundboardPlayMessage : MechEquipmentUiMessage
 [Serializable, NetSerializable]
 public sealed class MechBoundUiState : BoundUserInterfaceState
 {
-    public Dictionary<NetEntity, BoundUserInterfaceState> EquipmentStates = new();
-    
+    public Dictionary<NetEntity, BoundUserInterfaceState?> EquipmentStates = new(); // Forge-Change
+
     public List<NetEntity> Equipment = new(); // Forge-Change
 }
 

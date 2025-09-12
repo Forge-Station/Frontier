@@ -11,7 +11,7 @@
 # Shuttle Notes:
 
 - type: vessel
-  id: Centurion
+  id: centurion
   parent: BaseVessel
   name: NSF Центурион
   description: Штурмовое судно Центурион. Произведено частной военно-производственной компаний Vitezstvi по чертежам шаттла "Мародер" по спец. заказу НТ. Рекомендуемый состав команды 3-7 человек.
@@ -24,12 +24,12 @@
   - Capital
 
 - type: gameMap
-  id: Centurion
+  id: centurion
   mapName: 'NSF Центурион'
   mapPath: /Maps/Forge/Shuttles/Nfsd/centurion.yml
   minPlayers: 0
   stations:
-    Centurion:
+    centurion:
       stationProto: StandardFrontierSecurityVessel
       components:
         - type: StationNameSetup

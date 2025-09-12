@@ -318,5 +318,3 @@ public abstract class SharedSprayPainterSystem : EntitySystem
 
     #endregion
 }
-
-// End Rewritten in Upstream#37341
