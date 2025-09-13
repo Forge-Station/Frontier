@@ -131,7 +131,7 @@
   productEntity: ClothingOuterHardsuitNfsdExperimental
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 20
+    FrontierUplinkCoin: 32
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -401,7 +401,7 @@
   productEntity: WeaponCaseLongWeaponRifleScar12
   icon: { sprite: Forge/Objects/Weapons/Guns/Rifles/scar12.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 7
+    FrontierUplinkCoin: 6
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -413,6 +413,25 @@
       whitelist:
         - Bailiff
         - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityWeaponCaseLongEnergySwordNfsd
+  name:  Энергетический меч дсбф
+  description: Кейс с Энергетическим мечём ДСБФ
+  productEntity: WeaponCaseLongEnergySwordNfsd
+  cost:
+    FrontierUplinkCoin: 7
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
         - Sheriff
 
 - type: listing

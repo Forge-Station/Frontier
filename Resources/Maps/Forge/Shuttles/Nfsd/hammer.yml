@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Grid
+  engineVersion: 262.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 08/19/2025 04:49:53
+  entityCount: 315
+maps: []
+grids:
+- 1
+orphans:
+- 1
+nullspace: []
 tilemap:
   0: Space
   33: FloorDark
@@ -877,14 +888,17 @@ entities:
   - uid: 128
     components:
     - type: Transform
-      pos: 7.5,-1.5
-      parent: 2
-  - uid: 129
+      rot: 3.141592653589793 rad
+      pos: -0.5,3.5
+      parent: 1
+- proto: ButtonFrameCaution
+  entities:
+  - uid: 84
     components:
     - type: Transform
-      pos: 5.5,-1.5
-      parent: 2
-  - uid: 130
+      pos: 0.5,2.5
+      parent: 1
+  - uid: 272
     components:
     - type: Transform
       pos: 4.5,-1.5
@@ -2183,11 +2197,20 @@ entities:
   - uid: 212
     components:
     - type: Transform
-      pos: -4.5,-1.5
-      parent: 2
-    - type: FuelGenerator
-      targetPower: 16000
-- proto: PosterContrabandHackingGuide
+      parent: 98
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
+- proto: ComputerGunneryConsole
+  entities:
+  - uid: 83
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -0.5,1.5
+      parent: 1
+- proto: ComputerTabletopShuttle
+
   entities:
   - uid: 417
     components:
@@ -2229,17 +2252,13 @@ entities:
   - uid: 347
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -5.5,1.5
-      parent: 2
-- proto: PowerCellRecharger
-  entities:
-  - uid: 318
-    components:
-    - type: Transform
-      pos: 4.5,5.5
-      parent: 2
-- proto: Poweredlight
+      pos: -2.5,-6.5
+      parent: 1
+    - type: Battery
+      startingCharge: 0
+    - type: ApcPowerReceiver
+      powerLoad: 5
+- proto: GyroscopeNfsd
   entities:
   - uid: 219
     components:
@@ -2450,54 +2469,42 @@ entities:
       parent: 2
 - proto: SignalButtonDirectional
   entities:
-  - uid: 297
+  - uid: 85
     components:
     - type: Transform
-      pos: -4.5,5.5
-      parent: 2
+      pos: 0.5,2.5
+      parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        364:
-        - Pressed: Toggle
-        363:
-        - Pressed: Toggle
-        362:
-        - Pressed: Toggle
-        360:
-        - Pressed: Toggle
-        361:
-        - Pressed: Toggle
-        359:
-        - Pressed: Toggle
-  - uid: 355
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,0.5
-      parent: 2
-    - type: DeviceLinkSource
-      linkedPorts:
-        348:
-        - Pressed: Toggle
-        351:
-        - Pressed: Toggle
-        349:
-        - Pressed: Toggle
-  - uid: 357
+        17:
+        - - Pressed
+          - Toggle
+        18:
+        - - Pressed
+          - Toggle
+  - uid: 274
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -1.5,-1.5
-      parent: 2
+      pos: -5.5,-2.5
+      parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        349:
-        - Pressed: Toggle
-        351:
-        - Pressed: Toggle
-        348:
-        - Pressed: Toggle
-  - uid: 419
+        17:
+        - - Pressed
+          - Toggle
+  - uid: 275
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 5.5,-2.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        18:
+        - - Pressed
+          - Toggle
+  - uid: 281
     components:
     - type: Transform
       rot: -1.5707963267948966 rad

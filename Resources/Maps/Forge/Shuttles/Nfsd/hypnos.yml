@@ -4,8 +4,8 @@ meta:
   engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/11/2025 17:44:12
-  entityCount: 483
+  time: 08/19/2025 01:56:11
+  entityCount: 475
 maps: []
 grids:
 - 1
@@ -2232,21 +2232,6 @@ entities:
     - type: Transform
       pos: 6.5,1.5
       parent: 1
-- proto: LockerWallMedicalFilled
-  entities:
-  - uid: 388
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,8.5
-      parent: 1
-- proto: MobileEmpGenerator
-  entities:
-  - uid: 156
-    components:
-    - type: Transform
-      pos: -0.5,9.5
-      parent: 1
 - proto: NFHolopadShip
   entities:
   - uid: 473
@@ -3380,6 +3365,25 @@ entities:
     components:
     - type: Transform
       pos: 1.5,12.5
+      parent: 1
+  - uid: 414
+    components:
+    - type: Transform
+      pos: -0.5,12.5
+      parent: 1
+- proto: WeaponNavalCannon140mmUnanchor
+  entities:
+  - uid: 164
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 7.5,-4.5
+      parent: 1
+  - uid: 478
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -6.5,-4.5
       parent: 1
 - proto: WindoorSecureSecurityLocked
   entities:
