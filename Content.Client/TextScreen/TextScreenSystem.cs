@@ -348,6 +348,6 @@ public sealed class TextScreenSystem : VisualizerSystem<TextScreenVisualsCompone
         if (char.IsLetterOrDigit(character.Value))
             return character.Value.ToString().ToLower();
 
-        return null;
+        return "question";
     }
 }
