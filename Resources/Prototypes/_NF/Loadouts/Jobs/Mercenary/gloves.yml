@@ -16,3 +16,10 @@
   price: 0
   equipment:
     gloves: ClothingHandsGlovesCombat
+
+#Forge-Change
+- type: loadout
+  id: MercenaryClothingHandsGlovesArcadiaCombat
+  price: 1500
+  equipment:
+    gloves: ClothingHandsGlovesArcadiaCombat

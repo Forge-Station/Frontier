@@ -43,7 +43,7 @@
     newAccessLevels: [Captain, Security, Brig]
   - type: ShipyardListing
     shuttles:
-    - Fighter 
+    - Fighter
     - Cleric
     - Rogue
 
@@ -107,3 +107,18 @@
     - Legman
     - Liquidator
     - Honker
+
+# The Edison Console
+
+- type: entity
+  id: EdisonMothershipComputer
+  parent: BaseMothershipComputer
+  name: edison shipyard console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Construct
+    - Retort
+    - gasbender
+    - Ambition
+    - Hammer

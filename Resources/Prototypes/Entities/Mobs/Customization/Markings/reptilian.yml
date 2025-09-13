@@ -402,8 +402,8 @@
   markingCategory: Tail
   speciesRestriction: []
   sprites:
-  - sprite: Mobs/Customization/reptilian_parts.rsi
-    state: tail_dtiger_wagging
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: tail_dtiger_wagging
 
 - type: marking
   id: LizardTailAquaticAnimated
@@ -411,5 +411,5 @@
   markingCategory: Tail
   speciesRestriction: []
   sprites:
-  - sprite: Mobs/Customization/reptilian_parts.rsi
-    state: tail_aquatic_wagging
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: tail_aquatic_wagging

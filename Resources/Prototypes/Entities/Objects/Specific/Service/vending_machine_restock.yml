@@ -491,6 +491,7 @@
   - type: VendingMachineRestock
     canRestock:
     - ChemVendInventory
+    - ChemVendInventorySyndicate #Forge
   - type: Sprite
     layers:
     - state: base

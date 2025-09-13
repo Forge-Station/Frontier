@@ -1,0 +1,42 @@
+- type: entity
+  parent: [ClothingEyesBase, ShowSecurityIcons, ShowMedicalIcons, ClothingEyesGlassesSunglasses]
+  id: ClothingEyesGlassesMedSec
+  name: medical security glasses
+  description: Sunglasses with a medical and security hud
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Eyes/Glasses/medsecglasses.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Eyes/Glasses/medsecglasses.rsi
+  - type: Construction
+    graph: GlassesMedSecHUD
+    node: glassesMedSec
+
+- type: entity
+  parent: [ClothingEyesBase, ShowMedicalIcons, ClothingEyesGlassesSunglasses]
+  id: ClothingEyesGlassesMed
+  name: medical glasses
+  description: Sunglasses with a medical hud.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Eyes/Glasses/medglasses.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Eyes/Glasses/medglasses.rsi
+  - type: Construction
+    graph: GlassesMedHUD
+    node: glassesMed
+
+- type: entity
+  parent: [ClothingEyesBase, ClothingEyesGlassesSunglasses]
+  id: ClothingEyesGlassesDiag
+  name: diagnostic glasses
+  description: Sunglasses with a diagnostic hud.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Eyes/Glasses/diagglasses.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Eyes/Glasses/diagglasses.rsi
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon

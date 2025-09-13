@@ -869,40 +869,6 @@ entities:
     - type: ContainedSolution
       containerName: food
       container: 6
-  - uid: 9
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 8
-    - type: Solution
-      solution:
-        maxVol: 10
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Fiber
-          Quantity: 10
-    - type: ContainedSolution
-      containerName: food
-      container: 8
-  - uid: 11
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 10
-    - type: Solution
-      solution:
-        maxVol: 5
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Zinc
-          Quantity: 5
-    - type: ContainedSolution
-      containerName: food
-      container: 10
   - uid: 16
     components:
     - type: MetaData
@@ -960,23 +926,6 @@ entities:
     - type: ContainedSolution
       containerName: Welder
       container: 21
-- proto: ActionToggleLight
-  entities:
-  - uid: 12
-    components:
-    - type: Transform
-      parent: 8
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 8
-  - uid: 13
-    components:
-    - type: Transform
-      parent: 8
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 8
-      attachedEntity: 8
 - proto: AirAlarm
   entities:
   - uid: 33
@@ -1729,38 +1678,8 @@ entities:
     components:
     - type: Transform
       parent: 2
-    - type: HandheldLight
-      selfToggleActionEntity: 13
-      toggleActionEntity: 12
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 10
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 12
-          - 13
-        solution@food: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 9
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: EmitSoundOnCollide
-      nextSound: -5341.4489456
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: Actions
-      actions:
-      - 13
-    - type: InsideEntityStorage
 - proto: ClothingMaskGasExplorer
   entities:
   - uid: 28
@@ -2337,24 +2256,6 @@ entities:
           length: 0.5
         storage: {}
     - type: InsideEntityStorage
-- proto: Multitool
-  entities:
-  - uid: 24
-    components:
-    - type: Transform
-      parent: 20
-    - type: NetworkConfigurator
-      lastUseAttempt: -5341.4489456
-    - type: EmitSoundOnCollide
-      nextSound: -5341.4489456
-    - type: Physics
-      canCollide: False
-  - uid: 218
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5259066,-6.4956703
-      parent: 1
 - proto: NitrogenTank
   entities:
   - uid: 45
@@ -2507,22 +2408,6 @@ entities:
       containers:
         solution@food: !type:ContainerSlot
           ent: 5
-  - uid: 10
-    components:
-    - type: Transform
-      parent: 8
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: EmitSoundOnCollide
-      nextSound: -5341.4489456
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 11
 - proto: PoweredSmallLight
   entities:
   - uid: 228
@@ -2582,22 +2467,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 0.9689188,-6.939846
       parent: 1
-- proto: Screwdriver
-  entities:
-  - uid: 25
-    components:
-    - type: Transform
-      parent: 20
-    - type: MeleeWeapon
-      nextAttack: -5341.4489456
-    - type: RandomSprite
-      selected:
-        enum.DamageStateVisualLayers.Base:
-          screwdriver: '#18A2D5FF'
-    - type: EmitSoundOnCollide
-      nextSound: -5341.4489456
-    - type: Physics
-      canCollide: False
 - proto: SheetSteel1
   entities:
   - uid: 237
@@ -3066,53 +2935,6 @@ entities:
     - type: Transform
       pos: 2.6436634,0.13468552
       parent: 1
-- proto: Welder
-  entities:
-  - uid: 21
-    components:
-    - type: Transform
-      parent: 20
-    - type: UseDelay
-      delays:
-        default:
-          endTime: 0
-          startTime: 0
-          length: 1
-    - type: MeleeWeapon
-      nextAttack: -5341.4489456
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - Welder
-    - type: EmitSoundOnCollide
-      nextSound: -5341.4489456
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@Welder: !type:ContainerSlot
-          ent: 22
-  - uid: 308
-    components:
-    - type: Transform
-      pos: 4.6945233,-3.4888382
-      parent: 1
-- proto: Wirecutter
-  entities:
-  - uid: 26
-    components:
-    - type: Transform
-      parent: 20
-    - type: MeleeWeapon
-      nextAttack: -5341.4489456
-    - type: RandomSprite
-      selected:
-        enum.DamageStateVisualLayers.Base:
-          cutters: '#A05212FF'
-    - type: EmitSoundOnCollide
-      nextSound: -5341.4489456
-    - type: Physics
-      canCollide: False
 - proto: Wrench
   entities:
   - uid: 27

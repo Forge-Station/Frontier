@@ -910,14 +910,6 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: RosebudMKII
-- proto: ActionToggleLight
-  entities:
-  - uid: 418
-    components:
-    - type: Transform
-      parent: 544
-    - type: InstantAction
-      container: 544
 - proto: AirlockAtmosphericsGlass
   entities:
   - uid: 1312
@@ -7145,22 +7137,8 @@ entities:
     - type: Transform
       pos: -12.5503645,5.7794256
       parent: 1
-    - type: HandheldLight
-      toggleActionEntity: 418
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 418
     - type: Physics
       canCollide: True
-    - type: ActionsContainer
 - proto: LockerCaptainFilledHardsuit
   entities:
   - uid: 119

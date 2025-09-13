@@ -5,6 +5,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: StationEvent
+    # TODO: add path to  start warning and end Voiceover
     startRadioAnnouncement: station-event-bluespace-scrap-start-announcement
     startRadioAnnouncementChannel: Engineering
     warningRadioAnnouncement: station-event-bluespace-scrap-warning-announcement
@@ -31,7 +32,6 @@
           preventArtifactTriggers: true
         - type: PreventPilot
         paths:
-        - /Maps/Forge/Shuttles/Scrap/bison.yml
 #        - /Maps/Forge/Shuttles/Scrap/canister.yml # Too small
         - /Maps/Forge/Shuttles/Scrap/disciple.yml
         - /Maps/Forge/Shuttles/Scrap/nugget.yml

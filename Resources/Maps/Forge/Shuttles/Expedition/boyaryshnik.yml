@@ -571,14 +571,6 @@ entities:
     - type: ContainedSolution
       containerName: drink
       container: 836
-- proto: ActionToggleInternals
-  entities:
-  - uid: 781
-    components:
-    - type: Transform
-      parent: 780
-    - type: InstantAction
-      container: 780
 - proto: Airlock
   entities:
   - uid: 3
@@ -715,16 +707,8 @@ entities:
     components:
     - type: Transform
       parent: 770
-    - type: GasTank
-      toggleActionEntity: 781
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 781
     - type: InsideEntityStorage
 - proto: AmeController
   entities:

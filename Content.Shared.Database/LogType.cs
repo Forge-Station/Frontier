@@ -514,7 +514,7 @@ public enum LogType
     /// </summary>
     ObjectiveSummary = 422,
     #endregion DeltaV Values
-    
+
     /// <summary>
     /// Damaging grid collision has occurred.
     /// </summary>

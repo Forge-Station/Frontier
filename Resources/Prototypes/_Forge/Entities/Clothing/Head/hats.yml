@@ -1,0 +1,10 @@
+- type: entity
+  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  id: ClothingHeadHatSpecOper
+  name: cap special operations officer
+  description: "ohayo, arillery?"
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hats/dsocap.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hats/dsocap.rsi

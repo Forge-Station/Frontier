@@ -106,13 +106,14 @@
   name: "Воссоздать тело"
   description: "Сконцентрируйся и позволь своей сущности восстановить скелетное тело."
   components:
-  - type: InstantAction
+  - type: Action
     icon:
       sprite: Mobs/Species/Skeleton/parts.rsi
       state: full
-    event: !type:SkeletonReformEvent  { }
     checkCanInteract: false
     clientExclusive: false
+  - type: InstantAction
+    event: !type:SkeletonReformEvent  { }
 
 - type: entity
   id: LeftArmSkeleton

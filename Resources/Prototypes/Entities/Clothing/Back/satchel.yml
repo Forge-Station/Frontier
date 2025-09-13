@@ -121,7 +121,7 @@
   description: A sterile satchel for medical related needs.
   components:
   - type: Sprite
-    sprite: Clothing/Back/Satchels/brigmedic.rsi
+    sprite: _CorvaxGoob/Clothing/Back/Satchels/brigmedic.rsi #Forge
 
 - type: entity
   parent: ClothingBackpackSatchel # Frontier: removed BaseCommandContraband

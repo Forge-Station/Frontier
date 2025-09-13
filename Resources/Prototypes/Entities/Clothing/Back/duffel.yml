@@ -80,7 +80,7 @@
   description: A large duffel bag for holding extra medical related goods.
   components:
     - type: Sprite
-      sprite: Clothing/Back/Duffels/brigmedic.rsi
+      sprite: _CorvaxGoob/Clothing/Back/Duffels/brigmedic.rsi #Forge
 
 - type: entity
   parent: NFClothingDuffel # Frontier: ClothingBackpackDuffelNFClothingDuffel

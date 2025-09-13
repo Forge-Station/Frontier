@@ -1,0 +1,19 @@
+- type: entity
+  parent: [ ClothingShoesBootsMagSecurity, BaseCentcommContraband ]
+  id: ClothingShoesBootsMagCombatERT
+  name: combat ert magboots
+  description:
+  components:
+  - type: Sprite
+    sprite: _Wega/Clothing/Shoes/Boots/magboots-ert.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Wega/Clothing/Shoes/Boots/magboots-ert.rsi
+  - type: Magboots
+    magbootsAlert: MagbootsNfsd
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.95
+  - type: Item
+    sprite: _Wega/Clothing/Shoes/Boots/magboots-ert.rsi
+    size: Normal

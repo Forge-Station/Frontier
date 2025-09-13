@@ -238,24 +238,6 @@ entities:
     - type: BecomesStation
       id: konserva
     - type: RadiationGridResistance
-- proto: ActionToggleInternals
-  entities:
-  - uid: 3
-    components:
-    - type: Transform
-      parent: 2
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 2
-- proto: ActionToggleJetpack
-  entities:
-  - uid: 4
-    components:
-    - type: Transform
-      parent: 2
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 2
 - proto: AirAlarm
   entities:
   - uid: 200
@@ -1102,17 +1084,6 @@ entities:
     - type: Transform
       pos: 3.1694257,6.4863806
       parent: 1
-    - type: GasTank
-      toggleActionEntity: 3
-    - type: Jetpack
-      toggleActionEntity: 4
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 4
-          - 3
 - proto: LightBulbOld
   entities:
   - uid: 120

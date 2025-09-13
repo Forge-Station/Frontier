@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by BombasterDS - https://github.com/MetalSage/space-stories-archive/commit/26812e79c19c5f998bcbc445afbdceea625bc887, Chemist by Lehmin, idhighcommand by SolsticeOfTheWinter (sprite changed by CorvaxGoob)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+	{
+      "name": "idhighcommand"
+    },
+	{
+      "name": "medsyn"
+    },
+	{
+      "name": "chemist-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "chemist-inhand-right",
+      "directions": 4
+    }
+  ]
+}

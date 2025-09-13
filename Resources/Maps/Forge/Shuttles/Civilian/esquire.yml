@@ -42,6 +42,8 @@ entities:
           version: 6
       type: MapGrid
     - type: Broadphase
+    - type: BecomesStation
+      id: Esquire
     - bodyStatus: InAir
       angularDamping: 0.05
       linearDamping: 0.05
@@ -247,8 +249,6 @@ entities:
       type: GridAtmosphere
     - type: GasTileOverlay
     - type: RadiationGridResistance
-    - id: Esquire
-      type: BecomesStation
 - proto: AirAlarm
   entities:
   - uid: 7

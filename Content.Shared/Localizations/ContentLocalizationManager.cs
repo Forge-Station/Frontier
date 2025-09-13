@@ -44,7 +44,7 @@ namespace Content.Shared.Localizations
             _loc.AddFunction(culture, "NATURALPERCENT", FormatNaturalPercent);
             _loc.AddFunction(culture, "PLAYTIME", FormatPlaytime);
             _loc.AddFunction(culture, "GASQUANTITY", FormatGasQuantity); // Frontier
-            _loc.AddFunction(culture, "MANY", FormatMany); // Corvax-Localization
+            _loc.AddFunction(culture, "MANY", FormatManyRussian); // Corvax-Localization
 
 
             /*
@@ -56,6 +56,56 @@ namespace Content.Shared.Localizations
 
             _loc.AddFunction(cultureEn, "MAKEPLURAL", FormatMakePlural);
             _loc.AddFunction(cultureEn, "MANY", FormatMany);
+            _loc.AddFunction(cultureEn, "PRESSURE", FormatPressure);
+            _loc.AddFunction(cultureEn, "POWERWATTS", FormatPowerWatts);
+            _loc.AddFunction(cultureEn, "POWERJOULES", FormatPowerJoules);
+            _loc.AddFunction(cultureEn, "ENERGYWATTHOURS", FormatEnergyWattHours);
+            _loc.AddFunction(cultureEn, "UNITS", FormatUnits);
+            _loc.AddFunction(cultureEn, "TOSTRING", args => FormatToString(cultureEn, args));
+            _loc.AddFunction(cultureEn, "LOC", FormatLoc);
+            _loc.AddFunction(cultureEn, "NATURALFIXED", FormatNaturalFixed);
+            _loc.AddFunction(cultureEn, "NATURALPERCENT", FormatNaturalPercent);
+            _loc.AddFunction(cultureEn, "PLAYTIME", FormatPlaytime);
+            _loc.AddFunction(cultureEn, "GASQUANTITY", FormatGasQuantity); // Frontier
+        }
+
+        // Corvax-Localization: Added for Russian pluralization.
+        // This function expects arguments in the format: MANY(count, "one", "few", "many").
+        // Example: You have { $bananas } { MANY($bananas, "банан", "банана", "бананов") }.
+        private ILocValue FormatManyRussian(LocArgs args)
+        {
+            if (args.Args.Count < 2 || args.Args[0] is not LocValueNumber number)
+                return new LocValueString("?"); // Invalid arguments
+
+            var count = (long)Math.Abs(Math.Floor(number.Value));
+
+            // Not enough forms for full Russian pluralization, do a simple fallback.
+            if (args.Args.Count < 4)
+            {
+                // e.g. MANY(count, "form") -> "form"
+                if (args.Args.Count == 2)
+                    return (LocValueString) args.Args[1];
+
+                // e.g. MANY(count, "one", "many") -> "one" or "many"
+                var form = (LocValueString) args.Args[1];
+                if (count != 1)
+                    form = (LocValueString) args.Args[2];
+                return form;
+            }
+
+            // Full Russian pluralization: MANY(count, "one", "few", "many")
+            var one = ((LocValueString) args.Args[1]).Value;
+            var few = ((LocValueString) args.Args[2]).Value;
+            var many = ((LocValueString) args.Args[3]).Value;
+
+            var c10 = count % 10;
+            var c100 = count % 100;
+
+            if (c10 == 1 && c100 != 11)
+                return new LocValueString(one);
+            if (c10 >= 2 && c10 <= 4 && (c100 < 12 || c100 > 14))
+                return new LocValueString(few);
+            return new LocValueString(many);
         }
 
         private ILocValue FormatMany(LocArgs args)

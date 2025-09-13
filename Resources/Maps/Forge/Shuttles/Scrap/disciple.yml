@@ -222,14 +222,6 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: NavMap
-- proto: ActionToggleLight
-  entities:
-  - uid: 112
-    components:
-    - type: Transform
-      parent: 156
-    - type: InstantAction
-      container: 156
 - proto: AirAlarm
   entities:
   - uid: 194
@@ -979,27 +971,6 @@ entities:
     - type: Transform
       pos: 3.2941947,-0.5510896
       parent: 1
-- proto: Lantern
-  entities:
-  - uid: 156
-    components:
-    - type: Transform
-      pos: -2.5866327,5.701881
-      parent: 1
-    - type: HandheldLight
-      toggleActionEntity: 112
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 112
-    - type: ActionsContainer
 - proto: MaintenanceWeaponSpawner
   entities:
   - uid: 134

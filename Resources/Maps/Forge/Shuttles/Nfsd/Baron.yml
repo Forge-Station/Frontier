@@ -28062,18 +28062,6 @@ entities:
     - type: Transform
       pos: -25.50056,9.628118
       parent: 2
-- proto: JukeboxShip
-  entities:
-  - uid: 5511
-    components:
-    - type: Transform
-      pos: 11.5,-21.5
-      parent: 2
-  - uid: 5512
-    components:
-    - type: Transform
-      pos: -10.5,-21.5
-      parent: 2
 - proto: JukeboxWallmountShip
   entities:
   - uid: 2050

@@ -6950,13 +6950,6 @@ entities:
     - type: Transform
       pos: 14.5,10.5
       parent: 1
-- proto: JukeboxShip
-  entities:
-  - uid: 1341
-    components:
-    - type: Transform
-      pos: 14.5,25.5
-      parent: 1
 - proto: KitchenMicrowavePOI
   entities:
   - uid: 1373
