@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: anton953
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Tail
+  parent: BaseVessel
+  name: KL Хвост
+  description: Среднегабаритный добывающий шаттл. Рекомендуемый размер команды 3-6 человека.
+  price: 67042
+  category: Medium
+  group: Salvage
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/tail.yml
+  guidebookPage: Null
+  class:
+  - Salvage
+
+- type: gameMap
+  id: Tail
+  mapName: 'KL Хвост'
+  mapPath: /Maps/Forge/Shuttles/Salvage/tail.yml
+  minPlayers: 0
+  stations:
+    Tail:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Хвост {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
