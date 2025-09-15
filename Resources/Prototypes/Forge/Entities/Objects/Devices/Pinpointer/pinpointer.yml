@@ -1,8 +1,0 @@
-- type: entity
-  name: locator
-  id: ExtendedPinpointer
-  parent: PinpointerBase
-  components:
-  - type: ExtendedPinpointer
-    targetId: null
-    targetName: unknown

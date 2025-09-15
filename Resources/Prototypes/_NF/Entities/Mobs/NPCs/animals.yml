@@ -59,11 +59,11 @@
   - type: Butcherable
     spawned:
     - id: FoodMeatSlime
-      amount: 2    
+      amount: 2
     - id: MaterialHideRosyMothroach
       amount: 1
       prob: 0.3
-      
+
 - type: entity
   name: bee
   suffix: Angry, Timed

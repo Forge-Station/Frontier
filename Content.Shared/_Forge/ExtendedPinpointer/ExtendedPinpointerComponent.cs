@@ -77,6 +77,10 @@ public sealed partial class ExtendedPinpointerComponent : Component
     // Frontier - whether this pinpointer can target mobs
     [DataField("canTargetMobs")]
     public bool CanTargetMobs = false;
+
+    // Whether this pinpointer's target knows about the pinpointer using the PinpointerTargetComponent.
+    [DataField("setsTarget")]
+    public bool SetsTarget = false;
 }
 
 [Serializable, NetSerializable]

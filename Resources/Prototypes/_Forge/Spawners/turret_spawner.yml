@@ -13,7 +13,7 @@
   - type: ConditionalSpawner
     prototypes:
     - WeaponTurretSyndicateAntiMateriel
-    
+
 - type: entity
   id: SpawnMobWeaponTurretSyndicateMagnumAP
   parent: MarkerBase
@@ -28,7 +28,7 @@
   - type: ConditionalSpawner
     prototypes:
     - WeaponTurretSyndicateMagnumAP
-    
+
 - type: entity
   id: SpawnMobWeaponTurretSyndicateShotgun
   parent: MarkerBase

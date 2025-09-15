@@ -6,6 +6,7 @@ using Robust.Shared.Utility;
 using Content.Server.Shuttles.Events;
 using Content.Shared.IdentityManagement;
 using Content.Server.Station.Components;
+using Content.Shared.Pinpointer;
 
 namespace Content.Server._Forge.ExtendedPinpointer;
 
@@ -149,7 +150,7 @@ public sealed class ExtendedPinpointerSystem : SharedExtendedPinpointerSystem
         var target = pinpointer.Target;
         if (target == null || !EntityManager.EntityExists(target.Value))
         {
-            SetDistance(uid, Distance.Unknown, pinpointer);
+            SetDistance(uid, Content.Shared._Forge.ExtendedPinpointer.Distance.Unknown, pinpointer);
             return;
         }
 
@@ -159,7 +160,7 @@ public sealed class ExtendedPinpointerSystem : SharedExtendedPinpointerSystem
         // Frontier: if the pinpointer has a max range and the distance to target is greater than the max range, set the distance to unknown
         if (pinpointer.MaxRange > 0 && dirVec != null && dirVec.Value.LengthSquared() > pinpointer.MaxRange * pinpointer.MaxRange)
         {
-            SetDistance(uid, Distance.Unknown, pinpointer);
+            SetDistance(uid, Content.Shared._Forge.ExtendedPinpointer.Distance.Unknown, pinpointer);
             TrySetArrowAngle(uid, Angle.Zero, pinpointer);
             return;
         }
@@ -173,7 +174,7 @@ public sealed class ExtendedPinpointerSystem : SharedExtendedPinpointerSystem
         }
         else
         {
-            SetDistance(uid, Distance.Unknown, pinpointer);
+            SetDistance(uid, Content.Shared._Forge.ExtendedPinpointer.Distance.Unknown, pinpointer);
         }
         if (oldDist != pinpointer.DistanceToTarget)
             UpdateAppearance(uid, pinpointer);
@@ -202,16 +203,16 @@ public sealed class ExtendedPinpointerSystem : SharedExtendedPinpointerSystem
         return dir;
     }
 
-    private Distance CalculateDistance(Vector2 vec, ExtendedPinpointerComponent pinpointer)
+    private Content.Shared._Forge.ExtendedPinpointer.Distance CalculateDistance(Vector2 vec, ExtendedPinpointerComponent pinpointer)
     {
         var dist = vec.Length();
         if (dist <= pinpointer.ReachedDistance)
-            return Distance.Reached;
+            return Content.Shared._Forge.ExtendedPinpointer.Distance.Reached;
         else if (dist <= pinpointer.CloseDistance)
-            return Distance.Close;
+            return Content.Shared._Forge.ExtendedPinpointer.Distance.Close;
         else if (dist <= pinpointer.MediumDistance)
-            return Distance.Medium;
+            return Content.Shared._Forge.ExtendedPinpointer.Distance.Medium;
         else
-            return Distance.Far;
+            return Content.Shared._Forge.ExtendedPinpointer.Distance.Far;
     }
 }
