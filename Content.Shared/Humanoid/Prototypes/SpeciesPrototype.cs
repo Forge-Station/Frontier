@@ -1,3 +1,4 @@
+using Content.Shared._Forge.Sponsors;
 using Content.Shared.Dataset;
 using Content.Shared.Humanoid.Markings;
 using Robust.Shared.Prototypes;
@@ -136,13 +137,16 @@ public sealed partial class SpeciesPrototype : IPrototype
     /// </summary>
     [DataField]
     public Color ForcedMarkingColor { get; private set; } = new();
-    // Corvax-Frontier: job restrictions by species
+    // Forge-Change-Start: job restrictions by species
     [DataField("jobWhitelist")]
     public List<string>? JobWhitelist { get; private set; }
 
     [DataField("jobBlacklist")]
     public List<string>? JobBlacklist { get; private set; }
-    // Corvax-Frontier
+
+    [DataField("sponsorLevel")]
+    public SponsorLevel SponsorLevel = SponsorLevel.None;
+    // Forge-Change-End
 }
 
 public enum SpeciesNaming : byte

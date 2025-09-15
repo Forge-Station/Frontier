@@ -2,6 +2,8 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
+using Content.Server._Forge.Discord; // Forge-Change
+using Content.Server._Forge.Sponsors; // Forge-Change
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection.IPIntel;
@@ -66,6 +68,8 @@ namespace Content.Server.Connection
         [Dependency] private readonly IAdminManager _adminManager = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
         [Dependency] private readonly MiniAuthManager _authManager = default!; //Frontier
+        [Dependency] private readonly SponsorManager _sponsorMan = default!; // Forge-Change
+        [Dependency] private readonly DiscordAuthManager _discordAuth = default!; // Forge-Change
 
         private GameTicker? _ticker;
 
