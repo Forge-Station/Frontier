@@ -42,10 +42,10 @@
   components:
     - type: Action
       icon: { sprite: Objects/Tools/crowbar.rsi, state: icon }
-    - type: InstantAction
-      event: !type:ToggleIntrinsicUIEvent { key: enum.RadarConsoleUiKey.Key }
       useDelay: 1
       checkCanInteract: false
+    - type: InstantAction
+      event: !type:ToggleIntrinsicUIEvent { key: enum.RadarConsoleUiKey.Key }
 
 - type: entity
   id: PlayerBorgSyndicateSui
@@ -55,7 +55,6 @@
   - type: TurretControllable
     isDrone: true
     isMoveable: true
-    UseMouseRotation: true
   - type: ContainerFill
     containers:
       borg_module:
