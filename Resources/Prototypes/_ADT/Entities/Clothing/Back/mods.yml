@@ -50,9 +50,6 @@
     quickEquip: false
     slots:
     - back
-  - type: Construction
-    graph: ADTModsuitStandard
-    node: adtmodsuitstandard
   - type: ItemSlots
     slots:
       cell_slot:
@@ -111,9 +108,7 @@
       - ADTModsuitModRadiationProtection
       - ADTModsuitModTray
       - ADTModsuitModIsulation
-  - type: Construction
-    graph: ADTModsuitAtmospheric
-    node: adtmodsuitatmospheric
+
 
 #смешной
 - type: entity
@@ -131,9 +126,6 @@
       gloves: ADTClothingHandsModsuitClown
       outerClothing: ADTClothingOuterModsuitBodyClown
       shoes: ADTClothingModsuitShoesClown
-  - type: Construction
-    graph: ADTModsuitClown
-    node: adtmodsuitclown
 
 #инженерный
 - type: entity
@@ -158,9 +150,7 @@
       - ADTModsuitModRadiationProtection
       - ADTModsuitModMagboot
       - ADTModsuitModIsulation
-  - type: Construction
-    graph: ADTModsuitEngineering
-    node: adtmodsuitengineering
+
 
 #медицинский
 - type: entity
@@ -181,9 +171,7 @@
     startingModules:
       - ADTModsuitModStorage
       - ADTModsuitModLight
-  - type: Construction
-    graph: ADTModsuitMedical
-    node: adtmodsuitmedical
+
 
 #шахтёрский
 - type: entity
@@ -212,9 +200,7 @@
   - type: Tag
     tags:
     - ADTHardsuitSalvage
-  - type: Construction
-    graph: ADTModsuitMining
-    node: adtmodsuitmining
+
 
 #охранный
 - type: entity
@@ -239,9 +225,7 @@
       - ADTModsuitModStorage
       - ADTModsuitModLight
       - ADTModsuitModEmpProtection
-  - type: Construction
-    graph: ADTModsuitSecurity
-    node: adtmodsuitsecurity
+
 
 # учёный
 - type: entity
@@ -266,9 +250,7 @@
       - ADTModsuitModWelding
       - ADTModsuitModLight
       - ADTModsuitModRadiationProtection
-  - type: Construction
-    graph: ADTModsuitScience
-    node: adtmodsuitscience
+
 
 #гсб
 - type: entity
@@ -348,9 +330,6 @@
       - ADTModsuitModJetpack
       - ADTModsuitModEmpProtection
       - ADTModsuitModIsulation
-  - type: Construction
-    graph: ADTModsuitScience
-    node: adtmodsuitscience
 
 # синдиката
 - type: entity
