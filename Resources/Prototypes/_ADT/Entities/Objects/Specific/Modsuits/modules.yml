@@ -368,20 +368,6 @@
     components:
     - type: Insulated
 
-- type: entity
-  parent: ADTModsuitModBase
-  id: ADTModsuitModJump
-  name: MOD jump boot module
-  description: A pair of boots for a MODsuit.
-  components:
-  - type: Sprite
-    state: longfall
-  - type: ModSuitMod
-    complexity: 3
-    slots:
-    - shoes
-    components:
-    - type: Jumpboots
 
 - type: entity
   parent: ADTModsuitModBase
