@@ -169,10 +169,6 @@
   - type: Sprite
     noRot: true
     state: modcore0
-  - type: Construction
-    graph: ADTModsuitAssembled
-    node: start
-    defaultTarget: adtmodsuitassembled
   - type: Item
 - type: entity
   id: ADTModsuitAssembled
