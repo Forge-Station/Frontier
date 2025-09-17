@@ -1,6 +1,6 @@
 mod-module-space = Сложность: {$complexity} ({$maxcomplexity})
 mod-energy-waste = Расход W: {$energy}
-mod-username = Имя пользователя: 
+mod-username = Имя пользователя:
 mod-all-toggled = Полностью включен
 mod-partly-toggled = Частично включен
 mod-none-toggled = Выключен
@@ -12,5 +12,7 @@ mod-deactivate-nonactive = ⚫Выключить
 mod-eject = ⚠Извлечь
 mod-lock = заблокирован🔒
 mod-locked = разблокирован🔓
-mod-user = пользователь: 
+mod-user = пользователь:
 mod-no-user = пользователь отсутствует
+fibers-carbon-adt = углеродные
+fibers-advancedcarbon-adt = продвинутые углеродные
