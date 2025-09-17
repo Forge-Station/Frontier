@@ -526,13 +526,15 @@ public sealed class ModSuitSystem : EntitySystem
         var attachedCount = GetAttachedToggleCount(modSuit.Owner, modSuit.Comp);
         if (attachedCount <= 0)
         {
-            _cell.QueueUpdate((modSuit.Owner, celldraw));
+            Dirty(modSuit.Owner, celldraw);
             _cell.SetDrawEnabled((modSuit.Owner, celldraw), false);
+
             return;
         }
 
         modSuit.Comp.ModEnergyModifyedUsing = modSuit.Comp.ModEnergyBaseUsing * attachedCount;
         celldraw.DrawRate = modSuit.Comp.ModEnergyModifyedUsing;
+        Dirty(modSuit.Owner, celldraw);
         UpdateUserInterface(modSuit.Owner, modSuit.Comp);
     }
 
@@ -665,7 +667,7 @@ public sealed class ModSuitSystem : EntitySystem
         Dirty(modSuit, comp);
 
         if (_actionContainer.EnsureAction(modSuit, ref comp.ActionEntity, out var action, comp.Action))
-            _actionsSystem.SetEntityIcon(comp.ActionEntity.Value, modSuit, action);
+            _actionsSystem.SetEntityIcon(comp.ActionEntity.Value, modSuit.Owner);
         _actionContainer.EnsureAction(modSuit, ref comp.ActionMenuEntity, comp.MenuAction);
 
         foreach (var module in modSuit.Comp.StartingModules)
