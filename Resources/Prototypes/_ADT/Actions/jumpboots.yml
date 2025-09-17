@@ -5,16 +5,14 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: WorldTargetAction
+    icon: { sprite: ADT/Clothing/Shoes/Boots/jumpboots.rsi, state: icon }
+  - type: InstantAction
+    event: !type:JumpbootsActionEvent
     useDelay: 10
-    range: 16 # default examine-range.
-    # ^ should probably add better validation that the clicked location is on the users screen somewhere,
+    range: 16
     itemIconStyle: BigAction
     checkCanAccess: false
     repeat: true
-    icon:
-      sprite: ADT/Clothing/Shoes/Boots/jumpboots.rsi
-      state: icon
-    event: !type:JumpbootsActionEvent
 
 
 - type: entity
@@ -24,13 +22,11 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: WorldTargetAction
+    icon: { sprite: DT/Clothing/Shoes/Boots/jumpboots_syndie.rsi, state: icon }
+  - type: InstantAction
+    event: !type:JumpbootsActionEvent
     useDelay: 15
-    range: 16 # default examine-range.
-    # ^ should probably add better validation that the clicked location is on the users screen somewhere,
+    range: 16
     itemIconStyle: BigAction
     checkCanAccess: false
     repeat: true
-    icon:
-      sprite: ADT/Clothing/Shoes/Boots/jumpboots_syndie.rsi
-      state: icon
-    event: !type:JumpbootsActionEvent
