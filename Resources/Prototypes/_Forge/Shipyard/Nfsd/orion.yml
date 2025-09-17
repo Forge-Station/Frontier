@@ -1,46 +1,46 @@
-# Author Info
-# GitHub: -
-# Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# # Author Info
+# # GitHub: -
+# # Discord: autsaider_m
+# # License: CC-BY-NC-ND-3.0
+# # Corvax_frontier
 
-# Maintainer Info
-# GitHub: https://github.com/mersen-tyn
-# Discord: mersen
+# # Maintainer Info
+# # GitHub: https://github.com/mersen-tyn
+# # Discord: mersen
 
-# Shuttle Notes:
-- type: vessel
-  id: Orion
-  parent: BaseVessel
-  name: TL Орион
-  description: Крупногабаритный ударный авианосец. Рекомендованный состав команды 4-8 человек.
-  price: 180000 #Appraisal value is 150000
-  category: Large
-  group: Security
-  access: Bailiff
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/Orion.yml
-  guidebookPage: Null
-  class:
-  - Capital
+# # Shuttle Notes:
+# - type: vessel
+#   id: Orion
+#   parent: BaseVessel
+#   name: TL Орион
+#   description: Крупногабаритный ударный авианосец. Рекомендованный состав команды 4-8 человек.
+#   price: 180000 #Appraisal value is 150000
+#   category: Large
+#   group: Security
+#   access: Bailiff
+#   shuttlePath: /Maps/Forge/Shuttles/Nfsd/Orion.yml
+#   guidebookPage: Null
+#   class:
+#   - Capital
 
-- type: gameMap
-  id: Orion
-  mapName: 'TL Орион'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/Orion.yml
-  minPlayers: 0
-  stations:
-    Orion:
-      stationProto: StandardFrontierSecurityVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Орион {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-#            PrisonGuard: [ 0, 0 ]
-#            SecurityOfficer: [ 0, 0 ]
-#            Warden: [ 0, 0 ]
-#            Brigmedic: [ 0, 0 ]
-            Chef: [ 0, 0 ]
+# - type: gameMap
+#   id: Orion
+#   mapName: 'TL Орион'
+#   mapPath: /Maps/Forge/Shuttles/Nfsd/Orion.yml
+#   minPlayers: 0
+#   stations:
+#     Orion:
+#       stationProto: StandardFrontierSecurityVessel
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: 'Орион {1}'
+#           nameGenerator:
+#             !type:NanotrasenNameGenerator
+#             prefixCreator: '14'
+#         - type: StationJobs
+#           availableJobs:
+# #            PrisonGuard: [ 0, 0 ]
+# #            SecurityOfficer: [ 0, 0 ]
+# #            Warden: [ 0, 0 ]
+# #            Brigmedic: [ 0, 0 ]
+#             Chef: [ 0, 0 ]

@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/14/2025 01:11:49
-  entityCount: 297
+  time: 08/18/2025 06:42:16
+  entityCount: 295
 maps: []
 grids:
 - 2
@@ -2184,12 +2184,6 @@ entities:
       parent: 2
 - proto: WeaponNavalCannon105mmUnanchor
   entities:
-  - uid: 22
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,10.5
-      parent: 2
   - uid: 23
     components:
     - type: Transform
@@ -2201,11 +2195,5 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 7.5,18.5
-      parent: 2
-  - uid: 69
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,10.5
       parent: 2
 ...

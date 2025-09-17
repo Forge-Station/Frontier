@@ -19,7 +19,7 @@
     damageCoefficient: 0.80
   - type: StaticPrice #CorvaxFrontier
     price: 485
-    
+
 - type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatBishop
@@ -140,7 +140,7 @@
     sprite: _NF/Clothing/OuterClothing/Misc/pirate_captain.rsi
 
 - type: entity
-  parent: [ ClothingOuterStorageFoldableBase, BaseC3ContrabandNoValue, ContrabandClothing ]
+  parent: [ ClothingOuterStorageFoldableBase, BaseC1Contraband ]
   id: ClothingOuterCoatArcadiaTrench
   name: arcadia flak trenchcoat
   description: A flak trenchcoat produced by Arcadia Industries, enhanced with a bulletproof alloy for some extra protection.
@@ -152,13 +152,12 @@
   - type: Armor # ClothingOuterArmorBulletproof stats + caustic
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.4
-        Heat: 0.9
-        Caustic: 0.75
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.55
+        Heat: 0.85
   - type: ExplosionResistance
-    damageCoefficient: 0.50 # buffed 0.80<0.50
+    damageCoefficient: 0.80
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatArcadiaTrench]
@@ -168,13 +167,12 @@
   - type: Armor # Open = less armor
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.5
-        Heat: 0.9
-        Caustic: 0.8
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.55
+        Heat: 0.85
   - type: ExplosionResistance
-    damageCoefficient: 0.60
+    damageCoefficient: 0.80
 
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC3WizardContraband ]

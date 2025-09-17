@@ -5,7 +5,7 @@
   components:
   - type: WeaponCaseInsertable # Frontier
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/grenade.rsi
+    sprite: Forge/Objects/Weapons/Grenades/grenade.rsi
     layers:
     - state: icon
       map: ["enum.TriggerVisualLayers.Base"]
@@ -68,7 +68,7 @@
   id: GrenadeFlashBang
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/flashbang.rsi
+    sprite: Forge/Objects/Weapons/Grenades/flashbang.rsi
   - type: FlashOnTrigger
     range: 7
   - type: SoundOnTrigger
@@ -113,7 +113,7 @@
   id: SyndieMiniBomb
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/syndgrenade.rsi
+    sprite: Forge/Objects/Weapons/Grenades/syndgrenade.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.1
   - type: Destructible
@@ -176,7 +176,7 @@
   description: Grenade that simulates the power of a singularity, pulling things in a heap.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/singularitygrenade.rsi
+    sprite: Forge/Objects/Weapons/Grenades/singularitygrenade.rsi
   - type: OnUseTimerTrigger
     delay: 3
     beepInterval: 0.46
@@ -234,7 +234,7 @@
   id: WhiteholeGrenade
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/whiteholegrenade.rsi
+    sprite: Forge/Objects/Weapons/Grenades/whiteholegrenade.rsi
   - type: OnUseTimerTrigger
     delay: 3
     beepInterval: 0.69
@@ -281,7 +281,7 @@
   id: NuclearGrenade
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    sprite: Forge/Objects/Weapons/Grenades/nukenade.rsi
   - type: OnUseTimerTrigger
     delay: 5
   - type: ExplodeOnTrigger
@@ -312,7 +312,7 @@
   components:
   - type: WeaponCaseInsertable # Frontier
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/modular.rsi
+    sprite: Forge/Objects/Weapons/Grenades/modular.rsi
     layers:
     - state: empty
       map: [ "enum.ConstructionVisuals.Layer" ]
@@ -360,7 +360,7 @@
   id: EmpGrenade
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/empgrenade.rsi
+    sprite: Forge/Objects/Weapons/Grenades/empgrenade.rsi
   - type: EmpOnTrigger
     range: 5.5
     energyConsumption: 2700000 # Frontier: Upstream - #28984, 50000<2700000
@@ -377,7 +377,7 @@
   id: HolyHandGrenade
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/holyhandgrenade.rsi
+    sprite: Forge/Objects/Weapons/Grenades/holyhandgrenade.rsi
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default # same as macrobomb
@@ -402,7 +402,7 @@
   description: A tactical grenade that releases a large, long-lasting cloud of smoke when used.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/smoke.rsi
+    sprite: Forge/Objects/Weapons/Grenades/smoke.rsi
   - type: SmokeOnTrigger
     duration: 30
     spreadAmount: 50
@@ -420,7 +420,7 @@
   description: Special grenade for janitors, releasing large cloud of space cleaner foam.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/janitor.rsi
+    sprite: Forge/Objects/Weapons/Grenades/janitor.rsi
   - type: SmokeOnTrigger
     duration: 15
     spreadAmount: 50
@@ -438,7 +438,7 @@
   description: A riot control tear gas grenade. Causes irritation, pain and makes you cry your eyes out.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/tear_gas.rsi
+    sprite: Forge/Objects/Weapons/Grenades/tear_gas.rsi
   - type: SmokeOnTrigger
     duration: 10
     spreadAmount: 30
@@ -454,7 +454,7 @@
   description: An emergency tool used for patching hull breaches with special quick-set metal foam. Almost as good as real floors!
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/metalfoam.rsi
+    sprite: Forge/Objects/Weapons/Grenades/metalfoam.rsi
   - type: OnUseTimerTrigger
     delay: 5
   - type: SmokeOnTrigger
@@ -505,7 +505,7 @@
   id: GrenadeDummy
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/grenade.rsi
+    sprite: Forge/Objects/Weapons/Grenades/grenade.rsi
   - type: DeleteOnTrigger
   - type: SpawnOnTrigger
     proto: GrenadeFlashEffect
@@ -524,7 +524,7 @@
   id: SyndieTrickyBomb
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/syndgrenade.rsi
+    sprite: Forge/Objects/Weapons/Grenades/syndgrenade.rsi
   - type: OnUseTimerTrigger
     delay: 5
   - type: SoundOnTrigger

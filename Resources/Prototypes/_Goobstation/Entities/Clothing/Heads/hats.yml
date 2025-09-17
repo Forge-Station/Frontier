@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapHoS
+  name: head of security cap
+  description: The robust standard-issue cap of the Head of Security. For showing the officers who's in charge.
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/Head/Hats/hoshat.rsi
+    - type: Clothing
+      sprite: _CorvaxGoob/Clothing/Head/Hats/hoshat.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCapCentcomBlack
+  name: special operations officer cap
+  description: The NanoTrasen gold-engraved special cap of the higher ranks, which has long gone through more than one blitzkrieg...
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/Head/Hats/centcom_officer_black.rsi
+    - type: Clothing
+      sprite: _CorvaxGoob/Clothing/Head/Hats/centcom_officer_black.rsi

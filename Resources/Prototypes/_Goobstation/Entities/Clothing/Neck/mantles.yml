@@ -1,0 +1,10 @@
+- type: entity
+  parent: [ClothingNeckBase, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
+  id: ClothingNeckMantleHOSshoulder
+  name: head of security's mantle
+  description: Shootouts with syndicate agents are just another Tuesday for this HoS. This mantle is a symbol of commitment to the station.
+  components:
+  - type: Sprite
+    sprite: _CorvaxGoob/Clothing/Neck/mantles/hosmantle_shoulder.rsi
+  - type: Clothing
+    sprite: _CorvaxGoob/Clothing/Neck/mantles/hosmantle_shoulder.rsi

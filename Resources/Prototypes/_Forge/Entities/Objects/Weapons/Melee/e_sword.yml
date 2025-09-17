@@ -41,7 +41,7 @@
         variation: 0.125
     activatedDamage:
       types:
-        Slash: 42
+        Slash: 32
         Structural: 50
   - type: MeleeWeapon
     wideAnimationRotation: -135
@@ -76,7 +76,7 @@
 
 - type: entity
   name: energy sword
-  parent: [BaseMeleeWeaponEnergyTL, BaseC3SyndicateContraband] 
+  parent: [BaseMeleeWeaponEnergyTL, BaseC3SyndicateContraband]
   id: BaseEnergySwordTL
   categories: [ HideSpawnMenu ]
   description: A very loud & dangerous sword with a beam made of pure, concentrated plasma. Cuts through unarmored targets like butter.
@@ -93,16 +93,15 @@
   - type: Item
     sprite: Objects/Weapons/Melee/e_sword-inhands.rsi
 
-
 - type: entity
-  name: сотрясатель потоков
+  name: опытный образец 4
   parent: [BaseC3SyndicateContraband, BaseEnergySwordTL]
   id: EnergySwordTL
-  description: На первый взгляд неприметный пласталевый клинок, с парой кнопок на рукояти. 
+  description: На первый взгляд неприметный пласталевый клинок, с парой кнопок на рукояти.
   components:
-  - type: Sprite 
+  - type: Sprite
     sprite: Forge/Objects/Weapons/Melee/tl_e_sword.rsi
-  - type: Item 
+  - type: Item
     sprite: Forge/Objects/Weapons/Melee/tl_e_sword-inhands.rsi
   - type: EnergySword
     colorOptions:

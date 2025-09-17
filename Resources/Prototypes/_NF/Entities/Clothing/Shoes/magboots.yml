@@ -58,7 +58,7 @@
   - type: NoSlip
 
 - type: entity
-  parent: [BaseC1Contraband, ClothingShoesBootsMagNfsd] #Corvax-Frontier КБ
+  parent: [BaseC1Contraband, ClothingShoesBootsMagSyndie] #Corvax-Frontier КБ
   id: ClothingShoesBootsMagPirate
   name: pirate magboots
   description: Pirate magnetic boots, often used during extravehicular activity to ensure the user remains safely attached to the vehicle.
@@ -70,3 +70,15 @@
     sprite: _NF/Clothing/Shoes/Boots/magboots-pirate.rsi
   - type: Magboots
     magbootsAlert: MagbootsPirate
+  - type: ClothingSpeedModifier #Forge Frontier: PR 294
+    walkModifier: 0.95
+    sprintModifier: 0.8
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      # 2 minutes of thrust
+      volume: 0.80
+      temperature: 293.15
+      moles:
+      - 0.153853429 # oxygen
+      - 0.153853429 # nitrogen

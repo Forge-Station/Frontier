@@ -34,4 +34,17 @@ public sealed class ForgeVars
     /// </summary>
     public static readonly CVarDef<bool> MechGunOutsideMech =
         CVarDef.Create("mech.gun_outside_mech", false, CVar.SERVER | CVar.REPLICATED);
+
+
+    public static readonly CVarDef<string> DiscordApiUrl =
+        CVarDef.Create("jerry.discord_api_url", "", CVar.CONFIDENTIAL | CVar.SERVERONLY);
+
+    public static readonly CVarDef<bool> DiscordAuthEnabled =
+        CVarDef.Create("jerry.discord_auth_enabled", false, CVar.CONFIDENTIAL | CVar.SERVERONLY);
+
+    public static readonly CVarDef<string> DiscordGuildID =
+        CVarDef.Create("jerry.discord_guildId", "1222332535628103750", CVar.CONFIDENTIAL | CVar.SERVERONLY);
+
+    public static readonly CVarDef<string> ApiKey =
+        CVarDef.Create("jerry.discord_apikey", "", CVar.CONFIDENTIAL | CVar.SERVERONLY);
 }
