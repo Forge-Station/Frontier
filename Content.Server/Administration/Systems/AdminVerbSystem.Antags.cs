@@ -14,8 +14,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Content.Server._NF.GameTicking.Rules.Components; // Frontier
 using Content.Server._NF.Pirate.Components; // Frontier
-using Content.Server.GameTicking.Rules;
-using Content.Shared._Forge.Contractor.Components;
+using Content.Server.GameTicking.Rules; //Forge-Change
+using Content.Shared._Forge.Contractor.Components; //Forge-Change
 
 namespace Content.Server.Administration.Systems;
 
@@ -226,6 +226,7 @@ public sealed partial class AdminVerbSystem
         if (HasComp<HumanoidAppearanceComponent>(args.Target)) // only humanoids can be cloned
             args.Verbs.Add(paradox);
 
+        //Forge-Change-Start
         var contractorName = Loc.GetString("admin-verb-text-make-contractor");
         Verb contractor = new()
         {
@@ -248,5 +249,6 @@ public sealed partial class AdminVerbSystem
             Message = string.Join(": ", contractorName, Loc.GetString("admin-verb-make-contractor-description")),
         };
         args.Verbs.Add(contractor);
+        //Forge-Change-End
     }
 }
