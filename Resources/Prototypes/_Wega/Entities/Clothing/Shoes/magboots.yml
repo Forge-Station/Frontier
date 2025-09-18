@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingShoesBootsMagSyndie, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingShoesBootsMagSyndie, BaseC2ContrabandUnredeemable, ClothingSlotBase ]
   id: ClothingShoesBootsMagCombatERT
   name: combat ert magboots
   description:
@@ -17,6 +17,7 @@
   - type: Item
     sprite: _Wega/Clothing/Shoes/Boots/magboots-ert.rsi
     size: Normal
+  - type: Matchbox
   - type: ItemSlots
     slots:
       item:
@@ -25,6 +26,3 @@
           tags:
           - Knife
           - Sidearm
-  - type: ContainerContainer
-    containers:
-      item: !type:ContainerSlot
