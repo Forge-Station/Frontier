@@ -101,7 +101,13 @@
   completetime: 1
   materials:
     CreditCounterfeit: 44000
-
+- type: latheRecipe
+  id: WeaponRifleAkCyberSunRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponRifleAkCyberSun
+  completetime: 1
+  materials:
+    CreditCounterfeit: 65000
 - type: latheRecipe
   id: WeaponRevolverPythonRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
@@ -263,6 +269,22 @@
     CreditCounterfeit: 4000
 
 - type: latheRecipe
+  id: ClothingHandsGlovesCombatSyndicateRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingHandsGlovesCombatSyndicate
+  completetime: 1
+  materials:
+    CreditCounterfeit: 5000
+
+- type: latheRecipe
+  id: ClothingShoesBootsMagSyndieEliteRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingShoesBootsMagSyndieElite
+  completetime: 1
+  materials:
+    CreditCounterfeit: 12000
+
+- type: latheRecipe
   id: JetpackBlackFilledRecipe
   categories: [SyndicateTradingConsoleMeleeArmor]
   result: JetpackBlackFilled
@@ -285,6 +307,14 @@
   completetime: 1
   materials:
     CreditCounterfeit: 8000
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitSyndieSSTRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingOuterHardsuitSyndieSST
+  completetime: 1
+  materials:
+    CreditCounterfeit: 299999
 
 - type: latheRecipe
   id: ClothingOuterHardsuitJuggernautRecipe

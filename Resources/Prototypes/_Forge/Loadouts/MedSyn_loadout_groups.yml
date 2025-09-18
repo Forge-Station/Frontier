@@ -34,9 +34,10 @@
   name: loadout-group-contractor-gloves
   minLimit: 1
   loadouts:
-  - SmugglerClothingHandsGloves1
+  - MedSynClothingHandsGloves1
+  - MedSynClothingHandsGloves2
   fallbacks:
-  - SmugglerClothingHandsGloves1
+  - MedSynClothingHandsGloves1
 
 - type: loadoutGroup
   id: MedSynGlasses

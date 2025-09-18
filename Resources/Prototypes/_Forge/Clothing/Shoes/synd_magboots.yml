@@ -1,0 +1,36 @@
+- type: entity
+  parent: [ClothingShoesBootsMagBase, BaseJetpack, BaseC3SyndicateContraband, ClothingShoesBootsCombat]
+  id: ClothingShoesBootsMagSyndieElite
+  name: элитные магнитные сапоги
+  suffix: SST, прототип
+  description: Магнитные ботинки с обратной конструкцией, которые, по-видимому, основаны на усовершенствованной модели, поскольку обладают более легким магнитным притяжением. Собственность Мародёров Горлекса.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      volume: 5
+      temperature: 293.15
+      moles:
+      - 1.5
+      - 1.5
+  - type: Item
+    sprite: null
+    size: Normal
+  - type: Magboots
+    magbootsAlert: MagbootsSyndElite
+
+- type: alert
+  id: MagbootsSyndElite
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
+    state: icon-on
+  name: alerts-magboots-name
+  description: alerts-magboots-desc

@@ -99,6 +99,7 @@
 - type: latheRecipePack
   id: SyndicateTradingConsoleWeapons
   recipes:
+  - WeaponRifleAkCyberSunRecipe
   - WeaponLaserSvalinnRecipe
   - WeaponLaserCannonRecipe
   - ClothingBackpackDuffelSyndicateFilledShotgunRecipe
@@ -129,12 +130,15 @@
   id: SyndicateTradingConsoleArmor
   recipes:
   - ClothingOuterHardsuitJuggernautRecipe
+  - ClothingOuterHardsuitSyndieSSTRecipe
+  - ClothingHandsGlovesCombatSyndicateRecipe
   - ClothingOuterVestWebRecipe
   - ClothingOuterHardsuitTacticalMaidRecipe
   - WeaponTurretSyndicateFlatpackRecipe
   - ShuttleGunSunsetFlatpackRecipe
   - JetpackBlackFilledRecipe
   - ClothingShoesBootsMagSyndieRecipe
+  - ClothingShoesBootsMagSyndieEliteRecipe
   - ClothingBackpackDuffelSyndicateHardsuitBundleRecipe
   - ClothingBackpackDuffelSyndicateEliteHardsuitBundleRecipe
   - ClothingBackpackSyndicateRaidBundleRecipe
