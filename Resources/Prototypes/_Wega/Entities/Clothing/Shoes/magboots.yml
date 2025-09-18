@@ -25,3 +25,6 @@
           tags:
           - Knife
           - Sidearm
+  - type: ContainerContainer
+    containers:
+      item: !type:ContainerSlot
