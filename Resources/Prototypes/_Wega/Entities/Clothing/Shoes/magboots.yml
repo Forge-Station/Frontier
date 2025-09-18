@@ -17,3 +17,11 @@
   - type: Item
     sprite: _Wega/Clothing/Shoes/Boots/magboots-ert.rsi
     size: Normal
+  - type: ItemSlots
+    slots:
+      item:
+        name: clothing-boots-sidearm
+        whitelist:
+          tags:
+          - Knife
+          - Sidearm

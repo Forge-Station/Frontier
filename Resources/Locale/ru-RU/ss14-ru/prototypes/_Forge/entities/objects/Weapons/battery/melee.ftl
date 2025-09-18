@@ -10,5 +10,5 @@ ent-ClothingBeltCentcomSheath = сабельные ножны ЦентКома
     .desc = Практичность, прочность, сабля точно не окажется в вашей ноге.
 ent-ClothingBeltOfficerSheathFilled = { ent-ClothingBeltOfficerSheath }
     .desc = { ent-ClothingBeltOfficerSheath.desc }
-ent-ClothingBeltCentcomSheathilled = { ent-ClothingBeltCentcomSheath }
+ent-ClothingBeltCentcomSheathFilled = { ent-ClothingBeltCentcomSheath }
     .desc = { ent-ClothingBeltCentcomSheath.desc }
