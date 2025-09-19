@@ -1,0 +1,13 @@
+- type: entity
+  parent: [BaseC1Contraband, ClothingShoesBootsJack]
+  id: ClothingShoesBootsSheriff
+  name: advanced jackboots
+  description: This pair of jackboots was designed for the Head of Security. No one knows why are they called advanced, but they are for sure advanced in drip.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/sheriff.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/sheriff.rsi
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: StepHeavyBoots

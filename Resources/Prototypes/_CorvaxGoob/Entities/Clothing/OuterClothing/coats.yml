@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatLabSecurityMedic
+  name: security medic labcoat
+  description: A suit that protects against minor chemical spills.
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/OuterClothing/Coats/labcoat_security_medic.rsi
+    - type: Clothing
+      sprite: _CorvaxGoob/Clothing/OuterClothing/Coats/labcoat_security_medic.rsi
+    - type: Armor
+      modifiers:
+        coefficients:
+          Caustic: 0.75

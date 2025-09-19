@@ -1,0 +1,19 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckWhiteMantleCaptain
+  name: white captain mantle
+  description: Captain mantle, with white down.
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/Neck/Cloaks/white_captain_mantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakRoyalCaptain
+  name: royal captain cloak
+  description: The king in the palace, the king in the palace.
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/Neck/Cloaks/royal_captain.rsi
+    - type: StealTarget
+      stealGroup: HeadCloak

@@ -320,7 +320,7 @@
   description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
+    sprite: Forge/Objects/Weapons/Guns/Battery/e_shot.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
@@ -333,7 +333,7 @@
     zeroVisible: false
   - type: Appearance
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
+    sprite: Forge/Objects/Weapons/Guns/Battery/e_shot.rsi
   - type: Gun
     fireRate: 2
     soundGunshot:
