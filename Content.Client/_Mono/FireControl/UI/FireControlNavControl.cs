@@ -256,7 +256,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
             var gridBody = bodyQuery.GetComponent(gUid);
             EntManager.TryGetComponent<IFFComponent>(gUid, out var iff);
 
-            if (!_shuttles.CanDraw(gUid, gridBody, iff))
+            if (!_shuttles.CanDraw(gUid, gridBody, iff, viewerGridUid: ourGridId)) // Forge-Change
                 continue;
 
             var curGridToWorld = _transform.GetWorldMatrix(gUid);
@@ -269,7 +269,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
 
             if (ShowIFF)
             {
-                var labelName = _shuttles.GetIFFLabel(grid, self: false, iff);
+                var labelName = _shuttles.GetIFFLabel(grid, self: false, iff, viewerGridUid: ourGridId); // Forge-Change
                 if (labelName != null)
                 {
                     var gridBounds = grid.Comp.LocalAABB;

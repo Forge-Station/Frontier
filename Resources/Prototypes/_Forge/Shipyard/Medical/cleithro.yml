@@ -12,6 +12,7 @@
   price: 33000 # 10+% up from sell
   category: Medium
   group: Medical
+  access: Medical
   shuttlePath: /Maps/Forge/Shuttles/Medical/cleithro.yml
   guidebookPage: Null
   class:
@@ -33,6 +34,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            paraMedicalInterview: [ 0, 0 ]

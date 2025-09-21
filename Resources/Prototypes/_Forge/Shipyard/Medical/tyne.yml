@@ -16,6 +16,7 @@
   price: 22000 #~5-6% markup as it's a med ship. Grid values at 17372.
   category: Small
   group: Medical
+  access: Medical
   shuttlePath: /Maps/Forge/Shuttles/Medical/tyne.yml
   class:
   - Medical
@@ -36,6 +37,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            paraMedicalInterview: [ 0, 0 ]

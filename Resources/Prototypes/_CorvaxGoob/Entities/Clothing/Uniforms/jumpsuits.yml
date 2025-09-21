@@ -1,0 +1,32 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitHoSBlack
+  name: head of security's black suit
+  description: It's Head of Security's black suit.
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/Uniforms/Jumpsuit/hos_black.rsi
+    - type: Clothing
+      sprite: _CorvaxGoob/Clothing/Uniforms/Jumpsuit/hos_black.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitWhiteCaptain
+  name: white captain jumpsuit
+  description: Captain white jumpsuit symbolizes that your salary is clearly above the norm.
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/Uniforms/Jumpsuit/captain_white.rsi
+    - type: Clothing
+      sprite: _CorvaxGoob/Clothing/Uniforms/Jumpsuit/captain_white.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseC2ContrabandUnredeemable]
+  id: ClothingUniformJumpsuitSheriffAlt
+  name: sheriff jumpsuit
+  description: Jumpsuit showing your status is how terrible... the great ruler.
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/Uniforms/Jumpsuit/sheriff.rsi
+    - type: Clothing
+      sprite: _CorvaxGoob/Clothing/Uniforms/Jumpsuit/sheriff.rsi

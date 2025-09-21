@@ -23,6 +23,9 @@
   - Fighter
   engine:
   - APU
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Paladin

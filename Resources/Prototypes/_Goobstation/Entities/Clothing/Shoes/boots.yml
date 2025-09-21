@@ -1,0 +1,32 @@
+- type: entity
+  parent: [ClothingShoesMilitaryBase, ClothingShoesBaseWinterBoots, BaseC1Contraband]
+  id: ClothingShoesWinterCombatBoots
+  name: snowjacks boots
+  description: Nanotrasen-issue Security combat boots for combat scenarios or combat situations. Now in winter edition.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Shoes/Boots/winterbootsjackboot.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Shoes/Boots/winterbootsjackboot.rsi
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.6
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+
+- type: entity
+  parent: [BaseC2ContrabandUnredeemable, ClothingShoesBootsJack]
+  id: ClothingShoesBootsJackAdvanced
+  name: advanced jackboots
+  description: This pair of jackboots was designed for the Head of Security. No one knows why are they called advanced, but they are for sure advanced in drip.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Shoes/Boots/advanced_jackboots.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Shoes/Boots/advanced_jackboots.rsi
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: StepHeavyBoots

@@ -32,6 +32,16 @@
   - StormtrooperClothingBackpack1
 
 - type: loadoutGroup
+  id: StormtrooperGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 1
+  loadouts:
+  - StormtrooperClothingHandsGloves1
+  - StormtrooperClothingHandsGloves2
+  fallbacks:
+  - StormtrooperClothingHandsGloves1
+
+- type: loadoutGroup
   id: StormtrooperGlasses
   name: loadout-group-contractor-glasses
   minLimit: 1

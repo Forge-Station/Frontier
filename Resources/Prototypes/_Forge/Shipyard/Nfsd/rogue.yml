@@ -20,6 +20,9 @@
   guidebookPage: Null
   class:
   - Fighter
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Rogue

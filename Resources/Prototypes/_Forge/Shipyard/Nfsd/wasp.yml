@@ -23,6 +23,9 @@
   - Capital
   - Detainment
   - Expedition
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Wasp

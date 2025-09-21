@@ -14,6 +14,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Content.Server._NF.GameTicking.Rules.Components; // Frontier
 using Content.Server._NF.Pirate.Components; // Frontier
+using Content.Server.GameTicking.Rules; //Forge-Change
+using Content.Shared._Forge.Contractor.Components; //Forge-Change
 
 namespace Content.Server.Administration.Systems;
 
@@ -71,7 +73,7 @@ public sealed partial class AdminVerbSystem
                 _antag.ForceMakeAntag<TraitorRuleComponent>(targetPlayer, DefaultTraitorRule);
             },
             Impact = LogImpact.High,
-            Message = string.Join(": ", traitorName,  Loc.GetString("admin-verb-make-traitor")),
+            Message = string.Join(": ", traitorName, Loc.GetString("admin-verb-make-traitor")),
         };
         args.Verbs.Add(traitor);
 
@@ -223,5 +225,30 @@ public sealed partial class AdminVerbSystem
 
         if (HasComp<HumanoidAppearanceComponent>(args.Target)) // only humanoids can be cloned
             args.Verbs.Add(paradox);
+
+        //Forge-Change-Start
+        var contractorName = Loc.GetString("admin-verb-text-make-contractor");
+        Verb contractor = new()
+        {
+            Text = contractorName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Forge/Interface/Misc/contratnic.rsi"), "contrantic"),
+            Act = () =>
+            {
+                if (HasComp<ContractorComponent>(args.Target))
+                {
+                    _popup.PopupEntity(Loc.GetString("admin-verb-make-contractor-already-is"), args.Target, player);
+                    return;
+                }
+
+                var contractorSystem = EntityManager.System<ContractorRuleSystem>();
+                contractorSystem.OnContractAccepted(args.Target);
+                _popup.PopupEntity(Loc.GetString("admin-verb-make-contractor-success", ("target", args.Target)), args.Target, player);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", contractorName, Loc.GetString("admin-verb-make-contractor-description")),
+        };
+        args.Verbs.Add(contractor);
+        //Forge-Change-End
     }
 }

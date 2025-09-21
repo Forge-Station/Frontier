@@ -1,0 +1,7 @@
+- type: entity
+  id: InterviewHologramparaMedical
+  parent: InterviewHologram
+  categories: [ HideSpawnMenu, DoNotMap ]
+  components:
+  - type: InterviewHologram
+    job: paraMedical

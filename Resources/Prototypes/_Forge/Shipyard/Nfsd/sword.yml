@@ -21,6 +21,9 @@
   shuttlePath: /Maps/Forge/Shuttles/Nfsd/sword.yml
   class:
   - Fighter
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Sword

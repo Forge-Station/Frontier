@@ -75,7 +75,7 @@ public sealed partial class DeadDropComponent : Component
     ///     Location of the grid to spawn in as the dead drop.
     /// </summary>
     [DataField]
-    public ResPath DropGrid = new("/Maps/_NF/DeadDrop/deaddrop.yml");
+    public ResPath DropGrid = new("/Maps/Forge/DeadDrop/deaddrop.yml");
 
     /// <summary>
     ///     The color of your grid. the name should be set by the mapper when mapping.

@@ -25,7 +25,7 @@ shipyard-rules-default1 =
 shipyard-rules-default2 =
     Любые действия, совершаемые вами или вашим экипажем, нарушающие
     Космический Закон, приведут к административным мерам.
-    Благодарим за выбор Департамента Службы Безопасности Фронтира.	
+    Благодарим за выбор Департамента Службы Безопасности Фронтира.
 shuttle-ftl-proximity = Массивный объект блокирует блюспейс перемещение!
 shuttle-ftl-recharge = Блюспейс двигатель на перезарядке!
 shuttle-ftl-invalid = Неверный шаттл для БС-прыжка!
@@ -38,7 +38,7 @@ multiauth-already-connected = Уже подключены к серверу Фр
 public-transit-shuttle-name = Общественный транспорт NT
 public-transit-departure = Транспорт направляется в { $destination }. Ориентировочное время в пути: { $flytime } секунд.
 public-transit-arrival = Благодарим за выбор общественного транспорта NT. Следующий шаттл до { $destination } отправляется через { $waittime } секунд.
-public-transit-shuttle-screen-text = {" "}АВТОБУС  {$number}{$suffix}
+public-transit-shuttle-screen-text = {" "}АВТОБУС {$number}{$suffix}
 
 nf-adventure-title = Приключение
 nf-adventure-description = Исследуйте неизведанные уголки космоса, проводите научные исследования, занимайтесь спасательными операциями или транспортировкой грузов и прокладывайте свой путь к богатству!

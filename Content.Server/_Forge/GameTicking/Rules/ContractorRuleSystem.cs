@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Content.Server.Antag;
+using Content.Server.GameTicking.Events;
 using Content.Shared._Forge.Contracts;
 using Content.Server.EUI;
 using Content.Server.GameTicking.Rules.Components;
@@ -23,6 +24,8 @@ using Robust.Shared.Utility;
 using Content.Server._Forge.Contractor.UI;
 using Content.Shared.Clothing;
 using Content.Shared.Roles;
+using Content.Shared.Roles.Jobs;
+using Content.Shared.Ghost;
 
 // If someone is going to integrate it outside the frontier, do it through the normal logic of the antagonists
 // Here I just need to do this
@@ -43,6 +46,7 @@ namespace Content.Server.GameTicking.Rules
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly RoleSystem _role = default!;
         [Dependency] private readonly SharedHandsSystem _hands = default!;
+        [Dependency] private readonly SharedJobSystem _jobSystem = default!;
         [Dependency] private readonly LoadoutSystem _loadout = default!;
 
         // Validation in case of changes
@@ -50,6 +54,9 @@ namespace Content.Server.GameTicking.Rules
         private const string Pirate = "NFPirate";
         [ValidatePrototypeId<NpcFactionPrototype>]
         private const string Syndicate = "NFSyndicate";
+
+        [ValidatePrototypeId<JobPrototype>]
+        private const string Mercenary = "Mercenary"; // ID профессии наёмника. Измените, если он другой.
 
         [ValidatePrototypeId<EntityPrototype>]
         private const string MindRole = "MindRoleContractor";
@@ -102,6 +109,18 @@ namespace Content.Server.GameTicking.Rules
                 if (!Exists(ent.Owner))
                     return;
 
+                // Count players who are not ghosts.
+                var query = EntityQueryEnumerator<ActorComponent>();
+                var playerCount = 0;
+                while (query.MoveNext(out var uid, out _))
+                {
+                    if (!HasComp<GhostComponent>(uid))
+                        playerCount++;
+                }
+
+                if (playerCount <= 15)
+                    return;
+
                 SelectCandidates(ent.Comp);
             });
         }
@@ -122,6 +141,11 @@ namespace Content.Server.GameTicking.Rules
                 // You can add any new faction here if necessary
                 if (_factionSystem.IsMember((candidate, null), Pirate)
                     || _factionSystem.IsMember((candidate, null), Syndicate))
+                    continue;
+
+                if (!_mind.TryGetMind(candidate, out var mindId, out _) ||
+                    !_jobSystem.MindTryGetJob(mindId, out var jobProto) ||
+                    jobProto.ID != Mercenary)
                     continue;
 
                 candidates.Add(candidate);
