@@ -22,6 +22,9 @@
   guidebookPage: Null
   class:
   - Capital
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Vostok

@@ -16,7 +16,7 @@
   maximumDistance: 5400
   minimumClearance: 1000
   spawnGroup: Required
-  gridPath: /Maps/_NF/POI/edison.yml
+  gridPath: /Maps/Forge/POI/edison.yml #CorvaxFrontier
   addComponents:
   - type: IFF
     color: "#3737F8"
@@ -29,7 +29,7 @@
 - type: gameMap
   id: Edison
   mapName: 'Edison Power Plant'
-  mapPath: /Maps/_NF/POI/edison.yml
+  mapPath: /Maps/Forge/POI/edison.yml #CorvaxFrontier
   minPlayers: 0
   stations:
     Edison:

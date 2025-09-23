@@ -27,7 +27,8 @@ public abstract partial class SharedShuttleSystem
         return component.Color;
     }
 
-    public string? GetIFFLabel(EntityUid gridUid, bool self = false, IFFComponent? component = null)
+    // A lot of Forge-Changes
+    public string? GetIFFLabel(EntityUid gridUid, bool self = false, IFFComponent? component = null, EntityUid? viewerGridUid = null)
     {
         var entName = MetaData(gridUid).EntityName;
 
@@ -36,14 +37,32 @@ public abstract partial class SharedShuttleSystem
             return entName;
         }
 
-        if (Resolve(gridUid, ref component, false) && (component.Flags & (IFFFlags.HideLabel | IFFFlags.Hide)) != 0x0)
+        if (Resolve(gridUid, ref component, false))
         {
-            return null;
+            if ((component.Flags & IFFFlags.Hide) != 0x0)
+            {
+                if (viewerGridUid.HasValue && !IsSameFaction(gridUid, viewerGridUid.Value))
+                {
+                    return null;
+                }
+
+                var _suffix = GetServiceFlagsSuffix(component.ServiceFlags);
+                return string.IsNullOrEmpty(entName) ? Loc.GetString("shuttle-console-unknown") : entName + _suffix;
+            }
+
+            if ((component.Flags & IFFFlags.HideLabel) != 0x0)
+            {
+                if (viewerGridUid.HasValue && !IsSameFaction(gridUid, viewerGridUid.Value))
+                {
+                    return null;
+                }
+
+                var _suffix = GetServiceFlagsSuffix(component.ServiceFlags);
+                return string.IsNullOrEmpty(entName) ? Loc.GetString("shuttle-console-unknown") : entName + _suffix;
+            }
         }
 
-        // Frontier
         var suffix = component != null ? GetServiceFlagsSuffix(component.ServiceFlags) : string.Empty;
-
         return string.IsNullOrEmpty(entName) ? Loc.GetString("shuttle-console-unknown") : entName + suffix;
     }
 
@@ -160,4 +179,20 @@ public abstract partial class SharedShuttleSystem
         component.ReadOnly = readOnly;
     }
     // End Frontier
+
+    // Forge Method
+    public bool IsSameFaction(EntityUid a, EntityUid b)
+    {
+        if (a == b)
+            return true;
+
+        if (TryComp<ShuttleFactionComponent>(a, out var fa) && TryComp<ShuttleFactionComponent>(b, out var fb))
+        {
+            if (string.IsNullOrEmpty(fa.Faction) || string.IsNullOrEmpty(fb.Faction))
+                return false;
+            return fa.Faction == fb.Faction;
+        }
+
+        return false;
+    }
 }

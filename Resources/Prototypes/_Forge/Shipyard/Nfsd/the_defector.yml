@@ -21,6 +21,9 @@
 #   shuttlePath: /Maps/Forge/Shuttles/Nfsd/the_defector.yml
 #   class:
 #   - Patrol
+#   addComponents:
+#   - type: ShuttleFaction
+#     faction: NFSD
 
 # - type: gameMap
 #   id: the_defector

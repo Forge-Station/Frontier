@@ -22,6 +22,9 @@
   - Pursuit
   engine:
   - Uranium
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Hypnos
