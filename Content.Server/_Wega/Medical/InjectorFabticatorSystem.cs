@@ -76,6 +76,14 @@ public sealed class InjectorFabticatorSystem : EntitySystem
 
     private void OnComponentInit(EntityUid uid, InjectorFabticatorComponent component, ComponentInit args)
     {
+        // Forge Frontier add
+        if (_itemSlotsSystem.TryGetSlot(uid, InjectorFabticatorComponent.BeakerSlotId, out var slot))
+        {
+            component.BeakerSlot = slot;
+            return;
+        }
+        // Forge Frontier end
+
         _itemSlotsSystem.AddItemSlot(uid, InjectorFabticatorComponent.BeakerSlotId, component.BeakerSlot);
     }
 
@@ -206,6 +214,8 @@ public sealed class InjectorFabticatorSystem : EntitySystem
             return;
 
         _itemSlotsSystem.TryEject(uid, component.BeakerSlot, null, out var _, true);
+
+        UpdateUiState(uid, component);
     }
 
     private void OnSyncRecipeMessage(EntityUid uid, InjectorFabticatorComponent component, InjectorFabticatorSyncRecipeMessage args)

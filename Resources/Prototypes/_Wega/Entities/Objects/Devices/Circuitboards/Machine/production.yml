@@ -8,7 +8,8 @@
       state: secmodschematic
     - type: MachineBoard
       prototype: InjectorFabricator
-      stackRequirements:
+      requirements:
         Manipulator: 2
+      stackRequirements:
         Glass: 5
         Cable: 2
