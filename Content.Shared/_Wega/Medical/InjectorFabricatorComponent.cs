@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.FixedPoint;
@@ -18,7 +19,7 @@ public sealed partial class InjectorFabticatorComponent : Component
     public string? CustomName;
 
     [DataField]
-    public ItemSlot BeakerSlot = new();
+    public ItemSlot? BeakerSlot = new();
 
     [ViewVariables]
     public FixedPoint2 BufferVolume = 0;
@@ -44,4 +45,3 @@ public sealed partial class InjectorFabticatorComponent : Component
     [ViewVariables]
     public Dictionary<ReagentId, FixedPoint2>? Recipe;
 }
-

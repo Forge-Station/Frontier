@@ -76,15 +76,13 @@ public sealed class InjectorFabticatorSystem : EntitySystem
 
     private void OnComponentInit(EntityUid uid, InjectorFabticatorComponent component, ComponentInit args)
     {
-        // Forge Frontier add
-        if (_itemSlotsSystem.TryGetSlot(uid, InjectorFabticatorComponent.BeakerSlotId, out var slot))
-        {
-            component.BeakerSlot = slot;
-            return;
-        }
-        // Forge Frontier end
+        // Corvax Forge
+        if (component.BeakerSlot == null)
+            component.BeakerSlot = new ItemSlot();
 
-        _itemSlotsSystem.AddItemSlot(uid, InjectorFabticatorComponent.BeakerSlotId, component.BeakerSlot);
+        if (!_itemSlotsSystem.TryGetSlot(uid, InjectorFabticatorComponent.BeakerSlotId, out _))
+            _itemSlotsSystem.AddItemSlot(uid, InjectorFabticatorComponent.BeakerSlotId, component.BeakerSlot);
+        // Corvax Forge end
     }
 
     private void OnMapInit(EntityUid uid, InjectorFabticatorComponent component, MapInitEvent args)
@@ -105,7 +103,11 @@ public sealed class InjectorFabticatorSystem : EntitySystem
 
     private void OnTransferBeakerToBufferMessage(EntityUid uid, InjectorFabticatorComponent component, InjectorFabticatorTransferBeakerToBufferMessage args)
     {
-        if (component.IsProducing || component.BeakerSlot.Item is not { } beaker)
+        if (component.IsProducing)
+            return;
+
+        if (!_itemSlotsSystem.TryGetSlot(uid, InjectorFabticatorComponent.BeakerSlotId, out var slot)
+            || slot.Item is not { } beaker)
             return;
 
         if (!_solutionSystem.TryGetSolution(beaker, "beaker", out var beakerSolution, out var solution) ||
@@ -127,7 +129,8 @@ public sealed class InjectorFabticatorSystem : EntitySystem
         if (component.IsProducing)
             return;
 
-        if (component.BeakerSlot.Item is not { } beaker)
+        if (!_itemSlotsSystem.TryGetSlot(uid, InjectorFabticatorComponent.BeakerSlotId, out var slot)
+            || slot.Item is not { } beaker)
             return;
 
         if (!_solutionSystem.TryGetSolution(beaker, "beaker", out var beakerSolution, out _) ||
@@ -155,13 +158,9 @@ public sealed class InjectorFabticatorSystem : EntitySystem
         var exactKey = component.Recipe.Keys.FirstOrDefault(k =>
             k.Prototype == args.ReagentId.Prototype);
         if (exactKey != default)
-        {
             component.Recipe[exactKey] += args.Amount;
-        }
         else
-        {
             component.Recipe[args.ReagentId] = args.Amount;
-        }
 
         UpdateUiState(uid, component);
     }
@@ -187,12 +186,6 @@ public sealed class InjectorFabticatorSystem : EntitySystem
         if (component.Recipe == null || component.Recipe.Sum(r => (long)r.Value) > 30)
             return;
 
-        var totalRequired = new Dictionary<ReagentId, FixedPoint2>();
-        foreach (var (reagent, amountPerInjector) in component.Recipe)
-        {
-            totalRequired[reagent] = amountPerInjector * args.Amount;
-        }
-
         if (!_solutionSystem.TryGetSolution(uid, InjectorFabticatorComponent.BufferSolutionName, out var bufferSolution, out var buffer))
             return;
 
@@ -213,9 +206,10 @@ public sealed class InjectorFabticatorSystem : EntitySystem
         if (component.IsProducing)
             return;
 
-        _itemSlotsSystem.TryEject(uid, component.BeakerSlot, null, out var _, true);
+        if (!_itemSlotsSystem.TryGetSlot(uid, InjectorFabticatorComponent.BeakerSlotId, out var slot))
+            return;
 
-        UpdateUiState(uid, component);
+        _itemSlotsSystem.TryEject(uid, slot, null, out _, true);
     }
 
     private void OnSyncRecipeMessage(EntityUid uid, InjectorFabticatorComponent component, InjectorFabticatorSyncRecipeMessage args)
@@ -280,15 +274,17 @@ public sealed class InjectorFabticatorSystem : EntitySystem
         NetEntity? beakerNetEntity = null;
         ContainerInfo? beakerContainerInfo = null;
 
-        if (component.BeakerSlot.Item != null)
+        if (_itemSlotsSystem.TryGetSlot(uid, InjectorFabticatorComponent.BeakerSlotId, out var slot)
+            && slot.Item is { } beaker)
         {
-            beakerNetEntity = GetNetEntity(component.BeakerSlot.Item);
-            beakerContainerInfo = BuildBeakerContainerInfo(component.BeakerSlot.Item.Value);
+            beakerNetEntity = GetNetEntity(beaker);
+            beakerContainerInfo = BuildBeakerContainerInfo(beaker);
         }
 
         _solutionSystem.TryGetSolution(uid, InjectorFabticatorComponent.BufferSolutionName, out _, out var buffer);
 
         var canProduce = component.Recipe != null && component.Recipe.Sum(r => (long)r.Value) <= 30;
+
         return new InjectorFabticatorBoundUserInterfaceState(
             component.IsProducing,
             canProduce,

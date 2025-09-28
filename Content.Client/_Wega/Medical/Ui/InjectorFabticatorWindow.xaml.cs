@@ -109,28 +109,40 @@ public sealed partial class InjectorFabticatorWindow : FancyWindow
     public void UpdateState(InjectorFabticatorBoundUserInterfaceState state)
     {
         // Update beaker slot
-        if (state.Beaker == null)
+        BeakerSlot.RemoveAllChildren();
+        if (state.Beaker != null)
         {
-            BeakerSlot.RemoveAllChildren();
-            BeakerInfoLabel.Text = Loc.GetString("injector-fabticator-no-beaker");
+            var entity = _entityManager.GetEntity(state.Beaker);
+            if (entity != null)
+            {
+                var entityView = new SpriteView
+                {
+                    Scale = new Vector2(2, 2),
+                    SetSize = new Vector2(64, 64),
+                    Margin = new Thickness(4)
+                };
+                entityView.SetEntity(entity);
+                BeakerSlot.AddChild(entityView);
+
+                if (state.BeakerContainerInfo != null)
+                {
+                    BeakerInfoLabel.Text = $"{state.BeakerContainerInfo.DisplayName}: " +
+                        $"{state.BeakerContainerInfo.CurrentVolume}/{state.BeakerContainerInfo.MaxVolume}";
+                    UpdateReagentList(BeakerReagentList, state.BeakerContainerInfo.Reagents);
+                }
+                else
+                {
+                    BeakerInfoLabel.Text = Loc.GetString("injector-fabticator-no-beaker-info");
+                }
+            }
+            else
+            {
+                BeakerInfoLabel.Text = Loc.GetString("injector-fabticator-no-beaker");
+            }
         }
         else
         {
-            var entityView = new SpriteView
-            {
-                Scale = new Vector2(2, 2),
-                SetSize = new Vector2(64, 64),
-                Margin = new Thickness(4)
-            };
-            entityView.SetEntity(_entityManager.GetEntity(state.Beaker));
-            BeakerSlot.AddChild(entityView);
-
-            if (state.BeakerContainerInfo != null)
-            {
-                BeakerInfoLabel.Text = $"{state.BeakerContainerInfo.DisplayName}: " +
-                    $"{state.BeakerContainerInfo.CurrentVolume}/{state.BeakerContainerInfo.MaxVolume}";
-                UpdateReagentList(BeakerReagentList, state.BeakerContainerInfo.Reagents);
-            }
+            BeakerInfoLabel.Text = Loc.GetString("injector-fabticator-no-beaker");
         }
         EjectButton.Disabled = state.Beaker == null;
 
@@ -142,7 +154,41 @@ public sealed partial class InjectorFabticatorWindow : FancyWindow
         UpdateReagentList(RecipeReagentList, state.Recipe);
 
         // Update reagent selectors
-        UpdateReagentSelectors(state);
+        _beakerReagents.Clear();
+        _bufferReagents.Clear();
+        ReagentSelector.Clear();
+        BufferReagentSelector.Clear();
+        BeakerReagentSelector.Clear();
+
+        if (state.BeakerContainerInfo?.Reagents != null)
+        {
+            foreach (var reagent in state.BeakerContainerInfo.Reagents)
+            {
+                if (_prototypeManager.TryIndex<ReagentPrototype>(reagent.Reagent.Prototype, out var proto))
+                {
+                    _beakerReagents[reagent.Reagent] = proto;
+                    BeakerReagentSelector.AddItem(proto.LocalizedName, reagent.Reagent.Prototype.GetHashCode());
+                }
+            }
+        }
+
+        if (state.BufferSolution?.Contents != null)
+        {
+            foreach (var (reagentId, _) in state.BufferSolution.Contents)
+            {
+                if (_prototypeManager.TryIndex<ReagentPrototype>(reagentId.Prototype, out var proto))
+                {
+                    _bufferReagents[reagentId] = proto;
+                    ReagentSelector.AddItem(proto.LocalizedName, reagentId.Prototype.GetHashCode());
+                    BufferReagentSelector.AddItem(proto.LocalizedName, reagentId.Prototype.GetHashCode());
+                }
+            }
+        }
+
+        // Update transfer buttons state
+        TransferToBufferButton.Disabled = BeakerReagentSelector.ItemCount == 0;
+        TransferToBeakerButton.Disabled = BufferReagentSelector.ItemCount == 0;
+        AddReagentButton.Disabled = ReagentSelector.ItemCount == 0;
 
         // Update production controls
         var canProduce = state.CanProduce && !state.IsProducing;
