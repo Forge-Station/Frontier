@@ -1,25 +1,15 @@
-using Content.Shared._ADT.Modsuit.Components;
-using Content.Shared._ADT.Modsuit.Systems;
-using Robust.Client.Graphics;
-using Robust.Client.Input;
+using Content.Shared._ADT.Modsuit.Events;
 using Robust.Client.UserInterface;
 
 namespace Content.Client._ADT.Modsuits.UI;
 
 public sealed class ModSuitMenuBoundUserInterface : BoundUserInterface
 {
-    [Dependency] private readonly IClyde _displayManager = default!;
-    [Dependency] private readonly IInputManager _inputManager = default!;
-
-    private IEntityManager _entityManager;
     private ModSuitMenu? _menu;
-    private ModSuitSystem _modsuit;
 
     public ModSuitMenuBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
         IoCManager.InjectDependencies(this);
-        _entityManager = IoCManager.Resolve<IEntityManager>();
-        _modsuit = EntMan.System<ModSuitSystem>();
     }
 
     protected override void UpdateState(BoundUserInterfaceState state)
@@ -28,6 +18,7 @@ public sealed class ModSuitMenuBoundUserInterface : BoundUserInterface
 
         if (state is not ModBoundUiState msg)
             return;
+
         _menu?.UpdateModStats();
         _menu?.UpdateModuleView(msg);
     }
@@ -44,24 +35,18 @@ public sealed class ModSuitMenuBoundUserInterface : BoundUserInterface
 
         _menu.LockButton.OnPressed += _ => OnLockPressed();
 
-        _menu.OnRemoveButtonPressed += Owner =>
-        {
-            SendMessage(new ModModuleRemoveMessage(EntMan.GetNetEntity(Owner)));
-        };
-        _menu.OnActivateButtonPressed += Owner =>
-        {
-            SendMessage(new ModModulActivateMessage(EntMan.GetNetEntity(Owner)));
-        };
-        _menu.OnDeactivateButtonPressed += Owner =>
-        {
-            SendMessage(new ModModulDeactivateMessage(EntMan.GetNetEntity(Owner)));
-        };
+        _menu.OnRemoveButtonPressed +=
+            owner => SendPredictedMessage(new ModModuleRemoveMessage(EntMan.GetNetEntity(owner)));
+        _menu.OnActivateButtonPressed += owner =>
+            SendPredictedMessage(new ModModuleActivateMessage(EntMan.GetNetEntity(owner)));
+        _menu.OnDeactivateButtonPressed += owner =>
+            SendPredictedMessage(new ModModuleDeactivateMessage(EntMan.GetNetEntity(owner)));
     }
 
     private void OnLockPressed()
     {
         var msg = new ModLockMessage(EntMan.GetNetEntity(Owner));
-        SendMessage(msg);
+        SendPredictedMessage(msg);
         _menu?.UpdateModStats();
     }
 }

@@ -3,43 +3,44 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._ADT.Modsuit.Components;
 
-[RegisterComponent] [NetworkedComponent] [AutoGenerateComponentState]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class ModSuitModComponent : Component
 {
+    [DataField, AutoNetworkedField]
+    public bool IsInstantlyActive = false;
+
     [AutoNetworkedField]
     public bool Active = false;
 
     /// <summary>
-    /// Module  limit
+    ///     Module  limit
     /// </summary>
-    [DataField] [AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public int Complexity = 1;
+
+    /// <summary>
+    ///     energy using
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public float EnergyUsing = 0;
 
     /// <summary>
     /// The components to add when activated.
     /// </summary>
     [DataField(required: true)]
-    public ComponentRegistry Components = new();
-
-    [AutoNetworkedField]
-    public TimeSpan Ejecttick;
-
-    [AutoNetworkedField]
-    public bool Inserted = false;
-
-    [DataField] [AutoNetworkedField]
-    public bool IsInstantlyActive;
+    public Dictionary<string, ComponentRegistry> Components = new();
 
     /// <summary>
     /// The components to remove when deactivated.
-    /// If this is null <see cref="Components" /> is reused.
+    /// If this is null <see cref="Components"/> is reused.
     /// </summary>
     [DataField]
-    public ComponentRegistry? RemoveComponents;
+    public Dictionary<string, ComponentRegistry>? RemoveComponents;
+}
 
-    /// <summary>
-    /// The container that the clothing is stored in when not equipped.
-    /// </summary>
-    [DataField] [AutoNetworkedField]
-    public List<string> Slots = new();
+public enum ExamineColor
+{
+    Red,
+    Yellow,
+    Green
 }
