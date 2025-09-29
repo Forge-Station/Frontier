@@ -578,6 +578,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
 
         var damage = GetDamage(meleeUid, user, component);
         var entities = GetEntityList(ev.Entities);
+        var resistanceBypass = GetResistanceBypass(meleeUid, user, component); // Forge-Edit: ignoreResistances heavy attack fix
 
         if (entities.Count == 0)
         {
@@ -632,7 +633,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
 
         foreach (var entity in entities)
         {
-            if (entity == user ||
+            if (Deleted(entity) || entity == user ||
                 !damageQuery.HasComponent(entity))
                 continue;
 
@@ -681,7 +682,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
             RaiseLocalEvent(entity, attackedEvent);
             var modifiedDamage = DamageSpecifier.ApplyModifierSets(damage + hitEvent.BonusDamage + attackedEvent.BonusDamage, hitEvent.ModifiersList);
 
-            var damageResult = Damageable.TryChangeDamage(entity, modifiedDamage, origin:user);
+            var damageResult = Damageable.TryChangeDamage(entity, modifiedDamage, origin:user, ignoreResistances:resistanceBypass); // Forge-Edit: ignoreResistances heavy attack fix
 
             if (damageResult != null && damageResult.GetTotal() > FixedPoint2.Zero)
             {

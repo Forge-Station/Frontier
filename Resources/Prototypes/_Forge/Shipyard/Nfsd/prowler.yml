@@ -23,6 +23,9 @@
   - Patrol
   engine:
   - AME
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Prowler

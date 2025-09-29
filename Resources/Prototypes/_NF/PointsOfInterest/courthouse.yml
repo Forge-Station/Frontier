@@ -8,34 +8,34 @@
 
 # Notes:
 #
-- type: pointOfInterest
-  id: Courthouse
-  parent: BasePOI
-  name: "Суд"
-  minimumDistance: 1150
-  maximumDistance: 2050
-  spawnGroup: Required
-  gridPath: /Maps/_NF/POI/courthouse.yml
-  addComponents:
-  - type: IFF
-    color: "#8e6444"
-    readOnly: true
-  - type: Shuttle
-  - type: ProtectedGrid
-    noGridCollision: true #CorvaxFrontier
-  - type: StationTransit
-    routes:
-      MinorPointsOfInterest: 30
+#- type: pointOfInterest
+#  id: Courthouse
+#  parent: BasePOI
+#  name: "Суд"
+#  minimumDistance: 1150
+#  maximumDistance: 2050
+#  spawnGroup: Required
+#  gridPath: /Maps/_NF/POI/courthouse.yml
+#  addComponents:
+#  - type: IFF
+#    color: "#8e6444"
+#    readOnly: true
+#  - type: Shuttle
+#  - type: ProtectedGrid
+#    noGridCollision: true #CorvaxFrontier
+#  - type: StationTransit
+#    routes:
+#      MinorPointsOfInterest: 30
 
-- type: gameMap
-  id: Courthouse
-  mapName: "Courthouse"
-  mapPath: /Maps/_NF/POI/courthouse.yml
-  minPlayers: 0
-  stations:
-    Courthouse:
-      stationProto: StandardFrontierOutpost
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: "Courthouse"
-        - type: StationDeadDropHintExempt
+#- type: gameMap
+#  id: Courthouse
+#  mapName: "Courthouse"
+#  mapPath: /Maps/_NF/POI/courthouse.yml
+#  minPlayers: 0
+#  stations:
+#    Courthouse:
+#      stationProto: StandardFrontierOutpost
+#      components:
+#        - type: StationNameSetup
+#          mapNameTemplate: "Courthouse"
+#        - type: StationDeadDropHintExempt

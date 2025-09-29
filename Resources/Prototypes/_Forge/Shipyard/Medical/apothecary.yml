@@ -16,6 +16,7 @@
   price: 45000
   category: Small
   group: Medical
+  access: Medical
   shuttlePath: /Maps/Forge/Shuttles/Medical/apothecary.yml
   guidebookPage: ShipyardApothecary
   class:
@@ -38,6 +39,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            paraMedicalInterview: [ 0, 0 ]

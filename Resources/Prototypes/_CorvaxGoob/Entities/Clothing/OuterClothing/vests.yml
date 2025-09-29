@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingOuterVestArmorMedSec
+  name: security medic armor vest
+  description: A security medic's armor vest, with little pockets for little things.
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/OuterClothing/Vests/armor_sec_med.rsi
+    - type: Clothing
+      sprite: _CorvaxGoob/Clothing/OuterClothing/Vests/armor_sec_med.rsi

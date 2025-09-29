@@ -16,6 +16,7 @@
   price: 23500 #меньше не поставлю, ибо нефиг
   category: Small
   group: Medical
+  access: Medical
   shuttlePath: /Maps/Forge/Shuttles/Medical/konserv.yml
   class:
   - Medical
@@ -36,6 +37,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            paraMedicalInterview: [ 0, 0 ]

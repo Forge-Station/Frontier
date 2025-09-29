@@ -22,6 +22,8 @@
   addComponents:
   - type: IFF
     flags: [HideLabel]
+  - type: ShuttleFaction
+    faction: Pirate
 
 - type: gameMap
   id: QueenAnnesRevenge

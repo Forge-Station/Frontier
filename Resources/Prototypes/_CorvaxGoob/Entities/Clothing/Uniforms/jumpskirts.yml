@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtHoSBlack
+  name: head of security's black skirt
+  description: It's Head of Security's black skirt.
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/Uniforms/Jumpskirt/hos_black.rsi
+    - type: Clothing
+      sprite: _CorvaxGoob/Clothing/Uniforms/Jumpskirt/hos_black.rsi
+
+- type: entity
+  parent: ClothingUniformJumpskirtCaptain
+  id: ClothingUniformJumpskirtWhiteCaptain
+  name: white captain jumpskirt
+  description: White captain jumpsuit skirt symbolizing that your salary clearly exceeds the norm.
+  components:
+  - type: Sprite
+    sprite: _CorvaxGoob/Clothing/Uniforms/Jumpskirt/white_captain.rsi
+  - type: Clothing
+    sprite: _CorvaxGoob/Clothing/Uniforms/Jumpskirt/white_captain.rsi

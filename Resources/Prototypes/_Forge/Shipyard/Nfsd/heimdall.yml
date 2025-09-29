@@ -23,6 +23,9 @@
   - Detective
   engine:
   - Plasma
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Heimdall

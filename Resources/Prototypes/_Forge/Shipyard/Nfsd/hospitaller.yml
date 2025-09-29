@@ -21,6 +21,9 @@
   guidebookPage: Null
   class:
   - Medical
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Hospitaller

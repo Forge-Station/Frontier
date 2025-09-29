@@ -137,7 +137,7 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         }
     }
 
-    public bool CanDraw(EntityUid gridUid, PhysicsComponent? physics = null, IFFComponent? iffComp = null)
+    public bool CanDraw(EntityUid gridUid, PhysicsComponent? physics = null, IFFComponent? iffComp = null, EntityUid? viewerGridUid = null)
     {
         if (!Resolve(gridUid, ref physics))
             return true;
@@ -152,8 +152,13 @@ public abstract partial class SharedShuttleSystem : EntitySystem
             return true;
         }
 
-        // Hide it entirely.
-        return (iffComp.Flags & IFFFlags.Hide) == 0x0;
+        // Forge-Check
+        if ((iffComp.Flags & IFFFlags.Hide) != 0x0)
+        {
+            return viewerGridUid.HasValue && IsSameFaction(gridUid, viewerGridUid.Value);
+        }
+
+        return true; // Forge-Change
     }
 
     public bool IsBeaconMap(EntityUid mapUid)

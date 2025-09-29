@@ -19,6 +19,10 @@
 #   access: Security
 #   mapchecker_group_override: Security
 #   shuttlePath: /Maps/Forge/Shuttles/Nfsd/Gast.yml
+#   addComponents:
+#   - type: ShuttleFaction
+#     faction: NFSD
+
 # - type: gameMap
 #   id: Gast
 #   mapName: 'NSF Гаст'

@@ -16,6 +16,7 @@
   price: 30000 # ~26400$ on mapinit + ~2640$ from 10% markup
   category: Small
   group: Medical
+  access: Medical
   shuttlePath: /Maps/Forge/Shuttles/Medical/searchlight.yml
   guidebookPage: ShipyardSearchlight
   class:
@@ -37,6 +38,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            paraMedicalInterview: [ 0, 0 ]

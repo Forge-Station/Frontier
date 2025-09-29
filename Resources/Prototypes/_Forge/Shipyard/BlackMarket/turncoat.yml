@@ -21,6 +21,9 @@
   - Pirate
   engine:
   - Uranium
+  addComponents:
+  - type: ShuttleFaction
+    faction: Pirate
 
 - type: gameMap
   id: Turncoat

@@ -1,0 +1,44 @@
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesLatexSurgeon
+  name: latex gloves
+  description: Thin sterile latex gloves. Basic PPE for any doctor.
+  components:
+  - type: Sprite
+    sprite: _Wega/Clothing/Hands/Gloves/latex_surgeon.rsi
+  - type: Clothing
+    sprite: _Wega/Clothing/Hands/Gloves/latex_surgeon.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nitrile
+  - type: FingerprintMask
+  - type: Insulated
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesLatexSyndi
+  name: latex gloves syndi
+  description: Thin sterile latex gloves. Basic PPE for any doctor.
+  components:
+  - type: Sprite
+    sprite: _Wega/Clothing/Hands/Gloves/latex_syndi.rsi
+  - type: Clothing
+    sprite: _Wega/Clothing/Hands/Gloves/latex_syndi.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nitrile
+  - type: FingerprintMask
+  - type: Insulated
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesLatexNfsd
+  name: latex gloves nfsd
+  description: Thin sterile latex gloves. Basic PPE for any doctor.
+  components:
+  - type: Sprite
+    sprite: _Wega/Clothing/Hands/Gloves/latex_nsfd.rsi
+  - type: Clothing
+    sprite: _Wega/Clothing/Hands/Gloves/latex_nsfd.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nitrile
+  - type: FingerprintMask
+  - type: Insulated

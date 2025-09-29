@@ -23,6 +23,9 @@
   shuttlePath: /Maps/Forge/Shuttles/Nfsd/Cvasar.yml
   class:
   - Fighter
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Cvasar

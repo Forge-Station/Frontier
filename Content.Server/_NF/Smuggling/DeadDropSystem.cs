@@ -19,6 +19,7 @@ using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Paper;
 using Content.Shared.Shuttles.Components;
+using Content.Shared.Interaction;
 using Content.Shared.Verbs;
 using Robust.Shared.Configuration;
 using Robust.Shared.Map;
@@ -27,6 +28,8 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Content.Server._NF.Station.Systems;
 using Robust.Shared.EntitySerialization.Systems;
+using Robust.Shared.EntitySerialization;
+using Content.Server.Maps;
 
 namespace Content.Server._NF.Smuggling;
 
@@ -73,6 +76,7 @@ public sealed class DeadDropSystem : EntitySystem
 
         SubscribeLocalEvent<DeadDropComponent, ComponentStartup>(OnStartup); //TODO: compromise on shutdown if the stat
         SubscribeLocalEvent<DeadDropComponent, GetVerbsEvent<InteractionVerb>>(AddSearchVerb);
+        SubscribeLocalEvent<DeadDropComponent, ActivateInWorldEvent>(OnActivate);
         SubscribeLocalEvent<DeadDropComponent, AnchorStateChangedEvent>(OnDeadDropUnanchored);
         SubscribeLocalEvent<StationDeadDropComponent, ComponentStartup>(OnStationStartup);
         SubscribeLocalEvent<StationDeadDropComponent, ComponentShutdown>(OnStationShutdown);
@@ -434,6 +438,21 @@ public sealed class DeadDropSystem : EntitySystem
         args.Verbs.Add(searchVerb);
     }
 
+    private void OnActivate(EntityUid uid, DeadDropComponent component, ActivateInWorldEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        if (args.User == null || !TryComp<HandsComponent>(args.User, out var hands))
+            return;
+
+        if (_timing.CurTime < component.NextDrop)
+            return;
+
+        SendDeadDrop(uid, component, args.User, hands);
+        args.Handled = true;
+    }
+
     //spawning the dead drop.
     private void SendDeadDrop(EntityUid uid, DeadDropComponent component, EntityUid user, HandsComponent hands)
     {
@@ -525,15 +544,22 @@ public sealed class DeadDropSystem : EntitySystem
         dropHint.AppendLine();
         dropHint.AppendLine(Loc.GetString("deaddrop-hint-next-drop", ("time", hintNextDrop.ToString("hh\\:mm") + ":00")));
 
-        var paper = EntityManager.SpawnEntity(component.HintPaper, Transform(uid).Coordinates);
-
-        if (TryComp(paper, out PaperComponent? paperComp))
+        // Spawn the paper, but ensure it's a valid entity before proceeding.
+        var paperUid = EntityManager.SpawnEntity(component.HintPaper, Transform(uid).Coordinates);
+        if (!paperUid.Valid)
         {
-            _paper.SetContent((paper, paperComp), dropHint.ToString());
+            _sawmill.Error($"Failed to spawn hint paper with prototype '{component.HintPaper}' for dead drop {ToPrettyString(uid)}.");
+            return;
         }
-        _meta.SetEntityName(paper, Loc.GetString("deaddrop-hint-name"));
-        _meta.SetEntityDescription(paper, Loc.GetString("deaddrop-hint-desc"));
-        _hands.PickupOrDrop(user, paper, handsComp: hands);
+
+        // Ensure the paper has a PaperComponent before trying to write to it.
+        if (TryComp<PaperComponent>(paperUid, out var paperComp))
+        {
+            _paper.SetContent((paperUid, paperComp), dropHint.ToString());
+        }
+        _meta.SetEntityName(paperUid, Loc.GetString("deaddrop-hint-name"));
+        _meta.SetEntityDescription(paperUid, Loc.GetString("deaddrop-hint-desc"));
+        _hands.PickupOrDrop(user, paperUid, handsComp: hands);
 
         component.DeadDropCalled = true;
         //logic of posters ends here and logic of radio signals begins here

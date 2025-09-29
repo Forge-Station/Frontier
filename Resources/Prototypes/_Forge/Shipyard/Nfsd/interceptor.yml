@@ -21,6 +21,9 @@
   guidebookPage: Null
   class:
   - Detective
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Interceptor

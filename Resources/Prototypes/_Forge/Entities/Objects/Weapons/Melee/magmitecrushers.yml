@@ -9,6 +9,15 @@
     - state: icon-uncharged
       visible: false
       map: [ "empty-icon" ]
+  - type: Item
+    size: Ginormous
+    sprite: Forge/Objects/Weapons/Melee/magmitecrusher.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Melee/magmitecrusher.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
   - type: LeechOnMarker
     leech:
       groups:
@@ -45,6 +54,15 @@
   components:
   - type: Sprite
     sprite: Forge/Objects/Weapons/Melee/magmitecrusher_glaive.rsi
+  - type: Item
+    size: Ginormous
+    sprite: Forge/Objects/Weapons/Melee/magmitecrusher_glaive.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Melee/magmitecrusher_glaive.rsi
+    quickEquip: false
+    slots:
+    - back
+    - suitStorage
   - type: UseDelay
     delay: 1.9
   - type: LeechOnMarker
@@ -55,10 +73,5 @@
   - type: Tag
     tags:
       - Pickaxe
-  - type: Clothing
-    quickEquip: false
-    slots:
-    - back
-    - suitStorage
   - type: StaticPrice
     price: 2850

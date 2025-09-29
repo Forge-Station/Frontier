@@ -21,7 +21,6 @@
   addComponents:
   - type: IFF
     color: "#ff8c00"
-  - type: StationTransit
   - type: ProtectedGrid
     preventArtifactTriggers: True
     preventExplosions: False
