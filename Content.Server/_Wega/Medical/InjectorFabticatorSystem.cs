@@ -114,17 +114,23 @@ public sealed class InjectorFabticatorSystem : EntitySystem
             || slot.Item is not { } beaker)
             return;
 
-        if (!_solutionSystem.TryGetSolution(beaker, "beaker", out var beakerSolution, out _) ||
+        if (!_solutionSystem.TryGetSolution(beaker, "beaker", out var beakerSolution, out var beakerSolutionComp) ||
             !_solutionSystem.TryGetSolution(uid, InjectorFabticatorComponent.BufferSolutionName, out var bufferSolution, out _))
             return;
 
-        var quantity = new ReagentQuantity(args.ReagentId, args.Amount);
+        beakerSolutionComp.TryGetReagentQuantity(args.ReagentId, out var available);
+        var transferAmount = FixedPoint2.Min(args.Amount, available);
+
+        if (transferAmount <= 0)
+            return;
+
+        var quantity = new ReagentQuantity(args.ReagentId, transferAmount);
         if (_solutionSystem.RemoveReagent(beakerSolution.Value, quantity))
         {
             _solutionSystem.TryAddReagent(bufferSolution.Value, quantity, out _);
 
             var reagentName = _prototypeManager.Index<ReagentPrototype>(args.ReagentId.Prototype).LocalizedName;
-            var message = Loc.GetString("injector-fabticator-transfer-to-buffer-success", ("amount", args.Amount), ("reagent", reagentName));
+            var message = Loc.GetString("injector-fabticator-transfer-to-buffer-success", ("amount", transferAmount), ("reagent", reagentName));
             _popup.PopupEntity(message, uid);
             UpdateUiState(uid, component);
         }
@@ -139,17 +145,24 @@ public sealed class InjectorFabticatorSystem : EntitySystem
             || slot.Item is not { } beaker)
             return;
 
-        if (!_solutionSystem.TryGetSolution(beaker, "beaker", out var beakerSolution, out _) ||
-            !_solutionSystem.TryGetSolution(uid, InjectorFabticatorComponent.BufferSolutionName, out var bufferSolution, out _))
+        if (!_solutionSystem.TryGetSolution(beaker, "beaker", out var beakerSolution, out var beakerSolutionComp) ||
+            !_solutionSystem.TryGetSolution(uid, InjectorFabticatorComponent.BufferSolutionName, out var bufferSolution, out var bufferSolutionComp))
             return;
 
-        var quantity = new ReagentQuantity(args.ReagentId, args.Amount);
+        bufferSolutionComp.TryGetReagentQuantity(args.ReagentId, out var available);
+        var transferAmount = FixedPoint2.Min(args.Amount, available);
+        transferAmount = FixedPoint2.Min(transferAmount, beakerSolutionComp.AvailableVolume);
+
+        if (transferAmount <= 0)
+            return;
+
+        var quantity = new ReagentQuantity(args.ReagentId, transferAmount);
         if (_solutionSystem.RemoveReagent(bufferSolution.Value, quantity))
         {
             _solutionSystem.TryAddReagent(beakerSolution.Value, quantity, out _);
 
             var reagentName = _prototypeManager.Index<ReagentPrototype>(args.ReagentId.Prototype).LocalizedName;
-            var message = Loc.GetString("injector-fabticator-transfer-to-beaker-success", ("amount", args.Amount), ("reagent", reagentName));
+            var message = Loc.GetString("injector-fabticator-transfer-to-beaker-success", ("amount", transferAmount), ("reagent", reagentName));
             _popup.PopupEntity(message, uid);
             UpdateUiState(uid, component);
         }
