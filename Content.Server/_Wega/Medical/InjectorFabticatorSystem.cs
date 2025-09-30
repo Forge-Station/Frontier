@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Server.Power.EntitySystems;
+using Content.Server.Popups;
 using Content.Shared.Audio;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components.SolutionManager;
@@ -9,6 +10,7 @@ using Content.Shared.Containers.ItemSlots;
 using Content.Shared.FixedPoint;
 using Content.Shared.Injector.Fabticator;
 using Robust.Server.GameObjects;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Containers;
 
 namespace Content.Server.Injector.Fabticator;
@@ -21,6 +23,8 @@ public sealed class InjectorFabticatorSystem : EntitySystem
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly MetaDataSystem _metaData = default!;
+    [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
     public override void Initialize()
     {
@@ -49,7 +53,7 @@ public sealed class InjectorFabticatorSystem : EntitySystem
         while (query.MoveNext(out var uid, out var injectorFabticator))
         {
             if (!injectorFabticator.IsProducing || !this.IsPowered(uid, EntityManager))
-                return;
+                continue;
 
             injectorFabticator.ProductionTimer += frameTime;
             if (injectorFabticator.ProductionTimer >= injectorFabticator.ProductionTime)
@@ -110,18 +114,20 @@ public sealed class InjectorFabticatorSystem : EntitySystem
             || slot.Item is not { } beaker)
             return;
 
-        if (!_solutionSystem.TryGetSolution(beaker, "beaker", out var beakerSolution, out var solution) ||
+        if (!_solutionSystem.TryGetSolution(beaker, "beaker", out var beakerSolution, out _) ||
             !_solutionSystem.TryGetSolution(uid, InjectorFabticatorComponent.BufferSolutionName, out var bufferSolution, out _))
             return;
 
-        if (solution.GetReagentQuantity(args.ReagentId) < args.Amount)
-            return;
-
         var quantity = new ReagentQuantity(args.ReagentId, args.Amount);
-        _solutionSystem.RemoveReagent(beakerSolution.Value, quantity);
-        _solutionSystem.TryAddReagent(bufferSolution.Value, quantity, out _);
+        if (_solutionSystem.RemoveReagent(beakerSolution.Value, quantity))
+        {
+            _solutionSystem.TryAddReagent(bufferSolution.Value, quantity, out _);
 
-        UpdateUiState(uid, component);
+            var reagentName = _prototypeManager.Index<ReagentPrototype>(args.ReagentId.Prototype).LocalizedName;
+            var message = Loc.GetString("injector-fabticator-transfer-to-buffer-success", ("amount", args.Amount), ("reagent", reagentName));
+            _popup.PopupEntity(message, uid);
+            UpdateUiState(uid, component);
+        }
     }
 
     private void OnTransferBufferToBeakerMessage(EntityUid uid, InjectorFabticatorComponent component, InjectorFabticatorTransferBufferToBeakerMessage args)
@@ -134,17 +140,19 @@ public sealed class InjectorFabticatorSystem : EntitySystem
             return;
 
         if (!_solutionSystem.TryGetSolution(beaker, "beaker", out var beakerSolution, out _) ||
-            !_solutionSystem.TryGetSolution(uid, InjectorFabticatorComponent.BufferSolutionName, out var bufferSolution, out var solution))
-            return;
-
-        if (solution.GetReagentQuantity(args.ReagentId) < args.Amount)
+            !_solutionSystem.TryGetSolution(uid, InjectorFabticatorComponent.BufferSolutionName, out var bufferSolution, out _))
             return;
 
         var quantity = new ReagentQuantity(args.ReagentId, args.Amount);
-        _solutionSystem.RemoveReagent(bufferSolution.Value, quantity);
-        _solutionSystem.TryAddReagent(beakerSolution.Value, quantity, out _);
+        if (_solutionSystem.RemoveReagent(bufferSolution.Value, quantity))
+        {
+            _solutionSystem.TryAddReagent(beakerSolution.Value, quantity, out _);
 
-        UpdateUiState(uid, component);
+            var reagentName = _prototypeManager.Index<ReagentPrototype>(args.ReagentId.Prototype).LocalizedName;
+            var message = Loc.GetString("injector-fabticator-transfer-to-beaker-success", ("amount", args.Amount), ("reagent", reagentName));
+            _popup.PopupEntity(message, uid);
+            UpdateUiState(uid, component);
+        }
     }
 
     private void OnSetReagentMessage(EntityUid uid, InjectorFabticatorComponent component, InjectorFabticatorSetReagentMessage args)
@@ -184,10 +192,22 @@ public sealed class InjectorFabticatorSystem : EntitySystem
             return;
 
         if (component.Recipe == null || component.Recipe.Sum(r => (long)r.Value) > 30)
+        {
+            _popup.PopupEntity(Loc.GetString("injector-fabticator-invalid-recipe"), uid);
             return;
+        }
 
         if (!_solutionSystem.TryGetSolution(uid, InjectorFabticatorComponent.BufferSolutionName, out var bufferSolution, out var buffer))
             return;
+
+        foreach (var (reagent, amount) in component.Recipe)
+        {
+            if (buffer.GetReagentQuantity(reagent) < amount * args.Amount)
+            {
+                _popup.PopupEntity(Loc.GetString("injector-fabticator-not-enough-reagents"), uid);
+                return;
+            }
+        }
 
         component.CustomName = args.CustomName;
         component.InjectorsToProduce = args.Amount;
@@ -230,26 +250,25 @@ public sealed class InjectorFabticatorSystem : EntitySystem
         if (!HasComp<SolutionContainerManagerComponent>(injector))
             return;
 
-        if (!_solutionSystem.TryGetSolution(injector, "pen", out var solution, out _))
+        if (!_solutionSystem.TryGetSolution(injector, "pen", out var injectorSolution, out _))
             return;
 
-        foreach (var (reagent, amount) in component.Recipe)
+        if (_solutionSystem.TryGetSolution(uid, InjectorFabticatorComponent.BufferSolutionName, out var bufferSolution, out var buffer))
         {
-            var addQuantity = new ReagentQuantity(reagent, amount);
-            _solutionSystem.TryAddReagent(solution.Value, addQuantity, out _);
+            foreach (var (reagent, amount) in component.Recipe)
+            {
+                var available = buffer.GetReagentQuantity(reagent);
+                var toTransfer = FixedPoint2.Min(amount, available);
+
+                if (toTransfer > 0 && _solutionSystem.RemoveReagent(bufferSolution.Value, reagent, toTransfer))
+                {
+                    _solutionSystem.TryAddReagent(injectorSolution.Value, reagent, toTransfer, out _);
+                }
+            }
         }
 
         if (!string.IsNullOrWhiteSpace(component.CustomName))
             _metaData.SetEntityName(injector, component.CustomName);
-
-        if (_solutionSystem.TryGetSolution(uid, InjectorFabticatorComponent.BufferSolutionName, out var bufferSolution, out _))
-        {
-            foreach (var (reagent, amount) in component.Recipe)
-            {
-                var remQuantity = new ReagentQuantity(reagent, amount);
-                _solutionSystem.RemoveReagent(bufferSolution.Value, remQuantity);
-            }
-        }
     }
 
     private void UpdateAppearance(EntityUid uid, InjectorFabticatorComponent? component = null)

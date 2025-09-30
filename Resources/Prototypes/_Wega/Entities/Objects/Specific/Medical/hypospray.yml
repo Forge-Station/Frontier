@@ -31,6 +31,8 @@
     maxFillLevels: 1
     changeColor: false
     emptySpriteName: stimpen_empty
+    fullStates:
+    - stimpen
   - type: Hypospray
     solutionName: pen
     transferAmount: 30
