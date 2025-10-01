@@ -72,10 +72,16 @@ public sealed partial class DeadDropComponent : Component
     public bool DeadDropCalled = false;
 
     /// <summary>
-    ///     Location of the grid to spawn in as the dead drop.
+    ///     A list of possible dead drop grids and their spawn weights.
+    ///     The higher the weight, the more likely it is to be chosen.
+    ///     This is defined in code but can be overridden in prototypes.
     /// </summary>
     [DataField]
-    public ResPath DropGrid = new("/Maps/Forge/DeadDrop/deaddrop.yml");
+    public Dictionary<string, float> DropGrids { get; set; } = new()
+    {
+        { "/Maps/_NF/DeadDrop/deaddrop.yml", 70.0f },
+        { "/Maps/Forge/DeadDrop/deaddrop.yml", 5.0f }
+    };
 
     /// <summary>
     ///     The color of your grid. the name should be set by the mapper when mapping.

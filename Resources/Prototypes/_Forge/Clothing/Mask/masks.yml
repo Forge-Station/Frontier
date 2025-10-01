@@ -1,0 +1,19 @@
+- type: entity
+  parent: [ClothingMaskGas, BaseC3Contraband, ContrabandClothing]
+  id: ClothingMaskGasContractor
+  name: противогаз DCN™
+  description: Плотно прилегающая тактическая маска, которую можно подключить к дыхательному баллону.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Mask/gascontractor.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Mask/gascontractor.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95

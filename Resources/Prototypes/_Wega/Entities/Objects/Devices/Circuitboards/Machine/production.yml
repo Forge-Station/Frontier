@@ -1,0 +1,15 @@
+- type: entity
+  id: InjectorFabricatorMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: injector fabricator board
+  description: A machine printed circuit board for an injector fabricator.
+  components:
+    - type: Sprite
+      state: secmodschematic
+    - type: MachineBoard
+      prototype: InjectorFabricator
+      requirements:
+        Manipulator: 2
+      stackRequirements:
+        Glass: 5
+        Cable: 2

@@ -1,0 +1,13 @@
+- type: entity
+  parent: [NFClothingDuffel, BaseC3Contraband, ContrabandClothing]
+  id: ClothingDuffelContractorForge
+  name: вещмешок DCN™
+  description: Большой вещмешок для хранения предтательских предметов. Выглядит стильно и оригинально.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Back/Duffels/contractor.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,9,5

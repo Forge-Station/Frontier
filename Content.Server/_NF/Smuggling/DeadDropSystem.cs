@@ -19,14 +19,18 @@ using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Paper;
 using Content.Shared.Shuttles.Components;
+using Content.Shared.Interaction;
 using Content.Shared.Verbs;
 using Robust.Shared.Configuration;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 using Content.Server._NF.Station.Systems;
 using Robust.Shared.EntitySerialization.Systems;
+using Robust.Shared.EntitySerialization;
+using Content.Server.Maps;
 
 namespace Content.Server._NF.Smuggling;
 
@@ -416,17 +420,15 @@ public sealed class DeadDropSystem : EntitySystem
 
     private void AddSearchVerb(EntityUid uid, DeadDropComponent component, GetVerbsEvent<InteractionVerb> args)
     {
-        if (!args.CanInteract || !args.CanAccess || args.Hands == null || _timing.CurTime < component.NextDrop)
+        // The verb is only visible when the dead drop is ready.
+        if (!args.CanInteract || !args.CanAccess || args.Hands is not { } hands || _timing.CurTime < component.NextDrop)
             return;
 
-        var xform = Transform(uid);
-        var targetCoordinates = xform.Coordinates;
-
-        //here we build our dynamic verb. Using the object's sprite for now to make it more dynamic for the moment.
         InteractionVerb searchVerb = new()
         {
             IconEntity = GetNetEntity(uid),
-            Act = () => SendDeadDrop(uid, component, args.User, args.Hands),
+            // We pass the non-nullable `hands` variable captured from the check above.
+            Act = () => SendDeadDrop(uid, component, args.User, hands),
             Text = Loc.GetString("deaddrop-search-text"),
             Priority = 3
         };
@@ -449,8 +451,31 @@ public sealed class DeadDropSystem : EntitySystem
                 return;
         }
 
-        //load whatever grid was specified on the component, either a special dead drop or default
-        if (!_map.TryLoadGrid(_shipyard.ShipyardMap.Value, component.DropGrid, out var gridUid))
+        // Select a random grid based on the weights defined in the component
+        if (component.DropGrids.Count == 0)
+        {
+            _sawmill.Error($"Dead drop {ToPrettyString(uid)} has no drop grids defined.");
+            return;
+        }
+
+        var totalWeight = component.DropGrids.Values.Sum();
+        var randomValue = _random.NextFloat(totalWeight);
+        string? selectedGrid = null;
+
+        foreach (var (gridPath, weight) in component.DropGrids)
+        {
+            if (randomValue < weight)
+            {
+                selectedGrid = gridPath;
+                break;
+            }
+            randomValue -= weight;
+        }
+
+        // Fallback to the first grid if something goes wrong with the weights.
+        selectedGrid ??= component.DropGrids.Keys.First();
+
+        if (!_map.TryLoadGrid(_shipyard.ShipyardMap.Value, new ResPath(selectedGrid), out var gridUid))
             return;
         var grid = gridUid.Value;
 
@@ -525,15 +550,22 @@ public sealed class DeadDropSystem : EntitySystem
         dropHint.AppendLine();
         dropHint.AppendLine(Loc.GetString("deaddrop-hint-next-drop", ("time", hintNextDrop.ToString("hh\\:mm") + ":00")));
 
-        var paper = EntityManager.SpawnEntity(component.HintPaper, Transform(uid).Coordinates);
-
-        if (TryComp(paper, out PaperComponent? paperComp))
+        // Spawn the paper, but ensure it's a valid entity before proceeding.
+        var paperUid = EntityManager.SpawnEntity(component.HintPaper, Transform(user).Coordinates);
+        if (!paperUid.Valid)
         {
-            _paper.SetContent((paper, paperComp), dropHint.ToString());
+            _sawmill.Error($"Failed to spawn hint paper with prototype '{component.HintPaper}' for dead drop {ToPrettyString(uid)}.");
+            return;
         }
-        _meta.SetEntityName(paper, Loc.GetString("deaddrop-hint-name"));
-        _meta.SetEntityDescription(paper, Loc.GetString("deaddrop-hint-desc"));
-        _hands.PickupOrDrop(user, paper, handsComp: hands);
+
+        // Ensure the paper has a PaperComponent before trying to write to it.
+        if (TryComp<PaperComponent>(paperUid, out var paperComp))
+        {
+            _paper.SetContent((paperUid, paperComp), dropHint.ToString());
+        }
+        _meta.SetEntityName(paperUid, Loc.GetString("deaddrop-hint-name"));
+        _meta.SetEntityDescription(paperUid, Loc.GetString("deaddrop-hint-desc"));
+        _hands.TryPickupAnyHand(user, paperUid, handsComp: hands);
 
         component.DeadDropCalled = true;
         //logic of posters ends here and logic of radio signals begins here

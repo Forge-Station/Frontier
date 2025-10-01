@@ -460,6 +460,13 @@
   materials:
     CreditCounterfeit: 7500
 
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateMedicalBundleRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: ClothingBackpackDuffelSyndicateMedicalBundleFilled
+  completetime: 1
+  materials:
+    CreditCounterfeit: 159999
 
 - type: latheRecipe
   id: EmergencyMedipenRecipe

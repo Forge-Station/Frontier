@@ -1,0 +1,166 @@
+- type: entity
+  id: RandomHumanoidSpawnerSST
+  name: Оперативник УОС
+  suffix: Corvax-Forge, Ударный отряд Синдиката, Штурмовой
+  components:
+    - type: RandomMetadata
+      nameSegments: [NamesSyndicateElite]
+      nameFormat: name-format-nukie-operator
+    - type: RandomHumanoidSpawner
+      settings: SSTsettings
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+
+- type: entity
+  id: RandomHumanoidSpawnerSSTCharlie
+  name: Оперативник УОС
+  suffix: Corvax-Forge, Ударный отряд Синдиката, Чарли
+  components:
+    - type: RandomMetadata
+      nameSegments: [NamesSyndicateElite]
+      nameFormat: name-format-nukie-operator
+    - type: RandomHumanoidSpawner
+      settings: SSTCharliesettings
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+
+- type: randomHumanoidSettings
+  id: SSTsettings
+  parent: EventHumanoid
+  randomizeName: false
+  speciesBlacklist:
+    - Diona
+    - Arachnid
+    - Dwarf
+    - Gingerbread
+    - Moth
+    - Reptilian
+    - Skeleton
+    - SlimePerson
+    - Vox
+    - Vulpkanin
+    - Resomi
+    - Tajaran
+    - Ipc
+    - DemonSpecies
+    - Felinid
+    - Goblin
+    - Oni
+    - Elzuosa
+    - Sheleg
+    - Harpy
+  components:
+    - type: Loadout
+      prototypes: [ SyndicateStrikeTeamGear ]
+    - type: AutoImplant
+      implants:
+      - DeathAcidifierImplant
+      - DeathRattleImplant
+      - FreedomImplant
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: NukeOperative
+
+- type: randomHumanoidSettings
+  id: SSTCharliesettings
+  parent: EventHumanoid
+  randomizeName: false
+  speciesBlacklist:
+    - Diona
+    - Arachnid
+    - Dwarf
+    - Gingerbread
+    - Moth
+    - Reptilian
+    - Skeleton
+    - SlimePerson
+    - Vox
+    - Vulpkanin
+    - Resomi
+    - Tajaran
+    - Ipc
+    - DemonSpecies
+    - Felinid
+    - Goblin
+    - Oni
+    - Elzuosa
+    - Sheleg
+    - Harpy
+  components:
+    - type: Loadout
+      prototypes: [ SyndicateStrikeTeamGearCharlie ]
+    - type: AutoImplant
+      implants:
+      - DeathAcidifierImplant
+      - DeathRattleImplant
+      - FreedomImplant
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: NukeOperative
+
+- type: startingGear
+  id: SyndicateStrikeTeamGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicateAmmo
+    mask: ClothingMaskGasSyndicate
+    eyes: NFClothingEyesNightVisionGoggleSyndicate
+    ears: ClothingHeadsetAltSyndicate
+    gloves: ClothingHandsGlovesCombatSyndicate
+    outerClothing: ClothingOuterHardsuitSyndieSST
+    shoes: ClothingShoesBootsMagSyndieElite
+    id: SyndiPDACStorm
+    pocket1: EnergySword
+    pocket2: AccessBreaker
+    belt: ClothingBeltMilitaryWebbingGrenadeFilled
+  storage:
+    back:
+      - NFBoxMagazineRifle30Overpressure
+      - NFBoxMagazineRifle30Overpressure
+      - SyndicateJawsOfLife
+      - SyndiHypo
+      - SyndieMiniBomb
+      - SyndieMiniBomb
+      - CombatMedipen
+      - CombatMedipen
+      - CombatMedipen
+      - CombatMedipen
+      - CombatMedipen
+  inhand:
+    - WeaponRifleAkCyberSun
+
+- type: startingGear
+  id: SyndicateStrikeTeamGearCharlie
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicateAmmo
+    mask: ClothingMaskGasSyndicate
+    eyes: NFClothingEyesNightVisionGoggleSyndicate
+    ears: ClothingHeadsetAltSyndicate
+    gloves: ClothingHandsGlovesCombatSyndicate
+    outerClothing: ClothingOuterHardsuitSyndieSST
+    shoes: ClothingShoesBootsMagSyndieElite
+    id: SyndiPDACStorm
+    pocket1: EnergySword
+    pocket2: AccessBreaker
+    belt: ClothingBeltMilitaryWebbingMedFilled
+  storage:
+    back:
+      - NFBoxMagazineRifle30Overpressure
+      - NFBoxMagazineRifle30Overpressure
+      - SyndicateJawsOfLife
+      - PinpointerSyndicatePOI
+    belt:
+      - ChemistryBottleOmnizine
+      - Stimpack
+      - Stimpack
+      - Stimpack
+      - PunctAutoInjector
+      - PunctAutoInjector
+      - PunctAutoInjector
+  inhand:
+    - WeaponRifleAkCyberSun

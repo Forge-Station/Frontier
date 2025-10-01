@@ -125,15 +125,26 @@
   description: "Reloading! Contains 4 magazines for the C-20r, 5 drums for the Bulldog, and 2 ammo boxes for the L6 SAW."
   components:
   - type: StorageFill
-    contents:
-      - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
+    contents: # Corvax-Forge
+      - id: NFMagazineSubMachineGun35Overpressure
         amount: 4
-      - id: NFMagazineShotgunDrum # Frontier: MagazineShotgun<NFMagazineShotgunDrum
+      - id: NFMagazineRifle30Overpressure
         amount: 4
-      - id: NFMagazineShotgunDrumSlug # Frontier: MagazineShotgunSlug<NFMagazineShotgunDrumSlug
-        amount: 1
-      - id: NFMagazineBoxRifle20 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20
-        amount: 2
+      - id: NFMagazineShotgunDrumSlug
+        amount: 4
+      - id: NFMagazineRifle20Overpressure
+        amount: 4
+      - id: NFMagazineBoxRifle20
+        amount: 4
+    # contents:
+    #   - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
+    #     amount: 4
+    #   - id: NFMagazineShotgunDrum # Frontier: MagazineShotgun<NFMagazineShotgunDrum
+    #     amount: 4
+    #   - id: NFMagazineShotgunDrumSlug # Frontier: MagazineShotgunSlug<NFMagazineShotgunDrumSlug
+    #     amount: 1
+    #   - id: NFMagazineBoxRifle20 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20
+    #     amount: 2
 
 - type: entity
   parent: ClothingBackpackDuffelClown
@@ -304,9 +315,9 @@
     contents:
       - id: DefibrillatorSyndicate
       - id: MedkitCombatFilled
-        amount: 2 # Frontier: 4<2
+        amount: 4 # Frontier: 4<2 # Corvax-Forge: 2<4
       - id: Tourniquet
-        amount: 3 # Frontier: 4<3
+        amount: 6 # Frontier: 4<3 # Corvax-Forge: 3<6
       - id: CombatMedipen
         amount: 3 # Frontier: 4<3
       - id: PunctAutoInjector

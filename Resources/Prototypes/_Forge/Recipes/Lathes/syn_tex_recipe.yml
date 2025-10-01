@@ -342,3 +342,11 @@
   completetime: 1
   materials:
     CreditCounterfeit: 100000
+
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateAmmoRecipe
+  categories: [SyndicateTexMechAmmo]
+  result: ClothingBackpackDuffelSyndicateAmmoFilled
+  completetime: 1
+  materials:
+    CreditCounterfeit: 79999

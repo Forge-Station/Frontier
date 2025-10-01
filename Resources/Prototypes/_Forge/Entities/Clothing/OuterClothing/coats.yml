@@ -4,17 +4,25 @@
   name: officer's armored greatcoat
   description: officer's armored greatcoat
   components:
-    - type: Sprite
-      sprite: Forge/Clothing/OuterClothing/Coats/dso.rsi
-    - type: Clothing
-      sprite: Forge/Clothing/OuterClothing/Coats/dso.rsi
-    - type: Armor
-      modifiers:
-        coefficients:
-          Blunt: 0.7
-          Slash: 0.7
-          Piercing: 0.4
-          Heat: 0.7
+  - type: Sprite
+    sprite: Forge/Clothing/OuterClothing/Coats/dso.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/OuterClothing/Coats/dso.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.3
+        Heat: 0.3
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: FireProtection
+    reduction: 0.7
+  - type: StaminaResistance
+    damageCoefficient: 0.3
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
 
 - type: entity
   parent: ClothingOuterStorageBase

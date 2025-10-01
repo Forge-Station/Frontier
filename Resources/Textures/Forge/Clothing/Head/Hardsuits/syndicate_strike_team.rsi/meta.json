@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Created by discord:IAmRasputin#5242. Vox states by Flareguy for Space Station 14",
+  "copyright": "Created by discord:ne_gost (784795496622718986) for Corvax-Frontier",
   "size": {
     "x": 32,
     "y": 32
@@ -19,6 +19,10 @@
     },
     {
       "name": "on-equipped-HELMET",
+      "directions": 4
+    },
+    {
+      "name": "equipped-HELMET-unshaded",
       "directions": 4
     }
   ]
