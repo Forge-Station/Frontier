@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/02/2025 19:44:50
-  entityCount: 5872
+  time: 10/04/2025 18:16:48
+  entityCount: 5866
 maps: []
 grids:
 - 2
@@ -3816,7 +3816,7 @@ entities:
       pos: 8.5,10.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -28261.896
+      secondsUntilStateChange: -28359.564
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -13040,21 +13040,6 @@ entities:
     - type: Transform
       pos: -1.5,35.5
       parent: 2
-  - uid: 5864
-    components:
-    - type: Transform
-      pos: 5.5,33.5
-      parent: 2
-  - uid: 5866
-    components:
-    - type: Transform
-      pos: -1.5,36.5
-      parent: 2
-  - uid: 5873
-    components:
-    - type: Transform
-      pos: 3.5,35.5
-      parent: 2
   - uid: 5874
     components:
     - type: Transform
@@ -16948,6 +16933,20 @@ entities:
     - type: Transform
       pos: -2.5,22.5
       parent: 2
+- proto: ComputerShipyardEngineering
+  entities:
+  - uid: 1
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -3.5,-5.5
+      parent: 2
+  - uid: 331
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 4.5,-5.5
+      parent: 2
 - proto: ComputerSolarControl
   entities:
   - uid: 1777
@@ -19124,20 +19123,6 @@ entities:
     components:
     - type: Transform
       pos: -6.480907,7.560035
-      parent: 2
-- proto: EdisonMothershipComputer
-  entities:
-  - uid: 331
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,-5.5
-      parent: 2
-  - uid: 332
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -3.5,-5.5
       parent: 2
 - proto: EmergencyLight
   entities:
@@ -27544,13 +27529,6 @@ entities:
     - type: Transform
       pos: 4.5,33.5
       parent: 2
-  - uid: 5872
-    components:
-    - type: Transform
-      pos: 3.5,35.5
-      parent: 2
-    - type: PowerSupplier
-      supplyRate: 18000
 - proto: GeneratorRTGDamaged
   entities:
   - uid: 3530
@@ -27596,16 +27574,6 @@ entities:
     components:
     - type: Transform
       pos: -1.5,35.5
-      parent: 2
-  - uid: 5863
-    components:
-    - type: Transform
-      pos: 5.5,33.5
-      parent: 2
-  - uid: 5865
-    components:
-    - type: Transform
-      pos: -1.5,36.5
       parent: 2
 - proto: GravityGeneratorMini
   entities:
