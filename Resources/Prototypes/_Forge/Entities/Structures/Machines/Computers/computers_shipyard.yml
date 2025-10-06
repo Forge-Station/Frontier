@@ -91,7 +91,6 @@
       state: telesci_key
   - type: ActivatableUI
     key: enum.ShipyardConsoleUiKey.Engineering
-    adminOnly: true
   - type: UserInterface
     interfaces:
       enum.ShipyardConsoleUiKey.Engineering:
