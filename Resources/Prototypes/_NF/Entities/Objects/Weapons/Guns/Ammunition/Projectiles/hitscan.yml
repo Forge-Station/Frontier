@@ -89,7 +89,7 @@
   id: NFPulse
   damage:
     types:
-      Heat: 18
+      Heat: 30 # Corvax-Forge: Weaponary update
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_blue

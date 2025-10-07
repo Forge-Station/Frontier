@@ -1,6 +1,6 @@
 - type: entity #FrontierCorvax
   id: MagazineP90LRK
-  name: P90 Magazine .35 auto
+  name: P90 Magazine .25 auto
   parent: BaseItem
   description: 50-round magazine for P90
   components:
@@ -8,11 +8,11 @@
     tags:
       - MagazineP90LRK
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35
+    proto: NFCartridgeRifle25
     mayTransfer: true
     whitelist:
       tags:
-        - NFCartridgePistol35
+        - NFCartridgeRifle25
     capacity: 50
   - type: Item
     size: Small

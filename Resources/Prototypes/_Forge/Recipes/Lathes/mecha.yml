@@ -222,23 +222,3 @@
   parent: BaseGygaxLimbRecipe
   id: GygaxRArm
   result: GygaxRArm
-
-# Ripley MK-II
-- type: latheRecipe
-  parent: BaseMechPartRecipe
-  id: RipleyMKIIHarness
-  result: RipleyMKIIHarness
-  categories:
-  - Ripley
-  materials:
-    Steel: 1500
-    Glass: 1200
-
-- type: latheRecipe
-  parent: BaseMechPartRecipe
-  id: RipleyUpgradeKit
-  result: RipleyUpgradeKit
-  categories:
-  - Ripley
-  materials:
-    Steel: 1500

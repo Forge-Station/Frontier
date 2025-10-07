@@ -31,12 +31,20 @@
     CreditCounterfeit: 30000
 
 - type: latheRecipe
-  id: ClothingBackpackDuffelSyndicateFilledHristovRecipe
+  id: WeaponRifleSniperHristovRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
   result: NFWeaponRifleSniperHristov
   completetime: 1
   materials:
-    CreditCounterfeit: 26000
+    CreditCounterfeit: 44000
+
+- type: latheRecipe
+  id: WeaponRifleEstocRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: NFWeaponRifleEstoc
+  completetime: 1
+  materials:
+    CreditCounterfeit: 44000
 
 - type: latheRecipe
   id: ClothingBackpackDuffelSyndicateFilledLMGRecipe

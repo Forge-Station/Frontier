@@ -7,6 +7,7 @@
     Pla-ket-ket-ket-ket! An illegal firearm often used by Syndicate agents.
   components:
   - type: Gun
+    fireRate: 8.5 # Corvax-Forge: Weaponary update
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
   - type: Sprite
@@ -22,6 +23,7 @@
     An illegal firearm that is often used by the infamous nuclear operatives.
   components:
   - type: Gun
+    fireRate: 8 # Corvax-Forge: Weaponary update
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
   - type: Sprite
@@ -42,6 +44,7 @@
   description: A fully automatic SMG.
   components: &drozdComponents
   - type: Gun
+    fireRate: 6 # Corvax-Forge: Weaponary update
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
   - type: Sprite
@@ -85,6 +88,8 @@
     zeroVisible: true
   - type: ChamberMagazineAmmoProvider
     boltClosed: null
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 6
 
 #region DeltaV
 - type: entity

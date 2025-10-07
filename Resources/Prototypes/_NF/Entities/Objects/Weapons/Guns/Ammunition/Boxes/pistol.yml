@@ -281,3 +281,21 @@
     - state: decal-calibre-45
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: NFAmmunitionBoxPistol45AP # MagazineBoxPistolEmp
+  parent: NFBaseAmmunitionBoxPistol45
+  name: ammunition box (.45 pistol, AP)
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgePistol45AP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#7d3c40"
+    - state: decal-01
+      color: "#820000"
+    - state: decal-calibre-45
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

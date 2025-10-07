@@ -95,6 +95,14 @@
     CreditCounterfeit: 5000
 
 - type: latheRecipe
+  id: NFAmmunitionBoxPistol45APRecipe
+  categories: [SyndicateTexSyn4]
+  result: NFAmmunitionBoxPistol45AP
+  completetime: 1
+  materials:
+    CreditCounterfeit: 24999
+
+- type: latheRecipe
   id: NFAmmunitionBoxRifle20UraniumRecipe
   categories: [SyndicateTexSyn3]
   result: NFAmmunitionBoxRifle20Uranium
@@ -138,6 +146,38 @@
   id: NFAmmunitionBoxRifle30IncendiaryRecipe
   categories: [SyndicateTexSyn3]
   result: NFAmmunitionBoxRifle30Incendiary
+  completetime: 1
+  materials:
+    CreditCounterfeit: 5000
+
+- type: latheRecipe
+  id: NFAmmunitionBoxRifle25Recipe
+  categories: [SyndicateTexSyn4]
+  result: NFAmmunitionBoxRifle25
+  completetime: 1
+  materials:
+    CreditCounterfeit: 5000
+
+- type: latheRecipe
+  id: NFAmmunitionBoxRifle25UraniumRecipe
+  categories: [SyndicateTexSyn4]
+  result: NFAmmunitionBoxRifle25Uranium
+  completetime: 1
+  materials:
+    CreditCounterfeit: 5000
+
+- type: latheRecipe
+  id: NFAmmunitionBoxRifle25IncendiaryRecipe
+  categories: [SyndicateTexSyn4]
+  result: NFAmmunitionBoxRifle25Incendiary
+  completetime: 1
+  materials:
+    CreditCounterfeit: 5000
+
+- type: latheRecipe
+  id: NFAmmunitionBoxRifle25RubberRecipe
+  categories: [SyndicateTexSyn4]
+  result: NFAmmunitionBoxRifle25Rubber
   completetime: 1
   materials:
     CreditCounterfeit: 5000

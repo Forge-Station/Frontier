@@ -176,6 +176,19 @@
   categories:
   - UplinkWeaponry
 
+- type: listing # corvax-forge: weaponary update
+  id: UplinkEstoc
+  name: Эсток
+  description: Специальная стрелковая винтовка, стреляющая очередями по 3 патрона. Эсток была разработана как дальнобойный аналог Лектера, оснащенный удлиненным 20-дюймовым стволом и оптическим прицелом.
+  productEntity: NFWeaponRifleEstoc
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 9
+  cost:
+    Telecrystal: 18
+  categories:
+  - UplinkWeaponry
+
 - type: listing
   id: UplinkC20RBundle
   name: uplink-c20r-bundle-name

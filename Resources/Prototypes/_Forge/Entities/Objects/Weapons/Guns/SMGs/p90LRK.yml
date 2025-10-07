@@ -49,11 +49,11 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: NFCartridgePistol35
+        startingItem: NFCartridgeRifle25
         priority: 1
         whitelist:
           tags:
-            - NFCartridgePistol35
+            - NFCartridgeRifle25
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
