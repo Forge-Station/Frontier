@@ -8,7 +8,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 4
+        Piercing: 8
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -19,7 +19,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 5
+        Piercing: 9.5
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -30,8 +30,20 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 2.4
-        Heat: 1.6
+        Piercing: 5
+        Heat: 4
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: NFPelletShotgunUranium
+  name: pellet (.50 uranium)
+  parent: NFBasePelletUranium
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 5
+        Radiation: 5
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -43,18 +55,6 @@
     damage:
       types:
         Blunt: 0.1
-
-- type: entity
-  categories: [ HideSpawnMenu ]
-  id: NFPelletShotgunUranium
-  name: pellet (.50 uranium)
-  parent: NFBasePelletUranium
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 3.5
-        Radiation: 3.5
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -183,7 +183,8 @@
     damage:
       types:
         Piercing: 20
-        Blunt: 5
+        Blunt: 10
+        Structural: 15
 
 - type: entity
   categories: [ HideSpawnMenu ]

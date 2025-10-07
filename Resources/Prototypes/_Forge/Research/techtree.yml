@@ -39,6 +39,19 @@
   position: 5, 5
 
 - type: technology
+  id: ForgeHardsuitsArmoredAdvanced
+  name: nf-research-technology-hardsuits-armored-advanced
+  entityIcon: ClothingOuterHardsuitMercenaryElite
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 20000
+  recipeUnlocks:
+  - ClothingOuterHardsuitMercenaryElite
+  technologyPrerequisites:
+  - NFHardsuitsArmored
+  position: 5, 9
+
+- type: technology
   id: NFHonkerEquipment
   name: nf-research-technology-honker-equipment
   entityIcon: WeaponMechSpecialBananaMortar
@@ -52,20 +65,6 @@
   - NFHONKMech
   - NFPushHorn
   position: 3, 18
-
-- type: technology
-  id: NFRipley2Mech
-  name: nf-research-technology-ripley-mkii
-  entityIcon: MechRipley2
-  discipline: NFEngineering
-  tier: 2
-  cost: 7500
-  recipeUnlocks:
-  - RipleyMKIIHarness
-  - RipleyUpgradeKit
-  technologyPrerequisites:
-  - NFRipleyAPLU
-  position: 2, 18
 
 - type: technology
   id: NFClarkeMech
@@ -84,8 +83,8 @@
   - ClarkeCentralElectronics
   - ClarkePeripheralsElectronics
   technologyPrerequisites:
-  - NFRipley2Mech
-  position: 3, 16
+  - NFRipleyAPLU
+  position: 2, 16
 
 - type: technology
   id: NFMechDrill
@@ -97,7 +96,7 @@
   recipeUnlocks:
   - MechEquipmentDrill
   technologyPrerequisites:
-  - NFRipley2Mech
+  - NFClarkeMech
   position: 3, 15
 
 - type: technology
@@ -146,7 +145,7 @@
   - GygaxTargetingElectronics
   technologyPrerequisites:
   - NFClarkeMech
-  position: 4, 16
+  position: 3, 16
 
 - type: technology
   id: NFBaseWeaponMech
@@ -160,7 +159,7 @@
   - MechEquipmentShotgun
   technologyPrerequisites:
   - NFGygaxMech
-  position: 5, 16
+  position: 4, 16
 
 - type: technology
   id: NFShotgunIncendiaryMech
@@ -173,7 +172,7 @@
   - MechEquipmentShotgunIncendiary
   technologyPrerequisites:
   - NFBaseWeaponMech
-  position: 6, 16
+  position: 5, 16
 
 - type: technology
   id: NFDurandMech
@@ -195,7 +194,7 @@
   - DurandTargetingElectronics
   technologyPrerequisites:
   - NFGygaxMech
-  position: 4, 17
+  position: 3, 17
 
 - type: technology
   id: NFBaseLaserWeaponMech
@@ -209,7 +208,7 @@
   - MechEquipmentSolarisLaser
   technologyPrerequisites:
   - NFDurandMech
-  position: 5, 17
+  position: 4, 17
 
 - type: technology
   id: NFImmolationGunMech
@@ -222,7 +221,7 @@
   - MechEquipmentImmolationGun
   technologyPrerequisites:
   - NFBaseLaserWeaponMech
-  position: 6, 17
+  position: 5, 17
 
 - type: technology
   id: NFXRayGunMech
@@ -235,7 +234,7 @@
   - MechEquipmentXRayProjector
   technologyPrerequisites:
   - NFImmolationGunMech
-  position: 6, 18
+  position: 6, 17
 
 - type: technology
   id: NFBaseMissileRackMech
@@ -262,3 +261,17 @@
   technologyPrerequisites:
   - NFBaseMissileRackMech
   position: 5, 18
+
+- type: technology
+  id: NFImprovedSMGAmmo
+  name: nf-research-technology-smg-ammo-improved
+  entityIcon: NFAmmunitionBoxRifle25Overpressure
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - NFAmmunitionBoxRifle25Overpressure
+  - NFMagazineSubMachineGunTopMounted35Empty
+  technologyPrerequisites:
+  - NFImprovedPistolAmmo
+  position: 2, 45

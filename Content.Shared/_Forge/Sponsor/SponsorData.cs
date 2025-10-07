@@ -18,14 +18,15 @@ public sealed class SponsorData
         { "1351127483432570910", SponsorLevel.Level4 }, // ГГМ
         { "1227934528442728498", SponsorLevel.Level4 }, // Начкар
         { "1229422799362195577", SponsorLevel.Level4 }, // Старший ментор
-        { "1257628115988119562", SponsorLevel.Level3 } // Смотритель Сервера
+        { "1257628115988119562", SponsorLevel.Level3 }, // Смотритель Сервера
+        { "1226554881398280272", SponsorLevel.Level2 } // Модератор
     };
 
     public static readonly Dictionary<SponsorLevel, string> SponsorColor = new()
     {
         { SponsorLevel.Level1, "#6bb9f0" },
         { SponsorLevel.Level2, "#8a9eff" },
-        { SponsorLevel.Level3, "#bdbe6b" },
+        { SponsorLevel.Level3, "#6b8e23" },
         { SponsorLevel.Level4, "#bdbe6b" },
         { SponsorLevel.Level5, "#ff9e2c" },
         { SponsorLevel.Level6, "#ffd700" }

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Nansen shipyard by MrIzo all other belong to Corvax Frontier",
+  "copyright": "Minertasks and Minerrecieve, Nansen shipyard by MrIzo; all other belong to Corvax Frontier",
   "size": {
     "x": 32,
     "y": 32
@@ -48,7 +48,41 @@
     {
       "name": "telesci_key",
       "directions": 4
-    }
+    },
+    {
+      "name": "computer_engi",
+      "directions": 4
+    },
+     {
+            "name": "shipyard_engi",
+            "directions": 4,
+            "delays": [
+                [
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.4
+                ],
+                [
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.4
+                ],
+                [
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.4
+                ],
+                [
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.4
+                ]
+            ]
+        }
   ]
 }
 

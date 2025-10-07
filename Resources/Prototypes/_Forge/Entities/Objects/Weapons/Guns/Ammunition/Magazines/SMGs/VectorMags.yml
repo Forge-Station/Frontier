@@ -1,6 +1,6 @@
 - type: entity #FrontierCorvax
   id: MagazineVector22
-  name: magazine (.22 LR)
+  name: magazine (.25)
   parent: BaseItem
   description: A ridiculously large magazine with ridiculously small and ridiculous .22 ammo
   components:
@@ -8,11 +8,11 @@
     tags:
       - MagazineVector22
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35
+    proto: NFCartridgeRifle25
     mayTransfer: true
     whitelist:
       tags:
-        - NFCartridgePistol35
+        - NFCartridgeRifle25
     capacity: 44
   - type: Item
     size: Small
@@ -48,19 +48,19 @@
 
 - type: entity #FrontierCorvax
   id: MagazineVector45
-  name: magazine (.45 ACP)
+  name: magazine (.20)
   parent: BaseItem
-  description: Standard magazine for 13 small (big and slow) friends in .45 ACP
+  description: Standard magazine for 13 small (big and slow) friends in .20
   components:
   - type: Tag
     tags:
       - MagazineVector45
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol45
+    proto: NFCartridgeRifle20
     mayTransfer: true
     whitelist:
       tags:
-        - NFCartridgePistol45
+        - NFCartridgeRifle20
     capacity: 15
   - type: Item
     size: Small

@@ -144,6 +144,19 @@
   - ContractorUplinkWeaponry
 
 - type: listing
+  id: ContractorUplinkEstoc
+  name: Эсток
+  description: Специальная стрелковая винтовка, стреляющая очередями по 3 патрона. Эсток была разработана как дальнобойный аналог Лектера, оснащенный удлиненным 20-дюймовым стволом и оптическим прицелом.
+  productEntity: NFWeaponRifleEstoc
+  discountCategory: usualDiscounts
+  discountDownTo:
+    TelecrystalDamaged: 21
+  cost:
+    TelecrystalDamaged: 36
+  categories:
+  - ContractorUplinkWeaponry
+
+- type: listing
   id: ContractorUplinkC20RBundle
   name: uplink-c20r-bundle-name
   description: uplink-c20r-bundle-desc

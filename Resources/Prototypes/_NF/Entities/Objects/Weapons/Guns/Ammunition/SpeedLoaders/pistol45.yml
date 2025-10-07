@@ -196,3 +196,32 @@
       - state: inhand-right-ammo
       - state: inhand-right-stripe
         color: "#00b0ff"
+
+# Corvax-Frontier
+- type: entity
+  id: NFSpeedLoaderPistol45AP
+  name: "speed loader (.45 pistol, AP)"
+  parent: NFBaseSpeedLoaderPistol45
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgePistol45AP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#820000"
+    - state: base-6
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-ammo
+      - state: inhand-left-stripe
+        color: "#820000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-ammo
+      - state: inhand-right-stripe
+        color: "#820000"

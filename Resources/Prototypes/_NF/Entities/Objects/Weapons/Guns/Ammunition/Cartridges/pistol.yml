@@ -254,3 +254,18 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#00b0ff"
+
+- type: entity
+  id: NFCartridgePistol45AP
+  name: cartridge (.45 pistol, AP)
+  parent: NFBaseCartridgePistol45
+  components:
+  - type: CartridgeAmmo
+    proto: NFBulletPistol45AP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#820000"

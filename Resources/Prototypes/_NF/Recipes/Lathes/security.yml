@@ -224,6 +224,65 @@
     Plastic: 2000 # box - free, 60 [bullets] * 10 [Plastic per bullet]
     Steel: 2000 # box - free, 60 [bullets] * 10 [Steel per bullet]
 
+#region .25 Ammo Box
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxRifle25
+  result: NFAmmunitionBoxRifle25
+  materials:
+    Steel: 1200 # box - free, 60 [bullets] * 20 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxRifle25Overpressure
+  result: NFAmmunitionBoxRifle25Overpressure
+  materials:
+    Steel: 1800 # box - free, 60 [bullets] * 30 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxRifle25Practice
+  result: NFAmmunitionBoxRifle25Practice
+  materials:
+    Steel: 600 # box - free, 60 [bullets] * 10 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxRifle25Rubber
+  result: NFAmmunitionBoxRifle25Rubber
+  materials:
+    Plastic: 200 # box - free, 60 [bullets] * 10 [Plastic per bullet]
+    Steel: 200 # box - free, 60 [bullets] * 10 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxRifle25Incendiary
+  result: NFAmmunitionBoxRifle25Incendiary
+  materials:
+    Plastic: 1200 # box - free, 60 [bullets] * 20 [Plastic per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxRifle25Uranium
+  result: NFAmmunitionBoxRifle25Uranium
+  materials:
+    Plastic: 600 # box - free, 60 [bullets] * 10 [Plastic per bullet]
+    Uranium: 600 # box - free, 60 [bullets] * 10 [Uranium per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigRifle25
+  result: NFAmmunitionBoxBigRifle25
+  materials:
+    Steel: 4000 # box - free, 200 [bullets] * 20 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigRifle25Overpressure
+  result: NFAmmunitionBoxBigRifle25Overpressure
+  materials:
+    Steel: 6000 # box - free, 200 [bullets] * 30 [Steel per bullet]
+
 #region .30 Ammo Box
 - type: latheRecipe
   parent: BaseAmmoRecipe
