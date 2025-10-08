@@ -13,8 +13,8 @@
 - type: pointOfInterest
   id: arcadiaBase
   name: База Аркадии
-  minimumDistance: 3500
-  maximumDistance: 6000
+  minimumDistance: 5500
+  maximumDistance: 8000
   gridPath: /Maps/Forge/Events/Elementary/Arcadia/arcadiaBase.yml
   addComponents:
   - type: IFF

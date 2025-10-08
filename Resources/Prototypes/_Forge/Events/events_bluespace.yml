@@ -39,6 +39,7 @@
         - /Maps/Forge/Events/Periodic/DestroyedShuttles/RuinedSprinter.yml
         - /Maps/Forge/Events/Periodic/DestroyedShuttles/RuinedInquisitor.yml
         - /Maps/Forge/Events/Periodic/DestroyedShuttles/RuinedChisel.yml
+        - /Maps/Forge/Events/Periodic/DestroyedShuttles/dest_mercenary_shuttle.yml
 
 - type: entity
   id: BluespaceSyndicate
@@ -115,3 +116,87 @@
         paths:
         - /Maps/Forge/Events/Periodic/Cargo/cargomc.yml
         - /Maps/Forge/Events/Periodic/Cargo/mcevent.yml
+
+- type: entity
+  id: BluespaceCacheError
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-bluespace-cache-start-announcement
+    startAudio:
+      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_cache_arrival.ogg
+    warningAnnouncement: station-event-bluespace-cache-warning-announcement
+    endAnnouncement: station-event-bluespace-cache-end-announcement
+    endAudio:
+      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_cache_leave.ogg
+    earliestStart: 100
+    weight: 5
+    duration: 1350
+    maxDuration: 1560
+    reoccurrenceDelay: 360 # 6 hours
+    requiredJobs:
+      Sheriff: 1
+  - type: BluespaceErrorRule
+    groups:
+      grid: !type:GridSpawnGroup
+        nameLoc:
+        - station-event-bluespace-name-SyndicateWeaponsCache
+        minimumDistance: 1500
+        maximumDistance: 2500
+        addComponents:
+        - type: Gravity
+          enabled: true
+          inherent: true
+        - type: IFF
+          color: "#E10F9B"
+        - type: Shuttle
+        - type: LinkedLifecycleGridParent
+        - type: ProtectedGrid
+          preventArtifactTriggers: true
+        - type: PreventPilot
+        - type: ForceAnchor # Added post-FTL, so anchoring is fine.
+        paths:
+        - /Maps/Forge/Events/Periodic/Syndicate/syndicateVault.yml
+        - /Maps/Forge/Events/Periodic/Syndicate/smuggling_cell.yml
+    rewardAccounts:
+      Nfsd: 1.0
+
+- type: entity
+  id: BluespaceMercenary
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-bluespace-mercenary-ftl-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    warningAnnouncement: station-event-bluespace-mercenary-ftl-warning-announcement
+    endAnnouncement: station-event-bluespace-mercenary-ftl-end-announcement
+    earliestStart: 30
+    weight: 2
+    duration: 1350
+    maxDuration: 1560
+    reoccurrenceDelay: 340
+  - type: BluespaceErrorRule
+    groups:
+      grid: !type:GridSpawnGroup
+        nameLoc:
+        - station-event-bluespace-name-UnidentifiedVessel
+        minimumDistance: 2500
+        maximumDistance: 3500
+        addComponents:
+        - type: Gravity
+          enabled: true
+          inherent: true
+        - type: IFF
+          color: "#E10F9B"
+        - type: Shuttle
+        - type: LinkedLifecycleGridParent
+        - type: ProtectedGrid
+          preventArtifactTriggers: true
+        - type: PreventPilot
+        - type: ForceAnchor
+        paths:
+        - /Maps/Forge/Events/Periodic/Mercenary/hidden_shuttle.yml
+        - /Maps/Forge/Events/Periodic/Mercenary/mercenary_cache.yml
+    rewardAccounts:
+      Nfsd: 1.0
