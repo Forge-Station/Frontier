@@ -1,8 +1,10 @@
 - type: vessel
   id: Vitalis
   name: CTC Виталис
+  parent: BaseVessel
   description: Средний медицинский вспомогательный шаттл для медициского персонала, для использований криогенных условий.
   price: 75000 #Appraisal is 53480
+  access: Medical
   category: Medium
   group: Medical
   shuttlePath: /Maps/Forge/Shuttles/Medical/vitalis.yml
@@ -28,7 +30,7 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]
 

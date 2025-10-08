@@ -31,31 +31,6 @@
   - ShuttleRifleAmmoBox
   - ShuttleMagnumRifleAmmoBox
 
-- type: latheRecipePack
-  id: CorvaxMechsWeaponsNFSDDynamic
-  recipes:
-  - MechEquipmentUltraRifle
-  - MechEquipmentShotgun
-  - MechEquipmentShotgunIncendiary
-  - MechEquipmentFiredartLaser
-  - MechEquipmentSolarisLaser
-  - MechEquipmentImmolationGun
-  - MechEquipmentXRayProjector
-  - MechEquipmentMissileRack8
-  - MechEquipmentMissileRack6
-
-- type: latheRecipePack
-  id: CorvaxMechsWeaponsDynamic
-  recipes:
-  - MechEquipmentUltraRifle
-  - MechEquipmentShotgun
-  - MechEquipmentShotgunIncendiary
-  - MechEquipmentFiredartLaser
-  - MechEquipmentSolarisLaser
-  - MechEquipmentImmolationGun
-  - MechEquipmentXRayProjector
-  - MechEquipmentMissileRack8
-
 #Снаряжение
 - type: latheRecipePack
   id: CorvaxEquipment
@@ -124,6 +99,7 @@
 - type: latheRecipePack
   id: SyndicateTradingConsoleWeapons
   recipes:
+  - WeaponRifleAkCyberSunRecipe
   - WeaponLaserSvalinnRecipe
   - WeaponLaserCannonRecipe
   - ClothingBackpackDuffelSyndicateFilledShotgunRecipe
@@ -137,7 +113,8 @@
   - WeaponSubMachineGunDrozdRecipe
   - ClothingBackpackDuffelSyndicateFilledLMGRecipe
   - ClothingBackpackDuffelSyndicateFilledSMGRecipe
-  - ClothingBackpackDuffelSyndicateFilledHristovRecipe
+  - WeaponRifleSniperHristovRecipe
+  - WeaponRifleEstocRecipe
   - ClothingBackpackDuffelSyndicateFilledEmpGrenadeLauncherRecipe
   - ClothingBackpackDuffelSyndicateFilledCarbineRecipe
   - ClothingBackpackDuffelSyndicateFilledAtreidesRecipe
@@ -154,12 +131,15 @@
   id: SyndicateTradingConsoleArmor
   recipes:
   - ClothingOuterHardsuitJuggernautRecipe
+  - ClothingOuterHardsuitSyndieSSTRecipe
+  - ClothingHandsGlovesCombatSyndicateRecipe
   - ClothingOuterVestWebRecipe
   - ClothingOuterHardsuitTacticalMaidRecipe
   - WeaponTurretSyndicateFlatpackRecipe
   - ShuttleGunSunsetFlatpackRecipe
   - JetpackBlackFilledRecipe
   - ClothingShoesBootsMagSyndieRecipe
+  - ClothingShoesBootsMagSyndieEliteRecipe
   - ClothingBackpackDuffelSyndicateHardsuitBundleRecipe
   - ClothingBackpackDuffelSyndicateEliteHardsuitBundleRecipe
   - ClothingBackpackSyndicateRaidBundleRecipe
@@ -205,6 +185,7 @@
   - MedkitRecipe
   - EmergencyMedipenRecipe
   - CombatMedipenRecipe
+  - ClothingBackpackDuffelSyndicateMedicalBundleRecipe
   - WehMedipenRecipe
 
 - type: latheRecipePack
@@ -212,3 +193,22 @@
   recipes:
   - MachineBluespaceHarvesterCircuitboard
   - MachineBluespaceTransitorCircuitboard
+
+# Одежда
+- type: latheRecipePack
+  id: CFClothing
+  recipes:
+  - ClothingUniformJumpsuitHoSBlack
+  - ClothingUniformJumpskirtHoSBlack
+  - ClothingUniformJumpsuitWhiteCaptain
+  - ClothingUniformJumpskirtWhiteCaptain
+  - ClothingUniformJumpsuitSheriffAlt
+  - ClothingOuterCoatLabSecurityMedic
+  - ClothingHeadHatBeretHeadOfSecurityAdvanced
+  - ClothingHeadHelmetSecurityMedic
+  - ClothingHeadHatBeretCaptainWhite
+  - ClothingHeadHatCapcapWhite
+  - ClothingHeadHatBeretSheriff
+  - ClothingHeadHatCapcapSheriff
+  - ClothingOuterVestArmorMedSec
+  - ClothingOuterArmorHoSVestWeb

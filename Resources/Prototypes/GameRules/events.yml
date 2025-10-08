@@ -236,41 +236,41 @@
       mindRoles:
       - MindRoleNinja
 
-- type: entity
-  parent: BaseGameRule
-  id: ParadoxCloneSpawn
-  components:
-  - type: StationEvent
-    weight: 5
-    duration: null
-    earliestStart: 20
-    reoccurrenceDelay: 20
-    minimumPlayers: 15
-  - type: ParadoxCloneRule
-    objectiveBlacklist:
-      tags:
-      - ParadoxCloneObjectiveBlacklist
-  - type: AntagObjectives
-    objectives:
-    - ParadoxCloneKillObjective
-    - ParadoxCloneLivingObjective
-  - type: AntagRandomSpawn # TODO: improve spawning so they only start in maints
-  - type: AntagSelection
-    agentName: paradox-clone-round-end-agent-name
-    definitions:
-    - spawnerPrototype: SpawnPointGhostParadoxClone
-      min: 1
-      max: 1
-      pickPlayer: false
-      startingGear: ParadoxCloneGear
-      roleLoadout:
-      - RoleSurvivalVoxTank # give vox something to breath in case they don't get a copy
-      briefing:
-        text: paradox-clone-role-greeting
-        color: lightblue
-        sound: /Audio/Misc/paradox_clone_greeting.ogg
-      mindRoles:
-      - MindRoleParadoxClone
+# - type: entity    # Forge-Change - вынесено в отдельный yml в каталоге _NF
+  # parent: BaseGameRule
+  # id: ParadoxCloneSpawn
+  # components:
+  # - type: StationEvent
+    # weight: 5
+    # duration: null
+    # earliestStart: 20
+    # reoccurrenceDelay: 20
+    # minimumPlayers: 15
+  # - type: ParadoxCloneRule
+    # objectiveBlacklist:
+      # tags:
+      # - ParadoxCloneObjectiveBlacklist
+  # - type: AntagObjectives
+    # objectives:
+    # - ParadoxCloneKillObjective
+    # - ParadoxCloneLivingObjective
+  # - type: AntagRandomSpawn # TODO: improve spawning so they only start in maints
+  # - type: AntagSelection
+    # agentName: paradox-clone-round-end-agent-name
+    # definitions:
+    # - spawnerPrototype: SpawnPointGhostParadoxClone
+      # min: 1
+      # max: 1
+      # pickPlayer: false
+      # startingGear: ParadoxCloneGear
+      # roleLoadout:
+      # - RoleSurvivalVoxTank # give vox something to breath in case they don't get a copy
+      # briefing:
+        # text: paradox-clone-role-greeting
+        # color: lightblue
+        # sound: /Audio/Misc/paradox_clone_greeting.ogg
+      # mindRoles:
+      # - MindRoleParadoxClone
 
 - type: entity
   parent: BaseGameRule
@@ -523,41 +523,41 @@
       mindRoles:
       - MindRoleInitialInfected
 
-- type: entity
-  parent: BaseNukeopsRule
-  id: LoneOpsSpawn
-  components:
-  - type: StationEvent
-    earliestStart: 35
-    weight: 5.5
-    minimumPlayers: 20
-    duration: 1
-  - type: RuleGrids
-  - type: LoadMapRule
-    gridPath: /Maps/Shuttles/ShuttleEvent/striker.yml
-  - type: NukeopsRule
-    roundEndBehavior: Nothing
-  - type: AntagSelection
-    definitions:
-    - spawnerPrototype: SpawnPointLoneNukeOperative
-      min: 1
-      max: 1
-      pickPlayer: false
-      startingGear: SyndicateLoneOperativeGearFull
-      roleLoadout:
-      - RoleSurvivalNukie
-      components:
-      - type: NukeOperative
-      - type: RandomMetadata
-        nameSegments:
-        - NamesSyndicatePrefix
-        - NamesSyndicateNormal
-        nameFormat: name-format-nukie-generic
-      - type: NpcFactionMember
-        factions:
-        - Syndicate
-      mindRoles:
-      - MindRoleNukeops
+# - type: entity   # Forge-Change - вынесено в отдельный yml в каталоге _NF
+  # parent: BaseNukeopsRule
+  # id: LoneOpsSpawn
+  # components:
+  # - type: StationEvent
+    # earliestStart: 35
+    # weight: 5.5
+    # minimumPlayers: 20
+    # duration: null # LoneOpsSpawn needs an infinite duration so that it inherits the NukeOpsRule things of an actually appropriate end scrreen (not always "Neutral outcome!") and... ending the game if the station is nuked.
+  # - type: RuleGrids
+  # - type: LoadMapRule
+    # gridPath: /Maps/Shuttles/ShuttleEvent/striker.yml
+  # - type: NukeopsRule
+    # roundEndBehavior: Nothing
+  # - type: AntagSelection
+    # definitions:
+    # - spawnerPrototype: SpawnPointLoneNukeOperative
+      # min: 1
+      # max: 1
+      # pickPlayer: false
+      # startingGear: SyndicateLoneOperativeGearFull
+      # roleLoadout:
+      # - RoleSurvivalNukie
+      # components:
+      # - type: NukeOperative
+      # - type: RandomMetadata
+        # nameSegments:
+        # - NamesSyndicatePrefix
+        # - NamesSyndicateNormal
+        # nameFormat: name-format-nukie-generic
+      # - type: NpcFactionMember
+        # factions:
+        # - Syndicate
+      # mindRoles:
+      # - MindRoleNukeops
 
 - type: entity
   parent: BaseTraitorRule

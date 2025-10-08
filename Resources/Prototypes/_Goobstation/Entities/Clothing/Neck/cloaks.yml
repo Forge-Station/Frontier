@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakCentcomBlack
+  name: special operations officer cloak
+  description: The NanoTrasen logo embroidered in gold speaks for itself.
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/Neck/Cloaks/centcom_officer_black.rsi

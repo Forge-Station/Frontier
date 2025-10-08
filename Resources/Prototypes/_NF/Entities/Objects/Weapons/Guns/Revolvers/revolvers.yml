@@ -6,6 +6,8 @@
   description: |-
     A detective's best friend. On the handle is a label that says 'for authorized use only.'
   components:
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 2.8
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/inspector.rsi
   - type: Clothing
@@ -23,6 +25,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi
   - type: Gun
+    fireRate: 3
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
 
@@ -33,6 +36,8 @@
   description: |-
     A rare, civilian grade custom-built revolver. Use when there is no time for Voight-Kampff test.
   components:
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 2.6
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/deckard.rsi
     layers:
@@ -153,6 +158,8 @@
     sprite: _NF/Objects/Weapons/Guns/Revolvers/argenti.rsi
   - type: StaticPrice
     price: 200
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 3
 
 # Frontier: Rubber
 - type: entity

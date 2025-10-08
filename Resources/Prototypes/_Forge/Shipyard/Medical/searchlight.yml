@@ -13,9 +13,10 @@
   parent: BaseVessel
   name: LVHI Прожектор
   description: Малогабаритный медицинский шаттл. Рекомендованный состав команды 1-3 человека.
-  price: 29050 # ~26400$ on mapinit + ~2640$ from 10% markup
+  price: 50000 # ~26400$ on mapinit + ~2640$ from 10% markup + 20000 за d100 Corvax Forge
   category: Small
   group: Medical
+  access: Medical
   shuttlePath: /Maps/Forge/Shuttles/Medical/searchlight.yml
   guidebookPage: ShipyardSearchlight
   class:
@@ -37,6 +38,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            paraMedicalInterview: [ 0, 0 ]

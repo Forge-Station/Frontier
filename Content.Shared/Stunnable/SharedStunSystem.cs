@@ -6,6 +6,7 @@ using Content.Shared.Inventory.Events;
 using Content.Shared.Item;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems; // Forge-Change
+using Content.Shared.Bed.Sleep;
 using Content.Shared.Database;
 using Content.Shared.DoAfter; // Forge-Change
 using Content.Shared.Hands;
@@ -36,6 +37,12 @@ public abstract partial class SharedStunSystem : EntitySystem // Forge-Change (p
     [Dependency] protected readonly SharedDoAfterSystem DoAfter = default!; // Forge-Change
     [Dependency] protected readonly SharedStaminaSystem Stamina = default!; // Forge-Change
     [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
+
+    /// <summary>
+    /// Friction modifier for knocked down players.
+    /// Doesn't make them faster but makes them slow down... slower.
+    /// </summary>
+    public const float KnockDownModifier = 0.2f;
 
     public override void Initialize()
     {
@@ -177,7 +184,7 @@ public abstract partial class SharedStunSystem : EntitySystem // Forge-Change (p
         RaiseLocalEvent(uid, ref evAttempt); // Forge-Change
 
         if (evAttempt.Cancelled) // Forge-Change
-            return false; 
+            return false;
         // Forge-Change-Start
         // Initialize our component with the relevant data we need if we don't have it
         if (EnsureComp<KnockedDownComponent>(uid, out var component))
@@ -303,7 +310,7 @@ public abstract partial class SharedStunSystem : EntitySystem // Forge-Change (p
         UpdateStunModifiers(ent, speedModifier, speedModifier);
     }
 
-    #region friction and movement listeners 
+    #region friction and movement listeners
 
     private void OnRefreshMovespeed(EntityUid ent, SlowedDownComponent comp, RefreshMovementSpeedModifiersEvent args) // Forge-Change
     {

@@ -131,7 +131,7 @@
   productEntity: ClothingOuterHardsuitNfsdExperimental
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 20
+    FrontierUplinkCoin: 32
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -401,7 +401,7 @@
   productEntity: WeaponCaseLongWeaponRifleScar12
   icon: { sprite: Forge/Objects/Weapons/Guns/Rifles/scar12.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 7
+    FrontierUplinkCoin: 6
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -413,6 +413,25 @@
       whitelist:
         - Bailiff
         - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityWeaponCaseLongEnergySwordNfsd
+  name:  Энергетический меч дсбф
+  description: Кейс с Энергетическим мечём ДСБФ
+  productEntity: WeaponCaseLongEnergySwordNfsd
+  cost:
+    FrontierUplinkCoin: 7
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
         - Sheriff
 
 - type: listing
@@ -433,25 +452,6 @@
     - !type:BuyerJobCondition
       whitelist:
         - Bailiff
-        - Sheriff
-
-- type: listing
-  id: UplinkSecurityEmpRpg
-  name:  uplink-security-emprpg-name
-  description: uplink-security-emprpg-desc
-  productEntity: NFWeaponLauncherRocketEmp
-  icon: { sprite: Objects/Weapons/Guns/Launchers/rocket.rsi, state: base }
-  cost:
-    FrontierUplinkCoin: 5
-  categories:
-    - UplinkSecurityWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
         - Sheriff
 
 - type: listing # Corvax-Frontier
@@ -1551,6 +1551,26 @@
   productEntity: WeaponCaseLongWeaponPulseCarbineSniper
   icon: { sprite: Forge/Objects/Weapons/Guns/Battery/pulse_sniper.rsi, state: icon }
   cost:
+    FrontierUplinkCoin: 32
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityWeaponPulseCarbineCarbine
+  name: Импульсный карабин
+  description: Высокотехнологичный энергетический карабин, который предпочитают оперативные группы Nanotrasen. Запрещено к использованию гражданскими.
+  productEntity: WeaponCaseLongWeaponPulseCarbine
+  icon: { sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi, state: icon }
+  cost:
     FrontierUplinkCoin: 20
   categories:
     - UplinkSecurityWeapons
@@ -1562,8 +1582,85 @@
     - !type:BuyerJobCondition
       whitelist:
         - Bailiff
-        - SeniorOfficer
         - Sheriff
+
+- type: listing
+  id: UplinkSecurityWeaponPulseCarbinePistol
+  name: Импульсный пистолет
+  description: Новейший энергетический пистолет, предпочитаемый оперативными группами Nanotrasen в качестве запасного оружия. Запрещено к использованию гражданскими.
+  productEntity: WeaponCaseLongWeaponPulsePistol
+  icon: { sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 12
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityWeaponMateba
+  name: Матеба
+  description: Знаковое оружие элиты корпорации. Использует патроны калибра .45 магнум.
+  productEntity: WeaponCaseLongWeaponRevolverMateba
+  icon: { sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 6
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityWeaponN1984
+  name: N1984
+  description: Запасное оружие любого уважающего себя офицера. Выпускается в калибре .45 магнум, самом богоугодном калибре.
+  productEntity: NFWeaponPistolN1984
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityBoxPistol45AP
+  name: коробка патронов (.45 магнум бронебойные)
+  description: Коробка смертоносных патронов 45 калибра. Идеально подходят для пробития сильных вражеских едениц.
+  productEntity: NFAmmunitionBoxPistol45AP
+  cost:
+    FrontierUplinkCoin: 12
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+        - SeniorOfficer
 
 - type: listing
   id: UplinkSecurity80BGrenadeAmmo

@@ -54,7 +54,7 @@
       path: /Audio/Forge/Mecha/lowpowernano.ogg
     nominalSound:
       path: /Audio/Forge/Mecha/nominalnano.ogg
-      
+
 - type: entity
   id: SyndieMech
   abstract: true
@@ -73,7 +73,7 @@
     criticalDamageSound:
       path: /Audio/Forge/Mecha/critdestrsyndi.ogg
 
-# Ripley MK-II
+# Ripley MK-II PowerCage
 - type: entity
   id: MechRipley2
   parent: [ BaseMech, IndustrialMech ]
@@ -96,6 +96,7 @@
     brokenState: ripleymkii-broken
     mechToPilotDamageMultiplier: 0.1
     airtight: true
+    maxIntegrity: 450
     maxEquipmentAmount: 3
     pilotWhitelist:
       components:
@@ -120,9 +121,11 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHigh
+      - PowerCageSmall
       mech-gas-tank-slot:
       - MechAirTankFilled
+      mech-capacitor-slot:
+      - CapacitorStockPart
 
 # Clarke
 - type: entity
@@ -147,6 +150,7 @@
     brokenState: clarke-broken
     mechToPilotDamageMultiplier: 0.05
     airtight: true
+    maxIntegrity: 450
     maxEquipmentAmount: 4
     pilotWhitelist:
       components:
@@ -156,7 +160,8 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 26
+        Blunt: 13
+        Slash: 13
   - type: MovementSpeedModifier
     baseWalkSpeed: 4.5
     baseSprintSpeed: 5.5
@@ -172,9 +177,11 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHigh
+      - PowerCageSmall
       mech-gas-tank-slot:
       - MechAirTankFilled
+      mech-capacitor-slot:
+      - CapacitorStockPart
 
 # H.O.N.K.
 - type: entity
@@ -183,6 +190,7 @@
   suffix: Battery, Filled
   components:
   - type: Mech
+    maxEquipmentAmount: 3
     startingEquipment:
       - WeaponMechSpecialBananaMortar
       - WeaponMechSpecialMousetrapMortar
@@ -213,7 +221,7 @@
     brokenState: gygax-broken
     mechToPilotDamageMultiplier: 0.05
     airtight: true
-    maxIntegrity: 300
+    maxIntegrity: 500
     maxEquipmentAmount: 4
     pilotWhitelist:
       components:
@@ -223,7 +231,8 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 25
+        Blunt: 12.5
+        Slash: 12.5
         Structural: 180
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
@@ -241,9 +250,11 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHigh
+      - PowerCageMedium
       mech-gas-tank-slot:
       - MechAirTankFilled
+      mech-capacitor-slot:
+      - CapacitorStockPart
 
 # Durand
 - type: entity
@@ -268,7 +279,7 @@
     brokenState: durand-broken
     mechToPilotDamageMultiplier: 0.05
     airtight: true
-    maxIntegrity: 400
+    maxIntegrity: 600
     maxEquipmentAmount: 3
     pilotWhitelist:
       components:
@@ -278,7 +289,8 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 40
+        Blunt: 20
+        Slash: 20
         Structural: 220
   - type: MovementSpeedModifier
     baseWalkSpeed: 1.5
@@ -300,9 +312,11 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHigh
+      - PowerCageMedium
       mech-gas-tank-slot:
       - MechAirTankFilled
+      mech-capacitor-slot:
+      - CapacitorStockPart
 
 # NFSD Combat Mechs
 
@@ -329,7 +343,7 @@
     brokenState: ares-broken
     mechToPilotDamageMultiplier: 0.05
     airtight: true
-    maxIntegrity: 450
+    maxIntegrity: 650
     maxEquipmentAmount: 3
     pilotWhitelist:
       components:
@@ -339,7 +353,8 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 40
+        Blunt: 20
+        Slash: 20
         Structural: 220
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
@@ -361,9 +376,11 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHyper
+      - PowerCageHigh
       mech-gas-tank-slot:
       - MechAirTankFilled
+      mech-capacitor-slot:
+      - QuadraticCapacitorStockPart
 
 # Nanotrasen Combat Mechs
 
@@ -390,7 +407,7 @@
     brokenState: marauder-broken
     mechToPilotDamageMultiplier: 0.05
     airtight: true
-    maxIntegrity: 500
+    maxIntegrity: 700
     maxEquipmentAmount: 4
     pilotWhitelist:
       components:
@@ -400,7 +417,8 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 40
+        Blunt: 20
+        Slash: 20
         Structural: 400
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.2
@@ -422,9 +440,11 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHyper
+      - PowerCageHigh
       mech-gas-tank-slot:
       - MechAirTankFilled
+      mech-capacitor-slot:
+      - QuadraticCapacitorStockPart
 
 - type: entity
   id: MechMarauderFilled
@@ -461,7 +481,7 @@
     brokenState: seraph-broken
     mechToPilotDamageMultiplier: 0.05
     airtight: true
-    maxIntegrity: 550
+    maxIntegrity: 750
     maxEquipmentAmount: 5
     pilotWhitelist:
       components:
@@ -471,7 +491,8 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 60
+        Blunt: 30
+        Slash: 30
         Structural: 400
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
@@ -493,9 +514,11 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellAntiqueProto
+      - PowerCageHigh
       mech-gas-tank-slot:
       - MechAirTankFilled
+      mech-capacitor-slot:
+      - QuadraticCapacitorStockPart
 
 - type: entity
   id: MechSeraphFilled
@@ -535,7 +558,7 @@
     brokenState: darkgygax-broken
     mechToPilotDamageMultiplier: 0.1
     airtight: true
-    maxIntegrity: 300
+    maxIntegrity: 500
     maxEquipmentAmount: 4
     pilotWhitelist:
       components:
@@ -545,7 +568,8 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 30
+        Blunt: 15
+        Slash: 15
         Structural: 200
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
@@ -567,9 +591,11 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHyper
+      - PowerCageHigh
       mech-gas-tank-slot:
       - MechAirTankFilled
+      mech-capacitor-slot:
+      - QuadraticCapacitorStockPart
 
 - type: entity
   id: MechGygaxSyndieFilled
@@ -606,7 +632,7 @@
     brokenState: mauler-broken
     mechToPilotDamageMultiplier: 0.05
     airtight: true
-    maxIntegrity: 500
+    maxIntegrity: 700
     maxEquipmentAmount: 6
     pilotWhitelist:
       components:
@@ -616,7 +642,8 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 50
+        Blunt: 25
+        Slash: 25
         Structural: 400
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
@@ -638,9 +665,11 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHyper
+      - PowerCageHigh
       mech-gas-tank-slot:
       - MechAirTankFilled
+      mech-capacitor-slot:
+      - QuadraticCapacitorStockPart
 
 - type: entity
   id: MechMaulerSyndieFilled
@@ -680,7 +709,7 @@
     brokenState: blackpearal-broken
     mechToPilotDamageMultiplier: 0.05
     airtight: true
-    maxIntegrity: 320
+    maxIntegrity: 520
     maxEquipmentAmount: 4
     pilotWhitelist:
       components:
@@ -690,7 +719,8 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 30
+        Blunt: 15
+        Slash: 15
         Structural: 210
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
@@ -714,9 +744,11 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHyper
+      - PowerCageHigh
       mech-gas-tank-slot:
       - MechAirTankFilled
+      mech-capacitor-slot:
+      - QuadraticCapacitorStockPart
 
 - type: entity
   id: MechGygaxPirateFilled

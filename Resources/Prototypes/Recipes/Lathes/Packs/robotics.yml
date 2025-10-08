@@ -7,13 +7,18 @@
   - PositronicBrain
   - SciFlash
   - CyborgEndoskeleton
+  #Forge-Change Mechs
   - MechAirTank
   - MechThruster
+  - PowerCageHigh
+  - PowerCageMedium
+  - PowerCageSmall
 
 - type: latheRecipePack
   id: BorgModulesStatic
   recipes:
   - BorgModuleTool
+  - BorgModuleCable
   - BorgModuleFireExtinguisher
 
 - type: latheRecipePack

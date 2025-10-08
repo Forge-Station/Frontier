@@ -32,3 +32,20 @@
     - !type:BuyerJobCondition
       whitelist:
         - NFPirateCaptain
+
+- type: listing
+  id: UplinkNFBoxPirateTrackingBundle
+  name: uplink-BoxPirateTrackingBundle-name
+  description: uplink-BoxPirateTrackingBundle-desc
+  productEntity: BoxPirateTrackingBundle
+#  icon: { sprite: Forge/Objects/Specific/Mech/mecha.rsi, state: blackpearal }
+  cost:
+    Doubloon: 1
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition

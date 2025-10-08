@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ BaseItem, StorePresetContractorUplink, BaseC3SyndicateContraband ]
+  parent: [ BaseItem, StorePresetContractorUplink, BaseC3Contraband ]
   id: ContractorUplink
   name: contractor uplink
   description: "An advanced tablet from Deep Contract Net™, a company that produces equipment for urgent orders."
@@ -61,6 +61,21 @@
   - type: Pinpointer
     updateTargetName: true
     canTargetMobs: true
+  - type: Sprite
+    noRot: True
+    sprite: Forge/Objects/Devices/contr_pinpointer.rsi
+    layers:
+    - state: pinpointer_thief
+      map: ["enum.PinpointerLayers.Base"]
+    - state: pinonnull
+      map: ["enum.PinpointerLayers.Screen"]
+      shader: unshaded
+      visible: false
+  - type: Icon
+    sprite: Forge/Objects/Devices/contr_pinpointer.rsi
+    state: pinpointer_thief
+  - type: Item
+    sprite: Forge/Objects/Devices/contr_pinpointer.rsi
 
 - type: entity
   parent: BaseItem

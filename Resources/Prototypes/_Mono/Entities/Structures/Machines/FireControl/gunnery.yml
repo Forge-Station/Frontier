@@ -16,7 +16,7 @@
   description: Manages the remote operation of ship weapons.
   components:
   - type: Sprite
-    sprite: Structures/Machines/telecomms.rsi
+    sprite: Forge/Structures/Machines/telecomms.rsi
     snapCardinals: true
     layers:
     - state: icon

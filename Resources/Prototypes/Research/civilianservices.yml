@@ -81,6 +81,7 @@
   cost: 7500
   recipeUnlocks:
   - FatExtractorMachineCircuitboard
+  - BiogeneratorMachineCircuitboard # Frontier BiofabricatorMachineCircuitboard<BiogeneratorMachineCircuitboard
   - BiofabricatorMachineCircuitboard
   - BiomassReclaimerMachineCircuitboard
 
@@ -129,6 +130,7 @@
   cost: 5000
   recipeUnlocks:
   - BorgModuleAdvancedChemical
+  - BorgModuleAdvancedParamedic # Frontier
 
 - type: technology
   id: AdvancedCleaning
@@ -143,6 +145,8 @@
   - AdvMopItem
   - MegaSprayBottle
   - BorgModuleAdvancedCleaning
+  - ReinforcedJug # Frontier
+  - PortablePumpMachineCircuitBoard # Frontier
 
 - type: technology
   id: HONKMech
@@ -227,6 +231,8 @@
   recipeUnlocks:
   - BluespaceBeaker
   - SyringeBluespace
+  - JugBluespace # Frontier
+  - VialBluespace # Frontier
 
 - type: technology
   id: LauncherSyringe

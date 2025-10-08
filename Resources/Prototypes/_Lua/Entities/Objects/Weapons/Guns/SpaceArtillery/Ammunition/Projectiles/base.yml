@@ -27,7 +27,7 @@
       requireNoGrid: true
       shape: triangle
     - type: TimedDespawn
-      lifetime: 20 
+      lifetime: 20
     - type: ShipWeaponProjectile
 
 - type: entity
@@ -70,9 +70,9 @@
     - type: ExplodeOnTrigger
     - type: Explosive
       explosionType: Default
-      totalIntensity: 250.0
+      totalIntensity: 75.0
       intensitySlope: 17
-      maxIntensity: 250
+      maxIntensity: 75
       maxTileBreak: 1
     - type: RadarBlip
       scale: 2.5

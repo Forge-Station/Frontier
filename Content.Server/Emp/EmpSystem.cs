@@ -61,8 +61,11 @@ public sealed class EmpSystem : SharedEmpSystem
             if (HasComp<EmpProtectionComponent>(uid))
                 continue;
 
+            if (!TryComp<TransformComponent>(uid, out var xform))
+                continue;
+
             // Frontier: Block EMP on grid
-            var gridUid = Transform(uid).GridUid;
+            var gridUid = xform.GridUid;
             if (gridUid != null &&
                 (immuneGrids != null && immuneGrids.Contains(gridUid.Value) ||
                 TryComp<ProtectedGridComponent>(gridUid, out var prot) && prot.PreventEmpEvents))
@@ -129,7 +132,8 @@ public sealed class EmpSystem : SharedEmpSystem
         RaiseLocalEvent(uid, ref ev);
         if (ev.Affected)
         {
-            Spawn(EmpDisabledEffectPrototype, Transform(uid).Coordinates);
+            if (TryComp<TransformComponent>(uid, out var xform))
+                Spawn(EmpDisabledEffectPrototype, xform.Coordinates);
         }
         if (ev.Disabled)
         {

@@ -150,6 +150,7 @@ public sealed partial class ShuttleSystem
         else
         {
             TryComp<ShuttleStealthComponent>(xform.GridUid, out var stealth); // Forge-Change
+
             _uiSystem.SetUiState(uid, IFFConsoleUiKey.Key, new IFFConsoleBoundUserInterfaceState()
             {
                 AllowedFlags = component.AllowedFlags,

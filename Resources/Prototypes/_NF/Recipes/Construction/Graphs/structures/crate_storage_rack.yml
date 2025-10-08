@@ -9,7 +9,7 @@
       - material: Steel
         amount: 2
         doAfter: 1
-    
+
   - node: base
     entity: CrateStorageRackBase
     edges:
@@ -29,7 +29,7 @@
         prototype: SheetSteel1
         amount: 2
       - !type:DeleteEntity
-  
+
   - node: emptyframe
     entity: CrateStorageRackFrameEmpty
     edges:
@@ -48,7 +48,7 @@
       - !type:SpawnPrototype
         prototype: PartRodMetal1
         amount: 4
-    
+
   - node: frame
     entity: CrateStorageRackFrame
     edges:

@@ -83,6 +83,7 @@
 
       - tag: CapacitorStockPart
         name: construction-graph-component-capacitor
+        store: capacitor-container
         icon:
           sprite: Objects/Misc/stock_parts.rsi
           state: capacitor

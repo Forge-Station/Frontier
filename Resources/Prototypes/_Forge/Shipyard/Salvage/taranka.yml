@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: -
+# Discord: anton953 CorvaxForge
+# License: CC-BY-NC-ND-3.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Taranka
+  parent: BaseVessel
+  name: NC Таранка
+  description: Малогабаритный добывающий шаттл. Рекомендованный размер команды 3-6 человек.
+  price: 23425
+  category: Small
+  group: Salvage
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/taranka.yml
+  guidebookPage: Null
+  class:
+  - Cargo
+  - Salvage
+
+- type: gameMap
+  id: Taranka
+  mapName: 'NC Таранка'
+  mapPath: /Maps/Forge/Shuttles/Salvage/taranka.yml
+  minPlayers: 0
+  stations:
+    Taranka:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Таранка {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

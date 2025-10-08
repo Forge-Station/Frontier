@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: v6st CorvaxForge
+# License: CC-BY-NC-ND-3.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Mirage
+  parent: BaseVessel
+  name: SBI Мираж
+  description: Малогабаритный шаттл для наёмников, рекомендуемый состав экипажа 2 человека.
+  price: 42000
+  category: Small
+  group: Mercenary
+  shuttlePath: /Maps/Forge/Shuttles/Mercenary/mirage.yml
+  addComponents:
+  - type: MercenaryBountyDatabase
+    bounties: []
+
+- type: gameMap
+  id: Mirage
+  mapName: 'SBI Мираж'
+  mapPath: /Maps/Forge/Shuttles/Mercenary/mirage.yml
+  minPlayers: 0
+  stations:
+    Mirage:
+      stationProto: MercenaryFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Мираж {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

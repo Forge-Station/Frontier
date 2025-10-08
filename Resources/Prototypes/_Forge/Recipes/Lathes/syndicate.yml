@@ -31,12 +31,20 @@
     CreditCounterfeit: 30000
 
 - type: latheRecipe
-  id: ClothingBackpackDuffelSyndicateFilledHristovRecipe
+  id: WeaponRifleSniperHristovRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
   result: NFWeaponRifleSniperHristov
   completetime: 1
   materials:
-    CreditCounterfeit: 26000
+    CreditCounterfeit: 44000
+
+- type: latheRecipe
+  id: WeaponRifleEstocRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: NFWeaponRifleEstoc
+  completetime: 1
+  materials:
+    CreditCounterfeit: 44000
 
 - type: latheRecipe
   id: ClothingBackpackDuffelSyndicateFilledLMGRecipe
@@ -101,7 +109,13 @@
   completetime: 1
   materials:
     CreditCounterfeit: 44000
-
+- type: latheRecipe
+  id: WeaponRifleAkCyberSunRecipe
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  result: WeaponRifleAkCyberSun
+  completetime: 1
+  materials:
+    CreditCounterfeit: 65000
 - type: latheRecipe
   id: WeaponRevolverPythonRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
@@ -263,6 +277,22 @@
     CreditCounterfeit: 4000
 
 - type: latheRecipe
+  id: ClothingHandsGlovesCombatSyndicateRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingHandsGlovesCombatSyndicate
+  completetime: 1
+  materials:
+    CreditCounterfeit: 5000
+
+- type: latheRecipe
+  id: ClothingShoesBootsMagSyndieEliteRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingShoesBootsMagSyndieElite
+  completetime: 1
+  materials:
+    CreditCounterfeit: 12000
+
+- type: latheRecipe
   id: JetpackBlackFilledRecipe
   categories: [SyndicateTradingConsoleMeleeArmor]
   result: JetpackBlackFilled
@@ -285,6 +315,14 @@
   completetime: 1
   materials:
     CreditCounterfeit: 8000
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitSyndieSSTRecipe
+  categories: [SyndicateTradingConsoleMeleeArmor]
+  result: ClothingOuterHardsuitSyndieSST
+  completetime: 1
+  materials:
+    CreditCounterfeit: 299999
 
 - type: latheRecipe
   id: ClothingOuterHardsuitJuggernautRecipe
@@ -430,6 +468,13 @@
   materials:
     CreditCounterfeit: 7500
 
+- type: latheRecipe
+  id: ClothingBackpackDuffelSyndicateMedicalBundleRecipe
+  categories: [SyndicateTradingConsoleChemistry]
+  result: ClothingBackpackDuffelSyndicateMedicalBundleFilled
+  completetime: 1
+  materials:
+    CreditCounterfeit: 159999
 
 - type: latheRecipe
   id: EmergencyMedipenRecipe

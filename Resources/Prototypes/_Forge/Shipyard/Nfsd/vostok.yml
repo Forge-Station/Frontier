@@ -6,7 +6,7 @@
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
-# Discord: mersen 
+# Discord: mersen
 
 # Shuttle Notes:
 - type: vessel
@@ -14,7 +14,7 @@
   parent: BaseVessel
   name: TL Восток
   description: Тяжелый авианосец сил дсбф для подавления крупных восстаний.
-  price: 187000
+  price: 242000
   category: Large
   group: Security
   access: Bailiff
@@ -22,6 +22,9 @@
   guidebookPage: Null
   class:
   - Capital
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Vostok

@@ -21,6 +21,12 @@
         tags:
         - Write
         - CyberPen
+  - type: Icon
+    sprite: Forge/Objects/Devices/pda.rsi
+    state: pda-syndi
+  - type: Sprite
+    sprite: Forge/Objects/Devices/pda.rsi
+    state: pda-syndi
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
@@ -28,8 +34,6 @@
        pda-syndi
   - type: PdaBorderColor
     borderColor: "#891417"
-  - type: Icon
-    state: pda-syndi
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:
@@ -59,15 +63,19 @@
         tags:
         - Write
         - CyberPen
+  - type: Icon
+    sprite: Forge/Objects/Devices/pda.rsi
+    state: pda-highcommand
+  - type: Sprite
+    sprite: Forge/Objects/Devices/pda.rsi
+    state: pda-highcommand
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-syndi
+       pda-highcommand
   - type: PdaBorderColor
     borderColor: "#891417"
-  - type: Icon
-    state: pda-syndi
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:
@@ -97,6 +105,12 @@
         tags:
         - Write
         - CyberPen
+  - type: Icon
+    sprite: Forge/Objects/Devices/pda.rsi
+    state: pda-syndi
+  - type: Sprite
+    sprite: Forge/Objects/Devices/pda.rsi
+    state: pda-syndi
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
@@ -104,8 +118,6 @@
        pda-syndi
   - type: PdaBorderColor
     borderColor: "#891417"
-  - type: Icon
-    state: pda-syndi
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:
@@ -135,15 +147,19 @@
         tags:
         - Write
         - CyberPen
+  - type: Icon
+    sprite: Forge/Objects/Devices/pda.rsi
+    state: pda-syndi-agent
+  - type: Sprite
+    sprite: Forge/Objects/Devices/pda.rsi
+    state: pda-syndi-agent
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-syndi
+       pda-syndi-agent
   - type: PdaBorderColor
     borderColor: "#891417"
-  - type: Icon
-    state: pda-syndi
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:
@@ -186,4 +202,42 @@
     uiKey: enum.PdaUiKey.Key
     preinstalled:
       - NotekeeperCartridge
+      - AstroNavCartridge
+
+- type: entity
+  parent: BaseSecurityPDA
+  id: SpecOperPDA
+  name: КПК офицера
+  description: Сам списывает штрафы со счёта ДСБФ.
+  components:
+  - type: Pda
+    id: CentcomIDCard
+    penSlot:
+      startingItem: PenCentcom
+      whitelist:
+        tags:
+        - Write
+  - type: Icon
+    sprite: Forge/Objects/Devices/pda.rsi
+    state: pda-specop
+  - type: Sprite
+    sprite: Forge/Objects/Devices/pda.rsi
+    state: pda-specop
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-specop
+  - type: PdaBorderColor
+    borderColor: "#3f4742"
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      - MedTekCartridge
+      - WantedListCartridge
+      - LogProbeCartridge
       - AstroNavCartridge

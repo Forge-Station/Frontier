@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: NSF Виски
   description: Среднегабаритный спасательный шаттл NSF, рассчитанное на одного-двух бригмедиков и пилота.
-  price: 55000
+  price: 40500
   category: Medium
   group: Security
   access: Bailiff
@@ -21,6 +21,9 @@
   guidebookPage: Null
   class:
   - Medical
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Whiskey

@@ -260,7 +260,7 @@
     - id: ChemBag
     - id: ClothingHandsGlovesLatex
     - id: ClothingMaskSterile
-    - id: ClothingEyesGlassesChemical  
+    - id: ClothingEyesGlassesChemical
 
 - type: entity
   parent: CrateMedicalSecure
@@ -294,7 +294,7 @@
     - id: Bloodpack
       amount: 2
     - id: Gauze
-  
+
 - type: entity
   parent: CrateSurgery
   id: CrateMedicalSecureMedicinePierce
@@ -310,7 +310,7 @@
       amount: 3
     - id: Gauze
       amount: 3
-  
+
 - type: entity
   parent: CrateMedical
   id: CrateMedicalRollerBeds
@@ -321,7 +321,7 @@
     contents:
     - id: RollerBedSpawnFolded
       amount: 4
-  
+
 - type: entity
   parent: CrateEvaKit
   id: CrateEvaKitParamedic

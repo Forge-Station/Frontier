@@ -1,0 +1,25 @@
+- type: entity
+  parent: [ ClothingOuterStorageFoldableBase, BaseC2ContrabandUnredeemable ]
+  id: ClothingOuterArmorSheriffVestWeb
+  name: sheriff vest web
+  description: A flak trenchcoat produced by Arcadia Industries, enhanced with a bulletproof alloy for some extra protection.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/OuterClothing/Armor/web_vest_sheriff.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/OuterClothing/Armor/web_vest_sheriff.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.3
+        Heat: 0.3
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: FireProtection
+    reduction: 0.7
+  - type: StaminaResistance
+    damageCoefficient: 0.3
+  - type: ExplosionResistance
+    damageCoefficient: 0.5

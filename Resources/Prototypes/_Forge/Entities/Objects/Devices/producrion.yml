@@ -28,7 +28,7 @@
   id: GyroscopeSyndicateMachineCircuitboard
   parent: [BaseMachineCircuitboard, BaseC3ContrabandUnredeemable]
   name: гироскоп Синдиката (машинная плата)
-  components:   
+  components:
    - type: Sprite
      state: security
    - type: MachineBoard

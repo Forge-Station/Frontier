@@ -67,7 +67,7 @@
 
 - type: entity
   name: Dakota
-  parent: [NFBaseWeaponRifleAssaultChamber30, BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssaultNanotrasen]
+  parent: [NFBaseWeaponRifleAssaultChamber20, BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssaultNanotrasen]
   id: WeaponInterstellarRifleM4A1
   components:
   - type: Sprite
@@ -293,3 +293,123 @@
     walkModifier: 0.95
     sprintModifier: 0.95
 
+- type: entity
+  name: Рет-Cог
+  parent: [NFBaseWeaponRifleAssaultChamber30, BaseC3SyndicateContraband, NFBaseWeaponFrameRifleAssaultCybersun]
+  id: WeaponRifleAkCyberSun
+  description: Облегчённая штурмовая автоматическая винтовка, улучшена компанией Cybersun специально для поставки на черный рынок. Ещё чувствуется запах краски...
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Rifles/akcy.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 6.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: NFMagazineRifle30
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - NFMagazineRifle30
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: NFCartridgeRifle30
+        priority: 1
+        whitelist:
+          tags:
+            - NFCartridgeRifle30
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+  - type: Appearance
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Rifles/akcy.rsi
+  - type: Item
+    shape:
+    - 0,0,3,1
+
+- type: entity
+  name: МВ Эсток
+  parent: [NFBaseWeaponRifleAssaultChamber20, BaseC3SyndicateContraband, NFBaseWeaponFrameRifleAssaultCybersun]
+  id: NFWeaponRifleEstoc
+  description: Специальная стрелковая винтовка, стреляющая очередями по 3 патрона. Эсток была разработана как дальнобойный аналог Лектера, оснащенный удлиненным 20-дюймовым стволом и оптическим прицелом.
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Rifles/estoc.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    shape:
+    - 0,0,4,2
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Rifles/estoc.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_Forge/Weapons/Guns/Gunshots/estocshot.ogg
+    minAngle: 30
+    maxAngle: 43
+    shotsPerBurst: 3
+    selectedMode: Burst
+    availableModes:
+    - Burst
+    - SemiAuto
+    burstFireRate: 6.7
+  - type: GunWieldBonus
+    minAngle: -28
+    maxAngle: -25
+  # - type: CursorOffsetRequiresWield
+  # - type: EyeCursorOffset
+  #   maxOffset: 1
+  #   pvsIncrease: 1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: NFMagazineRifle20
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - NFMagazineRifle20
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: NFCartridgeRifle20
+        priority: 1
+        whitelist:
+          tags:
+          - NFCartridgeRifle20
+  - type: SpeedModifiedOnWield
+    sprintModifier: 0.9
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

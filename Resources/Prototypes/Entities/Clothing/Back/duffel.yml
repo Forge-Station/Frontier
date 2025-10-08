@@ -80,7 +80,7 @@
   description: A large duffel bag for holding extra medical related goods.
   components:
     - type: Sprite
-      sprite: Clothing/Back/Duffels/brigmedic.rsi
+      sprite: _CorvaxGoob/Clothing/Back/Duffels/brigmedic.rsi #Forge
 
 - type: entity
   parent: NFClothingDuffel # Frontier: ClothingBackpackDuffelNFClothingDuffel
@@ -160,7 +160,7 @@
       sprite: Clothing/Back/Duffels/salvage.rsi
 
 - type: entity
-  parent: [NFClothingDuffel, BaseC3Contraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3Contraband, added ContrabandClothing as parent
+  parent: [NFClothingDuffel, BaseC3Contraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3Contraband, added ContrabandClothing as parent  # Corvax-Forge: ClothingBackpackDuffelSyndicate
   id: ClothingBackpackDuffelSyndicate
   name: syndicate duffel bag
   description: A large duffel bag for holding various traitor goods.
@@ -168,13 +168,13 @@
   - type: Sprite
     sprite: Clothing/Back/Duffels/syndicate.rsi
   - type: ExplosionResistance
-    damageCoefficient: 0.1
+    damageCoefficient: 0 # Corvax-Forge: 100 expl resistance
   - type: Storage
     grid:
-    - 0,0,8,4
+    - 0,0,9,5 # Corvax-Forge: extend storage
 
 - type: entity
-  parent: NFClothingDuffel # Frontier: ClothingBackpackDuffelNFClothingDuffelSyndicate
+  parent: ClothingBackpackDuffelSyndicate # Frontier: ClothingBackpackDuffelNFClothingDuffelSyndicate # Corvax-Forge: ClothingBackpackDuffelSyndicate
   id: ClothingBackpackDuffelSyndicateBundle
   abstract: true
   components:
@@ -182,7 +182,7 @@
       tags: [] # ignore "WhitelistChameleon" tag
 
 - type: entity
-  parent: NFClothingDuffel # Frontier: ClothingBackpackDuffelNFClothingDuffelSyndicate
+  parent: ClothingBackpackDuffelSyndicate # Frontier: ClothingBackpackDuffelNFClothingDuffelSyndicate # Corvax-Forge: ClothingBackpackDuffelSyndicate
   id: ClothingBackpackDuffelSyndicateAmmo
   components:
     - type: Sprite
@@ -194,7 +194,7 @@
       equippedPrefix: ammo
 
 - type: entity
-  parent: NFClothingDuffel # Frontier: ClothingBackpackDuffelNFClothingDuffelSyndicateAmmo
+  parent: ClothingBackpackDuffelSyndicate # Frontier: ClothingBackpackDuffelNFClothingDuffelSyndicateAmmo # Corvax-Forge: ClothingBackpackDuffelSyndicate
   id: ClothingBackpackDuffelSyndicateAmmoBundle
   abstract: true
   components:
@@ -202,7 +202,7 @@
       tags: [] # ignore "WhitelistChameleon" tag
 
 - type: entity
-  parent: NFClothingDuffel # Frontier: ClothingBackpackDuffelNFClothingDuffelSyndicate
+  parent: ClothingBackpackDuffelSyndicate # Frontier: ClothingBackpackDuffelNFClothingDuffelSyndicate # Corvax-Forge: ClothingBackpackDuffelSyndicate
   id: ClothingBackpackDuffelSyndicateMedical
   components:
     - type: Sprite
@@ -214,7 +214,7 @@
       equippedPrefix: med
 
 - type: entity
-  parent: NFClothingDuffel # Frontier: ClothingBackpackDuffelNFClothingDuffelSyndicateMedical
+  parent: ClothingBackpackDuffelSyndicateMedical # Frontier: ClothingBackpackDuffelNFClothingDuffelSyndicateMedical # Corvax-Forge: ClothingBackpackDuffelSyndicate
   id: ClothingBackpackDuffelSyndicateMedicalBundle
   abstract: true
   components:

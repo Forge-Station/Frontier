@@ -641,13 +641,6 @@ entities:
     - type: Transform
       pos: -4.5,-2.5
       parent: 1
-- proto: WeaponLauncherRocket
-  entities:
-  - uid: 84
-    components:
-    - type: Transform
-      pos: 0.5539513,0.51385236
-      parent: 1
 - proto: WeaponTurretHostile
   entities:
   - uid: 79

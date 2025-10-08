@@ -1,0 +1,15 @@
+- type: entity
+  parent: [NFClothingBeltStorageBase, ContentsExplosionResistanceBase]
+  id: ClothingBeltContractorWebbing
+  name: разгрузка DCN™
+  description: Ременно-плечевая система тактических ремней, которую носят настоящая элита тёмного интернета.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Belt/contractor_webbing.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Belt/contractor_webbing.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,9,1

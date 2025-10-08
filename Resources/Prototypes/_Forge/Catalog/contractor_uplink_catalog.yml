@@ -1,4 +1,15 @@
 - type: listing
+  id: ContractorUplinkSpace
+  name: 'Набор космического контрактника'
+  description: 'Содержит в себе набор скафандр ВКД от DCN™ и плата консоли системы опознавания.'
+  productEntity: CrateContractorSpaceKit
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  categories:
+    - ContractorUplinkKit
+
+- type: listing
   id: ContractorUplinkPistolViper
   name: uplink-pistol-viper-name
   description: uplink-pistol-viper-desc
@@ -117,11 +128,6 @@
     Telecrystal: 16
   categories:
   - ContractorUplinkWeaponry
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
 
 - type: listing
   id: ContractorUplinkSniperBundle
@@ -134,6 +140,19 @@
     Telecrystal: 12
   cost:
     Telecrystal: 24
+  categories:
+  - ContractorUplinkWeaponry
+
+- type: listing
+  id: ContractorUplinkEstoc
+  name: Эсток
+  description: Специальная стрелковая винтовка, стреляющая очередями по 3 патрона. Эсток была разработана как дальнобойный аналог Лектера, оснащенный удлиненным 20-дюймовым стволом и оптическим прицелом.
+  productEntity: NFWeaponRifleEstoc
+  discountCategory: usualDiscounts
+  discountDownTo:
+    TelecrystalDamaged: 21
+  cost:
+    TelecrystalDamaged: 36
   categories:
   - ContractorUplinkWeaponry
 
@@ -166,6 +185,16 @@
   - ContractorUplinkWeaponry
 
 # Explosives
+
+- type: listing
+  id: ContractorUplinkGrenadeStinger
+  name: травматическая граната
+  description: Здесь не на что смотреть, пожалуйста, расходитесь.
+  productEntity: GrenadeStinger
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkExplosives
 
 - type: listing
   id: ContractorUplinkExplosiveGrenadeFlash
@@ -514,6 +543,81 @@
 # Disruption
 
 - type: listing
+  id: ContractorUplinkRCDAmmo
+  name: Заряд РСУ
+  description: Заряд для боевого РСУ от DCN™.
+  productEntity: RCDAmmo
+  cost:
+    Telecrystal: 1
+  categories:
+  - ContractorUplinkDisruption
+
+- type: listing
+  id: ContractorUplinkIFFCirc
+  name: Консоль системы опознавания (консольная плата)
+  description: Плата консоли после сборки которой позволяет управлять параметрами системы опознавания судна.
+  productEntity: ComputerIFFCircuitboard
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 6
+  categories:
+  - ContractorUplinkDisruption
+
+- type: listing
+  id: ContractorUplinkJOLCont
+  name: Челюсти жизни DCN™
+  description: Используется для проникновения на чужие шаттлы и аванпоста.
+  productEntity: JawsOfLifeContractor
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkDisruption
+
+- type: listing
+  id: ContractorUplinkToolboxContr
+  name: Ящик продвинутых инструментов DCN™
+  description: Зловеще выглядящий ящик для инструментов, наполненный лучшими инструментами.
+  productEntity: ToolboxContractorFilled
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 10
+  categories:
+  - ContractorUplinkDisruption
+
+- type: listing
+  id: ContractorUplinkAccessBreaker
+  name: uplink-access-breaker-name
+  description: uplink-access-breaker-desc
+  productEntity: AccessBreaker
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 10
+  categories:
+  - ContractorUplinkDisruption
+
+- type: listing
+  id: ContractorUplinkAmmoTech
+  name: ТехФаб патронов
+  description: Печатает тот минимум боеприпасов, который может понадобиться бюджетной армии или арсеналу. Ничего навороченного.
+  productEntity: AmmoTechFabFlatpack
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 10
+  categories:
+  - ContractorUplinkDisruption
+
+- type: listing
   id: ContractorUplinkEmag
   name: uplink-emag-name
   description: uplink-emag-desc
@@ -554,19 +658,6 @@
   name: uplink-slipocalypse-clustersoap-name
   description: uplink-slipocalypse-clustersoap-desc
   productEntity: SlipocalypseClusterSoap
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 2
-  cost:
-    Telecrystal: 4
-  categories:
-  - ContractorUplinkDisruption
-
-- type: listing
-  id: ContractorUplinkSyndicateJawsOfLife
-  name: uplink-syndicate-jaws-of-life-name
-  description: uplink-syndicate-jaws-of-life-desc
-  productEntity: SyndicateJawsOfLife
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -740,6 +831,113 @@
 # Wearables
 
 - type: listing
+  id: ContractorUplinkWebbing
+  name: Разгрузка DCN™
+  description: Ременно-плечевая система тактических ремней, которую носят настоящая элита тёмного интернета.
+  productEntity: ClothingBeltContractorWebbing
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkBackpack
+  name: Рюкзак DCN™
+  description: Удобный рюкзак для ваших предательских вещей. Выглядит стильно и оригинально.
+  productEntity: ClothingBackpackContractorForge
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkSatchel
+  name: Сумка DCN™
+  description: Приятная на ощупь жёлто-черная сумка. Выглядит стильно и оригинально.
+  productEntity: ClothingBackpackSatchelContractor
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkDuffel
+  name: Вещмешок DCN™
+  description: Большой вещмешок для хранения предтательских предметов. Выглядит стильно и оригинально.
+  productEntity: ClothingDuffelContractorForge
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkEVASuit
+  name: Скафандр ВКД от DCN™
+  description: Компактный скафандр и шлем способный помещатся в карманы. Прденазнвачен для защиты от враждебной среды космоса, не более... Имеется фирменный противогаз.
+  productEntity: ClothingDuffelContractorForgeEVA
+  discountCategory: veryRareDiscounts
+  icon: { sprite: /Textures/Forge/Clothing/OuterClothing/Hardsuits/contractor_eva.rsi, state: icon }
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkStealhSuit
+  name: Стелс-экзокостюм DCN™
+  description: Костюм, оснащенный экзоскелетом вместе со стелс-технологией фазового покрова при полной активации.
+  productEntity: ClothingDuffelContractorForgeStealh
+  discountCategory: veryRareDiscounts
+  icon: { sprite: /Textures/Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi, state: icon }
+  discountDownTo:
+    Telecrystal: 20
+  cost:
+    Telecrystal: 32
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkCombatSuit
+  name: Боевой скафандр DCN™
+  description: Костюм, оснащенный экзоскелетом вместе со стелс-технологией фазового покрова при полной активации.
+  productEntity: ClothingOuterHardsuitContractor
+  discountCategory: veryRareDiscounts
+  icon: { sprite: /Textures/Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi, state: icon }
+  discountDownTo:
+    Telecrystal: 10
+  cost:
+    Telecrystal: 16
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
+  id: ContractorUplinkBootsMag
+  name: Магнитные сапоги DCN™
+  description: Магнитные ботинки с обратной конструкциыей, которые, по-видимому, основаны на усовершенствованной модели, поскольку обладают более легким магнитным притяжением.
+  productEntity: ClothingShoesBootsMagContractor
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - ContractorUplinkWearables
+
+- type: listing
   id: ContractorUplinkJetpack
   name: uplink-black-jetpack-name
   description: uplink-black-jetpack-desc
@@ -762,26 +960,6 @@
     Telecrystal: 2
   cost:
     Telecrystal: 4
-  categories:
-  - ContractorUplinkWearables
-
-- type: listing
-  id: ContractorUplinkHolster
-  name: uplink-holster-name
-  description: uplink-holster-desc
-  productEntity: ClothingBeltSyndieHolster
-  cost:
-    Telecrystal: 2
-  categories:
-  - ContractorUplinkWearables
-
-- type: listing
-  id: ContractorUplinkChestRig
-  name: uplink-chest-rig-name
-  description: uplink-chest-rig-desc
-  productEntity: ClothingBeltMilitaryWebbing
-  cost:
-    Telecrystal: 2
   categories:
   - ContractorUplinkWearables
 
@@ -878,46 +1056,6 @@
   - ContractorUplinkWearables
 
 - type: listing
-  id: ContractorUplinkClothingOuterVestWebElite
-  name: uplink-clothing-outer-vest-web-elite-name
-  description: uplink-clothing-outer-vest-web-elite-desc
-  productEntity: ClothingOuterVestWebElite
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 2
-  cost:
-    Telecrystal: 6
-  categories:
-  - ContractorUplinkWearables
-
-- type: listing
-  id: ContractorUplinkClothingShoesBootsMagSyndie
-  name: uplink-clothing-shoes-boots-mag-syndie-name
-  description: uplink-clothing-shoes-boots-mag-syndie-desc
-  productEntity: ClothingShoesBootsMagSyndie
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 4
-  cost:
-    Telecrystal: 8
-  categories:
-  - ContractorUplinkWearables
-
-- type: listing
-  id: ContractorUplinkEVASyndie
-  name: uplink-eva-syndie-name
-  description: uplink-eva-syndie-desc
-  icon: { sprite: /Textures/Clothing/OuterClothing/Suits/eva_syndicate.rsi, state: icon }
-  productEntity: ClothingBackpackDuffelSyndicateEVABundle
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 2
-  cost:
-    Telecrystal: 4
-  categories:
-  - ContractorUplinkWearables
-
-- type: listing
   id: ContractorUplinkHardsuitCarp
   name: uplink-hardsuit-carp-name
   description: uplink-hardsuit-carp-desc
@@ -956,37 +1094,17 @@
   categories:
   - ContractorUplinkWearables
 
-- type: listing
-  id: ContractorUplinkBackpackSyndicate
-  name: uplink-backpack-syndicate-name
-  description: uplink-backpack-syndicate-desc
-  productEntity: ClothingBackpackSyndicate
-  cost:
-    Telecrystal: 4
-  categories:
-    - ContractorUplinkWearables
-
-- type: listing
-  id: ContractorUplinkBackpackSatchelSyndicate
-  name: uplink-satchel-syndicate-name
-  description: uplink-satchel-syndicate-desc
-  productEntity: ClothingBackpackSatchelSyndicate
-  cost:
-    Telecrystal: 4
-  categories:
-    - ContractorUplinkWearables
-
-- type: listing
-  id: ContractorUplinkBackpackDuffelSyndicate
-  name: uplink-duffel-syndicate-name
-  description: uplink-duffel-syndicate-desc
-  productEntity: ClothingBackpackDuffelSyndicate
-  cost:
-    Telecrystal: 4
-  categories:
-    - ContractorUplinkWearables
-
  # Pointless
+
+- type: listing
+  id: ContractorUplinkNukieSnacks
+  name: Коробка закусок Синдиката
+  description: Подозрительный обед с потенциально взрывоопасным сюрпризом.
+  productEntity: HappyHonkNukieSnacks
+  cost:
+    Telecrystal: 2
+  categories:
+  - ContractorUplinkPointless
 
 - type: listing
   id: ContractorUplinkBarberScissors
@@ -1008,19 +1126,6 @@
     Telecrystal: 4
   cost:
     Telecrystal: 8
-  categories:
-  - ContractorUplinkPointless
-
-- type: listing
-  id: ContractorUplinkSyndicateStamp
-  name: uplink-syndicate-stamp-name
-  description: uplink-syndicate-stamp-desc
-  productEntity: RubberStampSyndicate
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 2
-  cost:
-    Telecrystal: 4
   categories:
   - ContractorUplinkPointless
 
@@ -1055,16 +1160,6 @@
   - ContractorUplinkPointless
 
 - type: listing
-  id: ContractorUplinkCostumePyjama
-  name: uplink-costume-pyjama-name
-  description: uplink-costume-pyjama-desc
-  productEntity: ClothingBackpackDuffelSyndicatePyjamaBundle
-  cost:
-    Telecrystal: 8
-  categories:
-  - ContractorUplinkPointless
-
-- type: listing
   id: ContractorUplinkCarpSuitBundle
   name: uplink-carp-suit-bundle-name
   description: uplink-carp-suit-bundle-desc
@@ -1095,16 +1190,6 @@
   - ContractorUplinkPointless
 
 - type: listing
-  id: ContractorUplinkBalloon
-  name: uplink-balloon-name
-  description: uplink-balloon-desc
-  productEntity: BalloonSyn
-  cost:
-    Telecrystal: 40
-  categories:
-  - ContractorUplinkPointless
-
-- type: listing
   id: ContractorUplinkScarfSyndieRed
   name: uplink-scarf-syndie-red-name
   description: uplink-scarf-syndie-red-desc
@@ -1123,17 +1208,6 @@
     Telecrystal: 2
   categories:
     - ContractorUplinkPointless
-
-- type: listing
-  id: ContractorUplinkSyndicateBusinessCard
-  name: uplink-business-card-name
-  description: uplink-business-card-desc
-  productEntity: SyndicateBusinessCard
-  categories:
-    - ContractorUplinkPointless
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 3
 
 # Job Specific
 

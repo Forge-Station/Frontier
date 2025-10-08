@@ -2,7 +2,7 @@
   parent: [ClothingBackpackSatchel, BaseC3Contraband, ContrabandClothing]
   id: ClothingBackpackSatchelSyndicate
   name: сумка синдиката
-  description: приятная на ощупь красная-черная сумка.
+  description: Приятная на ощупь красная-черная сумка.
   components:
   - type: Sprite
     sprite: Forge/Clothing/Back/Satchels/syndicate.rsi
@@ -10,16 +10,16 @@
     damageCoefficient: 0.1
   - type: Storage
     grid:
-    - 0,0,1,6
-    - 3,0,6,6
-    - 8,0,9,6
+    - 0,0,1,4
+    - 3,0,6,4
+    - 8,0,9,4
 
 
 - type: entity
   parent: [ClothingBackpackSatchel, BaseC3Contraband, ContrabandClothing]
   id: ClothingBackpackSatchelSyndicateMed
-  name: сумка синдиката медицинский
-  description: приятная на ощупь красная-черная сумка. С белым крестом.
+  name: медициская сумка синдиката
+  description: Приятная на ощупь красная-черная сумка. С белым крестом.
   components:
   - type: Sprite
     sprite: Forge/Clothing/Back/Satchels/syndicatemed.rsi
@@ -27,6 +27,22 @@
     damageCoefficient: 0
   - type: Storage
     grid:
-    - 0,0,1,6
-    - 3,0,6,6
-    - 8,0,9,6
+    - 0,0,1,4
+    - 3,0,6,4
+    - 8,0,9,4
+
+- type: entity
+  parent: [ClothingBackpackSatchel, BaseC3Contraband, ContrabandClothing]
+  id: ClothingBackpackSatchelContractor
+  name: сумка DCN™
+  description: Приятная на ощупь жёлто-черная сумка. Выглядит стильно и оригинально.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Back/Satchels/contractor.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,1,4
+    - 3,0,6,4
+    - 8,0,9,4

@@ -70,3 +70,31 @@
   price: 1000
   equipment:
     outerClothing: ClothingOuterArmorCaptainCarapace
+
+#Forge-Change
+- type: loadout
+  id: MercenaryClothingOuterEVASuitArcadia
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 1000
+  equipment:
+    outerClothing: ClothingOuterEVASuitArcadia
+
+- type: loadout
+  id: MercenaryClothingOuterWinterArcadia
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 5000
+  equipment:
+    outerClothing: ClothingOuterWinterArcadia
+
+- type: loadout
+  id: MercenaryClothingOuterCoatArcadiaTrench
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 5000
+  equipment:
+    outerClothing: ClothingOuterCoatArcadiaTrench

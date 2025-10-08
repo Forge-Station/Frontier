@@ -1,0 +1,28 @@
+- type: entity
+  parent: [ ClothingShoesBootsMagSyndie, BaseC2ContrabandUnredeemable, ClothingSlotBase ]
+  id: ClothingShoesBootsMagCombatERT
+  name: combat ert magboots
+  description:
+  components:
+  - type: Sprite
+    sprite: _Wega/Clothing/Shoes/Boots/magboots-ert.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Wega/Clothing/Shoes/Boots/magboots-ert.rsi
+  - type: Magboots
+    magbootsAlert: MagbootsNfsd
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: Item
+    sprite: _Wega/Clothing/Shoes/Boots/magboots-ert.rsi
+    size: Normal
+  - type: Matchbox
+  - type: ItemSlots
+    slots:
+      item:
+        name: clothing-boots-sidearm
+        whitelist:
+          tags:
+          - Knife
+          - Sidearm

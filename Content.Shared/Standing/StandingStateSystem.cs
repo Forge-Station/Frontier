@@ -13,6 +13,7 @@ namespace Content.Shared.Standing;
 public sealed class StandingStateSystem : EntitySystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
 
@@ -48,7 +49,7 @@ public sealed class StandingStateSystem : EntitySystem
     private void OnRefreshMovementSpeedModifiers(Entity<StandingStateComponent> entity, ref RefreshMovementSpeedModifiersEvent args)
     {
         if (!entity.Comp.Standing)
-            args.ModifySpeed(entity.Comp.FrictionModifier);
+            args.ModifySpeed(entity.Comp.SpeedModifier);
     }
 
     private void OnRefreshFrictionModifiers(Entity<StandingStateComponent> entity, ref RefreshFrictionModifiersEvent args)
@@ -185,6 +186,9 @@ public sealed class StandingStateSystem : EntitySystem
         }
         standingState.ChangedFixtures.Clear();
 
+        _movementSpeedModifier.RefreshMovementSpeedModifiers(uid);
+        _movementSpeedModifier.RefreshFrictionModifiers(uid);
+
         return true;
     }
 }
@@ -238,5 +242,3 @@ public sealed class FellDownEvent : EntityEventArgs
 /// </summary>
 [ByRefEvent]
 public record struct FellDownThrowAttemptEvent(EntityUid Thrower, bool Cancelled = false);
-
-

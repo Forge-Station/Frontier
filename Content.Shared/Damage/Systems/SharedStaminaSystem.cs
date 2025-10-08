@@ -242,7 +242,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         if (!Resolve(uid, ref component, false))
             return true;
 
-        var oldStam = component.StaminaDamage; 
+        var oldStam = component.StaminaDamage;
 
         if (oldStam + value >= component.CritThreshold || component.Critical) // Forge-Change
             return false;

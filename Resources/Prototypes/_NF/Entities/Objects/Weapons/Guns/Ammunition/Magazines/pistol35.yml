@@ -472,7 +472,7 @@
 #region smg mags .35
 - type: entity
   id: NFMagazineSubMachineGun35Empty
-  name: smg magazine (.35 pistol, any)
+  name: smg magazine (.25 auto, any)
   parent: NFBaseMagazinePistolSubMachineGun35
   components:
   - type: BallisticAmmoProvider
@@ -480,19 +480,19 @@
 
 - type: entity
   id: NFMagazineSubMachineGun35
-  name: smg magazine (.35 pistol)
+  name: smg magazine (.25 auto)
   parent: NFBaseMagazinePistolSubMachineGun35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35
+    proto: NFCartridgeRifle25
 
 - type: entity
   id: NFMagazineSubMachineGun35Overpressure
-  name: smg magazine (.35 pistol, overpressure)
+  name: smg magazine (.25 auto, overpressure)
   parent: NFBaseMagazinePistolSubMachineGun35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Overpressure
+    proto: NFCartridgeRifle25Overpressure
   - type: Sprite
     layers:
     - state: base
@@ -514,11 +514,11 @@
 
 - type: entity
   id: NFMagazineSubMachineGun35Incendiary
-  name: smg magazine (.35 pistol, incendiary)
+  name: smg magazine (.25 auto, incendiary)
   parent: NFBaseMagazinePistolSubMachineGun35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Incendiary
+    proto: NFCartridgeRifle25Incendiary
   - type: Sprite
     layers:
     - state: base
@@ -540,11 +540,11 @@
 
 - type: entity
   id: NFMagazineSubMachineGun35Uranium
-  name: smg magazine (.35 pistol, uranium)
+  name: smg magazine (.25 auto, uranium)
   parent: NFBaseMagazinePistolSubMachineGun35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Uranium
+    proto: NFCartridgeRifle25Uranium
   - type: Sprite
     layers:
     - state: base
@@ -566,11 +566,11 @@
 
 - type: entity
   id: NFMagazineSubMachineGun35Practice
-  name: smg magazine (.35 pistol, practice)
+  name: smg magazine (.25 auto, practice)
   parent: NFBaseMagazinePistolSubMachineGun35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Practice
+    proto: NFCartridgeRifle25Practice
   - type: Sprite
     layers:
     - state: base
@@ -589,7 +589,7 @@
 
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Empty
-  name: top mounted smg magazine (.35 pistol, any)
+  name: top mounted smg magazine (.25 auto, any)
   parent: NFBaseMagazineSubMachineGunTopMounted35
   components:
   - type: BallisticAmmoProvider
@@ -604,11 +604,11 @@
 
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35
-  name: top mounted smg magazine (.35 pistol)
+  name: top mounted smg magazine (.25 auto)
   parent: NFBaseMagazineSubMachineGunTopMounted35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35
+    proto: NFCartridgeRifle25
   - type: Sprite
     layers:
       - state: base
@@ -619,11 +619,11 @@
 
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Overpressure
-  name: top mounted smg magazine (.35 pistol, overpressure)
+  name: top mounted smg magazine (.25 auto, overpressure)
   parent: NFBaseMagazineSubMachineGunTopMounted35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Overpressure
+    proto: NFCartridgeRifle25Overpressure
   - type: Sprite
     layers:
       - state: base
@@ -646,11 +646,11 @@
 
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Incendiary
-  name: top mounted smg magazine (.35 pistol, incendiary)
+  name: top mounted smg magazine (.25 auto, incendiary)
   parent: NFBaseMagazineSubMachineGunTopMounted35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Incendiary
+    proto: NFCartridgeRifle25Incendiary
   - type: Sprite
     layers:
       - state: base
@@ -673,11 +673,11 @@
 
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Uranium
-  name: top mounted smg magazine (.35 pistol, uranium)
+  name: top mounted smg magazine (.25 auto, uranium)
   parent: NFBaseMagazineSubMachineGunTopMounted35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Uranium
+    proto: NFCartridgeRifle25Uranium
   - type: Sprite
     layers:
       - state: base
@@ -700,11 +700,11 @@
 
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Practice
-  name: top mounted smg magazine (.35 pistol, practice)
+  name: top mounted smg magazine (.25 auto, practice)
   parent: NFBaseMagazineSubMachineGunTopMounted35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Practice
+    proto: NFCartridgeRifle25Practice
   - type: Sprite
     layers:
       - state: base
@@ -725,11 +725,11 @@
 # Frontier
 - type: entity
   id: NFMagazineSubMachineGun35Rubber # MagazinePistolSubMachineGunRubber
-  name: smg magazine (.35 pistol, rubber)
+  name: smg magazine (.25 auto, rubber)
   parent: NFBaseMagazinePistolSubMachineGun35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Rubber
+    proto: NFCartridgeRifle25Rubber
   - type: Sprite
     layers:
     - state: base
@@ -751,11 +751,11 @@
 
 - type: entity
   id: NFMagazineSubMachineGun35Emp # MagazinePistolSubMachineGunEmp
-  name: smg magazine (.35 pistol, EMP)
+  name: smg magazine (.25 auto, EMP)
   parent: NFBaseMagazinePistolSubMachineGun35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Emp
+    proto: NFCartridgeRifle25Emp
   - type: Sprite
     layers:
     - state: base
@@ -777,11 +777,11 @@
 
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Emp
-  name: top mounted smg magazine (.35 pistol, EMP)
+  name: top mounted smg magazine (.25 auto, EMP)
   parent: NFBaseMagazineSubMachineGunTopMounted35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Emp
+    proto: NFCartridgeRifle25Emp
   - type: Sprite
     layers:
       - state: base
@@ -804,11 +804,11 @@
 
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Rubber
-  name: top mounted smg magazine (.35 pistol, rubber)
+  name: top mounted smg magazine (.25 auto, rubber)
   parent: NFBaseMagazineSubMachineGunTopMounted35
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Rubber
+    proto: NFCartridgeRifle25Rubber
   - type: Sprite
     layers:
       - state: base

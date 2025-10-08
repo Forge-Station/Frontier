@@ -47,50 +47,6 @@
        type: ShipyardConsoleBoundUserInterface
 
 - type: entity
-  id: ComputerShipyardColiseum
-  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseComputer]
-  name: coliseum shipyard console
-  description: Buy a shuttle and go into battle!
-  components:
-  - type: Sprite
-    sprite: _NF/Structures/Machines/computers.rsi
-    layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: shipyard_coliseum
-    - map: ["computerLayerKeys"]
-      state: generic_keys
-  - type: ShipyardConsole
-    targetIdSlot:
-      name: id-card-console-target-id
-      ejectSound: /Audio/Machines/id_swipe.ogg
-      insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
-      ejectOnBreak: true
-      swap: true
-      whitelist:
-        components:
-        - ShipyardVoucher
-    newAccessLevels: [Captain]
-    newJobTitle: Captain
-  - type: ActivatableUI
-    singleUser: true
-    key: enum.ShipyardConsoleUiKey.Coliseum
-  - type: UserInterface
-    interfaces:
-      enum.ShipyardConsoleUiKey.Coliseum:
-        type: ShipyardConsoleBoundUserInterface
-  - type: ItemSlots
-  - type: ContainerContainer
-    containers:
-      board: !type:Container
-      ShipyardConsole-targetId: !type:ContainerSlot
-  - type: Computer
-    board: Null
-
-- type: entity
   id: ComputerShipyardDebug
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
   name: centcom shipyard console
@@ -114,4 +70,28 @@
   - type: UserInterface
     interfaces:
       enum.ShipyardConsoleUiKey.Debug:
+       type: ShipyardConsoleBoundUserInterface
+
+- type: entity
+  id: ComputerShipyardEngineering
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
+  name: engineer shipyard console
+  description: Shipyard console with engineers shuttles.
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_engi
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_engi
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Engineering
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Engineering:
        type: ShipyardConsoleBoundUserInterface

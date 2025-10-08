@@ -137,3 +137,25 @@
     state: boxpirat
     layers:
       - state: boxpirat
+
+- type: entity
+  parent: BoxCardboard
+  id: BoxPirateTrackingBundle
+  description: A box of pirate grenades... Or without them
+  components:
+  - type: StorageFill
+    contents:
+      - id: PinpointerUniversal
+        amount: 3
+      - id: CannonBallTracking
+        amount: 3
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,2,3
+  - type: Sprite
+    sprite: Forge/Boxes/pirate.rsi
+    state: boxpirat
+    layers:
+      - state: boxpirat
+      - state: island

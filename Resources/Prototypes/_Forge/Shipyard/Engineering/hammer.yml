@@ -15,7 +15,7 @@
   description: Среднегабаритный инженерный шаттл. Рекомендованный состав команды 2-4 человека.
   price: 46500 # ~28000 after purchase, ~13% markup
   category: Medium
-  group: Shipyard
+  group: Engineering
   shuttlePath: /Maps/Forge/Shuttles/Engineering/hammer.yml
   guidebookPage: ShipyardHammer
   class:
@@ -37,6 +37,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

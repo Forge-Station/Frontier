@@ -15,7 +15,7 @@
   description: Крупногабаритный инженерный шаттл. Рекомендованный размер команды 3-6 человек.
   price: 88500 # ~68140$ on mapinit + 20500$ from 30% markup
   category: Medium
-  group: Shipyard
+  group: Engineering
   shuttlePath: /Maps/Forge/Shuttles/Engineering/gasbender.yml
   guidebookPage: ShipyardGasbender
   class:
@@ -39,6 +39,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

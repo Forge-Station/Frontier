@@ -30,6 +30,8 @@
   description: |-
     A small, easily concealable machine pistol. An illegal firearm often used by Syndicate agents.
   components:
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 6
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/viper.rsi
   - type: Clothing
@@ -42,6 +44,8 @@
   name: pollock
   description: A compact and mass-produced combat pistol.
   components:
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 4.5
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Pistols/pollock.rsi
   - type: Clothing

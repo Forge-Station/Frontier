@@ -90,3 +90,31 @@
   - type: AccessReader
     access: [["Mercenary"], ["Security"], ["HeadOfPersonnel"], ["HeadOfSecurity"]]
   - type: ActivatableUIRequiresAccess
+
+- type: entity
+  parent: [BaseStructureDisableAnchoring, VendingMachine] # Frontier
+  id: VendingMachineOfficerDrobe
+  name: ОфицерШкаф
+  description: Здесь есть (почти) всё, что может понадобится офицеру. А кто на него пролил компот?
+  components:
+  - type: VendingMachine
+    pack: OfficerDrobeInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Sprite
+    sprite: Forge/Structures/Machines/offidrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#353492"
+  - type: AccessReader
+    access: [["CentralCommand"]]

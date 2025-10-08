@@ -108,7 +108,7 @@
     - prefRoles: [ NFPirateCaptain ]
       max: 999
       playerRatio: -1
-      lateJoinAdditional: true
+      lateJoinAdditional: false
       allowNonHumans: true
       multiAntagSetting: All
       components: &pirateComponents
@@ -127,7 +127,7 @@
     - prefRoles: [ NFPirateFirstMate ]
       max: 999
       playerRatio: -1
-      lateJoinAdditional: true
+      lateJoinAdditional: false
       allowNonHumans: true
       multiAntagSetting: All
       components: *pirateComponents
@@ -141,7 +141,7 @@
     - prefRoles: [ NFPirate ]
       max: 999
       playerRatio: -1
-      lateJoinAdditional: true
+      lateJoinAdditional: false
       allowNonHumans: true
       multiAntagSetting: All
       components: *pirateComponents
@@ -192,3 +192,81 @@
   - type: BasicStationEventScheduler
     scheduledGameRules: !type:NestedSelector
       tableId: NFGameRulesTable
+
+- type: entity   # Forge-Change
+  id: Revolutionary
+  parent: BaseGameRule
+  components:
+  - type: GameRule
+    minPlayers: 15
+  - type: RevolutionaryRule
+  - type: AntagSelection
+    selectionTime: IntraPlayerSpawn
+    definitions:
+    - prefRoles: [ HeadRev ]
+      max: 3
+      playerRatio: 15
+      briefing:
+        text: head-rev-role-greeting
+        color: CornflowerBlue
+        sound: "/Audio/Ambience/Antag/headrev_start.ogg"
+      startingGear: HeadRevGear
+      components:
+      - type: Revolutionary
+      - type: HeadRevolutionary
+      mindRoles:
+      - MindRoleHeadRevolutionary
+
+- type: entity   # Forge-Change
+  parent: BaseTraitorRule
+  id: Traitor
+  components:
+  - type: GameRule
+    minPlayers: 5
+    delay:
+      min: 240
+      max: 420
+  - type: AntagSelection
+    selectionTime: IntraPlayerSpawn
+    definitions:
+    - prefRoles: [ Traitor ]
+      max: 8
+      playerRatio: 10
+      blacklist:
+        components:
+        - AntagImmune
+      lateJoinAdditional: true
+      mindRoles:
+      - MindRoleTraitor
+
+- type: entity   # Forge-Change
+  id: Zombie
+  parent: BaseGameRule
+  components:
+  - type: GameRule
+    minPlayers: 20
+    delay:
+      min: 600
+      max: 900
+  - type: ZombieRule
+  - type: AntagSelection
+    selectionTime: IntraPlayerSpawn
+    definitions:
+    - prefRoles: [ InitialInfected ]
+      max: 6
+      playerRatio: 10
+      blacklist:
+        components:
+        - ZombieImmune
+        - AntagImmune
+      briefing:
+        text: zombie-patientzero-role-greeting
+        color: Plum
+        sound: "/Audio/Ambience/Antag/zombie_start.ogg"
+      components:
+      - type: PendingZombie
+      - type: ZombifyOnDeath
+      - type: IncurableZombie
+      - type: InitialInfected
+      mindRoles:
+      - MindRoleInitialInfected

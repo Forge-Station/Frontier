@@ -6,6 +6,8 @@
   description: |-
     An iconic weapon of war. An illegal firearm often used by Syndicate agents.
   components:
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 5
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Rifles/solandmoss.rsi
   - type: Sprite
@@ -26,6 +28,8 @@
     sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 5.5
 
 - type: entity
   id: NFWeaponRifleAssaultLecter
@@ -43,6 +47,7 @@
     steps: 3
     zeroVisible: true
   - type: Gun
+    fireRate: 5.5 # Corvax-Forge: Weaponary update
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
 
@@ -64,6 +69,8 @@
   description: |-
     One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World".
   components: &vulcanComponents
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 5
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
   - type: Clothing
@@ -85,6 +92,7 @@
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Rifles/jackdaw.rsi
   - type: Gun
+    fireRate: 5 # Corvax-Forge: Weaponary update
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/jackdaw.ogg
 
@@ -115,7 +123,7 @@
   - type: Gun
     burstFireRate: 5
     shotsPerBurst: 2
-    burstCooldown: 0.8
+    burstCooldown: 0.37 # Corvax-Forge: Weaponary update (3.5 RPS)
     selectedMode: Burst
     availableModes:
       - Burst
@@ -134,6 +142,7 @@
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Rifles/novalitec1.rsi
   - type: Gun
+    fireRate: 4 # Corvax-Forge: Weaponary update
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto

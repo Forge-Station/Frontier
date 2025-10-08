@@ -13,8 +13,8 @@
   - type: ShipShieldEmitter
     healPerSecond: 5000
     damageExp: 0.5
-    baseDraw: 80000
-    maxDraw: 150000
+    baseDraw: 1000
+    maxDraw: 1500
     unpoweredBonus: 8
     damageLimit: 200000
     damageOverloadTimePunishment: 30
@@ -30,7 +30,7 @@
       visible: false
       color: "#FF9933"
   - type: ApcPowerReceiver
-    powerLoad: 40000
+    powerLoad: 500
   - type: PointLight
     enabled: false
     castShadows: true

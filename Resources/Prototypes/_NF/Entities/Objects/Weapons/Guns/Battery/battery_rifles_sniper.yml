@@ -13,6 +13,8 @@
     sprite: Objects/Weapons/Guns/Battery/laser_cannon.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/laser_cannon.rsi
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 1.5
 
 - type: entity
   id: NFWeaponEnergyRifleSniperXrayCannon
@@ -22,6 +24,8 @@
   description: |-
     An illegal and experimental weapon that uses concentrated x-ray energy against its target.
   components:
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 2
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/xray.rsi
   - type: Clothing

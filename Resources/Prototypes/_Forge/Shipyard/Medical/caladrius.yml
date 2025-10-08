@@ -17,6 +17,7 @@
   price: 200000 # 133217 0.5 199825.5
   category: Large
   group: Medical
+  access: Medical
   shuttlePath: /Maps/Forge/Shuttles/Medical/caladrius.yml
   guidebookPage: ShipyardCaladrius
   class:
@@ -40,6 +41,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 0, 0 ]
-            PilotInterview: [ 0, 0 ]
-            MercenaryInterview: [ 0, 0 ]
+            paraMedicalInterview: [ 0, 0 ]

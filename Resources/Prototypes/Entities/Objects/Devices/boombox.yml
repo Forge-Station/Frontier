@@ -81,12 +81,12 @@
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeStarman
-  name: David Bowie - Starman 
+  name: David Bowie - Starman
   description: Музыка
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/starman.ogg
-      
+
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeTheChain
@@ -95,7 +95,7 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/TheChain.ogg
-      
+
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeCantSmile
@@ -104,7 +104,7 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/cant_smile.ogg
-      
+
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeUnderStars
@@ -113,7 +113,7 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/AURORA.ogg
-      
+
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeCarelessWhisper
@@ -122,7 +122,7 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/CarelessWhispe.ogg
-      
+
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeComingHome
@@ -131,7 +131,7 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/ComingHome.ogg
-      
+
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeSignals
@@ -140,7 +140,7 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/DarrenKorbSignals.ogg
-      
+
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeDemonKittyRag
@@ -149,7 +149,7 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/DemonKittyRag.ogg
-      
+
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeKissTheSky
@@ -158,7 +158,7 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/KissTheSky.ogg
-      
+
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeRetrograde
@@ -167,7 +167,7 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/jamesblackeretrograde.ogg
-      
+
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeThisAintNoPlaceForNoHero
@@ -176,7 +176,7 @@
   components:
     - type: BoomBoxTape
       soundPath: /Audio/BoomBox/ThisAintNoPlaceForNoHero.ogg
-      
+
 - type: entity
   parent: BaseBoomBoxTape
   id: BaseBoomBoxTapeMrKittyAfterDark
@@ -274,7 +274,7 @@
   description: Музыка
   components:
     - type: BoomBoxTape
-      soundPath: /Audio/BoomBox/Athara.ogg  
+      soundPath: /Audio/BoomBox/Athara.ogg
 
 - type: entity
   parent: BaseBoomBoxTape
@@ -283,4 +283,4 @@
   description: Музыка
   components:
     - type: BoomBoxTape
-      soundPath: /Audio/BoomBox/Nova.ogg  
+      soundPath: /Audio/BoomBox/Nova.ogg

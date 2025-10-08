@@ -33,7 +33,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMercenaryElite
-
+  - type: StaminaResistance
+    damageCoefficient: 0.6
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -67,3 +68,153 @@
     coolingCoefficient: 0.001
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMaxim
+
+- type: entity
+  parent: [ ClothingOuterHardsuitBase, BaseC3SyndicateContraband, ContrabandClothing ]
+  id: ClothingOuterHardsuitSyndieSST
+  name: кроваво-чёрный скафандр
+  description: Тяжелобронированный скафандр со встроенным экзоскелетом, предназначенный для элитных операций. Собственность Ударного подразделения Синдиката.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/OuterClothing/Hardsuits/syndicate_strike_team.rsi
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: Forge/Clothing/OuterClothing/Hardsuits/syndicate_strike_team.rsi
+    equippedPrefix: off
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.3
+        Heat: 0.3
+        Radiation: 0
+        Caustic: 0.3
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSyndieSST
+  - type: StaminaResistance
+    damageCoefficient: 0.3
+
+- type: entity
+  parent: [ ClothingOuterHardsuitBase, BaseC3Contraband, ContrabandClothing ]
+  id: ClothingOuterHardsuitContractor
+  name: жёлто-чёрный скафандр DCN™
+  description: Среднебронированный скафандр со встроенным экзоскелетом, предназначенный для элитных операций тёмного интернета.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,3,3
+  - type: Clothing
+    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.85
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitContractor
+  - type: StaminaResistance
+    damageCoefficient: 0
+
+- type: entity
+  parent: [ ClothingOuterHardsuitBase, BaseC3Contraband, ContrabandClothing ]
+  id: ClothingOuterHardsuitContractorStealh
+  name: стелс-экзокостюм DCN™
+  description: Костюм, оснащенный экзоскелетом вместе со стелс-технологией фазового покрова при полной активации. Спасёт от разгерметизации.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.6
+        Heat: 0.6
+        Caustic: 0.5
+        Radiation: 0
+  - type: StaminaResistance
+    damageCoefficient: 0
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,2,3
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHealmetContractorStealh
+
+- type: entity
+  parent: [ ClothingOuterEVASuitBase, AllowSuitStorageClothing, BaseC3Contraband, ContrabandClothing ]
+  id: ClothingOuterHardsuitContractorEVA
+  name: скафандр ВКД DCN™
+  description: Лёгкий скафандр, предназначенный для элитных операций тёмного интернета.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor_eva.rsi
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,2,3
+  - type: Clothing
+    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor_eva.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.65
+        Heat: 0.65
+        Radiation: 0
+        Caustic: 0.75
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: StaminaResistance
+    damageCoefficient: 0.2

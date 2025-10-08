@@ -19,7 +19,7 @@ public sealed partial class ShuttleNavControl
 {
     // Dependency
     private readonly StationSystem _station;
-    private readonly RadarBlipsSystem _blips; //Mono
+    private readonly RadarBlipSystem _blips; //Mono
 
     // Constants for gunnery system
     // These 2 handle timing updates

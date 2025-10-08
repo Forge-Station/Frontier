@@ -64,6 +64,8 @@
     sprite: _DV/Objects/Weapons/Guns/Rifles/ceremonial_grand.rsi
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Rifles/ceremonial_grand.rsi
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 3
 
 #region Frontier
 - type: entity
@@ -78,6 +80,8 @@
     sprite: _NF/Objects/Weapons/Guns/Rifles/repeater.rsi
   - type: BallisticAmmoProvider
     capacity: 8
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 3
 
 - type: entity
   id: NFWeaponRifleSVS
@@ -85,6 +89,8 @@
   name: SVS-42
   description: Originally designed by Samonov, this old surplus battle rifle looks like it's seen a few wars. Equipped with bayonet.
   components:
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 3.5
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Rifles/svs42.rsi
   - type: Clothing

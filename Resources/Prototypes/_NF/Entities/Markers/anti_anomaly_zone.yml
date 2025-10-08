@@ -22,7 +22,7 @@
   components:
   - type: AntiAnomalyZone
     zoneRadius: 20
-    
+
 - type: entity
   parent: AntiAnomalyZone
   id: AntiAnomalyZone50

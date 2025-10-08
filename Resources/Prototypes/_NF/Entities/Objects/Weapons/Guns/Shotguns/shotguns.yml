@@ -14,6 +14,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
   - type: Gun
+    fireRate: 2.5 # Corvax-Forge: Weaponary update
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -27,6 +28,8 @@
   description: |-
     An immortal classic. A civilian grade shotgun.
   components:
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 3
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun.rsi
   - type: Clothing
@@ -48,6 +51,8 @@
   description: |-
     A premium semi-automatic shotgun, featuring an upgraded tube capacity.
   components:
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 2
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
   - type: Clothing
@@ -92,6 +97,8 @@
     capacity: 2
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-custom-made
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 3
 
 - type: entity
   id: NFWeaponShotgunSawnEmpty

@@ -39,7 +39,7 @@
   components:
   - type: Tag
     tags:
-    - CentrifugeCompatible  
+    - CentrifugeCompatible
   - type: Sprite
     sprite: _NF/Objects/Specific/Chemistry/vial_bluespace.rsi
     layers:
@@ -51,7 +51,7 @@
     maxFillLevels: 6
     fillBaseName: vial-1-
     inHandsMaxFillLevels: 4
-    inHandsFillBaseName: -fill-  
+    inHandsFillBaseName: -fill-
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -60,7 +60,7 @@
     maxTransferAmount: 300
   - type: Item
     size: Tiny
-    sprite: _NF/Objects/Specific/Chemistry/vial_bluespace.rsi  
+    sprite: _NF/Objects/Specific/Chemistry/vial_bluespace.rsi
   - type: StaticPrice
     price: 100
-    vendPrice: 100  
+    vendPrice: 100

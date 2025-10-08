@@ -21,6 +21,18 @@
         icon:
           sprite: Objects/Power/power_cells.rsi
           state: small
+      - tag: MechAirTank
+        name: construction-graph-component-exosuit-air-tank
+        store: gas-tank-container
+        icon:
+          sprite: Objects/Specific/Mech/mecha_equipment.rsi
+          state: mecha_air_tank
+      - tag: CapacitorStockPart
+        name: construction-graph-component-capacitor
+        store: capacitor-container
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
       - tool: Screwing
         doAfter: 1
   - node: vim

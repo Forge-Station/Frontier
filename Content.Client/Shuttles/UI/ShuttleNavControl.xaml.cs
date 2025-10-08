@@ -64,7 +64,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         // Frontier
         _station = EntManager.System<StationSystem>();
-        _blips = EntManager.System<RadarBlipsSystem>();//Mono
+        _blips = EntManager.System<RadarBlipSystem>();//Mono
 
         OnMouseEntered += HandleMouseEntered;
         OnMouseExited += HandleMouseExited;
@@ -224,7 +224,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             var gridBody = bodyQuery.GetComponent(gUid);
             EntManager.TryGetComponent<IFFComponent>(gUid, out var iff);
 
-            if (!_shuttles.CanDraw(gUid, gridBody, iff))
+            if (!_shuttles.CanDraw(gUid, gridBody, iff, viewerGridUid: ourGridId)) // Forge-Change
                 continue;
 
             var curGridToWorld = _transform.GetWorldMatrix(gUid);
@@ -236,10 +236,19 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             // Others default:
             // Color.FromHex("#FFC000FF")
             // Hostile default: Color.Firebrick
-            var labelName = _shuttles.GetIFFLabel(grid, self: false, iff);
+            var labelName = _shuttles.GetIFFLabel(grid, self: false, iff, viewerGridUid: ourGridId); // Forge-Change
 
             var isPlayerShuttle = iff != null && (iff.Flags & IFFFlags.IsPlayerShuttle) != 0x0;
-            var shouldDrawIFF = ShowIFF && labelName != null && (iff != null && (iff.Flags & IFFFlags.HideLabel) == 0x0);
+            var shouldDrawIFF = ShowIFF && labelName != null; // Forge-Change может лучше вернуть как было
+
+            if (ourGridId == null && iff != null && (iff.Flags & IFFFlags.HideLabel) != 0x0)
+            {
+                // When in space, ourGridId is null and GetIFFLabel doesn't properly check HideLabel.
+                // So we do it manually.
+                if (!_shuttles.IsSameFaction(gUid, _coordinates.Value.EntityId))
+                    shouldDrawIFF = false;
+            }
+
             if (IFFFilter != null)
             {
                 shouldDrawIFF &= IFFFilter(gUid, grid.Comp, iff);

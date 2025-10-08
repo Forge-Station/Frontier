@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: -
+# Discord: anton953 CorvaxForge
+# License: CC-BY-NC-ND-3.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Tail
+  parent: BaseVessel
+  name: NC Хвост
+  description: Среднегабаритный добывающий шаттл. Рекомендованный размер команды 3-6 человек.
+  price: 59000
+  category: Medium
+  group: Salvage
+  shuttlePath: /Maps/Forge/Shuttles/Salvage/tail.yml
+  guidebookPage: Null
+  class:
+  - Cargo
+  - Salvage
+
+- type: gameMap
+  id: Tail
+  mapName: 'NC Хвост'
+  mapPath: /Maps/Forge/Shuttles/Salvage/tail.yml
+  minPlayers: 0
+  stations:
+    Tail:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Хвост {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

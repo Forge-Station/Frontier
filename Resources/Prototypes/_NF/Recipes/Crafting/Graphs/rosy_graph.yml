@@ -5,7 +5,7 @@
   - node: start
     edges:
     - to: ClothingNeckCloakRosy
-      steps:    
+      steps:
       - tag: MaterialHideRosyMothroach
         icon:
           sprite: _NF/Objects/Materials/rosymothroach.rsi

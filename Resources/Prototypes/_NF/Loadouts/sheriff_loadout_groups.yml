@@ -1,9 +1,11 @@
 - type: loadoutGroup
   id: SheriffJumpsuit
   name: loadout-group-contractor-jumpsuit
+  minLimit: 1
   loadouts:
   - SheriffClothingUniformJumpsuitSheriff
   - SheriffClothingUniformJumpskirtSheriff
+  - SheriffClothingUniformJumpsuitSheriffAlt #Corvax Forge: add SheriffClothingUniformJumpsuitSheriffAlt
   fallbacks:
   - SheriffClothingUniformJumpsuitSheriff
   - SheriffClothingUniformJumpskirtSheriff
@@ -11,9 +13,12 @@
 - type: loadoutGroup
   id: SheriffOuterClothing
   name: loadout-group-contractor-outerclothing
-  minLimit: 0
+  minLimit: 1
   loadouts:
   - SheriffOuterClothing
+  - SheriffClothingOuterArmorSheriffVestWeb
+  fallbacks:
+  - SheriffClothingOuterArmorSheriffVestWeb #Corvax Forge: add SheriffClothingOuterArmorSheriffVestWeb
 
 - type: loadoutGroup
   id: SheriffHead
@@ -21,6 +26,8 @@
   minLimit: 0
   loadouts:
   - SheriffClothingHeadHatSheriff
+  - SheriffClothingHeadHatBeretSheriff #Corvax Forge: add SheriffClothingHeadHatBeretSheriff
+  - SheriffClothingHeadHatCapcapSheriff #Corvax Forge: add SheriffClothingHeadHatCapcapSheriff
 
 - type: loadoutGroup
   id: SheriffNeck
@@ -28,6 +35,7 @@
   loadouts:
   - SheriffClothingNeckNfsdBadgeSheriff
   - SheriffClothingNeckMantleSheriff
+  - SheriffClothingNeckMantleSheriffLight #Corvax Forge: add SheriffClothingNeckMantleSheriffLight
   - SheriffClothingNeckCloakSheriff
   fallbacks:
   - SheriffClothingNeckNfsdBadgeSheriff
@@ -59,3 +67,49 @@
   - SheriffClothingHeadsetAltNfsdGreenCentcom
   fallbacks:
   - SheriffClothingHeadsetAltNfsdCreamandBrownCentcom
+
+#Corvax Forge: NfsdBelt in SheriffBelt
+- type: loadoutGroup
+  id: SheriffBelt
+  name: loadout-group-contractor-belt
+  minLimit: 1
+  loadouts:
+  - SheriffClothingBeltSheriffSheath
+  - NfsdWebbing
+  - NfsdBelt
+  fallbacks:
+  - SheriffClothingBeltSheriffSheath
+
+#Corvax Forge: NfsdGlovesCream in SheriffGloves
+- type: loadoutGroup
+  id: SheriffGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 1
+  loadouts:
+  - SheriffClothingHandsGlovesSheriff
+  - NfsdClothingHandsGlovesCombatNfsdCream
+  - NfsdClothingHandsGlovesCombatNfsdBrown
+  fallbacks:
+  - SheriffClothingHandsGlovesSheriff
+
+#Corvax Forge: NfsdBoots in SheriffBoots
+- type: loadoutGroup
+  id: SheriffBoots
+  name: loadout-group-contractor-shoes
+  minLimit: 1
+  loadouts:
+  - NfsdClothingShoesBootsBrown
+  - NfsdClothingShoesBootsCream
+  - SheriffClothingShoesBootsSheriff
+  fallbacks:
+  - NfsdClothingShoesBootsBrown
+
+- type: loadoutGroup
+  id: SheriffGlasses
+  name: loadout-group-contractor-glasses
+  minLimit: 1
+  loadouts:
+  - SheriffNFClothingEyesNightVisionGoggleDSBF
+  - NfsdClothingEyesGlasses
+  fallbacks:
+  - NfsdClothingEyesGlasses

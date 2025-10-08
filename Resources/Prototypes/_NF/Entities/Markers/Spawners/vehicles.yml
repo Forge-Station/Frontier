@@ -55,16 +55,16 @@
       - NFVehicleSkeletonMotorcycle # Frontier: add NF suffix
 
 # Corvax Frontier
-#- type: entity 
-#  name: hoverbike spawner
-#  id: NFSpawnVehicleHoverbike
-#  parent: MarkerBase
-#  components:
-#  - type: Sprite
-#    layers:
-#    - state: green
-#    - sprite: _NF/Objects/Vehicles/hoverbike.rsi
-#      state: vehicle
-#  - type: ConditionalSpawner
-#    prototypes:
-#    - NFVehicleHoverbike
+- type: entity
+  name: hoverbike spawner
+  id: NFSpawnVehicleHoverbike
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _NF/Objects/Vehicles/hoverbike.rsi
+      state: vehicle
+  - type: ConditionalSpawner
+    prototypes:
+    - NFVehicleHoverbike

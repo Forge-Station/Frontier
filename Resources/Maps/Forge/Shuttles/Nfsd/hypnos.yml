@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/14/2025 01:20:28
-  entityCount: 478
+  time: 08/19/2025 01:56:11
+  entityCount: 475
 maps: []
 grids:
 - 1
@@ -2214,13 +2214,6 @@ entities:
     - type: Transform
       pos: 6.5,1.5
       parent: 1
-- proto: MobileEmpGenerator
-  entities:
-  - uid: 156
-    components:
-    - type: Transform
-      pos: -0.5,9.5
-      parent: 1
 - proto: NFHolopadShip
   entities:
   - uid: 473
@@ -3332,18 +3325,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 7.5,-4.5
-      parent: 1
-  - uid: 476
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 8.5,2.5
-      parent: 1
-  - uid: 477
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -7.5,2.5
       parent: 1
   - uid: 478
     components:

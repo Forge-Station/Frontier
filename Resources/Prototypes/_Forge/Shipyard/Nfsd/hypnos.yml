@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: NSF Гипнос
   description: Среднегабаритный шаттл с рекомендуемым экипажем из 2-3 офицеров, "Гипнос" - специализированное судно для перехвата, оснащенное мощным электромагнитным устройством для борьбы с убегающими судами.
-  price: 34500
+  price: 53200
   category: Medium
   group: Security
   access: Sergeant
@@ -22,6 +22,9 @@
   - Pursuit
   engine:
   - Uranium
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Hypnos

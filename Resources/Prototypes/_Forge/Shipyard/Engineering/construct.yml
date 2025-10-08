@@ -15,7 +15,7 @@
   description: Чисто технически это тоже шаттл. Не рекомендуется никому.
   price: 10500
   category: Micro
-  group: Shipyard
+  group: Engineering
   shuttlePath: /Maps/Forge/Shuttles/Engineering/construct.yml
   guidebookPage: ShipyardConstruct
   class:
@@ -37,6 +37,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]
