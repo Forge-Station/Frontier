@@ -24,11 +24,6 @@ namespace Content.Server.Atmos.Piping.Unary.EntitySystems
 
         private void OnPassiveVentUpdated(EntityUid uid, GasPassiveVentComponent vent, ref AtmosDeviceUpdateEvent args)
         {
-            // Frontier: check running gas extraction
-            if (!_atmosphereSystem.AtmosInputCanRunOnMap(args.Map))
-                return;
-            // End Frontier
-
             var environment = _atmosphereSystem.GetContainingMixture(uid, args.Grid, args.Map, true, true);
 
             if (environment == null)
@@ -37,15 +32,19 @@ namespace Content.Server.Atmos.Piping.Unary.EntitySystems
             if (!_nodeContainer.TryGetNode(uid, vent.InletName, out PipeNode? inlet))
                 return;
 
-            var inletAir = inlet.Air.RemoveRatio(1f);
-            var envAir = environment.RemoveRatio(1f);
+            var pressureDelta = inlet.Air.Pressure - environment.Pressure;
 
-            var mergeAir = new GasMixture(inletAir.Volume + envAir.Volume);
-            _atmosphereSystem.Merge(mergeAir, inletAir);
-            _atmosphereSystem.Merge(mergeAir, envAir);
+            if (MathF.Abs(pressureDelta) < 0.1f)
+                return;
 
-            _atmosphereSystem.Merge(inlet.Air, mergeAir.RemoveVolume(inletAir.Volume));
-            _atmosphereSystem.Merge(environment, mergeAir);
+            const float transferCoefficient = 0.1f;
+
+            var transferMoles = pressureDelta * transferCoefficient * args.dt;
+
+            if (transferMoles > 0)
+                _atmosphereSystem.Merge(environment, inlet.Air.Remove(transferMoles));
+            else
+                _atmosphereSystem.Merge(inlet.Air, environment.Remove(-transferMoles));
         }
     }
 }
