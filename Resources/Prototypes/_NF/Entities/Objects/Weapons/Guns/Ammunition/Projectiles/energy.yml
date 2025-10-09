@@ -9,7 +9,18 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 8
+        Heat: 9 # Corvax-Forge: Weaponary update
+
+- type: entity
+  id: NFBulletLaserLowMed # Corvax-Forge: Weaponary update
+  parent: NFBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 11
 
 # Assault Rifles / Carbines
 - type: entity

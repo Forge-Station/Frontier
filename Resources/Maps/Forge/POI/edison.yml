@@ -3997,6 +3997,13 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -13.5,3.5
       parent: 2
+- proto: APCHighCapacity
+  entities:
+  - uid: 87
+    components:
+    - type: Transform
+      pos: 15.5,25.5
+      parent: 2
 - proto: AppraisalTool
   entities:
   - uid: 3896

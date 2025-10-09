@@ -464,24 +464,25 @@
   cost: 15000
   recipeUnlocks:
   - ClothingOuterHardsuitMaximPrototype
+  - ClothingOuterHardsuitMaxims # Corvax-Forge edit
   prerequisiteLineType: Tree
   technologyPrerequisites:
   - NFHardsuitsExperimentalRD
   - NFHardsuitsArmored
   position: 5, 8
 
-- type: technology
-  id: NFHardsuitsArmoredAdvanced
-  name: nf-research-technology-hardsuits-armored-advanced
-  entityIcon: ClothingOuterHardsuitScaf
-  discipline: NFArsenalMercenary
-  tier: 1
-  cost: 20000
-  recipeUnlocks:
-  - ClothingOuterHardsuitScaf
-  technologyPrerequisites:
-  - NFHardsuitsArmored
-  position: 5, 9
+# - type: technology
+#   id: NFHardsuitsArmoredAdvanced
+#   name: nf-research-technology-hardsuits-armored-advanced
+#   entityIcon: ClothingOuterHardsuitScaf
+#   discipline: NFArsenalMercenary
+#   tier: 1
+#   cost: 20000
+#   recipeUnlocks:
+#   - ClothingOuterHardsuitScaf
+#   technologyPrerequisites:
+#   - NFHardsuitsArmored
+#   position: 5, 9
 
 # region Medical
 
@@ -805,7 +806,7 @@
   - HonkerTargetingElectronics
   technologyPrerequisites:
   - NFRipleyAPLU
-  position: 2, 16
+  position: 2, 17
 
 - type: technology
   id: NFHornRoboticsEquipment
@@ -818,7 +819,7 @@
   - MechEquipmentHorn
   technologyPrerequisites:
   - NFHONKMech
-  position: 2, 17
+  position: 2, 18
 
 # region Entertainment & Comms
 
@@ -1665,9 +1666,11 @@
   - NFAmmunitionBoxShellShotgunBuckshot
   - NFAmmunitionBoxShellShotgunSlug
   - NFAmmunitionBoxRifle20
+  - NFAmmunitionBoxRifle25
   - NFAmmunitionBoxRifle30
   - NFAmmunitionBoxPistol35
   - NFAmmunitionBoxPistol45
+  - NFMagazineSubMachineGun35Empty
   - NFSpeedLoaderPistol35Empty
   - NFSpeedLoaderPistol45Empty
   - NFMagazineClipRifle20Empty
@@ -1706,8 +1709,6 @@
   - NFAmmunitionBoxPistol35Overpressure
   - NFAmmunitionBoxPistol45Overpressure
   - NFMagazineHighCapacityPistol35Empty
-  - NFMagazineSubMachineGun35Empty
-  - NFMagazineSubMachineGunTopMounted35Empty
   - NFMagazinePistol45Empty
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
@@ -1724,6 +1725,7 @@
   recipeUnlocks:
   - NFAmmunitionBoxShellShotgunBeanbag
   - NFAmmunitionBoxRifle20Rubber
+  - NFAmmunitionBoxRifle25Rubber
   - NFAmmunitionBoxRifle30Rubber
   - NFAmmunitionBoxPistol35Rubber
   - NFAmmunitionBoxPistol45Rubber
@@ -1848,9 +1850,12 @@
   recipeUnlocks:
   - NFAmmunitionBoxBigRifle20
   - NFAmmunitionBoxBigRifle20Overpressure
+  - NFAmmunitionBoxBigRifle25
+  - NFAmmunitionBoxBigRifle25Overpressure
   - NFAmmunitionBoxBigRifle30
   - NFAmmunitionBoxBigRifle30Overpressure
   technologyPrerequisites:
+  - NFImprovedSMGAmmo
   - NFImprovedRifleAmmo
   position: 3, 44
 

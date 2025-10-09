@@ -64,8 +64,9 @@
     prototype: ProtolatheHyperConvection
     requirements: # Frontier
       MatterBin: 4 # Frontier stackRequirements<requirements
+      Manipulator: 2 # Frontier
     # stackRequirements: # Frontier
-    #   Manipulator: 4 # Frontier
+    #   Manipulator: 2 # Frontier
     tagRequirements:
       GlassBeaker:
         amount: 2
@@ -142,7 +143,6 @@
         MatterBin: 2 # Frontier
         Manipulator: 2 # Frontier
       # stackRequirements: # Frontier
-        # Manipulator: 4 # Frontier
       tagRequirements:
         GlassBeaker:
           amount: 2
@@ -183,6 +183,7 @@
     prototype: CircuitImprinterHyperConvection
     requirements: # Frontier
       MatterBin: 2 # Frontier
+      Manipulator: 2 # Frontier
     # stackRequirements: # Frontier
     #   Manipulator: 2 # Frontier
     tagRequirements:
@@ -238,10 +239,10 @@
     state: service
   - type: MachineBoard
     prototype: Biogenerator
-    # requirements: # Frontier
-    #   MatterBin: 2 # Frontier
+    requirements: # Frontier
+      MatterBin: 2 # Frontier
     # stackRequirements:
-    #   Manipulator: 2
+      Manipulator: 2
     tagRequirements:
       GlassBeaker:
         amount: 1
@@ -637,7 +638,7 @@
     - type: MachineBoard
       prototype: ChemDispenserEmpty
       requirements: # Frontier
-        # Capacitor: 1 # Frontier stackRequirements<requirements
+        Capacitor: 1 # Frontier stackRequirements<requirements
         MatterBin: 1 # Frontier: upgrades number of stored jugs
       stackRequirements:
         # Manipulator: 1 # Frontier
@@ -722,8 +723,8 @@
       requirements: # Frontier
         Capacitor: 1 # Frontier
         PowerCell: 4 # Frontier
+        Manipulator: 1 # Frontier
       stackRequirements:
-        # Manipulator: 1 # Frontier
         CableHV: 10
 
 - type: entity
@@ -740,8 +741,8 @@
     requirements: # Frontier
         Capacitor: 2 # Frontier
         PowerCell: 8 # Frontier
+        Manipulator: 2 # Frontier
     stackRequirements:
-      # Manipulator: 2 # Frontier
       # PowerCell: 4 # Frontier
       CableHV: 20
 
@@ -872,8 +873,8 @@
       requirements: # Frontier
         Capacitor: 1 # Frontier
         PowerCell: 1 # Frontier componentRequirements<requirements
+        Manipulator: 1 # Frontier
       stackRequirements:
-        # Manipulator: 1 # Frontier
         CableMV: 5
         CableHV: 5
     - type: PhysicalComposition
