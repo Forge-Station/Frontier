@@ -1,4 +1,11 @@
-﻿using Content.Goobstation.Maths.FixedPoint;
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 PunishedJoe <PunishedJoeseph@proton.me>
+// SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 gluesniffler <linebarrelerenthusiast@gmail.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Goobstation.Maths.FixedPoint;
 using Content.Shared.Humanoid;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Components;
@@ -19,7 +26,7 @@ public sealed partial class NerveSystemComponent : Component
     /// How much of typical wound pain can this nerve system hold?
     /// </summary>
     [DataField, AutoNetworkedField, ViewVariables(VVAccess.ReadOnly)]
-    public FixedPoint2 SoftPainCap = 90f;
+    public FixedPoint2 SoftPainCap = 120f;
 
     /// <summary>
     /// How much Pain can this nerve system hold.
@@ -32,7 +39,10 @@ public sealed partial class NerveSystemComponent : Component
     public Dictionary<EntityUid, NerveComponent> Nerves = new();
 
     // Don't add manually!! Use built-in functions.
+    [ViewVariables(VVAccess.ReadOnly)]
     public Dictionary<string, PainMultiplier> Multipliers = new();
+
+    [ViewVariables(VVAccess.ReadOnly)]
     public Dictionary<(EntityUid, string), PainModifier> Modifiers = new();
 
     public Dictionary<EntityUid, AudioComponent> PlayedPainSounds = new();
@@ -51,7 +61,7 @@ public sealed partial class NerveSystemComponent : Component
     public TimeSpan PainReactionTime = TimeSpan.FromSeconds(0.07f);
 
     [DataField("adrenalineTime")]
-    public TimeSpan PainShockAdrenalineTime = TimeSpan.FromSeconds(40f);
+    public TimeSpan PainShockAdrenalineTime = TimeSpan.FromSeconds(30f);
 
     [DataField]
     public TimeSpan CritScreamsIntervalMin = TimeSpan.FromSeconds(13f);
@@ -63,7 +73,7 @@ public sealed partial class NerveSystemComponent : Component
     public TimeSpan NextCritScream;
 
     [DataField("painShockStun")]
-    public TimeSpan PainShockStunTime = TimeSpan.FromSeconds(7f);
+    public TimeSpan PainShockStunTime = TimeSpan.FromSeconds(2f);
 
     [DataField("organDamageStun")]
     public TimeSpan OrganDamageStunTime = TimeSpan.FromSeconds(12f);
@@ -235,13 +245,13 @@ public sealed partial class NerveSystemComponent : Component
     [DataField("reflexThresholds"), ViewVariables(VVAccess.ReadOnly)]
     public Dictionary<PainThresholdTypes, FixedPoint2> PainThresholds = new()
     {
-        { PainThresholdTypes.PainFlinch, 5 },
-        { PainThresholdTypes.Agony, 20 },
+        { PainThresholdTypes.PainFlinch, 10 },
+        { PainThresholdTypes.Agony, 40 },
         // Just having 'PainFlinch' is lame, people scream for a few seconds before passing out / getting pain shocked, so I added agony.
         // A lot of screams (individual pain screams poll), for the funnies.
-        { PainThresholdTypes.PainShock, 42 },
+        { PainThresholdTypes.PainShock, 65 }, // real
         // usually appears after an explosion. or some ultra big damage output thing, you might survive, and most importantly, you will fall down in pain.
         // :troll:
-        { PainThresholdTypes.PainShockAndAgony, 70 },
+        { PainThresholdTypes.PainShockAndAgony, 85 },
     };
 }

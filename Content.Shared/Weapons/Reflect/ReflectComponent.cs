@@ -54,6 +54,17 @@ public sealed partial class ReflectComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier? SoundOnReflect = new SoundPathSpecifier("/Audio/Weapons/Guns/Hits/laser_sear_wall.ogg", AudioParams.Default.WithVariation(0.05f));
+
+    /// <summary>
+    /// Goobstation - Lets you prevent the reflect examine from showing.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool Examinable = true;
+
+    // WD START
+    [DataField, AutoNetworkedField]
+    public float DamageOnReflectModifier;
+    // WD END
 }
 
 [Flags, Serializable, NetSerializable]

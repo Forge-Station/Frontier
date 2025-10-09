@@ -229,13 +229,13 @@ namespace Content.Client.HealthAnalyzer.UI
 
             var name = new FormattedMessage();
             name.PushColor(Color.White);
-            name.AddText(_entityManager.HasComponent<MetaDataComponent>(target.Value)
-                ? Identity.Name(target.Value, _entityManager)
+            name.AddText(_entityManager.HasComponent<MetaDataComponent>(_target.Value)
+                ? Identity.Name(_target.Value, _entityManager)
                 : Loc.GetString("health-analyzer-window-entity-unknown-text"));
             NameLabel.SetMessage(name);
 
             SpeciesLabel.Text =
-                _entityManager.TryGetComponent<HumanoidAppearanceComponent>(target.Value,
+                _entityManager.TryGetComponent<HumanoidAppearanceComponent>(_target.Value,
                     out var humanoidAppearanceComponent)
                     ? Loc.GetString(_prototypes.Index<SpeciesPrototype>(humanoidAppearanceComponent.Species).Name)
                     : Loc.GetString("health-analyzer-window-entity-unknown-species-text");
@@ -251,7 +251,7 @@ namespace Content.Client.HealthAnalyzer.UI
                 : Loc.GetString("health-analyzer-window-entity-unknown-value-text");
 
             StatusLabel.Text =
-                _entityManager.TryGetComponent<MobStateComponent>(target.Value, out var mobStateComponent)
+                _entityManager.TryGetComponent<MobStateComponent>(_target.Value, out var mobStateComponent)
                     ? GetStatus(mobStateComponent.CurrentState)
                     : Loc.GetString("health-analyzer-window-entity-unknown-text");
 
