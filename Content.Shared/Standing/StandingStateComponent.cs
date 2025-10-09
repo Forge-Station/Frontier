@@ -13,9 +13,6 @@ namespace Content.Shared.Standing
         [DataField]
         public SoundSpecifier? DownSound { get; private set; } = new SoundCollectionSpecifier("BodyFall");
 
-        [DataField, AutoNetworkedField]
-        public bool Standing { get; set; } = true;
-
         /// <summary>
         /// Time it takes us to stand up
         /// </summary>
@@ -41,5 +38,26 @@ namespace Content.Shared.Standing
         /// </summary>
         [DataField, AutoNetworkedField]
         public List<string> ChangedFixtures = new();
+
+        // WD EDIT START
+        [DataField, AutoNetworkedField]
+        public StandingState CurrentState { get; set; } = StandingState.Standing;
+        // WD EDIT END
+
+        /// <summary>
+        /// Goobstation - made to just use CurrentState and no longer a real field
+        /// This means while you try to get up it pushes mobs away which looks a bit better than standing up and suddenly pushing everyone out.
+        /// </summary>
+        [ViewVariables]
+        public bool Standing => CurrentState != StandingState.Lying;
     }
 }
+
+// WD EDIT START
+public enum StandingState
+{
+    Lying,
+    GettingUp,
+    Standing,
+}
+// WD EDIT END

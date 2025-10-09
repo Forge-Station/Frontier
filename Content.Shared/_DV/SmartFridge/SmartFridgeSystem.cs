@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 Will-Oliver-Br <164823659+Will-Oliver-Br@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Hands.EntitySystems;
@@ -44,7 +49,7 @@ public sealed class SmartFridgeSystem : EntitySystem
         if (_whitelist.IsWhitelistFail(ent.Comp.Whitelist, args.Used) || _whitelist.IsBlacklistPass(ent.Comp.Blacklist, args.Used))
             return;
 
-        if (ent.Comp.CheckAccessOnInsert && !Allowed(ent, args.User)) // Frontier: add CheckAccessOnInsert
+        if (!Allowed(ent, args.User))
             return;
 
         if (container.Count >= ent.Comp.MaxContainedCount) // Frontier
@@ -140,7 +145,7 @@ public sealed class SmartFridgeSystem : EntitySystem
         if (_whitelist.IsWhitelistFail(ent.Comp.Whitelist, item) || _whitelist.IsBlacklistPass(ent.Comp.Blacklist, item))
             return false;
 
-        if (user is { Valid: true } userUid && ent.Comp.CheckAccessOnInsert && !Allowed(ent, userUid)) // Frontier: add CheckAccessOnInsert
+        if (user is { Valid: true } userUid && !Allowed(ent, userUid))
             return false;
 
         if (container.Count >= ent.Comp.MaxContainedCount)

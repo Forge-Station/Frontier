@@ -19,6 +19,7 @@
 
 using Content.Shared.Inventory;
 using Robust.Shared.GameStates;
+using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
 // Shitmed Change
@@ -40,14 +41,14 @@ public sealed partial class ArmorComponent : Component
     /// <summary>
     /// The damage reduction
     /// </summary>
-    [DataField(required: true)]
+    [DataField(required: true), AutoNetworkedField]
     public DamageModifierSet Modifiers = default!;
 
     /// <summary>
     /// Shitmed Change: A multiplier applied to the calculated point value
     /// to determine the monetary value of the armor
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public float PriceMultiplier = 1;
 
     /// <summary>

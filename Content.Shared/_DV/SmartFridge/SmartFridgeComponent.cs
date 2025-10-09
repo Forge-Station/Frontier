@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 Ilya246 <ilyukarno@gmail.com>
+// SPDX-FileCopyrightText: 2025 Will-Oliver-Br <164823659+Will-Oliver-Br@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Whitelist;
 using Robust.Shared.Analyzers;
 using Robust.Shared.Audio;
@@ -48,18 +54,12 @@ public sealed partial class SmartFridgeComponent : Component
     [DataField]
     public SoundSpecifier SoundDeny = new SoundPathSpecifier("/Audio/Machines/custom_deny.ogg");
 
-    // Frontier: extra fields
+    // Frontier:
     /// <summary>
     /// The maximum number of entities that can be stored in the fridge
     /// </summary>
     [DataField]
     public int MaxContainedCount = 300;
-
-    /// <summary>
-    /// If true, insertion requires access
-    /// </summary>
-    [DataField]
-    public bool CheckAccessOnInsert = true;
     // End Frontier
 }
 

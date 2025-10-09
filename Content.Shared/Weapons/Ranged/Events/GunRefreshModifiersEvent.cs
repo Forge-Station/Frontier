@@ -1,4 +1,4 @@
-﻿using Content.Shared.Weapons.Ranged.Components;
+using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.Audio;
 
@@ -19,5 +19,8 @@ public record struct GunRefreshModifiersEvent(
     Angle MinAngle,
     int ShotsPerBurst,
     float FireRate,
-    float ProjectileSpeed
+    float ProjectileSpeed,
+    float BurstFireRate, // Goobstation
+    float BurstCooldown, // Goobstation
+    EntityUid? User // GoobStation change - User for NoWieldNeeded
 );

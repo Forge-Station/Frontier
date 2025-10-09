@@ -44,7 +44,7 @@ public sealed class SharedMultishotSystem : EntitySystem
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly MissChanceSystem _miss = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly StaminaSystem _staminaSystem = default!;
+    [Dependency] private readonly SharedStaminaSystem _staminaSystem = default!;
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
 
     public override void Initialize()
@@ -116,11 +116,12 @@ public sealed class SharedMultishotSystem : EntitySystem
         if (component.HandDamageAmount == 0)
             return;
 
-        if (!_handsSystem.IsHolding(target, weapon, out var hand))
+        if (!_handsSystem.IsHolding(target, weapon, out var handId)
+            || !_handsSystem.TryGetHand(target, handId, out var hand))
             return;
 
         // I didn't find better way to get hand
-        var bodySymmetry = hand.Location switch
+        var bodySymmetry = hand.Value.Location switch
         {
             HandLocation.Left => BodyPartSymmetry.Left,
             HandLocation.Right => BodyPartSymmetry.Right,
@@ -180,7 +181,7 @@ public sealed class SharedMultishotSystem : EntitySystem
     {
         var message = new FormattedMessage();
         var chance = (MathF.Round(ent.Comp.MissChance * 100f)).ToString();
-        message.AddText(Loc.GetString(MultishotComponent.ExamineMessage, ("chance", chance)));
+        message.AddText(Loc.GetString(ent.Comp.ExamineMessage, ("chance", chance)));
         args.PushMessage(message);
     }
 

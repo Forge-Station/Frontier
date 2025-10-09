@@ -1,7 +1,7 @@
 namespace Content.Shared.CombatMode;
 
 [ByRefEvent]
-public record struct DisarmedEvent(EntityUid Target, EntityUid Source, float PushProb)
+public record struct DisarmedEvent(EntityUid Target, EntityUid Source, float DisarmProb) // Goob - martial arts
 {
     /// <summary>
     /// The entity being disarmed.
@@ -14,9 +14,9 @@ public record struct DisarmedEvent(EntityUid Target, EntityUid Source, float Pus
     public readonly EntityUid Source = Source;
 
     /// <summary>
-    /// Probability for push/knockdown.
+    ///     Probability to disarm in addition to shoving.
     /// </summary>
-    public readonly float PushProbability = PushProb;
+    public float DisarmProbability { get; init; }
 
     /// <summary>
     /// Prefix for the popup message that will be displayed on a successful push.
@@ -25,9 +25,20 @@ public record struct DisarmedEvent(EntityUid Target, EntityUid Source, float Pus
     public string PopupPrefix = "";
 
     /// <summary>
-    /// Whether the entity was successfully stunned from a shove.
+    ///     Whether the entity was successfully stunned from a shove.
     /// </summary>
-    public bool IsStunned;
+    public bool IsStunned { get; set; }
+
+    /// <summary>
+    ///     Potential stamina damage if this disarm results in a shove.
+    /// </summary>
+    public float StaminaDamage { get; init; }
+
+    /// <summary>
+    ///     Whether the entity was successfully stunned from a shove.
+    /// </summary>
+    public bool WasDisarmed { get; set; }
 
     public bool Handled;
+
 }

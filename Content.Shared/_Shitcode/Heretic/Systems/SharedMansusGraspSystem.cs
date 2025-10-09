@@ -5,11 +5,9 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Server.Heretic.Components.PathSpecific;
-using Content.Shared._EinsteinEngines.Silicon.Components;
 using Content.Shared._Goobstation.Heretic.Systems;
 using Content.Shared._Shitcode.Heretic.Components;
 using Content.Shared._Shitmed.Targeting;
-using Content.Shared._White.BackStab;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Doors.Components;
@@ -44,7 +42,6 @@ public abstract class SharedMansusGraspSystem : EntitySystem
     [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly BackStabSystem _backstab = default!;
     [Dependency] private readonly SharedStunSystem _stun = default!;
     [Dependency] private readonly SharedVoidCurseSystem _voidCurse = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
@@ -102,18 +99,6 @@ public abstract class SharedMansusGraspSystem : EntitySystem
                     infusion.AvailableCharges = infusion.MaxCharges;
                     break;
                 }
-
-                // small stun if the person is looking away or laying down
-                if (_backstab.TryBackstab(target, performer, Angle.FromDegrees(45d)))
-                {
-                    _stun.TryParalyze(target, TimeSpan.FromSeconds(1.5f), true);
-                    _damage.TryChangeDamage(target,
-                        new DamageSpecifier(_proto.Index<DamageTypePrototype>("Slash"), 10),
-                        ignoreResistances: true,
-                        origin: performer,
-                        targetPart: TargetBodyPart.Chest);
-                }
-
                 break;
             }
 
@@ -177,7 +162,7 @@ public abstract class SharedMansusGraspSystem : EntitySystem
                 else if (TryComp(target, out DamageableComponent? damageable) && // Is it even damageable?
                          !_tag.HasTag(target, "Meat") && // Is it not organic body part or organ?
                          !HasComp<ShadowCloakEntityComponent>(target) && // No instakilling shadow cloak heretics
-                         (!HasComp<MobStateComponent>(target) || HasComp<SiliconComponent>(target) ||
+                         (!HasComp<MobStateComponent>(target) ||
                           HasComp<BorgChassisComponent>(target) ||
                           _tag.HasTag(target, "Bot"))) // Check for ingorganic target
                 {

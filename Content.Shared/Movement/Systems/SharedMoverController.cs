@@ -24,7 +24,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using PullableComponent = Content.Shared.Movement.Pulling.Components.PullableComponent;
-using Content.Shared.StepTrigger.Components; // Delta V-NoShoesSilentFootstepsComponent
+using Content.Shared.StepTrigger.Components;
+using Content.Shared._DV.StepTrigger.Components; // Delta V-NoShoesSilentFootstepsComponent
 
 namespace Content.Shared.Movement.Systems;
 
