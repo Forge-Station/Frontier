@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: anton953 CorvaxForge
+# License: CC-BY-NC-ND-3.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Myxa
+  parent: BaseVessel
+  name: SBI Муха
+  description: Среднегабаритный шаттл для наёмников, рекомендуемый состав экипажа 4 человека.
+  price: 64350
+  category: Medium
+  group: Mercenary
+  shuttlePath: /Maps/Forge/Shuttles/Mercenary/myxa.yml
+  addComponents:
+  - type: MercenaryBountyDatabase
+    bounties: []
+
+- type: gameMap
+  id: Myxa
+  mapName: 'SBI Муха'
+  mapPath: /Maps/Forge/Shuttles/Mercenary/myxa.yml
+  minPlayers: 0
+  stations:
+    Myxa:
+      stationProto: MercenaryFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Муха {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

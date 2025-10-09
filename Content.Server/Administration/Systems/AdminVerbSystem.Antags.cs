@@ -90,7 +90,7 @@ public sealed partial class AdminVerbSystem
             Impact = LogImpact.High,
             Message = string.Join(": ", initialInfectedName, Loc.GetString("admin-verb-make-initial-infected")),
         };
-        //args.Verbs.Add(initialInfected); // Frontier: comment this out, no initial infected verb
+        args.Verbs.Add(initialInfected); // Frontier: comment this out, no initial infected verb // Forge-Change
 
         var zombieName = Loc.GetString("admin-verb-text-make-zombie");
         Verb zombie = new()
@@ -120,7 +120,7 @@ public sealed partial class AdminVerbSystem
             Impact = LogImpact.High,
             Message = string.Join(": ", nukeOpName, Loc.GetString("admin-verb-make-nuclear-operative")),
         };
-        //args.Verbs.Add(nukeOp); // Frontier: comment this out, no nuke op verb
+        args.Verbs.Add(nukeOp); // Frontier: comment this out, no nuke op verb // Forge-Change
 
         // Frontier: custom pirate verbs
         var pirateName = Loc.GetString("admin-verb-text-make-nf-pirate");
@@ -185,7 +185,7 @@ public sealed partial class AdminVerbSystem
             Impact = LogImpact.High,
             Message = string.Join(": ", headRevName, Loc.GetString("admin-verb-make-head-rev")),
         };
-        //args.Verbs.Add(headRev); // Frontier
+        args.Verbs.Add(headRev); // Frontier // Forge-Change
 
         var thiefName = Loc.GetString("admin-verb-text-make-thief");
         Verb thief = new()

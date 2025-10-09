@@ -71,3 +71,27 @@
     interfaces:
       enum.ShipyardConsoleUiKey.Debug:
        type: ShipyardConsoleBoundUserInterface
+
+- type: entity
+  id: ComputerShipyardEngineering
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
+  name: engineer shipyard console
+  description: Shipyard console with engineers shuttles.
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_engi
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_engi
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Engineering
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Engineering:
+       type: ShipyardConsoleBoundUserInterface

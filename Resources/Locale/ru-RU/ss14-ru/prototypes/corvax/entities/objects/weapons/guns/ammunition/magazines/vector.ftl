@@ -1,10 +1,10 @@
-ent-MagazineVector22 = магазин (.35)
+ent-MagazineVector22 = магазин (.25)
     .desc = До смешного большой магазин.
 ent-MagazineVector22Empty = { ent-MagazineVector22 }
     .desc = { ent-BaseItem.desc }
     .suffix = Пустой
-ent-MagazineVector45 = магазин (.45)
-    .desc = Стандартный магазин на 15 маленьких (больших и медленных) друзей калибра .45.
+ent-MagazineVector45 = магазин (.20)
+    .desc = Стандартный магазин на 15 маленьких (больших и медленных) друзей калибра .20
 ent-MagazineVector45Empty = { ent-MagazineVector45 }
     .desc = { ent-BaseItem.desc }
     .suffix = Пустой

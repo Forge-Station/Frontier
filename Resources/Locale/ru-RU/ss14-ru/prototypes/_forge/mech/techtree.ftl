@@ -13,3 +13,5 @@ nf-research-technology-mech-immolation-laser = Пушка-испепелител
 nf-research-technology-mech-xray-laser = X-Ray излучатель «S-1»
 nf-research-technology-mech-base-missile-weapon = Базовое ракетное вооржуение
 nf-research-technology-mech-missile-weapon = Тяжёлое ракетное вооржуение
+
+nf-research-technology-smg-ammo-improved = Патроны для ПП выского давления
