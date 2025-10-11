@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: https://github.com/theg33ka
+# Discord: _n1neth
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Capellan
+  parent: BaseVessel
+  name: GS Капеллан
+  description: Крупногабаритный исследовательский шаттл. Рекомендованный размер команды 3-6 человек.
+  price: 220000
+  category: Large
+  group: Expedition
+  shuttlePath: /Maps/Forge/Shuttles/Expedition/capellan.yml
+
+- type: gameMap
+  id: Capellan
+  mapName: 'GS Капеллан'
+  mapPath: /Maps/Forge/Shuttles/Expedition/capellan.yml
+  minPlayers: 0
+  stations:
+    Capellan:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'GS Капеллан {1}'
+        nameGenerator: !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          Contractor: [ 0, 0 ]
+          Pilot: [ 0, 0 ]
+          Mercenary: [ 0, 0 ]

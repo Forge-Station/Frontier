@@ -111,7 +111,7 @@
 - type: entity
   id: NFMagazineRifle30Incendiary
   name: magazine (.30 rifle, incendiary)
-  parent: NFBaseMagazineRifle30
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazineRifle30] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle30Incendiary
@@ -137,7 +137,7 @@
 - type: entity
   id: NFMagazineRifle30Uranium
   name: magazine (.30 rifle, uranium)
-  parent: NFBaseMagazineRifle30
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazineRifle30] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle30Uranium
@@ -259,7 +259,7 @@
 - type: entity
   id: NFMagazineLowCapacityRifle30Incendiary
   name: low cap magazine (.30 rifle, incendiary)
-  parent: NFBaseMagazineLowCapacityRifle30
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazineLowCapacityRifle30] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle30Incendiary
@@ -285,7 +285,7 @@
 - type: entity
   id: NFMagazineLowCapacityRifle30Uranium
   name: low cap magazine (.30 rifle, uranium)
-  parent: NFBaseMagazineLowCapacityRifle30
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazineLowCapacityRifle30] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle30Uranium

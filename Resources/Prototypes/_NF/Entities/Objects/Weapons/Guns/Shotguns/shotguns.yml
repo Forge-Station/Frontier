@@ -18,6 +18,8 @@
     selectedMode: FullAuto
     availableModes:
     - FullAuto
+    soundGunshot:
+      path: /Audio/_Forge/Weapons/Guns/Gunshots/shotgun_auto.ogg
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-gorlex-steel-works
 
@@ -53,6 +55,8 @@
   components:
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 2
+    soundGunshot:
+      path: /Audio/_Forge/Weapons/Guns/Gunshots/shotgun_metal.ogg
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
   - type: Clothing
@@ -99,6 +103,8 @@
     manufacturer: weapon-details-manufacturer-custom-made
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 3
+    soundGunshot:
+      path: /Audio/_Forge/Weapons/Guns/Gunshots/shotgun_sawed.ogg
 
 - type: entity
   id: NFWeaponShotgunSawnEmpty
@@ -127,6 +133,9 @@
     capacity: 1
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-custom-made
+  - type: Gun # Corvax-Forge: Weaponary update
+    soundGunshot:
+      path: /Audio/_Forge/Weapons/Guns/Gunshots/shotgun_pipe.ogg
 
 - type: entity
   id: NFWeaponShotgunHandmadeEmpty
@@ -179,6 +188,9 @@
   - type: Construction
     graph: ImprovisedShotgunGraph
     node: shotgun
+  - type: Gun # Corvax-Forge: Weaponary update
+    soundGunshot:
+      path: /Audio/_Forge/Weapons/Guns/Gunshots/shotgun_pipe.ogg
 
 #region Less-lethal
 - type: entity

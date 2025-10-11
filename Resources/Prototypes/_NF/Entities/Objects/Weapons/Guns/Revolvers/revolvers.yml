@@ -7,7 +7,7 @@
     A detective's best friend. On the handle is a label that says 'for authorized use only.'
   components:
   - type: Gun # Corvax-Forge: Weaponary update
-    fireRate: 2.8
+    fireRate: 2.5
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/inspector.rsi
   - type: Clothing
@@ -25,7 +25,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi
   - type: Gun
-    fireRate: 3
+    fireRate: 3.5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
 
