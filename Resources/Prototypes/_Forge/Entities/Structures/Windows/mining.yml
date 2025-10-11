@@ -18,13 +18,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 250
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -51,7 +51,7 @@
   - type: StaticPrice
     price: 100
   - type: RadiationBlocker
-    resistance: 3
+    resistance: 4
 
 - type: entity
   parent: ShuttleWindowUran
@@ -98,7 +98,7 @@
     damageOverlay:
       sprite: Structures/Windows/cracks_diagonal.rsi
   - type: RadiationBlocker
-    resistance: 3
+    resistance: 4
 
 - type: entity
   id: MiningWindowPlasma
@@ -120,13 +120,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 350
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 200
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -153,7 +153,7 @@
   - type: StaticPrice
     price: 100
   - type: RadiationBlocker
-    resistance: 2
+    resistance: 3
 
 - type: entity
   parent: ShuttleWindowPlasma
@@ -200,4 +200,4 @@
     damageOverlay:
       sprite: Structures/Windows/cracks_diagonal.rsi
   - type: RadiationBlocker
-    resistance: 2
+    resistance: 3

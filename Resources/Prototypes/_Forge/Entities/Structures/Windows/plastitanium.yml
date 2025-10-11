@@ -13,13 +13,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 1450
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 725
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -49,7 +49,7 @@
   - type: StaticPrice # Frontier
     price: 100 # Frontier
   - type: RadiationBlocker
-    resistance: 3
+    resistance: 5
 
 - type: entity
   id: PlastitaniumWindowUranDiagonal
@@ -68,13 +68,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 1450
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 725
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -102,7 +102,7 @@
     damageContainer: StructuralInorganic
     damageModifierSet: RGlass
   - type: RadiationBlocker
-    resistance: 3
+    resistance: 5
 
 - type: entity
   id: PlastitaniumWindowPlasma
@@ -119,13 +119,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 1250
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 700
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -155,7 +155,7 @@
   - type: StaticPrice # Frontier
     price: 100 # Frontier
   - type: RadiationBlocker
-    resistance: 2
+    resistance: 4
 
 - type: entity
   id: PlastitaniumWindowPlasmaDiagonal
@@ -174,13 +174,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 1250
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 700
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -208,4 +208,4 @@
     damageContainer: StructuralInorganic
     damageModifierSet: RGlass
   - type: RadiationBlocker
-    resistance: 2
+    resistance: 4
