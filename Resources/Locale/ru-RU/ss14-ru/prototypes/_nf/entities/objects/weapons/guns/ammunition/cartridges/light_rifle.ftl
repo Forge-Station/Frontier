@@ -1,6 +1,6 @@
 ent-NFCartridgeRifle30 = патрон (.30 винтовочный)
     .desc = { ent-BaseCartridgeRifle.desc }
-ent-NFBulletRifle30Overpressure = патрон (.30 винтовочный высокоскоростной)
+ent-NFCartridgeRifle30Overpressure = патрон (.30 винтовочный высокоскоростной)
     .desc = { ent-BaseCartridgeRifle.desc }
 ent-NFCartridgeRifle30Incendiary = патрон (.30 винтовочный зажигательный)
     .desc = { ent-BaseCartridgeRifle.desc }

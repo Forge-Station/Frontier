@@ -105,9 +105,9 @@
   - type: Gun
     examineCaliber: gun-examine-pulse-low
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg # Corvax-Forge: Weapons Update
   - type: HitscanBatteryAmmoProvider
-    proto: NFPulse
+    proto: HeavyPulse # Corvax-Forge: Weapons Update
     fireCost: 100
 
 - type: entity

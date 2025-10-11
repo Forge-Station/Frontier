@@ -4,7 +4,7 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/04/2025 18:16:48
+  time: 10/09/2025 11:50:04
   entityCount: 5866
 maps: []
 grids:
@@ -3150,6 +3150,21 @@ entities:
       parent: 2
 - proto: AirlockEngineeringGlass
   entities:
+  - uid: 39
+    components:
+    - type: Transform
+      pos: -0.5,-0.5
+      parent: 2
+  - uid: 40
+    components:
+    - type: Transform
+      pos: 0.5,-0.5
+      parent: 2
+  - uid: 41
+    components:
+    - type: Transform
+      pos: 1.5,-0.5
+      parent: 2
   - uid: 42
     components:
     - type: Transform
@@ -3175,10 +3190,40 @@ entities:
     - type: Transform
       pos: 1.5,-13.5
       parent: 2
+  - uid: 47
+    components:
+    - type: Transform
+      pos: 1.5,8.5
+      parent: 2
+  - uid: 48
+    components:
+    - type: Transform
+      pos: 0.5,8.5
+      parent: 2
+  - uid: 49
+    components:
+    - type: Transform
+      pos: -0.5,8.5
+      parent: 2
+  - uid: 50
+    components:
+    - type: Transform
+      pos: -0.5,3.5
+      parent: 2
   - uid: 51
     components:
     - type: Transform
       pos: -0.5,-13.5
+      parent: 2
+  - uid: 52
+    components:
+    - type: Transform
+      pos: 0.5,3.5
+      parent: 2
+  - uid: 53
+    components:
+    - type: Transform
+      pos: 1.5,3.5
       parent: 2
   - uid: 54
     components:
@@ -3284,62 +3329,6 @@ entities:
     components:
     - type: Transform
       pos: 25.5,0.5
-      parent: 2
-- proto: AirlockEngineeringGlassLocked
-  entities:
-  - uid: 39
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 1.5,-0.5
-      parent: 2
-  - uid: 40
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,-0.5
-      parent: 2
-  - uid: 41
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -0.5,-0.5
-      parent: 2
-  - uid: 47
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -0.5,8.5
-      parent: 2
-  - uid: 48
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,8.5
-      parent: 2
-  - uid: 49
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 1.5,8.5
-      parent: 2
-  - uid: 50
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -0.5,3.5
-      parent: 2
-  - uid: 52
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,3.5
-      parent: 2
-  - uid: 53
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 1.5,3.5
       parent: 2
 - proto: AirlockEngineeringLocked
   entities:
@@ -3816,7 +3805,7 @@ entities:
       pos: 8.5,10.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -28359.564
+      secondsUntilStateChange: -28515.941
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3918,6 +3907,11 @@ entities:
       parent: 2
 - proto: APCBasic
   entities:
+  - uid: 87
+    components:
+    - type: Transform
+      pos: 15.5,25.5
+      parent: 2
   - uid: 164
     components:
     - type: Transform
@@ -4002,13 +3996,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -13.5,3.5
-      parent: 2
-- proto: APCHighCapacity
-  entities:
-  - uid: 87
-    components:
-    - type: Transform
-      pos: 15.5,25.5
       parent: 2
 - proto: AppraisalTool
   entities:
