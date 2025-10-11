@@ -575,18 +575,18 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
     // Corvax-Frontier-Zones-start
     private void DrawZoneCircles(DrawingHandleScreen handle)
     {
-        if (_coordinates == null || _rotation == null)
+        if (_coordinates == null)
             return;
 
-        var shuttleMapPos = _transform.ToMapCoordinates(_coordinates.Value);
-        var toWorldCenter = -shuttleMapPos.Position;
-        var radarPos = MidPointVector + toWorldCenter * MinimapScale;
+        var mapCenter = MapCoordinates.Nullspace;
+        var toMapCenter = mapCenter.Position - _transform.ToMapCoordinates(_coordinates.Value).Position;
+        var radarCenterPos = MidPointVector + toMapCenter * MinimapScale;
 
-        radarPos.Y = Height - radarPos.Y;
+        radarCenterPos.Y = Height - radarCenterPos.Y;
 
-        DrawZoneCircle(handle, radarPos, 200, new Color(0, 255, 0, 1));
-        DrawZoneCircle(handle, radarPos, 4500, new Color(255, 255, 0, 1));
-        DrawZoneCircle(handle, radarPos, 12000, new Color(255, 0, 0, 1));
+        DrawZoneCircle(handle, radarCenterPos, 200, new Color(0, 255, 0, 1));
+        DrawZoneCircle(handle, radarCenterPos, 4500, new Color(255, 255, 0, 1));
+        DrawZoneCircle(handle, radarCenterPos, 12000, new Color(255, 0, 0, 1));
     }
 
     private void DrawZoneCircle(DrawingHandleScreen handle, Vector2 center, float radius, Color color)
