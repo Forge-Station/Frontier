@@ -13,3 +13,30 @@
   - type: Storage
     grid:
     - 0,0,9,1
+
+- type: entity
+  parent: NFClothingBeltStorageBase
+  id: ClothingBeltNfsdEngineer
+  name: nfsd engineer's toolbelt
+  description: nfsd engineer's toolbelt desc
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Belt/nfsd_engi_belt.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Belt/nfsd_engi_belt.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+
+# Filled версия
+- type: entity
+  parent: ClothingBeltNfsdEngineer
+  id: ClothingBeltNfsdEngineerFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: RCDNfsd
+    - id: JawsOfLifeNfsd
+    - id: PowerDrillNfsd
+    - id: WelderNfsd
+    - id: MultitoolNfsd

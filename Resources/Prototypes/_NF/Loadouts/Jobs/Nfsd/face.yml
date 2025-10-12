@@ -23,3 +23,17 @@
     proto: EffectSpeciesVox
   equipment:
     mask: ClothingMaskGasNfsd
+
+# Forge add
+- type: loadout
+  id: NfsdClothingMaskGasAlt
+  storage:
+    back:
+    - ClothingMaskGasNfsdAlt
+
+- type: loadout
+  id: NfsdClothingMaskGasCoroner
+  storage:
+    back:
+    - ClothingMaskGasNfsdCoroner
+# Forge end

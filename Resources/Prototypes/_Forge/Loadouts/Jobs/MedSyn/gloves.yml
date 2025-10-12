@@ -4,6 +4,11 @@
     gloves: ClothingHandsGlovesCombat
 
 - type: loadout
+  id: MedSynClothingHandsGlovesLatex
+  equipment:
+    gloves: ClothingHandsGlovesLatexSyndi
+
+- type: loadout
   id: MedSynClothingHandsGloves2
   price: 10000
   equipment:

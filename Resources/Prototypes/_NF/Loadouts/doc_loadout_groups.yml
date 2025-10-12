@@ -13,10 +13,14 @@
 - type: loadoutGroup
   id: DocGloves
   name: loadout-group-contractor-gloves
-  minLimit: 0
+  minLimit: 1
   loadouts:
-  - NitrileGloves
-  - LatexGloves
+  - DocClothingHandsGloves1 # Forge-change
+  - DocClothingHandsGloves2 # Forge-change
+  - DocClothingHandsGloves3 # Forge-change
+  - DocClothingHandsGloves4 # Forge-change
+  fallbacks:
+  - DocClothingHandsGloves1
 
 - type: loadoutGroup
   id: DocBackpack

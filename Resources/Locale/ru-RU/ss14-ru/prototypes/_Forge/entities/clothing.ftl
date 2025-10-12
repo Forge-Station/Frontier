@@ -51,13 +51,53 @@ ent-ClothingUniformJumpskirtNanotrasenRepresentative = Юбка-комбинез
 
 ent-CentcomAgentSkirt = Юбка агента ЦентКома
 
+ent-ClothingBackpackMessengerCentcom = мессенджер ЦК
+
+# NFSD
 ent-ClothingNeckMantleSheriffLight = мантия шерифа
     .desc = Перестрелки с применением ядерного оружия - это просто очередной вторник для шерифа. Эта мантия - символ преданности своему участку.
 
 ent-ClothingShoesBootsSheriff = сапоги шерифа
     .desc = Шаттл дрожит, соседи молятся, а наёмники сразу вспоминают все свои грехи.
 
-ent-ClothingBackpackMessengerCentcom = мессенджер ЦК
-
 ent-ClothingOuterArmorSheriffVestWeb = бронежилет шерифа
     .desc = Высококачественный бронированный жилет из прочного синтетического материала. Несмотря на внушительную защиту, он гибкий и лёгкий.
+
+ent-ClothingMaskGasNfsdAlt = тактический противогаз ДСБФ
+    .desc = Модифицированная версия стандартного противогаза ДСБФ, обеспечивающая повышенный комфорт при длительном ношении.
+
+ent-ClothingMaskGasNfsdCoroner = противогаз коронера
+    .desc = Продвинутый медицинский противогаз, обеспечивающий владельцу полную защиту от нежелательных газов... Конечно, при наличии кислородного баллона.
+
+ent-ClothingMaskGasNfsdAdvanced = усиленный противогаз ДСБФ
+    .desc = Версия противогаза, разработанная для опасных операций и экстремальных условий.
+
+ent-ClothingBeltNfsdEngineer = пояс специалиста ДСБФ
+    .desc = Плотный тактический пояс с множеством креплений для инструментов и устройств технической поддержки.
+
+ent-ClothingBeltNfsdEngineerFilled = { ent-ClothingBeltNfsdEngineer }
+    .desc = { ent-ClothingBeltNfsdEngineer.desc }
+
+ent-ClothingUniformJumpsuitNfsdForgeDec = униформа детектива ДСБФ
+    .desc = Строгая, но функциональная униформа для сотрудников следственного отдела.
+
+ent-ClothingUniformJumpsuitNfsdForgeCoroner = униформа коронера ДСБФ
+    .desc = Лёгкая, но прочная униформа для медицинских специалистов ДСБФ. Идеальна для оказания помощи прямо на месте происшествия - даже под огнём.
+
+ent-ClothingUniformJumpsuitNfsdForgeCoronerAlt = свитер коронера ДСБФ
+    .desc = Тёплый вязаный свитер с эмблемой ДСБФ. Предпочитаемая одежда тех, кто проводит слишком много времени среди холодных тел.
+
+ent-ClothingUniformJumpsuitNfsdSpecialist = униформа специалиста ДСБФ
+    .desc = Универсальная униформа для технических специалистов. Сочетает прочность, комфорт и профессиональный вид.
+
+ent-ClothingUniformJumpskirtNfsdForgeDec = униформа детектива ДСБФ
+    .desc = Строгая, но функциональная униформа для сотрудников следственного отдела.
+
+ent-ClothingUniformJumpskirtNfsdForgeCoroner = униформа коронера ДСБФ
+    .desc = Лёгкая, но прочная униформа для медицинских специалистов ДСБФ. Идеальна для оказания помощи прямо на месте происшествия - даже под огнём.
+
+ent-ClothingUniformJumpskirtNfsdForgeCoronerAlt = свитер коронера ДСБФ
+    .desc = Тёплый вязаный свитер с эмблемой ДСБФ. Предпочитаемая одежда тех, кто проводит слишком много времени среди холодных тел.
+
+ent-ClothingUniformJumpskirtNfsdSpecialist = униформа специалиста ДСБФ
+    .desc = Универсальная униформа для технических специалистов. Сочетает прочность, комфорт и профессиональный вид.

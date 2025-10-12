@@ -17,3 +17,63 @@
         Slash: 0.95
         Piercing: 0.95
         Heat: 0.95
+
+# NFSD
+- type: entity
+  parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSecurity ]
+  id: ClothingMaskGasNfsdAlt
+  name: NFSD gas mask
+  description: A alternative issue NFSD gas mask.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Mask/nfsd_alt.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Mask/nfsd_alt.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+
+- type: entity
+  parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSecurity ]
+  id: ClothingMaskGasNfsdCoroner
+  name: NFSD coroner mask
+  description: NFSD coroner gas mask
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Mask/coroner.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Mask/coroner.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+
+- type: entity
+  parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSecurity ]
+  id: ClothingMaskGasNfsdAdvanced
+  name: NFSD advanced gas mask
+  description: Advanced issue NFSD gas mask.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Mask/nfsd_up.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Mask/nfsd_up.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.90
+        Heat: 0.90
+# NFSD end
