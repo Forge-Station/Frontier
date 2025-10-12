@@ -1,63 +1,4 @@
-// SPDX-FileCopyrightText: 2022 CommieFlowers <rasmus.cedergren@hotmail.com>
-// SPDX-FileCopyrightText: 2022 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2022 metalgearsloth <metalgearsloth@gmail.com>
-// SPDX-FileCopyrightText: 2022 rolfero <45628623+rolfero@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 Doru991 <75124791+Doru991@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 Errant <35878406+Errant-4@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 Errant <35878406+errant@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 Kara <lunarautomaton6@gmail.com>
-// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers <pieterjan.briers@gmail.com>
-// SPDX-FileCopyrightText: 2023 PixelTK <85175107+PixelTheKermit@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 Slava0135 <40753025+Slava0135@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
-// SPDX-FileCopyrightText: 2024 Adeinitas <147965189+adeinitas@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Callmore <22885888+Callmore@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Dakamakat <52600490+dakamakat@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Danger Revolution! <142105406+DangerRevolution@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
-// SPDX-FileCopyrightText: 2024 Piras314 <p1r4s@proton.me>
-// SPDX-FileCopyrightText: 2024 Plykiya <58439124+Plykiya@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
-// SPDX-FileCopyrightText: 2024 Timemaster99 <57200767+Timemaster99@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 metalgearsloth <comedian_vs_clown@hotmail.com>
-// SPDX-FileCopyrightText: 2024 plykiya <plykiya@protonmail.com>
-// SPDX-FileCopyrightText: 2024 username <113782077+whateverusername0@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 whateverusername0 <whateveremail>
-// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
-// SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
-// SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Aviu00 <aviu00@protonmail.com>
-// SPDX-FileCopyrightText: 2025 BramvanZijp <56019239+BramvanZijp@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Eagle <lincoln.mcqueen@gmail.com>
-// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
-// SPDX-FileCopyrightText: 2025 Lincoln McQueen <lincoln.mcqueen@gmail.com>
-// SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
-// SPDX-FileCopyrightText: 2025 Princess Cheeseballs <66055347+Pronana@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
-// SPDX-FileCopyrightText: 2025 SlamBamActionman <83650252+SlamBamActionman@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
-// SPDX-FileCopyrightText: 2025 Ted Lukin <66275205+pheenty@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
-// SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 gluesniffler <linebarrelerenthusiast@gmail.com>
-// SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
-// SPDX-FileCopyrightText: 2025 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 nikitosych <boriszyn@gmail.com>
-// SPDX-FileCopyrightText: 2025 pheenty <fedorlukin2006@gmail.com>
-// SPDX-FileCopyrightText: 2025 vanx <61917534+Vaaankas@users.noreply.github.com>
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using System.Linq;
-using Content.Goobstation.Common.MartialArts;
-using Content.Goobstation.Common.Stunnable; // Goobstation - Martial Arts
 using Content.Shared.Administration.Logs;
 using Content.Shared.Alert;
 using Content.Shared.CCVar;
@@ -66,14 +7,10 @@ using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Events;
 using Content.Shared.Database;
 using Content.Shared.Effects;
-using Content.Goobstation.Maths.FixedPoint;
-using Content.Shared._Shitcode.Weapons.Misc; // Goob
-using Content.Shared.Jittering;
+using Content.Shared.FixedPoint;
 using Content.Shared.Projectiles;
 using Content.Shared.Rejuvenate;
 using Content.Shared.Rounding;
-using Content.Shared.Speech.EntitySystems;
-using Content.Shared.StatusEffect;
 using Content.Shared.Stunnable;
 using Content.Shared.Throwing;
 using Content.Shared.Weapons.Melee.Events;
@@ -83,33 +20,27 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
-using Robust.Shared.Random; // Goob - Shove
-using Robust.Shared.Serialization;
+using Robust.Shared.Serialization; // Forge-Change
 using Robust.Shared.Timing;
 
 namespace Content.Shared.Damage.Systems;
 
 public abstract partial class SharedStaminaSystem : EntitySystem
 {
-    [Dependency] protected readonly IGameTiming Timing = default!;
+    [Dependency] protected readonly IGameTiming Timing = default!; // Forge-Change
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly MetaDataSystem _metadata = default!;
     [Dependency] private readonly SharedColorFlashEffectSystem _color = default!;
-    [Dependency] protected readonly SharedStunSystem StunSystem = default!;
+    [Dependency] protected readonly SharedStunSystem StunSystem = default!; // Forge-Change
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly IConfigurationManager _config = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffect = default!; // goob edit
-    [Dependency] private readonly SharedStutteringSystem _stutter = default!; // goob edit
-    [Dependency] private readonly SharedJitteringSystem _jitter = default!; // goob edit
-    [Dependency] private readonly IRobustRandom _random = default!; // Goob - Shove
-
 
     /// <summary>
     /// How much of a buffer is there between the stun duration and when stuns can be re-applied.
     /// </summary>
-    protected static readonly TimeSpan StamCritBufferTime = TimeSpan.FromSeconds(3f);
+    protected static readonly TimeSpan StamCritBufferTime = TimeSpan.FromSeconds(3f); // Forge-Change
 
     public float UniversalStaminaDamageModifier { get; private set; } = 1f;
 
@@ -135,7 +66,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
 
         Subs.CVar(_config, CCVars.PlaytestStaminaDamageModifier, value => UniversalStaminaDamageModifier = value, true);
     }
-
+    // Forge-Change-Start
     protected virtual void OnStamHandleState(Entity<StaminaComponent> entity, ref AfterAutoHandleStateEvent args)
     {
         if (entity.Comp.Critical)
@@ -162,18 +93,18 @@ public abstract partial class SharedStaminaSystem : EntitySystem
     {
         UpdateStaminaVisuals(entity);
     }
-
+    // Forge-Change-End
     [PublicAPI]
     public float GetStaminaDamage(EntityUid uid, StaminaComponent? component = null)
     {
         if (!Resolve(uid, ref component))
             return 0f;
 
-        var curTime = Timing.CurTime;
+        var curTime = Timing.CurTime; // Forge-Change
         var pauseTime = _metadata.GetPauseTime(uid);
-        return MathF.Max(0f, component.StaminaDamage - MathF.Max(0f, (float)(curTime - (component.NextUpdate + pauseTime)).TotalSeconds * component.Decay));
+        return MathF.Max(0f, component.StaminaDamage - MathF.Max(0f, (float) (curTime - (component.NextUpdate + pauseTime)).TotalSeconds * component.Decay));
     }
-
+    // Forge-Change-Start
     private void OnRejuvenate(Entity<StaminaComponent> entity, ref RejuvenateEvent args)
     {
         if (entity.Comp.StaminaDamage >= entity.Comp.CritThreshold)
@@ -187,24 +118,24 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         UpdateStaminaVisuals(entity);
         Dirty(entity);
     }
-
+    // Forge-Change-End
     private void OnDisarmed(EntityUid uid, StaminaComponent component, ref DisarmedEvent args)
     {
-        // No random stamina damage
         if (args.Handled)
             return;
 
         if (component.Critical)
             return;
 
-        TakeStaminaDamage(uid, args.StaminaDamage, component, source: args.Source, applyResistances: true);
+        var damage = args.PushProbability * component.CritThreshold;
+        TakeStaminaDamage(uid, damage, component, source: args.Source);
 
         args.PopupPrefix = "disarm-action-shove-";
         args.IsStunned = component.Critical;
-        // Shoving shouldnt handle it
+
+        args.Handled = true;
     }
 
-    // goobstation - stun resistance. try not to modify this method at all
     private void OnMeleeHit(EntityUid uid, StaminaDamageOnHitComponent component, MeleeHitEvent args)
     {
         if (!args.IsHit ||
@@ -214,14 +145,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
             return;
         }
 
-        // Goobstation - Martial Arts
-        if (TryComp<MartialArtsKnowledgeComponent>(args.User, out var knowledgeComp)
-            && TryComp<MartialArtBlockedComponent>(args.Weapon, out var blockedComp)
-            && knowledgeComp.MartialArtsForm == blockedComp.Form)
-            return;
-        // Goobstation
-
-        var ev = new StaminaDamageOnHitAttemptEvent(args.Direction == null, false); // Goob edit
+        var ev = new StaminaDamageOnHitAttemptEvent();
         RaiseLocalEvent(uid, ref ev);
         if (ev.Cancelled)
             return;
@@ -238,29 +162,21 @@ public abstract partial class SharedStaminaSystem : EntitySystem
             toHit.Add((ent, stam));
         }
 
-        // Goobstation
-        RaiseLocalEvent(uid, new StaminaDamageMeleeHitEvent(toHit, args.Direction));
+        var hitEvent = new StaminaMeleeHitEvent(toHit);
+        RaiseLocalEvent(uid, hitEvent);
 
-        // goobstation
+        if (hitEvent.Handled)
+            return;
+
+        var damage = component.Damage;
+
+        damage *= hitEvent.Multiplier;
+
+        damage += hitEvent.FlatModifier;
+
         foreach (var (ent, comp) in toHit)
         {
-            var hitEvent = new BeforeStaminaDamageEvent(1f);
-            // raise event for each entity hit
-            RaiseLocalEvent(ent, ref hitEvent);
-
-            var damageImmediate = component.Damage;
-            var damageOvertime = component.Overtime;
-            damageImmediate *= hitEvent.Value;
-            damageOvertime *= hitEvent.Value;
-
-            if (args.Direction == null)
-            {
-                damageImmediate *= component.LightAttackDamageMultiplier;
-                damageOvertime *= component.LightAttackOvertimeDamageMultiplier;
-            }
-
-            TakeStaminaDamage(ent, damageImmediate / toHit.Count, comp, source: args.User, with: args.Weapon, sound: component.Sound, immediate: true);
-            TakeOvertimeStaminaDamage(ent, damageOvertime);
+            TakeStaminaDamage(ent, damage / toHit.Count, comp, source: args.User, with: args.Weapon, sound: component.Sound);
         }
     }
 
@@ -274,7 +190,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         if (!TryComp<StaminaComponent>(args.Embedded, out var stamina))
             return;
 
-        TakeStaminaDamage(args.Embedded, component.Damage, stamina, source: uid, applyResistances: true);
+        TakeStaminaDamage(args.Embedded, component.Damage, stamina, source: uid);
     }
 
     private void OnThrowHit(EntityUid uid, StaminaDamageOnCollideComponent component, ThrowDoHitEvent args)
@@ -286,7 +202,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
     {
         // you can't inflict stamina damage on things with no stamina component
         // this prevents stun batons from using up charges when throwing it at lockers or lights
-        if (!TryComp<StaminaComponent>(target, out var stamComp))
+        if (!HasComp<StaminaComponent>(target))
             return;
 
         var ev = new StaminaDamageOnHitAttemptEvent();
@@ -294,20 +210,9 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         if (ev.Cancelled)
             return;
 
-        // goobstation
-        var hitEvent = new BeforeStaminaDamageEvent(1f);
-        RaiseLocalEvent(target, ref hitEvent);
-
-        var damage = component.Damage;
-        var overtime = component.Overtime;
-
-        damage *= hitEvent.Value;
-        overtime *= hitEvent.Value;
-
-        TakeStaminaDamage(target, damage, source: uid, sound: component.Sound);
-        TakeOvertimeStaminaDamage(target, overtime); // Goobstation
+        TakeStaminaDamage(target, component.Damage, source: uid, sound: component.Sound);
     }
-
+    // Forge-Change-Start
     private void UpdateStaminaVisuals(Entity<StaminaComponent> entity)
     {
         SetStaminaAlert(entity, entity.Comp);
@@ -315,7 +220,9 @@ public abstract partial class SharedStaminaSystem : EntitySystem
     }
 
     // Here so server can properly tell all clients in PVS range to start the animation
-    protected virtual void SetStaminaAnimation(Entity<StaminaComponent> entity) { }
+    protected virtual void SetStaminaAnimation(Entity<StaminaComponent> entity){}
+
+    // Forge-Change-End
 
     private void SetStaminaAlert(EntityUid uid, StaminaComponent? component = null)
     {
@@ -323,13 +230,13 @@ public abstract partial class SharedStaminaSystem : EntitySystem
             return;
 
         var severity = ContentHelpers.RoundToLevels(MathF.Max(0f, component.CritThreshold - component.StaminaDamage), component.CritThreshold, 7);
-        _alerts.ShowAlert(uid, component.StaminaAlert, (short)severity);
+        _alerts.ShowAlert(uid, component.StaminaAlert, (short) severity);
     }
 
     /// <summary>
     /// Tries to take stamina damage without raising the entity over the crit threshold.
     /// </summary>
-    public bool TryTakeStamina(EntityUid uid, float value, StaminaComponent? component = null, EntityUid? source = null, EntityUid? with = null)
+    public bool TryTakeStamina(EntityUid uid, float value, StaminaComponent? component = null, EntityUid? source = null, EntityUid? with = null, bool visual = false) // Forge-Change
     {
         // Something that has no Stamina component automatically passes stamina checks
         if (!Resolve(uid, ref component, false))
@@ -337,44 +244,29 @@ public abstract partial class SharedStaminaSystem : EntitySystem
 
         var oldStam = component.StaminaDamage;
 
-        if (oldStam + value > component.CritThreshold || component.Critical)
+        if (oldStam + value >= component.CritThreshold || component.Critical) // Forge-Change
             return false;
 
-        TakeStaminaDamage(uid, value, component, source, with, visual: false);
+        TakeStaminaDamage(uid, value, component, source, with, visual: visual); // Forge-Change
         return true;
     }
 
-    // goob edit - stunmeta
-    public void TakeOvertimeStaminaDamage(EntityUid uid, float value)
-    {
-        // do this only on server side because otherwise shit happens
-        if (value == 0)
-            return;
-
-        var hasComp = TryComp<OvertimeStaminaDamageComponent>(uid, out var overtime);
-
-        if (!hasComp)
-            overtime = EnsureComp<OvertimeStaminaDamageComponent>(uid);
-
-        overtime!.Amount = hasComp ? overtime.Amount + value : value;
-        overtime!.Damage = hasComp ? overtime.Damage + value : value;
-    }
-
-    // goob edit - stunmeta
     public void TakeStaminaDamage(EntityUid uid, float value, StaminaComponent? component = null,
-        EntityUid? source = null, EntityUid? with = null, bool visual = true, SoundSpecifier? sound = null, bool immediate = true, bool applyResistances = false)
+        EntityUid? source = null, EntityUid? with = null, bool visual = true, SoundSpecifier? sound = null, bool ignoreResist = false)
     {
-        if (!Resolve(uid, ref component, false)
-        || value == 0) // no damage???
+        if (!Resolve(uid, ref component, false))
             return;
 
-        var ev = new BeforeStaminaDamageEvent(value, source); // Goob change: Added source param.
+        var ev = new BeforeStaminaDamageEvent(value);
         RaiseLocalEvent(uid, ref ev);
         if (ev.Cancelled)
             return;
 
-        if (applyResistances)
+        // Allow stamina resistance to be applied.
+        if (!ignoreResist)
+        {
             value = ev.Value;
+        }
 
         value = UniversalStaminaDamageModifier * value;
 
@@ -388,15 +280,15 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         // Reset the decay cooldown upon taking damage.
         if (oldDamage < component.StaminaDamage)
         {
-            var nextUpdate = Timing.CurTime + TimeSpan.FromSeconds(component.Cooldown);
+            var nextUpdate = Timing.CurTime + TimeSpan.FromSeconds(component.Cooldown); // Forge-Change
 
             if (component.NextUpdate < nextUpdate)
                 component.NextUpdate = nextUpdate;
         }
 
-        AdjustSlowdown(uid, visual); // Goob edit
+        AdjustSlowdown(uid);
 
-        UpdateStaminaVisuals((uid, component));
+        UpdateStaminaVisuals((uid, component)); // Forge-Change
 
         // Checking if the stamina damage has decreased to zero after exiting the stamcrit
         if (component.AfterCritical && oldDamage > component.StaminaDamage && component.StaminaDamage <= 0f)
@@ -406,9 +298,9 @@ public abstract partial class SharedStaminaSystem : EntitySystem
 
         if (!component.Critical)
         {
-            if (component.StaminaDamage >= component.CritThreshold && value > 0) // goob edit
+            if (component.StaminaDamage >= component.CritThreshold)
             {
-                EnterStamCrit(uid, component, immediate);
+                EnterStamCrit(uid, component);
             }
         }
         else
@@ -444,65 +336,23 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         }
     }
 
-    // Goob edit - stamina drains
-    public void ToggleStaminaDrain(EntityUid target, float drainRate, bool enabled, bool modifiesSpeed, string key, EntityUid? source = null, bool applyResistances = false)
-    {
-        if (!TryComp<StaminaComponent>(target, out var stamina))
-            return;
-
-        // If theres no source, we assume its the target that caused the drain.
-        var actualSource = source ?? target;
-
-        if (enabled)
-        {
-            stamina.ActiveDrains.TryAdd(key, (drainRate, modifiesSpeed, GetNetEntity(actualSource), applyResistances));
-            EnsureComp<ActiveStaminaComponent>(target);
-        }
-        else
-        {
-            if (stamina.ActiveDrains.ContainsKey(key))
-                stamina.ActiveDrains.Remove(key);
-        }
-
-        Dirty(target, stamina);
-    }
-
-    public void ModifyStaminaDrain(EntityUid target, string key, float newValue, StaminaComponent? component = null)
-    {
-        if (!Resolve(target, ref component, false))
-            return;
-
-        if (component.ActiveDrains.ContainsKey(key))
-            component.ActiveDrains[key] = (newValue, component.ActiveDrains[key].Item2, component.ActiveDrains[key].Item3, component.ActiveDrains[key].Item4);
-
-        Dirty(target, component);
-    }
-
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
         var stamQuery = GetEntityQuery<StaminaComponent>();
         var query = EntityQueryEnumerator<ActiveStaminaComponent>();
-        var curTime = Timing.CurTime;
+        var curTime = Timing.CurTime; // Forge-Change
 
         while (query.MoveNext(out var uid, out _))
         {
-            // Goob Edit: Just in case we have active but not stamina we'll check and account for it.
+            // Just in case we have active but not stamina we'll check and account for it.
             if (!stamQuery.TryGetComponent(uid, out var comp) ||
-                comp.StaminaDamage <= 0f && !comp.Critical && comp.ActiveDrains.Count == 0)
+                comp.StaminaDamage <= 0f && !comp.Critical)
             {
                 RemComp<ActiveStaminaComponent>(uid);
                 continue;
             }
-            if (comp.ActiveDrains.Count > 0)
-                foreach (var (drainRate, _, source, applyResistances) in comp.ActiveDrains.Values)
-                    TakeStaminaDamage(uid,
-                    drainRate * frameTime,
-                    comp,
-                    source: GetEntity(source),
-                    visual: false,
-                    applyResistances: applyResistances);
 
             // Shouldn't need to consider paused time as we're only iterating non-paused stamina components.
             var nextUpdate = comp.NextUpdate;
@@ -513,62 +363,40 @@ public abstract partial class SharedStaminaSystem : EntitySystem
             // Handle exiting critical condition and restoring stamina damage
             if (comp.Critical)
                 ExitStamCrit(uid, comp);
-            // Goob - If theres no active drains, recover stamina.
-            if (!comp.ActiveDrains.Values.Any(x => x.DrainRate > 0))
-                TakeStaminaDamage(
-                    uid,
-                    comp.AfterCritical ? -comp.Decay * comp.AfterCritDecayMultiplier : -comp.Decay, // Recover faster after crit
-                    comp);
+
+            comp.NextUpdate += TimeSpan.FromSeconds(1f);
+
+            TakeStaminaDamage(
+                uid,
+                comp.AfterCritical ? -comp.Decay * comp.AfterCritDecayMultiplier : -comp.Decay, // Recover faster after crit
+                comp);
 
             Dirty(uid, comp);
         }
     }
 
-    // goob edit - stunmeta
-    private void EnterStamCrit(EntityUid uid, StaminaComponent? component = null, bool hardStun = false)
+    private void EnterStamCrit(EntityUid uid, StaminaComponent? component = null)
     {
-        if (!Resolve(uid, ref component) || component.Critical)
+        if (!Resolve(uid, ref component) ||
+            component.Critical)
         {
-            return;
-        }
-
-        // if our entity is under stims make threshold bigger
-        if (TryComp<StamcritResistComponent>(uid, out var stamres)
-            && component.StaminaDamage < component.CritThreshold * stamres.Multiplier)
-            return;
-
-        if (!hardStun)
-        {
-            if (!_statusEffect.HasStatusEffect(uid, "KnockedDown"))
-                StunSystem.TryKnockdown(uid, component.StunTime, true);
             return;
         }
 
         component.Critical = true;
         component.StaminaDamage = component.CritThreshold;
 
-        if (StunSystem.TryParalyze(uid, component.StunTime, true))
-            StunSystem.TrySeeingStars(uid);
-
-        // Goobstation - Modularization
-        var modifierEv = new GetClothingStunModifierEvent(uid);
-        RaiseLocalEvent(modifierEv);
-        var clothingModifier = modifierEv.Modifier;
-        // Goobstation - Modularization
+        if (StunSystem.TryParalyze(uid, component.StunTime, true)) // Forge-Change
+            StunSystem.TrySeeingStars(uid); // Forge-Change
 
         // Give them buffer before being able to be re-stunned
-        component.NextUpdate = Timing.CurTime + component.StunTime * clothingModifier + StamCritBufferTime; // Goobstation - Modularization
+        component.NextUpdate = Timing.CurTime + component.StunTime + StamCritBufferTime; // Forge-Change
         EnsureComp<ActiveStaminaComponent>(uid);
         Dirty(uid, component);
-
         _adminLogger.Add(LogType.Stamina, LogImpact.Medium, $"{ToPrettyString(uid):user} entered stamina crit");
     }
 
-    // goob edit - made it public.
-    // in any case it requires a stamina component that can be freely modified.
-    // so it doesn't really matter if it's public or private. besides, very convenient.
-    // regards
-    public void ExitStamCrit(EntityUid uid, StaminaComponent? component = null)
+    private void ExitStamCrit(EntityUid uid, StaminaComponent? component = null)
     {
         if (!Resolve(uid, ref component) ||
             !component.Critical)
@@ -578,9 +406,9 @@ public abstract partial class SharedStaminaSystem : EntitySystem
 
         component.Critical = false;
         component.AfterCritical = true;  // Set to true to indicate that stamina will be restored after exiting stamcrit
-        component.NextUpdate = Timing.CurTime;
+        component.NextUpdate = Timing.CurTime;  // Forge-Change
 
-        UpdateStaminaVisuals((uid, component));
+        UpdateStaminaVisuals((uid, component)); // Forge-Change
         Dirty(uid, component);
         _adminLogger.Add(LogType.Stamina, LogImpact.Low, $"{ToPrettyString(uid):user} recovered from stamina crit");
     }
@@ -593,7 +421,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
     /// speed modifier using the stun system. If no threshold is met then the entity's speed is restored to normal.
     /// </summary>
     /// <param name="ent">Entity to update</param>
-    private void AdjustSlowdown(Entity<StaminaComponent?> ent, bool visual = true) // Goob edit
+    private void AdjustSlowdown(Entity<StaminaComponent?> ent)
     {
         if (!Resolve(ent, ref ent.Comp))
             return;
@@ -609,12 +437,14 @@ public abstract partial class SharedStaminaSystem : EntitySystem
                 closest = thres.Key;
         }
 
-        StunSystem.UpdateStunModifiers(ent, ent.Comp.StunModifierThresholds[closest], visual: visual);
+        StunSystem.UpdateStunModifiers(ent, ent.Comp.StunModifierThresholds[closest]); // Forge-Change
     }
 
+    // Forge-Change-Start
     [Serializable, NetSerializable]
     public sealed class StaminaAnimationEvent(NetEntity entity) : EntityEventArgs
     {
         public NetEntity Entity = entity;
     }
+    // Forge-Change-End
 }

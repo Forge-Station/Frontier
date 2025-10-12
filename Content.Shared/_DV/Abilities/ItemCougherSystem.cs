@@ -1,10 +1,5 @@
-// SPDX-FileCopyrightText: 2025 Aidenkrz <28298836+Aidenkrz@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
-using Content.Shared._DV.Actions.Events;
 using Content.Shared.Actions;
+using Content.Shared.Actions.Events;
 using Content.Shared.Clothing.Components;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
@@ -40,13 +35,16 @@ public sealed class ItemCougherSystem : EntitySystem
     {
         base.Update(frameTime);
 
+        if (_net.IsClient)
+            return;
+
         var query = EntityQueryEnumerator<CoughingUpItemComponent, ItemCougherComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var coughing, out var comp, out var xform))
         {
             if (_timing.CurTime < coughing.NextCough)
                 continue;
 
-            var spawned = PredictedSpawnAtPosition(comp.Item, xform.Coordinates);
+            var spawned = Spawn(comp.Item, xform.Coordinates);
             RemCompDeferred(uid, coughing);
 
             var ev = new ItemCoughedUpEvent(spawned);
@@ -64,9 +62,9 @@ public sealed class ItemCougherSystem : EntitySystem
 
     private void OnCoughItemAction(Entity<ItemCougherComponent> ent, ref CoughItemActionEvent args)
     {
-        if (_inventory.TryGetSlotEntity(ent, "mask", out var maskUid)
-            && TryComp<MaskComponent>(maskUid, out var mask)
-            && !mask.IsToggled)
+        if (_inventory.TryGetSlotEntity(ent, "mask", out var maskUid) &&
+            TryComp<MaskComponent>(maskUid, out var mask) &&
+            !mask.IsToggled)
         {
             _popup.PopupClient(Loc.GetString("item-cougher-mask", ("mask", maskUid)), ent, ent);
             return;
@@ -76,7 +74,7 @@ public sealed class ItemCougherSystem : EntitySystem
         _popup.PopupPredicted(msg, ent, ent);
         _audio.PlayPredicted(ent.Comp.Sound, ent, ent);
 
-        var path = _audio.GetSound(ent.Comp.Sound);
+        var path = _audio.ResolveSound(ent.Comp.Sound); // Frontier: resolve sound
         var coughing = EnsureComp<CoughingUpItemComponent>(ent);
         coughing.NextCough = _timing.CurTime + _audio.GetAudioLength(path);
         args.Handled = true;
@@ -90,12 +88,13 @@ public sealed class ItemCougherSystem : EntitySystem
     /// Other systems have to call this, this is not used internally.
     /// </summary>
     public void EnableAction(Entity<ItemCougherComponent?> ent)
-        => SetActionEnabled(ent, true);
+    {
+        SetActionEnabled(ent, true);
+    }
 
     public void SetActionEnabled(Entity<ItemCougherComponent?> ent, bool enabled)
     {
-        if (!_query.Resolve(ent, ref ent.Comp)
-        || ent.Comp.ActionEntity is not {} action)
+        if (!_query.Resolve(ent, ref ent.Comp) || ent.Comp.ActionEntity is not {} action)
             return;
 
         _actions.SetEnabled(action, enabled);
@@ -107,3 +106,8 @@ public sealed class ItemCougherSystem : EntitySystem
 /// </summary>
 [ByRefEvent]
 public record struct ItemCoughedUpEvent(EntityUid Item);
+
+/// <summary>
+/// Action event that <see cref="ItemCougherComponent.Action"/> must use.
+/// </summary>
+public sealed partial class CoughItemActionEvent : InstantActionEvent;

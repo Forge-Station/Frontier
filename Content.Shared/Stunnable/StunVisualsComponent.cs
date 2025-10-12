@@ -2,6 +2,8 @@
 
 namespace Content.Shared.Stunnable;
 
+// Forge-Change full (refactory b.y. wizard)
+
 /// <summary>
 /// This is used to listen to incoming events from the AppearanceSystem
 /// </summary>

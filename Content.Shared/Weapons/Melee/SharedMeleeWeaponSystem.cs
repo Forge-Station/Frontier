@@ -41,7 +41,6 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using ItemToggleMeleeWeaponComponent = Content.Shared.Item.ItemToggle.Components.ItemToggleMeleeWeaponComponent;
-using Content.Shared.Mobs.Systems;
 
 namespace Content.Shared.Weapons.Melee;
 
@@ -60,12 +59,8 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
     [Dependency] private   readonly MeleeSoundSystem        _meleeSound      = default!;
     [Dependency] private   readonly SharedPhysicsSystem     _physics         = default!;
     [Dependency] private   readonly IPrototypeManager       _protoManager    = default!;
-    [Dependency] private   readonly SharedStaminaSystem     _stamina         = default!;
-    [Dependency] private   readonly SharedHandsSystem       _hands           = default!;
-    [Dependency] protected readonly MobStateSystem          _MobState        = default!;
-    [Dependency] private readonly   INetManager             _netMan          = default!;
-    [Dependency] private readonly   IRobustRandom           _random          = default!;
-    [Dependency] private readonly   SharedAudioSystem       _audio           = default!;
+    [Dependency] private   readonly StaminaSystem           _stamina         = default!;
+    [Dependency] private   readonly SharedHandsSystem             _hands           = default!;
 
     private const int AttackMask = (int) (CollisionGroup.MobMask | CollisionGroup.Opaque);
 
@@ -837,7 +832,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         }
 
 
-        if (_MobState.IsIncapacitated(target.Value))
+        if (MobState.IsIncapacitated(target.Value))
         {
             return false;
         }
