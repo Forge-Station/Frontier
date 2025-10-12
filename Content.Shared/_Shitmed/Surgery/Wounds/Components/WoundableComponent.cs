@@ -1,12 +1,4 @@
-// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
-// SPDX-FileCopyrightText: 2025 Ilya246 <57039557+Ilya246@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Ilya246 <ilyukarno@gmail.com>
-// SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 gluesniffler <linebarrelerenthusiast@gmail.com>
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
-using Content.Shared.Damage;
+﻿using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Goobstation.Maths.FixedPoint;
 using Robust.Shared.Audio;
@@ -82,13 +74,7 @@ public sealed partial class WoundableComponent : Component
     /// Healing will be shared across those 2 wounds.
     /// </summary>
     [DataField]
-    public FixedPoint2 HealAbility = 0.03;
-
-    /// <summary>
-    /// How much the woundable is bleeding.
-    /// </summary>
-    [ViewVariables]
-    public FixedPoint2 Bleeds = FixedPoint2.Zero;
+    public FixedPoint2 HealAbility = 0.1;
 
     /// <summary>
     /// How much bleeds will the woundable treat per tick
@@ -101,24 +87,6 @@ public sealed partial class WoundableComponent : Component
     /// </summary>
     [ViewVariables, DataField]
     public FixedPoint2 BleedsThreshold = 3.5f;
-
-    /// <summary>
-    /// At which amount of damage the woundable will stop healing.
-    /// </summary>
-    [DataField]
-    public FixedPoint2 DamageThreshold = 45;
-
-    /// <summary>
-    /// Can the woundable heal damage?
-    /// </summary>
-    [ViewVariables]
-    public bool CanHealDamage => WoundableIntegrity < DamageThreshold;
-
-    /// <summary>
-    /// Can the woundable heal bleeds?
-    /// </summary>
-    [ViewVariables]
-    public bool CanHealBleeds => Bleeds > 0 && Bleeds < BleedsThreshold;
 
     /// <summary>
     /// Multipliers of severity applied to this wound.
@@ -143,6 +111,12 @@ public sealed partial class WoundableComponent : Component
     public WoundableSeverity WoundableSeverity;
 
     /// <summary>
+    /// How much time in seconds had this woundable accumulated from the last healing tick.
+    /// </summary>
+    [ViewVariables]
+    public float HealingRateAccumulated;
+
+    /// <summary>
     /// Container potentially holding wounds.
     /// </summary>
     [ViewVariables]
@@ -157,19 +131,13 @@ public sealed partial class WoundableComponent : Component
     /// <summary>
     /// Whether this woundable can be removed from a body..
     /// </summary>
-    [DataField]
+    [ViewVariables]
     public bool CanRemove = true;
-
-    /// <summary>
-    /// Whether this woundable can bleed or not..
-    /// </summary>
-    [DataField]
-    public bool CanBleed = true;
 
     /// <summary>
     /// Whether this woundable's bone is exposed
     /// </summary>
-    [DataField]
+    [ViewVariables]
     public bool IsBoneExposed = false;
 
     /// <summary>
@@ -195,7 +163,6 @@ public sealed class WoundableComponentState : ComponentState
 
     public FixedPoint2 WoundableIntegrity;
     public FixedPoint2 HealAbility;
-    public FixedPoint2 Bleeds;
 
     public Dictionary<NetEntity, WoundableSeverityMultiplier> SeverityMultipliers = new();
     public Dictionary<NetEntity, WoundableHealingMultiplier> HealingMultipliers = new();

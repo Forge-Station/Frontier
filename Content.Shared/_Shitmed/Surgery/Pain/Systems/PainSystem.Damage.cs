@@ -1,22 +1,16 @@
-// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
-// SPDX-FileCopyrightText: 2025 PunishedJoe <PunishedJoeseph@proton.me>
-// SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 gluesniffler <linebarrelerenthusiast@gmail.com>
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
-using Content.Goobstation.Maths.FixedPoint;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Content.Shared._Shitmed.Targeting;
 using Content.Shared._Shitmed.Targeting.Events;
 using Content.Shared._Shitmed.Medical.Surgery.Consciousness;
-using Content.Shared._Shitmed.Medical.Surgery.Consciousness.Components;
 using Content.Shared._Shitmed.Medical.Surgery.Pain.Components;
 using Content.Shared._Shitmed.Medical.Surgery.Traumas;
 using Content.Shared.Body.Organ;
 using Content.Shared.Body.Part;
-using Content.Shared.Damage.Components;
+using Content.Goobstation.Maths.FixedPoint;
 using Content.Shared.Humanoid;
-using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Components;
@@ -24,10 +18,6 @@ using Robust.Shared.CPUJob.JobQueues;
 using Robust.Shared.CPUJob.JobQueues.Queues;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Content.Shared._Shitmed.Medical.Surgery.Pain.Systems;
 
@@ -127,25 +117,9 @@ public partial class PainSystem
         if (!Resolve(uid, ref nerveSys, false))
             return false;
 
-        // Create a modifier for WoundPain
-        var woundModifier = new PainModifier(
-            change,
-            MetaData(nerveUid).EntityPrototype!.ID,
-            PainDamageTypes.WoundPain,
-            _timing.CurTime + time
-        );
-
-        // Create a modifier for TraumaticPain
-        var traumaModifier = new PainModifier(
-            change,
-            MetaData(nerveUid).EntityPrototype!.ID,
-            PainDamageTypes.TraumaticPain,
-            _timing.CurTime + time
-        );
-
-        // Add both modifiers
-        nerveSys.Modifiers[(nerveUid, $"{identifier}_wound")] = woundModifier;
-        nerveSys.Modifiers[(nerveUid, $"{identifier}_trauma")] = traumaModifier;
+        var modifier = new PainModifier(change, MetaData(nerveUid).EntityPrototype!.ID, painType, _timing.CurTime + time);
+        if (!nerveSys.Modifiers.TryAdd((nerveUid, identifier), modifier))
+            return false;
 
         var ev = new PainModifierAddedEvent(uid, nerveUid, change);
         RaiseLocalEvent(uid, ref ev);
@@ -528,8 +502,7 @@ public partial class PainSystem
         string? screamString = null)
     {
         if (!_screamsEnabled
-            || !_random.Prob(_screamChance)
-            || _mobState.IsDead(body))
+            || !_random.Prob(_screamChance))
             return null;
 
         CleanupSounds(nerveSys);
@@ -563,9 +536,7 @@ public partial class PainSystem
         string? screamString = null)
     {
         if (!_screamsEnabled
-            || !_random.Prob(_screamChance)
-            || !TryComp(body, out ConsciousnessComponent? consciousness)
-            || !consciousness.HasPainScreams)
+            || !_random.Prob(_screamChance))
             return null;
 
         var sound = _IHaveNoMouthAndIMustScream.PlayPvs(specifier, body, audioParams);
@@ -625,7 +596,7 @@ public partial class PainSystem
 
     private void UpdatePainFeels(EntityUid nerveUid, NerveComponent? nerveComp = null)
     {
-        if (!Resolve(nerveUid, ref nerveComp, false))
+        if (!Resolve(nerveUid, ref nerveComp))
             return;
 
         var bodyPart = Comp<BodyPartComponent>(nerveUid);
@@ -649,13 +620,9 @@ public partial class PainSystem
     {
         if (!_timing.IsFirstTimePredicted
             || TerminatingOrDeleted(nerveSysEnt)
-            || !TryComp<OrganComponent>(nerveSysEnt, out var nerveSysOrgan)
-            || nerveSysOrgan.Body is not { } body
-            || _mobState.IsDead(body)
-            || HasComp<GodmodeComponent>(body))
+            || !TryComp<OrganComponent>(nerveSysEnt, out var nerveSysOrgan))
             return;
 
-        var shouldUpdate = false;
         if (nerveSys.LastPainThreshold != nerveSys.Pain)
         {
             if (_timing.CurTime > nerveSys.UpdateTime)
@@ -663,23 +630,22 @@ public partial class PainSystem
 
             if (_timing.CurTime > nerveSys.ReactionUpdateTime)
                 UpdatePainThreshold(nerveSysEnt, nerveSys);
-
-            shouldUpdate = true;
         }
 
         if (_timing.CurTime > nerveSys.NextCritScream)
         {
-            if (_mobState.IsCritical(body))
+            var body = nerveSysOrgan.Body;
+            if (body != null && _mobState.IsCritical(body.Value))
             {
                 var sex = Sex.Unsexed;
                 if (TryComp<HumanoidAppearanceComponent>(body, out var humanoid))
                     sex = humanoid.Sex;
 
                 CleanupSounds(nerveSys);
-                if (_trauma.HasBodyTrauma(body, TraumaType.OrganDamage) && _random.Prob(0.22f))
+                if (_trauma.HasBodyTrauma(body.Value, TraumaType.OrganDamage) && _random.Prob(0.22f))
                 {
                     // If the person suffers organ damage, do funny gaggling sound :3
-                    PlayPainSound(body,
+                    PlayPainSound(body.Value,
                         nerveSys,
                         nerveSys.OrganDamageWhimpersSounds[sex],
                         AudioParams.Default.WithVolume(-12f));
@@ -688,10 +654,10 @@ public partial class PainSystem
                 {
                     // Play screaming with less chance
                     if (_random.Prob(0.34f))
-                        PlayPainSound(body, nerveSys, nerveSys.PainShockScreams[sex], AudioParams.Default.WithVolume(12f));
+                        PlayPainSound(body.Value, nerveSys, nerveSys.PainShockScreams[sex], AudioParams.Default.WithVolume(12f));
                     else
                         // Whimpering
-                        PlayPainSound(body,
+                        PlayPainSound(body.Value,
                             nerveSys,                    // Pained or normal
                             _random.Prob(0.34f) ? nerveSys.PainShockWhimpers[sex] : nerveSys.CritWhimpers[sex],
                             AudioParams.Default.WithVolume(-12f));
@@ -712,28 +678,22 @@ public partial class PainSystem
 
         foreach (var (key, value) in nerveSys.Modifiers)
             if (_timing.CurTime > value.Time)
-                shouldUpdate |= TryRemovePainModifier(nerveSysEnt, key.Item1, key.Item2, nerveSys);
+                TryRemovePainModifier(nerveSysEnt, key.Item1, key.Item2, nerveSys);
 
         foreach (var (key, value) in nerveSys.Multipliers)
             if (_timing.CurTime > value.Time)
-                shouldUpdate |= TryRemovePainMultiplier(nerveSysEnt, key, nerveSys);
+                TryRemovePainMultiplier(nerveSysEnt, key, nerveSys);
 
         // I hate myself.
         foreach (var (ent, nerve) in nerveSys.Nerves)
             foreach (var (key, value) in nerve.PainFeelingModifiers.ToList())
                 if (_timing.CurTime > value.Time)
-                    shouldUpdate |= TryRemovePainFeelsModifier(key.Item1, key.Item2, ent, nerve);
-
-        if (shouldUpdate
-            && _net.IsServer)
-        {
-            RaiseNetworkEvent(new MobThresholdChecked(GetNetEntity(body)), body); // Shitcod to handle overlays.
-        }
+                    TryRemovePainFeelsModifier(key.Item1, key.Item2, ent, nerve);
     }
 
     private void UpdateNerveSystemPain(EntityUid uid, NerveSystemComponent? nerveSys = null)
     {
-        if (!Resolve(uid, ref nerveSys, false)
+        if (!Resolve(uid, ref nerveSys)
             || !TryComp<OrganComponent>(uid, out var organ)
             || organ.Body == null)
             return;
@@ -905,7 +865,7 @@ public partial class PainSystem
         PainDamageTypes painType,
         NerveComponent? nerve = null)
     {
-        if (!Resolve(nerveUid, ref nerve, false))
+        if (!Resolve(nerveUid, ref nerve))
             return pain;
 
         var modifiedPain = pain * nerve.PainMultiplier;

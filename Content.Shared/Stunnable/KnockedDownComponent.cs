@@ -45,7 +45,7 @@ public sealed partial class KnockedDownComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public TimeSpan GetUpDoAfter = TimeSpan.FromSeconds(1);
-
+}
     [ViewVariables, AutoNetworkedField]
     public float HelpTimer = 0f;
 

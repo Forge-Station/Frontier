@@ -3,7 +3,6 @@
 // SPDX-FileCopyrightText: 2025 Roudenn <romabond091@gmail.com>
 // SPDX-FileCopyrightText: 2025 Spatison <137375981+Spatison@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Trest <144359854+trest100@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 gluesniffler <linebarrelerenthusiast@gmail.com>
 // SPDX-FileCopyrightText: 2025 kurokoTurbo <92106367+kurokoTurbo@users.noreply.github.com>
 //
@@ -40,7 +39,6 @@ public sealed class WoundableVisualsSystem : VisualizerSystem<WoundableVisualsCo
         base.Initialize();
 
         SubscribeLocalEvent<WoundableVisualsComponent, ComponentInit>(InitializeEntity, after: [typeof(WoundSystem)]);
-        SubscribeLocalEvent<WoundableVisualsComponent, AfterAutoHandleStateEvent>(OnAfterAutoHandleState);
         SubscribeLocalEvent<WoundableVisualsComponent, BodyPartRemovedEvent>(WoundableRemoved);
         SubscribeLocalEvent<WoundableVisualsComponent, BodyPartAddedEvent>(WoundableConnected);
         SubscribeLocalEvent<WoundableVisualsComponent, WoundableIntegrityChangedEvent>(OnWoundableIntegrityChanged);
@@ -67,14 +65,6 @@ public sealed class WoundableVisualsSystem : VisualizerSystem<WoundableVisualsCo
                 $"{component.OccupiedLayer}_Minor",
                 $"{component.OccupiedLayer}Bleeding");
         }
-    }
-
-    private void OnAfterAutoHandleState(EntityUid uid, WoundableVisualsComponent component, ref AfterAutoHandleStateEvent args)
-    {
-        if (!TryComp(uid, out SpriteComponent? partSprite))
-            return;
-
-        UpdateWoundableVisuals(uid, component, partSprite);
     }
 
     private void WoundableConnected(EntityUid uid, WoundableVisualsComponent component, ref BodyPartAddedEvent args)
@@ -123,13 +113,13 @@ public sealed class WoundableVisualsSystem : VisualizerSystem<WoundableVisualsCo
                     continue;
 
                 bodySprite.LayerSetVisible(layer, false);
-                bodySprite.LayerMapRemove($"{woundableVisuals.OccupiedLayer}{group}");
+                bodySprite.LayerMapRemove(layer);
             }
 
             if (bodySprite.LayerMapTryGet($"{woundableVisuals.OccupiedLayer}Bleeding", out var childBleeds))
             {
                 bodySprite.LayerSetVisible(childBleeds, false);
-                bodySprite.LayerMapRemove($"{woundableVisuals.OccupiedLayer}Bleeding");
+                bodySprite.LayerMapRemove(childBleeds);
             }
 
             if (TryComp(uid, out SpriteComponent? pieceSprite))
@@ -144,7 +134,6 @@ public sealed class WoundableVisualsSystem : VisualizerSystem<WoundableVisualsCo
         {
             if (TryComp(uid, out SpriteComponent? partSprite))
                 UpdateWoundableVisuals(uid, component, partSprite);
-
             return;
         }
 

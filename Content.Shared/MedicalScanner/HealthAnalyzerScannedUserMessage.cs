@@ -41,18 +41,8 @@ public sealed class HealthAnalyzerScannedUserMessage : BoundUserInterfaceMessage
         BloodLevel = bloodLevel;
         ScanMode = scanMode;
         Bleeding = bleeding;
-        Body = body; // Shitmed Change
-        Part = part; // Shitmed Change
         Unrevivable = unrevivable;
+        Unclonable = unclonable; // Frontier
     }
 }
 
-// Shitmed Change Start
-[Serializable, NetSerializable]
-public sealed class HealthAnalyzerPartMessage(NetEntity? owner, TargetBodyPart? bodyPart) : BoundUserInterfaceMessage
-{
-    public readonly NetEntity? Owner = owner;
-    public readonly TargetBodyPart? BodyPart = bodyPart;
-
-}
-// Shitmed Change End
