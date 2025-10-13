@@ -1,0 +1,9 @@
+- type: entity
+  id: ThrusterLargeNfsd
+  parent: ThrusterLarge
+  suffix: NFSD
+  components:
+  - type: Sprite
+    sprite: _Mono/Structures/Shuttles/thrusternfsd_large.rsi
+  - type: Machine
+    board: ThrusterNfsdMachineCircuitboard
