@@ -2246,4 +2246,14 @@
     ejectDelay: 2
   - type: AccessReader
     access: [["SyndicateAgent"]]
-
+# Forge-change
+  - type: Sprite
+    sprite: Forge/Structures/Machines/s_chemvend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+# Forge-change end
