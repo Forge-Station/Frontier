@@ -27,7 +27,7 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.1
+    fireRate: 0.5
     projectileSpeed: 400
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
@@ -35,7 +35,7 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 214
+    autoRechargeRate: 444
   - type: SpaceArtillery
     powerChargeRate: 214
     powerUsePassive: 3500
@@ -43,7 +43,7 @@
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipTarnyxProjectile
-    fireCost: 15000 # low shot weapon moved back to the original spot
+    fireCost: 12000 # low shot weapon moved back to the original spot
   - type: RadarBlip
     radarColor: "#035EFC"
     scale: 2.5

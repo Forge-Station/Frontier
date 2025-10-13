@@ -27,8 +27,8 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 20000
+    startingCharge: 20000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
@@ -40,7 +40,7 @@
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 200
+    autoRechargeRate: 400
   - type: SpaceArtillery
     powerChargeRate: 200
     powerUsePassive: 750
@@ -48,7 +48,7 @@
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMissileASM417
-    fireCost: 867
+    fireCost: 800
   - type: RadarBlip
     radarColor: "#FCBA03"
     scale: 2
@@ -96,7 +96,7 @@
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMissileASM501
-    fireCost: 350
+    fireCost: 2500
   - type: RadarBlip
     radarColor: "#FCBA03"
     scale: 2.5
@@ -129,18 +129,18 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.8
+    fireRate: 1.0
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 60
+    autoRechargeRate: 40
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMissileASM302
-    fireCost: 300
+    fireCost: 3330
   - type: SpaceArtillery
     powerChargeRate: 350
     powerUsePassive: 600
@@ -201,7 +201,7 @@
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 500
+    autoRechargeRate: 1000
   - type: SpaceArtillery
     powerChargeRate: 500
     powerUsePassive: 2500
