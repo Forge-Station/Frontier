@@ -18,6 +18,7 @@ using Content.Server.Body.Systems;
 using Content.Shared.EntityEffects;
 using Content.Shared._Shitmed.Medical.Surgery.Wounds.Systems; // Shitmed Change
 using Robust.Shared.Prototypes;
+using Content.Shared.Body.Components;
 
 namespace Content.Server.EntityEffects.Effects;
 
@@ -45,7 +46,7 @@ public sealed partial class ModifyBleedAmount : EntityEffect
                 amt *= reagentArgs.Scale.Float();
             }
 
-            sys.TryModifyBleedAmount(args.TargetEntity, amt, blood);
+            sys.TryModifyBleedAmount((args.TargetEntity, blood), amt);
 
             // Shitmed Change
             var woundsSys = args.EntityManager.System<WoundSystem>();

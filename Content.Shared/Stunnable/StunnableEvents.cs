@@ -1,4 +1,4 @@
-﻿using Content.Shared.Alert;
+using Content.Shared.Alert;
 using Content.Shared.DoAfter;
 using Content.Shared.Popups;
 using Robust.Shared.Serialization;
@@ -12,12 +12,6 @@ namespace Content.Shared.Stunnable;
 /// </summary>
 
 /// <summary>
-///     Raised directed on an entity when it is stunned.
-/// </summary>
-[ByRefEvent]
-public record struct StunnedEvent;
-
-/// <summary>
 ///     Raised directed on an entity before it is knocked down to see if it should be cancelled, and to determine
 ///     knocked down arguments.
 /// </summary>
@@ -27,11 +21,6 @@ public record struct KnockDownAttemptEvent(bool AutoStand, bool Drop)
     public bool Cancelled;
 }
 
-/// <summary>
-///     Raised directed on an entity when it is knocked down.
-/// </summary>
-[ByRefEvent]
-public record struct KnockedDownEvent(TimeSpan Time);
 
 /// <summary>
 ///     Raised on an entity that needs to refresh its knockdown modifiers
@@ -88,4 +77,3 @@ public sealed partial class TryStandDoAfterEvent : SimpleDoAfterEvent;
 /// </summary>
 [Serializable, NetSerializable]
 public sealed class ForceStandUpEvent : EntityEventArgs;
-

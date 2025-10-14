@@ -246,7 +246,7 @@
 - type: entity
   name: searing tool
   id: EnergyCautery
-  parent: [ Cautery, BaseMedicalScienceContraband ]
+  parent: Cautery
   description: A cautery with an energy tip, also serves as a drill in its powered state.
   components:
   - type: Sprite
@@ -304,7 +304,7 @@
 - type: entity
   name: energy scalpel
   id: EnergyScalpel
-  parent: [ Scalpel, BaseMedicalScienceContraband ]
+  parent: Scalpel
   description: A scalpel which uses an energy blade, also serves as a saw in its powered state.
   components:
   - type: Sprite
@@ -363,7 +363,7 @@
 - type: entity
   name: mechanical pinches
   id: AdvancedRetractor
-  parent: [ Retractor, BaseMedicalScienceContraband ]
+  parent: Retractor
   description: A retractor with mechanical pinches, also serves as a hemostat in its powered state.
   components:
   - type: Sprite
@@ -442,7 +442,7 @@
 - type: entity
   name: medical multitool
   id: OmnimedTool
-  parent: [ BaseToolSurgery, BaseMedicalContraband ]
+  parent: BaseToolSurgery
   components:
   - type: Sprite
     sprite: _Shitmed/Objects/Specific/Medical/Surgery/omnimed.rsi
@@ -476,7 +476,7 @@
     speed: 2
 
 - type: entity
-  parent: [ BaseSyndicateContraband, OmnimedTool ]
+  parent: [ BaseC3SyndicateContraband, OmnimedTool ]
   id: OmnimedToolSyndie
   components:
   - type: Sprite

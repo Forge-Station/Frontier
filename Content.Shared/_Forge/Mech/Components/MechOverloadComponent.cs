@@ -1,7 +1,7 @@
 ﻿using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Content.Shared.Damage;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 
 namespace Content.Shared._Forge.Mech.Components;
 

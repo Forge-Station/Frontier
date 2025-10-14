@@ -88,7 +88,6 @@ using Content.Shared.Popups;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Content.Shared._EinsteinEngines.Silicon.Components;
 using Content.Shared._Shitmed.Medical.Surgery.Consciousness.Components; // Shitmed Change
 
 namespace Content.Server.Chat;
@@ -241,11 +240,6 @@ public sealed class SuicideSystem : EntitySystem
             args.Handled = true;
             return;
         }
-
-        if (HasComp<SiliconComponent>(victim)) // Goobstation
-            args.DamageType ??= "Shock";
-        else
-            args.DamageType ??= "Slash";
 
         _suicide.ApplyLethalDamage(victim, args.DamageType);
 

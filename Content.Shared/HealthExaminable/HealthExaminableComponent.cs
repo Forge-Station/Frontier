@@ -1,5 +1,5 @@
 ﻿using Content.Shared.Damage.Prototypes;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.HealthExaminable;

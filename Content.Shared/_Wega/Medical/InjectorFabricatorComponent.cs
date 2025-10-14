@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Containers.ItemSlots;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Injector.Fabticator;

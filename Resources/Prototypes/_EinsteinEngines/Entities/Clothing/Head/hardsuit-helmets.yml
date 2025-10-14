@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Standard Combat Hardsuits
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitCombatStandard
   name: combat hardsuit helmet
   description: An armoured helmet with a yellow visor and dual head-mounted lights.
@@ -34,7 +34,7 @@
         Heat: 0.70
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitCombatOfficer
   name: security combat hardsuit helmet
   components:
@@ -45,7 +45,7 @@
 
 # Medical Combat Hardsuits
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitCombatMedical
   name: medical combat hardsuit helmet
   description: A lightweight armoured helmet with full-face blue visor and head-mounted light.
@@ -76,7 +76,7 @@
 
 # Riot Combat Hardsuits
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitCombatRiot
   name: riot combat hardsuit helmet
   description: A heavy armoured helmet with a sealed visor with yellow slits and dual head-mounted lights.

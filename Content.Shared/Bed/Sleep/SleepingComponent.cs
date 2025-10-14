@@ -1,5 +1,5 @@
 using Content.Shared.Dataset;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;

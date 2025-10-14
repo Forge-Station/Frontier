@@ -125,15 +125,23 @@ namespace Content.Server.Body.Commands
                 return;
             }
 
-            var slotId = $"AttachBodyPartVerb-{partUid}";
+            // Shitmed Change Start
+            var slotId = "";
+            if (part.Symmetry != BodyPartSymmetry.None)
+                slotId = $"{part.Symmetry.ToString().ToLower()} {part.GetHashCode().ToString()}";
+            else
+                slotId = $"{part.GetHashCode().ToString()}";
 
-            if (body.RootContainer.ContainedEntity is null && !bodySystem.AttachPartToRoot(bodyId, partUid.Value, body, part))
+            part.SlotId = part.GetHashCode().ToString();
+            // Shitmed Change End
+            // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
+            if (body.RootContainer.ContainedEntity != null)
             {
                 bodySystem.AttachPartToRoot(bodyId, partUid.Value, body, part);
             }
             else
             {
-                if(!bodySystem.TryGetRootPart(bodyId, out var rootPart))
+                if (!bodySystem.TryGetRootPart(bodyId, out var rootPart))
                     return;
                 // Shitmed Change: Symmetry
                 if (!bodySystem.TryCreatePartSlotAndAttach(rootPart.Value, slotId, partUid.Value, part.PartType, part.Symmetry, rootPart, part))
@@ -143,17 +151,6 @@ namespace Content.Server.Body.Commands
                 }
             }
 
-            var (rootPartId, rootPart) = bodySystem.GetRootPartOrNull(bodyId, body)!.Value;
-            if (!bodySystem.TryCreatePartSlotAndAttach(rootPartId,
-                    slotId,
-                    partUid.Value,
-                    part.PartType,
-                    rootPart,
-                    part))
-            {
-                shell.WriteError($"Could not create slot {slotId} on entity {_entManager.ToPrettyString(bodyId)}");
-                return;
-            }
             shell.WriteLine($"Attached part {_entManager.ToPrettyString(partUid.Value)} to {_entManager.ToPrettyString(bodyId)}");
         }
     }

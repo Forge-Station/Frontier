@@ -31,6 +31,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 using SharedToolSystem = Content.Shared.Tools.Systems.SharedToolSystem;
+using Content.Shared.Body.Components;
 
 namespace Content.Server.Medical;
 
@@ -124,7 +125,7 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
                 solutionToInject.ScaleSolution(cryoPod.PotencyMultiplier);
                 // End Frontier
 
-                _bloodstreamSystem.TryAddToChemicals(patient.Value, solutionToInject, bloodstream);
+                _bloodstreamSystem.TryAddToChemicals((patient.Value, bloodstream), solutionToInject);
                 _reactiveSystem.DoEntityReaction(patient.Value, solutionToInject, ReactionMethod.Injection);
             }
         }

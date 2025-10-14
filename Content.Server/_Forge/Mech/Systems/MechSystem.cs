@@ -1,5 +1,5 @@
 using Content.Shared.Damage;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Mech;
 using Content.Shared.Mech.Components;
 using Content.Shared.Mech.EntitySystems;

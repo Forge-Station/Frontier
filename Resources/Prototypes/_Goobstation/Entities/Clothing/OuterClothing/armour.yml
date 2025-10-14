@@ -223,7 +223,7 @@
     sprintModifier: 0.8
 
 - type: entity
-  parent: [ ClothingOuterBaseMedium, ClothingOuterStorageToggleableBase, AllowSuitStorageClothing, BaseSyndicateContraband ]
+  parent: [ ClothingOuterBaseMedium, ClothingOuterStorageToggleableBase, AllowSuitStorageClothing, BaseC3SyndicateContraband ]
   id: ClothingOuterArmorCloakSith
   name: dark lord cloak
   description: What began as a simple cosplay cloak was illegally reinforced with armored plates, transforming it into a functional piece of armor. Looks like it's even capable of protecting the user from the lack of pressure in space.
@@ -258,7 +258,7 @@
   # Intentionally no temperature or high pressure protection
 
 - type: entity
-  parent: [BaseSyndicateContraband, ClothingOuterArmourInvisible]
+  parent: [BaseC3SyndicateContraband, ClothingOuterArmourInvisible]
   id: ClothingOuterArmourInvisibleSyndie
   name: bluespace assisted armor
   description: An armored vest that utilizes redspace technology to appear invisible and not mess with your business style.

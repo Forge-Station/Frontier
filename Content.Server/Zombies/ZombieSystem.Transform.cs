@@ -39,6 +39,8 @@ using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Content.Server.Animals.Components;
+using Content.Shared.Body.Components;
+using Content.Shared.Goobstation.Traits;
 
 namespace Content.Server.Zombies;
 

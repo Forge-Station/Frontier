@@ -1,4 +1,4 @@
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 
 namespace Content.Shared.Fluids.Components;
 

@@ -1,5 +1,5 @@
 ﻿using Content.Shared.Beeper.Systems;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.ProximityDetection.Systems;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;

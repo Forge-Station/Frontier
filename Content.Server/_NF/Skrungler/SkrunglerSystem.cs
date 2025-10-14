@@ -7,6 +7,7 @@ using Content.Server.Storage.Components;
 using Content.Server.Storage.EntitySystems;
 using Content.Shared._NF.Skrungler;
 using Content.Shared._NF.Skrungler.Components;
+using Content.Shared.Body.Components;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Database;
 using Content.Shared.IdentityManagement;

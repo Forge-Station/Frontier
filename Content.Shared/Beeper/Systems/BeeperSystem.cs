@@ -1,5 +1,5 @@
 ﻿using Content.Shared.Beeper.Components;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Item.ItemToggle;
 using Content.Shared.Item.ItemToggle.Components;
 using Robust.Shared.Audio.Systems;

@@ -22,9 +22,6 @@
         lungs: OrganHumanLungs
     groin:
       part: GroinVulpkanin
-      connections:
-      - right leg
-      - left leg
       organs:
         stomach: OrganVulpkaninStomach
         liver: OrganAnimalLiver

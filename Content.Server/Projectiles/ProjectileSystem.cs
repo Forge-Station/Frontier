@@ -11,7 +11,7 @@ using Content.Shared.Damage;
 using Content.Shared.Database;
 using Content.Shared.Eye.Blinding.Components; // Frontier
 using Content.Shared.Eye.Blinding.Systems; // Frontier
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Physics; // Frontier
 using Content.Shared.Projectiles;
 using Content.Shared.StatusEffectNew; // Frontier

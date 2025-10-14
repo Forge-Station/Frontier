@@ -15,7 +15,7 @@
 #chrono/future soldier voidsuit
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitChronolegioneer
   name: futuristic helmet
   description: The helmet of the fighters of the future, designed for special timeflow operations
@@ -54,7 +54,7 @@
 #bso voidsuit
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitBlueshield
   name: blueshield voidsuit helmet
   description: The helmet of the captain's bodyguard's voidsuit.
@@ -90,7 +90,7 @@
 # cybersun stealth
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitCybersunStealth
   suffix: stealth
   name: cybersun stealth voidsuit helmet
@@ -127,7 +127,7 @@
 # cybersun dreadnought
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitDreadnought
   name: cybersun Dreadnought suit helmet
   description: A helmet, looking at this you wonder if there anyone alive.
@@ -155,7 +155,7 @@
 
 # Security
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetVoidsuitSecurity
   name: security voidsuit helmet
   description: A well-built faceplate attached to the security voidsuit.
@@ -186,7 +186,7 @@
 
 # Head of Security
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitHeadOfSecurityExperimental
   name: head of security's advanced voidsuit helmet
   description: Security voidsuit helmet with the latest top secret NT-HUD software. This one seems more durable than stand issue helmets.

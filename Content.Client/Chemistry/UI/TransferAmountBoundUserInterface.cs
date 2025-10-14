@@ -1,6 +1,6 @@
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using JetBrains.Annotations;
 using Robust.Client.GameObjects;
 using Robust.Client.UserInterface;

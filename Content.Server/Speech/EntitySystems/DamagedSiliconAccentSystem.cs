@@ -3,7 +3,7 @@ using Content.Server.Destructible;
 using Content.Server.PowerCell;
 using Content.Shared.Speech.Components;
 using Content.Shared.Damage;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.Random;
 
 namespace Content.Server.Speech.EntitySystems;

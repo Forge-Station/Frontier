@@ -1,5 +1,5 @@
 ﻿using Content.Shared.Chemistry.Reagent;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Dictionary;
 
 namespace Content.Shared.Materials;

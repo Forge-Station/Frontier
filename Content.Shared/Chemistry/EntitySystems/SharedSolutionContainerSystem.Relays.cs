@@ -1,7 +1,7 @@
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.Reaction;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 
 namespace Content.Shared.Chemistry.EntitySystems;
 

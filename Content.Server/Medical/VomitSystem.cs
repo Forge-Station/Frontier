@@ -14,6 +14,7 @@ using Content.Shared.StatusEffect;
 using Robust.Server.Audio;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
+using Content.Shared.Body.Components;
 
 namespace Content.Server.Medical
 {

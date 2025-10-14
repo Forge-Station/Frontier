@@ -45,7 +45,8 @@ using Robust.Shared.Random;
 
 using TemperatureCondition = Content.Shared.EntityEffects.EffectConditions.Temperature; // disambiguate the namespace
 using PolymorphEffect = Content.Shared.EntityEffects.Effects.Polymorph;
-using Content.Shared.Humanoid; //Delta-V - Banning humanoids from becoming ghost roles.
+using Content.Shared.Humanoid;
+using Content.Shared.Body.Components; //Delta-V - Banning humanoids from becoming ghost roles.
 
 namespace Content.Server.EntityEffects;
 
@@ -810,7 +811,7 @@ public sealed class EntityEffectSystem : EntitySystem
                 amt *= reagentArgs.Scale.Float();
             }
 
-            _bloodstream.TryModifyBleedAmount(args.Args.TargetEntity, amt, blood);
+            _bloodstream.TryModifyBleedAmount((args.Args.TargetEntity, blood), amt);
         }
     }
 
@@ -826,7 +827,7 @@ public sealed class EntityEffectSystem : EntitySystem
                 amt *= reagentArgs.Scale;
             }
 
-            _bloodstream.TryModifyBloodLevel(args.Args.TargetEntity, amt, blood);
+            _bloodstream.TryModifyBloodLevel((args.Args.TargetEntity, blood), amt);
         }
     }
 

@@ -1,4 +1,4 @@
-﻿using Content.Shared.FixedPoint; // Frontier
+﻿using Content.Shared.Goobstation.FixedPoint; // Frontier
 using Robust.Shared.GameStates;
 
 namespace Content.Shared.Beeper.Components;

@@ -110,6 +110,12 @@ public sealed partial class HumanoidAppearanceComponent : Component
     /// </summary>
     [DataField]
     public Dictionary<HumanoidVisualLayers, DisplacementData> MarkingsDisplacement = new();
+
+    /// <summary>
+    ///     Shitmed Change: Used to prevent early additions of BodyPartAppearanceComp with incorrect data from Urists.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool ProfileLoaded;
 }
 
 [DataDefinition]

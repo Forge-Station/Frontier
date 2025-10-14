@@ -84,6 +84,7 @@ namespace Content.Client.HealthAnalyzer.UI
             _window.Title = EntMan.GetComponent<MetaDataComponent>(Owner).EntityName;
         }
 
+
         protected override void ReceiveMessage(BoundUserInterfaceMessage message)
         {
             if (_window == null)

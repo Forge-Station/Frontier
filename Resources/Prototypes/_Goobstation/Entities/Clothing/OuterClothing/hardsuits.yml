@@ -164,7 +164,7 @@
 # Cybersun Stealth
 
 - type: entity
-  parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband ]
+  parent: [ ClothingOuterHardsuitBase, BaseC3SyndicateContraband ]
   id: ClothingOuterHardsuitCybersunStealth
   suffix: stealth
   name: cybersun stealth voidsuit
@@ -222,7 +222,7 @@
 # cybersun dreadnought suit
 
 - type: entity
-  parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband ]
+  parent: [ ClothingOuterHardsuitBase, BaseC3SyndicateContraband ]
   id: ClothingOuterHardsuitCybersunDreadnought
   name: cybersun dreadnought suit
   description: The syndicate places it's glory on your shoulders, do not dissapoint.
@@ -306,12 +306,12 @@
 #  - type: StealTarget
 #    stealGroup: ClothingOuterVoidsuitParamedic
 #  - type: ToggleableClothing # Goobstation - Modsuits change
-#    clothingPrototypes: 
+#    clothingPrototypes:
 #      head: ClothingHeadHelmetVoidParamed
 
 # Security voidsuit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseSecurityContraband]
+  parent: [ClothingOuterHardsuitBase, BaseC2ContrabandUnredeemable]
   id: ClothingOuterVoidsuitSecurity
   name: security voidsuit
   description: A light voidsuit with an in-built plate carrier to provide moderate protection while remaining mobile.

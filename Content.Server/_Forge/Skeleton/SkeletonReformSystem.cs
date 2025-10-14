@@ -4,7 +4,7 @@ using Content.Shared._Forge.Skeleton;
 using Content.Shared._NF.Bank;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared.Damage;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
 using Robust.Server.Containers;

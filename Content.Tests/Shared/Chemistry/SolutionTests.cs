@@ -1,5 +1,5 @@
 using Content.Shared.Chemistry.Components;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using NUnit.Framework;
 using Robust.Shared.IoC;
 using Robust.Shared.Prototypes;

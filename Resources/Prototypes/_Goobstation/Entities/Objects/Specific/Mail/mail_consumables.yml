@@ -406,58 +406,6 @@
 
 - type: entity
   parent: BaseMail
-  id: MailNFSodaPwrGame
-  suffix: Pwrgame
-  components:
-  - type: Mail
-    contents:
-    - id: DrinkPwrGameCan
-      amount: 3
-    - id: PaperMailNFPwrGameAd
-
-- type: entity
-  parent: BaseMail
-  id: MailNFSodaRedBool
-  suffix: Red Bool
-  components:
-  - type: Mail
-    contents:
-    - id: DrinkEnergyDrinkCan
-      amount: 3
-    - id: PaperMailNFRedBoolAd
-
-- type: entity
-  parent: BaseMail
-  id: MailNFSodaSpaceCola
-  suffix: Space Cola
-  components:
-  - type: Mail
-    contents:
-    - id: DrinkColaBottleFull
-    - id: PaperMailNFSpaceColaAd
-
-- type: entity
-  parent: BaseMail
-  id: MailNFSodaSpaceMountainWind
-  suffix: Space Mountain Wind
-  components:
-  - type: Mail
-    contents:
-    - id: DrinkSpaceMountainWindBottleFull
-    - id: PaperMailNFSpaceMountainWindAd
-
-- type: entity
-  parent: BaseMail
-  id: MailNFSodaSpaceUp
-  suffix: Space Up
-  components:
-  - type: Mail
-    contents:
-    - id: DrinkSpaceUpBottleFull
-    - id: PaperMailNFSpaceUpAd
-
-- type: entity
-  parent: BaseMail
   id: MailJoints
   suffix: Joints
   components:

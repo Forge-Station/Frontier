@@ -28,6 +28,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
 // Shitmed Change
+using Content.Shared.Goobstation.Com.Body;
 using Content.Shared.Inventory;
 using Robust.Shared.Random;
 
@@ -54,15 +55,18 @@ public abstract partial class SharedBodySystem : EntitySystem
     /// </summary>
     public const string OrganSlotContainerIdPrefix = "body_organ_slot_";
 
-    [Dependency] private   readonly IGameTiming _timing = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] protected readonly IPrototypeManager Prototypes = default!;
     [Dependency] protected readonly DamageableSystem Damageable = default!;
     [Dependency] protected readonly MovementSpeedModifierSystem Movement = default!;
     [Dependency] protected readonly SharedContainerSystem Containers = default!;
     [Dependency] protected readonly SharedTransformSystem SharedTransform = default!;
     [Dependency] protected readonly StandingStateSystem Standing = default!;
-    [Dependency] private readonly IRobustRandom _random = default!; // Shitmed Change
-    [Dependency] private readonly InventorySystem _inventory = default!; // Shitmed Change
+    // <Shitmed>
+    [Dependency] private readonly CommonInsideBodyPartSystem _insideBodyPart = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly InventorySystem _inventory = default!;
+    // </Shitmed>
 
     public override void Initialize()
     {

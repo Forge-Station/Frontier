@@ -1,14 +1,15 @@
-﻿using Content.Server.Body.Components;
+using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Database;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Fluids.Components;
 using Content.Shared.Rootable;
 using Robust.Shared.Timing;
+using Content.Shared.Body.Components;
 
 namespace Content.Server.Rootable;
 
@@ -68,7 +69,7 @@ public sealed class RootableSystem : SharedRootableSystem
 
         _reactive.DoEntityReaction(entity, transferSolution, ReactionMethod.Ingestion);
 
-        if (_blood.TryAddToChemicals(entity, transferSolution, entity.Comp2))
+        if (_blood.TryAddToChemicals((entity, entity.Comp2), transferSolution))
         {
             // Log solution addition by puddle
             _logger.Add(LogType.ForceFeed, LogImpact.Medium, $"{ToPrettyString(entity):target} absorbed puddle {SharedSolutionContainerSystem.ToPrettyString(transferSolution)}");

@@ -1,6 +1,6 @@
 using Content.Shared.Alert;
 using Content.Shared.Damage;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Atmos.Components

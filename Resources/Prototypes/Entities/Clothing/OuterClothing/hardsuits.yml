@@ -32,9 +32,6 @@
     walkModifier: 0.80
     sprintModifier: 0.80
   - type: HeldSpeedModifier
-  - type: ToggleableClothing # Goobstation - Modsuits change
-    clothingPrototypes:
-      head: ClothingHeadHelmetHardsuitBasic
 
 #Atmospherics Hardsuit
 - type: entity

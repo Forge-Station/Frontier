@@ -1,10 +1,8 @@
-﻿using Content.Shared.Bed.Sleep;
+using Content.Shared.Bed.Sleep;
 using Content.Shared.Mobs;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Stunnable;
-
-// Forge-Change full (refactory b.y. wizard)
 
 public abstract partial class SharedStunSystem
 {

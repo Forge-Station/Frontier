@@ -2,7 +2,7 @@
 using Content.Server.Nyanotrasen.Kitchen.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.EntityEffects;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Popups;
 using Robust.Shared.Player;
 

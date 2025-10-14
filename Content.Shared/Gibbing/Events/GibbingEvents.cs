@@ -1,4 +1,10 @@
-﻿using Robust.Shared.Serialization;
+// SPDX-FileCopyrightText: 2024 Jezithyr <jezithyr@gmail.com>
+// SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.Gibbing.Events;
 
@@ -11,7 +17,8 @@ namespace Content.Shared.Gibbing.Events;
 /// <param name="GibType">What type of gibbing is occuring</param>
 /// <param name="AllowedContainers">Containers we are allow to gib</param>
 /// <param name="ExcludedContainers">Containers we are allow not allowed to gib</param>
-[ByRefEvent] public record struct AttemptEntityContentsGibEvent(
+[ByRefEvent]
+public record struct AttemptEntityContentsGibEvent(
     EntityUid Target,
     GibContentsOption GibType,
     List<string>? AllowedContainers,

@@ -9,6 +9,7 @@ using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Storage.EntitySystems;
 using Robust.Shared.Containers;
 using Robust.Shared.Input.Binding;
+using Robust.Shared.Utility;
 
 namespace Content.Shared.Hands.EntitySystems;
 
@@ -407,5 +408,33 @@ public abstract partial class SharedHandsSystem
         }
 
         return freeable;
+    }
+    /// <summary>
+    /// Gets the item currently held in the entity's specified hand. Returns false if no hands are present or there is no item.
+    /// </summary>
+    public bool TryGetHeldItem(Entity<HandsComponent?> ent, string? handId, [NotNullWhen(true)] out EntityUid? held)
+    {
+        held = null;
+        if (!Resolve(ent, ref ent.Comp, false))
+            return false;
+
+        // Sanity check to make sure this is actually a hand.
+        if (handId == null || !ent.Comp.Hands.ContainsKey(handId))
+            return false;
+
+        if (!ContainerSystem.TryGetContainer(ent, handId, out var container))
+            return false;
+
+        held = container.ContainedEntities.FirstOrNull();
+        return held != null;
+    }
+
+    /// <summary>
+    /// Gets the item currently held in the entity's specified hand. Returns null if no hands are present or there is no item.
+    /// </summary>
+    public EntityUid? GetHeldItem(Entity<HandsComponent?> ent, string? handId)
+    {
+        TryGetHeldItem(ent, handId, out var held);
+        return held;
     }
 }

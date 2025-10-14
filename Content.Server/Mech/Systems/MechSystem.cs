@@ -18,7 +18,7 @@ using Content.Shared.Atmos.Components; // Forge-Change
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
 using Content.Shared.Examine; // Forge-Change
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Hands.Components; // Forge-Change
 using Content.Shared.Interaction;
 using Content.Shared.Toggleable; // Frontier

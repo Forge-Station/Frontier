@@ -98,18 +98,31 @@ public abstract partial class SharedHandsSystem : EntitySystem
         if (!_actionBlocker.CanInteract(session.AttachedEntity.Value, null))
             return;
 
-        if (component.ActiveHand == null || component.Hands.Count < 2)
+        // <Goobstation> - use public API
+        SwapHands((session.AttachedEntity.Value, component), reverse);
+        // </Goobstation>
+    }
+
+    /// <summary>
+    /// Goobstation - Moved out of SwapHands above for public API.
+    /// </summary>
+    public void SwapHands(Entity<HandsComponent> ent, bool reverse = false)
+    {
+        if (ent.Comp.Hands == null || ent.Comp.Hands.Count < 2)
+            return;
+        
+        if (ent.Comp.ActiveHand is not { } activeHand)
             return;
 
-        var currentIndex = component.SortedHands.IndexOf(component.ActiveHand.Name);
-        var newActiveIndex = (currentIndex + (reverse ? -1 : 1) + component.Hands.Count) % component.Hands.Count;
-        var nextHand = component.SortedHands[newActiveIndex];
+        var currentIndex = ent.Comp.SortedHands.IndexOf(activeHand.Name);
+        var newActiveIndex = (currentIndex + (reverse ? -1 : 1) + ent.Comp.Hands.Count) % ent.Comp.Hands.Count;
+        var nextHand = ent.Comp.SortedHands[newActiveIndex];
 
-        TrySetActiveHand(session.AttachedEntity.Value, nextHand, component);
+        TrySetActiveHand(ent, nextHand);
     }
 
     // Frontier: swap hands
-    private void SwapHandsPreviousPressed(ICommonSession? session)
+    public void SwapHandsPreviousPressed(ICommonSession? session)
     {
         if (!TryComp(session?.AttachedEntity, out HandsComponent? component))
             return;

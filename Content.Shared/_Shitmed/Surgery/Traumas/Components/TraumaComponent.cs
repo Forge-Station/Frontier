@@ -1,4 +1,4 @@
-using Content.Goobstation.Maths.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 using Content.Shared.Body.Part;

@@ -8,7 +8,6 @@ namespace Content.Shared.Movement.Pulling.Components;
 /// Specifies an entity as being pullable by an entity with <see cref="PullerComponent"/>
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(Systems.PullingSystem))]
 public sealed partial class PullableComponent : Component
 {
     /// <summary>
@@ -41,6 +40,36 @@ public sealed partial class PullableComponent : Component
 
     [DataField]
     public ProtoId<AlertPrototype> PulledAlert = "Pulled";
+
+    /// <summary>
+    /// If this pullable being tabled.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool BeingTabled = false;
+
+    /// <summary>
+    /// Constant for tabling throw math
+    /// </summary>
+    [DataField]
+    public float BasedTabledForceSpeed = 5f;
+
+    /// <summary>
+    ///  Stamina damage. taken on tabled
+    /// </summary>
+    [DataField]
+    public float TabledStaminaDamage = 40f;
+
+    /// <summary>
+    /// Damage taken on being tabled.
+    /// </summary>
+    [DataField]
+    public float TabledDamage = 5f;
+
+    [DataField]
+    public float EscapeAttemptCooldown = 2f;
+
+    [AutoNetworkedField]
+    public TimeSpan NextEscapeAttempt = TimeSpan.Zero;
 }
 
 public sealed partial class StopBeingPulledAlertEvent : BaseAlertEvent;

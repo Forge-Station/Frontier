@@ -1,4 +1,4 @@
-﻿using Content.Goobstation.Maths.FixedPoint;
+﻿using Content.Shared.Goobstation.FixedPoint;
 
 namespace Content.Shared._Shitmed.Medical.Surgery.Wounds.Systems;
 

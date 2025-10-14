@@ -1,5 +1,5 @@
 using Content.Shared.DoAfter; // Frontier: Upstream, #30704 - MIT
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 using Robust.Shared.Audio;

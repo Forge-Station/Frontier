@@ -1,4 +1,4 @@
-ent-ClothingHeadHardsuitWithLightBaseNF = { ent-ClothingHeadHardsuitWithLightBase }
-    .desc = { ent-ClothingHeadHardsuitWithLightBase.desc }
+ent-ClothingHeadHardsuitWithLightBaseNF = { ent-NFClothingHeadHardsuitWithLightBase }
+    .desc = { ent-NFClothingHeadHardsuitWithLightBase.desc }
 ent-ClothingHeadHardsuitWithLightBaseNfsd = { ent-ClothingHeadHardsuitWithLightBaseNF }
     .desc = { ent-ClothingHeadHardsuitWithLightBaseNF.desc }

@@ -1,6 +1,6 @@
 using Content.Server.Tesla.EntitySystems;
 using Content.Shared.Explosion;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Lightning.Components;

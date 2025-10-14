@@ -1,5 +1,5 @@
 using Content.Shared.Chemistry.Components.SolutionManager;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Tools.Components;
 
 using SharedToolSystem = Content.Shared.Tools.Systems.SharedToolSystem;

@@ -9,7 +9,7 @@ using Content.Shared.Destructible;
 using Content.Shared.DoAfter;
 using Content.Shared.DragDrop;
 using Content.Shared.Emag.Systems; // Forge-Change
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Hands.Components; // Forge-Change
 using Content.Shared.Hands.EntitySystems; // Forge-Change
 using Content.Shared.Implants.Components; // Forge-Change

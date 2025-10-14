@@ -1,7 +1,7 @@
 using Content.Server.Body.Components;
 using Content.Shared.Nutrition.Components;
 using Content.Server.Nutrition.EntitySystems;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 

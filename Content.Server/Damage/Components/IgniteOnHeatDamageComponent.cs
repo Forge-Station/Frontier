@@ -1,5 +1,5 @@
 using Content.Shared.Damage;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 
 namespace Content.Server.Damage.Components;
 

@@ -20,7 +20,7 @@ using Content.Server.Chat.Managers;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Components;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared._Forge.Contracts;
 using Robust.Server.Audio;
 using Robust.Shared.Audio;

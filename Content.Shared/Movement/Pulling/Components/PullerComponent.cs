@@ -1,4 +1,4 @@
-﻿using Content.Shared.Alert;
+using Content.Shared.Alert;
 using Content.Shared.Movement.Pulling.Systems;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -10,7 +10,6 @@ namespace Content.Shared.Movement.Pulling.Components;
 /// Specifies an entity as being able to pull another entity with <see cref="PullableComponent"/>
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
-[Access(typeof(PullingSystem))]
 public sealed partial class PullerComponent : Component
 {
     // My raiding guild
@@ -43,6 +42,9 @@ public sealed partial class PullerComponent : Component
 
     [DataField]
     public ProtoId<AlertPrototype> PullingAlert = "Pulling";
+
+    [AutoNetworkedField]
+    public TimeSpan NextStageChange;
 }
 
 public sealed partial class StopPullingAlertEvent : BaseAlertEvent;

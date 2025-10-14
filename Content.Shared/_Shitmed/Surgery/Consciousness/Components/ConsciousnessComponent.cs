@@ -1,5 +1,11 @@
-﻿using Content.Shared._Shitmed.Medical.Surgery.Pain.Components;
-using Content.Goobstation.Maths.FixedPoint;
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 gluesniffler <linebarrelerenthusiast@gmail.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Shared._Shitmed.Medical.Surgery.Pain.Components;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.GameStates;
 
 namespace Content.Shared._Shitmed.Medical.Surgery.Consciousness.Components;
@@ -91,4 +97,7 @@ public sealed partial class ConsciousnessComponent : Component
     [ViewVariables(VVAccess.ReadOnly)]
     public bool IsConscious = true;
     // Forceful control attributes, it's recommended not to use them directly.
+
+    [DataField]
+    public bool HasPainScreams;
 }

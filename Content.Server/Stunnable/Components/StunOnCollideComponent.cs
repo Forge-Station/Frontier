@@ -1,3 +1,13 @@
+// SPDX-FileCopyrightText: 2021 mirrorcult <lunarautomaton6@gmail.com>
+// SPDX-FileCopyrightText: 2022 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 wrexbe <81056464+wrexbe@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
 namespace Content.Server.Stunnable.Components
 {
     /// <summary>
@@ -8,47 +18,21 @@ namespace Content.Server.Stunnable.Components
     {
         // TODO: Can probably predict this.
 
-        /// <summary>
-        /// How long we are stunned for
-        /// </summary>
-        [DataField]
-        public TimeSpan StunAmount; // Forge-Change
+        // See stunsystem for what these do
+        [DataField("stunAmount")]
+        public int StunAmount;
 
-        /// <summary>
-        /// How long we are knocked down for
-        /// </summary>
-        [DataField]
-        public TimeSpan KnockdownAmount; // Forge-Change
+        [DataField("knockdownAmount")]
+        public int KnockdownAmount;
 
-        /// <summary>
-        /// How long we are slowed down for
-        /// </summary>
-        [DataField]
-        public TimeSpan SlowdownAmount; // Forge-Change
+        [DataField("slowdownAmount")]
+        public int SlowdownAmount;
 
-        /// <summary>
-        /// Multiplier for a mob's walking speed
-        /// </summary>
-        [DataField]
-        public float WalkSpeedModifier = 1f; // Forge-Change
+        [DataField("walkSpeedMultiplier")]
+        public float WalkSpeedMultiplier = 1f;
 
-        /// <summary>
-        /// Multiplier for a mob's sprinting speed
-        /// </summary>
-        [DataField]
-        public float SprintSpeedModifier = 1f; // Forge-Change
-
-        /// <summary>
-        /// Refresh Stun or Slowdown on hit
-        /// </summary>
-        [DataField]
-        public bool Refresh = true; // Forge-Change
-
-        /// <summary>
-        /// Should the entity try and stand automatically after being knocked down?
-        /// </summary>
-        [DataField]
-        public bool AutoStand = true; // Forge-Change
+        [DataField("runSpeedMultiplier")]
+        public float RunSpeedMultiplier = 1f;
 
         /// <summary>
         /// Fixture we track for the collision.

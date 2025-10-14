@@ -10,7 +10,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [ ClothingOuterBase, AllowSuitStorageClothing, BaseMajorContraband ]
+  parent: [ ClothingOuterBase, AllowSuitStorageClothing, BaseC3Contraband ]
   id: ClothingOuterArmorAbductor
   name: agent vest
   components:
@@ -87,7 +87,7 @@
           equippedPrefix: combat
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, AllowSuitStorageClothing, BaseMajorContraband]
+  parent: [ ClothingOuterStorageBase, AllowSuitStorageClothing, BaseC3Contraband]
   id: ClothingOuterCoatAbductor
   name: alien lab coat
   description: A suit of alien origin that protects from various injuries, as well as from chemical spills.

@@ -1,5 +1,5 @@
 using Content.Shared.Dataset;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server._NF.Smuggling.Components;

@@ -1,4 +1,4 @@
-﻿using Content.Goobstation.Maths.FixedPoint;
+﻿using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 

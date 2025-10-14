@@ -53,7 +53,7 @@
     sprite: Clothing/OuterClothing/Armor/security_slim.rsi
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSecurityContraband]
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseC2ContrabandUnredeemable]
   id: ClothingOuterArmorRiot
   name: riot suit
   description: A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Perfect for fighting delinquents around the station.
@@ -184,27 +184,27 @@
   - type: HeldSpeedModifier
   - type: GroupExamine
 
-- type: entity
-  parent: [ClothingOuterArmorBaseCarapace] # Frontier: removed BaseCommandContraband
-  id: ClothingOuterArmorCaptainCarapace
-  name: captain's carapace
-  description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest.
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
+#- type: entity
+#  parent: [ClothingOuterArmorBaseCarapace] # Frontier: removed BaseCommandContraband
+#  id: ClothingOuterArmorCaptainCarapace
+#  name: captain's carapace
+#  description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest.
+#  components:
+#  - type: Sprite
+#    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
+#  - type: Clothing
+#    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
 
-- type: entity
-  parent: [ClothingOuterArmorBaseCarapace, BaseCentcommContraband]
-  id: ClothingOuterArmorCentcommCarapace
-  name: centcomm carapace
-  description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to centcomm officials and agents.
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/centcomm_carapace.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/centcomm_carapace.rsi
+#- type: entity
+#  parent: [ClothingOuterArmorBaseCarapace, BaseCentcommContraband]
+#  id: ClothingOuterArmorCentcommCarapace
+#  name: centcomm carapace
+#  description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to centcomm officials and agents.
+#  components:
+#  - type: Sprite
+#    sprite: Clothing/OuterClothing/Armor/centcomm_carapace.rsi
+#  - type: Clothing
+#    sprite: Clothing/OuterClothing/Armor/centcomm_carapace.rsi
 
 #Web vest
 - type: entity
@@ -218,14 +218,22 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Vests/webvest.rsi
   - type: Armor
+    coverage:
+    - Chest
+    - Groin
     modifiers:
       coefficients:
-        Blunt: 0.6 #ballistic plates = better protection
-        Slash: 0.6
-        Piercing: 0.3
-        Heat: 0.9
+        Blunt: 0.5 #ballistic plates = better protection
+        Slash: 0.5
+        Piercing: 0.4 # Goob edit - shouldn't be better than bulletproof vest
+        Heat: 0.8 # Goob edit - match regular vest
   - type: ExplosionResistance
     damageCoefficient: 0.9
+  - type: ModifyDelayedKnockdown # Goobstation
+    delayDelta: 2.5
+    knockdownTimeDelta: -2.5
+  - type: StaminaDamageResistance # Goobstation
+    coefficient: 0.6
 
 #Elite web vest
 - type: entity
@@ -254,6 +262,11 @@
     damageCoefficient: 0.5
   - type: FireProtection
     reduction: 0.85
+  - type: ModifyDelayedKnockdown # Goobstation
+    delayDelta: 3
+    knockdownTimeDelta: -3
+  - type: StaminaDamageResistance # Goobstation
+    coefficient: 0.4
 
 #Mercenary web vest
 - type: entity
@@ -372,28 +385,6 @@
     autoRechargeRate: 2
   - type: Item
     size: Normal
-
-- type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
-  id: ClothingOuterArmorRiot
-  name: riot suit
-  description: A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Perfect for fighting delinquents around the station.
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/riot.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/riot.rsi
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.4
-        Slash: 0.4
-        Piercing: 0.7
-        Heat: 0.9
-        Caustic: 0.9
-  - type: ExplosionResistance
-    damageCoefficient: 0.9
-  - type: GroupExamine
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseC3CultContraband, AllowSuitStorageClothing, ContrabandClothing ] # Frontier: BaseMajorContraband<BaseC3CultContraband, added ContrabandClothing as parent

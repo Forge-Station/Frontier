@@ -1,4 +1,4 @@
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.GameStates;
 
 namespace Content.Shared._DV.Abilities.Felinid;

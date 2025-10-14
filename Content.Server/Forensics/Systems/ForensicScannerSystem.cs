@@ -26,7 +26,7 @@ using Content.Server._NF.Bank; // Frontier
 using Content.Shared._NF.Bank.BUI; // Frontier
 using Content.Shared._NF.CCVar; // Frontier
 using Content.Shared.Containers.ItemSlots; // Frontier
-using Content.Shared.FixedPoint; // Frontier
+using Content.Shared.Goobstation.FixedPoint; // Frontier
 using Content.Shared.Stacks; // Frontier
 using Content.Shared.Radio; // Frontier
 using Robust.Shared.Configuration; // Frontier

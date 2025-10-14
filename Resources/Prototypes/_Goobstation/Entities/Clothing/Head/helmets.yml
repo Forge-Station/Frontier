@@ -41,17 +41,6 @@
     - HeadSide
 
 - type: entity
-  parent: ClothingHeadHelmetHardsuitBasic
-  id: ClothingHeadHelmetHEV
-  name: H.E.V helmet
-  description: Not included in a set with crowbar, long jump module and gravity manipulation device.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Clothing/Head/Helmets/hev.rsi
-  - type: Clothing
-    sprite: _Goobstation/Clothing/Head/Helmets/hev.rsi
-
-- type: entity
   parent: ClothingHeadHelmetBasic
   id: ClothingHeadHelmetBasicAlt
   suffix: Alt
@@ -65,7 +54,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseMajorContraband ]
+  parent: [ ClothingHeadBase, BaseC3Contraband ]
   id: ReverseBearTrap
   name: reverse bear trap
   description: A horrifying set of shut metal jaws, rigged to a kitchen timer and secured by padlock to a head-mounted clamp. To apply, hit someone with it
@@ -88,7 +77,7 @@
         Blunt: 5
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseSyndicateContraband ]
+  parent: [ ClothingHeadBase, BaseC3SyndicateContraband ]
   id: ClothingHeadHatHoodCloakSith
   name: dark lord hood
   description: What began as a simple cosplay hood was illegally reinforced with armored plates, transforming it into a functional piece of armor. Looks like it's even capable of protecting the user from the lack of pressure in space.

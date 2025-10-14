@@ -4,7 +4,7 @@ using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.Hypospray.Events;
 using Content.Shared.Chemistry;
 using Content.Shared.Database;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Forensics;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
@@ -16,7 +16,8 @@ using Content.Server.Body.Components;
 using System.Linq;
 using Robust.Server.Audio;
 using Content.Shared.DoAfter; // Frontier
-using Content.Shared._DV.Chemistry.Components; // Frontier
+using Content.Shared._DV.Chemistry.Components;
+using Content.Shared.Body.Components; // Frontier
 
 namespace Content.Server.Chemistry.EntitySystems;
 

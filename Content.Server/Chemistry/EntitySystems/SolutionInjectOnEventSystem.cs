@@ -2,6 +2,7 @@ using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Server.Chemistry.Components;
 using Content.Shared._DV.Chemistry.Components;
+using Content.Shared.Body.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Events;
 using Content.Shared.Inventory;
@@ -90,6 +91,7 @@ public sealed class SolutionInjectOnCollideSystem : EntitySystem
 
         // Build a list of bloodstreams to inject into
         var targetBloodstreams = new ValueList<Entity<BloodstreamComponent>>();
+        var anySuccess = false;
         foreach (var target in targets)
         {
             if (Deleted(target))
@@ -132,32 +134,23 @@ public sealed class SolutionInjectOnCollideSystem : EntitySystem
             if (!TryComp<BloodstreamComponent>(target, out var bloodstream))
                 continue;
 
+            // Make sure we got at least one bloodstream
+            if (targetBloodstreams.Count == 0)
+                return false;
 
-            // Checks passed; add this target's bloodstream to the list
-            targetBloodstreams.Add((target, bloodstream));
-        }
+            // Extract total needed solution from the injector
+            var removedSolution = _solutionContainer.SplitSolution(injectorSolution.Value, injector.Comp.TransferAmount * targetBloodstreams.Count);
+            // Adjust solution amount based on transfer efficiency
+            var solutionToInject = removedSolution.SplitSolution(removedSolution.Volume * injector.Comp.TransferEfficiency);
+            // Calculate how much of the adjusted solution each target will get
+            var volumePerBloodstream = solutionToInject.Volume * (1f / targetBloodstreams.Count);
 
-        // Make sure we got at least one bloodstream
-        if (targetBloodstreams.Count == 0)
-            return false;
-
-        // Extract total needed solution from the injector
-        var removedSolution = _solutionContainer.SplitSolution(injectorSolution.Value, injector.Comp.TransferAmount * targetBloodstreams.Count);
-        // Adjust solution amount based on transfer efficiency
-        var solutionToInject = removedSolution.SplitSolution(removedSolution.Volume * injector.Comp.TransferEfficiency);
-        // Calculate how much of the adjusted solution each target will get
-        var volumePerBloodstream = solutionToInject.Volume * (1f / targetBloodstreams.Count);
-
-        var anySuccess = false;
-        foreach (var targetBloodstream in targetBloodstreams)
-        {
             // Take our portion of the adjusted solution for this target
             var individualInjection = solutionToInject.SplitSolution(volumePerBloodstream);
             // Inject our portion into the target's bloodstream
-            if (_bloodstream.TryAddToChemicals(targetBloodstream.Owner, individualInjection, targetBloodstream.Comp))
+            if (_bloodstream.TryAddToChemicals((target, bloodstream), solutionToInject))
                 anySuccess = true;
         }
-
         // Huzzah!
         return anySuccess;
     }

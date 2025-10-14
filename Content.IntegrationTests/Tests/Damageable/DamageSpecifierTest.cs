@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Content.Shared.Damage;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 
 namespace Content.IntegrationTests.Tests.Damageable;
 

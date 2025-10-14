@@ -8,15 +8,17 @@
 // SPDX-FileCopyrightText: 2024 username <113782077+whateverusername0@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 whateverusername0 <whateveremail>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 Kayzel <43700376+KayzelW@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Roudenn <romabond091@gmail.com>
+// SPDX-FileCopyrightText: 2025 Spatison <137375981+Spatison@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Trest <144359854+trest100@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 deltanedas <39013340+deltanedas@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 deltanedas <@deltanedas:kde.org>
 // SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 gluesniffler <linebarrelerenthusiast@gmail.com>
-// SPDX-FileCopyrightText: 2025 Spatison <137375981+Spatison@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
 // SPDX-FileCopyrightText: 2025 kurokoTurbo <92106367+kurokoTurbo@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Trest <144359854+trest100@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Roudenn <romabond091@gmail.com>
-// SPDX-FileCopyrightText: 2025 Kayzel <43700376+KayzelW@users.noreply.github.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -27,17 +29,17 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
 // Shitmed Change
-using Content.Shared.Containers.ItemSlots;
+using Content.Shared._Shitmed.Body.Part;
 using Content.Shared._Shitmed.Medical.Surgery.Tools;
-using Content.Shared._Shitmed.Targeting;
 using Content.Shared._Shitmed.Medical.Surgery.Wounds;
+using Content.Shared.Containers.ItemSlots;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Body.Part;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(SharedBodySystem))]
-public sealed partial class BodyPartComponent : Component
+//[Access(typeof(SharedBodySystem))] // goob edit - all access :godo:
+public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent // Shitmed Change
 {
     // Need to set this on container changes as it may be several transform parents up the hierarchy.
     /// <summary>
@@ -51,13 +53,6 @@ public sealed partial class BodyPartComponent : Component
     [DataField, AutoNetworkedField]
     public BodyPartSlot? ParentSlot;
 
-    /// <summary>
-    /// Shitmed Change: Bleeding stacks to give when this body part is severed.
-    /// Doubled for <see cref="IsVital"/>. parts.
-    /// </summary>
-    [DataField]
-    public float SeverBleeding = 4f;
-
     [DataField]
     public string ToolName { get; set; } = "A body part";
 
@@ -69,6 +64,12 @@ public sealed partial class BodyPartComponent : Component
 
     [DataField]
     public float Speed { get; set; } = 1f;
+
+    /// <summary>
+    ///     Shitmed Change: What composition does this body part classify as
+    /// </summary>
+    [DataField]
+    public BodyPartComposition PartComposition = BodyPartComposition.Organic;
 
     /// <summary>
     ///     Shitmed Change: Whether this body part is enabled or not.
@@ -124,6 +125,20 @@ public sealed partial class BodyPartComponent : Component
 
     [DataField, AutoNetworkedField]
     public BodyPartSymmetry Symmetry = BodyPartSymmetry.None;
+
+    /// <summary>
+    ///     When attached, the part will ensure these components on the entity, and delete them on removal.
+    /// </summary>
+    [DataField, AlwaysPushInheritance]
+    public ComponentRegistry? OnAdd;
+
+    /// <summary>
+    ///     When removed, the part will ensure these components on the entity, and add them on removal.
+    /// </summary>
+    [DataField, AlwaysPushInheritance]
+    public ComponentRegistry? OnRemove;
+
+    // Shitmed Change End
 
     /// <summary>
     /// Child body parts attached to this body part.

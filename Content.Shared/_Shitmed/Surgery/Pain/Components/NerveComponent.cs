@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Content.Goobstation.Maths.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Robust.Shared.GameStates;
 
 namespace Content.Shared._Shitmed.Medical.Surgery.Pain.Components;

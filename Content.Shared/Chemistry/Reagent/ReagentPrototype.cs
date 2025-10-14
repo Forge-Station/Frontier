@@ -1,6 +1,6 @@
 using System.Collections.Frozen;
 using System.Linq;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using System.Text.Json.Serialization;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Body.Prototypes;
@@ -144,6 +144,12 @@ namespace Content.Shared.Chemistry.Reagent
         /// </summary>
         [DataField]
         public bool WorksOnTheDead;
+
+        /// <summary>
+        /// Should this reagent only work on unconscious entities?
+        /// </summary>
+        [DataField]
+        public bool? WorksOnUnconscious;
 
         [DataField]
         public FrozenDictionary<ProtoId<MetabolismGroupPrototype>, ReagentEffectsEntry>? Metabolisms;

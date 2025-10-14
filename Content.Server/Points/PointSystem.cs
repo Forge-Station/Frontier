@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Points;
 using JetBrains.Annotations;
 using Robust.Server.GameStates;

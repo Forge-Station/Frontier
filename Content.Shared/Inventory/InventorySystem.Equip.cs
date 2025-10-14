@@ -37,7 +37,7 @@ public abstract partial class InventorySystem
     [Dependency] private readonly SharedStrippableSystem _strippable = default!;
 
     [ValidatePrototypeId<ItemSizePrototype>]
-    private const string PocketableItemSize = "Small";
+    public const string PocketableItemSize = "Small";
 
     private void InitializeEquip()
     {

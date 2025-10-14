@@ -11,10 +11,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Goobstation.Common.CCVar;
-using Content.Goobstation.Common.Standing;
-using Content.Shared._Goobstation.Wizard.TimeStop;
-using Content.Shared._Goobstation.Wizard.Traps;
+using Content.Shared.Goobstation.Com.Standing;
 using Content.Shared._Shitmed.Body.Organ;
 using Content.Shared.Administration;
 using Content.Shared.Body.Components;
@@ -28,6 +25,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Player;
 using Robust.Shared.Serialization;
+using Content.Shared.Goobstation.Com.CCVar;
 
 namespace Content.Shared._White.Standing;
 
@@ -76,8 +74,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
         var uid = args.SenderSession.AttachedEntity.Value;
 
-        if (HasComp<IceCubeComponent>(uid) || HasComp<FrozenComponent>(uid) ||
-            HasComp<AdminFrozenComponent>(uid)) // Goob edit
+        if (HasComp<AdminFrozenComponent>(uid)) // Goob edit
             return;
 
         if (!TryComp(uid, out StandingStateComponent? standing) ||
@@ -143,7 +140,6 @@ public abstract class SharedLayingDownSystem : EntitySystem
         {
             BreakOnHandChange = false,
             RequireCanInteract = false,
-            MultiplyDelay = false, // Goobstatiom
         };
 
         if (!_doAfter.TryStartDoAfter(args))
@@ -174,7 +170,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
     private void OnCheckAutoGetUp(Entity<LayingDownComponent> ent, ref CheckAutoGetUpEvent args)
     {
-        if (HasComp<IceCubeComponent>(ent) || HasComp<FrozenComponent>(ent) || HasComp<AdminFrozenComponent>(ent))
+        if (HasComp<AdminFrozenComponent>(ent))
         {
             ent.Comp.AutoGetUp = false;
             Dirty(ent);

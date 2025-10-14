@@ -1,4 +1,4 @@
-using Content.Shared.FixedPoint;
+using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Smoking;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
