@@ -1,0 +1,8 @@
+recipe-macrobombimplanterinter-name = имплантер (макробомба)
+recipe-microbombimplanterinter-name = имплантер (микробомба)
+recipe-freedomimplanterinter-name = имплантер (Радио)
+recipe-dnascramblerimplanterinter-name = имплантер (миксер ДНК)
+recipe-scramimplanterinter-name = имплантер (побег)
+recipe-fakemindshieldimplanterinter-name = имплантер (поддельный щит разума)
+recipe-empimplanterinter-name = имплантер (ЭМИ)
+recipe-radioimplanterinter-name = имплантер (радио)

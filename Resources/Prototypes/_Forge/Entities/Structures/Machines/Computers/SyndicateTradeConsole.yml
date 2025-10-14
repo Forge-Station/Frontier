@@ -65,7 +65,7 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Machine
-    board: AutolatheMachineCircuitboard
+    board: TechFabInterdyneMachineCircuitboard
   - type: Lathe
     idleState: icon
     runningState: icon
