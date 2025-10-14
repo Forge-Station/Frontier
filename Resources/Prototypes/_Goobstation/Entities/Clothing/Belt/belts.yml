@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseCommandContraband ]
+  parent: [ NFClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseCommandContraband ]
   id: ClothingBeltMilitaryWebbingCMO
   name: chief medical officer's chest rig
   description: A medical chest rig with deep pockets, for use by health professionals.
@@ -10,29 +10,6 @@
     sprite: _Goobstation/Clothing/Belt/cmowebbing.rsi
   - type: Storage
     grid:
-      - 0,0,6,2
-    whitelist: # I have no idea why is, say, wrench here, but it's just copied from medical belt.
-      tags:
-        - Wrench
-        - Bottle
-        - Spray
-        - Brutepack
-        - Bloodpack
-        - Gauze
-        - Ointment
-        - CigPack
-        - PillCanister
-        - Radio
-        - DiscreteHealthAnalyzer
-        - SurgeryTool
-        - Dropper
-      components:
-        - Hypospray
-        - Injector
-        - Pill
-        - HandLabeler
-        - HandheldCrewMonitor
-        - SurgeryTool # Shitmed Change
-        - Defibrillator # Goobstation
+      - 0,0,6,3
   - type: ExplosionResistance
     damageCoefficient: 0.25

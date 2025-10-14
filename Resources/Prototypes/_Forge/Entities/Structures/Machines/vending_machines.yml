@@ -26,12 +26,12 @@
 
 - type: entity
   parent: VendingMachine
-  id: VendingMachineMedical Syndicate
+  id: VendingMachineMedicalSyndicate
   name: СиндиМед
   description: Разработанный Синдикатом раздатчик минимальный для выживания бойца медикаментов.
   components:
   - type: VendingMachine
-    pack: NanoMedPlusInventory
+    pack: SyndiMedPlusInventory # больше не наномед ;c
     offState: off
     brokenState: broken
     normalState: normal-unshaded
@@ -43,7 +43,7 @@
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: Forge/Structures/Machines/medical_syndicate.rsi
+    sprite: Forge/Structures/Machines/medical_syndicate_alt.rsi # Forge-Change
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -61,6 +61,8 @@
   - type: GuideHelp
     guides:
     - Medical Doctor
+  - type: AccessReader
+    access: [["SyndicateAgent"]]
 
 - type: entity
   parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]

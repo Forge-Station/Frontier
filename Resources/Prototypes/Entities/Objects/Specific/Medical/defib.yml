@@ -132,3 +132,5 @@
       types:
         Blunt: 8
         Heat: 20 # Corvax-Forge: [ Shock:16 < Heat:20 ]
+  - type: StaticPrice # Forge-change add: StaticPrice
+    price: 10000 # Это плохо и я знаю об этом
