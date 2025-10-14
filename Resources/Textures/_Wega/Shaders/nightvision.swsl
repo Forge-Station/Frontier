@@ -17,6 +17,6 @@ void fragment() {
     highp float vignette = 1.0 - smoothstep(0.0, 0.7, dist / (vision_radius * 0.1));
 
     highp vec3 night_vision = mix(color.rgb * enhanced, tint_color.rgb * enhanced, 0.6) * vignette;
-    
+
     COLOR = vec4(night_vision, color.a);
 }
