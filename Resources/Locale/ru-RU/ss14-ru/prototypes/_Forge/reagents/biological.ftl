@@ -1,0 +1,1 @@
+reagent-name-skrell-blood = блестящая синяя кровь

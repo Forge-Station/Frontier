@@ -1,3 +1,4 @@
+using System.Linq; // Forge-Change Corvax-Wega-Hair-Extended
 using Content.Client.DisplacementMap;
 using Content.Shared.CCVar;
 using Content.Shared.Humanoid;
@@ -172,10 +173,11 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         // We need to ensure hair before applying it or coloring can try depend on markings that can be invalid
         var hairColor = _markingManager.MustMatchSkin(profile.Species, HumanoidVisualLayers.Hair, out var hairAlpha, _prototypeManager)
-            ? profile.Appearance.SkinColor.WithAlpha(hairAlpha)
-            : profile.Appearance.HairColor;
+            ? new List<Color> { profile.Appearance.SkinColor.WithAlpha(hairAlpha) } // Forge-Change Corvax-Wega-Hair-Extended
+                .Concat(profile.Appearance.HairColor.Skip(1)).ToList() // Forge-Change Corvax-Wega-Hair-Extended
+            : profile.Appearance.HairColor; // Forge-Change Corvax-Wega-Hair-Extended
         var hair = new Marking(profile.Appearance.HairStyleId,
-            new[] { hairColor });
+            hairColor); // Forge-Change Corvax-Wega-Hair-Extended
 
         var facialHairColor = _markingManager.MustMatchSkin(profile.Species, HumanoidVisualLayers.FacialHair, out var facialHairAlpha, _prototypeManager)
             ? profile.Appearance.SkinColor.WithAlpha(facialHairAlpha)
@@ -187,12 +189,12 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         if (_markingManager.MustMatchColor(profile.Species, HumanoidVisualLayers.Hair, out var forcedHairAlpha, _prototypeManager) is Color forcedHairColor)
         {
             profile.Appearance.SkinColor.WithAlpha(forcedHairAlpha);
-            hairColor = forcedHairColor;
+            hairColor = new List<Color> { forcedHairColor.WithAlpha(forcedHairAlpha) }; // Forge-Change
         }
         if (_markingManager.MustMatchColor(profile.Species, HumanoidVisualLayers.FacialHair, out var forcedFacialHairAlpha, _prototypeManager) is Color forcedFacialHairColor)
         {
-            profile.Appearance.SkinColor.WithAlpha(forcedFacialHairAlpha);
-            facialHairColor = forcedFacialHairColor;
+            profile.Appearance.SkinColor.WithAlpha(forcedFacialHairAlpha); // Forge-Change
+            facialHairColor = forcedFacialHairColor.WithAlpha(forcedFacialHairAlpha);
         }
         // End Frontier
 

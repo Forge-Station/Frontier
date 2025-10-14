@@ -5,13 +5,6 @@
     Poison: 0.75
 
 - type: damageModifierSet
-  id: Phantom
-  coefficients:
-    Cold: 0.75
-    Heat: 1.5
-    Shock: 1.25
-
-- type: damageModifierSet
   id: Ariral
   coefficients:
     Blunt: 0.8
