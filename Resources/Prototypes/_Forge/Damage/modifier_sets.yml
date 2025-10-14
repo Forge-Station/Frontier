@@ -12,11 +12,9 @@
 - type: damageModifierSet
   id: Ipc
   coefficients:
-    Blunt: 1.1 # Forge-Change
-    Heat: 1.2 # Forge-Change
-    Shock: 1.4 # Forge-Change
-    Stamina: 0.9 # Forge-Change
-
+    Blunt: 1.1
+    Heat: 1.2
+    Shock: 1.4
 
 # Mech armor
 - type: damageModifierSet

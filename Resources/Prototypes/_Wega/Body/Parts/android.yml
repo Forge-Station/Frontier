@@ -30,11 +30,6 @@
   components:
   - type: Sprite
     state: "l_arm"
-  - type: Tag
-    tags:
-      - Trash
-      - BaseBodyPart
-      - LeftArmSynthetic
 
 - type: entity
   id: RightArmAndroid
@@ -43,11 +38,6 @@
   components:
   - type: Sprite
     state: "r_arm"
-  - type: Tag
-    tags:
-      - Trash
-      - BaseBodyPart
-      - RightArmSynthetic
 
 - type: entity
   id: LeftHandAndroid
@@ -56,11 +46,6 @@
   components:
   - type: Sprite
     state: "l_hand"
-  - type: Tag
-    tags:
-      - Trash
-      - BaseBodyPart
-      - LeftHandSynthetic
 
 - type: entity
   id: RightHandAndroid
@@ -69,11 +54,6 @@
   components:
   - type: Sprite
     state: "r_hand"
-  - type: Tag
-    tags:
-      - Trash
-      - BaseBodyPart
-      - RightHandSynthetic
 
 - type: entity
   id: LeftLegAndroid
@@ -82,11 +62,6 @@
   components:
   - type: Sprite
     state: "l_leg"
-  - type: Tag
-    tags:
-      - Trash
-      - BaseBodyPart
-      - LeftLegSynthetic
 
 - type: entity
   id: RightLegAndroid
@@ -95,11 +70,6 @@
   components:
   - type: Sprite
     state: "r_leg"
-  - type: Tag
-    tags:
-      - Trash
-      - BaseBodyPart
-      - RightLegSynthetic
 
 - type: entity
   id: LeftFootAndroid
@@ -108,11 +78,6 @@
   components:
   - type: Sprite
     state: "l_foot"
-  - type: Tag
-    tags:
-      - Trash
-      - BaseBodyPart
-      - LeftFootSynthetic
 
 - type: entity
   id: RightFootAndroid
@@ -121,8 +86,4 @@
   components:
   - type: Sprite
     state: "r_foot"
-  - type: Tag
-    tags:
-      - Trash
-      - BaseBodyPart
-      - RightFootSynthetic
+

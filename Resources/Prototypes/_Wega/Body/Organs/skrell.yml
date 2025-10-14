@@ -5,7 +5,6 @@
   components:
   - type: Sprite
     sprite: _Wega/Mobs/Species/Skrell/organ.rsi
-  - type: Organ
   - type: Food
   - type: Extractable
     grindableSolutionName: organ
@@ -21,6 +20,7 @@
         - ReagentId: UncookedAnimalProteins
           Quantity: 5
   - type: FlavorProfile
+  - type: Organ
     flavors:
       - people
   - type: Tag
@@ -39,7 +39,6 @@
   - type: Sprite
     state: brain
   - type: Organ
-    organType: Brain
   - type: SolutionContainerManager
     solutions:
       organ:
@@ -53,7 +52,6 @@
           Quantity: 5
   - type: Tag
     tags:
-      - BaseOrgan
       - Brain
       - Meat
 
@@ -69,11 +67,8 @@
     size: Small
     heldPrefix: eyes
   - type: Organ
-    organType: Eyes
   - type: Tag
     tags:
-      - BaseOrgan
-      - Eyes
       - Meat
 
 - type: entity
@@ -111,11 +106,8 @@
         - ReagentId: UncookedAnimalProteins
           Quantity: 5
   - type: Organ
-    organType: Lungs
   - type: Tag
     tags:
-      - BaseOrgan
-      - Lungs
       - Meat
 
 - type: entity
@@ -137,11 +129,8 @@
     size: Small
     heldPrefix: heart
   - type: Organ
-    organType: Heart
   - type: Tag
     tags:
-      - BaseOrgan
-      - Heart
       - Meat
 
 - type: entity
@@ -173,11 +162,8 @@
     - id: Food
     - id: Drink
   - type: Organ
-    organType: Stomach
   - type: Tag
     tags:
-      - BaseOrgan
-      - Stomach
       - Meat
 
 - type: entity
@@ -198,11 +184,8 @@
     - id: Alcohol
       rateModifier: 0.1
   - type: Organ
-    organType: Liver
   - type: Tag
     tags:
-      - BaseOrgan
-      - Liver
       - Meat
 
 - type: entity
@@ -221,9 +204,6 @@
     metabolizerTypes: [Human]
     removeEmpty: true
   - type: Organ
-    organType: Kidneys
   - type: Tag
     tags:
-      - BaseOrgan
-      - Kidneys
       - Meat

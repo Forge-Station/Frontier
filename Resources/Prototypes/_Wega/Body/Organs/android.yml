@@ -23,12 +23,6 @@
       Lung:
         maxVol: 100.0
         canReact: false
-  - type: Organ
-    organType: Lungs
-  - type: Tag
-    tags:
-      - BaseOrgan
-      - LungsSynthetic
 
 - type: entity
   id: OrganAndroidTyrium
@@ -40,12 +34,6 @@
     sprite: _Wega/Mobs/Species/Android/parts.rsi
     layers:
       - state: tyrium_module
-  - type: Organ
-    organType: Heart
-  - type: Tag
-    tags:
-      - BaseOrgan
-      - HeartSynthetic
 
 - type: entity
   id: OrganAndroidEyes
@@ -57,9 +45,3 @@
     sprite: _Wega/Mobs/Species/Android/parts.rsi
     layers:
       - state: eye_module
-  - type: Organ
-    organType: Eyes
-  - type: Tag
-    tags:
-      - BaseOrgan
-      - EyesSynthetic
