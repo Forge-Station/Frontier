@@ -17,5 +17,5 @@ loadout-group-contractor-hand-items = in-hand items
 loadout-group-contractor-encryption-key = encryption keys
 loadout-group-contractor-survival-box = survival box
 loadout-group-contractor-cartridge = PDA cartridges
-loadout-group-contractor-wallet = wallet
+loadout-group-contractor-LEGS = LEGS
 loadout-group-contractor-implanter = implanters

@@ -55,12 +55,12 @@ public sealed class SmartEquipSystem : EntitySystem
     {
         HandleSmartEquip(session, "belt");
     }
-    // Frontier: smart-equip to wallet
+    // Frontier: smart-equip to LEGS
     private void HandleSmartEquipWallet(ICommonSession? session)
     {
-        HandleSmartEquip(session, "wallet");
+        HandleSmartEquip(session, "LEGS");
     }
-    // End Frontier: smart-equip to wallet
+    // End Frontier: smart-equip to LEGS
     private void HandleSmartEquip(ICommonSession? session, string equipmentSlot)
     {
         if (session is not { } playerSession)

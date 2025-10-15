@@ -420,8 +420,6 @@
   - type: ModifyDelayedKnockdown # Goobstation
     delayDelta: 2
     knockdownTimeDelta: -2
-  - type: StaminaDamageResistance # Goobstation
-    coefficient: 0.7
 
 - type: entity
   parent: ClothingOuterStorageBase

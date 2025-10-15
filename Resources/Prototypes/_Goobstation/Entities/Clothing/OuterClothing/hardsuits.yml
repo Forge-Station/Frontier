@@ -61,15 +61,11 @@
     walkModifier: 0.70
     sprintModifier: 0.70
   - type: HeldSpeedModifier
-  - type: StasisProtection
-  - type: StasisBlinkProvider
   - type: ToggleableClothing # Goobstation - Modsuits change
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitChronolegioneer
   - type: ModifyDelayedKnockdown
     cancel: true
-  - type: StaminaDamageResistance
-    coefficient: 0
 
 - type: entity
   parent: ClothingOuterHardsuitChronolegioneer
@@ -114,8 +110,6 @@
   - type: ModifyDelayedKnockdown # Goobstation
     delayDelta: 2
     knockdownTimeDelta: -2
-  - type: StaminaDamageResistance
-    coefficient: 0.6
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseCentcommContraband]
@@ -158,8 +152,6 @@
   - type: ModifyDelayedKnockdown
     delayDelta: 3
     knockdownTimeDelta: -3
-  - type: StaminaDamageResistance
-    coefficient: 0.5
 
 # Cybersun Stealth
 
@@ -216,8 +208,6 @@
   - type: ModifyDelayedKnockdown # Goobstation
     delayDelta: 3
     knockdownTimeDelta: -3
-  - type: StaminaDamageResistance
-    coefficient: 0.5
 
 # cybersun dreadnought suit
 
@@ -270,8 +260,6 @@
           Slash: 0.3
       interval: 1.0
       ignoreResistances: true
-  - type: StaminaDamageResistance
-    coefficient: 0
   - type: ModifyDelayedKnockdown
     cancel: true
 
@@ -344,8 +332,6 @@
   - type: ModifyDelayedKnockdown # Goobstation
     delayDelta: 2
     knockdownTimeDelta: -2
-  - type: StaminaDamageResistance
-    coefficient: 0.6
 
 ## Heady of security voidsuit
 #- type: entity
@@ -382,9 +368,7 @@
 #  - type: ModifyDelayedKnockdown # Goobstation
 #    delayDelta: 3
 #    knockdownTimeDelta: -3
-#  - type: StaminaDamageResistance # Goobstation
-#    coefficient: 0.5
-#
+
 ## Engineer
 #- type: entity
 #  parent: [ClothingOuterHardsuitBase, BaseEngineeringContraband]
@@ -429,10 +413,5 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitHeadOfSecurityExperimental
-  - type: ClothingAutoInject
-    reagents:
-      Epinephrine: 10
-      Bicaridine: 10
-      TranexamicAcid: 5
   - type: Item
     size: Huge

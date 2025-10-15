@@ -37,6 +37,9 @@ using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
 using Robust.Shared.Serialization;
 using Robust.Shared.Network;
+using Content.Shared._Shitmed.Targeting;
+using System.Collections.Generic;
+using Content.Shared._Shitmed.Body;
 
 namespace Content.Shared.Mobs.Systems;
 
@@ -285,39 +288,16 @@ public sealed class MobThresholdSystem : EntitySystem
     /// <param name="target1">The entity whose damage will be scaled</param>
     /// <param name="target2">The entity whose health the damage will scale to</param>
     /// <param name="damage">The newly scaled damage. Can be null</param>
-    public bool GetScaledDamage(EntityUid target1, EntityUid target2, out DamageSpecifier? damage)
+    public bool GetScaledDamage(EntityUid target1,
+        EntityUid target2,
+        out DamageSpecifier? damage,
+        out Dictionary<TargetBodyPart, DamageSpecifier>? woundableDamage)
     {
         damage = null;
+        woundableDamage = null;
 
         if (!TryComp<DamageableComponent>(target1, out var oldDamage))
             return false;
-
-        // Shitmed Change Start
-        var entDamage = oldDamage.Damage;
-        if (TryComp<BodyComponent>(target1, out var body) && HasComp<ConsciousnessComponent>(target1))
-        {
-            var damageDict = new Dictionary<string, FixedPoint2>();
-            foreach (var bodyPart in _body.GetBodyChildren(target1, body))
-            {
-                if (!TryComp<WoundableComponent>(bodyPart.Id, out var woundable))
-                    continue;
-
-                foreach (var woundEnt in _wound.GetWoundableWounds(bodyPart.Id, woundable))
-                {
-                    if (!damageDict.TryAdd(woundEnt.Comp.DamageType, woundEnt.Comp.WoundSeverityPoint))
-                    {
-                        damageDict[woundEnt.Comp.DamageType] = woundEnt.Comp.WoundSeverityPoint;
-                    }
-                }
-            }
-
-            entDamage = new DamageSpecifier
-            {
-                DamageDict = damageDict,
-            };
-        }
-
-        // Shitmed Change End
 
         if (!TryComp<MobThresholdsComponent>(target1, out var threshold1) ||
             !TryComp<MobThresholdsComponent>(target2, out var threshold2))
@@ -329,7 +309,36 @@ public sealed class MobThresholdSystem : EntitySystem
         if (!TryGetThresholdForState(target2, MobState.Dead, out var ent2DeadThreshold, threshold2))
             ent2DeadThreshold = 0;
 
-        damage = (entDamage / ent1DeadThreshold.Value) * ent2DeadThreshold.Value;
+        // Shitmed Change Start
+        Dictionary<TargetBodyPart, DamageSpecifier> entWoundablesDamage = new();
+
+        // If the receiver is a simplemob, we don't care about any of this. Just grab the damage and go.
+        if (TryComp<BodyComponent>(target2, out var body)
+            && body.BodyType == BodyType.Complex)
+        {
+            // However if they are valid for woundmed, we first check if the sender is also valid for it to build a dict.
+            if (TryComp<BodyComponent>(target1, out var oldBody)
+                && oldBody.BodyType == BodyType.Complex
+                && _body.TryGetRootPart(target1, out var parentRootPart))
+            {
+                foreach (var woundable in _wound.GetAllWoundableChildren(parentRootPart.Value))
+                {
+                    if (woundable.Comp.WoundableIntegrity >= woundable.Comp.IntegrityCap
+                        || !TryComp<DamageableComponent>(parentRootPart.Value, out var damageable)
+                        || damageable.Damage.GetTotal() == 0)
+                        continue;
+
+                    var bodyPart = _body.GetTargetBodyPart(woundable);
+                    var modifiedDamage = damageable.Damage / ent1DeadThreshold.Value * ent2DeadThreshold.Value;
+                    if (!entWoundablesDamage.TryAdd(bodyPart, modifiedDamage))
+                        entWoundablesDamage[bodyPart] += modifiedDamage;
+                }
+                woundableDamage = entWoundablesDamage;
+            }
+        }
+
+        damage = oldDamage.Damage / ent1DeadThreshold.Value * ent2DeadThreshold.Value;
+        // Shitmed Change End
         return true;
     }
 

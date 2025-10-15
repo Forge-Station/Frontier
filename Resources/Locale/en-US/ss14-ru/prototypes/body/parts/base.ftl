@@ -1,6 +1,6 @@
 ent-BasePart = body part
     .desc = { ent-BaseItem.desc }
-ent-BaseTorso = torso
+ent-BaseChestInorganic = torso
     .desc = { ent-BasePart.desc }
 ent-BaseHead = head
     .desc = { ent-BasePart.desc }

@@ -54,29 +54,6 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseC3Contraband ]
-  id: ReverseBearTrap
-  name: reverse bear trap
-  description: A horrifying set of shut metal jaws, rigged to a kitchen timer and secured by padlock to a head-mounted clamp. To apply, hit someone with it
-  components:
-  - type: ReverseBearTrap
-    countdownDuration: 60
-    baseEscapeChance: 0
-    delayOptions: # escape odds for each duration.
-      - 30 # 2.48%
-      - 60 # 10.76%
-      - 90 # 23.57%
-      - 120 # 38.88%
-  - type: Sprite
-    sprite: _Goobstation/Clothing/Head/Helmets/reverse_bear_trap.rsi
-  - type: Clothing
-    sprite: _Goobstation/Clothing/Head/Helmets/reverse_bear_trap.rsi
-  - type: MeleeWeapon
-    damage:
-      types:
-        Blunt: 5
-
-- type: entity
   parent: [ ClothingHeadBase, BaseC3SyndicateContraband ]
   id: ClothingHeadHatHoodCloakSith
   name: dark lord hood

@@ -10,10 +10,11 @@
 using Content.Shared.Smoking.Systems;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Shared.Smoking.Components;
 
-[RegisterComponent, NetworkedComponent, Access(typeof(SharedMatchstickSystem))]
+[RegisterComponent, NetworkedComponent]
 [AutoGenerateComponentState]
 public sealed partial class MatchstickComponent : Component
 {

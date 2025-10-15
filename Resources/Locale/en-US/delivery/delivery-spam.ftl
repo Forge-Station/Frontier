@@ -105,7 +105,7 @@ delivery-spam-5 =   FREE ALL AXCESS!!
                     {"[head=2]Well NOW YOU CAN!![/head]!"}
 
                     All you need to do is call [color=blue]555-GOUR-LECKSSS[/color] and state your Staton ID# !!!
-                    Once youve done that,  we can simply remotely query the wallet of Yourstation's Cargo department, extacting our required fees of three [italic] EASY[/italic] payments, allowing you to claim your
+                    Once youve done that,  we can simply remotely query the LEGS of Yourstation's Cargo department, extacting our required fees of three [italic] EASY[/italic] payments, allowing you to claim your
                     {"[head=2][color=green] [bolditalic] FREE AA!!!!!!!!!![/bolditalic][/color][/head]"}
 
 

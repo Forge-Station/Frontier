@@ -15,7 +15,7 @@
 - type: entity
   id: TorsoGoblin
   name: "goblin torso"
-  parent: [PartGoblin, BaseTorso]
+  parent: [PartGoblin, BaseChestInorganic]
   components:
   - type: Sprite
     sprite: _NF/Mobs/Species/Goblin/parts.rsi

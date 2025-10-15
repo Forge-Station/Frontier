@@ -11,8 +11,11 @@ namespace Content.Shared.Maps;
 /// </summary>
 public sealed class TurfSystem : EntitySystem
 {
+    [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly EntityLookupSystem _entityLookup = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly SharedMapSystem _mapSystem = default!;
+    [Dependency] private readonly ITileDefinitionManager _tileDefinitions = default!;
 
     /// <summary>
     ///     Returns true if a given tile is blocked by physics-enabled entities.
@@ -87,6 +90,26 @@ public sealed class TurfSystem : EntitySystem
     }
 
     /// <summary>
+    /// Returns whether a tile is considered to be space or directly exposed to space.
+    /// </summary>
+    /// <param name="tile">The tile in question.</param>
+    /// <returns>True if the tile is considered to be space, false otherwise.</returns>
+    public bool IsSpace(Tile tile)
+    {
+        return GetContentTileDefinition(tile).MapAtmosphere;
+    }
+
+    /// <summary>
+    /// Returns whether a tile is considered to be space or directly exposed to space.
+    /// </summary>
+    /// <param name="tile">The tile in question.</param>
+    /// <returns>True if the tile is considered to be space, false otherwise.</returns>
+    public bool IsSpace(TileRef tile)
+    {
+        return IsSpace(tile.Tile);
+    }
+
+    /// <summary>
     /// Returns the location of the centre of the tile in grid coordinates.
     /// </summary>
     public EntityCoordinates GetTileCenter(TileRef turf)
@@ -94,5 +117,21 @@ public sealed class TurfSystem : EntitySystem
         var grid = Comp<MapGridComponent>(turf.GridUid);
         var center = (turf.GridIndices + new Vector2(0.5f, 0.5f)) * grid.TileSize;
         return new EntityCoordinates(turf.GridUid, center);
+    }
+
+    /// <summary>
+    ///     Returns the content tile definition for a tile.
+    /// </summary>
+    public ContentTileDefinition GetContentTileDefinition(Tile tile)
+    {
+        return (ContentTileDefinition)_tileDefinitions[tile.TypeId];
+    }
+
+    /// <summary>
+    ///     Returns the content tile definition for a tile ref.
+    /// </summary>
+    public ContentTileDefinition GetContentTileDefinition(TileRef tile)
+    {
+        return GetContentTileDefinition(tile.Tile);
     }
 }

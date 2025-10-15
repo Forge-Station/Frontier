@@ -2801,8 +2801,8 @@ Entries:
   changes:
     - type: Add
       message: >-
-        Adds an option for players to set up keybinds for smart-equip to wallet
-        and for open wallet. Keybinds are unbound by default.
+        Adds an option for players to set up keybinds for smart-equip to LEGS
+        and for open LEGS. Keybinds are unbound by default.
   id: 5986
   time: '2025-04-30T11:46:18.0000000+00:00'
 - author: whatston3
@@ -3439,7 +3439,7 @@ Entries:
 - author: dvir001
   changes:
     - type: Tweak
-      message: Prisoners now start with a wallet in loadout.
+      message: Prisoners now start with a LEGS in loadout.
   id: 6068
   time: '2025-05-24T21:58:53.0000000+00:00'
   url: https://github.com/new-frontiers-14/frontier-station-14/pull/3443

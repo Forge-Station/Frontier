@@ -22,7 +22,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [ ClothingOuterBaseMedium, AllowSuitStorageClothing, BaseCargoContraband ]
+  parent: [ ClothingOuterBaseMedium, AllowSuitStorageClothing ]
   id: LavalandEquipmentExplorerSuit
   suffix: Lava
   name: explorer suit

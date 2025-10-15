@@ -4,7 +4,7 @@
 // SPDX-FileCopyrightText: 2021 Fortune117 <fortune11709@gmail.com>
 // SPDX-FileCopyrightText: 2021 Galactic Chimp <GalacticChimpanzee@gmail.com>
 // SPDX-FileCopyrightText: 2021 Jaskanbe <86671825+Jaskanbe@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2021 Javier Guardia Fernández <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2021 Javier Guardia Fern�ndez <DrSmugleaf@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2021 Kara Dinyes <lunarautomaton6@gmail.com>
 // SPDX-FileCopyrightText: 2021 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2021 Leon Friedrich <60421075+leonsfriedrich@users.noreply.github.com>
@@ -40,13 +40,16 @@
 // SPDX-FileCopyrightText: 2023 moonheart08 <moonheart08@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 KrasnoshchekovPavel <119816022+KrasnoshchekovPavel@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
-// SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 // SPDX-FileCopyrightText: 2025 SlamBamActionman <83650252+SlamBamActionman@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
+// SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 gluesniffler <linebarrelerenthusiast@gmail.com>
 // SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
+// SPDX-FileCopyrightText: 2025 pheenty <fedorlukin2006@gmail.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -55,14 +58,16 @@ using Content.Shared.Damage.Prototypes;
 using Content.Shared.EntityEffects;
 using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Localizations;
-using Content.Shared._Shitmed.EntityEffects.Effects; // Shitmed Change
-using Content.Shared._Shitmed.Targeting; // Shitmed Change
-using Content.Server.Temperature.Components; // Shitmed Change
-using Content.Shared._Shitmed.Medical.Surgery.Wounds.Systems; // Shitmed Change
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using System.Linq;
 using System.Text.Json.Serialization;
+
+// Shitmed Changes
+using Content.Shared._Shitmed.EntityEffects.Effects;
+using Content.Shared._Shitmed.Targeting;
+using Content.Server.Temperature.Components;
+using Content.Shared._Shitmed.Damage;
 
 namespace Content.Server.EntityEffects.Effects
 {
@@ -102,12 +107,20 @@ namespace Content.Server.EntityEffects.Effects
         public bool IgnoreResistances = true;
 
         [DataField]
-        [JsonPropertyName("healingDamageMultiplier")]
-        public float HealingDamageMultiplier = 11f; // Shitmed Change
+        [JsonPropertyName("splitDamage")]
+        public SplitDamageBehavior SplitDamage = SplitDamageBehavior.SplitEnsureAllOrganic;
 
         [DataField]
-        [JsonPropertyName("damageMultiplier")]
-        public float DamageMultiplier = 1f; // Shitmed Change
+        [JsonPropertyName("useTargeting")]
+        public bool UseTargeting = true;
+
+        [DataField]
+        [JsonPropertyName("targetPart")]
+        public TargetBodyPart TargetPart = TargetBodyPart.All;
+
+        [DataField]
+        [JsonPropertyName("ignoreBlockers")]
+        public bool IgnoreBlockers = true;
 
         protected override string ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
         {
@@ -127,60 +140,17 @@ namespace Content.Server.EntityEffects.Effects
                 {
                     if (val < 0f)
                     {
-                        damageSpec.DamageDict[type] = val * universalReagentHealModifier * HealingDamageMultiplier;
+                        damageSpec.DamageDict[type] = val * universalReagentHealModifier;
                     }
 
                     if (val > 0f)
                     {
-                        damageSpec.DamageDict[type] = val * universalReagentDamageModifier * DamageMultiplier;
+                        damageSpec.DamageDict[type] = val * universalReagentDamageModifier;
                     }
                 }
             }
 
             damageSpec = entSys.GetEntitySystem<DamageableSystem>().ApplyUniversalAllModifiers(damageSpec);
-
-            foreach (var group in prototype.EnumeratePrototypes<DamageGroupPrototype>())
-            {
-                if (!damageSpec.TryGetDamageInGroup(group, out var amount))
-                    continue;
-
-                var relevantTypes = damageSpec.DamageDict
-                    .Where(x => x.Value != FixedPoint2.Zero && group.DamageTypes.Contains(x.Key))
-                    .ToList();
-
-                if (relevantTypes.Count != group.DamageTypes.Count)
-                    continue;
-
-                var sum = FixedPoint2.Zero;
-                foreach (var type in group.DamageTypes)
-                {
-                    sum += damageSpec.DamageDict.GetValueOrDefault(type);
-                }
-
-                // if the total sum of all the types equal the damage amount,
-                // assume that they're evenly distributed.
-                if (sum != amount)
-                    continue;
-
-                var sign = FixedPoint2.Sign(amount);
-
-                if (sign < 0)
-                    heals = true;
-                if (sign > 0)
-                    deals = true;
-
-                damages.Add(
-                    Loc.GetString("health-change-display",
-                        ("kind", group.LocalizedName),
-                        ("amount", MathF.Abs(amount.Float())),
-                        ("deltasign", sign)
-                    ));
-
-                foreach (var type in group.DamageTypes)
-                {
-                    damageSpec.DamageDict.Remove(type);
-                }
-            }
 
             foreach (var (kind, amount) in damageSpec.DamageDict)
             {
@@ -213,9 +183,7 @@ namespace Content.Server.EntityEffects.Effects
             var damageSpec = new DamageSpecifier(Damage);
 
             if (args is EntityEffectReagentArgs reagentArgs)
-            {
                 scale = ScaleByQuantity ? reagentArgs.Quantity * reagentArgs.Scale : reagentArgs.Scale;
-            }
 
             if (ScaleByTemperature.HasValue)
             {
@@ -235,21 +203,26 @@ namespace Content.Server.EntityEffects.Effects
                 foreach (var (type, val) in damageSpec.DamageDict)
                 {
                     if (val < 0f)
-                        damageSpec.DamageDict[type] = val * universalReagentHealModifier * HealingDamageMultiplier;
+                    {
+                        damageSpec.DamageDict[type] = val * universalReagentHealModifier;
+                    }
 
                     if (val > 0f)
-                        damageSpec.DamageDict[type] = val * universalReagentDamageModifier * DamageMultiplier;
+                    {
+                        damageSpec.DamageDict[type] = val * universalReagentDamageModifier;
+                    }
                 }
             }
 
             args.EntityManager.System<DamageableSystem>()
                 .TryChangeDamage(
                     args.TargetEntity,
-                    damageSpec * scale, // 8 represents the average number of parts on a humanoid.
+                    damageSpec * scale,
                     IgnoreResistances,
                     interruptsDoAfters: false,
-                    targetPart: TargetBodyPart.All,
-                    ignoreBlockers: true); // Shitmed Change
+                    targetPart: UseTargeting ? TargetPart : null,
+                    ignoreBlockers: IgnoreBlockers,
+                    splitDamage: SplitDamage); // Shitmed Change
 
         }
     }

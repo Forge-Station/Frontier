@@ -90,8 +90,6 @@
   - type: ModifyDelayedKnockdown # Goobstation
     delayDelta: 2.5
     knockdownTimeDelta: -2.5
-  - type: StaminaDamageResistance # Goobstation
-    coefficient: 0.6
 
 - type: entity
   parent: ClothingOuterArmorBase
@@ -232,8 +230,6 @@
   - type: ModifyDelayedKnockdown # Goobstation
     delayDelta: 2.5
     knockdownTimeDelta: -2.5
-  - type: StaminaDamageResistance # Goobstation
-    coefficient: 0.6
 
 #Elite web vest
 - type: entity
@@ -265,8 +261,6 @@
   - type: ModifyDelayedKnockdown # Goobstation
     delayDelta: 3
     knockdownTimeDelta: -3
-  - type: StaminaDamageResistance # Goobstation
-    coefficient: 0.4
 
 #Mercenary web vest
 - type: entity
@@ -564,8 +558,6 @@
   - type: ModifyDelayedKnockdown # Goobstation
     delayDelta: 2.5
     knockdownTimeDelta: -2.5
-  - type: StaminaDamageResistance # Goobstation
-    coefficient: 0.6
 
 - type: entity # This is from upstream, so it goes in wizden code.
   parent: [ClothingOuterArmorCaptainCarapace, BaseCentcommContraband]
@@ -579,7 +571,7 @@
     sprite: Clothing/OuterClothing/Armor/centcomm_carapace.rsi
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
+  parent: [ ClothingOuterBaseLarge, AllowSuitStorageClothing ]
   id: ClothingOuterArmorChangeling
   name: chitinous armor
   description: Inflates the changeling's body into an all-consuming chitinous mass of armor.

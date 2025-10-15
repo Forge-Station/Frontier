@@ -130,7 +130,6 @@ using Content.Shared.Body.Systems;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reaction;
 using Content.Shared.Chemistry.Reagent;
-using Content.Shared.EntityEffects.Effects;
 using Content.Shared.Forensics;
 
 namespace Content.Server.Body.Systems;

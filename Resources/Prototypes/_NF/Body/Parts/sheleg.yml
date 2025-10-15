@@ -15,7 +15,7 @@
 - type: entity
   id: TorsoSheleg
   name: "sheleg torso"
-  parent: [PartSheleg, BaseTorso]
+  parent: [PartSheleg, BaseChestInorganic]
   components:
   - type: Sprite
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi

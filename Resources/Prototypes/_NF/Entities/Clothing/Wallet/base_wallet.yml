@@ -2,7 +2,7 @@
   parent: [BaseStorageItem, Clothing, RecyclableItemClothBasic]
   id: NFBaseWallet
   abstract: true
-  name: wallet
+  name: LEGS
   description: If somebody dropped this, you should really return it.
   components:
   - type: Sprite
@@ -41,7 +41,7 @@
   - type: Item
     size: Small
   - type: Clothing
-    slots: [wallet]
+    slots: [LEGS]
     quickEquip: false
   - type: Appearance
   - type: ItemMapper

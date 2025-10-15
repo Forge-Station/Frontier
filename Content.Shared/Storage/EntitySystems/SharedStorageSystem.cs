@@ -1941,12 +1941,12 @@ public abstract class SharedStorageSystem : EntitySystem
     {
         HandleToggleSlotUI(session, "belt");
     }
-    // Frontier: open wallet
+    // Frontier: open LEGS
     private void HandleOpenWallet(ICommonSession? session)
     {
-        HandleToggleSlotUI(session, "wallet");
+        HandleToggleSlotUI(session, "LEGS");
     }
-    // End Frontier: open wallet
+    // End Frontier: open LEGS
     private void HandleToggleSlotUI(ICommonSession? session, string slot)
     {
         if (session is not { } playerSession)

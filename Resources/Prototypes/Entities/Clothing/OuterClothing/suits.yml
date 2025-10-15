@@ -278,7 +278,7 @@
     slots: WITHOUT_POCKET
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, ClothingOuterBaseToggleable ]
   id: ClothingOuterSuitIan
   name: ian suit
   description: Who's a good boy?
@@ -297,9 +297,16 @@
     node: suit
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: HideClothingLayerClothing # Goobstation
+    hiddenSlots:
+    - jumpsuit
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, ClothingOuterBaseToggleable ]
   id: ClothingOuterSuitCarp
   name: carp suit
   description: A special suit that makes you look just like a space carp, if your eyesight is bad.
@@ -314,7 +321,9 @@
   - type: ToggleableClothing # Goobstation - Modsuits change
     clothingPrototypes:
       head: ClothingHeadHatHoodCarp
-  - type: CatWearable # Frontier
+  - type: HideClothingLayerClothing # Goobstation
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: ClothingOuterSuitCarp
@@ -331,3 +340,8 @@
   - type: ToggleableClothing # Goobstation - Modsuits change
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitCarp
+  - type: HideClothingLayerClothing # Goobstation
+    hiddenSlots:
+    - jumpsuit
+  - type: StaticPrice
+    price: 1500

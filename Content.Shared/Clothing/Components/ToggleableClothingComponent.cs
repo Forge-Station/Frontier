@@ -3,6 +3,7 @@ using Content.Shared.Inventory;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared.Clothing.Components;
@@ -71,4 +72,38 @@ public sealed partial class ToggleableClothingComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public string? VerbText;
+
+    /// <summary>
+    ///     If true it will block unequip of this entity until all attached clothing are removed
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool BlockUnequipWhenAttached = false;
+
+    /// <summary>
+    ///     If true all attached will replace already equipped clothing on equip attempt
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool ReplaceCurrentClothing = false;
+
+
+    /// <summary>
+    ///     Dictionary of clothing uids and slots
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public Dictionary<EntityUid, string> ClothingUids = new();
+}
+[Serializable, NetSerializable]
+public enum ToggleClothingUiKey : byte
+{
+    Key
+}
+[Serializable, NetSerializable]
+public sealed class ToggleableClothingUiMessage : BoundUserInterfaceMessage
+{
+    public NetEntity AttachedClothingUid;
+
+    public ToggleableClothingUiMessage(NetEntity attachedClothingUid)
+    {
+        AttachedClothingUid = attachedClothingUid;
+    }
 }

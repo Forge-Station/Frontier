@@ -13,12 +13,11 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Shared.EntityEffects;
-using Content.Shared._Shitmed.Medical.Surgery.Wounds.Systems; // Shitmed Change
+using Content.Shared._Shitmed.Medical.Surgery.Wounds.Systems;
+using Content.Shared.Body.Components; // Shitmed Change
 using Robust.Shared.Prototypes;
-using Content.Shared.Body.Components;
 
 namespace Content.Server.EntityEffects.Effects;
 
@@ -40,7 +39,8 @@ public sealed partial class ModifyBleedAmount : EntityEffect
         {
             var sys = args.EntityManager.System<BloodstreamSystem>();
             var amt = Amount;
-            if (args is EntityEffectReagentArgs reagentArgs) {
+            if (args is EntityEffectReagentArgs reagentArgs)
+            {
                 if (Scaled)
                     amt *= reagentArgs.Quantity.Float();
                 amt *= reagentArgs.Scale.Float();

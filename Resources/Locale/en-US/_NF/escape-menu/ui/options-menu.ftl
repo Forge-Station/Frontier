@@ -4,5 +4,5 @@ ui-options-enable-overlay-nf-balance = Show balance
 
 ## Controls menu
 
-ui-options-function-smart-equip-wallet = Smart-equip to wallet
-ui-options-function-open-wallet = Open wallet
+ui-options-function-smart-equip-LEGS = Smart-equip to LEGS
+ui-options-function-open-LEGS = Open LEGS

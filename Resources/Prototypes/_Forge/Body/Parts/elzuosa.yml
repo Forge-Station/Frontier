@@ -13,7 +13,7 @@
 - type: entity
   id: TorsoElzuosa
   name: "elzuosa torso"
-  parent: [PartElzuosa, BaseTorso]
+  parent: [PartElzuosa, BaseChestInorganic]
   components:
   - type: Sprite
     sprite: Forge/Mobs/Species/Elzuosa/parts.rsi

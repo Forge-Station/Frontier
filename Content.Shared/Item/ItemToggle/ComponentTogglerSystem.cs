@@ -14,28 +14,39 @@ public sealed class ComponentTogglerSystem : EntitySystem
         SubscribeLocalEvent<ComponentTogglerComponent, ItemToggledEvent>(OnToggled);
     }
 
+
     private void OnToggled(Entity<ComponentTogglerComponent> ent, ref ItemToggledEvent args)
     {
-        if (args.Activated)
+        ToggleComponent(ent, args.Activated);
+    }
+
+    // Goobstation - Make this system more flexible
+    public void ToggleComponent(EntityUid uid, bool activate)
+    {
+        if (!TryComp<ComponentTogglerComponent>(uid, out var component))
+            return;
+
+
+        if (activate)
         {
-            var target = ent.Comp.Parent ? Transform(ent).ParentUid : ent.Owner;
+            var target = component.Parent ? Transform(uid).ParentUid : uid;
 
             if (TerminatingOrDeleted(target))
                 return;
 
-            ent.Comp.Target = target;
+            component.Target = target;
 
-            EntityManager.AddComponents(target, ent.Comp.Components);
+            EntityManager.AddComponents(target, component.Components);
         }
         else
         {
-            if (ent.Comp.Target == null)
+            if (component.Target == null)
                 return;
 
-            if (TerminatingOrDeleted(ent.Comp.Target.Value))
+            if (TerminatingOrDeleted(component.Target.Value))
                 return;
 
-            EntityManager.RemoveComponents(ent.Comp.Target.Value, ent.Comp.RemoveComponents ?? ent.Comp.Components);
+            EntityManager.RemoveComponents(component.Target.Value, component.RemoveComponents ?? component.Components);
         }
     }
 }

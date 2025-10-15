@@ -46,7 +46,6 @@
   parent: [ClothingShoesBase, ClothingSlotBase]
   id: ClothingShoesMilitaryBase
   components:
-  - type: Matchbox
   - type: ItemSlots
     slots:
       item:

@@ -11,7 +11,7 @@
   #   species: Felinid # Frontier: no shitmed
 
 - type: entity
-  parent: [ PartFelinidBase, BaseTorso ]
+  parent: [ PartFelinidBase, BaseChestInorganic ]
   id: TorsoFelinid
   name: "felinid torso"
   # Frontier: add sprites

@@ -140,13 +140,13 @@
       dependsOnComponents:
       - type: AllowSuitStorage
       displayName: Suit Storage
-    # Frontier: wallet slot
-    - name: wallet
+    # Frontier: LEGS slot
+    - name: LEGS
       slotTexture: wallet
-      slotFlags: WALLET
+      slotFlags: LEGS
       stripTime: 6
       uiWindowPos: 2,0
       strippingWindowPos: 2,1
       dependsOn: jumpsuit
-      displayName: Wallet
-    # End Frontier: wallet slot
+      displayName: LEGS
+    # End Frontier: LEGS slot
