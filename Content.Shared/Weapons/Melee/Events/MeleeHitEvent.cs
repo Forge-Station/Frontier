@@ -93,3 +93,12 @@ public record struct GetMeleeAttackRateEvent(EntityUid Weapon, float Rate, float
 /// </summary>
 [ByRefEvent]
 public record struct GetHeavyDamageModifierEvent(EntityUid Weapon, FixedPoint2 DamageModifier, float Multipliers, EntityUid User);
+
+/// <summary>
+/// Goobstation: Raised on the user to calculate potential damage bonuses or decreases.
+/// </summary>
+/// <remarks>
+/// Can't be in common because of DamageSpecifier and DamageModifierSet.
+/// </remarks>
+[ByRefEvent]
+public record struct GetUserMeleeDamageEvent(EntityUid Weapon, DamageSpecifier Damage, List<DamageModifierSet> Modifiers);

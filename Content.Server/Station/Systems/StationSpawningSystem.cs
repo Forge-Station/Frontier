@@ -121,7 +121,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             {
                 loadout = new RoleLoadout(jobLoadout);
                 loadout.SetDefault(profile, _actors.GetSession(entity), _prototypeManager);
-                loadout.EnsureValid(profile!, session, _dependencyCollection); // Frontier - profile must not be null, but if it was, TryGetValue above should fail
+                loadout.EnsureValid(profile!, session!, _dependencyCollection); // Frontier - profile must not be null, but if it was, TryGetValue above should fail
             }
         }
 

@@ -43,8 +43,8 @@
       - map: [ "enum.HumanoidVisualLayers.LArm" ]
       - map: [ "enum.HumanoidVisualLayers.RLeg" ]
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
-      - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
-      - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+      #- map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+      #- map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
       - map: [ "socks" ]
       - map: [ "jumpsuit" ]
       - map: ["enum.HumanoidVisualLayers.LFoot"]
@@ -74,7 +74,7 @@
         sprite: "Effects/creampie.rsi"
         state: "creampie_human"
         visible: false
-      - map: [ "enum.HumanoidVisualLayers.RArmExtension" ] # Frontier
+      - map: [ "enum.HumanoidVisualLayers.RArm" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ]
       - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
       - map: [ "mask" ]
@@ -176,8 +176,8 @@
       - map: [ "enum.HumanoidVisualLayers.LArm" ]
       - map: [ "enum.HumanoidVisualLayers.RLeg" ]
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
-      - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
-      - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+      #- map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+      #- map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
       - map: [ "socks" ]
       - map: [ "jumpsuit" ]
       - map: ["enum.HumanoidVisualLayers.LFoot"]
@@ -203,7 +203,7 @@
         sprite: "Effects/creampie.rsi"
         state: "creampie_human"
         visible: false
-      - map: [ "enum.HumanoidVisualLayers.RArmExtension" ] # Frontier
+      - map: [ "enum.HumanoidVisualLayers.RArm" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ]
       - map: [ "mask" ]
       - map: [ "head" ]

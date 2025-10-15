@@ -1,6 +1,14 @@
+// SPDX-FileCopyrightText: 2022 Flipp Syder <76629141+vulppine@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Morb <14136326+Morb0@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 csqrb <56765288+CaptainSqrBeard@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Piras314 <p1r4s@proton.me>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Collections.Frozen;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using Content.Shared.Humanoid.Prototypes;
 using Robust.Shared.Prototypes;
 
@@ -67,6 +75,10 @@ namespace Content.Shared.Humanoid.Markings
 
             foreach (var (key, marking) in MarkingsByCategory(category))
             {
+                // Goobstation - species without hair or other markings
+                if (!markingPoints.Points.ContainsKey(category))
+                    continue;
+
                 if ((markingPoints.OnlyWhitelisted || markingPoints.Points[category].OnlyWhitelisted) && marking.SpeciesRestrictions == null)
                 {
                     continue;
@@ -268,27 +280,5 @@ namespace Content.Shared.Humanoid.Markings
             alpha = sprite.LayerAlpha;
             return true;
         }
-
-        // Frontier: allow markings to force a specific color
-        public Color? MustMatchColor(string species, HumanoidVisualLayers layer, out float alpha, IPrototypeManager? prototypeManager = null)
-        {
-            IoCManager.Resolve(ref prototypeManager);
-            var speciesProto = prototypeManager.Index<SpeciesPrototype>(species);
-            if (
-                !prototypeManager.TryIndex(speciesProto.SpriteSet, out HumanoidSpeciesBaseSpritesPrototype? baseSprites) ||
-                !baseSprites.Sprites.TryGetValue(layer, out var spriteName) ||
-                !prototypeManager.TryIndex(spriteName, out HumanoidSpeciesSpriteLayer? sprite) ||
-                sprite == null ||
-                !sprite.ForcedColoring
-            )
-            {
-                alpha = 1f;
-                return null;
-            }
-
-            alpha = sprite.LayerAlpha;
-            return speciesProto.ForcedMarkingColor;
-        }
-        // End Frontier
     }
 }

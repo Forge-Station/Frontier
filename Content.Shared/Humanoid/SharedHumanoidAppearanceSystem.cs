@@ -1,3 +1,33 @@
+// SPDX-FileCopyrightText: 2023 Alex Evgrashin <aevgrashin@yandex.ru>
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Flipp Syder <76629141+vulppine@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Morb <14136326+Morb0@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Visne <39844191+Visne@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 csqrb <56765288+CaptainSqrBeard@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Piras314 <p1r4s@proton.me>
+// SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+// SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 ike709 <ike709@github.com>
+// SPDX-FileCopyrightText: 2024 ike709 <ike709@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 J <billsmith116@gmail.com>
+// SPDX-FileCopyrightText: 2025 MarkerWicker <markerWicker@proton.me>
+// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
+// SPDX-FileCopyrightText: 2025 Zachary Higgs <compgeek223@gmail.com>
+// SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 gluesniffler <linebarrelerenthusiast@gmail.com>
+// SPDX-FileCopyrightText: 2025 paige404 <59348003+paige404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 vanx <61917534+Vaaankas@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -5,15 +35,16 @@ using Content.Shared.CCVar;
 using Content.Shared.Decals;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Markings;
+using Content.Shared._Shitmed.Humanoid.Events; // Shitmed Change
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
 using Content.Shared.Preferences;
-using Content.Shared._Forge.Speech.Synthesis; // Corvax-Frontier-Barks
-using Content.Shared._Forge.Speech.Synthesis.Components; // Corvax-Frontier-Barks
 using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.GameObjects.Components.Localization;
+using Content.Shared._Forge.Speech.Synthesis; // Corvax-Frontier-Barks
+using Content.Shared._Forge.Speech.Synthesis.Components; // Corvax-Frontier-Barks
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -43,8 +74,8 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [Dependency] private readonly GrammarSystem _grammarSystem = default!;
     [Dependency] private readonly SharedIdentitySystem _identity = default!;
 
-    [ValidatePrototypeId<SpeciesPrototype>]
-    public const string DefaultSpecies = "Human";
+    public static readonly ProtoId<SpeciesPrototype> DefaultSpecies = "Human";
+
     // Corvax-Frontier-Barks-start
     [ValidatePrototypeId<BarkPrototype>]
     public const string DefaultBarkVoice = "BarksGoonSpeak1";
@@ -118,7 +149,14 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         var species = GetSpeciesRepresentation(component.Species).ToLower();
         var age = GetAgeRepresentation(component.Species, component.Age);
 
-        args.PushText(Loc.GetString("humanoid-appearance-component-examine", ("user", identity), ("age", age), ("species", species)));
+        // WWDP EDIT
+        string locale = "humanoid-appearance-component-examine";
+
+        if (args.Examiner == args.Examined) // Use the selfaware locale when examining yourself
+            locale += "-selfaware";
+
+        args.PushText(Loc.GetString(locale, ("user", identity), ("age", age), ("species", species)), 100); // priority for examine
+        // WWDP EDIT END
     }
 
     /// <summary>
@@ -152,13 +190,15 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     public void CloneAppearance(EntityUid source, EntityUid target, HumanoidAppearanceComponent? sourceHumanoid = null,
         HumanoidAppearanceComponent? targetHumanoid = null)
     {
-        if (!Resolve(source, ref sourceHumanoid) || !Resolve(target, ref targetHumanoid))
+        if (!Resolve(source, ref sourceHumanoid, false) || !Resolve(target, ref targetHumanoid, false))
             return;
 
         targetHumanoid.Species = sourceHumanoid.Species;
         targetHumanoid.SkinColor = sourceHumanoid.SkinColor;
         targetHumanoid.EyeColor = sourceHumanoid.EyeColor;
         targetHumanoid.Age = sourceHumanoid.Age;
+        targetHumanoid.Height = sourceHumanoid.Height; // Goobstation: port EE height/width sliders
+        targetHumanoid.Width = sourceHumanoid.Width; // Goobstation: port EE height/width sliders
         SetSex(target, sourceHumanoid.Sex, false, targetHumanoid);
         targetHumanoid.CustomBaseLayers = new(sourceHumanoid.CustomBaseLayers);
         targetHumanoid.MarkingSet = new(sourceHumanoid.MarkingSet);
@@ -369,6 +409,68 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
     }
 
+    // begin Goobstation: port EE height/width sliders
+
+    /// <summary>
+    ///     Set the height of a humanoid mob
+    /// </summary>
+    /// <param name="uid">The humanoid mob's UID</param>
+    /// <param name="height">The height to set the mob to</param>
+    /// <param name="sync">Whether to immediately synchronize this to the humanoid mob, or not</param>
+    /// <param name="humanoid">Humanoid component of the entity</param>
+    public void SetHeight(EntityUid uid, float height, bool sync = true, HumanoidAppearanceComponent? humanoid = null)
+    {
+        if (!Resolve(uid, ref humanoid) || MathHelper.CloseTo(humanoid.Height, height, 0.001f))
+            return;
+
+        var species = _proto.Index(humanoid.Species);
+        humanoid.Height = Math.Clamp(height, species.MinHeight, species.MaxHeight);
+
+        if (sync)
+            Dirty(uid, humanoid);
+    }
+
+    /// <summary>
+    ///     Set the width of a humanoid mob
+    /// </summary>
+    /// <param name="uid">The humanoid mob's UID</param>
+    /// <param name="width">The width to set the mob to</param>
+    /// <param name="sync">Whether to immediately synchronize this to the humanoid mob, or not</param>
+    /// <param name="humanoid">Humanoid component of the entity</param>
+    public void SetWidth(EntityUid uid, float width, bool sync = true, HumanoidAppearanceComponent? humanoid = null)
+    {
+        if (!Resolve(uid, ref humanoid) || MathHelper.CloseTo(humanoid.Width, width, 0.001f))
+            return;
+
+        var species = _proto.Index(humanoid.Species);
+        humanoid.Width = Math.Clamp(width, species.MinWidth, species.MaxWidth);
+
+        if (sync)
+            Dirty(uid, humanoid);
+    }
+
+    /// <summary>
+    ///     Set the scale of a humanoid mob
+    /// </summary>
+    /// <param name="uid">The humanoid mob's UID</param>
+    /// <param name="scale">The scale to set the mob to</param>
+    /// <param name="sync">Whether to immediately synchronize this to the humanoid mob, or not</param>
+    /// <param name="humanoid">Humanoid component of the entity</param>
+    public void SetScale(EntityUid uid, Vector2 scale, bool sync = true, HumanoidAppearanceComponent? humanoid = null)
+    {
+        if (!Resolve(uid, ref humanoid))
+            return;
+
+        var species = _proto.Index(humanoid.Species);
+        humanoid.Height = Math.Clamp(scale.Y, species.MinHeight, species.MaxHeight);
+        humanoid.Width = Math.Clamp(scale.X, species.MinWidth, species.MaxWidth);
+
+        if (sync)
+            Dirty(uid, humanoid);
+    }
+
+    // end Goobstation: port EE height/width sliders
+
     /// <summary>
     ///     Loads a humanoid character profile directly onto this humanoid mob.
     /// </summary>
@@ -417,19 +519,6 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         var facialHairColor = _markingManager.MustMatchSkin(profile.Species, HumanoidVisualLayers.FacialHair, out var facialHairAlpha, _proto)
             ? profile.Appearance.SkinColor.WithAlpha(facialHairAlpha) : profile.Appearance.FacialHairColor;
 
-        // Frontier: Match hair and facial hair colors to the forced color if it exists
-        if (_markingManager.MustMatchColor(profile.Species, HumanoidVisualLayers.Hair, out var forcedHairAlpha, _proto) is Color forcedHairColor)
-        {
-            profile.Appearance.SkinColor.WithAlpha(forcedHairAlpha);
-            hairColor = forcedHairColor;
-        }
-        if (_markingManager.MustMatchColor(profile.Species, HumanoidVisualLayers.FacialHair, out var forcedFacialHairAlpha, _proto) is Color forcedFacialHairColor)
-        {
-            profile.Appearance.SkinColor.WithAlpha(forcedFacialHairAlpha);
-            facialHairColor = forcedFacialHairColor;
-        }
-        // End Frontier
-
         if (_markingManager.Markings.TryGetValue(profile.Appearance.HairStyleId, out var hairPrototype) &&
             _markingManager.CanBeApplied(profile.Species, profile.Sex, hairPrototype, _proto))
         {
@@ -467,6 +556,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         humanoid.Age = profile.Age;
 
+        RaiseLocalEvent(uid, new ProfileLoadFinishedEvent()); // Shitmed Change
         Dirty(uid, humanoid);
     }
 
@@ -503,6 +593,17 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
             Dirty(uid, humanoid);
     }
 
+    // Corvax-Frontier-Barks-start
+    public void SetBarkVoice(EntityUid uid, string? barkvoiceId, HumanoidAppearanceComponent humanoid)
+    {
+        if (!TryComp<SpeechSynthesisComponent>(uid, out var comp))
+            return;
+
+        humanoid.BarkVoice = barkvoiceId ?? DefaultBarkVoice;
+        comp.VoicePrototypeId = barkvoiceId;
+    }
+    // Corvax-Frontier-Barks-end
+
     private void EnsureDefaultMarkings(EntityUid uid, HumanoidAppearanceComponent? humanoid)
     {
         if (!Resolve(uid, ref humanoid))
@@ -536,17 +637,6 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         if (sync)
             Dirty(uid, humanoid);
     }
-
-    // Corvax-Frontier-Barks-start
-    public void SetBarkVoice(EntityUid uid, string? barkvoiceId, HumanoidAppearanceComponent humanoid)
-    {
-        if (!TryComp<SpeechSynthesisComponent>(uid, out var comp))
-            return;
-
-        humanoid.BarkVoice = barkvoiceId ?? DefaultBarkVoice;
-        comp.VoicePrototypeId = barkvoiceId;
-    }
-    // Corvax-Frontier-Barks-end
 
     /// <summary>
     /// Takes ID of the species prototype, returns UI-friendly name of the species.

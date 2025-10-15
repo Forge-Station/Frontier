@@ -1,3 +1,15 @@
+// SPDX-FileCopyrightText: 2022 Flipp Syder <76629141+vulppine@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Morb <14136326+Morb0@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Visne <39844191+Visne@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 csqrb <56765288+CaptainSqrBeard@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
 using System.Linq;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -416,6 +428,7 @@ public sealed partial class MarkingPicker : Control
             CMarkingColors.AddChild(colorContainer);
 
             ColorSelectorSliders colorSelector = new ColorSelectorSliders();
+            colorSelector.SelectorType = ColorSelectorSliders.ColorSelectorType.Hsv; // defaults color selector to HSV
             colorSliders.Add(colorSelector);
 
             colorContainer.AddChild(new Label { Text = $"{stateNames[i]} color:" });
@@ -507,17 +520,6 @@ public sealed partial class MarkingPicker : Control
                 markingObject.SetColor(i, CurrentSkinColor);
             }
         }
-
-        // Frontier: Color overwrite
-        if (_markingManager.MustMatchColor(_currentSpecies, marking.BodyPart, out var _, _prototypeManager) is Color forcedColor)
-        {
-            // Color everything in forced color
-            for (var i = 0; i < marking.Sprites.Count; i++)
-            {
-                markingObject.SetColor(i, forcedColor);
-            }
-        }
-        // End Frontier
 
         markingObject.Forced = Forced;
 

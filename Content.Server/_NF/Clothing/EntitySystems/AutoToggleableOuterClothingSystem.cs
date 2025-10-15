@@ -23,7 +23,7 @@ public sealed class AutoToggleableOuterClothingSystem : EntitySystem
         if (TryComp(uid, out InventoryComponent? comp) && _inventory.TryGetSlotEntity(uid, "outerClothing", out var outerClothingEntity, comp) &&
             TryComp<ToggleableClothingComponent>(outerClothingEntity, out var outerClothingSuit))
         {
-            _clothing.ToggleClothing(uid, outerClothingEntity.Value, outerClothingSuit);
+            _clothing.ToggleClothing(uid, (outerClothingEntity.Value, outerClothingSuit));
         }
     }
 }

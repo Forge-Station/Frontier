@@ -21,7 +21,10 @@ namespace Content.Server.Entry
             "HolidayRsiSwap",
             "OptionsVisualizer",
             "MultipartMachineGhost",
-            "BlueprintLatheClientState" // Frontier
+            "BlueprintLatheClientState", // Frontier
+            "ToggleableLightWieldable", // Goobstation
+            "HideClothingLayerClothing", // Goobstation
+            "ItemSlotRenderer", // WWDP EDIT
         };
     }
 }
