@@ -29,7 +29,7 @@ using Content.Shared.Goobstation.Com.CCVar;
 
 namespace Content.Shared._White.Standing;
 
-public abstract class SharedLayingDownSystem : EntitySystem
+public class SharedLayingDownSystem : EntitySystem
 {
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly StandingStateSystem _standing = default!;
@@ -44,9 +44,9 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
         SubscribeNetworkEvent<ChangeLayingDownEvent>(OnChangeState);
 
-        SubscribeLocalEvent<StandingStateComponent, StandingUpDoAfterEvent>(OnStandingUpDoAfter);
-        SubscribeLocalEvent<LayingDownComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovementSpeed);
-        SubscribeLocalEvent<LayingDownComponent, CheckAutoGetUpEvent>(OnCheckAutoGetUp);
+        // SubscribeLocalEvent<StandingStateComponent, StandingUpDoAfterEvent>(OnStandingUpDoAfter);
+        // SubscribeLocalEvent<LayingDownComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovementSpeed);
+        // SubscribeLocalEvent<LayingDownComponent, CheckAutoGetUpEvent>(OnCheckAutoGetUp);
     }
 
     public override void Shutdown()

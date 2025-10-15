@@ -1,8 +1,16 @@
-using System.Threading;
-using Content.Shared.Construction.Prototypes;
+// SPDX-FileCopyrightText: 2022 0x6273 <0x40@keemail.me>
+// SPDX-FileCopyrightText: 2022 Moony <moonheart08@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <drsmugleaf@gmail.com>
+// SPDX-FileCopyrightText: 2023 Rane <60792108+Elijahrane@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 keronshb <54602815+keronshb@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Ilya246 <57039557+Ilya246@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Shared.Storage;
-using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Server.Medical.BiomassReclaimer
 {
@@ -51,27 +59,8 @@ namespace Content.Server.Medical.BiomassReclaimer
         /// <summary>
         /// How many units of biomass it produces for each unit of mass.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float YieldPerUnitMass = default;
-
-        /// <summary>
-        /// The base yield per mass unit when no components are upgraded.
-        /// </summary>
-        [DataField("baseYieldPerUnitMass")]
-        public float BaseYieldPerUnitMass = 0.4f;
-
-        /// <summary>
-        /// Machine part whose rating modifies the yield per mass.
-        /// </summary>
-        [DataField("machinePartYieldAmount", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-        public string MachinePartYieldAmount = "MatterBin";
-
-        /// <summary>
-        /// How much the machine part quality affects the yield.
-        /// Going up a tier will multiply the yield by this amount.
-        /// </summary>
-        [DataField("partRatingYieldAmountMultiplier")]
-        public float PartRatingYieldAmountMultiplier = 1.25f;
+        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        public float YieldPerUnitMass = 0.4f;
 
         /// <summary>
         /// How many seconds to take to insert an entity per unit of its mass.
@@ -88,28 +77,8 @@ namespace Content.Server.Medical.BiomassReclaimer
         /// <summary>
         /// The time it takes to process a mob, per mass.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float ProcessingTimePerUnitMass = default;
-
-        /// <summary>
-        /// The base time per mass unit that it takes to process a mob
-        /// when no components are upgraded.
-        /// </summary>
-        [DataField("baseProcessingTimePerUnitMass")]
-        public float BaseProcessingTimePerUnitMass = 0.5f;
-
-        /// <summary>
-        /// The machine part that increses the processing speed.
-        /// </summary>
-        [DataField("machinePartProcessSpeed", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-        public string MachinePartProcessingSpeed = "Manipulator";
-
-        /// <summary>
-        /// How much the machine part quality affects the yield.
-        /// Going up a tier will multiply the speed by this amount.
-        /// </summary>
-        [DataField("partRatingSpeedMultiplier")]
-        public float PartRatingSpeedMultiplier = 1.35f;
+        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        public float ProcessingTimePerUnitMass = 0.5f;
 
         /// <summary>
         /// Will this refuse to gib a living mob?

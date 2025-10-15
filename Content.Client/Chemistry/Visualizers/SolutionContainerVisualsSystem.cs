@@ -1,3 +1,21 @@
+// SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Moony <moony@hellomouse.net>
+// SPDX-FileCopyrightText: 2023 Rane <60792108+Elijahrane@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Topy <topy72.mine@gmail.com>
+// SPDX-FileCopyrightText: 2023 Visne <39844191+Visne@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 adamsong <adamsong@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 moonheart08 <moonheart08@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Aidenkrz <aiden@djkraz.com>
+// SPDX-FileCopyrightText: 2024 themias <89101928+themias@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
+// SPDX-FileCopyrightText: 2025 Tayrtahn <tayrtahn@gmail.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Client.Items.Systems;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
@@ -16,6 +34,7 @@ public sealed class SolutionContainerVisualsSystem : VisualizerSystem<SolutionCo
 {
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly ItemSystem _itemSystem = default!;
+    [Dependency] private readonly SpriteSystem _sprite = default!;
 
     public override void Initialize()
     {
@@ -27,10 +46,7 @@ public sealed class SolutionContainerVisualsSystem : VisualizerSystem<SolutionCo
 
     private void OnMapInit(EntityUid uid, SolutionContainerVisualsComponent component, MapInitEvent args)
     {
-        // var meta = MetaData(uid); // Frontier
-        if (!TryComp(uid, out MetaDataComponent? meta)) // Frontier
-            return; // Frontier
-
+        var meta = MetaData(uid);
         component.InitialDescription = meta.EntityDescription;
     }
 
@@ -52,7 +68,7 @@ public sealed class SolutionContainerVisualsSystem : VisualizerSystem<SolutionCo
         if (args.Sprite == null)
             return;
 
-        if (!SpriteSystem.LayerMapTryGet((uid, args.Sprite), component.Layer, out var fillLayer, false))
+        if (!_sprite.LayerMapTryGet((uid, args.Sprite), component.Layer, out var fillLayer, false))
             return;
 
         var maxFillLevels = component.MaxFillLevels;
@@ -70,9 +86,9 @@ public sealed class SolutionContainerVisualsSystem : VisualizerSystem<SolutionCo
         }
         if (component.Metamorphic)
         {
-            if (SpriteSystem.LayerMapTryGet((uid, args.Sprite), component.BaseLayer, out var baseLayer, false))
+            if (_sprite.LayerMapTryGet((uid, args.Sprite), component.BaseLayer, out var baseLayer, false))
             {
-                var hasOverlay = SpriteSystem.LayerMapTryGet((uid, args.Sprite), component.OverlayLayer, out var overlayLayer, false);
+                var hasOverlay = _sprite.LayerMapTryGet((uid, args.Sprite), component.OverlayLayer, out var overlayLayer, false);
 
                 if (AppearanceSystem.TryGetData<string>(uid, SolutionContainerVisuals.BaseOverride,
                         out var baseOverride,
@@ -82,35 +98,35 @@ public sealed class SolutionContainerVisualsSystem : VisualizerSystem<SolutionCo
 
                     if (reagentProto?.MetamorphicSprite is { } sprite)
                     {
-                        SpriteSystem.LayerSetSprite((uid, args.Sprite), baseLayer, sprite);
+                        _sprite.LayerSetSprite((uid, args.Sprite), baseLayer, sprite);
                         if (reagentProto.MetamorphicMaxFillLevels > 0)
                         {
-                            SpriteSystem.LayerSetVisible((uid, args.Sprite), fillLayer, true);
+                            _sprite.LayerSetVisible((uid, args.Sprite), fillLayer, true);
                             maxFillLevels = reagentProto.MetamorphicMaxFillLevels;
                             fillBaseName = reagentProto.MetamorphicFillBaseName;
                             changeColor = reagentProto.MetamorphicChangeColor;
                             fillSprite = sprite;
                         }
                         else
-                            SpriteSystem.LayerSetVisible((uid, args.Sprite), fillLayer, false);
+                            _sprite.LayerSetVisible((uid, args.Sprite), fillLayer, false);
 
                         if (hasOverlay)
-                            SpriteSystem.LayerSetVisible((uid, args.Sprite), overlayLayer, false);
+                            _sprite.LayerSetVisible((uid, args.Sprite), overlayLayer, false);
                     }
                     else
                     {
-                        SpriteSystem.LayerSetVisible((uid, args.Sprite), fillLayer, true);
+                        _sprite.LayerSetVisible((uid, args.Sprite), fillLayer, true);
                         if (hasOverlay)
-                            SpriteSystem.LayerSetVisible((uid, args.Sprite), overlayLayer, true);
+                            _sprite.LayerSetVisible((uid, args.Sprite), overlayLayer, true);
                         if (component.MetamorphicDefaultSprite != null)
-                            SpriteSystem.LayerSetSprite((uid, args.Sprite), baseLayer, component.MetamorphicDefaultSprite);
+                            _sprite.LayerSetSprite((uid, args.Sprite), baseLayer, component.MetamorphicDefaultSprite);
                     }
                 }
             }
         }
         else
         {
-            SpriteSystem.LayerSetVisible((uid, args.Sprite), fillLayer, true);
+            _sprite.LayerSetVisible((uid, args.Sprite), fillLayer, true);
         }
 
         var closestFillSprite = ContentHelpers.RoundToLevels(fraction, 1, maxFillLevels + 1);
@@ -122,25 +138,25 @@ public sealed class SolutionContainerVisualsSystem : VisualizerSystem<SolutionCo
 
             var stateName = fillBaseName + closestFillSprite;
             if (fillSprite != null)
-                SpriteSystem.LayerSetSprite((uid, args.Sprite), fillLayer, fillSprite);
-            SpriteSystem.LayerSetRsiState((uid, args.Sprite), fillLayer, stateName);
+                _sprite.LayerSetSprite((uid, args.Sprite), fillLayer, fillSprite);
+            _sprite.LayerSetRsiState((uid, args.Sprite), fillLayer, stateName);
 
             if (changeColor && AppearanceSystem.TryGetData<Color>(uid, SolutionContainerVisuals.Color, out var color, args.Component))
-                SpriteSystem.LayerSetColor((uid, args.Sprite), fillLayer, color);
+                _sprite.LayerSetColor((uid, args.Sprite), fillLayer, color);
             else
-                SpriteSystem.LayerSetColor((uid, args.Sprite), fillLayer, Color.White);
+                _sprite.LayerSetColor((uid, args.Sprite), fillLayer, Color.White);
         }
         else
         {
             if (component.EmptySpriteName == null)
-                SpriteSystem.LayerSetVisible((uid, args.Sprite), fillLayer, false);
+                _sprite.LayerSetVisible((uid, args.Sprite), fillLayer, false);
             else
             {
-                SpriteSystem.LayerSetRsiState((uid, args.Sprite), fillLayer, component.EmptySpriteName);
+                _sprite.LayerSetRsiState((uid, args.Sprite), fillLayer, component.EmptySpriteName);
                 if (changeColor)
-                    SpriteSystem.LayerSetColor((uid, args.Sprite), fillLayer, component.EmptySpriteColor);
+                    _sprite.LayerSetColor((uid, args.Sprite), fillLayer, component.EmptySpriteColor);
                 else
-                    SpriteSystem.LayerSetColor((uid, args.Sprite), fillLayer, Color.White);
+                    _sprite.LayerSetColor((uid, args.Sprite), fillLayer, Color.White);
             }
         }
 

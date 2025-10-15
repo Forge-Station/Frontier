@@ -1,12 +1,137 @@
+// SPDX-FileCopyrightText: 2019 Remie Richards <remierichards@gmail.com>
+// SPDX-FileCopyrightText: 2019 ZelteHonor <gabrieldionbouchard@gmail.com>
+// SPDX-FileCopyrightText: 2020 PrPleGoo <PrPleGoo@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2020 PrPleGoo <felix.leeuwen@gmail.com>
+// SPDX-FileCopyrightText: 2020 Tyler Young <tyler.young@impromptu.ninja>
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <zddm@outlook.es>
+// SPDX-FileCopyrightText: 2020 moneyl <8206401+Moneyl@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2020 nuke <47336974+nuke-makes-games@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2021 Acruid <shatter66@gmail.com>
+// SPDX-FileCopyrightText: 2021 Metal Gear Sloth <metalgearsloth@gmail.com>
+// SPDX-FileCopyrightText: 2021 Paul <ritter.paul1+git@googlemail.com>
+// SPDX-FileCopyrightText: 2021 Paul Ritter <ritter.paul1@googlemail.com>
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <gradientvera@outlook.com>
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <zddm@outlook.es>
+// SPDX-FileCopyrightText: 2021 Ygg01 <y.laughing.man.y@gmail.com>
+// SPDX-FileCopyrightText: 2021 plinyvic <plinyvicgames@gmail.com>
+// SPDX-FileCopyrightText: 2021 py01 <60152240+collinlunn@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2021 py01 <pyronetics01@gmail.com>
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+// SPDX-FileCopyrightText: 2022 wrexbe <81056464+wrexbe@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Arimah <arimah42@gmail.com>
+// SPDX-FileCopyrightText: 2023 ElectroJr <leonsfriedrich@gmail.com>
+// SPDX-FileCopyrightText: 2023 EnDecc <33369477+Endecc@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 TemporalOroboros <TemporalOroboros@gmail.com>
+// SPDX-FileCopyrightText: 2023 Visne <39844191+Visne@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 12rabbits <53499656+12rabbits@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Aiden <aiden@djkraz.com>
+// SPDX-FileCopyrightText: 2024 Alzore <140123969+Blackern5000@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 ArtisticRoomba <145879011+ArtisticRoomba@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Brandon Hu <103440971+Brandon-Huu@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 CaasGit <87243814+CaasGit@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Cojoke <83733158+Cojoke-dot@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Dimastra <65184747+Dimastra@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Dimastra <dimastra@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 DrSmugleaf <10968691+DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Ed <96445749+TheShuEd@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Emisse <99158783+Emisse@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 EmoGarbage404 <retron404@gmail.com>
+// SPDX-FileCopyrightText: 2024 Eoin Mcloughlin <helloworld@eoinrul.es>
+// SPDX-FileCopyrightText: 2024 Errant <35878406+Errant-4@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Flareguy <78941145+Flareguy@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Hrosts <35345601+Hrosts@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 IProduceWidgets <107586145+IProduceWidgets@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Ian <ignaz.k@live.de>
+// SPDX-FileCopyrightText: 2024 Ilya246 <57039557+Ilya246@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 JIPDawg <51352440+JIPDawg@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 JIPDawg <JIPDawg93@gmail.com>
+// SPDX-FileCopyrightText: 2024 Joel Zimmerman <JoelZimmerman@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 JustCone <141039037+JustCone14@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Killerqu00 <47712032+Killerqu00@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Ko4ergaPunk <62609550+Ko4ergaPunk@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Kukutis96513 <146854220+Kukutis96513@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Lye <128915833+Lyroth001@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 MerrytheManokit <167581110+MerrytheManokit@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Mervill <mervills.email@gmail.com>
+// SPDX-FileCopyrightText: 2024 Moomoobeef <62638182+Moomoobeef@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Mr. 27 <45323883+Dutch-VanDerLinde@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 MureixloI <132683811+MureixloI@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 NakataRin <45946146+NakataRin@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 OrangeMoronage9622 <whyteterry0092@gmail.com>
+// SPDX-FileCopyrightText: 2024 PJBot <pieterjan.briers+bot@gmail.com>
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers@gmail.com>
+// SPDX-FileCopyrightText: 2024 Piras314 <p1r4s@proton.me>
+// SPDX-FileCopyrightText: 2024 Plykiya <58439124+Plykiya@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 PopGamer46 <yt1popgamer@gmail.com>
+// SPDX-FileCopyrightText: 2024 Preston Smith <92108534+thetolbean@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Psychpsyo <60073468+Psychpsyo@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 PursuitInAshes <pursuitinashes@gmail.com>
+// SPDX-FileCopyrightText: 2024 QueerNB <176353696+QueerNB@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Repo <47093363+Titian3@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 RiceMar1244 <138547931+RiceMar1244@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Saphire Lattice <lattice@saphi.re>
+// SPDX-FileCopyrightText: 2024 ShadowCommander <10494922+ShadowCommander@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Simon <63975668+Simyon264@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Skye <57879983+Rainbeon@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 SlamBamActionman <83650252+SlamBamActionman@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Spessmann <156740760+Spessmann@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Stalen <33173619+stalengd@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 TakoDragon <69509841+BackeTako@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Thomas <87614336+Aeshus@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 TsjipTsjip <19798667+TsjipTsjip@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Unkn0wn_Gh0st <shadowstalkermll@gmail.com>
+// SPDX-FileCopyrightText: 2024 Vasilis <vasilis@pikachu.systems>
+// SPDX-FileCopyrightText: 2024 Verm <32827189+Vermidia@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Vigers Ray <60344369+VigersRay@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Winkarst <74284083+Winkarst-cpu@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 beck-thompson <107373427+beck-thompson@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 blueDev2 <89804215+blueDev2@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 deathride58 <deathride58@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 dffdff2423 <dffdff2423@gmail.com>
+// SPDX-FileCopyrightText: 2024 eoineoineoin <github@eoinrul.es>
+// SPDX-FileCopyrightText: 2024 foboscheshir <156405958+foboscheshir@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 metalgearsloth <comedian_vs_clown@hotmail.com>
+// SPDX-FileCopyrightText: 2024 nikthechampiongr <32041239+nikthechampiongr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 plykiya <plykiya@protonmail.com>
+// SPDX-FileCopyrightText: 2024 saintmuntzer <47153094+saintmuntzer@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 shamp <140359015+shampunj@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 stellar-novas <stellar_novas@riseup.net>
+// SPDX-FileCopyrightText: 2024 strO0pwafel <153459934+strO0pwafel@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 stroopwafel <j.o.luijkx@student.tudelft.nl>
+// SPDX-FileCopyrightText: 2024 themias <89101928+themias@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 to4no_fix <156101927+chavonadelal@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 voidnull000 <18663194+voidnull000@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 Hagvan <22118902+Hagvan@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
+// SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Collections;
+using System.Linq;
+using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Goobstation.FixedPoint;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
-using System.Collections;
-using System.Linq;
-using Content.Shared.Chemistry.Components.SolutionManager;
 
 namespace Content.Shared.Chemistry.Components
 {
@@ -15,7 +140,7 @@ namespace Content.Shared.Chemistry.Components
     /// </summary>
     [Serializable, NetSerializable]
     [DataDefinition]
-    public sealed partial class Solution : IEnumerable<ReagentQuantity>, ISerializationHooks
+    public sealed partial class Solution : IEnumerable<ReagentQuantity>, ISerializationHooks, IRobustCloneable<Solution>
     {
         // This is a list because it is actually faster to add and remove reagents from
         // a list than a dictionary, though contains-reagent checks are slightly slower,
@@ -174,6 +299,7 @@ namespace Content.Shared.Chemistry.Components
             Volume = solution.Volume;
             MaxVolume = solution.MaxVolume;
             Temperature = solution.Temperature;
+            CanReact = solution.CanReact;
             _heatCapacity = solution._heatCapacity;
             _heatCapacityDirty = solution._heatCapacityDirty;
             _heatCapacityUpdateCounter = solution._heatCapacityUpdateCounter;
@@ -582,7 +708,40 @@ namespace Content.Shared.Chemistry.Components
         /// <summary>
         /// Splits a solution without the specified reagent prototypes.
         /// </summary>
+        [Obsolete("Use SplitSolutionWithout with params ProtoId<ReagentPrototype>")]
         public Solution SplitSolutionWithout(FixedPoint2 toTake, params string[] excludedPrototypes)
+        {
+            // First remove the blacklisted prototypes
+            List<ReagentQuantity> excluded = new();
+            foreach (var id in excludedPrototypes)
+            {
+                foreach (var tuple in Contents)
+                {
+                    if (tuple.Reagent.Prototype != id)
+                        continue;
+
+                    excluded.Add(tuple);
+                    RemoveReagent(tuple);
+                    break;
+                }
+            }
+
+            // Then split the solution
+            var sol = SplitSolution(toTake);
+
+            // Then re-add the excluded reagents to the original solution.
+            foreach (var reagent in excluded)
+            {
+                AddReagent(reagent);
+            }
+
+            return sol;
+        }
+
+        /// <summary>
+        /// Splits a solution without the specified reagent prototypes.
+        /// </summary>
+        public Solution SplitSolutionWithout(FixedPoint2 toTake, params ProtoId<ReagentPrototype>[] excludedPrototypes)
         {
             // First remove the blacklisted prototypes
             List<ReagentQuantity> excluded = new();
@@ -614,6 +773,8 @@ namespace Content.Shared.Chemistry.Components
         /// <summary>
         /// Splits a solution with only the specified reagent prototypes.
         /// </summary>
+        /// <param name="toTake">The total amount of solution to remove and return.</param>
+        /// <returns>a new solution of equal proportions to the original solution</returns>
         public Solution SplitSolutionWithOnly(FixedPoint2 toTake, params string[] includedPrototypes)
         {
             // First remove the non-included prototypes
@@ -639,11 +800,6 @@ namespace Content.Shared.Chemistry.Components
             return sol;
         }
 
-        /// <summary>
-        /// Splits a solution, taking the specified amount of reagents proportionally to their quantity.
-        /// </summary>
-        /// <param name="toTake">The total amount of solution to remove and return.</param>
-        /// <returns>A new solution of equal proportions to the original.</returns>
         public Solution SplitSolution(FixedPoint2 toTake)
         {
             if (toTake <= FixedPoint2.Zero)
@@ -707,123 +863,57 @@ namespace Content.Shared.Chemistry.Components
             return newSolution;
         }
 
-        // Frontier: cryogenics per-reagent filter function (#1443, #1533)
         /// <summary>
-        /// Splits a solution, taking the specified amount of each reagent from the solution.
-        /// If any reagent in the solution has less volume than specified, it will all be transferred into the new solution.
+        /// splits the solution taking up to the specified amount of each reagent from the solution.
+        /// If the solution has less of a reagent than the specified amount, it will take all of that reagent.
         /// </summary>
-        /// <param name="toTakePer">How much of each reagent to take.</param>
-        /// <returns>A new solution containing the reagents taken from the original solution.</returns>
-        public Solution SplitSolutionPerReagent(FixedPoint2 toTakePer)
+        /// <param name="toTakePer">How much of each reagent to take</param>
+        /// <returns>a new solution containing the reagents taken from the original solution</returns>
+        public Solution SplitSolutionReagentsEvenly(FixedPoint2 toTakePer)
         {
+            var splitSolution = new Solution();
+
             if (toTakePer <= FixedPoint2.Zero)
-                return new Solution();
-
-            var origVol = Volume;
-            Solution newSolution = new Solution(Contents.Count) { Temperature = Temperature };
-
-            for (var i = Contents.Count - 1; i >= 0; i--) // iterate backwards because of remove swap.
+                return splitSolution;
+            var reagentsCount = Contents.Count;
+            var reagentsToRemove = new List<ReagentQuantity>();
+            for (var i = 0; i < reagentsCount; i++)
             {
-                var (reagent, quantity) = Contents[i];
+                var currentReagent = Contents[i];
 
-                // If the reagent has more than enough volume to remove, no need to remove it from the list.
-                if (quantity > toTakePer)
+                if (currentReagent.Quantity <= FixedPoint2.Zero)
                 {
-                    Contents[i] = new ReagentQuantity(reagent, quantity - toTakePer);
-                    newSolution.Contents.Add(new ReagentQuantity(reagent, toTakePer));
-                    Volume -= toTakePer;
-                }
-                else
-                {
-                    Contents.RemoveSwap(i);
-                    //Only add positive quantities to our new solution.
-                    if (quantity > 0)
-                    {
-                        newSolution.Contents.Add(new ReagentQuantity(reagent, quantity));
-                        Volume -= quantity;
-                    }
-                }
-            }
-
-            // If old solution is empty, invalidate old solution and transfer all volume to new.
-            if (Volume <= 0)
-            {
-                RemoveAllSolution();
-                newSolution.Volume = origVol;
-            }
-            else
-            {
-                newSolution.Volume = origVol - Volume;
-                _heatCapacityDirty = true;
-            }
-            newSolution._heatCapacityDirty = true;
-
-            ValidateSolution();
-            newSolution.ValidateSolution();
-
-            return newSolution;
-        }
-
-        /// <summary>
-        /// Splits a solution, taking the specified amount of each reagent specified in reagents from the solution.
-        /// If any reagent in the solution has less volume than specified, it will all be transferred into the new solution.
-        /// </summary>
-        /// <param name="toTakePer">How much of each reagent to take.</param>
-        /// <returns>A new solution containing the reagents taken from the original solution.</returns>
-        public Solution SplitSolutionPerReagentWithOnly(FixedPoint2 toTakePer, params string[] reagents)
-        {
-            if (toTakePer <= FixedPoint2.Zero)
-                return new Solution();
-
-            var origVol = Volume;
-            Solution newSolution = new Solution(Contents.Count) { Temperature = Temperature };
-
-            for (var i = Contents.Count - 1; i >= 0; i--) // iterate backwards because of remove swap.
-            {
-                var (reagent, quantity) = Contents[i];
-
-                // Each reagent to split must be in the set given.
-                if (!reagents.Contains(reagent.Prototype))
+                    reagentsToRemove.Add(currentReagent);
                     continue;
+                }
 
-                // If the reagent has more than enough volume to remove, no need to remove it from the list.
-                if (quantity > toTakePer)
+                if (currentReagent.Quantity <= toTakePer)
                 {
-                    Contents[i] = new ReagentQuantity(reagent, quantity - toTakePer);
-                    newSolution.Contents.Add(new ReagentQuantity(reagent, toTakePer));
-                    Volume -= toTakePer;
+                    splitSolution.AddReagent(currentReagent);
+                    reagentsToRemove.Add(currentReagent);
                 }
                 else
                 {
-                    Contents.RemoveSwap(i);
-                    //Only add positive quantities to our new solution.
-                    if (quantity > 0)
-                    {
-                        newSolution.Contents.Add(new ReagentQuantity(reagent, quantity));
-                        Volume -= quantity;
-                    }
+                    splitSolution.AddReagent(currentReagent.Reagent, toTakePer);
+                    RemoveReagent(currentReagent.Reagent, toTakePer);
                 }
             }
 
-            // If old solution is empty, invalidate old solution and transfer all volume to new.
-            if (Volume <= 0)
+            foreach (var reagent in reagentsToRemove)
             {
+                RemoveReagent(reagent);
+            }
+            if (Volume == FixedPoint2.Zero)
                 RemoveAllSolution();
-                newSolution.Volume = origVol;
-            }
-            else
-            {
-                newSolution.Volume = origVol - Volume;
-                _heatCapacityDirty = true;
-            }
-            newSolution._heatCapacityDirty = true;
+
+            _heatCapacityDirty = true;
+            splitSolution._heatCapacityDirty = true;
 
             ValidateSolution();
-            newSolution.ValidateSolution();
+            splitSolution.ValidateSolution();
 
-            return newSolution;
+            return splitSolution;
         }
-        // End Frontier
 
         /// <summary>
         /// Variant of <see cref="SplitSolution(FixedPoint2)"/> that doesn't return a new solution containing the removed reagents.
@@ -919,6 +1009,31 @@ namespace Content.Shared.Chemistry.Components
                     Contents.Add(new ReagentQuantity(otherReagent, otherQuantity));
                 }
             }
+			// Goobstation Start
+
+			// Find the maximum freshness for each unique DNA string in the other solution.
+			// This is done by flattening the nested lists, filtering for DnaData objects,
+			// grouping them by the DNA string, and creating a dictionary with the max freshness for each.
+			var freshestDnasFromOther = otherSolution.Contents
+			    .SelectMany(content => content.Reagent.Data ?? Enumerable.Empty<object>())
+			    .OfType<DnaData>()
+			    .GroupBy(dna => dna.DNA)
+			    .ToDictionary(
+			        group => group.Key,
+			        group => group.Max(dna => dna.Freshness));
+
+			// Get all DnaData objects in the current solution to be updated.
+			var allCurrentDna = Contents
+			    .SelectMany(content => content.Reagent.Data ?? Enumerable.Empty<object>())
+			    .OfType<DnaData>();
+
+			// Iterate through the current solution's DNA and update its freshness
+			// if a fresher version exists in the other solution.
+			foreach (var dna in allCurrentDna)
+			    if (freshestDnasFromOther.TryGetValue(dna.DNA, out var fresherFreshness) && fresherFreshness > dna.Freshness)
+			        dna.Freshness = fresherFreshness;
+
+			// Goobstation End
 
             _heatCapacity += otherSolution._heatCapacity;
             CheckRecalculateHeatCapacity();

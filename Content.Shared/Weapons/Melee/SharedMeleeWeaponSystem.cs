@@ -497,8 +497,8 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
                     LogImpact.Low,
                     $"{ToPrettyString(user):actor} melee attacked (light) using {ToPrettyString(meleeUid):tool} and missed");
             }
-            var missEvent = new MeleeHitEvent(new List<EntityUid>(), user, meleeUid, damage, null);
-            RaiseLocalEvent(meleeUid, missEvent);
+            var missEvent = new MeleeHitEvent(new List<EntityUid>(), user, meleeUid, damage, null, GetCoordinates(ev.Coordinates)); // Goob edit
+            RaiseLocalEvent(meleeUid, missEvent, true); // Goob station 
             _meleeSound.PlaySwingSound(user, meleeUid, component);
             return;
         }
@@ -506,8 +506,8 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         // Sawmill.Debug($"Melee damage is {damage.Total} out of {component.Damage.Total}");
 
         // Raise event before doing damage so we can cancel damage if the event is handled
-        var hitEvent = new MeleeHitEvent(new List<EntityUid> { target.Value }, user, meleeUid, damage, null);
-        RaiseLocalEvent(meleeUid, hitEvent);
+        var hitEvent = new MeleeHitEvent(new List<EntityUid> { target.Value }, user, meleeUid, damage, null, GetCoordinates(ev.Coordinates)); // Goob edit
+        RaiseLocalEvent(meleeUid, hitEvent, true); // Goob station - broadcast
 
         if (hitEvent.Handled)
             return;
@@ -599,8 +599,8 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
                     LogImpact.Low,
                     $"{ToPrettyString(user):actor} melee attacked (heavy) using {ToPrettyString(meleeUid):tool} and missed");
             }
-            var missEvent = new MeleeHitEvent(new List<EntityUid>(), user, meleeUid, damage, direction);
-            RaiseLocalEvent(meleeUid, missEvent);
+            var missEvent = new MeleeHitEvent(new List<EntityUid>(), user, meleeUid, damage, direction, GetCoordinates(ev.Coordinates)); // Goob edit
+            RaiseLocalEvent(meleeUid, missEvent, true); // Goob statio
 
             // immediate audio feedback
             _meleeSound.PlaySwingSound(user, meleeUid, component);
@@ -648,8 +648,8 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         // Sawmill.Debug($"Melee damage is {damage.Total} out of {component.Damage.Total}");
 
         // Raise event before doing damage so we can cancel damage if the event is handled
-        var hitEvent = new MeleeHitEvent(targets, user, meleeUid, damage, direction);
-        RaiseLocalEvent(meleeUid, hitEvent);
+        var hitEvent = new MeleeHitEvent(targets, user, meleeUid, damage, direction, GetCoordinates(ev.Coordinates)); // Goob edit
+        RaiseLocalEvent(meleeUid, hitEvent, true); // Goob station
 
         if (hitEvent.Handled)
             return true;

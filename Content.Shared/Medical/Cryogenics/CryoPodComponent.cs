@@ -1,3 +1,16 @@
+// SPDX-FileCopyrightText: 2022 Francesco <frafonia@gmail.com>
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <drsmugleaf@gmail.com>
+// SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 keronshb <54602815+keronshb@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 keronshb <keronshb@live.com>
+// SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
+// SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
@@ -38,16 +51,14 @@ public sealed partial class CryoPodComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("beakerTransferAmount")]
-    public float BeakerTransferAmount = .25f; // Frontier: 1<0.25 (applied per reagent)
+    public float BeakerTransferAmount = .25f;
 
-    // Frontier: more efficient cryogenics (#1443)
     /// <summary>
     /// How potent (multiplier) the reagents are when transferred from the beaker to the mob.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("PotencyAmount")]
     public float PotencyMultiplier = 2f;
-    // End Frontier
 
     /// <summary>
     ///     Delay applied when inserting a mob in the pod.

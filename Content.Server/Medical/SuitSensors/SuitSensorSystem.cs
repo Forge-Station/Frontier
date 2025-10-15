@@ -1,3 +1,101 @@
+// SPDX-FileCopyrightText: 2021 Alex Evgrashin <aevgrashin@yandex.ru>
+// SPDX-FileCopyrightText: 2021 Paul Ritter <ritter.paul1@gmail.com>
+// SPDX-FileCopyrightText: 2021 Paul Ritter <ritter.paul1@googlemail.com>
+// SPDX-FileCopyrightText: 2022 Jezithyr <Jezithyr.@gmail.com>
+// SPDX-FileCopyrightText: 2022 Jezithyr <Jezithyr@gmail.com>
+// SPDX-FileCopyrightText: 2022 KIBORG04 <bossmira4@gmail.com>
+// SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+// SPDX-FileCopyrightText: 2022 wrexbe <81056464+wrexbe@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Ahion <58528255+Ahion@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Jezithyr <jezithyr@gmail.com>
+// SPDX-FileCopyrightText: 2023 chromiumboy <50505512+chromiumboy@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 keronshb <54602815+keronshb@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Aiden <aiden@djkraz.com>
+// SPDX-FileCopyrightText: 2024 Alzore <140123969+Blackern5000@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 BombasterDS <115770678+BombasterDS@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Brandon Hu <103440971+Brandon-Huu@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 CaasGit <87243814+CaasGit@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Cojoke <83733158+Cojoke-dot@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 DrSmugleaf <10968691+DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 DrSmugleaf <drsmugleaf@gmail.com>
+// SPDX-FileCopyrightText: 2024 Ed <96445749+TheShuEd@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Emisse <99158783+Emisse@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 EmoGarbage404 <retron404@gmail.com>
+// SPDX-FileCopyrightText: 2024 Eoin Mcloughlin <helloworld@eoinrul.es>
+// SPDX-FileCopyrightText: 2024 Errant <35878406+Errant-4@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Flareguy <78941145+Flareguy@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Hrosts <35345601+Hrosts@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 IProduceWidgets <107586145+IProduceWidgets@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Ian <ignaz.k@live.de>
+// SPDX-FileCopyrightText: 2024 Ilya246 <57039557+Ilya246@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Jake Huxell <JakeHuxell@pm.me>
+// SPDX-FileCopyrightText: 2024 Joel Zimmerman <JoelZimmerman@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Julian Giebel <juliangiebel@live.de>
+// SPDX-FileCopyrightText: 2024 JustCone <141039037+JustCone14@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Kara <lunarautomaton6@gmail.com>
+// SPDX-FileCopyrightText: 2024 Killerqu00 <47712032+Killerqu00@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Ko4ergaPunk <62609550+Ko4ergaPunk@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Kukutis96513 <146854220+Kukutis96513@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Lye <128915833+Lyroth001@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 MerrytheManokit <167581110+MerrytheManokit@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Mervill <mervills.email@gmail.com>
+// SPDX-FileCopyrightText: 2024 Mr. 27 <45323883+Dutch-VanDerLinde@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 MureixloI <132683811+MureixloI@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 NakataRin <45946146+NakataRin@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 OrangeMoronage9622 <whyteterry0092@gmail.com>
+// SPDX-FileCopyrightText: 2024 PJBot <pieterjan.briers+bot@gmail.com>
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2024 Plykiya <58439124+Plykiya@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Preston Smith <92108534+thetolbean@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Pspritechologist <81725545+Pspritechologist@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Psychpsyo <60073468+Psychpsyo@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Repo <47093363+Titian3@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 RiceMar1244 <138547931+RiceMar1244@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 ShadowCommander <10494922+ShadowCommander@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Simon <63975668+Simyon264@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 SlamBamActionman <83650252+SlamBamActionman@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Stalen <33173619+stalengd@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 TakoDragon <69509841+BackeTako@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+// SPDX-FileCopyrightText: 2024 Thomas <87614336+Aeshus@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 TsjipTsjip <19798667+TsjipTsjip@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Unkn0wn_Gh0st <shadowstalkermll@gmail.com>
+// SPDX-FileCopyrightText: 2024 Vasilis <vasilis@pikachu.systems>
+// SPDX-FileCopyrightText: 2024 Vigers Ray <60344369+VigersRay@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 beck-thompson <107373427+beck-thompson@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 chavonadelal <156101927+chavonadelal@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 deathride58 <deathride58@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 dffdff2423 <dffdff2423@gmail.com>
+// SPDX-FileCopyrightText: 2024 eoineoineoin <github@eoinrul.es>
+// SPDX-FileCopyrightText: 2024 foboscheshir <156405958+foboscheshir@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 metalgearsloth <comedian_vs_clown@hotmail.com>
+// SPDX-FileCopyrightText: 2024 nikthechampiongr <32041239+nikthechampiongr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 plykiya <plykiya@protonmail.com>
+// SPDX-FileCopyrightText: 2024 saintmuntzer <47153094+saintmuntzer@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 shamp <140359015+shampunj@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 strO0pwafel <153459934+strO0pwafel@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 stroopwafel <j.o.luijkx@student.tudelft.nl>
+// SPDX-FileCopyrightText: 2024 themias <89101928+themias@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 to4no_fix <156101927+chavonadelal@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 voidnull000 <18663194+voidnull000@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Baptr0b0t <152836416+Baptr0b0t@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 Ignaz "Ian" Kraft <ignaz.k@live.de>
+// SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Server.Access.Systems;
 using Content.Server.DeviceNetwork.Systems;
@@ -25,9 +123,6 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Content.Shared.DeviceNetwork.Components;
-using Content.Server.Salvage.Expeditions; // Frontier
-using Content.Server._NF.Medical.SuitSensors; // Frontier
-using Content.Shared.Emp; // Frontier
 
 namespace Content.Server.Medical.SuitSensors;
 
@@ -40,7 +135,7 @@ public sealed class SuitSensorSystem : EntitySystem
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    // [Dependency] private readonly StationSystem _stationSystem = default!; // Frontier
+    [Dependency] private readonly StationSystem _stationSystem = default!;
     [Dependency] private readonly SingletonDeviceNetServerSystem _singletonServerSystem = default!;
     [Dependency] private readonly MobThresholdSystem _mobThresholdSystem = default!;
     [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
@@ -52,7 +147,7 @@ public sealed class SuitSensorSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        //SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawn); // Frontier modification
+        SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawn);
         SubscribeLocalEvent<SuitSensorComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<SuitSensorComponent, ClothingGotEquippedEvent>(OnEquipped);
         SubscribeLocalEvent<SuitSensorComponent, ClothingGotUnequippedEvent>(OnUnequipped);
@@ -70,7 +165,6 @@ public sealed class SuitSensorSystem : EntitySystem
         base.Update(frameTime);
 
         var curTime = _gameTiming.CurTime;
-        //var sensors = EntityManager.EntityQueryEnumerator<SuitSensorComponent, DeviceNetworkComponent>(); // Frontier modification
         var sensors = EntityQueryEnumerator<SuitSensorComponent, DeviceNetworkComponent, TransformComponent>(); // Frontier modification
 
         while (sensors.MoveNext(out var uid, out var sensor, out var device, out var xform)) // Frontier modification
@@ -82,10 +176,8 @@ public sealed class SuitSensorSystem : EntitySystem
             if (curTime < sensor.NextUpdate)
                 continue;
 
-            /* -- Frontier modification
             if (!CheckSensorAssignedStation(uid, sensor))
                 continue;
-            */
 
             // TODO: This would cause imprecision at different tick rates.
             sensor.NextUpdate = curTime + sensor.UpdateRate;
@@ -102,7 +194,6 @@ public sealed class SuitSensorSystem : EntitySystem
                 // if (!_singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(sensor.StationId!.Value, out var address))
                 if (!_singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(xform.MapID, out var address))
                     continue;
-
 
                 sensor.ConnectedServer = address;
             }
@@ -121,7 +212,6 @@ public sealed class SuitSensorSystem : EntitySystem
         }
     }
 
-    /* -- Frontier modification
     /// <summary>
     /// Checks whether the sensor is assigned to a station or not
     /// and tries to assign an unassigned sensor to a station if it's currently on a grid
@@ -161,14 +251,11 @@ public sealed class SuitSensorSystem : EntitySystem
             RecursiveSensor(child, stationUid, sensorQuery, xformQuery);
         }
     }
-    */
 
     private void OnMapInit(EntityUid uid, SuitSensorComponent component, MapInitEvent args)
     {
-        /* -- Frontier modification
         // Fallback
         component.StationId ??= _stationSystem.GetOwningStation(uid);
-        */
 
         // generate random mode
         if (component.RandomMode)
@@ -187,11 +274,6 @@ public sealed class SuitSensorSystem : EntitySystem
 
     private void OnEquipped(EntityUid uid, SuitSensorComponent component, ref ClothingGotEquippedEvent args)
     {
-        // Frontier: opt out of suit sensor registration
-        if (TryComp<DisableSuitSensorsComponent>(args.Wearer, out var disableSuitSensor) && disableSuitSensor.RemoveRegistration)
-            return;
-        // End Frontier
-
         component.User = args.Wearer;
     }
 
@@ -258,11 +340,6 @@ public sealed class SuitSensorSystem : EntitySystem
         if (args.Container.ID != component.ActivationContainer)
             return;
 
-        // Frontier: opt out of suit sensor registration
-        if (TryComp<DisableSuitSensorsComponent>(args.Container.Owner, out var disableSuitSensor) && disableSuitSensor.RemoveRegistration)
-            return;
-        // End Frontier
-
         component.User = args.Container.Owner;
     }
 
@@ -278,9 +355,6 @@ public sealed class SuitSensorSystem : EntitySystem
     {
         args.Affected = true;
         args.Disabled = true;
-
-        if (HasComp<EmpDisabledComponent>(uid)) // Frontier: don't double disable sensors
-            return; // Frontier
 
         component.PreviousMode = component.Mode;
         SetSensor((uid, component), SuitSensorMode.SensorOff, null);
@@ -394,17 +468,14 @@ public sealed class SuitSensorSystem : EntitySystem
             return null;
 
         // check if sensor is enabled and worn by user
-        // Frontier: sensors work off grids
-        if (sensor.Mode == SuitSensorMode.SensorOff || sensor.User == null || !HasComp<MobStateComponent>(sensor.User)) // || transform.GridUid == null
+        if (sensor.Mode == SuitSensorMode.SensorOff || sensor.User == null || !HasComp<MobStateComponent>(sensor.User) || transform.GridUid == null)
             return null;
-        // End Frontier
 
         // try to get mobs id from ID slot
         var userName = Loc.GetString("suit-sensor-component-unknown-name");
         var userJob = Loc.GetString("suit-sensor-component-unknown-job");
         var userJobIcon = "JobIconNoId";
         var userJobDepartments = new List<string>();
-        var userLocationName = Loc.GetString("suit-sensor-location-unknown"); // Frontier
 
         if (_idCardSystem.TryFindIdCard(sensor.User.Value, out var card))
         {
@@ -420,7 +491,7 @@ public sealed class SuitSensorSystem : EntitySystem
 
         // get health mob state
         var isAlive = false;
-        if (EntityManager.TryGetComponent(sensor.User.Value, out MobStateComponent? mobState))
+        if (TryComp(sensor.User.Value, out MobStateComponent? mobState))
             isAlive = !_mobStateSystem.IsDead(sensor.User.Value, mobState);
 
         // get mob total damage
@@ -434,7 +505,7 @@ public sealed class SuitSensorSystem : EntitySystem
             totalDamageThreshold = critThreshold.Value.Int();
 
         // finally, form suit sensor status
-        var status = new SuitSensorStatus(GetNetEntity(sensor.User.Value), GetNetEntity(uid), userName, userJob, userJobIcon, userJobDepartments, userLocationName); // Frontier: add userLocationName
+        var status = new SuitSensorStatus(GetNetEntity(sensor.User.Value), GetNetEntity(uid), userName, userJob, userJobIcon, userJobDepartments);
         switch (sensor.Mode)
         {
             case SuitSensorMode.SensorBinary:
@@ -451,41 +522,25 @@ public sealed class SuitSensorSystem : EntitySystem
                 status.TotalDamageThreshold = totalDamageThreshold;
                 EntityCoordinates coordinates;
                 var xformQuery = GetEntityQuery<TransformComponent>();
-                var locationName = "";
 
                 if (transform.GridUid != null)
                 {
-
                     coordinates = new EntityCoordinates(transform.GridUid.Value,
                         Vector2.Transform(_transform.GetWorldPosition(transform, xformQuery),
                             _transform.GetInvWorldMatrix(xformQuery.GetComponent(transform.GridUid.Value), xformQuery)));
-
-                    // Frontier: check if sensor is on expedition
-                    if (TryComp<SalvageExpeditionComponent>(transform.MapUid, out var salvageComp))
-                        locationName = Loc.GetString("suit-sensor-location-expedition");
-                    else if (TryComp(transform.GridUid, out MetaDataComponent? meta))
-                        locationName = meta.EntityName;
-                    else
-                        locationName = Loc.GetString("suit-sensor-location-unknown"); // Frontier
-                    // End Frontier
                 }
                 else if (transform.MapUid != null)
                 {
-
                     coordinates = new EntityCoordinates(transform.MapUid.Value,
-                        _transform.GetWorldPosition(transform, xformQuery)); // Frontier
-
-                    locationName = Loc.GetString("suit-sensor-location-space"); // Frontier
+                        _transform.GetWorldPosition(transform, xformQuery));
                 }
                 else
                 {
                     coordinates = EntityCoordinates.Invalid;
-
-                    locationName = Loc.GetString("suit-sensor-location-unknown"); // Frontier
                 }
 
                 status.Coordinates = GetNetCoordinates(coordinates);
-                status.LocationName = locationName; // Frontier
+                status.IsCommandTracker = sensor.CommandTracker; //Goob station
                 break;
         }
 
@@ -505,6 +560,7 @@ public sealed class SuitSensorSystem : EntitySystem
             [SuitSensorConstants.NET_JOB_ICON] = status.JobIcon,
             [SuitSensorConstants.NET_JOB_DEPARTMENTS] = status.JobDepartments,
             [SuitSensorConstants.NET_IS_ALIVE] = status.IsAlive,
+            [SuitSensorConstants.NET_IS_COMMAND] = status.IsCommandTracker, //Goob station
             [SuitSensorConstants.NET_SUIT_SENSOR_UID] = status.SuitSensorUid,
             [SuitSensorConstants.NET_OWNER_UID] = status.OwnerUid,
         };
@@ -515,8 +571,6 @@ public sealed class SuitSensorSystem : EntitySystem
             payload.Add(SuitSensorConstants.NET_TOTAL_DAMAGE_THRESHOLD, status.TotalDamageThreshold);
         if (status.Coordinates != null)
             payload.Add(SuitSensorConstants.NET_COORDINATES, status.Coordinates);
-        if (status.LocationName != null) // Frontier
-            payload.Add(SuitSensorConstants.NET_LOCATION_NAME, status.LocationName); // Frontier
 
         return payload;
     }
@@ -538,21 +592,22 @@ public sealed class SuitSensorSystem : EntitySystem
         if (!payload.TryGetValue(SuitSensorConstants.NET_JOB_ICON, out string? jobIcon)) return null;
         if (!payload.TryGetValue(SuitSensorConstants.NET_JOB_DEPARTMENTS, out List<string>? jobDepartments)) return null;
         if (!payload.TryGetValue(SuitSensorConstants.NET_IS_ALIVE, out bool? isAlive)) return null;
+        if (!payload.TryGetValue(SuitSensorConstants.NET_IS_COMMAND, out bool iscommand)) return null; //Goob station
         if (!payload.TryGetValue(SuitSensorConstants.NET_SUIT_SENSOR_UID, out NetEntity suitSensorUid)) return null;
         if (!payload.TryGetValue(SuitSensorConstants.NET_OWNER_UID, out NetEntity ownerUid)) return null;
-        if (!payload.TryGetValue(SuitSensorConstants.NET_LOCATION_NAME, out string? location)) return null; // Frontier
 
-        // try get total damage and cords and location name (optionals)
+        // try get total damage and cords (optionals)
         payload.TryGetValue(SuitSensorConstants.NET_TOTAL_DAMAGE, out int? totalDamage);
         payload.TryGetValue(SuitSensorConstants.NET_TOTAL_DAMAGE_THRESHOLD, out int? totalDamageThreshold);
         payload.TryGetValue(SuitSensorConstants.NET_COORDINATES, out NetCoordinates? coords);
 
-        var status = new SuitSensorStatus(ownerUid, suitSensorUid, name, job, jobIcon, jobDepartments, location) // Frontier: add location
+        var status = new SuitSensorStatus(ownerUid, suitSensorUid, name, job, jobIcon, jobDepartments)
         {
             IsAlive = isAlive.Value,
             TotalDamage = totalDamage,
             TotalDamageThreshold = totalDamageThreshold,
             Coordinates = coords,
+            IsCommandTracker = iscommand,//Goob station
         };
         return status;
     }
