@@ -12,12 +12,12 @@
     sprite: _Wega/Objects/Specific/Medical/tyriumpack.rsi
     state: tyriumpack
   - type: Healing
-    bloodlossModifier: -20
     damageContainers:
       - Android
     damage:
       types:
         Bloodloss: -5
+    ModifyBloodLevel: 40
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:

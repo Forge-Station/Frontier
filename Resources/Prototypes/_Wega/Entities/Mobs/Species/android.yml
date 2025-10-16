@@ -122,7 +122,7 @@
         sprite: Mobs/Effects/burn_damage.rsi
   - type: ZombieImmune
   - type: Repairable
-    doAfterDelay: 3
+    doAfterDelay: 4
     allowSelfRepair: true
     damage:
       types:
@@ -180,6 +180,9 @@
     bleedReductionAmount: 0
     bloodRefreshAmount: 0
   - type: Android
+  - type: Tag
+    tags:
+    - Android
   - type: InteractionPopup
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
