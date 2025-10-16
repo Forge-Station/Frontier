@@ -79,13 +79,13 @@
   id: MobIpcTorso
   baseSprite:
     sprite: Forge/Mobs/Species/Ipc/parts.rsi
-    state: torso_m
+    state: chest_m
 
 - type: humanoidBaseSprite
   id: MobIpcTorsoMale
   baseSprite:
     sprite: Forge/Mobs/Species/Ipc/parts.rsi
-    state: torso_m
+    state: chest_m
 
 - type: humanoidBaseSprite
   id: MobIpcTorsoFemale

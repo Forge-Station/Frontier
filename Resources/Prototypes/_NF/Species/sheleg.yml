@@ -114,13 +114,13 @@
   id: MobShelegTorso
   baseSprite:
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
-    state: torso_m
+    state: chest_m
 
 - type: humanoidBaseSprite
   id: MobShelegTorsoMale
   baseSprite:
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
-    state: torso_m
+    state: chest_m
 
 - type: humanoidBaseSprite
   id: MobShelegTorsoFemale

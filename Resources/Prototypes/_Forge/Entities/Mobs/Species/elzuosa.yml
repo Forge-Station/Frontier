@@ -23,11 +23,11 @@
   - type: Thirst
   - type: Bloodstream
     bloodReagent: ElectroBlood # TODO Color Elzuosa blood based on their Elzuosa color or smth
-  - type: DamageVisuals
-    damageOverlayGroups:
-      Brute:
-        sprite: Mobs/Effects/brute_damage.rsi
-        color: "#FDD023"
+#  - type: DamageVisuals
+#    damageOverlayGroups:
+#      Brute:
+#        sprite: Mobs/Effects/brute_damage.rsi
+#        color: "#FDD023"
   - type: Butcherable
     butcheringType: Spike
     spawned:

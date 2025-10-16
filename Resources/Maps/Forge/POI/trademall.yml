@@ -18872,14 +18872,6 @@ entities:
     - type: Transform
       pos: 6.465812,7.553358
       parent: 1
-- proto: ClothingHeadHatMagician
-  entities:
-  - uid: 4233
-    components:
-    - type: Transform
-      parent: 4231
-    - type: Physics
-      canCollide: False
 - proto: ClothingHeadHatMimesoft
   entities:
   - uid: 4246
@@ -18894,14 +18886,6 @@ entities:
     - type: Transform
       pos: 3.4642413,9.550318
       parent: 1
-- proto: ClothingHeadHatUshanka
-  entities:
-  - uid: 4235
-    components:
-    - type: Transform
-      parent: 4234
-    - type: Physics
-      canCollide: False
 - proto: ClothingHeadSafari
   entities:
   - uid: 4247
@@ -18965,14 +18949,7 @@ entities:
     - type: Transform
       pos: 4.3777328,-4.628041
       parent: 1
-- proto: ClothingOuterCoatJensen
-  entities:
-  - uid: 4230
-    components:
-    - type: Transform
-      parent: 4229
-    - type: Physics
-      canCollide: False
+
 - proto: ClothingOuterCoatTrench
   entities:
   - uid: 4251
@@ -31315,12 +31292,6 @@ entities:
     - type: PowerCellDraw
       canUse: True
       canDraw: True
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 5383
 - proto: HighSecFrontierCommandLocked
   entities:
   - uid: 5413
@@ -31631,120 +31602,18 @@ entities:
       rot: 3.141592653589793 rad
       pos: 6.5,-3.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        jumpsuit: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        outerClothing: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 4230
-        neck: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        mask: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        eyes: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        head: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        suitstorage: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        back: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
   - uid: 4231
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 6.5,4.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        jumpsuit: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        outerClothing: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        neck: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        mask: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        eyes: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        head: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 4233
-        suitstorage: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        back: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
   - uid: 4234
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 4.5,6.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        jumpsuit: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        outerClothing: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        neck: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        mask: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        eyes: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        head: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 4235
-        suitstorage: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        back: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
     - type: RussianAccent
 - proto: Matchbox
   entities:
@@ -32185,14 +32054,6 @@ entities:
     - type: Transform
       pos: -15.5,2.5
       parent: 1
-- proto: PowerCellMedium
-  entities:
-  - uid: 5383
-    components:
-    - type: Transform
-      parent: 5380
-    - type: Physics
-      canCollide: False
 - proto: Poweredlight
   entities:
   - uid: 48

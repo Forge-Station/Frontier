@@ -26,10 +26,10 @@
   components:
     - type: Sprite
       sprite: Forge/Mobs/Species/Ipc/parts.rsi
-      state: "torso_m"
+      state: "chest_m"
     - type: Icon
       sprite: Forge/Mobs/Species/Ipc/parts.rsi
-      state: "torso_m"
+      state: "chest_m"
 
 - type: entity
   id: HeadIpc

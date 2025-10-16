@@ -225,8 +225,8 @@
     lifetime: 0.170 # Very short range
   - type: StunOnCollide # Forge-Change
     stunAmount: 0
-    knockdownAmount: 2.5 # Enough to subdue and follow up with a stun batong
-    slowdownAmount: 2.5
+    knockdownAmount: 3 # Enough to subdue and follow up with a stun batong
+    slowdownAmount: 3 # Forge-Change
     walkSpeedModifier: 0.5
     sprintSpeedModifier: 0.5
 # Forge-Change-Start

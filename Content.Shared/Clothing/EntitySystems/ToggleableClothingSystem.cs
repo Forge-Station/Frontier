@@ -670,7 +670,22 @@ public sealed class ToggleableClothingSystem : EntitySystem
     {
         var comp = toggleable.Comp;
 
-        comp.Container = _containerSystem.EnsureContainer<Container>(toggleable, comp.ContainerId);
+        // Ensure the container is of the correct type. If it already exists but is the wrong type,
+        // this can cause a crash. This is a defensive check against bad prototypes.
+        if (_containerSystem.TryGetContainer(toggleable, comp.ContainerId, out var container) && container is not Container)
+        {
+            // Container exists but is of the wrong type. We need to remove it before creating a new one.
+            if (TryComp<ContainerManagerComponent>(toggleable, out var containerManager))
+            {
+                containerManager.Containers.Remove(comp.ContainerId);
+                container = null; // Invalidate the old container reference
+            }
+        }
+
+        if (container == null)
+            container = _containerSystem.EnsureContainer<Container>(toggleable, comp.ContainerId, out _);
+
+        comp.Container = (Container) container;
     }
 
     private void OnAttachedInit(Entity<AttachedClothingComponent> attached, ref ComponentInit args)
@@ -894,4 +909,3 @@ public readonly record struct ToggledBackClothingFullUnequipAndInsertedEvent(
 
     List<(EntityUid Part, string Slot)> Parts
 );
-

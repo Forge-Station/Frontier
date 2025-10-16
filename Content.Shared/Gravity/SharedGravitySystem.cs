@@ -1,3 +1,4 @@
+using Content.Shared._EinsteinEngines.Flight;
 using Content.Shared.Alert;
 using Content.Shared.Inventory;
 using Content.Shared.Movement.Components;
@@ -25,6 +26,9 @@ namespace Content.Shared.Gravity
 
             if ((body?.BodyType & (BodyType.Static | BodyType.Kinematic)) != 0)
                 return false;
+
+            if (TryComp<FlightComponent>(uid, out var flying) && flying.On) // Goobstation
+                return true;
 
             if (TryComp<MovementIgnoreGravityComponent>(uid, out var ignoreGravityComponent))
                 return ignoreGravityComponent.Weightless;
