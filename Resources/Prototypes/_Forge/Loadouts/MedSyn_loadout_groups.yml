@@ -35,9 +35,10 @@
   minLimit: 1
   loadouts:
   - MedSynClothingHandsGloves1
+  - MedSynClothingHandsGlovesLatex
   - MedSynClothingHandsGloves2
   fallbacks:
-  - MedSynClothingHandsGloves1
+  - MedSynClothingHandsGlovesLatex
 
 - type: loadoutGroup
   id: MedSynGlasses

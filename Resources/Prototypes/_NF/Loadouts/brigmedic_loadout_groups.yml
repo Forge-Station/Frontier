@@ -4,6 +4,10 @@
   loadouts:
   - BrigmedicClothingUniformJumpsuitBrigmedic
   - BrigmedicClothingUniformJumpskirtBrigmedic
+  - BrigmedicClothingUniformJumpsuitNfsdForgeCoroner # Forge: add BrigmedicClothingUniformJumpsuitNfsdForgeCoroner
+  - BrigmedicClothingUniformJumpsuitNfsdForgeCoronerAlt # Forge: add BrigmedicClothingUniformJumpsuitNfsdForgeCoronerAlt
+  - BrigmedicClothingUniformJumpskirtNfsdForgeCoroner # Forge: add BrigmedicClothingUniformJumpskirtNfsdForgeCoroner
+  - BrigmedicClothingUniformJumpskirtNfsdForgeCoronerAlt # Forge: add BrigmedicClothingUniformJumpskirtNfsdForgeCoronerAlt
   fallbacks:
   - BrigmedicClothingUniformJumpsuitBrigmedic
   - BrigmedicClothingUniformJumpskirtBrigmedic
@@ -25,11 +29,12 @@
 - type: loadoutGroup
   id: BrigmedicGloves
   name: loadout-group-contractor-gloves
-  hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
-  - NitrileGloves
+  - DocClothingHandsGloves2 # Forge add: DocClothingHandsGloves2
+  - DocClothingHandsGloves3 # Forge add: DocClothingHandsGloves3
+  - BrigmedClothingHandsGlovesLatexNfsd # Forge add: BrigmedClothingHandsGlovesLatexNfsd
   fallbacks:
-  - NitrileGloves
+  - DocClothingHandsGloves3 # Forge add: DocClothingHandsGloves3
 
 - type: loadoutGroup
   id: BrigmedicNeck
@@ -61,11 +66,12 @@
 - type: loadoutGroup
   id: BrigmedicFace
   name: loadout-group-contractor-face
-  hidden: true # No point in showing this, it gets auto-selected.
+  minLimit: 1
   loadouts:
   - BrigmedicClothingMaskBrigmedic
+  - NfsdClothingMaskGasCoroner # Forge add: NfsdClothingMaskGasCoroner
   fallbacks:
-  - BrigmedicClothingMaskBrigmedic
+  - NfsdClothingMaskGasCoroner
 
 - type: loadoutGroup
   id: BrigmedicBelt

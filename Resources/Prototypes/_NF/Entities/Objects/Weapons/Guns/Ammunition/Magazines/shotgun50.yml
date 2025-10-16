@@ -134,7 +134,7 @@
 - type: entity
   id: NFMagazineShotgunDrumIncendiary
   name: ammo drum (.50 shells, incendiary)
-  parent: NFBaseMagazineShotgunDrum
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazineShotgunDrum] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunIncendiary

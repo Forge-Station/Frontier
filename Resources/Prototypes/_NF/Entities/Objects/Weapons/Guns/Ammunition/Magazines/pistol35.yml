@@ -73,7 +73,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - NFCartridgePistol35
+        - NFCartridgeRifle25
     capacity: 30
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/smg_mag.rsi
@@ -101,10 +101,10 @@
       - NFMagazineSubMachineGunTopMountedPistol35
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: NFBulletPistol35
+    proto: NFCartridgeRifle25
     whitelist:
       tags:
-      - NFCartridgePistol35
+      - NFCartridgeRifle25
     capacity: 30
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/smg_mag_top_mounted.rsi
@@ -168,7 +168,7 @@
 - type: entity
   id: NFMagazinePistol35Incendiary
   name: pistol magazine (.35 pistol, incendiary)
-  parent: NFBaseMagazinePistol35
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazinePistol35] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Incendiary
@@ -194,7 +194,7 @@
 - type: entity
   id: NFMagazinePistol35Uranium
   name: pistol magazine (.35 pistol, uranium)
-  parent: NFBaseMagazinePistol35
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazinePistol35] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Uranium
@@ -343,7 +343,7 @@
 - type: entity
   id: NFMagazineHighCapacityPistol35Incendiary
   name: high capacity pistol magazine (.35 pistol, incendiary)
-  parent: NFBaseMagazineHighCapacityPistol35
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazineHighCapacityPistol35] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Incendiary
@@ -369,7 +369,7 @@
 - type: entity
   id: NFMagazineHighCapacityPistol35Uranium
   name: high capacity pistol magazine (.35 pistol, uranium)
-  parent: NFBaseMagazineHighCapacityPistol35
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazineHighCapacityPistol35] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35Uranium
@@ -515,7 +515,7 @@
 - type: entity
   id: NFMagazineSubMachineGun35Incendiary
   name: smg magazine (.25 auto, incendiary)
-  parent: NFBaseMagazinePistolSubMachineGun35
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazinePistolSubMachineGun35] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25Incendiary
@@ -541,7 +541,7 @@
 - type: entity
   id: NFMagazineSubMachineGun35Uranium
   name: smg magazine (.25 auto, uranium)
-  parent: NFBaseMagazinePistolSubMachineGun35
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazinePistolSubMachineGun35] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25Uranium
@@ -647,7 +647,7 @@
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Incendiary
   name: top mounted smg magazine (.25 auto, incendiary)
-  parent: NFBaseMagazineSubMachineGunTopMounted35
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazineSubMachineGunTopMounted35] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25Incendiary
@@ -674,7 +674,7 @@
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Uranium
   name: top mounted smg magazine (.25 auto, uranium)
-  parent: NFBaseMagazineSubMachineGunTopMounted35
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazineSubMachineGunTopMounted35] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25Uranium

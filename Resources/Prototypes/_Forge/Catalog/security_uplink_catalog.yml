@@ -221,3 +221,78 @@
       whitelist:
         - Bailiff
         - Sheriff
+
+# region utility
+- type: listing
+  id: UplinkSecurityNfsdGasAlt
+  name:  uplink-security-nfsdgasalt-name
+  description: uplink-security-nfsdgasalt-desc
+  productEntity: ClothingMaskGasNfsdAlt
+  icon: { sprite: Forge/Clothing/Mask/nfsd_alt.rsi, state: icon}
+  cost:
+    FrontierUplinkCoin: 3
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityNfsdGasCoroner
+  name:  uplink-security-nfsdgascoroner-name
+  description: uplink-security-nfsdgascoroner-desc
+  productEntity: ClothingMaskGasNfsdCoroner
+  icon: { sprite: Forge/Clothing/Mask/coroner.rsi, state: icon}
+  cost:
+    FrontierUplinkCoin: 3
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityNfsdGasAdvanced
+  name:  uplink-security-nfsdgasup-name
+  description: uplink-security-nfsdgasup-desc
+  productEntity: ClothingMaskGasNfsdAdvanced
+  icon: { sprite: Forge/Clothing/Mask/nfsd_up.rsi, state: icon}
+  cost:
+    FrontierUplinkCoin: 6
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityEngiBeltFilled
+  name:  uplink-security-engibelt-name
+  description: uplink-security-engibelt-desc
+  productEntity: ClothingBeltNfsdEngineerFilled
+  icon: { sprite: Forge/Clothing/Belt/nfsd_engi_belt.rsi, state: icon}
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff

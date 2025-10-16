@@ -89,7 +89,7 @@
 - type: entity
   id: NFSpeedLoaderPistol45Incendiary
   name: "speed loader (.45 pistol, incendiary)"
-  parent: NFBaseSpeedLoaderPistol45
+  parent: [BaseC2ContrabandUnredeemable, NFBaseSpeedLoaderPistol45] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol45Incendiary
@@ -117,7 +117,7 @@
 - type: entity
   id: NFSpeedLoaderPistol45Uranium
   name: "speed loader (.45 pistol, uranium)"
-  parent: NFBaseSpeedLoaderPistol45
+  parent: [BaseC2ContrabandUnredeemable, NFBaseSpeedLoaderPistol45] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol45Uranium

@@ -5,11 +5,11 @@
   description: Зловеще выглядящий ящик для инструментов, наполненный лучшими инструментами.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Tools/toolbox.rsi
+    sprite: Forge/Objects/Tools/Contractor/toolbox.rsi
     state: icon
   - type: Item
     size: Ginormous
-    sprite: Forge/Objects/Tools/toolbox.rsi
+    sprite: Forge/Objects/Tools/Contractor/toolbox.rsi
   - type: Storage
     maxItemSize: Huge
     grid:
@@ -41,10 +41,10 @@
   id: PowerDrillContractor
   components:
   - type: Sprite
-    sprite: Forge/Objects/Tools/contractor_drill.rsi
+    sprite: Forge/Objects/Tools/Contractor/contractor_drill.rsi
     state: drill_screw
   - type: Item
-    sprite: Forge/Objects/Tools/contractor_drill.rsi
+    sprite: Forge/Objects/Tools/Contractor/contractor_drill.rsi
     size: Small
   - type: Tool
     qualities:
@@ -56,7 +56,7 @@
     entries:
       - behavior: Screwing
         sprite:
-          sprite: Forge/Objects/Tools/contractor_drill.rsi
+          sprite: Forge/Objects/Tools/Contractor/contractor_drill.rsi
           state: drill_screw
         useSound:
           path: /Audio/Items/drill_use.ogg
@@ -64,7 +64,7 @@
           path: /Audio/Items/change_drill.ogg
       - behavior: Anchoring
         sprite:
-          sprite: Forge/Objects/Tools/contractor_drill.rsi
+          sprite: Forge/Objects/Tools/Contractor/contractor_drill.rsi
           state: drill_bolt
         useSound:
           path: /Audio/Items/drill_use.ogg
@@ -86,7 +86,7 @@
   description: Используется для проникновения на чужие шаттлы и аванпоста.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Tools/contractor_jaws_of_life.rsi
+    sprite: Forge/Objects/Tools/Contractor/contractor_jaws_of_life.rsi
     state: jaws_pry
   - type: Item
     inhandVisuals:
@@ -101,13 +101,13 @@
     entries:
       - behavior: Prying
         sprite:
-          sprite: Forge/Objects/Tools/contractor_jaws_of_life.rsi
+          sprite: Forge/Objects/Tools/Contractor/contractor_jaws_of_life.rsi
           state: jaws_pry
         useSound: /Audio/Items/jaws_pry.ogg
         changeSound: /Audio/Items/change_jaws.ogg
       - behavior: Cutting
         sprite:
-          sprite: Forge/Objects/Tools/contractor_jaws_of_life.rsi
+          sprite: Forge/Objects/Tools/Contractor/contractor_jaws_of_life.rsi
           state: jaws_cutter
         useSound: /Audio/Items/jaws_cut.ogg
         changeSound: /Audio/Items/change_jaws.ogg
@@ -125,9 +125,9 @@
   description: Экспериментальный сварочный аппарат, способный самостоятельно вырабатывать топливо, менее вреден для глаз. Работает в два раза эффективнее.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Tools/contractor_welder.rsi
+    sprite: Forge/Objects/Tools/Contractor/contractor_welder.rsi
   - type: Item
-    sprite: Forge/Objects/Tools/contractor_welder.rsi
+    sprite: Forge/Objects/Tools/Contractor/contractor_welder.rsi
   - type: SolutionContainerManager
     solutions:
       Welder:
@@ -160,13 +160,13 @@
     sound:
       path: /Audio/Items/multitool_drop.ogg
   - type: Sprite
-    sprite: Forge/Objects/Tools/contractor_multitool.rsi
+    sprite: Forge/Objects/Tools/Contractor/contractor_multitool.rsi
     layers:
     - state: icon
     - state: green-unlit
       shader: unshaded
   - type: Clothing
-    sprite: Forge/Objects/Tools/contractor_multitool.rsi
+    sprite: Forge/Objects/Tools/Contractor/contractor_multitool.rsi
     quickEquip: false
     slots:
     - Belt
@@ -183,12 +183,12 @@
   - type: LimitedCharges
     maxCharges: 60
   - type: Sprite
-    sprite: Forge/Objects/Tools/contractor_rcd.rsi
+    sprite: Forge/Objects/Tools/Contractor/contractor_rcd.rsi
     state: icon
   - type: Item
     size: Normal
   - type: Clothing
-    sprite: Forge/Objects/Tools/contractor_rcd.rsi
+    sprite: Forge/Objects/Tools/Contractor/contractor_rcd.rsi
     quickEquip: false
     slots:
     - Belt

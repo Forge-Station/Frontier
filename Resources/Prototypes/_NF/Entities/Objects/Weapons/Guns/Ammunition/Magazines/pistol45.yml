@@ -116,7 +116,7 @@
 - type: entity
   id: NFMagazinePistol45Incendiary
   name: pistol magazine (.45 pistol, incendiary)
-  parent: NFBaseMagazinePistol45
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazinePistol45] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol45Incendiary
@@ -145,7 +145,7 @@
 - type: entity
   id: NFMagazinePistol45Uranium
   name: pistol magazine (.45 pistol, uranium)
-  parent: NFBaseMagazinePistol45
+  parent: [BaseC2ContrabandUnredeemable, NFBaseMagazinePistol45] # Corvax-Forge: Contraband T2
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol45Uranium

@@ -64,7 +64,7 @@
 - type: entity
   id: NFCartridgePistol35Incendiary
   name: cartridge (.35 pistol, incendiary)
-  parent: NFBaseCartridgePistol35
+  parent: [BaseC2ContrabandUnredeemable, NFBaseCartridgePistol35] # Corvax-Forge: Contraband T2
   components:
   - type: CartridgeAmmo
     proto: NFBulletPistol35Incendiary
@@ -79,7 +79,7 @@
 - type: entity
   id: NFCartridgePistol35Uranium
   name: cartridge (.35 pistol, uranium)
-  parent: NFBaseCartridgePistol35
+  parent: [BaseC2ContrabandUnredeemable, NFBaseCartridgePistol35] # Corvax-Forge: Contraband T2
   components:
   - type: CartridgeAmmo
     proto: NFBulletPistol35Uranium
@@ -177,7 +177,7 @@
 - type: entity
   id: NFCartridgePistol45Incendiary
   name: cartridge (.45 pistol, incendiary)
-  parent: NFBaseCartridgePistol45
+  parent: [BaseC2ContrabandUnredeemable, NFBaseCartridgePistol45] # Corvax-Forge: Contraband T2
   components:
   - type: CartridgeAmmo
     proto: NFBulletPistol45Incendiary
@@ -192,7 +192,7 @@
 - type: entity
   id: NFCartridgePistol45Uranium
   name: cartridge (.45 pistol, uranium)
-  parent: NFBaseCartridgePistol45
+  parent: [BaseC2ContrabandUnredeemable, NFBaseCartridgePistol45] # Corvax-Forge: Contraband T2
   components:
   - type: CartridgeAmmo
     proto: NFBulletPistol45Uranium

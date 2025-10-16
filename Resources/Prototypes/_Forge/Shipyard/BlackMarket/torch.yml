@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: LeviyNosok (https://github.com/LeviyNosok)
+# Discord: no_idea_for_name
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Torch
+  parent: BaseVessel
+  name: Факел
+  description: Малогабаритный пиратский шаттл, предположительно украденный у ничем невиноватых парамедиков. Рекомендуемый размер экипажа 2-4 человека.
+  price: 48400 #Cheap
+  category: Small
+  group: BlackMarket
+  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/Torch.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - Plasma
+  addComponents:
+  - type: IFF
+    flags: [HideLabel]
+
+- type: gameMap
+  id: Torch
+  mapName: 'Torch'
+  mapPath: /Maps/Forge/Shuttles/BlackMarket/Torch.yml
+  minPlayers: 0
+  stations:
+    Torch:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Факел {1}' #Sneaky spoofed name
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

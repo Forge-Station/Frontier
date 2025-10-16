@@ -4,6 +4,8 @@
   loadouts:
   - NFDetectiveClothingUniformJumpsuitDetective
   - NFDetectiveClothingUniformJumpskirtDetective
+  - DetectiveClothingUniformJumpsuitNfsdForgeDec # Forge add: DetectiveClothingUniformJumpsuitNfsdForgeDec
+  - DetectiveClothingUniformJumpskirtNfsdForgeDec # Forge add: DetectiveClothingUniformJumpskirtNfsdForgeDec
   - NFDetectiveClothingUniformJumpsuitDetectiveGrey
   - NFDetectiveClothingUniformJumpskirtDetectiveGrey
   fallbacks:
@@ -52,3 +54,15 @@
   - NFDetectiveNFDetectivePDA
   fallbacks:
   - NFDetectiveNFDetectivePDA
+
+# Forge-change add
+- type: loadoutGroup
+  id: DetectiveFace
+  name: loadout-group-contractor-face
+  loadouts:
+  - ForgeClothingMaskNeckGaiter
+  subgroups:
+  - NfsdFace
+  fallbacks:
+  - NfsdClothingMaskGasNfsd
+# Forge-change end

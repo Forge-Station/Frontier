@@ -176,8 +176,8 @@
           Quantity: 30
   - type: Tag
     tags: []
-  - type: StaticPrice #CorvaxFrontier
-    price: 75
+  - type: StaticPrice # Forge-change
+    price: 250 # Forge-change
 
 - type: entity
   id: RadiumChemistryVial
