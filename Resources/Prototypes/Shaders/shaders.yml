@@ -124,3 +124,8 @@
   id: CircleAlphaMask
   kind: source
   path: "/Textures/Shaders/circle_alpha_mask.swsl"
+
+- type: shader # Forge-Change wega nightvision
+  id: NaturalNightVision
+  kind: source
+  path: "/Textures/_Wega/Shaders/nightvision.swsl"

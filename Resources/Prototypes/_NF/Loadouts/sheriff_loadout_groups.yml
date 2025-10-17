@@ -52,11 +52,13 @@
 - type: loadoutGroup
   id: SheriffFace
   name: loadout-group-contractor-face
-  hidden: true # No point in showing this, it gets auto-selected.
+  minLimit: 1 # Forge-change: add minLimit: 1
+#  hidden: true # No point in showing this, it gets auto-selected. # Forge-change
   loadouts:
+  - ForgeClothingMaskGasNfsdAdvanced # Forge-change: add ForgeClothingMaskGasNfsdAdvanced
   - SheriffClothingMaskSheriff
   fallbacks:
-  - SheriffClothingMaskSheriff
+  - ForgeClothingMaskGasNfsdAdvanced # Forge-change: SheriffClothingMaskSheriff > ForgeClothingMaskGasNfsdAdvanced
 
 - type: loadoutGroup
   id: SheriffEars

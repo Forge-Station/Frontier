@@ -301,6 +301,54 @@ public static class SkinColor
         return Color.ToHsv(color).Z >= MinHuesLightness;
     }
 
+    // Forge-Change-Start wega ariral
+    public static Color AriralColor(int tone)
+    {
+        tone = Math.Clamp(tone, 0, 100);
+
+        const float minValue = 0.85f;
+        const float maxValue = 1.0f;
+
+        const float minSaturation = 0.0f;
+        const float maxSaturation = 0.08f;
+
+        float tNorm = tone / 100f;
+        float value = minValue + tNorm * (maxValue - minValue);
+        float saturation = minSaturation + (1 - tNorm) * (maxSaturation - minSaturation);
+
+        return Color.FromHsv(new Vector4(0f, saturation, value, 1f));
+    }
+
+    public static float AriralSkinToneFromColor(Color color)
+    {
+        var hsv = Color.ToHsv(color);
+
+        const float minValue = 0.85f;
+        const float maxValue = 1.0f;
+
+        float v = Math.Clamp(hsv.Z, minValue, maxValue);
+        float tone = (v - minValue) / (maxValue - minValue) * 100f;
+
+        tone = MathF.Round(tone);
+        tone = Math.Clamp(tone, 0f, 100f);
+
+        return tone;
+    }
+
+    public static bool VerifyAriralColor(Color color)
+    {
+        var hsv = Color.ToHsv(color);
+
+        if (hsv.Y > 0.08f)
+            return false;
+
+        if (hsv.Z < 0.85f)
+            return false;
+
+        return true;
+    }
+    // Forge-Change-End wega ariral
+
     public static bool VerifySkinColor(HumanoidSkinColor type, Color color)
     {
         return type switch
@@ -311,6 +359,7 @@ public static class SkinColor
             HumanoidSkinColor.VoxFeathers => VerifyVoxFeathers(color),
             HumanoidSkinColor.AnimalFur => VerifyAnimalFur(color),
             HumanoidSkinColor.ShelegToned => VerifyShelegSkinTone(color), // Frontier: Sheleg
+            HumanoidSkinColor.AriralPale => VerifyAriralColor(color), // Forge-Change wega ariral
             _ => false,
         };
     }
@@ -325,6 +374,7 @@ public static class SkinColor
             HumanoidSkinColor.VoxFeathers => ClosestVoxColor(color),
             HumanoidSkinColor.AnimalFur => ClosestAnimalFurColor(color),
             HumanoidSkinColor.ShelegToned => ValidShelegSkinTone, // Frontier: Sheleg
+            HumanoidSkinColor.AriralPale => AriralColor(100), // Forge-Change wega ariral
             _ => color
         };
     }
@@ -422,4 +472,5 @@ public enum HumanoidSkinColor : byte
     NoColor, // Goob #1161
     AnimalFur, // Goob - Tajaran
     ShelegToned, // Frontier: Like human toned, but with a different color range for blue
+    AriralPale, // Forge-Change wega ariral
 }

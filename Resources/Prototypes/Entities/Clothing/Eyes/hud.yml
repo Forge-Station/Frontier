@@ -30,7 +30,8 @@
     damageContainers:
     - Inorganic
     - Silicon
-
+    - SiliconIpc # Forge-Change
+    - Android # Forge-Change wega android health display
 - type: entity
   parent: [ClothingEyesBase, ShowMedicalIcons]
   id: ClothingEyesHudMedical

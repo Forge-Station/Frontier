@@ -98,6 +98,7 @@
       job: Borg
     - type: BlockMovement
     - type: Examiner
+    - type: Organ
     - type: BorgBrain
     - type: IntrinsicRadioReceiver
     - type: IntrinsicRadioTransmitter
@@ -137,6 +138,3 @@
       whitelist:
         components:
         - SecretStash
-    - type: NerveSystem # backmen: wounding
-    - type: ConsciousnessRequired
-      identifier: "nerveSystem"

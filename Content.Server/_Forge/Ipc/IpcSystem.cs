@@ -12,6 +12,7 @@ using Content.Shared.Ninja.Systems;
 using Content.Shared.Popups;
 using Content.Shared.PowerCell.Components;
 using Content.Shared.Sound.Components;
+using Robust.Shared.Containers;  // Forge-Change
 using Robust.Shared.Audio;
 
 namespace Content.Server._Forge.Ipc;
@@ -39,7 +40,42 @@ public sealed class IpcSystem : EntitySystem
         SubscribeLocalEvent<IpcComponent, EmpPulseEvent>(OnEmpPulse);
         SubscribeLocalEvent<IpcComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovementSpeedModifiers);
         SubscribeLocalEvent<IpcComponent, MobStateChangedEvent>(OnMobStateChanged);
+        SubscribeLocalEvent<IpcComponent, EntInsertedIntoContainerMessage>(OnCellInsertedIntoSlot); // Forge-Change
+        SubscribeLocalEvent<IpcComponent, EntRemovedFromContainerMessage>(OnCellRemovedFromSlot); // Forge-Change
     }
+
+    // Forge-Change-Start
+    private void OnCellInsertedIntoSlot(EntityUid uid, IpcComponent component, EntInsertedIntoContainerMessage args)
+    {
+        // Проверка на корректный слот?
+        if (!TryComp(uid, out PowerCellSlotComponent? slot) || args.Container.ID != slot.CellSlotId)
+            return;
+
+        // ВЫКЛючение подзарядки, если была ВКЛючена
+        if (!component.DrainActivated)
+            return;
+
+        component.DrainActivated = false;
+        _action.SetToggled(component.ActionEntity, false);
+
+        // Уведа об отключении
+        _popup.PopupEntity(Loc.GetString("ipc-component-disabled"), uid, uid);
+    }
+
+    private void OnCellRemovedFromSlot(EntityUid uid, IpcComponent component, EntRemovedFromContainerMessage args)
+    {
+        // Проверка на корректный слот
+        if (!TryComp(uid, out PowerCellSlotComponent? slot) || args.Container.ID != slot.CellSlotId)
+            return;
+
+        if (!component.DrainActivated)
+            return;
+        // Уведа об отключении
+        component.DrainActivated = false;
+        _action.SetToggled(component.ActionEntity, false);
+        _popup.PopupEntity(Loc.GetString("ipc-component-disabled"), uid, uid);
+    }
+    // Forge-Change-End
 
     private void OnMapInit(EntityUid uid, IpcComponent component, MapInitEvent args)
     {

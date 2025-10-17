@@ -70,6 +70,24 @@
       prototype: TechFabInterdyne
       requirements:
         Manipulator: 2
+        MatterBin: 2
+      stackRequirements:
+        Glass: 5
+        Cable: 2
+
+- type: entity
+  id: SyndicateTradingConsoleCircuitboard
+  parent: [SecurityTechFabCircuitboard, BaseC3ContrabandUnredeemable]
+  name: Автомат торгов Синдиката (машинная плата)
+  description: Плата для создания автомата торгов.
+  components:
+    - type: Sprite
+      state: security
+    - type: MachineBoard
+      prototype: SyndicateTradingConsole
+      requirements:
+        Manipulator: 2
+        MatterBin: 2
       stackRequirements:
         Glass: 5
         Cable: 2

@@ -280,8 +280,9 @@ namespace Content.Client.Lobby.UI
             {
                 if (Profile is null)
                     return;
+                var hairColorList = new List<Robust.Shared.Maths.Color>(newColor.marking.MarkingColors); // Forge-Change Corvax-Wega-Hair-Extended
                 Profile = Profile.WithCharacterAppearance(
-                    Profile.Appearance.WithHairColor(newColor.marking.MarkingColors[0]));
+                    Profile.Appearance.WithHairColor(hairColorList));// Forge-Change Corvax-Wega-Hair-Extended
                 UpdateCMarkingsHair();
                 ReloadPreview();
             };
@@ -1198,6 +1199,22 @@ namespace Content.Client.Lobby.UI
                     break;
                 }
                 // End Frontier
+                // Forge-Change-Start wega ariral
+                case HumanoidSkinColor.AriralPale:
+                {
+                    if (!Skin.Visible)
+                    {
+                        Skin.Visible = true;
+                        RgbSkinColorContainer.Visible = false;
+                    }
+
+                    var color = SkinColor.AriralColor((int)Skin.Value);
+
+                    Markings.CurrentSkinColor = color;
+                    Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
+                    break;
+                }
+                // Forge-Change-End wega ariral
             }
 
             ReloadProfilePreview();
@@ -1449,6 +1466,20 @@ namespace Content.Client.Lobby.UI
                     break;
                 }
                 // End Frontier
+                // Forge-Change-Start wega ariral
+                case HumanoidSkinColor.AriralPale:
+                {
+                    if (!Skin.Visible)
+                    {
+                        Skin.Visible = true;
+                        RgbSkinColorContainer.Visible = false;
+                    }
+
+                    Skin.Value = SkinColor.AriralSkinToneFromColor(Profile.Appearance.SkinColor);
+
+                    break;
+                }
+                // Forge-Change-End wega ariral
             }
 
         }
@@ -1510,9 +1541,11 @@ namespace Content.Client.Lobby.UI
             {
                 return;
             }
-            var hairMarking = Profile.Appearance.HairStyleId == HairStyles.DefaultHairStyle
-                ? new List<Marking>()
-                : new() { new(Profile.Appearance.HairStyleId, new List<Color>() { Profile.Appearance.HairColor }) };
+            var hairMarking = Profile.Appearance.HairStyleId switch
+            {
+                HairStyles.DefaultHairStyle => new List<Marking>(),
+                _ => new() { new Marking(Profile.Appearance.HairStyleId, Profile.Appearance.HairColor) } // Corvax-Wega-Hair-Extended
+            };
 
             var facialHairMarking = Profile.Appearance.FacialHairStyleId == HairStyles.DefaultFacialHairStyle
                 ? new List<Marking>()
@@ -1536,31 +1569,29 @@ namespace Content.Client.Lobby.UI
             }
 
             // hair color
-            Color? hairColor = null;
+            // Forge-Change Corvax-Wega-Hair-Extended-Edit-start
+            List<Color>? hairColor = null;
             if (Profile.Appearance.HairStyleId != HairStyles.DefaultHairStyle &&
-                _markingManager.Markings.TryGetValue(Profile.Appearance.HairStyleId, out var hairProto)
-            )
+                _markingManager.Markings.TryGetValue(Profile.Appearance.HairStyleId, out var hairProto))
             {
                 if (_markingManager.CanBeApplied(Profile.Species, Profile.Sex, hairProto, _prototypeManager))
                 {
-                    if (_markingManager.MustMatchSkin(Profile.Species, HumanoidVisualLayers.Hair, out var _, _prototypeManager))
+                    if (_markingManager.MustMatchSkin(Profile.Species, HumanoidVisualLayers.Hair, out var hairAlpha, _prototypeManager))
                     {
-                        hairColor = Profile.Appearance.SkinColor;
+                        hairColor = new List<Color> { Profile.Appearance.SkinColor.WithAlpha(hairAlpha) };
+                        if (Profile.Appearance.HairColor.Count > 1)
+                            hairColor.AddRange(Profile.Appearance.HairColor.Skip(1));
                     }
                     else
                     {
-                        hairColor = Profile.Appearance.HairColor;
+                        hairColor = Profile.Appearance.HairColor.ToList();
                     }
                 }
             }
-            if (hairColor != null)
-            {
-                Markings.HairMarking = new(Profile.Appearance.HairStyleId, new List<Color>() { hairColor.Value });
-            }
-            else
-            {
-                Markings.HairMarking = null;
-            }
+            Markings.HairMarking = hairColor != null
+                ? new Marking(Profile.Appearance.HairStyleId, hairColor)
+                : null;
+            // Forge-Change Corvax-Wega-Hair-Extended-Edit-end
         }
 
         private void UpdateCMarkingsFacialHair()

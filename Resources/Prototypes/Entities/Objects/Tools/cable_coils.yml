@@ -200,6 +200,24 @@
           Quantity: 3
         - ReagentId: Copper
           Quantity: 2
+  # Forge-Change-Start
+  - type: Healing
+    damageContainers:
+    - SiliconIpc
+    - Android # Wega android
+    damage:
+      types:
+        Shock: -10
+        Blunt: -10
+        Slash: -10
+        Piercing: -10
+        Heat: -10
+    bloodlossModifier: -10 # Wega android
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+  # Forge-Change-End
 
 - type: entity
   parent: CableApcStack

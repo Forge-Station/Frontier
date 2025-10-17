@@ -515,9 +515,24 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         // Hair/facial hair - this may eventually be deprecated.
         // We need to ensure hair before applying it or coloring can try depend on markings that can be invalid
         var hairColor = _markingManager.MustMatchSkin(profile.Species, HumanoidVisualLayers.Hair, out var hairAlpha, _proto)
-            ? profile.Appearance.SkinColor.WithAlpha(hairAlpha) : profile.Appearance.HairColor;
+            ? new List<Color> { profile.Appearance.SkinColor.WithAlpha(hairAlpha) } // Forge-Change Corvax-Wega-Hair-Extended
+                .Concat(profile.Appearance.HairColor.Skip(1)).ToList() // Forge-Change Corvax-Wega-Hair-Extended
+            : profile.Appearance.HairColor; // Forge-Change Corvax-Wega-Hair-Extended
         var facialHairColor = _markingManager.MustMatchSkin(profile.Species, HumanoidVisualLayers.FacialHair, out var facialHairAlpha, _proto)
             ? profile.Appearance.SkinColor.WithAlpha(facialHairAlpha) : profile.Appearance.FacialHairColor;
+
+        // Frontier: Match hair and facial hair colors to the forced color if it exists
+        if (_markingManager.MustMatchColor(profile.Species, HumanoidVisualLayers.Hair, out var forcedHairAlpha, _proto) is Color forcedHairColor)
+        {
+            profile.Appearance.SkinColor.WithAlpha(forcedHairAlpha);
+            hairColor = new List<Color> { forcedHairColor.WithAlpha(forcedHairAlpha) }; // Forge-Change
+        }
+        if (_markingManager.MustMatchColor(profile.Species, HumanoidVisualLayers.FacialHair, out var forcedFacialHairAlpha, _proto) is Color forcedFacialHairColor)
+        {
+            profile.Appearance.SkinColor.WithAlpha(forcedFacialHairAlpha);
+            facialHairColor = forcedFacialHairColor;
+        }
+        // End Frontier
 
         if (_markingManager.Markings.TryGetValue(profile.Appearance.HairStyleId, out var hairPrototype) &&
             _markingManager.CanBeApplied(profile.Species, profile.Sex, hairPrototype, _proto))

@@ -1,0 +1,1 @@
+flavor-base-seabreeze = как солёный морской бриз

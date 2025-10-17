@@ -203,10 +203,11 @@ public sealed partial class MarkingSet
             {
                 foreach (var marking in list)
                 {
-                    if (markingManager.TryGetMarking(marking, out var prototype) &&
+                    if (markingManager.TryGetMarking(marking, out var prototype) && // Frontier: modified this test to add forced marking test
                         markingManager.MustMatchSkin(species, prototype.BodyPart, out var alpha, prototypeManager))
                     {
-                        marking.SetColor(skinColor.Value.WithAlpha(alpha));
+                        if (marking.MarkingColors.Count > 0) // Corvax-Wega-Hair-Extended
+                            marking.SetColor(0, skinColor.Value.WithAlpha(alpha)); // Corvax-Wega-Hair-Extended
                     }
                 }
             }

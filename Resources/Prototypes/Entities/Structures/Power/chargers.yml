@@ -262,6 +262,7 @@
     whitelist:
       components:
       - BorgChassis
+      - Android # Forge-Change wega android
   - type: Construction
     containers:
     - machine_parts
@@ -305,6 +306,7 @@
     whitelist:
       components:
       - BorgChassis
+      - Android # Forge-Change wega android
   - type: ContainerContainer
     containers:
       entity_storage: !type:Container

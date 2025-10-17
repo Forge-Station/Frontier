@@ -33,7 +33,9 @@
   - type: Damageable
     damageContainer: SiliconIpc
     damageModifierSet: Ipc
-  - type: ToggleableLightVisuals
+  - type: ItemTogglePointLight
+  - type: ToggleableVisuals
+    spriteLayer: light
   - type: PointLight
     enabled: false
     mask: /Textures/Effects/LightMasks/cone.png
@@ -91,9 +93,16 @@
   - type: Ipc
   - type: ZombieImmune
   - type: Repairable
-    fuelCost: 30
-    doAfterDelay: 20
-    selfRepairPenalty: 2
+    doAfterDelay: 7
+    allowSelfRepair: true
+    damage:
+      types:
+        Blunt: -10
+        Slash: -10
+        Piercing: -10
+        Cold: -10
+        Caustic: -10
+        Asphyxiation: -10
   - type: DamagedSiliconAccent
   - type: Reflect
     reflectProb: 0.05
