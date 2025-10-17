@@ -1,37 +1,6 @@
 #When adding new hardsuits, please try to keep the organization consistent with hardsuit-helmets.yml (if possible.)
 
 #CREW HARDSUITS
-#Basic Hardsuit
-- type: entity
-  parent: ClothingOuterHardsuitBase
-  id: ClothingOuterHardsuitBasic
-  name: basic voidsuit # Goob edit
-  description: A basic, universal voidsuit that protects the wearer against the horrors of life in space. Beats not having a hardsuit, at least. # Goob edit
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Hardsuits/basic.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Hardsuits/basic.rsi
-  - type: ExplosionResistance
-    damageCoefficient: 0.9
-  - type: Armor
-    coverage:
-    - Chest
-    - Groin
-    - Arm
-    - Hand
-    - Leg
-    - Foot
-    modifiers:
-      coefficients:
-        Blunt: 0.8
-        Slash: 0.8
-        Piercing: 0.8
-        Caustic: 0.8
-  - type: ClothingSpeedModifier
-    walkModifier: 0.80
-    sprintModifier: 0.80
-  - type: HeldSpeedModifier
 
 #Atmospherics Hardsuit
 - type: entity

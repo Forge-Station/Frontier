@@ -71,13 +71,13 @@
   id: MobElzuosaTorso
   baseSprite:
     sprite: Forge/Mobs/Species/Elzuosa/parts.rsi
-    state: torso_m
+    state: chest_f
 
 - type: humanoidBaseSprite
   id: MobElzuosaTorsoMale
   baseSprite:
     sprite: Forge/Mobs/Species/Elzuosa/parts.rsi
-    state: torso_m
+    state: chest_m
 
 - type: humanoidBaseSprite
   id: MobElzuosaTorsoFemale

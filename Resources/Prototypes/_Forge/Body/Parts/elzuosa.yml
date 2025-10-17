@@ -23,10 +23,10 @@
   components:
   - type: Sprite
     sprite: Forge/Mobs/Species/Elzuosa/parts.rsi
-    state: "torso_m"
+    state: "chest_m"
   - type: Icon
     sprite: Forge/Mobs/Species/Elzuosa/parts.rsi
-    state: "torso_m"
+    state: "chest_m"
   - type: Extractable
     juiceSolution:
       reagents:
