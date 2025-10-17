@@ -1,0 +1,19 @@
+inspect-wound-Bleeding-minor = Несильно кровоточит
+inspect-wound-Bleeding-moderate = Кровоточит
+inspect-wound-Bleeding-severe = Обильно кровоточит
+inspect-wound-Brute-minor = Выглядит ушибленным
+inspect-wound-Brute-moderate = Выглядит избитым
+inspect-wound-Brute-severe = Выглядит изувеченным
+inspect-wound-Burn-minor = Выглядит покрасневшим...
+inspect-wound-Burn-moderate = Покрыто волдырями
+inspect-wound-Burn-severe = Кожа отслаивается
+
+self-inspect-wound-Bleeding-minor = Несильно кровоточит
+self-inspect-wound-Bleeding-moderate = Кровоточит
+self-inspect-wound-Bleeding-severe = Обильно кровоточит
+self-inspect-wound-Brute-minor = В синяках и болит
+self-inspect-wound-Brute-moderate = Избито
+self-inspect-wound-Brute-severe = Полностью изувечено
+self-inspect-wound-Burn-minor = Немного жжёт...
+self-inspect-wound-Burn-moderate = Есть несколько болезненных волдырей
+self-inspect-wound-Burn-severe = Кожа отслаивается

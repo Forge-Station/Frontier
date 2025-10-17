@@ -1,7 +1,7 @@
 - type: body
   id: Android
   name: "андроид"
-  root: torso
+  root: chest
   slots:
     head:
       part: HeadAndroid
@@ -10,8 +10,8 @@
       organs:
         eyes: OrganAndroidEyes
         brain: PositronicBrain
-    torso:
-      part: TorsoHuman
+    chest:
+      part: ChestHuman
       connections:
       - right_arm
       - left_arm

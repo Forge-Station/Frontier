@@ -15,7 +15,7 @@
 - type: entity
   id: TorsoSkrell
   name: "skrell torso"
-  parent: [PartSkrell, BaseTorso]
+  parent: [PartSkrell, BaseChestInorganic]
   components:
   - type: Sprite
     sprite: _Wega/Mobs/Species/Skrell/parts.rsi

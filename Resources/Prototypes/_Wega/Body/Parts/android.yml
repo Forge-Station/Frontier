@@ -10,7 +10,7 @@
 - type: entity
   id: TorsoAndroid
   name: "android torso"
-  parent: [PartAndroid, BaseTorso]
+  parent: [PartAndroid, BaseChestInorganic]
   components:
   - type: Sprite
     state: "torso_m"

@@ -15,7 +15,7 @@
 - type: entity
   id: TorsoAriral
   name: "ariral torso"
-  parent: [PartAriral, BaseTorso]
+  parent: [PartAriral, BaseChestInorganic]
   components:
   - type: Sprite
     sprite: _Wega/Mobs/Species/Ariral/parts.rsi
