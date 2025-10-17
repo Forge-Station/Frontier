@@ -1,7 +1,7 @@
 - type: entity
   id: SyndicateTradingConsole
   parent: BaseLatheLube
-  name: Автомат торгов синдиката
+  name: Автомат торгов Синдиката
   description: Используеться для оформления заказов на нелегальные предметы
   components:
   - type: Sprite
@@ -16,7 +16,7 @@
     - state: panel
       map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
   - type: Machine
-    board: AutolatheMachineCircuitboard
+    board: SyndicateTradingConsoleCircuitboard
   - type: Lathe
     idleState: icon
     runningState: building
