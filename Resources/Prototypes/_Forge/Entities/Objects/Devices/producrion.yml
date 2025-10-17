@@ -84,7 +84,7 @@
     - type: Sprite
       state: security
     - type: MachineBoard
-      prototype: SyndicateTechFab
+      prototype: SyndicateTradingConsole
       requirements:
         Manipulator: 2
         MatterBin: 2
