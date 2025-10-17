@@ -1106,6 +1106,8 @@ entities:
           - 0
         chunkSize: 4
     - type: GasTileOverlay
+    - type: BecomesStation
+      id: Enigma
     - type: ImplicitRoof
 - proto: AdvMopItem
   entities:
