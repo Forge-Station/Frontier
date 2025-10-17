@@ -2241,9 +2241,21 @@
     pack: ChemVendInventorySyndicate
     offState: off
     brokenState: broken
-    normalState: normal
-    denyState: deny
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
     ejectDelay: 2
   - type: AccessReader
     access: [["SyndicateAgent"]]
-
+# Forge-change
+  - type: Sprite
+    sprite: Forge/Structures/Machines/med_syndi_alt.rsi # Forge-Change
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+# Forge-change end

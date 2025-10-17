@@ -1,0 +1,203 @@
+- type: entity
+  id: ShuttleWindowUran
+  name: shuttle window
+  parent: Window # Frontier: WindowRCDResistant<Window
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: Forge/Structures/Windows/shuttle_uran_window.rsi
+  - type: Icon
+    sprite: Forge/Structures/Windows/shuttle_uran_window.rsi
+  - type: Repairable
+    fuelCost: 15
+    doAfterDelay: 3
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: RGlass
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 650
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlassUranium:
+            min: 1
+            max: 2
+          PartRodMetal:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    base: swindow
+  - type: Appearance
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    damageDivisor: 20
+    trackAllDamage: true
+    damageOverlay:
+      sprite: Structures/Windows/cracks.rsi
+  - type: StaticPrice
+    price: 70 # Frontier: 150<70
+  - type: RadiationBlocker
+    resistance: 4
+
+- type: entity
+  parent: ShuttleWindowUran
+  id: ShuttleWindowUranDiagonal
+  suffix: diagonal
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: Forge/Structures/Windows/shuttle_uran_window_diagonal.rsi
+    state: state0
+  - type: Tag
+    tags:
+    - Diagonal
+  - type: IconSmooth
+    mode: Diagonal
+    key: walls # Frontier: windows<walls
+    base: state
+  - type: Icon
+    sprite: Forge/Structures/Windows/shuttle_uran_window_diagonal.rsi
+    state: state0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PolygonShape
+            vertices:
+            - "-0.5,-0.5"
+            - "0.5,0.5"
+            - "0.5,-0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+    airBlockedDirection:
+    - South
+    - East
+  - type: DamageVisuals
+    damageOverlay:
+      sprite: Structures/Windows/cracks_diagonal.rsi
+  - type: RadiationBlocker
+    resistance: 4
+
+- type: entity
+  id: ShuttleWindowPlasma
+  name: shuttle window
+  parent: Window # Frontier: WindowRCDResistant<Window
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: Forge/Structures/Windows/shuttle_plasma_window.rsi
+  - type: Icon
+    sprite: Forge/Structures/Windows/shuttle_plasma_window.rsi
+  - type: Repairable
+    fuelCost: 15
+    doAfterDelay: 3
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: RGlass
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1150
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 650
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlassPlasma:
+            min: 1
+            max: 2
+          PartRodMetal:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    base: swindow
+  - type: Appearance
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    damageDivisor: 20
+    trackAllDamage: true
+    damageOverlay:
+      sprite: Structures/Windows/cracks.rsi
+  - type: StaticPrice
+    price: 70 # Frontier: 150<70
+  - type: RadiationBlocker
+    resistance: 3
+
+- type: entity
+  parent: ShuttleWindowPlasma
+  id: ShuttleWindowPlasmaDiagonal
+  suffix: diagonal
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: Forge/Structures/Windows/shuttle_plasma_window_diagonal.rsi
+    state: state0
+  - type: Tag
+    tags:
+    - Diagonal
+  - type: IconSmooth
+    mode: Diagonal
+    key: walls # Frontier: windows<walls
+    base: state
+  - type: Icon
+    sprite: Forge/Structures/Windows/shuttle_plasma_window_diagonal.rsi
+    state: state0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PolygonShape
+            vertices:
+            - "-0.5,-0.5"
+            - "0.5,0.5"
+            - "0.5,-0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+    airBlockedDirection:
+    - South
+    - East
+  - type: DamageVisuals
+    damageOverlay:
+      sprite: Structures/Windows/cracks_diagonal.rsi
+  - type: RadiationBlocker
+    resistance: 3

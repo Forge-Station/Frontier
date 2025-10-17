@@ -97,9 +97,10 @@
 - type: loadoutGroup
   id: NfsdFace
   name: loadout-group-contractor-face
-  hidden: true # No point in showing this, it gets auto-selected.
+  minLimit: 1
   loadouts:
   - NfsdClothingMaskGasNfsd
+  - NfsdClothingMaskGasAlt # Forge add: NfsdClothingMaskGasAlt
   fallbacks:
   - NfsdClothingMaskGasNfsd
 

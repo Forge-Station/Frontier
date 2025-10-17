@@ -1,4 +1,4 @@
-ent-SyndicateTradingConsole = Консоль торгов Синдиката
+ent-SyndicateTradingConsole = Автомат торгов Синдиката
   .desc = Используется для обмена валюты на оружие
 ent-TinyMagazineGrenade = малый картридж гранат
   .desc = Используется корабельным орудием Закат

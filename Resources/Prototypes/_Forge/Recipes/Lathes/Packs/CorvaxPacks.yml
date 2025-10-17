@@ -95,7 +95,32 @@
   - CombatMedipenExchangeRecipe
   - ClothingOuterHardsuitTacticalMaidExchangeRecipe
 
+- type: latheRecipePack
+  id: BluespaceHarvester
+  recipes:
+  - MachineBluespaceHarvesterCircuitboard
+  - MachineBluespaceTransitorCircuitboard
 
+# Одежда
+- type: latheRecipePack
+  id: CFClothing
+  recipes:
+  - ClothingUniformJumpsuitHoSBlack
+  - ClothingUniformJumpskirtHoSBlack
+  - ClothingUniformJumpsuitWhiteCaptain
+  - ClothingUniformJumpskirtWhiteCaptain
+  - ClothingUniformJumpsuitSheriffAlt
+  - ClothingOuterCoatLabSecurityMedic
+  - ClothingHeadHatBeretHeadOfSecurityAdvanced
+  - ClothingHeadHelmetSecurityMedic
+  - ClothingHeadHatBeretCaptainWhite
+  - ClothingHeadHatCapcapWhite
+  - ClothingHeadHatBeretSheriff
+  - ClothingHeadHatCapcapSheriff
+  - ClothingOuterVestArmorMedSec
+  - ClothingOuterArmorHoSVestWeb
+
+# Автомат торгов Синдиката
 - type: latheRecipePack
   id: SyndicateTradingConsoleWeapons
   recipes:
@@ -126,6 +151,12 @@
   - ClothingHandsGlovesNorthStarRecipe
   - WeaponSyndieEnergyRifleCarbineRecipe
   - WeaponSyndieEnergyFalconPistolLaserRecipe
+  - NFEnergyPickaxeSTrade
+  - NFWeaponRifleAssaultSmSTrade
+  - NFWeaponPistolPollockHighCapacityMagSTrade
+  - NFWeaponPistolCobraSTrade
+  - WeaponRifleDaggerSTrade
+  - NFWeaponEnergyRifleTemperatureSTrade
 
 - type: latheRecipePack
   id: SyndicateTradingConsoleArmor
@@ -136,17 +167,27 @@
   - ClothingOuterVestWebRecipe
   - ClothingOuterHardsuitTacticalMaidRecipe
   - WeaponTurretSyndicateFlatpackRecipe
-  - ShuttleGunSunsetFlatpackRecipe
+#  - ShuttleGunSunsetFlatpackRecipe
   - JetpackBlackFilledRecipe
   - ClothingShoesBootsMagSyndieRecipe
   - ClothingShoesBootsMagSyndieEliteRecipe
   - ClothingBackpackDuffelSyndicateHardsuitBundleRecipe
   - ClothingBackpackDuffelSyndicateEliteHardsuitBundleRecipe
   - ClothingBackpackSyndicateRaidBundleRecipe
-  - SpaceCashSyndicateESRecipe
+#  - SpaceCashSyndicateESRecipe
   - NFClothingEyesNightVisionGoggleSyndicateRecipe
   - MechGygaxSyndieBatteryRecipe
   - MechMaulerSyndieBatteryRecipe
+  - ClothingHandsKnuckleDustersSyndicateSTrade
+  - ClothingOuterVestWebEliteSTrade
+  - ClothingBackpackSatchelSyndicateSTrade
+  - ClothingBackpackSyndicateForgeSTrade
+  - ClothingBackpackDuffelSyndicateSTrade
+  - ClothingMaskGasVoiceChameleonSTrade
+  - ClothingBeltMilitaryWebbingSTrade
+  - ClothingBeltMilitaryWebbingMedSTrade
+  - ClothingBeltAssaultSTrade
+  - ClothingBeltSyndieHolsterSTrade
 
 - type: latheRecipePack
   id: SyndicateTradingConsoleBoomA
@@ -164,6 +205,9 @@
   - WhiteholeGrenadeRecipe
   - EmpGrenadeRecipe
   - GrenadeShrapnelRecipe
+  - AirGrenadeSTrade
+  - ExGrenadeSTrade
+  - HolyHandGrenadeSTrade
 
 - type: latheRecipePack
   id: SyndicateTradingConsoleMed
@@ -189,26 +233,74 @@
   - WehMedipenRecipe
 
 - type: latheRecipePack
-  id: BluespaceHarvester
+  id: SyndicateTradingConsoleOther
   recipes:
-  - MachineBluespaceHarvesterCircuitboard
-  - MachineBluespaceTransitorCircuitboard
+  - RPEDSTrade
+  - BorgMegaSprayBottleSTrade
+  - BoxT3SuperCapacitorSTrade
+  - BoxT3ComponentsAssortedSTrade
+  - RadioJammerSTrade
 
-# Одежда
+# Interdyne обменник
 - type: latheRecipePack
-  id: CFClothing
+  id: InterdyneFabMed
   recipes:
-  - ClothingUniformJumpsuitHoSBlack
-  - ClothingUniformJumpskirtHoSBlack
-  - ClothingUniformJumpsuitWhiteCaptain
-  - ClothingUniformJumpskirtWhiteCaptain
-  - ClothingUniformJumpsuitSheriffAlt
-  - ClothingOuterCoatLabSecurityMedic
-  - ClothingHeadHatBeretHeadOfSecurityAdvanced
-  - ClothingHeadHelmetSecurityMedic
-  - ClothingHeadHatBeretCaptainWhite
-  - ClothingHeadHatCapcapWhite
-  - ClothingHeadHatBeretSheriff
-  - ClothingHeadHatCapcapSheriff
-  - ClothingOuterVestArmorMedSec
-  - ClothingOuterArmorHoSVestWeb
+  - StimpackInter # - 3500 спесо (контрабандные)
+  - StimpackMiniInter # - 1500 спесо (контрабандные)
+  - BruteAutoInjectorInter # - 2500 спесо (контрабандные)
+  - PyraAutoInjectorInter # - 3000 спесо (контрабандные)
+  - PunctAutoInjectorInter # - 3000 спесо (контрабандные)
+  - BurnAutoInjectorInter # - 2500 спесо (контрабандные)
+  - CombatMedipenInter # - 5500 спесо (контрабандные)
+  - BruizAutoInjectorInter # - 3000 спесо (контрабандные)
+  - HemostasisAutoInjectorInter # - 3000 спесо (контрабандные)
+  - LacerAutoInjectorInter # - 3000 спесо (контрабандные)
+  - EmergencyMedipenInter # - 1000 спесо (контрабандные)
+  - WehMedipenInter # - 1000 спесо (контрабандные)
+  - VestineChemistryVialInter # - 5000 спесо (контрабандные)
+  - CigPackSyndicateInter # - 2000 спесо (контрабандные)
+  - MedkitRadiationFilledInter # - 2000 спесо (контрабандные)
+  - MedkitToxinFilledInter # - 2000 спесо (контрабандные)
+  - MedkitFilledInter # - 1500 спесо (контрабандные)
+  - MedkitAdvancedFilledInter # - 4500 спесо (контрабандные)
+  - ClothingBackpackDuffelSyndicateMedicalBundleFilledInter # - 159999 спесо (контрабандные)
+  - HypoDartBoxInter # - 4000 спесо (контрабандные)
+  - ChemicalSynthesisKitInter # - 15000 спесо (контрабандные)
+  - MedkitOxygenFilledInter # - 2000 спесо (контрабандные)
+  - StimkitFilledInter # - 9000 спесо (контрабандные)
+  - MedkitBurnFilledInter # - 2000 спесо (контрабандные)
+  - MedkitBruteFilledInter # - 2000 спесо (контрабандные)
+  - MedkitCombatFilledInter # - 15000 спесо (контрабандные)
+  - BodyBagFoldedInter # - 200 спесо (контрабандные)
+  - SyringeTranexamicAcidInter # - 500 спесо (контрабандные)
+  - PowerCellHyperInter # - 5000 спесо (контрабандные)
+  - HypopenBoxInter # - 15000 спесо (контрабандные)
+  - SyndiHypoInter # - 25000 спесо (контрабандные)
+  - DefibrillatorSyndicateInter # - 25000 спесо (контрабандные)
+  - CrisisAutoInjectorInter # - 3000 спесо (контрабандные)
+  - RadAutoInjectorInter # - 1000 спесо (контрабандные)
+  - StimulantAutoInjectorInter # - 3000 спесо (контрабандные)
+  - EphedrineAutoInjectorInter # - 3000 спесо (контрабандные)
+  - EthylredoxrazineAutoInjectorInter # - 500 спесо (контрабандные)
+  - SpaceMedipenInter # - 500 спесо (контрабандные)
+  - AntiPoisonMedipenInter # - 1000 спесо (контрабандные)
+  - PolyAutoInjectorInter # - 10000 спесо (контрабандные)
+  - SyringeInter # - 100 спесо (контрабандные)
+  - BrutepackInter # - 500 спесо (контрабандные)
+  - OintmentInter # - 500 спесо (контрабандные)
+  - GauzeInter # - 500 спесо (контрабандные)
+  - BloodpackInter # - 500 спесо (контрабандные)
+  - RegenerativeMeshInter # - 1500 спесо (контрабандные)
+  - MedicatedSutureInter # - 1500 спесо (контрабандные)
+  - VendingMachineRestockChemVendInter # - 30000 спесо (контрабандные)
+  - VendingMachineRestockMedicalInter # - 30000 спесо (контрабандные)
+  - MacroBombImplanterInter # - 50000 спесо (контрабандные) (имплантер макробомба дополняй описание)
+  - MicroBombImplanterInter # - 15000 спесо (контрабандные) (имплантер микробомба дополняй описание)
+  - FreedomImplanterInter # - 20000 спесо (контрабандные) (имплантер свобода дополняй описание)
+  - DnaScramblerImplanterInter # - 10000 спесо (контрабандные) (имплантер днк миксер дополняй описание)
+  - ScramImplanterInter # - 15000 спесо (контрабандные) (имплантер побега дополняй описание)
+  - FakeMindShieldImplanterInter # - 35000 спесо (контрабандные) (имплантер фейкового импланта защиты разума дополняй описание)
+  - EmpImplanterInter # - 2500 спесо (контрабандные) (имплантер эми дополняй описание)
+  - RadioImplanterInter # - 3000 спесо (контрабандные) (имплантер радиоканала синди дополняй описание)
+  - BluespaceBeakerInter # - 50000 спесо (контрабандные)
+  - JugBluespaceInter # - 50000 спесо (контрабандные)
