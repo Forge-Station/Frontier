@@ -71,7 +71,7 @@
   id: MobElzuosaTorso
   baseSprite:
     sprite: Forge/Mobs/Species/Elzuosa/parts.rsi
-    state: chest_f
+    state: chest_m
 
 - type: humanoidBaseSprite
   id: MobElzuosaTorsoMale
@@ -83,7 +83,7 @@
   id: MobElzuosaTorsoFemale
   baseSprite:
     sprite: Forge/Mobs/Species/Elzuosa/parts.rsi
-    state: torso_f
+    state: chest_f
 
 - type: humanoidBaseSprite
   id: MobElzuosaLLeg

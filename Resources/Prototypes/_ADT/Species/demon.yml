@@ -87,19 +87,19 @@
   id: MobDemonTorso
   baseSprite:
     sprite: _ADT/Mobs/Species/Demon/parts.rsi
-    state: torso_m
+    state: chest_m
 
 - type: humanoidBaseSprite
   id: MobDemonTorsoMale
   baseSprite:
     sprite: _ADT/Mobs/Species/Demon/parts.rsi
-    state: torso_m
+    state: chest_m
 
 - type: humanoidBaseSprite
   id: MobDemonTorsoFemale
   baseSprite:
     sprite: _ADT/Mobs/Species/Demon/parts.rsi
-    state: torso_f
+    state: chest_f
 
 - type: humanoidBaseSprite
   id: MobDemonLLeg

@@ -1,16 +1,16 @@
 - type: body
   id: Ariral
   name: "ariral"
-  root: torso
+  root: chest
   slots:
     head:
       part: HeadAriral
       connections:
-      - torso
+      - chest
       organs:
         brain: OrganHumanBrain
         eyes: OrganHumanEyes
-    torso:
+    chest:
       part: TorsoAriral
       connections:
       - right_arm
