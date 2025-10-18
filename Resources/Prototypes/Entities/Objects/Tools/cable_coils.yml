@@ -203,8 +203,8 @@
   # Forge-Change-Start
   - type: Healing
     damageContainers:
-    - SiliconIpc
-    - Android # Wega android
+      - SiliconIpc
+      - Android # Wega android
     damage:
       types:
         Shock: -10

@@ -18,20 +18,6 @@
     - map: [ "enum.HumanoidVisualLayers.LArm" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
-    # Corvax-Wega-start
-    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
-    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-    - map: [ "enum.HumanoidVisualLayers.LFoot" ]
-    - map: [ "enum.HumanoidVisualLayers.RFoot" ]
-    - map: [ "enum.HumanoidVisualLayers.Special" ]
-    - map: [ "socks" ]
-    - map: [ "underwearbottom" ]
-    - map: [ "underweartop" ]
-    - map: [ "jumpsuit" ]
-    - map: [ "anal" ]
-    - map: [ "enum.HumanoidVisualLayers.LHand" ]
-    - map: [ "enum.HumanoidVisualLayers.RHand" ]
-    # Corvax-Wega-end
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
@@ -129,7 +115,9 @@
         Blunt: -10
         Slash: -10
         Piercing: -10
+        Shock: -10
         Cold: -10
+        Heat: -10
         Caustic: -10
         Asphyxiation: -10
   - type: AtmosExposed
@@ -180,9 +168,6 @@
     bleedReductionAmount: 0
     bloodRefreshAmount: 0
   - type: Android
-  - type: Tag
-    tags:
-    - Android
   - type: InteractionPopup
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
@@ -200,6 +185,14 @@
       effects:
       - !type:Electrocute
         electrocuteDamageScale: 1
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - AnomalyHost
+    - Android
+  - type: Carriable # Frontier: Carrying system from nyanotrasen.
 
 - type: entity
   id: AndroidLightMarker
