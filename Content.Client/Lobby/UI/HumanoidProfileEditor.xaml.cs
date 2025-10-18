@@ -1,7 +1,7 @@
 using System.IO;
 using System.Linq;
 using System.Numerics;
-using Content.Client._Forge.Sponsors; // Forge-Change
+using Content.Client._Forge.Sponsor; // Forge-Change
 using Content.Client.Humanoid;
 using Content.Client.Lobby.UI.Loadouts;
 using Content.Client.Lobby.UI.Roles;
@@ -12,8 +12,8 @@ using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
-using Content.Shared._Forge.ForgeVars; // Forge-Change
-using Content.Shared._Forge.Sponsors; // Forge-Change
+using Content.Shared._Forge; // Forge-Change
+using Content.Shared._Forge.Sponsor; // Forge-Change
 using Content.Shared.GameTicking;
 using Content.Shared.Guidebook;
 using Content.Shared.Humanoid;
@@ -227,6 +227,18 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion Gender
+
+            // Corvax-TTS-Start
+            #region Voice
+
+            if (configurationManager.GetCVar(ForgeVars.TTSEnabled))
+            {
+                TTSContainer.Visible = true;
+                InitializeVoice();
+            }
+
+            #endregion
+            // Corvax-TTS-End
 
             // Corvax-Frontier-Barks-start
             #region Barks
@@ -803,6 +815,7 @@ namespace Content.Client.Lobby.UI
             UpdateSaveButton();
             UpdateMarkings();
             UpdateBarkVoicesControls(); // Corvax-Frontier-Barks
+            UpdateTTSVoicesControls(); // Corvax-TTS
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
@@ -1317,6 +1330,14 @@ namespace Content.Client.Lobby.UI
             IsDirty = true;
         }
         // Corvax-Frontier-Barks-end
+
+        // Corvax-TTS-Start
+        private void SetVoice(string newVoice)
+        {
+            Profile = Profile?.WithVoice(newVoice);
+            IsDirty = true;
+        }
+        // Corvax-TTS-End
 
         public bool IsDirty
         {

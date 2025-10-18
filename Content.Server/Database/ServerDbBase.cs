@@ -220,6 +220,12 @@ namespace Content.Server.Database
             if (Enum.TryParse<Gender>(profile.Gender, true, out var genderVal))
                 gender = genderVal;
 
+            // Corvax-TTS-Start
+            var voice = profile.Voice;
+            if (voice == String.Empty)
+                voice = SharedHumanoidAppearanceSystem.DefaultSexVoice[sex];
+            // Corvax-TTS-End
+
             var balance = profile.BankBalance;
 
             // ReSharper disable once ConditionalAccessQualifierIsNonNullableAccordingToAPIContract
@@ -281,12 +287,12 @@ namespace Content.Server.Database
                 profile.CharacterName,
                 profile.FlavorText,
                 profile.Species,
+                voice, // Corvax-TTS
                 profile.Age,
                 sex,
                 gender,
                 balance,
-                new HumanoidCharacterAppearance
-                (
+                new HumanoidCharacterAppearance(
                     profile.HairName,
                     hairColors, // Forge-Change Corvax-Wega-Hair-Extended
                     profile.FacialHairName,
@@ -319,6 +325,7 @@ namespace Content.Server.Database
             profile.CharacterName = humanoid.Name;
             profile.FlavorText = humanoid.FlavorText;
             profile.Species = humanoid.Species;
+            profile.Voice = humanoid.Voice; // Corvax-TTS
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();
             profile.Gender = humanoid.Gender.ToString();

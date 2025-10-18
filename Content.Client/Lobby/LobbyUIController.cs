@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Client._Forge.Sponsors;
+using Content.Client._Forge.Sponsor;
 using Content.Client.Guidebook;
 using Content.Client.Humanoid;
 using Content.Client.Inventory;

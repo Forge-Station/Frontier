@@ -7,7 +7,8 @@ using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
-using Content.Shared._Forge.Speech.Synthesis; // Corvax-Frontier-Barks
+using Content.Shared._Forge.Speech.Synthesis;
+using Content.Shared._Forge.TTS; // Corvax-Frontier-Barks
 using Content.Shared.Traits;
 using Robust.Shared.Collections;
 using Robust.Shared.Configuration;
@@ -89,6 +90,9 @@ namespace Content.Shared.Preferences
         [DataField] // Corvax-Frontier-Barks
         public string BarkVoice { get; set; } = SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Corvax-Frontier-Barks
 
+        [DataField] // Corvax-TTS
+        public string Voice { get; set; } = SharedHumanoidAppearanceSystem.DefaultVoice; // Corvax-TTS
+
         [DataField]
         public int Age { get; set; } = 18;
 
@@ -144,6 +148,7 @@ namespace Content.Shared.Preferences
             string name,
             string flavortext,
             string species,
+            string voice, // Corvax-TTS
             int age,
             Sex sex,
             Gender gender,
@@ -160,6 +165,7 @@ namespace Content.Shared.Preferences
             Name = name;
             FlavorText = flavortext;
             Species = species;
+            Voice = voice; // Corvax-TTS
             Age = age;
             Sex = sex;
             Gender = gender;
@@ -181,7 +187,7 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
-            : this(other.Name, other.FlavorText, other.Species, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
+            : this(other.Name, other.FlavorText, other.Species, other.Voice, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
                 jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts, other.BarkVoice)
         {
         }
@@ -191,6 +197,7 @@ namespace Content.Shared.Preferences
             : this(other.Name,
                 other.FlavorText,
                 other.Species,
+                other.Voice,
                 other.Age,
                 other.Sex,
                 other.Gender,
@@ -255,6 +262,13 @@ namespace Content.Shared.Preferences
                 sex = random.Pick(speciesPrototype.Sexes);
                 age = random.Next(speciesPrototype.MinAge, speciesPrototype.OldAge); // people don't look and keep making 119 year old characters with zero rp, cap it at middle aged
             }
+
+            // Corvax-TTS-Start
+            var voiceId = random.Pick(prototypeManager
+                .EnumeratePrototypes<TTSVoicePrototype>()
+                .Where(o => CanHaveVoice(o, sex)).ToArray()
+            ).ID;
+            // Corvax-TTS-End
 
             // Corvax-Frontier-Barks-start
             var barkvoiceId = random.Pick(prototypeManager
@@ -325,6 +339,12 @@ namespace Content.Shared.Preferences
             return new(this) { Species = species };
         }
 
+        // Corvax-TTS-Start
+        public HumanoidCharacterProfile WithVoice(string voice)
+        {
+            return new(this) { Voice = voice };
+        }
+        // Corvax-TTS-End
 
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
         {
@@ -831,6 +851,14 @@ namespace Content.Shared.Preferences
 
             return result;
         }
+
+        // Corvax-TTS-Start
+        // SHOULD BE NOT PUBLIC, BUT....
+        public static bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
+        {
+            return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex == sex || voice.Sex == Sex.Unsexed);
+        }
+        // Corvax-TTS-End
 
         public ICharacterProfile Validated(ICommonSession session, IDependencyCollection collection)
         {

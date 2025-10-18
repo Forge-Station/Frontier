@@ -1,5 +1,5 @@
 
-namespace Content.Shared._Forge.Sponsors;
+namespace Content.Shared._Forge.Sponsor;
 
 public sealed class SponsorData
 {
