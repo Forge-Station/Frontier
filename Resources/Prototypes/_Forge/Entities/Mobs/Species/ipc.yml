@@ -84,6 +84,10 @@
         startingItem: PowerCellMedium
   - type: Lock
     unlockOnClick: false
+  - type: Bloodstream
+    bloodReagent: Tyrium
+    bleedReductionAmount: 0
+    bloodRefreshAmount: 0
   - type: ItemSlotsLock
     slots:
     - cell_slot
@@ -93,7 +97,7 @@
   - type: Ipc
   - type: ZombieImmune
   - type: Repairable
-    doAfterDelay: 7
+    doAfterDelay: 4
     allowSelfRepair: true
     damage:
       types:
@@ -101,6 +105,8 @@
         Slash: -10
         Piercing: -10
         Cold: -10
+        Shock: -10
+        Heat: -10
         Caustic: -10
         Asphyxiation: -10
   - type: DamagedSiliconAccent
@@ -146,6 +152,7 @@
   parent:
   - BaseMob
   - MobDamageable
+  - MobBloodstream
   - MobPolymorphable
   - MobCombat
   - StripableInventoryBase
