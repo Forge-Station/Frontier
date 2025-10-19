@@ -1,0 +1,140 @@
+# - type: entity
+#   name: hybrid laser gun
+#   parent: [ WeaponAdvancedLaser, BaseXenoborgContraband ]
+#   id: HybridLaserGun
+#   components:
+#   - type: HybridAmmoProvider
+#     proto: NFRedHeavyLaser # Frontier: use NF variant
+
+- type: entity
+  name: hybrid laser gun
+  parent: [BaseWeaponBatterySmall, BaseC1Contraband] # Frontier: added BaseC1Contraband
+  id: HybridLaserGun
+  description: Better pray it won't burn your hands off. At least it's legal.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/makeshift.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/makeshift.rsi
+  - type: HybridAmmoProvider
+    proto: NFRedLightLaser # Frontier: use NF variant
+    fireCost: 62.5
+  - type: HybridModeWeapon
+    proto: NFAnomalousParticleDeltaStrong
+    fireModes:
+       NFPulse: battery
+       WeaponRifleAkHybrid: ammo
+       HybridLaserGun: hybrid
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        # startingItem: MagazineLightRifle # Frontier
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+
+
+- type: entity
+  categories: [ HideSpawnMenu ] # Frontier
+  name: AKMS
+  parent: [BaseWeaponRifle] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
+  id: WeaponRifleAkHybrid
+  description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from .30 rifle magazines.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle # Frontier
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle # Frontier
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  categories: [ HideSpawnMenu ] # Frontier
+  name: pulse pistol
+  parent: [BaseWeaponBatterySmall, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
+  id: WeaponPulsePistolHybrid
+  description: A state of the art energy pistol favoured as a sidearm by the NT operatives. On the handle is a label that says 'for authorized use only.'
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: NFPulse # Frontier: use NF variant
+    fireCost: 200
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
+
+
+
