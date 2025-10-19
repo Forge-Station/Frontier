@@ -14,6 +14,9 @@
       state: o2
       shader: unshaded
   - type: EmpProtection
+  - type: BatterySelfRecharger
+    autoRecharge: false
+    autoRechargeRate: 0.12 # 12 -> 0.12
 
 - type: entity
   parent: PowerCellMicroreactor
@@ -31,6 +34,9 @@
       state: o2
       shader: unshaded
   - type: EmpProtection
+  - type: BatterySelfRecharger
+    autoRecharge: false
+    autoRechargeRate: 0.12 # 12 -> 0.12
 
 - type: entity
   parent: PowerCellMicroreactor
@@ -48,6 +54,9 @@
       state: o2
       shader: unshaded
   - type: EmpProtection
+  - type: BatterySelfRecharger
+    autoRecharge: false
+    autoRechargeRate: 0.12 # 12 -> 0.12
 
 - type: entity
   parent: PowerCellMicroreactor
@@ -65,3 +74,6 @@
       state: o2
       shader: unshaded
   - type: EmpProtection
+  - type: BatterySelfRecharger
+    autoRecharge: false
+    autoRechargeRate: 0.12 # 12 -> 0.12
