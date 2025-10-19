@@ -50,3 +50,8 @@ uplink-security-nfsdgasup-name = продвинутый противогаз Д�
 uplink-security-nfsdgasup-desc = Версия противогаза, разработанная для опасных операций и экстремальных условий.
 uplink-security-engibelt-name = пояс специалиста ДСБФ (Заполненный)
 uplink-security-engibelt-desc = Тактический пояс с креплениями под инструменты специалиста и аварийное оборудование. Включает в себя комплект инструментов ДСБФ.
+
+uplink-security-PowerCellNFSD-name = { ent-PowerCellNFSD }
+uplink-security-PowerCellNFSD-desc = { ent-PowerCellNFSD.desc }
+uplink-PowerCellSyndicate-name = { ent-PowerCellSyndi }
+uplink-PowerCellSyndicate-desc = { ent-PowerCellSynde.desc }
