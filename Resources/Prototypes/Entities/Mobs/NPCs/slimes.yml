@@ -148,6 +148,8 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  - type: TTS # Corvax-TTS
+    voice: Chen
 
 - type: entity
   name: blue slime

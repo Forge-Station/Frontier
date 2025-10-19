@@ -6,3 +6,5 @@ voice-mask-name-change-set-description = Измените имя, которое
 voice-mask-popup-success = Имя успешно изменено.
 voice-mask-popup-failure = Имя не может быть изменено.
 voice-mask-default-name-override = Неизвестный
+voice-mask-voice-change-info = Голос
+voice-mask-voice-popup-success = Голос успешно изменен.

@@ -1,0 +1,18 @@
+# Androind
+- type: loadout
+  id: EmergencyAndroid
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SpeciesAndroid
+  storage:
+    back:
+    - BoxSurvivalAndroid
+
+- type: loadout
+  id: EmergencyAndroidExtended
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SpeciesAndroid
+  storage:
+    back:
+    - BoxSurvivalAndroidExtended

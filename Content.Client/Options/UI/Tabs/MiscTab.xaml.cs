@@ -1,6 +1,6 @@
 using System.Linq;
 using Content.Client.UserInterface.Screens;
-using Content.Shared._Forge.ForgeVars; // Corvax-Frontier
+using Content.Shared._Forge; // Corvax-Frontier
 using Content.Shared.CCVar;
 using Content.Shared._EE.CCVars; // EE - chat stack
 using Content.Shared.HUD;

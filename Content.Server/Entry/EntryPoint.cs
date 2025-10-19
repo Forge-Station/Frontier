@@ -1,5 +1,6 @@
 using Content.Server._Forge.Discord; // Forge-Change
-using Content.Server._Forge.Sponsors; // Forge-Change
+using Content.Server._Forge.Sponsor;
+using Content.Server._Forge.TTS; // Forge-Change
 using Content.Server._NF.Auth;
 using Content.Server.Acz;
 using Content.Server.Administration;
@@ -116,6 +117,7 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<ServerApi>().Initialize();
                 IoCManager.Resolve<MiniAuthManager>();
                 IoCManager.Resolve<DiscordAuthManager>().Initialize(); // Forge-Change
+                IoCManager.Resolve<TTSManager>().Initialize(); // Corvax-TTS
 
                 _voteManager.Initialize();
                 _updateManager.Initialize();

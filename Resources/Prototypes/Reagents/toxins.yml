@@ -482,6 +482,11 @@
           - !type:OrganType
             type: Animal
             shouldHave: false
+            # Forge-Change wega ariral start
+          - !type:OrganType
+            type: Ariral
+            shouldHave: false
+            # Forge-Change wega ariral end
           - !type:OrganType
             type: Vox
             shouldHave: false
@@ -495,6 +500,11 @@
           - !type:OrganType
             type: Animal
             shouldHave: false
+          # Forge-Change wega ariral start
+          - !type:OrganType
+            type: Ariral
+            shouldHave: false
+            # Forge-Change wega ariral end
           - !type:OrganType
             type: Vox
             shouldHave: false
@@ -503,6 +513,11 @@
         - !type:OrganType
           type: Animal
           shouldHave: false
+        # Forge-Change wega ariral start
+        - !type:OrganType
+          type: Ariral
+          shouldHave: false
+        # Forge-Change wega ariral end
         - !type:OrganType
           type: Vox
           shouldHave: false
@@ -515,6 +530,7 @@
           type: Animal
         reagent: Protein
         amount: 0.5
+      # Forge-Change wega ariral end
       - !type:AdjustReagent
         conditions:
         - !type:OrganType

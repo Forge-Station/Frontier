@@ -96,7 +96,7 @@
                                     <Label Text="{Loc 'humanoid-profile-editor-voice-label'}" />
                                     <Control HorizontalExpand="True"/>
                                     <OptionButton Name="BarkVoiceButton" HorizontalAlignment="Right" />
-                                    <Button Name="BarkVoicePlayButton" Text="{Loc 'humanoid-profile-editor-voice-play'}" MaxWidth="80" />
+                                    <Button Name="BarkVoicePlayButton" Text="{Loc 'humanoid-profile-editor-BarkVoice-play'}" MaxWidth="80" />
                                 </BoxContainer>
                                 <!-- Corvax-Frontier-Barks-End -->
                             </BoxContainer>
