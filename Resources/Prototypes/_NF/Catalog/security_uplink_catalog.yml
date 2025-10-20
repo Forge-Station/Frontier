@@ -454,26 +454,26 @@
         - Bailiff
         - Sheriff
 
-- type: listing # Corvax-Frontier
-  id: UplinkSecurityKS23
-  name:  uplink-security-ks23-name
-  description: uplink-security-ks23-desc
-  productEntity: WeaponCaseLongWeaponShotgunKS23
-  icon: { sprite: Forge/Objects/Weapons/Guns/Shotguns/ks23.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 3
-  categories:
-    - UplinkSecurityWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+# - type: listing # Corvax-Frontier
+#   id: UplinkSecurityKS23
+#   name:  uplink-security-ks23-name
+#   description: uplink-security-ks23-desc
+#   productEntity: WeaponCaseLongWeaponShotgunKS23
+#   icon: { sprite: Forge/Objects/Weapons/Guns/Shotguns/ks23.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 3
+#   categories:
+#     - UplinkSecurityWeapons
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - Bailiff
+#         - SeniorOfficer
+#         - Sheriff
 
 #region utililty
 - type: listing

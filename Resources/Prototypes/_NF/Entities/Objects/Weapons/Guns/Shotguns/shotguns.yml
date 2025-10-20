@@ -15,6 +15,7 @@
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
   - type: Gun
     fireRate: 2.5 # Corvax-Forge: Weaponary update
+    projectileSpeed: 37
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -32,6 +33,7 @@
   components:
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 3
+    projectileSpeed: 37
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun.rsi
   - type: Clothing
@@ -55,6 +57,7 @@
   components:
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 2
+    projectileSpeed: 37
     soundGunshot:
       path: /Audio/_Forge/Weapons/Guns/Gunshots/shotgun_metal.ogg
   - type: Sprite
@@ -83,6 +86,8 @@
     capacity: 5
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+  - type: Gun # Corvax-Forge: Weaponary update
+    projectileSpeed: 35
 
 - type: entity
   id: NFWeaponShotgunSawn
@@ -103,6 +108,7 @@
     manufacturer: weapon-details-manufacturer-custom-made
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 3
+    projectileSpeed: 35
     soundGunshot:
       path: /Audio/_Forge/Weapons/Guns/Gunshots/shotgun_sawed.ogg
 
@@ -134,6 +140,7 @@
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-custom-made
   - type: Gun # Corvax-Forge: Weaponary update
+    projectileSpeed: 37
     soundGunshot:
       path: /Audio/_Forge/Weapons/Guns/Gunshots/shotgun_pipe.ogg
 
@@ -189,6 +196,7 @@
     graph: ImprovisedShotgunGraph
     node: shotgun
   - type: Gun # Corvax-Forge: Weaponary update
+    projectileSpeed: 37
     soundGunshot:
       path: /Audio/_Forge/Weapons/Guns/Gunshots/shotgun_pipe.ogg
 

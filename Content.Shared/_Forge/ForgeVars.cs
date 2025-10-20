@@ -30,7 +30,7 @@ public sealed class ForgeVars
         CVarDef.Create("voice.barks_volume", 1f, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
-    ///     Whether or not players can use mech guns outside of mechs.
+    /// Whether or not players can use mech guns outside of mechs.
     /// </summary>
     public static readonly CVarDef<bool> MechGunOutsideMech =
         CVarDef.Create("mech.gun_outside_mech", false, CVar.SERVER | CVar.REPLICATED);
@@ -52,11 +52,11 @@ public sealed class ForgeVars
      * TTS (Text-To-Speech)
      */
 
-    /// <summary>
-    /// URL of the TTS server API.
-    /// </summary>
     public static readonly CVarDef<bool> TTSEnabled =
         CVarDef.Create("tts.enabled", false, CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
+
+    public static readonly CVarDef<bool> LocalTTSEnabled =
+        CVarDef.Create("tts.local_enabled", true, CVar.CLIENT | CVar.REPLICATED | CVar.ARCHIVE);
 
     /// <summary>
     /// URL of the TTS server API.

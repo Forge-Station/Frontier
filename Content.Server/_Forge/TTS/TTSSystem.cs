@@ -15,6 +15,7 @@ namespace Content.Server._Forge.TTS;
 public sealed partial class TTSSystem : EntitySystem
 {
     [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private readonly INetConfigurationManager _netCfg = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly TTSManager _ttsManager = default!;
     [Dependency] private readonly SharedTransformSystem _xforms = default!;
@@ -77,6 +78,13 @@ public sealed partial class TTSSystem : EntitySystem
 
     private async void OnEntitySpoke(EntityUid uid, TTSComponent component, EntitySpokeEvent args)
     {
+        if (!TryComp<ActorComponent>(uid, out var comp))
+            return;
+
+        var channel = comp.PlayerSession.Channel;
+        if (!_netCfg.GetClientCVar(channel, ForgeVars.LocalTTSEnabled))
+            return;
+
         var voiceId = component.VoicePrototypeId;
         if (!_isEnabled ||
             args.Message.Length > MaxMessageChars ||
