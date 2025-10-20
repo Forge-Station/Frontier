@@ -873,6 +873,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Property<float>("Width")
                         .HasColumnType("REAL")
                         .HasColumnName("width");
+                    b.Property<string>("Voice")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("voice");
 
                     b.HasKey("Id")
                         .HasName("PK_profile");

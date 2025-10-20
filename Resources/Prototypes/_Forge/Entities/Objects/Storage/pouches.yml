@@ -1,0 +1,258 @@
+- type: entity
+  id: PouchNFSDTech
+  parent: NFPouchUtility
+  name: specialist pouch
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    layers:
+    - state: base_NFSD
+    - state: close_NFSD
+      map: ["closeLayer"]
+    - state: open_NFSD
+      map: ["openLayer"]
+      visible: false
+    - state: inside
+      map: ["insideLayer"]
+      visible: false
+    - state: fill-util4-1
+      map: [ "pouchFill4" ]
+      visible: false
+    - state: fill-util3-1
+      map: [ "pouchFill3" ]
+      visible: false
+    - state: fill-util2-1
+      map: [ "pouchFill2" ]
+      visible: false
+    - state: fill-util1-1
+      map: [ "pouchFill1" ]
+      visible: false
+    - state: decal_NFSD_Tech
+      map: [ "decal1" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#1f2611"
+      right:
+      - state: inhand-right
+        color: "#1f2611"
+  - type: Clothing
+    quickEquip: false
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    slots: [ belt, pocket ]
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+        color: "#1f2611"
+      pocket:
+      - state: equipped-BELT
+        color: "#1f2611"
+
+- type: entity
+  id: PouchNFSDMed
+  parent: NFPouchUtility
+  name: Coroner pouch
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    layers:
+    - state: base_NFSD
+    - state: close_NFSD
+      map: ["closeLayer"]
+    - state: open_NFSD
+      map: ["openLayer"]
+      visible: false
+    - state: inside
+      map: ["insideLayer"]
+      visible: false
+    - state: fill-med-1
+      map: [ "pouchFill1" ]
+      visible: false
+    - state: fill-med-2
+      map: [ "pouchFill2" ]
+      visible: false
+    - state: fill-med-3
+      map: [ "pouchFill3" ]
+      visible: false
+    - state: fill-med-4
+      map: [ "pouchFill4" ]
+      visible: false
+    - state: decal_NFSD_Med
+      map: [ "decal1" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#1f2611"
+      right:
+      - state: inhand-right
+        color: "#1f2611"
+  - type: Clothing
+    quickEquip: false
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    slots: [ belt, pocket ]
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+        color: "#1f2611"
+      pocket:
+      - state: equipped-BELT
+        color: "#1f2611"
+
+- type: entity
+  id: PouchSyndicate
+  parent: NFPouchUtility
+  name: syndicate pouch
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    layers:
+    - state: base_Syndi
+    - state: close_Syndi
+      map: ["closeLayer"]
+    - state: open_Syndi
+      map: ["openLayer"]
+      visible: false
+    - state: inside
+      map: ["insideLayer"]
+      visible: false
+    - state: fill-util4-1
+      map: [ "pouchFill4" ]
+      visible: false
+    - state: fill-util3-1
+      map: [ "pouchFill3" ]
+      visible: false
+    - state: fill-util2-1
+      map: [ "pouchFill2" ]
+      visible: false
+    - state: fill-util1-1
+      map: [ "pouchFill1" ]
+      visible: false
+    - state: decal_Syndi
+      map: [ "decal1" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#1a1a1a"
+      right:
+      - state: inhand-right
+        color: "#1a1a1a"
+  - type: Clothing
+    quickEquip: false
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    slots: [ belt, pocket ]
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+        color: "#1a1a1a"
+      pocket:
+      - state: equipped-BELT
+        color: "#1a1a1a"
+
+- type: entity
+  id: PouchSyndicateMed
+  parent: NFPouchUtility
+  name: syndicate medical pouch
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    layers:
+    - state: base_Syndi
+    - state: close_Syndi
+      map: ["closeLayer"]
+    - state: open_Syndi
+      map: ["openLayer"]
+      visible: false
+    - state: inside
+      map: ["insideLayer"]
+      visible: false
+    - state: fill-med-1
+      map: [ "pouchFill1" ]
+      visible: false
+    - state: fill-med-2
+      map: [ "pouchFill2" ]
+      visible: false
+    - state: fill-med-3
+      map: [ "pouchFill3" ]
+      visible: false
+    - state: fill-med-4
+      map: [ "pouchFill4" ]
+      visible: false
+    - state: decal_Syndi
+      map: [ "decal1" ]
+    - state: decal_Syndi_Med
+      map: [ "decal2" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#1a1a1a"
+      right:
+      - state: inhand-right
+        color: "#1a1a1a"
+  - type: Clothing
+    quickEquip: false
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    slots: [ belt, pocket ]
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+        color: "#1a1a1a"
+      pocket:
+      - state: equipped-BELT
+        color: "#1a1a1a"
+
+- type: entity
+  id: PouchSyndicateTech
+  parent: NFPouchUtility
+  name: syndicate tech pouch
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    layers:
+    - state: base_Syndi
+    - state: close_Syndi
+      map: ["closeLayer"]
+    - state: open_Syndi
+      map: ["openLayer"]
+      visible: false
+    - state: inside
+      map: ["insideLayer"]
+      visible: false
+    - state: fill-util4-1
+      map: [ "pouchFill4" ]
+      visible: false
+    - state: fill-util3-1
+      map: [ "pouchFill3" ]
+      visible: false
+    - state: fill-util2-1
+      map: [ "pouchFill2" ]
+      visible: false
+    - state: fill-util1-1
+      map: [ "pouchFill1" ]
+      visible: false
+    - state: decal_Syndi
+      map: [ "decal1" ]
+    - state: decal_Syndi_Tech
+      map: [ "decal2" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#1a1a1a"
+      right:
+      - state: inhand-right
+        color: "#1a1a1a"
+  - type: Clothing
+    quickEquip: false
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    slots: [ belt, pocket ]
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+        color: "#1a1a1a"
+      pocket:
+      - state: equipped-BELT
+        color: "#1a1a1a"

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Content.Server.Connection.Whitelist;
 using Content.Server.Connection.Whitelist.Conditions;
 using Content.Server.Database;
-using Content.Shared._Forge.Sponsors; // Forge-Change
+using Content.Shared._Forge.Sponsor; // Forge-Change
 using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Content.Shared.Players.PlayTimeTracking;

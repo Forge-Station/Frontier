@@ -1,0 +1,79 @@
+- type: entity
+  parent: PowerCellMicroreactor
+  id: PowerCellNanoT
+  name: microreactor power cell
+  description: A rechargeable standardized microreactor cell. Has lower capacity but slowly recharges by itself.
+  suffix: NT
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Power/power_cells.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: powerNT
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: EmpProtection
+  - type: BatterySelfRecharger
+    autoRecharge: false
+    autoRechargeRate: 0.12 # 12 -> 0.12
+
+- type: entity
+  parent: PowerCellMicroreactor
+  id: PowerCellNFSD
+  name: microreactor power cell
+  description: A rechargeable standardized microreactor cell. Has lower capacity but slowly recharges by itself.
+  suffix: NFSD
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Power/power_cells.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: powerNFSD
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: EmpProtection
+  - type: BatterySelfRecharger
+    autoRecharge: false
+    autoRechargeRate: 0.12 # 12 -> 0.12
+
+- type: entity
+  parent: PowerCellMicroreactor
+  id: PowerCellSyndicate
+  name: microreactor power cell
+  description: A rechargeable standardized microreactor cell. Has lower capacity but slowly recharges by itself.
+  suffix: Syndi
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Power/power_cells.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: powerSyndi
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: EmpProtection
+  - type: BatterySelfRecharger
+    autoRecharge: false
+    autoRechargeRate: 0.12 # 12 -> 0.12
+
+- type: entity
+  parent: PowerCellMicroreactor
+  id: PowerCellDCN
+  name: microreactor power cell
+  description: A rechargeable standardized microreactor cell. Has lower capacity but slowly recharges by itself.
+  suffix: DCN
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Power/power_cells.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: powerDCN
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: EmpProtection
+  - type: BatterySelfRecharger
+    autoRecharge: false
+    autoRechargeRate: 0.12 # 12 -> 0.12

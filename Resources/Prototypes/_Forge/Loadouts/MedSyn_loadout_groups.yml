@@ -85,3 +85,13 @@
   - SmugglerOuterclothing4
   - SmugglerOuterclothing5
   - SmugglerOuterclothing6
+
+- type: loadoutGroup
+  id: MedSynBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - PouchSyndicateMedLd
+  subgroups:
+  - SyndicateBackpackItems

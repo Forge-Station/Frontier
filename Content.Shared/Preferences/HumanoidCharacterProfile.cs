@@ -61,6 +61,8 @@ using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Roles;
+using Content.Shared._Forge.Speech.Synthesis;
+using Content.Shared._Forge.TTS; // Corvax-Frontier-Barks
 using Content.Shared.Traits;
 using Robust.Shared.Collections;
 using Robust.Shared.Configuration;
@@ -139,6 +141,9 @@ namespace Content.Shared.Preferences
         [DataField] // Corvax-Frontier-Barks
         public string BarkVoice { get; set; } = SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Corvax-Frontier-Barks
 
+        [DataField] // Corvax-TTS
+        public string Voice { get; set; } = SharedHumanoidAppearanceSystem.DefaultVoice; // Corvax-TTS
+
         [DataField]
         public int Age { get; set; } = 18;
 
@@ -203,6 +208,7 @@ namespace Content.Shared.Preferences
             string species,
             float height, // Goobstation: port EE height/width sliders
             float width, // Goobstation: port EE height/width sliders
+            string voice, // Corvax-TTS
             int age,
             Sex sex,
             Gender gender,
@@ -222,6 +228,7 @@ namespace Content.Shared.Preferences
             Species = species;
             Height = height; // Goobstation: port EE height/width sliders
             Width = width; // Goobstation: port EE height/width sliders
+            Voice = voice; // Corvax-TTS
             Age = age;
             Sex = sex;
             Gender = gender;
@@ -234,20 +241,17 @@ namespace Content.Shared.Preferences
             _traitPreferences = traitPreferences;
             _loadouts = loadouts;
             BarkVoice = barkVoice; // Corvax-Frontier-Barks
-
-            var hasHighPrority = false;
-            foreach (var (key, value) in _jobPriorities)
-            {
-                if (value == JobPriority.Never)
-                    _jobPriorities.Remove(key);
-                else if (value != JobPriority.High)
-                    continue;
-
-                if (hasHighPrority)
-                    _jobPriorities[key] = JobPriority.Medium;
-
-                hasHighPrority = true;
-            }
+        }   
+        /// <summary>Copy constructor but with overridable references (to prevent useless copies)</summary>
+        private HumanoidCharacterProfile(
+            HumanoidCharacterProfile other,
+            Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
+            HashSet<ProtoId<AntagPrototype>> antagPreferences,
+            HashSet<ProtoId<TraitPrototype>> traitPreferences,
+            Dictionary<string, RoleLoadout> loadouts)
+            : this(other.Name, other.FlavorText, other.Species, other.Voice, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
+                jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts, other.BarkVoice)
+        {
         }
 
         /// <summary>Copy constructor</summary>
@@ -257,6 +261,7 @@ namespace Content.Shared.Preferences
                 other.Species,
                 other.Height, // Goobstation: port EE height/width sliders
                 other.Width, // Goobstation: port EE height/width sliders
+                other.Voice,
                 other.Age,
                 other.Sex,
                 other.Gender,
@@ -329,6 +334,13 @@ namespace Content.Shared.Preferences
                 height = random.NextFloat(speciesPrototype.MinHeight, speciesPrototype.MaxHeight); // Goobstation: port EE height/width sliders
                 width = random.NextFloat(speciesPrototype.MinWidth, speciesPrototype.MaxWidth); // Goobstation: port EE height/width sliders
             }
+
+            // Corvax-TTS-Start
+            var voiceId = random.Pick(prototypeManager
+                .EnumeratePrototypes<TTSVoicePrototype>()
+                .Where(o => CanHaveVoice(o, sex)).ToArray()
+            ).ID;
+            // Corvax-TTS-End
 
             // Corvax-Frontier-Barks-start
             var barkvoiceId = random.Pick(prototypeManager
@@ -413,6 +425,12 @@ namespace Content.Shared.Preferences
             return new(this) { Width = width };
         }
         // end Goobstation: port EE height/width sliders
+        // Corvax-TTS-Start
+        public HumanoidCharacterProfile WithVoice(string voice)
+        {
+            return new(this) { Voice = voice };
+        }
+        // Corvax-TTS-End
 
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
         {
@@ -888,6 +906,14 @@ namespace Content.Shared.Preferences
 
             return result;
         }
+
+        // Corvax-TTS-Start
+        // SHOULD BE NOT PUBLIC, BUT....
+        public static bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
+        {
+            return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex == sex || voice.Sex == Sex.Unsexed);
+        }
+        // Corvax-TTS-End
 
         public ICharacterProfile Validated(ICommonSession session, IDependencyCollection collection)
         {

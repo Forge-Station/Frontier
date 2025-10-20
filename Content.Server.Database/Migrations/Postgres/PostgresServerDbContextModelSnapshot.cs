@@ -922,6 +922,10 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Property<float>("Width")
                         .HasColumnType("real")
                         .HasColumnName("width");
+                    b.Property<string>("Voice")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("voice");
 
                     b.HasKey("Id")
                         .HasName("PK_profile");

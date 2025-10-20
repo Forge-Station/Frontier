@@ -55,48 +55,6 @@
     state: body_f
 
 - type: marking
-  id: AndroidTorsoFemaleBreast
-  bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Android ]
-  sexRestriction: [ Female ]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
-  sprites:
-  - sprite: _Wega/Mobs/Customization/android.rsi
-    state: body_f_breast
-
-- type: marking
-  id: AndroidTorsoFemaleBigBreast
-  bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Android ]
-  sexRestriction: [ Female ]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
-  sprites:
-  - sprite: _Wega/Mobs/Customization/android.rsi
-    state: body_f_bigbreast
-
-- type: marking
-  id: AndroidTorsoFemaleNoBreast
-  bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Android ]
-  sexRestriction: [ Female ]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
-  sprites:
-  - sprite: _Wega/Mobs/Customization/android.rsi
-    state: body_f_nobreast
-
-- type: marking
   id: AndroidTorsoMale
   bodyPart: Chest
   markingCategory: Chest

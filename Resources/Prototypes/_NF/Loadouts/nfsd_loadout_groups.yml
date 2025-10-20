@@ -180,3 +180,16 @@
   - NfsdClothingHeadsetAltNfsdGreen
   fallbacks:
   - NfsdClothingHeadsetAltNfsdGreen
+
+# Forge-change
+- type: loadoutGroup
+  id: NFSDBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - PouchNfsdLd
+  - PouchNFSDTechLd
+  subgroups:
+  - ContractorBackpackItems
+# Forge-change end

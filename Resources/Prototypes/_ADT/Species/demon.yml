@@ -23,7 +23,7 @@
     Chest: MobDemonTorso
     HeADTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
-    Tail: MobDemonTail
+    Tail: MobHumanoidAnyMarking
     Eyes: MobHumanoidEyes
     LArm: MobDemonLArm
     RArm: MobDemonRArm
@@ -54,7 +54,8 @@
       required: false
     Tail:
       points: 1
-      required: false
+      required: true
+      defaultMarkings: [ DemomTail ]
     Snout:
       points: 2
       required: false
@@ -148,9 +149,3 @@
   baseSprite:
     sprite: _ADT/Mobs/Species/Demon/parts.rsi
     state: r_foot
-
-- type: humanoidBaseSprite
-  id: MobDemonTail
-  baseSprite:
-    sprite: _ADT/Mobs/Species/Demon/parts.rsi
-    state: tail

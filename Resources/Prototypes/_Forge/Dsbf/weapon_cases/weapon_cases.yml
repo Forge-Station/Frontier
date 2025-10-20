@@ -88,18 +88,18 @@
     - id: NFMagazinePistol35
       amount: 2
 
-- type: entity
-  parent: WeaponCaseLong
-  id: WeaponCaseLongWeaponShotgunKS23
-  name: Кейс с KS23
-  suffix: Аплинк ДСБФ, KS23
-  components:
-  - type: StorageFill
-    contents:
-    - id: WeaponShotgunKS23
-      amount: 1
-    - id: BoxLethalshotKS23
-      amount: 2
+# - type: entity
+#   parent: WeaponCaseLong
+#   id: WeaponCaseLongWeaponShotgunKS23
+#   name: Кейс с KS23
+#   suffix: Аплинк ДСБФ, KS23
+#   components:
+#   - type: StorageFill
+#     contents:
+#     - id: WeaponShotgunKS23
+#       amount: 1
+#     - id: BoxLethalshotKS23
+#       amount: 2
 
 - type: entity
   parent: WeaponCaseLong

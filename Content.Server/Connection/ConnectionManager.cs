@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using Content.Server._Forge.Discord; // Forge-Change
-using Content.Server._Forge.Sponsors; // Forge-Change
+using Content.Server._Forge.Sponsor; // Forge-Change
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection.IPIntel;

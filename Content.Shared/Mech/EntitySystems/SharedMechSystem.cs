@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Shared._Forge.ForgeVars;
+using Content.Shared._Forge;
 using Content.Shared._Forge.Mech; // Forge-Change
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems; // Forge-Change
@@ -109,7 +109,7 @@ public abstract partial class SharedMechSystem : EntitySystem
         if (mech.Broken || mech.Integrity <= 0 || mech.Energy <= 0)
             args.Cancel();
     }
-    
+
     private void OnMechMoveEvent(EntityUid uid, MechComponent component, CancellableEntityEventArgs args) // Forge-Change
     {
         if (component.LifeStage > ComponentLifeStage.Running)
@@ -130,9 +130,9 @@ public abstract partial class SharedMechSystem : EntitySystem
         if (args.Handled)
             return;
         args.Handled = true;
-        
+
         component.Internals = !component.Internals;
-        
+
         _actions.SetToggled(component.MechToggleInternalsActionEntity, component.Internals);
     }
 
@@ -213,7 +213,7 @@ public abstract partial class SharedMechSystem : EntitySystem
 
         UpdateActions(mech, pilot, component);
     }
-    
+
     private void UpdateActions(EntityUid mech, EntityUid pilot, MechComponent? component = null)
     {
         if (!Resolve(mech, ref component))
@@ -408,12 +408,12 @@ public abstract partial class SharedMechSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return false;
 
-        if ((component.Energy / component.MaxEnergy) * 100 <= 25 
-            && component.PlayPowerSound 
+        if ((component.Energy / component.MaxEnergy) * 100 <= 25
+            && component.PlayPowerSound
             && component.PilotSlot.ContainedEntity != null)
         {
             _audioSystem.PlayEntity(component.LowPowerSound, component.PilotSlot.ContainedEntity.Value, uid);
-            
+
             component.PlayPowerSound = false;
         }
         else if ((component.Energy / component.MaxEnergy) * 100 >= 25)
@@ -438,12 +438,12 @@ public abstract partial class SharedMechSystem : EntitySystem
 
         component.Integrity = FixedPoint2.Clamp(value, 0, component.MaxIntegrity);
 
-        if ((component.Integrity / component.MaxIntegrity) * 100 <= 50 
-            && component.PlayIntegritySound 
+        if ((component.Integrity / component.MaxIntegrity) * 100 <= 50
+            && component.PlayIntegritySound
             && component.PilotSlot.ContainedEntity != null)
         {
             _audioSystem.PlayEntity(component.CriticalDamageSound, component.PilotSlot.ContainedEntity.Value, uid);
-            
+
             component.PlayIntegritySound = false;
         }
         else if ((component.Integrity / component.MaxIntegrity) * 100 >= 50)

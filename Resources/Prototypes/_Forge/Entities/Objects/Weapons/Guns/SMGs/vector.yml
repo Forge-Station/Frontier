@@ -21,6 +21,7 @@
     - Belt
   - type: Gun
     fireRate: 12
+    projectileSpeed: 40
     selectedMode: FullAuto
     soundGunshot:
       path: /Audio/Forge/Weapons/Guns/Gunshots/Vector22.ogg
@@ -81,6 +82,7 @@
     minAngle: 2
     maxAngle: 8
     fireRate: 4.2
+    projectileSpeed: 40
     selectedMode: SemiAuto
     soundGunshot:
       path: /Audio/Forge/Weapons/Guns/Gunshots/Vector45.ogg
