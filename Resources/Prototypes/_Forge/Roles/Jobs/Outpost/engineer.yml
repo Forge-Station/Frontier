@@ -1,0 +1,45 @@
+- type: job
+  id: OutpostEngineer
+  name: forge-job-name-outpostengineer
+  description: forge-job-desc-outpostengineer
+  playTimeTracker: JobOutpostEngineer
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 36000 # Frontier - 10 hrs
+  startingGear: OutpostEngineerGear
+  alwaysUseSpawner: true
+  icon: "JobIconStationEngineer"
+  supervisors: job-supervisors-sr
+  weight: 80
+  displayWeight: 20 # Second from the bottom
+  canBeAntag: false
+  access:
+  - Service
+  - Janitor
+  - Maintenance
+  - External
+  - Engineering
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: OutpostEngineerGear
+  equipment:
+    eyes: ClothingEyesGlassesMeson #ClothingEyesGlassesSecurity
+    id: EngineerPDA
+    hands: ClothingHandsGlovesColorYellow
+  storage:
+    back:
+    - AccessConfigurator
+  encryptionKeys:
+  - EncryptionKeyService
+  - EncryptionKeyEngineering
+
+- type: chameleonOutfit
+  id: OutpostEngineerChameleonOutfit
+  job: OutpostEngineer
+  hasMindShield: true

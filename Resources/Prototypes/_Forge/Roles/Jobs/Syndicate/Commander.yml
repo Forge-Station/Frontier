@@ -1,7 +1,7 @@
 - type: job
   id: Commander
-  name: Командир
-  description: Глава штурмовой группы "Жнецы"
+  name: forge-job-name-syndicommander
+  description: forge-job-desc-syndicommander
   playTimeTracker: JobCommander
   requirements:
     - !type:OverallPlaytimeRequirement

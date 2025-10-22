@@ -1,0 +1,46 @@
+- type: job
+  id: OutpostMedic
+  name: forge-job-name-outpostmedic
+  description: forge-job-desc-outpostmedic
+  playTimeTracker: JobOutpostMedic
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 36000 # Frontier - 10 hrs
+  startingGear: OutpostMedicGear
+  alwaysUseSpawner: true
+  icon: "JobIconDoc"
+  supervisors: job-supervisors-sr
+  weight: 80
+  displayWeight: 20 # Second from the bottom
+  canBeAntag: false
+  access:
+  - Service
+  - Janitor
+  - Maintenance
+  - External
+  - Medical
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: OutpostMedicGear
+  equipment:
+    ears: ClothingHeadsetMedical
+    belt: ClothingBeltMedicalFilled
+    eyes: ClothingEyesGlassesMed
+    id: MedicalPDA
+  storage:
+    back:
+    - HypoMini
+  encryptionKeys:
+  - EncryptionKeyService
+  - EncryptionKeyMedical
+
+- type: chameleonOutfit
+  id: OutpostMedicChameleonOutfit
+  job: OutpostMedic
+  hasMindShield: true

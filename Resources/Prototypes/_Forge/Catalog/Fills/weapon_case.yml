@@ -1,0 +1,163 @@
+# region Loadouts Merc
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercMK58
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: MK58
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponPistolMk58
+      amount: 1
+    - id: NFMagazinePistol35
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercPollock
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: Pollock
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponPistolPollock
+      amount: 1
+    - id: NFMagazinePistol35
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercMoonWhisper
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: MoonWhisper
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponPistolMoonWhisper
+      amount: 1
+    - id: NFMagazinePistol35
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercFitz
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: Fitz
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRevolverFitz
+      amount: 1
+    - id: NFSpeedLoaderPistol45
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercArgenti
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: Argenti
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRevolverArgenti
+      amount: 1
+    - id: NFSpeedLoaderPistol35
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercDeckard
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: Deckard
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRevolverDeckard
+      amount: 1
+    - id: NFSpeedLoaderPistol45
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercRLucky
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: RLucky
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRevolverLucky
+      amount: 1
+    - id: NFSpeedLoaderPistol45
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercFaith
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: Faith
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRevolverFaith
+      amount: 1
+    - id: NFSpeedLoaderPistol45
+      amount: 2
+
+# Laser
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercPistolLaser
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: PistolLaser
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponEnergyPistolLaser
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercLaserSvalinn
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: Svalinn
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponEnergyPistolLaserSvalinn
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercLaserMakeshift
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: LaserMakeshift
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponEnergyPistolLaserMakeshift
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercWaterBlaster
+  name: оружейный ящик
+  description: Ящик для хранения малокалиберного оружия и аксессуаров к нему.
+  suffix: WaterBlaster
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponWaterBlaster
+      amount: 1
+    - id: DrinkWaterBottleFull
+      amount: 2

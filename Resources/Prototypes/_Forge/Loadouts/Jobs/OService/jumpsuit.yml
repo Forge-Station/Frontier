@@ -1,0 +1,128 @@
+- type: loadout
+  id: ClothingUniformJumpsuitValetOServLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitValet
+
+- type: loadout
+  id: ClothingUniformJumpskirtValetOServLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtValet
+
+- type: loadout
+  id: ClothingUniformJumpsuitChefOServLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChef
+
+- type: loadout
+  id: ClothingUniformJumpskirtChefOServLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtChef
+
+- type: loadout
+  id: ClothingUniformJumpsuitBartenderOServLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBartender
+
+- type: loadout
+  id: ClothingUniformJumpskirtBartenderOServLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtBartender
+
+# Уборщика
+- type: loadout
+  id: ClothingUniformJumpsuitJanitorOServLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitJanitor
+
+- type: loadout
+  id: ClothingUniformJumpskirtJanitorOServLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtJanitor
+
+# Ботаник
+- type: loadout
+  id: ClothingUniformJumpsuitHydroponicsOServLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHydroponics
+
+- type: loadout
+  id: ClothingUniformJumpskirtHydroponicsOServLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtHydroponics
+
+# region PlayTime
+# Военные комбезы
+- type: loadout
+  id: ClothingUniformJumpsuitMilitaryServiceOServLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryService
+
+- type: loadout
+  id: ClothingUniformJumpsuitMilitaryHydroponicsOServLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryHydroponics
+
+- type: loadout
+  id: ClothingUniformJumpsuitBartenderPurpleOServLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBartenderPurple
+
+# Горничной.. а чего их так много?
+- type: loadout
+  id: ClothingUniformJumpskirtJanimaidOServLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT2
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtJanimaid
+
+- type: loadout
+  id: ClothingUniformJumpskirtJanimaidminiOServLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT3
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtJanimaidmini # МИНИ-ЮБКА!?
+
+- type: loadout
+  id: ClothingUniformJumpskirtElegantMaidOServLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT4
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtElegantMaid
+
+# Униформа ОБР уборщика..
+- type: loadout
+  id: ClothingUniformJumpsuitERTJanitorOServLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT5
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTJanitor

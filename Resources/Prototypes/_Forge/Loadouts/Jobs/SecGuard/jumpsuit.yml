@@ -1,0 +1,128 @@
+# Варден - 10 часов
+- type: loadout
+  id: ClothingUniformJumpsuitWardenSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT1
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitWarden
+
+- type: loadout
+  id: ClothingUniformJumpskirtWardenSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT1
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtWarden
+
+# ГСБ - 20 часов
+- type: loadout
+  id: ClothingUniformJumpsuitHoSSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoS
+
+- type: loadout
+  id: ClothingUniformJumpskirtHoSSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtHoS
+
+- type: loadout
+  id: ClothingUniformJumpsuitHoSBlackSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoSBlack
+
+- type: loadout
+  id: ClothingUniformJumpskirtHoSBlackSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtHoSBlack
+
+- type: loadout
+  id: ClothingUniformJumpsuitHoSAltSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoSAlt
+
+- type: loadout
+  id: ClothingUniformJumpskirtHoSAltSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtHoSAlt
+
+- type: loadout
+  id: ClothingUniformJumpsuitHoSGreySGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoSGrey
+
+- type: loadout
+  id: ClothingUniformJumpsuitHoSBlueSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoSBlue
+
+# ГСБ Парадка - 30 часов
+- type: loadout
+  id: ClothingUniformJumpsuitHoSParadeMaleSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT3
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoSParadeMale
+
+- type: loadout
+  id: ClothingUniformJumpskirtHoSParadeMaleSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT3
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtHoSParadeMale
+
+- type: loadout
+  id: ClothingUniformJumpsuitHosFormalSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT3
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHosFormal
+
+- type: loadout
+  id: ClothingUniformJumpskirtHosFormalSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT3
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtHosFormal
