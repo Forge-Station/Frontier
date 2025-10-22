@@ -52,7 +52,7 @@
   id: OServiceHead
   name: loadout-group-contractor-head
   minLimit: 0
-  mixLimit: 1
+  maxLimit: 1
   loadouts:
   - ClothingHeadHatBellhopOServLd
   - ContractorClothingHeadHatTrucker
@@ -144,7 +144,7 @@
 # EVA
 - type: loadoutGroup
   id: OServiceForcedOuterClothing
-  name: loadout-group-contractor-forcedouterclothing
+  name: loadout-group-contractor-outerclothing
   minLimit: 1
   maxLimit: 1
   hidden: true

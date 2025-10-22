@@ -44,7 +44,7 @@
   suffix: Spawner, Forge
   components:
   - type: SpawnPoint
-    job_id: ServiceOutpost
+    job_id: OutpostService
   - type: Sprite
     layers:
       - state: green
