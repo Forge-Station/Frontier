@@ -172,3 +172,24 @@
   - MercenaryClothingBeltArcadia #Forge-Change
   subgroups:
   - ContractorBelt
+
+# Forge-add
+- type: loadoutGroup
+  id: MercenaryWeapon
+  name: loadout-group-merc-utility
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - WeaponCaseMercMK58Ld
+  - WeaponCaseMercPollockLd
+  - WeaponCaseMercMoonWhisperLd
+  - WeaponCaseMercFitzLd
+  - WeaponCaseMercArgentiLd
+  - WeaponCaseMercDeckardLd
+#  - WeaponCaseMercRLuckyLd
+#  - WeaponCaseMercFaithLd
+  - WeaponCaseMercPistolLaserLd
+#  - WeaponCaseMercLaserSvalinnLd
+  - WeaponCaseMercLaserMakeshiftLd
+  - WeaponCaseMercWaterBlasterLd
+# Forge end
