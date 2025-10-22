@@ -26,12 +26,12 @@
     walkModifier: 0.85
     sprintModifier: 0.85
   - type: Gun
-    projectileSpeed: 30
-    minAngle: 18
-    maxAngle: 38
+    projectileSpeed: 33
+    minAngle: 20
+    maxAngle: 24
     angleIncrease: 3
     angleDecay: 14
-    fireRate: 6
+    fireRate: 6.5
   - type: Armor
     modifiers:
       coefficients:

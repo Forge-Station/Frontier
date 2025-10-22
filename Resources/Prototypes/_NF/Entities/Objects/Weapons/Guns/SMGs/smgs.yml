@@ -8,6 +8,7 @@
   components:
   - type: Gun
     fireRate: 8.5 # Corvax-Forge: Weaponary update
+    projectileSpeed: 37
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
   - type: Sprite
@@ -24,6 +25,7 @@
   components:
   - type: Gun
     fireRate: 8 # Corvax-Forge: Weaponary update
+    projectileSpeed: 37
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
   - type: Sprite
@@ -45,6 +47,7 @@
   components: &drozdComponents
   - type: Gun
     fireRate: 6 # Corvax-Forge: Weaponary update
+    projectileSpeed: 40
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
   - type: Sprite
@@ -90,6 +93,8 @@
     boltClosed: null
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 6
+    projectileSpeed: 40
+
 
 #region DeltaV
 - type: entity
@@ -100,6 +105,7 @@
     A modern take on the classic design used by mobsters throughout space and time.
   components:
   - type: Gun
+    projectileSpeed: 40
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/typewriter.ogg
   - type: Sprite

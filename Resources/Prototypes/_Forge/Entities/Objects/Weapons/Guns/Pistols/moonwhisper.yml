@@ -15,6 +15,7 @@
     sprite: Forge/Objects/Weapons/Guns/Pistols/moonwhisper.rsi
   - type: Gun
     fireRate: 4.5
+    projectileSpeed: 35
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto

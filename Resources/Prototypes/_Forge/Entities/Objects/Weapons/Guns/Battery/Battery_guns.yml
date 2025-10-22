@@ -13,7 +13,7 @@
       shader: unshaded
   - type: MagazineVisuals
     magState: mag
-    steps: 5
+    steps: 4
     zeroVisible: false
   - type: Appearance
   - type: Clothing
@@ -109,7 +109,7 @@
   id: SniperSign
   damage:
     types:
-      Heat: 42
+      Heat: 51
       Structural: 80
   muzzleFlash:
     sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi

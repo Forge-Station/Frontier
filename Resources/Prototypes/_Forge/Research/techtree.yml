@@ -275,3 +275,16 @@
   technologyPrerequisites:
   - NFImprovedPistolAmmo
   position: 2, 45
+
+- type: technology
+  id: ForgePowercellNTTech
+  name: research-technology-powercellnt
+  entityIcon: PowerCellNanoT
+  discipline: NFEngineering
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - PowerCellNTRecipe
+  technologyPrerequisites:
+  - NFFission
+  position: 4, 26

@@ -77,6 +77,9 @@ public sealed partial class TTSSystem : EntitySystem
 
     private async void OnEntitySpoke(EntityUid uid, TTSComponent component, EntitySpokeEvent args)
     {
+        if (!HasComp<ActorComponent>(uid))
+            return;
+
         var voiceId = component.VoicePrototypeId;
         if (!_isEnabled ||
             args.Message.Length > MaxMessageChars ||

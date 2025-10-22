@@ -30,6 +30,7 @@
     sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 5.5
+    projectileSpeed: 38
 
 - type: entity
   id: NFWeaponRifleAssaultLecter
@@ -48,6 +49,7 @@
     zeroVisible: true
   - type: Gun
     fireRate: 5.5 # Corvax-Forge: Weaponary update
+    projectileSpeed: 35
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
 
@@ -71,6 +73,7 @@
   components: &vulcanComponents
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 5
+    projectileSpeed: 40
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
   - type: Clothing
@@ -93,6 +96,7 @@
     sprite: _DV/Objects/Weapons/Guns/Rifles/jackdaw.rsi
   - type: Gun
     fireRate: 5 # Corvax-Forge: Weaponary update
+    projectileSpeed: 35
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/jackdaw.ogg
 
@@ -124,6 +128,7 @@
     burstFireRate: 5
     shotsPerBurst: 2
     burstCooldown: 0.37 # Corvax-Forge: Weaponary update (3.5 RPS)
+    projectileSpeed: 35
     selectedMode: Burst
     availableModes:
       - Burst
@@ -143,6 +148,7 @@
     sprite: _NF/Objects/Weapons/Guns/Rifles/novalitec1.rsi
   - type: Gun
     fireRate: 4 # Corvax-Forge: Weaponary update
+    projectileSpeed: 35
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
