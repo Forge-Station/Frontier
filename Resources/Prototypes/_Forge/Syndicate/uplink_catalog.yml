@@ -2312,3 +2312,13 @@
     TelecrystalDamaged: 16
   categories:
   - UplinkWeaponrySmugger
+
+- type: listing
+  id: SmuggerUplinkPowerCellSyndicate
+  name: uplink-PowerCellSyndicate-name
+  description: uplink-PowerCellSyndicate-desc
+  productEntity: PowerCellSyndicate
+  cost:
+    TelecrystalDamaged: 20
+  categories:
+  - UplinkWearablesSmugger

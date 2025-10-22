@@ -532,6 +532,8 @@
     - Kangaroo
   - type: StealTarget
     stealGroup: ClothingHandsKnuckleDustersQM
+  - type: StaticPrice # Forge-change: add StaticPrice
+    price: 10000
 
 - type: entity
   parent: [ClothingHandsBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband

@@ -296,3 +296,24 @@
         - Bailiff
         - SeniorOfficer
         - Sheriff
+
+- type: listing
+  id: UplinkPowerCellNFSD
+  name:  uplink-security-PowerCellNFSD-name
+  description: uplink-security-PowerCellNFSD-desc
+  productEntity: PowerCellNFSD
+  icon: { sprite: Forge/Objects/Power/power_cells.rsi, state: powerNFSD }
+  cost:
+    FrontierUplinkCoin: 12
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff

@@ -82,3 +82,14 @@
   - BrigmedicClothingBeltBrigmedicWebbing
   fallbacks:
   - BrigmedicClothingBeltBrigmedicWebbing
+
+# Forge-change
+- type: loadoutGroup
+  id: CoronerBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - PouchNFSDMedLd
+  subgroups:
+  - ContractorBackpackItems

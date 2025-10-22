@@ -73,3 +73,17 @@
     - state: power_console_ame
   - type: StaticPrice
     price: 2100
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: GoldprinterFlatpack
+  name: упакованный ювелирный станок
+  description: Упакованный ювелирный станок.
+  components:
+  - type: Flatpack
+    entity: Goldprinter
+  - type: Sprite
+    layers:
+    - state: engineering_lathe
+  - type: StaticPrice
+    price: 600
