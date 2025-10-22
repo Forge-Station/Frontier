@@ -1,21 +1,21 @@
 - type: latheRecipe
   id: GoldRing
   result: GoldRing
-  completetime: 20
+  completetime: 7
   materials:
     Gold: 800
 
 - type: latheRecipe
   id: SilverRing
   result: SilverRing
-  completetime: 20
+  completetime: 7
   materials:
     Silver: 800
 
 - type: latheRecipe
   id: GoldRingDiamond
   result: GoldRingDiamond
-  completetime: 20
+  completetime: 7
   materials:
     Gold: 800
     Plasma: 1200
@@ -25,7 +25,7 @@
 - type: latheRecipe
   id: SilverRingDiamond
   result: SilverRingDiamond
-  completetime: 20
+  completetime: 7
   materials:
     Silver: 800
     Plasma: 1200
@@ -34,7 +34,7 @@
 - type: latheRecipe
   id: GoldRingGem
   result: GoldRingGem
-  completetime: 20
+  completetime: 7
   materials:
     Gold: 1200
     Diamond: 50
@@ -44,7 +44,7 @@
 - type: latheRecipe
   id: SilverRingGem
   result: SilverRingGem
-  completetime: 20
+  completetime: 7
   materials:
     Silver: 1200
     Diamond: 50
@@ -65,7 +65,7 @@
 - type: latheRecipe
   id: ClothingHandsGoldBrasetGem
   result: ClothingHandsGoldBrasetGem
-  completetime: 40
+  completetime: 10
   materials:
     Gold: 2000
     Plasma: 2000
@@ -75,7 +75,7 @@
 - type: latheRecipe
   id: ClothingHandsGoldBraset
   result: ClothingHandsGoldBraset
-  completetime: 40
+  completetime: 10
   materials:
     Gold: 2000
 
@@ -84,7 +84,7 @@
 - type: latheRecipe
   id: TreasureCoinIronRecipe
   result: TreasureCoinIron
-  completetime: 5
+  completetime: 3
   materials:
     Steel: 1000
     Plasma: 200
@@ -92,15 +92,15 @@
 - type: latheRecipe
   id: TreasureCoinSilverRecipe
   result: TreasureCoinSilver
-  completetime: 10
+  completetime: 3
   materials:
-    Steel: 1000
+    Silver: 1000
     Plasma: 200
 
 - type: latheRecipe
   id: TreasureCoinGoldRecipe
   result: TreasureCoinGold
-  completetime: 10
+  completetime: 3
   materials:
     Gold: 1000
     Plasma: 200
@@ -108,7 +108,7 @@
 - type: latheRecipe
   id: TreasureCoinAdamantineRecipe
   result: TreasureCoinAdamantine
-  completetime: 10
+  completetime: 4
   materials:
     Silver: 1500
     Gold: 1500
@@ -117,7 +117,7 @@
 - type: latheRecipe
   id: TreasureCoinDiamondRecipe
   result: TreasureCoinDiamond
-  completetime: 10
+  completetime: 4
   materials:
     Silver: 1500
     Gold: 1500
@@ -128,7 +128,7 @@
 - type: latheRecipe
   id: WristwatchGoldRecipe
   result: WristwatchGold
-  completetime: 10
+  completetime: 5
   materials:
     Silver: 2000
     Gold: 3000
@@ -139,7 +139,7 @@
 - type: latheRecipe
   id: ArabianLampRecipe
   result: ArabianLamp
-  completetime: 10
+  completetime: 6
   materials:
     Gold: 3000
     Uranium: 1000
@@ -148,7 +148,7 @@
 - type: latheRecipe
   id: ClothingMaskGoldenCursedRecipe
   result: ClothingMaskGoldenCursed
-  completetime: 10
+  completetime: 6
   materials:
     Gold: 9000
     Plasma: 3000
@@ -157,7 +157,7 @@
 - type: latheRecipe
   id: GoldenBikeHornRecipe
   result: GoldenBikeHorn
-  completetime: 10
+  completetime: 6
   materials:
     Gold: 2000
     Plasma: 1000
