@@ -1,6 +1,16 @@
 # TODO: make more categories
 # Guns
 
+- type: listing # Forge-Change
+  id: UplinkConvertTelecrystal
+  name: uplink-convert-telecrystal-name
+  description: uplink-convert-telecrystal-desc
+  productEntity: Telecrystal1
+  cost:
+    Speso: 10000
+  categories:
+  - UplinkConverter
+
 - type: listing
   abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkPistolViper

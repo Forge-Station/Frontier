@@ -6,6 +6,11 @@
   components:
   - type: HumanoidAppearance
     species: Ariral
+    hideLayersOnEquip:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide
   - type: Carriable
   - type: Hunger
   - type: Thirst

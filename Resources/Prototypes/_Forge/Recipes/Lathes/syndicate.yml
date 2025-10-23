@@ -63,6 +63,14 @@
     CreditCounterfeit: 55000
 
 - type: latheRecipe
+  id: NFWeaponPistolAnaconda45Recipe
+  result: NFWeaponPistolAnaconda45
+  categories: [SyndicateTradingConsoleFirearmsWeapons]
+  completetime: 1
+  materials:
+    CreditCounterfeit: 30000
+
+- type: latheRecipe
   id: ClothingBackpackDuffelSyndicateFilledCarbineRecipe
   categories: [SyndicateTradingConsoleFirearmsWeapons]
   result: NFWeaponRifleAssaultM90GrenadeLauncher

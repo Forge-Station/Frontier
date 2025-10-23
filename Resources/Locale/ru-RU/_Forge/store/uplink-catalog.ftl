@@ -53,5 +53,5 @@ uplink-security-engibelt-desc = Тактический пояс с крепле�
 
 uplink-security-PowerCellNFSD-name = { ent-PowerCellNFSD }
 uplink-security-PowerCellNFSD-desc = { ent-PowerCellNFSD.desc }
-uplink-PowerCellSyndicate-name = { ent-PowerCellSyndi }
-uplink-PowerCellSyndicate-desc = { ent-PowerCellSynde.desc }
+uplink-PowerCellSyndicate-name = { ent-PowerCellSyndicate }
+uplink-PowerCellSyndicate-desc = { ent-PowerCellSyndicate.desc }

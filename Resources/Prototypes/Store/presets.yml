@@ -5,6 +5,7 @@
   - type: Store
     name: store-preset-name-uplink
     categories:
+    - UplinkConverter # Forge-Change
     - UplinkWeaponry
     - UplinkAmmo
     - UplinkExplosives
@@ -18,8 +19,10 @@
     - UplinkPointless
     currencyWhitelist:
     - Telecrystal
+    - Speso
     balance:
       Telecrystal: 0
+      Speso: 0
 
 - type: entity
   id: StorePresetSpellbook
