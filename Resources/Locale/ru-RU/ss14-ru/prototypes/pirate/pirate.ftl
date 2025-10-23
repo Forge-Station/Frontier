@@ -16,3 +16,5 @@ ent-BoxPirateGrenadeRadiation = коробка с гранатами
 ent-BoxPiratePirateGrenadeConcussion = коробка с гранатами
   .suffix = чёрные
   .desc = { ent-BoxPirateGrenadeFire.desc }
+ent-BoxPirateTrackingBundle = Коробка с примочками для слежки
+  .desc = В этой коробке, вероятно, поставляются устройства слежения за чужими шаттлами.

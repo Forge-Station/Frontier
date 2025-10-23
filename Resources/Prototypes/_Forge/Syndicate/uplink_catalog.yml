@@ -156,6 +156,19 @@
   - UplinkWeaponrySmugger
 
 - type: listing
+  id: SmuggerUplinkEstoc
+  name: Эсток
+  description: Специальная стрелковая винтовка, стреляющая очередями по 3 патрона. Эсток была разработана как дальнобойный аналог Лектера, оснащенный удлиненным 20-дюймовым стволом и оптическим прицелом.
+  productEntity: NFWeaponRifleEstoc
+  discountCategory: usualDiscounts
+  discountDownTo:
+    TelecrystalDamaged: 9
+  cost:
+    TelecrystalDamaged: 18
+  categories:
+  - UplinkWeaponrySmugger
+
+- type: listing
   id: SmuggerUplinkC20RBundle
   name: uplink-c20r-bundle-name
   description: uplink-c20r-bundle-desc
@@ -2299,3 +2312,13 @@
     TelecrystalDamaged: 16
   categories:
   - UplinkWeaponrySmugger
+
+- type: listing
+  id: SmuggerUplinkPowerCellSyndicate
+  name: uplink-PowerCellSyndicate-name
+  description: uplink-PowerCellSyndicate-desc
+  productEntity: PowerCellSyndicate
+  cost:
+    TelecrystalDamaged: 20
+  categories:
+  - UplinkWearablesSmugger

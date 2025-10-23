@@ -119,3 +119,25 @@
       sprite: Forge/Clothing/Uniforms/Jumpsuits/scraptech.rsi
     - type: Clothing
       sprite: Forge/Clothing/Uniforms/Jumpsuits/scraptech.rsi
+
+- type: entity
+  parent: [ ClothingUniformBase, BaseCentcommContraband ]
+  id: ClothingUniformJumpsuitFormalSpecOper
+  name: special operations officer formal uniform
+  description: Special Operations Officer uniform, nothing like that. Although... If you have time to read this, it's too late...
+  components:
+    - type: Sprite
+      sprite: Forge/Clothing/Uniforms/Jumpsuits/dsoformal.rsi
+    - type: Clothing
+      sprite: Forge/Clothing/Uniforms/Jumpsuits/dsoformal.rsi
+
+- type: entity
+  parent: [ ClothingUniformBase, BaseCentcommContraband ]
+  id: ClothingUniformJumpsuitSpecOper
+  name: special operations officer uniform
+  description: Special Operations Officer uniform, nothing like that. Although... If you have time to read this, it's too late...
+  components:
+    - type: Sprite
+      sprite: Forge/Clothing/Uniforms/Jumpsuits/dso_official.rsi
+    - type: Clothing
+      sprite: Forge/Clothing/Uniforms/Jumpsuits/dso_official.rsi

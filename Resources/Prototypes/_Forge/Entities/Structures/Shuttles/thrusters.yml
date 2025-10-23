@@ -170,7 +170,7 @@
         - !type:ChangeConstructionNodeBehavior
           node: machineFrame
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/thruster.rsi 
+    sprite: Forge/Structures/Shuttles/thruster.rsi
     layers:
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]

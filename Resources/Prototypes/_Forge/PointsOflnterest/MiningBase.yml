@@ -1,6 +1,6 @@
 # Author Info
 # GitHub: -
-# Discord: autsaider_m
+# Discord: t4k_dnh
 # License: CC-BY-NC-ND-3.0
 # Corvax_frontier
 
@@ -22,6 +22,8 @@
   - type: IFF
     color: "#a68614"
   - type: StationTransit
+    routes:
+      SpawnPoints: 30
   - type: ProtectedGrid
     preventArtifactTriggers: True
     preventExplosions: True

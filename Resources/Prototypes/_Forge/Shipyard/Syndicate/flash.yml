@@ -14,7 +14,7 @@
   parent: BaseVessel
   name: Вспышка
   description: Штурмовой истребитель Жнецов. Рекомендуемый экипаж 1-2 человека.
-  price: 37500 
+  price: 37500
   category: Small
   group: Syndicate
   shuttlePath: /Maps/Forge/Shuttles/Syndicate/flash.yml
@@ -22,6 +22,8 @@
   - type: IFF
     color: "#850d09"
     flags: [HideLabel]
+  - type: ShuttleFaction
+    faction: Syndicate
   guidebookPage: Null
   class:
   - Syndicate

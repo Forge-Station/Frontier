@@ -9110,14 +9110,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 20.319727,14.4973545
       parent: 2
-- proto: WeaponShotgunKS23
-  entities:
-  - uid: 647
-    components:
-    - type: Transform
-      parent: 644
-    - type: Physics
-      canCollide: False
 - proto: WeaponTurretSyndicateBroken
   entities:
   - uid: 1085

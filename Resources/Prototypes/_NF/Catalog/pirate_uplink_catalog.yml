@@ -152,6 +152,21 @@
           - PirateUplink
 
 - type: listing
+  id: UplinkPirateEnergySwordTL
+  name:  Опытный образцец 4
+  description: Клинок странной формы, украденный у какой то корпорации, и почему братсво требует за него такие деньги?
+  productEntity: EnergySwordTL
+  cost:
+    Doubloon: 15
+  categories:
+    - UplinkPirateWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+
+- type: listing
   id: UplinkPirateCannon
   name:  uplink-pirate-cannon-name
   description: uplink-pirate-cannon-desc
@@ -785,3 +800,19 @@
           - PirateUplink
   categories:
   - UplinkPirateUtility
+
+- type: listing
+  id: UplinkPirateJetpack
+  name:  uplink-pirate-jetpack-name
+  description: uplink-pirate-jetpack-desc
+  productEntity: JetpackPirateFilled
+  icon: { sprite: _NF/Objects/Tanks/Jetpacks/pirate.rsi, state: icon }
+  cost:
+    Doubloon: 2
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink

@@ -5,56 +5,61 @@
 
 #contractor
 - type: storeCategory
+  id: ContractorUplinkKit
+  name: store-category-kit
+  priority: 0
+
+- type: storeCategory
   id: ContractorUplinkWeaponry
   name: store-category-weapons
-  priority: 0
+  priority: 1
 
 - type: storeCategory
   id: ContractorUplinkAmmo
   name: store-category-ammo
-  priority: 1
+  priority: 2
 
 - type: storeCategory
   id: ContractorUplinkExplosives
   name: store-category-explosives
-  priority: 2
+  priority: 3
 
 - type: storeCategory
   id: ContractorUplinkWearables
   name: store-category-wearables
-  priority: 3
+  priority: 4
 
 - type: storeCategory
   id: ContractorUplinkChemicals
   name: store-category-chemicals
-  priority: 4
+  priority: 5
 
 - type: storeCategory
   id: ContractorUplinkDeception
   name: store-category-deception
-  priority: 5
+  priority: 6
 
 - type: storeCategory
   id: ContractorUplinkDisruption
   name: store-category-disruption
-  priority: 6
+  priority: 7
 
 - type: storeCategory
   id: ContractorUplinkImplants
   name: store-category-implants
-  priority: 7
+  priority: 8
 
 - type: storeCategory
   id: ContractorUplinkAllies
   name: store-category-allies
-  priority: 8
+  priority: 9
 
 - type: storeCategory
   id: ContractorUplinkJob
   name: store-category-job
-  priority: 9
+  priority: 10
 
 - type: storeCategory
   id: ContractorUplinkPointless
   name: store-category-pointless
-  priority: 10
+  priority: 11

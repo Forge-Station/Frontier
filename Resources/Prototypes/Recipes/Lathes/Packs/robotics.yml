@@ -7,13 +7,19 @@
   - PositronicBrain
   - SciFlash
   - CyborgEndoskeleton
+  - Tyriumpack # Forge-Change wega android
+  #Forge-Change Mechs
   - MechAirTank
   - MechThruster
+  - PowerCageHigh
+  - PowerCageMedium
+  - PowerCageSmall
 
 - type: latheRecipePack
   id: BorgModulesStatic
   recipes:
   - BorgModuleTool
+  - BorgModuleCable
   - BorgModuleFireExtinguisher
 
 - type: latheRecipePack

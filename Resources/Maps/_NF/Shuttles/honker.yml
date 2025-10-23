@@ -131,14 +131,6 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
-- proto: ActionToggleLight
-  entities:
-  - uid: 3
-    components:
-    - type: Transform
-      parent: 1
-    - type: InstantAction
-      container: 1
 - proto: AirAlarm
   entities:
   - uid: 160
@@ -1078,29 +1070,6 @@ entities:
     - type: Transform
       pos: -0.5,11.5
       parent: 2
-- proto: LampBanana
-  entities:
-  - uid: 1
-    components:
-    - type: Transform
-      pos: 0.72970486,10.401932
-      parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 3
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3
-    - type: Physics
-      canCollide: True
-    - type: ActionsContainer
 - proto: LockerClownFilled
   entities:
   - uid: 113

@@ -8621,171 +8621,6 @@ entities:
     - type: Transform
       pos: -28.488285,5.5572014
       parent: 1
-- proto: ActionToggleInternals
-  entities:
-  - uid: 165
-    components:
-    - type: Transform
-      parent: 164
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 164
-  - uid: 168
-    components:
-    - type: Transform
-      parent: 167
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 167
-  - uid: 170
-    components:
-    - type: Transform
-      parent: 169
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 169
-  - uid: 172
-    components:
-    - type: Transform
-      parent: 171
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 171
-  - uid: 174
-    components:
-    - type: Transform
-      parent: 173
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 173
-  - uid: 176
-    components:
-    - type: Transform
-      parent: 175
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 175
-  - uid: 178
-    components:
-    - type: Transform
-      parent: 177
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 177
-  - uid: 181
-    components:
-    - type: Transform
-      parent: 180
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 180
-  - uid: 183
-    components:
-    - type: Transform
-      parent: 182
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 182
-  - uid: 185
-    components:
-    - type: Transform
-      parent: 184
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 184
-  - uid: 188
-    components:
-    - type: Transform
-      parent: 187
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 187
-  - uid: 190
-    components:
-    - type: Transform
-      parent: 189
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 189
-  - uid: 192
-    components:
-    - type: Transform
-      parent: 191
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 191
-  - uid: 194
-    components:
-    - type: Transform
-      parent: 193
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 193
-  - uid: 196
-    components:
-    - type: Transform
-      parent: 195
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 195
-  - uid: 198
-    components:
-    - type: Transform
-      parent: 197
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 197
-  - uid: 200
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 199
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 199
-- proto: ActionToggleJetpack
-  entities:
-  - uid: 201
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 199
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 199
-- proto: ActionToggleLight
-  entities:
-  - uid: 132
-    components:
-    - type: Transform
-      parent: 129
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 129
-  - uid: 133
-    components:
-    - type: Transform
-      parent: 129
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 129
-      attachedEntity: 129
-  - uid: 203
-    components:
-    - type: Transform
-      parent: 202
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 202
-  - uid: 206
-    components:
-    - type: Transform
-      parent: 205
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 205
 - proto: AdvancedCapacitorStockPart
   entities:
   - uid: 211
@@ -31795,30 +31630,12 @@ entities:
     - type: Transform
       pos: 30.657238,6.582618
       parent: 1
-    - type: GasTank
-      toggleActionEntity: 165
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 165
 - proto: DoubleEmergencyOxygenTankFilled
   entities:
   - uid: 177
     components:
     - type: Transform
       parent: 166
-    - type: GasTank
-      toggleActionEntity: 178
-    - type: Physics
-      canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 178
 - proto: Drill
   entities:
   - uid: 4218
@@ -32272,16 +32089,6 @@ entities:
     components:
     - type: Transform
       parent: 166
-    - type: GasTank
-      toggleActionEntity: 172
-    - type: Physics
-      canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 172
   - uid: 4283
     components:
     - type: Transform
@@ -33003,20 +32810,6 @@ entities:
     - type: Transform
       pos: 6.551494,-8.262249
       parent: 1
-    - type: HandheldLight
-      toggleActionEntity: 203
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 203
-    - type: ActionsContainer
 - proto: FloodlightBroken
   entities:
   - uid: 4370
@@ -40228,17 +40021,6 @@ entities:
     - type: Transform
       pos: 9.616557,27.860672
       parent: 1
-    - type: GasTank
-      toggleActionEntity: 200
-    - type: Jetpack
-      toggleActionEntity: 201
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 201
-          - 200
 - proto: Jug
   entities:
   - uid: 2
@@ -41524,47 +41306,12 @@ entities:
     - type: Transform
       pos: 19.529951,0.34374994
       parent: 1
-    - type: HandheldLight
-      selfToggleActionEntity: 133
-      toggleActionEntity: 132
-    - type: PointLight
-      enabled: True
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 130
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 132
-          - 133
-    - type: ActionsContainer
-    - type: Actions
-      actions:
-      - 133
   - uid: 205
     components:
     - type: Transform
       parent: 204
-    - type: HandheldLight
-      toggleActionEntity: 206
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 206
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
     - type: InsideEntityStorage
   - uid: 207
     components:
@@ -43554,16 +43301,8 @@ entities:
     components:
     - type: Transform
       parent: 166
-    - type: GasTank
-      toggleActionEntity: 170
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 170
   - uid: 5544
     components:
     - type: Transform
@@ -44822,7 +44561,7 @@ entities:
       parent: 1
     - type: Paper
       content: >-
-        Вы уверены, что введение в эксплуатацию жило-торгового и плазма-добывающего корпуса было хорошей идеей? Последние семь лет моей работы эта платформа только и делает, что идет ко дну! Мы ведь и так концы-с-концами еле как сводим-даже недавно пришлось переоборудовать утилизаторскую под цех переработки мусора! Так вот, возвращаясь к этой "хорошей идее" от Вернара в виде новых двух корпусов. Я ведь заведую производством, и меня не обмануть фальшивой бухгалтерией: Платформа потребляет колоссальное количество энергии для работы, а взамен мы получаем не так что-бы много плазмы! Одна радость-этого "не так что-бы много" хватает для запитки остальной электросети, так что в поставках от Нормана, мы, слава богу не нуждаемся (а с его-то завышенными ценами-и подавно). 
+        Вы уверены, что введение в эксплуатацию жило-торгового и плазма-добывающего корпуса было хорошей идеей? Последние семь лет моей работы эта платформа только и делает, что идет ко дну! Мы ведь и так концы-с-концами еле как сводим-даже недавно пришлось переоборудовать утилизаторскую под цех переработки мусора! Так вот, возвращаясь к этой "хорошей идее" от Вернара в виде новых двух корпусов. Я ведь заведую производством, и меня не обмануть фальшивой бухгалтерией: Платформа потребляет колоссальное количество энергии для работы, а взамен мы получаем не так что-бы много плазмы! Одна радость-этого "не так что-бы много" хватает для запитки остальной электросети, так что в поставках от Нормана, мы, слава богу не нуждаемся (а с его-то завышенными ценами-и подавно).
 
 
         Я не уверен, что еще долго проработаю здесь. Это место меняет специальности как перчатки! Уже, как мне известно, трижды происходило увольнение почти всех сотрудников, последний раз это было три года назад, тогда это место было огромным ремонтным цехом. Но, после "смены направления", теперь это буровая вышка! Ох-х. Да, пожалуй, через неделю-другую я уволюсь... Однако, пропадать такой талантливый инженер как я не буду, мою кандидатуру уже рассмотрели на другой вышке, пускай там и довольно... необычный подход к найму рабочих, пока-что они отзываются положительно. Я надеюсь, что без меня здесь в первый-же день все не рухнет.
@@ -45418,113 +45157,49 @@ entities:
     components:
     - type: Transform
       parent: 166
-    - type: GasTank
-      toggleActionEntity: 168
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 168
   - uid: 173
     components:
     - type: Transform
       parent: 166
-    - type: GasTank
-      toggleActionEntity: 174
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 174
   - uid: 175
     components:
     - type: Transform
       parent: 166
-    - type: GasTank
-      toggleActionEntity: 176
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 176
   - uid: 184
     components:
     - type: Transform
       pos: -5.4387336,-29.745604
       parent: 1
-    - type: GasTank
-      toggleActionEntity: 185
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 185
   - uid: 189
     components:
     - type: Transform
       parent: 186
-    - type: GasTank
-      toggleActionEntity: 190
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 190
   - uid: 191
     components:
     - type: Transform
       parent: 186
-    - type: GasTank
-      toggleActionEntity: 192
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 192
   - uid: 195
     components:
     - type: Transform
       parent: 186
-    - type: GasTank
-      toggleActionEntity: 196
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 196
   - uid: 197
     components:
     - type: Transform
       parent: 186
-    - type: GasTank
-      toggleActionEntity: 198
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 198
   - uid: 5677
     components:
     - type: Transform
@@ -45563,55 +45238,23 @@ entities:
     - type: Transform
       pos: -3.3293586,-30.292208
       parent: 1
-    - type: GasTank
-      toggleActionEntity: 181
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 181
   - uid: 182
     components:
     - type: Transform
       pos: -5.3293586,-29.401854
       parent: 1
-    - type: GasTank
-      toggleActionEntity: 183
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 183
   - uid: 187
     components:
     - type: Transform
       parent: 186
-    - type: GasTank
-      toggleActionEntity: 188
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 188
   - uid: 193
     components:
     - type: Transform
       parent: 186
-    - type: GasTank
-      toggleActionEntity: 194
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 194
 - proto: PlasmaWindoorSecureAtmosphericsLocked
   entities:
   - uid: 5683

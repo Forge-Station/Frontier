@@ -9,19 +9,6 @@
     retargetDoAfter: 0
     canTargetMobs: true
 
-- type: entity
-  description: Pointing to some unknown place.
-  id: PinpointerSyndicatePOI
-  parent: PinpointerSyndicateNuclear
-  suffix: Syndicate FOB
-  components:
-#  - type: Pinpointer #Forge-Change
-#    component: SyndicateFOB
-#    targetName: unknown
-   - type: ExtendedPinpointer #Forge-Change
-     targetId: Charlie
-     targetName: unknown
-
 # Dead Drop
 - type: entity
   name: dead drop hint pinpointer
@@ -45,3 +32,76 @@
     component: DeadDrop
     targetName: DeadDrop
 
+# Forge-Change-Start
+- type: entity
+  name: PinpointerBase
+  description: Pointing to some unknown place.
+  id: PinpointerBaseFrontier
+  parent: [BaseItem, RecyclableItemDeviceSmall]
+  abstract: true
+  suffix: Base
+  components:
+  - type: Transform
+    noRot: True
+  - type: Sprite
+    noRot: True
+    sprite: Objects/Devices/pinpointer.rsi
+    layers:
+    - state: pinpointer
+      map: ["enum.PinpointerLayers.Base"]
+    - state: pinonnull
+      map: ["enum.PinpointerLayers.Screen"]
+      shader: unshaded
+      visible: false
+  - type: Icon
+    sprite: Objects/Devices/pinpointer.rsi
+    state: pinpointer
+  - type: Item
+    sprite: Objects/Devices/pinpointer.rsi
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PinpointerVisuals.IsActive:
+        enum.PinpointerLayers.Screen:
+          True: { visible: True }
+          False: { visible: False }
+      enum.PinpointerVisuals.TargetDistance:
+        enum.PinpointerLayers.Screen:
+          Unknown: { state: pinonnull }
+          Reached: { state: pinondirect }
+          Close: { state: pinonclose }
+          Medium: { state: pinonmedium }
+          Far: { state: pinonfar }
+  - type: AnimationPlayer
+
+- type: entity
+  name: syndicate Charlie
+  description: Pointing to some unknown place.
+  id: PinpointerSyndicatePOI
+  suffix: Syndicate FOB
+  parent: PinpointerBaseFrontier
+  components:
+  - type: ExtendedPinpointer #Forge-Change
+    targetId: Charlie
+    targetName: unknown
+  - type: Sprite
+    layers:
+    - state: pinpointer-syndicate
+      map: ["enum.PinpointerLayers.Base"]
+    - state: pinonnull
+      map: ["enum.PinpointerLayers.Screen"]
+      shader: unshaded
+      visible: false
+  - type: Icon
+    state: pinpointer-syndicate
+
+- type: entity
+  name: locator
+  id: ExtendedPinpointer
+  parent: PinpointerBaseFrontier
+  components:
+  - type: ExtendedPinpointer
+    targetId: null
+    targetName: unknown
+
+# Forge-Change-End

@@ -14,7 +14,7 @@
     - !type:CreateEntityReactionEffect
       entity: FoodCurdCheese
       number: 2
-      
+
 # Mozzarella
 - type: reaction
   id: CurdlingMozzarella
@@ -42,4 +42,4 @@
       amount: 1
   products:
     OilGhee: 1
-    
+

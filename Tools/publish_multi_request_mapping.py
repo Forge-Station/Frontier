@@ -8,7 +8,7 @@ from typing import Iterable
 
 PUBLISH_TOKEN = os.environ["PUBLISH_MAPPING_TOKEN"]
 VERSION = os.environ["GITHUB_SHA"]
-FORK_ID = os.environ['FORK_ID_MAPPING']
+FORK_ID = "frontier_mapping"
 
 RELEASE_DIR = "release"
 

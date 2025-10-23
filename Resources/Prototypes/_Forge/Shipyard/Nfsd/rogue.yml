@@ -13,13 +13,16 @@
   parent: BaseVessel
   name: NSF Плут
   description: Малогабаритный штурмовой шаттл ДСБФ с системами активной маскировки.
-  price: 12200 #the appraisal is 9100$
+  price: 25125 #the appraisal is 9100$
   category: Micro
   group: Custom
   shuttlePath: /Maps/Forge/Shuttles/Nfsd/rogue.yml
   guidebookPage: Null
   class:
   - Fighter
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Rogue

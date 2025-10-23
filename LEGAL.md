@@ -20,6 +20,8 @@
 
 Код, созданный участниками Frontier, находится в пространствах имён `_NF`.
 
+Код, созданный участниками Forge Frontier - находится в пространствах имён `_Forge` или `Forge`
+
 Исходный код из [Space Station 14](https://github.com/space-wizards/space-station-14) взят под [лицензией MIT](https://github.com/Forge-Station/Frontier/blob/master/LICENSE-MIT.txt). Весь код вне конкретных пространств имён (за исключением поддиректорий Nyanotrasen) распространяется как MIT + AGPLv3 от Space Wizards Federation.
 
 ## Особые требования к ассетам
@@ -54,6 +56,7 @@
 | `_Impstation` | Impstation | https://github.com/impstation/imp-station-14 | AGPL 3.0 |
 | `_NC14` | Nuclear 14 | https://github.com/Vault-Overseers/nuclear-14 | AGPL 3.0 |
 | `Nyanotrasen` | Nyanotrasen | https://github.com/Nyanotrasen/Nyanotrasen | MIT |
+| `_Wega` | Wega | https://github.com/wega-team/ss14-wega | GPL 3.0 |
 
 Дополнительные репозитории с портированным кодом (без пространств имён):
 

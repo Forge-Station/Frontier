@@ -1,0 +1,45 @@
+# NFSD
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNfsdForgeDec
+  name: detective jumpsuit
+  description: detective jumpsuit desc
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/detective.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/detective.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNfsdForgeCoroner
+  name: coroner jumpsuit
+  description: coroner jumpsuit desc
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/medical.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/medical.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNfsdForgeCoronerAlt
+  name: coroner jumpsuit but that brigmedic
+  description: coroner jumpsuit but that brigmedic desc
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/brigmedic.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/brigmedic.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNfsdSpecialist
+  name: specialist jumpsuit
+  description: specialist jumpsuit desc
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/engineering.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/engineering.rsi
+# NFSD end

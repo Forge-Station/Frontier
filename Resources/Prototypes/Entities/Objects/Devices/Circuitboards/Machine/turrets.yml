@@ -13,7 +13,7 @@
       TurretCompatibleWeapon:
         amount: 1
         defaultPrototype: NFWeaponEnergyRifleSniperCannon # Frontier: WeaponLaserCannon<NFWeaponEnergyRifleSniperCannon
-        examineName: construction-insert-info-examine-name-laser-cannon 
+        examineName: construction-insert-info-examine-name-laser-cannon
       ProximitySensor:
         amount: 1
         defaultPrototype: ProximitySensor
@@ -26,7 +26,7 @@
     requirements:
       PowerCell: 1
     # End Frontier: convert power cell to machine part req
-        
+
 - type: entity
   id: WeaponEnergyTurretAIMachineCircuitboard
   parent: WeaponEnergyTurretStationMachineCircuitboard

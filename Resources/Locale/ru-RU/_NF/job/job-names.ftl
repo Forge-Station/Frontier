@@ -49,6 +49,7 @@ job-title-ert-mail-carrier = Почтальон ОБР
 JobContractorInterview = Кандидат на аванюриста
 JobMercenaryInterview = Кандидат на наемника
 JobPilotInterview = Кандидат на пилота
+JobparaMedicalInterview = Кандидат на парамедика
 JobPlantManager = Старший инженер Э.Э.
 JobPlantTechnician = Инженер Э.Э.
 JobPublicAffairsLiaison = Представитель Юр. департамента

@@ -140,9 +140,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   footstepSound:
-    collection: FootstepSticky
-    params:
-      volume: 6
+    collection: FootstepSlime
 
 - type: reagent
   id: IcedCoffee
@@ -347,7 +345,7 @@
       - !type:ModifyStatusEffect # Forge-Change
         effectProto: StatusEffectDrowsiness # Forge-Change
         time: 3 # Forge-Change
-        type: Remove 
+        type: Remove
     Poison:
       effects:
       - !type:HealthChange
@@ -449,6 +447,18 @@
       effects:
       - !type:SatiateThirst
         factor: 4
+    Gas:
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: true
+        conditions:
+        - !type:OrganType
+          type: Slime
+          shouldHave: true
+        damage:
+          types:
+            Heat: 3
 
 - type: reagent
   id: Ice

@@ -28,3 +28,129 @@
   - type: PointLight
     radius: 7
     energy: 3
+
+- type: entity
+  parent: [ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase, BaseC3SyndicateContraband]
+  id: ClothingHeadHelmetHardsuitSyndieSST
+  name: шлем кроваво-чёрного скафандра
+  description: Тяжелобронированный шлем, предназначенный для элитных операций. Собственность Ударного подразделения Синдиката.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hardsuits/syndicate_strike_team.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hardsuits/syndicate_strike_team.rsi
+    equippedPrefix: off
+    clothingVisuals:
+      head:
+      - state: off-equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+  - type: PointLight
+    color: darkred
+    radius: 7
+    energy: 3
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.9
+  - type: ThermalVision
+    flashDurationMultiplier: 2
+    isEquipment: true
+    toggleAction: ToggleThermalVision
+
+- type: entity
+  parent: [ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase, BaseC3Contraband, ContrabandClothing]
+  id: ClothingHeadHelmetHardsuitContractor
+  name: шлем жёлто-чёрного скафандра DCN™
+  description: Тяжелобронированный шлем, предназначенный для элитных операций.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hardsuits/contractor.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hardsuits/contractor.rsi
+  - type: PointLight
+    color: yellow
+    radius: 7
+    energy: 3
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+- type: entity
+  parent: [ClothingHeadHardsuitBase, BaseToggleClothing, PowerCellSlotSmallItem, BaseC3Contraband]
+  id: ClothingHeadHealmetContractorStealh
+  name: шлем экзокостюма DCN™
+  description: Прекрасно сидит на вашей голове фиксируя её положение
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hardsuits/contractor.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hardsuits/contractor.rsi
+    equippedState: off-equipped-HELMET
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+  - type: ToggleClothing
+    action: ActionTogglePhaseCloak
+    disableOnUnequip: true
+  - type: ComponentToggler
+    parent: true
+    components:
+    - type: Stealth
+      minVisibility: 0.01
+      lastVisibility: 0.01
+  - type: UseDelay
+    delay: 2
+  - type: PowerCellDraw
+    drawRate: 2
+  - type: ToggleCellDraw
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+- type: entity
+  parent: [ClothingHeadEVAHelmetBase, BaseC3Contraband, ContrabandClothing]
+  id: ClothingHeadHelmetHardsuitContractorEVA
+  name: шлем скафандра ВКД DCN™
+  description: Шлем, предназначенный для элитных операций тёмного интернета.
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hardsuits/contractor_eva.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hardsuits/contractor_eva.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9

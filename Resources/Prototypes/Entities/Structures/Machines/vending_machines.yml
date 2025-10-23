@@ -36,6 +36,15 @@
         density: 200
   - type: Destructible
     thresholds:
+    - trigger: # Excess damage, don't do anything
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
         damage: 100
@@ -43,20 +52,6 @@
       - !type:DoActsBehavior
         acts: ["Breakage"]
       - !type:EjectVendorItems
-    - trigger:
-        !type:DamageTrigger
-        damage: 200
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetSteel1:
-            min: 1
-            max: 1
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalGlassBreak
   - type: Repairable
     doAfterDelay: 8
   - type: ActivatableUI
@@ -75,6 +70,8 @@
   - type: Anchorable
   - type: TypingIndicator
     proto: robot
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
   - type: Speech
     speechVerb: Robotic
     speechSounds: Vending
@@ -877,6 +874,8 @@
   components:
   - type: VendingMachine
     pack: NanoMedPlusInventory
+    taxAccounts: # Frontier
+      Medical: 0.4 # Frontier
     offState: off
     brokenState: broken
     normalState: normal-unshaded
@@ -1500,6 +1499,8 @@
   components:
   - type: VendingMachine
     pack: NanoMedInventory
+    taxAccounts: # Frontier
+      Medical: 0.4 # Frontier
     offState: off
     brokenState: broken
     normalState: normal-unshaded
@@ -1710,6 +1711,8 @@
   components:
   - type: VendingMachine
     pack: MediDrobeInventory
+    taxAccounts: # Frontier
+      Medical: 0.4 # Frontier
     offState: off
     brokenState: broken
     normalState: normal-unshaded
@@ -2207,6 +2210,8 @@
   components:
   - type: VendingMachine
     pack: ChemVendInventory
+    taxAccounts: # Frontier
+      Medical: 0.4 # Frontier
     offState: off
     brokenState: broken
     normalState: normal
@@ -2238,9 +2243,21 @@
     pack: ChemVendInventorySyndicate
     offState: off
     brokenState: broken
-    normalState: normal
-    denyState: deny
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
     ejectDelay: 2
   - type: AccessReader
     access: [["SyndicateAgent"]]
-
+# Forge-change
+  - type: Sprite
+    sprite: Forge/Structures/Machines/med_syndi_alt.rsi # Forge-Change
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+# Forge-change end

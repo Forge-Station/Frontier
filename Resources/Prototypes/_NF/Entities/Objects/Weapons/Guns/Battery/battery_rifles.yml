@@ -12,6 +12,8 @@
     sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 2.2
 
 - type: entity
   id: NFWeaponEnergyRifleCarbinePractice
@@ -119,6 +121,7 @@
   description: An advanced gun that shoots beams capable of heating or cooling their target.
   components:
   - type: Gun
+    fireRate: 2 # Corvax-Forge: Weaponary update
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/laser.ogg
   - type: Sprite
@@ -131,18 +134,21 @@
       shader: unshaded
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/temp_gun.rsi
-  - type: Battery # 30 shots
-    maxCharge: 3000
-    startingCharge: 3000
+  - type: Battery # Default: 30 shots with 80 fireCost
+    maxCharge: 2400
+    startingCharge: 2400
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 4 # Default recharge rate: 1 shot per 20 seconds with 80 fireCost
   - type: ProjectileBatteryAmmoProvider
     proto: NFBoltTempgunCold # Frontier
-    fireCost: 100
+    fireCost: 80
   - type: BatteryWeaponFireModes
     fireModes:
     - proto: NFBoltTempgunCold
-      fireCost: 100
+      fireCost: 80
     - proto: NFBoltTempgunHot
-      fireCost: 100
+      fireCost: 80
   - type: MagazineVisuals
     magState: mag
     steps: 5

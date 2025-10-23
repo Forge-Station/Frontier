@@ -1,0 +1,43 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapHoS
+  name: head of security cap
+  description: The robust standard-issue cap of the Head of Security. For showing the officers who's in charge.
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/Head/Hats/hoshat.rsi
+    - type: Clothing
+      sprite: _CorvaxGoob/Clothing/Head/Hats/hoshat.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCapCentcomBlack
+  name: special operations officer cap
+  description: The NanoTrasen gold-engraved special cap of the higher ranks, which has long gone through more than one blitzkrieg...
+  components:
+    - type: Sprite
+      sprite: _CorvaxGoob/Clothing/Head/Hats/centcom_officer_black.rsi
+    - type: Clothing
+      sprite: _CorvaxGoob/Clothing/Head/Hats/centcom_officer_black.rsi
+
+- type: entity
+  parent: [ClothingHeadBase, BaseC1Contraband]
+  id: ClothingHeadHatBeretHeadOfSecurityAdvanced
+  name: head of security's parade beret
+  description: A particularly gilded beret, designed for the Head of Security.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Head/Hats/hos-expi.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Head/Hats/hos-expi.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.8

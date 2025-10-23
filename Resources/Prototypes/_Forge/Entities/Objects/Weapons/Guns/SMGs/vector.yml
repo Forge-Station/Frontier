@@ -1,6 +1,6 @@
 - type: entity #FrontierCorvax
   name: Vector (.22 LR)
-  parent: [ NFBaseWeaponSubMachineGunChamber35, BaseC1Contraband, NFBaseWeaponFrameSubMachineGunGorlex ]
+  parent: [ NFBaseWeaponSubMachineGunChamber35, BaseC3SyndicateContraband, NFBaseWeaponFrameSubMachineGunGorlex ]
   id: WeaponSubMachineGunVector22
   description: An illegal version of the legendary submachine gun for sport shooting. He might even be able to shoot a squirrel. Uses .22lr ammunition.
   components:
@@ -21,6 +21,7 @@
     - Belt
   - type: Gun
     fireRate: 12
+    projectileSpeed: 40
     selectedMode: FullAuto
     soundGunshot:
       path: /Audio/Forge/Weapons/Guns/Gunshots/Vector22.ogg
@@ -39,11 +40,11 @@
           - MagazineVector22
       gun_chamber:
         name: Chamber
-        startingItem: NFCartridgePistol35
+        startingItem: NFCartridgeRifle25
         priority: 1
         whitelist:
           tags:
-          - NFCartridgePistol35
+          - NFCartridgeRifle25
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -60,7 +61,7 @@
 
 - type: entity #FrontierCorvax
   name: Vector (.45 ACP)
-  parent: [ NFBaseWeaponPistolChamber45, BaseC1Contraband, NFBaseWeaponFrameSubMachineGunNanotrasen ]
+  parent: [ NFBaseWeaponRifleAssaultChamber20, BaseC1Contraband, NFBaseWeaponFrameSubMachineGunNanotrasen ]
   id: WeaponSubMachineGunVector45
   description: A legal civilian version of the already legendary and forgotten submachine gun. Uses caliber cartridges .45 ACP. Automatic fire is not included in the package.
   components:
@@ -81,6 +82,7 @@
     minAngle: 2
     maxAngle: 8
     fireRate: 4.2
+    projectileSpeed: 40
     selectedMode: SemiAuto
     soundGunshot:
       path: /Audio/Forge/Weapons/Guns/Gunshots/Vector45.ogg
@@ -99,11 +101,11 @@
             - MagazineVector45
       gun_chamber:
         name: Chamber
-        startingItem: NFCartridgePistol45
+        startingItem: NFCartridgeRifle20
         priority: 1
         whitelist:
           tags:
-          - NFCartridgePistol45
+          - NFCartridgeRifle20
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container

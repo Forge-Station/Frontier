@@ -47,6 +47,12 @@
   kind: source
   path: "/Textures/Shaders/rainbow.swsl"
 
+# sin city effect: everything is greyscale, except red
+- type: shader
+  id: Noir
+  kind: source
+  path: "/Textures/Shaders/noir.swsl"
+
 - type: shader
   id: CameraStatic
   kind: source
@@ -118,3 +124,8 @@
   id: CircleAlphaMask
   kind: source
   path: "/Textures/Shaders/circle_alpha_mask.swsl"
+
+- type: shader # Forge-Change wega nightvision
+  id: NaturalNightVision
+  kind: source
+  path: "/Textures/_Wega/Shaders/nightvision.swsl"

@@ -161,7 +161,7 @@ public sealed partial class DockingScreen : BoxContainer
 
                 if (_entManager.EntityExists(dockGrid))
                 {
-                    iffLabel = _shuttles.GetIFFLabel(dockGrid.Value);
+                    iffLabel = _shuttles.GetIFFLabel(dockGrid.Value, viewerGridUid: shuttle); // Forge-Change
                 }
 
                 iffLabel ??= Loc.GetString("shuttle-console-unknown");

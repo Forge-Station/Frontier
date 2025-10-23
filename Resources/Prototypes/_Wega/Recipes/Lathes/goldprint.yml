@@ -1,0 +1,182 @@
+- type: latheRecipe
+  id: GoldRing
+  result: GoldRing
+  completetime: 20
+  materials:
+    Gold: 800
+
+- type: latheRecipe
+  id: SilverRing
+  result: SilverRing
+  completetime: 20
+  materials:
+    Silver: 800
+
+- type: latheRecipe
+  id: GoldRingDiamond
+  result: GoldRingDiamond
+  completetime: 20
+  materials:
+    Gold: 800
+    Plasma: 1200
+    PlasmaGlass: 2000
+
+
+- type: latheRecipe
+  id: SilverRingDiamond
+  result: SilverRingDiamond
+  completetime: 20
+  materials:
+    Silver: 800
+    Plasma: 1200
+    PlasmaGlass: 2000
+
+- type: latheRecipe
+  id: GoldRingGem
+  result: GoldRingGem
+  completetime: 20
+  materials:
+    Gold: 1200
+    Diamond: 50
+    Plasma: 2000
+    PlasmaGlass: 4000
+
+- type: latheRecipe
+  id: SilverRingGem
+  result: SilverRingGem
+  completetime: 20
+  materials:
+    Silver: 1200
+    Diamond: 50
+    Plasma: 2000
+    PlasmaGlass: 4000
+
+# Forge-change
+# - type: latheRecipe
+#  id: HolyHandGrenadeMir
+#  result: HolyHandGrenadeMir
+#  completetime: 6.4
+#  materials:
+#    Silver: 1000
+#    Gold: 500
+#    Diamond: 100
+# Forge-change end
+
+- type: latheRecipe
+  id: ClothingHandsGoldBrasetGem
+  result: ClothingHandsGoldBrasetGem
+  completetime: 40
+  materials:
+    Gold: 2000
+    Plasma: 2000
+    PlasmaGlass: 4000
+    Diamond: 100
+
+- type: latheRecipe
+  id: ClothingHandsGoldBraset
+  result: ClothingHandsGoldBraset
+  completetime: 40
+  materials:
+    Gold: 2000
+
+# Forge-change add
+# Coins
+- type: latheRecipe
+  id: TreasureCoinIronRecipe
+  result: TreasureCoinIron
+  completetime: 5
+  materials:
+    Steel: 1000
+    Plasma: 200
+
+- type: latheRecipe
+  id: TreasureCoinSilverRecipe
+  result: TreasureCoinSilver
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plasma: 200
+
+- type: latheRecipe
+  id: TreasureCoinGoldRecipe
+  result: TreasureCoinGold
+  completetime: 10
+  materials:
+    Gold: 1000
+    Plasma: 200
+
+- type: latheRecipe
+  id: TreasureCoinAdamantineRecipe
+  result: TreasureCoinAdamantine
+  completetime: 10
+  materials:
+    Silver: 1500
+    Gold: 1500
+    Plasma: 400
+
+- type: latheRecipe
+  id: TreasureCoinDiamondRecipe
+  result: TreasureCoinDiamond
+  completetime: 10
+  materials:
+    Silver: 1500
+    Gold: 1500
+    Uranium: 1000
+    Plasma: 400
+
+# все дороги ведут в рим
+- type: latheRecipe
+  id: WristwatchGoldRecipe
+  result: WristwatchGold
+  completetime: 10
+  materials:
+    Silver: 2000
+    Gold: 3000
+    Plasma: 1000
+    PlasmaGlass: 2000
+
+# EMAG
+- type: latheRecipe
+  id: ArabianLampRecipe
+  result: ArabianLamp
+  completetime: 10
+  materials:
+    Gold: 3000
+    Uranium: 1000
+    Plasma: 2000
+
+- type: latheRecipe
+  id: ClothingMaskGoldenCursedRecipe
+  result: ClothingMaskGoldenCursed
+  completetime: 10
+  materials:
+    Gold: 9000
+    Plasma: 3000
+    Cloth: 1000
+
+- type: latheRecipe
+  id: GoldenBikeHornRecipe
+  result: GoldenBikeHorn
+  completetime: 10
+  materials:
+    Gold: 2000
+    Plasma: 1000
+    Cloth: 1000
+    Bananium: 9998
+
+- type: latheRecipe
+  id: ClothingHandsKnuckleDustersQMRecipe
+  result: ClothingHandsKnuckleDustersQM
+  completetime: 10
+  materials:
+    Gold: 24000
+    Plasma: 12000
+    Plasteel: 6000
+    Durathread: 2000
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseSupplyMachineRecipeCategory ]
+  id: GoldprinterMachineCircuitboard
+  result: GoldprinterMachineCircuitboard
+
+# Forge-change end

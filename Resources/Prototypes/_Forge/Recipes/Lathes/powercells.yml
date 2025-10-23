@@ -1,0 +1,19 @@
+- type: latheRecipe
+  id: PowerCellNTRecipe
+  result: PowerCellNanoT
+  categories:
+  - Parts
+  completetime: 20
+  materials:
+    Steel: 500
+    Glass: 400
+    Uranium: 200
+    Gold: 100
+    Bananium: 300
+    Plastic: 300
+    Plasteel: 500
+
+- type: latheRecipePack
+  id: PowerCellNTPack
+  recipes:
+  - PowerCellNTRecipe

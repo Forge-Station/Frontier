@@ -1,0 +1,14 @@
+ent-SheriffSabre = сабля шерифа
+    .desc = Говорят, сабля шерифа помнит каждый вынесенный приговор...
+ent-CentcomSabre = сабля ЦентКома
+    .desc = Парадная сабля, символ власти и традиций корпорации. Отполированное до блеска лезвие в серебряно-золотом обрамлении - больше знак престижа, чем оружие, но в умелых руках способна напомнить о том, что власть ЦентКома имеет и острие.
+ent-OfficerSabre = сабля офицера
+    .desc = Символ командования, который при необходимости превращается в оружие.
+ent-ClothingBeltOfficerSheath = сабельные ножны офицера
+    .desc = Практичность, прочность, сабля точно не окажется в вашей ноге.
+ent-ClothingBeltCentcomSheath = сабельные ножны ЦентКома
+    .desc = Практичность, прочность, сабля точно не окажется в вашей ноге.
+ent-ClothingBeltOfficerSheathFilled = { ent-ClothingBeltOfficerSheath }
+    .desc = { ent-ClothingBeltOfficerSheath.desc }
+ent-ClothingBeltCentcomSheathFilled = { ent-ClothingBeltCentcomSheath }
+    .desc = { ent-ClothingBeltCentcomSheath.desc }

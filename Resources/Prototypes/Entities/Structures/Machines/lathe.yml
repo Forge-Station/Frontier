@@ -230,6 +230,7 @@
     - NFScience # Frontier
     - NFPouches # Frontier
     - CorvaxEquipment #Corvax-Frontier
+    - PowerCellNTPack # Forge-change
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - NfsdAmmoStatic # Frontier: SecurityAmmo<NfsdAmmoStatic
@@ -306,6 +307,7 @@
     - NFMedicalBoards # Frontier
     - NFServiceBoards # Frontier
     - BluespaceHarvester #  Frontier
+    - GoldprinterMachineCircuitboard # Forge-change
   - type: EmagLatheRecipes
     emagDynamicPacks: [] # Frontier: empty list
     # - SecurityBoards # Frontier
@@ -415,7 +417,6 @@
   parent: BaseLatheLube
   name: security techfab
   description: Prints equipment for use by security crew.
-  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi

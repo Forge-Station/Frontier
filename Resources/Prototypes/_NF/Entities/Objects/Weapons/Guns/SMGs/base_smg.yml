@@ -86,7 +86,7 @@
   abstract: true
   components:
   - type: Gun
-    examineCaliber: gun-examine-caliber-35
+    examineCaliber: gun-examine-caliber-25
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/smg.ogg
   - type: ChamberMagazineAmmoProvider
@@ -110,17 +110,17 @@
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
-        whitelist: &mag35Whitelist
+        whitelist: &mag25Whitelist
           tags:
             - NFMagazineSubMachineGunPistol35
         whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber: &chamber35Standard
+      gun_chamber: &chamber25Standard
         name: Chamber
-        startingItem: NFCartridgePistol35
+        startingItem: NFCartridgeRifle25
         priority: 1
         whitelist:
           tags:
-            - NFCartridgePistol35
+            - NFCartridgeRifle25
 
 - type: entity
   id: NFBaseWeaponSubMachineGunChamber35Rubber
@@ -135,15 +135,15 @@
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
-        whitelist: *mag35Whitelist
+        whitelist: *mag25Whitelist
         whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber: &chamber35Rubber
+      gun_chamber: &chamber25Rubber
         name: Chamber
-        startingItem: NFCartridgePistol35Rubber
+        startingItem: NFCartridgeRifle25Rubber
         priority: 1
         whitelist:
           tags:
-            - NFCartridgePistol35
+            - NFCartridgeRifle25
 
 - type: entity
   id: NFBaseWeaponSubMachineGunChamber35TopMounted
@@ -158,10 +158,10 @@
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
-        whitelist: &mag35TopMountedWhitelist
+        whitelist: &mag25TopMountedWhitelist
           tags:
             - NFMagazineSubMachineGunTopMountedPistol35
-      gun_chamber: *chamber35Standard
+      gun_chamber: *chamber25Standard
 
 - type: entity
   id: NFBaseWeaponSubMachineGunChamber35TopMountedRubber
@@ -176,5 +176,5 @@
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
-        whitelist: *mag35TopMountedWhitelist
-      gun_chamber: *chamber35Rubber
+        whitelist: *mag25TopMountedWhitelist
+      gun_chamber: *chamber25Rubber

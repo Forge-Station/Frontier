@@ -514,14 +514,6 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Buksir
-- proto: ActionToggleLight
-  entities:
-  - uid: 3
-    components:
-    - type: Transform
-      parent: 2
-    - type: InstantAction
-      container: 2
 - proto: AirAlarm
   entities:
   - uid: 4
@@ -3167,22 +3159,8 @@ entities:
     - type: Transform
       pos: -3.531167,16.075829
       parent: 1
-    - type: HandheldLight
-      toggleActionEntity: 3
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3
     - type: Physics
       canCollide: True
-    - type: ActionsContainer
 - proto: LightBulbOld
   entities:
   - uid: 422

@@ -46,3 +46,50 @@
       - id: NFWeaponSubMachineGunAtreides
       - id: NFMagazineSubMachineGun35
         amount: 2
+
+- type: entity
+  parent: ClothingDuffelContractorForge
+  id: ClothingDuffelContractorForgeEVA
+  name: вещмешок DCN™
+  description: Большой вещмешок для хранения предтательских предметов. Выглядит стильно и оригинально.
+  suffix: Заполненный, ВКД
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingOuterHardsuitContractorEVA
+      - id: ClothingHeadHelmetHardsuitContractorEVA
+      - id: ClothingMaskGasContractor
+      - id: ClothingHandsGlovesCombat
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: DoubleEmergencyNitrogenTankFilled
+
+- type: entity
+  parent: ClothingDuffelContractorForge
+  id: ClothingDuffelContractorForgeStealh
+  name: вещмешок DCN™
+  description: Большой вещмешок для хранения предтательских предметов. Выглядит стильно и оригинально.
+  suffix: Заполненный, Стелс костюм
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingOuterHardsuitContractorStealh
+      - id: PowerCellMedium
+      - id: ClothingMaskGasContractor
+      - id: ClothingHandsGlovesCombat
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: DoubleEmergencyNitrogenTankFilled
+
+- type: entity
+  parent: ClothingDuffelContractorForge
+  id: ClothingDuffelContractorForgeCombat
+  name: вещмешок DCN™
+  description: Большой вещмешок для хранения предтательских предметов. Выглядит стильно и оригинально.
+  suffix: Заполненный, Боевой скафандр
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingOuterHardsuitContractor
+      - id: ClothingMaskGasContractor
+      - id: ClothingHandsGlovesCombat
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: DoubleEmergencyNitrogenTankFilled

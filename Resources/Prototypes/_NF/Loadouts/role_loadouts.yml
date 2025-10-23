@@ -306,7 +306,7 @@
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
-  - ContractorBackpackItems
+  - NFSDBackpackItems # Forge-change
   - ContractorHandItems
   - NfsdSpeciesSpecific
 
@@ -331,7 +331,7 @@
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
-  - ContractorBackpackItems
+  - NFSDBackpackItems # Forge-change
   - ContractorHandItems
   - NfsdSpeciesSpecific
 
@@ -356,7 +356,7 @@
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
-  - ContractorBackpackItems
+  - CoronerBackpackItems # Forge-change
   - ContractorHandItems
   - NfsdSpeciesSpecific
 
@@ -371,7 +371,7 @@
   - NFDetectiveOuterClothing
   - NfsdForcedOuterClothing
   - NfsdShoesBrown
-  - NfsdFace
+  - DetectiveFace # Forge-change add: DetectiveFace
   - NfsdGlasses
   - NfsdBelt
   - NfsdEarsCream
@@ -381,7 +381,7 @@
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
-  - ContractorBackpackItems
+  - NFSDBackpackItems # Forge-change
   - ContractorHandItems
   - NfsdSpeciesSpecific
 
@@ -405,7 +405,7 @@
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
-  - ContractorBackpackItems
+  - NFSDBackpackItems # Forge-change
   - ContractorHandItems
   - NFSpeciesSpecific # Explicitly civilian variant
 
@@ -490,14 +490,14 @@
   - SheriffHead
   - SheriffNeck
   - SheriffJumpsuit
-  - NfsdGlovesCream
+  - SheriffGloves #Corvax Forge: NfsdGlovesCream → SheriffGloves
   - NfsdBackpackBrown
   - SheriffOuterClothing
   - NfsdForcedOuterClothing
-  - NfsdShoesBrown
+  - SheriffBoots #Corvax Forge: NfsdShoesBrown → SheriffBoots
   - SheriffFace
-  - NfsdGlasses
-  - NfsdBelt
+  - SheriffGlasses #Corvax Forge: NfsdGlasses → SheriffGlasses
+  - SheriffBelt #Corvax Forge: NfsdBelt → SheriffBelt
   - SheriffEars
   - NfsdBoxSurvival
   - SheriffPDA

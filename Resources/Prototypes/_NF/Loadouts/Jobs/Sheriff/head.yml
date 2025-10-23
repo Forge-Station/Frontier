@@ -5,3 +5,21 @@
     proto: NFHeadwearCapable
   equipment:
     head: ClothingHeadHatNfsdCampaignFilled
+
+#Corvax Forge
+- type: loadout
+  id: SheriffClothingHeadHatBeretSheriff
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ClothingHeadHatBeretSheriff
+
+#Corvax Forge
+- type: loadout
+  id: SheriffClothingHeadHatCapcapSheriff
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ClothingHeadHatCapcapSheriff

@@ -28,6 +28,25 @@
   - !type:AddImplantSpecial
     implants: [ MedicalTrackingImplanter ]
 
+- type: job
+  id: paraMedicalInterview
+  name: Парамедик
+  description: Полевой медик занимающийся спасением раненых.
+  playTimeTracker: JobparaMedicalInterview
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 1 # 48 hours
+ # whitelisted: true
+#  startingGear: ParaMedicalHologramGear
+  icon: "JobIconParamedic"
+  supervisors: job-supervisors-MMO
+  setPreference: false
+  access:
+  - Medical
+  accessGroups:
+  - Medical
+  jobEntity: InterviewHologramparaMedical
+
 - type: startingGear
   id: ParaMedicalGear
   equipment:
@@ -43,3 +62,13 @@
     - PaperWrittenMedic
     - DefibrillatorCompact
     - MedTekCartridge
+
+#- type: startingGear
+#  id: ParaMedicalHologramGear
+#  equipment:
+#    jumpsuit: ClothingUniformJumpsuitPilot
+#    shoes: ClothingShoesBootsPilot
+
+- type: chameleonOutfit
+  id: paraMedicalChameleonOutfit
+  job: paraMedical

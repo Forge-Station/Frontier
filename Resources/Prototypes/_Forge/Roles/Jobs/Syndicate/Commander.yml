@@ -36,7 +36,7 @@
   equipment:
     ears: ClothingHeadsetAltSyndicate
     id: SyndiPDAComa
-    belt: ClothingBeltSheathFilled
+    belt: ClothingBeltSheathSyndicateFilled
     pocket1: NFWeaponPistolCobra
     mask: ClothingMaskGasSwat
   storage:
@@ -44,3 +44,7 @@
     - NFBoxSurvivalExtended
     - NFMagazinePistol45
     - SyndicateDataMinerFlatpack
+
+- type: chameleonOutfit
+  id: CommanderChameleonOutfit
+  job: Commander

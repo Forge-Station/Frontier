@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: SBI Ворон
   description: Малогабаритный шаттл для наёмников, рекомендуемый состав экипажа 2 человека.
-  price: 46000
+  price: 50000
   category: Small
   group: Mercenary
   shuttlePath: /Maps/Forge/Shuttles/Mercenary/crown.yml
@@ -37,6 +37,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

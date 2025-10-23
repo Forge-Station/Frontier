@@ -1,0 +1,15 @@
+- type: damageModifierSet
+  id: Skrell
+  coefficients:
+    Heat: 1.5
+    Poison: 0.75
+
+- type: damageModifierSet
+  id: Ariral
+  coefficients:
+    Blunt: 0.8
+    Slash: 0.8
+    Piercing: 0.9
+    Cold: 1.25
+    Heat: 1.25
+    Poison: 0.8

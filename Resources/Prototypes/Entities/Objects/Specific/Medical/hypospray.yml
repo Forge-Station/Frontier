@@ -72,6 +72,8 @@
     maxFillLevels: 4
     fillBaseName: hypo_fill
     solutionName: hypospray
+  - type: StaticPrice # Forge-change add: StaticPrice
+    price: 10000 # бубубу бебебе
 
 - type: entity
   name: borghypo

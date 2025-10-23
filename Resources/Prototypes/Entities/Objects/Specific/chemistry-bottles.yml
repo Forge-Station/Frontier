@@ -236,6 +236,8 @@
         reagents:
         - ReagentId: Nocturine
           Quantity: 30
+  - type: StaticPrice # Forge-change: add StaticPrice
+    price: 200 # Крепись
 
 - type: entity
   id: ChemistryBottleEphedrine
@@ -251,6 +253,8 @@
         reagents:
         - ReagentId: Ephedrine
           Quantity: 30
+  - type: StaticPrice # Forge-change: add StaticPrice
+    price: 100 # Крепись
 
 - type: entity
   id: ChemistryBottleOmnizine
@@ -266,6 +270,8 @@
         reagents:
         - ReagentId: Omnizine
           Quantity: 30
+  - type: StaticPrice # Forge-change: add StaticPrice
+    price: 400 # Крепись
 
 - type: entity
   parent: BaseChemistryBottleFilled

@@ -22,6 +22,14 @@ public sealed partial class MechComponent : Component
     public bool BreakOnEmag = true;
 
     /// <summary>
+    /// Forge-Change:
+    /// A multiplier used to calculate how much of the damage done to a mech
+    /// is transfered to the pilot
+    /// </summary>
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float MechEnergyWaste = 10;
+
+    /// <summary>
     /// Forge-Change: is the mech lights are toggled?
     /// </summary>
     [DataField("light")]
@@ -34,6 +42,15 @@ public sealed partial class MechComponent : Component
     [DataField("internals")]
     [AutoNetworkedField]
     public bool Internals = false;
+
+    /// <summary>
+    /// Forge-Change: A whitelist for inserting equipment items.
+    /// </summary>
+    [DataField]
+    public EntityWhitelist? BatteryWhitelist;
+    
+    [DataField]
+    public EntityWhitelist? GasTankWhitelist;
 
     /// <summary>
     /// How much "health" the mech has left.
@@ -78,6 +95,15 @@ public sealed partial class MechComponent : Component
 
     [ViewVariables]
     public readonly string GasTankSlotId = "mech-gas-tank-slot";
+
+    /// <summary>
+    /// The slot the battery is stored in.
+    /// </summary>
+    [ViewVariables]
+    public ContainerSlot CapacitorSlot = default!;
+
+    [ViewVariables]
+    public readonly string CapacitorSlotId = "mech-capacitor-slot";
 
     /// <summary>
     /// A multiplier used to calculate how much of the damage done to a mech

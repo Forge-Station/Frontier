@@ -21,7 +21,10 @@
 #   shuttlePath: /Maps/Forge/Shuttles/Nfsd/Dakota.yml
 #   class:
 #   - Pursuit
-  
+#   addComponents:
+#   - type: ShuttleFaction
+#     faction: NFSD
+
 # - type: gameMap
 #   id: Dakota
 #   mapName: 'NSF Дакота'

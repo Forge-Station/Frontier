@@ -71,6 +71,7 @@
   id: SpaceLube
   name: reagent-name-space-lube
   desc: reagent-desc-space-lube
+  evaporationSpeed: 0.1
   slipData:
     requiredSlipSpeed: 1
     superSlippery: true
@@ -109,7 +110,7 @@
       - !type:ModifyStatusEffect # Forge-Change
         effectProto: StatusEffectSeeingRainbow # Forge-Change
         time: 5
-        type: Add 
+        type: Add
         refresh: false
     Drink:
       effects:
@@ -120,6 +121,4 @@
         time: 5
         refresh: false
   footstepSound:
-    collection: FootstepSticky
-    params:
-      volume: 6
+    collection: FootstepSlime

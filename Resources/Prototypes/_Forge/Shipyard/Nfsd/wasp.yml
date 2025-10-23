@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: NSF Шершень
   description: Крупногабаритный каторжный шаттл. Рекомендованный состав команды 8+ человек.
-  price: 155000
+  price: 226350
   category: Large
   group: Security
   access: Bailiff
@@ -23,6 +23,9 @@
   - Capital
   - Detainment
   - Expedition
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Wasp

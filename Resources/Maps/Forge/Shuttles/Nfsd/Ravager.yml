@@ -8317,22 +8317,6 @@ entities:
     - type: Transform
       pos: 0.5,20.5
       parent: 3
-- proto: NFWeaponLauncherRocket
-  entities:
-  - uid: 676
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.681276,8.49919
-      parent: 3
-- proto: NFWeaponLauncherRocketEmp
-  entities:
-  - uid: 497
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.415651,8.514815
-      parent: 3
 - proto: NitrogenCanister
   entities:
   - uid: 939

@@ -1,0 +1,31 @@
+- type: latheRecipePack
+  id: GoldPrinterRec
+  recipes:
+    - GoldRing
+    - SilverRing
+    - GoldRingDiamond
+    - SilverRingDiamond
+    - GoldRingGem
+    - SilverRingGem
+    - ClothingHandsGoldBraset
+    - ClothingHandsGoldBrasetGem
+    - TreasureCoinIronRecipe
+    - TreasureCoinSilverRecipe
+    - TreasureCoinGoldRecipe
+    - TreasureCoinAdamantineRecipe
+    - TreasureCoinDiamondRecipe
+    - WristwatchGoldRecipe
+
+# Forge-change add EMAG lathepack
+- type: latheRecipePack
+  id: GoldPrinterRecEMAG
+  recipes:
+    - ArabianLampRecipe
+    - ClothingMaskGoldenCursedRecipe
+    - GoldenBikeHornRecipe
+    - ClothingHandsKnuckleDustersQMRecipe
+
+- type: latheRecipePack
+  id: GoldprinterMachineCircuitboard
+  recipes:
+  - GoldprinterMachineCircuitboard

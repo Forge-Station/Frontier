@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: Tochechka-dot
+# Discord: t4k_dnh CorvaxForge
+# License: CC-BY-NC-ND-3.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Mule
+  parent: BaseVessel
+  name: LVHI Мул
+  description: Среднегабаритный экспедиционный шаттл. Рекомендованный состав команды 6-8 человек.
+  price: 141900
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/Forge/Shuttles/Expedition/Mule.yml
+  class:
+  - Expedition
+  - Civilian
+
+- type: gameMap
+  id: Mule
+  mapName: 'LVHI Мул'
+  mapPath: /Maps/Forge/Shuttles/Expedition/Mule.yml
+  minPlayers: 0
+  stations:
+    Mule:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Мул {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

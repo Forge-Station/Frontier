@@ -303,7 +303,7 @@
 
 - type: entity
   id: NFAmmunitionBoxRifle20Incendiary
-  parent: NFBaseAmmunitionBoxRifle20
+  parent: [NFBaseAmmunitionBoxRifle20, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.20 rifle, incendiary)
   components:
   - type: BallisticAmmoProvider
@@ -321,7 +321,7 @@
 
 - type: entity
   id: NFAmmunitionBoxRifle20Uranium
-  parent: NFBaseAmmunitionBoxRifle20
+  parent: [NFBaseAmmunitionBoxRifle20, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.20 rifle, uranium)
   components:
   - type: BallisticAmmoProvider
@@ -408,7 +408,7 @@
 
 - type: entity
   id: NFAmmunitionBoxBigRifle20Incendiary
-  parent: NFBaseAmmunitionBoxBigRifle20
+  parent: [NFBaseAmmunitionBoxBigRifle20, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.20 rifle, incendiary)
   components:
   - type: BallisticAmmoProvider
@@ -425,7 +425,7 @@
 
 - type: entity
   id: NFAmmunitionBoxBigRifle20Uranium
-  parent: NFBaseAmmunitionBoxBigRifle20
+  parent: [NFBaseAmmunitionBoxBigRifle20, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.20 rifle, uranium)
   components:
   - type: BallisticAmmoProvider
@@ -511,7 +511,7 @@
 
 - type: entity
   id: NFAmmunitionBoxRifle25Incendiary
-  parent: NFBaseAmmunitionBoxRifle25
+  parent: [NFBaseAmmunitionBoxRifle25, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.25 rifle, incendiary)
   components:
   - type: BallisticAmmoProvider
@@ -529,7 +529,7 @@
 
 - type: entity
   id: NFAmmunitionBoxRifle25Uranium
-  parent: NFBaseAmmunitionBoxRifle25
+  parent: [NFBaseAmmunitionBoxRifle25, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.25 rifle, uranium)
   components:
   - type: BallisticAmmoProvider
@@ -616,7 +616,7 @@
 
 - type: entity
   id: NFAmmunitionBoxBigRifle25Incendiary
-  parent: NFBaseAmmunitionBoxBigRifle25
+  parent: [NFBaseAmmunitionBoxBigRifle25, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.25 rifle, incendiary)
   components:
   - type: BallisticAmmoProvider
@@ -633,7 +633,7 @@
 
 - type: entity
   id: NFAmmunitionBoxBigRifle25Uranium
-  parent: NFBaseAmmunitionBoxBigRifle25
+  parent: [NFBaseAmmunitionBoxBigRifle25, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.25 rifle, uranium)
   components:
   - type: BallisticAmmoProvider
@@ -719,7 +719,7 @@
 
 - type: entity
   id: NFAmmunitionBoxRifle30Incendiary
-  parent: NFBaseAmmunitionBoxRifle30
+  parent: [NFBaseAmmunitionBoxRifle30, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.30 rifle, incendiary)
   components:
   - type: BallisticAmmoProvider
@@ -737,7 +737,7 @@
 
 - type: entity
   id: NFAmmunitionBoxRifle30Uranium
-  parent: NFBaseAmmunitionBoxRifle30
+  parent: [NFBaseAmmunitionBoxRifle30, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.30 rifle, uranium)
   components:
   - type: BallisticAmmoProvider
@@ -824,7 +824,7 @@
 
 - type: entity
   id: NFAmmunitionBoxBigRifle30Incendiary
-  parent: NFBaseAmmunitionBoxBigRifle30
+  parent: [NFBaseAmmunitionBoxBigRifle30, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.30 rifle, incendiary)
   components:
   - type: BallisticAmmoProvider
@@ -841,7 +841,7 @@
 
 - type: entity
   id: NFAmmunitionBoxBigRifle30Uranium
-  parent: NFBaseAmmunitionBoxBigRifle30
+  parent: [NFBaseAmmunitionBoxBigRifle30, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.30 rifle, uranium)
   components:
   - type: BallisticAmmoProvider

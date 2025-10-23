@@ -35,6 +35,8 @@
   description: |-
     This is an antique laser pistol with two settings: disable and kill. All craftsmanship is of the highest quality. It is decorated with a mahogany grip and chrome filigree. The object menaces with spikes of energy. On the item is an image of a captain and a clown. The clown is dead. The captain is striking a heroic pose.
   components:
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 3
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Battery/antiquelasergun.rsi
   - type: Clothing
@@ -97,6 +99,8 @@
   - type: BatterySelfRecharger # Recharges 1 shot per 3 seconds
     autoRecharge: true
     autoRechargeRate: 20
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 3
 
 # Frontier
 - type: entity
@@ -121,6 +125,8 @@
       - state: inhand-right
       - state: inhand-right-unshaded
         shader: unshaded
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 2.8
 
 #region Pulse
 - type: entity

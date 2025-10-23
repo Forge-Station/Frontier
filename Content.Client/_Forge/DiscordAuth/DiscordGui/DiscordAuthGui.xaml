@@ -1,0 +1,41 @@
+﻿<Control xmlns="https://spacestation14.io"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:parallax="clr-namespace:Content.Client.Parallax"
+         xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls">
+    <parallax:ParallaxControl />
+    <Control HorizontalAlignment="Center" VerticalAlignment="Center">
+        <PanelContainer StyleClasses="AngleRect" />
+        <BoxContainer Orientation="Vertical">
+            <BoxContainer Orientation="Horizontal">
+                <Label Margin="8 0 0 0" Text="{Loc 'stalker-discord-auth-title'}"
+                       StyleClasses="LabelHeading" VAlign="Center" />
+                <Button Name="QuitButton" Text="{Loc 'stalker-discord-auth-quit-btn'}"
+                        HorizontalAlignment="Right" HorizontalExpand="True" />
+            </BoxContainer>
+            <controls:HighDivider />
+            <BoxContainer Orientation="Horizontal" Margin="50 20 50 20" Align="Center">
+                <RichTextLabel Name="InfoLabel"
+                             VerticalAlignment="Center"
+                             HorizontalExpand="True"
+                             Margin="0 0 20 0"/>
+                <TextureRect Name="QrCodeDisplay"
+                           VerticalAlignment="Center"
+                           Stretch="Scale"
+                           MaxWidth="200"
+                           MaxHeight="200" />
+            </BoxContainer>
+            <BoxContainer Orientation="Horizontal" Margin="50 20 50 20" Align="Center">
+                <RichTextLabel Name="ErrorMessage" />
+            </BoxContainer>
+            <BoxContainer HorizontalExpand="True">
+                <LineEdit Editable="False" Name="AuthLinkEdit" HorizontalExpand="True" />
+                <LineEdit Editable="False" Name="DLinkEdit" HorizontalExpand="True" />
+            </BoxContainer>
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                <Button Name="AuthorizeButton" Text="{Loc 'stalker-discord-auth-text'}" HorizontalExpand="True" StyleClasses="OpenRight" />
+                <Button Name="DiscordButton" Text="{Loc 'stalker-discord-auth-dlink'}" HorizontalExpand="True" StyleClasses="OpenLeft" />
+                <Button Name="SkipButton" Text="{Loc 'stalker-discord-auth-skip'}" HorizontalExpand="True" />
+            </BoxContainer>
+        </BoxContainer>
+    </Control>
+</Control>

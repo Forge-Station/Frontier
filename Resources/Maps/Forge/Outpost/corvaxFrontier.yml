@@ -7260,30 +7260,6 @@ entities:
     - type: ContainedSolution
       containerName: food
       container: 10
-- proto: ActionBibleSummon
-  entities:
-  - uid: 13
-    components:
-    - type: Transform
-      parent: 12
-    - type: InstantAction
-      container: 12
-- proto: ActionStethoscope
-  entities:
-  - uid: 15
-    components:
-    - type: Transform
-      parent: 14
-    - type: EntityTargetAction
-      container: 14
-- proto: ActionToggleLight
-  entities:
-  - uid: 17
-    components:
-    - type: Transform
-      parent: 16
-    - type: InstantAction
-      container: 16
 - proto: AirAlarm
   entities:
   - uid: 18
@@ -14455,20 +14431,6 @@ entities:
     - type: Transform
       pos: -10.5,-12.5
       parent: 2
-    - type: Summonable
-      summonActionEntity: 13
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 13
-    - type: ActionsContainer
 - proto: BigBox
   entities:
   - uid: 1182
@@ -24471,14 +24433,6 @@ entities:
     - type: Transform
       pos: 14.33576,21.629574
       parent: 2
-    - type: Stethoscope
-      actionEntity: 15
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 15
 - proto: ClothingOuterVestWeb
   entities:
   - uid: 3119
@@ -47738,22 +47692,8 @@ entities:
     - type: Transform
       pos: 21.647375,-13.482686
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 17
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 17
     - type: Physics
       canCollide: True
-    - type: ActionsContainer
 - proto: LandMineKick
   entities:
   - uid: 6337

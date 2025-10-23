@@ -61,7 +61,7 @@ public sealed class RainbowOverlay : Overlay
         }
         else
         {
-            Intoxication -= Intoxication/(timeLeft - TimeTicker) * args.DeltaSeconds;
+            Intoxication -= Intoxication / (timeLeft - TimeTicker) * args.DeltaSeconds;
         }
     }
 

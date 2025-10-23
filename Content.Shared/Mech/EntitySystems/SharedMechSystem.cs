@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Shared._Forge.ForgeVars;
+using Content.Shared._Forge;
 using Content.Shared._Forge.Mech; // Forge-Change
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems; // Forge-Change
@@ -43,7 +43,7 @@ namespace Content.Shared.Mech.EntitySystems;
 /// <summary>
 /// Handles all of the interactions, UI handling, and items shennanigans for <see cref="MechComponent"/>
 /// </summary>
-public abstract class SharedMechSystem : EntitySystem
+public abstract partial class SharedMechSystem : EntitySystem
 {
     [Dependency] private readonly AccessReaderSystem _accessReader = default!; // Forge-Change
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -69,7 +69,7 @@ public abstract class SharedMechSystem : EntitySystem
     /// <inheritdoc/>
     public override void Initialize()
     {
-        SubscribeLocalEvent<MechComponent, MechToggleEquipmentEvent>(OnToggleEquipmentAction);
+        // SubscribeLocalEvent<MechComponent, MechToggleEquipmentEvent>(OnToggleEquipmentAction);
         SubscribeLocalEvent<MechComponent, MechToggleInternalsEvent>(OnMechToggleInternals);
         SubscribeLocalEvent<MechComponent, MechEjectPilotEvent>(OnEjectPilotEvent);
         SubscribeLocalEvent<MechComponent, UserActivateInWorldEvent>(RelayInteractionEvent);
@@ -91,6 +91,14 @@ public abstract class SharedMechSystem : EntitySystem
 
         SubscribeLocalEvent<MechEquipmentComponent, ShotAttemptedEvent>(OnShotAttempted); // Forge-Change
         Subs.CVar(_config, ForgeVars.MechGunOutsideMech, value => _canUseMechGunOutside = value, true); // Forge-Change
+
+        // Forge-Change
+        SubscribeNetworkEvent<SelectMechEquipmentEvent>(OnMechEquipSelected);
+
+        SubscribeLocalEvent<MechComponent, MechGrabberEjectMessage>(ReceiveEquipmentUiMesssages);
+        SubscribeLocalEvent<MechComponent, MechSoundboardPlayMessage>(ReceiveEquipmentUiMesssages);
+
+        InitializeForge();
     }
 
     private void OnPilotMoveEvent(EntityUid uid, MechPilotComponent component, UpdateCanMoveEvent args) // Forge-Change
@@ -101,7 +109,7 @@ public abstract class SharedMechSystem : EntitySystem
         if (mech.Broken || mech.Integrity <= 0 || mech.Energy <= 0)
             args.Cancel();
     }
-    
+
     private void OnMechMoveEvent(EntityUid uid, MechComponent component, CancellableEntityEventArgs args) // Forge-Change
     {
         if (component.LifeStage > ComponentLifeStage.Running)
@@ -117,22 +125,14 @@ public abstract class SharedMechSystem : EntitySystem
         TryEject(component.Mech, pilot: uid);
     }
 
-    private void OnToggleEquipmentAction(EntityUid uid, MechComponent component, MechToggleEquipmentEvent args)
-    {
-        if (args.Handled)
-            return;
-        args.Handled = true;
-        CycleEquipment(uid);
-    }
-
     private void OnMechToggleInternals(EntityUid uid, MechComponent component, MechToggleInternalsEvent args)
     {
         if (args.Handled)
             return;
         args.Handled = true;
-        
+
         component.Internals = !component.Internals;
-        
+
         _actions.SetToggled(component.MechToggleInternalsActionEntity, component.Internals);
     }
 
@@ -166,6 +166,7 @@ public abstract class SharedMechSystem : EntitySystem
         component.EquipmentContainer = _container.EnsureContainer<Container>(uid, component.EquipmentContainerId);
         component.BatterySlot = _container.EnsureContainer<ContainerSlot>(uid, component.BatterySlotId);
         component.GasTankSlot = _container.EnsureContainer<ContainerSlot>(uid, component.GasTankSlotId);
+        component.CapacitorSlot = _container.EnsureContainer<ContainerSlot>(uid, component.CapacitorSlotId);
         UpdateAppearance(uid, component);
     }
 
@@ -212,7 +213,7 @@ public abstract class SharedMechSystem : EntitySystem
 
         UpdateActions(mech, pilot, component);
     }
-    
+
     private void UpdateActions(EntityUid mech, EntityUid pilot, MechComponent? component = null)
     {
         if (!Resolve(mech, ref component))
@@ -407,15 +408,12 @@ public abstract class SharedMechSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return false;
 
-        if (component.Energy + delta < 0)
-            return false;
-
-        if ((component.Energy / component.MaxEnergy) * 100 <= 25 
-            && component.PlayPowerSound 
+        if ((component.Energy / component.MaxEnergy) * 100 <= 25
+            && component.PlayPowerSound
             && component.PilotSlot.ContainedEntity != null)
         {
             _audioSystem.PlayEntity(component.LowPowerSound, component.PilotSlot.ContainedEntity.Value, uid);
-            
+
             component.PlayPowerSound = false;
         }
         else if ((component.Energy / component.MaxEnergy) * 100 >= 25)
@@ -440,12 +438,12 @@ public abstract class SharedMechSystem : EntitySystem
 
         component.Integrity = FixedPoint2.Clamp(value, 0, component.MaxIntegrity);
 
-        if ((component.Integrity / component.MaxIntegrity) * 100 <= 50 
-            && component.PlayIntegritySound 
+        if ((component.Integrity / component.MaxIntegrity) * 100 <= 50
+            && component.PlayIntegritySound
             && component.PilotSlot.ContainedEntity != null)
         {
             _audioSystem.PlayEntity(component.CriticalDamageSound, component.PilotSlot.ContainedEntity.Value, uid);
-            
+
             component.PlayIntegritySound = false;
         }
         else if ((component.Integrity / component.MaxIntegrity) * 100 >= 50)

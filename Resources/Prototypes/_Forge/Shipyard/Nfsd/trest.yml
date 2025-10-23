@@ -21,6 +21,9 @@
   shuttlePath: /Maps/Forge/Shuttles/Nfsd/trest.yml
   class:
   - Fighter
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
 - type: gameMap
   id: Trest

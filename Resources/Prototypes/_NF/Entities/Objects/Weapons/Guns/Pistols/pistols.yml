@@ -5,6 +5,9 @@
   name: mk58
   description: A cheap semiauto sidearm.
   components:
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 4.5
+    projectileSpeed: 38
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
   - type: Clothing
@@ -24,6 +27,9 @@
     sprite: Objects/Weapons/Guns/Pistols/N1984.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Pistols/N1984.rsi
+  - type: Gun # Corvax-Forge: Weaponary update
+    fireRate: 4
+    projectileSpeed: 40
 
 - type: entity
   id: NFWeaponPistolCobra
@@ -33,6 +39,8 @@
     A rugged, robust operator handgun with inbuilt silencer. An illegal firearm often used by Syndicate agents.
   components:
   - type: Gun
+    fireRate: 4 # Corvax-Forge: Weaponary update
+    projectileSpeed: 40
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
       params:
@@ -50,6 +58,8 @@
   description: The Mark 32 Offensive Handgun.
   components:
   - type: Gun
+    fireRate: 5 # Corvax-Forge: Weaponary update
+    projectileSpeed: 38
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
   - type: Sprite
@@ -65,6 +75,7 @@
     The Mark 32 Offensive Service Pistol. On the handle is a label that says 'for authorized use only.'
   components: &universalComponents
   - type: Gun
+    projectileSpeed: 38
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
 

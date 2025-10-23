@@ -4,7 +4,14 @@ using Robust.Shared.Timing;
 
 namespace Content.Client._NF.Radar;
 
-public sealed partial class RadarBlipsSystem : EntitySystem
+/// <summary>
+/// A system for requesting, receiving, and caching radar blips.
+/// Sends off ad hoc requests for blips, caches them for a period of time, and draws them when requested.
+/// </summary>
+/// <remarks>
+/// Ported from Monolith's RadarBlipsSystem.
+/// </remarks>
+public sealed partial class RadarBlipSystem : EntitySystem
 {
     private const double BlipStaleSeconds = 3.0;
     private static readonly List<(Vector2, float, Color, RadarBlipShape)> EmptyBlipList = new();
@@ -30,6 +37,9 @@ public sealed partial class RadarBlipsSystem : EntitySystem
         SubscribeNetworkEvent<GiveBlipsEvent>(HandleReceiveBlips);
     }
 
+    /// <summary>
+    /// Handles receiving blip data from the server.
+    /// </summary>
     private void HandleReceiveBlips(GiveBlipsEvent ev, EntitySessionEventArgs args)
     {
         if (ev?.Blips == null)
@@ -88,7 +98,6 @@ public sealed partial class RadarBlipsSystem : EntitySystem
             return EmptyBlipList;
 
         var result = new List<(Vector2, float, Color, RadarBlipShape)>(_blips.Count);
-
         foreach (var blip in _blips)
         {
             Vector2 worldPosition;
@@ -124,7 +133,6 @@ public sealed partial class RadarBlipsSystem : EntitySystem
                 result.Add((worldPosition, blip.Scale, blip.Color, blip.Shape));
             }
         }
-
         return result;
     }
 

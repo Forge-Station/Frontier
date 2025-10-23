@@ -1,7 +1,7 @@
 - type: accessLevel
   id: Sergeant
   name: id-card-access-level-sergeant
-  
+
 - type: accessLevel
   id: Bailiff
   name: id-card-access-level-bailiff
@@ -17,7 +17,7 @@
   - External
   - Security
   - Brig
-  
+
 - type: accessGroup
   id: GeneralNfsdAccess
   tags:

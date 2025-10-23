@@ -24,6 +24,7 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Timing;
+using Content.Client._NF.Radar;
 
 namespace Content.Client._Mono.FireControl.UI;
 
@@ -32,8 +33,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
     [Dependency] private readonly IMapManager _mapManager = default!;
     private readonly SharedShuttleSystem _shuttles;
     private readonly SharedTransformSystem _transform;
-    private readonly IEntitySystemManager _sysManager = default!;
-    private readonly _NF.Radar.RadarBlipsSystem _blips;
+    private readonly RadarBlipSystem _blips;
     private readonly SharedPhysicsSystem _physics;
 
     private EntityCoordinates? _coordinates;
@@ -72,7 +72,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
         IoCManager.InjectDependencies(this);
         _shuttles = EntManager.System<SharedShuttleSystem>();
         _transform = EntManager.System<SharedTransformSystem>();
-        _blips = EntManager.System<_NF.Radar.RadarBlipsSystem>();
+        _blips = EntManager.System<RadarBlipSystem>();
         _physics = EntManager.System<SharedPhysicsSystem>();
 
         OnMouseEntered += HandleMouseEntered;
@@ -256,7 +256,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
             var gridBody = bodyQuery.GetComponent(gUid);
             EntManager.TryGetComponent<IFFComponent>(gUid, out var iff);
 
-            if (!_shuttles.CanDraw(gUid, gridBody, iff))
+            if (!_shuttles.CanDraw(gUid, gridBody, iff, viewerGridUid: ourGridId)) // Forge-Change
                 continue;
 
             var curGridToWorld = _transform.GetWorldMatrix(gUid);
@@ -269,7 +269,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
 
             if (ShowIFF)
             {
-                var labelName = _shuttles.GetIFFLabel(grid, self: false, iff);
+                var labelName = _shuttles.GetIFFLabel(grid, self: false, iff, viewerGridUid: ourGridId); // Forge-Change
                 if (labelName != null)
                 {
                     var gridBounds = grid.Comp.LocalAABB;

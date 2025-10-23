@@ -1,6 +1,7 @@
 - type: vendingMachineInventory
   id: NFSalvageEquipmentInventory
   startingInventory:
+    NFWeaponHoloflareGun: 4
     NFWeaponPka: 4
     WeaponCrusher: 6
     WeaponCrusherDagger: 8
@@ -25,4 +26,4 @@
     BoxDispenserFlare: 4294967295 # Infinite
     FlashlightLantern: 4294967295 # Infinite
     RadioHandheldNF: 4294967295 # Infinite
-    ShuttleGunM25Flatpack: 4294967295 # CorvaxFrontier
+

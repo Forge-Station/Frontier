@@ -1,0 +1,31 @@
+- type: vendingMachineInventory
+  id: SyndiMedPlusInventory
+  startingInventory:
+#    HandheldHealthAnalyzer: 3
+    Brutepack: 5
+    Ointment: 5
+    Bloodpack: 5
+    Gauze: 5
+    ChemistryBottleEpinephrine: 3
+    Syringe: 5
+    BoxBottle: 3
+#    ClothingEyesHudMedical: 2
+#    ClothingEyesEyepatchHudMedical: 2
+#    MedicalTrackingImplanter: 4294967295 # Frontier - infinite
+    SadTromboneImplanter: 10 # Frontier
+#    BikeHornImplanter: 10 # Frontier
+#    LightImplanter: 10 # Frontier
+#    BoxFolderMedicalDoctor: 4294967295 # Frontier - infinite
+    MedTekCartridge: 4294967295 # 3 -> infinite
+    ChemistryBottleEphedrine: 4 # 500
+    ChemistryBottleNocturine: 2 # 1.000
+    ChemistryBottleOmnizine: 4 # 2.000
+    MedicatedSuture: 1
+    RegenerativeMesh: 1
+    BoxBeaker: 1
+    BoxBodyBag: 2
+    DefibrillatorSyndicate: 1 #50.000
+    SyndiHypo: 1 # 50.000
+    DeathRattleImplanter: 4294967295
+    DeathAcidifierImplanter: 4294967295
+    Tourniquet: 4

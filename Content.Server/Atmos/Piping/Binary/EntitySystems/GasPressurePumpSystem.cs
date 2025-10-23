@@ -45,14 +45,24 @@ public sealed class GasPressurePumpSystem : SharedGasPressurePumpSystem
         if (outputStartingPressure >= ent.Comp.TargetPressure)
         {
             _ambientSoundSystem.SetAmbience(ent, false);
-            return; // No need to pump gas if target has been reached.
+            return;
         }
 
-        if (inlet.Air.TotalMoles > 0 && inlet.Air.Temperature > 0)
+        if (inlet.Air.TotalMoles > 0f && inlet.Air.Temperature > 0f)
         {
-            // We calculate the necessary moles to transfer using our good ol' friend PV=nRT.
             var pressureDelta = ent.Comp.TargetPressure - outputStartingPressure;
             var transferMoles = (pressureDelta * outlet.Air.Volume) / (inlet.Air.Temperature * Atmospherics.R);
+
+            var maxVolume = Atmospherics.MaxTransferRate * _atmosphereSystem.PumpSpeedup() * args.dt;
+            var maxMoles = (maxVolume * inlet.Air.Pressure) / (inlet.Air.Temperature * Atmospherics.R);
+
+            transferMoles = Math.Min(transferMoles, maxMoles);
+
+            if (transferMoles <= 0)
+            {
+                _ambientSoundSystem.SetAmbience(ent, false);
+                return;
+            }
 
             var removed = inlet.Air.Remove(transferMoles);
             _atmosphereSystem.Merge(outlet.Air, removed);
