@@ -1,0 +1,14 @@
+- type: loadout
+  id: ClothingBeltUtilityEngineeringOEngiLd
+  price: 0
+  equipment:
+    belt: ClothingBeltUtilityEngineering
+
+- type: loadout
+  id: ClothingBeltChiefEngineerFilledOEngiLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT3
+  equipment:
+    belt: ClothingBeltChiefEngineerFilled

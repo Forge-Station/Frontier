@@ -1,0 +1,187 @@
+# region Service OF
+- type: loadoutEffectGroup
+  id: OServiceT1
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostService
+      time: 36000 # 10 hrs
+
+- type: loadoutEffectGroup
+  id: OServiceT2
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostService
+      time: 72000 # 20 hrs
+
+- type: loadoutEffectGroup
+  id: OServiceT3
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostService
+      time: 108000 # 30 hrs
+
+- type: loadoutEffectGroup
+  id: OServiceT4
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostService
+      time: 144000 # 40 hrs
+
+# Это для.. вещей ОБР.
+- type: loadoutEffectGroup
+  id: OServiceT5
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostService
+      time: 1080000 # 300 hrs
+
+# region Medic OF
+- type: loadoutEffectGroup
+  id: OMedT1
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostMedic
+      time: 36000 # 10 hrs
+
+- type: loadoutEffectGroup
+  id: OMedT2
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostMedic
+      time: 72000 # 20 hrs
+
+- type: loadoutEffectGroup
+  id: OMedT3
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostMedic
+      time: 108000 # 30 hrs
+
+- type: loadoutEffectGroup
+  id: OMedT4
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostMedic
+      time: 144000 # 40 hrs
+
+# Это для.. вещей ОБР.
+- type: loadoutEffectGroup
+  id: OMedT5
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostMedic
+      time: 1080000 # 300 hrs
+
+# region Engineer OF
+- type: loadoutEffectGroup
+  id: OEngT1
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostEngineer
+      time: 36000 # 10 hrs
+
+- type: loadoutEffectGroup
+  id: OEngT2
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostEngineer
+      time: 72000 # 20 hrs
+
+- type: loadoutEffectGroup
+  id: OEngT3
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostEngineer
+      time: 108000 # 30 hrs
+
+- type: loadoutEffectGroup
+  id: OEngT4
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostEngineer
+      time: 144000 # 40 hrs
+
+# Это для.. вещей ОБР.
+- type: loadoutEffectGroup
+  id: OEngT5
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobOutpostEngineer
+      time: 1080000 # 300 hrs
+
+# region Security Guard
+- type: loadoutEffectGroup
+  id: OSecT1
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSecurityGuard
+      time: 36000 # 10 hrs
+
+- type: loadoutEffectGroup
+  id: OSecT2
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSecurityGuard
+      time: 72000 # 20 hrs
+
+- type: loadoutEffectGroup
+  id: OSecT3
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSecurityGuard
+      time: 108000 # 30 hrs
+
+- type: loadoutEffectGroup
+  id: OSecT4
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSecurityGuard
+      time: 144000 # 40 hrs
+
+# Это для.. вещей ОБР.
+- type: loadoutEffectGroup
+  id: OSecT5
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSecurityGuard
+      time: 1080000 # 300 hrs

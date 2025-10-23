@@ -1,0 +1,59 @@
+- type: loadoutGroup
+  id: OSecHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - ClothingHeadHatWardenSGuardLd
+  - ClothingHeadHatBeretWardenSGuardLd
+  - ClothingHeadHatCapHoSSGuardLd
+  - ClothingHeadHatBeretHoSSGuardLd
+  - ClothingHeadHatHoshatSGuardLd
+  - ClothingHeadHatBeretHeadOfSecurityAdvancedSGuardLd
+  - ClothingHeadHelmetERTSecuritySGuardLd
+
+- type: loadoutGroup
+  id: OSecJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - ClothingUniformJumpsuitWardenSGuardLd
+  - ClothingUniformJumpskirtWardenSGuardLd
+  - ClothingUniformJumpsuitHoSSGuardLd
+  - ClothingUniformJumpskirtHoSSGuardLd
+  - ClothingUniformJumpsuitHoSBlackSGuardLd
+  - ClothingUniformJumpskirtHoSBlackSGuardLd
+  - ClothingUniformJumpsuitHoSAltSGuardLd
+  - ClothingUniformJumpskirtHoSAltSGuardLd
+  - ClothingUniformJumpsuitHoSGreySGuardLd
+  - ClothingUniformJumpsuitHoSBlueSGuardLd
+  - ClothingUniformJumpsuitHoSParadeMaleSGuardLd
+  - ClothingUniformJumpskirtHoSParadeMaleSGuardLd
+  - ClothingUniformJumpsuitHosFormalSGuardLd
+  - ClothingUniformJumpskirtHosFormalSGuardLd
+
+- type: loadoutGroup
+  id: OSecNeck
+  name: loadout-group-contractor-neck
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - ClothingNeckCloakHosSGuardLd
+  - ClothingNeckMantleHOSSGuardLd
+
+- type: loadoutGroup
+  id: OSecOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - ClothingOuterCoatWardenSGuardLd
+  - ClothingOuterWinterWardenUnarmoredSGuardLd
+  - ClothingOuterWinterWardenSGuardLd
+  - ClothingOuterCoatHoSTrenchSGuardLd
+  - ClothingOuterCoatHoSGreatcoatSGuardLd
+  - ClothingOuterWinterHoSUnarmoredSGuardLd
+  - ClothingOuterWinterHoSSGuardLd
+  - ClothingOuterArmorHoSVestWebSGuardLd
+  - ClothingOuterHardsuitERTSecuritySGuardLd

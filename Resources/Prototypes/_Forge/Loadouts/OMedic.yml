@@ -1,0 +1,61 @@
+- type: loadoutGroup
+  id: OMedicJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  minLimit: 1
+  loadouts:
+  - ClothingUniformJumpsuitMedicalDoctorOMedLd
+  - ClothingUniformJumpskirtMedicalDoctorOMedLd
+  - ClothingUniformJumpsuitChemistryOMedLd
+  - ClothingUniformJumpskirtChemistryOMedLd
+  - ClothingUniformJumpsuitSeniorPhysicianOMedLd
+  - ClothingUniformJumpskirtSeniorPhysicianOMedLd
+  - ClothingUniformJumpsuitMilitaryMedicalDoctorOMedLd
+  - ClothingUniformJumpsuitERTMedicOMedLd
+  fallbacks:
+  - ClothingUniformJumpsuitMedicalDoctorOMedLd
+  - ClothingUniformJumpskirtMedicalDoctorOMedLd
+
+- type: loadoutGroup
+  id: OMedicOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - ClothingOuterCoatLabOMedLd
+  - ClothingOuterCoatLabChemOMedLd
+  - ClothingOuterWinterChemOMedLd
+  - ClothingOuterWinterMedOMedLd
+  - ClothingOuterCoatLabSeniorPhysicianOMedLd
+  - ClothingOuterHardsuitERTMedicalOMedLd
+
+- type: loadoutGroup
+  id: OMedicShoes
+  name: loadout-group-contractor-shoes
+  minLimit: 1
+  loadouts:
+  - ClothingShoesLeatherOMedLd
+  - ClothingShoesBootsWinterMedOMedLd
+  - ClothingShoesBootsCowboyWhiteOMedLd
+  subgroups:
+  - OServiceShoes
+  fallbacks:
+  - ClothingShoesColorWhiteOServLd
+
+- type: loadoutGroup
+  id: OMedicBackpack
+  name: loadout-group-contractor-backpack
+  loadouts:
+  - ParaMedicalBackpack1
+  - ParaMedicalBackpack2
+  - ParaMedicalBackpack3
+  - ParaMedicalBackpack4
+  - ClothingBackpackChemistryOMedLd
+  - ClothingBackpackSatchelChemistryOMedLd
+  - ClothingBackpackDuffelChemistryOMedLd
+  - ClothingBackpackMessengerChemistryOMedLd
+  - ClothingBackpackVirologyOMedLd
+  - ClothingBackpackSatchelVirologyOMedLd
+  - ClothingBackpackDuffelVirologyOMedLd
+  - ClothingBackpackMessengerVirologyOMedLd
+  - ClothingBackpackERTMedicalOMedLd
+  fallbacks:
+  - ParaMedicalBackpack1

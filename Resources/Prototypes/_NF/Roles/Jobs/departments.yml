@@ -7,10 +7,13 @@
   roles:
   - StationRepresentative
   - StationTrafficController
-  - Valet # nyano
-  - NFJanitor
+#  - Valet # nyano ## Forge-change
+#  - NFJanitor # Forge-change
   - MailCarrier # nyano
   - SecurityGuard
+  - OutpostMedic # Forge-add
+  - OutpostEngineer # Forge-add
+  - OutpostService # Forge-add
 
 - type: department
   id: Antag

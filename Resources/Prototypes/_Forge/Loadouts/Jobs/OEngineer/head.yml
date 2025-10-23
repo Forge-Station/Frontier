@@ -1,0 +1,23 @@
+- type: loadout
+  id: ClothingHeadHatHardhatYellowOEngiLd
+  equipment:
+    head: ClothingHeadHatHardhatYellow
+
+- type: loadout
+  id: ClothingHeadHatHardhatOrangeOEngiLd
+  equipment:
+    head: ClothingHeadHatHardhatOrange
+
+- type: loadout
+  id: ClothingHeadHatBeretEngineeringOEngiLd
+  equipment:
+    head: ClothingHeadHatBeretEngineering
+
+#region PlayTime
+- type: loadout
+  id: ClothingHeadHelmetERTEngineerOEngi
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT5
+  equipment:
+    head: ClothingHeadHelmetERTEngineer

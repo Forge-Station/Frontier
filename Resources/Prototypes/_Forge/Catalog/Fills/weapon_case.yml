@@ -1,0 +1,139 @@
+# region Loadouts Merc
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercMK58
+  suffix: MK58
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponPistolMk58
+      amount: 1
+    - id: NFMagazinePistol35
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercPollock
+  suffix: Pollock
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponPistolPollock
+      amount: 1
+    - id: NFMagazinePistol35
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercMoonWhisper
+  suffix: MoonWhisper
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponPistolMoonWhisper
+      amount: 1
+    - id: NFMagazinePistol35
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercFitz
+  suffix: Fitz
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRevolverFitz
+      amount: 1
+    - id: NFSpeedLoaderPistol45
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercArgenti
+  suffix: Argenti
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRevolverArgenti
+      amount: 1
+    - id: NFSpeedLoaderPistol35
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercDeckard
+  suffix: Deckard
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRevolverDeckard
+      amount: 1
+    - id: NFSpeedLoaderPistol45
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercRLucky
+  suffix: RLucky
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRevolverLucky
+      amount: 1
+    - id: NFSpeedLoaderPistol45
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercFaith
+  suffix: Faith
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRevolverFaith
+      amount: 1
+    - id: NFSpeedLoaderPistol45
+      amount: 2
+
+# Laser
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercPistolLaser
+  suffix: PistolLaser
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponEnergyPistolLaser
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercLaserSvalinn
+  suffix: Svalinn
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponEnergyPistolLaserSvalinn
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercLaserMakeshift
+  suffix: LaserMakeshift
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponEnergyPistolLaserMakeshift
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseMercWaterBlaster
+  suffix: WaterBlaster
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponWaterBlaster
+      amount: 1
+    - id: DrinkWaterBottleFull
+      amount: 2

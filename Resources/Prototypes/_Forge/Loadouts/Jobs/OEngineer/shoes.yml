@@ -1,0 +1,30 @@
+- type: loadout
+  id: ClothingShoesBootsWorkOEngiLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWork
+
+- type: loadout
+  id: ClothingShoesBootsWinterEngiOEngiLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterEngi
+
+# region PlayTime
+- type: loadout
+  id: ClothingShoesBootsWinterChiefEngineerOEngiLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT3
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterChiefEngineer

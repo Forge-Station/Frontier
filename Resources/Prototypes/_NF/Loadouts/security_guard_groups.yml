@@ -17,6 +17,8 @@
   - SecurityGuardSecurityHat
   - SecurityGuardSecurityBeret
   - SecurityGuardTrooperHat
+  subgroups:
+  - OSecHead # Forge-add: play time motivation xd
 
 - type: loadoutGroup
   id: SecurityGuardJumpsuit
@@ -27,6 +29,8 @@
   fallbacks:
   - SecurityGuardJumpsuit
   - SecurityGuardJumpskirt
+  subgroups:
+  - OSecJumpsuit # Forge-add
 
 - type: loadoutGroup
   id: SecurityGuardBackpack
@@ -47,6 +51,8 @@
   - SecurityGuardArmorVestSlim
   fallbacks:
   - SecurityGuardArmorVest
+  subgroups:
+  - OSecOuterClothing # Forge-add
 
 - type: loadoutGroup
   id: SecurityGuardShoes

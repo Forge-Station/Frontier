@@ -74,3 +74,57 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+
+- type: roleLoadout
+  id: JobOutpostMedic
+  groups:
+  - ContractorFace
+  - OMedicJumpsuit
+  - OMedicOuterClothing
+  - DocGloves
+  - OMedicShoes
+  - OMedicBackpack
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+  - ContractorBoxSurvival
+
+- type: roleLoadout
+  id: JobOutpostEngineer
+  groups:
+  - OEngiHead
+  - ContractorFace
+  - OEngiJumpsuit
+  - OEngiShoes
+  - OEngiBackpack
+  - OEngiBelt
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+  - ContractorBoxSurvival
+
+- type: roleLoadout
+  id: JobOutpostService
+  groups:
+  - OServiceHead
+  - ContractorFace
+  - OServiceGlasses
+  - OServiceJumpsuit
+  - OServiceOuterClothing
+  - OServiceShoes
+  - OServiceBackpack
+  - OServiceBelt
+  - OServiceForcedOuterClothing
+  - ContractorGloves
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+  - ContractorBoxSurvival

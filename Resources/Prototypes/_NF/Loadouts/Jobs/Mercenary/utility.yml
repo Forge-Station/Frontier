@@ -1,0 +1,102 @@
+# region Pistols
+- type: loadout
+  id: WeaponCaseMercMK58Ld
+  name: MK58
+  previewEntity: NFWeaponPistolMk58
+  price: 4000
+  inhand:
+  - WeaponCaseMercMK58
+
+- type: loadout
+  id: WeaponCaseMercPollockLd
+  name: Вальдшнеп
+  previewEntity: NFWeaponPistolPollock
+  price: 6000
+  inhand:
+  - WeaponCaseMercPollock
+
+- type: loadout
+  id: WeaponCaseMercMoonWhisperLd
+  name: "Шёпот Луны"
+  previewEntity: WeaponPistolMoonWhisper
+  price: 25000
+  inhand:
+  - WeaponCaseMercMoonWhisper
+
+- type: loadout
+  id: WeaponCaseMercFitzLd
+  name: Фитз
+  previewEntity: NFWeaponRevolverFitz
+  price: 3500
+  inhand:
+  - WeaponCaseMercFitz
+
+- type: loadout
+  id: WeaponCaseMercArgentiLd
+  name: Аргенти
+  previewEntity: NFWeaponRevolverArgenti
+  price: 3500
+  inhand:
+  - WeaponCaseMercArgenti
+
+- type: loadout
+  id: WeaponCaseMercDeckardLd
+  name: Декард
+  previewEntity: NFWeaponRevolverDeckard
+  price: 5000
+  inhand:
+  - WeaponCaseMercDeckard
+
+- type: loadout
+  id: WeaponCaseMercRLuckyLd
+  name: "Счастливчик"
+  previewEntity: NFWeaponRevolverLucky
+  price: 3500
+  inhand:
+  - WeaponCaseMercRLucky
+
+- type: loadout
+  id: WeaponCaseMercFaithLd
+  name: "Вера"
+  previewEntity: NFWeaponRevolverFaith
+  price: 4500
+  inhand:
+  - WeaponCaseMercFaith
+
+# region Laser
+- type: loadout
+  id: WeaponCaseMercPistolLaserLd
+  name: Лазерный пистолет
+  previewEntity: NFWeaponEnergyPistolLaser
+  price: 4500
+  inhand:
+  - WeaponCaseMercPistolLaser
+
+- type: loadout
+  id: WeaponCaseMercLaserSvalinnLd
+  name: Свалинн
+  previewEntity: NFWeaponEnergyPistolLaserSvalinn
+  price: 1400
+  inhand:
+  - WeaponCaseMercLaserSvalinn
+
+- type: loadout
+  id: WeaponCaseMercLaserMakeshiftLd
+  name: Старомодный лазерный бластер
+  previewEntity: NFWeaponEnergyPistolLaserMakeshift
+  price: 4500
+  inhand:
+  - WeaponCaseMercLaserMakeshift
+
+# region WaterBlaster
+- type: loadout
+  id: WeaponCaseMercWaterBlasterLd
+  previewEntity: WeaponWaterBlaster
+  name: Водяной бластер
+  price: 3000
+  inhand:
+  - WeaponCaseMercWaterBlaster
+
+# Быстрый Q/A для того, кто читает:
+# Q: - А почему имена тут, а не в переводах?
+# A: - Я, честно сказать, попытался. Но не получилось. Сможешь исправить?

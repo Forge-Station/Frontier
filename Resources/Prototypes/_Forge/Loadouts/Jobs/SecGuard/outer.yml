@@ -1,0 +1,84 @@
+# Варден - 10 часов
+- type: loadout
+  id: ClothingOuterCoatWardenSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT1
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterCoatWarden
+
+- type: loadout
+  id: ClothingOuterWinterWardenUnarmoredSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT1
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterWardenUnarmored
+
+- type: loadout
+  id: ClothingOuterWinterWardenSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT1
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterWarden
+
+# ГСБ - 20 часов
+- type: loadout
+  id: ClothingOuterCoatHoSTrenchSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterCoatHoSTrench
+
+- type: loadout
+  id: ClothingOuterCoatHoSGreatcoatSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterCoatHoSGreatcoat
+
+- type: loadout
+  id: ClothingOuterWinterHoSUnarmoredSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterHoSUnarmored
+
+- type: loadout
+  id: ClothingOuterWinterHoSSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterHoS
+
+# ГСБ - 30 часов
+- type: loadout
+  id: ClothingOuterArmorHoSVestWebSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT3
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterArmorHoSVestWeb
+
+# Карьерный рост - с офицера АФ до офицера ОБР. Слава нт!
+- type: loadout
+  id: ClothingOuterHardsuitERTSecuritySGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT5
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterHardsuitERTSecurity

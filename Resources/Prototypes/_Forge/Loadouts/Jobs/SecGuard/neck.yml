@@ -1,0 +1,19 @@
+# ГСБ - 20 часов
+- type: loadout
+  id: ClothingNeckCloakHosSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  price: 0
+  equipment:
+    neck: ClothingNeckCloakHos
+
+# ГСБ - 30 часов
+- type: loadout
+  id: ClothingNeckMantleHOSSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT3
+  price: 0
+  equipment:
+    neck: ClothingNeckMantleHOS

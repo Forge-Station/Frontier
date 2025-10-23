@@ -15,3 +15,12 @@
     state: commander
   jobName: job-name-commander
   allowSelection: false # Frontier
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconStrep
+  icon:
+    sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
+    state: strep
+  jobName: job-name-sr
+  allowSelection: false # Frontier: prefer contractor

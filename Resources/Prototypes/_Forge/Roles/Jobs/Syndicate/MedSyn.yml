@@ -1,7 +1,7 @@
 - type: job
   id: MedSyn
-  name: Штурмовой Парамедик Синдиката
-  description: Специально подготовленный синдикатом медик для работы в зонах боевых действий
+  name: forge-job-name-medsyn
+  description: forge-job-desc-medsyn
   playTimeTracker: JobMedSyn
   access:
   - SyndicateAgent

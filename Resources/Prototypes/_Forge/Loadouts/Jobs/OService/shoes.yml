@@ -1,0 +1,168 @@
+- type: loadout
+  id: ClothingShoesColorBlackOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesColorBlack
+
+- type: loadout
+  id: ClothingShoesBootsLaceupOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+
+- type: loadout
+  id: ClothingShoesColorPurpleOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesColorPurple
+
+- type: loadout
+  id: ClothingShoesColorBlueOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesColorBlue
+
+- type: loadout
+  id: ClothingShoesColorOrangeOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesColorOrange
+
+- type: loadout
+  id: ClothingShoesColorRedOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesColorRed
+
+- type: loadout
+  id: ClothingShoesColorBrownOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesColorBrown
+
+- type: loadout
+  id: ClothingShoesColorWhiteOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesColorWhite
+
+- type: loadout
+  id: ClothingShoesColorGreenOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesColorGreen
+
+- type: loadout
+  id: ClothingShoesColorYellowOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesColorYellow
+
+- type: loadout
+  id: ClothingShoesChefOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesChef
+
+- type: loadout
+  id: ClothingShoesBootsWorkOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWork
+
+- type: loadout
+  id: ClothingShoesBootsWinterOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinter
+
+- type: loadout
+  id: ClothingShoesBootsWinterChefOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterChef
+
+- type: loadout
+  id: ClothingShoesBootsWinterJaniOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterJani
+
+- type: loadout
+  id: ClothingShoesBootsWinterHydroOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterHydro
+
+# region PlayTime
+- type: loadout
+  id: ClothingShoesBootsCowboyBlackOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT1
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsCowboyBlack
+
+- type: loadout
+  id: ClothingShoesHighheelBootsOServLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT2
+  price: 0
+  equipment:
+    shoes: ClothingShoesHighheelBoots
