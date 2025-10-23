@@ -1,6 +1,6 @@
 - type: gameMap
   id: corvaxFrontier
-  mapName: 'Аванпост Фронтира'
+  mapName: 'Сектор "Жандер"'
   mapPath: /Maps/Forge/Outpost/corvaxFrontier.yml
   minPlayers: 0
   maxPlayers: 100
@@ -27,9 +27,10 @@
             Mercenary: [ -1, -1 ]
             StationRepresentative: [ 1, 1 ]
             StationTrafficController: [ 1, 1 ]
-            SecurityGuard: [ 1, 1 ]
-            Valet: [ 1, 1 ]
-            NFJanitor: [ 1, 1 ]
+            SecurityGuard: [ 3, 3 ]
+            OutpostService: [ 3, 3 ]
+            OutpostMedic: [ 2, 2 ]
+            OutpostEngineer: [ 1, 1 ]
             MailCarrier: [ 1, 1 ]
 # Others:
 #            Borg: [ 0, 0 ]

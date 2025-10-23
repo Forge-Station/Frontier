@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/27/2025 19:22:43
-  entityCount: 1706
+  time: 10/22/2025 21:35:50
+  entityCount: 1716
 maps: []
 grids:
 - 1
@@ -43,7 +43,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: CentComm Outpost
+      name: Управление Секторального Флота
     - type: Transform
       pos: -0.515625,-0.4375
       parent: invalid
@@ -964,7 +964,9 @@ entities:
     - type: PreventGridAnchorChanges
     - type: IFF
       readOnly: True
-      color: '#00DD00FF'
+      color: '#488C40FF'
+    - type: ImplicitRoof
+    - type: BlockEvacuation
 - proto: AirAlarm
   entities:
   - uid: 1305
@@ -1203,11 +1205,6 @@ entities:
     - type: Transform
       pos: 5.5,-6.5
       parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        160:
-        - - DoorStatus
-          - Toggle
 - proto: AirlockSecurityLocked
   entities:
   - uid: 151
@@ -4667,12 +4664,50 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,-8.5
       parent: 1
+  - uid: 1713
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -3.5,2.5
+      parent: 1
 - proto: ComputerTabletopId
   entities:
   - uid: 30
     components:
     - type: Transform
       pos: 3.5,3.5
+      parent: 1
+- proto: ComputerTabletopStationAdminBankATMEdison
+  entities:
+  - uid: 1717
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 2.5,1.5
+      parent: 1
+- proto: ComputerTabletopStationAdminBankATMFrontier
+  entities:
+  - uid: 1714
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -2.5,1.5
+      parent: 1
+- proto: ComputerTabletopStationAdminBankATMMedical
+  entities:
+  - uid: 1716
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 3.5,1.5
+      parent: 1
+- proto: ComputerTabletopStationAdminBankATMNfsd
+  entities:
+  - uid: 1715
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -1.5,1.5
       parent: 1
 - proto: ComputerTabletopSurveillanceCameraMonitor
   entities:
@@ -7102,8 +7137,6 @@ entities:
       pos: -5.5,16.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 1305
     - type: AtmosPipeColor
@@ -7283,8 +7316,6 @@ entities:
       pos: -10.5,7.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 1305
     - type: AtmosPipeColor
@@ -7315,8 +7346,6 @@ entities:
       pos: -7.5,16.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 1305
     - type: AtmosPipeColor
@@ -7462,8 +7491,6 @@ entities:
       pos: -10.5,5.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 1305
     - type: AtmosPipeColor
@@ -8896,24 +8923,10 @@ entities:
       parent: 1
 - proto: LockerRepresentative
   entities:
-  - uid: 122
-    components:
-    - type: MetaData
-      name: шкаф ОЦК
-    - type: Transform
-      pos: 3.5,-3.5
-      parent: 1
   - uid: 131
     components:
     - type: Transform
       pos: -0.5,3.5
-      parent: 1
-  - uid: 1660
-    components:
-    - type: MetaData
-      name: шкаф ОСО
-    - type: Transform
-      pos: -2.5,-3.5
       parent: 1
   - uid: 1665
     components:
@@ -10400,6 +10413,13 @@ entities:
     - type: Transform
       pos: 4.286922,3.0468082
       parent: 1
+- proto: RubberStampCentcom
+  entities:
+  - uid: 1712
+    components:
+    - type: Transform
+      pos: 4.4840794,2.456789
+      parent: 1
 - proto: RubberStampDenied
   entities:
   - uid: 124
@@ -11205,6 +11225,30 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,-7.5
       parent: 1
+  - uid: 1708
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,1.5
+      parent: 1
+  - uid: 1709
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -1.5,1.5
+      parent: 1
+  - uid: 1710
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 3.5,1.5
+      parent: 1
+  - uid: 1711
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 2.5,1.5
+      parent: 1
 - proto: ToiletDirtyWater
   entities:
   - uid: 267
@@ -11311,12 +11355,26 @@ entities:
     - type: Transform
       pos: 2.5,13.5
       parent: 1
+- proto: VendingMachineCentDrobe
+  entities:
+  - uid: 1707
+    components:
+    - type: Transform
+      pos: 3.5,-3.5
+      parent: 1
 - proto: VendingMachineChemicals
   entities:
   - uid: 575
     components:
     - type: Transform
       pos: 11.5,3.5
+      parent: 1
+- proto: VendingMachineOfficerDrobe
+  entities:
+  - uid: 1660
+    components:
+    - type: Transform
+      pos: -2.5,-3.5
       parent: 1
 - proto: VendingMachineTankDispenserEVA
   entities:
