@@ -1,7 +1,7 @@
 - type: job
   id: Stormtrooper
-  name: Штурмовик
-  description: Штурмовик подчиняющийся командиру.
+  name: forge-job-name-stormtrooper
+  description: forge-job-desc-stormtrooper
   playTimeTracker: JobStormtrooper
   requirements:
     - !type:OverallPlaytimeRequirement

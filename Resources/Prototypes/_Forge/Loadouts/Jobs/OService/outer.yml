@@ -1,0 +1,73 @@
+- type: loadout
+  id: ClothingOuterApronChefOServLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterApronChef
+
+- type: loadout
+  id: ClothingOuterApronBarOServLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterApronBar
+
+- type: loadout
+  id: ClothingOuterApronBotanistOServLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterApronBotanist
+
+- type: loadout
+  id: ClothingOuterJacketChefOServLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterJacketChef
+
+- type: loadout
+  id: ClothingOuterWinterJaniOServLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterJani
+
+- type: loadout
+  id: ClothingOuterWinterChefOServLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterChef
+
+- type: loadout
+  id: ClothingOuterWinterBarOServLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterBar
+
+- type: loadout
+  id: ClothingOuterBioGeneralOServLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterBioGeneral
+
+- type: loadout
+  id: ClothingOuterBioJanitorOServLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterBioJanitor
+
+- type: loadout
+  id: ClothingOuterEVASuitServiceWorkerOServLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NFOuterSuitRequired
+  equipment:
+    outerClothing: ClothingOuterEVASuitServiceWorker
+
+# region PlayTime
+# Скафандр ОБР Уборщика
+- type: loadout
+  id: ClothingOuterHardsuitERTJanitorOServLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT5
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterHardsuitERTJanitor

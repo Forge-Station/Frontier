@@ -1,0 +1,85 @@
+- type: loadout
+  id: ClothingUniformJumpsuitEngineeringOEngiLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitEngineering
+
+- type: loadout
+  id: ClothingUniformJumpskirtEngineeringOEngiLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtEngineering
+
+- type: loadout
+  id: ClothingUniformJumpsuitEngineeringHazardOEngiLd
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitEngineeringHazard
+
+# region PlayTime
+# атмосиания
+- type: loadout
+  id: ClothingUniformJumpsuitAtmosOEngiLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAtmos
+
+- type: loadout
+  id: ClothingUniformJumpskirtAtmosOEngiLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT1
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtAtmos
+
+- type: loadout
+  id: ClothingUniformJumpsuitAtmosCasualOEngiLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAtmosCasual
+
+# костбм ведущего инжа
+- type: loadout
+  id: ClothingUniformJumpsuitSeniorEngineerOEngiLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT2
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSeniorEngineer
+
+- type: loadout
+  id: ClothingUniformJumpskirtSeniorEngineerOEngiLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT2
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSeniorEngineer
+
+# военный комбез
+- type: loadout
+  id: ClothingUniformJumpsuitMilitaryEngineeringOEngiLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT3
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryEngineering
+
+# ERT ENG
+- type: loadout
+  id: ClothingUniformJumpsuitERTEngineerOEngiLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT5
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTEngineer

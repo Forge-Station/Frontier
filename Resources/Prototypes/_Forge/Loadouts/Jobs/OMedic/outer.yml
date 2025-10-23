@@ -1,0 +1,64 @@
+- type: loadout
+  id: ClothingOuterCoatLabOMedLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterCoatLab
+
+- type: loadout
+  id: ClothingOuterWinterMedOMedLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterMed
+
+# Химик
+- type: loadout
+  id: ClothingOuterCoatLabChemOMedLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterCoatLabChem
+
+- type: loadout
+  id: ClothingOuterWinterChemOMedLd
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterChem
+
+# region PLayTime
+# ведущий врач
+- type: loadout
+  id: ClothingOuterCoatLabSeniorPhysicianOMedLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT1
+  equipment:
+    outerClothing: ClothingOuterCoatLabSeniorPhysician
+
+# Вирусолог
+- type: loadout
+  id: ClothingOuterCoatLabViroOMedLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT1
+  equipment:
+    outerClothing: ClothingOuterCoatLabViro
+
+- type: loadout
+  id: ClothingOuterWinterViroOMedLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT1
+  equipment:
+    outerClothing: ClothingOuterWinterViro
+
+# скафандр.. обр.
+- type: loadout
+  id: ClothingOuterHardsuitERTMedicalOMedLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT5
+  equipment:
+    outerClothing: ClothingOuterHardsuitERTMedical

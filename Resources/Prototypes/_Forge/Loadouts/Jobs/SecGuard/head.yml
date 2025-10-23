@@ -1,0 +1,59 @@
+# Варден - 10 часов
+- type: loadout
+  id: ClothingHeadHatWardenSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT1
+  equipment:
+    head: ClothingHeadHatWarden
+
+- type: loadout
+  id: ClothingHeadHatBeretWardenSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT1
+  equipment:
+    head: ClothingHeadHatBeretWarden
+
+# ГСБ - 20 часов
+- type: loadout
+  id: ClothingHeadHatCapHoSSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  equipment:
+    head: ClothingHeadHatCapHoS
+
+- type: loadout
+  id: ClothingHeadHatBeretHoSSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  equipment:
+    head: ClothingHeadHatBeretHoS
+
+- type: loadout
+  id: ClothingHeadHatHoshatSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT2
+  equipment:
+    head: ClothingHeadHatHoshat
+
+# ГСБ Парадка - 30 часов
+- type: loadout
+  id: ClothingHeadHatBeretHeadOfSecurityAdvancedSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT3
+  equipment:
+    head: ClothingHeadHatBeretHeadOfSecurityAdvanced
+
+# С хулиганьём на АФ будет разбираться ОБР
+- type: loadout
+  id: ClothingHeadHelmetERTSecuritySGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT5
+  equipment:
+    head: ClothingHeadHelmetERTSecurity

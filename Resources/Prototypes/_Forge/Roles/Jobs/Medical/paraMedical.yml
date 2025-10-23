@@ -1,7 +1,7 @@
 - type: job
   id: paraMedical
-  name: Парамедик
-  description: Полевой медик занимающийся спасением раненых.
+  name: forge-job-name-paramedical
+  description: forge-job-desc-paramedical
   playTimeTracker: JobparaMedical
   requirements:
     - !type:OverallPlaytimeRequirement

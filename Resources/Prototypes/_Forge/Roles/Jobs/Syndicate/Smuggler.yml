@@ -1,7 +1,7 @@
 - type: job
   id: smuggler
-  name: Контрабандист
-  description: Торговец контрабанды.
+  name: forge-job-name-smuggler
+  description: forge-job-desc-smuggler
   playTimeTracker: Jobsmuggler
   requirements:
     - !type:OverallPlaytimeRequirement
