@@ -30,7 +30,8 @@
     preventFloorRemoval: True
     noGridCollision: True
   - type: BlockEvacuation
-
+  - type: ShuttleFaction
+    faction: Syndicate
 - type: gameMap
   id: Bunkeralfa
   mapName: Бункер Альфа

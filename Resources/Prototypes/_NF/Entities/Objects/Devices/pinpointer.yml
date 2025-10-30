@@ -96,6 +96,69 @@
     state: pinpointer-syndicate
 
 - type: entity
+  name: syndicate Bravo
+  description: Pointing to some unknown place.
+  id: PinpointerSyndicateBravo
+  suffix: Syndicate FOB
+  parent: PinpointerBaseFrontier
+  components:
+  - type: ExtendedPinpointer #Forge-Change
+    targetId: LPBravo
+    targetName: unknown
+  - type: Sprite
+    layers:
+    - state: pinpointer-syndicate
+      map: ["enum.PinpointerLayers.Base"]
+    - state: pinonnull
+      map: ["enum.PinpointerLayers.Screen"]
+      shader: unshaded
+      visible: false
+  - type: Icon
+    state: pinpointer-syndicate
+
+- type: entity
+  name: syndicate Alfa
+  description: Pointing to some unknown place.
+  id: PinpointerSyndicateAlfa
+  suffix: Syndicate FOB
+  parent: PinpointerBaseFrontier
+  components:
+  - type: ExtendedPinpointer #Forge-Change
+    targetId: Bunkeralfa
+    targetName: unknown
+  - type: Sprite
+    layers:
+    - state: pinpointer-syndicate
+      map: ["enum.PinpointerLayers.Base"]
+    - state: pinonnull
+      map: ["enum.PinpointerLayers.Screen"]
+      shader: unshaded
+      visible: false
+  - type: Icon
+    state: pinpointer-syndicate
+
+- type: entity
+  name: syndicate Epsilon
+  description: Pointing to some unknown place.
+  id: PinpointerSyndicateEpsilon
+  suffix: Syndicate FOB
+  parent: PinpointerBaseFrontier
+  components:
+  - type: ExtendedPinpointer #Forge-Change
+    targetId: Epsilon
+    targetName: unknown
+  - type: Sprite
+    layers:
+    - state: pinpointer-syndicate
+      map: ["enum.PinpointerLayers.Base"]
+    - state: pinonnull
+      map: ["enum.PinpointerLayers.Screen"]
+      shader: unshaded
+      visible: false
+  - type: Icon
+    state: pinpointer-syndicate
+
+- type: entity
   name: locator
   id: ExtendedPinpointer
   parent: PinpointerBaseFrontier
