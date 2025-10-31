@@ -25,6 +25,8 @@
   - type: ProtectedGrid
     noGridCollision: True
   - type: BlockEvacuation
+  - type: ShuttleFaction
+    faction: Syndicate
 
 - type: gameMap
   id: Enigma
