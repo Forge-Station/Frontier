@@ -815,7 +815,7 @@
       board: [ DoorElectronicsBrig ]
 
 - type: entity
-  parent: ADTGlassLawyerAirlock # ADT-DoorsADT-D
+  parent: ADTGlassLawyerAirlock # ADT-Doors
   id: AirlockSecurityLawyerGlassLocked
   suffix: Security/Lawyer, Locked
   components:

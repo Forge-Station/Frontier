@@ -13,9 +13,11 @@
   components:
   - type: BreathMask
   - type: Sprite
-    sprite: _NF/Clothing/Head/Hardsuits/mercenary.rsi
+#    sprite: _NF/Clothing/Head/Hardsuits/mercenary.rsi
+    sprite: _Mono/Clothing/Head/Hardsuits/scaf_pirate.rsi # Forge-change
   - type: Clothing
-    sprite: _NF/Clothing/Head/Hardsuits/mercenary.rsi
+#    sprite: _NF/Clothing/Head/Hardsuits/mercenary.rsi
+    sprite: _Mono/Clothing/Head/Hardsuits/scaf_pirate.rsi # Forge-change
   - type: PointLight
     color: "#ffeead"
   - type: PressureProtection

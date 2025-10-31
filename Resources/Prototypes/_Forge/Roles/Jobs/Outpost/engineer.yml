@@ -16,10 +16,16 @@
   access:
   - Service
   - Janitor
+  - Theatre
+  - Kitchen
+  - Hydroponics
+  - Bar
+  - Medical
   - Maintenance
   - External
   - Frontier
   - Engineering
+  - Atmospherics
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

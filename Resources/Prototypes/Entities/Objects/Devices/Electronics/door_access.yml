@@ -30,7 +30,7 @@
   suffix: Bar, Locked
   components:
   - type: AccessReader
-    access: [["Bar"]]
+    access: [["Service"]] # Forge-change
 
 - type: entity
   parent: DoorElectronics
@@ -38,7 +38,7 @@
   suffix: Bar, Locked
   components:
   - type: AccessReader
-    access: [["Bar"], ["Kitchen"]]
+    access: [["Service"]] # Forge-change
 
 - type: entity
   parent: DoorElectronics
@@ -46,7 +46,7 @@
   suffix: Hydroponics, Locked
   components:
   - type: AccessReader
-    access: [["Hydroponics"]]
+    access: [["Service"]] # Forge-change
 
 - type: entity
   parent: DoorElectronics
@@ -62,7 +62,7 @@
   suffix: Theatre, Locked
   components:
   - type: AccessReader
-    access: [["Theatre"]]
+    access: [["Service"]] # Forge-change
 
 - type: entity
   parent: DoorElectronics
@@ -70,7 +70,7 @@
   suffix: Kitchen, Locked
   components:
   - type: AccessReader
-    access: [["Kitchen"]]
+    access: [["Service"]] # Forge-change
 
 - type: entity
   parent: DoorElectronics
@@ -78,7 +78,7 @@
   suffix: Kitchen/Hydroponics, Locked
   components:
   - type: AccessReader
-    access: [["Kitchen"], ["Hydroponics"]]
+    access: [["Service"]] # Forge-change
 
 - type: entity
   parent: DoorElectronics
@@ -110,7 +110,7 @@
   suffix: Service, Theatre, Locked
   components:
   - type: AccessReader
-    access: [["Service"], ["Theatre"]]
+    access: [["Service"]] # Forge-change
 
 # Cargo
 - type: entity
@@ -152,7 +152,7 @@
   suffix: Atmospherics, Locked
   components:
   - type: AccessReader
-    access: [["Atmospherics"]]
+    access: [["Engineering"]] # Forge-change
 
 - type: entity
   parent: DoorElectronics
