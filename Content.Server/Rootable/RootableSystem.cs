@@ -1,6 +1,11 @@
-using Content.Server.Body.Components;
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 SlamBamActionman <83650252+SlamBamActionman@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Body.Systems;
 using Content.Shared.Administration.Logs;
+using Content.Shared.Body.Components;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
@@ -9,10 +14,10 @@ using Content.Shared.Goobstation.FixedPoint;
 using Content.Shared.Fluids.Components;
 using Content.Shared.Rootable;
 using Robust.Shared.Timing;
-using Content.Shared.Body.Components;
 
 namespace Content.Server.Rootable;
 
+// TODO: Move all of this to shared
 /// <summary>
 /// Adds an action to toggle rooting to the ground, primarily for the Diona species.
 /// </summary>
