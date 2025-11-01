@@ -5,10 +5,10 @@
   description: A weighty fountain pen for NFSD paperwork wizards. Writes in a thin blue line.
   components:
   - type: Sprite
-    sprite: _NF/Objects/Misc/pens.rsi
+    sprite: Forge/Objects/Misc/pens.rsi #Forge-Change
     state: pen_pal
   - type: Item
-    sprite: _NF/Objects/Misc/pens.rsi
+    sprite: Forge/Objects/Misc/pens.rsi #Forge-Change
     heldPrefix: pen_pal
 
 - type: entity

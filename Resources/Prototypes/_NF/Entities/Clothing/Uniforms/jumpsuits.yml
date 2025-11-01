@@ -149,9 +149,9 @@
   description: A starched and pressed suit for the public affairs liaison.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Uniforms/Jumpsuit/public_affairs.rsi
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/public_affairs.rsi #Forge-Change
   - type: Clothing
-    sprite: _NF/Clothing/Uniforms/Jumpsuit/public_affairs.rsi
+    sprite: Forge/Clothing/Uniforms/Jumpsuits/public_affairs.rsi #Forge-Change
 
 # Syndicate Jupsuits with sensors off
 - type: entity
