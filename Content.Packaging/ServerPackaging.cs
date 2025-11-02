@@ -47,8 +47,7 @@ public static class ServerPackaging
         // Python script had Npgsql. though we want Npgsql.dll as well soooo
         "Npgsql",
         "Microsoft",
-        "Discord",
-        "QRCoder",
+        "NetCord",
     };
 
     private static readonly List<string> ServerNotExtraAssemblies = new()

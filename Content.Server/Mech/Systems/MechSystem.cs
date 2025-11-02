@@ -34,6 +34,9 @@ using Content.Shared.Tools.Components;
 using Content.Shared.Verbs;
 using Content.Shared.Wires;
 using Content.Shared.Tools.Systems;
+using Content.Shared.Verbs;
+using Content.Shared.Whitelist;
+using Content.Shared.Wires;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems; // Frontier
@@ -44,11 +47,11 @@ using Robust.Shared.Map; // Forge-Change
 using Robust.Shared.Map.Components; // Forge-Change
 using Robust.Shared.Physics.Components; // Forge-Change
 using Robust.Shared.Player;
-using Content.Shared.Whitelist;
 using Content.Shared.Mobs.Components; // Frontier
 using Content.Shared.NPC.Components; // Frontier
 using Content.Shared.Mobs; // Frontier
 using Content.Shared.NPC.Systems; // Frontier
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.Mech.Systems;
 
@@ -74,6 +77,8 @@ public sealed partial class MechSystem : SharedMechSystem
     [Dependency] private readonly SharedPointLightSystem _light = default!; // Forge-Change
     [Dependency] private readonly PowerCellSystem _powerCell = default!;
     [Dependency] protected readonly IGameTiming Timing = default!;
+
+    private static readonly ProtoId<ToolQualityPrototype> PryingQuality = "Prying";
 
     /// <inheritdoc/>
     public override void Initialize()

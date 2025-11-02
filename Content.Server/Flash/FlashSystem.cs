@@ -1,12 +1,3 @@
-using System.Linq;
-using Content.Server.Flash.Components;
-using Content.Shared.Flash.Components;
-using Content.Server.Light.EntitySystems;
-using Content.Server.Popups;
-using Content.Server.Stunnable;
-using Content.Shared.Charges.Components;
-using Content.Shared.Charges.Systems;
-using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Flash;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction.Events;
@@ -24,22 +15,7 @@ using InventoryComponent = Content.Shared.Inventory.InventoryComponent;
 using Robust.Shared.Prototypes;
 using Content.Shared._Goobstation.Flashbang;
 
-namespace Content.Server.Flash
-{
-    internal sealed class FlashSystem : SharedFlashSystem
-    {
-        [Dependency] private readonly AppearanceSystem _appearance = default!;
-        [Dependency] private readonly AudioSystem _audio = default!;
-        [Dependency] private readonly SharedChargesSystem _sharedCharges = default!;
-        [Dependency] private readonly EntityLookupSystem _entityLookup = default!;
-        [Dependency] private readonly SharedTransformSystem _transform = default!;
-        [Dependency] private readonly ExamineSystemShared _examine = default!;
-        [Dependency] private readonly InventorySystem _inventory = default!;
-        [Dependency] private readonly PopupSystem _popup = default!;
-        [Dependency] private readonly StunSystem _stun = default!;
-        [Dependency] private readonly TagSystem _tag = default!;
-        [Dependency] private readonly IRobustRandom _random = default!;
-        [Dependency] private readonly StatusEffectsSystem _statusEffectsSystem = default!;
+namespace Content.Server.Flash;
 
         private static readonly ProtoId<TagPrototype> TrashTag = "Trash";
 
@@ -219,7 +195,6 @@ namespace Content.Server.Flash
         {
             args.Cancel();
         }
-    }
 
     /// <summary>
     ///     Called before a flash is used to check if the attempt is cancelled by blindness, items or FlashImmunityComponent.
@@ -256,4 +231,3 @@ namespace Content.Server.Flash
             Used = used;
         }
     }
-}

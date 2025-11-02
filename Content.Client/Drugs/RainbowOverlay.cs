@@ -12,6 +12,8 @@ namespace Content.Client.Drugs;
 
 public sealed class RainbowOverlay : Overlay
 {
+    private static readonly ProtoId<ShaderPrototype> Shader = "Rainbow";
+
     [Dependency] private readonly IConfigurationManager _config = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
@@ -36,9 +38,10 @@ public sealed class RainbowOverlay : Overlay
     {
         IoCManager.InjectDependencies(this);
 
-        _statusEffects = _sysMan.GetEntitySystem<StatusEffectsSystem>(); // Forge-Change
+        _statusEffects = _sysMan.GetEntitySystem<StatusEffectsSystem>();
 
-        _rainbowShader = _prototypeManager.Index<ShaderPrototype>("Rainbow").InstanceUnique();
+        _rainbowShader = _prototypeManager.Index(Shader).InstanceUnique();
+        _config.OnValueChanged(CCVars.ReducedMotion, OnReducedMotionChanged, invokeImmediately: true);
     }
 
     protected override void FrameUpdate(FrameEventArgs args)
@@ -48,11 +51,11 @@ public sealed class RainbowOverlay : Overlay
         if (playerEntity == null)
             return;
 
-        if (!_statusEffects.TryGetEffectsEndTimeWithComp<SeeingRainbowsStatusEffectComponent>(playerEntity, out var endTime)) // Forge-Change
+        if (!_statusEffects.TryGetEffectsEndTimeWithComp<SeeingRainbowsStatusEffectComponent>(playerEntity, out var endTime))
             return;
 
-        endTime ??= TimeSpan.MaxValue; // Forge-Change
-        var timeLeft = (float)(endTime - _timing.CurTime).Value.TotalSeconds; // Forge-Change
+        endTime ??= TimeSpan.MaxValue;
+        var timeLeft = (float)(endTime - _timing.CurTime).Value.TotalSeconds;
 
         TimeTicker += args.DeltaSeconds;
         if (timeLeft - TimeTicker > timeLeft / 16f)

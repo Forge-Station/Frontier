@@ -36,6 +36,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Content.Server._NF.Shuttles.Components; // Frontier
+using Content.Server.GameTicking; // Frontier
 using Content.Shared.Maps;
 
 namespace Content.Server.Shuttles.Systems;
@@ -76,6 +77,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly ThrusterSystem _thruster = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly GameTicker _ticker = default!; //Frontier: needed to get the main map in FTL
+    [Dependency] private readonly TurfSystem _turf = default!;
 
     public const float TileDensityMultiplier = 0.5f; // Forge-Change
     [Dependency] private readonly TurfSystem _turf = default!;
@@ -138,12 +140,12 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
 
     private void OnShuttleStartup(EntityUid uid, ShuttleComponent component, ComponentStartup args)
     {
-        if (!EntityManager.HasComponent<MapGridComponent>(uid))
+        if (!HasComp<MapGridComponent>(uid))
         {
             return;
         }
 
-        if (!EntityManager.TryGetComponent(uid, out PhysicsComponent? physicsComponent))
+        if (!TryComp(uid, out PhysicsComponent? physicsComponent))
         {
             return;
         }
@@ -158,7 +160,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
 
     public void Toggle(EntityUid uid, ShuttleComponent component)
     {
-        if (!EntityManager.TryGetComponent(uid, out PhysicsComponent? physicsComponent))
+        if (!TryComp(uid, out PhysicsComponent? physicsComponent))
             return;
 
         if (HasComp<PreventGridAnchorChangesComponent>(uid)) // Frontier
@@ -205,7 +207,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     private void OnShuttleShutdown(EntityUid uid, ShuttleComponent component, ComponentShutdown args)
     {
         // None of the below is necessary for any cleanup if we're just deleting.
-        if (EntityManager.GetComponent<MetaDataComponent>(uid).EntityLifeStage >= EntityLifeStage.Terminating)
+        if (Comp<MetaDataComponent>(uid).EntityLifeStage >= EntityLifeStage.Terminating)
             return;
 
         Disable(uid);
