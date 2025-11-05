@@ -194,3 +194,40 @@
       !type:RoleTimeRequirement
       role: JobSecurityGuard
       time: 1080000 # 300 hrs
+
+# region Mercenary
+- type: loadoutEffectGroup
+  id: ForgeMercT1
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMercenary
+      time: 36000 # 10 hrs
+
+- type: loadoutEffectGroup
+  id: ForgeMercT2
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMercenary
+      time: 72000 # 20 hrs
+
+- type: loadoutEffectGroup
+  id: ForgeMercT3
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMercenary
+      time: 108000 # 30 hrs
+
+- type: loadoutEffectGroup
+  id: ForgeMercT4
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMercenary
+      time: 144000 # 40 hrs

@@ -12,3 +12,26 @@
     fiberMaterial: fibers-nitrile
   - type: FingerprintMask
   - type: Insulated
+
+- type: entity
+  parent: [ClothingHandsGlovesCaptain, BaseC1Contraband]
+  id: ClothingHandsGlovesCombatUpgrade
+  name: upgrade combat gloves
+  description: gloves desc
+  suffix: v6st
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Hands/Gloves/combatgloves.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Hands/Gloves/combatgloves.rsi
+  - type: MeleeWeapon
+    autoAttack: false
+    attackRate: 1
+    damage:
+      types:
+       Blunt: 8
+    soundHit:
+      collection: Punch
+    animation: WeaponArcFist
+    mustBeEquippedToUse: true
+  - type: Insulated

@@ -141,3 +141,90 @@
       sprite: Forge/Clothing/Uniforms/Jumpsuits/dso_official.rsi
     - type: Clothing
       sprite: Forge/Clothing/Uniforms/Jumpsuits/dso_official.rsi
+
+# _Mono version contractor military jumpsuit
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMilitaryMerc
+  name: mercenary jumpsuit
+  description: A sturdy jumpsuit, commonly issued to mercenary.
+  suffix: Military
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#3e3e48"
+    - state: icon-base-top-jumpsuit
+      color: "#3e3e48"
+    - state: icon-decor-contractor
+      color: "#424242" # mono
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#3e3e48"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#3e3e48"
+      - state: inhand-left-decor-contractor
+        color: "#424242" # mono
+      right:
+      - state: inhand-right-base-bottom
+        color: "#3e3e48"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#3e3e48"
+      - state: inhand-right-decor-contractor
+        color: "#424242" # mono
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#3e3e48"
+      - state: equipped-base-top-jumpsuit
+        color: "#3e3e48"
+      - state: equipped-decor-contractor
+        color: "#424242" # mono
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMilitaryMercTac
+  name: mercenary jumpsuit
+  description: A sturdy jumpsuit, commonly issued to mercenary.
+  suffix: Military, Tac
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#3e3e48"
+    - state: icon-base-top-jumpsuit
+      color: "#3e3e48"
+    - state: icon-decor-contractor-tac
+      color: "#424242" # mono
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#3e3e48"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#3e3e48"
+      - state: inhand-left-decor-contractor-tac
+        color: "#424242" # mono
+      right:
+      - state: inhand-right-base-bottom
+        color: "#3e3e48"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#3e3e48"
+      - state: inhand-right-decor-contractor-tac
+        color: "#424242" # mono
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#3e3e48"
+      - state: equipped-base-top-jumpsuit-tac
+        color: "#3e3e48"
+      - state: equipped-decor-contractor-tac
+        color: "#424242" # mono

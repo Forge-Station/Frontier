@@ -101,3 +101,10 @@ ent-ClothingUniformJumpskirtNfsdForgeCoronerAlt = свитер коронера 
 
 ent-ClothingUniformJumpskirtNfsdSpecialist = униформа специалиста ДСБФ
     .desc = Универсальная униформа для технических специалистов. Сочетает прочность, комфорт и профессиональный вид.
+
+ent-ClothingUniformJumpsuitMilitaryMerc = чёрный комбинезон
+    .desc = Обычный комбинезон без знаков отличия.
+ent-ClothingUniformJumpsuitMilitaryMercTac = чёрный тактический комбинезон
+    .desc = Обычный тактический комбинезон без знаков отличия.
+ent-ClothingHandsGlovesCombatUpgrade = усиленные боевые перчатки
+    .desc = Усиленные тактические перчатки, позволяющие чаще побеждать в драках на яме.
