@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBlack
+  name: black cloak
+  description: A black cloak, looks old.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Cloaks/blackcloak.rsi

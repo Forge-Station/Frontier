@@ -1,0 +1,17 @@
+- type: loadout
+  id: ForgeMercJumpsuitMilitaryMerc
+  price: 1000
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT3
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryMerc
+
+- type: loadout
+  id: ForgeMercJumpsuitMilitaryMercTac
+  price: 1000
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT3
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryMercTac

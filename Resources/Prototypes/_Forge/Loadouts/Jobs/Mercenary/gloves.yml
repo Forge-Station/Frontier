@@ -1,0 +1,8 @@
+- type: loadout
+  id: ForgeMercGlovesCombatUpgrade
+  price: 2000
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT4
+  equipment:
+    gloves: ClothingHandsGlovesCombatUpgrade

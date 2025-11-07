@@ -19,6 +19,12 @@ namespace Content.Server.Nuke
     public sealed partial class NukeComponent : SharedNukeComponent
     {
         /// <summary>
+        ///     Corvax-Forge: If false - bomb cant change sector alert level.
+        /// </summary>
+        [DataField]
+        public bool CanChangeAlertLevel = true;
+
+        /// <summary>
         ///     Default bomb timer value in seconds.
         /// </summary>
         [DataField]

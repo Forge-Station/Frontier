@@ -1,0 +1,71 @@
+- type: loadout
+  id: ForgeMercCloakBlack
+  price: 500
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT1
+  equipment:
+    neck: ClothingNeckCloakBlack
+
+- type: loadout
+  id: ForgeMercPonchoSmallBlack
+  price: 500
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT2
+  equipment:
+    neck: ClothingNeckPonchoSmallBlack
+
+- type: loadout
+  id: ForgeMercNeckCloakSanabi
+  price: 500
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT3
+  equipment:
+    neck: ClothingNeckCloakSanabi
+
+- type: loadout
+  id: ForgeMercPonchoBlack
+  price: 500
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT4
+  equipment:
+    neck: ClothingNeckPonchoBlack
+
+- type: loadout
+  id: ForgeMercPonchoBlackStripe
+  price: 500
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT4
+  equipment:
+    neck: ClothingNeckPonchoBlackStripe
+
+- type: loadout
+  id: ForgeMercPonchoBlackStripeBlue
+  price: 500
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT4
+  equipment:
+    neck: ClothingNeckPonchoBlackStripeBlue
+
+- type: loadout
+  id: ForgeMercPonchoBlackStripeGreen
+  price: 500
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT4
+  equipment:
+    neck: ClothingNeckPonchoBlackStripeGreen
+
+- type: loadout
+  id: ForgeMercPonchoBlackStripeWhite
+  price: 500
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT4
+  equipment:
+    neck: ClothingNeckPonchoBlackStripeWhite

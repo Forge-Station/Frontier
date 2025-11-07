@@ -190,7 +190,7 @@ namespace Content.Server.RoundEnd
                 null,
                 Color.Gold);
 
-            _audio.PlayGlobal("/Audio/_NF/Announcements/PocketSizedAndy/andy1_shift_near.ogg", Filter.Broadcast(), true); // Frontier
+            _audio.PlayGlobal("/Audio/_Forge/Announcements/Misc/oleg_shift_near.ogg", Filter.Broadcast(), true); // Corvax-Frontier
 
             LastCountdownStart = _gameTiming.CurTime;
             ExpectedCountdownEnd = _gameTiming.CurTime + countdownTime;
@@ -238,7 +238,7 @@ namespace Content.Server.RoundEnd
             _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("round-end-system-shuttle-recalled-announcement"),
                 Loc.GetString("round-end-system-shuttle-sender-announcement"), false, colorOverride: Color.Gold);
 
-            _audio.PlayGlobal("/Audio/_NF/Announcements/PocketSizedAndy/andy1_shift_extend.ogg", Filter.Broadcast(), true); // Frontier
+            _audio.PlayGlobal("/Audio/_Forge/Announcements/Misc/oleg_shift_extend.ogg", Filter.Broadcast(), true); // Corvax-Frontier
 
             LastCountdownStart = null;
             ExpectedCountdownEnd = null;
@@ -292,7 +292,7 @@ namespace Content.Server.RoundEnd
                     ("time", time),
                     ("units", Loc.GetString(unitsLocString))));
             Timer.Spawn(countdownTime.Value, AfterEndRoundRestart, _countdownTokenSource.Token);
-            _audio.PlayGlobal("/Audio/_NF/Announcements/PocketSizedAndy/andy1_shift_end.ogg", Filter.Broadcast(), true); // Frontier
+            _audio.PlayGlobal("/Audio/_Forge/Announcements/Misc/oleg_shift_end.ogg", Filter.Broadcast(), true); // Corvax-Frontier
         }
 
         /// <summary>

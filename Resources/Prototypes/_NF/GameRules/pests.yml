@@ -18,7 +18,9 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_vent_critters.ogg # Corvax-Frontier
+      params:
+        volume: -1
     earliestStart: 15
     weight: 6
     duration: 50
@@ -40,7 +42,9 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_vent_critters.ogg # Corvax-Frontier
+      params:
+        volume: -1
     weight: 6
     duration: 50
   - type: VentCrittersRule
@@ -59,7 +63,9 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_vent_critters.ogg # Corvax-Frontier
+      params:
+        volume: -1
     weight: 6
     duration: 50
   - type: VentCrittersRule

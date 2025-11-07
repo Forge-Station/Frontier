@@ -1,0 +1,15 @@
+- type: entity
+  parent: [NFClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband]
+  id: ClothingBeltWebbingsNormalBlack
+  name: black chest rig
+  description: A set of tactical webbing worn by boarding parties.
+  components:
+  - type: StaticPrice
+    price: 1000
+    vendPrice: 1500
+  - type: Sprite
+    sprite: _Mono/Clothing/Belt/webbings_normal_black.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Belt/webbings_normal_black.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.5

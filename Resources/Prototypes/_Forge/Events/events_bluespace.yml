@@ -48,9 +48,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-cache-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_cache_arrival.ogg
     warningAnnouncement: station-event-bluespace-cache-warning-announcement
     endAnnouncement: station-event-bluespace-cache-end-announcement
+    endAudio:
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_cache_leave.ogg
     earliestStart: 30
     weight: 2
     duration: 1350
@@ -89,9 +91,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
     startAudio:
-      path: /Audio/Misc/notice1.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    endAudio:
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg
     earliestStart: 20
     maximumPlayers: 15 #Corvax-Frontier
     weight: 5
@@ -124,11 +128,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-cache-start-announcement
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_cache_arrival.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_cache_arrival.ogg
     warningAnnouncement: station-event-bluespace-cache-warning-announcement
     endAnnouncement: station-event-bluespace-cache-end-announcement
     endAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_cache_leave.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_cache_leave.ogg
     earliestStart: 100
     weight: 5
     duration: 1350
@@ -168,9 +172,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-mercenary-ftl-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg
     warningAnnouncement: station-event-bluespace-mercenary-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-mercenary-ftl-end-announcement
+    endAudio:
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg
     earliestStart: 30
     weight: 2
     duration: 1350

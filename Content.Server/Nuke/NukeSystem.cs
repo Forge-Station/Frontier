@@ -477,8 +477,11 @@ public sealed class NukeSystem : EntitySystem
         // The nuke may not be on a station, so it's more important to just
         // let people know that a nuclear bomb was armed in their vicinity instead.
         // Otherwise, you could set every station to whatever AlertLevelOnActivate is.
-        if (stationUid != null)
-            _alertLevel.SetLevel(stationUid.Value, component.AlertLevelOnActivate, true, true, true, true);
+        if (component.CanChangeAlertLevel) // Corvax-Forge change
+        {
+            if (stationUid != null)
+                _alertLevel.SetLevel(stationUid.Value, component.AlertLevelOnActivate, true, true, true, true);
+        }
 
         var pos = _transform.GetMapCoordinates(uid, xform: nukeXform);
         var x = (int) pos.X;
@@ -488,15 +491,18 @@ public sealed class NukeSystem : EntitySystem
         // We are collapsing the randomness here, otherwise we would get separate random song picks for checking duration and when actually playing the song afterwards
         _selectedNukeSong = _audio.ResolveSound(component.ArmMusic);
 
-        // warn a crew
-        var announcement = Loc.GetString("nuke-component-announcement-armed",
-            ("time", (int) component.RemainingTime),
-            ("location", FormattedMessage.RemoveMarkupOrThrow(_navMap.GetNearestBeaconString((uid, nukeXform)))));
-        var sender = Loc.GetString("nuke-component-announcement-sender");
-        _chatSystem.DispatchStationAnnouncement(stationUid ?? uid, announcement, sender, false, null, Color.Red);
+        if (component.CanChangeAlertLevel) // Corvax-Forge change
+        {
+            // warn a crew
+            var announcement = Loc.GetString("nuke-component-announcement-armed",
+                ("time", (int)component.RemainingTime),
+                ("location", FormattedMessage.RemoveMarkupOrThrow(_navMap.GetNearestBeaconString((uid, nukeXform)))));
+            var sender = Loc.GetString("nuke-component-announcement-sender");
+            _chatSystem.DispatchStationAnnouncement(stationUid ?? uid, announcement, sender, false, null, Color.Red);
+        }
 
         _sound.PlayGlobalOnStation(uid, _audio.ResolveSound(component.ArmSound));
-        _nukeSongLength = (float) _audio.GetAudioLength(_selectedNukeSong).TotalSeconds;
+        _nukeSongLength = (float)_audio.GetAudioLength(_selectedNukeSong).TotalSeconds;
 
         // turn on the spinny light
         _pointLight.SetEnabled(uid, true);
@@ -530,10 +536,13 @@ public sealed class NukeSystem : EntitySystem
         if (stationUid != null)
             _alertLevel.SetLevel(stationUid.Value, component.AlertLevelOnDeactivate, true, true, true);
 
-        // warn a crew
-        var announcement = Loc.GetString("nuke-component-announcement-unarmed");
-        var sender = Loc.GetString("nuke-component-announcement-sender");
-        _chatSystem.DispatchStationAnnouncement(uid, announcement, sender, false);
+        if (component.CanChangeAlertLevel) // Corvax-Forge change
+        {
+            // warn a crew
+            var announcement = Loc.GetString("nuke-component-announcement-unarmed");
+            var sender = Loc.GetString("nuke-component-announcement-sender");
+            _chatSystem.DispatchStationAnnouncement(uid, announcement, sender, false);
+        }
 
         component.PlayedNukeSong = false;
         _sound.PlayGlobalOnStation(uid, _audio.ResolveSound(component.DisarmSound));

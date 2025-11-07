@@ -6,3 +6,12 @@
   components:
     - type: Sprite
       sprite: _CorvaxGoob/Clothing/Neck/Cloaks/centcom_officer_black.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakSanabi
+  name: brigadier general cloak
+  description: A tattered, yet imposing cloak, worn by elite warriors.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Neck/Cloaks/sanabi.rsi
