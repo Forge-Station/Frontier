@@ -232,7 +232,7 @@ public sealed partial class AdminVerbSystem
         {
             Text = contractorName,
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Forge/Interface/Misc/contratnic.rsi"), "contrantic"),
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Forge/Interface/Misc/contratnic.rsi"), "contrantic"),
             Act = () =>
             {
                 if (HasComp<ContractorComponent>(args.Target))
