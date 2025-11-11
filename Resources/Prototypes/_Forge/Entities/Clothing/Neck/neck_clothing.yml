@@ -5,9 +5,9 @@
   description: Ты заново рождаешься в мире моды.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_brown.rsi
+    sprite: _Forge/Clothing/Neck/Misc/poncho_cowboy_brown.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_brown.rsi
+    sprite: _Forge/Clothing/Neck/Misc/poncho_cowboy_brown.rsi
   - type: Construction
     graph: ClothingNeckPonchoWebGraph
     node: ClothingNeckPonchoWebNode
@@ -23,9 +23,9 @@
   description: Ты заново рождаешься в мире моды.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_grey.rsi
+    sprite: _Forge/Clothing/Neck/Misc/poncho_cowboy_grey.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_grey.rsi
+    sprite: _Forge/Clothing/Neck/Misc/poncho_cowboy_grey.rsi
   - type: Construction
     graph: ClothingNeckPonchoWebGraph
     node: ClothingNeckPonchoWebNode
@@ -41,9 +41,9 @@
   description: Ты заново рождаешься в мире моды.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_red.rsi
+    sprite: _Forge/Clothing/Neck/Misc/poncho_cowboy_red.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Neck/Misc/poncho_cowboy_red.rsi
+    sprite: _Forge/Clothing/Neck/Misc/poncho_cowboy_red.rsi
   - type: Construction
     graph: ClothingNeckPonchoWebGraph
     node: ClothingNeckPonchoWebNode
@@ -59,9 +59,9 @@
   description: Ты заново рождаешься в мире моды.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Neck/Misc/poncho_web_white.rsi
+    sprite: _Forge/Clothing/Neck/Misc/poncho_web_white.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Neck/Misc/poncho_web_white.rsi
+    sprite: _Forge/Clothing/Neck/Misc/poncho_web_white.rsi
   - type: Construction
     graph: ClothingNeckPonchoWebGraph
     node: ClothingNeckPonchoWebNode
@@ -77,9 +77,9 @@
 #   description: Ты заново рождаешься в мире моды.
 #   components:
 #   - type: Sprite
-#     sprite: Forge/Clothing/Neck/Misc/poncho_web_dark.rsi
+#     sprite: _Forge/Clothing/Neck/Misc/poncho_web_dark.rsi
 #   - type: Clothing
-#     sprite: Forge/Clothing/Neck/Misc/poncho_web_dark.rsi
+#     sprite: _Forge/Clothing/Neck/Misc/poncho_web_dark.rsi
 #   - type: Construction
 #     graph: ClothingNeckPonchoWebGraph
 #     node: ClothingNeckPonchoWebNode

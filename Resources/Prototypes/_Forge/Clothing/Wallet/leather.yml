@@ -5,7 +5,7 @@
   description: Surprisingly thick. Careful not to lose it, and don't sit on it.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Wallet/wallet.rsi
+    sprite: _Forge/Clothing/Wallet/wallet.rsi
     layers:
     - state: closed-med
       map: ["closeLayer"]
@@ -22,7 +22,7 @@
       map: ["closed-coin"]
       visible: false
   - type: Item
-    sprite: Forge/Clothing/Wallet/wallet.rsi
+    sprite: _Forge/Clothing/Wallet/wallet.rsi
   - type: Butcherable
     butcheringType: Knife
     spawned:
@@ -30,7 +30,7 @@
       amount: 1
   - type: Appearance
   - type: ItemMapper
-    sprite: Forge/Clothing/Wallet/wallet.rsi
+    sprite: _Forge/Clothing/Wallet/wallet.rsi
 
 - type: entity
   parent: ClothingWalletLeatherMed

@@ -22,10 +22,10 @@
         - Write
         - CyberPen
   - type: Icon
-    sprite: Forge/Objects/Devices/pda.rsi
+    sprite: _Forge/Objects/Devices/pda.rsi
     state: pda-syndi
   - type: Sprite
-    sprite: Forge/Objects/Devices/pda.rsi
+    sprite: _Forge/Objects/Devices/pda.rsi
     state: pda-syndi
   - type: Appearance
     appearanceDataInit:
@@ -64,10 +64,10 @@
         - Write
         - CyberPen
   - type: Icon
-    sprite: Forge/Objects/Devices/pda.rsi
+    sprite: _Forge/Objects/Devices/pda.rsi
     state: pda-highcommand
   - type: Sprite
-    sprite: Forge/Objects/Devices/pda.rsi
+    sprite: _Forge/Objects/Devices/pda.rsi
     state: pda-highcommand
   - type: Appearance
     appearanceDataInit:
@@ -106,10 +106,10 @@
         - Write
         - CyberPen
   - type: Icon
-    sprite: Forge/Objects/Devices/pda.rsi
+    sprite: _Forge/Objects/Devices/pda.rsi
     state: pda-syndi
   - type: Sprite
-    sprite: Forge/Objects/Devices/pda.rsi
+    sprite: _Forge/Objects/Devices/pda.rsi
     state: pda-syndi
   - type: Appearance
     appearanceDataInit:
@@ -148,10 +148,10 @@
         - Write
         - CyberPen
   - type: Icon
-    sprite: Forge/Objects/Devices/pda.rsi
+    sprite: _Forge/Objects/Devices/pda.rsi
     state: pda-syndi-agent
   - type: Sprite
-    sprite: Forge/Objects/Devices/pda.rsi
+    sprite: _Forge/Objects/Devices/pda.rsi
     state: pda-syndi-agent
   - type: Appearance
     appearanceDataInit:
@@ -218,10 +218,10 @@
         tags:
         - Write
   - type: Icon
-    sprite: Forge/Objects/Devices/pda.rsi
+    sprite: _Forge/Objects/Devices/pda.rsi
     state: pda-specop
   - type: Sprite
-    sprite: Forge/Objects/Devices/pda.rsi
+    sprite: _Forge/Objects/Devices/pda.rsi
     state: pda-specop
   - type: Appearance
     appearanceDataInit:

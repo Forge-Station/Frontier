@@ -6,7 +6,7 @@
   parent: [ BaseItem, BaseC3SyndicateContraband ] # Frontier: BaseMinorContraband<BaseC3SyndicateContraband
   components:
   - type: Sprite
-    sprite: Forge/Objects/Misc/Syndicatebox.rsi
+    sprite: _Forge/Objects/Misc/Syndicatebox.rsi
     state: icon
   - type: ThiefUndeterminedBackpack
     maxSelectedSets: 1

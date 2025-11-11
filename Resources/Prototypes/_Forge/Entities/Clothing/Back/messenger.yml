@@ -5,7 +5,7 @@
   description: A tactical messenger for army related needs.
   components:
   - type: Sprite
-    sprite: Forge/Back/Messenger/military.rsi
+    sprite: _Forge/Back/Messenger/military.rsi
   - type: Storage
     grid:
     - 0,0,1,1
@@ -22,7 +22,7 @@
   description: A messenger bag that opens into a localized pocket of bluespace.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Back/Messenger/centcom.rsi
+    sprite: _Forge/Clothing/Back/Messenger/centcom.rsi
   - type: Storage
     maxItemSize: Huge
     grid:

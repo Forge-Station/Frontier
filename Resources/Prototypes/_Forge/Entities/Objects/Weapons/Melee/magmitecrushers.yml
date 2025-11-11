@@ -3,7 +3,7 @@
   id: WeaponMagmiteCrusher
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Melee/magmitecrusher.rsi
+    sprite: _Forge/Objects/Weapons/Melee/magmitecrusher.rsi
     layers:
     - state: icon
     - state: icon-uncharged
@@ -11,9 +11,9 @@
       map: [ "empty-icon" ]
   - type: Item
     size: Ginormous
-    sprite: Forge/Objects/Weapons/Melee/magmitecrusher.rsi
+    sprite: _Forge/Objects/Weapons/Melee/magmitecrusher.rsi
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Melee/magmitecrusher.rsi
+    sprite: _Forge/Objects/Weapons/Melee/magmitecrusher.rsi
     quickEquip: false
     slots:
     - Back
@@ -53,12 +53,12 @@
   description: An early design of the proto-kinetic accelerator, in glaive form.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Melee/magmitecrusher_glaive.rsi
+    sprite: _Forge/Objects/Weapons/Melee/magmitecrusher_glaive.rsi
   - type: Item
     size: Ginormous
-    sprite: Forge/Objects/Weapons/Melee/magmitecrusher_glaive.rsi
+    sprite: _Forge/Objects/Weapons/Melee/magmitecrusher_glaive.rsi
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Melee/magmitecrusher_glaive.rsi
+    sprite: _Forge/Objects/Weapons/Melee/magmitecrusher_glaive.rsi
     quickEquip: false
     slots:
     - back

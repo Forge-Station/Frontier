@@ -20,7 +20,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/p90lrkmag.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Magazine/p90lrkmag.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]

@@ -10,7 +10,7 @@
         Cold: 0.15
         Bloodloss: 0.15
   - type: Icon # It will not have an icon in the adminspawn menu without this. Body parts seem fine for whatever reason.
-    sprite: Forge/Mobs/Species/Elzuosa/parts.rsi
+    sprite: _Forge/Mobs/Species/Elzuosa/parts.rsi
     state: full
   - type: HumanoidAppearance
     species: Elzuosa

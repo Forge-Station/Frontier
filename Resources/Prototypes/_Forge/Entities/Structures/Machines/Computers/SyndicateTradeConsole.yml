@@ -5,7 +5,7 @@
   description: Используется для оформления заказов на нелегальные предметы
   components:
   - type: Sprite
-    sprite: Forge/Structures/Machines/terminal_syndicatechange.rsi
+    sprite: _Forge/Structures/Machines/terminal_syndicatechange.rsi
     noRot: true
     layers:
     - state: "off"
@@ -52,7 +52,7 @@
   description: Используется для оформления заказов на продукцию компании Interdyne.
   components:
   - type: Sprite
-    sprite: Forge/Structures/Machines/interdyne_techfab.rsi
+    sprite: _Forge/Structures/Machines/interdyne_techfab.rsi
     snapCardinals: true # Frontier
     layers:
     - state: icon

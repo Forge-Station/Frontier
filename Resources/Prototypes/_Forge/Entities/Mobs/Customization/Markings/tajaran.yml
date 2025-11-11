@@ -1,7 +1,7 @@
 - type: humanoidBaseSprite
   id: MobTajaranEyes
   baseSprite:
-    sprite: Forge/Mobs/Customization/Tajaran/tajaran_eyes.rsi
+    sprite: _Forge/Mobs/Customization/Tajaran/tajaran_eyes.rsi
     state: eyes
 
 - type: marking
@@ -10,7 +10,7 @@
   bodyPart: Chest
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_overlay.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_overlay.rsi
       state: patch
 
 - type: marking
@@ -19,7 +19,7 @@
   bodyPart: Chest
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_overlay.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_overlay.rsi
       state: skeleton_body
 
 # - type: marking
@@ -28,7 +28,7 @@
 #   bodyPart: Chest
 #   speciesRestriction: [Tajaran]
 #   sprites:
-#     - sprite: Forge/Mobs/Customization/Tajaran/tajaran_overlay.rsi
+#     - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_overlay.rsi
 #       state: points
 
 - type: marking
@@ -37,7 +37,7 @@
   bodyPart: Chest
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_overlay.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_overlay.rsi
       state: blots_body
 
 - type: marking
@@ -46,7 +46,7 @@
   bodyPart: Chest
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_overlay.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_overlay.rsi
       state: stripes_body
 
 # - type: marking
@@ -55,7 +55,7 @@
 #   bodyPart: RFoot
 #   speciesRestriction: [Tajaran]
 #   sprites:
-#     - sprite: Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
+#     - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
 #       state: gradient_RLeg
 
 # - type: marking
@@ -64,7 +64,7 @@
 #   bodyPart: LFoot
 #   speciesRestriction: [Tajaran]
 #   sprites:
-#     - sprite: Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
+#     - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
 #       state: gradient_LLeg
 
 - type: marking
@@ -73,7 +73,7 @@
   bodyPart: LHand
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
       state: gradient_LHand
 
 - type: marking
@@ -82,7 +82,7 @@
   bodyPart: LArm
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
       state: gradient_LArm
 
 - type: marking
@@ -91,7 +91,7 @@
   bodyPart: RHand
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
       state: gradient_RHand
 
 - type: marking
@@ -100,7 +100,7 @@
   bodyPart: RArm
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_parts.rsi
       state: gradient_RArm
 
 - type: marking
@@ -109,7 +109,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: spikey
 
 - type: marking
@@ -118,7 +118,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: ladiesretro
 
 - type: marking
@@ -127,7 +127,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: braid
 
 - type: marking
@@ -136,7 +136,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: eyebrows
 
 - type: marking
@@ -145,7 +145,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: pigtail
 
 - type: marking
@@ -154,7 +154,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: curly
 
 - type: marking
@@ -163,7 +163,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: bob
 
 - type: marking
@@ -172,7 +172,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: fingerwave
 
 - type: marking
@@ -181,7 +181,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: plait
 
 - type: marking
@@ -190,7 +190,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: ponytail
 
 - type: marking
@@ -199,7 +199,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: clean
 
 - type: marking
@@ -208,7 +208,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: rattail
 
 - type: marking
@@ -217,7 +217,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: bedhead
 
 - type: marking
@@ -226,7 +226,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: victory
 
 - type: marking
@@ -235,7 +235,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: shaggy
 
 - type: marking
@@ -244,7 +244,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: mohawk
 
 - type: marking
@@ -253,7 +253,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: bangs
 
 - type: marking
@@ -262,7 +262,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: messy
 
 - type: marking
@@ -271,7 +271,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: straight
 
 - type: marking
@@ -280,7 +280,7 @@
   bodyPart: Hair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_hairs.rsi
       state: long
 
 - type: marking
@@ -289,7 +289,7 @@
   bodyPart: FacialHair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_facial_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_facial_hairs.rsi
       state: mustache_2
 
 - type: marking
@@ -298,7 +298,7 @@
   bodyPart: FacialHair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_facial_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_facial_hairs.rsi
       state: beard
 
 - type: marking
@@ -307,7 +307,7 @@
   bodyPart: FacialHair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_facial_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_facial_hairs.rsi
       state: mustache_3
 
 - type: marking
@@ -316,7 +316,7 @@
   bodyPart: FacialHair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_facial_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_facial_hairs.rsi
       state: cheeks
 
 - type: marking
@@ -325,7 +325,7 @@
   bodyPart: FacialHair
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_facial_hairs.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_facial_hairs.rsi
       state: mustache
 
 - type: marking
@@ -334,7 +334,7 @@
   bodyPart: Head
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: patch_2
 
 - type: marking
@@ -343,7 +343,7 @@
   bodyPart: Head
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: eye_stripes_head
 
 - type: marking
@@ -352,7 +352,7 @@
   bodyPart: HeadTop
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: outears
 
 - type: marking
@@ -361,7 +361,7 @@
   bodyPart: Head
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: tiger_head
 
 - type: marking
@@ -370,7 +370,7 @@
   bodyPart: Snout
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: muzzle
 
 - type: marking
@@ -379,7 +379,7 @@
   bodyPart: Head
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: tiger_face
 
 - type: marking
@@ -388,7 +388,7 @@
   bodyPart: Head
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: star_head
 
 - type: marking
@@ -397,7 +397,7 @@
   bodyPart: HeadTop
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: inears
 
 - type: marking
@@ -406,7 +406,7 @@
   bodyPart: Snout
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: nose
 
 - type: marking
@@ -415,7 +415,7 @@
   bodyPart: Head
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: raccoon-head
 
 - type: marking
@@ -424,7 +424,7 @@
   bodyPart: Head
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: mane_head
 
 - type: marking
@@ -433,7 +433,7 @@
   bodyPart: Snout
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_head.rsi
       state: muzzleinears
 
 - type: marking
@@ -442,7 +442,7 @@
   bodyPart: Tail
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_fluffy
 
 
@@ -452,7 +452,7 @@
   bodyPart: Chest
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_chest.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_chest.rsi
       state: belly2
 
 - type: marking
@@ -461,7 +461,7 @@
   bodyPart: Chest
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_chest.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_chest.rsi
       state: chest
 
 - type: marking
@@ -470,7 +470,7 @@
   bodyPart: Chest
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_chest.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_chest.rsi
       state: belly1
 
 - type: marking
@@ -479,7 +479,7 @@
   bodyPart: Chest
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_chest.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_chest.rsi
       state: belly3
 
 - type: marking
@@ -488,7 +488,7 @@
   markingCategory: Tail
   speciesRestriction: []
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_m
 
 - type: marking
@@ -497,9 +497,9 @@
   markingCategory: Tail
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_m
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_ring
 
 - type: marking
@@ -508,9 +508,9 @@
   bodyPart: Tail
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_m
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_skeleton
 
 - type: marking
@@ -519,9 +519,9 @@
   bodyPart: Tail
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_m
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_tip
 
 - type: marking
@@ -530,9 +530,9 @@
   bodyPart: Tail
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_fluffy
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_skeleton
 
 
@@ -542,9 +542,9 @@
   bodyPart: Tail
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_fluffy
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: wingler_1
 
 - type: marking
@@ -553,9 +553,9 @@
   bodyPart: Tail
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_fluffy
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: wingler_2
 
 - type: marking
@@ -564,9 +564,9 @@
   bodyPart: Tail
   speciesRestriction: [Tajaran]
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_fluffy
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: wingler_3
 
 # Animated
@@ -576,7 +576,7 @@
   markingCategory: Tail
   speciesRestriction: []
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_fluffy_wagging
 
 - type: marking
@@ -585,9 +585,9 @@
   bodyPart: Tail
   speciesRestriction: []
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_fluffy_wagging
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: wingler_1_wagging
 
 - type: marking
@@ -596,9 +596,9 @@
   bodyPart: Tail
   speciesRestriction: []
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_fluffy_wagging
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: wingler_2_wagging
 
 - type: marking
@@ -607,9 +607,9 @@
   bodyPart: Tail
   speciesRestriction: []
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_fluffy_wagging
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: wingler_3_wagging
 
 - type: marking
@@ -618,9 +618,9 @@
   markingCategory: Tail
   speciesRestriction: []
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_fluffy_wagging
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_skeleton_wagging
 
 - type: marking
@@ -629,9 +629,9 @@
   bodyPart: Tail
   speciesRestriction: []
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_m_wagging
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_tip_wagging
 
 
@@ -641,7 +641,7 @@
   markingCategory: Tail
   speciesRestriction: []
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_m_wagging
 
 - type: marking
@@ -650,9 +650,9 @@
   markingCategory: Tail
   speciesRestriction: []
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_m_wagging
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_ring_wagging
 
 - type: marking
@@ -661,7 +661,7 @@
   bodyPart: Tail
   speciesRestriction: []
   sprites:
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_m_wagging
-    - sprite: Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
+    - sprite: _Forge/Mobs/Customization/Tajaran/tajaran_tail.rsi
       state: tail_skeleton_wagging

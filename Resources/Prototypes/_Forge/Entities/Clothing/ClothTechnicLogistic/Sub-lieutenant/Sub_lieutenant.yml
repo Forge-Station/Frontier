@@ -5,9 +5,9 @@
   description: Takes the officer rank of sub-lieutenants of the Self-Defense Forces TechnicLogistic.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/beret.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/beret.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/beret.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/beret.rsi
 
 - type: entity
   parent: [ClothingShoesMilitaryBase, BaseC2ContrabandUnredeemable]
@@ -16,9 +16,9 @@
   description: Robust combat boots for combat scenarios or combat situations. All combat, all the time.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/boots.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/boots.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/boots.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/boots.rsi
 
 - type: entity
   parent: [ClothingOuterStorageBase, BaseC2ContrabandUnredeemable]
@@ -27,9 +27,9 @@
   description: coat TL
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/coat.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/coat.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/coat.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/coat.rsi
 
 - type: entity
   parent: [ClothingEyesGlassesSecurity, BaseC2ContrabandUnredeemable]
@@ -38,9 +38,9 @@
   description: There is an incomprehensible engraving on the glasses; all I can make out is the word "Nian"
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/glasses.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/glasses.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/glasses.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/glasses.rsi
 
 - type: entity
   parent: [ClothingEyesNightVisionGoggles, ShowSecurityIcons, BaseC2ContrabandUnredeemable]
@@ -49,9 +49,9 @@
   description: There is an incomprehensible engraving on the glasses; all I can make out is the word "Nian"
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/diagnostic_nightvision.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/diagnostic_nightvision.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/diagnostic_nightvision.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/diagnostic_nightvision.rsi
   - type: FlashImmunity
   - type: EyeProtection
   - type: StaticPrice
@@ -69,9 +69,9 @@
   description: A pair of gloves made from the finest reinforced materials.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/hand.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/hand.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/hand.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/hand.rsi
   - type: Insulated
   - type: Fiber
     fiberColor: fibers-red
@@ -93,9 +93,9 @@
   description: Advanced armored jumpsuit used by special forces in special operations.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/jumpsuit.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/jumpsuit.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/jumpsuit.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/jumpsuit.rsi
 
 - type: entity
   parent: [ClothingMaskGas, BaseC2ContrabandUnredeemable]
@@ -106,9 +106,9 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/mask.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/mask.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/mask.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/mask.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -124,9 +124,9 @@
   description: Unloading of self-defense forces fighters TechnicLogistic.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/belt.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/belt.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/belt.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/belt.rsi
 
 - type: entity
   parent: [ClothingOuterArmorHoS, ClothingOuterStorageBase, BaseC2ContrabandUnredeemable]
@@ -135,9 +135,9 @@
   description: TechnicLogistic Self-Defense Forces Bulletproof Vest.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/vest.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/vest.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/vest.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/vest.rsi
     equippedState: equipped-OUTHERCLOTHING
 - type: entity
   parent: [BaseC2ContrabandUnredeemable, ClothingHeadHelmetBasic]
@@ -146,9 +146,9 @@
   description: TechnicLogistic Self-Defense Forces helmet.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/helmet.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/helmet.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/helmet.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/helmet.rsi
 
 - type: entity
   parent: [ClothingHeadsetAlt, BaseC2ContrabandUnredeemable]
@@ -161,9 +161,9 @@
       key_slots:
       - EncryptionKeyCommon
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/headset.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/headset.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/headset.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/headset.rsi
 
 - type: entity
   parent: [ClothingBackpackDuffel, BaseC2ContrabandUnredeemable]
@@ -172,7 +172,7 @@
   description: A large duffel bag for holding any army goods.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/duffel_bag.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/duffel_bag.rsi
   - type: Storage
     grid:
     - 0,0,7,4
@@ -185,8 +185,8 @@
   description: A badge to show that the owner is a 'legitimate' lawyer who passed the NT bar exam required to practice law.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/lawyerbadge.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/lawyerbadge.rsi
   - type: Clothing
-    sprite: Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/lawyerbadge.rsi
+    sprite: _Forge/Clothing/ClothTechnicLogistic/Sub-lieutenant/lawyerbadge.rsi
   - type: TypingIndicatorClothing
     proto: lawyer

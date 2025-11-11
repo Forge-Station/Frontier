@@ -2251,7 +2251,7 @@
     access: [["SyndicateAgent"]]
 # Forge-change
   - type: Sprite
-    sprite: Forge/Structures/Machines/med_syndi_alt.rsi # Forge-Change
+    sprite: _Forge/Structures/Machines/med_syndi_alt.rsi # Forge-Change
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]

@@ -330,7 +330,7 @@
   - type: Sprite
     drawdepth: Mobs
     noRot: true
-    sprite: Forge/Objects/Specific/Mech/mecha.rsi
+    sprite: _Forge/Objects/Specific/Mech/mecha.rsi
     layers:
     - map: [ "enum.MechVisualLayers.Base" ]
       state: ares
@@ -696,7 +696,7 @@
   - type: Sprite
     drawdepth: Mobs
     noRot: true
-    sprite: Forge/Objects/Specific/Mech/mecha.rsi
+    sprite: _Forge/Objects/Specific/Mech/mecha.rsi
     layers:
     - map: [ "enum.MechVisualLayers.Base" ]
       state: blackpearal

@@ -67,9 +67,9 @@
   components:
   - type: CargoSellBlacklist
   - type: Icon
-    sprite: Forge/Bluespace/Crates/industrial_secure.rsi
+    sprite: _Forge/Bluespace/Crates/industrial_secure.rsi
   - type: Sprite
-    sprite: Forge/Bluespace/Crates/industrial_secure.rsi
+    sprite: _Forge/Bluespace/Crates/industrial_secure.rsi
   - type: StorageFill
     contents:
     - id: SpaceCash15000
@@ -82,9 +82,9 @@
   components:
   - type: CargoSellBlacklist
   - type: Icon
-    sprite: Forge/Bluespace/Crates/technological_secure.rsi
+    sprite: _Forge/Bluespace/Crates/technological_secure.rsi
   - type: Sprite
-    sprite: Forge/Bluespace/Crates/technological_secure.rsi
+    sprite: _Forge/Bluespace/Crates/technological_secure.rsi
   - type: StorageFill
     contents:
     - id: SpaceCash20000
@@ -97,9 +97,9 @@
   components:
   - type: CargoSellBlacklist
   - type: Icon
-    sprite: Forge/Bluespace/Crates/biological_secure.rsi
+    sprite: _Forge/Bluespace/Crates/biological_secure.rsi
   - type: Sprite
-    sprite: Forge/Bluespace/Crates/biological_secure.rsi
+    sprite: _Forge/Bluespace/Crates/biological_secure.rsi
   - type: StorageFill
     contents:
     - id: SpaceCash10000
@@ -112,9 +112,9 @@
   components:
   - type: CargoSellBlacklist
   - type: Icon
-    sprite: Forge/Bluespace/Crates/destruction_secure.rsi
+    sprite: _Forge/Bluespace/Crates/destruction_secure.rsi
   - type: Sprite
-    sprite: Forge/Bluespace/Crates/destruction_secure.rsi
+    sprite: _Forge/Bluespace/Crates/destruction_secure.rsi
   - type: StorageFill
     contents:
     - id: SpaceCash25000
@@ -127,9 +127,9 @@
   components:
   - type: CargoSellBlacklist
   - type: Icon
-    sprite: Forge/Bluespace/Crates/limited_secure.rsi
+    sprite: _Forge/Bluespace/Crates/limited_secure.rsi
   - type: Sprite
-    sprite: Forge/Bluespace/Crates/limited_secure.rsi
+    sprite: _Forge/Bluespace/Crates/limited_secure.rsi
   - type: StorageFill
     contents:
     - id: SpaceCash25000

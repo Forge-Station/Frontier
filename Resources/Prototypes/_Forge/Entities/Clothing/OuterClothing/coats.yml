@@ -5,9 +5,9 @@
   description: officer's armored greatcoat
   components:
   - type: Sprite
-    sprite: Forge/Clothing/OuterClothing/Coats/dso.rsi
+    sprite: _Forge/Clothing/OuterClothing/Coats/dso.rsi
   - type: Clothing
-    sprite: Forge/Clothing/OuterClothing/Coats/dso.rsi
+    sprite: _Forge/Clothing/OuterClothing/Coats/dso.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -31,9 +31,9 @@
   description: Стильный и защищённый тренч настоящего офицера Синдиката. Покажите этим корпоратам кто тут главный!
   components:
   - type: Sprite
-    sprite: Forge/Clothing/OuterClothing/Coats/syndicate.rsi
+    sprite: _Forge/Clothing/OuterClothing/Coats/syndicate.rsi
   - type: Clothing
-    sprite: Forge/Clothing/OuterClothing/Coats/syndicate.rsi
+    sprite: _Forge/Clothing/OuterClothing/Coats/syndicate.rsi
   - type: Armor
     modifiers:
       coefficients:

@@ -3,7 +3,7 @@
   name:  uplink-pirate-nightvision-name
   description: uplink-pirate-nightvision-desc
   productEntity: NFClothingEyesNightVisionGogglePirate
-  icon: { sprite: Forge/Clothing/Eyes/Goggles/diagnostic_nightvision.rsi, state: icon }
+  icon: { sprite: _Forge/Clothing/Eyes/Goggles/diagnostic_nightvision.rsi, state: icon }
   cost:
     Doubloon: 6
   categories:
@@ -19,7 +19,7 @@
   name: uplink-security-mech-bpearl-name
   description: uplink-security-mech-bpearl-desc
   productEntity: MechGygaxPirateBattery
-  icon: { sprite: Forge/Objects/Specific/Mech/mecha.rsi, state: blackpearal }
+  icon: { sprite: _Forge/Objects/Specific/Mech/mecha.rsi, state: blackpearal }
   cost:
     Doubloon: 80
   categories:
@@ -38,7 +38,7 @@
   name: uplink-BoxPirateTrackingBundle-name
   description: uplink-BoxPirateTrackingBundle-desc
   productEntity: BoxPirateTrackingBundle
-#  icon: { sprite: Forge/Objects/Specific/Mech/mecha.rsi, state: blackpearal }
+#  icon: { sprite: _Forge/Objects/Specific/Mech/mecha.rsi, state: blackpearal }
   cost:
     Doubloon: 1
   categories:

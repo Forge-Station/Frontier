@@ -25,10 +25,10 @@
   parent: PartIpc
   components:
     - type: Sprite
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "torso_m"
     - type: Icon
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "torso_m"
 
 - type: entity
@@ -37,10 +37,10 @@
   parent: PartIpc
   components:
     - type: Sprite
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "head_m"
     - type: Icon
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "head_m"
     - type: BodyPart
       partType: Head
@@ -59,10 +59,10 @@
   parent: PartIpc
   components:
     - type: Sprite
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "l_arm"
     - type: Icon
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "l_arm"
     - type: BodyPart
       partType: Arm
@@ -74,10 +74,10 @@
   parent: PartIpc
   components:
     - type: Sprite
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "r_arm"
     - type: Icon
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "r_arm"
     - type: BodyPart
       partType: Arm
@@ -89,10 +89,10 @@
   parent: PartIpc
   components:
     - type: Sprite
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "l_hand"
     - type: Icon
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "l_hand"
     - type: BodyPart
       partType: Hand
@@ -104,10 +104,10 @@
   parent: PartIpc
   components:
     - type: Sprite
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "r_hand"
     - type: Icon
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "r_hand"
     - type: BodyPart
       partType: Hand
@@ -119,10 +119,10 @@
   parent: PartIpc
   components:
     - type: Sprite
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "l_leg"
     - type: Icon
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "l_leg"
     - type: BodyPart
       partType: Leg
@@ -135,10 +135,10 @@
   parent: PartIpc
   components:
     - type: Sprite
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "r_leg"
     - type: Icon
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "r_leg"
     - type: BodyPart
       partType: Leg
@@ -151,10 +151,10 @@
   parent: PartIpc
   components:
     - type: Sprite
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "l_foot"
     - type: Icon
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "l_foot"
     - type: BodyPart
       partType: Foot
@@ -166,10 +166,10 @@
   parent: PartIpc
   components:
     - type: Sprite
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "r_foot"
     - type: Icon
-      sprite: Forge/Mobs/Species/Ipc/parts.rsi
+      sprite: _Forge/Mobs/Species/Ipc/parts.rsi
       state: "r_foot"
     - type: BodyPart
       partType: Foot

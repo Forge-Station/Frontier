@@ -5,10 +5,10 @@
   description: Магнитные ботинки с обратной конструкцией, которые, по-видимому, основаны на усовершенствованной модели, поскольку обладают более легким магнитным притяжением. Собственность Мародёров Горлекса.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
+    sprite: _Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
     state: icon
   - type: Clothing
-    sprite: Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
+    sprite: _Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -34,7 +34,7 @@
 - type: alert
   id: MagbootsSyndElite
   icons:
-  - sprite: Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
+  - sprite: _Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
     state: icon-on
   name: alerts-magboots-name
   description: alerts-magboots-desc
@@ -46,10 +46,10 @@
   description: Магнитные ботинки с обратной конструкциыей, которые, по-видимому, основаны на усовершенствованной модели, поскольку обладают более легким магнитным притяжением.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
+    sprite: _Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
     state: icon
   - type: Clothing
-    sprite: Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
+    sprite: _Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -72,7 +72,7 @@
 - type: alert
   id: MagbootsContractor
   icons:
-  - sprite: Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
+  - sprite: _Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
     state: icon-on
   name: alerts-magboots-name
   description: alerts-magboots-desc

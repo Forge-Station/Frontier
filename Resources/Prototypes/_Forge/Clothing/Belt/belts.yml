@@ -5,9 +5,9 @@
   description: Ременно-плечевая система тактических ремней, которую носят настоящая элита тёмного интернета.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Belt/contractor_webbing.rsi
+    sprite: _Forge/Clothing/Belt/contractor_webbing.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Belt/contractor_webbing.rsi
+    sprite: _Forge/Clothing/Belt/contractor_webbing.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.1
   - type: Storage
@@ -21,9 +21,9 @@
   description: nfsd engineer's toolbelt desc
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Belt/nfsd_engi_belt.rsi
+    sprite: _Forge/Clothing/Belt/nfsd_engi_belt.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Belt/nfsd_engi_belt.rsi
+    sprite: _Forge/Clothing/Belt/nfsd_engi_belt.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.1
   - type: Storage

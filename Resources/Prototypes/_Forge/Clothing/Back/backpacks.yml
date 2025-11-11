@@ -5,7 +5,7 @@
   description: Удобный, практичный рюкзак.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Back/Backpacks/syndicate.rsi
+    sprite: _Forge/Clothing/Back/Backpacks/syndicate.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.1
   - type: Storage
@@ -19,7 +19,7 @@
   description: Удобный рюкзак для ваших медицинских пренадлежностей.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Back/Backpacks/syndicatemed.rsi
+    sprite: _Forge/Clothing/Back/Backpacks/syndicatemed.rsi
   - type: ExplosionResistance
     damageCoefficient: 0
   - type: Storage
@@ -33,7 +33,7 @@
   description: Удобный рюкзак для ваших предательских вещей. Выглядит стильно и оригинально.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Back/Backpacks/contractor.rsi
+    sprite: _Forge/Clothing/Back/Backpacks/contractor.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.1
   - type: Storage

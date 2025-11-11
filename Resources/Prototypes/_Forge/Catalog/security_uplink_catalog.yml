@@ -21,7 +21,7 @@
   name: uplink-security-mech-ares-name
   description: uplink-security-mech-ares-desc
   productEntity: MechAresBattery
-  icon: { sprite: Forge/Objects/Specific/Mech/mecha.rsi, state: ares }
+  icon: { sprite: _Forge/Objects/Specific/Mech/mecha.rsi, state: ares }
   cost:
     FrontierUplinkCoin: 120
   categories:
@@ -41,7 +41,7 @@
   name: uplink-security-mech-disabler-name
   description: uplink-security-mech-disabler-desc
   productEntity: WeaponMechCombatDisabler
-  icon: { sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_disabler }
+  icon: { sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_disabler }
   cost:
     FrontierUplinkCoin: 10
   categories:
@@ -62,7 +62,7 @@
   name: uplink-security-mech-firedart-name
   description: uplink-security-mech-firedart-desc
   productEntity: WeaponMechCombatFiredartLaser
-  icon: { sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_firedart }
+  icon: { sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_firedart }
   cost:
     FrontierUplinkCoin: 12
   categories:
@@ -83,7 +83,7 @@
   name: uplink-security-mech-solaris-name
   description: uplink-security-mech-solaris-desc
   productEntity: WeaponMechCombatSolarisLaser
-  icon: { sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_solaris }
+  icon: { sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_solaris }
   cost:
     FrontierUplinkCoin: 16
   categories:
@@ -104,7 +104,7 @@
   name: uplink-security-mech-immolation-name
   description: uplink-security-mech-immolation-desc
   productEntity: WeaponMechCombatImmolationGun
-  icon: { sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_immolator }
+  icon: { sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_immolator }
   cost:
     FrontierUplinkCoin: 18
   categories:
@@ -124,7 +124,7 @@
   name: uplink-security-mech-rifle-name
   description: uplink-security-mech-rifle-desc
   productEntity: WeaponMechCombatUltraRifle
-  icon: { sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_uac2 }
+  icon: { sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi, state: mecha_uac2 }
   cost:
     FrontierUplinkCoin: 22
   categories:
@@ -228,7 +228,7 @@
   name:  uplink-security-nfsdgasalt-name
   description: uplink-security-nfsdgasalt-desc
   productEntity: ClothingMaskGasNfsdAlt
-  icon: { sprite: Forge/Clothing/Mask/nfsd_alt.rsi, state: icon}
+  icon: { sprite: _Forge/Clothing/Mask/nfsd_alt.rsi, state: icon}
   cost:
     FrontierUplinkCoin: 3
   categories:
@@ -244,7 +244,7 @@
   name:  uplink-security-nfsdgascoroner-name
   description: uplink-security-nfsdgascoroner-desc
   productEntity: ClothingMaskGasNfsdCoroner
-  icon: { sprite: Forge/Clothing/Mask/coroner.rsi, state: icon}
+  icon: { sprite: _Forge/Clothing/Mask/coroner.rsi, state: icon}
   cost:
     FrontierUplinkCoin: 3
   categories:
@@ -260,7 +260,7 @@
   name:  uplink-security-nfsdgasup-name
   description: uplink-security-nfsdgasup-desc
   productEntity: ClothingMaskGasNfsdAdvanced
-  icon: { sprite: Forge/Clothing/Mask/nfsd_up.rsi, state: icon}
+  icon: { sprite: _Forge/Clothing/Mask/nfsd_up.rsi, state: icon}
   cost:
     FrontierUplinkCoin: 6
   categories:
@@ -281,7 +281,7 @@
   name:  uplink-security-engibelt-name
   description: uplink-security-engibelt-desc
   productEntity: ClothingBeltNfsdEngineerFilled
-  icon: { sprite: Forge/Clothing/Belt/nfsd_engi_belt.rsi, state: icon}
+  icon: { sprite: _Forge/Clothing/Belt/nfsd_engi_belt.rsi, state: icon}
   cost:
     FrontierUplinkCoin: 10
   categories:
@@ -302,7 +302,7 @@
   name:  uplink-security-PowerCellNFSD-name
   description: uplink-security-PowerCellNFSD-desc
   productEntity: PowerCellNFSD
-  icon: { sprite: Forge/Objects/Power/power_cells.rsi, state: powerNFSD }
+  icon: { sprite: _Forge/Objects/Power/power_cells.rsi, state: powerNFSD }
   cost:
     FrontierUplinkCoin: 12
   categories:

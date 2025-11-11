@@ -7,9 +7,9 @@
   components:
   - type: BreathMask
   - type: Sprite
-    sprite: Forge/Clothing/Head/Hardsuits/mercenaryelitehelm.rsi
+    sprite: _Forge/Clothing/Head/Hardsuits/mercenaryelitehelm.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Head/Hardsuits/mercenaryelitehelm.rsi
+    sprite: _Forge/Clothing/Head/Hardsuits/mercenaryelitehelm.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
@@ -36,9 +36,9 @@
   description: Тяжелобронированный шлем, предназначенный для элитных операций. Собственность Ударного подразделения Синдиката.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Head/Hardsuits/syndicate_strike_team.rsi
+    sprite: _Forge/Clothing/Head/Hardsuits/syndicate_strike_team.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Head/Hardsuits/syndicate_strike_team.rsi
+    sprite: _Forge/Clothing/Head/Hardsuits/syndicate_strike_team.rsi
     equippedPrefix: off
     clothingVisuals:
       head:
@@ -71,9 +71,9 @@
   description: Тяжелобронированный шлем, предназначенный для элитных операций.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Head/Hardsuits/contractor.rsi
+    sprite: _Forge/Clothing/Head/Hardsuits/contractor.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Head/Hardsuits/contractor.rsi
+    sprite: _Forge/Clothing/Head/Hardsuits/contractor.rsi
   - type: PointLight
     color: yellow
     radius: 7
@@ -97,9 +97,9 @@
   components:
   - type: BreathMask
   - type: Sprite
-    sprite: Forge/Clothing/Head/Hardsuits/contractor.rsi
+    sprite: _Forge/Clothing/Head/Hardsuits/contractor.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Head/Hardsuits/contractor.rsi
+    sprite: _Forge/Clothing/Head/Hardsuits/contractor.rsi
     equippedState: off-equipped-HELMET
   - type: PressureProtection
     highPressureMultiplier: 0.08
@@ -141,9 +141,9 @@
     shape:
     - 0,0,1,1
   - type: Sprite
-    sprite: Forge/Clothing/Head/Hardsuits/contractor_eva.rsi
+    sprite: _Forge/Clothing/Head/Hardsuits/contractor_eva.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Head/Hardsuits/contractor_eva.rsi
+    sprite: _Forge/Clothing/Head/Hardsuits/contractor_eva.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000

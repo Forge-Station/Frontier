@@ -6,9 +6,9 @@
   description: detective jumpskirt desc
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/detective.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/detective.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/detective.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/detective.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -17,9 +17,9 @@
   description: coroner jumpskirt desc
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/medical.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/medical.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/medical.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/medical.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -28,9 +28,9 @@
   description: coroner jumpskirt but that brigmedic desc
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/brigmedic.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/brigmedic.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/brigmedic.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/brigmedic.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -39,7 +39,7 @@
   description: specialist jumpskirt desc
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/engineering.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/engineering.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/engineering.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/engineering.rsi
 # NFSD end

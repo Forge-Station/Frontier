@@ -14,7 +14,7 @@
     pack: GenericVendGoodbyes
   - type: Speech
   - type: Sprite
-    sprite: Forge/Structures/Machines/coliseumvending.rsi
+    sprite: _Forge/Structures/Machines/coliseumvending.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -43,7 +43,7 @@
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: Forge/Structures/Machines/medical_syndicate_alt.rsi # Forge-Change
+    sprite: _Forge/Structures/Machines/medical_syndicate_alt.rsi # Forge-Change
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -105,7 +105,7 @@
     brokenState: broken
     normalState: normal-unshaded
   - type: Sprite
-    sprite: Forge/Structures/Machines/offidrobe.rsi
+    sprite: _Forge/Structures/Machines/offidrobe.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -144,7 +144,7 @@
   - type: SpeakOnUIClosed
     pack: GetmoreChocolateCorpGoodbyes
   - type: Sprite
-    sprite: Forge/Structures/Machines/VendingMachines/donkvendNT.rsi
+    sprite: _Forge/Structures/Machines/VendingMachines/donkvendNT.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -181,7 +181,7 @@
   - type: SpeakOnUIClosed
     pack: GetmoreChocolateCorpGoodbyes
   - type: Sprite
-    sprite: Forge/Structures/Machines/VendingMachines/donkvendSY.rsi
+    sprite: _Forge/Structures/Machines/VendingMachines/donkvendSY.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]

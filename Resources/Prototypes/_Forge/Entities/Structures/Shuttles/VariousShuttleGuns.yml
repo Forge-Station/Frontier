@@ -58,7 +58,7 @@
   description: A stationary shuttle gun that fires a .50 caliber. Designed to suppress the enemy.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Shuttles/shotgunrifle.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Shuttles/shotgunrifle.rsi
     layers:
     - state: shotgun
     - state: mag-1
@@ -118,7 +118,7 @@
   description: An impressive - sized shuttle weapon, firing a large caliber .60. Breaks through most types of armored walls.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Shuttles/amrifle.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Shuttles/amrifle.rsi
     layers:
     - state: amrifle
   - type: ContainerContainer
@@ -166,7 +166,7 @@
   description: A stationary shuttle rifle on .30 rifle cartridges with a VERY large supply of ammunition.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Shuttles/arifle.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Shuttles/arifle.rsi
     layers:
     - state: arifle
     - state: mag-1
@@ -226,7 +226,7 @@
   description: A stationary small-caliber weapon with an increased rate of fire, unlike other shuttle`s weapons.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Shuttles/smgrifle.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Shuttles/smgrifle.rsi
     layers:
     - state: smgrifle
     - state: mag-1
@@ -286,7 +286,7 @@
   description: The nightmare of the syndicate that liked to hide behind doors. Double-barreled .45 caliber gun.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Shuttles/magnumrifle.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Shuttles/magnumrifle.rsi
     layers:
     - state: magnumrifle
     - state: mag-1

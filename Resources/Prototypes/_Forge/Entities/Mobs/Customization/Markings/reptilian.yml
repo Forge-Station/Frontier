@@ -5,7 +5,7 @@
   markingCategory: Head
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/snouts.rsi
+  - sprite: _Forge/Mobs/Customization/snouts.rsi
     state: guilmon
 
 - type: marking
@@ -14,9 +14,9 @@
   markingCategory: HeadSide
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/reptilian_parts.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian_parts.rsi
     state: cobra_hood_with_ears
-  - sprite: Forge/Mobs/Customization/reptilian_parts.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian_parts.rsi
     state: cobra_hood_with_ears_overlay
 
 # SHOUT
@@ -26,9 +26,9 @@
   markingCategory: Snout
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/snouts.rsi
+  - sprite: _Forge/Mobs/Customization/snouts.rsi
     state: eastern_dragon
-  - sprite: Forge/Mobs/Customization/snouts.rsi
+  - sprite: _Forge/Mobs/Customization/snouts.rsi
     state: eastern_dragon_overlay
 
 - type: marking
@@ -37,11 +37,11 @@
   markingCategory: Snout
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/snouts.rsi
+  - sprite: _Forge/Mobs/Customization/snouts.rsi
     state: eastern_dragon
-  - sprite: Forge/Mobs/Customization/snouts.rsi
+  - sprite: _Forge/Mobs/Customization/snouts.rsi
     state: eastern_dragon_overlay
-  - sprite: Forge/Mobs/Customization/snouts.rsi
+  - sprite: _Forge/Mobs/Customization/snouts.rsi
     state: eastern_dragon_usiki
 
 # SPINE
@@ -51,7 +51,7 @@
   markingCategory: Chest
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/reptilian.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian.rsi
     state: spines_aquatic
 
 - type: marking
@@ -60,7 +60,7 @@
   markingCategory: Chest
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/reptilian.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian.rsi
     state: spines_aquatic_alt
 
 - type: marking
@@ -69,7 +69,7 @@
   markingCategory: Chest
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/reptilian.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian.rsi
     state: spines_long
 
 - type: marking
@@ -78,7 +78,7 @@
   markingCategory: Chest
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/reptilian.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian.rsi
     state: spines_long_alt
 
 - type: marking
@@ -87,7 +87,7 @@
   markingCategory: Chest
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/reptilian.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian.rsi
     state: spines_longmembrane
 
 - type: marking
@@ -96,7 +96,7 @@
   markingCategory: Chest
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/reptilian.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian.rsi
     state: spines_longmembrane_alt
 
 - type: marking
@@ -105,7 +105,7 @@
   markingCategory: Chest
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/reptilian.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian.rsi
     state: spines_short
 
 - type: marking
@@ -114,7 +114,7 @@
   markingCategory: Chest
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/reptilian.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian.rsi
     state: spines_short_alt
 
 - type: marking
@@ -123,7 +123,7 @@
   markingCategory: Chest
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/reptilian.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian.rsi
     state: spines_shortmembrane
 
 - type: marking
@@ -132,5 +132,5 @@
   markingCategory: Chest
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Forge/Mobs/Customization/reptilian.rsi
+  - sprite: _Forge/Mobs/Customization/reptilian.rsi
     state: spines_shortmembrane_alt

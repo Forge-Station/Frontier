@@ -5,9 +5,9 @@
   description: Плотно прилегающая тактическая маска, которую можно подключить к дыхательному баллону.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Mask/gascontractor.rsi
+    sprite: _Forge/Clothing/Mask/gascontractor.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Mask/gascontractor.rsi
+    sprite: _Forge/Clothing/Mask/gascontractor.rsi
   - type: FlashImmunity
   - type: EyeProtection
   - type: Armor
@@ -26,9 +26,9 @@
   description: A alternative issue NFSD gas mask.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Mask/nfsd_alt.rsi
+    sprite: _Forge/Clothing/Mask/nfsd_alt.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Mask/nfsd_alt.rsi
+    sprite: _Forge/Clothing/Mask/nfsd_alt.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -44,9 +44,9 @@
   description: NFSD coroner gas mask
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Mask/coroner.rsi
+    sprite: _Forge/Clothing/Mask/coroner.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Mask/coroner.rsi
+    sprite: _Forge/Clothing/Mask/coroner.rsi
   - type: FlashImmunity
   - type: EyeProtection
   - type: Armor
@@ -64,9 +64,9 @@
   description: Advanced issue NFSD gas mask.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Mask/nfsd_up.rsi
+    sprite: _Forge/Clothing/Mask/nfsd_up.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Mask/nfsd_up.rsi
+    sprite: _Forge/Clothing/Mask/nfsd_up.rsi
   - type: FlashImmunity
   - type: EyeProtection
   - type: Armor

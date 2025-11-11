@@ -19,10 +19,10 @@
     intensitySlope: 20
     maxIntensity: 2500
   - type: PowerMonitoringDevice
-    sprite: Forge/Bluespace/bluespace_transitor.rsi
+    sprite: _Forge/Bluespace/bluespace_transitor.rsi
     state: display
   - type: Sprite
-    sprite: Forge/Bluespace/bluespace_transitor.rsi
+    sprite: _Forge/Bluespace/bluespace_transitor.rsi
     snapCardinals: true
     layers:
     - state: offline

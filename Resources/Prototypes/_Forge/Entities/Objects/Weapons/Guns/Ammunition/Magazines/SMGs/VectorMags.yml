@@ -20,7 +20,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/Vector/vector22mag.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Magazine/Vector/vector22mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -68,7 +68,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/Vector/vector45mag.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Magazine/Vector/vector45mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

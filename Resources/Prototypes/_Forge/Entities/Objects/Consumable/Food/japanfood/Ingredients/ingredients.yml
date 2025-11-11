@@ -8,7 +8,7 @@
     flavors:
       - dough
   - type: Sprite
-    sprite: Forge/Objects/Consumable/Food/ingredients.rsi
+    sprite: _Forge/Objects/Consumable/Food/ingredients.rsi
     state: boileddoughdangoball
   - type: SolutionContainerManager
     solutions:
@@ -28,7 +28,7 @@
     flavors:
       - dough
   - type: Sprite
-    sprite: Forge/Objects/Consumable/Food/ingredients.rsi
+    sprite: _Forge/Objects/Consumable/Food/ingredients.rsi
     state: rawdoughdangoball
   - type: SolutionContainerManager
     solutions:
@@ -46,7 +46,7 @@
   components:
   - type: FlavorProfile
   - type: Sprite
-    sprite: Forge/Objects/Consumable/Food/ingredients.rsi
+    sprite: _Forge/Objects/Consumable/Food/ingredients.rsi
     state: rawramennoodles
   - type: SolutionContainerManager
     solutions:

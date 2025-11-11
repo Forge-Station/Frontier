@@ -22,7 +22,7 @@
   parent: BaseShellKS23
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Casings/ks23_shell.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Casings/ks23_shell.rsi
     layers:
       - state: flashbang
         map: [ "enum.AmmoVisualLayers.Base" ]
@@ -37,7 +37,7 @@
   parent: BaseShellKS23
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Casings/ks23_shell.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Casings/ks23_shell.rsi
     layers:
       - state: smoke
         map: [ "enum.AmmoVisualLayers.Base" ]
@@ -52,7 +52,7 @@
   parent: BaseShellKS23
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Casings/ks23_shell.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Casings/ks23_shell.rsi
     layers:
       - state: beanbag
         map: [ "enum.AmmoVisualLayers.Base" ]
@@ -67,7 +67,7 @@
   parent: BaseShellKS23
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Casings/ks23_shell.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Casings/ks23_shell.rsi
     layers:
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]

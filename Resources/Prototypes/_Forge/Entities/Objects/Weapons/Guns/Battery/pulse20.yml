@@ -5,7 +5,7 @@
   description: Учёные TL взяли за основу один из образцов оружия ядерный оперативников и переделали на свой манер.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Battery/pulse20.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/pulse20.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -13,7 +13,7 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Battery/pulse20.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/pulse20.rsi
   - type: Gun
     selectedMode: FullAuto
     availableModes:

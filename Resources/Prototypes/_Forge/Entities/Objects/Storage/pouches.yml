@@ -4,7 +4,7 @@
   name: specialist pouch
   components:
   - type: Sprite
-    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    sprite: _Forge/Objects/Storage/Pouches/pouch.rsi
     layers:
     - state: base_NFSD
     - state: close_NFSD
@@ -39,7 +39,7 @@
         color: "#1f2611"
   - type: Clothing
     quickEquip: false
-    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    sprite: _Forge/Objects/Storage/Pouches/pouch.rsi
     slots: [ belt, pocket ]
     clothingVisuals:
       belt:
@@ -55,7 +55,7 @@
   name: Coroner pouch
   components:
   - type: Sprite
-    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    sprite: _Forge/Objects/Storage/Pouches/pouch.rsi
     layers:
     - state: base_NFSD
     - state: close_NFSD
@@ -90,7 +90,7 @@
         color: "#1f2611"
   - type: Clothing
     quickEquip: false
-    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    sprite: _Forge/Objects/Storage/Pouches/pouch.rsi
     slots: [ belt, pocket ]
     clothingVisuals:
       belt:
@@ -106,7 +106,7 @@
   name: syndicate pouch
   components:
   - type: Sprite
-    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    sprite: _Forge/Objects/Storage/Pouches/pouch.rsi
     layers:
     - state: base_Syndi
     - state: close_Syndi
@@ -141,7 +141,7 @@
         color: "#1a1a1a"
   - type: Clothing
     quickEquip: false
-    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    sprite: _Forge/Objects/Storage/Pouches/pouch.rsi
     slots: [ belt, pocket ]
     clothingVisuals:
       belt:
@@ -157,7 +157,7 @@
   name: syndicate medical pouch
   components:
   - type: Sprite
-    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    sprite: _Forge/Objects/Storage/Pouches/pouch.rsi
     layers:
     - state: base_Syndi
     - state: close_Syndi
@@ -194,7 +194,7 @@
         color: "#1a1a1a"
   - type: Clothing
     quickEquip: false
-    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    sprite: _Forge/Objects/Storage/Pouches/pouch.rsi
     slots: [ belt, pocket ]
     clothingVisuals:
       belt:
@@ -210,7 +210,7 @@
   name: syndicate tech pouch
   components:
   - type: Sprite
-    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    sprite: _Forge/Objects/Storage/Pouches/pouch.rsi
     layers:
     - state: base_Syndi
     - state: close_Syndi
@@ -247,7 +247,7 @@
         color: "#1a1a1a"
   - type: Clothing
     quickEquip: false
-    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    sprite: _Forge/Objects/Storage/Pouches/pouch.rsi
     slots: [ belt, pocket ]
     clothingVisuals:
       belt:

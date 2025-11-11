@@ -5,9 +5,9 @@
   description: Ременно-плечевая система тактических ремней.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Belt/syndicatewebbing.rsi
+    sprite: _Forge/Clothing/Belt/syndicatewebbing.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Belt/syndicatewebbing.rsi
+    sprite: _Forge/Clothing/Belt/syndicatewebbing.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.1
   - type: Storage
@@ -21,9 +21,9 @@
   description: Ременно-плечевая система тактических ремней.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Belt/syndicatewebbingshturm.rsi
+    sprite: _Forge/Clothing/Belt/syndicatewebbingshturm.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Belt/syndicatewebbingshturm.rsi
+    sprite: _Forge/Clothing/Belt/syndicatewebbingshturm.rsi
 
 - type: entity
   parent: ClothingBeltMilitaryWebbingSyndicate
@@ -32,9 +32,9 @@
   description: Ременно-плечевая система тактических ремней.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Belt/syndicatewebbingmed.rsi
+    sprite: _Forge/Clothing/Belt/syndicatewebbingmed.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Belt/syndicatewebbingmed.rsi
+    sprite: _Forge/Clothing/Belt/syndicatewebbingmed.rsi
 
 - type: entity
   parent: ClothingBeltMilitaryWebbingSyndicate
@@ -43,9 +43,9 @@
   description: Ременно-плечевая система тактических ремней.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Belt/syndicatewebbingeng.rsi
+    sprite: _Forge/Clothing/Belt/syndicatewebbingeng.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Belt/syndicatewebbingeng.rsi
+    sprite: _Forge/Clothing/Belt/syndicatewebbingeng.rsi
 
 - type: entity
   parent: ClothingBeltMilitaryWebbingSyndicate
@@ -54,6 +54,6 @@
   description: Ременно-плечевая система тактических ремней.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Belt/syndicatewebbingcom.rsi
+    sprite: _Forge/Clothing/Belt/syndicatewebbingcom.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Belt/syndicatewebbingcom.rsi
+    sprite: _Forge/Clothing/Belt/syndicatewebbingcom.rsi

@@ -5,14 +5,14 @@
   description: The Scar-12 battle rifle, developed by TechnicLogistic for its own army, is one of the most commonly found models on the black market due to its efficiency and accuracy. Currently, it is supplied to DSBF forces under a special order from NT.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Rifles/scar12.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/scar12.rsi
     layers:
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
       - state: base
         map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Rifles/scar12.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/scar12.rsi
   - type: Gun
     fireRate: 4
     projectileSpeed: 45
@@ -74,7 +74,7 @@
   id: WeaponInterstellarRifleM4A1
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Rifles/m4a1.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/m4a1.rsi
     layers:
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
@@ -149,14 +149,14 @@
   id: WeaponRifleDagger
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Rifles/dagger.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/dagger.rsi
     layers:
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
       - state: base
         map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Rifles/dagger.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/dagger.rsi
   - type: Gun
     fireRate: 1.3
     shotsPerBurst: 5
@@ -230,14 +230,14 @@
   id: WeaponRifleCascade
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Rifles/cascade.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/cascade.rsi
     layers:
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
       - state: base
         map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Rifles/cascade.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/cascade.rsi
   - type: Gun
     fireRate: 2.1
     shotsPerBurst: 3
@@ -312,14 +312,14 @@
   description: The Scar-12 battle rifle, developed by TechnicLogistic for its own army, is one of the most commonly found models on the black market due to its efficiency and accuracy. Currently, it is supplied to DSBF forces under a special order from NT.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Rifles/ar30.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/ar30.rsi
     layers:
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
       - state: base
         map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Rifles/ar30.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/ar30.rsi
   - type: Gun
     fireRate: 5
     projectileSpeed: 45
@@ -385,7 +385,7 @@
   description: Облегчённая штурмовая автоматическая винтовка, улучшена компанией Cybersun специально для поставки на черный рынок. Ещё чувствуется запах краски...
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Rifles/akcy.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/akcy.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
@@ -427,7 +427,7 @@
     zeroVisible: true
   - type: Appearance
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Rifles/akcy.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/akcy.rsi
   - type: Item
     shape:
     - 0,0,3,1
@@ -439,7 +439,7 @@
   description: Специальная стрелковая винтовка, стреляющая очередями по 3 патрона. Эсток была разработана как дальнобойный аналог Лектера, оснащенный удлиненным 20-дюймовым стволом и оптическим прицелом.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Rifles/estoc.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/estoc.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -449,7 +449,7 @@
     shape:
     - 0,0,4,2
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Rifles/estoc.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Rifles/estoc.rsi
   - type: Gun
     soundGunshot:
       path: /Audio/_Forge/Weapons/Guns/Gunshots/estocshot.ogg

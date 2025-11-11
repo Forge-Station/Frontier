@@ -5,7 +5,7 @@
   description: Data collecting and processing machine produced by Cybersun.
   components:
   - type: Sprite
-    sprite: Forge/Structures/Specific/Syndicate/syndicatedataminer.rsi
+    sprite: _Forge/Structures/Specific/Syndicate/syndicatedataminer.rsi
     noRot: true
     layers:
     - state: server
@@ -22,7 +22,7 @@
   description: Ужасающее устройство синдиката способное преобразовать один тип валюты в другой и обратно.
   components:
   - type: Sprite
-    sprite: Forge/Structures/Specific/Syndicate/syndicatedataserver.rsi
+    sprite: _Forge/Structures/Specific/Syndicate/syndicatedataserver.rsi
     snapCardinals: true
     layers:
     - state: server-nopower
@@ -86,7 +86,7 @@
   description: Сервер на котором хранятся ужасные данные Синдиката. Тут имеется слот для кэша.
   components:
   - type: Sprite
-    sprite: Forge/Structures/Specific/Syndicate/syndicatedataconventor.rsi
+    sprite: _Forge/Structures/Specific/Syndicate/syndicatedataconventor.rsi
     drawdepth: LargeObjects
     snapCardinals: true
     layers:

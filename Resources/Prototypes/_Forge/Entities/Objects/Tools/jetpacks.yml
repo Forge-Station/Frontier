@@ -6,9 +6,9 @@
   suffix: Empty
   components:
   - type: Sprite
-    sprite: Forge/Objects/Tanks/Jetpacks/mining.rsi
+    sprite: _Forge/Objects/Tanks/Jetpacks/mining.rsi
   - type: Clothing
-    sprite: Forge/Objects/Tanks/Jetpacks/mining.rsi
+    sprite: _Forge/Objects/Tanks/Jetpacks/mining.rsi
     slots:
       - Back
       - suitStorage
@@ -41,11 +41,11 @@
   suffix: Empty
   components:
   - type: Item
-    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+    sprite: _Forge/Objects/Tanks/Jetpacks/paramed.rsi
   - type: Sprite
-    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+    sprite: _Forge/Objects/Tanks/Jetpacks/paramed.rsi
   - type: Clothing
-    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+    sprite: _Forge/Objects/Tanks/Jetpacks/paramed.rsi
   - type: Tag
     tags:
       - HideContextMenu
@@ -59,11 +59,11 @@
   suffix: Filled
   components:
   - type: Item
-    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+    sprite: _Forge/Objects/Tanks/Jetpacks/paramed.rsi
   - type: Sprite
-    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+    sprite: _Forge/Objects/Tanks/Jetpacks/paramed.rsi
   - type: Clothing
-    sprite: Forge/Objects/Tanks/Jetpacks/paramed.rsi
+    sprite: _Forge/Objects/Tanks/Jetpacks/paramed.rsi
   - type: Tag
     tags:
       - HideContextMenu

@@ -100,9 +100,9 @@
   description: На первый взгляд неприметный пласталевый клинок, с парой кнопок на рукояти.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Melee/tl_e_sword.rsi
+    sprite: _Forge/Objects/Weapons/Melee/tl_e_sword.rsi
   - type: Item
-    sprite: Forge/Objects/Weapons/Melee/tl_e_sword-inhands.rsi
+    sprite: _Forge/Objects/Weapons/Melee/tl_e_sword-inhands.rsi
   - type: EnergySword
     colorOptions:
       - "#ebf0e9"

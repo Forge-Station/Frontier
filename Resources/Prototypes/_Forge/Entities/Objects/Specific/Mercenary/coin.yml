@@ -5,10 +5,10 @@
   description: A brightly iridescent greenish crystal, necessary for exchanging rewards for goods of a different range in the terminal.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Specific/Mercenary/quantumcrystal.rsi
+    sprite: _Forge/Objects/Specific/Mercenary/quantumcrystal.rsi
     state: quantumcrystal
   - type: Item
-    sprite: Forge/Objects/Specific/Mercenary/quantumcrystal.rsi
+    sprite: _Forge/Objects/Specific/Mercenary/quantumcrystal.rsi
     size: Tiny
   - type: Material
   - type: PhysicalComposition

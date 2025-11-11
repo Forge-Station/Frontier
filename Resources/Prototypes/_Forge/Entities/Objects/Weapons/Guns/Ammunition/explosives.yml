@@ -64,7 +64,7 @@
   parent: BaseCannonBall
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     state: ball
     layers:
     - state: icon

@@ -79,7 +79,7 @@
   description: Shipyard console with engineers shuttles.
   components:
   - type: Sprite
-    sprite: Forge/Structures/Machines/computers.rsi
+    sprite: _Forge/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
       state: computer_engi

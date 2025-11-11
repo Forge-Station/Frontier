@@ -357,7 +357,7 @@
   name:  uplink-security-WeaponLightMachineGunL2RPK-name
   description: uplink-security-WeaponLightMachineGunL2RPK-desc
   productEntity: WeaponCaseLongWeaponLightMachineGunL2RPK
-  icon: { sprite: Forge/Objects/Weapons/Guns/LMGs/L2RPK.rsi, state: base }
+  icon: { sprite: _Forge/Objects/Weapons/Guns/LMGs/L2RPK.rsi, state: base }
   cost:
     FrontierUplinkCoin: 20
   categories:
@@ -378,7 +378,7 @@
   name:  uplink-security-WeaponSubMachineGunScorpion-name
   description: uplink-security-WeaponSubMachineGunScorpion-desc
   productEntity: WeaponCaseLongWeaponSubMachineGunScorpion
-  icon: { sprite: Forge/Objects/Weapons/Guns/SMGs/scorpion.rsi, state: base }
+  icon: { sprite: _Forge/Objects/Weapons/Guns/SMGs/scorpion.rsi, state: base }
   cost:
     FrontierUplinkCoin: 3
   categories:
@@ -399,7 +399,7 @@
   name:  uplink-security-WeaponRifleScar12-name
   description: uplink-security-WeaponRifleScar12-desc
   productEntity: WeaponCaseLongWeaponRifleScar12
-  icon: { sprite: Forge/Objects/Weapons/Guns/Rifles/scar12.rsi, state: base }
+  icon: { sprite: _Forge/Objects/Weapons/Guns/Rifles/scar12.rsi, state: base }
   cost:
     FrontierUplinkCoin: 6
   categories:
@@ -459,7 +459,7 @@
 #   name:  uplink-security-ks23-name
 #   description: uplink-security-ks23-desc
 #   productEntity: WeaponShotgunKD12
-#   icon: { sprite: Forge/Objects/Weapons/Guns/Shotguns/ks23.rsi, state: icon }
+#   icon: { sprite: _Forge/Objects/Weapons/Guns/Shotguns/ks23.rsi, state: icon }
 #   cost:
 #     FrontierUplinkCoin: 3
 #   categories:
@@ -1489,7 +1489,7 @@
   name:  uplink-security-contraband-forensics-M4A1
   description: uplink-security-contraband-forensics-M4A1-desc
   productEntity: WeaponCaseLongM4A1
-  icon: { sprite: Forge/Objects/Weapons/Guns/Rifles/m4a1.rsi, state: icon }
+  icon: { sprite: _Forge/Objects/Weapons/Guns/Rifles/m4a1.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 20
   categories:
@@ -1528,7 +1528,7 @@
   name:  uplink-security-contraband-forensics-AD12
   description: uplink-security-contraband-forensics-AD12-desc
   productEntity: WeaponCaseLongAD12
-  icon: { sprite: Forge/Objects/Weapons/Guns/Shotguns/ad12.rsi, state: icon }
+  icon: { sprite: _Forge/Objects/Weapons/Guns/Shotguns/ad12.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 11
   categories:
@@ -1549,7 +1549,7 @@
   name:  uplink-security-contraband-forensics-CarbineSniper
   description: uplink-security-contraband-forensics-CarbineSniper-desc
   productEntity: WeaponCaseLongWeaponPulseCarbineSniper
-  icon: { sprite: Forge/Objects/Weapons/Guns/Battery/pulse_sniper.rsi, state: icon }
+  icon: { sprite: _Forge/Objects/Weapons/Guns/Battery/pulse_sniper.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 32
   categories:
@@ -1802,7 +1802,7 @@
   name:  Импульсный ФН-200
   description: uplink-security-contraband-forensics-CarbineSniper-desc
   productEntity: WeaponCaseLongWeaponPulse20
-  icon: { sprite: Forge/Objects/Weapons/Guns/Battery/pulse20.rsi, state: icon }
+  icon: { sprite: _Forge/Objects/Weapons/Guns/Battery/pulse20.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 18
   categories:

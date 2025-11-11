@@ -6,7 +6,7 @@
   parent: [ BaseMechWeaponRange, CombatMechEquipment ]
   components:
   - type: Sprite
-    sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi
+    sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi
     state: mecha_pulse
   - type: Gun
     fireRate: 3
@@ -30,7 +30,7 @@
   parent: [ BaseMechWeaponRange, CombatMechEquipment ]
   components:
   - type: Sprite
-    sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi
+    sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi
     state: mecha_immolator
   - type: Gun
     fireRate: 1
@@ -54,7 +54,7 @@
   parent: [ BaseMechWeaponRange, CombatMechEquipment ]
   components:
   - type: Sprite
-    sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi
+    sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi
     state: mecha_solaris
   - type: Gun
     fireRate: 3
@@ -78,7 +78,7 @@
   parent: [ BaseMechWeaponRange, CombatMechEquipment ]
   components:
   - type: Sprite
-    sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi
+    sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi
     state: mecha_firedart
   - type: Gun
     fireRate: 1
@@ -102,7 +102,7 @@
   parent: [ BaseMechWeaponRange, CombatMechEquipment ]
   components:
   - type: Sprite
-    sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi
+    sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi
     state: mecha_xray
   - type: Gun
     fireRate: 1
@@ -126,7 +126,7 @@
   parent: [ BaseMechWeaponRange, CombatMechEquipment ]
   components:
   - type: Sprite
-    sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi
+    sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi
     state: mecha_teslacannon
   - type: Gun
     projectileSpeed: 6
@@ -153,7 +153,7 @@
   parent: [ BaseMechWeaponRange, CombatMechEquipment ]
   components:
   - type: Sprite
-    sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi
+    sprite: _Forge/Objects/Specific/Mech/mech_equipment.rsi
     state: mecha_disabler
   - type: Gun
     fireRate: 5

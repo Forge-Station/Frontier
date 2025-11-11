@@ -5,7 +5,7 @@
   id: Hypospray
   components:
   - type: Sprite
-    sprite: Forge/Objects/Specific/Medical/hypospray.rsi
+    sprite: _Forge/Objects/Specific/Medical/hypospray.rsi
     layers:
       - state: hypo
         map: ["enum.SolutionContainerLayers.Base"]
@@ -13,7 +13,7 @@
         map: ["enum.SolutionContainerLayers.Fill"]
         visible: false
   - type: Item
-    sprite: Forge/Objects/Specific/Medical/hypospray.rsi
+    sprite: _Forge/Objects/Specific/Medical/hypospray.rsi
   - type: SolutionContainerManager
     solutions:
       hypospray:

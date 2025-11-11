@@ -23,10 +23,10 @@
   id: PowerDrillSyndicate
   components:
   - type: Sprite
-    sprite: Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
+    sprite: _Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
     state: drill_screw
   - type: Item
-    sprite: Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
+    sprite: _Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
     size: Small
   - type: Tool
     qualities:
@@ -38,7 +38,7 @@
     entries:
       - behavior: Screwing
         sprite:
-          sprite: Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
+          sprite: _Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
           state: drill_screw
         useSound:
           path: /Audio/Items/drill_use.ogg
@@ -46,7 +46,7 @@
           path: /Audio/Items/change_drill.ogg
       - behavior: Anchoring
         sprite:
-          sprite: Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
+          sprite: _Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
           state: drill_bolt
         useSound:
           path: /Audio/Items/drill_use.ogg
@@ -61,7 +61,7 @@
     soundHit:
       path: "/Audio/Items/drill_hit.ogg"
   - type: Clothing
-    sprite: Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
+    sprite: _Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
     quickEquip: false
     slots:
     - Belt
@@ -76,9 +76,9 @@
   description: Экспериментальный сварочный аппарат, способный самостоятельно вырабатывать топливо, менее вреден для глаз. Работает в два раза эффективнее.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Tools/Syndicate/nfsd_welder.rsi
+    sprite: _Forge/Objects/Tools/Syndicate/nfsd_welder.rsi
   - type: Item
-    sprite: Forge/Objects/Tools/Syndicate/nfsd_welder.rsi
+    sprite: _Forge/Objects/Tools/Syndicate/nfsd_welder.rsi
   - type: SolutionContainerManager
     solutions:
       Welder:
@@ -101,7 +101,7 @@
   - type: Tool
     speedModifier: 2
   - type: Clothing
-    sprite: Forge/Objects/Tools/Syndicate/nfsd_welder.rsi
+    sprite: _Forge/Objects/Tools/Syndicate/nfsd_welder.rsi
     quickEquip: false
     slots:
     - Belt
@@ -119,13 +119,13 @@
     sound:
       path: /Audio/Items/multitool_drop.ogg
   - type: Sprite
-    sprite: Forge/Objects/Tools/Syndicate/nfsd_multitool.rsi
+    sprite: _Forge/Objects/Tools/Syndicate/nfsd_multitool.rsi
     layers:
     - state: icon
     - state: green-unlit
       shader: unshaded
   - type: Clothing
-    sprite: Forge/Objects/Tools/Syndicate/nfsd_multitool.rsi
+    sprite: _Forge/Objects/Tools/Syndicate/nfsd_multitool.rsi
     quickEquip: false
     slots:
     - Belt

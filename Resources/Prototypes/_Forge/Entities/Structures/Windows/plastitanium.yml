@@ -5,9 +5,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Forge/Structures/Windows/plastitanium_uran_window.rsi
+    sprite: _Forge/Structures/Windows/plastitanium_uran_window.rsi
   - type: Icon
-    sprite: Forge/Structures/Windows/plastitanium_uran_window.rsi
+    sprite: _Forge/Structures/Windows/plastitanium_uran_window.rsi
     state: full
   - type: Destructible
     thresholds:
@@ -59,10 +59,10 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Forge/Structures/Windows/plastitanium_uran_window_diagonal.rsi
+    sprite: _Forge/Structures/Windows/plastitanium_uran_window_diagonal.rsi
     state: state0
   - type: Icon
-    sprite: Forge/Structures/Windows/plastitanium_uran_window_diagonal.rsi
+    sprite: _Forge/Structures/Windows/plastitanium_uran_window_diagonal.rsi
     state: state0
   - type: Destructible
     thresholds:
@@ -111,9 +111,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Forge/Structures/Windows/plastitanium_plasma_window.rsi
+    sprite: _Forge/Structures/Windows/plastitanium_plasma_window.rsi
   - type: Icon
-    sprite: Forge/Structures/Windows/plastitanium_plasma_window.rsi
+    sprite: _Forge/Structures/Windows/plastitanium_plasma_window.rsi
     state: full
   - type: Destructible
     thresholds:
@@ -165,10 +165,10 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Forge/Structures/Windows/plastitanium_plasma_window_diagonal.rsi
+    sprite: _Forge/Structures/Windows/plastitanium_plasma_window_diagonal.rsi
     state: state0
   - type: Icon
-    sprite: Forge/Structures/Windows/plastitanium_plasma_window_diagonal.rsi
+    sprite: _Forge/Structures/Windows/plastitanium_plasma_window_diagonal.rsi
     state: state0
   - type: Destructible
     thresholds:

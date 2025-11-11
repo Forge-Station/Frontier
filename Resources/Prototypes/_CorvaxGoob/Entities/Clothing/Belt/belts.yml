@@ -63,10 +63,10 @@
   description: Practicality, durability, the saber will definitely not end up in your leg.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Belt/officer_sheath.rsi
+    sprite: _Forge/Clothing/Belt/officer_sheath.rsi
     state: sheath
   - type: Clothing
-    sprite: Forge/Clothing/Belt/officer_sheath.rsi
+    sprite: _Forge/Clothing/Belt/officer_sheath.rsi
 
 #Filled версия ножен офицера
 - type: entity

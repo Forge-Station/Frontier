@@ -27,7 +27,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/rifle_cartridges.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Magazine/rifle_cartridges.rsi
     layers:
     - state: 50base
       map: ["enum.GunVisualLayers.Base"]
@@ -68,7 +68,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/rifle_cartridges.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Magazine/rifle_cartridges.rsi
     layers:
     - state: 35base
       map: ["enum.GunVisualLayers.Base"]
@@ -109,7 +109,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/rifle_cartridges.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Magazine/rifle_cartridges.rsi
     layers:
     - state: 30base
       map: ["enum.GunVisualLayers.Base"]
@@ -150,7 +150,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/rifle_cartridges.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Magazine/rifle_cartridges.rsi
     layers:
     - state: 45base
       map: ["enum.GunVisualLayers.Base"]

@@ -78,7 +78,7 @@
   - type: Appearance
   - type: WiresVisuals
   - type: Sprite
-    sprite: Forge/Structures/Wallmounts/air_monitors.rsi # Forge-Change
+    sprite: _Forge/Structures/Wallmounts/air_monitors.rsi # Forge-Change
     layers:
     - state: alarmp
       map: ["airAlarmBase"]
@@ -131,7 +131,7 @@
   - type: Clickable
   - type: InteractionOutline
   - type: Sprite
-    sprite: Forge/Structures/Wallmounts/air_monitors.rsi # Forge-Change
+    sprite: _Forge/Structures/Wallmounts/air_monitors.rsi # Forge-Change
     layers:
     - state: alarm_b1
       map: [ "enum.ConstructionVisuals.Layer" ]

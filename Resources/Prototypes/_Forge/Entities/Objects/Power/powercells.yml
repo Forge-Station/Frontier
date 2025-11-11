@@ -6,7 +6,7 @@
   suffix: NT
   components:
   - type: Sprite
-    sprite: Forge/Objects/Power/power_cells.rsi
+    sprite: _Forge/Objects/Power/power_cells.rsi
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
       state: powerNT
@@ -26,7 +26,7 @@
   suffix: NFSD
   components:
   - type: Sprite
-    sprite: Forge/Objects/Power/power_cells.rsi
+    sprite: _Forge/Objects/Power/power_cells.rsi
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
       state: powerNFSD
@@ -46,7 +46,7 @@
   suffix: Syndi
   components:
   - type: Sprite
-    sprite: Forge/Objects/Power/power_cells.rsi
+    sprite: _Forge/Objects/Power/power_cells.rsi
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
       state: powerSyndi
@@ -66,7 +66,7 @@
   suffix: DCN
   components:
   - type: Sprite
-    sprite: Forge/Objects/Power/power_cells.rsi
+    sprite: _Forge/Objects/Power/power_cells.rsi
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
       state: powerDCN

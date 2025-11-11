@@ -5,7 +5,7 @@
   description: The compact submachine gun was developed by TechnicLogistic for self-defense forces. Based on a short-barreled SMG, it is supplied to DSBF forces under order from Nanotrasen.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/SMGs/scorpion.rsi
+    sprite: _Forge/Objects/Weapons/Guns/SMGs/scorpion.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

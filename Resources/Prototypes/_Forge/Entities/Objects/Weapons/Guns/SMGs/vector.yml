@@ -5,7 +5,7 @@
   description: An illegal version of the legendary submachine gun for sport shooting. He might even be able to shoot a squirrel. Uses .22lr ammunition.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/SMGs/vector22.rsi
+    sprite: _Forge/Objects/Weapons/Guns/SMGs/vector22.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
@@ -14,7 +14,7 @@
   - type: Item
     size: Huge
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/SMGs/vector22.rsi
+    sprite: _Forge/Objects/Weapons/Guns/SMGs/vector22.rsi
     quickEquip: false
     slots:
     - suitStorage
@@ -66,14 +66,14 @@
   description: A legal civilian version of the already legendary and forgotten submachine gun. Uses caliber cartridges .45 ACP. Automatic fire is not included in the package.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/SMGs/vector45.rsi
+    sprite: _Forge/Objects/Weapons/Guns/SMGs/vector45.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/SMGs/vector45.rsi
+    sprite: _Forge/Objects/Weapons/Guns/SMGs/vector45.rsi
     quickEquip: false
     slots:
     - suitStorage

@@ -4,7 +4,7 @@
   id: WeaponPulseCarbineSniper
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Battery/pulse_sniper.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/pulse_sniper.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -17,7 +17,7 @@
     zeroVisible: false
   - type: Appearance
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Battery/pulse_sniper.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/pulse_sniper.rsi
   - type: Gun
     selectedMode: FullAuto
     fireRate: 0.65
@@ -58,7 +58,7 @@
 #  description: A cheap and widely used laser pistol.
 #  components:
 #  - type: Sprite
-#    sprite: Forge/Objects/Weapons/Guns/Battery/owl.rsi
+#    sprite: _Forge/Objects/Weapons/Guns/Battery/owl.rsi
 #    layers:
 #    - state: base
 #      map: ["enum.GunVisualLayers.Base"]
@@ -77,13 +77,13 @@
   id: WeaponSniperSign
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Battery/sign.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/sign.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
   - type: Appearance
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Battery/sign.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/sign.rsi
   - type: Gun
     selectedMode: FullAuto
     fireRate: 0.65
@@ -112,13 +112,13 @@
       Heat: 51
       Structural: 80
   muzzleFlash:
-    sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
     state: muzzle_sign
   travelFlash:
-    sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
     state: sign
   impactFlash:
-    sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
     state: impact_sign
 
 - type: entity
@@ -130,9 +130,9 @@
     Modified laser carbine made for Syndicate operatives
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Battery/laser_gun_syndie.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/laser_gun_syndie.rsi
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Battery/laser_gun_syndie.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/laser_gun_syndie.rsi
 
 - type: entity
   id: BaseWeaponEnergyRifleFireModesSyndie
@@ -294,9 +294,9 @@
     Powerful laser pistol specially designed by Vitezstvi for the Gorlax Marauders
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Battery/laser_pistol_syndie.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/laser_pistol_syndie.rsi
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Battery/laser_pistol_syndie.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/laser_pistol_syndie.rsi
   - type: Battery # 26 shots
     maxCharge: 1560
     startingCharge: 1560
@@ -316,7 +316,7 @@
   description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Battery/e_shot.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/e_shot.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
@@ -329,7 +329,7 @@
     zeroVisible: false
   - type: Appearance
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Battery/e_shot.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Battery/e_shot.rsi
   - type: Gun
     fireRate: 2
     soundGunshot:

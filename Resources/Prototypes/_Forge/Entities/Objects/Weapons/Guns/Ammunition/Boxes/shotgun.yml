@@ -23,10 +23,10 @@
     - type: BallisticAmmoProvider
       proto: ShellKS23Base
     - type: Icon
-      sprite: Forge/Objects/Storage/boxes.rsi
+      sprite: _Forge/Objects/Storage/boxes.rsi
       state: KS23BaseDispenser
     - type: Sprite
-      sprite: Forge/Objects/Storage/boxes.rsi
+      sprite: _Forge/Objects/Storage/boxes.rsi
       state: KS23BaseDispenser
 
 - type: entity
@@ -38,10 +38,10 @@
     - type: BallisticAmmoProvider
       proto: ShellKS23Flashbang
     - type: Icon
-      sprite: Forge/Objects/Storage/boxes.rsi
+      sprite: _Forge/Objects/Storage/boxes.rsi
       state: KS23FlashbangDispenser
     - type: Sprite
-      sprite: Forge/Objects/Storage/boxes.rsi
+      sprite: _Forge/Objects/Storage/boxes.rsi
       state: KS23FlashbangDispenser
 
 - type: entity
@@ -53,10 +53,10 @@
     - type: BallisticAmmoProvider
       proto: ShellKS23Smoke
     - type: Icon
-      sprite: Forge/Objects/Storage/boxes.rsi
+      sprite: _Forge/Objects/Storage/boxes.rsi
       state: KS23SmokeDispenser
     - type: Sprite
-      sprite: Forge/Objects/Storage/boxes.rsi
+      sprite: _Forge/Objects/Storage/boxes.rsi
       state: KS23SmokeDispenser
 
 - type: entity
@@ -68,8 +68,8 @@
     - type: BallisticAmmoProvider
       proto: ShellKS23Beanbag
     - type: Icon
-      sprite: Forge/Objects/Storage/boxes.rsi
+      sprite: _Forge/Objects/Storage/boxes.rsi
       state: KS23BeanbagDispenser
     - type: Sprite
-      sprite: Forge/Objects/Storage/boxes.rsi
+      sprite: _Forge/Objects/Storage/boxes.rsi
       state: KS23BeanbagDispenser

@@ -4,7 +4,7 @@
   id: WeaponSubMachineGunGalem
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/SMGs/galem.rsi
+    sprite: _Forge/Objects/Weapons/Guns/SMGs/galem.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

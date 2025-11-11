@@ -10,7 +10,7 @@
   - type: Thirst
     baseDecayRate: 0.15
   - type: Icon
-    sprite: Forge/Mobs/Species/Tajaran/parts.rsi
+    sprite: _Forge/Mobs/Species/Tajaran/parts.rsi
     state: full
   - type: Body
     prototype: Tajaran
@@ -22,23 +22,23 @@
       jumpsuit:
         sizeMaps:
           32:
-            sprite: Forge/Mobs/Species/displacement.rsi
+            sprite: _Forge/Mobs/Species/displacement.rsi
             state: jumpsuit-female
       shoes:
         sizeMaps:
           32:
-            sprite: Forge/Mobs/Species/displacement.rsi
+            sprite: _Forge/Mobs/Species/displacement.rsi
             state: shoes
     displacements:
       jumpsuit:
         sizeMaps:
           32:
-            sprite: Forge/Mobs/Species/displacement.rsi
+            sprite: _Forge/Mobs/Species/displacement.rsi
             state: jumpsuit
       shoes:
         sizeMaps:
           32:
-            sprite: Forge/Mobs/Species/displacement.rsi
+            sprite: _Forge/Mobs/Species/displacement.rsi
             state: shoes
   - type: ContentEye
   - type: Speech
@@ -94,21 +94,21 @@
       jumpsuit:
         sizeMaps:
           32:
-            sprite: Forge/Mobs/Species/displacement.rsi
+            sprite: _Forge/Mobs/Species/displacement.rsi
             state: jumpsuit-female
       shoes:
         sizeMaps:
           32:
-            sprite: Forge/Mobs/Species/displacement.rsi
+            sprite: _Forge/Mobs/Species/displacement.rsi
             state: shoes
     displacements:
       jumpsuit:
         sizeMaps:
           32:
-            sprite: Forge/Mobs/Species/displacement.rsi
+            sprite: _Forge/Mobs/Species/displacement.rsi
             state: jumpsuit
       shoes:
         sizeMaps:
           32:
-            sprite: Forge/Mobs/Species/displacement.rsi
+            sprite: _Forge/Mobs/Species/displacement.rsi
             state: shoes

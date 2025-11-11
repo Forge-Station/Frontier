@@ -6,7 +6,7 @@
   suffix: DO NOT MAP
   components:
   - type: Sprite
-    sprite: Forge/Objects/Specific/Syndicate/contractor_uplink.rsi
+    sprite: _Forge/Objects/Specific/Syndicate/contractor_uplink.rsi
     state: icon
   - type: ActivatableUI
     key: enum.ContractsUiKey.Key
@@ -63,7 +63,7 @@
     canTargetMobs: true
   - type: Sprite
     noRot: True
-    sprite: Forge/Objects/Devices/contr_pinpointer.rsi
+    sprite: _Forge/Objects/Devices/contr_pinpointer.rsi
     layers:
     - state: pinpointer_thief
       map: ["enum.PinpointerLayers.Base"]
@@ -72,10 +72,10 @@
       shader: unshaded
       visible: false
   - type: Icon
-    sprite: Forge/Objects/Devices/contr_pinpointer.rsi
+    sprite: _Forge/Objects/Devices/contr_pinpointer.rsi
     state: pinpointer_thief
   - type: Item
-    sprite: Forge/Objects/Devices/contr_pinpointer.rsi
+    sprite: _Forge/Objects/Devices/contr_pinpointer.rsi
 
 - type: entity
   parent: BaseItem

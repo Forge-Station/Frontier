@@ -5,9 +5,9 @@
   description: A battle-worn green and brown combat suit with reinforced plating, ready for any situation.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/OuterClothing/Hardsuits/mercenaryelite.rsi
+    sprite: _Forge/Clothing/OuterClothing/Hardsuits/mercenaryelite.rsi
   - type: Clothing
-    sprite: Forge/Clothing/OuterClothing/Hardsuits/mercenaryelite.rsi
+    sprite: _Forge/Clothing/OuterClothing/Hardsuits/mercenaryelite.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -76,11 +76,11 @@
   description: Тяжелобронированный скафандр со встроенным экзоскелетом, предназначенный для элитных операций. Собственность Ударного подразделения Синдиката.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/OuterClothing/Hardsuits/syndicate_strike_team.rsi
+    sprite: _Forge/Clothing/OuterClothing/Hardsuits/syndicate_strike_team.rsi
   - type: Item
     size: Huge
   - type: Clothing
-    sprite: Forge/Clothing/OuterClothing/Hardsuits/syndicate_strike_team.rsi
+    sprite: _Forge/Clothing/OuterClothing/Hardsuits/syndicate_strike_team.rsi
     equippedPrefix: off
     clothingVisuals:
       outerClothing:
@@ -119,13 +119,13 @@
   description: Среднебронированный скафандр со встроенным экзоскелетом, предназначенный для элитных операций тёмного интернета.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
+    sprite: _Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
   - type: Item
     size: Huge
     shape:
     - 0,0,3,3
   - type: Clothing
-    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
+    sprite: _Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000
@@ -156,9 +156,9 @@
   description: Костюм, оснащенный экзоскелетом вместе со стелс-технологией фазового покрова при полной активации. Спасёт от разгерметизации.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
+    sprite: _Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
   - type: Clothing
-    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
+    sprite: _Forge/Clothing/OuterClothing/Hardsuits/contractor.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000
@@ -193,13 +193,13 @@
   description: Лёгкий скафандр, предназначенный для элитных операций тёмного интернета.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor_eva.rsi
+    sprite: _Forge/Clothing/OuterClothing/Hardsuits/contractor_eva.rsi
   - type: Item
     size: Small
     shape:
     - 0,0,2,3
   - type: Clothing
-    sprite: Forge/Clothing/OuterClothing/Hardsuits/contractor_eva.rsi
+    sprite: _Forge/Clothing/OuterClothing/Hardsuits/contractor_eva.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000

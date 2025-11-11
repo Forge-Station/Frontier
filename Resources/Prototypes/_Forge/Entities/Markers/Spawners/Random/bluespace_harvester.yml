@@ -9,7 +9,7 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: Forge/Bluespace/harvester.rsi
+    - sprite: _Forge/Bluespace/harvester.rsi
       state: tap_5
   - type: RandomSpawner
     prototypes:
@@ -36,7 +36,7 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: Forge/Bluespace/harvester.rsi
+    - sprite: _Forge/Bluespace/harvester.rsi
       state: tap_5
   - type: RandomSpawner
     prototypes:
@@ -63,7 +63,7 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: Forge/Bluespace/harvester.rsi
+    - sprite: _Forge/Bluespace/harvester.rsi
       state: tap_5
   - type: RandomSpawner
     prototypes:
@@ -92,7 +92,7 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: Forge/Bluespace/harvester.rsi
+    - sprite: _Forge/Bluespace/harvester.rsi
       state: tap_5
   - type: RandomSpawner
     prototypes:

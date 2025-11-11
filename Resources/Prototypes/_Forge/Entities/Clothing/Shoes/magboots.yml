@@ -5,10 +5,10 @@
   description: One moment and you are already here.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Shoes/Boots/jetboots.rsi
+    sprite: _Forge/Clothing/Shoes/Boots/jetboots.rsi
     state: icon
   - type: Clothing
-    sprite: Forge/Clothing/Shoes/Boots/jetboots.rsi
+    sprite: _Forge/Clothing/Shoes/Boots/jetboots.rsi
   - type: Magboots
     magbootsAlert: ActionToggleJetBoots
   - type: ClothingSpeedModifier
@@ -19,7 +19,7 @@
 - type: alert
   id: ActionToggleJetBoots
   icons:
-  - sprite: Forge/Clothing/Shoes/Boots/jetboots.rsi
+  - sprite: _Forge/Clothing/Shoes/Boots/jetboots.rsi
     state: icon
   name: alerts-magboots-name
   description: alerts-magboots-desc

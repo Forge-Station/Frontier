@@ -126,7 +126,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Ammunition/Grenade/grenade_cartridge.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Grenade/grenade_cartridge.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

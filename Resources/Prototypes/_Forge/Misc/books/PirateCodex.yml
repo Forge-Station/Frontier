@@ -5,7 +5,7 @@
   description: "Основы пиратской жизни. На обложке имеется гравировка: Чтить и соблюдать любой ценой!"
   components:
   - type: Sprite
-    sprite: Forge/Objects/Misc/books.rsi
+    sprite: _Forge/Objects/Misc/books.rsi
     layers:
     - state: pirate_codex
   - type: HyperlinkBook

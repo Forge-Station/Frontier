@@ -5,14 +5,14 @@
   description: The RPK-L2 is a heavy machine gun from the TechnicLogistic family, designed based on the well-known L6. This machine gun stands out for its increased accuracy and low production cost. However, its design features have made it very bulky.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/LMGs/L2RPK.rsi
+    sprite: _Forge/Objects/Weapons/Guns/LMGs/L2RPK.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-3
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/LMGs/L2RPK.rsi
+    sprite: _Forge/Objects/Weapons/Guns/LMGs/L2RPK.rsi
     quickEquip: false
     slots:
     - Back

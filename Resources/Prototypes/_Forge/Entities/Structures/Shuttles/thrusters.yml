@@ -101,7 +101,7 @@
         - !type:ChangeConstructionNodeBehavior
           node: machineFrame
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/thruster.rsi
+    sprite: _Forge/Structures/Shuttles/thruster.rsi
     layers:
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -132,7 +132,7 @@
   parent: ThrusterSecurity
   components:
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/thruster.rsi
+    sprite: _Forge/Structures/Shuttles/thruster.rsi
     layers:
     - state: base_centcom
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -205,7 +205,7 @@
   - type: Machine
     board: ThrusterMediumMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/medium_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/medium_thruster.rsi
     offset: 0.5,-0.5
     layers:
     - state: base
@@ -229,7 +229,7 @@
   - type: Machine
     board: ThrusterMediumNfsdMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/medium_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/medium_thruster.rsi
     offset: 0.5,-0.5
     layers:
     - state: mediumnfsd
@@ -253,7 +253,7 @@
   - type: Machine
     board: ThrusterMediumSyndiMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/medium_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/medium_thruster.rsi
     offset: 0.5,-0.5
     layers:
     - state: mediumsyndi
@@ -277,7 +277,7 @@
   - type: Machine
     board: ThrusterMediumMercMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/medium_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/medium_thruster.rsi
     offset: 0.5,-0.5
     layers:
     - state: mediummerc
@@ -301,7 +301,7 @@
   - type: Machine
     board: ThrusterMediumCentcomMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/medium_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/medium_thruster.rsi
     offset: 0.5,-0.5
     layers:
     - state: mediumcentcom
@@ -374,7 +374,7 @@
   - type: Machine
     board: ThrusterMLongMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/medi_long_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/medi_long_thruster.rsi
     layers:
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -397,7 +397,7 @@
   - type: Machine
     board: ThrusterMLongNfsdMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/medi_long_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/medi_long_thruster.rsi
     layers:
     - state: medinfsd
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -420,7 +420,7 @@
   - type: Machine
     board: ThrusterMLongMercMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/medi_long_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/medi_long_thruster.rsi
     layers:
     - state: medimerc
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -443,7 +443,7 @@
   - type: Machine
     board: ThrusterMLongSyndiMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/medi_long_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/medi_long_thruster.rsi
     layers:
     - state: medisyndi
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -466,7 +466,7 @@
   - type: Machine
     board: ThrusterMLongCentcomMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/medi_long_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/medi_long_thruster.rsi
     layers:
     - state: medicentcom
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -538,7 +538,7 @@
   - type: Machine
     board: ThrusterBigMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/big_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/big_thruster.rsi
     layers:
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -561,7 +561,7 @@
   - type: Machine
     board: ThrusterBigNfsdMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/big_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/big_thruster.rsi
     layers:
     - state: bignfsd
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -584,7 +584,7 @@
   - type: Machine
     board: ThrusterBigSyndiMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/big_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/big_thruster.rsi
     layers:
     - state: bigsyndi
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -607,7 +607,7 @@
   - type: Machine
     board: ThrusterBigMercMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/big_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/big_thruster.rsi
     layers:
     - state: bigmerc
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -630,7 +630,7 @@
   - type: Machine
     board: ThrusterBigCentComMachineCircuitboard
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/big_thruster.rsi
+    sprite: _Forge/Structures/Shuttles/big_thruster.rsi
     layers:
     - state: bigcentcom
       map: ["enum.ThrusterVisualLayers.Base"]

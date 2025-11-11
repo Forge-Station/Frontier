@@ -5,10 +5,10 @@
   description: Can be exchanged for money.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Materials/Coliseum/coliseum_coin.rsi
+    sprite: _Forge/Objects/Materials/Coliseum/coliseum_coin.rsi
     state: coin
   - type: Item
-    sprite: Forge/Objects/Materials/Coliseum/coliseum_coin.rsi
+    sprite: _Forge/Objects/Materials/Coliseum/coliseum_coin.rsi
     size: Tiny
   - type: PointLight
     color: "#00FF00"
@@ -34,7 +34,7 @@
   - type: Sprite
     drawdepth: Items
     noRot: false
-    sprite: Forge/Objects/Materials/Coliseum/coliseum_coin.rsi
+    sprite: _Forge/Objects/Materials/Coliseum/coliseum_coin.rsi
     state: coin
   - type: DeleteOnTrigger
   - type: SpawnOnTrigger

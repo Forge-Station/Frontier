@@ -5,7 +5,7 @@
   parent: [ BaseC2ContrabandUnredeemable, BaseItem ]  # Frontier: BaseMinorContraband<BaseC3SyndicateContraband
   components:
   - type: Sprite
-    sprite: Forge/Objects/Misc/NFSDbox.rsi
+    sprite: _Forge/Objects/Misc/NFSDbox.rsi
     layers:
     - state: icon
   - type: ActivatableUI

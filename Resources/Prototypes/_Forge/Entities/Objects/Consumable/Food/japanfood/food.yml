@@ -11,7 +11,7 @@
     storedRotation: -90
   - type: Food
   - type: Sprite
-    sprite: Forge/Objects/Consumable/Food/japanfood.rsi
+    sprite: _Forge/Objects/Consumable/Food/japanfood.rsi
     state: chocopocky
   - type: SolutionContainerManager
     solutions:
@@ -46,7 +46,7 @@
       - sweet
   - type: Food
   - type: Sprite
-    sprite: Forge/Objects/Consumable/Food/japanfood.rsi
+    sprite: _Forge/Objects/Consumable/Food/japanfood.rsi
     state: hanamidango
   - type: SolutionContainerManager
     solutions:
@@ -80,7 +80,7 @@
       - sweet
   - type: Food
   - type: Sprite
-    sprite: Forge/Objects/Consumable/Food/japanfood.rsi
+    sprite: _Forge/Objects/Consumable/Food/japanfood.rsi
     state: mitarashidango
   - type: SolutionContainerManager
     solutions:
@@ -108,7 +108,7 @@
     storedRotation: -90
   - type: Food
   - type: Sprite
-    sprite: Forge/Objects/Consumable/Food/japanfood.rsi
+    sprite: _Forge/Objects/Consumable/Food/japanfood.rsi
     state: onigiri
   - type: SolutionContainerManager
     solutions:
@@ -142,7 +142,7 @@
   - type: Food
     utensil: Fork
   - type: Sprite
-    sprite: Forge/Objects/Consumable/Food/japanfood.rsi
+    sprite: _Forge/Objects/Consumable/Food/japanfood.rsi
     state: porkramen
   - type: SolutionContainerManager
     solutions:
@@ -178,7 +178,7 @@
   - type: Food
     utensil: Fork
   - type: Sprite
-    sprite: Forge/Objects/Consumable/Food/japanfood.rsi
+    sprite: _Forge/Objects/Consumable/Food/japanfood.rsi
     state: spicyporkramen
   - type: SolutionContainerManager
     solutions:

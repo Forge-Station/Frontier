@@ -5,9 +5,9 @@
   description: Call me master and bring me some beer.
   components:
     - type: Sprite
-      sprite: Forge/Clothing/Uniforms/Jumpskirts/elegantmaid.rsi
+      sprite: _Forge/Clothing/Uniforms/Jumpskirts/elegantmaid.rsi
     - type: Clothing
-      sprite: Forge/Clothing/Uniforms/Jumpskirts/elegantmaid.rsi
+      sprite: _Forge/Clothing/Uniforms/Jumpskirts/elegantmaid.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -16,9 +16,9 @@
   description: Stylish and comfortable school skirt.
   components:
     - type: Sprite
-      sprite: Forge/Clothing/Uniforms/Jumpskirts/schoolskirt.rsi
+      sprite: _Forge/Clothing/Uniforms/Jumpskirts/schoolskirt.rsi
     - type: Clothing
-      sprite: Forge/Clothing/Uniforms/Jumpskirts/schoolskirt.rsi
+      sprite: _Forge/Clothing/Uniforms/Jumpskirts/schoolskirt.rsi
 
 - type: entity
   parent: [BaseC3SyndicateContraband, UnsensoredClothingUniformSkirtBase, ContrabandClothing ]
@@ -27,9 +27,9 @@
   description: юбка наивысшего качества ткани для деловых встреч.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/smugglerskirt.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/smugglerskirt.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/smugglerskirt.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/smugglerskirt.rsi
 
 - type: entity
   parent: [BaseC3SyndicateContraband, UnsensoredClothingUniformSkirtBase, ContrabandClothing ]
@@ -38,9 +38,9 @@
   description: юбка-комбинезон представлена командиром жнецов, украшена золотыми вставками. Не замедляет передвижения, притягиваем к себе взгляд.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/commanderskirt.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/commanderskirt.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpskirts/commanderskirt.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpskirts/commanderskirt.rsi
 
 - type: entity
   parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
@@ -49,9 +49,9 @@
   description: костюм наивысшего качества ткани для деловых встреч.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuit.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuit.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuit.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuit.rsi
 
 - type: entity
   parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
@@ -60,9 +60,9 @@
   description: костюм наивысшего качества ткани для деловых встреч. Очень удобный.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuittactical.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuittactical.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuittactical.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/smugglerjumpsuittactical.rsi
 
 - type: entity
   parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
@@ -71,9 +71,9 @@
   description: комбинезон представлена командиром жнецов, украшена золотыми вставками. Не замедляет передвижения, притягиваем к себе взгляд.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/commanderjumpsuit.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/commanderjumpsuit.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/commanderjumpsuit.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/commanderjumpsuit.rsi
 
 - type: entity
   parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
@@ -82,9 +82,9 @@
   description: теплый и уютный комбинезон, создан для кровавых битв.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/stormtrooperjumpsuit.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/stormtrooperjumpsuit.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/stormtrooperjumpsuit.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/stormtrooperjumpsuit.rsi
 
 
 - type: entity
@@ -94,9 +94,9 @@
   description: практичный комбинезон санитара для полевых условий.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/medsynjumpsuit.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/medsynjumpsuit.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/medsynjumpsuit.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/medsynjumpsuit.rsi
 
 - type: entity
   parent: [UnsensoredClothingUniformBase, BaseC3SyndicateContraband, ContrabandClothing]
@@ -105,9 +105,9 @@
   description: прочный комбинезон защищающий владельца в любых условиях.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/engineersynjumpsuit.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/engineersynjumpsuit.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Uniforms/Jumpsuits/engineersynjumpsuit.rsi
+    sprite: _Forge/Clothing/Uniforms/Jumpsuits/engineersynjumpsuit.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -116,9 +116,9 @@
   description: Old and dirty orange salvage jumpsuit bandaged with yellow duct tape.
   components:
     - type: Sprite
-      sprite: Forge/Clothing/Uniforms/Jumpsuits/scraptech.rsi
+      sprite: _Forge/Clothing/Uniforms/Jumpsuits/scraptech.rsi
     - type: Clothing
-      sprite: Forge/Clothing/Uniforms/Jumpsuits/scraptech.rsi
+      sprite: _Forge/Clothing/Uniforms/Jumpsuits/scraptech.rsi
 
 - type: entity
   parent: [ ClothingUniformBase, BaseCentcommContraband ]
@@ -127,9 +127,9 @@
   description: Special Operations Officer uniform, nothing like that. Although... If you have time to read this, it's too late...
   components:
     - type: Sprite
-      sprite: Forge/Clothing/Uniforms/Jumpsuits/dsoformal.rsi
+      sprite: _Forge/Clothing/Uniforms/Jumpsuits/dsoformal.rsi
     - type: Clothing
-      sprite: Forge/Clothing/Uniforms/Jumpsuits/dsoformal.rsi
+      sprite: _Forge/Clothing/Uniforms/Jumpsuits/dsoformal.rsi
 
 - type: entity
   parent: [ ClothingUniformBase, BaseCentcommContraband ]
@@ -138,9 +138,9 @@
   description: Special Operations Officer uniform, nothing like that. Although... If you have time to read this, it's too late...
   components:
     - type: Sprite
-      sprite: Forge/Clothing/Uniforms/Jumpsuits/dso_official.rsi
+      sprite: _Forge/Clothing/Uniforms/Jumpsuits/dso_official.rsi
     - type: Clothing
-      sprite: Forge/Clothing/Uniforms/Jumpsuits/dso_official.rsi
+      sprite: _Forge/Clothing/Uniforms/Jumpsuits/dso_official.rsi
 
 # _Mono version contractor military jumpsuit
 - type: entity

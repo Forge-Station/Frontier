@@ -5,9 +5,9 @@
   description: Длинное, свободное одеяние цвета ночи, которое элегантно струится вокруг фигуры, добавляя образу таинственности и загадочности.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Neck/Cloaks/darkcloakclose.rsi
+    sprite: _Forge/Clothing/Neck/Cloaks/darkcloakclose.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Neck/Cloaks/darkcloakclose.rsi
+    sprite: _Forge/Clothing/Neck/Cloaks/darkcloakclose.rsi
   - type: ToggleableClothing
     clothingPrototype: PlumberDarkHoodV
     requiredSlot:
@@ -24,9 +24,9 @@
   description: Длинное, свободное одеяние цвета ночи, которое элегантно струится вокруг фигуры, добавляя образу таинственности и загадочности.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Neck/Cloaks/darkcloakopen.rsi
+    sprite: _Forge/Clothing/Neck/Cloaks/darkcloakopen.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Neck/Cloaks/darkcloakopen.rsi
+    sprite: _Forge/Clothing/Neck/Cloaks/darkcloakopen.rsi
   - type: ToggleableClothing
     clothingPrototype: PlumberDarkHoodV
     requiredSlot:
@@ -43,9 +43,9 @@
   description: Глубокий и мягкий, словно тень, обрамляет лицо, создавая ощущение уютной тайны. Он идеально дополняет плащ, придавая владельцу вид таинственного странника.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Head/Hats/darkhood.rsi
+    sprite: _Forge/Clothing/Head/Hats/darkhood.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Head/Hats/darkhood.rsi
+    sprite: _Forge/Clothing/Head/Hats/darkhood.rsi
   - type: Tag
     tags:
     - WhitelistChameleon

@@ -5,9 +5,9 @@
   description: High-quality nitrile insulated gloves. Expensive medical PPE.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Hands/Gloves/isolnitrile.rsi
+    sprite: _Forge/Clothing/Hands/Gloves/isolnitrile.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Hands/Gloves/isolnitrile.rsi
+    sprite: _Forge/Clothing/Hands/Gloves/isolnitrile.rsi
   - type: Fiber
     fiberMaterial: fibers-nitrile
   - type: FingerprintMask
@@ -21,9 +21,9 @@
   suffix: v6st
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Hands/Gloves/combatgloves.rsi
+    sprite: _Forge/Clothing/Hands/Gloves/combatgloves.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Hands/Gloves/combatgloves.rsi
+    sprite: _Forge/Clothing/Hands/Gloves/combatgloves.rsi
   - type: MeleeWeapon
     autoAttack: false
     attackRate: 1

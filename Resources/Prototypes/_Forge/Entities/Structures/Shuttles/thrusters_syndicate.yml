@@ -4,7 +4,7 @@
   suffix: Syndicate
   components:
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/thrustersyndicate.rsi
+    sprite: _Forge/Structures/Shuttles/thrustersyndicate.rsi
     layers:
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -26,7 +26,7 @@
   suffix: DEBUG, Syndicate
   components:
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/thrustersyndicate.rsi
+    sprite: _Forge/Structures/Shuttles/thrustersyndicate.rsi
   - type: Machine
     board: ThrusterSyndicateMachineCircuitboard
 
@@ -36,7 +36,7 @@
   suffix: Syndicate
   components:
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/syndicategyroscope.rsi
+    sprite: _Forge/Structures/Shuttles/syndicategyroscope.rsi
     layers:
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -60,7 +60,7 @@
   suffix: DEBUG, Syndicate
   components:
   - type: Sprite
-    sprite: Forge/Structures/Shuttles/syndicategyroscope.rsi
+    sprite: _Forge/Structures/Shuttles/syndicategyroscope.rsi
     snapCardinals: true
   - type: Machine
     board: GyroscopeSyndicateMachineCircuitboard

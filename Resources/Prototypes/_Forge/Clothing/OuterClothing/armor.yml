@@ -5,9 +5,9 @@
   description: Стильный синтетический бронежилет. Имеет прочные баллистические пластины.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/OuterClothing/Armor/tact_contractor.rsi
+    sprite: _Forge/Clothing/OuterClothing/Armor/tact_contractor.rsi
   - type: Clothing
-    sprite: Forge/Clothing/OuterClothing/Armor/tact_contractor.rsi
+    sprite: _Forge/Clothing/OuterClothing/Armor/tact_contractor.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -28,9 +28,9 @@
   description: Стильный синтетический бронежилет. Сшит из термостойких волокон и дополнительными баллистическими пластинами для настоящих элитных агентов.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/OuterClothing/Armor/elite_tact_contractor.rsi
+    sprite: _Forge/Clothing/OuterClothing/Armor/elite_tact_contractor.rsi
   - type: Clothing
-    sprite: Forge/Clothing/OuterClothing/Armor/elite_tact_contractor.rsi
+    sprite: _Forge/Clothing/OuterClothing/Armor/elite_tact_contractor.rsi
   - type: TemperatureProtection
     heatingCoefficient: 0.1
     coolingCoefficient: 0.1

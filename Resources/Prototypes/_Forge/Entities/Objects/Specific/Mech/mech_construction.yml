@@ -8,7 +8,7 @@
   - type: Sprite
     drawdepth: Items
     noRot: false
-    sprite: Forge/Objects/Specific/Mech/clarke_construction.rsi
+    sprite: _Forge/Objects/Specific/Mech/clarke_construction.rsi
 
 - type: entity
   id: BaseClarkePartItem
@@ -43,7 +43,7 @@
         whitelist:
           tags:
           - ClarkeTreads
-    sprite: Forge/Objects/Specific/Mech/clarke_construction.rsi
+    sprite: _Forge/Objects/Specific/Mech/clarke_construction.rsi
   - type: ContainerContainer
     containers:
       mech-assembly-container: !type:Container
@@ -136,7 +136,7 @@
   - type: Sprite
     drawdepth: Items
     noRot: false
-    sprite: Forge/Objects/Specific/Mech/durand_construction.rsi
+    sprite: _Forge/Objects/Specific/Mech/durand_construction.rsi
 
 - type: entity
   id: BaseDurandPartItem
@@ -175,7 +175,7 @@
         whitelist:
           tags:
           - DurandRLeg
-    sprite: Forge/Objects/Specific/Mech/durand_construction.rsi
+    sprite: _Forge/Objects/Specific/Mech/durand_construction.rsi
   - type: ContainerContainer
     containers:
       mech-assembly-container: !type:Container
@@ -281,7 +281,7 @@
   - type: Sprite
     drawdepth: Items
     noRot: false
-    sprite: Forge/Objects/Specific/Mech/gygax_construction.rsi
+    sprite: _Forge/Objects/Specific/Mech/gygax_construction.rsi
 
 - type: entity
   id: BaseGygaxPartItem
@@ -320,7 +320,7 @@
         whitelist:
           tags:
           - GygaxRLeg
-    sprite: Forge/Objects/Specific/Mech/gygax_construction.rsi
+    sprite: _Forge/Objects/Specific/Mech/gygax_construction.rsi
   - type: ContainerContainer
     containers:
       mech-assembly-container: !type:Container
@@ -426,7 +426,7 @@
   - type: Sprite
     drawdepth: Items
     noRot: false
-    sprite: Forge/Objects/Specific/Mech/ripleymkii_construction.rsi
+    sprite: _Forge/Objects/Specific/Mech/ripleymkii_construction.rsi
 
 - type: entity
   parent: BaseRipleyMKIIPart
@@ -457,7 +457,7 @@
         whitelist:
           tags:
           - RipleyRLeg
-    sprite: Forge/Objects/Specific/Mech/ripleymkii_construction.rsi
+    sprite: _Forge/Objects/Specific/Mech/ripleymkii_construction.rsi
   - type: ContainerContainer
     containers:
       mech-assembly-container: !type:Container

@@ -5,7 +5,7 @@
   description: Allows you to buy a shuttle for fighting at the coliseum.
   components:
   - type: Sprite
-    sprite: Forge/Objects/Misc/shipyard_voucher.rsi
+    sprite: _Forge/Objects/Misc/shipyard_voucher.rsi
     layers:
     - state: coliseum
     - state: vouchercoliseum

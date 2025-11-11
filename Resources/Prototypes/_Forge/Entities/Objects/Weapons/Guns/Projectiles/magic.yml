@@ -7,7 +7,7 @@
   components:
   - type: Sprite
     noRot: false
-    sprite: Forge/Objects/Weapons/Guns/Projectiles/magic.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
       - state: magmabolt
         shader: unshaded
@@ -37,7 +37,7 @@
   components:
   - type: Sprite
     noRot: false
-    sprite: Forge/Objects/Weapons/Guns/Projectiles/magic.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
       - state: plasmacharge
         shader: unshaded

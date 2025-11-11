@@ -5,7 +5,7 @@
   description: Приятная на ощупь красная-черная сумка.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Back/Satchels/syndicate.rsi
+    sprite: _Forge/Clothing/Back/Satchels/syndicate.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.1
   - type: Storage
@@ -22,7 +22,7 @@
   description: Приятная на ощупь красная-черная сумка. С белым крестом.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Back/Satchels/syndicatemed.rsi
+    sprite: _Forge/Clothing/Back/Satchels/syndicatemed.rsi
   - type: ExplosionResistance
     damageCoefficient: 0
   - type: Storage
@@ -38,7 +38,7 @@
   description: Приятная на ощупь жёлто-черная сумка. Выглядит стильно и оригинально.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Back/Satchels/contractor.rsi
+    sprite: _Forge/Clothing/Back/Satchels/contractor.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.1
   - type: Storage

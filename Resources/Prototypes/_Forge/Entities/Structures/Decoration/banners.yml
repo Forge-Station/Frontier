@@ -5,7 +5,7 @@
   description: A banner displaying some crappy company. He,s covered with dirt and engine fluid, in the corner, you can see the crossed-out initials of another company.
   components:
   - type: Sprite
-    sprite: Forge/Structures/Decoration/banner.rsi
+    sprite: _Forge/Structures/Decoration/banner.rsi
     state: banner_scraptech
 
 - type: entity
@@ -15,5 +15,5 @@
   description: Banner of the advanced military-industrial corporation TechnicLogistic.
   components:
   - type: Sprite
-    sprite: Forge/Structures/Decoration/banner.rsi
+    sprite: _Forge/Structures/Decoration/banner.rsi
     state: banner_tl

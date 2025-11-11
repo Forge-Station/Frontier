@@ -111,7 +111,7 @@
   description: A machine board for a Bluespace Harvester
   components:
   - type: Sprite
-    sprite: Forge/Bluespace/module.rsi
+    sprite: _Forge/Bluespace/module.rsi
     state: bluespace
   - type: MachineBoard
     prototype: BluespaceHarvester

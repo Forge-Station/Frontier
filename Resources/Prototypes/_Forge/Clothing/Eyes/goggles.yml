@@ -7,9 +7,9 @@
   description: An advanced heads-up display which provides id data and vision in complete darkness.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Eyes/Goggles/nightvision.rsi
+    sprite: _Forge/Clothing/Eyes/Goggles/nightvision.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Eyes/Goggles/nightvision.rsi
+    sprite: _Forge/Clothing/Eyes/Goggles/nightvision.rsi
   - type: FlashImmunity
   - type: StaticPrice
     price: 30
@@ -28,9 +28,9 @@
   description: An advanced heads-up display which provides id data and vision in complete darkness.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Eyes/Goggles/medical_nightvision.rsi
+    sprite: _Forge/Clothing/Eyes/Goggles/medical_nightvision.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Eyes/Goggles/medical_nightvision.rsi
+    sprite: _Forge/Clothing/Eyes/Goggles/medical_nightvision.rsi
   - type: FlashImmunity
   - type: StaticPrice
     price: 30
@@ -50,9 +50,9 @@
   description: An advanced heads-up display which provides id data and vision in complete darkness.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Eyes/Goggles/security_nightvision.rsi
+    sprite: _Forge/Clothing/Eyes/Goggles/security_nightvision.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Eyes/Goggles/security_nightvision.rsi
+    sprite: _Forge/Clothing/Eyes/Goggles/security_nightvision.rsi
   - type: FlashImmunity
   - type: StaticPrice
     price: 30
@@ -69,9 +69,9 @@
   description: An advanced heads-up display which provides id data and vision in complete darkness.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Eyes/Goggles/diagnostic_nightvision.rsi
+    sprite: _Forge/Clothing/Eyes/Goggles/diagnostic_nightvision.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Eyes/Goggles/diagnostic_nightvision.rsi
+    sprite: _Forge/Clothing/Eyes/Goggles/diagnostic_nightvision.rsi
   - type: FlashImmunity
   - type: EyeProtection
   - type: StaticPrice
@@ -163,9 +163,9 @@
   description: Усовершенствованный сенсорный дисплей, который выдает идентификационные данные и обеспечивает видимость в полной темноте.
   components:
   - type: Sprite
-    sprite: Forge/Clothing/Eyes/Goggles/dcn_nightvision.rsi
+    sprite: _Forge/Clothing/Eyes/Goggles/dcn_nightvision.rsi
   - type: Clothing
-    sprite: Forge/Clothing/Eyes/Goggles/dcn_nightvision.rsi
+    sprite: _Forge/Clothing/Eyes/Goggles/dcn_nightvision.rsi
   - type: FlashImmunity
   - type: EyeProtection
   - type: StaticPrice

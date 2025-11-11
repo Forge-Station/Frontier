@@ -5,10 +5,10 @@
   id: PowerDrillNfsd
   components:
   - type: Sprite
-    sprite: Forge/Objects/Tools/NFSD/nfsd_drill.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_drill.rsi
     state: drill_screw
   - type: Item
-    sprite: Forge/Objects/Tools/NFSD/nfsd_drill.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_drill.rsi
     size: Small
   - type: Tool
     qualities:
@@ -20,7 +20,7 @@
     entries:
       - behavior: Screwing
         sprite:
-          sprite: Forge/Objects/Tools/NFSD/nfsd_drill.rsi
+          sprite: _Forge/Objects/Tools/NFSD/nfsd_drill.rsi
           state: drill_screw
         useSound:
           path: /Audio/Items/drill_use.ogg
@@ -28,7 +28,7 @@
           path: /Audio/Items/change_drill.ogg
       - behavior: Anchoring
         sprite:
-          sprite: Forge/Objects/Tools/NFSD/nfsd_drill.rsi
+          sprite: _Forge/Objects/Tools/NFSD/nfsd_drill.rsi
           state: drill_bolt
         useSound:
           path: /Audio/Items/drill_use.ogg
@@ -43,7 +43,7 @@
     soundHit:
       path: "/Audio/Items/drill_hit.ogg"
   - type: Clothing
-    sprite: Forge/Objects/Tools/NFSD/nfsd_drill.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_drill.rsi
     quickEquip: false
     slots:
     - Belt
@@ -58,7 +58,7 @@
   description: jaws of life nfsd
   components:
   - type: Sprite
-    sprite: Forge/Objects/Tools/NFSD/nfsd_jol.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_jol.rsi
     state: jaws_pry
   - type: Item
     inhandVisuals:
@@ -73,13 +73,13 @@
     entries:
       - behavior: Prying
         sprite:
-          sprite: Forge/Objects/Tools/NFSD/nfsd_jol.rsi
+          sprite: _Forge/Objects/Tools/NFSD/nfsd_jol.rsi
           state: jaws_pry
         useSound: /Audio/Items/jaws_pry.ogg
         changeSound: /Audio/Items/change_jaws.ogg
       - behavior: Cutting
         sprite:
-          sprite: Forge/Objects/Tools/NFSD/nfsd_jol.rsi
+          sprite: _Forge/Objects/Tools/NFSD/nfsd_jol.rsi
           state: jaws_cutter
         useSound: /Audio/Items/jaws_cut.ogg
         changeSound: /Audio/Items/change_jaws.ogg
@@ -90,7 +90,7 @@
   - type: StaticPrice #CorvaxFrontier
     price: 200
   - type: Clothing
-    sprite: Forge/Objects/Tools/NFSD/nfsd_jol.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_jol.rsi
     quickEquip: false
     slots:
     - Belt
@@ -105,9 +105,9 @@
   description: welder nfsd desc
   components:
   - type: Sprite
-    sprite: Forge/Objects/Tools/NFSD/nfsd_welder.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_welder.rsi
   - type: Item
-    sprite: Forge/Objects/Tools/NFSD/nfsd_welder.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_welder.rsi
   - type: SolutionContainerManager
     solutions:
       Welder:
@@ -130,7 +130,7 @@
   - type: Tool
     speedModifier: 2
   - type: Clothing
-    sprite: Forge/Objects/Tools/NFSD/nfsd_welder.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_welder.rsi
     quickEquip: false
     slots:
     - Belt
@@ -148,13 +148,13 @@
     sound:
       path: /Audio/Items/multitool_drop.ogg
   - type: Sprite
-    sprite: Forge/Objects/Tools/NFSD/nfsd_multitool.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_multitool.rsi
     layers:
     - state: icon
     - state: green-unlit
       shader: unshaded
   - type: Clothing
-    sprite: Forge/Objects/Tools/NFSD/nfsd_multitool.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_multitool.rsi
     quickEquip: false
     slots:
     - Belt
@@ -174,12 +174,12 @@
   - type: LimitedCharges
     maxCharges: 60
   - type: Sprite
-    sprite: Forge/Objects/Tools/NFSD/nfsd_rcd.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_rcd.rsi
     state: icon
   - type: Item
     size: Normal
   - type: Clothing
-    sprite: Forge/Objects/Tools/NFSD/nfsd_rcd.rsi
+    sprite: _Forge/Objects/Tools/NFSD/nfsd_rcd.rsi
     quickEquip: false
     slots:
     - Belt

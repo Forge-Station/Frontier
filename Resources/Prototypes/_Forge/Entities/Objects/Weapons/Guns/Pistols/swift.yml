@@ -4,14 +4,14 @@
   id: WeaponPistolSwift
   components:
   - type: Sprite
-    sprite: Forge/Objects/Weapons/Guns/Pistols/swift.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Pistols/swift.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: Forge/Objects/Weapons/Guns/Pistols/swift.rsi
+    sprite: _Forge/Objects/Weapons/Guns/Pistols/swift.rsi
   - type: Gun
     fireRate: 5.5
     selectedMode: SemiAuto

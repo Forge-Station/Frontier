@@ -5,9 +5,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Forge/Structures/Windows/shuttle_uran_window.rsi
+    sprite: _Forge/Structures/Windows/shuttle_uran_window.rsi
   - type: Icon
-    sprite: Forge/Structures/Windows/shuttle_uran_window.rsi
+    sprite: _Forge/Structures/Windows/shuttle_uran_window.rsi
   - type: Repairable
     fuelCost: 15
     doAfterDelay: 3
@@ -64,7 +64,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Forge/Structures/Windows/shuttle_uran_window_diagonal.rsi
+    sprite: _Forge/Structures/Windows/shuttle_uran_window_diagonal.rsi
     state: state0
   - type: Tag
     tags:
@@ -74,7 +74,7 @@
     key: walls # Frontier: windows<walls
     base: state
   - type: Icon
-    sprite: Forge/Structures/Windows/shuttle_uran_window_diagonal.rsi
+    sprite: _Forge/Structures/Windows/shuttle_uran_window_diagonal.rsi
     state: state0
   - type: Fixtures
     fixtures:
@@ -107,9 +107,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Forge/Structures/Windows/shuttle_plasma_window.rsi
+    sprite: _Forge/Structures/Windows/shuttle_plasma_window.rsi
   - type: Icon
-    sprite: Forge/Structures/Windows/shuttle_plasma_window.rsi
+    sprite: _Forge/Structures/Windows/shuttle_plasma_window.rsi
   - type: Repairable
     fuelCost: 15
     doAfterDelay: 3
@@ -166,7 +166,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Forge/Structures/Windows/shuttle_plasma_window_diagonal.rsi
+    sprite: _Forge/Structures/Windows/shuttle_plasma_window_diagonal.rsi
     state: state0
   - type: Tag
     tags:
@@ -176,7 +176,7 @@
     key: walls # Frontier: windows<walls
     base: state
   - type: Icon
-    sprite: Forge/Structures/Windows/shuttle_plasma_window_diagonal.rsi
+    sprite: _Forge/Structures/Windows/shuttle_plasma_window_diagonal.rsi
     state: state0
   - type: Fixtures
     fixtures:
