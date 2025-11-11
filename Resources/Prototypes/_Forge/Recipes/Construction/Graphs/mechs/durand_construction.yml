@@ -160,7 +160,7 @@
       - tag: DurandArmor
         name: construction-graph-component-durand-armor
         icon:
-          sprite: "Forge/Objects/Specific/Mech/durand_construction.rsi"
+          sprite: "_Forge/Objects/Specific/Mech/durand_construction.rsi"
           state: durand_armor
         completed:
         - !type:VisualizerDataInt

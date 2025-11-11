@@ -151,7 +151,7 @@
       - tag: GygaxArmor
         name: construction-graph-component-gygax-armor
         icon:
-          sprite: "Forge/Objects/Specific/Mech/gygax_construction.rsi"
+          sprite: "_Forge/Objects/Specific/Mech/gygax_construction.rsi"
           state: gygax_armor
         completed:
         - !type:VisualizerDataInt
