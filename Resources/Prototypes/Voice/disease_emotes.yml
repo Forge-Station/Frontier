@@ -3,6 +3,8 @@
   name: chat-emote-name-sneeze
   category: Vocal
   chatMessages: ["chat-emote-msg-sneeze"]
+  chatTriggers: # Forge-Change
+    - чихает # Forge-Change
 
 - type: emote
   id: Cough
@@ -15,6 +17,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - Ipc # Forge-Change
   chatMessages: ["chat-emote-msg-cough"]
   chatTriggers:
     - cough
@@ -66,6 +69,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - Ipc # Forge-Change
   chatMessages: ["chat-emote-msg-yawn"]
   chatTriggers:
     - yawn

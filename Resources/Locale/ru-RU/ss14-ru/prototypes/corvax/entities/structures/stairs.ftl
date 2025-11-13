@@ -1,4 +1,4 @@
-ent-StairsPortal = ступеньки
+ent-StairsPortal = Ступеньки
     .desc = Величайшее изобретение после гранатомётов.
     .suffix = Стальной, Портал
 ent-StairStagePortal = { ent-Stairs }

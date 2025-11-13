@@ -1,9 +1,28 @@
 - type: marking
+  id: DemomTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [DemonSpecies]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: tail
+
+- type: marking
   id: DemomTail1
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [DemonSpecies]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
   sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: tail
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: demon_tail
 
@@ -14,6 +33,8 @@
   speciesRestriction: [DemonSpecies]
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: tail
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: long
 
 - type: marking
@@ -23,4 +44,49 @@
   speciesRestriction: [DemonSpecies]
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: tail
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: up
+
+# Forge-Change animated tail from wega
+- type: marking
+  id: DemomTailAnimated
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: []
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: tail_waggin
+
+- type: marking
+  id: DemomTail1Animated
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: []
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: tail_waggin
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: demon_tail_waggin
+
+- type: marking
+  id: DemomTailLongAnimated
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: []
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: tail_waggin
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: long_waggin
+
+- type: marking
+  id: DemomTailUpAnimated
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: []
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: tail_waggin
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: up_waggin

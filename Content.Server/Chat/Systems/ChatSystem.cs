@@ -10,6 +10,7 @@ using Content.Server.Speech.Prototypes;
 using Content.Server.Speech.EntitySystems;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
+using Content._Forge.Shared.Loudspeaker.Events; // Corvax-Forge
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
@@ -61,9 +62,6 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
 
-    public const int VoiceRange = 10; // how far voice goes in world units
-    public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
-    public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
     public const string DefaultAnnouncementSound = "/Audio/Announcements/announce.ogg";
 
     private bool _loocEnabled = true;
@@ -445,11 +443,31 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         name = FormattedMessage.EscapeText(name);
 
+        // Corvax-Forge start
+        int? loudSpeakFont = null;
+
+        var getLoudspeakerEv = new GetLoudspeakerEvent();
+        RaiseLocalEvent(source, ref getLoudspeakerEv);
+
+        if (getLoudspeakerEv.Loudspeakers != null)
+            foreach (var loudspeaker in getLoudspeakerEv.Loudspeakers)
+            {
+                var loudSpeakerEv = new GetLoudspeakerDataEvent();
+                RaiseLocalEvent(loudspeaker, ref loudSpeakerEv);
+
+                if (loudSpeakerEv.IsActive && loudSpeakerEv.AffectChat)
+                {
+                    loudSpeakFont = loudSpeakerEv.FontSize;
+                    break;
+                }
+            }
+        // Corvax-Forge end
+
         var wrappedMessage = Loc.GetString(speech.Bold ? "chat-manager-entity-say-bold-wrap-message" : "chat-manager-entity-say-wrap-message",
             ("entityName", name),
             ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
             ("fontType", speech.FontId),
-            ("fontSize", speech.FontSize),
+            ("fontSize", loudSpeakFont ?? speech.FontSize), // Corvax-Forge - "loudSpeakFont"
             ("message", FormattedMessage.EscapeText(message)));
 
         SendInVoiceRange(ChatChannel.Local, message, wrappedMessage, source, range);

@@ -1,0 +1,20 @@
+- type: loadout
+  id: ForgeAndroidSurvival
+  name: аварийный запас (Синтетики)
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeAndroidLd
+  storage:
+    back:
+    - BoxSurvivalAndroid
+
+- type: loadout
+  id: ForgeAndroidExtendedSurvival
+  name: расширенный аварийный запас (Синтетики)
+  price: 1000
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeAndroidLd
+  storage:
+    back:
+    - BoxSurvivalAndroidExtended

@@ -16,20 +16,20 @@
         type: ThiefBackpackBoundUserInterface
 
 - type: entity
-  id: DogtagsCoroner
-  suffix: coroner
+  id: DogtagsCadet
+  suffix: Кадет
   parent: DogtagsKit
   components:
   - type: ThiefUndeterminedBackpack
     maxSelectedSets: 1
     possibleSets:
-    - NfsdBrigmedic1Set
-    - NfsdBrigmedic2Set
-    - NfsdBrigmedic3Set
+    - NfsdCadet1Set
+    - NfsdCadet2Set
+    - NfsdCadet3Set
 
 - type: entity
   id: DogtagsDeputy
-  suffix: Deputy
+  suffix: Рейнджер
   parent: DogtagsKit
   components:
   - type: ThiefUndeterminedBackpack
@@ -41,13 +41,61 @@
     - NfsdDeputy4Set
 
 - type: entity
-  id: DogtagsCadet
-  suffix: Cadet
+  id: DogtagsCoroner
+  suffix: Коронер
   parent: DogtagsKit
   components:
   - type: ThiefUndeterminedBackpack
     maxSelectedSets: 1
     possibleSets:
-    - NfsdCadet1Set
-    - NfsdCadet2Set
-    - NfsdCadet3Set
+    - NfsdBrigmedic1Set
+    - NfsdBrigmedic2Set
+    - NfsdBrigmedic3Set
+    - NfsdBrigmedic4Set
+
+- type: entity
+  id: DogtagsDetective
+  suffix: Детектив
+  parent: DogtagsKit
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - NfsdDetective1Set
+    - NfsdDetective2Set
+    - NfsdDetective3Set
+
+- type: entity
+  id: DogtagsLieutenant
+  suffix: Лейтенант
+  parent: DogtagsKit
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - NfsdLieutenant1Set
+    - NfsdLieutenant2Set
+    - NfsdLieutenant3Set
+    - NfsdLieutenant4Set
+
+- type: entity
+  id: DogtagsBailiff
+  suffix: Бейлиф
+  parent: DogtagsKit
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - NfsdBailiff1Set
+    - NfsdBailiff2Set
+    - NfsdBailiff3Set
+
+- type: entity
+  id: DogtagsSheriff
+  suffix: Шериф
+  parent: DogtagsKit
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - NfsdSheriff1Set

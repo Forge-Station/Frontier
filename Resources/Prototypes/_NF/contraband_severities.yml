@@ -10,6 +10,10 @@
   showDepartmentsAndJobs: true
 
 - type: contrabandSeverity
+  id: Class2DisallowNFSD
+  examineText: contraband-examine-text-Class2
+
+- type: contrabandSeverity
   id: Class2Expedition
   examineText: contraband-examine-text-Class2Expedition
 

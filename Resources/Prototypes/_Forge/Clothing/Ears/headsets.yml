@@ -1,0 +1,61 @@
+- type: entity
+  abstract: true
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltLoudspeaker
+  components:
+  - type: Loudspeaker
+    isActive: true
+    canToggle: true
+    affectRadio: true
+
+# Синдикат
+- type: entity
+  parent: [ClothingHeadsetAlt, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingHeadsetAltSyndicateSmuggler
+  name: полноразмерная кроваво-красная гарнитура
+  description: Модифицированный модульный интерком синдиката, надеваемый на голову, и содержащий ключ шифрования.
+  suffix: Контрабандист
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySmuggler
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/syndicate.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/syndicate.rsi
+
+- type: entity
+  parent: [ClothingHeadsetAlt, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingHeadsetAltSyndicateShturm
+  name: полноразмерная кроваво-красная гарнитура
+  description: Модифицированный модульный интерком синдиката, надеваемый на голову, и содержащий ключ шифрования.
+  suffix: Жнец, Штурмовик
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyShturm
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/syndicate.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/syndicate.rsi
+
+- type: entity
+  parent: [ClothingHeadsetAltLoudspeaker, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingHeadsetAltSyndicateComShturm
+  name: полноразмерная кроваво-красная гарнитура
+  description: Модифицированный модульный интерком синдиката, надеваемый на голову, и содержащий ключ шифрования.
+  suffix: Жнец, Командир
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyShturm
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/syndicate.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/syndicate.rsi
+
+
+

@@ -14,3 +14,130 @@
     - state: device-on
       map: [ "enum.PowerDeviceVisualLayers.Powered" ]
   - type: DataMinerSyndicate
+
+- type: entity
+  parent: [ BaseMachinePowered, BaseStructureDisableToolUse, ConstructibleMachine ]
+  id: SyndicateDataServer
+  name: дата сервер Синдиката
+  description: Ужасающее устройство синдиката способное преобразовать один тип валюты в другой и обратно.
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Specific/Syndicate/syndicatedataserver.rsi
+    snapCardinals: true
+    layers:
+    - state: server-nopower
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: server-on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: server-open
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: OreSilo
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - SSpaceCash
+      - SpaceCash
+  - type: ActivatableUI
+    key: enum.OreSiloUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.OreSiloUiKey.Key:
+        type: OreSiloBoundUserInterface
+  - type: Machine
+    board: MaterialSiloMachineCircuitboard
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: WiresVisuals
+  - type: WiresPanel
+  - type: StaticPrice
+    price: 5000
+  - type: MaterialStorageMagnetPickup
+    range: 0.3
+
+- type: entity
+  parent: [ BaseLatheLube, BaseStructureDisableToolUse ]
+  id: SyndicateDataConventor
+  name: конвертер кэша Синдиката
+  description: Сервер на котором хранятся ужасные данные Синдиката. Тут имеется слот для кэша.
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Specific/Syndicate/syndicatedataconventor.rsi
+    drawdepth: LargeObjects
+    snapCardinals: true
+    layers:
+    - state: server-nopower
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: server-off
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: server-on
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+  - type: Appearance
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - SSpaceCash
+      - SpaceCash
+  - type: OreSiloClient
+  - type: Machine
+    board: MaterialSiloMachineCircuitboard
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: StaticPrice
+    price: 3000
+  - type: MaterialStorageMagnetPickup
+    range: 0.3
+  - type: Lathe
+    idleState: server-nopower
+    runningState: server-nopower
+    unlitIdleState: server-off
+    unlitRunningState: server-on
+    staticPacks:
+    - SyndicateTradingCash

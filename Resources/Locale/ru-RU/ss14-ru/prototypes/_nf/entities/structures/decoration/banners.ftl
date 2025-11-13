@@ -4,3 +4,7 @@ ent-FlagNfsd = флаг ДСБФ
     .desc = Флаг с цветами цветов Департамента Службы Безопасности Фронтира.
 ent-BannerGoblin01 = знамя Гоблинов
     .desc = Знамя со знаком одного из кланов гоблинов.
+ent-BannerTL = знамя TechnicLogistic 
+    .desc = Знамя передовой военно-производственной корпорации TechnicLogistic.
+ent-TL_flag = флаг TechnicLogistic 
+    .desc = Флаг передовой военно-производственной корпорации TechnicLogistic.

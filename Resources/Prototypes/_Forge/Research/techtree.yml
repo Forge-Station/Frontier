@@ -44,9 +44,11 @@
   entityIcon: ClothingOuterHardsuitMercenaryElite
   discipline: NFArsenalMercenary
   tier: 1
-  cost: 20000
+  cost: 35000
   recipeUnlocks:
   - ClothingOuterHardsuitMercenaryElite
+  - ClothingOuterHardsuitAAMr
+  - ClothingOuterHardsuitAAMrAdv
   technologyPrerequisites:
   - NFHardsuitsArmored
   position: 5, 9
@@ -275,3 +277,16 @@
   technologyPrerequisites:
   - NFImprovedPistolAmmo
   position: 2, 45
+
+- type: technology
+  id: ForgePowercellNTTech
+  name: research-technology-powercellnt
+  entityIcon: PowerCellNanoT
+  discipline: NFEngineering
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - PowerCellNTRecipe
+  technologyPrerequisites:
+  - NFFission
+  position: 4, 26

@@ -1,0 +1,100 @@
+- type: loadout
+  id: ClothingHeadHatBellhopOServLd
+  equipment:
+    head: ClothingHeadHatBellhop
+
+- type: loadout
+  id: ClothingHeadHatHoodBioGeneralOServLd
+  equipment:
+    head: ClothingHeadHatHoodBioGeneral
+
+- type: loadout
+  id: ClothingHeadBandBotanyOServLd
+  equipment:
+    head: ClothingHeadBandBotany
+
+- type: loadout
+  id: ClothingHeadHatHoodBioJanitorOServLd
+  equipment:
+    head: ClothingHeadHatHoodBioJanitor
+
+- type: loadout
+  id: ClothingHeadHatBeretOServLd
+  equipment:
+    head: ClothingHeadHatBeret
+
+- type: loadout
+  id: ClothingHeadHatBeretFrenchOServLd
+  equipment:
+    head: ClothingHeadHatBeretFrench
+
+- type: loadout
+  id: ClothingHeadHatYellowsoftOServLd
+  equipment:
+    head: ClothingHeadHatYellowsoft
+
+- type: loadout
+  id: ClothingHeadHatGreensoftOServLd
+  equipment:
+    head: ClothingHeadHatGreensoft
+
+- type: loadout
+  id: ClothingHeadHatBrownFlatcapOServLd
+  equipment:
+    head: ClothingHeadHatBrownFlatcap
+
+- type: loadout
+  id: ClothingHeadHatCorpsoftOServLd
+  equipment:
+    head: ClothingHeadHatCorpsoft
+
+- type: loadout
+  id: ClothingHeadHatPurplesoftOServLd
+  equipment:
+    head: ClothingHeadHatPurplesoft
+
+- type: loadout
+  id: ClothingHeadHatOrangesoftOServLd
+  equipment:
+    head: ClothingHeadHatOrangesoft
+
+- type: loadout
+  id: ClothingHeadHatGreyFlatcapOServLd
+  equipment:
+    head: ClothingHeadHatGreyFlatcap
+
+- type: loadout
+  id: ClothingHeadHatBluesoftOServLd
+  equipment:
+    head: ClothingHeadHatBluesoft
+
+- type: loadout
+  id: ClothingHeadHatBlacksoftOServLd
+  equipment:
+    head: ClothingHeadHatBlacksoft
+
+# region PlayTime
+- type: loadout
+  id: ClothingHeadPaperSackOServLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT2
+  equipment:
+    head: ClothingHeadPaperSack
+
+- type: loadout
+  id: ClothingHeadPaperSackSmileOServLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT3
+  equipment:
+    head: ClothingHeadPaperSackSmile
+
+# Шлем ОБР Уборщика
+- type: loadout
+  id: ClothingHeadHelmetERTJanitorOServLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT5
+  equipment:
+    head: ClothingHeadHelmetERTJanitor

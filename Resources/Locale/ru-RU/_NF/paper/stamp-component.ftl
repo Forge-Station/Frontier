@@ -10,4 +10,4 @@ stamp-component-stamped-name-bailiff = Бейлиф
 stamp-component-stamped-name-confidential = Представитель НаноТрайзен
 stamp-component-stamped-name-doc = Менеджер Мед. Операций
 stamp-component-stamped-name-pal = Представитель Юр. Департамента
-stamp-component-stamped-name-plant-manager = Старший инженер Э.Э.
+stamp-component-stamped-name-plant-manager = Директор Электростанции

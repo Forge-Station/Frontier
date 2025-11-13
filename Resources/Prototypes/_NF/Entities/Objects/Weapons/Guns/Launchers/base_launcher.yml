@@ -97,6 +97,9 @@
     whitelist:
       tags:
         - Grenade
+        - NFCartridgeGrenade40mm
+        - NFCartridgeGrenade40mmFlash # Forge-Change
+        - NFCartridgeGrenade40mmEmp # Forge-Change
     capacity: 3
     proto: NFGrenadeFrag
 
@@ -118,7 +121,8 @@
           tags:
             - NFTrackingDart
             - NFCartridgeGrenade40mmEmp
-            - NFCartridgeGrenade40mmFlash
+            - NFCartridgeGrenade40mmFlash # Forge-Change
+            - NFCartridgeGrenade40mm # Forge-Change
   - type: ChamberMagazineAmmoProvider
     autoCycle: false
     boltClosed: false

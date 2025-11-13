@@ -141,8 +141,12 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi
   - type: Battery # 20 shots
-    maxCharge: 1200
-    startingCharge: 1200
+    maxCharge: 720 #ForgeFrontier
+    startingCharge: 720 #ForgeFrontier
+  - type: Gun
+    fireRate: 2.8
+  - type: HitscanBatteryAmmoProvider
+    proto: SmgPulse
 
 #region Disablers
 - type: entity

@@ -53,7 +53,7 @@
   id: JobMercenary
   groups:
   - MercenaryHead
-  - ContractorNeck
+  - MercNeck # Forge-change ContractorNeck<MercNeck
   - MercenaryJumpsuit
   - MercenaryGloves
   - MercenaryBackpack
@@ -73,6 +73,7 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - MercenaryWeapon
 
 # region Frontier
 - type: roleLoadout
@@ -199,6 +200,7 @@
   - SecurityGuardFace
   - SecurityGuardBelt
   - SecurityGuardEars
+  - OSecNeck
   - NfsdBoxSurvival
   - SecurityGuardPDA
   - ContractorWallet
@@ -306,7 +308,7 @@
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
-  - ContractorBackpackItems
+  - NFSDBackpackItems # Forge-change
   - ContractorHandItems
   - NfsdSpeciesSpecific
 
@@ -331,7 +333,7 @@
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
-  - ContractorBackpackItems
+  - NFSDBackpackItems # Forge-change
   - ContractorHandItems
   - NfsdSpeciesSpecific
 
@@ -356,7 +358,7 @@
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
-  - ContractorBackpackItems
+  - CoronerBackpackItems # Forge-change
   - ContractorHandItems
   - NfsdSpeciesSpecific
 
@@ -371,7 +373,7 @@
   - NFDetectiveOuterClothing
   - NfsdForcedOuterClothing
   - NfsdShoesBrown
-  - NfsdFace
+  - DetectiveFace # Forge-change add: DetectiveFace
   - NfsdGlasses
   - NfsdBelt
   - NfsdEarsCream
@@ -381,7 +383,7 @@
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
-  - ContractorBackpackItems
+  - NFSDBackpackItems # Forge-change
   - ContractorHandItems
   - NfsdSpeciesSpecific
 
@@ -394,18 +396,18 @@
   - PalGloves
   - NfsdBackpackBrown
   - NfsdForcedOuterClothing
-  - NfsdShoesBrown
+  - PalShoes
   - ContractorFace
   - NfsdGlasses
   - ContractorBelt
-  - NfsdEarsBrown
+  - NfsdEarsAltBrown
   - NfsdBoxSurvival
   - PalPDA
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
-  - ContractorBackpackItems
+  - NFSDBackpackItems # Forge-change
   - ContractorHandItems
   - NFSpeciesSpecific # Explicitly civilian variant
 

@@ -1,0 +1,67 @@
+- type: entity
+  name: гипоспрей ДСБФ
+  parent: [BaseItem, BaseC2ContrabandUnredeemable]
+  description: Стерильный инъектор для быстрого введения лекарств пациентам.
+  id: NfsdHypo
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Specific/Medical/nfsdhypo.rsi
+    layers:
+      - state: hypo
+        map: ["enum.SolutionContainerLayers.Base"]
+      - state: hypo_fill1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    sprite: Forge/Objects/Specific/Medical/nfsdhypo.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 20
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    onlyAffectsMobs: false
+  - type: UseDelay
+    delay: 0.5
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 4
+    fillBaseName: hypo_fill
+    solutionName: hypospray
+
+- type: entity
+  name: гипоспрей врача NT-MED-74
+  parent: [BaseItem, BaseC2ContrabandUnredeemable]
+  description: Стерильный инъектор для быстрого введения лекарств пациентам.
+  id: MedHypo
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Specific/Medical/medihypo.rsi
+    layers:
+      - state: hypo
+        map: ["enum.SolutionContainerLayers.Base"]
+      - state: hypo_fill1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    sprite: Forge/Objects/Specific/Medical/medihypo.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 20
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    onlyAffectsMobs: false
+  - type: UseDelay
+    delay: 0.5
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 4
+    fillBaseName: hypo_fill
+    solutionName: hypospray

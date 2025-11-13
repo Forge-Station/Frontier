@@ -698,6 +698,15 @@
         color: "#424242"
       - state: clasp-inhand-right
         color: "#7f0101"
+  - type: ExplosionResistance # Corvax-Forge
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,1,2
+    - 0,4,1,6
+    - 3,1,6,5
+    - 8,0,9,2
+    - 8,4,9,6
 
 - type: entity
   parent:
@@ -838,6 +847,15 @@
         color: "#c2ae98"
       - state: clasp-inhand-right
         color: "#e1af4e"
+  - type: ExplosionResistance # Corvax-Forge
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,1,2
+    - 0,4,1,6
+    - 3,1,6,5
+    - 8,0,9,2
+    - 8,4,9,6
 
 - type: entity
   parent: ClothingBackpackMessengerContractor
@@ -883,6 +901,15 @@
         color: "#47603b"
       - state: clasp-inhand-right
         color: "#e1af4e"
+  - type: ExplosionResistance # Corvax-Forge
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,1,2
+    - 0,4,1,6
+    - 3,1,6,5
+    - 8,0,9,2
+    - 8,4,9,6
 
 ## Security
 - type: entity

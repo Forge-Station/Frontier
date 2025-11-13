@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/tgstation/blob/51934abbc85086aa068f32b6fb27a22ed20bcf50/icons/obj/machines/nuke_terminal.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "nuclearbomb_deployed"
+    },
+    {
+      "name": "nuclearbomb_deployed_unlit"
+    },
+    {
+      "name": "nuclearbomb_timing",
+      "delays": [
+        [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      ]
+    },
+    {
+      "name": "nuclearbomb_exploding",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "nuclearbomb_base"
+    }
+  ]
+}

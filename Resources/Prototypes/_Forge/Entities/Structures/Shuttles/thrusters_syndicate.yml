@@ -5,7 +5,7 @@
   components:
   - type: Sprite
     sprite: Forge/Structures/Shuttles/thrustersyndicate.rsi
-    layers: &secThrusterLayers
+    layers:
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
@@ -37,7 +37,7 @@
   components:
   - type: Sprite
     sprite: Forge/Structures/Shuttles/syndicategyroscope.rsi
-    layers: &secGyroLayers
+    layers:
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust

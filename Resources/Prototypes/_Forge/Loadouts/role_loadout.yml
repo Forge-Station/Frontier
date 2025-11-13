@@ -23,6 +23,7 @@
   - SmugglerNeck
   - SmugglerOuterclothing
   - MedSynGloves
+  - MedSynBackpackItems
 
 - type: roleLoadout
   id: JobStormtrooper
@@ -37,6 +38,7 @@
   - StormtrooperOuterclothing
   - StormtrooperGlasses
   - StormtrooperGloves
+  - SyndicateBackpackItems
 
 - type: roleLoadout
   id: JobCommander
@@ -50,6 +52,7 @@
   - CommanderNeck
   - CommanderOuterclothing
   - CommanderGloves
+  - SyndicateBackpackItems
 
 - type: roleLoadout
   id: JobparaMedical
@@ -58,6 +61,7 @@
   - ParaMedicalBackpack
   - ParaMedicalOuterClothing
   - ParaMedicalShoes
+  - ParaMedicalWallet
   - ParaMedicalHead
   - DocGloves
   - ContractorOuterClothing
@@ -71,3 +75,61 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - paraMedicalBackpackItems
+
+- type: roleLoadout
+  id: JobOutpostMedic
+  groups:
+  - ContractorFace
+  - OMedicJumpsuit
+  - OMedicOuterClothing
+  - DocGloves
+  - OMedicShoes
+  - OMedicBackpack
+  - OMedicPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+  - ContractorBoxSurvival
+
+- type: roleLoadout
+  id: JobOutpostEngineer
+  groups:
+  - OEngiHead
+  - ContractorFace
+  - OEngiJumpsuit
+  - OEngiShoes
+  - OEngiBackpack
+  - OEngiBelt
+  - OEngineerPDA
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+  - ContractorBoxSurvival
+
+- type: roleLoadout
+  id: JobOutpostService
+  groups:
+  - OServiceHead
+  - ContractorFace
+  - OServiceGlasses
+  - OServiceJumpsuit
+  - OServiceOuterClothing
+  - OServiceShoes
+  - OServiceBackpack
+  - OServiceBelt
+  - OServicePDA
+  - OServiceForcedOuterClothing
+  - ContractorGloves
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+  - ContractorBoxSurvival

@@ -1,0 +1,71 @@
+- type: thiefBackpackSet
+  id: SyndShturm1Set
+  name: SyndShturm1Set-name
+  description: SyndShturm1Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/Rifles/cascade.rsi
+    state: icon
+  content:
+  - ClothingHeadHelmetSyndicate
+  - ClothingOuterEVASuitSyndicate
+  - WeaponRifleCascade
+  - NFMagazineRifle30
+  - NFMagazineRifle30
+  - MedkitFilled
+  - CombatMedipen
+  - CrisisAutoInjector
+  - PunctAutoInjector
+  - EmpGrenade
+
+- type: thiefBackpackSet
+  id: SyndShturm2Set
+  name: SyndShturm2Set-name
+  description: SyndShturm2Set-description
+  sprite:
+    sprite: _NF/Objects/Weapons/Guns/Battery/antiquelasergun.rsi
+    state: icon
+  content:
+  - ClothingHeadHelmetSyndicate
+  - ClothingOuterEVASuitSyndicate
+  - NFWeaponEnergyPistolLaserAntique
+  - MedkitFilled
+  - CombatMedipen
+  - CombatMedipen
+  - CrisisAutoInjector
+  - BreachingCharge
+  - GrenadeIncendiary
+
+- type: thiefBackpackSet
+  id: SyndShturm3Set
+  name: SyndShturm3Set-name
+  description: SyndShturm3Set-description
+  sprite:
+    sprite: _NF/Objects/Weapons/Guns/Shotguns/pump.rsi
+    state: icon
+  content:
+  - ClothingHeadHelmetSyndicate
+  - ClothingOuterEVASuitSyndicate
+  - NFWeaponShotgunKammerer
+  - NFAmmunitionBoxShellShotgunBuckshot
+  - MedkitFilled
+  - CombatMedipen
+  - CrisisAutoInjector
+  - PunctAutoInjector
+  - PyraAutoInjector
+  - ExGrenade
+  - ExGrenade
+  - EmpGrenade
+
+- type: thiefBackpackSet
+  id: SyndShturm4Set
+  name: SyndShturm4Set-name
+  description: SyndShturm4Set-description
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/syndicate.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitSyndie
+  - NFWeaponPistolViper
+  - NFMagazineHighCapacityPistol35
+  - NFAmmunitionBoxPistol35
+  - EmergencyMedipen

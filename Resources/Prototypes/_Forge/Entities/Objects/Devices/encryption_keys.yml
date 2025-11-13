@@ -1,0 +1,39 @@
+- type: entity
+  parent: [EncryptionKey, BaseC3SyndicateContraband]
+  id: EncryptionKeySmuggler
+  name: ключ шифрования контрабандиста
+  categories: [ DoNotMap ]
+  description: Ключ шифрования используемый контрабандным отделением синдиката.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Syndicate
+    - SyndicateSmuggler
+    defaultChannel: Syndicate
+  - type: Item
+    sprite: Forge/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: Forge/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_red
+    - state: synd_label
+
+- type: entity
+  parent: [EncryptionKey, BaseC3SyndicateContraband]
+  id: EncryptionKeyShturm
+  name: ключ шифрования жнецов
+  categories: [ DoNotMap ]
+  description: Ключ шифрования используемый штурмовым отделением синдиката.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Syndicate
+    - SyndicateShturm
+    defaultChannel: Syndicate
+  - type: Item
+    sprite: Forge/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: Forge/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_red_alt
+    - state: synd_label_alt

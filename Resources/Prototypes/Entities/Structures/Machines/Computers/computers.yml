@@ -265,7 +265,7 @@
     stealGroup: CargoShuttleConsoleCircuitboard
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: [BaseComputerAiAccess, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
   id: ComputerIFF
   name: IFF computer
   description: Allows you to control the IFF characteristics of this vessel.
@@ -296,7 +296,7 @@
     board: ComputerIFFCircuitboard
 
 - type: entity
-  parent: [ComputerIFF, BaseC3Contraband] #Corvax-Frontier КБ
+  parent: [BaseC3SyndicateContraband, ComputerIFF] #Corvax-Frontier КБ
   id: ComputerIFFSyndicate
   name: IFF computer
   suffix: Syndicate

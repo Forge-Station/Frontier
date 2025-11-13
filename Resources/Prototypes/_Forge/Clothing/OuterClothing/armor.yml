@@ -1,0 +1,51 @@
+- type: entity
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, BaseC3Contraband, ContrabandClothing]
+  id: ClothingOuterVestWebContractor
+  name: тактический жилет DCN™
+  description: Стильный синтетический бронежилет. Имеет прочные баллистические пластины.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/OuterClothing/Armor/tact_contractor.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/OuterClothing/Armor/tact_contractor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.3
+        Heat: 0.8
+  - type: StaminaResistance
+    damageCoefficient: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+
+#Elite web vest
+- type: entity
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, BaseC3Contraband, ContrabandClothing]
+  id: ClothingOuterVestWebEliteContractor
+  name: элитный тактический жилет DCN™
+  description: Стильный синтетический бронежилет. Сшит из термостойких волокон и дополнительными баллистическими пластинами для настоящих элитных агентов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/OuterClothing/Armor/elite_tact_contractor.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/OuterClothing/Armor/elite_tact_contractor.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 0.1
+    coolingCoefficient: 0.1
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.4
+        Heat: 0.4
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: FireProtection
+    reduction: 0.65
+  - type: StaminaResistance
+    damageCoefficient: 0
+  - type: ExplosionResistance
+    damageCoefficient: 0.5

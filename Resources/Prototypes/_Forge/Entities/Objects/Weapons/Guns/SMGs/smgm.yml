@@ -12,6 +12,7 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
     fireRate: 5.9
+    projectileSpeed: 40
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
   - type: MagazineVisuals

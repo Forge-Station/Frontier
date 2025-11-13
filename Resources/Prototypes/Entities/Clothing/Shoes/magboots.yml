@@ -88,7 +88,7 @@
     price: 3000
 
 - type: entity
-  parent: [ClothingShoesBootsMagBase, BaseJetpack, BaseC1Contraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent #Corvax-Frontier КБ
+  parent: [ClothingShoesBootsMagBase, BaseJetpack, BaseC2ContrabandDisallowSecs, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent #Corvax-Frontier BaseC3SyndicateContraband<BaseC2ContrabandDisallowSecs
   id: ClothingShoesBootsMagSyndie
   name: blood-red magboots
   description: Reverse-engineered magnetic boots that have a heavy magnetic pull and integrated thrusters. It can hold 0.75 L of gas.
@@ -115,6 +115,9 @@
     size: Normal
   - type: StaticPrice #CorvaxFrontier
     price: 200
+  - type: Jetpack #CorvaxFrontier
+    radarBlip: false
+
 - type: entity
   parent: BaseAction
   id: ActionToggleMagboots

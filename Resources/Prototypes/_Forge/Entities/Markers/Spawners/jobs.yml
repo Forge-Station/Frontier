@@ -37,3 +37,39 @@
   components:
   - type: SpawnPoint
     job_id: paraMedical
+
+- type: entity
+  id: SpawnPointServiceOutpost
+  parent: SpawnPointPassenger
+  suffix: Spawner, Forge
+  components:
+  - type: SpawnPoint
+    job_id: OutpostService
+  - type: Sprite
+    layers:
+      - state: green
+      - state: serviceworker
+
+- type: entity
+  id: SpawnPointMedicOutpost
+  parent: SpawnPointPassenger
+  suffix: Spawner, Forge
+  components:
+  - type: SpawnPoint
+    job_id: OutpostMedic
+  - type: Sprite
+    layers:
+      - state: green
+      - state: medicalintern
+
+- type: entity
+  id: SpawnPointEngineerOutpost
+  parent: SpawnPointPassenger
+  suffix: Spawner, Forge
+  components:
+  - type: SpawnPoint
+    job_id: OutpostEngineer
+  - type: Sprite
+    layers:
+      - state: green
+      - state: technicalassistant

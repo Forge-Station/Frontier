@@ -1,0 +1,137 @@
+- type: entity
+  parent: ToolboxSyndicate
+  id: ToolboxSyndicateAltFilled
+  name: подозрительный ящик для продвинутых инструментов
+  description: Зловеще выглядящий ящик для инструментов, наполненный лучшими инструментами Синдиката. Хранит в себе продвинутые инструменты Синдиката.
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: SyndicateJawsOfLife
+    - id: PowerDrillSyndicate
+    - id: WelderSyndicate
+    - id: MultitoolSyndicate
+    - id: ClothingHandsGlovesCombat
+    - id: ClothingMaskGasSyndicate
+  - type: StaticPrice
+    price: 300
+
+- type: entity
+  name: электродрель Синдиката
+  description: Отличная электродрель для ваших нужд. Работает на повышенных мощностях.
+  parent: [PowerDrill, BaseC3SyndicateContraband]
+  id: PowerDrillSyndicate
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
+    state: drill_screw
+  - type: Item
+    sprite: Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
+    size: Small
+  - type: Tool
+    qualities:
+      - Screwing
+    speedModifier: 3
+    useSound: /Audio/Items/drill_use.ogg
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: Screwing
+        sprite:
+          sprite: Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
+          state: drill_screw
+        useSound:
+          path: /Audio/Items/drill_use.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Anchoring
+        sprite:
+          sprite: Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
+          state: drill_bolt
+        useSound:
+          path: /Audio/Items/drill_use.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    attackRate: 2
+    damage:
+      types:
+        Piercing: 13
+    soundHit:
+      path: "/Audio/Items/drill_hit.ogg"
+  - type: Clothing
+    sprite: Forge/Objects/Tools/Syndicate/nfsd_drill.rsi
+    quickEquip: false
+    slots:
+    - Belt
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+
+- type: entity
+  name: сварочный аппарат Синдиката
+  parent: [Welder, BaseC3SyndicateContraband]
+  id: WelderSyndicate
+  description: Экспериментальный сварочный аппарат, способный самостоятельно вырабатывать топливо, менее вреден для глаз. Работает в два раза эффективнее.
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Tools/Syndicate/nfsd_welder.rsi
+  - type: Item
+    sprite: Forge/Objects/Tools/Syndicate/nfsd_welder.rsi
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 1000
+        maxVol: 1000
+  - type: PointLight
+    enabled: false
+    radius: 1.5
+    color: lightblue
+  - type: SolutionRegeneration
+    solution: Welder
+    generated:
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 1
+  - type: RequiresEyeProtection
+    statusEffectTime: 5
+  - type: Tool
+    speedModifier: 2
+  - type: Clothing
+    sprite: Forge/Objects/Tools/Syndicate/nfsd_welder.rsi
+    quickEquip: false
+    slots:
+    - Belt
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+
+- type: entity
+  name: мультитул Синдиката
+  parent: [Multitool, BaseC3SyndicateContraband]
+  id: MultitoolSyndicate
+  description: Современный инструмент для копирования, хранения и передачи электрических импульсов и сигналов по проводам и машинам.
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/multitool_drop.ogg
+  - type: Sprite
+    sprite: Forge/Objects/Tools/Syndicate/nfsd_multitool.rsi
+    layers:
+    - state: icon
+    - state: green-unlit
+      shader: unshaded
+  - type: Clothing
+    sprite: Forge/Objects/Tools/Syndicate/nfsd_multitool.rsi
+    quickEquip: false
+    slots:
+    - Belt
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+  - type: Tool
+    qualities:
+      - Pulsing

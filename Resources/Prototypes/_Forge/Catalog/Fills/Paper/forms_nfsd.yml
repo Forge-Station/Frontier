@@ -1,0 +1,358 @@
+- type: entity
+  id: ForgeFillNfsdForms
+  abstract: true
+  components:
+  - type: StorageFill
+    contents:
+    - id: ForgePaperWrittenNfsdWarrant
+    - id: ForgePaperWrittenNfsdReportWarrant
+    - id: ForgePaperWrittenNfsdArrestWarrant
+    - id: ForgePaperWrittenNfsdJudgment
+    - id: ForgePaperWrittenNfsdReport
+    - id: ForgePaperWrittenNfsdPALRequestDocument
+    - id: ForgePaperWrittenNfsdPermissionCooperate
+    - id: ForgePaperWrittenNfsdEliminationViolations
+    - id: ForgePaperWrittenNfsdDismissalOrder
+    - id: Paper
+      prob: 0.5
+    - id: Paper
+      prob: 0.5
+
+- type: entity
+  id: ForgeBoxFolderNfsdForms
+  parent: [ForgeFillNfsdForms, BoxFolderPalGreen]
+  name: папка форм ДСБФ
+  description: Папка заполненная бланками документов ДСБФ.
+  suffix: Forge, Формы, Зелёная
+
+- type: entity
+  id: ForgeBoxFolderNfsdFormsBrown
+  parent: [ForgeFillNfsdForms, BoxFolderPalBrown]
+  name: папка форм ДСБФ
+  description: Папка заполненная бланками документов ДСБФ.
+  suffix: Forge, Формы, Коричневая
+
+# Forms
+- type: entity
+  id: ForgePaperWrittenNfsdWarrant
+  name: ордер на обыск
+  parent: Paper
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    content: |2
+      [color=#4f6e40]███░███░░░░██░░░░                      ★★★[/color]
+      [color=#4f6e40]░██░████░░░██░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#4f6e40]░░█░██░██░░██░█░░[/color]          [head=3]ДСБФ Сектора[/head]
+      [color=#4f6e40]░░░░██░░██░██░██░[/color]                 [head=3]Жандер[/head]
+      [color=#4f6e40]░░░░██░░░████░███                      ★★★[/color]
+      [head=2]═════════════════════════════[/head]
+      [head=1]            Ордер на обыск[/head]
+      [head=2]═════════════════════════════[/head]
+      [bold]Время:[/bold] [italic][color=Navy]<ВРЕМЯ>[/color][/italic]
+      [bold]Составитель документа:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Должность составителя:[/bold] [italic][color=Navy]<ДОЛЖНОСТЬ>[/color][/italic]
+
+      [bold]Судно-нарушитель:[/bold] [bold][color=Navy]<ШАТТЛ>[/color][/bold]
+      [bold]Лицо-нарушитель:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Причина обыска:[/bold] [italic][color=Navy]<ПРИЧИНА>[/color][/italic]
+
+
+      [mono][color=DarkGray]Данная форма недействительна без подписи или печати уполномоченного сотрудника ДСБФ ИЛИ Представителя Фронтира.[/color][/mono]
+      [head=2]═════════════════════════════[/head]
+                                          [italic]Место для печатей[/italic]
+
+- type: entity
+  id: ForgePaperWrittenNfsdReportWarrant
+  name: отчет о обыске шаттла
+  parent: Paper
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    content: |2
+      [color=#4f6e40]███░███░░░░██░░░░                      ★★★[/color]
+      [color=#4f6e40]░██░████░░░██░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#4f6e40]░░█░██░██░░██░█░░[/color]          [head=3]ДСБФ Сектора[/head]
+      [color=#4f6e40]░░░░██░░██░██░██░[/color]                 [head=3]Жандер[/head]
+      [color=#4f6e40]░░░░██░░░████░███                      ★★★[/color]
+      [head=2]═════════════════════════════[/head]
+      [head=2]               Отчет о обыске шаттла[/head]
+      [head=2]═════════════════════════════[/head]
+      [bold]Время:[/bold] [italic][color=Navy]<ВРЕМЯ>[/color][/italic]
+      [bold]Составитель документа:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Должность составителя:[/bold] [italic][color=Navy]<ДОЛЖНОСТЬ>[/color][/italic]
+
+      [bold]Судно-нарушитель:[/bold] [bold][color=Navy]<ШАТТЛ>[/color][/bold]
+      [bold]Лицо-нарушитель:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Время проведение процедуры:[/bold] [italic][color=Navy]<ВРЕМЯ>[/color][/italic]
+      [bold]Причина обыска:[/bold] [italic][color=Navy]<ПРИЧИНА>[/color][/italic]
+      [bold]Результат обыска:[/bold] [italic][color=Navy]<РЕЗУЛЬТАТ>[/color][/italic]
+
+
+      [mono][color=DarkGray]Данная форма недействительна без подписи или печати уполномоченного сотрудника ДСБФ ИЛИ Представителя Фронтира.[/color][/mono]
+      [head=2]═════════════════════════════[/head]
+                                          [italic]Место для печатей[/italic]
+
+- type: entity
+  id: ForgePaperWrittenNfsdArrestWarrant
+  name: ордер на арест
+  parent: Paper
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    content: |2
+      [color=#4f6e40]███░███░░░░██░░░░                      ★★★[/color]
+      [color=#4f6e40]░██░████░░░██░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#4f6e40]░░█░██░██░░██░█░░[/color]          [head=3]ДСБФ Сектора[/head]
+      [color=#4f6e40]░░░░██░░██░██░██░[/color]                 [head=3]Жандер[/head]
+      [color=#4f6e40]░░░░██░░░████░███                      ★★★[/color]
+      [head=2]═════════════════════════════[/head]
+      [head=1]            Ордер на арест[/head]
+      [head=2]═════════════════════════════[/head]
+      [bold]Время:[/bold] [italic][color=Navy]<ВРЕМЯ>[/color][/italic]
+      [bold]Составитель документа:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Должность составителя:[/bold] [italic][color=Navy]<ДОЛЖНОСТЬ>[/color][/italic]
+
+      [bold]Судно-нарушитель:[/bold] [bold][color=Navy]<ШАТТЛ>[/color][/bold]
+      [bold]Лицо-нарушитель:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Причина ареста:[/bold] [italic][color=Navy]<ПРИЧИНА>[/color][/italic]
+
+      Уважаемый обыватель сектора Жандер, спешим уведомить Вас, что вы являетесь нарушителем правопорядка сектора и против Вас выдвинуто заключительное обвинение. Просим явится на Аванпост ДСБФ в течении 5 минут после получения данного документа, в ином случае к вам будет применена сила при задержании.
+
+      [mono][color=DarkGray]Данная форма недействительна без подписи или печати уполномоченного сотрудника ДСБФ ИЛИ Представителя Фронтира.[/color][/mono]
+      [head=2]═════════════════════════════[/head]
+                                          [italic]Место для печатей[/italic]
+
+- type: entity
+  id: ForgePaperWrittenNfsdJudgment
+  name: приговор
+  parent: Paper
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    content: |2
+      [color=#4f6e40]███░███░░░░██░░░░                      ★★★[/color]
+      [color=#4f6e40]░██░████░░░██░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#4f6e40]░░█░██░██░░██░█░░[/color]          [head=3]ДСБФ Сектора[/head]
+      [color=#4f6e40]░░░░██░░██░██░██░[/color]                 [head=3]Жандер[/head]
+      [color=#4f6e40]░░░░██░░░████░███                      ★★★[/color]
+      [head=2]═════════════════════════════[/head]
+      [head=1]                  Приговор[/head]
+      [head=2]═════════════════════════════[/head]
+      [bold]Время:[/bold] [italic][color=Navy]<ВРЕМЯ>[/color][/italic]
+      [bold]Составитель документа:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Должность составителя:[/bold] [italic][color=Navy]<ДОЛЖНОСТЬ>[/color][/italic]
+
+      [bold]Судно-нарушитель:[/bold] [bold][color=Navy]<ШАТТЛ>[/color][/bold]
+      [bold]Лицо-нарушитель:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+
+      [bold]Данное лицо нарушило следующие статьи Космического Закона[/bold]:
+      1. XXX/X - <наименование статьи>/<пункта>
+      2. XXX/X - <наименование статьи>/<пункта>
+      3. XXX/X - <наименование статьи>/<пункта>
+
+      [bold]С учетом всех смягчающих и отягчающих обстоятельств, правовое наказание данного лица представлено в виде[/bold]:
+      <штрафа / 00 минут заключения под стражей / пожизненного заключения / приговора к казни>
+
+      [mono][color=DarkGray]Данная форма недействительна без подписи или печати уполномоченного сотрудника ДСБФ ИЛИ Представителя Фронтира.[/color][/mono]
+      [head=2]═════════════════════════════[/head]
+                                          [italic]Место для печатей[/italic]
+
+- type: entity
+  id: ForgePaperWrittenNfsdReport
+  name: жалоба
+  categories: [ HideSpawnMenu ]
+  parent: Paper
+  components:
+  - type: Paper
+    content: |2
+      [color=#4f6e40]███░███░░░░██░░░░                      ★★★[/color]
+      [color=#4f6e40]░██░████░░░██░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#4f6e40]░░█░██░██░░██░█░░[/color]          [head=3]ДСБФ Сектора[/head]
+      [color=#4f6e40]░░░░██░░██░██░██░[/color]                 [head=3]Жандер[/head]
+      [color=#4f6e40]░░░░██░░░████░███                      ★★★[/color]
+      [head=2]═════════════════════════════[/head]
+      [head=2]         Жалоба на правонарушение[/head]
+      [head=2]═════════════════════════════[/head]
+      [bold]Время:[/bold] [italic][color=Navy]<ВРЕМЯ>[/color][/italic]
+      [bold]Составитель документа:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Должность составителя:[/bold] [italic][color=Navy]<ДОЛЖНОСТЬ>[/color][/italic]
+
+      Я, [color=Navy][bold]<ФИО>[/bold][/color], капитан шаттла [italic][color=Navy]<Название шаттла XX-000>[/color][/italic], считаю, что [bold][color=purple]<Ф.И.О.>[/color][/bold], капитан шаттла [italic][color=purple]<Название шаттла XX-000>[/color][/italic], нарушил Космический Закон, потому что [italic][color=Navy]<укажите причину>[/color][/italic].
+
+      [bold]Произошедшее с моей точки зрения[/bold]: [italic][color=Navy]<опишите события с вашей точки зрения>[/color][/italic]
+
+      [color=DarkGray]Информируем, что заявитель освобождается от ответственности за содержание данного документа, даже в случае недостоверности представленной информации.[/color]
+
+      [mono][color=DarkGray]Данная форма недействительна без подписей обеих сторон или печати Представителя Фронтира, старшего по званию в ДСБФ или Представителя Юр. Департамента.[/color][/mono]
+      [head=2]═════════════════════════════[/head]
+                                          [italic]Место для печатей[/italic]
+
+- type: entity
+  id: ForgePaperWrittenNfsdPALRequestDocument
+  name: запрос предоставления документов
+  categories: [ HideSpawnMenu ]
+  parent: Paper
+  components:
+  - type: Paper
+    content: |2
+      [color=#4f6e40]███░███░░░░██░░░░                      ★★★[/color]
+      [color=#4f6e40]░██░████░░░██░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#4f6e40]░░█░██░██░░██░█░░[/color]          [head=3]ДСБФ Сектора[/head]
+      [color=#4f6e40]░░░░██░░██░██░██░[/color]                 [head=3]Жандер[/head]
+      [color=#4f6e40]░░░░██░░░████░███                      ★★★[/color]
+      [head=2]═════════════════════════════[/head]
+      [head=2]   Запрос предоставления документов[/bold]
+      [head=2]═════════════════════════════[/head]
+      [bold]Время:[/bold] [italic][color=Navy]<ВРЕМЯ>[/color][/italic]
+      [bold]Составитель документа:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Должность составителя:[/bold] [italic][color=Navy]<ДОЛЖНОСТЬ>[/color][/italic]
+
+      Я, [bold][color=Navy](ФИО)[/color][/bold], в должности [bold][color=Navy]Представитель Юридического Департамента[/color][/bold], прошу предоставить для проверки соответствия Космическому Закону копии следующих документов:
+      1. <наименование документа>
+      2. <наименование документа>
+      3. <наименование документа>
+
+      [bold]Дополнительная информация[/bold]: <дополнительная информация>
+
+      [mono][color=DarkGray]Данная форма недействительна без подписей обеих сторон или печати Представителя Фронтира, старшего по званию в ДСБФ или Представителя Юр. Департамента.[/color][/mono]
+      [head=2]═════════════════════════════[/head]
+                                          [italic]Место для печатей[/italic]
+
+- type: entity
+  id: ForgePaperWrittenNfsdPermissionCooperate
+  name: разрешение на сотрудничество
+  parent: Paper
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    content: |2
+      [color=#4f6e40]███░███░░░░██░░░░                      ★★★[/color]
+      [color=#4f6e40]░██░████░░░██░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#4f6e40]░░█░██░██░░██░█░░[/color]          [head=3]ДСБФ Сектора[/head]
+      [color=#4f6e40]░░░░██░░██░██░██░[/color]                 [head=3]Жандер[/head]
+      [color=#4f6e40]░░░░██░░░████░███                      ★★★[/color]
+      [head=2]═════════════════════════════[/head]
+      [head=2]     Разрешение на сотрудничество[/bold]
+      [head=2]═════════════════════════════[/head]
+      [bold]Время:[/bold] [italic][color=Navy]<ВРЕМЯ>[/color][/italic]
+      [bold]Составитель документа:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Должность составителя:[/bold] [italic][color=Navy]<ДОЛЖНОСТЬ>[/color][/italic]
+
+      [bold]Одобренное судно:[/bold] [bold][color=Navy]<ШАТТЛ>[/color][/bold]
+      [bold]Одобренн(ое/ые) лиц(о/а):[/bold]
+      1. [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      2. [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      3. [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+
+      [bold]Перечень разрешённых объектов:[/bold]
+      1. Объекты Кровавого культа.
+      2. Объекты Синдиката.
+      3. Объекты Федерации Космических Волшебников.
+
+      Этот документ уполномочивает вышеупомянутое судно и его экипаж оказывать содействие и сотрудничать с ДСБФ и Центральным Командованием в нейтрализации враждебных угроз в секторе на вышеупомянутых объектах.
+
+      [bold]Любая контрабанда, изъятая во время операций на борту вражеских судов, должна быть передана сотрудникам ДСБФ за денежное вознаграждение. Отказ от передачи контрабанды приведет к аннулированию настоящего соглашения, а уполномоченная сторона может быть привлечена к уголовной ответственности.[/bold]
+
+      Ожидается, что перед вступлением в бой с вражескими судами уполномоченное лицо выполнит все инструкции, данные сотрудниками ДСБФ, по постановке или другой подготовке перед боевыми действиями на борту.
+
+      При намеренном нарушении уполномоченным лицом условий сотрудничества и/или Космического Закона, будет вынесен приговор согласно статье 142.3 КЗ сектора Жандер.
+
+      [mono][color=DarkGray]Данная форма недействительна без подписи обеих сторон и/или печати уполномоченного сотрудника ДСБФ ИЛИ Представителя Фронтира.[/color][/mono]
+      [head=2]═════════════════════════════[/head]
+                                          [italic]Место для печатей[/italic]
+
+- type: entity
+  id: ForgePaperWrittenNfsdEliminationViolations
+  name: отчёт об устранении нарушений
+  parent: Paper
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    content: |2
+      [color=#4f6e40]███░███░░░░██░░░░                      ★★★[/color]
+      [color=#4f6e40]░██░████░░░██░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#4f6e40]░░█░██░██░░██░█░░[/color]          [head=3]ДСБФ Сектора[/head]
+      [color=#4f6e40]░░░░██░░██░██░██░[/color]                 [head=3]Жандер[/head]
+      [color=#4f6e40]░░░░██░░░████░███                      ★★★[/color]
+      [head=2]═════════════════════════════[/head]
+      [head=2]     Отчёт об устранении нарушений[/bold]
+      [head=2]═════════════════════════════[/head]
+      [bold]Время:[/bold] [italic][color=Navy]<ВРЕМЯ>[/color][/italic]
+      [bold]Составитель документа:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Должность составителя:[/bold] [italic][color=Navy]<ДОЛЖНОСТЬ>[/color][/italic]
+
+      Я, [bold][color=Navy](ФИО)[/color][/bold], в должности [bold][color=Navy](ДОЛЖНОСТЬ)[/color][/bold], отчитываюсь об устранении нарушений в работе, выявленных у сотрудника – [bold][color=Indigo](ФИО ОБЪЕКТА)[/color][/bold], в должности [bold][color=Indigo](ДОЛЖНОСТЬ ОБЪЕКТА)[/color][/bold].
+
+      [bold]Предъявленные нарушения[/bold]: <опишите предъявленные нарушения>
+
+      [bold]Причина нарушений[/bold]: <опишите причины и обстоятельства возможных нарушений с вашей точки зрения>
+
+      [bold]Проведенные мероприятия по устранению нарушений[/bold]: <опишите проведенные мероприятия>
+
+      [mono][color=DarkGray]Данная форма недействительна без подписи обеих сторон и/или печати уполномоченного сотрудника ДСБФ ИЛИ Представителя Фронтира.[/color][/mono]
+      [head=2]═════════════════════════════[/head]
+                                          [italic]Место для печатей[/italic]
+
+- type: entity
+  id: ForgePaperWrittenNfsdPenalty
+  name: штраф
+  categories: [ HideSpawnMenu ]
+  parent: Paper
+  components:
+  - type: Paper
+    content: |2
+      [color=#4f6e40]███░███░░░░██░░░░                      ★★★[/color]
+      [color=#4f6e40]░██░████░░░██░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#4f6e40]░░█░██░██░░██░█░░[/color]          [head=3]ДСБФ Сектора[/head]
+      [color=#4f6e40]░░░░██░░██░██░██░[/color]                 [head=3]Жандер[/head]
+      [color=#4f6e40]░░░░██░░░████░███                      ★★★[/color]
+      [head=3]══════════════════════════════════[/head]
+      [head=1]                     Штраф[/head]
+      [head=3]══════════════════════════════════[/head]
+      [bold]Время:[/bold] [italic][color=Navy]<ВРЕМЯ>[/color][/italic]
+      [bold]Номер шаттла:[/bold] [italic][color=Navy]<XX-000>[/color][/italic]
+      [bold]Ф.И.О. капитана:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Причина:[/bold] [italic][color=Navy]<Причина>[/color][/italic]
+      [bold]Сумма штрафа:[/bold] [italic][color=Navy]<Сумма>[/color][/italic]
+      [bold]Место оплаты:[/bold] [italic][color=Navy]Аванпост ДСБФ[/color][/italic]
+
+
+      [bold]Составитель документа:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Должность составителя:[/bold] [italic][color=Navy]ДОЛЖНОСТЬ[/color][/italic]
+
+      У вас есть [bold]десять (10) минут[/bold] с момента получения данного факса на оплату штрафа в указанном месте.
+
+      [mono][color=DarkGray]Данная форма недействительна без подписи и/или печати Представителя Фронтира, диспетчера, старшего по званию в ДСБФ или Представителя Юр. Департамента.[/color][/mono]
+      [head=3]══════════════════════════════════[/head]
+                                          [italic]Место для печатей[/italic]
+
+- type: entity
+  id: ForgePaperWrittenNfsdDismissalOrder
+  name: приказ об увольнении
+  categories: [ HideSpawnMenu ]
+  parent: Paper
+  components:
+  - type: Paper
+    content: |2
+      [color=#4f6e40]███░███░░░░██░░░░                      ★★★[/color]
+      [color=#4f6e40]░██░████░░░██░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#4f6e40]░░█░██░██░░██░█░░[/color]          [head=3]ДСБФ Сектора[/head]
+      [color=#4f6e40]░░░░██░░██░██░██░[/color]                 [head=3]Жандер[/head]
+      [color=#4f6e40]░░░░██░░░████░███                      ★★★[/color]
+      [head=2]═════════════════════════════[/head]
+      [head=1]     Приказ об увольнении[/bold]
+      [head=2]═════════════════════════════[/head]
+      [bold]Время:[/bold] [italic][color=Navy]<ВРЕМЯ>[/color][/italic]
+      [bold]Составитель документа:[/bold] [bold][color=Navy]<Ф.И.О.>[/color][/bold]
+      [bold]Должность составителя:[/bold] [italic][color=Navy]<ДОЛЖНОСТЬ>[/color][/italic]
+
+      Я, [bold][color=Navy](ФИО)[/color][/bold], в текущей должности [bold][color=Navy](ДОЛЖНОСТЬ)[/color][/bold], увольняю сотрудника [bold][color=Indigo](ФИО ОБЪЕКТА)[/color][/bold], в должности [bold][color=Indigo](ДОЛЖНОСТЬ ОБЪЕКТА)[/color][/bold], по причине(-ам):[italic]
+      [bullet/]<опишите причину>
+      [bullet/]<опишите причину>
+      [/italic]
+      [color=DarkGray]Сотрудник должен быть уведомлен о своем увольнении, после чего он обязан сдать рабочее снаряжение, доступы и экипировку. В случае игнорирования приказа изъятие вещей должно быть произведено с содействием Департамента Службы Безопасности.[/color]
+
+      [mono][color=DarkGray]Данная форма недействительна без подписи обеих сторон и/или печати уполномоченного сотрудника ДСБФ ИЛИ Представителя Фронтира.[/color][/mono]
+      [head=2]═════════════════════════════[/head]
+                                          [italic]Место для печатей[/italic]

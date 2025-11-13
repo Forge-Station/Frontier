@@ -1,7 +1,7 @@
 - type: job
   id: smuggler
-  name: Контрабандист
-  description: Торговец контрабанды.
+  name: forge-job-name-smuggler
+  description: forge-job-desc-smuggler
   playTimeTracker: Jobsmuggler
   requirements:
     - !type:OverallPlaytimeRequirement
@@ -33,12 +33,13 @@
 - type: startingGear
   id: SmugglerGear
   equipment:
-    ears: ClothingHeadsetAltSyndicate
+    ears: ClothingHeadsetAltSyndicateSmuggler
     id: SyndiPDASmugger
     belt: ClothingBeltSyndieHolster
     pocket1: NFWeaponPistolViper
     pocket2: SmuggerUplinkRadio200TC
     mask: ClothingMaskNeckGaiter
+    wallet: ClothingWalletLeatherSyndi
   storage:
     back:
     - NFBoxSurvivalExtended

@@ -34,3 +34,14 @@
   - PalClothingHandsGlovesHop
   fallbacks:
   - PalClothingHandsGlovesHop
+
+- type: loadoutGroup
+  id: PalShoes
+  name: loadout-group-contractor-shoes
+  minLimit: 1
+  loadouts:
+  - NfsdClothingShoesBootsBrown
+  - NfsdClothingShoesBootsCream
+  - PalClothingShoesBootsLaceup
+  fallbacks:
+  - NfsdClothingShoesBootsBrown

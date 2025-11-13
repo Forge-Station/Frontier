@@ -15,7 +15,7 @@
   - type: StationEvent
     startAnnouncement: bluespace-cargo-event-announcement
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_normal_crate.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_normal_crate.ogg # Corvax-Frontier
     weight: 5
     duration: 35
     reoccurrenceDelay: 120
@@ -34,7 +34,7 @@
   #Todo add path to  start warning and end Voiceover
     startAnnouncement: bluespace-cargo-event-announcement
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_normal_crate.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_normal_crate.ogg # Corvax-Frontier
     earliestStart: 20
     weight: 5
     duration: 35
@@ -52,7 +52,7 @@
   - type: StationEvent
     startAnnouncement: bluespace-syndicate-crate-event-announcement
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_syndie_crate.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_syndie_crate.ogg # Corvax-Frontier
     weight: 1
     duration: 35
     earliestStart: 90

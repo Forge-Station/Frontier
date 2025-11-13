@@ -10,7 +10,8 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
 using Content.Shared.Preferences;
 using Content.Shared._Forge.Speech.Synthesis; // Corvax-Frontier-Barks
-using Content.Shared._Forge.Speech.Synthesis.Components; // Corvax-Frontier-Barks
+using Content.Shared._Forge.Speech.Synthesis.Components;
+using Content.Shared._Forge.TTS; // Corvax-Frontier-Barks
 using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.GameObjects.Components.Localization;
@@ -49,6 +50,15 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [ValidatePrototypeId<BarkPrototype>]
     public const string DefaultBarkVoice = "BarksGoonSpeak1";
     // Corvax-Frontier-Barks-end
+    // Corvax-TTS-Start
+    public const string DefaultVoice = "Garithos";
+    public static readonly Dictionary<Sex, string> DefaultSexVoice = new()
+    {
+        {Sex.Male, "Garithos"},
+        {Sex.Female, "Maiev"},
+        {Sex.Unsexed, "Myron"},
+    };
+    // Corvax-TTS-End
 
     public override void Initialize()
     {
@@ -413,7 +423,9 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         // Hair/facial hair - this may eventually be deprecated.
         // We need to ensure hair before applying it or coloring can try depend on markings that can be invalid
         var hairColor = _markingManager.MustMatchSkin(profile.Species, HumanoidVisualLayers.Hair, out var hairAlpha, _proto)
-            ? profile.Appearance.SkinColor.WithAlpha(hairAlpha) : profile.Appearance.HairColor;
+            ? new List<Color> { profile.Appearance.SkinColor.WithAlpha(hairAlpha) } // Forge-Change Corvax-Wega-Hair-Extended
+                .Concat(profile.Appearance.HairColor.Skip(1)).ToList() // Forge-Change Corvax-Wega-Hair-Extended
+            : profile.Appearance.HairColor; // Forge-Change Corvax-Wega-Hair-Extended
         var facialHairColor = _markingManager.MustMatchSkin(profile.Species, HumanoidVisualLayers.FacialHair, out var facialHairAlpha, _proto)
             ? profile.Appearance.SkinColor.WithAlpha(facialHairAlpha) : profile.Appearance.FacialHairColor;
 
@@ -421,7 +433,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         if (_markingManager.MustMatchColor(profile.Species, HumanoidVisualLayers.Hair, out var forcedHairAlpha, _proto) is Color forcedHairColor)
         {
             profile.Appearance.SkinColor.WithAlpha(forcedHairAlpha);
-            hairColor = forcedHairColor;
+            hairColor = new List<Color> { forcedHairColor.WithAlpha(forcedHairAlpha) }; // Forge-Change
         }
         if (_markingManager.MustMatchColor(profile.Species, HumanoidVisualLayers.FacialHair, out var forcedFacialHairAlpha, _proto) is Color forcedFacialHairColor)
         {
@@ -458,6 +470,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         EnsureDefaultMarkings(uid, humanoid);
         SetBarkVoice(uid, profile.BarkVoice, humanoid); // Corvax-Frontier-Barks
+        SetTTSVoice(uid, profile.Voice, humanoid); // Corvax-TTS
 
         humanoid.Gender = profile.Gender;
         if (TryComp<GrammarComponent>(uid, out var grammar))
@@ -502,6 +515,18 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         if (sync)
             Dirty(uid, humanoid);
     }
+
+    // Corvax-TTS-Start
+    // ReSharper disable once InconsistentNaming
+    public void SetTTSVoice(EntityUid uid, string voiceId, HumanoidAppearanceComponent humanoid)
+    {
+        if (!TryComp<TTSComponent>(uid, out var comp))
+            return;
+
+        humanoid.Voice = voiceId;
+        comp.VoicePrototypeId = voiceId;
+    }
+    // Corvax-TTS-End
 
     private void EnsureDefaultMarkings(EntityUid uid, HumanoidAppearanceComponent? humanoid)
     {

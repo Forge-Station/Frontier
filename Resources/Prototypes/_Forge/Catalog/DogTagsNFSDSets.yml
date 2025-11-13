@@ -1,83 +1,10 @@
-# Brigmedic
-- type: thiefBackpackSet
-  id: NfsdBrigmedic1Set
-  name: NfsdBrigmedic1Set-name
-  description: NfsdBrigmedic1Set-description
-  sprite:
-    sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi
-    state: blackkit
-  content:
-  - CrateNfsdBrigmedic1
-
-- type: thiefBackpackSet
-  id: NfsdBrigmedic2Set
-  name: NfsdBrigmedic2Set-name
-  description: NfsdBrigmedic2Set-description
-  sprite:
-    sprite: _NF/Objects/Weapons/Guns/SMGs/drozd.rsi
-    state: base
-  content:
-  - CrateNfsdBrigmedic2
-
-- type: thiefBackpackSet
-  id: NfsdBrigmedic3Set
-  name: NfsdBrigmedic3Set-name
-  description: NfsdBrigmedic3Set-description
-  sprite:
-    sprite: _NF/Structures/Machines/medical_assembler.rsi
-    state: mediwave-base
-  content:
-  - CrateNfsdBrigmedic3
-
-# Deputy
-- type: thiefBackpackSet
-  id: NfsdDeputy1Set
-  name: NfsdDeputy1Set-name
-  description: NfsdDeputy1Set-description
-  sprite:
-    sprite: _NF/Objects/Weapons/Guns/Launchers/nfsd_lake.rsi
-    state: icon
-  content:
-  - CrateNfsdDeputy1
-
-- type: thiefBackpackSet
-  id: NfsdDeputy2Set
-  name: NfsdDeputy2Set-name
-  description: NfsdDeputy2Set-description
-  sprite:
-    sprite: _NF/Objects/Weapons/Guns/Rifles/lecter.rsi
-    state: base
-  content:
-  - CrateNfsdDeputy2
-
-- type: thiefBackpackSet
-  id: NfsdDeputy3Set
-  name: NfsdDeputy3Set-name
-  description: NfsdDeputy3Set-description
-  sprite:
-    sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi
-    state: icon
-  content:
-  - CrateNfsdDeputy3
-
-- type: thiefBackpackSet
-  id: NfsdDeputy4Set
-  name: NfsdDeputy4Set-name
-  description: NfsdDeputy4Set-description
-  sprite:
-    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
-    state: icon
-  content:
-  - CrateNfsdDeputy4
-
-# Cadet
-
+# Кадет
 - type: thiefBackpackSet
   id: NfsdCadet1Set
   name: NfsdCadet1Set-name
   description: NfsdCadet1Set-description
   sprite:
-    sprite: Forge/Objects/Weapons/Guns/Pistols/moonwhisper.rsi
+    sprite: _NF/Objects/Weapons/Guns/Rifles/novalitec1.rsi
     state: base
   content:
   - CrateNfsdCadet1
@@ -87,8 +14,8 @@
   name: NfsdCadet2Set-name
   description: NfsdCadet2Set-description
   sprite:
-    sprite: Forge/Objects/Weapons/Guns/SMGs/scorpion.rsi
-    state: base
+    sprite: _NF/Objects/Weapons/Guns/Shotguns/pump.rsi
+    state: icon
   content:
   - CrateNfsdCadet2
 
@@ -97,7 +24,203 @@
   name: NfsdCadet3Set-name
   description: NfsdCadet3Set-description
   sprite:
-    sprite: _NF/Objects/Weapons/Guns/Shotguns/pump.rsi
+    sprite: _NF/Objects/Weapons/Guns/SMGs/drozd.rsi
     state: icon
   content:
   - CrateNfsdCadet3
+
+# Коронер
+- type: thiefBackpackSet
+  id: NfsdBrigmedic1Set
+  name: NfsdBrigmedic1Set-name
+  description: NfsdBrigmedic1Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/SMGs/scorpion.rsi
+    state: icon
+  content:
+  - CrateNfsdBrigmedic1
+
+- type: thiefBackpackSet
+  id: NfsdBrigmedic2Set
+  name: NfsdBrigmedic2Set-name
+  description: NfsdBrigmedic2Set-description
+  sprite:
+    sprite: _NF/Objects/Weapons/Guns/Battery/antiquelasergun.rsi
+    state: icon
+  content:
+  - CrateNfsdBrigmedic2
+
+- type: thiefBackpackSet
+  id: NfsdBrigmedic3Set
+  name: NfsdBrigmedic3Set-name
+  description: NfsdBrigmedic3Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/Shotguns/ks23.rsi
+    state: icon
+  content:
+  - CrateNfsdBrigmedic3
+
+- type: thiefBackpackSet
+  id: NfsdBrigmedic4Set
+  name: NfsdBrigmedic4Set-name
+  description: NfsdBrigmedic4Set-description
+  sprite:
+    sprite: _NF/Structures/Machines/medical_assembler.rsi
+    state: mediwave-base
+  content:
+  - CrateNfsdBrigmedic4
+
+# ДеФектив
+- type: thiefBackpackSet
+  id: NfsdDetective1Set
+  name: NfsdDetective1Set-name
+  description: NfsdDetective1Set-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Revolvers/inspector.rsi
+    state: icon
+  content:
+  - CrateNfsdDetective1
+
+- type: thiefBackpackSet
+  id: NfsdDetective2Set
+  name: NfsdDetective2Set-name
+  description: NfsdDetective2Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/Shotguns/ks23.rsi
+    state: icon
+  content:
+  - CrateNfsdDetective2
+
+- type: thiefBackpackSet
+  id: NfsdDetective3Set
+  name: NfsdDetective3Set-name
+  description: NfsdDetective3Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/SMGs/scorpion.rsi
+    state: icon
+  content:
+  - CrateNfsdDetective3
+
+# Рейнджер
+- type: thiefBackpackSet
+  id: NfsdDeputy1Set
+  name: NfsdDeputy1Set-name
+  description: NfsdDeputy1Set-description
+  sprite:
+    sprite: _NF/Objects/Weapons/Guns/Rifles/lecter.rsi
+    state: icon
+  content:
+  - CrateNfsdDeputy1
+
+- type: thiefBackpackSet
+  id: NfsdDeputy2Set
+  name: NfsdDeputy2Set-name
+  description: NfsdDeputy2Set-description
+  sprite:
+    sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
+    state: icon
+  content:
+  - CrateNfsdDeputy2
+
+- type: thiefBackpackSet
+  id: NfsdDeputy3Set
+  name: NfsdDeputy3Set-name
+  description: NfsdDeputy3Set-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
+    state: icon
+  content:
+  - CrateNfsdDeputy3
+
+- type: thiefBackpackSet
+  id: NfsdDeputy4Set
+  name: NfsdDeputy4Set-name
+  description: NfsdDeputy4Set-description
+  sprite:
+    sprite: _NF/Objects/Weapons/Guns/SMGs/wt550.rsi
+    state: icon
+  content:
+  - CrateNfsdDeputy4
+
+# Лейтенант
+- type: thiefBackpackSet
+  id: NfsdLieutenant1Set
+  name: NfsdLieutenant1Set-name
+  description: NfsdLieutenant1Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/Rifles/scar12.rsi
+    state: icon
+  content:
+  - CrateNfsdLieutenant1
+
+- type: thiefBackpackSet
+  id: NfsdLieutenant2Set
+  name: NfsdLieutenant2Set-name
+  description: NfsdLieutenant2Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/SMGs/scorpion.rsi
+    state: icon
+  content:
+  - CrateNfsdLieutenant2
+
+- type: thiefBackpackSet
+  id: NfsdLieutenant3Set
+  name: NfsdLieutenant3Set-name
+  description: NfsdLieutenant3Set-description
+  sprite:
+    sprite: _NF/Objects/Weapons/Guns/SMGs/wt550.rsi
+    state: icon
+  content:
+  - CrateNfsdLieutenant3
+
+- type: thiefBackpackSet
+  id: NfsdLieutenant4Set
+  name: NfsdLieutenant4Set-name
+  description: NfsdLieutenant4Set-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
+    state: icon
+  content:
+  - CrateNfsdLieutenant4
+
+# Бейлиф
+- type: thiefBackpackSet
+  id: NfsdBailiff1Set
+  name: NfsdBailiff1Set-name
+  description: NfsdBailiff1Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/Rifles/scar12.rsi
+    state: icon
+  content:
+  - CrateNfsdBailiff1
+
+- type: thiefBackpackSet
+  id: NfsdBailiff2Set
+  name: NfsdBailiff2Set-name
+  description: NfsdBailiff2Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/LMGs/L2RPK.rsi
+    state: icon
+  content:
+  - CrateNfsdBailiff2
+
+- type: thiefBackpackSet
+  id: NfsdBailiff3Set
+  name: NfsdBailiff3Set-name
+  description: NfsdBailiff3Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/Shotguns/ad12.rsi
+    state: icon
+  content:
+  - CrateNfsdBailiff3
+
+# Шериф
+- type: thiefBackpackSet
+  id: NfsdSheriff1Set
+  name: NfsdSheriff1Set-name
+  description: NfsdSheriff1Set-description
+  sprite:
+    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_sheriff.rsi
+    state: icon
+  content:
+  - CrateNfsdSheriff1

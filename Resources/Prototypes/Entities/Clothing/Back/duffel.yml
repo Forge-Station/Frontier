@@ -248,7 +248,7 @@
   - type: Storage
     maxItemSize: Huge
     grid:
-    - 0,0,7,7 # Frontier: Was 0,0,19,9
+    - 0,0,14,14 # Frontier: Was 0,0,19,9 # Corvax-Forge: 0,0,7,7 -> 0,0,14,14
   - type: ClothingSpeedModifier
     sprintModifier: 1 # makes its stats identical to other variants of bag of holding
   - type: HeldSpeedModifier
@@ -259,6 +259,8 @@
       - state: equipped-BACKPACK # Frontier
       - state: equipped-BACKPACK-unlit # Frontier
         shader: unshaded # Frontier
+  - type: ExplosionResistance # Corvax-Forge
+    damageCoefficient: 0.5
 
 - type: entity
   parent: [ NFClothingDuffel, BaseCentcommContraband ] # Frontier: ClothingBackpackDuffel<NFClothingDuffel

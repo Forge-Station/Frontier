@@ -130,3 +130,27 @@
     state: cash_100000
   - type: Stack
     count: 200000
+
+- type: entity
+  parent: SpaceCashCounterfeit
+  id: SpaceCashCounterfeit2000
+  suffix: 2000
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Icon
+    sprite: _NF/Objects/Economy/counterfeit_cash.rsi
+    state: cash_1000
+  - type: Stack
+    count: 2000
+
+- type: entity
+  parent: SpaceCashCounterfeit
+  id: SpaceCashCounterfeit1000
+  suffix: 1000
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Icon
+    sprite: _NF/Objects/Economy/counterfeit_cash.rsi
+    state: cash_1000
+  - type: Stack
+    count: 1000

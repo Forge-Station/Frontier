@@ -13,3 +13,19 @@
       stackRequirements:
         Glass: 5
         Cable: 2
+
+- type: entity
+  id: GoldprinterMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: gold printer board
+  components:
+  - type: MachineBoard
+    prototype: Goldprinter
+    requirements: #Forge-change add: requirements
+      Manipulator: 4
+      MatterBin: 4 #Forge-change add: MatterBin
+    stackRequirements:
+      Gold: 5
+      Silver: 5
+      Glass: 10
+      Cable: 2

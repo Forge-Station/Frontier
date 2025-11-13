@@ -22,13 +22,10 @@
 - type: loadoutGroup
   id: StcEars
   name: loadout-group-contractor-ears
-  loadouts: []
-  subgroups:
-  - MercenaryEars
-  - PilotEars
-  - ContractorEars
+  loadouts:
+  - StationRepClothingHeadsetAltCentComCommon
   fallbacks:
-  - ContractorClothingHeadsetGreyCommon
+  - StationRepClothingHeadsetAltCentComCommon
 
 - type: loadoutGroup
   id: StcShoes

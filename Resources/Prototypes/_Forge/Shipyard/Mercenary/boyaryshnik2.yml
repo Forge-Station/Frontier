@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-3.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+
+- type: vessel
+  id: boyaryshnik2
+  parent: BaseVessel
+  name: TL Боярышник MK2
+  description: Среднегабаритный экспедиционный шаттл. Рекомендуемый состав команды 2-5 человек.
+  price: 160400
+  category: Medium
+  group: Mercenary
+  shuttlePath: /Maps/Forge/Shuttles/Mercenary/boyarichnik.yml
+
+- type: gameMap
+  id: boyaryshnik2
+  mapName: 'Боярышник MK2'
+  mapPath: /Maps/Forge/Shuttles/Mercenary/boyarichnik.yml
+  minPlayers: 0
+  stations:
+    boyaryshnik2:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Боярышник MK2 {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

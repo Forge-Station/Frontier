@@ -13,7 +13,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 1600
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -22,7 +22,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 800
       behaviors:
       - !type:PlaySoundBehavior
         sound:

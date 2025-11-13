@@ -1,0 +1,99 @@
+- type: entity
+  id: BoxFoodPizzaDonkpocket
+  name: коробка пиццы донк-покет
+  description: Коробка для пиццы или других вещей.
+  parent: FoodBoxPizza
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodPizzaDonkpocket
+      amount: 1
+    - id: KnifePlastic
+      amount: 1
+
+- type: entity
+  id: BoxFoodPizzaArnold
+  name: коробка пиццы Арнольд
+  description: Коробка для пиццы или других вещей.
+  parent: FoodBoxPizza
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodPizzaArnold
+      amount: 1
+    - id: KnifePlastic
+      amount: 1
+
+- type: entity
+  id: BoxFoodPizzaSassysage
+  name: коробка дерзкалбасной пиццы
+  description: Коробка для пиццы или других вещей.
+  parent: FoodBoxPizza
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodPizzaSassysage
+      amount: 1
+    - id: KnifePlastic
+      amount: 1
+
+- type: entity
+  id: BoxFoodPizzaWorldpeas
+  name: коробка пиццы "Мировая"
+  description: Коробка для пиццы или других вещей.
+  parent: FoodBoxPizza
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodPizzaWorldpeas
+      amount: 1
+    - id: KnifePlastic
+      amount: 1
+
+- type: entity
+  id: BoxFoodPizzaSyndiDonkpocketSyndi
+  name: коробка пиццы донк-покет
+  parent: FoodBoxPizzaSyndi
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodPizzaDonkpocket
+      amount: 1
+    - id: KnifePlastic
+      amount: 1
+
+- type: entity
+  id: BoxFoodSyndiPizzaArnoldSyndi
+  name: коробка пиццы Арнольд
+  parent: FoodBoxPizzaSyndi
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodPizzaArnold
+      amount: 1
+    - id: KnifePlastic
+      amount: 1
+
+- type: entity
+  id: BoxFoodSyndiPizzaSassysageSyndi
+  name: коробка дерзкалбасной пиццы
+  parent: FoodBoxPizzaSyndi
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodPizzaSassysage
+      amount: 1
+    - id: KnifePlastic
+      amount: 1
+
+- type: entity
+  id: BoxFoodSyndiPizzaSyndi
+  name: коробка пиццы Синдиката
+  parent: FoodBoxPizzaSyndi
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodPizzaSyndi
+      amount: 1
+    - id: KnifePlastic
+      amount: 1

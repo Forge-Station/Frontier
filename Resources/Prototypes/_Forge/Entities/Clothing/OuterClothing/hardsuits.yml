@@ -1,0 +1,75 @@
+- type: entity
+  parent: [ ClothingOuterHardsuitMercenary, BaseC1Contraband ]
+  id: ClothingOuterHardsuitAAMr
+  name: AAM R-41 Spectre Hardsuit
+  description: AAM r-41 hardsuit desc
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/syndicate.rsi # textures from _Mono
+  - type: Clothing
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/syndicate.rsi # textures from _Mono
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitAAMr
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Cold: 0.5
+        Radiation: 0.4
+        Shock: 0.5
+        Caustic: 0.5
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.5
+  - type: TemperatureProtection
+    heatingCoefficient: 0.001
+    coolingCoefficient: 0.001
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: FireProtection
+    reduction: 0.4
+  - type: StaminaResistance
+    damageCoefficient: 0.7
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+
+- type: entity
+  parent: [ ClothingOuterHardsuitMercenary, BaseC1Contraband ]
+  id: ClothingOuterHardsuitAAMrAdv
+  name: AAM R-44 Galius Hardsuit
+  description: AAM R-44 Galius Hardsuit desc
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/syndielite.rsi # textures from _Mono
+  - type: Clothing
+    sprite: _Mono/Clothing/OuterClothing/Hardsuits/syndielite.rsi # textures from _Mono
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitAAMrAdv
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.45
+        Slash: 0.45
+        Piercing: 0.4
+        Heat: 0.4
+        Cold: 0.4
+        Radiation: 0.3
+        Shock: 0.5
+        Caustic: 0.5
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.45
+  - type: TemperatureProtection
+    heatingCoefficient: 0.001
+    coolingCoefficient: 0.001
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: FireProtection
+    reduction: 0.3
+  - type: StaminaResistance
+    damageCoefficient: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9

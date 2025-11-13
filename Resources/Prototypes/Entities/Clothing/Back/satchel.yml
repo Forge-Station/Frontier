@@ -186,7 +186,7 @@
   - type: Storage
     maxItemSize: Huge
     grid:
-    - 0,0,7,7 # Frontier: Was 0,0,19,9
+    - 0,0,14,14 # Frontier: Was 0,0,19,9 # Corvax-Forge: 0,0,7,7 -> 0,0,14,14
   - type: Clothing # Frontier
     sprite: _NF/Clothing/Back/Satchels/holding.rsi # Frontier
     clothingVisuals: # Frontier
@@ -194,3 +194,5 @@
       - state: equipped-BACKPACK # Frontier
       - state: equipped-BACKPACK-unlit # Frontier
         shader: unshaded # Frontier
+  - type: ExplosionResistance # Corvax-Forge
+    damageCoefficient: 0.5

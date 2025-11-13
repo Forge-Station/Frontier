@@ -12,8 +12,12 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi
   - type: Battery # 40 shots
-    maxCharge: 3200
-    startingCharge: 3200
+    maxCharge: 2400
+    startingCharge: 2400
+  - type: Gun
+    fireRate: 2
+  - type: HitscanBatteryAmmoProvider
+    proto: SmgPulse
 
 #region Laser
 # Frontier

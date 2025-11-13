@@ -73,6 +73,7 @@
   - StormtrooperNeck2
   - StormtrooperNeck3
   - StormtrooperNeck4
+  - StormtrooperNeck5
   fallbacks:
   - StormtrooperNeck1
 
@@ -87,3 +88,12 @@
   - StormtrooperOuterclothing4
   - StormtrooperOuterclothing5
   - StormtrooperOuterclothing6
+
+- type: loadoutGroup
+  id: SyndicateBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - PouchSyndicateLd
+  - PouchSyndicateTechLd

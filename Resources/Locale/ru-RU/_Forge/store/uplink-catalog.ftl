@@ -41,3 +41,30 @@ uplink-syndie-laser-name = лазерная винтовка синдиката
 uplink-syndie-laser-desc = Новейшая поставка с рынков Vitezstvi. Продвинутая лазерная винтовка сделанная по особому заказу для мародёров Горлакса. Имеет встроенную микрореакторную батарейку, повышающую эффективность самозарядки.
 uplink-syndie-laser-pistol-name = пистолет "Сокол"
 uplink-syndie-laser-pistol-desc = Новейшая поставка с рынков Vitezstvi. Мощный лазерный пистолет, кандидат на лучшее вторичное оружие для мародёров Горлакса.
+
+uplink-security-nfsdgasalt-name = тактический противогаз ДСБФ
+uplink-security-nfsdgasalt-desc = Модифицированная версия стандартного противогаза ДСБФ, обеспечивающая повышенный комфорт при длительном ношении.
+uplink-security-nfsdgascoroner-name = противогаз коронера ДСБФ
+uplink-security-nfsdgascoroner-desc = Продвинутый медицинский противогаз, предназначенный для работы в зонах заражения и при оказании помощи под обстрелом.
+uplink-security-nfsdgasup-name = продвинутый противогаз ДСБФ
+uplink-security-nfsdgasup-desc = Версия противогаза, разработанная для опасных операций и экстремальных условий.
+uplink-security-engibelt-name = пояс специалиста ДСБФ (Заполненный)
+uplink-security-engibelt-desc = Тактический пояс с креплениями под инструменты специалиста и аварийное оборудование. Включает в себя комплект инструментов ДСБФ.
+
+uplink-security-PowerCellNFSD-name = { ent-PowerCellNFSD }
+uplink-security-PowerCellNFSD-desc = { ent-PowerCellNFSD.desc }
+uplink-PowerCellSyndicate-name = { ent-PowerCellSyndicate }
+uplink-PowerCellSyndicate-desc = { ent-PowerCellSyndicate.desc }
+
+uplink-security-C4-name = { ent-C4 }
+uplink-security-C4-desc = { ent-C4.desc }
+uplink-smug-bundle50-name = ящик припасов синдиката первого класса
+uplink-smug-bundle50-desc = Содержит случайное снаряжение Синдиката, общей стоимостью в 50 телекристаллов. Оно может быть как бесполезным хламом, так и реально крутым.
+uplink-smug-bundle100-name = ящик припасов синдиката второго класса
+uplink-smug-bundle100-desc = Содержит случайное снаряжение Синдиката, общей стоимостью в 100 телекристаллов. Оно может быть как бесполезным хламом, так и реально крутым.
+uplink-smug-bundle150-name = ящик припасов синдиката третьего класса
+uplink-smug-bundle150-desc = Содержит случайное снаряжение Синдиката, общей стоимостью в 150 телекристаллов. Оно может быть как бесполезным хламом, так и реально крутым.
+uplink-smug-bundle200-name = ящик припасов синдиката четвёртого класса
+uplink-smug-bundle200-desc = Содержит случайное снаряжение Синдиката, общей стоимостью в 200 телекристаллов. Оно может быть как бесполезным хламом, так и реально крутым.
+uplink-smug-bundle250-name = ящик припасов синдиката пятого класса
+uplink-smug-bundle250-desc = Содержит случайное снаряжение Синдиката, общей стоимостью в 250 телекристаллов. Оно может быть как бесполезным хламом, так и реально крутым.

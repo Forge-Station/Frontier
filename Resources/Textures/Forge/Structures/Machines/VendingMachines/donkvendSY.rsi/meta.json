@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Unknown, but update by Eifall",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "normal-unshaded",
+      "delays": [
+        [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.3,
+          2.0
+        ]
+      ]
+    },
+    {
+      "name": "broken"
+    },
+    {
+      "name": "normal"
+    },
+    {
+      "name": "deny-unshaded",
+      "delays": [
+        [
+          0.3,
+          0.3,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "eject-unshaded",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.3,
+          2.0
+        ]
+      ]
+    },
+    {
+      "name": "off"
+    },
+    {
+      "name": "panel"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingShoesBootsMagSyndie, BaseC2ContrabandUnredeemable, ClothingSlotBase ]
+  parent: [ ClothingShoesBootsMagBase, BaseJetpack, BaseC2ContrabandUnredeemable, ClothingSlotBase ]
   id: ClothingShoesBootsMagCombatERT
   name: combat ert magboots
   description:
@@ -26,3 +26,11 @@
           tags:
           - Knife
           - Sidearm
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      # 2 minutes of thrust
+      volume: 4
+      temperature: 293.15
+      moles:
+      - 4.0 # oxygen

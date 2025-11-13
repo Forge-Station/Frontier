@@ -1,0 +1,188 @@
+- type: entity
+  parent: Airlock
+  id: ADTServiceAirlock
+  suffix: Service
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/service.rsi
+
+- type: entity
+  parent: Airlock
+  id: ADTBathroom
+  suffix: Bathroom
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/bathroom.rsi
+
+- type: entity
+  parent: Airlock
+  id: ADTChaplainAirlock
+  suffix: Chaplain
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/chaplain.rsi
+
+- type: entity
+  parent: Airlock
+  id: ADTKitchenAirlock
+  suffix: Kitchen
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/kitchen.rsi
+
+- type: entity
+  parent: AirlockScience
+  id: ADTRoboticsAirlock
+  suffix: Robotics
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/robotics.rsi
+
+- type: entity
+  parent: AirlockCargo
+  id: ADTSalvageAirlock
+  suffix: Salvage
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/salvage.rsi
+
+- type: entity
+  parent: Airlock
+  id: ADTTheatreAirlock
+  suffix: Theatre
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/theatre.rsi
+
+- type: entity
+  parent: Airlock
+  id: ADTBarAirlock
+  suffix: Bar
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/bar.rsi
+
+- type: entity
+  parent: AirlockMedical
+  id: ADTMorgueAirlock
+  suffix: Morgue
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/morgue.rsi
+
+- type: entity
+  parent: Airlock
+  id: ADTLibraryAirlock
+  suffix: Library
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/library.rsi
+
+- type: entity
+  parent: Airlock
+  id: ADTLawyerAirlock
+  suffix: Lawyer
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/lawyer.rsi
+
+- type: entity
+  parent: Airlock
+  id: ADTJanitorAirlock
+  suffix: Janitor
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/janitor.rsi
+
+- type: entity
+  parent: AirlockMedical
+  id: ADTPsychoAirlock
+  suffix: Psycho
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/psycho.rsi
+
+# region Glass
+- type: entity
+  parent: AirlockGlass
+  id: ADTGlassServiceAirlock
+  suffix: Service
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Glass/service.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: ADTChaplainAirlockGlass
+  suffix: Chaplain
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Glass/chaplain.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockGlass
+  id: ADTKitchenAirlockGlass
+  suffix: Kitchen
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Glass/kitchen.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockScienceGlass
+  id: ADTRoboticsAirlockGlass
+  suffix: Robotics
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Glass/robotics.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockCargoGlass
+  id: ADTSalvageAirlockGlass
+  suffix: Salvage
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Glass/salvage.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockGlass
+  id: ADTTheatreAirlockGlass
+  suffix: Theatre
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Glass/theatre.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockGlass
+  id: ADTBarAirlockGlass
+  suffix: Bar
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Glass/bar.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockGlass
+  id: ADTGlassLawyerAirlock
+  suffix: Lawyer
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Glass/lawyer.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: ADTGlassJanitorAirlock
+  suffix: Janitor
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Glass/janitor.rsi

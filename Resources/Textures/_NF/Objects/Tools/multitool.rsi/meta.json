@@ -14,13 +14,35 @@
             "name": "icon"
         },
         {
-            "name": "green-unlit"
+            "name": "green-unlit",
+            "delays": [
+                [
+                0.1,
+                0.1,
+                0.1,
+                0.1
+                ]
+            ]
         },
         {
-            "name": "yellow-unlit"
+            "name": "yellow-unlit",
+            "delays": [
+                [
+                0.2,
+                0.2
+                ]
+            ]
         },
         {
-            "name": "red-unlit"
+            "name": "red-unlit",
+            "delays": [
+                [
+                0.1,
+                0.1,
+                0.1,
+                0.1
+                ]
+            ]
         },
         {
             "name": "inhand-left",

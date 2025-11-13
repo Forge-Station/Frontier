@@ -1,0 +1,28 @@
+- type: loadout
+  id: MedicalInternPDAOMedLd
+  equipment:
+    id: MedicalInternPDA
+
+- type: loadout
+  id: PsychologistPDAOMedLd
+  equipment:
+    id: PsychologistPDA
+
+- type: loadout
+  id: ChemistryPDAOMedLd
+  equipment:
+    id: ChemistryPDA
+
+- type: loadout
+  id: MedicalPDAOMedLd
+  equipment:
+    id: MedicalPDA
+
+# region PlayTime
+- type: loadout
+  id: SeniorPhysicianPDAOMedLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT2
+  equipment:
+    id: SeniorPhysicianPDA

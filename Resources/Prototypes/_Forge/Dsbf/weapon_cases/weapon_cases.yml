@@ -88,18 +88,18 @@
     - id: NFMagazinePistol35
       amount: 2
 
-- type: entity
-  parent: WeaponCaseLong
-  id: WeaponCaseLongWeaponShotgunKS23
-  name: Кейс с KS23
-  suffix: Аплинк ДСБФ, KS23
-  components:
-  - type: StorageFill
-    contents:
-    - id: WeaponShotgunKS23
-      amount: 1
-    - id: BoxLethalshotKS23
-      amount: 2
+# - type: entity
+#   parent: WeaponCaseLong
+#   id: WeaponShotgunKD12
+#   name: Кейс с KS23
+#   suffix: Аплинк ДСБФ, KS23
+#   components:
+#   - type: StorageFill
+#     contents:
+#     - id: WeaponShotgunKS23
+#       amount: 1
+#     - id: BoxLethalshotKS23
+#       amount: 2
 
 - type: entity
   parent: WeaponCaseLong
@@ -204,7 +204,7 @@
       amount: 1
     - id: NFMagazineSubMachineGunTopMounted35
       amount: 2
-    - id: NFAmmunitionBoxPistol35
+    - id: NFAmmunitionBoxRifle25
       amount: 1
 
 - type: entity
@@ -271,13 +271,13 @@
       amount: 1
     - id: NFMagazineBoxRifle20
       amount: 2
-    - id: NFAmmunitionBoxRifle30
+    - id: NFAmmunitionBoxRifle20
       amount: 1
 
 - type: entity
   parent: WeaponCaseLong
   id: WeaponCaseLongWeaponPulseCarbine
-  name: Кейс с Импульсным карабином
+  name: Кейс с Импульсным ФН-1000
   suffix: Аплинк ДСБФ, Импульсный карабин
   components:
   - type: StorageFill
@@ -288,7 +288,7 @@
 - type: entity
   parent: WeaponCaseLong
   id: WeaponCaseLongWeaponPulseCarbineSniper
-  name: Кейс с Импульсной снайперской винтовкой
+  name: Кейс с Импульсным ФН-3000
   suffix: Аплинк ДСБФ, Импульсная снайперская винтовка
   components:
   - type: StorageFill
@@ -299,10 +299,21 @@
 - type: entity
   parent: WeaponCaseShort
   id: WeaponCaseLongWeaponPulsePistol
-  name: Кейс с Импульсным пистолетом
+  name: Кейс с Импульсным ФН-14
   suffix: Аплинк ДСБФ, Импульсный пистолет
   components:
   - type: StorageFill
     contents:
     - id: NFWeaponEnergyPistolPulse
+      amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponPulse20
+  name: Кейс с Импульсным ФН-200
+  suffix: Аплинк ДСБФ, Импульсный пистолет
+  components:
+  - type: StorageFill
+    contents:
+    - id: pulse20
       amount: 1

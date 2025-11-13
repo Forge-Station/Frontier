@@ -616,7 +616,7 @@
     # - 0,0,3,1 # Frontier: commented out
 
 - type: entity
-  parent: [NFClothingBeltStorageBase, BaseC1Contraband, ContrabandClothing] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent #Corvax-Frontier КБ
+  parent: [NFClothingBeltStorageBase, BaseC2ContrabandDisallowSecs, ContrabandClothing] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent #Corvax-Frontier BaseC3SyndicateContraband<BaseC2ContrabandDisallowSecs
   id: ClothingBeltSyndieHolster
   name: syndicate shoulder holster
   description: A deep shoulder holster capable of holding many types of ballistics.
@@ -680,8 +680,8 @@
     sprite: Clothing/Belt/militarywebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/militarywebbing.rsi
-  - type: ExplosionResistance
-    damageCoefficient: 0.1
+  # - type: ExplosionResistance #Corvax-Frontier
+  #   damageCoefficient: 0.1
 
 - type: entity
   parent: ClothingBeltMilitaryWebbing
@@ -695,8 +695,8 @@
     sprite: Clothing/Belt/militarywebbingmed.rsi
   #- type: Item # Frontier
     #size: Huge # Frontier
-  - type: ExplosionResistance
-    damageCoefficient: 0.1
+  # - type: ExplosionResistance #Corvax-Frontier
+  #   damageCoefficient: 0.1
 
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase

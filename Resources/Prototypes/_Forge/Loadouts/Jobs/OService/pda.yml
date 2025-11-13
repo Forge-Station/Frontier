@@ -1,0 +1,28 @@
+- type: loadout
+  id: ServiceWorkerPDAOServLd
+  equipment:
+    id: ServiceWorkerPDA
+
+- type: loadout
+  id: BartenderPDAOServLd
+  equipment:
+    id: BartenderPDA
+
+- type: loadout
+  id: ChefPDAOServLd
+  equipment:
+    id: ChefPDA
+
+- type: loadout
+  id: BotanistPDAOServLd
+  equipment:
+    id: BotanistPDA
+
+# region PlayTime
+- type: loadout
+  id: HoPPDAOServLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT3
+  equipment:
+    id: HoPPDA

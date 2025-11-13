@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/09/2025 11:50:04
-  entityCount: 5866
+  time: 10/26/2025 15:04:29
+  entityCount: 5873
 maps: []
 grids:
 - 2
@@ -2267,7 +2267,7 @@ entities:
           0,6:
             0: 65535
           0,7:
-            0: 47359
+            0: 47615
           0,8:
             0: 39867
           1,5:
@@ -2371,10 +2371,11 @@ entities:
           8,-1:
             0: 65399
           5,1:
-            0: 4915
+            0: 819
+            5: 4096
             2: 34952
           5,2:
-            0: 307
+            5: 307
             2: 51336
           5,3:
             2: 119
@@ -2463,9 +2464,9 @@ entities:
             1: 1904
           -6,5:
             1: 119
-            5: 28672
+            6: 28672
           -6,6:
-            5: 7
+            6: 7
             1: 30464
           -6,7:
             1: 1904
@@ -2614,6 +2615,21 @@ entities:
           moles:
           - 0
           - 6666.982
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 235
+          moles:
+          - 27.225372
+          - 102.419266
           - 0
           - 0
           - 0
@@ -3787,7 +3803,7 @@ entities:
       parent: 2
 - proto: AirlockFreezer
   entities:
-  - uid: 4644
+  - uid: 5865
     components:
     - type: Transform
       pos: 20.5,7.5
@@ -3805,7 +3821,7 @@ entities:
       pos: 8.5,10.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -28515.941
+      secondsUntilStateChange: -28658.072
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -4107,6 +4123,11 @@ entities:
     components:
     - type: Transform
       pos: 34.5,-4.5
+      parent: 2
+  - uid: 332
+    components:
+    - type: Transform
+      pos: 20.5,7.5
       parent: 2
 - proto: AtmosFixBlockerMarker
   entities:
@@ -7251,6 +7272,38 @@ entities:
     components:
     - type: Transform
       pos: -19.5,11.5
+      parent: 2
+- proto: AtmosFixFreezerMarker
+  entities:
+  - uid: 3732
+    components:
+    - type: Transform
+      pos: 20.5,8.5
+      parent: 2
+  - uid: 3733
+    components:
+    - type: Transform
+      pos: 20.5,9.5
+      parent: 2
+  - uid: 4644
+    components:
+    - type: Transform
+      pos: 21.5,8.5
+      parent: 2
+  - uid: 5863
+    components:
+    - type: Transform
+      pos: 21.5,9.5
+      parent: 2
+  - uid: 5864
+    components:
+    - type: Transform
+      pos: 20.5,10.5
+      parent: 2
+  - uid: 5866
+    components:
+    - type: Transform
+      pos: 20.5,7.5
       parent: 2
 - proto: AtmosFixNitrogenMarker
   entities:
@@ -29799,7 +29852,7 @@ entities:
       parent: 2
     - type: Paper
       content: >-
-        У нас вышла поломка иза которой Переработчик материалов полетел не забудьте его улучшить . . . снова 
+        У нас вышла поломка иза которой Переработчик материалов полетел не забудьте его улучшить . . . снова
 
         А то утилизация будет работать не так как задумано
   - uid: 5043
@@ -29826,7 +29879,7 @@ entities:
       parent: 2
     - type: Paper
       content: >-
-        Парни 
+        Парни
 
         Мы тут установили новые блоки, для доставки различных вещей от вашей добычи, или чего там еще
 

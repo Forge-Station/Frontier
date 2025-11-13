@@ -1,0 +1,23 @@
+- type: loadout
+  id: TechnicalAssistantPDAOEngiLd
+  equipment:
+    id: TechnicalAssistantPDA
+
+- type: loadout
+  id: EngineerPDAOEngiLd
+  equipment:
+    id: EngineerPDA
+
+- type: loadout
+  id: AtmosPDAOEngiLd
+  equipment:
+    id: AtmosPDA
+
+# region PlayTime
+- type: loadout
+  id: SeniorEngineerPDAOEngiLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT2
+  equipment:
+    id: SeniorEngineerPDA

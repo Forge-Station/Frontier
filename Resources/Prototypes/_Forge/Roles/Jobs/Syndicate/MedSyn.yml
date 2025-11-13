@@ -1,7 +1,7 @@
 - type: job
   id: MedSyn
-  name: Штурмовой Парамедик Синдиката
-  description: Специально подготовленный синдикатом медик для работы в зонах боевых действий
+  name: forge-job-name-medsyn
+  description: forge-job-desc-medsyn
   playTimeTracker: JobMedSyn
   access:
   - SyndicateAgent
@@ -37,18 +37,18 @@
 - type: startingGear
   id: MedSynGear
   equipment:
-    ears: ClothingHeadsetAltSyndicate
+    ears: ClothingHeadsetAltSyndicateShturm
     id: SyndiPDACParamed
     belt: ClothingBeltMilitaryWebbingMedFilled
-    pocket1: NFWeaponPistolViper
-    pocket2: ToolboxMedic
-    mask: ClothingMaskNeckGaiterRed
+    mask: ClothingMaskGasSyndicate
+    wallet: ClothingWalletLeatherSyndi
   storage:
     back:
     - NFBoxSurvivalExtended
     - HypoBrigmedic
     - PillCanisterTricordrazine
     - SyndicateDataMinerFlatpack
+    - ToolboxMedic
 
 - type: chameleonOutfit
   id: MedSynChameleonOutfit

@@ -71,7 +71,7 @@
 
 - type: material
   id: Credit
-  name: speso
+  name: stack-nf-credit
   unit: materials-unit-bill
   stackEntity: SpaceCash
   icon: { sprite: /Textures/Objects/Economy/cash.rsi, state: cash }
@@ -126,6 +126,17 @@
     state: cash_1000
   - type: Stack
     count: 1000
+
+- type: entity
+  parent: SpaceCash
+  id: SpaceCash2000
+  suffix: 2000
+  components:
+  - type: Icon
+    sprite: Objects/Economy/cash.rsi
+    state: cash_1000
+  - type: Stack
+    count: 2000
 
 - type: entity
   parent: SpaceCash

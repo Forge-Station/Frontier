@@ -314,13 +314,13 @@
       amount: 1
     - id: MagazineVector22
       amount: 2
-    - id: NFAmmunitionBoxPistol35
+    - id: NFAmmunitionBoxRifle25
       amount: 2 #CorvaxFrontier
 
 - type: entity #CorvaxFrontier
   parent: WeaponCaseLong
   id: WeaponCaseWeaponSubMachineP90LRK
-  suffix: Dungeon, SubMachineGunVector22
+  suffix: Dungeon, SubMachineGunP90LRK
   categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
@@ -329,7 +329,7 @@
       amount: 1
     - id: MagazineP90LRK
       amount: 2
-    - id: NFAmmunitionBoxPistol35
+    - id: NFAmmunitionBoxRifle25
       amount: 2 #CorvaxFrontier
 
 #region Rifles

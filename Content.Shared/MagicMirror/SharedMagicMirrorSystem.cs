@@ -224,3 +224,16 @@ public sealed partial class MagicMirrorChangeColorDoAfterEvent : DoAfterEvent
     public int Slot;
     public List<Color> Colors = new List<Color>();
 }
+
+// Forge-Change Corvax-Wega-Skrell-start
+[Serializable, NetSerializable]
+public sealed partial class HairMarkingRemovedEvent : EntityEventArgs
+{
+    public NetEntity Target { get; }
+
+    public HairMarkingRemovedEvent(NetEntity target)
+    {
+        Target = target;
+    }
+}
+// Forge-Change Corvax-Wega-Skrell-end

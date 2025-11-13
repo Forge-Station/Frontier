@@ -20,7 +20,7 @@
   components:
   - type: StationEvent
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_breaker_flip.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_breaker_flip.ogg # Corvax-Frontier
     weight: 7
     earliestStart: 15 # Frontier
     duration: 1
@@ -36,9 +36,7 @@
     startAnnouncement: station-event-power-grid-check-nf-start-announcement # Frontier: add nf-
     endAnnouncement: station-event-power-grid-check-nf-end-announcement # Frontier: add nf-
     startAudio:
-      params:
-        volume: -0
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy1_power_offnf.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_power_off.ogg # Corvax-Frontier
   #  endAudio:
   #    path: /Audio/_NF/Announcements/PocketSizedAndy/andy1_power_onnf.ogg  ##PowerGridCheckRule handles end audio, leaving this incase that breaks
   #    params:
@@ -57,9 +55,11 @@
     earliestStart: 15
     reoccurrenceDelay: 45
     startAnnouncement: station-event-solar-flare-nf-start-announcement
+    startAudio: # Corvax-Forge
+      path: /Audio/_Forge/Announcements/Events/oleg_solar_flare_start.ogg # Corvax-Frontier
     endAnnouncement: station-event-solar-flare-nf-end-announcement
-    endAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_solar_flare_end.ogg
+    endAudio: # Corvax-Forge
+      path: /Audio/_Forge/Announcements/Events/oleg_solar_flare_end.ogg # Corvax-Frontier
     duration: 120
     maxDuration: 240
   - type: SolarFlareRule
@@ -74,7 +74,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-clog-nf-start-announcement # Frontier: add nf-
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_vent_clog.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_vent_clog.ogg # Corvax-Frontier
     earliestStart: 15
     minimumPlayers: 15
     weight: 5

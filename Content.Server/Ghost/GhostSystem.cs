@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Numerics;
-using Content.Server._Forge.Sponsors; // Forge-Change
+using Content.Server._Forge.Sponsor; // Forge-Change
 using Content.Server._NF.CryoSleep; // Frontier
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers; // Frontier

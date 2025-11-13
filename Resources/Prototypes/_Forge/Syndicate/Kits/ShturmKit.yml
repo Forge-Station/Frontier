@@ -1,0 +1,25 @@
+- type: entity
+  id: ToolboxShturm
+  name: подозрительный ящик неопределённости
+  suffix: Штурмовик
+  description: Что же взять на этот раз?
+  parent: [ BaseItem, BaseC3SyndicateContraband ] # Frontier: BaseMinorContraband<BaseC3SyndicateContraband
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Misc/Syndicatebox.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SyndShturm1Set
+    - SyndShturm2Set
+    - SyndShturm3Set
+    - SyndShturm4Set
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+  - type: Contraband # Frontier
+    hideValues: true # Frontier

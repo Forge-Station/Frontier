@@ -45,6 +45,16 @@
   - ParaMedicalShoes1
 
 - type: loadoutGroup
+  id: ParaMedicalWallet
+  name: loadout-group-contractor-wallet
+  minLimit: 1
+  loadouts:
+  - ParaMedicalWalletMed
+  - ParaMedicalWalletMedNian
+  fallbacks:
+  - ParaMedicalWalletMed
+
+- type: loadoutGroup
   id: ParaMedicalHead
   name: loadout-group-contractor-head
   minLimit: 1
@@ -53,3 +63,4 @@
   - ParaMedicalClothingHeadHatParamedicsoftFlipped
   fallbacks:
   - ParaMedicalClothingHeadHatParamedicsoft
+

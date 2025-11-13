@@ -1,0 +1,31 @@
+- type: latheRecipe
+  id: Tyriumpack1Recipe
+  result: Tyriumpack1
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+    Plasma: 15
+
+- type: latheRecipe
+  id: CableApcStack1Recipe
+  result: CableApcStack1
+  completetime: 2
+  materials:
+    Steel: 30
+
+- type: latheRecipe
+  id: WelderMiniRecipe
+  result: WelderMini
+  completetime: 4
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: Bloodpack1Recipe
+  result: Bloodpack1
+  completetime: 2
+  materials:
+    Plastic: 20
+    Biomass: 2
+    Plasma: 20

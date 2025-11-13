@@ -445,7 +445,7 @@
   parent: LockableButton
   components:
   - type: AccessReader
-    access: [["Theatre"]]
+    access: [["Service"]] # Forge-change
 
 - type: entity
   id: LockableButtonBar
@@ -453,7 +453,7 @@
   parent: LockableButton
   components:
   - type: AccessReader
-    access: [["Bar"]]
+    access: [["Service"]] # Forge-change
 
 - type: entity
   id: LockableButtonChemistry
@@ -469,7 +469,7 @@
   parent: LockableButton
   components:
   - type: AccessReader
-    access: [["Kitchen"]]
+    access: [["Service"]] # Forge-change
 
 - type: entity
   id: LockableButtonChapel
@@ -485,7 +485,7 @@
   parent: LockableButton
   components:
   - type: AccessReader
-    access: [["Hydroponics"]]
+    access: [["Service"]] # Forge-change
 
 - type: entity
   id: LockableButtonAtmospherics
@@ -493,7 +493,7 @@
   parent: LockableButton
   components:
   - type: AccessReader
-    access: [["Atmospherics"]]
+    access: [["Engineering"]] # Forge-change
 
 - type: entity
   id: LockableButtonCentcomm

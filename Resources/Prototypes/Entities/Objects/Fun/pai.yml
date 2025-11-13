@@ -70,6 +70,8 @@
     followEntity: true
   - type: TypingIndicator
     proto: robot
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
   - type: Speech
     speechVerb: Robotic
     speechSounds: Pai

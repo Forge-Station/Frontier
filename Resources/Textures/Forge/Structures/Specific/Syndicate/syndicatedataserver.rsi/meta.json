@@ -1,0 +1,28 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Sprites for Corvax-Frontier",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "server-on",
+            "delays": [
+                [
+                    0.35,
+                    0.35,
+                    0.35,
+                    0.35
+                ]
+            ]
+        },
+        {
+            "name": "server-nopower"
+        },
+        {
+            "name": "server-open"
+        }
+    ]
+}

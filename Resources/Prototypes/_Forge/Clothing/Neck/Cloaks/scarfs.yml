@@ -1,0 +1,10 @@
+- type: entity
+  parent: [ClothingScarfBase, BaseC3Contraband, ContrabandClothing]
+  id: ClothingNeckScarfStripedContractor
+  name: полосатый жёлтый шарф DCN™
+  description: Стильный полосатый жёлтый шарф. Идеальный аксессуар для тех, у кого обострённое чувство моды, и тех, кто просто в настроении кого-нибудь украсть.
+  components:
+    - type: Sprite
+      sprite: Forge/Clothing/Neck/Scarfs/cont_yellow.rsi
+    - type: Clothing
+      sprite: Forge/Clothing/Neck/Scarfs/cont_yellow.rsi

@@ -1,0 +1,61 @@
+- type: loadout
+  id: ClothingBackpackEngineeringOEngiLd
+  equipment:
+    back: ClothingBackpackEngineering
+
+- type: loadout
+  id: ClothingBackpackSatchelEngineeringOEngiLd
+  equipment:
+    back: ClothingBackpackSatchelEngineering
+
+- type: loadout
+  id: ClothingBackpackDuffelEngineeringOEngiLd
+  equipment:
+    back: ClothingBackpackDuffelEngineering
+
+- type: loadout
+  id: ClothingBackpackMessengerEngineeringOEngiLd
+  equipment:
+    back: ClothingBackpackMessengerEngineering
+
+# region PlayTime
+- type: loadout
+  id: ClothingBackpackAtmosphericsOEngiLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT2
+  equipment:
+    back: ClothingBackpackAtmospherics
+
+- type: loadout
+  id: ClothingBackpackSatchelAtmosphericsOEngiLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT2
+  equipment:
+    back: ClothingBackpackSatchelAtmospherics
+
+- type: loadout
+  id: ClothingBackpackDuffelAtmosphericsOEngiLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT2
+  equipment:
+    back: ClothingBackpackDuffelAtmospherics
+
+- type: loadout
+  id: ClothingBackpackMessengerAtmosphericsOEngiLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT2
+  equipment:
+    back: ClothingBackpackMessengerAtmospherics
+
+# ERT
+- type: loadout
+  id: ClothingBackpackERTEngineerOEngiLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OEngT5
+  equipment:
+    back: ClothingBackpackERTEngineer

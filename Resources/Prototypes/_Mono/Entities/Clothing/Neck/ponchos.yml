@@ -1,0 +1,83 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckPonchoBlack
+  name: black poncho
+  description: black poncho desc
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Ponchos/black.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Ponchos/black.rsi
+  - type: Item
+    size: Normal
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.5
+
+- type: entity
+  parent: ClothingNeckPonchoBlack
+  id: ClothingNeckPonchoBlackStripe
+  name: black poncho red stripe
+  description: black poncho red stripe desc
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Ponchos/blackstripe.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Ponchos/blackstripe.rsi
+
+- type: entity
+  parent: ClothingNeckPonchoBlack
+  id: ClothingNeckPonchoSyndicate
+  name: black and red cold weather poncho
+  description: The Cold Weather Poncho, advertised as a masterpiece of elemental protection. The truth is that it's itchy, stuffy, and a little baggy - but at least it's not cold. This one seems vaguely sinister...
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Ponchos/syndicate.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Ponchos/syndicate.rsi
+
+- type: entity
+  parent: ClothingNeckPonchoBlack
+  id: ClothingNeckPonchoSmallBlack
+  name: small black cold weather poncho
+  description: The Cold Weather Poncho, advertised as a masterpiece of elemental protection. This rendition comes in a smaller size. This one is black.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Ponchos/blacksmall.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Ponchos/blacksmall.rsi
+
+# Forge-change: add blue, green, white versions
+- type: entity
+  parent: ClothingNeckPonchoBlack
+  id: ClothingNeckPonchoBlackStripeBlue
+  name: black poncho blue stripe
+  description: black poncho blue stripe desc
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Ponchos/blackstripeblue.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Ponchos/blackstripeblue.rsi
+
+- type: entity
+  parent: ClothingNeckPonchoBlack
+  id: ClothingNeckPonchoBlackStripeGreen
+  name: black poncho green stripe
+  description: black poncho green stripe desc
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Ponchos/blackstripegreen.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Ponchos/blackstripegreen.rsi
+
+- type: entity
+  parent: ClothingNeckPonchoBlack
+  id: ClothingNeckPonchoBlackStripeWhite
+  name: black poncho white stripe
+  description: black poncho white stripe desc
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Ponchos/blackstripewhite.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Ponchos/blackstripewhite.rsi
+# Forge-change end

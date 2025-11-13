@@ -1,0 +1,25 @@
+- type: latheRecipe
+  id: ClothingOuterHardsuitAAMr
+  parent: NFBaseHardSuitArmoredRecipe
+  result: ClothingOuterHardsuitAAMr
+  materials:
+    PlasmaGlass: 2000
+    Plastic: 6000
+    Plasteel: 8000
+    Durathread: 6000
+    Silver: 4000
+    Gold: 6000
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitAAMrAdv
+  parent: NFBaseHardSuitArmoredRecipe
+  result: ClothingOuterHardsuitAAMrAdv
+  materials:
+    PlasmaGlass: 1500
+    UraniumGlass: 1500
+    Plastic: 6000
+    Plasteel: 9000
+    Durathread: 8000
+    Silver: 4000
+    Gold: 6000
+    Brass: 2000

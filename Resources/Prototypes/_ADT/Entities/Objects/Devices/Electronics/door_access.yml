@@ -1,0 +1,23 @@
+- type: entity
+  parent: DoorElectronics
+  id: ADTDoorElectronicsRobotics
+  suffix: Robotics, Locked
+  components:
+  - type: AccessReader
+    access: [["Research"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: ADTDoorElectronicsLibrary
+  suffix: Library, Locked
+  components:
+  - type: AccessReader
+    access: [["Service"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: ADTDoorElectronicsMedicalPsycho
+  suffix: Psycho, Locked
+  components:
+  - type: AccessReader
+    access: [["Medical"]]

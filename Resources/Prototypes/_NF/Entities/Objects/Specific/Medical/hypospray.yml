@@ -27,7 +27,7 @@
   - type: UseDelay
     delay: 2.5
   - type: StaticPrice
-    price: 550
+    price: 625
   - type: Appearance
   - type: SolutionContainerVisuals
     maxFillLevels: 2
@@ -50,6 +50,10 @@
     - state: hypo_fill1
       map: ["enum.SolutionContainerLayers.Fill"]
       visible: false
+  - type: StaticPrice
+    price: 1250
+  - type: UseDelay
+    delay: 1.5
   - type: Item
     sprite: _NF/Objects/Specific/Medical/hypobrigmedic.rsi
 
@@ -67,6 +71,10 @@
     - state: hypo_fill1
       map: ["enum.SolutionContainerLayers.Fill"]
       visible: false
+  - type: StaticPrice
+    price: 2500
+  - type: UseDelay
+    delay: 0.5
   - type: Item
     sprite: _NF/Objects/Specific/Medical/hypominilimitededition.rsi
 

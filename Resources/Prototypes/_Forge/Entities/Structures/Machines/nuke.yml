@@ -1,0 +1,107 @@
+- type: entity
+  parent: [NuclearBomb, BaseStructureDisableToolUse]
+  id: NuclearBombSyndi
+  name: ССУ "Энигма"
+  description: Система Самоуничтожения базы "Энигма", вам, вероянто, не стоит оставаться здесь, чтобы проверить, запущена ли она.
+  suffix: ядерная боеголовка, не изменяет код угрозы
+  components:
+  - type: AdminFrozen
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Forge/Objects/Devices/nuke.rsi
+    noRot: true
+    layers:
+    - state: nuclearbomb_base
+      map: ["enum.NukeVisualLayers.Base"]
+    - state: nuclearbomb_deployed_unlit
+      map: ["enum.NukeVisualLayers.Unlit"]
+      shader: unshaded
+      visible: false
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.NukeVisuals.Deployed:
+        enum.NukeVisualLayers.Base:
+          False: { state: nuclearbomb_base }
+          True:  { state: nuclearbomb_deployed }
+        enum.NukeVisualLayers.Unlit:
+          True:  { visible: true }
+          False: { visible: false }
+      enum.NukeVisuals.State:
+        enum.NukeVisualLayers.Unlit:
+          Idle:        { state: nuclearbomb_deployed_unlit }
+          Armed:       { state: nuclearbomb_timing }
+          YoureFucked: { state: nuclearbomb_exploding }
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 9000
+        mask:
+        - MachineMask
+        layer:
+        - HalfWallLayer
+  - type: PointLight
+    enabled: false
+    radius: 4
+    energy: 2.0
+    color: "#FF4020"
+    mask: /Textures/Effects/LightMasks/double_cone.png
+  - type: RotatingLight
+    speed: 120
+  - type: NukeLabel
+    prefix: nuke-label-syndicate
+  - type: Nuke
+    canChangeAlertLevel: false
+    minimumTime: 120
+    cooldown: 120
+    disarmDoafterLength: 50
+    requiredFloorRadius: 1
+    timer: 120
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 5
+    totalIntensity: 5000000
+    diskSlot:
+      name: nuke-slot-component-slot-name-disk
+      insertSound:
+        path: /Audio/Machines/terminal_insert_disc.ogg
+      ejectSound:
+        path: /Audio/Machines/terminal_insert_disc.ogg
+      whitelist:
+        components:
+        - NukeDisk
+  - type: InteractionOutline
+  - type: ActivatableUI
+    key: enum.NukeUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.NukeUiKey.Key:
+        type: NukeBoundUserInterface
+  - type: StaticPrice
+    price: 50000
+  - type: CargoSellBlacklist
+  - type: ArrivalsBlacklist
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      Nuke: !type:ContainerSlot
+  - type: Tag
+    tags:
+    - GhostOnlyWarp
+  - type: WarpPoint
+    adminOnly: True
+    location: Система самоуничтожения Энигмы
+    follow: true
+    blacklist:
+      tags:
+      - GhostOnlyWarp
+  - type: FTLSmashImmune
+  - type: ShipyardSellCondition
+    blockSale: true
+    reason: shipyard-console-dangerous-materials

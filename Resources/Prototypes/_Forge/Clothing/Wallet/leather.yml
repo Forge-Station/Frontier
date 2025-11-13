@@ -1,0 +1,75 @@
+- type: entity
+  parent: NFBaseWallet
+  id: ClothingWalletLeatherMed
+  name: leather wallet
+  description: Surprisingly thick. Careful not to lose it, and don't sit on it.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Wallet/wallet.rsi
+    layers:
+    - state: closed-med
+      map: ["closeLayer"]
+    - state: open-med
+      map: ["openLayer"]
+      visible: false
+    - state: closed-paper
+      map: ["closed-paper"]
+      visible: false
+    - state: closed-cash
+      map: ["closed-cash"]
+      visible: false
+    - state: closed-coin
+      map: ["closed-coin"]
+      visible: false
+  - type: Item
+    sprite: Forge/Clothing/Wallet/wallet.rsi
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
+  - type: Appearance
+  - type: ItemMapper
+    sprite: Forge/Clothing/Wallet/wallet.rsi
+
+- type: entity
+  parent: ClothingWalletLeatherMed
+  id: ClothingWalletLeatherMedNian
+  components:
+  - type: Sprite
+    layers:
+    - state: closed-med-nian
+      map: ["closeLayer"]
+    - state: open-med
+      map: ["openLayer"]
+      visible: false
+    - state: closed-paper
+      map: ["closed-paper"]
+      visible: false
+    - state: closed-cash
+      map: ["closed-cash"]
+      visible: false
+    - state: closed-coin
+      map: ["closed-coin"]
+      visible: false
+
+- type: entity
+  parent: ClothingWalletLeatherMed
+  id: ClothingWalletLeatherSyndi
+  components:
+  - type: Sprite
+    layers:
+    - state: closed-syndi
+      map: ["closeLayer"]
+    - state: open-syndi
+      map: ["openLayer"]
+      visible: false
+    - state: closed-paper
+      map: ["closed-paper"]
+      visible: false
+    - state: closed-cash
+      map: ["closed-cash"]
+      visible: false
+    - state: closed-coin
+      map: ["closed-coin"]
+      visible: false

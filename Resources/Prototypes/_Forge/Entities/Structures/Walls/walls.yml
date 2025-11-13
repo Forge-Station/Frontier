@@ -11,7 +11,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 600
+            damage: 1500
           behaviors:
             - !type:SpawnEntitiesBehavior
               spawn:
@@ -102,7 +102,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 1000
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -111,7 +111,7 @@
           collection: WoodDestroyHeavy
     - trigger:
         !type:DamageTrigger
-        damage: 250
+        damage: 500
       behaviors:
       - !type:PlaySoundBehavior
         sound:

@@ -23,3 +23,80 @@
     collection: FootstepBlood
     params:
       volume: 6
+
+- type: reagent
+  id: SkrellBlood
+  name: reagent-name-skrell-blood
+  group: Biological
+  desc: reagent-desc-skrell-blood
+  flavor: seabreeze
+  color: "#4285b4"
+  recognizable: true
+  physicalDesc: reagent-physical-desc-refreshing
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.5
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: -1
+            Caustic: -0.5
+      - !type:SatiateThirst
+        factor: 2.2
+        conditions:
+          - !type:OrganType
+            type: Skrell
+            shouldHave: false
+    Poison:
+      metabolismRate: 0.5
+      effects:
+      - !type:HealthChange
+        conditions:
+          - !type:OrganType
+            type: Skrell
+            shouldHave: True
+        damage:
+          types:
+            Caustic: 0.3
+  footstepSound:
+    collection: FootstepBlood
+    params:
+      volume: 6
+
+- type: reagent
+  id: ShelegBlood
+  name: reagent-name-sheleg-blood
+  group: Biological
+  desc: reagent-desc-sheleg-blood
+  flavor: iceblood
+  color: "#002f55"
+  recognizable: true
+  physicalDesc: reagent-physical-desc-frosty
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.5
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cold: -0.5
+            Blunt: -0.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+        damage:
+          types:
+            Cold: 2
+      - !type:AdjustTemperature
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+        amount: -41500
+      - !type:SatiateThirst
+        factor: 2
+  footstepSound:
+    collection: FootstepBlood
+    params:
+      volume: 6

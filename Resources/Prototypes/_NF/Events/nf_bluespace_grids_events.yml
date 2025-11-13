@@ -5,10 +5,10 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-vault-start-announcement
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_vault_arrival.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_arrival.ogg # Corvax-Frontier
     endAnnouncement: station-event-bluespace-vault-end-announcement
     endAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_vault_leave.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_leave.ogg # Corvax-Frontier
     warningAnnouncement: station-event-bluespace-vault-warning-announcement
     earliestStart: 100
     weight: 5
@@ -47,10 +47,10 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-vault-start-announcement
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_vault_arrival.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_arrival.ogg # Corvax-Frontier
     endAnnouncement: station-event-bluespace-vault-end-announcement
     endAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_vault_leave.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_leave.ogg # Corvax-Frontier
     warningAnnouncement: station-event-bluespace-vault-warning-announcement
     earliestStart: 100
     maximumPlayers: 30
@@ -90,11 +90,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_arrival.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Corvax-Frontier
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     endAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Corvax-Frontier
     earliestStart: 80
     minimumPlayers: 15
     weight: 1
@@ -129,11 +129,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_arrival.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Corvax-Frontier
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     endAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Corvax-Frontier
     earliestStart: 100
     minimumPlayers: 15
     weight: 1
@@ -168,11 +168,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_arrival.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Corvax-Frontier
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     endAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Corvax-Frontier
     earliestStart: 80
     minimumPlayers: 15
     weight: 1
@@ -207,11 +207,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-asteroid-start-announcement
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_asteroid_arrival.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_asteroid_arrival.ogg # Corvax-Frontier
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-asteroid-end-announcement
     endAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_asteroid_leave.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_asteroid_leave.ogg # Corvax-Frontier
     earliestStart: 20
     weight: 1
     duration: 1800
@@ -245,11 +245,11 @@
   # TODO: Maybe change start & end to unique Voice over audio
     startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_arrival.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Corvax-Frontier
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     endAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Corvax-Frontier
     earliestStart: 20
     maximumPlayers: 20
     weight: 5

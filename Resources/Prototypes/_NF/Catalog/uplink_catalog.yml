@@ -22,6 +22,17 @@
   categories:
   - UplinkWeaponry
 
+- type: listing # Forge-Change
+  id: UplinkNFWeaponPistolAnaconda45
+  name: uplink-pistol-anaconda-name
+  description: uplink-pistol-anaconda-desc
+  productEntity: NFWeaponPistolAnaconda45
+  discountCategory: rareDiscounts
+  cost:
+    Telecrystal: 12
+  categories:
+  - UplinkWeaponry
+
 - type: listing
   id: UplinkNFPistolCobra
   name: uplink-pistol-cobra-name

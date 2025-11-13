@@ -7,3 +7,13 @@
   - type: Sprite
     sprite: Forge/Structures/Decoration/banner.rsi
     state: banner_scraptech
+
+- type: entity
+  id: BannerTL
+  parent: BannerBase
+  name: Banner TL
+  description: Banner of the advanced military-industrial corporation TechnicLogistic.
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Decoration/banner.rsi
+    state: banner_tl

@@ -1,4 +1,4 @@
-ent-Stairs = ступеньки
+ent-Stairs = Ступеньки
     .desc = Величайшее изобретение после гранатомётов.
     .suffix = Стальной
 ent-StairStage = { ent-Stairs }

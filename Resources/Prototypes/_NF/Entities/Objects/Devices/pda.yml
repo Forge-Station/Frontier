@@ -344,6 +344,10 @@
     borderColor: "#FFFDD0"
     accentHColor: "#896b49"
   - type: Icon
+    sprite: Forge/Objects/Devices/pda.rsi #Forge-Change
+    state: pda-pal
+  - type: Sprite  #Forge-Change
+    sprite: Forge/Objects/Devices/pda.rsi
     state: pda-pal
 
 - type: entity

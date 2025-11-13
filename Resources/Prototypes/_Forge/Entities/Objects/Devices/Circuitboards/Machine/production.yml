@@ -149,3 +149,246 @@
       Bluespace: 8
   - type: Item
     size: Normal
+
+# DEFAULT THRUSTER
+- type: entity
+  id: ThrusterCentcomMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: ракетный двигатель ЦентКом (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterCentCom
+    requirements:
+      Capacitor: 3
+    stackRequirements:
+      Steel: 5
+
+# MEDIUM THRUSTERS
+- type: entity
+  id: ThrusterMediumMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: средний ракетный двигатель (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterMedium
+    requirements:
+      Capacitor: 16
+    stackRequirements:
+      Steel: 30
+      Cable: 20
+
+- type: entity
+  id: ThrusterMediumNfsdMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: средний ракетный двигатель ДСБФ (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterMediumNfsd
+    requirements:
+      Capacitor: 16
+    stackRequirements:
+      Steel: 40
+      Cable: 20
+
+- type: entity
+  id: ThrusterMediumSyndiMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: средний ракетный двигатель синдиката (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterMediumSyndi
+    requirements:
+      Capacitor: 14
+    stackRequirements:
+      Steel: 40
+      Cable: 20
+
+- type: entity
+  id: ThrusterMediumMercMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: средний ракетный двигатель наёмников (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterMediumMerc
+    requirements:
+      Capacitor: 16
+    stackRequirements:
+      Steel: 40
+      Cable: 20
+
+- type: entity
+  id: ThrusterMediumCentcomMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: средний ракетный двигатель ЦентКом (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterMediumCentcom
+    requirements:
+      Capacitor: 16
+    stackRequirements:
+      Steel: 40
+      Cable: 20
+
+# LONG THRUSTERS
+- type: entity
+  id: ThrusterMLongMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: длинный ракетный двигатель (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterMediumLong
+    requirements:
+      Capacitor: 20
+    stackRequirements:
+      Steel: 30
+      Cable: 20
+
+- type: entity
+  id: ThrusterMLongNfsdMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: длинный ракетный двигатель ДСБФ (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterMediumLongNfsd
+    requirements:
+      Capacitor: 18
+    stackRequirements:
+      Steel: 30
+      Cable: 20
+
+- type: entity
+  id: ThrusterMLongSyndiMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: длинный ракетный двигатель синдиката (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterMediumLongSyndi
+    requirements:
+      Capacitor: 16
+    stackRequirements:
+      Steel: 30
+      Cable: 20
+
+- type: entity
+  id: ThrusterMLongMercMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: длинный ракетный двигатель наёмников (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterMediumLongMerc
+    requirements:
+      Capacitor: 16
+    stackRequirements:
+      Steel: 30
+      Cable: 20
+
+- type: entity
+  id: ThrusterMLongCentcomMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: длинный ракетный двигатель ЦентКом (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterMediumLongCentCom
+    requirements:
+      Capacitor: 16
+    stackRequirements:
+      Steel: 30
+      Cable: 20
+
+# BIG THRUSTERS
+- type: entity
+  id: ThrusterBigMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: большой ракетный двигатель (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterBig
+    requirements:
+      Capacitor: 40
+    stackRequirements:
+      Steel: 120
+      Cable: 60
+
+- type: entity
+  id: ThrusterBigNfsdMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: большой ракетный двигатель ДСБФ (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterBigNfsd
+    requirements:
+      Capacitor: 40
+    stackRequirements:
+      Steel: 120
+      Cable: 60
+
+- type: entity
+  id: ThrusterBigSyndiMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: большой ракетный двигатель синдиката (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterBigSyndi
+    requirements:
+      Capacitor: 40
+    stackRequirements:
+      Steel: 120
+      Cable: 60
+
+- type: entity
+  id: ThrusterBigMercMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: большой ракетный двигатель наёмников (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterBigMerc
+    requirements:
+      Capacitor: 40
+    stackRequirements:
+      Steel: 120
+      Cable: 60
+
+- type: entity
+  id: ThrusterBigCentComMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: большой ракетный двигатель ЦентКом (машинная плата)
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: ThrusterBigCentCom
+    requirements:
+      Capacitor: 40
+    stackRequirements:
+      Steel: 120
+      Cable: 60

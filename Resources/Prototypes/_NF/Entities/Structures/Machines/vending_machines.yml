@@ -150,7 +150,7 @@
     key: enum.StoreUiKey.Key
   - type: Store
     balance:
-      Telecrystal: 20 #CorvaxFrontier
+      Telecrystal: 0 #CorvaxFrontier
   - type: AccessReader
     access: [["NuclearOperative"], ["SyndicateAgent"]]
 
@@ -461,7 +461,7 @@
   suffix: SR
   components:
   - type: VendingMachine
-    pack: NFPTechInventory
+    pack: PTechInventoryForge # Forge-Change
   - type: AccessReader
     access: [["HeadOfPersonnel"]]
   - type: MarketModifier

@@ -161,6 +161,8 @@
         Heat: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.9
+  - type: StaminaResistance # Corvax-Forge: Armor rebalance
+    damageCoefficient: 0.6
 
 #Elite web vest
 - type: entity
@@ -181,14 +183,16 @@
       coefficients:
         Blunt: 0.5
         Slash: 0.5
-        Piercing: 0.7
+        Piercing: 0.3
         Heat: 0.3
         Radiation: 0.5
         Caustic: 0.5
   - type: ExplosionResistance
     damageCoefficient: 0.5
   - type: FireProtection
-    reduction: 0.85
+    reduction: 0.75 # Corvax-Forge: Armor rebalance
+  - type: StaminaResistance # Corvax-Forge: Armor rebalance
+    damageCoefficient: 0.5
 
 #Mercenary web vest
 - type: entity

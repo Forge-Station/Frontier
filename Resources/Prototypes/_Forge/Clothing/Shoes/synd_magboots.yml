@@ -28,7 +28,8 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: StepHeavyBoots
-
+  - type: Jetpack
+    radarBlip: false
 
 - type: alert
   id: MagbootsSyndElite

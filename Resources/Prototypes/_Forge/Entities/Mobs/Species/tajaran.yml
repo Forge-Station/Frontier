@@ -15,6 +15,7 @@
   - type: Body
     prototype: Tajaran
     requiredLegs: 2
+  - type: NaturalNightVision
   - type: Inventory
     speciesId: reptilian # whyyy
     femaleDisplacements:
@@ -66,10 +67,6 @@
       types:
         Asphyxiation: -2.0
   - type: Wagging
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: Carriable # Frontier: Carrying system from nyanotrasen.
   - type: ShortWhitelist # Frontier
     scale: 0.8 # Frontier

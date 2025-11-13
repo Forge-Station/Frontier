@@ -152,7 +152,7 @@
 
 - type: entity
   id: NfsdTechFab
-  parent: [ NFBlueprintReceiverBase, SecurityTechFab ]
+  parent: [ BaseC2Contraband, NFBlueprintReceiverBase, SecurityTechFab ] #Corvax-Forge +BaseC2Contraband
   name: NFSD techfab
   description: Prints equipment for use by NFSD.
   components:

@@ -32,7 +32,7 @@
   - type: Contraband
     severity: Class2
     # Security and heads only (finally, shotgun traffic controller)
-    allowedDepartments: [ Security, Command ]
+    allowedDepartments: [ Security, Command, CentralCommand ]
 
 # Engineering equipment that's potentially hazardous in use
 - type: entity
@@ -41,7 +41,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Engineering ]
+    allowedDepartments: [ Engineering, CentralCommand ]
 
 - type: entity
   parent: BaseC2ContrabandUnredeemable
@@ -63,6 +63,15 @@
     turnInValues: &noFUCs
       FrontierUplinkCoin: 0
       Doubloon: 0
+
+- type: entity
+  parent: BaseC2Contraband
+  id: BaseC2ContrabandDisallowSecs
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Class2DisallowNFSD
+    allowedDepartments: []
 # endregion
 
 # region Class 3 Objects

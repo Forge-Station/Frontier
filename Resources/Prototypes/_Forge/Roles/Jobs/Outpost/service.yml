@@ -1,0 +1,49 @@
+- type: job
+  id: OutpostService
+  name: forge-job-name-outpostservice
+  description: forge-job-desc-outpostservice
+  playTimeTracker: JobOutpostService
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 0 # Посмотрим, что из этого выйдет..
+  startingGear: OutpostServiceGear
+  alwaysUseSpawner: true
+  icon: "JobIconOutpostService"
+  supervisors: job-supervisors-sr
+  weight: 80
+  displayWeight: 20 # Second from the bottom
+  canBeAntag: false
+  access:
+  - Service
+  - Janitor
+  - Theatre
+  - Kitchen
+  - Hydroponics
+  - Bar
+  - Maintenance
+  - External
+  - Frontier
+  - Atmospherics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: OutpostServiceGear
+  equipment:
+    ears: ClothingHeadsetService
+    eyes: ClothingEyesGlassesSunglasses #ClothingEyesGlassesSecurity
+  storage:
+    back:
+    - BoxFolderClipboard
+  encryptionKeys:
+  - EncryptionKeyService
+  - EncryptionKeyGreeting
+
+- type: chameleonOutfit
+  id: OutpostServiceChameleonOutfit
+  job: OutpostService
+  hasMindShield: true

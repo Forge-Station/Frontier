@@ -3,6 +3,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Radio.Components;
+using Content._Forge.Shared.Loudspeaker.Events; // Forge-Change
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Radio;
@@ -122,11 +123,30 @@ public sealed class RadioSystem : EntitySystem
         else
             channelText = $"\\[{channel.LocalizedName}\\]";
         // End Frontier
+        // Corvax-Forge start
+        int? loudSpeakFont = null;
+
+        var getLoudspeakerEv = new GetLoudspeakerEvent();
+        RaiseLocalEvent(messageSource, ref getLoudspeakerEv);
+
+        if (getLoudspeakerEv.Loudspeakers != null)
+            foreach (var loudspeaker in getLoudspeakerEv.Loudspeakers)
+            {
+                var loudSpeakerEv = new GetLoudspeakerDataEvent();
+                RaiseLocalEvent(loudspeaker, ref loudSpeakerEv);
+
+                if (loudSpeakerEv.IsActive && loudSpeakerEv.AffectRadio)
+                {
+                    loudSpeakFont = loudSpeakerEv.FontSize;
+                    break;
+                }
+            }
+        // Corvax-Forge end
 
         var wrappedMessage = Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
             ("color", channel.Color),
             ("fontType", speech.FontId),
-            ("fontSize", speech.FontSize),
+            ("fontSize", loudSpeakFont ?? speech.FontSize), // Corvax-Forge - "loudSpeakFont"
             ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
             ("channel", channelText), // Frontier: $"\\[{channel.LocalizedName}\\]"<channelText
             ("name", name),

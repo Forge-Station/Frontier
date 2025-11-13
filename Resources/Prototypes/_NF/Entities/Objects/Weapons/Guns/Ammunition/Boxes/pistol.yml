@@ -139,7 +139,7 @@
 
 - type: entity
   id: NFAmmunitionBoxPistol35Emp # MagazineBoxPistolEmp
-  parent: NFBaseAmmunitionBoxPistol35
+  parent: [NFBaseAmmunitionBoxPistol35, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.35 pistol, EMP)
   components:
   - type: BallisticAmmoProvider
@@ -266,7 +266,7 @@
 
 - type: entity
   id: NFAmmunitionBoxPistol45Emp # MagazineBoxPistolEmp
-  parent: NFBaseAmmunitionBoxPistol45
+  parent: [NFBaseAmmunitionBoxPistol45, BaseC2ContrabandUnredeemable] # Corvax-Forge: Contraband T2
   name: ammunition box (.45 pistol, EMP)
   components:
   - type: BallisticAmmoProvider
@@ -284,7 +284,7 @@
 
 - type: entity
   id: NFAmmunitionBoxPistol45AP # MagazineBoxPistolEmp
-  parent: NFBaseAmmunitionBoxPistol45
+  parent: [NFBaseAmmunitionBoxPistol45, BaseC2Contraband]
   name: ammunition box (.45 pistol, AP)
   components:
   - type: BallisticAmmoProvider

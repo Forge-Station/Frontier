@@ -1,0 +1,61 @@
+- type: loadout
+  id: ClothingBackpackChemistryOMedLd
+  equipment:
+    back: ClothingBackpackChemistry
+
+- type: loadout
+  id: ClothingBackpackSatchelChemistryOMedLd
+  equipment:
+    back: ClothingBackpackSatchelChemistry
+
+- type: loadout
+  id: ClothingBackpackDuffelChemistryOMedLd
+  equipment:
+    back: ClothingBackpackDuffelChemistry
+
+- type: loadout
+  id: ClothingBackpackMessengerChemistryOMedLd
+  equipment:
+    back: ClothingBackpackMessengerChemistry
+
+# region PlayTime
+- type: loadout
+  id: ClothingBackpackVirologyOMedLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT1
+  equipment:
+    back: ClothingBackpackVirology
+
+- type: loadout
+  id: ClothingBackpackSatchelVirologyOMedLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT1
+  equipment:
+    back: ClothingBackpackSatchelVirology
+
+- type: loadout
+  id: ClothingBackpackDuffelVirologyOMedLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT1
+  equipment:
+    back: ClothingBackpackDuffelVirology
+
+- type: loadout
+  id: ClothingBackpackMessengerVirologyOMedLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT1
+  equipment:
+    back: ClothingBackpackMessengerVirology
+
+# ERT
+- type: loadout
+  id: ClothingBackpackERTMedicalOMedLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT5
+  equipment:
+    back: ClothingBackpackERTMedical

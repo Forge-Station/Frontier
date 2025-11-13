@@ -876,6 +876,8 @@
   - ContractorClothingMaskSadMime
   - ContractorClothingMaskClown
   - ContractorClothingMaskClownBald
+  - ForgeClothingMaskNeckGaiter # Forge-change add: ForgeClothingMaskNeckGaiter
+  - ForgeClothingMaskNeckGaiterRed # Forge-change add: ForgeClothingMaskNeckGaiterRed
   fallbacks:
   - ContractorClothingMaskBreath
 
@@ -890,10 +892,13 @@
   - ContractorNFBoxSurvivalExtendedNitrogen
   - ContractorNFBoxSurvivalSheleg
   - ContractorNFBoxSurvivalExtendedSheleg
+  - ForgeAndroidSurvival # Forge-add
+  - ForgeAndroidExtendedSurvival # Forge-add
   fallbacks:
   - ContractorNFBoxSurvival
   - ContractorNFBoxSurvivalNitrogen
   - ContractorNFBoxSurvivalSheleg
+  - ForgeAndroidSurvival # Forge-add
 
 - type: loadoutGroup
   id: ContractorEncryptionKey

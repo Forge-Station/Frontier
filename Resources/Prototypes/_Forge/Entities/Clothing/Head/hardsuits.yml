@@ -1,0 +1,27 @@
+- type: entity
+  parent: [ ClothingHeadHelmetHardsuitMercenary, BaseC1Contraband ]
+  id: ClothingHeadHelmetHardsuitAAMr
+  name: AAM R-41 Spectre helmet
+  description: AAM r-41 helmet desc
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/syndicate.rsi # textures from _Mono
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/syndicate.rsi # textures from _Mono
+  - type: PointLight
+    color: "#8FBC8F"
+
+- type: entity
+  parent: [ ClothingHeadHelmetHardsuitMercenary, BaseC1Contraband ]
+  id: ClothingHeadHelmetHardsuitAAMrAdv
+  name: AAM r-44 helmet
+  description: AAM r-44 helmet desc
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/syndielite.rsi # textures from _Mono
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/syndielite.rsi # textures from _Mono
+  - type: PointLight
+    color: "#800000"

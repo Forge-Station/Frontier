@@ -5,7 +5,7 @@
   id: BreachingCharge
   components:
   - type: Sprite
-    sprite: _DV/Objects/Weapons/Bombs/breaching.rsi
+    sprite: Forge/Objects/Weapons/Bombs/breaching.rsi # Forge-Change
     state: icon
     layers:
     - state: icon

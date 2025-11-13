@@ -12,6 +12,8 @@
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenary
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryMedic
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryCaptain
+  - ForgeMercJumpsuitMilitaryMerc # Forge-change add: ForgeMercJumpsuitMilitaryMerc
+  - ForgeMercJumpsuitMilitaryMercTac # Forge-change add: ForgeMercJumpsuitMilitaryMercTac
   - MercenaryClothingUniformJumpskirtArcadia #Forge-Change
   - MercenaryClothingUniformJumpsuitArcadia #Forge-Change
   - MercenaryClothingUniformJumpsuitMilitaryArcadiaTac #Forge-Change
@@ -120,6 +122,7 @@
   - MercenaryClothingHandsMercenaryGlovesCombat
   - MercenaryClothingHandsGlovesCombat
   - MercenaryClothingHandsGlovesArcadiaCombat #Forge-Change
+  - ForgeMercGlovesCombatUpgrade # Forge-change add ForgeMercGlovesCombatUpgrade
   subgroups:
   - PilotGloves
   - ContractorGloves
@@ -166,6 +169,7 @@
   minLimit: 0
   loadouts:
   - MercenaryClothingBeltMercenaryWebbing
+  - ForgeMercBeltWebbingsNormalBlack # Forge-change add ForgeMercBeltWebbingsNormalBlack
   - MercenaryClothingBeltMilitaryWebbing
   - MercenaryClothingBeltMilitaryWebbingMed
   - MercenaryClothingBeltSecurity

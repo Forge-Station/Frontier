@@ -26,12 +26,12 @@
 
 - type: entity
   parent: VendingMachine
-  id: VendingMachineMedical Syndicate
+  id: VendingMachineMedicalSyndicate
   name: СиндиМед
   description: Разработанный Синдикатом раздатчик минимальный для выживания бойца медикаментов.
   components:
   - type: VendingMachine
-    pack: NanoMedPlusInventory
+    pack: SyndiMedPlusInventory # больше не наномед ;c
     offState: off
     brokenState: broken
     normalState: normal-unshaded
@@ -43,7 +43,7 @@
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: Forge/Structures/Machines/medical_syndicate.rsi
+    sprite: Forge/Structures/Machines/medical_syndicate_alt.rsi # Forge-Change
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -61,6 +61,8 @@
   - type: GuideHelp
     guides:
     - Medical Doctor
+  - type: AccessReader
+    access: [["SyndicateAgent"]]
 
 - type: entity
   parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]
@@ -118,3 +120,77 @@
     color: "#353492"
   - type: AccessReader
     access: [["CentralCommand"]]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineSnackDonkNT
+  name: Любимые Снэки Donk
+  description: Насладитесь потрясающим вкусом любого из наших продуктов, которые считаются лучшими в мире для откорма и вредны для здоровья! ДОНК!!
+  components:
+  - type: VendingMachine
+    pack: SnackDonkNTPack
+    dispenseOnHitChance: 0.25
+    dispenseOnHitThreshold: 2
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    initialStockQuality: 0.69
+  - type: MarketModifier
+    mod: 200
+  - type: Advertise
+    pack: GetmoreChocolateCorpAds
+  - type: SpeakOnUIClosed
+    pack: GetmoreChocolateCorpGoodbyes
+  - type: Sprite
+    sprite: Forge/Structures/Machines/VendingMachines/donkvendNT.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#4682B4"
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineSnackDonkSyndi
+  name: Любимые Снэки Donk
+  description: Насладитесь потрясающим вкусом любого из наших продуктов, которые считаются лучшими в мире для откорма и вредны для здоровья! ДОНК!!
+  components:
+  - type: VendingMachine
+    pack: SnackDonkSyndiPack
+    dispenseOnHitChance: 0.25
+    dispenseOnHitThreshold: 2
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    initialStockQuality: 1
+  - type: MarketModifier
+    mod: 200
+  - type: Advertise
+    pack: GetmoreChocolateCorpAds
+  - type: SpeakOnUIClosed
+    pack: GetmoreChocolateCorpGoodbyes
+  - type: Sprite
+    sprite: Forge/Structures/Machines/VendingMachines/donkvendSY.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#800000"

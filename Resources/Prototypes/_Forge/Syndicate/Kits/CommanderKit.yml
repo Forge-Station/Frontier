@@ -1,0 +1,27 @@
+- type: entity
+  id: ToolboxCommander
+  name: подозрительный ящик неопределённости
+  suffix: Командир
+  description: Что же взять на этот раз?
+  parent: [ BaseItem, BaseC3SyndicateContraband ] # Frontier: BaseMinorContraband<BaseC3SyndicateContraband
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Misc/Syndicatebox.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SyndCommander1Set
+    - SyndCommander2Set
+    - SyndCommander3Set
+    - SyndCommander4Set
+    - SyndCommander5Set
+    - SyndCommander6Set
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+  - type: Contraband # Frontier
+    hideValues: true # Frontier

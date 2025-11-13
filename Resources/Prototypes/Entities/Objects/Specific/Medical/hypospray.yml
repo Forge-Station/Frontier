@@ -72,6 +72,8 @@
     maxFillLevels: 4
     fillBaseName: hypo_fill
     solutionName: hypospray
+  - type: StaticPrice # Forge-change add: StaticPrice
+    price: 10000 # бубубу бебебе
 
 - type: entity
   name: borghypo
@@ -617,7 +619,7 @@
 
 - type: entity
   name: combat medipen
-  parent: [ChemicalMedipen, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ChemicalMedipen, BaseC1Contraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband #Corvax-Forge BaseC3SyndicateContraband<BaseC1Contraband
   id: CombatMedipen
   description: A single-use medipen containing chemicals that regenerate most types of damage.
   components:

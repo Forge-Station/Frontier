@@ -21,16 +21,16 @@
   - type: ChamberMagazineAmmoProvider
     boltClosed: null
   - type: Gun
-    projectileSpeed: 20
-    fireRate: 7
-    minAngle: 1
-    maxAngle: 5
+    projectileSpeed: 38
+    fireRate: 6
+    minAngle: 3
+    maxAngle: 12
     angleIncrease: 2
     angleDecay: 8
     selectedMode: FullAuto
-    shotsPerBurst: 7
+    shotsPerBurst: 6
     burstCooldown: 0.3
-    burstFireRate: 8
+    burstFireRate: 5.5
     availableModes:
     - SemiAuto
     - Burst
@@ -73,3 +73,9 @@
     steps: 6
     zeroVisible: true
   - type: Appearance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: NFWeaponDetails
+    class: weapon-details-class-light-machine-gun
+    manufacturer: weapon-details-manufacturer-TechnicLogistic

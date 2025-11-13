@@ -1,0 +1,42 @@
+- type: vendingMachineInventory
+  id: SnackDonkNTPack
+  startingInventory:
+    FoodBoxDonkpocket: 4
+    FoodBoxDonkpocketTeriyaki: 2
+    FoodBoxDonkpocketPizza: 2
+    FoodBoxDonkpocketSpicy: 2
+    FoodBoxDonkpocketBerry: 2
+    FoodBoxDonkpocketHonk: 2
+    FoodBoxDonkpocketDink: 1
+    FoodBoxDonkpocketStonk: 1
+    FoodBoxDonkpocketCarp: 1
+    FoodBoxDonkpocketMoth: 4
+    FoodBoxNugget: 4
+    FoodPSB: 6
+    DrinkColaCan: 6
+    BoxFoodPizzaDonkpocket: 1
+    BoxFoodPizzaArnold: 1
+    BoxFoodPizzaSassysage: 1
+    BoxFoodPizzaWorldpeas: 1
+
+- type: vendingMachineInventory
+  id: SnackDonkSyndiPack
+  startingInventory:
+    FoodBoxDonkpocket: 4294967295 # Infinite
+    FoodBoxDonkpocketTeriyaki: 4294967295 # Infinite
+    FoodBoxDonkpocketPizza: 4294967295 # Infinite
+    FoodBoxDonkpocketSpicy: 4294967295 # Infinite
+    FoodBoxDonkpocketBerry: 4294967295 # Infinite
+    FoodBoxDonkpocketHonk: 4294967295 # Infinite
+    FoodBoxDonkpocketDink: 4294967295 # Infinite
+    FoodBoxDonkpocketStonk: 4294967295 # Infinite
+    FoodBoxDonkpocketCarp: 4294967295 # Infinite
+    FoodBoxDonkpocketMoth: 4294967295 # Infinite
+    FoodBoxNugget: 4294967295 # Infinite
+    FoodPSB: 4294967295 # Infinite
+    DrinkColaCan: 4294967295 # Infinite
+    DrinkColaBottleFull: 4294967295 # Infinite
+    BoxFoodPizzaSyndiDonkpocketSyndi: 4294967295 # Infinite
+    BoxFoodSyndiPizzaArnoldSyndi: 4294967295 # Infinite
+    BoxFoodSyndiPizzaSassysageSyndi: 4294967295 # Infinite
+    BoxFoodSyndiPizzaSyndi: 4294967295 # Infinite

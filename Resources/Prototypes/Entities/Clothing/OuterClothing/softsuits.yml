@@ -34,14 +34,25 @@
     - SuitEVA
     - MonkeyWearable
     - WhitelistChameleon
-  - type: Armor #CorvaxFrontier
+  - type: FireProtection # Corvax-Forge: Armor rebalance
+    reduction: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance # Corvax-Forge: Armor rebalance
+    damageCoefficient: 0.6
+  - type: Armor
     modifiers:
-      coefficients:
-        Blunt: 0.8
-        Slash: 0.8
+      coefficients: # Corvax-Forge: Armor rebalance
+        Blunt: 0.65
+        Slash: 0.65
         Piercing: 0.65
-        Heat: 0.4
-        Caustic: 0.75
+        Heat: 0.6
+        Radiation: 0.55
+        Caustic: 0.65
+  - type: ClothingSpeedModifier  # Corvax-Forge: Armor rebalance
+    walkModifier: 1
+    sprintModifier: 1
+
 #Emergency EVA
 - type: entity
   parent: NFClothingOuterEVASuitBase # Frontier: ClothingOuterEVASuitBase<NFClothingOuterEVASuitBase

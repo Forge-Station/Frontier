@@ -1,7 +1,7 @@
 using Content.Client.Audio;
 using Content.Shared._Forge.Speech.Synthesis;
 using Content.Shared.Chat;
-using Content.Shared._Forge.ForgeVars;
+using Content.Shared._Forge;
 using Robust.Client.Audio;
 using Robust.Client.Player;
 using Robust.Client.ResourceManagement;

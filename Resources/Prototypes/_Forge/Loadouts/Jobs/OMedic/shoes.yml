@@ -1,0 +1,38 @@
+- type: loadout
+  id: ClothingShoesLeatherOMedLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesLeather
+
+- type: loadout
+  id: ClothingShoesBootsWinterMedOMedLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterMed
+
+- type: loadout
+  id: ClothingShoesBootsWinterViroOMedLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterViro
+
+- type: loadout
+  id: ClothingShoesBootsCowboyWhiteOMedLd
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT1
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsCowboyWhite

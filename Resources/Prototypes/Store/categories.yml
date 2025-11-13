@@ -34,6 +34,11 @@
   priority: 4
 
 #uplink categoires
+- type: storeCategory # Forge-Change
+  id: UplinkConverter
+  name: store-category-converter
+  priority: -1
+
 - type: storeCategory
   id: UplinkWeaponry
   name: store-category-weapons

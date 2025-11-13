@@ -12,4 +12,34 @@
     damageCoefficient: 0.1
   - type: Storage
     grid:
-    - 0,0,9,1
+    - 0,0,10,1
+
+- type: entity
+  parent: [ BaseC2ContrabandUnredeemable, ClothingBeltChiefEngineer, ContentsExplosionResistanceBase ]
+  id: ClothingBeltNfsdEngineer
+  name: nfsd engineer's toolbelt
+  description: nfsd engineer's toolbelt desc
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Belt/nfsd_engi_belt.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Belt/nfsd_engi_belt.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,10,1
+
+# Filled версия
+- type: entity
+  parent: ClothingBeltNfsdEngineer
+  id: ClothingBeltNfsdEngineerFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: RCDNfsd
+    - id: JawsOfLifeNfsd
+    - id: PowerDrillNfsd
+    - id: WelderNfsd
+    - id: MultitoolNfsd

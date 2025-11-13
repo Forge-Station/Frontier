@@ -1,0 +1,59 @@
+- type: entity
+  parent: [BaseC2ContrabandDisallowSecs, NFClothingBeltStorageBase, ContentsExplosionResistanceBase]
+  id: ClothingBeltMilitaryWebbingSyndicate
+  name: РПС синдиката
+  description: Ременно-плечевая система тактических ремней.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Belt/syndicatewebbing.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Belt/syndicatewebbing.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,10,1
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingSyndicate
+  id: ClothingBeltMilitaryWebbingSyndicateShturm
+  name: РПС штурмовика синдиката
+  description: Ременно-плечевая система тактических ремней.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Belt/syndicatewebbingshturm.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Belt/syndicatewebbingshturm.rsi
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingSyndicate
+  id: ClothingBeltMilitaryWebbingSyndicateMed
+  name: РПС санитара синдиката
+  description: Ременно-плечевая система тактических ремней.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Belt/syndicatewebbingmed.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Belt/syndicatewebbingmed.rsi
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingSyndicate
+  id: ClothingBeltMilitaryWebbingSyndicateEng
+  name: РПС техника синдиката
+  description: Ременно-плечевая система тактических ремней.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Belt/syndicatewebbingeng.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Belt/syndicatewebbingeng.rsi
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingSyndicate
+  id: ClothingBeltMilitaryWebbingSyndicateCommand
+  name: РПС командира синдиката
+  description: Ременно-плечевая система тактических ремней.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Belt/syndicatewebbingcom.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Belt/syndicatewebbingcom.rsi

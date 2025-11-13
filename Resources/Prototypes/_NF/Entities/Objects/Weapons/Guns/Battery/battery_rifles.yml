@@ -2,7 +2,7 @@
 #region Laser
 - type: entity
   id: NFWeaponEnergyRifleCarbine
-  parent: [ NFBaseWeaponEnergyRifleFireModes, NFBaseWeaponFrameEnergyRifleNanotrasen ]
+  parent: [ BaseC1Contraband, NFBaseWeaponEnergyRifleFireModes, NFBaseWeaponFrameEnergyRifleNanotrasen ] #Corvax-Forge +BaseC1Contraband
   name: laser carbine
   suffix: Frontier
   description: |-

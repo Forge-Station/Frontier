@@ -29,6 +29,8 @@
   - type: ProtectedGrid
     noGridCollision: true #Forge-Change
   - type: BlockEvacuation #Forge-Change
+  - type: ShuttleFaction #Forge-Change
+    faction: Syndicate
 
 - type: gameMap
   id: LPBravo

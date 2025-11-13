@@ -143,7 +143,7 @@
 
 - type: entity
   id: ClothingBeltMilitaryWebbingGrenadeFilled
-  parent: ClothingBeltMilitaryWebbing
+  parent: ClothingBeltMilitaryWebbingSyndicate # Corvax-Frontier
   name: grenadier chest rig
   suffix: Filled
   components:
@@ -164,7 +164,7 @@
 
 - type: entity
   id: ClothingBeltMilitaryWebbingMedFilled
-  parent: ClothingBeltMilitaryWebbingMed
+  parent: ClothingBeltMilitaryWebbingSyndicateMed # Corvax-Frontier
   suffix: Filled
   components:
   - type: StorageFill

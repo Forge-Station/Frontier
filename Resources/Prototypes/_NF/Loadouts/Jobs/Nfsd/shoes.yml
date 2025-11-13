@@ -13,3 +13,11 @@
     proto: ShoesCapableNF
   equipment:
     shoes: ClothingShoesBootsNfsdCreamFilled
+
+- type: loadout
+  id: PalClothingShoesBootsLaceup
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsLaceup

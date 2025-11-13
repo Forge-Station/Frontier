@@ -1,0 +1,94 @@
+- type: loadout
+  id: ClothingBackpackSatchelOServLd
+  equipment:
+    back: ClothingBackpackSatchel
+
+- type: loadout
+  id: NFClothingBackpackOServLd
+  equipment:
+    back: NFClothingBackpack
+
+- type: loadout
+  id: NFClothingDuffelOServLd
+  equipment:
+    back: NFClothingDuffel
+
+- type: loadout
+  id: ClothingBackpackMessengerColorBlackOServLd
+  equipment:
+    back: ClothingBackpackMessengerColorBlack
+
+- type: loadout
+  id: ClothingBackpackMessengerColorBlueOServLd
+  equipment:
+    back: ClothingBackpackMessengerColorBlue
+
+- type: loadout
+  id: ClothingBackpackMessengerColorPurpleOServLd
+  equipment:
+    back: ClothingBackpackMessengerColorPurple
+
+- type: loadout
+  id: ClothingBackpackMessengerColorOrangeOServLd
+  equipment:
+    back: ClothingBackpackMessengerColorOrange
+
+- type: loadout
+  id: ClothingBackpackMessengerColorBrownLightOServLd
+  equipment:
+    back: ClothingBackpackMessengerColorBrownLight
+
+- type: loadout
+  id: ClothingBackpackMessengerColorGreenOServLd
+  equipment:
+    back: ClothingBackpackMessengerColorGreen
+
+- type: loadout
+  id: ClothingBackpackMessengerColorBrownOServLd
+  equipment:
+    back: ClothingBackpackMessengerColorBrown
+
+- type: loadout
+  id: ClothingBackpackMessengerColorWhiteOServLd
+  equipment:
+    back: ClothingBackpackMessengerColorWhite
+
+- type: loadout
+  id: ClothingBackpackMessengerColorRedOServLd
+  equipment:
+    back: ClothingBackpackMessengerColorRed
+
+- type: loadout
+  id: ClothingBackpackMessengerOServLd
+  equipment:
+    back: ClothingBackpackMessenger
+
+- type: loadout
+  id: ClothingBackpackDuffelHydroponicsOServLd
+  equipment:
+    back: ClothingBackpackDuffelHydroponics
+
+- type: loadout
+  id: ClothingBackpackSatchelHydroponicsOServLd
+  equipment:
+    back: ClothingBackpackSatchelHydroponics
+
+- type: loadout
+  id: ClothingBackpackHydroponicsOServLd
+  equipment:
+    back: ClothingBackpackHydroponics
+
+- type: loadout
+  id: ClothingBackpackMessengerHydroponicsOServLd
+  equipment:
+    back: ClothingBackpackMessengerHydroponics
+
+# region PlayTime
+# Рюкзак ОБР уборщика
+- type: loadout
+  id: ClothingBackpackERTJanitorOServLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OServiceT5
+  equipment:
+    back: ClothingBackpackERTJanitor

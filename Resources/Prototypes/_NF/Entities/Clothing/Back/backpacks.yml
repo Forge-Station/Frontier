@@ -44,6 +44,11 @@
   components:
   - type: Sprite
     sprite: _NF/Clothing/Back/Backpacks/nfsd_brown.rsi
+  - type: ExplosionResistance # Corvax-Forge
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,7,4
 
 - type: entity
   parent: ClothingBackpackNfsdBrown

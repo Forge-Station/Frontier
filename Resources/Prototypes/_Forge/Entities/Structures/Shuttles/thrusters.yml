@@ -1,74 +1,5 @@
 #Corvax-frotier (Mersen)
 - type: entity
-  name: Большой двигатель ДСБФ
-  id: ThrusterNfsdAss
-  parent: ThrusterSecurity
-  suffix: NFSD Усиленные для больших шаттлов
-  placement:
-    mode: AlignTileAny
-  components:
-  - type: Transform
-    anchored: true
-  - type: Sprite
-    sprite: Forge/Structures/Shuttles/thrusternfsd.rsi
-    layers:
-    - state: base
-      map: ["enum.ThrusterVisualLayers.Base"]
-    - state: thrust
-      map: ["enum.ThrusterVisualLayers.ThrustOn"]
-      shader: unshaded
-      visible: false
-    - state: thrust_burn_unshaded
-      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
-      shader: unshaded
-      visible: false
-      offset: 0, 3
-  - type: Machine
-    board: ThrusterNfsdMachineCircuitboard
-  - type: Thruster
-    damage:
-      types:
-        Heat: 80
-    thrust: 500
-    baseThrust: 500
-  - type: ApcPowerReceiver
-    powerLoad: 5000
-  - type: StaticPrice
-    price: 10000
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 3000
-      behaviors:
-        - !type:DoActsBehavior
-          acts: ["Destruction"]
-    - trigger:
-        !type:DamageTrigger
-        damage: 1000
-      behaviors:
-        - !type:DoActsBehavior
-          acts: ["Destruction"]
-        - !type:PlaySoundBehavior
-          sound:
-            collection: MetalBreak
-        - !type:ChangeConstructionNodeBehavior
-          node: machineFrame
-  - type: Physics
-    bodyType: Static
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-1.5,-1.5,1.5,1.5"
-        density: 3250
-        mask:
-        - LargeMobMask
-        layer:
-        - WallLayer
-
-- type: entity
   name: Большой гироскоп ДСБФ
   id: GyroscopeNfsdAss
   parent: GyroscopeSecurity
@@ -271,6 +202,10 @@
     layers:
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
     - state: thrust_burn_unshaded
       map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
       shader: unshaded
@@ -288,4 +223,523 @@
     - Off
     - Toggle
   - type: PirateBountyItem
-    id: Thruster
+
+# DefaultThruster
+- type: entity
+  id: ThrusterCentCom
+  name: двигатель ЦентКом
+  parent: ThrusterSecurity
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/thruster.rsi
+    layers:
+    - state: base_centcom
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 1
+  - type: Machine
+    board: ThrusterCentcomMachineCircuitboard
+
+# MediumThrusters???
+- type: entity
+  id: BaseThrusterMedium
+  name: средний двигатель
+  parent: [ BaseThruster, ConstructibleMachine ]
+  abstract: true
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1800
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 900
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-1.45,1.45,0.45"
+        density: 1750
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: Thruster
+    thrust: 364
+    baseThrust: 280
+    thrustPerPartLevel: [364, 476, 588, 700]
+    burnShape: ["-0.3,0.5","0.2,1.6","0.8,1.6","1.3,0.5"]
+    damage:
+      types:
+        Heat: 120
+  - type: Anchorable
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  id: ThrusterMedium
+  name: средний двигатель
+  parent: BaseThrusterMedium
+  components:
+  - type: Machine
+    board: ThrusterMediumMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/medium_thruster.rsi
+    offset: 0.5,-0.5
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 1.96
+      scale: 0.6, 1
+
+- type: entity
+  id: ThrusterMediumNfsd
+  name: средний двигатель ДСБФ
+  parent: BaseThrusterMedium
+  components:
+  - type: Machine
+    board: ThrusterMediumNfsdMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/medium_thruster.rsi
+    offset: 0.5,-0.5
+    layers:
+    - state: mediumnfsd
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 1.96
+      scale: 0.6, 1
+
+- type: entity
+  id: ThrusterMediumSyndi
+  name: средний двигатель синдиката
+  parent: BaseThrusterMedium
+  components:
+  - type: Machine
+    board: ThrusterMediumSyndiMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/medium_thruster.rsi
+    offset: 0.5,-0.5
+    layers:
+    - state: mediumsyndi
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 1.96
+      scale: 0.6, 1
+
+- type: entity
+  id: ThrusterMediumMerc
+  name: средний двигатель наёмников
+  parent: BaseThrusterMedium
+  components:
+  - type: Machine
+    board: ThrusterMediumMercMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/medium_thruster.rsi
+    offset: 0.5,-0.5
+    layers:
+    - state: mediummerc
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 1.96
+      scale: 0.6, 1
+
+- type: entity
+  id: ThrusterMediumCentcom
+  name: средний двигатель ЦентКом
+  parent: BaseThrusterMedium
+  components:
+  - type: Machine
+    board: ThrusterMediumCentcomMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/medium_thruster.rsi
+    offset: 0.5,-0.5
+    layers:
+    - state: mediumcentcom
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 1.96
+      scale: 0.6, 1
+
+# MediumLongThusters???
+- type: entity
+  id: BaseThrusterMediumLong
+  name: длинный двигатель
+  parent: [ BaseThruster, ConstructibleMachine ]
+  abstract: true
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1800
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 900
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-1.5,0.5,1.3"
+        density: 1750
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: Thruster
+    thrust: 364
+    baseThrust: 280
+    thrustPerPartLevel: [364, 476, 588, 700]
+    burnShape: ["-0.5,1.25","0.2,2","-0.2,2","0.5,1.25"]
+    damage:
+      types:
+        Heat: 120
+  - type: Anchorable
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  id: ThrusterMediumLong
+  name: длинный двигатель
+  parent: BaseThrusterMediumLong
+  components:
+  - type: Machine
+    board: ThrusterMLongMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/medi_long_thruster.rsi
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 2.7
+      scale: 0.7, 1
+
+- type: entity
+  id: ThrusterMediumLongNfsd
+  name: длинный двигатель ДСБФ
+  parent: BaseThrusterMediumLong
+  components:
+  - type: Machine
+    board: ThrusterMLongNfsdMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/medi_long_thruster.rsi
+    layers:
+    - state: medinfsd
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 2.7
+      scale: 0.7, 1
+
+- type: entity
+  id: ThrusterMediumLongMerc
+  name: длинный двигатель наёмников
+  parent: BaseThrusterMediumLong
+  components:
+  - type: Machine
+    board: ThrusterMLongMercMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/medi_long_thruster.rsi
+    layers:
+    - state: medimerc
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 2.7
+      scale: 0.7, 1
+
+- type: entity
+  id: ThrusterMediumLongSyndi
+  name: длинный двигатель синдиката
+  parent: BaseThrusterMediumLong
+  components:
+  - type: Machine
+    board: ThrusterMLongSyndiMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/medi_long_thruster.rsi
+    layers:
+    - state: medisyndi
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 2.7
+      scale: 0.7, 1
+
+- type: entity
+  id: ThrusterMediumLongCentCom
+  name: длинный двигатель ЦентКом
+  parent: BaseThrusterMediumLong
+  components:
+  - type: Machine
+    board: ThrusterMLongCentcomMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/medi_long_thruster.rsi
+    layers:
+    - state: medicentcom
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 2.7
+      scale: 0.7, 1
+
+# BigThrusters???
+- type: entity
+  id: BaseThrusterBig
+  name: базовый большой двигатель
+  parent: [ BaseThruster, ConstructibleMachine ]
+  abstract: true
+  components:
+  - type: Anchorable
+  - type: Thruster
+    thrust: 780
+    baseThrust: 600
+    thrustPerPartLevel: [780, 1020, 1260, 1950]
+    burnShape: ["-1.3,1","-0.8,2.5","0.8,2.5","1.3,1"]
+    damage:
+      types:
+        Heat: 170
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1800
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 900
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1"
+        density: 1750
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  id: ThrusterBig
+  name: большой двигатель
+  parent: BaseThrusterBig
+  components:
+  - type: Machine
+    board: ThrusterBigMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/big_thruster.rsi
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 2.7
+      scale: 0.7, 1
+
+- type: entity
+  id: ThrusterBigNfsd
+  name: большой двигатель ДСБФ
+  parent: BaseThrusterBig
+  components:
+  - type: Machine
+    board: ThrusterBigNfsdMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/big_thruster.rsi
+    layers:
+    - state: bignfsd
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 2.7
+      scale: 0.7, 1
+
+- type: entity
+  id: ThrusterBigSyndi
+  name: большой двигатель синдиката
+  parent: BaseThrusterBig
+  components:
+  - type: Machine
+    board: ThrusterBigSyndiMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/big_thruster.rsi
+    layers:
+    - state: bigsyndi
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 2.7
+      scale: 0.7, 1
+
+- type: entity
+  id: ThrusterBigMerc
+  name: большой двигатель наёмников
+  parent: BaseThrusterBig
+  components:
+  - type: Machine
+    board: ThrusterBigMercMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/big_thruster.rsi
+    layers:
+    - state: bigmerc
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 2.7
+      scale: 0.7, 1
+
+- type: entity
+  id: ThrusterBigCentCom
+  name: большой двигатель ЦентКом
+  parent: BaseThrusterBig
+  components:
+  - type: Machine
+    board: ThrusterBigCentComMachineCircuitboard
+  - type: Sprite
+    sprite: Forge/Structures/Shuttles/big_thruster.rsi
+    layers:
+    - state: bigcentcom
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 2.7
+      scale: 0.7, 1

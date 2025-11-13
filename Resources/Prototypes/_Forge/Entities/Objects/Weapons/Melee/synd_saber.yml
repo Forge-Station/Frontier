@@ -51,9 +51,10 @@
   - type: MeleeWeapon
     resistanceBypass: true
     attackRate: 1.5
+    angle: 0
     damage:
       types:
-        Slash: 17
+        Slash: 19
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Reflect

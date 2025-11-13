@@ -93,3 +93,41 @@
       - id: ClothingHandsGlovesCombat
       - id: DoubleEmergencyOxygenTankFilled
       - id: DoubleEmergencyNitrogenTankFilled
+
+- type: entity
+  parent: ClothingDuffelContractorForge
+  id: ClothingDuffelContractorForgeC4Bundle
+  name: вещмешок DCN™
+  description: Большой вещмешок для хранения предтательских предметов. Выглядит стильно и оригинально.
+  suffix: "Заполненный, C4"
+  components:
+    - type: StorageFill
+      contents:
+        - id: C4
+          amount: 8
+
+- type: entity
+  parent: ClothingDuffelContractorForge
+  id: ClothingDuffelContractorForgeAmmoFilled
+  name: вещмешок DCN™
+  description: Большой вещмешок для хранения предтательских предметов. Выглядит стильно и оригинально.
+  suffix: "Заполненный, Набор боеприпасов"
+  components:
+  - type: StorageFill
+    contents:
+      - id: NFMagazineSubMachineGun35Overpressure
+        amount: 4
+      - id: NFMagazineRifle30Overpressure
+        amount: 4
+      - id: NFMagazineShotgunDrumSlug
+        amount: 4
+      - id: NFMagazineRifle20Overpressure
+        amount: 4
+      - id: NFAmmunitionBoxRifle25Overpressure
+        amount: 2
+      - id: NFAmmunitionBoxRifle30Overpressure
+        amount: 2
+      - id: NFAmmunitionBoxRifle20Overpressure
+        amount: 2
+      - id: NFAmmunitionBoxRifle20Overpressure
+        amount: 2

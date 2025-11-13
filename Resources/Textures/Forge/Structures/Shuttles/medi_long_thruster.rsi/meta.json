@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "base and thrust by ledniky, (discord:726481288713732147), thrust_burn_unshaded from thruster.rsi",
+  "states": [
+    {
+      "name": "base",
+      "directions": 4
+    },
+    {
+      "name": "medimerc",
+      "directions": 4
+    },
+    {
+      "name": "medinfsd",
+      "directions": 4
+    },
+    {
+      "name": "medisyndi",
+      "directions": 4
+    },
+    {
+      "name": "medicentcom",
+      "directions": 4
+    },
+    {
+      "name": "medirenegat",
+      "directions": 4
+    },
+    {
+      "name": "iconmedibase"
+    },
+    {
+      "name": "iconmedimerc"
+    },
+    {
+      "name": "iconmedinfsd"
+    },
+    {
+      "name": "iconmedirenegat"
+    },
+    {
+      "name": "iconmedisyndi"
+    },
+    {
+      "name": "iconmedicentcom"
+    },
+    {
+      "name": "thrust",
+      "directions": 4
+    },
+    {
+      "name": "thrust_burn_unshaded",
+      "directions": 4,
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

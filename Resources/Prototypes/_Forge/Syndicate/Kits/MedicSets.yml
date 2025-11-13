@@ -1,0 +1,101 @@
+- type: thiefBackpackSet
+  id: SyndMedic1Set
+  name: SyndMedic1Set-name
+  description: SyndMedic1Set-description
+  sprite:
+    sprite: _DV/Objects/Weapons/Guns/Rifles/jackdaw.rsi
+    state: icon
+  content:
+  - ClothingHeadHelmetSyndicate
+  - ClothingOuterEVASuitSyndicate
+  - SyndiHypo
+  - DefibrillatorSyndicate
+  - NFPouchFirstAidMEdickMedipen
+  - NFWeaponRifleAssaultJackdaw
+  - NFMagazineRifle20
+  - NFMagazineRifle20
+  - NFWeaponEnergyPistolDisabler
+  - Stimpack
+  - Stimpack
+  - MedkitCombatFilled
+  - MedkitAdvancedFilled
+  - MedkitToxinFilled
+  - MedkitRadiationFilled
+  - ChemicalSynthesisKit
+
+- type: thiefBackpackSet
+  id: SyndMedic2Set
+  name: SyndMedic2Set-name
+  description: SyndMedic2Set-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
+    state: icon
+  content:
+  - ClothingHeadHelmetSyndicate
+  - ClothingOuterEVASuitSyndicate
+  - SyndiHypo
+  - DefibrillatorSyndicate
+  - NFPouchFirstAidMEdickMedipen
+  - NFWeaponShotgunEnforcer
+  - NFAmmunitionBoxShellShotgunBuckshot
+  - NFAmmunitionBoxShellShotgunBuckshot
+  - NFWeaponEnergyPistolDisabler
+  - Stimpack
+  - Stimpack
+  - MedkitCombatFilled
+  - MedkitAdvancedFilled
+  - MedkitToxinFilled
+  - MedkitRadiationFilled
+  - ChemicalSynthesisKit
+
+- type: thiefBackpackSet
+  id: SyndMedic3Set
+  name: SyndMedic3Set-name
+  description: SyndMedic3Set-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Cannons/syringe_gun.rsi
+    state: syringe_gun
+  content:
+  - ClothingHeadHelmetSyndicate
+  - ClothingOuterEVASuitSyndicate
+  - SyndiHypo
+  - DefibrillatorSyndicate
+  - NFPouchFirstAidMEdickMedipen
+  - NFWeaponEnergyPistolLaserAntique
+  - LauncherSyringe
+  - MiniSyringe
+  - MiniSyringe
+  - MiniSyringe
+  - MiniSyringe
+  - MiniSyringe
+  - MiniSyringe
+  - ChemistryBottleToxin
+  - MedkitCombatFilled
+  - MedkitAdvancedFilled
+  - MedkitToxinFilled
+  - MedkitRadiationFilled
+  - ChemicalSynthesisKit
+
+- type: thiefBackpackSet
+  id: SyndMedic4Set
+  name: SyndMedic4Set-name
+  description: SyndMedic4Set-description
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/syndiemedic.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitSyndieMedic
+  - SyndiHypo
+  - DefibrillatorSyndicate
+  - NFPouchFirstAidMEdickMedipen
+  - NFWeaponEnergyPistolDisabler
+  - EnergyShield
+  - EnergyDaggerLoud
+  - ChemistryBottleEpinephrine
+  - ChemistryBottleEpinephrine
+  - ChemistryBottleOmnizine
+  - MedkitFilled
+  - MedkitAdvancedFilled
+  - MedkitToxinFilled
+  - MedkitRadiationFilled
+  - ChemicalSynthesisKit

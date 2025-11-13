@@ -63,3 +63,14 @@
     price: 300 # Frontier: 1500<300
   - type: MaterialStorageMagnetPickup # Frontier
     range: 0.3 # Frontier
+
+# Forge-add
+# Silo POI-version
+- type: entity
+  parent: MachineMaterialSilo
+  id: MachineMaterialSiloPOI
+  suffix: POI, DoNotMap
+  components:
+  - type: OreSilo
+    range: 200
+# Forge-end

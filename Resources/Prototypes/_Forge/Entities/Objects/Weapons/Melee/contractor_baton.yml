@@ -1,0 +1,185 @@
+- type: entity
+  name: дубинка DCN™
+  parent: [BaseItem, BaseC3Contraband]
+  id: Contractorbaton
+  description: "Элитная электрошоковая дубинка для обездвиживания плохих людей. Слишком усердное причинение вреда с помощью этого предмета считается дурным тоном.\n\nУровень: 1/3"
+  suffix: "1/3"
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Melee/contractor_baton.rsi
+    layers:
+    - state: stunbaton_off
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: sparks
+      params:
+        variation: 0.250
+    soundDeactivate:
+      collection: sparks
+      params:
+        variation: 0.250
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+      params:
+        variation: 0.250
+  - type: ItemTogglePrefix
+    prefixOn: on
+    prefixOff: off
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Blunt: 0
+        Shock: 2.5
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 8
+    bluntStaminaDamageFactor: 2.0
+    angle: 60
+    animation: WeaponArcThrust
+  - type: StaminaDamageOnHit
+    damage: 35
+    sound: /Audio/Weapons/egloves.ogg
+  - type: StaminaDamageOnCollide
+    damage: 35
+    sound: /Audio/Weapons/egloves.ogg
+  - type: LandAtCursor # it deals stamina damage when thrown
+  - type: UseDelay
+  - type: Item
+    heldPrefix: off
+    size: Small
+  - type: ItemToggleSize
+    activatedSize: Normal
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Melee/contractor_baton.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: DisarmMalus
+    malus: 0.225
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+     enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {state: stunbaton_on}
+          False: {state: stunbaton_off}
+  - type: StaticPrice
+    price: 4500
+  - type: Riggable
+  - type: SolutionContainerManager
+    solutions:
+      battery:
+        maxVol: 5
+  - type: InjectableSolution
+    solution: battery
+  - type: DrawableSolution
+    solution: battery
+  - type: Explosive
+    explosionType: Default
+    intensitySlope: 1.5
+    maxIntensity: 200
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 150
+      Plastic: 100
+  - type: Construction
+    graph: ContractorbatonUpgradeT2
+    node: start
+
+- type: entity
+  name: дубинка DCN™
+  parent: Contractorbaton
+  id: ContractorbatonT2
+  description: "Элитная электрошоковая дубинка для обездвиживания плохих людей. Слишком усердное причинение вреда с помощью этого предмета считается дурным тоном.\n\nУровень: 2/3"
+  suffix: "2/3"
+  components:
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Blunt: 0
+        Shock: 5
+  - type: MeleeWeapon
+    attackRate: 1.25
+  - type: StaminaDamageOnHit
+    damage: 50
+    sound: /Audio/Weapons/egloves.ogg
+  - type: StaminaDamageOnCollide
+    damage: 50
+    sound: /Audio/Weapons/egloves.ogg
+  - type: Construction
+    graph: ContractorbatonUpgradeT3
+    node: start
+
+- type: entity
+  name: дубинка DCN™
+  parent: Contractorbaton
+  id: ContractorbatonT3
+  description: "Элитная электрошоковая дубинка для обездвиживания плохих людей. Слишком усердное причинение вреда с помощью этого предмета считается дурным тоном.\n\nУровень: 3/3"
+  suffix: "3/3"
+  components:
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Blunt: 0
+        Shock: 7.5
+  - type: MeleeWeapon
+    attackRate: 1.75
+  - type: StaminaDamageOnHit
+    damage: 80
+    sound: /Audio/Weapons/egloves.ogg
+  - type: StaminaDamageOnCollide
+    damage: 80
+    sound: /Audio/Weapons/egloves.ogg
+
+
+- type: entity
+  name: чип улучшения DCN™
+  parent: [BaseItem, BaseC3Contraband]
+  id: ContractorbatonUpgradeKit
+  description: Чип созданный DCN™ для повышения мощности продвинутых приборов.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: cart_connector
+  - type: Item
+    size: Small
+  - type: Tag
+    tags:
+    - ContractorbatonUpgradeKit
+
+- type: Tag
+  id: ContractorbatonUpgradeKit
+
+
+- type: constructionGraph
+  id: ContractorbatonUpgradeT2
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: upgraded
+          steps:
+            - tag: ContractorbatonUpgradeKit
+              name: construction-graph-tag-weapon-pistol-chimp-upgrade-kit
+              doAfter: 2
+    - node: upgraded
+      entity: ContractorbatonT2
+
+- type: constructionGraph
+  id: ContractorbatonUpgradeT3
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: upgraded
+          steps:
+            - tag: ContractorbatonUpgradeKit
+              name: construction-graph-tag-weapon-pistol-chimp-upgrade-kit
+              doAfter: 2
+    - node: upgraded
+      entity: ContractorbatonT3

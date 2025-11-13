@@ -1,0 +1,48 @@
+- type: thiefBackpackSet
+  id: SyndCadet1Set
+  name: SyndCadet1Set-name
+  description: SyndCadet1Set-description
+  sprite:
+    sprite: _NF/Objects/Weapons/Guns/Pistols/cobra.rsi
+    state: icon
+  content:
+  - ClothingHeadHelmetSwatSyndicate
+  - ClothingOuterVestWebElite
+  - ClothingMaskGasSyndicate
+  - ClothingShoesBootsMagSyndie
+  - EmpImplanter
+  - FreedomImplanter
+  - NFWeaponEnergyPistolDisabler
+  - Stunbaton
+  - BoxZiptie
+  - PinpointerUniversal
+  - MedkitCombatFilled
+  - MedkitAdvancedFilled
+  - Stimpack
+  - NFWeaponPistolCobra
+  - NFMagazinePistol45
+  - NFMagazinePistol45
+  - NFAmmunitionBoxPistol45
+
+- type: thiefBackpackSet
+  id: SyndCadet2Set
+  name: SyndCadet2Set-name
+  description: SyndCadet2Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/Battery/laser_pistol_syndie.rsi
+    state: icon
+  content:
+  - ClothingHeadHelmetSwatSyndicate
+  - ClothingOuterVestWebElite
+  - ClothingMaskGasSyndicate
+  - ClothingShoesBootsMagSyndie
+  - EmpImplanter
+  - FreedomImplanter
+  - NFWeaponEnergyPistolDisabler
+  - Stunbaton
+  - BoxZiptie
+  - PinpointerUniversal
+  - MedkitCombatFilled
+  - MedkitAdvancedFilled
+  - Stimpack
+  - WeaponSyndieEnergyFalconPistolLaser

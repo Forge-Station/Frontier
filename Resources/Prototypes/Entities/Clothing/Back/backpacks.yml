@@ -321,7 +321,9 @@
   - type: Storage
     maxItemSize: Huge
     grid:
-    - 0,0,7,7 # Frontier: Was 0,0,19,9
+    - 0,0,14,14 # Frontier: Was 0,0,19,9 # Corvax-Forge: 0,0,7,7 -> 0,0,14,14
+  - type: ExplosionResistance # Corvax-Forge
+    damageCoefficient: 0.5
 
 - type: entity
   parent: NFClothingBackpack # Frontier: ClothingBackpack<NFClothingBackpackClown

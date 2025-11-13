@@ -1,0 +1,35 @@
+- type: entity
+  parent: BoxCardboard
+  id: FoodBoxPizzaSyndi
+  name: коробка пиццы Синдиката
+  description: Коробка выполненная в чёрно-красном оттенке, придаёт стиль вкусу.
+  components:
+  - type: Sprite
+    sprite: _ADT/Objects/Consumable/Food/Baked/pizza.rsi
+    drawdepth: SmallObjects
+    layers:
+    - state: boxclosed
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: boxopen
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Storage
+    grid:
+    - 0,0,3,1
+    maxItemSize: Normal
+    whitelist:
+      components:
+      - Utensil
+      tags:
+      - Pizza
+  - type: Item
+    sprite: _ADT/Objects/Consumable/Food/Baked/pizza.rsi
+    heldPrefix: box
+    shape:
+    - 0,0,2,1
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: boxopen
+    stateDoorClosed: boxclosed
+  - type: StaticPrice
+    price: 0
+  - type: NFIngredient # Frontier

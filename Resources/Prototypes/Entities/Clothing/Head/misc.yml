@@ -206,7 +206,7 @@
     accent: MobsterAccent
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseC1Contraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband #Corvax-Frontier КБ
+  parent: [ ClothingHeadBase, BaseC3CultContrabandUnredeemable ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband #Corvax-Frontier КБ
   id: ClothingHeadHatCatEars
   name: cat ears
   description: "NYAH!"

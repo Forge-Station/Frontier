@@ -1,0 +1,134 @@
+- type: thiefBackpackSet
+  id: SyndCommander1Set
+  name: SyndCommander1Set-name
+  description: SyndCommander1Set-description
+  sprite:
+    sprite: _NF/Objects/Weapons/Guns/Rifles/solandmoss.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitSyndieCommander
+  - JetpackBlackFilled
+  - MedkitCombatFilled
+  - CombatMedipen
+  - CombatMedipen
+  - HemostasisAutoInjector
+  - FreedomImplanter
+  - C4
+  - NFWeaponRifleAssaultSm
+  - NFMagazineRifle30
+  - NFMagazineRifle30
+  - NFAmmunitionBoxRifle30
+
+- type: thiefBackpackSet
+  id: SyndCommander2Set
+  name: SyndCommander2Set-name
+  description: SyndCommander2Set-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/SMGs/p90lrk.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitSyndieCommander
+  - JetpackBlackFilled
+  - MedkitCombatFilled
+  - CombatMedipen
+  - CombatMedipen
+  - HemostasisAutoInjector
+  - FreedomImplanter
+  - C4
+  - WeaponSubMachineP90LRK
+  - MagazineP90LRK
+  - MagazineP90LRK
+  - NFAmmunitionBoxPistol35
+
+- type: thiefBackpackSet
+  id: SyndCommander3Set
+  name: SyndCommander3Set-name
+  description: SyndCommander3Set-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitSyndieCommander
+  - JetpackBlackFilled
+  - MedkitCombatFilled
+  - CombatMedipen
+  - CombatMedipen
+  - HemostasisAutoInjector
+  - FreedomImplanter
+  - C4
+  - NFWeaponShotgunBulldog
+  - NFMagazineShotgunDrum
+  - NFMagazineShotgunDrum
+  - NFAmmunitionBoxShellShotgunBuckshot
+
+- type: thiefBackpackSet
+  id: SyndCommander4Set
+  name: SyndCommander4Set-name
+  description: SyndCommander4Set-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
+    state: base
+  content:
+  - ClothingOuterHardsuitSyndieCommander
+  - JetpackBlackFilled
+  - MedkitCombatFilled
+  - CombatMedipen
+  - CombatMedipen
+  - HemostasisAutoInjector
+  - FreedomImplanter
+  - C4
+  - NFWeaponRifleSniperHristov
+  - NFAmmunitionBoxRifle60
+  - NFWeaponPistolViper
+  - NFMagazineHighCapacityPistol35
+  - NFAmmunitionBoxPistol35
+  - NFAmmunitionBoxPistol35
+
+- type: thiefBackpackSet
+  id: SyndCommander5Set
+  name: SyndCommander5Set-name
+  description: SyndCommander5Set-description
+  sprite:
+    sprite: _NF/Objects/Weapons/Guns/Battery/antiquelasergun.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitSyndieCommander
+  - JetpackBlackFilled
+  - MedkitCombatFilled
+  - CombatMedipen
+  - CombatMedipen
+  - HemostasisAutoInjector
+  - FreedomImplanter
+  - C4
+  - NFWeaponEnergyPistolLaserAntique
+  - EnergySword
+
+- type: thiefBackpackSet
+  id: SyndCommander6Set
+  name: SyndCommander6Set-name
+  description: SyndCommander6Set-description
+  sprite:
+    sprite: Objects/Weapons/Melee/e_shield.rsi
+    state: eshield-on
+  content:
+  - ClothingOuterHardsuitSyndieCommander
+  - JetpackBlackFilled
+  - MedkitCombatFilled
+  - CombatMedipen
+  - CombatMedipen
+  - HemostasisAutoInjector
+  - HemostasisAutoInjector
+  - FreedomImplanter
+  - EmpImplanter
+  - BruteAutoInjector
+  - BruteAutoInjector
+  - BurnAutoInjector
+  - BurnAutoInjector
+  - StimpackMini
+  - StimpackMini
+  - StimpackMini
+  - StimpackMini
+  - PyraAutoInjector
+  - PunctAutoInjector
+  - EnergySword
+  - EnergyShield

@@ -1,0 +1,14 @@
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockDonkies
+  name: набор пополнения серии вендоматов Donk
+  description: Коробка, что восполнит запас ваших любимых Снэков в вендоматах Donk!
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - SnackDonkNTPack
+    - SnackDonkSyndiPack
+  - type: Sprite
+    sprite: Forge/Objects/Specific/Service/vending_machine_restock.rsi
+    layers:
+    - state: refill_donksnack

@@ -23,3 +23,6 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  - type: NFWeaponDetails
+    class: weapon-details-class-shotgun
+    manufacturer: weapon-details-manufacturer-TechnicLogistic

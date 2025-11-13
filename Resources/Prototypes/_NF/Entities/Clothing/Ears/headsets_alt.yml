@@ -51,7 +51,7 @@
     sprite: _NF/Clothing/Ears/Headsets/nfsd_h_cb.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: [ClothingHeadsetAltLoudspeaker, BaseCommandContraband] # Corvax-Forge: +ClothingHeadsetAltNfsdGreenCentcom
   id: ClothingHeadsetAltNfsdBrownCentcom
   name: sheriff's over-ear headset
   categories: [ HideSpawnMenu ]
@@ -86,7 +86,7 @@
     sprite: _NF/Clothing/Ears/Headsets/nfsd_h_cb.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: [ClothingHeadsetAltLoudspeaker, BaseCommandContraband]
   id: ClothingHeadsetAltEngineeringPlantManager
   name: plant manager's over-ear headset
   components:
@@ -143,6 +143,6 @@
   categories: [ HideSpawnMenu ]
 
 - type: entity
-  parent: [ClothingHeadsetCommon, ClothingHeadsetAltCentCom]
+  parent: [ClothingHeadsetAltLoudspeaker, ClothingHeadsetCommon, ClothingHeadsetAltCentCom]
   id: ClothingHeadsetAltCentComCommon
   categories: [ HideSpawnMenu ]

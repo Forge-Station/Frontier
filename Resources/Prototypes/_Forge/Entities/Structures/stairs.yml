@@ -113,3 +113,14 @@
     canTeleportToOtherMaps: true
     randomTeleport: false
   - type: PortalAutoLink
+
+- type: entity
+  id: StairBridge
+  parent: Stairs
+  name: Ступеньки
+  suffix: Мостик
+  components:
+  - type: Sprite
+    sprite: Structures/stairs.rsi
+    state: stairs_catwalk
+    drawdepth: FloorTiles

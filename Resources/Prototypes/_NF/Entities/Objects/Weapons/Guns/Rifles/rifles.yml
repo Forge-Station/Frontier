@@ -82,6 +82,7 @@
     capacity: 8
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 3
+    projectileSpeed: 40
 
 - type: entity
   id: NFWeaponRifleSVS
@@ -91,6 +92,7 @@
   components:
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 3.5
+    projectileSpeed: 40
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Rifles/svs42.rsi
   - type: Clothing

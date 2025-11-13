@@ -1,7 +1,7 @@
 // Port From SS14 Corvax-Next
 
 using Content.Shared._Forge.OfferItem;
-using Content.Shared._Forge.ForgeVars;
+using Content.Shared._Forge;
 using Robust.Client.Graphics;
 using Robust.Client.Input;
 using Robust.Client.Player;
