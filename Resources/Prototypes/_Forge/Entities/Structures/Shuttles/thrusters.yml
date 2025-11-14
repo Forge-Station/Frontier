@@ -178,25 +178,6 @@
   components:
   - type: Machine
     board: ThrusterMachineCircuitboard
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 600
-      behaviors:
-        - !type:DoActsBehavior
-          acts: ["Destruction"]
-    - trigger:
-        !type:DamageTrigger
-        damage: 300
-      behaviors:
-        - !type:DoActsBehavior
-          acts: ["Destruction"]
-        - !type:PlaySoundBehavior
-          sound:
-            collection: MetalBreak
-        - !type:ChangeConstructionNodeBehavior
-          node: machineFrame
   - type: Sprite
     sprite: Structures/Shuttles/old_thruster.rsi
     layers:
@@ -211,7 +192,6 @@
       shader: unshaded
       visible: false
       offset: 0, 1
-  # Frontier: linkable thrusters, pirate bounties
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: BasicDevice
@@ -222,7 +202,6 @@
     - On
     - Off
     - Toggle
-  - type: PirateBountyItem
 
 # DefaultThruster
 - type: entity
