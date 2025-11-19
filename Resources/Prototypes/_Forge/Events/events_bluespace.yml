@@ -1,35 +1,44 @@
 #CorvaxForge (by. Mersen and autsaider_m)
 - type: entity
-  id: BluespaceCargoniaShip
+  id: BluespaceSalvage
   parent: BaseStationEventShortDelay
+  name: NT Bluespace Monitoring # This name shows up in the radio messages.
+  categories: [ HideSpawnMenu ]
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
-    startAudio:
-      path: /Audio/Misc/notice1.ogg
-    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
-    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
-    earliestStart: 10
-    minimumPlayers: 15
-    weight: 2
-    duration: 3800
-    maxDuration: 6400
-    reoccurrenceDelay: 60
+    # TODO: add path to  start warning and end Voiceover
+    startRadioAnnouncement: station-event-bluespace-scrap-start-announcement
+    startRadioAnnouncementChannel: Engineering
+    warningRadioAnnouncement: station-event-bluespace-scrap-warning-announcement
+    warningRadioAnnouncementChannel: Engineering
+    endRadioAnnouncement: station-event-bluespace-scrap-end-announcement
+    endRadioAnnouncementChannel: Engineering
+    weight: 5
+    duration: 1800 # 30 minutes
+    maxDuration: 1800 # 30 minutes
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
-        nameLoc:
-        - station-event-bluespace-name-UnidentifiedVessel
-        minimumDistance: 1500
-        maximumDistance: 2500
+        nameDataset: NamesScrap
+        nameDatasetType: Nanotrasen # they're shuttles
+        minCount: 2
+        maxCount: 3
+        minimumDistance: 1000
+        maximumDistance: 2000
         addComponents:
-        - type: Gravity
-          enabled: true
-          inherent: true
         - type: IFF
-          color: "#E10F9B"
-        - type: Shuttle
+          color: "#AAAAAA"
+        - type: LinkedLifecycleGridParent
+        - type: ProtectedGrid
+          preventArtifactTriggers: true
+        - type: PreventPilot
         paths:
+#        - /Maps/_Forge/Shuttles/Scrap/canister.yml # Too small
+        - /Maps/_Forge/Shuttles/Scrap/disciple.yml
+        - /Maps/_Forge/Shuttles/Scrap/nugget.yml
+        - /Maps/_Forge/Shuttles/Scrap/orange.yml
+        - /Maps/_Forge/Shuttles/Scrap/point.yml
+        - /Maps/_Forge/Shuttles/Scrap/tide.yml
         - /Maps/_Forge/Events/Periodic/DestroyedShuttles/RuinedHauler.yml
         - /Maps/_Forge/Events/Periodic/DestroyedShuttles/RuinedBarge.yml
         - /Maps/_Forge/Events/Periodic/DestroyedShuttles/RuinedCourser.yml
@@ -40,6 +49,9 @@
         - /Maps/_Forge/Events/Periodic/DestroyedShuttles/RuinedInquisitor.yml
         - /Maps/_Forge/Events/Periodic/DestroyedShuttles/RuinedChisel.yml
         - /Maps/_Forge/Events/Periodic/DestroyedShuttles/dest_mercenary_shuttle.yml
+  - type: ActiveRadio
+    channels:
+    - Engineering
 
 - type: entity
   id: BluespaceSyndicate
