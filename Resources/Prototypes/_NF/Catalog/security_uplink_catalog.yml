@@ -513,7 +513,7 @@
   name:  uplink-security-magboots-name
   description: uplink-security-magboots-desc
   productEntity: ClothingShoesBootsMagNfsdFilled
-  icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi, state: icon }
+  icon: { sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots_promax.rsi, state: icon } # Forge-change: path to sprite
   cost:
     FrontierUplinkCoin: 1
   categories:

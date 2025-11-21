@@ -72,3 +72,6 @@ uplink-FSyndicateProtolathe-name = { ent-FSyndicateProtolathe }
 uplink-FSyndicateProtolathe-desc = { ent-FSyndicateProtolathe.desc }
 uplink-ClothingBackpackSyndicateRaidBundle-name = комплект рейдерского костюма синдиката
 uplink-ClothingBackpackSyndicateRaidBundle-desc = Комплект, в который входит рейдерский костюм и шлем, противогаз и боевые перчатки.
+
+forge-uplink-security-magbootspro-name = продвинутые магнитные сапоги ДСБФ
+forge-uplink-security-magbootspro-desc = Магнитные ботинки со встроенным джетпаком и местом под личное оружие, не замедляющие движения своего владельца благодаря ослабленному магнитному притяжению.

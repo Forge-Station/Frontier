@@ -290,3 +290,31 @@
   technologyPrerequisites:
   - NFFission
   position: 4, 26
+
+- type: technology
+  id: ForgeAdvancedProMaxBoots
+  name: forge-research-technology-advpromax
+  entityIcon: ClothingShoesBootsMagAdvsPromax
+  discipline: NFScience
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - FRecClothingShoesBootsMagAdvsPromax
+  technologyPrerequisites:
+  - NFMagnetsTechAdvanced
+  position: 3, 14
+
+- type: technology
+  id: ForgeBattleProMaxBoots
+  name: forge-research-technology-battlepromax
+  entityIcon: ClothingShoesBootsMagMercPromax
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - FRecClothingShoesBootsMagMercPromax
+  - FRecClothingShoesBootsMagBattlePromax
+  technologyPrerequisites:
+  - NFMagnetsTechCombat
+  - ForgeAdvancedProMaxBoots
+  position: 4, 13

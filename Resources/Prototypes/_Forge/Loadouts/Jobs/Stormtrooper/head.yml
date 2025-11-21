@@ -6,9 +6,20 @@
 - type: loadout
   id: StormtrooperClothingHead2
   equipment:
-    head: ClothingHeadHatOutlawHat
+    head: ClothingHeadHatCapHoS
 
 - type: loadout
   id: StormtrooperClothingHead3
   equipment:
+    head: ClothingHeadHatSyndieMAA
+
+- type: loadout
+  id: StormtrooperClothingHead4
+  equipment:
     head: ClothingHeadHatSyndie
+
+- type: loadout
+  id: StormtrooperClothingHead5
+  price: 20000
+  equipment:
+    head: ClothingHeadHelmetSwatSyndicate

@@ -7,3 +7,6 @@ ent-ClothingOuterHardsuitAAMrAdv = AAM R-44 Галиус
     .desc = Боевой скафандр линейки R компании Ardent Advanced Manufacturing. Один из лучших представителей линейки.
 ent-ClothingHeadHelmetHardsuitAAMrAdv = шлем AAM R-44
     .desc = Шлем боевого скафандра компании Ardent Advanced Manufacturing.
+
+ent-ClothingOuterArmorSheriffVestWeb = бронежилет шерифа
+    .desc = Высококачественный бронированный жилет из прочного синтетического материала. Несмотря на внушительную защиту, он гибкий и лёгкий.
