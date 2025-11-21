@@ -17,7 +17,7 @@
   category: Small
   group: Medical
   access: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/spirit.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/spirit.yml
   guidebookPage: ShipyardSpirit
   class:
   - Medical
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Spirit
   mapName: 'NM Дух'
-  mapPath: /Maps/Forge/Shuttles/Medical/spirit.yml
+  mapPath: /Maps/_Forge/Shuttles/Medical/spirit.yml
   minPlayers: 0
   stations:
     Spirit:

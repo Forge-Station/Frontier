@@ -16,7 +16,7 @@
   price: 75666
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Service/ceres.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Service/ceres.yml
   guidebookPage: ShipyardCeres
   class:
   - Kitchen
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Ceres
   mapName: 'SBB Церера'
-  mapPath: /Maps/Forge/Shuttles/Service/ceres.yml
+  mapPath: /Maps/_Forge/Shuttles/Service/ceres.yml
   minPlayers: 0
   stations:
     Ceres:

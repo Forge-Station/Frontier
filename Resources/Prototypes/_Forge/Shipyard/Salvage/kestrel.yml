@@ -1,10 +1,10 @@
 # Author Info
 # GitHub: @No-Dad-Not-The-Belt (https://github.com/No-Dad-Not-The-Belt)
-# Discord: ???
+# Discord: -
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 #
@@ -16,7 +16,7 @@
   price: 66800 # ~45370$ on mapinit + ~6805$ from 15% markup
   category: Small
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/kestrel.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/kestrel.yml
   guidebookPage: ShipyardKestrel
   class:
   - Salvage
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Kestrel
   mapName: 'NC Пустельга'
-  mapPath: /Maps/Forge/Shuttles/Salvage/kestrel.yml
+  mapPath: /Maps/_Forge/Shuttles/Salvage/kestrel.yml
   minPlayers: 0
   stations:
     Kestrel:

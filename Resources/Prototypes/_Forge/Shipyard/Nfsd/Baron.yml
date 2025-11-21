@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m and docs.unity3d.com
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 # - type: vessel
 #   id: Baron
 #   parent: BaseVessel
@@ -19,7 +19,7 @@
 #   category: Large
 #   group: Security
 #   access: Frontier
-#   shuttlePath: /Maps/Forge/Shuttles/Nfsd/Baron.yml
+#   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/baron.yml
 #   addComponents:
 #  - type: ShuttleFaction
 #    faction: NFSD
@@ -27,7 +27,7 @@
 # - type: gameMap
 #   id: Baron
 #   mapName: 'NSF Барон'
-#   mapPath: /Maps/Forge/Shuttles/Nfsd/Baron.yml
+#   mapPath: /Maps/_Forge/Shuttles/Nfsd/baron.yml
 #   minPlayers: 0
 #   stations:
 #     Baron:

@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: faron
   parent: BaseVessel
@@ -18,12 +18,12 @@
   price: 79500 # 50% tax
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/faron.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/faron.yml
 
 - type: gameMap
   id: faron
   mapName: 'NLE Фарон'
-  mapPath: /Maps/Forge/Shuttles/Expedition/faron.yml
+  mapPath: /Maps/_Forge/Shuttles/Expedition/faron.yml
   minPlayers: 0
   stations:
     faron:

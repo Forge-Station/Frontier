@@ -3,19 +3,19 @@
 # Discord: Checkraze, mariusdemeier, trucy_deuxy
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Notes:
 # Basic Trade Outpost buying point for economy and great wealth
 - type: pointOfInterest
   id: TradeMall
   parent: BasePOI
-  name: Торговая Станция #CorvaxFrontier
+  name: Торговая Станция #Forge-Change
   minimumDistance: 1500
   maximumDistance: 2500
   spawnGroup: MarketStation
-  gridPath: /Maps/Forge/POI/trademall.yml # СorvaxFrontier
+  gridPath: /Maps/_Forge/POI/trademall.yml #Forge-Change
   addComponents:
   - type: IFF
     color: "#37C837"
@@ -24,9 +24,9 @@
       TradeExpress: 10
   - type: ProtectedGrid
     preventArtifactTriggers: true
-    preventEmpEvents: true #CorvaxFrontier
-    preventRCDUse: true #CorvaxFrontier
-    noGridCollision: true #CorvaxFrontier
+    preventEmpEvents: true #Forge-Change
+    preventRCDUse: true #Forge-Change
+    noGridCollision: true #Forge-Change
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
@@ -40,8 +40,8 @@
 
 - type: gameMap
   id: TradeMall
-  mapName: 'Торговая Станция' #CorvaxFrontier
-  mapPath: /Maps/Forge/POI/trademall.yml # СorvaxFrontier
+  mapName: 'Торговая Станция' #Forge-Change
+  mapPath: /Maps/_Forge/POI/trademall.yml #Forge-Change
   minPlayers: 0
   stations:
     TradeMall:

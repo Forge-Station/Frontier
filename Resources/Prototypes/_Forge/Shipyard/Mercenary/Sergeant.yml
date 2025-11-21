@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Sergeant
   parent: BaseVessel
@@ -15,7 +15,7 @@
   description: Малогабаритный шаттл наёмников для быстрого перемещения в космическом пространстве
   price: 20400
   category: Small
-  shuttlePath: /Maps/Forge/Shuttles/Mercenary/Sergeant.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Mercenary/sergeant.yml
   addComponents:
   - type: MercenaryBountyDatabase
     bounties: []
@@ -23,7 +23,7 @@
 - type: gameMap
   id: Sergeant
   mapName: 'SBI Гильза'
-  mapPath: /Maps/Forge/Shuttles/Mercenary/Sergeant.yml
+  mapPath: /Maps/_Forge/Shuttles/Mercenary/sergeant.yml
   minPlayers: 0
   stations:
     Sergeant:

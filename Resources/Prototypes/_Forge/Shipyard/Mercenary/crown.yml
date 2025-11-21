@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Crown
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 50000
   category: Small
   group: Mercenary
-  shuttlePath: /Maps/Forge/Shuttles/Mercenary/crown.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Mercenary/crown.yml
   addComponents:
   - type: MercenaryBountyDatabase
     bounties: []
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Crown
   mapName: 'SBI Ворон'
-  mapPath: /Maps/Forge/Shuttles/Mercenary/crown.yml
+  mapPath: /Maps/_Forge/Shuttles/Mercenary/crown.yml
   minPlayers: 0
   stations:
     Crown:

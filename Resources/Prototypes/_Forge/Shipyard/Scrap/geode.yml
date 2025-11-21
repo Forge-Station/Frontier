@@ -1,5 +1,12 @@
 # Author Info
+# GitHub: -
 # Discord: LoakaOfTheWind
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
 #
 - type: vessel
   id: Geode
@@ -9,7 +16,7 @@
   price: 51000 # 46016 0.1 50617.6
   category: Medium
   group: Scrap
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/geode.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/geode.yml
   guidebookPage: ShipyardGeode
   class:
   - Scrapyard
@@ -21,7 +28,7 @@
 - type: gameMap
   id: Geode
   mapName: 'CLU Жеода'
-  mapPath: /Maps/Forge/Shuttles/Scrap/geode.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/geode.yml
   minPlayers: 0
   stations:
     Geode:

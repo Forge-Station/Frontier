@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: hauler
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 146000
   category: Medium
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/hauler.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/hauler.yml
   guidebookPage: Null
   class:
   - Cargo
@@ -27,7 +27,7 @@
 - type: gameMap
   id: hauler
   mapName: 'NC Тягач'
-  mapPath: /Maps/Forge/Shuttles/Salvage/hauler.yml
+  mapPath: /Maps/_Forge/Shuttles/Salvage/hauler.yml
   minPlayers: 0
   stations:
     hauler:

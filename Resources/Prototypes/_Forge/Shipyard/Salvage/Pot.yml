@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: kvasen
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 # - type: vessel
 #   id: Pot
 #   parent: BaseVessel
@@ -18,7 +18,7 @@
 #   price: 60000
 #   category: Medium
 #   group: Salvage
-#   shuttlePath: /Maps/Forge/Shuttles/Salvage/Pot.yml
+#   shuttlePath: /Maps/_Forge/Shuttles/Salvage/pot.yml
 #   class:
 #   - Salvage
 
@@ -27,7 +27,7 @@
 # - type: gameMap
 #   id: Pot
 #   mapName: 'NMS Каструля'
-#   mapPath: /Maps/Forge/Shuttles/Salvage/Pot.yml
+#   mapPath: /Maps/_Forge/Shuttles/Salvage/pot.yml
 #   minPlayers: 0
 #   stations:
 #     Pot:

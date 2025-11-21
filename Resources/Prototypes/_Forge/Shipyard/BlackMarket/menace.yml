@@ -16,7 +16,7 @@
   price: 35400
   category: Small
   group: BlackMarket
-  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/menace.yml
+  shuttlePath: /Maps/_Forge/Shuttles/BlackMarket/menace.yml
   guidebookPage: Null
   class:
   - Pirate
@@ -30,8 +30,8 @@
 
 - type: gameMap
   id: Menace
-  mapName: 'Menace'
-  mapPath: /Maps/Forge/Shuttles/BlackMarket/menace.yml
+  mapName: 'Предъява'
+  mapPath: /Maps/_Forge/Shuttles/BlackMarket/menace.yml
   minPlayers: 0
   stations:
     Menace:

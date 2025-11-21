@@ -79,8 +79,8 @@ public sealed partial class DeadDropComponent : Component
     [DataField]
     public Dictionary<string, float> DropGrids { get; set; } = new()
     {
-        { "/Maps/_NF/DeadDrop/deaddrop.yml", 70.0f },
-        { "/Maps/Forge/DeadDrop/deaddrop.yml", 5.0f }
+        { "/Maps/_NF/DeadDrop/deaddrop.yml", 60.0f },
+        { "/Maps/_Forge/DeadDrop/deaddrop.yml", 40.0f }
     };
 
     /// <summary>

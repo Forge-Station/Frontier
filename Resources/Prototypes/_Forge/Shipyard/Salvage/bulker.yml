@@ -1,10 +1,10 @@
 # Author Info
 # GitHub: CharcoalShipyard (https://github.com/CharcoalShipyard)
-# Discord: ???
+# Discord: -
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 #
@@ -16,7 +16,7 @@
   price: 89200 #41245$ before the +15% (6190$)
   category: Medium
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/bulker.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/bulker.yml
   guidebookPage: ShipyardBulker
   class:
   - Salvage
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Bulker
   mapName: 'KL Балкер'
-  mapPath: /Maps/Forge/Shuttles/Salvage/bulker.yml
+  mapPath: /Maps/_Forge/Shuttles/Salvage/bulker.yml
   minPlayers: 0
   stations:
     Bulker:

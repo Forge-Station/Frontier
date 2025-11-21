@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: kvasen
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Hercules
   parent: BaseVessel
@@ -18,7 +18,7 @@
   price: 39900
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/hercules.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/hercules.yml
   class:
   - Cargo
   - Civilian
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Hercules
   mapName: 'NCS Геркулес'
-  mapPath: /Maps/Forge/Shuttles/Civilian/hercules.yml
+  mapPath: /Maps/_Forge/Shuttles/Civilian/hercules.yml
   minPlayers: 0
   stations:
     Hercules:

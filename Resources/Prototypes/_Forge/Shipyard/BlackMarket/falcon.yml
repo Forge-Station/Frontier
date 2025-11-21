@@ -1,5 +1,10 @@
 # Author Info
 # GitHub: Leander_0
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 # Kestrel looking ship with hangar bay meant to be used along with hoverbikes.
@@ -11,7 +16,7 @@
   price: 48000 #Selling price is 22520
   category: Medium
   group: BlackMarket
-  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/falcon.yml
+  shuttlePath: /Maps/_Forge/Shuttles/BlackMarket/falcon.yml
   guidebookPage: Null
   class:
   - Pirate
@@ -25,8 +30,8 @@
 
 - type: gameMap
   id: Falcon
-  mapName: 'Falcon'
-  mapPath: /Maps/Forge/Shuttles/BlackMarket/falcon.yml
+  mapName: 'Сокол'
+  mapPath: /Maps/_Forge/Shuttles/BlackMarket/falcon.yml
   minPlayers: 0
   stations:
     Falcon:

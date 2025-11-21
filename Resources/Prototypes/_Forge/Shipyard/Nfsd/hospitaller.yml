@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Hospitaller
   parent: BaseVessel
@@ -17,7 +17,7 @@
   category: Small
   group: Security
   access: Security
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/hospitaller.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/hospitaller.yml
   guidebookPage: Null
   class:
   - Medical
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Hospitaller
   mapName: 'NSF Лазарет'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/hospitaller.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/hospitaller.yml
   minPlayers: 0
   stations:
     Hospitaller:

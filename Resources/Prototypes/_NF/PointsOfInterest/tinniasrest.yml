@@ -3,8 +3,8 @@
 # Discord: Checkraze
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Notes:
 # Down at your local saloon
@@ -21,7 +21,7 @@
     routes:
       MinorPointsOfInterest: 10
   - type: ProtectedGrid
-    noGridCollision: true #CorvaxFrontier
+    noGridCollision: true #Forge-Change
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true

@@ -1,21 +1,21 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
-# Shuttle Notes:
-
+# Notes:
+#
 - type: pointOfInterest
   id: Bunkeralfa
   name: Бункер Альфа
   minimumDistance: 6000
   maximumDistance: 9000
-  gridPath: /Maps/Forge/Events/Elementary/Syndicate/bunkerAlfa.yml
+  gridPath: /Maps/_Forge/Events/Elementary/Syndicate/bunkerAlfa.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -35,7 +35,7 @@
 - type: gameMap
   id: Bunkeralfa
   mapName: Бункер Альфа
-  mapPath: /Maps/Forge/Events/Elementary/Syndicate/bunkerAlfa.yml
+  mapPath: /Maps/_Forge/Events/Elementary/Syndicate/bunkerAlfa.yml
   minPlayers: 0
   stations:
     Bunkeralfa:

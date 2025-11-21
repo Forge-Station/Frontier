@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Sword
   parent: BaseVessel
@@ -18,7 +18,7 @@
   price: 27500
   category: Small
   group: Custom
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/sword.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/sword.yml
   class:
   - Fighter
   addComponents:
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Sword
   mapName: 'TL Меч'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/sword.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/sword.yml
   minPlayers: 0
   stations:
     Sword:

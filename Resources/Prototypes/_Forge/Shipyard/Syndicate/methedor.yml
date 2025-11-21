@@ -1,14 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
+#
 - type: vessel
   id: methedor
   parent: BaseVessel
@@ -17,7 +18,7 @@
   price: 49500
   category: Small
   group: Syndicate
-  shuttlePath: /Maps/Forge/Shuttles/Syndicate/methedor.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Syndicate/methedor.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -31,7 +32,7 @@
 - type: gameMap
   id: methedor
   mapName: 'Метедор'
-  mapPath: /Maps/Forge/Shuttles/Syndicate/methedor.yml
+  mapPath: /Maps/_Forge/Shuttles/Syndicate/methedor.yml
   minPlayers: 0
   stations:
     methedor:

@@ -1,15 +1,15 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: letstrythisone.
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
-# Shuttle notes:
-
+# Shuttle Notes:
+#
 - type: vessel
   id: Viking
   parent: BaseVessel
@@ -18,7 +18,7 @@
   price: 40000 # (34197)
   category: Medium
   group: Custom
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/Viking.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/viking.yml
   guidebookPage: Null
   class:
   - Scrapyard
@@ -30,7 +30,7 @@
 - type: gameMap
   id: Viking
   mapName: 'ST Викинг'
-  mapPath: /Maps/Forge/Shuttles/Scrap/Viking.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/viking.yml
   minPlayers: 0
   stations:
     Viking:

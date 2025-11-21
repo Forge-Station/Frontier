@@ -1,21 +1,21 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
-# Shuttle Notes:
-
+# Notes:
+#
 - type: pointOfInterest
   id: arcadiaBase
   name: База Аркадии
   minimumDistance: 5500
   maximumDistance: 8000
-  gridPath: /Maps/Forge/Events/Elementary/Arcadia/arcadiaBase.yml
+  gridPath: /Maps/_Forge/Events/Elementary/Arcadia/arcadiaBase.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -26,7 +26,7 @@
 - type: gameMap
   id: arcadiaBase
   mapName: База Аркадии
-  mapPath: /Maps/Forge/Events/Elementary/Arcadia/arcadiaBase.yml
+  mapPath: /Maps/_Forge/Events/Elementary/Arcadia/arcadiaBase.yml
   minPlayers: 0
   stations:
     arcadiaBase:

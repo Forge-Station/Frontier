@@ -1,13 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: tochka_dunaxy
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
+# Shuttle Notes:
+#
 - type: vessel
   id: Unit
   parent: BaseVessel
@@ -16,7 +18,7 @@
   price: 53800
   category: Small
   group: Mercenary
-  shuttlePath: /Maps/Forge/Shuttles/Mercenary/Unit.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Mercenary/unit.yml
   addComponents:
   - type: MercenaryBountyDatabase
     bounties: []
@@ -24,7 +26,7 @@
 - type: gameMap
   id: Unit
   mapName: 'SBI Юнит'
-  mapPath: /Maps/Forge/Shuttles/Mercenary/Unit.yml
+  mapPath: /Maps/_Forge/Shuttles/Mercenary/unit.yml
   minPlayers: 0
   stations:
     Unit:

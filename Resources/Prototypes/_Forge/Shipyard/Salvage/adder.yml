@@ -16,7 +16,7 @@
   price: 18530 # 15898 0.05 16692.9 17295
   category: Small
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/adder.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/adder.yml
   guidebookPage: ShipyardAdder
   class:
   - Salvage
@@ -27,8 +27,8 @@
 
 - type: gameMap
   id: Adder
-  mapName: 'Гадюка'
-  mapPath: /Maps/Forge/Shuttles/Salvage/adder.yml
+  mapName: 'LVHI Гадюка'
+  mapPath: /Maps/_Forge/Shuttles/Salvage/adder.yml
   minPlayers: 0
   stations:
     Adder:

@@ -16,7 +16,7 @@
   price: 40500
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Service/piecrust.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Service/piecrust.yml
   guidebookPage: Null
   class:
   - Kitchen
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Piecrust
   mapName: 'NT Пирожок'
-  mapPath: /Maps/Forge/Shuttles/Service/piecrust.yml
+  mapPath: /Maps/_Forge/Shuttles/Service/piecrust.yml
   minPlayers: 0
   stations:
     Piecrust:

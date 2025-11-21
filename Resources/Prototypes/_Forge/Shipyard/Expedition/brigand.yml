@@ -16,7 +16,7 @@
   price: 75600 # ~47835$ on mapinit + ~7175$ from 15% markup
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/brigand.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/brigand.yml
   guidebookPage: ShipyardBrigand
   class:
   - Expedition
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Brigand
   mapName: 'NT Разбойник'
-  mapPath: /Maps/Forge/Shuttles/Expedition/brigand.yml
+  mapPath: /Maps/_Forge/Shuttles/Expedition/brigand.yml
   minPlayers: 0
   stations:
     Brigand:

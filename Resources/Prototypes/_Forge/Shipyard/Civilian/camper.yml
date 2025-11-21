@@ -1,13 +1,13 @@
 # Author Info
 # GitHub: https://github.com/AF-Buyrcsp2
-# Discord:
+# Discord: -
 
 # Maintainer Info
-#
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 #
-
 - type: vessel
   id: Camper
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 15000
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/camper.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/camper.yml
   guidebookPage: ShipyardCamper
   class:
   - Civilian
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Camper
   mapName: 'SSS Кемпер'
-  mapPath: /Maps/Forge/Shuttles/Civilian/camper.yml
+  mapPath: /Maps/_Forge/Shuttles/Civilian/camper.yml
   minPlayers: 0
   stations:
     Camper:

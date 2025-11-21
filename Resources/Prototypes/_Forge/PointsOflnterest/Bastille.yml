@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: https://github.com/MrIzodem
 # Discord: MrIzo aka letstrythisone.
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
-# Notes: Бастилии в 3025-ом году исполнилось 253 года...
-
+# Notes:
+# Бастилии в 3025-ом году исполнилось 253 года...
 - type: pointOfInterest
   id: BastilleOutpost
   parent: BasePOI
@@ -17,7 +17,7 @@
   minimumDistance: 2900
   maximumDistance: 3500
   spawnGroup: Required
-  gridPath: /Maps/Forge/POI/Bastille.yml
+  gridPath: /Maps/_Forge/POI/Bastille.yml
   addComponents:
   - type: IFF
     color: "#ff8c00"
@@ -34,7 +34,7 @@
 - type: gameMap
   id: BastilleOutpost
   mapName: 'Транспортное депо Бастилия'
-  mapPath: /Maps/Forge/POI/Bastille.yml
+  mapPath: /Maps/_Forge/POI/Bastille.yml
   minPlayers: 0
   stations:
     BastilleOutpost:

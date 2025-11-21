@@ -1,35 +1,36 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
+#
 - type: vessel
-  id: Сascade1
+  id: Cascade
   parent: BaseVessel
   name: TL Каскад
   description: пересобранный под гражданские нужды тяжелый бомбардировщик TechnicLogistic. Рекомендованный экипаж 1-3 человека.
   price: 53400
   category: Small
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/cascade.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/cascade.yml
   class:
   - Salvage
 
 
 
 - type: gameMap
-  id: Сascade1
+  id: Cascade
   mapName: 'TL Каскад'
-  mapPath: /Maps/Forge/Shuttles/Salvage/cascade.yml
+  mapPath: /Maps/_Forge/Shuttles/Salvage/cascade.yml
   minPlayers: 0
   stations:
-    Сascade1:
+    Cascade:
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup

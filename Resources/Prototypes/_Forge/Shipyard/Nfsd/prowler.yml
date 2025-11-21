@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Prowler
   parent: BaseVessel
@@ -17,7 +17,7 @@
   category: Medium
   group: Security
   access: Sergeant
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/prowler.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/prowler.yml
   guidebookPage: Null
   class:
   - Patrol
@@ -30,7 +30,7 @@
 - type: gameMap
   id: Prowler
   mapName: 'NSF Бродяга'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/prowler.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/prowler.yml
   minPlayers: 0
   stations:
     Prowler:

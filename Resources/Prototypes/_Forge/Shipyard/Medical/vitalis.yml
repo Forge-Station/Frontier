@@ -1,3 +1,13 @@
+# Author Info
+# GitHub: -
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
+#
 - type: vessel
   id: Vitalis
   name: CTC Виталис
@@ -7,7 +17,7 @@
   access: Medical
   category: Medium
   group: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/vitalis.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/vitalis.yml
   guidebookPage: ShipyardVitalis
   class:
   - Medical
@@ -16,8 +26,8 @@
 
 - type: gameMap
   id: Vitalis
-  mapName: 'CTC Vitalis'
-  mapPath: /Maps/Forge/Shuttles/Medical/vitalis.yml
+  mapName: 'CTC Виталис'
+  mapPath: /Maps/_Forge/Shuttles/Medical/vitalis.yml
   minPlayers: 0
   stations:
     Vitalis:
@@ -33,4 +43,3 @@
             ContractorInterview: [ 0, 0 ]
             PilotInterview: [ 0, 0 ]
             MercenaryInterview: [ 0, 0 ]
-

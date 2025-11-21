@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Cleric
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 11800 #Appraisal is 10500
   category: Micro
   group: Custom
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/cleric.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/cleric.yml
   guidebookPage: Null
   class:
   - Medical
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Cleric
   mapName: 'NSF Пастырь'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/cleric.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/cleric.yml
   minPlayers: 0
   stations:
     Cleric:

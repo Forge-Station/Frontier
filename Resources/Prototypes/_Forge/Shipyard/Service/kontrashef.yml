@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: terrafrog and autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: kontrashef
   parent: BaseVessel
@@ -18,14 +18,14 @@
   price: 70500 # 13.5% markup (+2350 from init)
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Service/kontrashef.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Service/kontrashef.yml
   class:
   - Kitchen
 
 - type: gameMap
   id: kontrashef
   mapName: 'NC Эскимо'
-  mapPath: /Maps/Forge/Shuttles/Service/kontrashef.yml
+  mapPath: /Maps/_Forge/Shuttles/Service/kontrashef.yml
   minPlayers: 0
   stations:
     kontrashef:

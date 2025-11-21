@@ -1,13 +1,15 @@
-# Author -
+# Author Info
 # GitHub: -
-# Discord: -
+# Discord: tochka_dunaxy
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
-# GitHub: -
-# Discord: -
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: konserva
   parent: BaseVessel
@@ -17,14 +19,14 @@
   category: Small
   group: Medical
   access: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/konserv.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/konserv.yml
   class:
   - Medical
 
 - type: gameMap
   id: konserva
   mapName: 'NMS Консерва'
-  mapPath: /Maps/Forge/Shuttles/Medical/konserv.yml
+  mapPath: /Maps/_Forge/Shuttles/Medical/konserv.yml
   minPlayers: 0
   stations:
     konserva:

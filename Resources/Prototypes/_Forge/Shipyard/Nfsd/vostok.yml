@@ -1,14 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
+#
 - type: vessel
   id: Vostok
   parent: BaseVessel
@@ -18,7 +19,7 @@
   category: Large
   group: Security
   access: Bailiff
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/vostok.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/vostok.yml
   guidebookPage: Null
   class:
   - Capital
@@ -29,7 +30,7 @@
 - type: gameMap
   id: Vostok
   mapName: 'TL Восток'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/vostok.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/vostok.yml
   minPlayers: 0
   stations:
     Vostok:

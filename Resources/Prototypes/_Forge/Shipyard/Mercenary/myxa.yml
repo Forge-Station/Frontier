@@ -1,7 +1,7 @@
 # Author Info
 # GitHub: -
-# Discord: anton953 CorvaxForge
-# License: CC-BY-NC-ND-3.0
+# Discord: anton953
+# License: CC-BY-NC-ND-4.0
 # CorvaxForge
 
 # Maintainer Info
@@ -9,7 +9,7 @@
 # Discord: ko_mp_otik
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Myxa
   parent: BaseVessel
@@ -18,7 +18,7 @@
   price: 64350
   category: Medium
   group: Mercenary
-  shuttlePath: /Maps/Forge/Shuttles/Mercenary/myxa.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Mercenary/myxa.yml
   addComponents:
   - type: MercenaryBountyDatabase
     bounties: []
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Myxa
   mapName: 'SBI Муха'
-  mapPath: /Maps/Forge/Shuttles/Mercenary/myxa.yml
+  mapPath: /Maps/_Forge/Shuttles/Mercenary/myxa.yml
   minPlayers: 0
   stations:
     Myxa:

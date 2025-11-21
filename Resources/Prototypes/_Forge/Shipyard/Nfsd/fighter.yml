@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Fighter
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 9000 #not sure how much mark up % to add but the appraisal is 7150$ now
   category: Micro
   group: Custom
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/fighter.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/fighter.yml
   guidebookPage: Null
   class:
   - Fighter
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Fighter
   mapName: 'NSF Истребитель'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/fighter.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/fighter.yml
   minPlayers: 0
   stations:
     Fighter:

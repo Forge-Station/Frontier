@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Honker
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 22500
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/honker.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/honker.yml
   guidebookPage: Null
   class:
   - Civilian
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Honker
   mapName: 'NT ХОНКЕР'
-  mapPath: /Maps/Forge/Shuttles/Civilian/honker.yml
+  mapPath: /Maps/_Forge/Shuttles/Civilian/honker.yml
   minPlayers: 0
   stations:
     Honker:

@@ -1,8 +1,8 @@
 # Author Info
 # GitHub: https://github.com/theg33ka
 # Discord: _n1neth
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
@@ -18,12 +18,12 @@
   price: 220000
   category: Large
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/capellan.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/capellan.yml
 
 - type: gameMap
   id: Capellan
   mapName: 'GS Капеллан'
-  mapPath: /Maps/Forge/Shuttles/Expedition/capellan.yml
+  mapPath: /Maps/_Forge/Shuttles/Expedition/capellan.yml
   minPlayers: 0
   stations:
     Capellan:

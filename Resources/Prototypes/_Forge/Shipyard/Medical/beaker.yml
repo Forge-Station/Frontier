@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -17,7 +17,7 @@
   category: Small
   group: Medical
   access: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/beaker.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/beaker.yml
   guidebookPage: Null
   class:
   - Chemistry
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Beaker
   mapName: 'SBI Мензурка'
-  mapPath: /Maps/Forge/Shuttles/Medical/beaker.yml
+  mapPath: /Maps/_Forge/Shuttles/Medical/beaker.yml
   minPlayers: 0
   stations:
     Beaker:

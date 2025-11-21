@@ -1,13 +1,13 @@
 # Author Info
 # GitHub: Checkraze (https://github.com/Cheackraze)
-# Discord: ???
+# Discord: -
 
 # Maintainer Info
 # GitHub: dustylens (https://github.com/dustylens)
 # Discord: dustylens
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Buksir
   parent: BaseVessel
@@ -16,14 +16,14 @@
   price: 51000
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Service/Buksir.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Service/buksir.yml
   class:
   - Kitchen
 
 - type: gameMap
   id: Buksir
   mapName: 'NC Буксир'
-  mapPath: /Maps/Forge/Shuttles/Service/Buksir.yml
+  mapPath: /Maps/_Forge/Shuttles/Service/buksir.yml
   minPlayers: 0
   stations:
     Buksir:

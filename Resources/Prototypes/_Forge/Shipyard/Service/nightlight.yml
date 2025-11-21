@@ -16,7 +16,7 @@
   price: 45000 # Botany bay
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Service/nightlight.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Service/nightlight.yml
   guidebookPage: ShipyardNightlight
   class:
   - Kitchen
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Nightlight
   mapName: 'FSB Nightlight'
-  mapPath: /Maps/Forge/Shuttles/Service/nightlight.yml
+  mapPath: /Maps/_Forge/Shuttles/Service/nightlight.yml
   minPlayers: 0
   stations:
     Nightlight:

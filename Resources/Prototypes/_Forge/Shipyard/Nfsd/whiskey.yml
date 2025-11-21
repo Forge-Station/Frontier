@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Whiskey
   parent: BaseVessel
@@ -17,7 +17,7 @@
   category: Medium
   group: Security
   access: Bailiff
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/whiskey.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/whiskey.yml
   guidebookPage: Null
   class:
   - Medical
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Whiskey
   mapName: 'NSF Whiskey'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/whiskey.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/whiskey.yml
   minPlayers: 0
   stations:
     Whiskey:

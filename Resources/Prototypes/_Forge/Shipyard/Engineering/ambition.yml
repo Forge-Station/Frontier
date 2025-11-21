@@ -3,8 +3,8 @@
 # Discord: cu1r
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 #
@@ -16,7 +16,7 @@
   price: 160000
   category: Large
   group: Engineering
-  shuttlePath: /Maps/Forge/Shuttles/Engineering/ambition.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Engineering/ambition.yml
   guidebookPage: ShipyardAmbition
   class:
   - Atmospherics
@@ -25,8 +25,8 @@
 
 - type: gameMap
   id: Ambition
-  mapName: 'UAC Ambition'
-  mapPath: /Maps/Forge/Shuttles/Engineering/ambition.yml
+  mapName: 'UAC Амбициозный'
+  mapPath: /Maps/_Forge/Shuttles/Engineering/ambition.yml
   minPlayers: 0
   stations:
     Ambition:

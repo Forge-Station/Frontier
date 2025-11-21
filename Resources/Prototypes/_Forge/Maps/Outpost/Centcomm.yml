@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: -
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/Ko-mp-otik
 # Discord: ko_mp_otik
 
-# Shuttle Notes:
-
+# Notes:
+#
 - type: pointOfInterest
   id: Centcomm
   parent: BasePOI
@@ -17,7 +17,7 @@
   minimumDistance: 750
   maximumDistance: 1000
   spawnGroup: NewMapsgGrid
-  gridPath: /Maps/Forge/Outpost/CentComm.yml
+  gridPath: /Maps/_Forge/Outpost/CentComm.yml
   addComponents:
   - type: ProtectedGrid
     preventArtifactTriggers: True
@@ -34,7 +34,7 @@
 - type: gameMap
   id: Centcomm
   mapName: 'Управление Секторального Флота'
-  mapPath: /Maps/Forge/Outpost/CentComm.yml
+  mapPath: /Maps/_Forge/Outpost/CentComm.yml
   minPlayers: 0
   stations:
     Centcomm:

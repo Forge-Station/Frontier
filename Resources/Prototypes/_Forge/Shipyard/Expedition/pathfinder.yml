@@ -3,8 +3,8 @@
 # Discord: @kesiath
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 #
@@ -16,7 +16,7 @@
   price: 60100
   category: Small
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/pathfinder.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/pathfinder.yml
   guidebookPage: ShipyardPathfinder
   class:
   - Expedition
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Pathfinder
   mapName: 'KC Следопыт'
-  mapPath: /Maps/Forge/Shuttles/Expedition/pathfinder.yml
+  mapPath: /Maps/_Forge/Shuttles/Expedition/pathfinder.yml
   minPlayers: 0
   stations:
     Pathfinder:

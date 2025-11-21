@@ -1,9 +1,13 @@
+# Author Info
+# GitHub: -
+# Discord: -
+
 # Maintainer Info
 # GitHub: dvir001
 # Discord: dvir01 (84770870936997888)
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Cleithro
   parent: BaseVessel
@@ -13,7 +17,7 @@
   category: Medium
   group: Medical
   access: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/cleithro.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/cleithro.yml
   guidebookPage: Null
   class:
   - Medical # HEH
@@ -21,7 +25,7 @@
 - type: gameMap
   id: Cleithro
   mapName: 'DC Клейтро'
-  mapPath: /Maps/Forge/Shuttles/Medical/cleithro.yml
+  mapPath: /Maps/_Forge/Shuttles/Medical/cleithro.yml
   minPlayers: 0
   stations:
     Cleithro:

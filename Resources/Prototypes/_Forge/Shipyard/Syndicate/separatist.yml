@@ -1,14 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
+#
 - type: vessel
   id: separatist
   parent: BaseVessel
@@ -17,7 +18,7 @@
   price: 75000
   category: Medium
   group: Syndicate
-  shuttlePath: /Maps/Forge/Shuttles/Syndicate/separatist.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Syndicate/separatist.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -31,7 +32,7 @@
 - type: gameMap
   id: separatist
   mapName: 'Сепаратист'
-  mapPath: /Maps/Forge/Shuttles/Syndicate/separatist.yml
+  mapPath: /Maps/_Forge/Shuttles/Syndicate/separatist.yml
   minPlayers: 0
   stations:
     separatist:

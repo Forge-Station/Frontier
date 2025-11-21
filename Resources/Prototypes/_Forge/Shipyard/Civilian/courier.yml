@@ -16,7 +16,7 @@
   price: 32600 # base 31100
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/courier.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/courier.yml
   guidebookPage: ShipyardCourier
   class:
   - Cargo
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Courier
   mapName: 'FSB Курьер'
-  mapPath: /Maps/Forge/Shuttles/Civilian/courier.yml
+  mapPath: /Maps/_Forge/Shuttles/Civilian/courier.yml
   minPlayers: 0
   stations:
     Courier:

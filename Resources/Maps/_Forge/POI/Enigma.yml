@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/26/2025 14:52:35
-  entityCount: 1789
+  time: 11/18/2025 15:56:00
+  entityCount: 1791
 maps: []
 grids:
 - 1
@@ -6324,7 +6324,7 @@ entities:
       pos: -5.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -8340.503
+      secondsUntilStateChange: -13379.731
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -9108,26 +9108,13 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: NuclearBomb
+- proto: NuclearBombSyndi
   entities:
   - uid: 1180
     components:
-    - type: MetaData
-      desc: Система Самоуничтожения базы "Энигма", вам, вероянто, не стоит оставаться здесь, чтобы проверить, запущена ли она.
-      name: ССУ "Энигма"
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: 0.5,-3.5
       parent: 1
-    - type: Nuke
-      minimumTime: 120
-      cooldown: 120
-      disarmDoafterLength: 50
-      requiredFloorRadius: 1
-      timer: 120
-    - type: WarpPoint
-      adminOnly: True
-      location: Система самоуничтожения Энигмы
 - proto: NukeCodePaperStation
   entities:
   - uid: 1181
@@ -9916,6 +9903,13 @@ entities:
     - type: Transform
       pos: -2.5,-0.5
       parent: 1
+- proto: SpawnPointEngineerSyn
+  entities:
+  - uid: 1791
+    components:
+    - type: Transform
+      pos: 1.5,-0.5
+      parent: 1
 - proto: SpawnPointMedSyn
   entities:
   - uid: 1287
@@ -9929,6 +9923,13 @@ entities:
     components:
     - type: Transform
       pos: -10.5,-0.5
+      parent: 1
+- proto: SpawnPointSmugglerBodyguard
+  entities:
+  - uid: 1790
+    components:
+    - type: Transform
+      pos: -9.5,-0.5
       parent: 1
 - proto: SpawnPointStormtrooper
   entities:

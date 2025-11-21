@@ -1,7 +1,7 @@
 # Author Info
 # GitHub: -
-# Discord: anton953 CorvaxForge
-# License: CC-BY-NC-ND-3.0
+# Discord: anton953
+# License: CC-BY-NC-ND-4.0
 # CorvaxForge
 
 # Maintainer Info
@@ -18,7 +18,7 @@
   price: 59000
   category: Medium
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/tail.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/tail.yml
   guidebookPage: Null
   class:
   - Cargo
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Tail
   mapName: 'NC Хвост'
-  mapPath: /Maps/Forge/Shuttles/Salvage/tail.yml
+  mapPath: /Maps/_Forge/Shuttles/Salvage/tail.yml
   minPlayers: 0
   stations:
     Tail:

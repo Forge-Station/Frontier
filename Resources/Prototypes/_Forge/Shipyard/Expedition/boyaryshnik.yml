@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: boyaryshnik
   parent: BaseVessel
@@ -18,12 +18,12 @@
   price: 72850
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/boyaryshnik.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/boyaryshnik.yml
 
 - type: gameMap
   id: boyaryshnik
   mapName: 'NLE Боярышник'
-  mapPath: /Maps/Forge/Shuttles/Expedition/boyaryshnik.yml
+  mapPath: /Maps/_Forge/Shuttles/Expedition/boyaryshnik.yml
   minPlayers: 0
   stations:
     boyaryshnik:

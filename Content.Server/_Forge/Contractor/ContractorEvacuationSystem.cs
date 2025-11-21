@@ -179,7 +179,7 @@ public sealed class ContractorEvacuationSystem : EntitySystem
         var offset = new Vector2(MathF.Cos(angle), MathF.Sin(angle)) * distance;
         var desiredPosition = currentMap.Position + offset;
 
-        var path = new ResPath("/Maps/Forge/Shuttles/Scrap/oldpallet.yml");
+        var path = new ResPath("/Maps/_Forge/Shuttles/Scrap/oldpallet.yml");
         if (!_mapLoader.TryLoadGrid(targetXform.MapID, path, out var gridUid, offset: desiredPosition))
             return;
 

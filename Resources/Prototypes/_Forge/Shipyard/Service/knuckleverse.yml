@@ -1,13 +1,13 @@
 # Author Info
 # GitHub: Checkraze (https://github.com/Cheackraze)
-# Discord: ???
+# Discord: -
 
 # Maintainer Info
 # GitHub: dustylens (https://github.com/dustylens)
 # Discord: dustylens
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: KnuckleVerse
   parent: BaseVessel
@@ -16,15 +16,15 @@
   price: 38000
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Service/knuckleverse.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Service/knuckleverse.yml
   guidebookPage: Null
   class:
   - Civilian
 
 - type: gameMap
   id: KnuckleVerse
-  mapName: 'КостоЛом'
-  mapPath: /Maps/Forge/Shuttles/Service/knuckleverse.yml
+  mapName: 'SSC КостоЛом'
+  mapPath: /Maps/_Forge/Shuttles/Service/knuckleverse.yml
   minPlayers: 0
   stations:
     KnuckleVerse:

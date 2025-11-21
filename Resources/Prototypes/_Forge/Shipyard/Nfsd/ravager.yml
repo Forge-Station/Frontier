@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Ravager
   parent: BaseVessel
@@ -17,7 +17,7 @@
   category: Large
   group: Security
   access: Bailiff
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/Ravager.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/ravager.yml
   guidebookPage: Null
   class:
   - Capital
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Ravager
   mapName: 'TL Разоритель'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/Ravager.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/ravager.yml
   minPlayers: 0
   stations:
     Ravager:

@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: kvasen
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: BigSkat
   parent: BaseVessel
@@ -19,7 +19,7 @@
   category: Large
   group: Security
   access: Frontier
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/bigskat.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/bigskat.yml
   class:
   - Capital
   addComponents:
@@ -29,7 +29,7 @@
 - type: gameMap
   id: BigSkat
   mapName: 'NSF Большой скат'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/bigskat.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/bigskat.yml
   minPlayers: 0
   stations:
     BigSkat:

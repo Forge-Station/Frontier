@@ -1,6 +1,6 @@
 # Author Info
 # GitHub: kennedytcooper (https://github.com/kennedytcooper)
-# Discord: ???
+# Discord: -
 
 # Maintainer Info
 # GitHub: erhardsteinhauer
@@ -16,7 +16,7 @@
   price: 20000 # Forge-Change
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Service/bocadillo.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Service/bocadillo.yml
   guidebookPage: ShipyardBocadillo
   class:
   - Kitchen
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Bocadillo
   mapName: 'NC Фудтрак'
-  mapPath: /Maps/Forge/Shuttles/Service/bocadillo.yml
+  mapPath: /Maps/_Forge/Shuttles/Service/bocadillo.yml
   minPlayers: 0
   stations:
     Bocadillo:
