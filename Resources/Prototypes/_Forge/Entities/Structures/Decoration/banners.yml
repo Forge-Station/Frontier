@@ -2,7 +2,8 @@
   id: BannerScrapTech
   parent: BannerBase
   name: Scrap Tech banner
-  description: A banner displaying some crappy company. He,s covered with dirt and engine fluid, in the corner, you can see the crossed-out initials of another company.
+  suffix: DT/ST
+  description: A banner displaying some crappy company. He,s covered with dirt and engine fluid.
   components:
   - type: Sprite
     sprite: Forge/Structures/Decoration/banner.rsi
