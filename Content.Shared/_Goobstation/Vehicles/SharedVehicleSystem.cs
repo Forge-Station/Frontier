@@ -1,389 +1,445 @@
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 Daniil Sikinami
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2023 brainfood1183
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 AJCM-git
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2024 themias
+// SPDX-FileCopyrightText: 2025 HacksLua
+// SPDX-FileCopyrightText: 2025 ScyronX
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Numerics;
+using Content.Shared._NF.Vehicle.Components;
 using Content.Shared.Access.Components;
-using Content.Shared.Access.Systems;
 using Content.Shared.Actions;
 using Content.Shared.Audio;
 using Content.Shared.Buckle;
 using Content.Shared.Buckle.Components;
-using Content.Shared.Hands;
 using Content.Shared.Inventory.VirtualItem;
+using Content.Shared.Item;
+using Content.Shared.Light.Components;
 using Content.Shared.Movement.Components;
+using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Systems;
-using Robust.Shared.Audio;
+using Content.Shared.Popups;
+using Content.Shared.Tag;
+using Content.Shared._Goobstation.Vehicle.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
-using Content.Shared._NF.Vehicle.Components; // Frontier
-using Content.Shared.ActionBlocker; // Frontier
-using Content.Shared.Actions.Components; // Frontier
-using Content.Shared.Light.Components; // Frontier
-using Content.Shared.Light.EntitySystems; // Frontier
-using Content.Shared.Movement.Pulling.Components; // Frontier
-using Content.Shared.Movement.Pulling.Events; // Frontier
-using Content.Shared.Popups; // Frontier
-using Robust.Shared.Network; // Frontier
-using Robust.Shared.Prototypes; // Frontier
-using Robust.Shared.Timing; // Frontier
-using Content.Shared.Weapons.Melee.Events; // Frontier
-using Content.Shared.Emag.Systems; // Frontier
+using Robust.Shared.Network;
+using Robust.Shared.Physics.Systems;
+using Robust.Shared.Serialization;
+using Content.Shared.Actions.Components;
 
-namespace Content.Shared._Goobstation.Vehicles; // Frontier: migrate under _Goobstation
+namespace Content.Shared._Goobstation.Vehicle;
 
+/// <summary>
+/// Stores the VehicleVisuals and shared event
+/// Nothing for a system but these need to be put somewhere in
+/// Content.Shared
+/// </summary>
 public abstract partial class SharedVehicleSystem : EntitySystem
 {
-    [Dependency] private readonly AccessReaderSystem _access = default!;
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
+    [Dependency] private readonly INetManager _netManager = default!;
+
+    [Dependency] protected readonly SharedAppearanceSystem Appearance = default!;
+    [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
+    [Dependency] private readonly MovementSpeedModifierSystem _modifier = default!;
     [Dependency] private readonly SharedAmbientSoundSystem _ambientSound = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly TagSystem _tagSystem = default!;
+    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
+    [Dependency] private readonly SharedVirtualItemSystem _virtualItemSystem = default!;
+    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
+    [Dependency] private readonly SharedJointSystem _joints = default!;
     [Dependency] private readonly SharedBuckleSystem _buckle = default!;
     [Dependency] private readonly SharedMoverController _mover = default!;
-    [Dependency] private readonly SharedVirtualItemSystem _virtualItem = default!;
-    [Dependency] private readonly IGameTiming _timing = default!; // Frontier
-    [Dependency] private readonly INetManager _net = default!; // Frontier
-    [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!; // Frontier
-    [Dependency] private readonly ActionContainerSystem _actionContainer = default!; // Frontier
-    [Dependency] private readonly EmagSystem _emag = default!; // Frontier
-    [Dependency] private readonly SharedPopupSystem _popup = default!; // Frontier
-    [Dependency] private readonly UnpoweredFlashlightSystem _flashlight = default!; // Frontier
 
-    public static readonly EntProtoId HornActionId = "ActionHorn";
-    public static readonly EntProtoId SirenActionId = "ActionSiren";
+    private const string KeySlot = "key_slot";
 
+    /// <inheritdoc/>
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<VehicleComponent, ComponentInit>(OnInit);
-        SubscribeLocalEvent<VehicleComponent, MapInitEvent>(OnMapInit); // Frontier
-        SubscribeLocalEvent<VehicleComponent, ComponentRemove>(OnRemove);
-        SubscribeLocalEvent<VehicleComponent, StrapAttemptEvent>(OnStrapAttempt);
-        SubscribeLocalEvent<VehicleComponent, StrappedEvent>(OnStrapped);
-        SubscribeLocalEvent<VehicleComponent, UnstrappedEvent>(OnUnstrapped);
-        SubscribeLocalEvent<VehicleComponent, VirtualItemDeletedEvent>(OnDropped);
-        SubscribeLocalEvent<VehicleComponent, MeleeHitEvent>(OnMeleeHit); // Frontier
-        SubscribeLocalEvent<VehicleComponent, GotEmaggedEvent>(OnGotEmagged, before: [typeof(UnpoweredFlashlightSystem)]); // Frontier
-        SubscribeLocalEvent<VehicleComponent, GotUnEmaggedEvent>(OnGotUnemagged, before: [typeof(UnpoweredFlashlightSystem)]); // Frontier
+        InitializeRider();
 
-        SubscribeLocalEvent<VehicleComponent, EntInsertedIntoContainerMessage>(OnInsert);
-        SubscribeLocalEvent<VehicleComponent, EntRemovedFromContainerMessage>(OnEject);
+        SubscribeLocalEvent<VehicleComponent, ComponentStartup>(OnVehicleStartup);
+        SubscribeLocalEvent<VehicleComponent, StrapAttemptEvent>(OnStrapAttempt); // Umbra
+        SubscribeLocalEvent<VehicleComponent, StrappedEvent>(OnStrapped); // Umbra
+        SubscribeLocalEvent<VehicleComponent, UnstrappedEvent>(OnUnstrapped); // Umbra
+        SubscribeLocalEvent<VehicleComponent, HonkActionEvent>(OnHonkAction);
+        SubscribeLocalEvent<VehicleComponent, EntInsertedIntoContainerMessage>(OnEntInserted);
+        SubscribeLocalEvent<VehicleComponent, EntRemovedFromContainerMessage>(OnEntRemoved);
+        SubscribeLocalEvent<VehicleComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovementSpeedModifiers);
+        SubscribeLocalEvent<VehicleComponent, MoveEvent>(OnMoveEvent);
+        SubscribeLocalEvent<VehicleComponent, GetAdditionalAccessEvent>(OnGetAdditionalAccess);
 
-        SubscribeLocalEvent<VehicleComponent, HornActionEvent>(OnHorn);
-        SubscribeLocalEvent<VehicleComponent, SirenActionEvent>(OnSiren);
+        SubscribeLocalEvent<InVehicleComponent, GettingPickedUpAttemptEvent>(OnGettingPickedUpAttempt);
 
-        SubscribeLocalEvent<VehicleRiderComponent, PullAttemptEvent>(OnRiderPull); // Frontier
+        SubscribeLocalEvent<VehicleHornComponent, ComponentInit>(OnVehicleHornInit);
+        SubscribeLocalEvent<VehicleHornComponent, ComponentShutdown>(OnVehicleHornShutdown);
+        SubscribeLocalEvent<VehicleHornComponent, HonkActionEvent>(OnHornHonkAction); // Frontier: for vehicles with innate horns (e.g. taxibot)
     }
 
-    private void OnInit(EntityUid uid, VehicleComponent component, ComponentInit args)
+    /// <summary>
+    /// This just controls whether the wheels are turning.
+    /// </summary>
+    public override void Update(float frameTime)
     {
-        _appearance.SetData(uid, VehicleState.Animated, component.EngineRunning && component.Driver != null); // Frontier: add Driver != null
-        _appearance.SetData(uid, VehicleState.DrawOver, false);
+        var vehicleQuery = EntityQueryEnumerator<VehicleComponent, InputMoverComponent>();
+        while (vehicleQuery.MoveNext(out var uid, out var vehicle, out var mover))
+        {
+            if (!vehicle.AutoAnimate)
+                continue;
+
+            // Why is this updating appearance data every tick, instead of when it needs to be updated???
+
+            if (_mover.GetVelocityInput(mover).Sprinting == Vector2.Zero)
+            {
+                UpdateAutoAnimate(uid, false);
+                continue;
+            }
+
+            UpdateAutoAnimate(uid, true);
+        }
     }
 
-    // Frontier
-    private void OnMapInit(EntityUid uid, VehicleComponent component, MapInitEvent args)
+    private void OnVehicleStartup(EntityUid uid, VehicleComponent component, ComponentStartup args)
     {
-        bool actionsUpdated = false;
+        UpdateDrawDepth(uid, 2);
+
+        // This code should be purged anyway but with that being said this doesn't handle components being changed.
+        if (TryComp<StrapComponent>(uid, out var strap))
+        {
+            component.BaseBuckleOffset = strap.BuckleOffset;
+            strap.BuckleOffset = Vector2.Zero;
+        }
+
+        _modifier.RefreshMovementSpeedModifiers(uid);
+    }
+
+    // Umbra: vehicle changes
+    protected virtual void OnUnstrapped(EntityUid uid, VehicleComponent component, ref UnstrappedEvent args) //Lua: private void<protected virtual void
+    {
+        // Remove rider
+        var riderUid = args.Buckle.Owner;
+
+        // Clean up actions and virtual items
+        _actionsSystem.RemoveProvidedActions(riderUid, uid);
+
+        if (component.UseHand == true)
+            _virtualItemSystem.DeleteInHandsMatching(riderUid, uid);
+
+        // Entity is no longer riding
+        RemComp<RiderComponent>(riderUid);
+        RemComp<RelayInputMoverComponent>(riderUid);
+        _tagSystem.RemoveTag(uid, "DoorBumpOpener");
+
+        Appearance.SetData(uid, VehicleVisuals.HideRider, false);
+        // Reset component
+        component.Rider = null;
+        Dirty(uid, component);
+    }
+
+    private void OnStrapAttempt(EntityUid uid, VehicleComponent component, ref StrapAttemptEvent args)
+    {
+        // Add Rider
+        var riderUid = args.Buckle.Owner;
+        if (component.UseHand == true)
+        {
+            // Frontier: no pulling when riding
+            if (TryComp<PullerComponent>(riderUid, out var puller) && puller.Pulling != null)
+            {
+                if (_netManager.IsServer)
+                {
+                    _popupSystem.PopupEntity(Loc.GetString("vehicle-cannot-pull", ("object", puller.Pulling), ("vehicle", uid)), uid, riderUid);
+                }
+                args.Cancelled = true;
+                return;
+            }
+            // End Frontier
+
+            // Add a virtual item to rider's hand, cancel if we can't.
+            if (!_virtualItemSystem.TrySpawnVirtualItemInHand(uid, riderUid))
+            {
+                args.Cancelled = true;
+                return;
+            }
+        }
+    }
+
+    protected virtual void OnStrapped(EntityUid uid, VehicleComponent component, ref StrappedEvent args) //Lua: private void<protected virtual void
+    {
+        var riderUid = args.Buckle.Owner;
+
+        // Set up the rider and vehicle with each other
+        EnsureComp<InputMoverComponent>(uid);
+        var rider = EnsureComp<RiderComponent>(riderUid);
+        component.Rider = riderUid;
+        component.LastRider = component.Rider;
+        Dirty(uid, component);
+        Appearance.SetData(uid, VehicleVisuals.HideRider, true);
+
+        _mover.SetRelay(riderUid, uid);
+        rider.Vehicle = uid;
+
+        // Update appearance stuff, add actions
+        UpdateBuckleOffset(uid, Transform(uid), component);
+        if (TryComp<InputMoverComponent>(uid, out var mover))
+            UpdateDrawDepth(uid, GetDrawDepth(Transform(uid), component, mover.RelativeRotation.Degrees));
+
+        if (TryComp<ActionsComponent>(riderUid, out var actions) && TryComp<UnpoweredFlashlightComponent>(uid, out var flashlight))
+        {
+            _actionsSystem.AddAction(riderUid, ref flashlight.ToggleActionEntity, flashlight.ToggleAction, uid, actions);
+        }
+
         if (component.HornSound != null)
         {
-            _actionContainer.EnsureAction(uid, ref component.HornAction, HornActionId);
-            actionsUpdated = true;
+            _actionsSystem.AddAction(riderUid, ref component.HornActionEntity, component.HornAction, uid, actions);
         }
 
-        if (component.SirenSound != null)
-        {
-            _actionContainer.EnsureAction(uid, ref component.SirenAction, SirenActionId);
-            actionsUpdated = true;
-        }
+        _joints.ClearJoints(riderUid);
 
-        if (actionsUpdated)
-            Dirty(uid, component);
+        _tagSystem.AddTag(uid, "DoorBumpOpener");
     }
-    // End Frontier
+    // End Umbra
 
-    private void OnRemove(EntityUid uid, VehicleComponent component, ComponentRemove args)
+    /// <summary>
+    /// This fires when the rider presses the honk action
+    /// </summary>
+    private void OnHonkAction(EntityUid uid, VehicleComponent vehicle, HonkActionEvent args)
     {
-        if (component.Driver == null)
+        if (args.Handled || vehicle.HornSound == null)
             return;
 
-        _buckle.TryUnbuckle(component.Driver.Value, component.Driver.Value);
-        Dismount(component.Driver.Value, uid);
-        _appearance.SetData(uid, VehicleState.DrawOver, false);
+        // TODO: Need audio refactor maybe, just some way to null it when the stream is over.
+        // For now better to just not loop to keep the code much cleaner.
+        vehicle.HonkPlayingStream = _audioSystem.PlayPredicted(vehicle.HornSound, uid, args.Performer)?.Entity;
+        args.Handled = true;
     }
 
-    private void OnInsert(EntityUid uid, VehicleComponent component, ref EntInsertedIntoContainerMessage args)
+    /// <summary>
+    /// Handle adding keys to the ignition, give stuff the InVehicleComponent so it can't be picked
+    /// up by people not in the vehicle.
+    /// </summary>
+    private void OnEntInserted(EntityUid uid, VehicleComponent component, EntInsertedIntoContainerMessage args)
     {
-        if (HasComp<InstantActionComponent>(args.Entity))
+        if (args.Container.ID != KeySlot ||
+            !_tagSystem.HasTag(args.Entity, "VehicleKey"))
             return;
 
-        // Frontier: check key slot
-        if (args.Container.ID != component.KeySlotId)
-            return;
-        if (!_timing.IsFirstTimePredicted)
-            return;
-        // End Frontier: check key slot
+        // Enable vehicle
+        var inVehicle = EnsureComp<InVehicleComponent>(args.Entity);
+        inVehicle.Vehicle = component;
 
-        component.EngineRunning = true;
-        _appearance.SetData(uid, VehicleState.Animated, component.Driver != null);
+        component.HasKey = true;
 
+        var msg = Loc.GetString("vehicle-use-key",
+            ("keys", args.Entity), ("vehicle", uid));
+        if (_netManager.IsServer)
+            _popupSystem.PopupEntity(msg, uid, args.OldParent, PopupType.Medium);
+
+        // Audiovisual feedback
         _ambientSound.SetAmbience(uid, true);
-
-        if (component.Driver == null)
-            return;
-
-        Mount(component.Driver.Value, uid);
+        _modifier.RefreshMovementSpeedModifiers(uid);
     }
 
-    private void OnEject(EntityUid uid, VehicleComponent component, ref EntRemovedFromContainerMessage args)
+    /// <summary>
+    /// Turn off the engine when key is removed.
+    /// </summary>
+    private void OnEntRemoved(EntityUid uid, VehicleComponent component, EntRemovedFromContainerMessage args)
     {
-        // Frontier: check key slot
-        if (args.Container.ID != component.KeySlotId)
+        if (args.Container.ID != KeySlot || !RemComp<InVehicleComponent>(args.Entity))
             return;
-        if (!_timing.IsFirstTimePredicted)
-            return;
-        // End Frontier: check key slot
 
-        component.EngineRunning = false;
-        _appearance.SetData(uid, VehicleState.Animated, false);
-
+        // Disable vehicle
+        component.HasKey = false;
         _ambientSound.SetAmbience(uid, false);
-
-        if (component.Driver == null)
-            return;
-
-        Dismount(component.Driver.Value, uid, removeDriver: false); // Frontier: add removeDriver: false - the driver is still around.
+        _modifier.RefreshMovementSpeedModifiers(uid);
     }
 
-    private void OnHorn(EntityUid uid, VehicleComponent component, InstantActionEvent args)
+    private void OnRefreshMovementSpeedModifiers(EntityUid uid, VehicleComponent component, RefreshMovementSpeedModifiersEvent args)
     {
-        if (args.Handled == true || component.Driver != args.Performer || component.HornSound == null)
+        if (!component.HasKey)
+        {
+            args.ModifySpeed(0f, 0f);
+        }
+    }
+
+    // TODO: Shitcode, needs to use sprites instead of actual offsets.
+    private void OnMoveEvent(EntityUid uid, VehicleComponent component, ref MoveEvent args)
+    {
+        if (args.NewRotation == args.OldRotation)
             return;
 
-        _audio.PlayPredicted(component.HornSound, uid, args.Performer); // Frontier: PlayPvs<PlayPredicted, add args.Performer
+        // This first check is just for safety
+        if (component.AutoAnimate && !HasComp<InputMoverComponent>(uid))
+        {
+            UpdateAutoAnimate(uid, false);
+            return;
+        }
+
+        UpdateBuckleOffset(uid, args.Component, component);
+        if (TryComp<InputMoverComponent>(uid, out var mover))
+            UpdateDrawDepth(uid, GetDrawDepth(args.Component, component, mover.RelativeRotation));
+    }
+
+    private void OnGettingPickedUpAttempt(EntityUid uid, InVehicleComponent component, GettingPickedUpAttemptEvent args)
+    {
+        if (component.Vehicle == null || component.Vehicle.Rider != null && component.Vehicle.Rider != args.User)
+            args.Cancel();
+    }
+
+    /// <summary>
+    /// Depending on which direction the vehicle is facing,
+    /// change its draw depth. Vehicles can choose between special drawdetph
+    /// when facing north or south. East and west are easy.
+    /// </summary>
+    private int GetDrawDepth(TransformComponent xform, VehicleComponent component, Angle cameraAngle)
+    {
+        var itemDirection = cameraAngle.GetDir() switch
+        {
+            Direction.South => xform.LocalRotation.GetDir(),
+            Direction.North => xform.LocalRotation.RotateDir(Direction.North),
+            Direction.West => xform.LocalRotation.RotateDir(Direction.East),
+            Direction.East => xform.LocalRotation.RotateDir(Direction.West),
+            _ => Direction.South
+        };
+
+        return itemDirection switch
+        {
+            Direction.North => component.NorthOver
+                ? (int) DrawDepth.DrawDepth.Doors
+                : (int) DrawDepth.DrawDepth.WallMountedItems,
+            Direction.South => component.SouthOver
+                ? (int) DrawDepth.DrawDepth.Doors
+                : (int) DrawDepth.DrawDepth.WallMountedItems,
+            Direction.West => component.WestOver
+                ? (int) DrawDepth.DrawDepth.Doors
+                : (int) DrawDepth.DrawDepth.WallMountedItems,
+            Direction.East => component.EastOver
+                ? (int) DrawDepth.DrawDepth.Doors
+                : (int) DrawDepth.DrawDepth.WallMountedItems,
+            _ => (int) DrawDepth.DrawDepth.WallMountedItems
+        };
+    }
+
+
+    /// <summary>
+    /// Change the buckle offset based on what direction the vehicle is facing and
+    /// teleport any buckled entities to it. This is the most crucial part of making
+    /// buckled vehicles work.
+    /// </summary>
+    private void UpdateBuckleOffset(EntityUid uid, TransformComponent xform, VehicleComponent component)
+    {
+        if (!TryComp<StrapComponent>(uid, out var strap))
+            return;
+
+        // TODO: Strap should handle this but buckle E/C moment.
+        var oldOffset = strap.BuckleOffset;
+
+        strap.BuckleOffset = xform.LocalRotation.Degrees switch
+        {
+            < 45f => new(0, component.SouthOverride),
+            <= 135f => component.BaseBuckleOffset,
+            < 225f  => new(0, component.NorthOverride),
+            <= 315f => new(component.BaseBuckleOffset.X * -1, component.BaseBuckleOffset.Y),
+            _ => new(0, component.SouthOverride)
+        };
+
+        if (!oldOffset.Equals(strap.BuckleOffset))
+            Dirty(uid, strap);
+
+        foreach (var buckledEntity in strap.BuckledEntities)
+        {
+            var buckleXform = Transform(buckledEntity);
+            _transform.SetLocalPositionNoLerp(buckleXform, strap.BuckleOffset);
+        }
+    }
+
+    private void OnGetAdditionalAccess(EntityUid uid, VehicleComponent component, ref GetAdditionalAccessEvent args)
+    {
+        if (component.Rider == null)
+            return;
+        args.Entities.Add(component.Rider.Value);
+    }
+
+    /// <summary>
+    /// Set the draw depth for the sprite.
+    /// </summary>
+    private void UpdateDrawDepth(EntityUid uid, int drawDepth)
+    {
+        Appearance.SetData(uid, VehicleVisuals.DrawDepth, drawDepth);
+    }
+
+    /// <summary>
+    /// Set whether the vehicle's base layer is animating or not.
+    /// </summary>
+    private void UpdateAutoAnimate(EntityUid uid, bool autoAnimate)
+    {
+        Appearance.SetData(uid, VehicleVisuals.AutoAnimate, autoAnimate);
+    }
+
+    /// Horn-only functions
+    private void OnVehicleHornShutdown(EntityUid uid, VehicleHornComponent component, ComponentShutdown args)
+    {
+        // Perf: If the entity is deleting itself, no reason to change these back.
+        if (Terminating(uid))
+            return;
+
+        _actionsSystem.RemoveAction(uid, component.ActionEntity);
+    }
+
+    private void OnVehicleHornInit(EntityUid uid, VehicleHornComponent component, ComponentInit args)
+    {
+        _actionsSystem.AddAction(uid, ref component.ActionEntity, out var _, component.Action);
+    }
+
+    /// <summary>
+    /// This fires when the vehicle entity presses the honk action
+    /// </summary>
+    private void OnHornHonkAction(EntityUid uid, VehicleHornComponent vehicle, HonkActionEvent args)
+    {
+        if (args.Handled || vehicle.HornSound == null)
+            return;
+
+        // TODO: Need audio refactor maybe, just some way to null it when the stream is over.
+        // For now better to just not loop to keep the code much cleaner.
+        vehicle.HonkPlayingStream = _audioSystem.PlayPredicted(vehicle.HornSound, uid, args.Performer)?.Entity;
         args.Handled = true;
     }
-
-    private void OnSiren(EntityUid uid, VehicleComponent component, InstantActionEvent args)
-    {
-        if (_net.IsClient) // Frontier: _audio.Stop hates client-side entities, only create this serverside
-            return; // Frontier
-
-        if (args.Handled == true || component.Driver != args.Performer || component.SirenSound == null)
-            return;
-
-        if (component.SirenStream != null) // Frontier: SirenEnabled<SirenStream != null
-        {
-            component.SirenStream = _audio.Stop(component.SirenStream);
-        }
-        else
-        {
-            var sirenParams = component.SirenSound.Params.WithLoop(true); // Frontier: force loop
-            component.SirenStream = _audio.PlayPvs(component.SirenSound, uid, audioParams: sirenParams)?.Entity; // Frontier: set params
-        }
-
-        // component.SirenEnabled = component.SirenStream != null; // Frontier: remove (unneeded state)
-        args.Handled = true;
-    }
-
-
-    private void OnStrapAttempt(Entity<VehicleComponent> ent, ref StrapAttemptEvent args)
-    {
-        var driver = args.Buckle.Owner; // i dont want to re write this shit 100 fucking times
-
-        if (ent.Comp.Driver != null)
-        {
-            args.Cancelled = true;
-            return;
-        }
-
-        // Frontier: no pulling when riding
-        if (TryComp<PullerComponent>(args.Buckle, out var puller) && puller.Pulling != null)
-        {
-            _popup.PopupPredicted(Loc.GetString("vehicle-cannot-pull", ("object", puller.Pulling), ("vehicle", ent)), ent, args.Buckle);
-            args.Cancelled = true;
-            return;
-        }
-        // End Frontier
-
-        if (ent.Comp.RequiredHands != 0)
-        {
-            for (int hands = 0; hands < ent.Comp.RequiredHands; hands++)
-            {
-                if (!_virtualItem.TrySpawnVirtualItemInHand(ent.Owner, driver, false))
-                {
-                    args.Cancelled = true;
-                    _virtualItem.DeleteInHandsMatching(driver, ent.Owner);
-                    return;
-                }
-            }
-        }
-
-        // AddHorns(driver, ent); // Frontier: delay until mounted
-    }
-
-    protected virtual void OnStrapped(Entity<VehicleComponent> ent, ref StrappedEvent args) // Frontier: private<protected virtual
-    {
-        var driver = args.Buckle.Owner;
-
-        if (!TryComp(driver, out MobMoverComponent? mover) || ent.Comp.Driver != null)
-            return;
-
-        ent.Comp.Driver = driver;
-        Dirty(ent); // Frontier
-        _appearance.SetData(ent.Owner, VehicleState.DrawOver, true);
-        _appearance.SetData(ent.Owner, VehicleState.Animated, ent.Comp.EngineRunning); // Frontier
-        var rider = EnsureComp<VehicleRiderComponent>(driver); // Frontier
-        Dirty(driver, rider); // Frontier
-
-        if (!ent.Comp.EngineRunning)
-            return;
-
-        Mount(driver, ent.Owner);
-    }
-
-    protected virtual void OnUnstrapped(Entity<VehicleComponent> ent, ref UnstrappedEvent args) // Frontier: private<protected virtual
-    {
-        if (ent.Comp.Driver != args.Buckle.Owner)
-            return;
-
-        Dismount(args.Buckle.Owner, ent);
-        _appearance.SetData(ent.Owner, VehicleState.DrawOver, false);
-        _appearance.SetData(ent.Owner, VehicleState.Animated, false); // Frontier
-        RemComp<VehicleRiderComponent>(args.Buckle.Owner); // Frontier
-    }
-
-    private void OnDropped(EntityUid uid, VehicleComponent comp, VirtualItemDeletedEvent args)
-    {
-        if (comp.Driver != args.User)
-            return;
-
-        _buckle.TryUnbuckle(args.User, args.User);
-
-        Dismount(args.User, uid);
-        _appearance.SetData(uid, VehicleState.DrawOver, false);
-        _appearance.SetData(uid, VehicleState.Animated, false); // Frontier
-        RemComp<VehicleRiderComponent>(args.User); // Frontier
-    }
-
-    // Frontier: do not hit your own vehicle
-    private void OnMeleeHit(Entity<VehicleComponent> ent, ref MeleeHitEvent args)
-    {
-        if (args.User == ent.Comp.Driver) // Don't hit your own vehicle
-            args.Handled = true;
-    }
-    // End Frontier: do not hit your own vehicle
-
-    private void AddHorns(EntityUid driver, EntityUid vehicle)
-    {
-        if (!TryComp<VehicleComponent>(vehicle, out var vehicleComp))
-            return;
-
-        // Frontier: grant existing actions
-        List<EntityUid> grantedActions = new();
-        if (vehicleComp.HornAction != null)
-            grantedActions.Add(vehicleComp.HornAction.Value);
-
-        if (vehicleComp.SirenAction != null)
-            grantedActions.Add(vehicleComp.SirenAction.Value);
-
-        if (TryComp<UnpoweredFlashlightComponent>(vehicle, out var flashlight) && flashlight.ToggleActionEntity != null)
-        {
-            grantedActions.Add(flashlight.ToggleActionEntity.Value);
-            _flashlight.SetLight((vehicle, flashlight), flashlight.LightOn, quiet: true);
-        }
-        // Only try to grant actions if the vehicle actually has them.
-        if (grantedActions.Count > 0)
-            _actions.GrantActions(driver, grantedActions, vehicle);
-        // End Frontier
-    }
-
-    private void Mount(EntityUid driver, EntityUid vehicle)
-    {
-        if (TryComp<AccessComponent>(vehicle, out var accessComp))
-        {
-            var accessSources = _access.FindPotentialAccessItems(driver);
-            var access = _access.FindAccessTags(driver, accessSources);
-
-            foreach (var tag in access)
-            {
-                accessComp.Tags.Add(tag);
-            }
-        }
-
-        _mover.SetRelay(driver, vehicle);
-
-        AddHorns(driver, vehicle); // Frontier
-    }
-
-    private void Dismount(EntityUid driver, EntityUid vehicle, bool removeDriver = true) // Frontier: add removeDriver
-    {
-        if (!TryComp<VehicleComponent>(vehicle, out var vehicleComp) || vehicleComp.Driver != driver)
-            return;
-
-        RemComp<RelayInputMoverComponent>(driver);
-        _actionBlocker.UpdateCanMove(driver); // Frontier: bugfix, relay input mover only updates on shutdown, not remove
-
-        if (removeDriver) // Frontier
-            vehicleComp.Driver = null;
-
-        _actions.RemoveProvidedActions(driver, vehicle); // Frontier: don't remove actions, just provide/revoke them
-
-        if (removeDriver) // Frontier
-            _virtualItem.DeleteInHandsMatching(driver, vehicle);
-
-        if (TryComp<AccessComponent>(vehicle, out var accessComp))
-            accessComp.Tags.Clear();
-    }
-
-    // Frontier: prevent drivers from pulling things, emag handlers
-    private void OnRiderPull(Entity<VehicleRiderComponent> ent, ref PullAttemptEvent args)
-    {
-        if (args.PullerUid == ent.Owner)
-            args.Cancelled = true;
-    }
-
-    private void OnGotEmagged(Entity<VehicleComponent> ent, ref GotEmaggedEvent args)
-    {
-        if (args.Handled)
-            return;
-
-        if (!_emag.CompareFlag(args.Type, EmagType.Interaction))
-            return;
-
-        if (ent.Comp.RadarBlip)
-        {
-            ent.Comp.RadarBlip = false;
-            Dirty(ent);
-
-            HandleEmag(ent);
-
-            // Hack: assuming the only other emaggable component on the vehicle is a flashlight
-            args.Repeatable = HasComp<UnpoweredFlashlightComponent>(ent);
-            args.Handled = true;
-        }
-    }
-
-    private void OnGotUnemagged(Entity<VehicleComponent> ent, ref GotUnEmaggedEvent args)
-    {
-        if (args.Handled)
-            return;
-
-        if (!_emag.CompareFlag(args.Type, EmagType.Interaction))
-            return;
-
-        if (!ent.Comp.RadarBlip)
-        {
-            ent.Comp.RadarBlip = true;
-            Dirty(ent);
-
-            HandleUnemag(ent);
-
-            args.Handled = true;
-        }
-    }
-
-    protected abstract void HandleEmag(Entity<VehicleComponent> ent);
-    protected abstract void HandleUnemag(Entity<VehicleComponent> ent);
-    // End Frontier
 }
 
-public sealed partial class HornActionEvent : InstantActionEvent;
+/// <summary>
+/// Stores the vehicle's draw depth mostly
+/// </summary>
+[Serializable, NetSerializable]
+public enum VehicleVisuals : byte
+{
+    /// <summary>
+    /// What layer the vehicle should draw on (assumed integer)
+    /// </summary>
+    DrawDepth,
+    /// <summary>
+    /// Whether the wheels should be turning
+    /// </summary>
+    AutoAnimate,
+    HideRider
+}
 
-public sealed partial class SirenActionEvent : InstantActionEvent;
+/// <summary>
+/// Raised when someone honks a vehicle horn
+/// </summary>
+public sealed partial class HonkActionEvent : InstantActionEvent
+{
+}

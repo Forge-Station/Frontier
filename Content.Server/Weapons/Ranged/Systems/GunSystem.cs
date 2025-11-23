@@ -47,10 +47,10 @@
 
 using Content.Server._Mono.FireControl;
 using Content.Server.Cargo.Systems;
-using Content.Server.Damage.Systems;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Weapons.Ranged.Components;
 using Content.Shared._Mono;
+using Content.Shared._RMC14.Weapons.Ranged.Prediction;
 using Content.Shared.Cargo;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
@@ -88,7 +88,7 @@ public sealed partial class GunSystem : SharedGunSystem
     [Dependency] private readonly PricingSystem _pricing = default!;
     [Dependency] private readonly SharedColorFlashEffectSystem _color = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly StaminaSystem _stamina = default!;
+    [Dependency] private readonly SharedStaminaSystem _stamina = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly RequireProjectileTargetSystem _requireProjectileTarget = default!;
@@ -290,6 +290,14 @@ public sealed partial class GunSystem : SharedGunSystem
             return;
         }
 
+        if (GunPrediction && user != null && TryComp<ActorComponent>(user, out var actor))
+        {
+            var predicted = EnsureComp<PredictedProjectileServerComponent>(uid);
+            predicted.Shooter = actor.PlayerSession;
+            predicted.ClientId = uid.Id;
+            predicted.ClientEnt = user;
+        }
+
         ShootProjectile(uid, mapDirection, gunVelocity, gunUid, user, gun.ProjectileSpeedModified);
         if (HasComp<FireControllableComponent>(gunUid))
         {
@@ -343,7 +351,7 @@ public sealed partial class GunSystem : SharedGunSystem
         RaiseNetworkEvent(message, filter);
     }
 
-    public void PlayImpactSound(EntityUid otherEntity, DamageSpecifier? modifiedDamage, SoundSpecifier? weaponSound, bool forceWeaponSound, Robust.Shared.Player.Filter? filter = null, Entity<ProjectileComponent, PhysicsComponent>? projectile = null)
+    public override void PlayImpactSound(EntityUid otherEntity, DamageSpecifier? modifiedDamage, SoundSpecifier? weaponSound, bool forceWeaponSound, Robust.Shared.Player.Filter? filter = null, Entity<ProjectileComponent, PhysicsComponent>? projectile = null)
     {
         DebugTools.Assert(!Deleted(otherEntity), "Impact sound entity was deleted");
 

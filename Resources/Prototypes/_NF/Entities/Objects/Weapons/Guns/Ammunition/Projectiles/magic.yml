@@ -57,20 +57,27 @@
   - type: Ammo
     muzzleFlash: null
 
-- type: hitscan
+- type: entity
+  parent: BasicHitscan
   id: BloodCultLaser
-  damage:
-    types:
-      Slash: 8
-  muzzleFlash:
-    sprite: _NF/Effects/bloodcultbeams.rsi
-    state: red_lightning
-  travelFlash:
-    sprite: _NF/Effects/bloodcultbeams.rsi
-    state: red_lightning
-  impactFlash:
-    sprite: _NF/Effects/bloodcultbeams.rsi
-    state: red_lightning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicRaycast
+    maxDistance: 60.0
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Slash: 8
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _NF/Effects/bloodcultbeams.rsi
+      state: red_lightning
+    travelFlash:
+      sprite: _NF/Effects/bloodcultbeams.rsi
+      state: red_lightning
+    impactFlash:
+      sprite: _NF/Effects/bloodcultbeams.rsi
+      state: red_lightning
 
 - type: entity # For blood cult cat
   parent: BaseBullet

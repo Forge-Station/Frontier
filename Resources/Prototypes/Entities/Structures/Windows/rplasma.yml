@@ -66,6 +66,7 @@
         layer:
         - WallLayer
         density: 2000
+  - type: HitscanDiffractTarget # Mono - Causes diffraction
 
 - type: entity
   id: PlasmaReinforcedWindowDirectional
@@ -122,6 +123,7 @@
         acts: [ "Destruction" ]
   - type: StaticPrice
     price: 30
+  - type: HitscanDiffractTarget # Mono - Causes diffraction
 
 - type: entity
   parent: ReinforcedPlasmaWindow
@@ -171,3 +173,4 @@
   - type: Construction
     graph: WindowDiagonal
     node: reinforcedPlasmaWindowDiagonal
+  - type: HitscanDiffractTarget # Mono - Causes diffraction

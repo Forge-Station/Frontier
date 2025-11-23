@@ -66,6 +66,7 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+
 - type: entity
   id: MuzzleFlashEffect
   categories: [ HideSpawnMenu ]
@@ -88,6 +89,7 @@
   - type: Tag
     tags:
       - HideContextMenu
+  - type: AnimationPlayer
 
 - type: entity
   parent: MuzzleFlashEffect

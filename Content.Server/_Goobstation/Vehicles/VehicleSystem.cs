@@ -1,39 +1,42 @@
-using Content.Shared._Goobstation.Vehicles; // Frontier: migrate under _Goobstation
-using Content.Server._NF.Radar; // Frontier
-using Content.Shared.Buckle.Components; // Frontier
-using Content.Shared._NF.Radar; // Frontier
+// SPDX-FileCopyrightText: 2022 DrSmugleaf
+// SPDX-FileCopyrightText: 2022 Leon Friedrich
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2023 AJCM-git
+// SPDX-FileCopyrightText: 2023 Daniil Sikinami
+// SPDX-FileCopyrightText: 2024 checkraze
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 HacksLua
+// SPDX-FileCopyrightText: 2025 ScyronX
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
-namespace Content.Server._Goobstation.Vehicles; // Frontier: migrate under _Goobstation
+using Content.Server._Mono.Radar; //Lua mod
+using Content.Shared.Buckle.Components; //Lua mod
+using Content.Shared._Goobstation.Vehicle;
+using Content.Shared._Goobstation.Vehicle.Components;
+using Content.Shared._NF.Radar; //Lua mod
+
+namespace Content.Server.Vehicle;
 
 public sealed class VehicleSystem : SharedVehicleSystem
 {
-    //// Frontier: extra logic (radar blips, faction stuff)
-    [Dependency] private readonly RadarBlipSystem _radar = default!;
-
-    /// <summary>
-    /// Configures the radar blip for a vehicle entity.
-    /// </summary>
-    protected override void OnStrapped(Entity<VehicleComponent> ent, ref StrappedEvent args)
+    //Lua start
+    protected override void OnStrapped(EntityUid uid, VehicleComponent component, ref StrappedEvent args)
     {
-        base.OnStrapped(ent, ref args);
-        _radar.SetupVehicleRadarBlip(ent);
+        base.OnStrapped(uid, component, ref args);
+
+        var blip = EnsureComp<RadarBlipComponent>(uid);
+        blip.RadarColor = Color.Cyan;
+        blip.Scale = 0.5f;
+        blip.VisibleFromOtherGrids = true;
     }
 
-    protected override void OnUnstrapped(Entity<VehicleComponent> ent, ref UnstrappedEvent args)
+    protected override void OnUnstrapped(EntityUid uid, VehicleComponent component, ref UnstrappedEvent args)
     {
-        RemComp<RadarBlipComponent>(ent);
-        base.OnUnstrapped(ent, ref args);
-    }
+        RemComp<RadarBlipComponent>(uid);
 
-    protected override void HandleEmag(Entity<VehicleComponent> ent)
-    {
-        RemComp<RadarBlipComponent>(ent);
+        base.OnUnstrapped(uid, component, ref args);
     }
-
-    protected override void HandleUnemag(Entity<VehicleComponent> ent)
-    {
-        if (ent.Comp.Driver != null)
-            _radar.SetupVehicleRadarBlip(ent);
-    }
-    // End Frontier
+    //Lua end
 }

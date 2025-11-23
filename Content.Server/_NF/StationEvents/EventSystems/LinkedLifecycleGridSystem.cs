@@ -10,7 +10,7 @@ using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Movement.Pulling.Components;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
-using Content.Shared._Goobstation.Vehicles;
+using Content.Shared._Goobstation.Vehicle.Components;
 
 namespace Content.Server.StationEvents.Events;
 
@@ -69,7 +69,7 @@ public sealed class LinkedLifecycleGridSystem : EntitySystem
     // Try to get parent of entity where appropriate.
     private (EntityUid, TransformComponent) GetParentToReparent(EntityUid uid, TransformComponent xform)
     {
-        if (TryComp<VehicleComponent>(xform.ParentUid, out var vehicle) && vehicle.Driver == uid)
+        if (TryComp<VehicleComponent>(xform.ParentUid, out var vehicle) && vehicle.Rider == uid)
         {
             var vehicleXform = Transform(xform.ParentUid);
             if (vehicleXform.MapUid != null)
