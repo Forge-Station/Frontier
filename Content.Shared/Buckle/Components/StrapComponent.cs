@@ -1,6 +1,6 @@
 using System.Numerics;
 using Content.Shared.Alert;
-using Content.Shared._Goobstation.Vehicle; // Frontier
+using Content.Shared._Goobstation.Vehicles; // Frontier
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;

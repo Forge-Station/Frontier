@@ -1,4 +1,4 @@
-using Content.Shared._Goobstation.Vehicle;
+using Content.Shared._Goobstation.Vehicles;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;

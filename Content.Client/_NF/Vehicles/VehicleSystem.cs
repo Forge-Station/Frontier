@@ -1,80 +1,96 @@
-using Content.Shared._Goobstation.Vehicle;
-using Content.Shared._Goobstation.Vehicle.Components;
+using System.Numerics;
+using Content.Shared._Goobstation.Vehicles;
 using Robust.Client.GameObjects;
-using Robust.Shared.GameStates;
+using Robust.Client.Graphics;
+using Robust.Shared.Graphics.RSI;
 
-namespace Content.Client.Vehicle;
+namespace Content.Client._NF.Vehicles;
 
+// Rewritten from Goobstation's VehicleSystem.
 public sealed class VehicleSystem : SharedVehicleSystem
 {
-    [Dependency] private EyeSystem _eye = default!;
+    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly IEyeManager _eye = default!;
+    [Dependency] private readonly TransformSystem _transform = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-
-        SubscribeLocalEvent<RiderComponent, ComponentStartup>(OnRiderStartup);
-        SubscribeLocalEvent<RiderComponent, ComponentShutdown>(OnRiderShutdown);
-        SubscribeLocalEvent<RiderComponent, ComponentHandleState>(OnRiderHandleState);
-        SubscribeLocalEvent<VehicleComponent, AppearanceChangeEvent>(OnVehicleAppearanceChange);
+        SubscribeLocalEvent<VehicleComponent, AppearanceChangeEvent>(OnAppearanceChange);
     }
 
-    private void OnRiderStartup(EntityUid uid, RiderComponent component, ComponentStartup args)
+    private void OnAppearanceChange(EntityUid uid, VehicleComponent comp, ref AppearanceChangeEvent args)
     {
-        // Center the player's eye on the vehicle
-        if (TryComp(uid, out EyeComponent? eyeComp))
+        if (args.Sprite == null
+            || !_appearance.TryGetData(uid, VehicleState.Animated, out bool animated)
+            || !TryComp<SpriteComponent>(uid, out var spriteComp))
         {
-            _eye.SetTarget(uid, eyeComp.Target ?? component.Vehicle, eyeComp);
-        }
-    }
-
-    private void OnRiderShutdown(EntityUid uid, RiderComponent component, ComponentShutdown args)
-    {
-        // reset the riders eye centering.
-        if (TryComp(uid, out EyeComponent? eyeComp))
-        {
-            _eye.SetTarget(uid, null, eyeComp);
-        }
-    }
-
-    private void OnRiderHandleState(EntityUid uid, RiderComponent component, ref ComponentHandleState args)
-    {
-        if (args.Current is not RiderComponentState state)
             return;
-
-        var entity = EnsureEntity<RiderComponent>(state.Entity, uid);
-
-        if (TryComp(uid, out EyeComponent? eyeComp) && eyeComp.Target == component.Vehicle)
-        {
-            _eye.SetTarget(uid, entity, eyeComp);
         }
 
-        component.Vehicle = entity;
+        if (!spriteComp.LayerMapTryGet(VehicleVisualLayers.AutoAnimate, out var layer))
+            layer = 0;
+        spriteComp.LayerSetAutoAnimated(layer, animated);
     }
 
-    private void OnVehicleAppearanceChange(EntityUid uid, VehicleComponent component, ref AppearanceChangeEvent args)
+    public override void FrameUpdate(float frameTime)
     {
-        if (args.Sprite == null)
-            return;
+        base.FrameUpdate(frameTime);
 
-        if (component.HideRider
-            && Appearance.TryGetData<bool>(uid, VehicleVisuals.HideRider, out var hide, args.Component)
-            && TryComp<SpriteComponent>(component.LastRider, out var riderSprite))
-            riderSprite.Visible = !hide;
+        var query = EntityQueryEnumerator<VehicleComponent, SpriteComponent>();
+        var eye = _eye.CurrentEye;
+        while (query.MoveNext(out var uid, out var vehicle, out var sprite))
+        {
+            var angle = _transform.GetWorldRotation(uid) + eye.Rotation;
+            if (angle < 0)
+                angle += 2 * Math.PI;
+            RsiDirection dir = SpriteComponent.Layer.GetDirection(RsiDirectionType.Dir4, angle);
+            VehicleRenderOver renderOver = (VehicleRenderOver)(1 << (int)dir);
 
-        // First check is for the sprite itself
-        if (Appearance.TryGetData<int>(uid, VehicleVisuals.DrawDepth, out var drawDepth, args.Component))
-            args.Sprite.DrawDepth = drawDepth;
+            if ((vehicle.RenderOver & renderOver) == renderOver)
+                sprite.DrawDepth = (int)Content.Shared.DrawDepth.DrawDepth.OverMobs;
+            else
+                sprite.DrawDepth = (int)Content.Shared.DrawDepth.DrawDepth.Objects;
 
-        // Set vehicle layer to animated or not (i.e. are the wheels turning or not)
-        if (component.AutoAnimate
-            && Appearance.TryGetData<bool>(uid, VehicleVisuals.AutoAnimate, out var autoAnimate, args.Component))
-            args.Sprite.LayerSetAutoAnimated(VehicleVisualLayers.AutoAnimate, autoAnimate);
+            Vector2 offset = Vector2.Zero;
+            if (vehicle.Driver != null)
+            {
+                switch (dir)
+                {
+                    case RsiDirection.South:
+                    default:
+                        offset = vehicle.SouthOffset;
+                        break;
+                    case RsiDirection.North:
+                        offset = vehicle.NorthOffset;
+                        break;
+                    case RsiDirection.East:
+                        offset = vehicle.EastOffset;
+                        break;
+                    case RsiDirection.West:
+                        offset = vehicle.WestOffset;
+                        break;
+                }
+            }
+
+            // Avoid recalculating a matrix if we can help it.
+            if (sprite.Offset != offset)
+                sprite.Offset = offset;
+        }
+    }
+
+    // NOOPs
+    protected override void HandleEmag(Entity<VehicleComponent> ent)
+    {
+    }
+
+    protected override void HandleUnemag(Entity<VehicleComponent> ent)
+    {
     }
 }
 
 public enum VehicleVisualLayers : byte
 {
-    /// Layer for the vehicle's wheels
+    /// Layer for the vehicle's wheels/jets/etc.
     AutoAnimate,
 }
