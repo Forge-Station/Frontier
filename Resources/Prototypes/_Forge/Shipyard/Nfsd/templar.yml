@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Templar
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 19220
   category: Small
   group: Custom
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/templar.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/templar.yml
   guidebookPage: Null
   class:
   - Fighter
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Templar
   mapName: 'NSF Тамплиер'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/templar.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/templar.yml
   minPlayers: 0
   stations:
     Templar:

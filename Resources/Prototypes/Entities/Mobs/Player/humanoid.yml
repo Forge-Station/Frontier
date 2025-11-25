@@ -28,6 +28,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerDeathSquad
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   name: Death Squad Agent
   suffix: ERTRole, Death Squad
   components:
@@ -68,6 +69,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTLeader
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   name: ERT leader
   suffix: ERTRole, Basic
   components:
@@ -104,6 +106,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTLeaderEVA
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTLeader
   name: ERT leader
   suffix: ERTRole, Armored EVA
@@ -131,6 +134,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTLeaderEVALecter
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTLeaderEVA
   suffix: ERTRole, Lecter, EVA
   components:
@@ -156,6 +160,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTChaplain
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTLeader
   name: ERT chaplain
   suffix: ERTRole, Basic
@@ -194,6 +199,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTChaplainEVA
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTChaplain
   name: ERT chaplain
   suffix: ERTRole, Enviro EVA
@@ -224,6 +230,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTJanitor
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTLeader
   name: ERT janitor
   suffix: ERTRole, Basic
@@ -261,6 +268,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTJanitorEVA
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTJanitor
   name: ERT janitor
   suffix: ERTRole, Enviro EVA
@@ -290,6 +298,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTEngineer
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTLeader
   name: ERT engineer
   suffix: ERTRole, Basic
@@ -327,6 +336,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTEngineerEVA
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTEngineer
   name: ERT engineer
   suffix: ERTRole, Enviro EVA
@@ -356,6 +366,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTSecurity
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTLeader
   name: ERT security
   suffix: ERTRole, Basic
@@ -393,6 +404,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTSecurityEVA
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTSecurity
   name: ERT security
   suffix: ERTRole, Armored EVA
@@ -420,6 +432,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTSecurityEVALecter
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTSecurityEVA
   suffix: ERTRole, Lecter, EVA
   components:
@@ -445,6 +458,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTMedical
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTLeader
   name: ERT medic
   suffix: ERTRole, Basic
@@ -482,6 +496,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerERTMedicalEVA
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   parent: RandomHumanoidSpawnerERTMedical
   name: ERT medic
   suffix: ERTRole, Armored EVA
@@ -511,6 +526,7 @@
 
 - type: entity
   id: RandomHumanoidSpawnerCBURNUnit
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   name: CBURN Agent
   suffix: ERTRole
   components:
@@ -543,6 +559,7 @@
 
 - type: entity
   name: CentComm official
+  categories: [ HideSpawnMenu ] # Corvax-Frontier: New CC role
   id: RandomHumanoidSpawnerCentcomOfficial
   components:
     - type: Sprite

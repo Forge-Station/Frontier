@@ -495,10 +495,10 @@
   suffix: indestructible
   components:
     - type: Sprite
-      sprite: Structures/Walls/plastitanium.rsi
+      sprite: Forge/Structures/Walls/plastitanium.rsi # Forge-change
 #      color: "#cdf3cd" # Frontier #CorvaxFrontier
     - type: Icon
-      sprite: Structures/Walls/plastitanium.rsi
+      sprite: Forge/Structures/Walls/plastitanium.rsi # Forge-change
     - type: IconSmooth
       key: walls
       base: plastitanium
@@ -554,11 +554,11 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: Forge/Structures/Walls/plastitanium_diagonal.rsi # Forge-change
     color: "#ffffff" # Frontier
     state: state0
   - type: Icon
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: Forge/Structures/Walls/plastitanium_diagonal.rsi # Forge-change
     state: state0
   - type: Destructible
     thresholds:
@@ -604,14 +604,14 @@
   - type: Sprite
 #    color: "#cdf3cd" #CorvaxFrontier
     drawdepth: Walls
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: Forge/Structures/Walls/plastitanium_diagonal.rsi # Forge-change
     state: state0
   - type: IconSmooth
     mode: Diagonal
     key: walls
     base: state
   - type: Icon
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: Forge/Structures/Walls/plastitanium_diagonal.rsi # Forge-change
     state: state0
   - type: Physics
     bodyType: Static

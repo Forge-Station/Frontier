@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Tide
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 9700
   category: Small
   group: Scrap
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/tide.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/tide.yml
   guidebookPage: Null
   class:
   - Scrapyard
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Tide
   mapName: 'SV Волна'
-  mapPath: /Maps/Forge/Shuttles/Scrap/tide.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/tide.yml
   minPlayers: 0
   stations:
     Tide:

@@ -1,7 +1,7 @@
 #Empty security
 - type: entity
   id: JetpackNfsd
-  parent: JetpackSecurity
+  parent: [BaseC2ContrabandUnredeemable, JetpackSecurity] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   name: NFSD jetpack
   suffix: Empty
   components:
@@ -18,7 +18,7 @@
 #Filled security
 - type: entity
   id: JetpackNfsdFilled
-  parent: JetpackSecurityFilled
+  parent: [BaseC2ContrabandUnredeemable, JetpackSecurityFilled] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   name: NFSD jetpack
   suffix: Filled
   components:

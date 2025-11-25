@@ -8,15 +8,11 @@
 
 - type: autoSalaryJob
   id: Представитель Фронтира
-  salary: 14000
+  salary: 20000
 
 - type: autoSalaryJob
   id: Диспетчер Аванпоста
-  salary: 6000
-
-- type: autoSalaryJob
-  id: Уборщик
-  salary: 7000
+  salary: 13500
 
 - type: autoSalaryJob
   id: Почтальон
@@ -24,11 +20,7 @@
 
 - type: autoSalaryJob
   id: Офицер АФ
-  salary: 11000 # + 1000 как извинение
-
-- type: autoSalaryJob
-  id: Консьерж
-  salary: 7000
+  salary: 11000
 
 - type: autoSalaryJob
   id: Бейлиф
@@ -51,8 +43,8 @@
   salary: 11000
 
 - type: autoSalaryJob
-  id: Представитель Юридического Департамента
-  salary: 12000
+  id: Представитель ЮД
+  salary: 15000
 
 - type: autoSalaryJob
   id: Кадет

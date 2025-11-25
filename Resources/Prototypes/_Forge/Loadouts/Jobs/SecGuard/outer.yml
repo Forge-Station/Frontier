@@ -73,6 +73,15 @@
   equipment:
     outerClothing: ClothingOuterArmorHoSVestWeb
 
+- type: loadout
+  id: ClothingOuterArmorHoSExperimentalSGuardLd
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OSecT3
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterArmorHoSExperimental
+
 # Карьерный рост - с офицера АФ до офицера ОБР. Слава нт!
 - type: loadout
   id: ClothingOuterHardsuitERTSecuritySGuardLd

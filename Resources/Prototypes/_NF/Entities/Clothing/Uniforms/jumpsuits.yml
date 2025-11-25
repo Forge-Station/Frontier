@@ -77,7 +77,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/ert_mailcarrier.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [BaseC2ContrabandUnredeemable, ClothingUniformBase] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingUniformJumpsuitNfsd
   name: NFSD jumpsuit
   description: A long sleeved jumpsuit produced for deputy sheriffs. Designed to reduce chaffing between the legs for the comfort of skin, slime, scales, fluff, and wood.
@@ -88,7 +88,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_jump.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [BaseC2ContrabandUnredeemable, ClothingUniformBase] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingUniformJumpsuitNfsdShort
   name: NFSD jumpsuit
   description: A short sleeved jumpsuit produced for deputy sheriffs. Designed to reduce chaffing between the legs for the comfort of skin, slime, scales, fluff, and wood.
@@ -99,7 +99,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_jump_short.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [BaseC2ContrabandUnredeemable, ClothingUniformBase] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingUniformJumpsuitNfsdTacBlack
   name: NFSD tactical jumpsuit
   description: A tactical jumpsuit for deputies in the field.
@@ -110,7 +110,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_tac_black.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [BaseC2ContrabandUnredeemable, ClothingUniformBase] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingUniformJumpsuitNfsdTacGray
   name: NFSD tactical jumpsuit
   description: A tactical jumpsuit for deputies in the field.
@@ -121,7 +121,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_tac_gray.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [BaseC2ContrabandUnredeemable, ClothingUniformBase] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingUniformJumpsuitNfsdTacCamo
   name: NFSD tactical jumpsuit
   description: A tactical jumpsuit for deputies in the field.
@@ -132,7 +132,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_tac_camo.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [BaseC2ContrabandUnredeemable, ClothingUniformBase] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingUniformJumpsuitNfsdTacCream
   name: NFSD tactical jumpsuit
   description: A tactical jumpsuit for deputies in the field.
@@ -143,7 +143,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_tac_cream.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [BaseC2ContrabandUnredeemable, ClothingUniformBase] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingUniformJumpsuitPublicAffairsLiaison
   name: public affairs liaison jumpsuit
   description: A starched and pressed suit for the public affairs liaison.

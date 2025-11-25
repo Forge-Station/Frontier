@@ -1,10 +1,12 @@
 # Author Info
 # GitHub: LeviyNosok (https://github.com/LeviyNosok)
 # Discord: no_idea_for_name
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
 
 # Shuttle Notes:
 #
@@ -16,7 +18,7 @@
   price: 48400 #Cheap
   category: Small
   group: BlackMarket
-  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/Torch.yml
+  shuttlePath: /Maps/_Forge/Shuttles/BlackMarket/torch.yml
   guidebookPage: Null
   class:
   - Pirate
@@ -28,8 +30,8 @@
 
 - type: gameMap
   id: Torch
-  mapName: 'Torch'
-  mapPath: /Maps/Forge/Shuttles/BlackMarket/Torch.yml
+  mapName: 'Факел'
+  mapPath: /Maps/_Forge/Shuttles/BlackMarket/torch.yml
   minPlayers: 0
   stations:
     Torch:

@@ -1,21 +1,21 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Notes:
-
+#
 - type: pointOfInterest
   id: chip
   name: Обломок
   minimumDistance: 4500
   maximumDistance: 6500
-  gridPath: /Maps/Forge/Events/Elementary/Syndicate/chip.yml
+  gridPath: /Maps/_Forge/Events/Elementary/Syndicate/chip.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -27,7 +27,7 @@
 - type: gameMap
   id: chip
   mapName: Обломок
-  mapPath: /Maps/Forge/Events/Elementary/Syndicate/chip.yml
+  mapPath: /Maps/_Forge/Events/Elementary/Syndicate/chip.yml
   minPlayers: 0
   stations:
     chip:

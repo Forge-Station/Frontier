@@ -16,7 +16,7 @@
   price: 97000 # 42014 0.1 46215.4
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Science/pulsar.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Science/pulsar.yml
   guidebookPage: ShipyardPulsar
   class:
   - Science
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Pulsar
   mapName: 'FSB Пульсар'
-  mapPath: /Maps/Forge/Shuttles/Science/pulsar.yml
+  mapPath: /Maps/_Forge/Shuttles/Science/pulsar.yml
   minPlayers: 0
   stations:
     Pulsar:

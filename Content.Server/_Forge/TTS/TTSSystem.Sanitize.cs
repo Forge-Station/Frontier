@@ -141,6 +141,16 @@ public sealed partial class TTSSystem
             {"ии", "И И"},
             {"опз", "О Пэ Зэ"},
             {"рпс", "Эр Пэ Эс"},
+            // Corvax-Frontier region
+            {"ДСБФ", "Дэ Эс Бэ Эф"},
+            {"AДСБФ", "A Дэ Эс Бэ Эф"},
+            {"АФ", "А Эф"},
+            {"ПФ", "Пэ Эф"},
+            {"БЗ", "Бэ Зэ"},
+            {"УСФ", "У Эс Эф"},
+            {"ММО", "Эм Мэ О"},
+            {"бсх", "Бэ Эс Ха"},
+            {"УМЗД", "У Эм ЗэДэ"},
         };
 
     private static readonly IReadOnlyDictionary<string, string> ReverseTranslit =

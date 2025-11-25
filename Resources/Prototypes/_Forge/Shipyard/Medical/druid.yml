@@ -17,7 +17,7 @@
   category: Medium
   group: Medical
   access: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/druid.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/druid.yml
   guidebookPage: ShipyardDruid
   class:
   - Botany
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Druid
   mapName: 'FSB Друид'
-  mapPath: /Maps/Forge/Shuttles/Medical/druid.yml
+  mapPath: /Maps/_Forge/Shuttles/Medical/druid.yml
   minPlayers: 0
   stations:
     Druid:

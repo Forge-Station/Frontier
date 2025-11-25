@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,36 +7,36 @@
 # Discord: -
 
 # Shuttle Notes:
+#
+- type: vessel
+  id: CourserX
+  parent: BaseVessel
+  name: NT Дальнобойщик-Х
+  description: Среднегабаритный экспедиционный шаттл. Рекомендованный размер команды 3-6 человек.
+  price: 97550
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/courserx.yml
+  guidebookPage: Null
+  class:
+  - Expedition
 
- - type: vessel
-   id: CourserX
-   parent: BaseVessel
-   name: NT Дальнобойщик-Х
-   description: Среднегабаритный экспедиционный шаттл. Рекомендованный размер команды 3-6 человек.
-   price: 97550
-   category: Medium
-   group: Expedition
-   shuttlePath: /Maps/Forge/Shuttles/Expedition/courserx.yml
-   guidebookPage: Null
-   class:
-   - Expedition
-
- - type: gameMap
-   id: CourserX
-   mapName: 'NT Дальнобойщик-Х'
-   mapPath: /Maps/Forge/Shuttles/Expedition/courserx.yml
-   minPlayers: 0
-   stations:
-     CourserX:
-       stationProto: StandardFrontierExpeditionVessel
-       components:
-         - type: StationNameSetup
-           mapNameTemplate: 'Дальнобойщик-Х {1}'
-           nameGenerator:
-             !type:NanotrasenNameGenerator
-             prefixCreator: '14'
-         - type: StationJobs
-           availableJobs:
-             ContractorInterview: [ 0, 0 ]
-             PilotInterview: [ 0, 0 ]
-             MercenaryInterview: [ 0, 0 ]
+- type: gameMap
+  id: CourserX
+  mapName: 'NT Дальнобойщик-Х'
+  mapPath: /Maps/_Forge/Shuttles/Expedition/courserx.yml
+  minPlayers: 0
+  stations:
+   CourserX:
+    stationProto: StandardFrontierExpeditionVessel
+    components:
+    - type: StationNameSetup
+      mapNameTemplate: 'Дальнобойщик-Х {1}'
+      nameGenerator:
+       !type:NanotrasenNameGenerator
+       prefixCreator: '14'
+    - type: StationJobs
+      availableJobs:
+       ContractorInterview: [ 0, 0 ]
+       PilotInterview: [ 0, 0 ]
+       MercenaryInterview: [ 0, 0 ]

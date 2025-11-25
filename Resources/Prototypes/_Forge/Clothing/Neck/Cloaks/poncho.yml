@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckPonchoBlack
+  id: ClothingNeckPonchoParamedic
+  name: paramedic poncho
+  description: paramedic poncho desc
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Poncho/paramedic.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Poncho/paramedic.rsi

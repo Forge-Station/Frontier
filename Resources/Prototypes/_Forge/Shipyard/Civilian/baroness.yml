@@ -16,7 +16,7 @@
   price: 27000 # ~23,500 on purchase, ~15% markup
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/baroness.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/baroness.yml
   guidebookPage: ShipyardBaroness
   class:
   - Civilian
@@ -25,8 +25,8 @@
 
 - type: gameMap
   id: Baroness
-  mapName: 'SBB Baroness'
-  mapPath: /Maps/Forge/Shuttles/Civilian/baroness.yml
+  mapName: 'SBB Баронесса'
+  mapPath: /Maps/_Forge/Shuttles/Civilian/baroness.yml
   minPlayers: 0
   stations:
     Baroness:

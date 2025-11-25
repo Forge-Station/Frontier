@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Wasp
   parent: BaseVessel
@@ -17,7 +17,7 @@
   category: Large
   group: Security
   access: Bailiff
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/wasp.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/wasp.yml
   guidebookPage: Null
   class:
   - Capital
@@ -30,7 +30,7 @@
 - type: gameMap
   id: Wasp
   mapName: 'NSF Шершень'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/wasp.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/wasp.yml
   minPlayers: 0
   stations:
     Wasp:

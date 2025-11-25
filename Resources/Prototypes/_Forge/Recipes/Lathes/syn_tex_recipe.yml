@@ -247,6 +247,22 @@
     CreditCounterfeit: 2000
 
 - type: latheRecipe
+  id: MagazineAntiMaterielEmptyRecipe
+  categories: [SyndicateTexSynAmmo]
+  result: MagazineAntiMaterielEmpty
+  completetime: 1
+  materials:
+    CreditCounterfeit: 2500
+
+- type: latheRecipe
+  id: MagazineAntiMaterielAPRecipe
+  categories: [SyndicateTexSynAmmo]
+  result: MagazineAntiMaterielAP
+  completetime: 1
+  materials:
+    CreditCounterfeit: 7500
+
+- type: latheRecipe
   id: NFMagazinePistol45Recipe
   categories: [SyndicateTexSynAmmo]
   result: NFMagazinePistol45

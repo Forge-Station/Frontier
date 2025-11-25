@@ -1,6 +1,6 @@
 # Author Info
 # GitHub: DustScoundrel (https://github.com/DustScoundrel)
-# Discord: ???
+# Discord: -
 
 # Maintainer Info
 # GitHub: erhardsteinhauer
@@ -16,7 +16,7 @@
   price: 30500
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Service/garden.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Service/garden.yml
   guidebookPage: ShipyardGarden
   class:
   - Botany
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Garden
   mapName: 'HS Розарий'
-  mapPath: /Maps/Forge/Shuttles/Service/garden.yml
+  mapPath: /Maps/_Forge/Shuttles/Service/garden.yml
   minPlayers: 0
   stations:
     Garden:

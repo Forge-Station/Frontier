@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: tochka_dunaxy
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: pill
   parent: BaseVessel
@@ -19,14 +19,14 @@
   category: Small
   group: Medical
   access: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/pill.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/pill.yml
   class:
   - Medical
 
 - type: gameMap
   id: pill
   mapName: 'NMS Таблетка'
-  mapPath: /Maps/Forge/Shuttles/Medical/pill.yml
+  mapPath: /Maps/_Forge/Shuttles/Medical/pill.yml
   minPlayers: 0
   stations:
     pill:

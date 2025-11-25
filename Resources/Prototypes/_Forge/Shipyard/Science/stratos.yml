@@ -1,36 +1,42 @@
-﻿
+﻿# Author Info
+# GitHub: -
+# Discord: -
 
+# Maintainer Info
+# GitHub: -
+# Discord: -
 
+# Shuttle Notes:
+#
+- type: vessel
+  id: Stratos
+  parent: BaseVessel
+  name: NR Стратег
+  description: Среднегабаритный исследовательский шаттл. Рекомендованный состав команды 2-6 человек.
+  price: 90000
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_Forge/Shuttles/Science/stratos.yml
+  guidebookPage: Null
+  class:
+  - Science
 
- - type: vessel
-   id: Stratos
-   parent: BaseVessel
-   name: NR Стратег
-   description: Среднегабаритный исследовательский шаттл. Рекомендованный состав команды 2-6 человек.
-   price: 90000
-   category: Medium
-   group: Shipyard
-   shuttlePath: /Maps/Forge/Shuttles/Science/stratos.yml
-   guidebookPage: Null
-   class:
-   - Science
-
- - type: gameMap
-   id: Stratos
-   mapName: 'NR Стратег'
-   mapPath: /Maps/Forge/Shuttles/Science/stratos.yml
-   minPlayers: 0
-   stations:
-     Stratos:
-       stationProto: StandardFrontierVessel
-       components:
-         - type: StationNameSetup
-           mapNameTemplate: 'Стратег {1}'
-           nameGenerator:
-             !type:NanotrasenNameGenerator
-             prefixCreator: '14'
-         - type: StationJobs
-           availableJobs:
-             ContractorInterview: [ 0, 0 ]
-             PilotInterview: [ 0, 0 ]
-             MercenaryInterview: [ 0, 0 ]
+- type: gameMap
+  id: Stratos
+  mapName: 'NR Стратег'
+  mapPath: /Maps/_Forge/Shuttles/Science/stratos.yml
+  minPlayers: 0
+  stations:
+   Stratos:
+    stationProto: StandardFrontierVessel
+    components:
+    - type: StationNameSetup
+      mapNameTemplate: 'Стратег {1}'
+      nameGenerator:
+       !type:NanotrasenNameGenerator
+       prefixCreator: '14'
+    - type: StationJobs
+      availableJobs:
+       ContractorInterview: [ 0, 0 ]
+       PilotInterview: [ 0, 0 ]
+       MercenaryInterview: [ 0, 0 ]

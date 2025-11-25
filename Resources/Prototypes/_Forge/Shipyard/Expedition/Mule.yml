@@ -1,7 +1,7 @@
 # Author Info
 # GitHub: Tochechka-dot
-# Discord: t4k_dnh CorvaxForge
-# License: CC-BY-NC-ND-3.0
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
 # CorvaxForge
 
 # Maintainer Info
@@ -18,7 +18,7 @@
   price: 141900
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/Mule.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/mule.yml
   class:
   - Expedition
   - Civilian
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Mule
   mapName: 'LVHI Мул'
-  mapPath: /Maps/Forge/Shuttles/Expedition/Mule.yml
+  mapPath: /Maps/_Forge/Shuttles/Expedition/mule.yml
   minPlayers: 0
   stations:
     Mule:

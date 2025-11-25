@@ -1,14 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
+#
 - type: vessel
   id: Dreadnought
   parent: BaseVessel
@@ -17,7 +18,7 @@
   price: 195500
   category: Small
   group: Mercenary
-  shuttlePath: /Maps/Forge/Shuttles/Mercenary/dreadnought.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Mercenary/dreadnought.yml
   addComponents:
   - type: MercenaryBountyDatabase
     bounties: []
@@ -25,7 +26,7 @@
 - type: gameMap
   id: Dreadnought
   mapName: 'SBI Дредноут'
-  mapPath: /Maps/Forge/Shuttles/Mercenary/dreadnought.yml
+  mapPath: /Maps/_Forge/Shuttles/Mercenary/dreadnought.yml
   minPlayers: 0
   stations:
     Dreadnought:

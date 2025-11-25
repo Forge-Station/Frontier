@@ -16,15 +16,15 @@
   price: 30300 # ~24600$ on mapinit + ~3690$ from 15% markup
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/harbormaster.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/harbormaster.yml
   guidebookPage: ShipyardHarbormaster
   class:
   - Civilian
 
 - type: gameMap
   id: harbormaster
-  mapName: 'Квадрон'
-  mapPath: /Maps/Forge/Shuttles/Civilian/harbormaster.yml
+  mapName: 'NC Квадрон'
+  mapPath: /Maps/_Forge/Shuttles/Civilian/harbormaster.yml
   minPlayers: 0
   stations:
     harbormaster:

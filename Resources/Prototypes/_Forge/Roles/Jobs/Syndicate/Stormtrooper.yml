@@ -5,9 +5,12 @@
   playTimeTracker: JobStormtrooper
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 1 # 48 hours
+      time: 144000 # 40 hours
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
+      time: 72000 # 20 hours
+    - !type:RoleTimeRequirement
+      role: JobSeniorOfficer
       time: 36000 # 10 hours
   startingGear: StormtrooperGear
   access:

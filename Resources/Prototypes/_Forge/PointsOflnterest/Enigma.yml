@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Notes:
-
+#
 - type: pointOfInterest
   id: Enigma
   parent: BasePOI
@@ -17,7 +17,7 @@
   minimumDistance: 17000
   maximumDistance: 20000
   spawnGroup: Required
-  gridPath: /Maps/Forge/POI/Enigma.yml
+  gridPath: /Maps/_Forge/POI/Enigma.yml
   addComponents:
   - type: IFF
     color: "#C83737"
@@ -31,7 +31,7 @@
 - type: gameMap
   id: Enigma
   mapName: 'Энигма'
-  mapPath: /Maps/Forge/POI/Enigma.yml
+  mapPath: /Maps/_Forge/POI/Enigma.yml
   minPlayers: 0
   stations:
     Enigma:
@@ -50,3 +50,5 @@
             MedSyn: [ 1, 1 ]
             Stormtrooper: [ 2, 2 ]
             Commander: [ 1, 1 ]
+            EngineerSyn: [ 1, 1 ]
+            smugglerBodyguard: [ 1, 1 ]

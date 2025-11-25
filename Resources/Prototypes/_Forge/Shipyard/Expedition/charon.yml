@@ -20,7 +20,7 @@
   # In light of the mid-range tile count and relatively narrow width I feel like Medium is more appropriate than Large even though it is technically one tile too long for the class.
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/charon.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/charon.yml
   guidebookPage: ShipyardCharon
   class:
   - Expedition
@@ -29,8 +29,8 @@
 
 - type: gameMap
   id: Charon
-  mapName: 'Харон'
-  mapPath: /Maps/Forge/Shuttles/Expedition/charon.yml
+  mapName: 'EIS Харон'
+  mapPath: /Maps/_Forge/Shuttles/Expedition/charon.yml
   minPlayers: 0
   stations:
     Charon:

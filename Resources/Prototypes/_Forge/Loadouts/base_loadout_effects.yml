@@ -231,3 +231,13 @@
       !type:RoleTimeRequirement
       role: JobMercenary
       time: 144000 # 40 hrs
+
+# region Syndicate
+- type: loadoutEffectGroup
+  id: EngineerSynT1
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobEngineerSyn
+      time: 36000 # 10 hrs

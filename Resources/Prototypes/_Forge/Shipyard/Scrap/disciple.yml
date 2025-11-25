@@ -6,8 +6,8 @@
 # GitHub: Nyozzl https://github.com/nyozzl
 # Discord: Nyozzl
 
-# Shuttle Notes:I liked the idea of a scrap church also 9kw is probably all thats needed to run it
-#
+# Shuttle Notes:
+# I liked the idea of a scrap church also 9kw is probably all thats needed to run it
 - type: vessel
   id: Disciple
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 11300
   category: Small
   group: Scrap
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/disciple.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/disciple.yml
   guidebookPage: Null
   class:
   - Scrapyard
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Disciple
   mapName: 'NSV Диакон'
-  mapPath: /Maps/Forge/Shuttles/Scrap/disciple.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/disciple.yml
   minPlayers: 0
   stations:
     Disciple:

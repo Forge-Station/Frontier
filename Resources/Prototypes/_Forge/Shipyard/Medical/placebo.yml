@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Placebo
   parent: BaseVessel
@@ -17,7 +17,7 @@
   category: Small
   group: Medical
   access: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/placebo.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/placebo.yml
   guidebookPage: Null
   class:
   - Medical
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Placebo
   mapName: 'NC Плацебо'
-  mapPath: /Maps/Forge/Shuttles/Medical/placebo.yml
+  mapPath: /Maps/_Forge/Shuttles/Medical/placebo.yml
   minPlayers: 0
   stations:
     Placebo:

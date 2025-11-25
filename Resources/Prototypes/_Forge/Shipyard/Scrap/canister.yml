@@ -1,6 +1,12 @@
 # Author Info
 # GitHub: Cu1r (https://github.com/Cu1r/)
 # Discord: cu1r
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
 #
 - type: vessel
   id: Canister
@@ -10,7 +16,7 @@
   price: 8000
   category: Micro
   group: Scrap
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/canister.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/canister.yml
   guidebookPage: Null
   class:
   - Scrapyard
@@ -19,7 +25,7 @@
 - type: gameMap
   id: Canister
   mapName: 'UAC Канистра'
-  mapPath: /Maps/Forge/Shuttles/Scrap/canister.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/canister.yml
   minPlayers: 0
   stations:
     Canister:

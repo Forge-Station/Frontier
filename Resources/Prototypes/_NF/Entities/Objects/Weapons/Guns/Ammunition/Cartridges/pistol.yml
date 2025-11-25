@@ -228,8 +228,8 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletPistol45Emp
-  - type: EmpDescription
-    range: 0.3
+  - type: EmpOnTrigger
+    range: 5
     energyConsumption: 2700000
     disableDuration: 10
   - type: Sprite

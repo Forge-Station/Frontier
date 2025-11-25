@@ -22,8 +22,9 @@
     fireRate: 3.5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: SmgPulse
+    projectileSpeed: 50
+  - type: ProjectileBatteryAmmoProvider # Corvax-Forge: Weaponary update
+    proto: ForgeBulletPulse
     fireCost: 100
   - type: Battery
     maxCharge: 2500

@@ -1,0 +1,27 @@
+# серёжки у гоблинов.. уъу
+- type: marking
+  id: GoblinEarsEarringGoldenOV
+  bodyPart: HeadTop
+  markingCategory: Overlay
+  speciesRestriction: [Goblin]
+  sprites:
+  - sprite: Forge/Mobs/Customization/goblin_ears.rsi
+    state: goblin_ears_earring
+
+- type: marking
+  id: GoblinEarsEarringSilverOV
+  bodyPart: HeadTop
+  markingCategory: Overlay
+  speciesRestriction: [Goblin]
+  sprites:
+  - sprite: Forge/Mobs/Customization/goblin_ears.rsi
+    state: goblin_ears_earring_silver
+
+- type: marking
+  id: GoblinEarsEarringFlexOV
+  bodyPart: HeadTop
+  markingCategory: Overlay
+  speciesRestriction: [Goblin]
+  sprites:
+  - sprite: Forge/Mobs/Customization/goblin_ears.rsi
+    state: goblin_ears_earring_flex

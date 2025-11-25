@@ -1,15 +1,15 @@
-# Author MrIzo
+# Author Info
 # GitHub: -
 # Discord: letstrythisone.
-# License: CC-BY-NC-ND-3.0
-# Corvax-Frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 #- type: vessel
 #  id: diesel
 #  parent: BaseVessel
@@ -18,7 +18,7 @@
 #  price: 68400 #57000 + 20%
 #  category: Medium
 #  group: Scrap
-#  shuttlePath: /Maps/Forge/Shuttles/Scrap/diesel.yml
+#  shuttlePath: /Maps/_Forge/Shuttles/Scrap/diesel.yml
 #  class:
 #  - Scrapyard
 #  - Civilian
@@ -27,7 +27,7 @@
 #- type: gameMap
 #  id: diesel
 #  mapName: 'SV Дизель'
-#  mapPath: /Maps/Forge/Shuttles/Scrap/diesel.yml
+#  mapPath: /Maps/_Forge/Shuttles/Scrap/diesel.yml
 #  minPlayers: 0
 #  stations:
 #    diesel:

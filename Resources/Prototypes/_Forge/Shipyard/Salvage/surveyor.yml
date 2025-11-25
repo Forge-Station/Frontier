@@ -16,7 +16,7 @@
   price: 27500 # 17518 0.06 18569.08
   category: Small
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/surveyor.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/surveyor.yml
   guidebookPage: ShipyardSurveyor
   class:
   - Salvage
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Surveyor
   mapName: 'FSB Геодезист'
-  mapPath: /Maps/Forge/Shuttles/Salvage/surveyor.yml
+  mapPath: /Maps/_Forge/Shuttles/Salvage/surveyor.yml
   minPlayers: 0
   stations:
     Surveyor:

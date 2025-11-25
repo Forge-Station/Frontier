@@ -16,7 +16,7 @@
   price: 32000
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/bookworm.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/bookworm.yml
   guidebookPage: ShipyardBookworm
   class:
   - Civilian
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Bookworm
   mapName: 'SBB Книжный червь'
-  mapPath: /Maps/Forge/Shuttles/Civilian/bookworm.yml
+  mapPath: /Maps/_Forge/Shuttles/Civilian/bookworm.yml
   minPlayers: 0
   stations:
     Bookworm:

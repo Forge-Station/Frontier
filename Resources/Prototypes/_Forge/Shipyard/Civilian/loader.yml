@@ -1,10 +1,10 @@
 # Author Info
 # GitHub: SurfinNinja1
-# Discord: ???
+# Discord: -
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 #
@@ -16,7 +16,7 @@
   price: 22000
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/loader.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/loader.yml
   guidebookPage: ShipyardLoader
   class:
   - Cargo
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Loader
   mapName: 'NC Такелажник'
-  mapPath: /Maps/Forge/Shuttles/Civilian/loader.yml
+  mapPath: /Maps/_Forge/Shuttles/Civilian/loader.yml
   minPlayers: 0
   stations:
     Loader:

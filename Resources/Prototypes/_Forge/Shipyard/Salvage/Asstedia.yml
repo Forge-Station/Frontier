@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Asstedia
   parent: BaseVessel
@@ -18,7 +18,7 @@
   price: 22100
   category: Small
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/Asstedia.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/asstedia.yml
   class:
   - Salvage
 
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Asstedia
   mapName: 'NMS Асцедия'
-  mapPath: /Maps/Forge/Shuttles/Salvage/Asstedia.yml
+  mapPath: /Maps/_Forge/Shuttles/Salvage/asstedia.yml
   minPlayers: 0
   stations:
     Asstedia:

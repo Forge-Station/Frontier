@@ -392,3 +392,27 @@
     stackRequirements:
       Steel: 120
       Cable: 60
+
+- type: entity
+  id: FSyndicateProtolatheCircuitboard
+  parent: [ProtolatheMachineCircuitboard, BaseC3ContrabandUnredeemable]
+  name: syndicate protolathe board
+  description:  A machine board for a syndicate protolathe.
+  components:
+    - type: Sprite
+      state: security
+    - type: MachineBoard
+      prototype: FSyndicateProtolathe
+
+- type: entity
+  parent: [ BaseComputerCircuitboard, BaseC3SyndicateContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  id: FComputerShuttleAntagCircuitboard
+  name: syndicate shuttle console computer board
+  description: A computer printed circuit board for a syndicate shuttle console.
+  components:
+    - type: Sprite
+      state: cpu_syndicate
+    - type: ComputerBoard
+      prototype: ComputerShuttleAntag
+    - type: ComputerTabletopBoard # Frontier
+      prototype: ComputerTabletopShuttleAntag # Frontier

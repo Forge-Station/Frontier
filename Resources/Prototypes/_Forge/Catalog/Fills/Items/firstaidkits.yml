@@ -1,0 +1,13 @@
+- type: entity
+  id: NaniteskitFilled
+  name: боевая аптечка
+  description: Для любителей больших пушек среди нас.
+  suffix: Боевой стимулятор
+  parent: MedkitCombat
+  components:
+  - type: StorageFill
+    contents:
+      - id: CombatNaniteMedipen
+        amount: 8
+  - type: StaticPrice
+    price: 1200

@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Star_track
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 239500
   category: Small
   group: Mercenary
-  shuttlePath: /Maps/Forge/Shuttles/Mercenary/Star_track.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Mercenary/star_track.yml
   addComponents:
   - type: MercenaryBountyDatabase
     bounties: []
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Star_track
   mapName: 'SBI Энтерпрайз'
-  mapPath: /Maps/Forge/Shuttles/Mercenary/Star_track.yml
+  mapPath: /Maps/_Forge/Shuttles/Mercenary/star_track.yml
   minPlayers: 0
   stations:
     Star_track:

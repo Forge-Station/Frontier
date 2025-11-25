@@ -145,8 +145,6 @@
     startingCharge: 720 #ForgeFrontier
   - type: Gun
     fireRate: 2.8
-  - type: HitscanBatteryAmmoProvider
-    proto: SmgPulse
 
 #region Disablers
 - type: entity

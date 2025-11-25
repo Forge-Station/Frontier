@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 # - type: vessel
 #   id: Dakota
 #   parent: BaseVessel
@@ -18,7 +18,7 @@
 #   category: Small
 #   access: Security
 #   mapchecker_group_override: Security
-#   shuttlePath: /Maps/Forge/Shuttles/Nfsd/Dakota.yml
+#   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/dakota.yml
 #   class:
 #   - Pursuit
 #   addComponents:
@@ -28,7 +28,7 @@
 # - type: gameMap
 #   id: Dakota
 #   mapName: 'NSF Дакота'
-#   mapPath: /Maps/Forge/Shuttles/Nfsd/Dakota.yml
+#   mapPath: /Maps/_Forge/Shuttles/Nfsd/dakota.yml
 #   minPlayers: 0
 #   stations:
 #     Dakota:

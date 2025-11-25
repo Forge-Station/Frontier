@@ -80,7 +80,7 @@
     range: 0.3
 
 - type: entity
-  parent: [ BaseLatheLube, BaseStructureDisableToolUse ]
+  parent: [ BaseLatheLube ]
   id: SyndicateDataConventor
   name: конвертер кэша Синдиката
   description: Сервер на котором хранятся ужасные данные Синдиката. Тут имеется слот для кэша.
@@ -104,8 +104,6 @@
       - SSpaceCash
       - SpaceCash
   - type: OreSiloClient
-  - type: Machine
-    board: MaterialSiloMachineCircuitboard
   - type: Fixtures
     fixtures:
       fix1:
@@ -141,3 +139,19 @@
     unlitRunningState: server-on
     staticPacks:
     - SyndicateTradingCash
+  - type: Machine
+    board: DataConventorMachineCircuitboard
+
+- type: entity
+  id: DataConventorMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: конвертер кэша Синдиката (машинная плата)
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: SyndicateDataConventor
+    requirements:
+      Manipulator: 5
+    stackRequirements:
+      Steel: 10

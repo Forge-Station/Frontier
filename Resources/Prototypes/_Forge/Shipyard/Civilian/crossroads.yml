@@ -2,6 +2,10 @@
 # GitHub: CadenceArgent (https://github.com/CadenceArgent)
 # Discord: Cadence
 
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
 # Shuttle Notes:
 # Docking Hub Vessel, with basic service setup, reception desk, and a public garden.
 - type: vessel
@@ -12,7 +16,7 @@
   price: 70000 #63452 0.1 69797.2
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/crossroads.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/crossroads.yml
   guidebookPage: ShipyardCrossroads
   class:
   - Civilian
@@ -22,7 +26,7 @@
 - type: gameMap
   id: Crossroads
   mapName: 'PHI Перекресток'
-  mapPath: /Maps/Forge/Shuttles/Civilian/crossroads.yml
+  mapPath: /Maps/_Forge/Shuttles/Civilian/crossroads.yml
   minPlayers: 0
   stations:
     Crossroads:

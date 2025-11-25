@@ -15,7 +15,7 @@ job-name-security-guard = Офицер АФ
 job-name-sheriff = Шериф
 job-name-stc = Диспетчер Аванпоста
 job-name-sr = Представитель Фронтира
-job-name-pal = Представитель Юридического Департамента
+job-name-pal = Представитель ЮД
 job-name-doc = Менеджер медицинских операций
 # Role timers - Make these alphabetical or I cut you
 JobERTMailCarrier = ОБР почтальон

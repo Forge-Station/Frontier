@@ -1,21 +1,21 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Notes:
-
+#
 - type: pointOfInterest
   id: Lab
   name: Лаборатория
   minimumDistance: 3500
   maximumDistance: 4500
-  gridPath: /Maps/Forge/Events/Elementary/AbandonedBuildings/laboratory.yml
+  gridPath: /Maps/_Forge/Events/Elementary/AbandonedBuildings/laboratory.yml
   addComponents:
   - type: IFF
     color: "#9d1bde"
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Lab
   mapName: Лаборатория
-  mapPath: /Maps/Forge/Events/Elementary/AbandonedBuildings/laboratory.yml
+  mapPath: /Maps/_Forge/Events/Elementary/AbandonedBuildings/laboratory.yml
   minPlayers: 0
   stations:
     Lab:

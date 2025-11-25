@@ -11,6 +11,9 @@
     sprite: Forge/Clothing/Shoes/Boots/magboots-combat.rsi #Corvax-Frontier респрайт
   - type: Magboots
     magbootsAlert: MagbootsSecurity
+  - type: ClothingSpeedModifier # Corvax-Forge: Armor rebalance
+    walkModifier: 0.95
+    sprintModifier: 0.9
 
 - type: entity
   parent: [ClothingShoesBootsMagSecurity, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
@@ -18,15 +21,12 @@
   name: NFSD magboots
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi
+    sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots.rsi #Forge-change
     state: icon
   - type: Clothing
-    sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi
+    sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots.rsi #Forge-change
   - type: Magboots
     magbootsAlert: MagbootsNfsd
-  - type: ClothingSpeedModifier
-    walkModifier: 0.95
-    sprintModifier: 0.9
 
 - type: entity
   parent: ClothingShoesBootsMagSecurity
@@ -35,10 +35,10 @@
   description: Mercenary magnetic boots, often used during extravehicular activity to ensure the user remains safely attached to the vehicle.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Shoes/Boots/magboots-mercenary.rsi
+    sprite: Forge/Clothing/Shoes/Boots/merc_magboots.rsi #Forge-change
     state: icon
   - type: Clothing
-    sprite: _NF/Clothing/Shoes/Boots/magboots-mercenary.rsi
+    sprite: Forge/Clothing/Shoes/Boots/merc_magboots.rsi #Forge-change
   - type: Magboots
     magbootsAlert: MagbootsMercenary
 

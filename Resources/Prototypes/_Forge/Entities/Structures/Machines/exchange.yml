@@ -1,5 +1,5 @@
 - type: entity
-  parent: [BaseStructureDisableToolUse, BaseLathe]
+  parent: [ BaseLathe ]
   id: ExchangerSyndicate
   name: Exchanger Syndicate
   description: Exchanger Syndicate
@@ -44,3 +44,20 @@
     whitelist:
       tags:
         - SpaceCash
+  - type: Machine
+    board: ExchangerMachineCircuitboard
+
+- type: entity
+  id: ExchangerMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: обменник контрабандиста (машинная плата)
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ExchangerSyndicate
+    requirements:
+      MatterBin: 5
+      Manipulator: 5
+    stackRequirements:
+      Steel: 5

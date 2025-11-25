@@ -150,6 +150,7 @@
     examineCaliber: gun-examine-pulse-low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: NFPulse
+    projectileSpeed: 50
+  - type: ProjectileBatteryAmmoProvider # Corvax-Forge: Weaponary update
+    proto: ForgeBulletPulse
     fireCost: 60

@@ -1,0 +1,94 @@
+- type: entity
+  id: BaseMagazineAntiMateriel
+  name: "магазин (.60 калибр)"
+  parent: [ BaseItem, BaseC2ContrabandUnredeemable ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - MagazineAntiMateriel
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+      - NFCartridgeRifle60
+    proto: NFCartridgeRifle60
+    capacity: 5
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/sniper_rifle_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineAntiMaterielEmpty
+  name: "магазин (.60 пустые)"
+  parent: BaseMagazineAntiMateriel
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: MagazineAntiMateriel
+  name: "магазин (.60)"
+  parent: BaseMagazineAntiMateriel
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle60
+
+- type: entity
+  id: MagazineAntiMaterielRubber
+  name: "магазин (.60 резиновые)"
+  parent: BaseMagazineAntiMateriel
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/sniper_rifle_mag.rsi
+    layers:
+    - state: disruptor
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle60Rubber
+
+- type: entity
+  id: MagazineAntiMaterielAP
+  name: "магазин (.60 пробивные)"
+  parent: [ BaseC3SyndicateContraband, BaseMagazineAntiMateriel ]
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/sniper_rifle_mag.rsi
+    layers:
+    - state: penetrator
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle60AP
+
+- type: entity
+  id: MagazineAntiMaterielIncendiary
+  name: "магазин (.60 зажигательные)"
+  parent: BaseMagazineAntiMateriel
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/sniper_rifle_mag.rsi
+    layers:
+    - state: incendiary
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle60Incendiary

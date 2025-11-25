@@ -1,21 +1,21 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Notes:
-
+#
 - type: pointOfInterest
   id: PodA
   name: Ячейка контрабанды A
   minimumDistance: 2900
   maximumDistance: 5000
-  gridPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
+  gridPath: /Maps/_Forge/Events/Elementary/Syndicate/pod.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -27,7 +27,7 @@
 - type: gameMap
   id: PodA
   mapName: Ячейка контрабанды A
-  mapPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
+  mapPath: /Maps/_Forge/Events/Elementary/Syndicate/pod.yml
   minPlayers: 0
   stations:
     PodA:
@@ -44,7 +44,7 @@
   name: Ячейка контрабанды B
   minimumDistance: 2900
   maximumDistance: 5000
-  gridPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
+  gridPath: /Maps/_Forge/Events/Elementary/Syndicate/pod.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -56,7 +56,7 @@
 - type: gameMap
   id: PodB
   mapName: Ячейка контрабанды B
-  mapPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
+  mapPath: /Maps/_Forge/Events/Elementary/Syndicate/pod.yml
   minPlayers: 0
   stations:
     PodB:
@@ -73,7 +73,7 @@
   name: Ячейка контрабанды C
   minimumDistance: 2900
   maximumDistance: 5000
-  gridPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
+  gridPath: /Maps/_Forge/Events/Elementary/Syndicate/pod.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -85,7 +85,7 @@
 - type: gameMap
   id: PodC
   mapName: Ячейка контрабанды C
-  mapPath: /Maps/Forge/Events/Elementary/Syndicate/pod.yml
+  mapPath: /Maps/_Forge/Events/Elementary/Syndicate/pod.yml
   minPlayers: 0
   stations:
     PodC:

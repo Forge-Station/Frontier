@@ -1,10 +1,10 @@
 # Author Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 #
@@ -17,7 +17,7 @@
   category: Micro
   group: Sr
   access: Mail
-  shuttlePath: /Maps/Forge/Shuttles/Service/mailpod.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Service/mailpod.yml
   guidebookPage: Null
   class:
   - Cargo
@@ -25,7 +25,7 @@
 - type: gameMap
   id: MailPod
   mapName: 'NC Ямщик'
-  mapPath: /Maps/Forge/Shuttles/Service/mailpod.yml
+  mapPath: /Maps/_Forge/Shuttles/Service/mailpod.yml
   minPlayers: 0
   stations:
     MailPod:

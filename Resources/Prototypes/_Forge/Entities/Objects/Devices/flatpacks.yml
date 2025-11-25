@@ -87,3 +87,15 @@
     - state: engineering_lathe
   - type: StaticPrice
     price: 600
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: FSyndicateProtolatheFlatpack
+  name: syndicate protolathe flatpack
+  description: syndicate protolathe flatpack
+  components:
+  - type: Flatpack
+    entity: FSyndicateProtolathe
+  - type: Sprite
+    layers:
+    - state: power_console_ame

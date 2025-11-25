@@ -6,17 +6,7 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCommon
-      - EncryptionKeyCargo
-      - EncryptionKeyEngineering
-      - EncryptionKeyMedical
-      - EncryptionKeyScience
-      - EncryptionKeySecurity
-      - EncryptionKeyService
-      - EncryptionKeyCommand
-      - EncryptionKeyNfsd
-      - EncryptionKeyTraffic
-      - EncryptionKeyGreeting
+      - EncryptionKeyStationMaster
 
 - type: entity
   parent: TelecomServer

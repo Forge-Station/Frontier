@@ -513,7 +513,7 @@
   name:  uplink-security-magboots-name
   description: uplink-security-magboots-desc
   productEntity: ClothingShoesBootsMagNfsdFilled
-  icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi, state: icon }
+  icon: { sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots_promax.rsi, state: icon } # Forge-change: path to sprite
   cost:
     FrontierUplinkCoin: 1
   categories:
@@ -1028,6 +1028,21 @@
           - SecurityUplink
 
 - type: listing
+  id: UplinkSecurityBoxRifle60
+  name: коробка патронов (.60 крупнокалиберный)
+  description: Коробка смертоносных патрон .60 калибра для снайперской винтовки. Для тех, кто хочет открыть новый сезон охоты на нарушителей.
+  productEntity: NFAmmunitionBoxRifle60
+  cost:
+    FrontierUplinkCoin: 3
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
   id: UplinkSecurityShotBeanbag
   name:  uplink-security-shotbeanbag-name
   description: uplink-security-shotbeanbag-desc
@@ -1531,6 +1546,27 @@
   icon: { sprite: Forge/Objects/Weapons/Guns/Shotguns/ad12.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 11
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityWeaponSniperBrute
+  name: Снайперская винтовка "Брут"
+  description: Смертоносная крупнокалиберная снайперская винтовка. Очевидно, что она не предназначена для разгона мирных демонстраций... Хотя, кто с вами будет спорить? Использует .60 калибр.
+  productEntity: WeaponCaseLongWeaponSniperBrute
+  icon: { sprite: Forge/Objects/Weapons/Guns/Snipers/brute.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 30
   categories:
     - UplinkSecurityWeapons
   conditions:

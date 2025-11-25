@@ -3,8 +3,8 @@
 # Discord: SergeantEcho
 
 # Maintainer Info
-# GitHub:
-# Discord:
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 #
@@ -16,7 +16,7 @@
   price: 114100
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/venera.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/venera.yml
   class:
   - Expedition
   - Civilian
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Venera
   mapName: 'NC Венера'
-  mapPath: /Maps/Forge/Shuttles/Expedition/venera.yml
+  mapPath: /Maps/_Forge/Shuttles/Expedition/venera.yml
   minPlayers: 0
   stations:
     Venera:

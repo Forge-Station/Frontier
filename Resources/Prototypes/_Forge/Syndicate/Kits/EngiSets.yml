@@ -1,0 +1,63 @@
+- type: thiefBackpackSet
+  id: SyndEngineer1Set
+  name: SyndEngineer1Set-name
+  description: SyndEngineer1Set-description
+  sprite:
+    sprite: _NF/Objects/Weapons/Guns/Rifles/solandmoss.rsi
+    state: icon
+  content:
+  - ClothingHeadHelmetSyndicate
+  - ClothingOuterEVASuitSyndicate
+  - MedkitCombatFilled
+  - CombatMedipen
+  - SpaceMedipen
+  - C4
+  - BreachingCharge
+  - ToolboxSyndicateFilled
+  - SheetSteel
+  - SheetPlastic
+  - SheetGlass
+  - ConstructionBag
+  - NFWeaponRifleAssaultSm
+  - NFMagazineRifle30
+
+- type: thiefBackpackSet
+  id: SyndEngineer2Set
+  name: SyndEngineer2Set-name
+  description: SyndEngineer2Set-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
+    state: icon
+  content:
+  - ClothingHeadHelmetSyndicate
+  - ClothingOuterEVASuitSyndicate
+  - MedkitCombatFilled
+  - CombatMedipen
+  - SpaceMedipen
+  - C4
+  - BreachingCharge
+  - ToolboxSyndicateFilled
+  - SheetSteel
+  - SheetPlastic
+  - SheetGlass
+  - ConstructionBag
+  - WeaponCaseLongWeaponShotgunEnforcer
+
+- type: thiefBackpackSet
+  id: SyndEngineer3Set
+  name: SyndEngineer3Set-name
+  description: SyndEngineer3Set-description
+  sprite:
+    sprite: Clothing/OuterClothing/Hardsuits/syndicate.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitSyndie
+  - MedkitCombatFilled
+  - C4
+  - BreachingCharge
+  - ToolboxSyndicateAltFilled
+  - ConstructionBag
+  - WeaponCaseLongWeaponSubMachineGunScorpion
+  - SheetSteel
+  - SheetPlastic
+  - SheetGlass

@@ -13,3 +13,17 @@
   frequency: 5603
   color: "#680721"
   longRange: true
+
+- type: radioChannel
+  id: MercenaryFM
+  name: mercenaryfm-radio
+  keycode: 'р'
+  frequency: 1063
+  color: "#376333"
+
+- type: radioChannel
+  id: Hospital
+  name: radio-hospital
+  keycode: 'г'
+  frequency: 1165
+  color: "#75baf3"

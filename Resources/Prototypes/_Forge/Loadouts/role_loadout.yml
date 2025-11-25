@@ -3,26 +3,54 @@
   canCustomizeName: true
   groups:
   - SmugglerCaptainHead
-  - SmugglerJumpsuit
-  - SmugglerBags
-  - SmugglerGloves
-  - SmugglerShoes
-  - SmugglerNeck
-  - SmugglerOuterclothing
   - SmugglerGlasses
+  - SmugglerJumpsuit
+  - SmugglerOuterclothing
+  - SmugglerNeck
+  - SmugglerGloves
+  - SmugglerBags
+  - StormtrooperShoes
+  - SmugglerWeapon
+
+- type: roleLoadout
+  id: JobsmugglerBodyguard
+  canCustomizeName: true
+  groups:
+  - SmugglerCaptainHead
+  - SmugglerGlasses
+  - SmugglerJumpsuit
+  - SmugglerOuterclothing
+  - SmugglerNeck
+  - SmugglerGloves
+  - SmugglerBags
+  - StormtrooperShoes
+
+- type: roleLoadout
+  id: JobEngineerSyn
+  canCustomizeName: true
+  groups:
+  - EngineerSynHead
+  - StormtrooperGlasses
+  - EngineerSynJumpsuit
+  - EngineerSynOuter
+  - StormtrooperNeck
+  - StormtrooperGloves
+  - StormtrooperBags
+  - StormtrooperShoes
+  - EngineerSynBackpackItems
 
 - type: roleLoadout
   id: JobMedSyn
   canCustomizeName: true
   groups:
-  - SmugglerCaptainHead
-  - MedSynJumpsuit
-  - MedSynBack
+  - MedSynHead
   - MedSynGlasses
-  - SmugglerShoes
-  - SmugglerNeck
+  - MedSynJumpsuit
   - SmugglerOuterclothing
+  - SmugglerNeck
   - MedSynGloves
+  - MedSynBack
+  - StormtrooperShoes
   - MedSynBackpackItems
 
 - type: roleLoadout
@@ -30,14 +58,13 @@
   canCustomizeName: true
   groups:
   - StormtrooperCaptainHead
+  - StormtrooperGlasses
   - StormtrooperJumpsuit
-  - StormtrooperBags
-  - StormtrooperGlasses
-  - StormtrooperShoes
-  - StormtrooperNeck
   - StormtrooperOuterclothing
-  - StormtrooperGlasses
+  - StormtrooperNeck
   - StormtrooperGloves
+  - StormtrooperBags
+  - StormtrooperShoes
   - SyndicateBackpackItems
 
 - type: roleLoadout
@@ -45,30 +72,32 @@
   canCustomizeName: true
   groups:
   - CommanderCaptainHead
-  - CommanderJumpsuit
-  - CommanderBags
   - CommanderGlasses
-  - CommanderShoes
-  - CommanderNeck
+  - CommanderJumpsuit
   - CommanderOuterclothing
   - CommanderGloves
+  - CommanderNeck
+  - CommanderBags
+  - StormtrooperShoes
   - SyndicateBackpackItems
 
 - type: roleLoadout
   id: JobparaMedical
   groups:
-  - ParaMedicalJumpsuit
-  - ParaMedicalBackpack
-  - ParaMedicalOuterClothing
-  - ParaMedicalShoes
-  - ParaMedicalWallet
+  - paraMedicalEars
   - ParaMedicalHead
-  - DocGloves
-  - ContractorOuterClothing
+  - paraMedicalGlasses
   - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - ContractorWallet
+  - ParaMedicalJumpsuit
+  - ParaMedicalOuterClothing
+  - ParaMedicalNeck
+  - DocGloves
+  - ParaMedicalBackpack
+  - paraMedicalPDA
+  - paraMedicalEncryptionKey
+  - ParaMedicalShoes
+#  - ContractorBelt
+  - ParaMedicalWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
@@ -87,7 +116,7 @@
   - OMedicShoes
   - OMedicBackpack
   - OMedicPDA
-  - ContractorWallet
+  - ParaMedicalWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems

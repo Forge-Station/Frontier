@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/FireFoxPhoenix
 # Discord: FireFoxPhoenix
 
 # Notes:
-
+#
 # - type: pointOfInterest
 #   id: MercenaryBase
 #   parent: BasePOI
@@ -17,7 +17,7 @@
 #   minimumDistance: 1650
 #   maximumDistance: 3400
 #   spawnGroup: Required
-#   gridPath: /Maps/Forge/POI/MercenaryBase.yml
+#   gridPath: /Maps/_Forge/POI/MercenaryBase.yml
 #   addComponents:
 #   - type: IFF
 #     color: "#5beb34"
@@ -30,7 +30,7 @@
 # - type: gameMap
 #   id: MercenaryBase
 #   mapName: 'Аванпост наёмников Рубеж'
-#   mapPath: /Maps/Forge/POI/MercenaryBase.yml
+#   mapPath: /Maps/_Forge/POI/MercenaryBase.yml
 #   minPlayers: 0
 #   stations:
 #     MercenaryBase:

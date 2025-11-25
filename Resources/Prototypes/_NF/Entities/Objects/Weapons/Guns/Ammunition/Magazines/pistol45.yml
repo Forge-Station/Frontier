@@ -295,3 +295,33 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
         color: "#00b0ff"
+
+# Corvax-Frontier
+- type: entity
+  id: NFMagazinePistol45AP
+  name: pistol magazine (.45 pistol, AP)
+  parent: NFBaseMagazinePistol45
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgePistol45AP
+  - type: Sprite
+    layers:
+    - state: base
+      color: "#666666"
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#820000"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+        color: "#666666"
+      - state: inhand-left-stripe
+        color: "#820000"
+      right:
+      - state: inhand-right-mag
+        color: "#666666"
+      - state: inhand-right-stripe
+        color: "#820000"

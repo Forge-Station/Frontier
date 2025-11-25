@@ -1,14 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
+#
 - type: vessel
   id: Slasher
   parent: BaseVessel
@@ -17,7 +18,7 @@
   price: 113350
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/slasher.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/slasher.yml
   class:
   - Expedition
   - Civilian
@@ -25,7 +26,7 @@
 - type: gameMap
   id: Slasher
   mapName: 'NC Слэшер'
-  mapPath: /Maps/Forge/Shuttles/Expedition/slasher.yml
+  mapPath: /Maps/_Forge/Shuttles/Expedition/slasher.yml
   minPlayers: 0
   stations:
     Slasher:

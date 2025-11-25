@@ -3,11 +3,11 @@
 # Discord: -
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: RosebudMKII
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 106000
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/rosebudmkii.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/rosebudmkii.yml
   guidebookPage: Null
   class:
   - Expedition
@@ -24,7 +24,7 @@
 - type: gameMap
   id: RosebudMKII
   mapName: 'NT Бутон MKII'
-  mapPath: /Maps/Forge/Shuttles/Expedition/rosebudmkii.yml
+  mapPath: /Maps/_Forge/Shuttles/Expedition/rosebudmkii.yml
   minPlayers: 0
   stations:
     RosebudMKII:

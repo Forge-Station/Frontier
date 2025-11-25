@@ -249,6 +249,33 @@ public sealed partial class SalvageSystem
                                 continue;
                             }
 
+                            EntityUid? targetPOI = null;
+
+                            if (TryComp<ShuttleComponent>(shuttleUid, out var shuttleComp) && !string.IsNullOrEmpty(shuttleComp.TargetPOI))
+                            {
+                                if (int.TryParse(shuttleComp.TargetPOI, out var PoiId))
+                                {
+                                    var entityId = new EntityUid(PoiId);
+                                    if (Exists(entityId) && TryComp<TransformComponent>(entityId, out var entityXform) && entityXform.MapID == _gameTicker.DefaultMap)
+                                    {
+                                        targetPOI = entityId;
+                                    }
+                                }
+                                if (targetPOI == null)
+                                {
+                                    var poiQuery = AllEntityQuery<BecomesStationComponent, TransformComponent>();
+                                    while (poiQuery.MoveNext(out var poiUid, out var becomesStation, out var poiXform))
+                                    {
+                                        if (becomesStation.Id == shuttleComp.TargetPOI && poiXform.MapID == _gameTicker.DefaultMap)
+                                        {
+                                            targetPOI = poiUid;
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+
+
                             // Destination generator parameters (move to CVAR?)
                             int numRetries = 20; // Maximum number of retries
                             float minDistance = 200f; // Minimum distance from another object, in meters
@@ -284,7 +311,14 @@ public sealed partial class SalvageSystem
                                 dropLocation = _random.NextVector2(minRange, maxRange);
                             }
 
-                            _shuttle.FTLToCoordinates(shuttleUid, shuttle, new EntityCoordinates(mapUid.Value, dropLocation), 0f, ftlTime, TravelTime);
+                            if (targetPOI == null)
+                            {
+                                _shuttle.FTLToCoordinates(shuttleUid, shuttle, new EntityCoordinates(mapUid.Value, dropLocation), 0f, ftlTime, TravelTime);
+                            }
+                            else
+                            {
+                                _shuttle.FTLToDock(shuttleUid, shuttle, targetPOI.Value, 0f, ftlTime);
+                            }
                             // End Frontier:  try to find a potential destination for ship that doesn't collide with other grids.
                             //_shuttle.FTLToDock(shuttleUid, shuttle, member, ftlTime); // Frontier: use above instead
                         }

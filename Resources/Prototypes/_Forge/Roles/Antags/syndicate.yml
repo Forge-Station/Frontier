@@ -19,7 +19,7 @@
   components:
     - type: RandomMetadata
       nameSegments: [NamesSyndicateElite]
-      nameFormat: name-format-nukie-operator
+      nameFormat: name-format-nukie-agent
     - type: RandomHumanoidSpawner
       settings: SSTCharliesettings
     - type: NpcFactionMember
@@ -51,6 +51,9 @@
     - Elzuosa
     - Sheleg
     - Harpy
+    - Skrell
+    - Ariral
+    - Android
   components:
     - type: Loadout
       prototypes: [ SyndicateStrikeTeamGear ]
@@ -63,6 +66,7 @@
       factions:
         - Syndicate
     - type: NukeOperative
+    - type: BankAccount
 
 - type: randomHumanoidSettings
   id: SSTCharliesettings
@@ -89,6 +93,9 @@
     - Elzuosa
     - Sheleg
     - Harpy
+    - Skrell
+    - Ariral
+    - Android
   components:
     - type: Loadout
       prototypes: [ SyndicateStrikeTeamGearCharlie ]
@@ -101,6 +108,7 @@
       factions:
         - Syndicate
     - type: NukeOperative
+    - type: BankAccount
 
 - type: startingGear
   id: SyndicateStrikeTeamGear
@@ -114,22 +122,24 @@
     outerClothing: ClothingOuterHardsuitSyndieSST
     shoes: ClothingShoesBootsMagSyndieElite
     id: SyndiPDACStorm
-    pocket1: EnergySword
-    pocket2: AccessBreaker
+    pocket1: DoubleEmergencyOxygenTankFilled
+    pocket2: DoubleEmergencyOxygenTankFilled
     belt: ClothingBeltMilitaryWebbingGrenadeFilled
   storage:
     back:
       - NFBoxMagazineRifle30Overpressure
       - NFBoxMagazineRifle30Overpressure
       - SyndicateJawsOfLife
-      - SyndiHypo
-      - SyndieMiniBomb
-      - SyndieMiniBomb
-      - CombatMedipen
-      - CombatMedipen
-      - CombatMedipen
-      - CombatMedipen
-      - CombatMedipen
+      - PowerDrillSyndicate
+      - WelderSyndicate
+      - MultitoolSyndicate
+      - PowerCellSyndicate
+      - MedTekCartridge
+      - EnergySword
+      - AccessBreaker
+      - BarberScissors
+    belt:
+      - NaniteskitFilled
   inhand:
     - WeaponRifleAkCyberSun
 
@@ -145,22 +155,32 @@
     outerClothing: ClothingOuterHardsuitSyndieSST
     shoes: ClothingShoesBootsMagSyndieElite
     id: SyndiPDACStorm
-    pocket1: EnergySword
-    pocket2: AccessBreaker
-    belt: ClothingBeltMilitaryWebbingMedFilled
+    pocket1: DoubleEmergencyOxygenTankFilled
+    pocket2: DoubleEmergencyOxygenTankFilled
+    belt: ClothingBeltMilitaryWebbingSyndicateMed
   storage:
     back:
       - NFBoxMagazineRifle30Overpressure
       - NFBoxMagazineRifle30Overpressure
       - SyndicateJawsOfLife
+      - PowerDrillSyndicate
+      - WelderSyndicate
+      - MultitoolSyndicate
       - PinpointerSyndicatePOI
+      - PowerCellSyndicate
+      - MedTekCartridge
+      - EnergySword
+      - AccessBreaker
+      - BarberScissors
     belt:
+      - StimkitFilled
+      - NaniteskitFilled
+      - SyndiHypo
+      - ChemistryBottleEpinephrine
       - ChemistryBottleOmnizine
-      - Stimpack
-      - Stimpack
-      - Stimpack
-      - PunctAutoInjector
-      - PunctAutoInjector
-      - PunctAutoInjector
+      - ChemistryBottleEpinephrine
+      - ChemistryBottleEphedrine
+      - ChemistryBottleEphedrine
+      - ChemistryBottleOmnizine
   inhand:
     - WeaponRifleAkCyberSun

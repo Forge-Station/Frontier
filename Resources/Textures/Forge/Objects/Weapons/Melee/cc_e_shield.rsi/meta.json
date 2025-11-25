@@ -1,0 +1,121 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from Citadel station 13 at https://github.com/Citadel-Station-13/Citadel-Station-13/commit/84223c65f5caf667a84f3c0f49bc2a41cdc6c4e3",
+    "extra_copyright": [
+        "Recolor by dvir001 for Frontier"
+    ],
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "eshield-icon",
+            "delays": [
+                [
+                0.5,
+                0.5
+                ]
+            ]
+        },
+        {
+            "name": "eshield-inhand-right",
+            "directions": 4,
+            "delays": [
+                [
+                0.5,
+                0.5
+                ],
+                [
+                0.5,
+                0.5
+                ],
+                [
+                0.5,
+                0.5
+                ],
+                [
+                0.5,
+                0.5
+                ]
+            ]
+        },
+        {
+            "name": "eshield-inhand-left",
+            "directions": 4,
+            "delays": [
+                [
+                0.5,
+                0.5
+                ],
+                [
+                0.5,
+                0.5
+                ],
+                [
+                0.5,
+                0.5
+                ],
+                [
+                0.5,
+                0.5
+                ]
+            ]
+        },
+        {
+            "name": "eshield-on",
+            "delays": [
+                [
+                0.4,
+                0.4,
+                0.4
+                ]
+            ]
+        },
+        {
+            "name": "inhand-right-shield",
+            "directions": 4,
+            "delays": [
+                [
+                0.2,
+                0.2
+                ],
+                [
+                0.2,
+                0.2
+                ],
+                [
+                0.2,
+                0.2
+                ],
+                [
+                0.2,
+                0.2
+                ]
+            ]
+        },
+        {
+            "name": "inhand-left-shield",
+            "directions": 4,
+            "delays": [
+                [
+                0.2,
+                0.2
+                ],
+                [
+                0.2,
+                0.2
+                ],
+                [
+                0.2,
+                0.2
+                ],
+                [
+                0.2,
+                0.2
+                ]
+            ]
+        }
+    ]
+}

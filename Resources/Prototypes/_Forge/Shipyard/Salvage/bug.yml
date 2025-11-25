@@ -16,7 +16,7 @@
   price: 12300
   category: Small
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/bug.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/bug.yml
   guidebookPage: null
   class:
   - Salvage
@@ -25,8 +25,8 @@
 
 - type: gameMap
   id: Bug
-  mapName: 'Жук'
-  mapPath: /Maps/Forge/Shuttles/Salvage/bug.yml
+  mapName: 'TL Жук'
+  mapPath: /Maps/_Forge/Shuttles/Salvage/bug.yml
   minPlayers: 0
   stations:
     Bug:

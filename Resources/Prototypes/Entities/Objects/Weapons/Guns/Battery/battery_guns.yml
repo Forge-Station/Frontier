@@ -383,8 +383,8 @@
     fireRate: 1.5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: NFRedHeavyLaser # Frontier: use NF variant
+  - type: ProjectileBatteryAmmoProvider # Corvax-Forge: Weapons Update
+    proto: NFBulletLaserHeavy
     fireCost: 100
   - type: Tag
     tags:
@@ -898,5 +898,5 @@
   parent: [ WeaponAdvancedLaser, BaseXenoborgContraband ]
   id: XenoborgHeavyLaserGun
   components:
-  - type: HitscanBatteryAmmoProvider
-    proto: NFRedHeavyLaser # Frontier: use NF variant
+  - type: ProjectileBatteryAmmoProvider # Corvax-Forge: Weapons Update
+    proto: NFBulletLaserHeavy

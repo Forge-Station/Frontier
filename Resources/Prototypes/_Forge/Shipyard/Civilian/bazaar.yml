@@ -1,10 +1,10 @@
 # Author Info
 # GitHub: YumiGumi (https://github.com/YumiGumi)
-# Discord: ???
+# Discord: -
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 #
@@ -16,7 +16,7 @@
   price: 95555 # on init ~57005$ + 8550$ from 15% markup
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/bazaar.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/bazaar.yml
   guidebookPage: ShipyardBazaar
   class:
   - Cargo
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Bazaar
   mapName: 'SLI Барахолка'
-  mapPath: /Maps/Forge/Shuttles/Civilian/bazaar.yml
+  mapPath: /Maps/_Forge/Shuttles/Civilian/bazaar.yml
   minPlayers: 0
   stations:
     Bazaar:

@@ -1,5 +1,10 @@
 # Author Info
 # GitHub: cheackraze
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 # a wooden pirate version of the classic Prospector
@@ -11,7 +16,7 @@
   price: 24000
   category: Small
   group: BlackMarket
-  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/barnacle.yml
+  shuttlePath: /Maps/_Forge/Shuttles/BlackMarket/barnacle.yml
   guidebookPage: Null
   class:
   - Pirate
@@ -26,7 +31,7 @@
 - type: gameMap
   id: Barnacle
   mapName: 'Моряк'
-  mapPath: /Maps/Forge/Shuttles/BlackMarket/barnacle.yml
+  mapPath: /Maps/_Forge/Shuttles/BlackMarket/barnacle.yml
   minPlayers: 0
   stations:
     Barnacle:

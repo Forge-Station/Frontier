@@ -1,10 +1,13 @@
+# Author Info
+# GitHub: -
+# Discord: -
+
 # Maintainer Info
 # GitHub: dvir001
 # Discord: dvir01 (84770870936997888)
 
 # Shuttle Notes:
 #
-
 - type: vessel
   id: McDelivery
   parent: BaseVessel
@@ -13,7 +16,7 @@
   price: 10500
   category: Micro
   group: Custom
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/mcdelivery.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/mcdelivery.yml
   guidebookPage: ShipyardMcDelivery
   class:
   - Civilian
@@ -21,7 +24,7 @@
 - type: gameMap
   id: McDelivery
   mapName: 'DC Курьер'
-  mapPath: /Maps/Forge/Shuttles/Civilian/mcdelivery.yml
+  mapPath: /Maps/_Forge/Shuttles/Civilian/mcdelivery.yml
   minPlayers: 0
   stations:
     McDelivery:

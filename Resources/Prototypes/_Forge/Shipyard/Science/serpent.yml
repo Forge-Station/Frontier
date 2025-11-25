@@ -16,7 +16,7 @@
   price: 185000
   category: Large
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Science/serpent.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Science/serpent.yml
   guidebookPage: Null
   class:
   - Science
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Serpent
   mapName: 'TL Змей'
-  mapPath: /Maps/Forge/Shuttles/Science/serpent.yml
+  mapPath: /Maps/_Forge/Shuttles/Science/serpent.yml
   minPlayers: 0
   stations:
     Serpent:

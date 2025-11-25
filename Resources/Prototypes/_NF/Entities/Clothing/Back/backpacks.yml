@@ -38,7 +38,7 @@
       collection: CatMeows
 
 - type: entity
-  parent: ClothingBackpackSecurity
+  parent: [BaseC2ContrabandUnredeemable, ClothingBackpackSecurity] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingBackpackNfsdBrown
   name: NFSD backpack
   components:

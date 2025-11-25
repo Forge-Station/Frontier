@@ -39,7 +39,7 @@
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
     - type: BallisticAmmoProvider
-      proto: NFCartridgePistol45
+      proto: NFCartridgePistol45AP # Corvax-Forge
       capacity: 500
 
 - type: entity

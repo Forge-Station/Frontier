@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: docs.unity3d.com
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: centurion
   parent: BaseVessel
@@ -19,7 +19,7 @@
   category: Large
   group: Security
   access: Bailiff
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/centurion.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/centurion.yml
   class:
   - Capital
   addComponents:
@@ -29,7 +29,7 @@
 - type: gameMap
   id: centurion
   mapName: 'NSF Центурион'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/centurion.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/centurion.yml
   minPlayers: 0
   stations:
     centurion:

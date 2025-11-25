@@ -1,7 +1,7 @@
 # Author Info
 # GitHub: -
-# Discord: v6st CorvaxForge
-# License: CC-BY-NC-ND-3.0
+# Discord: v6st
+# License: CC-BY-NC-ND-4.0
 # CorvaxForge
 
 # Maintainer Info
@@ -9,7 +9,7 @@
 # Discord: ko_mp_otik
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Mirage
   parent: BaseVessel
@@ -18,7 +18,7 @@
   price: 42000
   category: Small
   group: Mercenary
-  shuttlePath: /Maps/Forge/Shuttles/Mercenary/mirage.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Mercenary/mirage.yml
   addComponents:
   - type: MercenaryBountyDatabase
     bounties: []
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Mirage
   mapName: 'SBI Мираж'
-  mapPath: /Maps/Forge/Shuttles/Mercenary/mirage.yml
+  mapPath: /Maps/_Forge/Shuttles/Mercenary/mirage.yml
   minPlayers: 0
   stations:
     Mirage:

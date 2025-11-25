@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Owl
   parent: BaseVessel
@@ -18,7 +18,7 @@
   price: 40000
   category: Small
   group: Mercenary
-  shuttlePath: /Maps/Forge/Shuttles/Mercenary/owl.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Mercenary/owl.yml
   addComponents:
   - type: MercenaryBountyDatabase
     bounties: []
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Owl
   mapName: 'SBI Сова'
-  mapPath: /Maps/Forge/Shuttles/Mercenary/owl.yml
+  mapPath: /Maps/_Forge/Shuttles/Mercenary/owl.yml
   minPlayers: 0
   stations:
     Owl:

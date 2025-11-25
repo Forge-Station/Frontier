@@ -33,3 +33,13 @@
 #  - WeaponCaseMercLaserSvalinnLd # Ничего смешного не придумал, придумайте сами
   - WeaponCaseMercLaserMakeshiftLd
   - WeaponCaseMercWaterBlasterLd
+
+- type: loadoutGroup
+  id: MercEncryptionKey
+  name: loadout-group-contractor-encryption-key
+  minLimit: 0
+  maxLimit: 5
+  loadouts:
+  - ForgeMercEncryptionKeyMercenaryFM
+  subgroups:
+  - ContractorEncryptionKey

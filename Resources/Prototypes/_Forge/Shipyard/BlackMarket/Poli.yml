@@ -1,14 +1,15 @@
 # Author Info
 # GitHub: -
-# Discord:  terrafrog
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# Discord: terrafrog
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
+#
 - type: vessel
   id: Poli
   parent: BaseVessel
@@ -17,7 +18,7 @@
   price: 104000
   category: Medium
   group: BlackMarket
-  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/Poli.yml
+  shuttlePath: /Maps/_Forge/Shuttles/BlackMarket/poli.yml
   addComponents:
   - type: IFF
     flags: [HideLabel]
@@ -26,8 +27,8 @@
 
 - type: gameMap
   id: Poli
-  mapName: 'Poli'
-  mapPath: /Maps/Forge/Shuttles/BlackMarket/Poli.yml
+  mapName: 'Полюс'
+  mapPath: /Maps/_Forge/Shuttles/BlackMarket/poli.yml
   minPlayers: 0
   stations:
     Poli:

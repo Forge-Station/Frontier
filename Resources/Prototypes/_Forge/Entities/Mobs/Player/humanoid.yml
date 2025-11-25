@@ -1,0 +1,770 @@
+- type: entity
+  parent: MobDemon
+  id: MobDemonRandom
+  name: Урист МакАркана
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobHarpy
+  id: MobHarpyRandom
+  name: Урист МакГарпия
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobVulpkanin
+  id: MobVulpkaninRandom
+  name: Урист МакВульпа
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesVulpkaninMale
+    - NamesVulpkaninLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobElzuosa
+  id: MobElzuosaRandom
+  name: Урист МакЭльзуос
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobIpc
+  id: MobIpcRandom
+  name: Урист МакКПБ
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesIpcFirstMale
+
+- type: entity
+  parent: MobTajaran
+  id: MobTajaranRandom
+  name: Урист МакТаяр
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesTajaranFirstMale
+    - NamesTajaranLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobGoblin
+  id: MobGoblinRandom
+  name: Урист МакГоблин
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesGoblinFirstMale
+    - NamesGoblinLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobSheleg
+  id: MobShelegRandom
+  name: Урист МакШлег
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesShelegFirstMale
+    - NamesShelegLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobAndroid
+  id: MobAndroidRandom
+  name: Урист МакАндроид
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesAI
+
+- type: entity
+  parent: MobAriral
+  id: MobAriralRandom
+  name: Урист МакАрирал
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesAriralFirst
+    - NamesAriralLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobFelinid
+  id: MobFelinidRandom
+  name: Урист МакФелинид
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobOni
+  id: MobOniRandom
+  name: Урист МакОни
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesOniMale
+    - NamesOniLocation
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobArachnid
+  id: MobArachnidRandom
+  name: Урист МакВеб
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesArachnidFirst
+    - NamesArachnidLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobDiona
+  id: MobDionaRandom
+  name: Урист МакДиона
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesDionaFirst
+    - NamesDionaLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobDwarf
+  id: MobDwarfRandom
+  name: Урист МакДворф
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobHuman
+  id: MobHumanRandom
+  name: Урист МакЧеловек
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobMoth
+  id: MobMothRandom
+  name: Урист МакФлафф
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesMothFirstFemale
+    - NamesMothLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobReptilian
+  id: MobReptilianRandom
+  name: Урист МакУнатх
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesReptilianMale
+
+- type: entity
+  parent: MobSlimePerson
+  id: MobSlimePersonRandom
+  name: Урист МакСлайм
+  suffix: Слаймолюд, Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobVox
+  id: MobVoxRandom
+  name: Уристистист МакВокс
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesVox
+
+## Death Squad
+
+- type: entity
+  id: ForgeRandomHumanoidSpawnerDeathSquad
+  name: Агент Эскадрона Смерти
+  suffix: Роль УСФ, Эскадрон
+  components:
+    - type: Sprite
+      sprite: Clothing/OuterClothing/Hardsuits/deathsquad.rsi
+      state: icon
+    - type: RandomMetadata
+      nameSegments:
+        - NamesMilitaryFirstLeader
+        - NamesMilitaryLast
+      nameFormat: name-format-ert
+    - type: RandomHumanoidSpawner
+      settings: ForgeDeathSquad
+
+- type: randomHumanoidSettings
+  id: ForgeDeathSquad
+  parent: EventHumanoidCentcomm
+  speciesBlacklist:
+    - Diona
+    - Arachnid
+    - Dwarf
+    - Gingerbread
+    - Moth
+    - Reptilian
+    - Skeleton
+    - SlimePerson
+    - Vox
+    - Vulpkanin
+    - Resomi
+    - Tajaran
+    - Ipc
+    - DemonSpecies
+    - Felinid
+    - Goblin
+    - Oni
+    - Elzuosa
+    - Sheleg
+    - Harpy
+    - Skrell
+    - Ariral
+    - Android
+  components:
+    - type: GhostRole
+      name: ghost-role-information-Death-Squad-name
+      description: ghost-role-information-Death-Squad-description
+      rules: ghost-role-information-Death-Squad-rules
+      raffle:
+        settings: short
+      mindRoles:
+      - MindRoleGhostRoleFamiliar
+    - type: Loadout
+      prototypes: [ ForgeDeathSquadGear ]
+      roleLoadout: [ RoleSurvivalEVA ]
+    - type: AutoImplant
+      implants:
+      - DeathAcidifierImplant
+    - type: RandomMetadata
+      nameSegments:
+        - NamesMilitaryFirstLeader
+        - NamesMilitaryLast
+      nameFormat: name-format-ert
+    - type: BankAccount
+
+- type: startingGear
+  id: ForgeDeathSquadGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDeathSquad
+    back: ClothingBackpackDeathSquad
+    mask: ClothingMaskGasDeathSquad
+    eyes: ClothingEyesGlassesCentComm
+    ears: ClothingHeadsetAltCentCom
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitDeathsquad
+    shoes: ClothingShoesBootsMagCombatERT
+    id: DeathsquadPDA
+    pocket1: EnergySword
+    pocket2: EnergyShieldAdvanced
+    belt: ClothingBeltMilitaryWebbingMed
+  storage:
+    back:
+      - NFWeaponEnergyPistolPulse
+      - NFWeaponPistolN1984
+      - NFMagazinePistol45AP
+      - NFMagazinePistol45AP
+      - NFAmmunitionBoxPistol45AP
+      - ToolDebug
+      - WelderExperimental
+    belt:
+      - NaniteskitFilled
+      - Hypospray
+      - ChemistryBottleEpinephrine
+      - ChemistryBottleEpinephrine
+      - ChemistryBottleEphedrine
+      - ChemistryBottleEphedrine
+      - ChemistryBottleOmnizine
+      - ChemistryBottleOmnizine
+      - SyringePhalanximine
+      - SyringePhalanximine
+      - SyringePhalanximine
+      - SyringePhalanximine
+  inhand:
+  - WeaponDSPulseGun
+
+
+## ERT Leader
+
+- type: entity
+  id: ForgeRandomHumanoidSpawnerERTLeaderEVA
+  parent: RandomHumanoidSpawnerERTLeader
+  name: Лидер ОБР
+  suffix: Роль УСФ, EVA
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: ertleadereva
+    - type: RandomHumanoidSpawner
+      settings: ForgeERTLeaderEVA
+
+- type: randomHumanoidSettings
+  id: ForgeERTLeaderEVA
+  parent: ERTLeader
+  speciesBlacklist:
+    - Diona
+    - Gingerbread
+    - Skeleton
+    - Vox
+    - Oni
+    - Goblin
+    - Elzuosa
+    - Sheleg
+    - Harpy
+    - Android
+  components:
+    - type: GhostRole
+      name: ghost-role-information-ert-leader-name
+      description: ghost-role-information-ert-leader-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+      job: ERTLeader
+    - type: Loadout
+      prototypes: [ ForgeERTLeaderGearEVA ]
+      roleLoadout: [ RoleSurvivalEVA ]
+    - type: BankAccount
+
+- type: startingGear
+  id: ForgeERTLeaderGearEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTLeader
+    back: ClothingBackpackERTLeader
+    shoes: ClothingShoesBootsMagCombatERT
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTLeader
+    id: ERTLeaderPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltSecurityFilled
+    pocket1: NFWeaponPistolN1984
+    pocket2: FlashlightSeclite
+  storage:
+    back:
+    - NFAmmunitionBoxBigRifle20Overpressure
+    - NFAmmunitionBoxBigRifle20Overpressure
+    - MedkitCombatFilled
+    - NFMagazinePistol45
+    - NFWeaponEnergyPistolDisabler
+    - JawsOfLife
+  inhand:
+  - WeaponCaseLongM4A1
+
+## ERT Janitor
+
+- type: entity
+  id: ForgeRandomHumanoidSpawnerERTJanitorEVA
+  parent: RandomHumanoidSpawnerERTJanitor
+  name: Уборщик ОБР
+  suffix: Роль УСФ, EVA
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: ertjanitoreva
+    - type: RandomHumanoidSpawner
+      settings: ForgeERTJanitorEVA
+
+- type: randomHumanoidSettings
+  id: ForgeERTJanitorEVA
+  parent: ERTJanitor
+  speciesBlacklist:
+    - Diona
+    - Gingerbread
+    - Skeleton
+    - Vox
+    - Oni
+    - Goblin
+    - Elzuosa
+    - Sheleg
+    - Harpy
+    - Android
+  components:
+    - type: GhostRole
+      name: ghost-role-information-ert-janitor-name
+      description: ghost-role-information-ert-janitor-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+      job: ERTJanitor
+    - type: Loadout
+      prototypes: [ ForgeERTJanitorGearEVA ]
+      roleLoadout: [ RoleSurvivalEVA ]
+    - type: BankAccount
+
+- type: startingGear
+  id: ForgeERTJanitorGearEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTJanitor
+    back: ClothingBackpackERTJanitor
+    shoes: ClothingShoesBootsMagGaloshes
+    eyes: ClothingEyesGlassesCentComm
+    mask: ClothingMaskGasERT
+    gloves: ClothingHandsGlovesJanitor
+    outerClothing: ClothingOuterHardsuitERTJanitor
+    id: ERTJanitorPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltJanitorFilled
+    pocket1: Flare
+  storage:
+    back:
+    - BoxLightMixed
+    - BoxLightMixed
+    - LightReplacer
+    - Soap
+    - CrowbarRed
+  inhand:
+    - AdvMopItem
+
+## ERT Engineer
+
+- type: entity
+  id: ForgeRandomHumanoidSpawnerERTEngineerEVA
+  parent: RandomHumanoidSpawnerERTEngineer
+  name: Инженер ОБР
+  suffix: Роль УСФ, EVA
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: ertengineereva
+    - type: RandomHumanoidSpawner
+      settings: ForgeERTEngineerEVA
+
+- type: randomHumanoidSettings
+  id: ForgeERTEngineerEVA
+  parent: ERTEngineer
+  speciesBlacklist:
+    - Diona
+    - Gingerbread
+    - Skeleton
+    - Vox
+    - Oni
+    - Sheleg
+    - Harpy
+    - Android
+  components:
+    - type: GhostRole
+      name: ghost-role-information-ert-engineer-name
+      description: ghost-role-information-ert-engineer-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+      job: ERTEngineer
+    - type: Loadout
+      prototypes: [ ForgeERTEngineerGearEVA ]
+      roleLoadout: [ RoleSurvivalEVA ]
+    - type: BankAccount
+
+- type: startingGear
+  id: ForgeERTEngineerGearEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTEngineer
+    back: ClothingBackpackERTEngineer
+    shoes: ClothingShoesBootsMagAdv
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTEngineer
+    id: ERTEngineerPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltChiefEngineerFilled
+    pocket1: Flare
+    pocket2: GasAnalyzer
+  storage:
+    back:
+    - NFAmmunitionBoxBigRifle20Overpressure
+    - trayScanner
+    - RCD
+    - RCDAmmo
+    - RCDAmmo
+    - CableMVStack
+    - CableHVStack
+    - CableApcStack
+  inhand:
+    - WeaponCaseLongWeaponSubMachineGunScorpion
+
+## ERT Security
+
+- type: entity
+  id: ForgeRandomHumanoidSpawnerERTSecurityEVA
+  parent: RandomHumanoidSpawnerERTSecurity
+  name: Офицер ОБР
+  suffix: Роль УСФ, EVA
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: ertsecurityeva
+    - type: RandomHumanoidSpawner
+      settings: ForgeERTSecurityEVA
+
+- type: randomHumanoidSettings
+  id: ForgeERTSecurityEVA
+  parent: ERTSecurity
+  speciesBlacklist:
+    - Diona
+    - Gingerbread
+    - Skeleton
+    - Vox
+    - Oni
+    - Elzuosa
+    - Sheleg
+    - Harpy
+    - Android
+  components:
+    - type: GhostRole
+      name: ghost-role-information-ert-security-name
+      description: ghost-role-information-ert-security-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+      job: ERTSecurity
+    - type: Loadout
+      prototypes: [ ForgeERTSecurityGearEVA ]
+      roleLoadout: [ RoleSurvivalEVA ]
+    - type: BankAccount
+
+- type: startingGear
+  id: ForgeERTSecurityGearEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTSecurity
+    back: ClothingBackpackERTSecurity
+    shoes: ClothingShoesBootsMagAdv
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTSecurity
+    id: ERTSecurityPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltSecurityFilled
+    pocket1: NFWeaponPistolUniversalNfsd
+    pocket2: FlashlightSeclite
+  storage:
+    back:
+    - NFAmmunitionBoxBigRifle20Overpressure
+    - MedkitCombatFilled
+    - CrowbarRed
+    - NFMagazineHighCapacityPistol35Overpressure
+  inhand:
+    - WeaponCaseLongWeaponRifleLecter
+
+## ERT Medic
+
+- type: entity
+  id: ForgeRandomHumanoidSpawnerERTMedicalEVA
+  parent: RandomHumanoidSpawnerERTMedical
+  name: Медик ОБР
+  suffix: Роль УСФ, EVA
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: ertmedicaleva
+    - type: RandomHumanoidSpawner
+      settings: ForgeERTMedicalEVA
+
+- type: randomHumanoidSettings
+  id: ForgeERTMedicalEVA
+  parent: ERTMedical
+  speciesBlacklist:
+    - Diona
+    - Gingerbread
+    - Skeleton
+    - Vox
+    - Oni
+    - Elzuosa
+    - Sheleg
+    - Harpy
+    - Android
+  components:
+    - type: GhostRole
+      name: ghost-role-information-ert-medical-name
+      description: ghost-role-information-ert-medical-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+      job: ERTMedical
+    - type: Loadout
+      prototypes: [ ForgeERTMedicalGearEVA ]
+      roleLoadout: [ RoleSurvivalEVA ]
+    - type: BankAccount
+
+- type: startingGear
+  id: ForgeERTMedicalGearEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTMedic
+    back: ClothingBackpackERTMedical
+    shoes: ClothingShoesBootsMagAdv
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesNitrile
+    outerClothing: ClothingOuterHardsuitERTMedical
+    id: ERTMedicPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltMilitaryWebbingMed
+    pocket1: Flare
+  storage:
+    back:
+      - NFAmmunitionBoxShellShotgunOverpressure
+      - NFAmmunitionBoxShellShotgunOverpressure
+      - NFAmmunitionBoxShellShotgunOverpressure
+      - NFAmmunitionBoxShellShotgunOverpressure
+      - MedkitCombatFilled
+      - MedkitCombatFilled
+      - CrowbarRed
+    belt:
+      - Hypospray
+      - ChemistryBottleEpinephrine
+      - ChemistryBottleEpinephrine
+      - ChemistryBottleEpinephrine
+      - ChemistryBottleEphedrine
+      - ChemistryBottleEphedrine
+      - ChemistryBottleOmnizine
+      - ChemistryBottleOmnizine
+      - Syringe
+      - Syringe
+      - Syringe
+  inhand:
+    - WeaponCaseLongAD12
+## CBURN
+
+- type: entity
+  id: ForgeRandomHumanoidSpawnerCBURNUnit
+  name: Агент РХБЗ
+  suffix: Роль УСФ
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: cburn
+    - type: RandomHumanoidSpawner
+      settings: ForgeCBURNAgent
+
+- type: randomHumanoidSettings
+  id: ForgeCBURNAgent
+  parent: EventHumanoidCentcomm
+  speciesBlacklist:
+    - Diona
+    - Gingerbread
+    - Skeleton
+    - Vox
+    - Oni
+    - Elzuosa
+    - Goblin
+    - Sheleg
+    - Harpy
+    - Android
+  components:
+    - type: Loadout
+      prototypes: [ ForgeCBURNGear ]
+      roleLoadout: [ RoleSurvivalEVA ]
+    - type: GhostRole
+      name: ghost-role-information-cburn-agent-name
+      description: ghost-role-information-cburn-agent-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+    - type: RandomMetadata
+      nameSegments:
+      - NamesMilitaryFirst
+      - NamesMilitaryLast
+      nameFormat: name-format-ert
+    - type: BankAccount
+
+- type: startingGear
+  id: ForgeCBURNGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    back: ClothingBackpackDuffelCBURN
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesGlassesCentComm
+    ears: ClothingHeadsetAltCentCom
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitCBURN
+    shoes: ClothingShoesBootsMagAdv
+    id: CBURNPDA
+    pocket1: RadioHandheldNF # Frontier: RadioHandheld<RadioHandheldNF
+    pocket2: NFWeaponEnergyPistolLaser # Frontier: WeaponLaserGun<NFWeaponEnergyPistolLaser
+    belt: ClothingBeltBandolier
+  storage:
+    back:
+    - NFAmmunitionBoxShellShotgunIncendiary
+    - NFAmmunitionBoxShellShotgunIncendiary
+    - NFAmmunitionBoxShellShotgunIncendiary
+    - NFAmmunitionBoxShellShotgunIncendiary
+    - GrenadeFlashBang
+    - PillAmbuzolPlus
+    - PillAmbuzol
+  inhand:
+   - WeaponCaseLongAD12

@@ -1,4 +1,4 @@
-# Author -
+# Author Infp
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Interceptor
   parent: BaseVessel
@@ -17,7 +17,7 @@
   category: Small
   group: Security
   access: Detective
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/interceptor.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/interceptor.yml
   guidebookPage: Null
   class:
   - Detective
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Interceptor
   mapName: 'NSF Перехватчик'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/interceptor.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/interceptor.yml
   minPlayers: 0
   stations:
     Interceptor:

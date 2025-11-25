@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Paladin
   parent: BaseVessel
@@ -17,7 +17,7 @@
   category: Small
   group: Security
   access: Security
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/paladin.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/paladin.yml
   guidebookPage: Null
   class:
   - Fighter
@@ -30,7 +30,7 @@
 - type: gameMap
   id: Paladin
   mapName: 'NSF Паладин'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/paladin.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/paladin.yml
   minPlayers: 0
   stations:
     Paladin:

@@ -38,6 +38,11 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+  - type: FootstepModifier # Forge-change
+    footstepSoundCollection:
+      collection: FootstepHeavySuit
+      params:
+        volume: -10
 
 - type: entity
   parent: [ClothingShoesBootsMagBase]
