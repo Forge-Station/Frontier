@@ -86,8 +86,8 @@ public abstract partial class SharedVehicleSystem : EntitySystem
 
         SubscribeLocalEvent<InVehicleComponent, GettingPickedUpAttemptEvent>(OnGettingPickedUpAttempt);
 
-        SubscribeLocalEvent<VehicleHornComponent, ComponentInit>(OnVehicleHornInit);
-        SubscribeLocalEvent<VehicleHornComponent, ComponentShutdown>(OnVehicleHornShutdown);
+        // SubscribeLocalEvent<VehicleHornComponent, ComponentInit>(OnVehicleHornInit);
+        //SubscribeLocalEvent<VehicleHornComponent, ComponentShutdown>(OnVehicleHornShutdown);
         SubscribeLocalEvent<VehicleHornComponent, HonkActionEvent>(OnHornHonkAction); // Frontier: for vehicles with innate horns (e.g. taxibot)
     }
 
@@ -391,19 +391,19 @@ public abstract partial class SharedVehicleSystem : EntitySystem
     }
 
     /// Horn-only functions
-    private void OnVehicleHornShutdown(EntityUid uid, VehicleHornComponent component, ComponentShutdown args)
-    {
-        // Perf: If the entity is deleting itself, no reason to change these back.
-        if (Terminating(uid))
-            return;
+   // private void OnVehicleHornShutdown(EntityUid uid, VehicleHornComponent component, ComponentShutdown args)
+   // {
+   //    // Perf: If the entity is deleting itself, no reason to change these back.
+   //     if (Terminating(uid))
+   //         return;
 
-        _actionsSystem.RemoveAction(uid, component.ActionEntity);
-    }
+   //     _actionsSystem.RemoveAction(uid, component.ActionEntity);
+   // }
 
-    private void OnVehicleHornInit(EntityUid uid, VehicleHornComponent component, ComponentInit args)
-    {
-        _actionsSystem.AddAction(uid, ref component.ActionEntity, out var _, component.Action);
-    }
+  //  private void OnVehicleHornInit(EntityUid uid, VehicleHornComponent component, ComponentInit args)
+  //  {
+  //      _actionsSystem.AddAction(uid, ref component.ActionEntity, out var _, component.Action);
+  //  }
 
     /// <summary>
     /// This fires when the vehicle entity presses the honk action

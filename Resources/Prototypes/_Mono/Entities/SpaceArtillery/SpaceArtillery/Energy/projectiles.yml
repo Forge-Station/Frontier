@@ -147,7 +147,7 @@
     - state: plasmashot
     scale: 0.4, 0.4
   - type: Ammo
-    muzzleFlash: MuzzleFlashEffectHeavyLaser
+    muzzleFlash: NFMuzzleFlashEffectHeavyLaser
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#C92BCC"
@@ -256,7 +256,7 @@
     - state: neutron_bolt
     scale: 1.5, 1.5
   - type: Ammo
-    muzzleFlash: MuzzleFlashEffectHeavyLaser
+    muzzleFlash: NFMuzzleFlashEffectHeavyLaser
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#ffffff"
