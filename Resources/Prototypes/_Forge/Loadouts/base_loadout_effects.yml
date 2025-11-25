@@ -232,7 +232,101 @@
       role: JobMercenary
       time: 144000 # 40 hrs
 
+# region NFSD
+# full syndicate dep
+- type: loadoutEffectGroup
+  id: ForgeNFSDT1
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Security
+      time: 36000 # 10 hrs
+
+- type: loadoutEffectGroup
+  id: ForgeNFSDT2
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Security
+      time: 72000 # 20 hrs
+
+- type: loadoutEffectGroup
+  id: ForgeNFSDT3
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Security
+      time: 108000 # 30 hrs
+
+- type: loadoutEffectGroup
+  id: ForgeNFSDT4
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Security
+      time: 144000 # 40 hrs
+
+- type: loadoutEffectGroup
+  id: ForgeNFSDT10
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Security
+      time: 360000 # 100 hrs
+
 # region Syndicate
+# full syndicate dep
+- type: loadoutEffectGroup
+  id: ForgeSyndicateT1
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Syndicate
+      time: 36000 # 10 hrs
+
+- type: loadoutEffectGroup
+  id: ForgeSyndicateT2
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Syndicate
+      time: 72000 # 20 hrs
+
+- type: loadoutEffectGroup
+  id: ForgeSyndicateT3
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Syndicate
+      time: 108000 # 30 hrs
+
+- type: loadoutEffectGroup
+  id: ForgeSyndicateT4
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Syndicate
+      time: 144000 # 40 hrs
+
+- type: loadoutEffectGroup
+  id: ForgeSyndicateT10
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Syndicate
+      time: 360000 # 100 hrs
+
+# техник синдиката
 - type: loadoutEffectGroup
   id: EngineerSynT1
   effects:
@@ -241,3 +335,40 @@
       !type:RoleTimeRequirement
       role: JobEngineerSyn
       time: 36000 # 10 hrs
+
+# region ParaMedical
+- type: loadoutEffectGroup
+  id: paraMedT1
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobparaMedical
+      time: 36000 # 10 hrs
+
+- type: loadoutEffectGroup
+  id: paraMedT2
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobparaMedical
+      time: 72000 # 20 hrs
+
+- type: loadoutEffectGroup
+  id: paraMedT3
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobparaMedical
+      time: 108000 # 30 hrs
+
+- type: loadoutEffectGroup
+  id: paraMedT4
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobparaMedical
+      time: 144000 # 40 hrs

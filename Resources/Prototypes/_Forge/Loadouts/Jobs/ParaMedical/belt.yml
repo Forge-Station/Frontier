@@ -1,0 +1,27 @@
+- type: loadout
+  id: paraMedicalBelt1
+  price: 0
+  equipment:
+    belt: ClothingBeltMedicalFilled
+
+- type: loadout
+  id: paraMedicalBelt2
+  price: 0
+  equipment:
+    belt: ClothingBeltMedicalEMTFilled
+
+- type: loadout
+  id: paraMedicalBelt3
+  price: 0
+  equipment:
+    belt: ADTClothingBeltMedicalBagFilled
+
+# region PlayTime
+- type: loadout
+  id: paraMedicalBelt4
+  price: 1500
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT2
+  equipment:
+    belt: ADTClothingBeltMedicalSecurityFilled

@@ -1,3 +1,11 @@
+# fallback
+- type: loadout
+  id: ParaMedicalClothingUniform0
+  price: 0
+  equipment:
+    jumpsuit: ADTClothingJumpsuitParamedicFieldSuit
+
+# paramedic
 - type: loadout
   id: ParaMedicalClothingUniform1
   price: 0
@@ -11,19 +19,180 @@
     jumpsuit: ClothingUniformJumpskirtParamedic
 
 - type: loadout
-  id: ParaMedicalClothingUniform3
+  id: ParaMedicalClothingUniformOld1
   price: 0
   equipment:
-    jumpsuit: ClothingUniformJumpsuitMilitaryTurtleneckMercenaryMedic
+    jumpsuit: ClothingUniformJumpsuitParamedicOld
 
 - type: loadout
-  id: ParaMedicalClothingUniform4
+  id: ParaMedicalClothingUniformOld2
   price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtParamedicOld
+
+# medical
+- type: loadout
+  id: ParaMedicalClothingUniformMedical1
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMedicalDoctor
+
+- type: loadout
+  id: ParaMedicalClothingUniformMedical2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtMedicalDoctor
+
+# viro
+- type: loadout
+  id: ParaMedicalClothingUniformViro1
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitVirology
+
+- type: loadout
+  id: ParaMedicalClothingUniformViro2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtVirology
+
+- type: loadout
+  id: ParaMedicalClothingUniformViroOld1
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitVirologyOld
+
+- type: loadout
+  id: ParaMedicalClothingUniformViroOld2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtVirologyOld
+
+# chimestry
+- type: loadout
+  id: ParaMedicalClothingUniformChem1
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChemistry
+
+- type: loadout
+  id: ParaMedicalClothingUniformChem2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtChemistry
+
+# genetics
+- type: loadout
+  id: ParaMedicalClothingUniformGenetics1
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitGenetics
+
+- type: loadout
+  id: ParaMedicalClothingUniformGenetics2
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtGenetics
+
+# Pathologis
+- type: loadout
+  id: ParaMedicalClothingUniformPath1
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT1
+  equipment:
+    jumpsuit: ADTClothingUniformPathologistSuit
+
+- type: loadout
+  id: ParaMedicalClothingUniformPath2
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT1
+  equipment:
+    jumpsuit: ADTClothingUniformPathologistSkirt
+
+# Pathologis alt
+- type: loadout
+  id: ParaMedicalClothingUniformPathAlt1
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT1
+  equipment:
+    jumpsuit: ADTClothingUniformPathologistSuitAlt
+
+- type: loadout
+  id: ParaMedicalClothingUniformPathAlt2
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT1
+  equipment:
+    jumpsuit: ADTClothingUniformPathologistSkirtAlt
+
+# senior PTT
+- type: loadout
+  id: ParaMedicalClothingUniformPTT1
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT2
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSeniorPhysician
+
+- type: loadout
+  id: ParaMedicalClothingUniformPTT2
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT2
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSeniorPhysician
+
+# military
+- type: loadout
+  id: ParaMedicalClothingUniform3
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT3
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryParamedic
 
 - type: loadout
+  id: ParaMedicalClothingUniform4
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT3
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryMedicalDoctor
+
+- type: loadout
   id: ParaMedicalClothingUniform5
   price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT3
   equipment:
-    jumpsuit: ClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryMedic
+    jumpsuit: ClothingUniformJumpsuitMilitaryVirology
+
+- type: loadout
+  id: ParaMedicalClothingUniform6
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT3
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryChemistry
+
+- type: loadout
+  id: ParaMedicalClothingUniform7
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT3
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryGenetics

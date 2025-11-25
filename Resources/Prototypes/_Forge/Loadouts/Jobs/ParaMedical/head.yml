@@ -15,3 +15,33 @@
   price: 0
   equipment:
     head: ClothingHeadHatParamedicsoftFlipped
+
+- type: loadout
+  id: ParaMedicalADTClothingHeadHatsParamedicBeret
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 0
+  equipment:
+    head: ADTClothingHeadHatsParamedicBeret
+
+- type: loadout
+  id: ParaMedicalClothingHeadHatBeretMedic
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 0
+  equipment:
+    head: ClothingHeadHatBeretMedic
+
+- type: loadout
+  id: ParaMedicalClothingHeadHatBeretSeniorPhysician
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT2
+  equipment:
+    head: ClothingHeadHatBeretSeniorPhysician

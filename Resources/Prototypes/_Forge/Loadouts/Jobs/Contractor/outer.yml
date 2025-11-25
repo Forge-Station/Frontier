@@ -1,0 +1,17 @@
+- type: loadout
+  id: ForgeLdLettermanNanotrasen
+  price: 2000
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeNFSDT10
+  equipment:
+    outerClothing: ADTClothingOuterLettermanNanoTrasen
+
+- type: loadout
+  id: ForgeLdLettermanSyndicate
+  price: 2000
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeSyndicateT10
+  equipment:
+    outerClothing: ADTClothingOuterLettermanSyndie

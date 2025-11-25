@@ -311,7 +311,7 @@
   name: loadout-group-contractor-outerclothing
   minLimit: 0
   loadouts:
-  - ContractorClothingOuterHardsuitVoidParamed
+#  - ContractorClothingOuterHardsuitVoidParamed # Forge-change
   - ContractorClothingOuterHoodieGrey
   - ContractorClothingOuterVestHazard
   - ContractorClothingOuterApron
@@ -391,6 +391,8 @@
   - ContractorClothingOuterPlagueSuit
   - ContractorWetFloorSign
   - ContractorClothingOuterCoatExpensive
+  - ForgeLdLettermanNanotrasen # Forge-change add
+  - ForgeLdLettermanSyndicate # Forge-change add
   - ContractorClothingOuterCoatSpaceAsshole
 
 - type: loadoutGroup
