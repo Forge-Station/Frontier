@@ -6,7 +6,7 @@
 namespace Content.Server._Mono.Projectiles.TargetSeeking;
 
 /// <summary>
-/// Raised on an entity that has become the target of an entity with a <see cref="TargetSeekingComponent"/>.  
+/// Raised on an entity that has become the target of an entity with a <see cref="TargetSeekingComponent"/>.
 /// </summary>
 /// <remarks>
 /// <see cref="TargetSeekingComponent.CurrentTarget"/> may not yet be changed to the entity this is directed at.
