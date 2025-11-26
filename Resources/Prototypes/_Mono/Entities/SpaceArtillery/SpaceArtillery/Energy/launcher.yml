@@ -306,7 +306,7 @@
 - type: entity
   id: WeaponTurretM25
   name: M25 mining pulser
-  parent: [BallisticArtillery, ConstructibleMachine] #Could possibly create a ConstructibleTurret proto if more are added; comps currently do nothing upgrade wise
+  parent: BallisticArtillery #Could possibly create a ConstructibleTurret proto if more are added; comps currently do nothing upgrade wise
   description: Uses mechanisms to launch... something. Destroys rock easily. Limited range.
   components:
   - type: StaticPrice
