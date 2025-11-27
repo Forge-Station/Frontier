@@ -2657,18 +2657,6 @@ entities:
     - type: Transform
       pos: -0.5,-2.5
       parent: 1
-- proto: CrateArmoryWeapon120mm
-  entities:
-  - uid: 880
-    components:
-    - type: Transform
-      pos: -5.5,-12.5
-      parent: 1
-  - uid: 882
-    components:
-    - type: Transform
-      pos: 4.5,-12.5
-      parent: 1
 - proto: CrowbarRed
   entities:
   - uid: 324

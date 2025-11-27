@@ -3318,20 +3318,6 @@ entities:
     - type: Transform
       pos: -0.5,12.5
       parent: 1
-- proto: WeaponNavalCannon140mmUnanchor
-  entities:
-  - uid: 164
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.5,-4.5
-      parent: 1
-  - uid: 478
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -6.5,-4.5
-      parent: 1
 - proto: WindoorSecureSecurityLocked
   entities:
   - uid: 129

@@ -12085,32 +12085,6 @@ entities:
     - type: Transform
       pos: -1.5,16.5
       parent: 3
-- proto: WeaponNavalCannon105mmUnanchor
-  entities:
-  - uid: 471
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -15.5,-5.5
-      parent: 3
-  - uid: 472
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 16.5,1.5
-      parent: 3
-  - uid: 1472
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -15.5,1.5
-      parent: 3
-  - uid: 1628
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 16.5,-5.5
-      parent: 3
 - proto: WindoorSecure
   entities:
   - uid: 474
