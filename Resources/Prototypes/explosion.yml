@@ -27,7 +27,7 @@
       Heat: 3
       Blunt: 3
       Piercing: 3
-      Structural: 50
+      Structural: 150 # +100 = 150
   tileBreakChance: [ 0, 0.5, 1 ]
   tileBreakIntensity: [ 0, 10, 30 ]
   tileBreakRerollReduction: 20
@@ -42,7 +42,7 @@
       Heat: 6
       Blunt: 6
       Piercing: 6
-      Structural: 20
+      Structural: 60
   tileBreakChance: [ 0, 0.5, 1 ]
   tileBreakIntensity: [ 1, 10, 15 ]
   tileBreakRerollReduction: 30
@@ -70,7 +70,7 @@
     types:
       Cold: 5
       Blunt: 2
-      Structural: 20
+      Structural: 60
   tileBreakChance: [0]
   tileBreakIntensity: [0]
   lightColor: Blue
@@ -99,7 +99,7 @@
       Heat: 12
       Blunt: 12
       Piercing: 12
-      Structural: 30
+      Structural: 90
   tileBreakChance: [ 0, 0.5, 1 ]
   tileBreakIntensity: [ 1, 5, 10 ]
   tileBreakRerollReduction: 3
@@ -115,7 +115,7 @@
       Heat: 15
       Blunt: 15
       Piercing: 6
-      Structural: 40
+      Structural: 120
   tileBreakChance: [ 0, 0.5, 1 ]
   tileBreakIntensity: [ 0, 10, 30 ]
   tileBreakRerollReduction: 10

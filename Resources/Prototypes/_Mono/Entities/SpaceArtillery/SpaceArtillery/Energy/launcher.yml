@@ -343,7 +343,7 @@
     powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
-    proto: ShipM25Projectile
+    proto: ShipM25ProjectileHard
     fireCost: 100
   - type: Destructible
     thresholds:

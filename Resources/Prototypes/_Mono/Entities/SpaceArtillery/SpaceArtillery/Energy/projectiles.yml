@@ -137,10 +137,11 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
+    impactEffect: BulletImpactEffectKinetic
     damage:
       types:
         Structural: 15
-        Heat: 35
+        Heat: 25
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/plasmashot.rsi
     layers:
@@ -155,10 +156,43 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 3
+    lifetime: 5
   - type: PointLight
     color: "#C92BCC"
   - type: GatheringProjectile
+  - type: MiningGatheringSoft
+#  - type: MiningGatheringHard
+
+- type: entity
+  id: ShipM25ProjectileHard
+  name: M25 projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectKinetic
+    damage:
+      types:
+        Structural: 25
+        Heat: 35
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/plasmashot.rsi
+    layers:
+    - state: plasmashot
+    scale: 0.4, 0.4
+  - type: Ammo
+    muzzleFlash: NFMuzzleFlashEffectHeavyLaser
+  - type: GatheringProjectile
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    radarColor: "#C92BCC"
+    scale: 0.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 3
+  - type: PointLight
+    color: "#C92BCC"
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
 

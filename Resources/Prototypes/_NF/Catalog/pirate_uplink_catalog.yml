@@ -400,10 +400,10 @@
   id: UplinkPirateLaserGun
   name:  Старомодный лазерный бластер
   description: старый пистолет стреляющий концентрированным светом, что может быть круче?
-  productEntity: WeaponLaserGun
-  icon: { sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi, state: base }
+  productEntity: NFWeaponEnergyPistolLaserMakeshift
+  icon: { sprite: _NF/Objects/Weapons/Guns/Battery/makeshift.rsi, state: base }
   cost:
-    Doubloon: 4
+    Doubloon: 2
   categories:
     - UplinkPirateWeapons
   conditions:
@@ -603,51 +603,6 @@
         tags:
           - PirateUplink
     - !type:BuyerJobCondition
-
-- type: listing # Corvax-Frontier
-  id: UplinkPiratMagazineBox53mmPF
-  name:  обойма бесконтактных снарядов .53мм
-  description: Обойма бесконтактных снарядов .53мм для миномета соответствующего калибра.
-  productEntity: MagazineBox53mmPF
-  cost:
-    Doubloon: 3
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-
-- type: listing # Corvax-Frontier
-  id: UplinkPiratMagazineBox53mmAP
-  name:  обойма бронебойных снарядов .53мм
-  description: Обойма бронебойных снарядов .53мм для миномета соответствующего калибра.
-  productEntity: MagazineBox53mmAP
-  cost:
-    Doubloon: 3
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-
-- type: listing # Corvax-Frontier
-  id: UplinkPiratMagazineBox53mm
-  name:  обойма фугасных снарядов .53мм
-  description: Обойма фугасных снарядов .53мм для миномета соответствующего калибра.
-  productEntity: MagazineBox53mm
-  cost:
-    Doubloon: 4
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
 
 - type: listing #CorvaxFrontier
   id: UplinkPiratBoxPirateAssault

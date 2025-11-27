@@ -22,9 +22,9 @@
   - type: GunSignalControl
   - type: WirelessNetworkConnection
     range: 700
-  - type: DeviceLinkSink
-    ports:
-    - Toggle
+#  - type: DeviceLinkSink # Разве этого нету в базовом прототипе..?
+#    ports:
+#    - Toggle # К тому же тут неправильныый стоит..
   - type: Gun
     fireRate: 12
     projectileSpeed: 160

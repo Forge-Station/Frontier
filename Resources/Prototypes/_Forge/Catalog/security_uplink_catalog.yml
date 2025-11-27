@@ -348,3 +348,74 @@
         - Bailiff
         - SeniorOfficer
         - Sheriff
+
+# region ShipGun ammo
+- type: listing # Corvax-Frontier
+  id: UplinkSecurityMagazine20mm
+  name:  барабан корабельных снарядов 20мм
+  description: Барабан корабельных снарядов 20мм, что подойдёт для пулемёта L85 «Аспид».
+  productEntity: Magazine20mmPiercing
+  cost:
+    FrontierUplinkCoin: 4
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing # Corvax-Frontier
+  id: UplinkSecurityMagazine30mm
+  name:  барабан корабельных снарядов 30мм
+  description: Барабан корабельных снарядов 20мм, что подойдёт для пулемёта RAC-30 «Драупнир».
+  productEntity: Magazine30mm
+  cost:
+    FrontierUplinkCoin: 5
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing # Corvax-Frontier
+  id: UplinkSecurityMagazine57mm
+  name: барабан корабельных снарядов 57мм
+  description: Барабан корабельных снарядов 57мм, что подойдёт для пулемёта ADBP-7 «Дравон».
+  productEntity: Magazine57mm
+  cost:
+    FrontierUplinkCoin: 6
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing # Corvax-Frontier
+  id: UplinkSecurityMagazine90mm
+  name: барабан корабельных снарядов 90мм
+  description: Барабан корабельных снарядов 90мм, что подойдёт для AK570 «Клычки» 90мм.
+  productEntity: Magazine90mm
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
