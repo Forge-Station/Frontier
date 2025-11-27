@@ -1,0 +1,93 @@
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecMagazine20mmWeak
+  result: Magazine20mmWeak
+  materials:
+    Steel: 1050
+    Plastic: 280
+    Glass: 100
+    Plasteel: 180
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecMagazine30mmWeak
+  result: Magazine30mmWeak
+  materials:
+    Steel: 1500
+    Plastic: 320
+    Glass: 120
+    Plasteel: 220
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecMagazine57mmWeak
+  result: Magazine57mmWeak
+  materials:
+    Steel: 1820
+    Plastic: 360
+    Glass: 140
+    Plasteel: 260
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecMagazine90mmWeak
+  result: Magazine90mmWeak
+  materials:
+    Steel: 1620
+    Plastic: 420
+    Glass: 160
+    Plasteel: 900
+
+# EMP
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecTovekCartridge
+  result: TovekCartridge
+  materials:
+    Steel: 560
+    Uranium: 880
+    Gold: 620
+    Silver: 420
+    Plasteel: 260
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRec150mmEmpShell
+  result: 150mmEmpShell
+  materials:
+    Steel: 560
+    Uranium: 980
+    Gold: 920
+    Silver: 520
+    Plasteel: 260
+
+# NFSD
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRec203mmCartridge
+  result: 203mmCartridge
+  materials:
+    Steel: 1700
+    Plastic: 480
+    Glass: 180
+    Plasteel: 960
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRec220mmCartridge
+  result: 220mmCartridge
+  materials:
+    Steel: 1840
+    Plastic: 500
+    Glass: 180
+    Plasteel: 980
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRec255mmCartridge
+  result: 255mmCartridge
+  materials:
+    Steel: 2820
+    Plastic: 540
+    Glass: 200
+    Plasteel: 2000

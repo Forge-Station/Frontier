@@ -445,3 +445,20 @@
   - FSynLRecClothingShoesSwat
   - FSynLRecClothingWalletLeatherSyndi
   - FSynLRecFComputerShuttleAntagCircuitboard
+
+- type: latheRecipePack
+  id: ForgePackShipAmmo
+  recipes:
+  - FRecMagazine20mmWeak
+  - FRecMagazine30mmWeak
+  - FRecMagazine57mmWeak
+  - FRecMagazine90mmWeak
+  - FRecTovekCartridge
+  - FRec150mmEmpShell
+
+- type: latheRecipePack
+  id: ForgePackShipAmmoNfsd
+  recipes:
+  - FRec203mmCartridge
+  - FRec220mmCartridge
+  - FRec255mmCartridge

@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/11/2025 04:23:16
-  entityCount: 388
+  time: 11/27/2025 14:03:52
+  entityCount: 387
 maps: []
 grids:
 - 1
@@ -43,8 +43,6 @@ entities:
           tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIMAAAAAAACDAAAAAAAAYwAAAAAAAAIAAAAAAABTAAAAAAAAAgAAAAAAAG0AAAAAAACDAAAAAAAAgwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAbQAAAAAAAGMAAAAAAAACAAAAAAAAAgAAAAAAAAIAAAAAAABtAAAAAAAAbQAAAAAAAIMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgwAAAAAAAIMAAAAAAAABAAAAAAAAgwAAAAAAAIMAAAAAAABtAAAAAAAAgwAAAAAAAIMAAAAAAACDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCAAAAAAAAggAAAAAAAIMAAAAAAABjAAAAAAAAYwAAAAAAAG0AAAAAAACDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAggAAAAAAAIIAAAAAAACDAAAAAAAAYwAAAAAAAGMAAAAAAABtAAAAAAAAgwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEUAAAAAAACCAAAAAAAAgwAAAAAAAG0AAAAAAABtAAAAAAAAgwAAAAAAAIMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAggAAAAAAAIMAAAAAAACDAAAAAAAAgwAAAAAAAIMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
           version: 7
     - type: Broadphase
-    - type: BecomesStation
-      id: Unit
     - type: Physics
       bodyStatus: InAir
       angularDamping: 0.05
@@ -53,6 +51,8 @@ entities:
       bodyType: Dynamic
     - type: Fixtures
       fixtures: {}
+    - type: BecomesStation
+      id: Unit
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
@@ -576,6 +576,7 @@ entities:
       - bounty: MercenaryBountyArmorHeavy1
         id: ARR-120
     - type: RadiationGridResistance
+    - type: ImplicitRoof
 - proto: AirAlarm
   entities:
   - uid: 235
@@ -684,7 +685,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -1833.624
+      secondsUntilStateChange: -1943.4746
       state: Opening
 - proto: AirSensor
   entities:
@@ -2147,6 +2148,18 @@ entities:
     - type: Transform
       pos: 6.5,14.5
       parent: 1
+- proto: Magazine90mmWeak
+  entities:
+  - uid: 243
+    components:
+    - type: Transform
+      pos: 8.828609,21.770283
+      parent: 1
+  - uid: 260
+    components:
+    - type: Transform
+      pos: 8.888346,21.483543
+      parent: 1
 - proto: NFPosterContrabandLvhiLogo
   entities:
   - uid: 237
@@ -2205,59 +2218,6 @@ entities:
     - type: Transform
       pos: 8.5,19.5
       parent: 1
-- proto: PaperOffice
-  entities:
-  - uid: 243
-    components:
-    - type: MetaData
-      name: не очень важная бумажка
-    - type: Transform
-      rot: 0.2792526803190927 rad
-      pos: 6.4786215,20.639229
-      parent: 1
-    - type: Paper
-      content: >2+
-
-
-        [italic] Я модифицировал перфоратор из-за того, что после каждой смены к нам прилетают полу-разрушенные "Юниты"! Я посчитал, что проблема заключается в том, что покупатели не могут взаимодействовать с вооружением шаттла!
-
-        Итак, хар-ки обычного и модифицированного перфораторов:
-
-
-        Перфоратор:
-
-        Отступ - 0,5 градусов за выстрел
-
-        Стабильность - 4 градуса за секунду
-
-        Максимальный и минимальный разброс - 2/1 градус
-
-        Скорострельность - 1,0 заряда за секунду
-
-        Начальная скорость заряда - 25 м/с
-
-        Поворот - отсутствует
-
-
-        Перфоратор-М:
-
-        Отступ - 0,5 градусов за выстрел
-
-        Стабильность - 4 градуса за секунду
-
-        Максимальный и минимальный разброс - 1/1 градус
-
-        Скорострельность - 1,5 заряда за секунду
-
-        Начальная скорость заряда - 35 м/с
-
-        Поворот - 5 градусов за 1 поворот
-
-
-        Веселитесь, покупатели
-
-
-
 - proto: Pen
   entities:
   - uid: 244
@@ -2353,30 +2313,6 @@ entities:
     - type: Transform
       pos: 11.5,14.5
       parent: 1
-- proto: PowerCageMediumEmpty
-  entities:
-  - uid: 386
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.770233,19.510498
-      parent: 1
-  - uid: 387
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.707733,19.697998
-      parent: 1
-- proto: PowerCageRecharger
-  entities:
-  - uid: 260
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.5,20.5
-      parent: 1
-    - type: Charger
-      chargeRate: 80
 - proto: Poweredlight
   entities:
   - uid: 261
@@ -2452,11 +2388,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 10.5,15.5
       parent: 1
-  - uid: 271
-    components:
-    - type: Transform
-      pos: 5.5,19.5
-      parent: 1
   - uid: 272
     components:
     - type: Transform
@@ -2501,6 +2432,33 @@ entities:
     - type: Transform
       pos: 13.5,9.5
       parent: 1
+  - uid: 298
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 5.5,20.5
+      parent: 1
+- proto: RailingCorner
+  entities:
+  - uid: 282
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,22.5
+      parent: 1
+  - uid: 386
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 5.5,21.5
+      parent: 1
+- proto: RailingCornerSmall
+  entities:
+  - uid: 271
+    components:
+    - type: Transform
+      pos: 6.5,21.5
+      parent: 1
 - proto: RandomPosterAny
   entities:
   - uid: 280
@@ -2513,20 +2471,6 @@ entities:
     - type: Transform
       pos: 10.5,6.5
       parent: 1
-- proto: RemoteSignaller
-  entities:
-  - uid: 282
-    components:
-    - type: Transform
-      pos: 5.4496117,19.567074
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        298:
-        - - Pressed
-          - Toggle
-        - - Pressed
-          - Trigger
 - proto: RubberStampPal
   entities:
   - uid: 283
@@ -2625,61 +2569,6 @@ entities:
     - type: Transform
       pos: 8.5,18.5
       parent: 1
-- proto: ShuttleGunPerforatorNoUse
-  entities:
-  - uid: 298
-    components:
-    - type: MetaData
-      desc: Модифицированная продвинутая стационарная лазерная установка. Уничтожает электроприборы быстрее чем раньше, и также опасна для здоровья! Для стрельбы требует энергоячейки.
-      name: LSE-1200c "Перфоратор-М"
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.5,21.5
-      parent: 1
-    - type: Gun
-      shotsPerBurst: 2
-      soundEmpty: !type:SoundPathSpecifier
-        params:
-          variation: null
-          playOffsetSeconds: 0
-          loop: False
-          referenceDistance: 1
-          rolloffFactor: 1
-          maxDistance: 15
-          pitch: 2
-          volume: 0
-        path: /Audio/Weapons/Guns/Empty/empty.ogg
-      soundMode: !type:SoundPathSpecifier
-        params:
-          variation: null
-          playOffsetSeconds: 0
-          loop: False
-          referenceDistance: 1
-          rolloffFactor: 1
-          maxDistance: 15
-          pitch: 2
-          volume: 0
-        path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
-      maxAngle: 0.017453292519943295 rad
-      burstCooldown: 1
-      burstFireRate: 3
-      fireRate: 1.5
-      projectileSpeed: 35
-      availableModes: SemiAuto, Burst
-      soundGunshot: !type:SoundPathSpecifier
-        params:
-          variation: 0.05
-          playOffsetSeconds: 0
-          loop: False
-          referenceDistance: 1
-          rolloffFactor: 1
-          maxDistance: 15
-          pitch: 2
-          volume: 0
-        path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
-    - type: Rotatable
-      increment: 0.08726646259971647 rad
-      rotateWhileAnchored: True
 - proto: SignalButton
   entities:
   - uid: 299
@@ -3286,13 +3175,13 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponTurretL85Autocannon
+- proto: WeaponTurretAK570
   entities:
-  - uid: 388
+  - uid: 387
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 6.5,22.5
+      pos: 5.5,21.5
       parent: 1
 - proto: WindoorSecureMercenaryLocked
   entities:
