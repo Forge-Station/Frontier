@@ -11,8 +11,8 @@ ent-220mmCartridgeWeak = { ent-220mmCartridge }
 
 ent-255mmCartridge = 255мм снаряд
     .desc = Химический снаряд для орудия «Бофорс» калибра 255 мм.
-ent-255mmCartridgeWeak = { ent-255mmCartridgeWeak }
-    .desc = { ent-255mmCartridgeWeak.desc }
+ent-255mmCartridgeWeak = { ent-255mmCartridge }
+    .desc = { ent-255mmCartridge.desc }
 
 ent-ShipRailgunProjectile = M381 «Чарон» 280мм снаряд
 ent-CharonSlugAmmo = M381 280мм снаряд
