@@ -111,7 +111,7 @@
 
 - type: entity
   id: GunneryServerUltra
-  parent: [GunneryServerBase] # removed BaseStructureDisableToolUse
+  parent: [GunneryServerBase, BaseStructureDisableToolUse]
   name: сервер управления стрельбой ультра высокой мощности
   components:
   - type: Machine

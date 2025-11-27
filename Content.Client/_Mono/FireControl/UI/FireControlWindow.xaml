@@ -52,21 +52,21 @@
                     <PanelContainer.PanelOverride>
                         <gfx:StyleBoxFlat BorderThickness="4" BorderColor="#2e2e2e" BackgroundColor="#1c1c1c" />
                     </PanelContainer.PanelOverride>
-            <Button Name="SelectBallisticButton" Access="Public" Text="Ballistics"
+            <Button Name="SelectBallisticButton" Access="Public" Text="{Loc 'gunnery-select-ballistic'}"
                     StyleClasses="ButtonSquare" HorizontalExpand="True" Margin="4 4"/>
                 </PanelContainer>
             <PanelContainer VerticalExpand="False" HorizontalExpand="True">
                 <PanelContainer.PanelOverride>
                     <gfx:StyleBoxFlat BorderThickness="4" BorderColor="#2e2e2e" BackgroundColor="#1c1c1c" />
                 </PanelContainer.PanelOverride>
-            <Button Name="SelectEnergyButton" Access="Public" Text="Energy"
+            <Button Name="SelectEnergyButton" Access="Public" Text="{Loc 'gunnery-select-energy'}"
                     StyleClasses="ButtonSquare" HorizontalExpand="True" Margin="4 4"/>
             </PanelContainer>
             <PanelContainer VerticalExpand="False" HorizontalExpand="True">
                 <PanelContainer.PanelOverride>
                     <gfx:StyleBoxFlat BorderThickness="4" BorderColor="#2e2e2e" BackgroundColor="#1c1c1c" />
                 </PanelContainer.PanelOverride>
-            <Button Name="SelectMissileButton" Access="Public" Text="Missiles"
+            <Button Name="SelectMissileButton" Access="Public" Text="{Loc 'gunnery-select-missiles'}"
                     StyleClasses="ButtonSquare" HorizontalExpand="True" Margin="4 4"/>
             </PanelContainer>
             </BoxContainer>

@@ -1,17 +1,17 @@
-gunner-console-window-title = оружейная консоль
-
-gunnery-window-title = Управление вооружением
+gunnery-window-title = Управление орудиями
 gunnery-window-disconnected = ОТКЛЮЧЕНО
 gunnery-window-connected = ПОДКЛЮЧЕНО
 gunnery-select-all = Выбрать всё
-gunnery-unselect-all = Убрать всё
-
+gunnery-unselect-all = Отменить выбор
 gunnery-guns = Орудия
+gunnery-gun-select = {$name}
+gunnery-gun-select-ammo = {$name}: {$ammo}
 
-gunnery-select-ballistics = Баллистические
+gunnery-server-examine-detail = Сервер использует [color={$valueColor}]{$usedProcessingPower}/{$processingPower}[/color] своей вычислительной мощности.
+
+gunnery-select-ballistic = Баллистические
 gunnery-select-energy = Энергетические
 gunnery-select-missiles = Ракетные
-gunnery-select-mining = Шахтерские
 
 gunner-console-display-label = Экран
 gunner-console-gun-control-label = Контроль
