@@ -1,37 +1,39 @@
 # Author Info
-# GitHub: erhardsteinhauer
-# Discord: erhardsteinhauer
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
-# GitHub: erhardsteinhauer
-# Discord: erhardsteinhauer
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
 
 # Shuttle Notes:
 #
 - type: vessel
-  id: Brigand
+  id: Horizonts
   parent: BaseVessel
-  name: NT Разбойник
+  name: NT Горизонт
   description: Среднегабаритный экспедиционный шаттл. Рекомендованный размер команды 3-6 человек.
-  price: 83800
+  price: 71000
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/_Forge/Shuttles/Expedition/brigand.yml
-  guidebookPage: ShipyardBrigand
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/horizonts.yml
+  guidebookPage: null
   class:
   - Expedition
 
 - type: gameMap
-  id: Brigand
-  mapName: 'NT Разбойник'
-  mapPath: /Maps/_Forge/Shuttles/Expedition/brigand.yml
+  id: Horizonts
+  mapName: 'NT Горизонт'
+  mapPath: /Maps/_Forge/Shuttles/Expedition/horizonts.yml
   minPlayers: 0
   stations:
-    Brigand:
+    Horizonts:
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Разбойник {1}'
+          mapNameTemplate: 'Горизонт {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

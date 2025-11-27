@@ -11,22 +11,22 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: faron
+  id: Faron
   parent: BaseVessel
   name: NLE Фарон
   description: Среднегабаритный экспедиционный шаттл. Рекомендуемый состав команды 2-5 человек.
-  price: 79500 # 50% tax
+  price: 104000
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_Forge/Shuttles/Expedition/faron.yml
 
 - type: gameMap
-  id: faron
+  id: Faron
   mapName: 'NLE Фарон'
   mapPath: /Maps/_Forge/Shuttles/Expedition/faron.yml
   minPlayers: 0
   stations:
-    faron:
+    Faron:
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup

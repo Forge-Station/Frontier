@@ -1,39 +1,39 @@
 # Author Info
 # GitHub: -
-# Discord: tochka_dunaxy
+# Discord: t4k_dnh
 # License: CC-BY-NC-ND-4.0
 # CorvaxForge
 
 # Maintainer Info
-# GitHub: https://github.com/mersen-tyn
-# Discord: mersen
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
 
 # Shuttle Notes:
 #
 - type: vessel
-  id: Pill
+  id: MXMC
   parent: BaseVessel
-  name: NMS Таблетка
-  description: Малогабаритный медицинский шаттл. Рекомендованный состав команды 1-2 человек.
-  price: 16500
+  name: NMS MXMC
+  description: Малогабаритный медицинский шаттл с хим. лабораторией. Рекомендованный состав команды 1-2 человек.
+  price: 22500
   category: Small
   group: Medical
   access: Medical
-  shuttlePath: /Maps/_Forge/Shuttles/Medical/pill.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/mXMC.yml
   class:
   - Medical
 
 - type: gameMap
-  id: Pill
-  mapName: 'NMS Таблетка'
-  mapPath: /Maps/_Forge/Shuttles/Medical/pill.yml
+  id: MXMC
+  mapName: 'NMS MXMC'
+  mapPath: /Maps/_Forge/Shuttles/Medical/mXMC.yml
   minPlayers: 0
   stations:
-    Pill:
+    MXMC:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Таблетка {1}'
+          mapNameTemplate: 'MXMC {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

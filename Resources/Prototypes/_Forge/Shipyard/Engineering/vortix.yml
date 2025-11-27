@@ -11,31 +11,29 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: Pioneer
+  id: Vortix
   parent: BaseVessel
-  name: LVHI Пионер
-  description: Двухместный грузовой контейнер, переоборудованный под выход в открытый космос. Погодите... тот самый?
-  price: 22000
+  name: NT Вортикс
+  description: Малогабаритный инженерный шаттл. Рекомендованный размер команды 1-3 человек.
+  price: 29000
   category: Small
-  group: Salvage
-  shuttlePath: /Maps/_Forge/Shuttles/Salvage/pioneer2.yml
+  group: Engineering
+  shuttlePath: /Maps/_Forge/Shuttles/Engineering/vortix.yml
   guidebookPage: null
   class:
-  - Salvage
-
-
+  - Atmospherics
 
 - type: gameMap
-  id: Pioneer
-  mapName: 'LVHI Пионер'
-  mapPath: /Maps/_Forge/Shuttles/Salvage/pioneer2.yml
+  id: Vortix
+  mapName: 'NT Вортикс'
+  mapPath: /Maps/_Forge/Shuttles/Engineering/vortix.yml
   minPlayers: 0
   stations:
-    Pioneer:
+    Vortix:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Пионер {1}'
+          mapNameTemplate: 'Вортикс {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

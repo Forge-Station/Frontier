@@ -11,31 +11,30 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: Pioneer
+  id: Drozd
   parent: BaseVessel
-  name: LVHI Пионер
-  description: Двухместный грузовой контейнер, переоборудованный под выход в открытый космос. Погодите... тот самый?
-  price: 22000
+  name: SV Дрозд
+  description: Малогабаритный сгоревший шаттл. Рекомендованный состав команды 1-2 человека.
+  price: 12000
   category: Small
-  group: Salvage
-  shuttlePath: /Maps/_Forge/Shuttles/Salvage/pioneer2.yml
-  guidebookPage: null
+  group: Scrap
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/drozd.yml
+  guidebookPage: Null
   class:
+  - Scrapyard
   - Salvage
 
-
-
 - type: gameMap
-  id: Pioneer
-  mapName: 'LVHI Пионер'
-  mapPath: /Maps/_Forge/Shuttles/Salvage/pioneer2.yml
+  id: Drozd
+  mapName: 'SV Дрозд'
+  mapPath: /Maps/_Forge/Shuttles/Scrap/drozd.yml
   minPlayers: 0
   stations:
-    Pioneer:
+    Drozd:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Пионер {1}'
+          mapNameTemplate: 'Дрозд {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

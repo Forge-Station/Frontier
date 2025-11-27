@@ -1,39 +1,39 @@
 # Author Info
 # GitHub: -
-# Discord: tochka_dunaxy
+# Discord: t4k_dnh
 # License: CC-BY-NC-ND-4.0
 # CorvaxForge
 
 # Maintainer Info
-# GitHub: https://github.com/mersen-tyn
-# Discord: mersen
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
 
 # Shuttle Notes:
 #
 - type: vessel
-  id: Pill
+  id: Sanare
   parent: BaseVessel
-  name: NMS Таблетка
+  name: NMS Санаре
   description: Малогабаритный медицинский шаттл. Рекомендованный состав команды 1-2 человек.
-  price: 16500
+  price: 24500
   category: Small
   group: Medical
   access: Medical
-  shuttlePath: /Maps/_Forge/Shuttles/Medical/pill.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/sanare.yml
   class:
   - Medical
 
 - type: gameMap
-  id: Pill
-  mapName: 'NMS Таблетка'
-  mapPath: /Maps/_Forge/Shuttles/Medical/pill.yml
+  id: Sanare
+  mapName: 'NMS Санаре'
+  mapPath: /Maps/_Forge/Shuttles/Medical/sanare.yml
   minPlayers: 0
   stations:
-    Pill:
+    Sanare:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Таблетка {1}'
+          mapNameTemplate: 'Санаре {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

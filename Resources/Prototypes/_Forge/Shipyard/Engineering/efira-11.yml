@@ -11,31 +11,29 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: Pioneer
+  id: Efira-11
   parent: BaseVessel
-  name: LVHI Пионер
-  description: Двухместный грузовой контейнер, переоборудованный под выход в открытый космос. Погодите... тот самый?
-  price: 22000
-  category: Small
-  group: Salvage
-  shuttlePath: /Maps/_Forge/Shuttles/Salvage/pioneer2.yml
+  name: NT Эфира-11
+  description: Среднегабаритный инженерный шаттл. Рекомендованный размер команды 2-4 человек.
+  price: 45700
+  category: Medium
+  group: Engineering
+  shuttlePath: /Maps/_Forge/Shuttles/Engineering/efira-11.yml
   guidebookPage: null
   class:
-  - Salvage
-
-
+  - Atmospherics
 
 - type: gameMap
-  id: Pioneer
-  mapName: 'LVHI Пионер'
-  mapPath: /Maps/_Forge/Shuttles/Salvage/pioneer2.yml
+  id: Efira-11
+  mapName: 'NT Эфира-11'
+  mapPath: /Maps/_Forge/Shuttles/Engineering/efira-11.yml
   minPlayers: 0
   stations:
-    Pioneer:
+    Efira-11:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Пионер {1}'
+          mapNameTemplate: 'Эфира-11 {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

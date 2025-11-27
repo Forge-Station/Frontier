@@ -11,31 +11,29 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: Pioneer
+  id: Igla
   parent: BaseVessel
-  name: LVHI Пионер
-  description: Двухместный грузовой контейнер, переоборудованный под выход в открытый космос. Погодите... тот самый?
-  price: 22000
-  category: Small
-  group: Salvage
-  shuttlePath: /Maps/_Forge/Shuttles/Salvage/pioneer2.yml
+  name: NC Игла
+  description: Малогабаритный грузовой шаттл. Рекомендованный состав команды 1-2 человека.
+  price: 7000
+  category: Micro
+  group: Shipyard
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/igla.yml
   guidebookPage: null
   class:
-  - Salvage
-
-
+  - Cargo
 
 - type: gameMap
-  id: Pioneer
-  mapName: 'LVHI Пионер'
-  mapPath: /Maps/_Forge/Shuttles/Salvage/pioneer2.yml
+  id: Igla
+  mapName: 'NC Игла'
+  mapPath: /Maps/_Forge/Shuttles/Civilian/igla.yml
   minPlayers: 0
   stations:
-    Pioneer:
+    Igla:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Пионер {1}'
+          mapNameTemplate: 'Игла {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

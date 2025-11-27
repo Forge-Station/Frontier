@@ -1,39 +1,39 @@
 # Author Info
 # GitHub: -
-# Discord: tochka_dunaxy
+# Discord: t4k_dnh
 # License: CC-BY-NC-ND-4.0
 # CorvaxForge
 
 # Maintainer Info
-# GitHub: https://github.com/mersen-tyn
-# Discord: mersen
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
 
 # Shuttle Notes:
 #
 - type: vessel
-  id: Pill
+  id: Orbit
   parent: BaseVessel
-  name: NMS Таблетка
+  name: NMS Орбита
   description: Малогабаритный медицинский шаттл. Рекомендованный состав команды 1-2 человек.
-  price: 16500
+  price: 17500
   category: Small
   group: Medical
   access: Medical
-  shuttlePath: /Maps/_Forge/Shuttles/Medical/pill.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/orbit.yml
   class:
   - Medical
 
 - type: gameMap
-  id: Pill
-  mapName: 'NMS Таблетка'
-  mapPath: /Maps/_Forge/Shuttles/Medical/pill.yml
+  id: Orbit
+  mapName: 'NMS Орбита'
+  mapPath: /Maps/_Forge/Shuttles/Medical/orbit.yml
   minPlayers: 0
   stations:
-    Pill:
+    Orbit:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Таблетка {1}'
+          mapNameTemplate: 'Орбита {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

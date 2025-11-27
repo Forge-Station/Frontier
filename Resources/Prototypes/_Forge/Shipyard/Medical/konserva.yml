@@ -11,25 +11,25 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: konserva
+  id: Konserva
   parent: BaseVessel
   name: NMS Консерва
   description: Малогабаритный медицинский шаттл. Рекомендованный состав команды 1-2 человек.
-  price: 23500 #меньше не поставлю, ибо нефиг
+  price: 20000
   category: Small
   group: Medical
   access: Medical
-  shuttlePath: /Maps/_Forge/Shuttles/Medical/konserv.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/konserva.yml
   class:
   - Medical
 
 - type: gameMap
-  id: konserva
+  id: Konserva
   mapName: 'NMS Консерва'
-  mapPath: /Maps/_Forge/Shuttles/Medical/konserv.yml
+  mapPath: /Maps/_Forge/Shuttles/Medical/konserva.yml
   minPlayers: 0
   stations:
-    konserva:
+    Konserva:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup

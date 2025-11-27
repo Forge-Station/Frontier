@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Cliper
+  parent: BaseVessel
+  name: LVHI Клипер
+  description: Малогабаритный шахтёрский шаттл. Рекомендуемый размер команды 2-3 человека.
+  price: 36800
+  category: Small
+  group: Salvage
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/cliper.yml
+  guidebookPage: null
+  class:
+  - Salvage
+
+
+
+- type: gameMap
+  id: Cliper
+  mapName: 'LVHI Клипер'
+  mapPath: /Maps/_Forge/Shuttles/Salvage/cliper.yml
+  minPlayers: 0
+  stations:
+    Cliper:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Клипер {1}'
+        nameGenerator: !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]
