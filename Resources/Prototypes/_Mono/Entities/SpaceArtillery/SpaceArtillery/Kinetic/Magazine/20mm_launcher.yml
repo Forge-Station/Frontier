@@ -27,7 +27,8 @@
 #    - Toggle # К тому же тут неправильныый стоит..
   - type: Gun
     fireRate: 12
-    projectileSpeed: 160
+    structural: 12
+    piercing: 12
     minAngle: 0
     maxAngle: 5
     shootThermalSignature: 10000 # relatively low for a shipgun, ~693m signature if firing continuously
