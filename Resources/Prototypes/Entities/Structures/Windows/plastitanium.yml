@@ -93,13 +93,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2000
+        damage: 6500 # Backup / 9k too more, 6500 norm - Forge
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 4000 # vanilla (500) / CombatOverhaul (6000) - Mono / to 4000 - Forge
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -195,13 +195,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2000
+        damage: 6500 # Forge-change
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 4000 # vanilla (500) / CombatOverhaul (6000) - Mono / to 4000 - Forge
       behaviors:
       - !type:PlaySoundBehavior
         sound:

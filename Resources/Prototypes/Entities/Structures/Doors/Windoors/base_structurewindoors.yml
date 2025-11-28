@@ -304,6 +304,7 @@
     price: 170 # Frontier: 500<170 - TODO: material value rework
   - type: RadiationBlocker
     resistance: 2
+  - type: HitscanDiffractTarget # Mono - Causes diffraction
 
 - type: entity
   id: BaseSecurePlasmaWindoor
@@ -374,7 +375,7 @@
     tags:
       - SecurePlasmaWindoor
       # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
-
+  - type: HitscanDiffractTarget # Mono - Causes diffraction
 
 #Uranium Windoors
 - type: entity

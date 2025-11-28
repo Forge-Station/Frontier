@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/17/2025 20:24:25
-  entityCount: 424
+  time: 11/27/2025 14:03:52
+  entityCount: 387
 maps: []
 grids:
 - 1
@@ -53,6 +53,8 @@ entities:
       bodyType: Dynamic
     - type: Fixtures
       fixtures: {}
+    - type: BecomesStation
+      id: Unit
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
@@ -566,6 +568,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,17.5
       parent: 1
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
+    - type: Door
+      secondsUntilStateChange: -1943.4746
+      state: Opening
 - proto: AirSensor
   entities:
   - uid: 10
@@ -2331,7 +2339,26 @@ entities:
           ent: null
 - proto: MachineFrame
   entities:
-  - uid: 257
+  - uid: 231
+    components:
+    - type: Transform
+      pos: 6.5,14.5
+      parent: 1
+- proto: Magazine90mmWeak
+  entities:
+  - uid: 243
+    components:
+    - type: Transform
+      pos: 8.828609,21.770283
+      parent: 1
+  - uid: 260
+    components:
+    - type: Transform
+      pos: 8.888346,21.483543
+      parent: 1
+- proto: NFPosterContrabandLvhiLogo
+  entities:
+  - uid: 237
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -2374,16 +2401,7 @@ entities:
     - type: Transform
       pos: 8.5,19.5
       parent: 1
-- proto: PinpointerUniversal
-  entities:
-  - uid: 76
-    components:
-    - type: Transform
-      parent: 69
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: PlasticFlapsClear
+- proto: Pen
   entities:
   - uid: 262
     components:
@@ -2464,27 +2482,6 @@ entities:
     components:
     - type: Transform
       pos: 7.5,21.5
-      parent: 1
-- proto: PlastitaniumWindowDiagonal
-  entities:
-  - uid: 277
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 10.5,22.5
-      parent: 1
-  - uid: 278
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 11.5,21.5
-      parent: 1
-- proto: PortableGeneratorSuperPacmanShuttle
-  entities:
-  - uid: 279
-    components:
-    - type: Transform
-      pos: 11.5,14.5
       parent: 1
 - proto: Poweredlight
   entities:
@@ -2572,12 +2569,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 10.5,15.5
       parent: 1
-  - uid: 292
-    components:
-    - type: Transform
-      pos: 9.5,9.5
-      parent: 1
-  - uid: 293
+  - uid: 272
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -2657,20 +2649,47 @@ entities:
     - type: Transform
       pos: 13.5,9.5
       parent: 1
-  - uid: 307
+  - uid: 298
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 5.5,20.5
+      parent: 1
+- proto: RailingCorner
+  entities:
+  - uid: 282
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,22.5
+      parent: 1
+  - uid: 386
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 5.5,21.5
+      parent: 1
+- proto: RailingCornerSmall
+  entities:
+  - uid: 271
+    components:
+    - type: Transform
+      pos: 6.5,21.5
+      parent: 1
+- proto: RandomPosterAny
+  entities:
+  - uid: 280
+    components:
+    - type: Transform
+      pos: 6.5,11.5
+      parent: 1
+  - uid: 281
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 11.5,7.5
       parent: 1
-- proto: RandomPosterAny
-  entities:
-  - uid: 308
-    components:
-    - type: Transform
-      pos: 6.5,11.5
-      parent: 1
-- proto: RubberStampBailiff
+- proto: RubberStampPal
   entities:
   - uid: 309
     components:
@@ -2791,12 +2810,9 @@ entities:
     - type: Transform
       pos: 8.5,18.5
       parent: 1
-  - uid: 327
-    components:
-    - type: Transform
-      pos: 7.5,20.5
-      parent: 1
-  - uid: 328
+- proto: SignalButton
+  entities:
+  - uid: 299
     components:
     - type: Transform
       pos: 7.5,21.5
@@ -3324,21 +3340,13 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponNavalCannonL85Autocannon
+- proto: WeaponTurretAK570
   entities:
-  - uid: 409
+  - uid: 387
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 5.5,21.5
-      parent: 1
-- proto: WeaponNavalCannonTurretM220
-  entities:
-  - uid: 410
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,22.5
       parent: 1
 - proto: WindoorSecureMercenaryLocked
   entities:

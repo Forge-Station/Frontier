@@ -1,0 +1,259 @@
+- type: entity
+  parent: [ClothingShoesBootsMagBase, BaseJetpack, BaseC3SyndicateContraband, ClothingShoesBootsCombat]
+  id: ClothingShoesBootsMagSyndieElite
+  name: elite syndicate magboots
+  description: Magnetic boots with a unique design, which appear to be based on an improved model, as they have a lighter magnetic attraction. Property of the Gorlex Marauders.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      volume: 5
+      temperature: 293.15
+      moles:
+      - 1.5
+      - 1.5
+  - type: Item
+    sprite: null
+    size: Normal
+  - type: Magboots
+    magbootsAlert: MagbootsSyndElite
+  - type: Jetpack
+    radarBlip: false
+
+- type: alert
+  id: MagbootsSyndElite
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
+    state: icon-on
+  name: alerts-magboots-name
+  description: alerts-magboots-desc
+
+- type: entity
+  parent: [ClothingShoesBootsMagBase, BaseJetpack, ClothingShoesBootsCombat, BaseC3Contraband, ContrabandClothing ]
+  id: ClothingShoesBootsMagContractor
+  name: DCN™ magboots
+  description: Magnetic boots with a unique design, which appear to be based on an improved model, as they have a lighter magnetic attraction.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      volume: 5
+      temperature: 293.15
+      moles:
+      - 1.5
+      - 1.5
+  - type: Item
+    sprite: null
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: Magboots
+    magbootsAlert: MagbootsContractor
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: SilenceIsGolden
+
+- type: alert
+  id: MagbootsContractor
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
+    state: icon-on
+  name: alerts-magboots-name
+  description: alerts-magboots-desc
+
+- type: entity
+  parent: [ ClothingShoesBootsMagBase, BaseJetpack, ClothingShoesBootsCombat ]
+  id: ClothingShoesBootsMagMercPromax
+  name: mercenary promax magboots
+  description: mercenary promax magboots deluxe super edition desc.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/merc_magboots_promax.rsi
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/merc_magboots_promax.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      # 2 minutes of thrust
+      volume: 0.75
+      temperature: 293.15
+      moles:
+      - 0.153853429 # oxygen
+      - 0.153853429 # nitrogen
+  - type: Item
+    sprite: null
+    size: Normal
+  - type: StaticPrice #CorvaxFrontier
+    price: 1000
+  - type: Magboots
+    magbootsAlert: MagbootsMercPromax
+
+- type: alert
+  id: MagbootsMercPromax
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/merc_magboots_promax.rsi
+    state: icon-on
+  name: alerts-magboots-name
+  description: alerts-magboots-desc
+
+- type: entity
+  parent: [ ClothingShoesBootsMagBase, BaseJetpack, ClothingShoesBootsCombat ]
+  id: ClothingShoesBootsMagBattlePromax
+  name: battle premium promax magboots
+  description: battle promax magboots GOTY 2025 edition desc.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/sec_magboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/sec_magboots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      # 2 minutes of thrust
+      volume: 0.75
+      temperature: 293.15
+      moles:
+      - 0.153853429 # oxygen
+      - 0.153853429 # nitrogen
+  - type: Item
+    sprite: null
+    size: Normal
+  - type: StaticPrice #CorvaxFrontier
+    price: 1050
+  - type: Magboots
+    magbootsAlert: MagbootsBattlePromax
+
+- type: alert
+  id: MagbootsBattlePromax
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/sec_magboots.rsi
+    state: icon-on
+  name: alerts-magboots-name
+  description: alerts-magboots-desc
+
+- type: entity
+  parent: [ ClothingShoesBootsMagBase, BaseJetpack, ClothingShoesBootsCombat ]
+  id: ClothingShoesBootsMagAdvsPromax
+  name: Advs professional maximum magnetic boots
+  description: Advs prosuper1337 magboots Forge edition desc.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/advs_magboots_promax.rsi
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/advs_magboots_promax.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      # 2 minutes of thrust
+      volume: 0.75
+      temperature: 293.15
+      moles:
+      - 0.153853429 # oxygen
+      - 0.153853429 # nitrogen
+  - type: Item
+    sprite: null
+    size: Normal
+  - type: StaticPrice #CorvaxFrontier
+    price: 1050
+  - type: Magboots
+    magbootsAlert: MagbootsAdvsPromax
+
+- type: alert
+  id: MagbootsAdvsPromax
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/advs_magboots_promax.rsi
+    state: icon-on
+  name: alerts-magboots-name
+  description: alerts-magboots-desc
+
+- type: entity
+  parent: [ ClothingShoesBootsMagBase, BaseJetpack, ClothingShoesBootsCombat ]
+  id: ClothingShoesBootsMagNFSDPromax
+  name: woow woow police woow woow magbots
+  description: nfsd magboots promax edition desc.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots_promax.rsi
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots_promax.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      volume: 5
+      temperature: 293.15
+      moles:
+      - 1.5
+      - 1.5
+  - type: Item
+    sprite: null
+    size: Normal
+  - type: StaticPrice #CorvaxFrontier
+    price: 1050
+  - type: Magboots
+    magbootsAlert: MagbootsNFSDPromax
+
+- type: alert
+  id: MagbootsNFSDPromax
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots_promax.rsi
+    state: icon-on
+  name: alerts-magboots-name
+  description: alerts-m
+
+
+- type: entity
+  parent: [ClothingShoesBootsMag, BaseC1Contraband] #Corvax-Frontier КБ
+  id: ClothingShoesBootsMagParamed
+  name: Paramedic magboots
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/paramed_magboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/paramed_magboots.rsi
+  - type: Magboots
+    magbootsAlert: MagbootsParamed
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.9
+
+
+- type: alert
+  id: MagbootsParamed
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/paramed_magboots.rsi
+    state: icon-on
+  name: alerts-magboots-name
+  description: alerts-magboots-desc

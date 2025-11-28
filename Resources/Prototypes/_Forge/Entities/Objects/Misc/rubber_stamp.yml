@@ -10,3 +10,47 @@
     stampState: "paper_stamp-warden"
   - type: Sprite
     state: stamp-warden
+
+- type: entity
+  name: печать ПЕРЕДЕЛАТЬ
+  description: Печать из резины, для проставления печатей на важных документах.
+  parent: RubberStampBase
+  id: RubberStampRemade
+  suffix: НЕ МАППИТЬ!
+  components:
+  - type: Stamp
+    stampedName: ПЕРЕДЕЛАТЬ
+    stampedColor: "#3681bb"
+    stampState: "paper_stamp-cap"
+  - type: Sprite
+    state: stamp-cap
+
+- type: entity
+  name: печать ДСО
+  parent: RubberStampBase
+  id: RubberStampDSO
+  description: Печать из резины, для проставления печатей на важных документах.
+  suffix: НЕ МАППИТЬ!
+  components:
+  - type: Stamp
+    stampedName: Департамент Спец. Операций
+    stampedColor: "#323232"
+    stampState: "paper_stamp-greytide"
+    protected: True
+  - type: Sprite
+    state: stamp-greytide
+
+- type: entity
+  name: печать адмирала УСФ
+  description: Печать из резины, для проставления печатей на важных документах.
+  parent: RubberStampBase
+  id: RubberStampMSFAdmiral
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: Адмирал УСФ
+    stampedColor: "#008200"
+    stampState: "paper_stamp-centcom"
+    protected: True
+  - type: Sprite
+    state: stamp-centcom

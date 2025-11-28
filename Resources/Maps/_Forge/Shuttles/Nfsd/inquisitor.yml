@@ -4570,20 +4570,6 @@ entities:
     - type: Transform
       pos: 3.5,13.5
       parent: 1
-- proto: WeaponNavalCannon140mmUnanchor
-  entities:
-  - uid: 154
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,15.5
-      parent: 1
-  - uid: 155
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 7.5,15.5
-      parent: 1
 - proto: WeaponTurretSyndicateBroken
   entities:
   - uid: 646

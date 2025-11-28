@@ -30,7 +30,6 @@ public sealed class SlidingSystem : EntitySystem
         SubscribeLocalEvent<SlidingComponent, EndCollideEvent>(OnEndCollide);
         SubscribeLocalEvent<SlidingComponent, RefreshFrictionModifiersEvent>(OnRefreshFrictionModifiers);
         SubscribeLocalEvent<SlidingComponent, ThrowerImpulseEvent>(OnThrowerImpulse);
-        SubscribeLocalEvent<SlidingComponent, ShooterImpulseEvent>(ShooterImpulseEvent);
     }
 
     /// <summary>
@@ -130,11 +129,6 @@ public sealed class SlidingSystem : EntitySystem
     }
 
     private void OnThrowerImpulse(Entity<SlidingComponent> entity, ref ThrowerImpulseEvent args)
-    {
-        args.Push = true;
-    }
-
-    private void ShooterImpulseEvent(Entity<SlidingComponent> entity, ref ShooterImpulseEvent args)
     {
         args.Push = true;
     }

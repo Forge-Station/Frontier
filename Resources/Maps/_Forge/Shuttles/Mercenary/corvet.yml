@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/11/2025 04:05:30
-  entityCount: 698
+  time: 11/27/2025 14:09:22
+  entityCount: 707
 maps: []
 grids:
 - 1
@@ -715,6 +715,7 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Corvet
+    - type: ImplicitRoof
 - proto: AirAlarm
   entities:
   - uid: 2
@@ -868,6 +869,21 @@ entities:
       deviceLists:
       - 278
       - 2
+- proto: AmmoLoaderSmall
+  entities:
+  - uid: 705
+    components:
+    - type: Transform
+      pos: 1.5,-8.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        697:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
+        696:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
 - proto: APCHyperCapacity
   entities:
   - uid: 21
@@ -2155,6 +2171,42 @@ entities:
       rot: 3.141592653589793 rad
       pos: 6.5,-11.5
       parent: 1
+  - uid: 699
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -3.5,5.5
+      parent: 1
+  - uid: 700
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -4.5,5.5
+      parent: 1
+  - uid: 701
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -4.5,6.5
+      parent: 1
+  - uid: 702
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 5.5,5.5
+      parent: 1
+  - uid: 703
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,5.5
+      parent: 1
+  - uid: 704
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,6.5
+      parent: 1
 - proto: ChairFolding
   entities:
   - uid: 266
@@ -3347,12 +3399,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -4.5,-0.5
       parent: 1
-  - uid: 413
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 6.5,5.5
-      parent: 1
   - uid: 414
     components:
     - type: Transform
@@ -3364,12 +3410,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -4.5,6.5
-      parent: 1
-  - uid: 416
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -4.5,5.5
       parent: 1
   - uid: 417
     components:
@@ -3491,6 +3531,18 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -2.5,-1.5
+      parent: 1
+- proto: Magazine90mmWeak
+  entities:
+  - uid: 706
+    components:
+    - type: Transform
+      pos: 1.8754878,-8.546592
+      parent: 1
+  - uid: 707
+    components:
+    - type: Transform
+      pos: 2.07262,-8.725803
       parent: 1
 - proto: NFAshtray
   entities:
@@ -5157,19 +5209,33 @@ entities:
     - type: Transform
       pos: 1.5,-5.5
       parent: 1
-- proto: WeaponNavalCannonL85Autocannon
+- proto: WeaponTurretAK570
   entities:
   - uid: 696
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -6.5,-6.5
+      rot: 3.141592653589793 rad
+      pos: 8.5,-6.5
       parent: 1
   - uid: 697
     components:
     - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -6.5,-6.5
+      parent: 1
+- proto: WeaponTurretM220
+  entities:
+  - uid: 413
+    components:
+    - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 8.5,-6.5
+      pos: 6.5,5.5
+      parent: 1
+  - uid: 416
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.5,5.5
       parent: 1
 - proto: Wrench
   entities:

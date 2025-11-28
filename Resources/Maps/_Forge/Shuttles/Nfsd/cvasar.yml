@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/18/2025 06:42:16
-  entityCount: 295
+  time: 11/27/2025 13:48:26
+  entityCount: 297
 maps: []
 grids:
 - 2
@@ -354,6 +354,7 @@ entities:
     - type: GasTileOverlay
     - type: BecomesStation
       id: cvasar
+    - type: ImplicitRoof
 - proto: AirAlarm
   entities:
   - uid: 298
@@ -422,6 +423,21 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,10.5
       parent: 2
+- proto: AmmoLoaderSmall
+  entities:
+  - uid: 22
+    components:
+    - type: Transform
+      pos: 5.5,16.5
+      parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        71:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
+        72:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
 - proto: APCBasic
   entities:
   - uid: 305
@@ -1511,6 +1527,18 @@ entities:
     - type: Transform
       pos: 3.5,15.5
       parent: 2
+- proto: Magazine90mmWeak
+  entities:
+  - uid: 23
+    components:
+    - type: Transform
+      pos: 5.193786,16.265015
+      parent: 2
+  - uid: 24
+    components:
+    - type: Transform
+      pos: 5.1221023,16.57565
+      parent: 2
 - proto: NFPrisonerClosetWallOrangeFilled
   entities:
   - uid: 11
@@ -1632,14 +1660,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 1.5,17.5
       parent: 2
-- proto: Rack
-  entities:
-  - uid: 115
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 5.5,16.5
-      parent: 2
 - proto: Railing
   entities:
   - uid: 80
@@ -1679,17 +1699,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 4.5,11.5
-      parent: 2
-  - uid: 228
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,10.5
-      parent: 2
-  - uid: 238
-    components:
-    - type: Transform
-      pos: 8.5,10.5
       parent: 2
 - proto: RandomSpawner100
   entities:
@@ -2182,15 +2191,29 @@ entities:
     - type: Transform
       pos: 4.5,16.5
       parent: 2
-- proto: WeaponNavalCannon105mmUnanchor
+- proto: WeaponTurretAK570
   entities:
-  - uid: 23
+  - uid: 71
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.5,10.5
+      parent: 2
+  - uid: 72
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 8.5,10.5
+      parent: 2
+- proto: WeaponTurretM220
+  entities:
+  - uid: 69
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,18.5
       parent: 2
-  - uid: 24
+  - uid: 70
     components:
     - type: Transform
       rot: 3.141592653589793 rad

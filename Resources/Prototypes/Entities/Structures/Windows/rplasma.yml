@@ -17,7 +17,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 600
+        damage: 1500 # Mono
       behaviors: #excess damage, don't spawn entities.
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -26,7 +26,7 @@
           collection: WindowShatter
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 750 # Mono 150->750
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -66,6 +66,7 @@
         layer:
         - WallLayer
         density: 2000
+  - type: HitscanDiffractTarget # Mono - Causes diffraction
 
 - type: entity
   id: PlasmaReinforcedWindowDirectional
@@ -99,13 +100,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 700 # Mono
       behaviors: #excess damage, don't spawn entities.
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 75
+        damage: 350 # Mono
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -122,6 +123,7 @@
         acts: [ "Destruction" ]
   - type: StaticPrice
     price: 30
+  - type: HitscanDiffractTarget # Mono - Causes diffraction
 
 - type: entity
   parent: ReinforcedPlasmaWindow
@@ -171,3 +173,4 @@
   - type: Construction
     graph: WindowDiagonal
     node: reinforcedPlasmaWindowDiagonal
+  - type: HitscanDiffractTarget # Mono - Causes diffraction

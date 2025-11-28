@@ -1,0 +1,321 @@
+- type: entity
+  parent: BaseStructure
+  id: BaseMetalPlatform
+  abstract: true
+  name: обычная платформа
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    sprite: Forge/Structures/Walls/platform.rsi
+  - type: Icon
+    sprite: Forge/Structures/Walls/platform.rsi
+  - type: Physics
+    bodyType: Static
+  - type: InteractionOutline
+  - type: Repairable
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StrongMetallic
+  - type: Climbable
+
+- type: entity
+  parent: BaseStructure
+  id: BasePlasteelPlatform
+  abstract: true
+  name: укреплённая платформа
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    sprite: Forge/Structures/Walls/platform.rsi
+  - type: Icon
+    sprite: Forge/Structures/Walls/platform.rsi
+  - type: Physics
+    bodyType: Static
+  - type: InteractionOutline
+  - type: Repairable
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StrongMetallic
+  - type: Climbable
+
+- type: entity
+  parent: BaseMetalPlatform
+  id: MetalPlatform
+  components:
+  - type: Sprite
+    state: metal
+  - type: Icon
+    state: metal
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,-0.25"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PartRodMetal1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BasePlasteelPlatform
+  id: PlasteelPlatform
+  components:
+  - type: Sprite
+    state: plasteel
+  - type: Icon
+    state: plasteel
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,-0.25"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PartRodMetal1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseMetalPlatform
+  id: MetalPlatformCorner
+  components:
+  - type: Sprite
+    state: metalcorner
+  - type: Icon
+    state: metalcorner
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,-0.25"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+      fix2:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.49,0.49,0.25,-0.49"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PartRodMetal1:
+            min: 0
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BasePlasteelPlatform
+  id: PlasteelPlatformCorner
+  components:
+  - type: Sprite
+    state: plasteelcorner
+  - type: Icon
+    state: plasteelcorner
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,-0.25"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+      fix2:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.49,0.49,0.25,-0.49"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PartRodMetal1:
+            min: 0
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseMetalPlatform
+  id: MetalPlatformCornerSmall
+  components:
+  - type: Sprite
+    state: metalcorner_small
+  - type: Icon
+    state: metalcorner_small
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,0.49,-0.25,0.25"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PartRodMetal1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BasePlasteelPlatform
+  id: PlasteelPlatformCornerSmall
+  components:
+  - type: Sprite
+    state: plasteelcorner_small
+  - type: Icon
+    state: plasteelcorner_small
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,0.49,-0.25,0.25"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PartRodMetal1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

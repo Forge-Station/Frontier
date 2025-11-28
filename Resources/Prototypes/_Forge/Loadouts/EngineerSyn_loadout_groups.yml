@@ -1,4 +1,18 @@
 - type: loadoutGroup
+  id: EngineerSynHead
+  name: loadout-group-contractor-head
+  minLimit: 1
+  loadouts:
+  - EngineerSynClothingHead1
+  - EngineerSynClothingHead2
+  - EngineerSynClothingHead3
+  - EngineerSynClothingHead4
+  - EngineerSynClothingHead5
+  - EngineerSynClothingHead6
+  fallbacks:
+  - EngineerSynClothingHead1
+
+- type: loadoutGroup
   id: EngineerSynJumpsuit
   name: loadout-group-contractor-jumpsuit
   minLimit: 1
@@ -7,6 +21,24 @@
   - EngineerSynJumpsuit2
   fallbacks:
   - EngineerSynJumpsuit1
+
+- type: loadoutGroup
+  id: EngineerSynOuter
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - EngineerSynOuterclothing1
+  - EngineerSynOuterclothing2
+  - EngineerSynOuterclothing3
+  - EngineerSynOuterclothing4
+  - EngineerSynOuterclothing5
+  - EngineerSynOuterclothing6
+  - EngineerSynOuterclothing7
+  - EngineerSynOuterclothing8
+  fallbacks:
+  - EngineerSynOuterclothing1
+  subgroups: # Delete or comment after winter
+  - SyndicateWinetOuter
 
 - type: loadoutGroup
   id: EngineerSynBackpackItems

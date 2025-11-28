@@ -1,32 +1,41 @@
-
-- type: hitscan
+- type: entity
+  parent: BasicHitscan
   id: SmgPulse
-  damage:
-    types:
-      Heat: 30
-      Structural: 100
-  muzzleFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_blue
-  travelFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam_blue
-  impactFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_blue
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 30 # Mono
+        Structural: 100
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: muzzle_blue
+    travelFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: beam_blue
+    impactFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: impact_blue
 
-- type: hitscan
+- type: entity
+  parent: BasicHitscan
   id: SmgPulseSniper
-  damage:
-    types:
-      Heat: 100
-      Structural: 1000
-  muzzleFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_blue
-  travelFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam_blue
-  impactFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_blue
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 100 # Mono
+        Structural: 1000
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: muzzle_blue
+    travelFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: beam_blue
+    impactFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: impact_blue

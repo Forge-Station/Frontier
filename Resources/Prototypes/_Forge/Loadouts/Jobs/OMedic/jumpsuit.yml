@@ -23,6 +23,32 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtChemistry
 
+# Pathologis
+- type: loadout
+  id: OMedLdPathologist1
+  price: 0
+  equipment:
+    jumpsuit: ADTClothingUniformPathologistSuit
+
+- type: loadout
+  id: OMedLdPathologist2
+  price: 0
+  equipment:
+    jumpsuit: ADTClothingUniformPathologistSkirt
+
+# Pathologis alt
+- type: loadout
+  id: OMedLdPathologist3
+  price: 0
+  equipment:
+    jumpsuit: ADTClothingUniformPathologistSuitAlt
+
+- type: loadout
+  id: OMedLdPathologist4
+  price: 0
+  equipment:
+    jumpsuit: ADTClothingUniformPathologistSkirtAlt
+
 # region PlayTime
 # ведущего врача
 - type: loadout
@@ -61,6 +87,25 @@
     proto: OMedT1
   equipment:
     jumpsuit: ClothingUniformJumpskirtVirology
+
+# вирусолог Old
+- type: loadout
+  id: ClothingUniformJumpsuitVirologyOldOMedLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitVirologyOld
+
+- type: loadout
+  id: ClothingUniformJumpskirtVirologyOldOMedLd
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OMedT1
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtVirologyOld
 
 # военный комбез
 - type: loadout

@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/11/2025 04:14:16
-  entityCount: 199
+  time: 11/27/2025 14:06:36
+  entityCount: 202
 maps: []
 grids:
 - 1573
@@ -295,6 +295,7 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Owl
+    - type: ImplicitRoof
 - proto: AirAlarm
   entities:
   - uid: 1674
@@ -372,6 +373,21 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 1674
+- proto: AmmoLoaderSmall
+  entities:
+  - uid: 26
+    components:
+    - type: Transform
+      pos: 0.5,3.5
+      parent: 1573
+    - type: DeviceLinkSource
+      linkedPorts:
+        32:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
+        33:
+        - - AmmoLoaderLoad
+          - SpaceArtilleryLoad
 - proto: APCBasic
   entities:
   - uid: 1691
@@ -808,11 +824,10 @@ entities:
       parent: 1573
 - proto: ComputerGunneryConsole
   entities:
-  - uid: 29
+  - uid: 27
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,3.5
+      pos: -0.5,5.5
       parent: 1573
 - proto: ComputerTabletopShuttle
   entities:
@@ -872,7 +887,7 @@ entities:
   - uid: 9
     components:
     - type: Transform
-      pos: -2.4818292,1.5775838
+      pos: -2.516261,0.75161076
       parent: 1573
 - proto: FaxMachineShip
   entities:
@@ -920,13 +935,12 @@ entities:
   - uid: 1694
     components:
     - type: Transform
-      pos: -2.48147,1.4071269
+      pos: -2.6596298,0.69784737
       parent: 1573
   - uid: 1695
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -2.590845,1.4852519
+      pos: -2.6417084,0.6799269
       parent: 1573
 - proto: GasPassiveVent
   entities:
@@ -1026,10 +1040,27 @@ entities:
       powerLoad: 5
 - proto: Gyroscope
   entities:
-  - uid: 1646
+  - uid: 29
     components:
     - type: Transform
-      pos: -0.5,5.5
+      pos: -2.5,1.5
+      parent: 1573
+- proto: Magazine20mmWeak
+  entities:
+  - uid: 34
+    components:
+    - type: Transform
+      pos: -2.6417084,4.7434607
+      parent: 1573
+  - uid: 35
+    components:
+    - type: Transform
+      pos: -2.3012066,4.6180124
+      parent: 1573
+  - uid: 36
+    components:
+    - type: Transform
+      pos: -2.552103,4.474643
       parent: 1573
 - proto: NFHolopadShip
   entities:
@@ -1103,11 +1134,6 @@ entities:
     components:
     - type: Transform
       pos: -2.5,7.5
-      parent: 1573
-  - uid: 1688
-    components:
-    - type: Transform
-      pos: -2.5,1.5
       parent: 1573
 - proto: Railing
   entities:
@@ -1509,15 +1535,15 @@ entities:
     - type: Transform
       pos: -4.5,5.5
       parent: 1573
-- proto: WeaponNavalCannon20mm
+- proto: WeaponTurretL85Autocannon
   entities:
-  - uid: 26
+  - uid: 32
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,8.5
       parent: 1573
-  - uid: 27
+  - uid: 33
     components:
     - type: Transform
       rot: 3.141592653589793 rad

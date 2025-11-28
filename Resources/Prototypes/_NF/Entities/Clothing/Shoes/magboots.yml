@@ -21,10 +21,10 @@
   name: NFSD magboots
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi
+    sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots.rsi #Forge-change
     state: icon
   - type: Clothing
-    sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi
+    sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots.rsi #Forge-change
   - type: Magboots
     magbootsAlert: MagbootsNfsd
 
@@ -35,10 +35,10 @@
   description: Mercenary magnetic boots, often used during extravehicular activity to ensure the user remains safely attached to the vehicle.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Shoes/Boots/magboots-mercenary.rsi
+    sprite: Forge/Clothing/Shoes/Boots/merc_magboots.rsi #Forge-change
     state: icon
   - type: Clothing
-    sprite: _NF/Clothing/Shoes/Boots/magboots-mercenary.rsi
+    sprite: Forge/Clothing/Shoes/Boots/merc_magboots.rsi #Forge-change
   - type: Magboots
     magbootsAlert: MagbootsMercenary
 

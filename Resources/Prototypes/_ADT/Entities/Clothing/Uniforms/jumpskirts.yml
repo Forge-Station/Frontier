@@ -1,0 +1,32 @@
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ADTClothingUniformBlackGhoticWeddingDress
+  name: Black ghotic wedding dress
+  description: Morticia Addams likes. You will not find better than this sexy dress
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniforms/Jumpskirt/black_ghotic_dress.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniforms/Jumpskirt/black_ghotic_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ADTClothingUniformPathologistSkirt
+  name: pathologist jumpskirt
+  description: A lightweight jumpskirt for a morgue worker
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniforms/Jumpskirt/pathologist.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniforms/Jumpskirt/pathologist.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ADTClothingUniformPathologistSkirtAlt
+  name: pathologist jumpskirt
+  description: A lightweight jumpskirt for a morgue worker. A darker version.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniforms/Jumpskirt/pathologist_alt.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniforms/Jumpskirt/pathologist_alt.rsi

@@ -5,31 +5,23 @@
     proto: ShoesCapableNF
   price: 0
   equipment:
-    shoes: ClothingShoesBootsCombat
+    shoes: ClothingShoesBootsJackFilled
 
 - type: loadout
   id: StormtrooperClothingShoes2
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  price: 500
+  equipment:
+    shoes: ClothingShoesSwat
+
+# Delete or comment after winter
+- type: loadout
+  id: StormtrooperClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
   price: 0
   equipment:
     shoes: ClothingShoesBootsWinterSyndicate
-
-- type: loadout
-  id: StormtrooperClothingShoes3
-  hideEffects:
-  - !type:GroupLoadoutEffect
-    proto: ShoesCapableNF
-  price: 2000
-  equipment:
-    shoes: ClothingShoesBootsJackFilled
-
-- type: loadout
-  id: StormtrooperClothingShoes4
-  hideEffects:
-  - !type:GroupLoadoutEffect
-    proto: ShoesCapableNF
-  price: 2000
-  equipment:
-    shoes: ClothingShoesSwat

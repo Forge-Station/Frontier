@@ -184,6 +184,8 @@
     dynamicPacks:
     - CorvaxShuttleGunsDynamic #Corvax-Frontier
     - CorvaxAmmoDynamic #Corvax-Frontier
+    - ForgePackShipAmmo # forge-change
+    - ForgePackShipAmmoNfsd # Forge-change
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -218,6 +220,8 @@
     staticPacks:
     - NFMercenaryTechfabDeprecatedStatic
     - NfsdPracticeStatic
+    dynamicPacks:
+    - ForgePackShipAmmo # Forge-change
   - type: BlueprintReceiver
     whitelist:
       tags:

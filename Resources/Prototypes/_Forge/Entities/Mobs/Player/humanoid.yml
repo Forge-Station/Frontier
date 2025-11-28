@@ -1,3 +1,255 @@
+- type: entity
+  parent: MobDemon
+  id: MobDemonRandom
+  name: Урист МакАркана
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobHarpy
+  id: MobHarpyRandom
+  name: Урист МакГарпия
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobVulpkanin
+  id: MobVulpkaninRandom
+  name: Урист МакВульпа
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesVulpkaninMale
+    - NamesVulpkaninLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobElzuosa
+  id: MobElzuosaRandom
+  name: Урист МакЭльзуос
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobIpc
+  id: MobIpcRandom
+  name: Урист МакКПБ
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesIpcFirstMale
+
+- type: entity
+  parent: MobTajaran
+  id: MobTajaranRandom
+  name: Урист МакТаяр
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesTajaranFirstMale
+    - NamesTajaranLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobGoblin
+  id: MobGoblinRandom
+  name: Урист МакГоблин
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesGoblinFirstMale
+    - NamesGoblinLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobSheleg
+  id: MobShelegRandom
+  name: Урист МакШлег
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesShelegFirstMale
+    - NamesShelegLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobAndroid
+  id: MobAndroidRandom
+  name: Урист МакАндроид
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesAI
+
+- type: entity
+  parent: MobAriral
+  id: MobAriralRandom
+  name: Урист МакАрирал
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesAriralFirst
+    - NamesAriralLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobFelinid
+  id: MobFelinidRandom
+  name: Урист МакФелинид
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobOni
+  id: MobOniRandom
+  name: Урист МакОни
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesOniMale
+    - NamesOniLocation
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobArachnid
+  id: MobArachnidRandom
+  name: Урист МакВеб
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesArachnidFirst
+    - NamesArachnidLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobDiona
+  id: MobDionaRandom
+  name: Урист МакДиона
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesDionaFirst
+    - NamesDionaLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobDwarf
+  id: MobDwarfRandom
+  name: Урист МакДворф
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobHuman
+  id: MobHumanRandom
+  name: Урист МакЧеловек
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobMoth
+  id: MobMothRandom
+  name: Урист МакФлафф
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesMothFirstFemale
+    - NamesMothLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobReptilian
+  id: MobReptilianRandom
+  name: Урист МакУнатх
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesReptilianMale
+
+- type: entity
+  parent: MobSlimePerson
+  id: MobSlimePersonRandom
+  name: Урист МакСлайм
+  suffix: Слаймолюд, Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-standard
+
+- type: entity
+  parent: MobVox
+  id: MobVoxRandom
+  name: Уристистист МакВокс
+  suffix: Рандомная внешность
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesVox
+
 ## Death Squad
 
 - type: entity
@@ -502,8 +754,8 @@
     outerClothing: ClothingOuterHardsuitCBURN
     shoes: ClothingShoesBootsMagAdv
     id: CBURNPDA
-    pocket1: RadioHandheldNF # Frontier: RadioHandheld<RadioHandheldNF
-    pocket2: NFWeaponEnergyPistolLaser # Frontier: WeaponLaserGun<NFWeaponEnergyPistolLaser
+    pocket1: RadioHandheldNF
+    pocket2: NFWeaponEnergyPistolLaser
     belt: ClothingBeltBandolier
   storage:
     back:
@@ -516,3 +768,50 @@
     - PillAmbuzol
   inhand:
    - WeaponCaseLongAD12
+
+# Флот УСФ
+- type: startingGear
+  id: MSFAdmiralGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNavyGold
+    shoes: ClothingShoesBootsJack
+    head: ClothingHeadHatBeretCommander
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesHeavyGoldenTrim
+    id: MSFAdmiralPDA
+    ears: ClothingHeadsetCentCom
+    pocket1: RubberStampMSFAdmiral
+    pocket2: MindShieldImplanter
+    back: ClothingBackpackSatchelLeather
+    belt: ClothingBeltOfficerSheathFilled
+    wallet: ClothingWalletLeatherBlack
+
+- type: startingGear
+  id: MSFNavyRepGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNanotrasenRepresentative
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatBeretCommander
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesHeavyGoldenTrim
+    outerClothing: ClothingOuterVest
+    id: MSFRepPDA
+    ears: ClothingHeadsetCentCom
+    pocket1: NFWeaponEnergyPistolPulse
+    pocket2: MindShieldImplanter
+    back: ClothingBackpackSatchelLeather
+    belt: ClothingBeltOfficerSheathFilled
+    wallet: ClothingWalletLeatherBlack
+
+- type: startingGear
+  id: MSFOperatorGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficer
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesSr
+    id: MSFOperatorPDA
+    ears: ClothingHeadsetCentCom
+    pocket2: MindShieldImplanter
+    back: ClothingBackpackSatchelLeather
+    wallet: ClothingWalletLeatherBlack

@@ -15934,28 +15934,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponNavalCannon140mmUnanchor
-  entities:
-  - uid: 2451
-    components:
-    - type: Transform
-      pos: 10.5,10.5
-      parent: 1
-  - uid: 2452
-    components:
-    - type: Transform
-      pos: 13.5,10.5
-      parent: 1
-  - uid: 2453
-    components:
-    - type: Transform
-      pos: 39.5,10.5
-      parent: 1
-  - uid: 2454
-    components:
-    - type: Transform
-      pos: 42.5,10.5
-      parent: 1
 - proto: WeaponPistolMoonWhisper
   entities:
   - uid: 2239

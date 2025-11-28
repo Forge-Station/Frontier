@@ -1,0 +1,98 @@
+# Blueshield
+- type: entity
+  id: ADTClothingBeltMedicalSecurity
+  name: medical-security belt
+  description: Special medical-security belt.
+  parent: ClothingBeltStorageBase
+  components:
+  - type: Storage
+    grid:
+    - 0,0,7,1
+    maxItemSize: Normal
+  - type: ItemMapper
+    mapLayers:
+      flashbang:
+        whitelist:
+          components:
+          - FlashOnTrigger
+      stunbaton:
+        whitelist:
+          components:
+          - Stunbaton
+      tear_gas_grenade:
+        whitelist:
+          components:
+          - SmokeOnTrigger
+      bottle:
+        whitelist:
+          tags:
+          - Bottle
+      hypo:
+        whitelist:
+          components:
+          - Hypospray
+      pill:
+        whitelist:
+          components:
+          - Pill
+          tags:
+          - PillCanister
+      bottle_spray:
+        whitelist:
+          tags:
+          - Spray
+      wrench:
+        whitelist:
+          tags:
+          - Wrench
+    sprite: Clothing/Belt/belt_overlay.rsi
+  - type: Appearance
+  - type: Sprite
+    sprite: _ADT/Clothing/Belt/medical_security_belt.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Belt/medical_security_belt.rsi
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ADTClothingBeltMedicalBag
+  name: medical bag
+  description: Small but capacious bag to hold various medical equipment. It even has some place for a tablet for paper!
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Belt/medical_bag.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Belt/medical_bag.rsi
+
+# Forge-change, add filled version
+- type: entity
+  id: ADTClothingBeltMedicalSecurityFilled
+  parent: ADTClothingBeltMedicalSecurity
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: NFWeaponEnergyPistolDisabler # я не уверен..
+      - id: Brutepack
+        amount: 2
+      - id: Ointment
+        amount: 1
+      - id: Bloodpack
+        amount: 1
+      - id: Gauze
+      - id: EmergencyMedipen
+
+- type: entity
+  id: ADTClothingBeltMedicalBagFilled
+  parent: ADTClothingBeltMedicalBag
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Brutepack
+        amount: 2
+      - id: Ointment
+        amount: 1
+      - id: Bloodpack
+        amount: 1
+      - id: Gauze
+      - id: EmergencyMedipen
