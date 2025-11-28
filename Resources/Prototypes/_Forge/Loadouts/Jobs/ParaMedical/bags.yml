@@ -21,3 +21,125 @@
   price: 0
   equipment:
     back: ClothingBackpackMessengerMedical
+
+# paramed
+- type: loadout
+  id: ParaMedicalBackpackPM1
+  price: 0
+  equipment:
+    back: ADTClothingBackpackParamedic
+
+- type: loadout
+  id: ParaMedicalBackpackPM2
+  price: 0
+  equipment:
+    back: ADTClothingBackpackSatchelParamedic
+
+- type: loadout
+  id: ParaMedicalBackpackPM3
+  price: 0
+  equipment:
+    back: ADTClothingBackpackDuffelParamedic
+
+# viro
+- type: loadout
+  id: ParaMedicalBackpackViro1
+  price: 0
+  equipment:
+    back: ClothingBackpackVirology
+
+- type: loadout
+  id: ParaMedicalBackpackViro2
+  price: 0
+  equipment:
+    back: ClothingBackpackSatchelVirology
+
+- type: loadout
+  id: ParaMedicalBackpackViro3
+  price: 0
+  equipment:
+    back: ClothingBackpackDuffelVirology
+
+- type: loadout
+  id: ParaMedicalBackpackViro4
+  price: 0
+  equipment:
+    back: ClothingBackpackMessengerVirology
+
+# chem
+- type: loadout
+  id: ParaMedicalBackpackChem1
+  price: 0
+  equipment:
+    back: ClothingBackpackChemistry
+
+- type: loadout
+  id: ParaMedicalBackpackChem2
+  price: 0
+  equipment:
+    back: ClothingBackpackSatchelChemistry
+
+- type: loadout
+  id: ParaMedicalBackpackChem3
+  price: 0
+  equipment:
+    back: ClothingBackpackDuffelChemistry
+
+- type: loadout
+  id: ParaMedicalBackpackChem4
+  price: 0
+  equipment:
+    back: ClothingBackpackMessengerChemistry
+
+# genetic
+- type: loadout
+  id: ParaMedicalBackpackGenetics1
+  price: 0
+  equipment:
+    back: ClothingBackpackGenetics
+
+- type: loadout
+  id: ParaMedicalBackpackGenetics2
+  price: 0
+  equipment:
+    back: ClothingBackpackSatchelGenetics
+
+- type: loadout
+  id: ParaMedicalBackpackGenetics3
+  price: 0
+  equipment:
+    back: ClothingBackpackDuffelGenetics
+
+- type: loadout
+  id: ParaMedicalBackpackGenetics4
+  price: 0
+  equipment:
+    back: ClothingBackpackMessengerGenetics
+
+# pathologist
+- type: loadout
+  id: ParaMedicalBackpackPath1
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT1
+  equipment:
+    back: ADTClothingBackpackPathologist
+
+- type: loadout
+  id: ParaMedicalBackpackPath2
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT1
+  equipment:
+    back: ADTClothingBackpackSatchelPathologist
+
+- type: loadout
+  id: ParaMedicalBackpackPath3
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT1
+  equipment:
+    back: ADTClothingBackpackDuffelPathologist

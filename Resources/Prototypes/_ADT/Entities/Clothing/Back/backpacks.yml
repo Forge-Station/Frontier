@@ -1,0 +1,17 @@
+# Med
+- type: entity
+  parent: ClothingBackpackMedical
+  id: ADTClothingBackpackPathologist
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Back/pathologist_backpack.rsi
+
+- type: entity
+  parent: ClothingBackpackMedical
+  id: ADTClothingBackpackParamedic
+  name: paramedical backpack
+  description: Backpack to store some paramedical equipment.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Back/paramedic_backpack.rsi
+

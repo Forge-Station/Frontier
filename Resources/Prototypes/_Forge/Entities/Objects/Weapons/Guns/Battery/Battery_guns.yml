@@ -218,7 +218,7 @@
     startingCharge: 2400
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 12
+    autoRechargeRate: 15
   - type: NFWeaponDetails
     class: weapon-details-class-assault-rifle
 
@@ -274,7 +274,8 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 15
+        Heat: 16
+        Radiation: 4
 
 - type: entity
   id: BulletLaserSyndie
@@ -285,7 +286,8 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 10
+        Heat: 11
+        Radiation: 3
 
 - type: entity
   id: WeaponSyndieEnergyFalconPistolLaser
@@ -405,3 +407,22 @@
   - type: Battery
     maxCharge: 40000
     startingCharge: 40000
+
+- type: entity
+  id: WeaponDOCLaserPistol
+  parent: [ BaseWeaponEnergyPistolFireModesSyndie, BaseWeaponFrameEnergyPistolSyndie, BaseC1Contraband ]
+  name: DOC pistol
+  description: |-
+    Powerful laser pistol specially designed by Vitezstvi for the Director of Care
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Battery/DOC.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Battery/DOC.rsi
+  - type: Battery
+    maxCharge: 1200
+    startingCharge: 1200
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 35
+  - type: Tag

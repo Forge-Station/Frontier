@@ -102,3 +102,12 @@ ent-ClothingHandsGlovesCombatUpgrade = усиленные боевые перч�
 
 ent-ClothingBackpackSyndicateRaidBundle = { ent-ClothingBackpackSyndicate }
     .desc = { ent-ClothingBackpackSyndicate.desc }
+
+ent-ClothingUniformJumpsuitParamedicOld = { ent-ClothingUniformJumpsuitParamedic }
+    .desc = { ent-ClothingUniformJumpsuitParamedic.desc }
+ent-ClothingUniformJumpskirtParamedicOld = { ent-ClothingUniformJumpskirtParamedic }
+    .desc = { ent-ClothingUniformJumpskirtParamedic.desc }
+ent-ClothingUniformJumpsuitVirologyOld = { ent-ClothingUniformJumpsuitVirology }
+    .desc = { ent-ClothingUniformJumpsuitVirology.desc }
+ent-ClothingUniformJumpskirtVirologyOld = { ent-ClothingUniformJumpskirtVirology }
+    .desc = { ent-ClothingUniformJumpskirtVirology.desc }

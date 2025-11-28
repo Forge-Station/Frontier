@@ -7,6 +7,16 @@
   - ClothingUniformJumpskirtMedicalDoctorOMedLd
   - ClothingUniformJumpsuitChemistryOMedLd
   - ClothingUniformJumpskirtChemistryOMedLd
+  - OMedLdPathologist1
+  - OMedLdPathologist2
+  - OMedLdPathologist3
+  - OMedLdPathologist4
+  - ClothingUniformJumpsuitVirologyOMedLd
+  - ClothingUniformJumpskirtVirologyOMedLd
+  - ClothingUniformJumpsuitVirologyOldOMedLd
+  - ClothingUniformJumpskirtVirologyOldOMedLd
+  - ParaMedicalClothingUniformGenetics1
+  - ParaMedicalClothingUniformGenetics2
   - ClothingUniformJumpsuitSeniorPhysicianOMedLd
   - ClothingUniformJumpskirtSeniorPhysicianOMedLd
   - ClothingUniformJumpsuitMilitaryMedicalDoctorOMedLd
@@ -22,10 +32,15 @@
   loadouts:
   - ClothingOuterCoatLabOMedLd
   - ClothingOuterCoatLabChemOMedLd
-  - ClothingOuterWinterChemOMedLd
-  - ClothingOuterWinterMedOMedLd
+  - OMedLdPathologistOuter1
+  - OMedLdPathologistOuter2
+  - OMedLdPathologistOuter3
+  - ClothingOuterCoatLabViroOMedLd
+  - ParaMedicalClothingCenetics1
   - ClothingOuterCoatLabSeniorPhysicianOMedLd
   - ClothingOuterHardsuitERTMedicalOMedLd
+  subgroups:
+  - MedicalWinterOuter
 
 - type: loadoutGroup
   id: OMedicShoes
@@ -37,6 +52,7 @@
   - ClothingShoesBootsCowboyWhiteOMedLd
   subgroups:
   - OServiceShoes
+  - MedicalWinterShoes
   fallbacks:
   - ClothingShoesColorWhiteOServLd
 
@@ -52,10 +68,17 @@
   - ClothingBackpackSatchelChemistryOMedLd
   - ClothingBackpackDuffelChemistryOMedLd
   - ClothingBackpackMessengerChemistryOMedLd
+  - ADTClothingBackpackPathologistOMedLd
+  - ADTClothingBackpackSatchelPathologistOMedLd
+  - ADTClothingBackpackDuffelPathologistOMedLd
   - ClothingBackpackVirologyOMedLd
   - ClothingBackpackSatchelVirologyOMedLd
   - ClothingBackpackDuffelVirologyOMedLd
   - ClothingBackpackMessengerVirologyOMedLd
+  - ParaMedicalBackpackGenetics1
+  - ParaMedicalBackpackGenetics2
+  - ParaMedicalBackpackGenetics3
+  - ParaMedicalBackpackGenetics4
   - ClothingBackpackERTMedicalOMedLd
   fallbacks:
   - ParaMedicalBackpack1

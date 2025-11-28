@@ -1,23 +1,66 @@
 - type: loadoutGroup
   id: ParaMedicalJumpsuit
   name: loadout-group-contractor-jumpsuit
+  minLimit: 1
+  maxLimit: 1
   loadouts:
+  - ParaMedicalClothingUniform0
   - ParaMedicalClothingUniform1
   - ParaMedicalClothingUniform2
+  - ParaMedicalClothingUniformOld1
+  - ParaMedicalClothingUniformOld2
+  - ParaMedicalClothingUniformMedical1
+  - ParaMedicalClothingUniformMedical2
+  - ParaMedicalClothingUniformViro1
+  - ParaMedicalClothingUniformViro2
+  - ParaMedicalClothingUniformViroOld1
+  - ParaMedicalClothingUniformViroOld2
+  - ParaMedicalClothingUniformChem1
+  - ParaMedicalClothingUniformChem2
+  - ParaMedicalClothingUniformGenetics1
+  - ParaMedicalClothingUniformGenetics2
+  - ParaMedicalClothingUniformPath1
+  - ParaMedicalClothingUniformPath2
+  - ParaMedicalClothingUniformPathAlt1
+  - ParaMedicalClothingUniformPathAlt2
+  - ParaMedicalClothingUniformPTT1
+  - ParaMedicalClothingUniformPTT2
   - ParaMedicalClothingUniform3
   - ParaMedicalClothingUniform4
   - ParaMedicalClothingUniform5
+  - ParaMedicalClothingUniform6
+  - ParaMedicalClothingUniform7
   fallbacks:
-  - ParaMedicalClothingUniform1
+  - ParaMedicalClothingUniform0
 
 - type: loadoutGroup
   id: ParaMedicalBackpack
   name: loadout-group-contractor-backpack
+  minLimit: 1
+  maxLimit: 1
   loadouts:
   - ParaMedicalBackpack1
   - ParaMedicalBackpack2
   - ParaMedicalBackpack3
   - ParaMedicalBackpack4
+  - ParaMedicalBackpackPM1
+  - ParaMedicalBackpackPM2
+  - ParaMedicalBackpackPM3
+  - ParaMedicalBackpackChem1
+  - ParaMedicalBackpackChem2
+  - ParaMedicalBackpackChem3
+  - ParaMedicalBackpackChem4
+  - ParaMedicalBackpackGenetics1
+  - ParaMedicalBackpackGenetics2
+  - ParaMedicalBackpackGenetics3
+  - ParaMedicalBackpackGenetics4
+  - ParaMedicalBackpackViro1
+  - ParaMedicalBackpackViro2
+  - ParaMedicalBackpackViro3
+  - ParaMedicalBackpackViro4
+  - ParaMedicalBackpackPath1
+  - ParaMedicalBackpackPath2
+  - ParaMedicalBackpackPath3
   fallbacks:
   - ParaMedicalBackpack1
 
@@ -25,13 +68,21 @@
   id: ParaMedicalOuterClothing
   name: loadout-group-contractor-outerclothing
   minLimit: 0
+  maxLimit: 1
   loadouts:
   - ParaMedicalClothing1
-  - ParaMedicalClothing2
-  - ParaMedicalClothing3
+  - ParaMedicalClothingOld
+  - ParaMedicalClothingMedical1
+  - ParaMedicalClothingViro1
+  - ParaMedicalClothingChem1
+  - ParaMedicalClothingCenetics1
+  - ParaMedicalClothingPath1
+  - ParaMedicalClothingPathAlt1
+  - ParaMedicalClothingPathApron
+  - ParaMedicalClothingPTT1
   - ParaMedicalClothing4
-  fallbacks:
-  - ParaMedicalClothing1
+  subgroups:
+  - MedicalWinterOuter
 
 - type: loadoutGroup
   id: ParaMedicalShoes
@@ -39,10 +90,11 @@
   minLimit: 1
   loadouts:
   - ParaMedicalShoes1
-  - ParaMedicalShoes2
-  - ParaMedicalShoes3
   fallbacks:
   - ParaMedicalShoes1
+  subgroups:
+  - MedicalWinterShoes
+  - ContractorShoes
 
 - type: loadoutGroup
   id: ParaMedicalWallet
@@ -64,8 +116,9 @@
   loadouts:
   - ParaMedicalClothingHeadHatParamedicsoft
   - ParaMedicalClothingHeadHatParamedicsoftFlipped
-  fallbacks:
-  - ParaMedicalClothingHeadHatParamedicsoft
+  - ParaMedicalADTClothingHeadHatsParamedicBeret
+  - ParaMedicalClothingHeadHatBeretMedic
+  - ParaMedicalClothingHeadHatBeretSeniorPhysician
 
 - type: loadoutGroup
   id: ParaMedicalNeck
@@ -119,9 +172,69 @@
   - paraMedicalEyes1
 
 - type: loadoutGroup
+  id: ParaMedicalBelt
+  name: loadout-group-contractor-belt
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - paraMedicalBelt1
+  - paraMedicalBelt2
+  - paraMedicalBelt3
+  - paraMedicalBelt4
+  fallbacks:
+  - paraMedicalBelt1
+
+- type: loadoutGroup
   id: paraMedicalBackpackItems
   name: loadout-group-paraMedic-backpack-items
   minLimit: 0
   maxLimit: 1
   loadouts:
   - ParaMedicalMedHypo
+
+- type: loadoutGroup
+  id: ForgeDocOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - DocLabcoatLd
+  subgroups:
+  - ParaMedicalOuterClothing
+
+- type: loadoutGroup
+  id: paraMedicalFace
+  name: loadout-group-contractor-face
+  loadouts:
+  - paraMedicalFace1
+  - paraMedicalFace2
+  - paraMedicalFace3
+  - paraMedicalFace4
+  - paraMedicalFace5
+  - paraMedicalFace6
+  fallbacks:
+  - paraMedicalFace3
+
+#
+- type: loadoutGroup
+  id: MedicalWinterOuter
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - MedicalWinterOuter1
+  - MedicalWinterOuter2
+  - MedicalWinterOuter3
+  - MedicalWinterOuter4
+  - MedicalWinterOuter5
+
+- type: loadoutGroup
+  id: MedicalWinterShoes
+  name: loadout-group-contractor-shoes
+  minLimit: 1
+  loadouts:
+  - MedicalWinterShoes1
+  - MedicalWinterShoes2
+  - MedicalWinterShoes3
+  - MedicalWinterShoes4
+  - MedicalWinterShoes5
