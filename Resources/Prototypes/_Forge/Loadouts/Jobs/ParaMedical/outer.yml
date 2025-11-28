@@ -1,3 +1,4 @@
+# paramedic
 - type: loadout
   id: ParaMedicalClothing1
   price: 0
@@ -5,19 +6,120 @@
     outerClothing: ClothingOuterCoatParamedicWB
 
 - type: loadout
-  id: ParaMedicalClothing2
+  id: ParaMedicalClothingOld
   price: 0
   equipment:
-    outerClothing: ClothingOuterWinterPara
+    outerClothing: ClothingOuterCoatParamedicWBOld
 
+# medical
 - type: loadout
-  id: ParaMedicalClothing3
+  id: ParaMedicalClothingMedical1
   price: 0
   equipment:
-    outerClothing: ClothingOuterWinterMed
+    outerClothing: ClothingOuterCoatLab
 
+# viro
+- type: loadout
+  id: ParaMedicalClothingViro1
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterCoatLabViro
+
+# chem
+- type: loadout
+  id: ParaMedicalClothingChem1
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterCoatLabChem
+
+# genetic
+- type: loadout
+  id: ParaMedicalClothingCenetics1
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterCoatLabGene
+
+# pathologist
+- type: loadout
+  id: ParaMedicalClothingPath1
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT1
+  equipment:
+    outerClothing: ADTClothingOuterCoatLabPathologist
+
+# pathologist alt
+- type: loadout
+  id: ParaMedicalClothingPathAlt1
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT1
+  equipment:
+    outerClothing: ADTClothingOuterCoatLabPathologist_alt
+
+# pathologist apron
+- type: loadout
+  id: ParaMedicalClothingPathApron
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT1
+  equipment:
+    outerClothing: ADTClothingOuterApronPathologist
+
+# region PlayTime
+- type: loadout
+  id: ParaMedicalClothingPTT1
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: paraMedT2
+  equipment:
+    outerClothing: ClothingOuterCoatLabSeniorPhysician
+
+# another
 - type: loadout
   id: ParaMedicalClothing4
   price: 1500
   equipment:
     outerClothing: ClothingOuterEVASuitMedic
+
+# doc-cmo outer
+- type: loadout
+  id: DocLabcoatLd
+  price: 0
+  equipment:
+    outerClothing: ADTClothingOuterCoatLabcoatCMOHike
+
+# region WINTER
+- type: loadout
+  id: MedicalWinterOuter1
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterPara
+
+- type: loadout
+  id: MedicalWinterOuter2
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterMed
+
+- type: loadout
+  id: MedicalWinterOuter3
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterChem
+
+- type: loadout
+  id: MedicalWinterOuter4
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterViro
+
+- type: loadout
+  id: MedicalWinterOuter5
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterWinterGen

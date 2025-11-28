@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHeadsetMedical
+  id: ADTClothingHeadsetParamedic
+  name: paramedic's headset
+  description: A headset for the paramedic.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Ears/Headsets/headset_paramedic.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Ears/Headsets/headset_paramedic.rsi

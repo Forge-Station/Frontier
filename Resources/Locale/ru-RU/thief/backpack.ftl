@@ -200,3 +200,32 @@ thief-backpack-category-smuggler-description =
     Не забудьте присоединить свой фултон.
     В комплект входят: маяк фултона, 10 фултонов, 3 дымовые гранаты,
     и невидимый ящик, чтобы прятать ценную добычу.
+
+thief-backpack-category-nonlethal-name = Нелетальный набор
+thief-backpack-category-nonlethal-description = 
+    Набор для самозащиты парамедиков от всех возможных угроз.
+    В комплект входят: 
+    Травматический дробовик, картридж патрон для него
+    Базовая экипировка парамедика
+thief-backpack-category-chemical-name = Химический набор
+thief-backpack-category-chemical-description = 
+    Зачем покупать специальные шаттлы, когда можно варить на любом?
+    В комплект входят: 
+    Упакованный мед-о-мат, продвинутая аптечка
+    Базовая экипировка парамедика
+thief-backpack-category-disabler-name = Оглушающий набор
+thief-backpack-category-disabler-description = 
+    Я вообще-то пацифист, но буйных надо как-то успокаивать.
+    В комплект входят: 
+    Станнер, две стяжки
+    Базовая экипировка парамедика
+thief-backpack-category-DOC-lethal-name = Летальный набор
+thief-backpack-category-DOC-lethal-description = Вот это уже настоящая самозащита!
+    В комплект входят: 
+    Пистолет, два магазина повышенного объёма
+    Экипировка ММО
+thief-backpack-category-DOC-laser-name = Лазерный набор
+thief-backpack-category-DOC-laser-description = Сильный лазерный пистолет, так ещё и с двумя режимами? Беру!
+    В комплект входят: 
+    Продвинутый лазерный пистолет
+    Экипировка ММО

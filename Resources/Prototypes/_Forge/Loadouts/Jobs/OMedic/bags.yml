@@ -18,6 +18,25 @@
   equipment:
     back: ClothingBackpackMessengerChemistry
 
+# pathologist
+- type: loadout
+  id: ADTClothingBackpackPathologistOMedLd
+  price: 0
+  equipment:
+    back: ADTClothingBackpackPathologist
+
+- type: loadout
+  id: ADTClothingBackpackSatchelPathologistOMedLd
+  price: 0
+  equipment:
+    back: ADTClothingBackpackSatchelPathologist
+
+- type: loadout
+  id: ADTClothingBackpackDuffelPathologistOMedLd
+  price: 0
+  equipment:
+    back: ADTClothingBackpackDuffelPathologist
+
 # region PlayTime
 - type: loadout
   id: ClothingBackpackVirologyOMedLd

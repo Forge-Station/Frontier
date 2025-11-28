@@ -1,0 +1,45 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ADTClothingUniformJumpsuitGothicAttire
+  name: gothic attire
+  description: For those, who don't like bright colors.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/gothic_attire.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/gothic_attire.rsi #спрайты от dion_clawed
+  - type: StaticPrice
+    price: 55
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ADTClothingUniformPathologistSuit
+  name: pathologist jumpsuit
+  description: A lightweight jumpsuit for a morgue worker
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/pathologist.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/pathologist.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ADTClothingUniformPathologistSuitAlt
+  name: pathologist jumpsuit
+  description: A lightweight jumpsuit for a morgue worker. A darker version.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/pathologist_alt.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/pathologist_alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ADTClothingJumpsuitParamedicFieldSuit
+  name: paramedic field suit
+  description: Clothing designed with the wearers complete comfort in mind.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/paramedic_field_suit.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/paramedic_field_suit.rsi

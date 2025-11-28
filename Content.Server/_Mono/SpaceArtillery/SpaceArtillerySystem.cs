@@ -1,14 +1,24 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 RikuTheKiller
+// SPDX-FileCopyrightText: 2025 ark1368
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: MPL-2.0
+
 using System.Numerics;
+using Content.Server._Mono.AmmoLoader;
 using Content.Server._Mono.FireControl;
+using Content.Shared.DeviceLinking.Events;
 using Content.Server.DeviceLinking.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Weapons.Ranged.Systems;
+using Content.Shared._Mono.AmmoLoader;
 using Content.Shared._Mono.ShipGuns;
 using Content.Shared._Mono.SpaceArtillery;
 using Content.Shared.Camera;
 using Content.Shared.DeviceLinking;
-using Content.Shared.DeviceLinking.Events;
 using Content.Shared.Examine;
 using Content.Shared.Power;
 using Content.Shared.Projectiles;
@@ -27,6 +37,7 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _xform = default!;
     [Dependency] private readonly SharedCameraRecoilSystem _recoilSystem = default!;
     [Dependency] private readonly FireControlSystem _fireControl = default!;
+    [Dependency] private readonly AmmoLoaderSystem _ammoLoader = default!;
 
     private const float DISTANCE = 100;
     private const float BIG_DAMAGE = 1000;
@@ -51,6 +62,15 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
     {
         if (!TryComp<DeviceLinkSinkComponent>(uid, out var source))
             return;
+
+        if (args.Port == component.SpaceArtilleryLoadPort)
+        {
+            if (TryComp<AmmoLoaderComponent>(args.Trigger, out var loader) && args.Trigger != null)
+            {
+                _ammoLoader.TryTransferAmmoTo(new Entity<AmmoLoaderComponent>(args.Trigger.Value, loader), uid);
+            }
+            return;
+        }
 
         if (args.Port != component.SpaceArtilleryFirePort)
             OnMalfunction(uid, component);
@@ -96,6 +116,12 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
     private void TryFireArtillery(EntityUid uid, TransformComponent xform, SpaceArtilleryComponent component)
     {
         if (xform.GridUid == null && !xform.MapUid.HasValue)
+        {
+            return;
+        }
+
+        var parentGrid = xform.GridUid;
+        if (HasComp<SpaceArtilleryDisabledGridComponent>(parentGrid) || !xform.Anchored)
         {
             return;
         }

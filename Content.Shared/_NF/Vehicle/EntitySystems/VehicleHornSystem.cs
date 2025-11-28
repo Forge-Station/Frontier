@@ -15,7 +15,6 @@ public sealed class VehicleHornSystem : EntitySystem
     {
         SubscribeLocalEvent<VehicleHornComponent, ComponentInit>(OnVehicleHornInit);
         SubscribeLocalEvent<VehicleHornComponent, ComponentShutdown>(OnVehicleHornShutdown);
-        SubscribeLocalEvent<VehicleHornComponent, HornActionEvent>(OnHornHonkAction);
     }
 
     /// Horn-only functions
@@ -31,19 +30,5 @@ public sealed class VehicleHornSystem : EntitySystem
     private void OnVehicleHornInit(EntityUid uid, VehicleHornComponent component, ComponentInit args)
     {
         _actions.AddAction(uid, ref component.ActionEntity, out var _, component.Action);
-    }
-
-    /// <summary>
-    /// This fires when the vehicle entity presses the honk action
-    /// </summary>
-    private void OnHornHonkAction(EntityUid uid, VehicleHornComponent vehicle, HornActionEvent args)
-    {
-        if (args.Handled || vehicle.HornSound == null)
-            return;
-
-        // TODO: Need audio refactor maybe, just some way to null it when the stream is over.
-        // For now better to just not loop to keep the code much cleaner.
-        vehicle.HonkPlayingStream = _audio.PlayPredicted(vehicle.HornSound, uid, args.Performer)?.Entity;
-        args.Handled = true;
     }
 }

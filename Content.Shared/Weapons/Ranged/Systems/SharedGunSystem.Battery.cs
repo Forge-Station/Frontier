@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2022 Kara
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 beck-thompson
+// SPDX-FileCopyrightText: 2025 bitcrushing
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Shared.Examine;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
@@ -35,17 +43,24 @@ public abstract partial class SharedGunSystem
         component.Shots = state.Shots;
         component.Capacity = state.MaxShots;
         component.FireCost = state.FireCost;
-        UpdateAmmoCount(uid, prediction: false);
+
+        if (component is HitscanBatteryAmmoProviderComponent hitscan && state.Prototype != null) // Shitmed Change
+            hitscan.HitscanEntityProto = state.Prototype; // Mono - Changed to HitscanEntityProto
     }
 
     private void OnBatteryGetState(EntityUid uid, BatteryAmmoProviderComponent component, ref ComponentGetState args)
     {
-        args.State = new BatteryAmmoProviderComponentState()
+        var state = new BatteryAmmoProviderComponentState() // Shitmed Change
         {
             Shots = component.Shots,
             MaxShots = component.Capacity,
             FireCost = component.FireCost,
         };
+
+        if (TryComp<HitscanBatteryAmmoProviderComponent>(uid, out var hitscan)) // Shitmed Change
+            state.Prototype = hitscan.HitscanEntityProto; // Mono - Changed to HitscanEntityProto
+
+        args.State = state; // Shitmed Change
     }
 
     private void OnBatteryExamine(EntityUid uid, BatteryAmmoProviderComponent component, ExaminedEvent args)
@@ -67,7 +82,7 @@ public abstract partial class SharedGunSystem
             component.Shots--;
         }
 
-        TakeCharge((uid, component));
+        TakeCharge(uid, component);
         UpdateBatteryAppearance(uid, component);
         Dirty(uid, component);
     }
@@ -81,9 +96,9 @@ public abstract partial class SharedGunSystem
     /// <summary>
     /// Update the battery (server-only) whenever fired.
     /// </summary>
-    protected virtual void TakeCharge(Entity<BatteryAmmoProviderComponent> entity)
+    protected virtual void TakeCharge(EntityUid uid, BatteryAmmoProviderComponent component)
     {
-        UpdateAmmoCount(entity, prediction: false);
+        UpdateAmmoCount(uid, prediction: false);
     }
 
     protected void UpdateBatteryAppearance(EntityUid uid, BatteryAmmoProviderComponent component)
@@ -104,7 +119,8 @@ public abstract partial class SharedGunSystem
                 var ent = Spawn(proj.Prototype, coordinates);
                 return (ent, EnsureShootable(ent));
             case HitscanBatteryAmmoProviderComponent hitscan:
-                return (null, ProtoManager.Index<HitscanPrototype>(hitscan.Prototype));
+                var hitscanEnt = Spawn(hitscan.HitscanEntityProto);
+                return (hitscanEnt, EnsureShootable(hitscanEnt));
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -116,5 +132,6 @@ public abstract partial class SharedGunSystem
         public int Shots;
         public int MaxShots;
         public float FireCost;
+        public string? Prototype;
     }
 }

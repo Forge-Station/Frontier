@@ -9,8 +9,8 @@ using Robust.Client.UserInterface;
 using Robust.Shared.Input;
 using Robust.Shared.Timing;
 using Content.Shared._NF.Radar;
-using Content.Client._NF.Radar;
 using Content.Client.Station;
+using Content.Client._NF.Radar;
 
 // Purposefully colliding with base namespace.
 namespace Content.Client.Shuttles.UI;

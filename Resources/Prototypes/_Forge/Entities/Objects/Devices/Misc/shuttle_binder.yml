@@ -1,0 +1,83 @@
+- type: entity
+  parent: BaseItem
+  id: ShuttleTransmitter
+  name: shuttle transmitter
+  description: A device that can be linked to navigation beacons and installed on shuttles for automated return.
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/signaller.rsi
+    state: signaller
+  - type: UseDelay
+  - type: StaticPrice
+    price: 40
+  - type: ShuttleTransmitter
+
+- type: entity
+  parent: BaseItem
+  id: ShuttleExpeditionBeacon
+  name: shuttle beacon
+  description: A navigation beacon that shuttles can lock onto for automated return.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/station_beacon.rsi
+    layers:
+    - state: blink
+      map: ["base"]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.NavMapBeaconVisuals.Enabled:
+        base:
+          True: {state: blink}
+          False: {state: icon}
+  - type: Item
+    size: Small
+  - type: Anchorable
+  - type: CollideOnAnchor
+  - type: Physics
+    canCollide: false
+    bodyType: static
+  - type: Transform
+    anchored: true
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger: # for nukes
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+            params:
+              volume: -8
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 1
+              max: 1
+          offset: 0
+        - !type:DoActsBehavior
+          acts: ["Breakage"]
+  - type: StaticPrice
+    price: 40
+  - type: ShuttleBeacon
+
+- type: entity
+  parent: ShuttleExpeditionBeacon
+  id: ShuttleExpeditionBeaconPOI
+  suffix: POI
+  components:
+  - type: Godmode
+  - type: DisableToolUse
+    anchoring: True

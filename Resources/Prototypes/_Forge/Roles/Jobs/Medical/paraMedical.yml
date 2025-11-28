@@ -50,14 +50,10 @@
 - type: startingGear
   id: ParaMedicalGear
   equipment:
-    belt: ClothingBeltMedicalEMTFilled
-    pocket1: WeaponShotgunKD12Medic
-    pocket2: BoxBeanbagKS23
+    pocket1: ToolboxParamed
   storage:
     back:
     - NFBoxSurvivalExtended
-    - PaperWrittenMedic
-    - DefibrillatorCompact
     - MedTekCartridge
 
 #- type: startingGear

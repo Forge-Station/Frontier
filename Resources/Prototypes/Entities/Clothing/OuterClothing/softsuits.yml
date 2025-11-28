@@ -54,8 +54,8 @@
         Shock: 0.6
         Caustic: 0.6
   - type: ClothingSpeedModifier  # Corvax-Forge: Armor rebalance
-    walkModifier: 1
-    sprintModifier: 1
+    walkModifier: 0.8
+    sprintModifier: 0.8
 
 #Emergency EVA
 - type: entity
@@ -135,8 +135,8 @@
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 0.85
+    sprintModifier: 0.85
   - type: HeldSpeedModifier
   - type: TemperatureProtection
     heatingCoefficient: 0.1
@@ -144,12 +144,12 @@
   - type: Armor
     modifiers:
       coefficients:
-        Radiation: 0.75 #CorvaxFrontier
-        Caustic: 0.5 #CorvaxFrontier
-        Blunt: 0.80 #CorvaxFrontier
-        Slash: 0.80 #CorvaxFrontier
-        Piercing: 0.75 #CorvaxFrontier
-        Heat: 0.8 #CorvaxFrontier
+        Radiation: 0.85 #CorvaxFrontier
+        Caustic: 0.85 #CorvaxFrontier
+        Blunt: 0.90 #CorvaxFrontier
+        Slash: 0.90 #CorvaxFrontier
+        Piercing: 0.85 #CorvaxFrontier
+        Heat: 0.9 #CorvaxFrontier
   - type: GroupExamine
   - type: StealTarget
     stealGroup: ClothingOuterHardsuitVoidParamed

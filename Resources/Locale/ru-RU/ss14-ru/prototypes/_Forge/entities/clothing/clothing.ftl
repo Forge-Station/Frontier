@@ -40,16 +40,16 @@ ent-ClothingUniformJumpsuitFormalSpecOper = офицерская парадна�
 ent-ClothingHeadHatSpecOper = офицерская фуражка
     .desc = Фуражка строгого кроя с эмблемой флота. Знак авторитета.
 
-ent-ClothingOuterCoatSpecOperGreatcoat = Бронированная шинель офицера
+ent-ClothingOuterCoatSpecOperGreatcoat = бронированная шинель офицера
     .desc = Усиленная шинель из плотной ткани с вшитыми бронепластинами. Совмещает защиту и офицерский авторитет.
 
-ent-ClothingUniformJumpsuitCasualCentcom = Повседневный комбинезон ЦентКома
+ent-ClothingUniformJumpsuitCasualCentcom = повседневный комбинезон ЦентКома
 
-ent-ClothingUniformJumpsuitNanotrasenRepresentative = Комбинезон Представителя NanoTrasen
+ent-ClothingUniformJumpsuitNanotrasenRepresentative = комбинезон представителя NanoTrasen
 
-ent-ClothingUniformJumpskirtNanotrasenRepresentative = Юбка-комбинезон Представителя NanoTrasen
+ent-ClothingUniformJumpskirtNanotrasenRepresentative = юбка-комбинезон Представителя NanoTrasen
 
-ent-CentcomAgentSkirt = Юбка агента ЦентКома
+ent-CentcomAgentSkirt = юбка агента ЦентКома
 
 ent-ClothingBackpackMessengerCentcom = мессенджер ЦК
 
@@ -102,3 +102,12 @@ ent-ClothingHandsGlovesCombatUpgrade = усиленные боевые перч�
 
 ent-ClothingBackpackSyndicateRaidBundle = { ent-ClothingBackpackSyndicate }
     .desc = { ent-ClothingBackpackSyndicate.desc }
+
+ent-ClothingUniformJumpsuitParamedicOld = { ent-ClothingUniformJumpsuitParamedic }
+    .desc = { ent-ClothingUniformJumpsuitParamedic.desc }
+ent-ClothingUniformJumpskirtParamedicOld = { ent-ClothingUniformJumpskirtParamedic }
+    .desc = { ent-ClothingUniformJumpskirtParamedic.desc }
+ent-ClothingUniformJumpsuitVirologyOld = { ent-ClothingUniformJumpsuitVirology }
+    .desc = { ent-ClothingUniformJumpsuitVirology.desc }
+ent-ClothingUniformJumpskirtVirologyOld = { ent-ClothingUniformJumpskirtVirology }
+    .desc = { ent-ClothingUniformJumpskirtVirology.desc }

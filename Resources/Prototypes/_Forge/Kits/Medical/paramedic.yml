@@ -1,0 +1,123 @@
+- type: entity
+  id: ToolboxParamed
+  name: медицинский ящик неопределённости
+  description: Что же взять на этот раз?
+  parent: [ BaseItem ]
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Misc/Paramedbox.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - ParamedNonlethalSet
+    - ParamedChemicalSet
+    - ParamedDisablerSet
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+
+- type: entity
+  id: ToolboxParamedAdvanced
+  name: продвинутый медицинский ящик неопределённости
+  description: Что же взять на этот раз?
+  parent: [ BaseItem ]
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Misc/Paramedbox.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - ParamedAdvancedLethalSet
+    - ParamedAdvancedLaserSet
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+
+- type: thiefBackpackSet
+  id: ParamedNonlethalSet
+  name: thief-backpack-category-nonlethal-name
+  description: thief-backpack-category-nonlethal-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/Shotguns/kd12.rsi
+    state: icon
+  content:
+  - WeaponShotgunKD12Medic
+  - BoxBeanbagKS23
+  - PaperWrittenMedicKd12
+  - JetpackParamedFilled
+  - ClothingOuterHardsuitVoidParamed
+  - DefibrillatorCompact
+  - ClothingShoesBootsMagParamed
+
+- type: thiefBackpackSet
+  id: ParamedChemicalSet
+  name: thief-backpack-category-chemical-name
+  description: thief-backpack-category-chemical-description
+  sprite:
+    sprite: _NF/Structures/Machines/medical_assembler.rsi
+    state: icon
+  content:
+  - MedicalAssemblerFlatpack
+  - MedkitAdvancedFilled
+  - PaperWrittenMedic
+  - JetpackParamedFilled
+  - ClothingOuterHardsuitVoidParamed
+  - DefibrillatorCompact
+  - ClothingShoesBootsMagParamed
+
+- type: thiefBackpackSet
+  id: ParamedDisablerSet
+  name: thief-backpack-category-disabler-name
+  description: thief-backpack-category-disabler-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Battery/disabler.rsi
+    state: base
+  content:
+  - NFWeaponEnergyPistolDisabler
+  - Zipties
+  - Zipties
+  - PaperWrittenMedic
+  - JetpackParamedFilled
+  - ClothingOuterHardsuitVoidParamed
+  - DefibrillatorCompact
+  - ClothingShoesBootsMagParamed
+
+- type: thiefBackpackSet
+  id: ParamedAdvancedLethalSet
+  name: thief-backpack-category-DOC-lethal-name
+  description: thief-backpack-category-DOC-lethal-description
+  sprite:
+    sprite: _DV/Objects/Weapons/Guns/Pistols/pollock.rsi
+    state: base
+  content:
+  - NFWeaponPistolPollockHighCapacityMag
+  - NFMagazineHighCapacityPistol35
+  - NFMagazineHighCapacityPistol35
+  - JetpackParamedFilled
+  - ClothingOuterHardsuitDOC
+  - DefibrillatorCompact
+  - ClothingShoesBootsMagParamed
+  - MedicalAppraisalTool
+
+- type: thiefBackpackSet
+  id: ParamedAdvancedLaserSet
+  name: thief-backpack-category-DOC-laser-name
+  description: thief-backpack-category-DOC-laser-description
+  sprite:
+    sprite: Forge/Objects/Weapons/Guns/Battery/DOC.rsi
+    state: base
+  content:
+  - WeaponDOCLaserPistol
+  - JetpackParamedFilled
+  - ClothingOuterHardsuitDOC
+  - DefibrillatorCompact
+  - ClothingShoesBootsMagParamed
+  - MedicalAppraisalTool

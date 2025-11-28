@@ -6,7 +6,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared._NF.Vehicle.Components;
 
 /// <summary>
-/// 
+///
 /// </summary>
 [RegisterComponent, NetworkedComponent]
 [Access(typeof(VehicleHornSystem))]

@@ -6,6 +6,15 @@ namespace Content.Server.Weapons.Ranged.Systems;
 
 public sealed partial class GunSystem
 {
+    /// <summary>
+    /// Adds ammo to a ballistic ammo provider by incrementing UnspawnedCount.
+    /// </summary>
+    public void AddBallisticAmmo(EntityUid uid, BallisticAmmoProviderComponent component, int amount = 1)
+    {
+        component.UnspawnedCount += amount;
+
+        DirtyField(uid, component, nameof(BallisticAmmoProviderComponent.UnspawnedCount));
+    }
     protected override void Cycle(EntityUid uid, BallisticAmmoProviderComponent component, MapCoordinates coordinates)
     {
         EntityUid? ent = null;
