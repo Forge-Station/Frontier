@@ -8,7 +8,7 @@
   components:
   - type: Clickable
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: Forge/Structures/stairs.rsi
     state: stairs_steel
     drawdepth: FloorTiles
   - type: Transform
@@ -52,7 +52,7 @@
   suffix: White
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: Forge/Structures/stairs.rsi #Corvax-Forge: retexture
     state: stairs_white
     drawdepth: FloorTiles
 
@@ -72,7 +72,7 @@
   suffix: Dark
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: Forge/Structures/stairs.rsi #Corvax-Forge: retexture
     state: stairs_dark
     drawdepth: FloorTiles
 

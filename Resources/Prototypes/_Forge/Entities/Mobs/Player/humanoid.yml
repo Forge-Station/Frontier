@@ -754,8 +754,8 @@
     outerClothing: ClothingOuterHardsuitCBURN
     shoes: ClothingShoesBootsMagAdv
     id: CBURNPDA
-    pocket1: RadioHandheldNF # Frontier: RadioHandheld<RadioHandheldNF
-    pocket2: NFWeaponEnergyPistolLaser # Frontier: WeaponLaserGun<NFWeaponEnergyPistolLaser
+    pocket1: RadioHandheldNF
+    pocket2: NFWeaponEnergyPistolLaser
     belt: ClothingBeltBandolier
   storage:
     back:
@@ -768,3 +768,50 @@
     - PillAmbuzol
   inhand:
    - WeaponCaseLongAD12
+
+# Флот УСФ
+- type: startingGear
+  id: MSFAdmiralGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNavyGold
+    shoes: ClothingShoesBootsJack
+    head: ClothingHeadHatBeretCommander
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesHeavyGoldenTrim
+    id: MSFAdmiralPDA
+    ears: ClothingHeadsetCentCom
+    pocket1: RubberStampMSFAdmiral
+    pocket2: MindShieldImplanter
+    back: ClothingBackpackSatchelLeather
+    belt: ClothingBeltOfficerSheathFilled
+    wallet: ClothingWalletLeatherBlack
+
+- type: startingGear
+  id: MSFNavyRepGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNanotrasenRepresentative
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatBeretCommander
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesHeavyGoldenTrim
+    outerClothing: ClothingOuterVest
+    id: MSFRepPDA
+    ears: ClothingHeadsetCentCom
+    pocket1: NFWeaponEnergyPistolPulse
+    pocket2: MindShieldImplanter
+    back: ClothingBackpackSatchelLeather
+    belt: ClothingBeltOfficerSheathFilled
+    wallet: ClothingWalletLeatherBlack
+
+- type: startingGear
+  id: MSFOperatorGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficer
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesSr
+    id: MSFOperatorPDA
+    ears: ClothingHeadsetCentCom
+    pocket2: MindShieldImplanter
+    back: ClothingBackpackSatchelLeather
+    wallet: ClothingWalletLeatherBlack

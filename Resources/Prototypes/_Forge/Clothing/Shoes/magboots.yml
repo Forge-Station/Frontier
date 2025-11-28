@@ -1,8 +1,8 @@
 - type: entity
   parent: [ClothingShoesBootsMagBase, BaseJetpack, BaseC3SyndicateContraband, ClothingShoesBootsCombat]
   id: ClothingShoesBootsMagSyndieElite
-  name: элитные магнитные сапоги
-  description: Магнитные ботинки с обратной конструкцией, которые, по-видимому, основаны на усовершенствованной модели, поскольку обладают более легким магнитным притяжением. Собственность Мародёров Горлекса.
+  name: elite syndicate magboots
+  description: Magnetic boots with a unique design, which appear to be based on an improved model, as they have a lighter magnetic attraction. Property of the Gorlex Marauders.
   components:
   - type: Sprite
     sprite: Forge/Clothing/Shoes/Boots/magboots-syndicate-elite.rsi
@@ -27,9 +27,6 @@
     magbootsAlert: MagbootsSyndElite
   - type: Jetpack
     radarBlip: false
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepHeavySuit
 
 - type: alert
   id: MagbootsSyndElite
@@ -42,8 +39,8 @@
 - type: entity
   parent: [ClothingShoesBootsMagBase, BaseJetpack, ClothingShoesBootsCombat, BaseC3Contraband, ContrabandClothing ]
   id: ClothingShoesBootsMagContractor
-  name: магнитные сапоги DCN™
-  description: Магнитные ботинки с обратной конструкциыей, которые, по-видимому, основаны на усовершенствованной модели, поскольку обладают более легким магнитным притяжением.
+  name: DCN™ magboots
+  description: Magnetic boots with a unique design, which appear to be based on an improved model, as they have a lighter magnetic attraction.
   components:
   - type: Sprite
     sprite: Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
@@ -234,3 +231,29 @@
     state: icon-on
   name: alerts-magboots-name
   description: alerts-m
+
+
+- type: entity
+  parent: [ClothingShoesBootsMag, BaseC1Contraband] #Corvax-Frontier КБ
+  id: ClothingShoesBootsMagParamed
+  name: Paramedic magboots
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/paramed_magboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/paramed_magboots.rsi
+  - type: Magboots
+    magbootsAlert: MagbootsParamed
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.9
+
+
+- type: alert
+  id: MagbootsParamed
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/paramed_magboots.rsi
+    state: icon-on
+  name: alerts-magboots-name
+  description: alerts-magboots-desc

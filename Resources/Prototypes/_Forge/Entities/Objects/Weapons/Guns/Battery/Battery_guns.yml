@@ -36,21 +36,16 @@
     proto: ForgeBulletPulseSniper
     fireCost: 1000
 
-- type: hitscan
+- type: entity
+  parent: Pulse
   id: PulseSniper
-  damage:
-    types:
-      Heat: 100
-      Structural: 1000
-  muzzleFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_blue
-  travelFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam_blue
-  impactFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_blue
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 100
+        Structural: 1000
 
 #- type: entity
 #  name: Owl
@@ -106,21 +101,26 @@
     maxOffset: 3
     pvsIncrease: 0.3
 
-- type: hitscan
+- type: entity
+  parent: BasicHitscan
   id: SniperSign
-  damage:
-    types:
-      Heat: 51
-      Structural: 80
-  muzzleFlash:
-    sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
-    state: muzzle_sign
-  travelFlash:
-    sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
-    state: sign
-  impactFlash:
-    sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
-    state: impact_sign
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 51
+        Structural: 80
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+      state: muzzle_sign
+    travelFlash:
+      sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+      state: sign
+    impactFlash:
+      sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+      state: impact_sign
 
 - type: entity
   id: WeaponSyndieEnergyRifleCarbine
@@ -218,7 +218,7 @@
     startingCharge: 2400
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 12
+    autoRechargeRate: 15
   - type: NFWeaponDetails
     class: weapon-details-class-assault-rifle
 
@@ -274,7 +274,8 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 15
+        Heat: 16
+        Radiation: 4
 
 - type: entity
   id: BulletLaserSyndie
@@ -285,7 +286,8 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 10
+        Heat: 11
+        Radiation: 3
 
 - type: entity
   id: WeaponSyndieEnergyFalconPistolLaser
@@ -405,3 +407,22 @@
   - type: Battery
     maxCharge: 40000
     startingCharge: 40000
+
+- type: entity
+  id: WeaponDOCLaserPistol
+  parent: [ BaseWeaponEnergyPistolFireModesSyndie, BaseWeaponFrameEnergyPistolSyndie, BaseC1Contraband ]
+  name: DOC pistol
+  description: |-
+    Powerful laser pistol specially designed by Vitezstvi for the Director of Care
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Battery/DOC.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Battery/DOC.rsi
+  - type: Battery
+    maxCharge: 1200
+    startingCharge: 1200
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 35
+  - type: Tag

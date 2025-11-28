@@ -1,0 +1,84 @@
+- type: entity
+  parent: IDCardStandard
+  id: CentcomIDCardMSFAdmiral
+  name: ID карта адмирала УСФ
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: job-title-msf-admiral
+    jobIcon: JobIconAdmin
+  - type: Access
+    groups:
+    - AllAccess
+    - Silicon
+    tags:
+    - CentralCommand
+    - NuclearOperative
+    - SyndicateAgent
+    - Wizard
+    - Xenoborg
+    - Pirate
+
+- type: entity
+  parent: IDCardStandard
+  id: CentcomIDCardMSFSpecOpsOfficer
+  name: ID карта офицера спец. операций
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: job-title-msf-specops-officer
+    jobIcon: JobIconNanotrasen
+  - type: Access
+    groups:
+    - AllAccess
+    - Silicon
+    tags:
+    - CentralCommand
+
+- type: entity
+  parent: IDCardStandard
+  id: CentcomIDCardMSFOperator
+  name: ID карта оператора УСФ
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: job-title-msf-operator
+    jobIcon: JobIconNanotrasen
+  - type: Access
+    groups:
+    - AllAccess
+    - Silicon
+    tags:
+    - CentralCommand
+
+- type: entity
+  parent: IDCardStandard
+  id: CentcomIDCardMSFRep
+  name: ID карта представителя флота
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: job-title-msf-rep
+    jobIcon: JobIconNanotrasen
+  - type: Access
+    groups:
+    - AllAccess
+    - Silicon
+    tags:
+    - CentralCommand

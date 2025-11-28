@@ -11,3 +11,8 @@ forge-job-name-smugglerbodyguard = Телохранитель
 forge-job-name-stormtrooper = Штурмовик
 # paraMedical
 forge-job-name-paramedical = Парамедик
+
+job-title-msf-admiral = адмирал УСФ
+job-title-msf-specops-officer = офицер спец. операций
+job-title-msf-operator = оператор УСФ
+job-title-msf-rep = представитель флота

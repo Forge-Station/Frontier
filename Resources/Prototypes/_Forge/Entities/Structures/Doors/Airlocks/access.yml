@@ -1,0 +1,10 @@
+- type: entity
+  parent: AirlockHatch
+  id: AirlockHatchCentComLocked
+  name: герметичный люк
+  description: Он открывается, он закрывается, и он может вас раздавить.
+  suffix: CentCom, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCentralCommand ]

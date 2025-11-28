@@ -22,13 +22,13 @@ using System.Linq;
 using Content.Shared.Physics;
 using System.Numerics;
 using Content.Server._Mono.SpaceArtillery;
+using Content.Server._Mono.SpaceArtillery.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Shuttles.Components;
 using Robust.Shared.Timing;
 using Content.Shared.Interaction;
 using Content.Shared._Mono.ShipGuns;
 using Content.Shared.Examine;
-using Content.Shared.UserInterface;
 using Content.Server.Salvage.Expeditions;
 
 namespace Content.Server._Mono.FireControl;
@@ -404,6 +404,7 @@ public sealed partial class FireControlSystem : EntitySystem
             return;
 
         var targetCoords = GetCoordinates(coordinates);
+        var artilleryFired = false; // Track if any artillery weapons fired
 
         foreach (var weapon in weapons)
         {
@@ -455,8 +456,15 @@ public sealed partial class FireControlSystem : EntitySystem
             if (!CanFireInDirection(localWeapon, weaponPos, direction, targetPos.Position, weaponX.MapID))
                 continue;
 
+            var isArtillery = HasComp<SpaceArtilleryComponent>(localWeapon);
+
             // If we can fire, fire the weapon
             _gun.AttemptShoot(localWeapon, localWeapon, gun, targetCoords);
+
+            if (isArtillery)
+            {
+                artilleryFired = true;
+            }
         }
     }
 
