@@ -233,7 +233,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 118 # expl + structural? no no no
+        Structural: 168 # expl + structural? no no no
         Blunt: 66
         Piercing: 141
   - type: Sprite
@@ -268,7 +268,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 132
+        Structural: 192
         Blunt: 76
         Piercing: 163
   - type: TriggerOnCollide
@@ -276,7 +276,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    totalIntensity: 7
+    totalIntensity: 25
     intensitySlope: 3
     maxIntensity: 25
 
@@ -289,6 +289,6 @@
   - type: Projectile
     damage:
       types:
-        Structural: 182
+        Structural: 222
         Blunt: 96
         Piercing: 183
