@@ -1,38 +1,44 @@
 {
-    "version": 1,
-    "license": "CC-BY-NC-SA-3.0",
-    "copyright": "Made by _starch_ (discord) and kyres1, Edit original sprite to APHE and ABCPC version by Adachi for Forge",
-    "size": {
-        "x": 32,
-        "y": 32
+  "version": 1,
+  "license": "CC-BY-NC-SA-3.0",
+  "copyright": "Made by _starch_ (discord), and kyres1 | Edit original sprite to APHE and APCBC version by Adachi for Forge",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "20mm"
     },
-    "states": [
-        {
-            "name": "20mm"
-        },
-        {
-            "name": "20aphe"
-        },
-        {
-            "name": "20apcbc"
-        },
-        {
-            "name": "30mm"
-        },
-        {
-            "name": "30aphe"
-        },
-        {
-            "name": "30apcbc"
-        },
-        {
-            "name": "57mm"
-        },
-        {
-            "name": "57aphe"
-        },
-        {
-            "name": "57apcbc"
-        }
-    ]
+    {
+      "name": "20aphe"
+    },
+    {
+      "name": "20apcbc"
+    },
+    {
+      "name": "30mm"
+    },
+    {
+      "name": "30aphe"
+    },
+    {
+      "name": "30apcbc"
+    },
+    {
+      "name": "57mm"
+    },
+    {
+      "name": "57aphe"
+    },
+    {
+      "name": "57apcbc"
+    },
+    {
+      "name": "research-aphe"
+    },
+    {
+      "name": "research-apcbc"
+    }
+  ]
 }

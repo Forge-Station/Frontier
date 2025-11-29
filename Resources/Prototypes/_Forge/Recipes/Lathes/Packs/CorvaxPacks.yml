@@ -452,13 +452,30 @@
   - ForgeAmmoDrum20mmBase
   - ForgeAmmoDrum30mmBase
   - ForgeMagazine57mmBase
+  - ForgeAmmoDrum20mmAPCBC
+  - ForgeAmmoDrum30mmAPCBC
+  - ForgeMagazine57mmAPCBC
   - FRecMagazine90mmWeak
   - FRecTovekCartridge
   - FRec150mmEmpShell
 
 - type: latheRecipePack
-  id: ForgePackShipAmmoNfsd
+  id: ForgePackNfsd
   recipes:
+  - NFClothingBackpackElectropack
+  - JetpackNfsd
+  - FRecClothingOuterHardsuitNfsdBronze
+  - FRecClothingOuterHardsuitNfsdSilver
+  - FRecClothingOuterHardsuitNfsdCombat
+  - FRecClothingOuterHardsuitNfsdCommand
+  - FRecClothingOuterHardsuitNfsdExperimental
+  - FRecClothingShoesBootsMagNFSD
+  - FRecClothingShoesBootsMagAdvsPromax
+  - FRecAdvancedRadarConsoleCircuitboard
+  - FRecComputerIFFCircuitboar
+  - ForgeAmmoDrum20mmAPHE
+  - ForgeAmmoDrum30mmAPHE
+  - ForgeMagazine57mmAPHE
   - FRec203mmCartridge
   - FRec220mmCartridge
   - FRec255mmCartridge

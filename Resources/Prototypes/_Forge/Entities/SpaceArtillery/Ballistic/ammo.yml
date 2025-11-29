@@ -248,7 +248,7 @@
   parent: Magazine30mm
   components:
   - type: Sprite
-    sprite: Forge/Objects/SpaceArtillery/magazine_20mm.rsi
+    sprite: Forge/Objects/SpaceArtillery/magazine_30mm.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -279,7 +279,7 @@
   parent: Magazine30mm
   components:
   - type: Sprite
-    sprite: Forge/Objects/SpaceArtillery/magazine_20mm.rsi
+    sprite: Forge/Objects/SpaceArtillery/magazine_30mm.rsi
     layers:
     - state: aphe
       map: ["enum.GunVisualLayers.Base"]
@@ -309,7 +309,7 @@
   parent: Magazine30mm
   components:
   - type: Sprite
-    sprite: Forge/Objects/SpaceArtillery/magazine_20mm.rsi
+    sprite: Forge/Objects/SpaceArtillery/magazine_30mm.rsi
     layers:
     - state: apcbc
       map: ["enum.GunVisualLayers.Base"]
@@ -339,7 +339,7 @@
   parent: Magazine57mm
   components:
   - type: Sprite
-    sprite: Forge/Objects/SpaceArtillery/magazine_20mm.rsi
+    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -369,7 +369,7 @@
   parent: Magazine57mm
   components:
   - type: Sprite
-    sprite: Forge/Objects/SpaceArtillery/magazine_20mm.rsi
+    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
     layers:
     - state: aphe
       map: ["enum.GunVisualLayers.Base"]
@@ -399,7 +399,7 @@
   parent: Magazine57mm
   components:
   - type: Sprite
-    sprite: Forge/Objects/SpaceArtillery/magazine_20mm.rsi
+    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
     layers:
     - state: apcbc
       map: ["enum.GunVisualLayers.Base"]

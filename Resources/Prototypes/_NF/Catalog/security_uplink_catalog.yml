@@ -68,42 +68,43 @@
         - SeniorOfficer
         - Sheriff
 
-- type: listing
-  id: UplinkSecurityCombatHardsuit
-  name:  uplink-security-hardsuit-combat-name
-  description: uplink-security-hardsuit-combat-desc
-  productEntity: ClothingOuterHardsuitNfsdCombat
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 7 # Corvax-Forge: Armor rebalance
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityCommandHardsuit
-  name:  uplink-security-hardsuit-commmand-name
-  description: uplink-security-hardsuit-commmand-desc
-  productEntity: ClothingOuterHardsuitNfsdCommand
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_command.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 13 # Corvax-Forge: Armor rebalance
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+# Forge-change: move to NFSD rnd-server
+#- type: listing
+#  id: UplinkSecurityCombatHardsuit
+#  name:  uplink-security-hardsuit-combat-name
+#  description: uplink-security-hardsuit-combat-desc
+#  productEntity: ClothingOuterHardsuitNfsdCombat
+#  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi, state: icon }
+#  cost:
+#    FrontierUplinkCoin: 7 # Corvax-Forge: Armor rebalance
+#  categories:
+#    - UplinkSecurityHardsuits
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+#
+#- type: listing
+#  id: UplinkSecurityCommandHardsuit
+#  name:  uplink-security-hardsuit-commmand-name
+#  description: uplink-security-hardsuit-commmand-desc
+#  productEntity: ClothingOuterHardsuitNfsdCommand
+#  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_command.rsi, state: icon }
+#  cost:
+#    FrontierUplinkCoin: 13 # Corvax-Forge: Armor rebalance
+#  categories:
+#    - UplinkSecurityHardsuits
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+#    - !type:BuyerJobCondition
+#      whitelist:
+#        - Bailiff
+#        - SeniorOfficer
+#        - Sheriff
 
 # - type: listing                                # Corvax-Forge: Armor rebalance
 #   id: UplinkSecurityHardsuitSheriff
@@ -123,25 +124,25 @@
 #     - !type:BuyerJobCondition
 #       whitelist:
 #         - Sheriff
-
-- type: listing
-  id: UplinkSecurityHardsuitSyndieReverseEngineered
-  name:  uplink-security-hardsuit-experimental-name
-  description: uplink-security-hardsuit-experimental-desc
-  productEntity: ClothingOuterHardsuitNfsdExperimental
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 40
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
+#
+#- type: listing
+#  id: UplinkSecurityHardsuitSyndieReverseEngineered
+#  name:  uplink-security-hardsuit-experimental-name
+#  description: uplink-security-hardsuit-experimental-desc
+#  productEntity: ClothingOuterHardsuitNfsdExperimental
+#  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi, state: icon }
+#  cost:
+#    FrontierUplinkCoin: 40
+#  categories:
+#    - UplinkSecurityHardsuits
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+#    - !type:BuyerJobCondition
+#      whitelist:
+#        - Sheriff
 
 #region weapons
 - type: listing
