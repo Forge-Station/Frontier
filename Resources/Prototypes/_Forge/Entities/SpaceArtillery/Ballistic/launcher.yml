@@ -1,19 +1,14 @@
-# SPDX-FileCopyrightText: 2025 Ilya246
-# SPDX-FileCopyrightText: 2025 kasature90
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: MPL-2.0
-
+# adder, but bad adder
 - type: entity
-  id: WeaponTurretL85Autocannon
-  name: L85 20mm autocannon
+  id: WeaponTurretDeslerScattergun
+  name: ship scatter Desler 40mm
   parent: BallisticArtilleryMagazine
-  description: A light 20mm ballistic autocannon designed for rapid fire and suppressing smaller targets at close range. Cheap, light, and can be remotely activated or linked up to a GCS.
+  description: Twin-barrelled scatter cannon, firing bursts of canister shot to shred any incoming missiles or potential boarders.
   components:
   - type: StaticPrice
     price: 250
   - type: Sprite
-    sprite: _Mono/Objects/ShuttleWeapons/50cal.rsi
+    sprite: Forge/Objects/ShuttleWeapons/adler.rsi
     layers:
     - state: space_artillery
   - type: Appearance
@@ -22,14 +17,14 @@
   - type: GunSignalControl
   - type: WirelessNetworkConnection
     range: 700
-#  - type: DeviceLinkSink # Разве этого нету в базовом прототипе..?
+#  - type: DeviceLinkSink
 #    ports:
-#    - Toggle # К тому же тут неправильныый стоит..
+#    - Toggle
   - type: Gun
-    fireRate: 12
-    projectileSpeed: 160
+    fireRate: 6
+    projectileSpeed: 200
     minAngle: 0
-    maxAngle: 5
+    maxAngle: 9
     shootThermalSignature: 10000 # relatively low for a shipgun, ~693m signature if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/slammer.ogg
@@ -41,19 +36,19 @@
   - type: Actions
   - type: CombatMode
     isInCombatMode: true
-  - type: Airtight
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: ForgeAmmoDrum20mmBase # Forge-change
+        startingItem: Magazine40mm
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - Magazine20mm
+          - Magazine40mm
         whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: Airtight
   - type: Destructible
     thresholds:
     - trigger:
@@ -74,3 +69,27 @@
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Light
+
+# reskin Phalanx L-1 to Phaser AAM "Storm"
+# + another hitscan proto
+- type: entity
+  id: WeaponLaserTurretAAMStorm
+  name: phaser AAM Storm
+  parent: WeaponLaserTurretL1Phalanx
+  description: A light laser gun.
+  components:
+  - type: Battery
+    maxCharge: 5000 # Forge-change: rebalance
+    startingCharge: 5000 # Forge-change: rebalance
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 10 # Forge-change: rebalance
+  - type: HitscanBatteryAmmoProvider
+    proto: PhaserStormLaser
+    fireCost: 25
+  - type: Sprite
+    sprite:  Forge/Objects/ShuttleWeapons/desler.rsi
+    layers:
+    - state: desler-base
+    - state: desler-shaded
+      shader: unshaded

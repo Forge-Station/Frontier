@@ -335,14 +335,14 @@
 - type: technology
   id: ForgeResearchShipAmmoMagazines
   name: forge-research-technology-shipammomagazines
-  entityIcon: Magazine90mmWeak
+  entityIcon: ForgeAmmoDrum20mmBase
   discipline: NFArsenalMercenary
   tier: 1
   cost: 12000
   recipeUnlocks:
-  - FRecMagazine20mmWeak
-  - FRecMagazine30mmWeak
-  - FRecMagazine57mmWeak
+  - ForgeAmmoDrum20mmBase
+  - ForgeAmmoDrum30mmBase
+  - ForgeMagazine57mmBase
   - FRecMagazine90mmWeak
   technologyPrerequisites:
   - ForgeResearchShipAmmoEMP

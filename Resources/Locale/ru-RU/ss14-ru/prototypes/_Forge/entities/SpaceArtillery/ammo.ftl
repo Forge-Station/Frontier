@@ -1,0 +1,42 @@
+ent-ForgeAmmoDrum20mmBase = барабан 20мм
+    .desc = Барабан, предназначенный для корабельных 20мм патронов.
+ent-ForgeAmmoDrum20mmAPHE = барабан 20мм (APHE)
+    .desc = Барабан, предназначенный для корабельных 20мм патронов. Этот помечен красным цветом.. возможно, в нём патроны типа APHE.
+ent-ForgeAmmoDrum20mmAPCBC = барабан 20мм (APCBC)
+    .desc = Барабан, предназначенный для корабельных 20мм патронов. Этот помечен синим цветом.. возможно, в нём патроны типа APCBC.
+
+ent-ForgeAmmoDrum30mmBase = барабан 30мм
+    .desc = Барабан, предназначенный для корабельных 30мм патронов.
+ent-ForgeAmmoDrum30mmAPHE = барабан 30мм (APHE)
+    .desc = Барабан, предназначенный для корабельных 30мм патронов. Этот помечен красным цветом.. возможно, в нём патроны типа APHE.
+ent-ForgeAmmoDrum30mmAPCBC = барабан 30мм (APCBC)
+    .desc = Барабан, предназначенный для корабельных 30мм патронов. Этот помечен синим цветом.. возможно, в нём патроны типа APCBC.
+
+ent-ForgeMagazine57mmBase = барабан 57мм
+    .desc = Барабан, предназначенный для корабельных 57мм снарядов.
+ent-ForgeMagazine57mmAPHE = барабан 57мм (APHE)
+    .desc = Барабан, предназначенный для корабельных 57мм снарядов. Этот помечен красным цветом.. возможно, в нём патроны типа APHE.
+ent-ForgeMagazine57mmAPCBC = барабан 57мм (APCBC)
+    .desc = Барабан, предназначенный для корабельных 57мм снарядов. Этот помечен синим цветом.. возможно, в нём патроны типа APCBC.
+
+# cartridge
+ent-Forge20mmCartridgeBase = патрон 20мм
+    .desc = " "
+ent-Forge20mmCartridgeAPHE = патрон 20мм (APHE)
+    .desc = " "
+ent-Forge20mmCartridgeAPCBC = патрон 20мм (APCBC)
+    .desc = " "
+
+ent-Forge30mmCartridgeBase = патрон 30мм
+    .desc = " "
+ent-Forge30mmCartridgeAPHE = патрон 30мм (APHE)
+    .desc = " "
+ent-Forge30mmCartridgeAPCBC = патрон 30мм (APCBC)
+    .desc = " "
+
+ent-Forge57mmCartridgeBase = снаряд 57мм
+    .desc = " "
+ent-Forge57mmCartridgeAPHE = снаряд 57мм (APHE)
+    .desc = " "
+ent-Forge57mmCartridgeAPCBC = снаряд 57мм (APCBC)
+    .desc = " "

@@ -40,7 +40,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine57mmWeak
+        startingItem: ForgeMagazine57mmBase # Forge-change
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2

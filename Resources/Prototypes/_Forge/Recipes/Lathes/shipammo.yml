@@ -1,7 +1,7 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: FRecMagazine20mmWeak
-  result: Magazine20mmWeak
+  id: ForgeAmmoDrum20mmBase
+  result: ForgeAmmoDrum20mmBase
   materials:
     Steel: 1050
     Plastic: 280
@@ -10,8 +10,8 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: FRecMagazine30mmWeak
-  result: Magazine30mmWeak
+  id: ForgeAmmoDrum30mmBase
+  result: ForgeAmmoDrum30mmBase
   materials:
     Steel: 1500
     Plastic: 320
@@ -20,8 +20,8 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: FRecMagazine57mmWeak
-  result: Magazine57mmWeak
+  id: ForgeMagazine57mmBase
+  result: ForgeMagazine57mmBase
   materials:
     Steel: 1820
     Plastic: 360
