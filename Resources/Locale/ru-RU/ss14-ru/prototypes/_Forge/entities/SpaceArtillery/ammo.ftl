@@ -67,5 +67,5 @@ ent-Forge90mmCartridge = снаряд 90мм
     .desc = " "
 ent-Forge90mmCartridgeAPHE = снаряд 90мм (APHE)
     .desc = " "
-ent-ForgeMagazine90mmAPHEBC = снаряд 90мм (APHEBC)
+ent-Forge90mmCartridgeAPHEBC = снаряд 90мм (APHEBC)
     .desc = " "
