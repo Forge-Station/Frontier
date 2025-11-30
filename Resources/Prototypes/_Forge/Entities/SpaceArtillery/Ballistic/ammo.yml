@@ -314,7 +314,7 @@
 - type: entity
   id: ForgeMagazine90mmAPHE
   name: "90mm ammo drum APHE"
-  parent: Forge90mmCartridge
+  parent: ForgeMagazine90mm
   components:
   - type: Tag
     tags:
@@ -347,7 +347,7 @@
 - type: entity
   id: ForgeMagazine90mmAPHEBC
   name: "90mm ammo drum APHEBC"
-  parent: Forge90mmCartridge
+  parent: ForgeMagazine90mm
   components:
   - type: Tag
     tags:
