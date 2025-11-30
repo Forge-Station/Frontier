@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Numerics;
 using Content.Server._NF.Roles.Systems;
 using Content.Shared._NF.Roles.Components;
 using Robust.Client.GameObjects;
