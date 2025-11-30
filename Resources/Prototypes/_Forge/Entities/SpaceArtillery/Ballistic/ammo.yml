@@ -149,6 +149,7 @@
 # region WIP Forge-frog
 # Base - APHE - APCBC
 
+# region 20mm
 # 20mm base
 - type: entity
   id: ForgeAmmoDrum20mmBase
@@ -241,6 +242,7 @@
   - type: CartridgeAmmo
     proto: Forge20mmBulletAPCBC
 
+# region 30mm
 # 30mm base
 - type: entity
   id: ForgeAmmoDrum30mmBase
@@ -332,6 +334,7 @@
   - type: CartridgeAmmo
     proto: Forge30mmBulletAPCBC
 
+# region 57mm
 # 57mm Base
 - type: entity
   id: ForgeMagazine57mmBase
@@ -421,3 +424,94 @@
     - state: 57apcbc
   - type: CartridgeAmmo
     proto: ForgeDravonAPCBC
+
+# region 90mm
+# 90mm base (тоже взрывается, но слабее.. дя)
+- type: entity
+  id: ForgeMagazine90mm
+  name: "90mm ammo drum"
+  parent: Magazine90mm
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
+    layers:
+    - state: apcbc
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge90mmCartridge
+    capacity: 60
+
+- type: entity
+  id: Forge90mmCartridge
+  name: "cartridge 90mm"
+  parent: 90mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 57apcbc
+  - type: CartridgeAmmo
+    proto: Forge90mmBulletBase
+
+# 90mm APHE
+- type: entity
+  id: ForgeMagazine90mmAPHE
+  name: "90mm ammo drum APHE"
+  parent: Forge90mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
+    layers:
+    - state: apcbc
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge90mmCartridgeAPHE
+    capacity: 60
+
+- type: entity
+  id: Forge90mmCartridgeAPHE
+  name: "cartridge 90mm APHE"
+  parent: Forge90mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 57apcbc
+  - type: CartridgeAmmo
+    proto: Forge90mmBulletAPHE
+
+# 90mm APHEBC
+- type: entity
+  id: ForgeMagazine90mmAPHEBC
+  name: "90mm ammo drum APHEBC"
+  parent: Forge90mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
+    layers:
+    - state: apcbc
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge90mmCartridgeAPHEBC
+    capacity: 60
+
+- type: entity
+  id: Forge90mmCartridgeAPHEBC
+  name: "cartridge 90mm APHEBC"
+  parent: 90mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 57apcbc
+  - type: CartridgeAmmo
+    proto: Forge90mmBulletAPHEBC

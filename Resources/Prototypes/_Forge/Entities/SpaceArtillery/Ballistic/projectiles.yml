@@ -97,7 +97,7 @@
 # APHE - бронебойный, взрывчатка
 # APCBC - повыш. бронебойный, без взрыва
 
-# 20mm
+# region 20mm
 - type: entity
   id: Forge20mmBulletBase
   parent: BaseBullet
@@ -163,7 +163,7 @@
         Blunt: 34
         Piercing: 46
 
-# 30mm
+# region 30mm
 - type: entity
   id: Forge30mmBulletBase
   parent: BaseBullet
@@ -222,7 +222,7 @@
         Blunt: 45
         Piercing: 94
 
-# 57mm Dravon
+# region 57mm
 
 - type: entity
   id: ForgeDravonBase
@@ -259,6 +259,7 @@
 #    maxIntensity: 25
 #    maxTileBreak: 1
 
+# 57mm APHE
 - type: entity
   id: ForgeDravonAPHE
   name: 57mm APHE
@@ -280,6 +281,7 @@
     intensitySlope: 3
     maxIntensity: 25
 
+# 57mm APCBC
 - type: entity
   id: ForgeDravonAPCBC
   name: 57mm APCBC
@@ -292,3 +294,103 @@
         Structural: 222
         Blunt: 96
         Piercing: 183
+
+# region 90mm
+- type: entity
+  id: Forge90mmBulletBase
+  name: 90mm
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+  - type: Projectile
+    damage:
+      types:
+        Structural: 740
+        Blunt: 100
+        Piercing: 250
+  - type: TimedDespawn
+    lifetime: 4.2
+  - type: PointLight
+    color: orange
+    radius: 3.5
+    energy: 0.5
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 1.5
+    requireNoGrid: true
+    shape: triangle
+    radarColor: "#1df1f5"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    totalIntensity: 25
+    intensitySlope: 2
+    maxIntensity: 5
+    maxTileBreak: 1
+
+# 90mm APHE
+- type: entity
+  id: Forge90mmBulletAPHE
+  name: 90mm
+  parent: Forge90mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 960
+        Blunt: 100
+        Piercing: 250
+  - type: TimedDespawn
+    lifetime: 4.2
+  - type: PointLight
+    color: orange
+    radius: 3.5
+    energy: 0.5
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 1.5
+    requireNoGrid: true
+    shape: triangle
+    radarColor: "#1df1f5"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    totalIntensity: 35
+    intensitySlope: 4
+    maxIntensity: 5
+    maxTileBreak: 1
+
+# 90mm APHEBC
+- type: entity
+  id: Forge90mmBulletAPHEBC
+  name: 90mm
+  parent: Forge90mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 1313
+        Blunt: 175
+        Piercing: 293
+  - type: TimedDespawn
+    lifetime: 4.2
+  - type: PointLight
+    color: orange
+    radius: 3.5
+    energy: 0.5
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 1.5
+    requireNoGrid: true
+    shape: triangle
+    radarColor: "#1df1f5"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    totalIntensity: 27
+    intensitySlope: 4
+    maxIntensity: 5
+    maxTileBreak: 1
