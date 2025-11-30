@@ -12,6 +12,7 @@
   name: 220mm auto shell
   description: A chemically-propelled shell for CYREXA 220mm cannons.
   parent: BaseGrenade
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance
   components:
   - type: Tag
     tags:

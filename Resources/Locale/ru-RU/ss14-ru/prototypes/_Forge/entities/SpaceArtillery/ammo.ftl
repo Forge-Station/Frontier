@@ -26,6 +26,21 @@ ent-ForgeMagazine90mmAPHE = барабан 90мм (APHE)
 ent-ForgeMagazine90mmAPHEBC = барабан 90мм (APHEBC)
     .desc = Барабан, предназначенный для корабельных 90мм снарядов. Этот помечен синим цветом.. возможно, в нём снаряды типа APHEBC.
 
+ent-Forge203mmCartridgeHE = снаряд 203мм (HE)
+    .desc = Химический снаряд для орудия «Каргил» калибра 203 мм.
+ent-Forge203mmCartridgeHESH = снаряд 203мм (HESH)
+    .desc = Химический снаряд для орудия «Каргил» калибра 203 мм.
+
+ent-Forge220mmCartridgeHE =  снаряд 220мм (HE)
+    .desc = Химический снаряд для орудия «Цирекса» калибра 220 мм.
+ent-Forge220mmCartridgeHESH = снаряд 220мм (HESH)
+    .desc = Химический снаряд для орудия «Цирекса» калибра 220 мм.
+
+ent-Forge255mmCartridgeHE = снаряд 255мм (HE)
+    .desc = Химический снаряд для орудия «Бофорс» калибра 255 мм.
+ent-Forge255mmCartridgeHESH = снаряд 255мм (HESH)
+    .desc = Химический снаряд для орудия «Бофорс» калибра 255 мм.
+
 # cartridge
 ent-Forge20mmCartridgeBase = патрон 20мм
     .desc = " "

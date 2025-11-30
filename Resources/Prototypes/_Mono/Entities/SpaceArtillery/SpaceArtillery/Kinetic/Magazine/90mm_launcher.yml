@@ -48,13 +48,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine90mmWeak
+        startingItem: ForgeMagazine90mm # Forge-change: rebalance
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - ForgeMagazine90mm # Forge-change
+          - Magazine90mm
         whitelistFailPopup: gun-magazine-whitelist-fail
   - type: Destructible
     thresholds:

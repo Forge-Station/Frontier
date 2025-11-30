@@ -46,7 +46,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: ForgeAmmoDrum30mmBase
+        startingItem: ForgeAmmoDrum30mmBase # Forge-change: rebalance
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2

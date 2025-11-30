@@ -394,3 +394,169 @@
     intensitySlope: 4
     maxIntensity: 5
     maxTileBreak: 1
+
+# region 203mm
+# 203 base = HE
+- type: entity
+  id: Forge203ProjectileHE
+  name: 203mm HE
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 5500
+        Blunt: 6500
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 2, 2
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 2.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 5.15
+  - type: PointLight
+    color: "#fc8c03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 850
+    intensitySlope: 35
+    maxIntensity: 60
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+# 203 HESH
+- type: entity
+  id: Forge203ProjectileHESH
+  name: 203mm HESH
+  parent: Forge203ProjectileHE
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 7000
+        Blunt: 7500
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 850
+    intensitySlope: 35
+    maxIntensity: 75
+
+# region 220mm
+- type: entity
+  id: Forge220ProjectileHE
+  name: 220mm HE
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 8124
+        Blunt: 6983
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 2, 2
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 3.25
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 5.15
+  - type: PointLight
+    color: "#FCBA03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    totalIntensity: 1040
+    intensitySlope: 15
+    maxIntensity: 1520
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+- type: entity
+  id: Forge220ProjectileHESH
+  name: 220mm HESH
+  parent: Forge220ProjectileHE
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 9260
+        Blunt: 6983
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 1300
+    intensitySlope: 18
+    maxIntensity: 1900
+
+# region 255mm
+- type: entity
+  id: Forge255ProjectileHE
+  name: Bofors 255mm projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 9460
+        Blunt: 7244
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 2, 2
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 2.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 5.5
+  - type: PointLight
+    color: "#fc5a03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 1500
+    intensitySlope: 18
+    maxIntensity: 2300
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+- type: entity
+  id: Forge255ProjectileHESH
+  name: 255mm HESH
+  parent: Forge255ProjectileHE
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 10123
+        Blunt: 7444
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 1750
+    intensitySlope: 26
+    maxIntensity: 2600
