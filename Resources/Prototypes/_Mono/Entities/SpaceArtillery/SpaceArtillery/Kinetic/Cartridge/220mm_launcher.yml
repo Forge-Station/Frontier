@@ -72,7 +72,7 @@
     whitelist:
       tags:
       - 220mmCartridge
-    capacity: 24
+    capacity: 12 # Forge-change: rebalance
     proto: Forge220mmCartridgeHE # Forge-change: rebalance
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
