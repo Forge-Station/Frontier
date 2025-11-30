@@ -19,6 +19,13 @@ ent-ForgeMagazine57mmAPHE = барабан 57мм (APHE)
 ent-ForgeMagazine57mmAPCBC = барабан 57мм (APCBC)
     .desc = Барабан, предназначенный для корабельных 57мм снарядов. Этот помечен синим цветом.. возможно, в нём патроны типа APCBC.
 
+ent-ForgeMagazine90mm = барабан 90мм
+    .desc = Барабан, предназначенный для корабельных 90мм снарядов.
+ent-ForgeMagazine90mmAPHE = барабан 90мм (APHE)
+    .desc = Барабан, предназначенный для корабельных 90мм снарядов. Этот помечен красным цветом.. возможно, в нём снаряды типа APHE.
+ent-ForgeMagazine90mmAPHEBC = барабан 90мм (APHEBC)
+    .desc = Барабан, предназначенный для корабельных 90мм снарядов. Этот помечен синим цветом.. возможно, в нём снаряды типа APHEBC.
+
 # cartridge
 ent-Forge20mmCartridgeBase = патрон 20мм
     .desc = " "
@@ -39,4 +46,11 @@ ent-Forge57mmCartridgeBase = снаряд 57мм
 ent-Forge57mmCartridgeAPHE = снаряд 57мм (APHE)
     .desc = " "
 ent-Forge57mmCartridgeAPCBC = снаряд 57мм (APCBC)
+    .desc = " "
+
+ent-Forge90mmCartridge = снаряд 90мм
+    .desc = " "
+ent-Forge90mmCartridgeAPHE = снаряд 90мм (APHE)
+    .desc = " "
+ent-ForgeMagazine90mmAPHEBC = снаряд 90мм (APHEBC)
     .desc = " "

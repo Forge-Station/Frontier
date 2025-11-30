@@ -433,9 +433,9 @@
   parent: Magazine90mm
   components:
   - type: Sprite
-    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
+    sprite: Forge/Objects/SpaceArtillery/magazine_90mm.rsi
     layers:
-    - state: apcbc
+    - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
@@ -452,7 +452,7 @@
   - type: Sprite
     sprite: Forge/Objects/SpaceArtillery/ammo.rsi
     layers:
-    - state: 57apcbc
+    - state: 90mm
   - type: CartridgeAmmo
     proto: Forge90mmBulletBase
 
@@ -463,9 +463,9 @@
   parent: Forge90mmCartridge
   components:
   - type: Sprite
-    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
+    sprite: Forge/Objects/SpaceArtillery/magazine_90mm.rsi
     layers:
-    - state: apcbc
+    - state: aphe
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
@@ -482,7 +482,7 @@
   - type: Sprite
     sprite: Forge/Objects/SpaceArtillery/ammo.rsi
     layers:
-    - state: 57apcbc
+    - state: 90aphe
   - type: CartridgeAmmo
     proto: Forge90mmBulletAPHE
 
@@ -493,9 +493,9 @@
   parent: Forge90mmCartridge
   components:
   - type: Sprite
-    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
+    sprite: Forge/Objects/SpaceArtillery/magazine_90mm.rsi
     layers:
-    - state: apcbc
+    - state: aphebc
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
@@ -512,6 +512,6 @@
   - type: Sprite
     sprite: Forge/Objects/SpaceArtillery/ammo.rsi
     layers:
-    - state: 57apcbc
+    - state: 90aphebc
   - type: CartridgeAmmo
     proto: Forge90mmBulletAPHEBC
