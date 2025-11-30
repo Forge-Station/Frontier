@@ -2,6 +2,7 @@ forge-research-technology-advpromax = продвинутый реверс-инж
 forge-research-technology-battlepromax = боевой реверс-инженеринг магнитного поля
 
 forge-research-technology-shipammoemp = Электромагнитная самооборона
+forge-research-technology-shipammo90 = Убойный калибр
 forge-research-technology-shipammo20apcbc = Бронебойная сила 20-го миллиметра
 forge-research-technology-shipammo30apcbc = Бронебойная сила 30-го миллиметра
 forge-research-technology-shipammo57apcbc = Бронебойная сила 57-го миллиметра
