@@ -341,7 +341,7 @@
         mask:
         - Opaque # Mono
   - type: Ammo
-    muzzleFlash: MuzzleFlashEffectOmnilaser #imp
+    muzzleFlash: NFMuzzleFlashEffectOmnilaser #imp
   - type: StaminaDamageOnCollide
     damage: 38 # Mono
   - type: Projectile
@@ -380,7 +380,7 @@
         mask:
         - Opaque # Mono
   - type: Ammo
-    muzzleFlash: MuzzleFlashEffectOmnilaser #imp
+    muzzleFlash: NFMuzzleFlashEffectOmnilaser #imp
   - type: StaminaDamageOnCollide
     damage: 1
   - type: Projectile
@@ -1058,7 +1058,7 @@
         mask:
         - Opaque # Mono
   - type: Ammo
-    muzzleFlash: MuzzleFlashEffectOmnilaser #imp
+    muzzleFlash: NFMuzzleFlashEffectOmnilaser #imp
   - type: StaminaDamageOnCollide
     damage: 18 # Mono
   - type: Projectile
@@ -1127,7 +1127,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Ammo
-    muzzleFlash: MuzzleFlashEffectOmnilaser
+    muzzleFlash: NFMuzzleFlashEffectOmnilaser
   - type: Sprite
     sprite: _Impstation/Objects/Weapons/Guns/Projectiles/energybolts.rsi #imp
     layers:
@@ -1207,7 +1207,7 @@
         mask:
         - Opaque # Mono
   - type: Ammo
-    muzzleFlash: MuzzleFlashEffectHeavyLaser #imp
+    muzzleFlash: NFMuzzleFlashEffectHeavyLaser #imp
   - type: Projectile
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
