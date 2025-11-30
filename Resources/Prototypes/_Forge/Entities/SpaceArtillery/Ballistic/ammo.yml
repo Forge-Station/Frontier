@@ -432,6 +432,9 @@
   name: "90mm ammo drum"
   parent: Magazine90mm
   components:
+  - type: Tag
+    tags:
+    - Magazine90mm
   - type: Sprite
     sprite: Forge/Objects/SpaceArtillery/magazine_90mm.rsi
     layers:
@@ -462,6 +465,9 @@
   name: "90mm ammo drum APHE"
   parent: Forge90mmCartridge
   components:
+  - type: Tag
+    tags:
+    - Magazine90mm
   - type: Sprite
     sprite: Forge/Objects/SpaceArtillery/magazine_90mm.rsi
     layers:
@@ -492,6 +498,9 @@
   name: "90mm ammo drum APHEBC"
   parent: Forge90mmCartridge
   components:
+  - type: Tag
+    tags:
+    - Magazine90mm
   - type: Sprite
     sprite: Forge/Objects/SpaceArtillery/magazine_90mm.rsi
     layers:
@@ -562,6 +571,9 @@
   id: Forge203mmCartridgeHESH
   parent: Forge203mmCartridgeHE
   components:
+  - type: Tag
+    tags:
+    - 203mmCartridge
   - type: CartridgeAmmo
     proto: Forge203ProjectileHESH
   - type: Sprite
@@ -615,6 +627,9 @@
   id: Forge220mmCartridgeHESH
   parent: Forge220mmCartridgeHE
   components:
+  - type: Tag
+    tags:
+    - 220mmCartridge
   - type: CartridgeAmmo
     proto: Forge220ProjectileHESH
   - type: Sprite
@@ -665,9 +680,12 @@
     damageModifierSet: Metallic
 
 - type: entity
-  id: Forge255mmCartridgeWeakHESH
+  id: Forge255mmCartridgeHESH
   parent: 255mmCartridge
   components:
+  - type: Tag
+    tags:
+    - 255mmCartridge
   - type: CartridgeAmmo
     proto: Forge255ProjectileHESH
   - type: Sprite

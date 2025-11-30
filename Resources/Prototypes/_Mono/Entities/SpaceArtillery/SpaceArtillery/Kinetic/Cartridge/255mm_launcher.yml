@@ -63,9 +63,9 @@
     infiniteUnspawned: true
     whitelist:
       tags:
-      - Forge255mmCartridgeHE # Forge-change: rebalance
+      - 255mmCartridge
     capacity: 8
-    proto: 255mmCartridgeWeak
+    proto: Forge255mmCartridgeHE # Forge-change: rebalance
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: RadarBlip

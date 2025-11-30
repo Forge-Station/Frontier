@@ -71,9 +71,9 @@
     infiniteUnspawned: true
     whitelist:
       tags:
-      - Forge220mmCartridgeHE # Forge-change: rebalance
+      - 220mmCartridge
     capacity: 24
-    proto: 220mmCartridgeWeak
+    proto: Forge220mmCartridgeHE # Forge-change: rebalance
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: ShipGunType

@@ -22,11 +22,11 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 2.5
+    fireRate: 1.5 # Forge-change: rebalance
     projectileSpeed: 170
     minAngle: 0
     maxAngle: 3
-    burstCooldown: 0.5
+    burstCooldown: 0.8 # Forge-change: rebalance
     burstFireRate: 10
     shotsPerBurst: 2
     selectedMode: Burst
