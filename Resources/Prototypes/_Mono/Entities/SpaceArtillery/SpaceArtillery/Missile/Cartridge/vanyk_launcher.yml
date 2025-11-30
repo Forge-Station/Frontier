@@ -11,6 +11,7 @@
   parent: BallisticArtilleryCartridge
   description: An escort missile pod manufactured by Aetherion Dynamics. Launches guided missiles for basic ship-to-ship combat and area denial. Can be remotely activated or linked to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 4000
   - type: Sprite

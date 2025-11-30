@@ -10,6 +10,7 @@
   parent: BallisticArtilleryUnanchorableCartridge
   description: A smaller, more compact railgun that fires a large slug at rapid velocity, capable of big damage to enemy ships. Medium linear accelerator, can be remotely activated or linked up to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 17500
   - type: Sprite

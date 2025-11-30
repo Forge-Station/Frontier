@@ -1,152 +1,3 @@
-# 40mm
-- type: entity
-  id: Magazine40mm
-  name: "40mm ammo drum"
-  parent: [BaseItem, RecyclableItemSteelTiny]
-  components:
-  - type: Tag
-    tags:
-    - Magazine40mm
-  - type: Item
-    size: Small
-  - type: BallisticAmmoProvider
-    proto: 40mmCartridge
-    capacity: 250
-    mayTransfer: true
-    whitelist:
-      tags:
-      - 40mmCartridge
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/SmartGuns/magazine_smart_gun.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
-
-- type: entity
-  id: 40mmCartridge
-  name: cartridge (40mm)
-  parent: [ BaseCartridge, BaseC1Contraband ]
-  components:
-  - type: Tag
-    tags:
-    - Cartridge
-    - 40mmCartridge
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: DeslerSpread
-  - type: Sprite
-    sprite: Forge/Objects/SpaceArtillery/40_shell.rsi
-    layers:
-    - state: 40-shell
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 1
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 250
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:ExplodeBehavior
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 100
-    intensitySlope: 3
-    totalIntensity: 1
-  - type: ExplodeOnTrigger
-  - type: Damageable
-    damageContainer: Inorganic
-    damageModifierSet: Metallic
-
-# 40mm cumul
-- type: entity
-  id: Magazine40mmExpl
-  name: "40mm expl ammo drum"
-  parent: [BaseItem, RecyclableItemSteelTiny]
-  components:
-  - type: Tag
-    tags:
-    - Magazine40mm
-  - type: Item
-    size: Small
-  - type: BallisticAmmoProvider
-    proto: 40mmExplCartridge
-    capacity: 250
-    mayTransfer: true
-    whitelist:
-      tags:
-      - 40mmCartridge
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/SmartGuns/magazine_smart_gun.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
-
-- type: entity
-  id: 40mmExplCartridge
-  name: cartridge (40mm expl)
-  parent: [ BaseCartridge, BaseC1Contraband ]
-  components:
-  - type: Tag
-    tags:
-    - Cartridge
-    - 40mmCartridge
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: DeslerExplSpread
-  - type: Sprite
-    sprite: Forge/Objects/SpaceArtillery/40_shell.rsi
-    layers:
-    - state: 40expl-shell
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 1
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 250
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:ExplodeBehavior
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 100
-    intensitySlope: 3
-    totalIntensity: 1
-  - type: ExplodeOnTrigger
-  - type: Damageable
-    damageContainer: Inorganic
-    damageModifierSet: Metallic
-
-# region WIP Forge-frog
 # Base - APHE - APCBC
 
 # region 20mm
@@ -456,6 +307,9 @@
     sprite: Forge/Objects/SpaceArtillery/ammo.rsi
     layers:
     - state: 90mm
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
   - type: CartridgeAmmo
     proto: Forge90mmBulletBase
 
@@ -489,6 +343,9 @@
     sprite: Forge/Objects/SpaceArtillery/ammo.rsi
     layers:
     - state: 90aphe
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
   - type: CartridgeAmmo
     proto: Forge90mmBulletAPHE
 
@@ -522,6 +379,9 @@
     sprite: Forge/Objects/SpaceArtillery/ammo.rsi
     layers:
     - state: 90aphebc
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
   - type: CartridgeAmmo
     proto: Forge90mmBulletAPHEBC
 

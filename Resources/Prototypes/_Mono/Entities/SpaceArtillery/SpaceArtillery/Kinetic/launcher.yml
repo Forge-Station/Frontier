@@ -21,6 +21,7 @@
   parent: BallisticArtilleryUnanchorable
   description: One of the largest chemical-based kinetic weapons in the sector. Its power is only rivaled by mass drivers such as the M381.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 30000
   - type: Sprite
@@ -103,6 +104,7 @@
   parent: BallisticArtillery
   description: A large, twin-barrelled scatter cannon, firing bursts of canister shot to shred any incoming missiles or potential boarders. Uses a self loading mechanism similar to the anaconda handgun.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 250
   - type: Sprite
@@ -172,6 +174,7 @@
   parent: BallisticArtillery
   description: A heavy 100mm autocannon of syndicate design, created during the corporate war. Made for shattering the hulls of NT crusiers. Uses a self loading mechanism similar to the anaconda handgun.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 2000
   - type: Sprite
@@ -233,6 +236,7 @@
   parent: BallisticArtilleryUnanchorable
   description: A main cannonade of syndicate origin, the hydra is a monstrous tri-barreled battery of pain, designed to shatter NT's toughest vessels. Loads with a similar mechanism as the anaconda handgun.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 20000
   - type: Sprite

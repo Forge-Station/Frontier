@@ -9,6 +9,7 @@
   parent: BallisticArtilleryUnanchorableCartridge
   description: A heavy torpedo VLS relying on manual loading to work, usually done at harbor. However, it has high-yield missiles for its size.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 10000
   - type: Sprite

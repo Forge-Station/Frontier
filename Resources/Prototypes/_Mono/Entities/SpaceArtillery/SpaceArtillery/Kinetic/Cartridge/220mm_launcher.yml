@@ -10,6 +10,7 @@
   parent: BallisticArtilleryUnanchorableCartridge
   description: A main battery with dual barrels, delivering rapid, punishing salvos at extreme range. Fires 220mm auto shells with slightly reduced brute strength. Can be remotely activated or linked up to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 15000
   - type: Sprite

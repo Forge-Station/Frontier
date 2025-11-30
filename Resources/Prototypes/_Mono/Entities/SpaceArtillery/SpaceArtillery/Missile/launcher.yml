@@ -21,6 +21,7 @@
   parent: BallisticArtilleryUnanchorable
   description: A cruiser torpedo launcher. Fires heavy torpedoes for high-damage strikes against large ships and stations. Can be remotely activated or linked to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 5000
   - type: Sprite
@@ -69,6 +70,7 @@
   parent: BallisticArtillery
   description: A light torpedo launcher developed by the Syndicate during the corporate war, uses similar systems to the anaconda for self loading munitons.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 5000
   - type: Sprite

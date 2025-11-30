@@ -12,6 +12,7 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: BindToStation # Forge-change
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
@@ -85,6 +86,7 @@
   parent: BallisticArtilleryBase
   abstract: true
   components:
+  - type: BindToStation # Forge-change
   - type: RequiresGrid
 
 - type: entity
@@ -92,6 +94,7 @@
   parent: BallisticArtilleryBase
   abstract: true
   components:
+  - type: BindToStation # Forge-change
   - type: Anchorable
     delay: 10
   - type: Pullable
@@ -104,6 +107,7 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: BindToStation # Forge-change
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
@@ -180,6 +184,7 @@
   parent: BallisticArtilleryBaseCartridge
   abstract: true
   components:
+  - type: BindToStation # Forge-change
   - type: Anchorable
     delay: 10
   - type: Pullable
@@ -191,6 +196,7 @@
   parent: BallisticArtilleryBaseCartridge
   abstract: true
   components:
+  - type: BindToStation # Forge-change
   - type: RequiresGrid
 
 - type: entity
@@ -199,6 +205,7 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: BindToStation # Forge-change
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
@@ -283,6 +290,7 @@
   parent: BallisticArtilleryBaseMagazine
   abstract: true
   components:
+  - type: BindToStation # Forge-change
   - type: Anchorable
     delay: 10
   - type: Pullable
@@ -294,4 +302,5 @@
   parent: BallisticArtilleryBaseMagazine
   abstract: true
   components:
+  - type: BindToStation # Forge-change
   - type: RequiresGrid

@@ -2,7 +2,9 @@ forge-research-technology-advpromax = продвинутый реверс-инж
 forge-research-technology-battlepromax = боевой реверс-инженеринг магнитного поля
 
 forge-research-technology-shipammoemp = Электромагнитная самооборона
-forge-research-technology-shipammo90 = Убойный калибр
+forge-research-technology-shipammo90 = Убойный 90мм калибр
+forge-research-technology-shipammo90aphe = Убойный 90мм каморный
+forge-research-technology-shipammo90aphebc = Убойный 90мм каморный-бронебойный
 forge-research-technology-shipammo20apcbc = Бронебойная сила 20-го миллиметра
 forge-research-technology-shipammo30apcbc = Бронебойная сила 30-го миллиметра
 forge-research-technology-shipammo57apcbc = Бронебойная сила 57-го миллиметра
@@ -23,3 +25,10 @@ forge-research-technology-nfsd-magbootspromax = Подвижное решени�
 forge-research-technology-nfsd-advradar = Зоркий глаз
 forge-research-technology-nfsd-iff = Если меня не видят - значит меня нет
 forge-research-technology-shipammonfsd = Весомый аргумент
+
+forge-research-technology-shipammo203 = Аргумент в бою
+forge-research-technology-shipammo220 = Хороший аргумент
+forge-research-technology-shipammo255 = Весомый аргумент
+forge-research-technology-shipammo203hesh = Взрывной аргумент
+forge-research-technology-shipammo220hesh = Сотрясающий аргумент
+forge-research-technology-shipammo255hesh = Умопомрочительный аргумент

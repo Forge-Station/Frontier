@@ -10,7 +10,7 @@
   - ForgeAmmoDrum20mmBase
   - ForgeAmmoDrum30mmBase
   - ForgeMagazine57mmBase
-  position: 0, 48
+  position: 0, 47
 
 # region APCBC
 - type: technology
@@ -24,7 +24,7 @@
   - ForgeAmmoDrum20mmAPCBC
   technologyPrerequisites:
   - ForgeResearchShipAmmoAll
-  position: 1, 48
+  position: 1, 47
 
 - type: technology
   id: ForgeResearchShipAmmoAPCBC30
@@ -37,7 +37,7 @@
   - ForgeAmmoDrum30mmAPCBC
   technologyPrerequisites:
   - ForgeResearchShipAmmoAll
-  position: 1, 49
+  position: 1, 48
 
 - type: technology
   id: ForgeResearchShipAmmoAPCBC57
@@ -50,7 +50,7 @@
   - ForgeMagazine57mmAPCBC
   technologyPrerequisites:
   - ForgeResearchShipAmmoAll
-  position: 1, 50
+  position: 1, 49
 
 - type: technology
   id: ForgeResearchShipAmmo90
@@ -63,7 +63,7 @@
   - FRecMagazine90mmWeak
   technologyPrerequisites:
   - ForgeResearchShipAmmoAll
-  position: 1, 51
+  position: 0, 50
 
 # EMP Base
 - type: technology
@@ -78,4 +78,4 @@
   - FRec150mmEmpShell
   technologyPrerequisites:
   - ForgeResearchShipAmmoAll
-  position: 1, 52
+  position: 0, 46

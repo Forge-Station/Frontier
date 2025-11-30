@@ -10,6 +10,7 @@
   parent: BallisticArtilleryUnanchorableCartridge
   description: A cruiser artillery cannon that launches devastating 203mm shells for long-range ship-to-ship combat. Can be remotely activated or linked up to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 12500
   - type: Sprite

@@ -132,7 +132,7 @@
   - JetpackNfsd
   technologyPrerequisites:
   - ForgeResearchNfsdBase
-  position: 2, 47
+  position: 3, 46
 
 # region ShipAmmo
 #- type: technology
@@ -150,6 +150,35 @@
 #  position: 3, 48
 
 - type: technology
+  id: ForgeResearchShipAmmo90APHE
+  name: forge-research-technology-shipammo90aphe
+  entityIcon: ForgeResearchShipAmmoAPHE
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - FRecMagazine90mmAPHE
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ForgeResearchShipAmmo90
+  - ForgeResearchNfsdBase
+  position: 2, 50
+
+- type: technology
+  id: ForgeResearchShipAmmo90APHEBC
+  name: forge-research-technology-shipammo90aphebc
+  entityIcon: ForgeResearchShipAmmoAPHEBC
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - FRecMagazine90mmAPHEBC
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ForgeResearchShipAmmo90APHE
+  position: 2, 51
+
+- type: technology
   id: ForgeResearchShipAmmoAPHE30
   name: forge-research-technology-shipammo30aphe
   entityIcon: ForgeResearchShipAmmoAPHE
@@ -158,10 +187,11 @@
   cost: 6000
   recipeUnlocks:
   - ForgeAmmoDrum30mmAPHE
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - ForgeResearchShipAmmoAPCBC30
   - ForgeResearchNfsdBase
-  position: 3, 49
+  position: 2, 48
 
 - type: technology
   id: ForgeResearchShipAmmoAPHEC57
@@ -172,22 +202,86 @@
   cost: 6000
   recipeUnlocks:
   - ForgeMagazine57mmAPHE
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - ForgeResearchShipAmmoAPCBC57
+  - ForgeResearchNfsdBase
+  position: 2, 49
+
+- type: technology
+  id: ForgeResearchShipAmmo203
+  name: forge-research-technology-shipammo203
+  entityIcon: Forge203mmCartridgeHE
+  discipline: ForgeNFSDtechDiscipline
+  tier: 1
+  cost: 4000
+  recipeUnlocks:
+  - FRec203mmCartridge
+  technologyPrerequisites:
+  - ForgeResearchNfsdBase
+  position: 3, 49
+
+- type: technology
+  id: ForgeResearchShipAmmo220
+  name: forge-research-technology-shipammo220
+  entityIcon: Forge220mmCartridgeHE
+  discipline: ForgeNFSDtechDiscipline
+  tier: 1
+  cost: 4000
+  recipeUnlocks:
+  - FRec220mmCartridge
+  technologyPrerequisites:
   - ForgeResearchNfsdBase
   position: 3, 50
 
 - type: technology
-  id: ForgeResearchShipAmmoNfsd
-  name: forge-research-technology-shipammonfsd
-  entityIcon: 255mmCartridge
+  id: ForgeResearchShipAmmo255
+  name: forge-research-technology-shipammo255
+  entityIcon: Forge255mmCartridgeHE
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 12000
+  cost: 4000
   recipeUnlocks:
-  - FRec203mmCartridge
-  - FRec220mmCartridge
   - FRec255mmCartridge
   technologyPrerequisites:
   - ForgeResearchNfsdBase
-  position: 3, 48
+  position: 3, 51
+
+- type: technology
+  id: ForgeResearchShipAmmo203HESH
+  name: forge-research-technology-shipammo203hesh
+  entityIcon: Forge203mmCartridgeHESH
+  discipline: ForgeNFSDtechDiscipline
+  tier: 1
+  cost: 4000
+  recipeUnlocks:
+  - FRec203mmCartridgeHESH
+  technologyPrerequisites:
+  - ForgeResearchShipAmmo203
+  position: 4, 49
+
+- type: technology
+  id: ForgeResearchShipAmmo220HESH
+  name: forge-research-technology-shipammo220hesh
+  entityIcon: Forge220mmCartridgeHESH
+  discipline: ForgeNFSDtechDiscipline
+  tier: 1
+  cost: 4000
+  recipeUnlocks:
+  - FRec220mmCartridgeHESH
+  technologyPrerequisites:
+  - ForgeResearchShipAmmo220
+  position: 4, 50
+
+- type: technology
+  id: ForgeResearchShipAmmo255HESH
+  name: forge-research-technology-shipammo255hesh
+  entityIcon: Forge255mmCartridgeHESH
+  discipline: ForgeNFSDtechDiscipline
+  tier: 1
+  cost: 4000
+  recipeUnlocks:
+  - FRec255mmCartridgeHESH
+  technologyPrerequisites:
+  - ForgeResearchShipAmmo255
+  position: 4, 51

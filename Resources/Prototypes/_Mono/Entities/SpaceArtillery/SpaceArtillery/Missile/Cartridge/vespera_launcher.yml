@@ -9,6 +9,7 @@
   parent: BallisticArtilleryUnanchorableCartridge
   description: A rapid-fire swarm missile pod manufactured by Aetherion Dynamics. Saturates targets with guided warheads to overwhelm defenses. Can be remotely activated or linked to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 1500
   - type: Sprite

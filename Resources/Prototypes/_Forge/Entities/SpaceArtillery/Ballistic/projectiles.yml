@@ -1,95 +1,3 @@
-# region Projectile
-# 40mm
-- type: entity
-  id: DeslerBullet
-  name: 40mm
-  parent: 20mmBulletBase
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Structural: 3
-        Piercing: 7
-  - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/50_armorpiercing_machinegun_casing.rsi
-    layers:
-    - state: base-projectile
-  - type: PointLight
-    color: orange
-
-- type: entity
-  id: DeslerSpread
-  categories: [ HideSpawnMenu ]
-  parent: DeslerBullet
-  components:
-  - type: ProjectileSpread
-    proto: DeslerBullet
-    count: 7
-    spread: 6
-
-#40 mm cumul
-- type: entity
-  id: DeslerExplBullet
-  name: 40mm cumul
-  parent: 20mmBulletBase
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Structural: 3
-        Piercing: 7
-  - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/50_armorpiercing_machinegun_casing.rsi
-    layers:
-    - state: base-projectile
-  - type: PointLight
-    color: orange
-
-- type: entity
-  id: DeslerExplSpread
-  categories: [ HideSpawnMenu ]
-  parent: DeslerExplBullet
-  components:
-  - type: ProjectileSpread
-    proto: DeslerExplBullet
-    count: 7
-    spread: 6
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 1
-    intensitySlope: 5
-    maxIntensity: 25
-    maxTileBreak: 1
-
-# region Hitscan
-- type: entity
-  parent: BasicHitscan
-  id: PhaserStormLaser
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: HitscanBasicVisuals
-    muzzleFlash:
-      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-      state: muzzle_beam_heavy
-    travelFlash:
-      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-      state: beam_heavy
-    impactFlash:
-      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-      state: impact_beam_heavy
-  - type: HitscanRadarSignature
-    radarColor: red
-  - type: HitscanBasicDamage
-    damage:
-     types:
-      Heat: 25
-      Structural: 10
-  - type: HitscanBasicRaycast
-    maxDistance: 200
-
 # region Forge rebalance
 # rebalance Monolith kinetic projectiles
 
@@ -342,7 +250,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 1262
+        Structural: 1140
         Blunt: 100
         Piercing: 250
   - type: TimedDespawn
@@ -360,8 +268,8 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    totalIntensity: 55
-    intensitySlope: 1.5
+    totalIntensity: 50
+    intensitySlope: 3.5
     maxIntensity: 50
     maxTileBreak: 1
 
@@ -375,7 +283,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 1533
+        Structural: 1569
         Blunt: 175
         Piercing: 293
   - type: TimedDespawn
@@ -504,6 +412,7 @@
       types:
         Structural: 11160
         Blunt: 6983
+  - type: Explosive
     explosionType: HardBombShipGun
     totalIntensity: 2350
     intensitySlope: 60
@@ -538,6 +447,7 @@
   - type: PointLight
     color: "#fc5a03"
   - type: ExplodeOnTrigger
+  - type: Explosive
     explosionType: HardBombShipGun
     totalIntensity: 2650
     intensitySlope: 35
@@ -557,6 +467,7 @@
       types:
         Structural: 14123
         Blunt: 7444
+  - type: Explosive
     explosionType: HardBombShipGun
     totalIntensity: 2950
     intensitySlope: 60
