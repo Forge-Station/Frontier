@@ -307,9 +307,6 @@
     sprite: Forge/Objects/SpaceArtillery/ammo.rsi
     layers:
     - state: 90mm
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
   - type: CartridgeAmmo
     proto: Forge90mmBulletBase
 
@@ -343,9 +340,6 @@
     sprite: Forge/Objects/SpaceArtillery/ammo.rsi
     layers:
     - state: 90aphe
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
   - type: CartridgeAmmo
     proto: Forge90mmBulletAPHE
 
@@ -379,9 +373,6 @@
     sprite: Forge/Objects/SpaceArtillery/ammo.rsi
     layers:
     - state: 90aphebc
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
   - type: CartridgeAmmo
     proto: Forge90mmBulletAPHEBC
 
