@@ -123,4 +123,23 @@
   - type: Sprite
     sprite: Structures/stairs.rsi
     state: stairs_catwalk
+
+- type: entity
+  id: StairConcrete
+  name: ступеньки
+  description: Величайшее изобретение после гранатомётов.
+  parent: Stairs
+  suffix: Forge, Каменные
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/stairs.rsi
+    state: stairs_stone
     drawdepth: FloorTiles
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepCatwalk
+      params:
+        volume: 8
+  - type: Tag
+    tags:
+      - Catwalk

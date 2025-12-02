@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: docs.unity3d.com
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 # - type: vessel
 #   id: Warrior
 #   parent: BaseVessel
@@ -20,7 +20,7 @@
 #   category: Small
 #   access: Security
 #   mapchecker_group_override: Security
-#   shuttlePath: /Maps/Forge/Shuttles/Nfsd/warrior.yml
+#   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/warrior.yml
 #   addComponents:
 #   - type: ShuttleFaction
 #     faction: NFSD
@@ -28,7 +28,7 @@
 # - type: gameMap
 #   id: Warrior
 #   mapName: 'NSF Вариор'
-#   mapPath: /Maps/Forge/Shuttles/Nfsd/warrior.yml
+#   mapPath: /Maps/_Forge/Shuttles/Nfsd/warrior.yml
 #   minPlayers: 0
 #   stations:
 #     Warrior:

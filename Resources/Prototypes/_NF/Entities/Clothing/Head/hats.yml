@@ -140,7 +140,7 @@
     sprite: _NF/Clothing/Head/Hats/pirate_hat_luffy.rsi
 
 - type: entity
-  parent: ClothingHeadBaseButcherable
+  parent: [ ClothingHeadBaseButcherable, BaseC2ContrabandUnredeemable] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingHeadHatNfsdBeretGreen
   name: NFSD beret
   description: A green beret for use by NFSD officers.
@@ -152,7 +152,7 @@
   - type: CatWearable
 
 - type: entity
-  parent: ClothingHeadBaseButcherable
+  parent: [ ClothingHeadBaseButcherable, BaseC2ContrabandUnredeemable] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingHeadHatNfsdBeretBrown
   name: NFSD beret
   description: A brown beret for use by NFSD officers.
@@ -164,7 +164,7 @@
   - type: CatWearable
 
 - type: entity
-  parent: ClothingHeadBaseButcherable
+  parent: [ ClothingHeadBaseButcherable, BaseC2ContrabandUnredeemable] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingHeadHatNfsdBeretCream
   name: NFSD beret
   description: A cream beret for use by NFSD officers.
@@ -176,7 +176,7 @@
   - type: CatWearable
 
 - type: entity
-  parent: ClothingHeadBaseButcherable
+  parent: [ ClothingHeadBaseButcherable, BaseC2ContrabandUnredeemable] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingHeadHatNfsdCampaign
   name: NFSD campaign hat
   description: Yeehaw, partner.
@@ -218,7 +218,7 @@
         amount: 3
 
 - type: entity
-  parent: ClothingHeadBaseButcherable
+  parent: [ ClothingHeadBaseButcherable, BaseC2ContrabandUnredeemable] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingHeadHatNfsdSmallCampaign
   name: NFSD campaign cap
   description: All yee, no haw.
@@ -244,7 +244,7 @@
   - type: HamsterWearable
 
 - type: entity
-  parent: ClothingHeadHatHopcap
+  parent: [ ClothingHeadHatHopcap, BaseC2ContrabandUnredeemable] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingHeadHatSrBeret
   name: station representative's beret
   description: A breezy beret issued to Frontier Outpost's station representative. Looks soft.

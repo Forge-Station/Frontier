@@ -1,0 +1,132 @@
+- type: entity
+  name: лазерный снаряд
+  id: ForgeBulletImmolationLaser
+  parent: NFBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: heavylaser
+      shader: unshaded
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 40
+
+- type: entity
+  name: лазерный снаряд
+  id: ForgeBulletFiredartLaser
+  parent: NFBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 20
+
+- type: entity
+  name: радиактивный снаряд
+  id: ForgeBulletXrayLaser
+  parent: NFBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: green
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 20
+        Radiation: 20
+
+- type: entity
+  name: импульсный снаряд
+  id: ForgeBulletPulse
+  parent: NFBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: blue
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 30
+        Structural: 100
+
+- type: entity
+  name: тяжёлый импульсный снаряд
+  id: ForgeBulletPulseSniper
+  parent: NFBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: blue
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 100
+        Structural: 1000
+
+- type: entity
+  name: Убить
+  id: ForgeBulletHeavyPulse
+  parent: NFBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: blue
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 50
+        Structural: 500
+
+- type: entity
+  name: Уничтожить
+  id: ForgeBulletHeavyPulseNarrow
+  categories: [ HideSpawnMenu ]
+  parent: ForgeBulletPulse
+  components:
+  - type: ProjectileSpread
+    proto: ForgeBulletPulse
+    count: 4 #*48* heat damage if you hit all your shots, but narrower spread
+    spread: 10
+
+- type: entity
+  id: ForgeBulletDisablerHeavy
+  name: Обезвредить
+  parent: BulletDisabler
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 2
+    soundHit:
+      collection: WeakHit
+    forceSound: true
+  - type: StaminaDamageOnCollide
+    damage: 75

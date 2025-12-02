@@ -60,7 +60,11 @@
     - WhitelistChameleon
   - type: IdentityBlocker
     coverage: EYES
-  - type: ThermalVision
+  - type: NightVision #Corvax-Forge: NightVision<ThermalVision
+    color: "#3ba147"
+    flashDurationMultiplier: 2
     isEquipment: true
-    color: "#2ebf40"
-    lightRadius: 15
+  # - type: ThermalVision
+  #   isEquipment: true
+  #   color: "#2ebf40"
+  #   lightRadius: 15

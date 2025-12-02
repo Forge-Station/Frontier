@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Venture
+  parent: BaseVessel
+  name: LVHI Венчюр
+  description: Малогабаритный шахтёрский шаттл. Рекомендуемый размер команды 2-3 человека.
+  price: 17000
+  category: Small
+  group: Salvage
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/venture.yml
+  guidebookPage: null
+  class:
+  - Salvage
+
+
+
+- type: gameMap
+  id: Venture
+  mapName: 'LVHI Венчюр'
+  mapPath: /Maps/_Forge/Shuttles/Salvage/venture.yml
+  minPlayers: 0
+  stations:
+    Venture:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Венчюр {1}'
+        nameGenerator: !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

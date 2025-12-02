@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Vortix
+  parent: BaseVessel
+  name: NT Вортикс
+  description: Малогабаритный инженерный шаттл. Рекомендованный размер команды 1-3 человек.
+  price: 29000
+  category: Small
+  group: Engineering
+  shuttlePath: /Maps/_Forge/Shuttles/Engineering/vortix.yml
+  guidebookPage: null
+  class:
+  - Atmospherics
+
+- type: gameMap
+  id: Vortix
+  mapName: 'NT Вортикс'
+  mapPath: /Maps/_Forge/Shuttles/Engineering/vortix.yml
+  minPlayers: 0
+  stations:
+    Vortix:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Вортикс {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

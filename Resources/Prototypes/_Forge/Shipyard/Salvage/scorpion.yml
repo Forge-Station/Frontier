@@ -16,7 +16,7 @@
   price: 13200
   category: Small
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/scorpion.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/scorpion.yml
   guidebookPage: null
   class:
   - Salvage
@@ -24,8 +24,8 @@
 
 - type: gameMap
   id: Scorpion1
-  mapName: 'Скорпион'
-  mapPath: /Maps/Forge/Shuttles/Salvage/scorpion.yml
+  mapName: 'TL Скорпион'
+  mapPath: /Maps/_Forge/Shuttles/Salvage/scorpion.yml
   minPlayers: 0
   stations:
     Scorpion1:

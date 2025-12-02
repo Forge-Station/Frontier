@@ -1,21 +1,21 @@
 # Author Info
-# GitHub:
+# GitHub: -
 # Discord: Checkraze
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Notes:
 # Provides higher end expeditionary ships and a space for vets to spawn in away from potential frontier shenanigans
 - type: pointOfInterest
   id: Lodge
   parent: BasePOI
-  name: 'Аванпост наёмников Рубеж' #CorvaxFrontier
+  name: 'Аванпост наёмников Рубеж' #Forge-Change
   minimumDistance: 1650
   maximumDistance: 3400
   spawnGroup: Required
-  gridPath: /Maps/Forge/POI/lodge.yml #CorvaxFrontier
+  gridPath: /Maps/_Forge/POI/lodge.yml #Forge-Change
   addComponents:
   - type: IFF
     color: "#3737F8"
@@ -23,14 +23,14 @@
     routes:
       SpawnPoints: 20
   - type: ProtectedGrid
-    preventEmpEvents: true #CorvaxFrontier
-    preventRCDUse: true #CorvaxFrontier
-    noGridCollision: true #CorvaxFrontier
+    preventEmpEvents: true #Forge-Change
+    preventRCDUse: true #Forge-Change
+    noGridCollision: true #Forge-Change
 
 - type: gameMap
   id: Lodge
-  mapName: 'Аванпост наёмников Рубеж' #CorvaxFrontier
-  mapPath: /Maps/Forge/POI/lodge.yml #CorvaxFrontier
+  mapName: 'Аванпост наёмников Рубеж' #Forge-Change
+  mapPath: /Maps/_Forge/POI/lodge.yml #Forge-Change
   minPlayers: 0
   stations:
     Lodge:

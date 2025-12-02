@@ -50,17 +50,10 @@
 - type: startingGear
   id: ParaMedicalGear
   equipment:
-    ears: ClothingHeadsetMedical
-    id: ParamedicPDA
-    belt: ClothingBeltMedicalEMTFilled
-    pocket1: WeaponShotgunKD12Medic
-    pocket2: BoxBeanbagKS23
-    eyes: ClothingEyesHudMedical
+    pocket1: ToolboxParamed
   storage:
     back:
     - NFBoxSurvivalExtended
-    - PaperWrittenMedic
-    - DefibrillatorCompact
     - MedTekCartridge
 
 #- type: startingGear

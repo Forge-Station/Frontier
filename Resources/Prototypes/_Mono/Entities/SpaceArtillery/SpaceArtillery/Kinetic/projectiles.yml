@@ -1,10 +1,12 @@
 # SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Avalon
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 BlueHNT
 # SPDX-FileCopyrightText: 2025 Disguised Bear
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 RikuTheKiller
 # SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 kasature90
 # SPDX-FileCopyrightText: 2025 starch
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -20,9 +22,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 15000
+        Structural: 55000
         Blunt: 3000
-        Ion: 600
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
@@ -36,7 +37,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 1.5
+    lifetime: 2.2
   - type: PointLight
     color: "#19AFFF"
   - type: ExplodeOnTrigger
@@ -49,6 +50,22 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
 
+- type: entity
+  id: ShipMiniRailgunProjectileWeak
+  name: stock M194 CHARONETTE 280mm 10.25 kg slug
+  parent: ShipMiniRailgunProjectile
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 44000
+        Blunt: 2400
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 2000
+    intensitySlope: 40
+    maxIntensity: 620
+
 # 20mm
 
 - type: entity
@@ -60,20 +77,21 @@
   - type: Projectile
     damage:
       types:
-        Structural: 75
+        Structural: 300
         Blunt: 75
         Piercing: 100
     ignoreWeaponGrid: true
   - type: ShipWeaponProjectile
   - type: TimedDespawn
-    lifetime: 1
+    lifetime: 2
   - type: PointLight
     radius: 3.5
     energy: 0.5
   - type: RadarBlip
-    scale: 0.5
+    scale: 0.85
     requireNoGrid: true
     shape: triangle
+    radarColor: "#1df1f5"
 
 - type: entity
   id: 20mmBulletArmorPiercing
@@ -84,14 +102,63 @@
   - type: Projectile
     damage:
       types:
-        Structural: 25
-        Piercing: 125
+        Structural: 12
+        Piercing: 18
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/50_armorpiercing_machinegun_casing.rsi
     layers:
     - state: base-projectile
   - type: PointLight
     color: orange
+
+- type: entity
+  id: 20mmBulletWeak
+  name: 20mm bullet
+  parent: 20mmBulletArmorPiercing
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 240
+        Piercing: 100
+
+# 30mm
+
+- type: entity
+  id: 30mmBullet
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 350
+        Blunt: 100
+        Piercing: 125
+  - type: ShipWeaponProjectile
+  - type: TimedDespawn
+    lifetime: 3
+  - type: PointLight
+    radius: 3.5
+    energy: 0.5
+  - type: RadarBlip
+    scale: 1.15
+    requireNoGrid: true
+    shape: arrow
+    radarColor: "#1df1f5"
+
+- type: entity
+  id: 30mmBulletWeak
+  parent: 30mmBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 280
+        Blunt: 80
+        Piercing: 100
 
 # 57mm Dravon
 
@@ -104,23 +171,22 @@
   - type: Projectile
     damage:
       types:
-        Structural: 420
-        Blunt: 100
+        Structural: 820
+        Blunt: 120
         Piercing: 210
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/57_shell.rsi
     layers:
     - state: 57-shell
     scale: 1, 1
-  - type: Ammo
-    muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
     scale: 2.5
     requireNoGrid: true
     shape: triangle
+    radarColor: "#1df1f5"
   - type: TimedDespawn
-    lifetime: 3.5
+    lifetime: 7
   - type: PointLight
     color: "#FCBA03"
   - type: ExplodeOnTrigger
@@ -130,6 +196,24 @@
     intensitySlope: 5
     maxIntensity: 25
     maxTileBreak: 1
+
+- type: entity
+  id: ShipDravonProjectileWeak
+  name: stock DRAVON 57mm projectile
+  parent: ShipDravonProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 656
+        Blunt: 96
+        Piercing: 168
+  - type: Explosive
+    explosionType: DefaultShipGun
+    totalIntensity: 32
+    intensitySlope: 4
+    maxIntensity: 20
 
 # 90mm
 
@@ -141,7 +225,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: TimedDespawn
-    lifetime: 2.1
+    lifetime: 4.2
   - type: PointLight
     radius: 3.5
     energy: 0.5
@@ -150,6 +234,7 @@
     scale: 1.5
     requireNoGrid: true
     shape: triangle
+    radarColor: "#1df1f5"
 
 # 90mm AP
 
@@ -161,9 +246,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 875
-        Blunt: 50
-        Piercing: 150
+        Structural: 1800
+        Blunt: 100
+        Piercing: 250
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -176,6 +261,21 @@
   - type: PointLight
     color: orange
 
+- type: entity
+  id: 90mmBulletWeak
+  parent: 90mmBulletArmorPiercing
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 1440
+        Blunt: 80
+        Piercing: 200
+  - type: Explosive
+    totalIntensity: 20
+    maxIntensity: 4
+
 # 90mm HE
 
 - type: entity
@@ -187,6 +287,59 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
+
+# 140mm Longbow
+
+- type: entity
+  id: ShipLongbowProjectile
+  name: longbow 140mm HEAT projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 2700
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 1.25, 1.25
+  - type: Ammo
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 3.25
+    requireNoGrid: true
+    shape: arrow
+    radarColor: "#f7dc0c"
+  - type: TimedDespawn
+    lifetime: 3
+  - type: PointLight
+    color: "#FCBA03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 400
+    intensitySlope: 18
+    maxIntensity: 1900
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+- type: entity
+  id: ShipLongbowProjectileWeak
+  name: longbow 140mm projectile
+  parent: ShipLongbowProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 2160
+  - type: Explosive
+    totalIntensity: 320
+    intensitySlope: 15
+    maxIntensity: 1520
 
 # 220mm Cyrexa
 
@@ -201,7 +354,6 @@
       types:
         Structural: 6500
         Blunt: 10000
-        Ion: 17500
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -215,18 +367,34 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 4
+    lifetime: 5.15
   - type: PointLight
     color: "#FCBA03"
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
-    totalIntensity: 550
-    intensitySlope: 5
-    maxIntensity: 1150
+    totalIntensity: 1300
+    intensitySlope: 18
+    maxIntensity: 1900
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+
+- type: entity
+  id: ShipCyrexaProjectileWeak
+  name: stock CYREXA 220mm projectile
+  parent: ShipCyrexaProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 5200
+        Blunt: 8000
+  - type: Explosive
+    totalIntensity: 1040
+    intensitySlope: 15
+    maxIntensity: 1520
 
 # 255mm Bofors
 
@@ -241,7 +409,6 @@
       types:
         Structural: 8500
         Blunt: 12000
-        Ion: 20000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -255,7 +422,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 5.5
   - type: PointLight
     color: "#fc5a03"
   - type: ExplodeOnTrigger
@@ -267,6 +434,22 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+
+- type: entity
+  id: ShipBoforsProjectileWeak
+  name: stock Bofors 255mm projectile
+  parent: ShipBoforsProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 6800
+        Blunt: 9600
+  - type: Explosive
+    totalIntensity: 800
+    intensitySlope: 20
+    maxIntensity: 60
 
 # 203mm Kargil
 
@@ -281,7 +464,6 @@
       types:
         Structural: 6000
         Blunt: 7500
-        Ion: 14000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -295,7 +477,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 5.15
   - type: PointLight
     color: "#fc8c03"
   - type: ExplodeOnTrigger
@@ -307,6 +489,22 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+
+- type: entity
+  id: ShipKargilProjectileWeak
+  name: stock Kargil 203mm projectile
+  parent: ShipKargilProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 4800
+        Blunt: 6000
+  - type: Explosive
+    totalIntensity: 600
+    intensitySlope: 28
+    maxIntensity: 40
 
 # 305mm Hades
 
@@ -322,7 +520,6 @@
       types:
         Structural: 12500
         Blunt: 15000
-        Ion: 30000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -336,15 +533,111 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 10
   - type: PointLight
-    color: "#FCBA03"
+    color: "#ff9100"
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
     totalIntensity: 1250
     intensitySlope: 5
     maxIntensity: 1450
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+# Corporate War - Syndicate
+
+# Adder Cannister Shells
+
+- type: entity
+  id: AdderBullet
+  name: AdderBullet
+  parent: 20mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 350
+        Piercing: 125
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/50_armorpiercing_machinegun_casing.rsi
+    layers:
+    - state: base-projectile
+  - type: PointLight
+    color: orange
+
+- type: entity
+  id: AdderSpread
+  categories: [ HideSpawnMenu ]
+  parent: AdderBullet
+  components:
+  - type: ProjectileSpread
+    proto: AdderBullet
+    count: 6
+    spread: 5
+
+# Fang 100mm Shell
+
+- type: entity
+  id: 100mmBullet
+  parent: 90mmBulletExplosiveBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 2250
+        Blunt: 200
+        Piercing: 400
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+  - type: Explosive
+    totalIntensity: 40 # totalIntensity goes first, please.
+    intensitySlope: 3
+    maxIntensity: 8
+    maxTileBreak: 1
+  - type: PointLight
+    color: orange
+
+# Hydra 200mm Shell
+
+- type: entity
+  id: ShipHydraProjectile
+  name: Hydra 200mm projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 6000
+        Blunt: 8000
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 2, 2
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 3.25
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 6
+  - type: PointLight
+    color: "#FCBA03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 1000
+    intensitySlope: 18
+    maxIntensity: 1750
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard

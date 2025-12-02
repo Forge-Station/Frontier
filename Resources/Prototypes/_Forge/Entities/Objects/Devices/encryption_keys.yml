@@ -37,3 +37,56 @@
     layers:
     - state: crypt_red_alt
     - state: synd_label_alt
+
+- type: entity
+  parent: [ EncryptionKey ]
+  id: EncryptionKeyMercenaryFM
+  name: ключ шифрования наёмников
+  description: Ключ шифрования, используемый для более удобной работы с заказами.
+  components:
+  - type: EncryptionKey
+    channels:
+    - MercenaryFM
+    defaultChannel: MercenaryFM
+  - type: Sprite
+    sprite: Forge/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_merc
+    - state: merc_label
+
+- type: entity
+  parent: [ EncryptionKey ]
+  id: EncryptionKeyHospital
+  name: hospital encrypt key
+  description: hospital encrypt key desc.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Hospital
+    defaultChannel: Hospital
+  - type: Sprite
+    sprite: Forge/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_silver
+    - state: hospital_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyPlantManager
+  name: plant manager encryption key
+  categories: [ DoNotMap ]
+  description: An encryption key for coordinating plant technicans.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    - Engineering
+    - Command
+    defaultChannel: Common
+  - type: Item
+    sprite: Forge/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: Forge/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_silver
+    - state: pm_label

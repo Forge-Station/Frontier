@@ -1,10 +1,10 @@
 # Author Info
 # GitHub: Kesiath (https://github.com/Kesiath)
-# Discord: ???
+# Discord: -
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 #
@@ -16,7 +16,7 @@
   price: 161300 # $81000 +30%
   category: Large
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/anchor.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/anchor.yml
   guidebookPage: Null
   class:
   - Expedition
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Anchor
   mapName: 'KC Якорь'
-  mapPath: /Maps/Forge/Shuttles/Expedition/anchor.yml
+  mapPath: /Maps/_Forge/Shuttles/Expedition/anchor.yml
   minPlayers: 0
   stations:
     Anchor:

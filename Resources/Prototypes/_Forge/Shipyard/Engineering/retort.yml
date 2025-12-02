@@ -16,7 +16,7 @@
   price: 59000 # 53331 0.1 58664.1
   category: Medium
   group: Engineering
-  shuttlePath: /Maps/Forge/Shuttles/Engineering/retort.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Engineering/retort.yml
   guidebookPage: ShipyardRetort
   class:
   - Atmospherics
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Retort
   mapName: 'FSB Реторн'
-  mapPath: /Maps/Forge/Shuttles/Engineering/retort.yml
+  mapPath: /Maps/_Forge/Shuttles/Engineering/retort.yml
   minPlayers: 0
   stations:
     Retort:

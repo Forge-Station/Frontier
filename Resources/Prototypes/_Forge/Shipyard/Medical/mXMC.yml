@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: MXMC
+  parent: BaseVessel
+  name: NMS MXMC
+  description: Малогабаритный медицинский шаттл с хим. лабораторией. Рекомендованный состав команды 1-2 человек.
+  price: 22500
+  category: Small
+  group: Medical
+  access: Medical
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/mXMC.yml
+  class:
+  - Medical
+
+- type: gameMap
+  id: MXMC
+  mapName: 'NMS MXMC'
+  mapPath: /Maps/_Forge/Shuttles/Medical/mXMC.yml
+  minPlayers: 0
+  stations:
+    MXMC:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'MXMC {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            paraMedicalInterview: [ 0, 0 ]

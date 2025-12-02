@@ -297,6 +297,21 @@
       amount: 1
 
 - type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponSniperBrute
+  name: Кейс с Брут
+  suffix: Аплинк ДСБФ, Брут
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSniperBrute
+      amount: 1
+    - id: MagazineAntiMateriel
+      amount: 2
+    - id: NFAmmunitionBoxRifle60
+      amount: 1
+
+- type: entity
   parent: WeaponCaseShort
   id: WeaponCaseLongWeaponPulsePistol
   name: Кейс с Импульсным ФН-14

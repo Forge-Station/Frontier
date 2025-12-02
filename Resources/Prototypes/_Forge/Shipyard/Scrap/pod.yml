@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -16,7 +16,7 @@
   price: 15000
   category: Small
   group: Scrap
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/pod.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/pod.yml
   guidebookPage: Null
   class:
   - Scrapyard
@@ -24,7 +24,7 @@
 - type: gameMap
   id: pod
   mapName: 'NT Под'
-  mapPath: /Maps/Forge/Shuttles/Scrap/pod.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/pod.yml
   minPlayers: 0
   stations:
     pod:

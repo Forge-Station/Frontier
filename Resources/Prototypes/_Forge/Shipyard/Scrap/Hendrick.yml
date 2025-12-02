@@ -1,15 +1,15 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: letstrythisone.
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
-# Shuttle notes:
-
+# Shuttle Notes:
+#
 - type: vessel
   id: Hendrick
   parent: BaseVessel
@@ -18,7 +18,7 @@
   price: 11000 # (6306)
   category: Micro
   group: Custom
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/Hendrick.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/hendrick.yml
   guidebookPage: Null
   class:
   - Scrapyard
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Hendrick
   mapName: 'ST Хендрик'
-  mapPath: /Maps/Forge/Shuttles/Scrap/Hendrick.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/hendrick.yml
   minPlayers: 0
   stations:
     Hendrick:

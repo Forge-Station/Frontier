@@ -5,10 +5,10 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-vault-start-announcement
     startAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_arrival.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_arrival.ogg # Forge-Change
     endAnnouncement: station-event-bluespace-vault-end-announcement
     endAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_leave.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_leave.ogg # Forge-Change
     warningAnnouncement: station-event-bluespace-vault-warning-announcement
     earliestStart: 100
     weight: 5
@@ -34,7 +34,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Forge/Events/Periodic/NanoTrasen/storageNt.yml #Corvax-Frontier
+        - /Maps/_Forge/Events/Periodic/NanoTrasen/storageNt.yml #Forge-Change
     rewardAccounts:
       Nfsd: 0.25
       Frontier: 0.25
@@ -47,10 +47,10 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-vault-start-announcement
     startAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_arrival.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_arrival.ogg # Forge-Change
     endAnnouncement: station-event-bluespace-vault-end-announcement
     endAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_leave.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_vault_leave.ogg # Forge-Change
     warningAnnouncement: station-event-bluespace-vault-warning-announcement
     earliestStart: 100
     maximumPlayers: 30
@@ -77,7 +77,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Forge/Events/Periodic/NanoTrasen/storageNtSmall.yml #Corvax-Frontier
+        - /Maps/_Forge/Events/Periodic/NanoTrasen/storageNtSmall.yml #Forge-Change
     rewardAccounts:
       Nfsd: 0.25
       Frontier: 0.25
@@ -90,11 +90,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
     startAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Forge-Change
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     endAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Forge-Change
     earliestStart: 80
     minimumPlayers: 15
     weight: 1
@@ -120,7 +120,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Forge/Events/Periodic/Syndicate/syndieftlintercept.yml #Corvax-Frontier
+        - /Maps/_Forge/Events/Periodic/Syndicate/syndieftlintercept.yml #Forge-Change
 
 - type: entity
   id: BluespaceWizardFederationScout
@@ -129,11 +129,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
     startAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Forge-Change
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     endAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Forge-Change
     earliestStart: 100
     minimumPlayers: 15
     weight: 1
@@ -159,7 +159,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Forge/Events/Periodic/Magic/shuttleFederationMages.yml #Corvax-Frontier
+        - /Maps/_Forge/Events/Periodic/Magic/shuttleFederationMages.yml #Forge-Change
 
 - type: entity
   id: BluespaceBloodMoon
@@ -168,11 +168,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
     startAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Forge-Change
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     endAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Forge-Change
     earliestStart: 80
     minimumPlayers: 15
     weight: 1
@@ -198,7 +198,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Forge/Events/Periodic/Cult/bloodmoon.yml #Corvax-Frontier
+        - /Maps/_Forge/Events/Periodic/Cult/bloodmoon.yml #Forge-Change
 
 - type: entity
   id: BluespaceCave
@@ -207,11 +207,11 @@
   - type: StationEvent
     startAnnouncement: station-event-bluespace-asteroid-start-announcement
     startAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_asteroid_arrival.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_asteroid_arrival.ogg # Forge-Change
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-asteroid-end-announcement
     endAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_asteroid_leave.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_asteroid_leave.ogg # Forge-Change
     earliestStart: 20
     weight: 1
     duration: 1800
@@ -235,7 +235,7 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/Forge/Events/Periodic/Caves/cave.yml #Corvax-Frontier
+        - /Maps/_Forge/Events/Periodic/Caves/cave.yml #Forge-Change
 
 - type: entity
   id: NFBluespaceBrokenMcDelivery
@@ -245,11 +245,11 @@
   # TODO: Maybe change start & end to unique Voice over audio
     startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
     startAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_arrival.ogg # Forge-Change
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     endAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_ship_leave.ogg # Forge-Change
     earliestStart: 20
     maximumPlayers: 20
     weight: 5
@@ -272,4 +272,4 @@
           preventArtifactTriggers: true
         - type: PreventPilot
         paths:
-        - /Maps/Forge/Events/Periodic/Cargo/mcevent.yml #Corvax-Frontier
+        - /Maps/_Forge/Events/Periodic/Cargo/mcevent.yml #Forge-Change

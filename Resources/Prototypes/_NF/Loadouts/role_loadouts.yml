@@ -64,7 +64,7 @@
   - MercenaryGlasses
   - MercenaryBelt
   - MercenaryEars
-  - ContractorEncryptionKey
+  - MercEncryptionKey # Forge-change
   - ContractorBoxSurvival
   - MercenaryPDA
   - ContractorWallet
@@ -219,17 +219,17 @@
   - DocNeck
   - DocJumpsuit
   - DocGloves
-  - DocBackpack
-  - ContractorOuterClothing
+  - ParaMedicalBackpack # Forge-change #- DocBackpack
+  - ForgeDocOuterClothing # Forge-change #- ContractorOuterClothing
   - DocForcedOuterClothing
   - DocShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
+  - ParaMedicalBelt # Forge-change #- ContractorBelt
   - DocEars
   - ContractorBoxSurvival
   - DocPDA
-  - ContractorWallet
+  - ParaMedicalWallet # Forge-change
   - ContractorCartridge
   - ContractorImplanter
   - ContractorEncryptionKey

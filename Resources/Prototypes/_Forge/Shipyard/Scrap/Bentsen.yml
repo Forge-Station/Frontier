@@ -1,15 +1,15 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: letstrythisone.
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
-# Shuttle notes:
-
+# Shuttle Notes:
+#
 - type: vessel
   id: Bentsen
   parent: BaseVessel
@@ -18,7 +18,7 @@
   price: 24500 # (17023)
   category: Small
   group: Custom
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/Bentsen.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/bentsen.yml
   guidebookPage: Null
   class:
   - Scrapyard
@@ -29,7 +29,7 @@
 - type: gameMap
   id: Bentsen
   mapName: 'ST Бентсен'
-  mapPath: /Maps/Forge/Shuttles/Scrap/Bentsen.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/bentsen.yml
   minPlayers: 0
   stations:
     Bentsen:

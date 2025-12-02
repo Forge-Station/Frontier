@@ -1,15 +1,15 @@
-﻿# Author Corvax
+﻿# Author Info
 # GitHub: -
 # Discord: -
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn and https://github.com/FireFoxPhoenix
 # Discord: mersen and FireFoxPhoenix
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Fly
   parent: BaseVessel
@@ -17,13 +17,13 @@
   price: 33500
   category: Small
   group: Coliseum
-  shuttlePath: /Maps/Forge/Shuttles/Coliseum/fly.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Coliseum/fly.yml
   guidebookPage: Null
 
 - type: gameMap
   id: Fly
   mapName: 'COL Муха'
-  mapPath: /Maps/Forge/Shuttles/Coliseum/fly.yml
+  mapPath: /Maps/_Forge/Shuttles/Coliseum/fly.yml
   minPlayers: 0
   stations:
     Fly:

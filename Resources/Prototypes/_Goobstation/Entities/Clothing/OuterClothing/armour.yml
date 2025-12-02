@@ -8,3 +8,22 @@
     sprite: _Goobstation/Clothing/OuterClothing/Armor/web_vest_hos.rsi
   - type: Clothing
     sprite: _Goobstation/Clothing/OuterClothing/Armor/web_vest_hos.rsi
+  - type: Armor # Corvax-Forge: Armor rebalance
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.5
+        Heat: 0.7
+        Cold: 0.7
+        Shock: 0.7
+        Radiation: 0.8
+        Caustic: 0.7
+  - type: FireProtection # Corvax-Forge: Armor rebalance
+    reduction: 0.5
+  - type: StaminaResistance # Corvax-Forge: Armor rebalance
+    damageCoefficient: 0.5
+  - type: ExplosionResistance # Corvax-Forge: Armor rebalance
+    damageCoefficient: 0.8
+  - type: ZombificationResistance # Corvax-Forge: Armor rebalance
+    zombificationResistanceCoefficient: 0.3

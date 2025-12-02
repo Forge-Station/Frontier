@@ -16,7 +16,7 @@
   price: 23500 # ~21724 0.05 22810.2
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/copperhead.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/copperhead.yml
   guidebookPage: ShipyardCopperhead
   class:
   - Salvage
@@ -27,8 +27,8 @@
 
 - type: gameMap
   id: Copperhead
-  mapName: 'Щитомордник'
-  mapPath: /Maps/Forge/Shuttles/Salvage/copperhead.yml
+  mapName: 'LVHI Щитомордник'
+  mapPath: /Maps/_Forge/Shuttles/Salvage/copperhead.yml
   minPlayers: 0
   stations:
     Copperhead:

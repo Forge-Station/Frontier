@@ -1,0 +1,14 @@
+- type: loadout
+  id: EngineerSynJumpsuit1
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitEngineerSyn
+
+- type: loadout
+  id: EngineerSynJumpsuit2
+  price: 0
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EngineerSynT1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChiefEngineerSyndieNF

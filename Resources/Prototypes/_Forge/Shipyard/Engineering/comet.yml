@@ -1,6 +1,6 @@
 # Author Info
 # GitHub: Shodhans
-# Discord: ???
+# Discord: -
 
 # Maintainer Info
 # GitHub: dustylens (https://github.com/dustylens)
@@ -16,7 +16,7 @@
   price: 55000
   category: Medium
   group: Engineering
-  shuttlePath: /Maps/Forge/Shuttles/Engineering/comet.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Engineering/comet.yml
   guidebookPage: ShipyardComet
   class:
   - Salvage
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Comet
   mapName: 'NT Комета'
-  mapPath: /Maps/Forge/Shuttles/Engineering/comet.yml
+  mapPath: /Maps/_Forge/Shuttles/Engineering/comet.yml
   minPlayers: 0
   stations:
     Comet:

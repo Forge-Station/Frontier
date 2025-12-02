@@ -17,14 +17,14 @@
   category: Small
   group: Medical
   access: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/tyne.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/tyne.yml
   class:
   - Medical
 
 - type: gameMap
   id: Tyne
   mapName: 'SBB Тайна'
-  mapPath: /Maps/Forge/Shuttles/Medical/tyne.yml
+  mapPath: /Maps/_Forge/Shuttles/Medical/tyne.yml
   minPlayers: 0
   stations:
     Tyne:

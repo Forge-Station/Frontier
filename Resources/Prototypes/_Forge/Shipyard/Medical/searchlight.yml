@@ -17,15 +17,15 @@
   category: Small
   group: Medical
   access: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/searchlight.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/searchlight.yml
   guidebookPage: ShipyardSearchlight
   class:
   - Medical
 
 - type: gameMap
   id: Searchlight
-  mapName: 'Прожектор'
-  mapPath: /Maps/Forge/Shuttles/Medical/searchlight.yml
+  mapName: 'LVHI Прожектор'
+  mapPath: /Maps/_Forge/Shuttles/Medical/searchlight.yml
   minPlayers: 0
   stations:
     Searchlight:

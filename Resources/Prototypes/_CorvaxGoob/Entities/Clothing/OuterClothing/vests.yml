@@ -8,3 +8,21 @@
       sprite: _CorvaxGoob/Clothing/OuterClothing/Vests/armor_sec_med.rsi
     - type: Clothing
       sprite: _CorvaxGoob/Clothing/OuterClothing/Vests/armor_sec_med.rsi
+    - type: Armor # Corvax-Forge: Armor rebalance
+      modifiers:
+        coefficients:
+          Blunt: 0.7
+          Slash: 0.7
+          Piercing: 0.65
+          Heat: 0.8
+          Cold: 0.8
+          Shock: 0.9
+          Caustic: 0.7
+    - type: FireProtection # Corvax-Forge: Armor rebalance
+      reduction: 0.2
+    - type: StaminaResistance # Corvax-Forge: Armor rebalance
+      damageCoefficient: 0.9
+    - type: ExplosionResistance # Corvax-Forge: Armor rebalance
+      damageCoefficient: 0.9
+    - type: ZombificationResistance # Corvax-Forge: Armor rebalance
+      zombificationResistanceCoefficient: 0.3

@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Inquisitor
   parent: BaseVessel
@@ -17,7 +17,7 @@
   category: Small
   group: Security
   access: Detective
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/inquisitor.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/inquisitor.yml
   guidebookPage: Null
   class:
   - Detective
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Inquisitor
   mapName: 'NSF Инквизитор'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/inquisitor.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/inquisitor.yml
   minPlayers: 0
   stations:
     Inquisitor:

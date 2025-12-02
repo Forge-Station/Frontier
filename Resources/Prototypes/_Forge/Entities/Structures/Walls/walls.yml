@@ -2,7 +2,7 @@
   parent: WallPlastitaniumIndestructible
   id: WallPlastitaniumShuttle
   name: пластитановая стена
-  suffix: "ослабленная"
+  suffix: Ослабленная, 5K
   components:
     - type: Tag
       tags:
@@ -11,7 +11,32 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 1500
+            damage: 5000 # take Mono balance,
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                Girder:
+                  min: 1
+                  max: 1
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+#    - type: Reflect # Frontier
+#      reflectProb: 0.15 # Frontier
+
+- type: entity
+  parent: WallPlastitaniumIndestructible
+  id: WallPlastitaniumVeryShuttle
+  name: пластитановая стена
+  suffix: Ослабленная, 2.5
+  components:
+    - type: Tag
+      tags:
+        - Wall
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 2500 # take Mono balance,
           behaviors:
             - !type:SpawnEntitiesBehavior
               spawn:
@@ -102,7 +127,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 1800 # we take Mono wall balance, and im buff
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -111,7 +136,7 @@
           collection: WoodDestroyHeavy
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 900
       behaviors:
       - !type:PlaySoundBehavior
         sound:

@@ -5,7 +5,9 @@ forge-job-desc-outpostservice = Приготовь, налей, уберись, 
 # Syndicate
 forge-job-desc-syndicommander = Глава штурмовой группы "Жнецы"
 forge-job-desc-medsyn = Специально подготовленный синдикатом медик для работы в зонах боевых действий
+forge-job-desc-engineersyn = Технический специалист синдиката
 forge-job-desc-smuggler = Торгуй контрабандой. Не попадайся (Опционально).
+forge-job-desc-smugglerbodyguard = Защищай того, кто торгует контрабандой. Не умирай (Опционально).
 forge-job-desc-stormtrooper = Штурмовик подчиняющийся командиру.
 # paraMedical
 forge-job-desc-paramedical = Полевой медик занимающийся спасением раненых.

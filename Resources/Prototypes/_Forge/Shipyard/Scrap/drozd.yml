@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Drozd
+  parent: BaseVessel
+  name: SV Дрозд
+  description: Малогабаритный сгоревший шаттл. Рекомендованный состав команды 1-2 человека.
+  price: 12000
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/drozd.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Salvage
+
+- type: gameMap
+  id: Drozd
+  mapName: 'SV Дрозд'
+  mapPath: /Maps/_Forge/Shuttles/Scrap/drozd.yml
+  minPlayers: 0
+  stations:
+    Drozd:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Дрозд {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

@@ -13,13 +13,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1450
+        damage: 6950
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 725
+        damage: 4250
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -68,13 +68,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1450
+        damage: 6800
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 725
+        damage: 4050
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -119,13 +119,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 3000
+        damage: 7450
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 2100
+        damage: 4550
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -174,13 +174,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1250
+        damage: 7350
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 700
+        damage: 4150
       behaviors:
       - !type:PlaySoundBehavior
         sound:

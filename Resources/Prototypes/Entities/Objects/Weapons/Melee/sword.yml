@@ -127,9 +127,14 @@
   - type: MeleeWeapon
     damage:
       types:
-        Slash: 15
+        Slash: 22 # Corvax-Forge: 22<15
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
+  - type: Reflect # Corvax-Forge: +Reflect
+    reflectProb: 0.1
+    reflects:
+      - Energy
+      - NonEnergy
   - type: Item
     storedSprite:
       state: storage

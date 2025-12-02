@@ -23,3 +23,33 @@
     Silver: 4000
     Gold: 6000
     Brass: 2000
+
+- type: latheRecipe
+  id: FRecClothingShoesBootsMagAdvsPromax
+  parent: NFBaseMagBootsRecipe
+  result: ClothingShoesBootsMagAdvsPromax
+  completetime: 8
+  materials:
+    Silver: 1500
+    Gold: 1000
+    Plasteel: 500
+
+- type: latheRecipe
+  id: FRecClothingShoesBootsMagMercPromax
+  parent: NFBaseMagBootsRecipe
+  result: ClothingShoesBootsMagMercPromax
+  completetime: 8
+  materials:
+    Silver: 1500
+    Gold: 1000
+    Plasteel: 500
+
+- type: latheRecipe
+  id: FRecClothingShoesBootsMagBattlePromax
+  parent: NFBaseMagBootsRecipe
+  result: ClothingShoesBootsMagBattlePromax
+  completetime: 8
+  materials:
+    Silver: 1500
+    Gold: 1000
+    Plasteel: 500

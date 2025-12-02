@@ -1,10 +1,10 @@
 # Author Info
 # GitHub: crystalHex (https://github.com/crystalHex)
-# Discord: ???
+# Discord: -
 
 # Maintainer Info
 # GitHub: crystalHex (https://github.com/crystalHex)
-# Discord: ???
+# Discord: -
 
 # Shuttle Notes:
 #
@@ -16,7 +16,7 @@
   price: 111450 # ~62075$ on mapinit + ~18650$ from 30% markup
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/dragonfly.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/dragonfly.yml
   guidebookPage: Null
   class:
   - Expedition
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Dragonfly
   mapName: 'DYS Стрекоза'
-  mapPath: /Maps/Forge/Shuttles/Expedition/dragonfly.yml
+  mapPath: /Maps/_Forge/Shuttles/Expedition/dragonfly.yml
   minPlayers: 0
   stations:
     Dragonfly:

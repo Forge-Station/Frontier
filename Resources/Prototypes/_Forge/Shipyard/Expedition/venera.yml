@@ -3,28 +3,28 @@
 # Discord: SergeantEcho
 
 # Maintainer Info
-# GitHub:
-# Discord:
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
 #
 - type: vessel
   id: Venera
   parent: BaseVessel
-  name: NC Венера
-  description: Среднегабаритная экспедиционная баржа. Рекомендованный размер команды 6-8 человек.
-  price: 114100
+  name: LVHI Венера
+  description: Крупногабаритная экспедиционная баржа. Рекомендованный размер команды 6-8 человек.
+  price: 177000
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/Forge/Shuttles/Expedition/venera.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/venera.yml
   class:
   - Expedition
   - Civilian
 
 - type: gameMap
   id: Venera
-  mapName: 'NC Венера'
-  mapPath: /Maps/Forge/Shuttles/Expedition/venera.yml
+  mapName: 'LVHI Венера'
+  mapPath: /Maps/_Forge/Shuttles/Expedition/venera.yml
   minPlayers: 0
   stations:
     Venera:

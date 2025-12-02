@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Normandya
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 37500
   category: Small
   group: Scrap
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/Normandya.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/normandya.yml
   guidebookPage: Null
   class:
   - Scrapyard
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Normandya
   mapName: 'NT Нормандия'
-  mapPath: /Maps/Forge/Shuttles/Scrap/Normandya.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/normandya.yml
   minPlayers: 0
   stations:
     Normandya:

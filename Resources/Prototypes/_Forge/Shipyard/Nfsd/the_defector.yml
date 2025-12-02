@@ -1,13 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: charodey0167
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
+# Shuttle Notes:
+#
 # - type: vessel
 #   id: the_defector
 #   parent: BaseVessel
@@ -18,7 +20,7 @@
 #   access: Security
 #   mapchecker_group_override: Security
 #   group: Security
-#   shuttlePath: /Maps/Forge/Shuttles/Nfsd/the_defector.yml
+#   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/the_defector.yml
 #   class:
 #   - Patrol
 #   addComponents:
@@ -28,7 +30,7 @@
 # - type: gameMap
 #   id: the_defector
 #   mapName: 'NSF Перебежчик'
-#   mapPath: /Maps/Forge/Shuttles/Nfsd/the_defector.yml
+#   mapPath: /Maps/_Forge/Shuttles/Nfsd/the_defector.yml
 #   minPlayers: 0
 #   stations:
 #     the_defector:

@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: -
+# Discord: -
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Point
+  parent: BaseVessel
+  name: SV Пункт
+  description: Среднегабаритный шаттл, сваренный из двух обломков, способен что-то исследовать. Рекомендованный состав команды 2-3 человека.
+  price: 21500
+  category: Medium
+  group: Scrap
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/point.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Science
+
+- type: gameMap
+  id: Point
+  mapName: 'SV Пункт'
+  mapPath: /Maps/_Forge/Shuttles/Scrap/point.yml
+  minPlayers: 0
+  stations:
+    Point:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Пункт {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: boyaryshnik2
   parent: BaseVessel
@@ -18,12 +18,12 @@
   price: 160400
   category: Medium
   group: Mercenary
-  shuttlePath: /Maps/Forge/Shuttles/Mercenary/boyarichnik.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Mercenary/boyarichnik2.yml
 
 - type: gameMap
   id: boyaryshnik2
-  mapName: 'Боярышник MK2'
-  mapPath: /Maps/Forge/Shuttles/Mercenary/boyarichnik.yml
+  mapName: 'TL Боярышник MK2'
+  mapPath: /Maps/_Forge/Shuttles/Mercenary/boyarichnik2.yml
   minPlayers: 0
   stations:
     boyaryshnik2:

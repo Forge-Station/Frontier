@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Jander-4
+  parent: BaseVessel
+  name: LVHI Жандер-4
+  description: Малогабаритный шахтёрский шаттл. Рекомендуемый размер команды 2-3 человека.
+  price: 25100
+  category: Small
+  group: Salvage
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/jander-4.yml
+  guidebookPage: null
+  class:
+  - Salvage
+
+
+
+- type: gameMap
+  id: Jander-4
+  mapName: 'LVHI Жандер-4'
+  mapPath: /Maps/_Forge/Shuttles/Salvage/jander-4.yml
+  minPlayers: 0
+  stations:
+    Jander-4:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Жандер-4 {1}'
+        nameGenerator: !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

@@ -1,0 +1,19 @@
+- type: entity
+  parent: ClothingHeadHatHardhatBase
+  id: ClothingHeadHatHardhatSEngiArmored
+  name: armored syndicate engineer hard hat
+  description: An armored hard hat. Provides the best of both worlds in both protection & utility - perfect for the engineer on the frontlines.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Helmets/armored.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Helmets/armored.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8
+        Cold: 0.8
+        Shock: 0.8

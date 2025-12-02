@@ -1,15 +1,15 @@
-﻿# Author Corvax
+﻿# Author Info
 # GitHub: -
 # Discord: -
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn and https://github.com/FireFoxPhoenix
 # Discord: mersen and FireFoxPhoenix
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Kerefo
   parent: BaseVessel
@@ -17,13 +17,13 @@
   price: 25000
   category: Small
   group: Coliseum
-  shuttlePath: /Maps/Forge/Shuttles/Coliseum/kerefo.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Coliseum/kerefo.yml
   guidebookPage: Null
 
 - type: gameMap
   id: Kerefo
   mapName: 'COL Керефо'
-  mapPath: /Maps/Forge/Shuttles/Coliseum/kerefo.yml
+  mapPath: /Maps/_Forge/Shuttles/Coliseum/kerefo.yml
   minPlayers: 0
   stations:
     Kerefo:

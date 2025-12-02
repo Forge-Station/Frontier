@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: hunami
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 18000
   category: Small
   group: Scrap
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/hunami.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/hunami.yml
   guidebookPage: Null
   class:
   - Scrapyard
@@ -24,7 +24,7 @@
 - type: gameMap
   id: hunami
   mapName: 'NT Хунами'
-  mapPath: /Maps/Forge/Shuttles/Scrap/hunami.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/hunami.yml
   minPlayers: 0
   stations:
     hunami:

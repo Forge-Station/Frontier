@@ -1,14 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
+#
 - type: vessel
   id: flash
   parent: BaseVessel
@@ -17,7 +18,7 @@
   price: 37500
   category: Small
   group: Syndicate
-  shuttlePath: /Maps/Forge/Shuttles/Syndicate/flash.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Syndicate/flash.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -31,7 +32,7 @@
 - type: gameMap
   id: flash
   mapName: 'Вспышка'
-  mapPath: /Maps/Forge/Shuttles/Syndicate/flash.yml
+  mapPath: /Maps/_Forge/Shuttles/Syndicate/flash.yml
   minPlayers: 0
   stations:
     flash:

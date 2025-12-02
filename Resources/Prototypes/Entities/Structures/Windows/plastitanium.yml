@@ -54,9 +54,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/plastitanium_window.rsi # Frontier
+    sprite: Forge/Structures/Windows/plastitanium_window.rsi # Forge-change
   - type: Icon
-    sprite: _NF/Structures/Windows/plastitanium_window.rsi # Frontier
+    sprite: Forge/Structures/Windows/plastitanium_window.rsi # Forge-change
     state: full
   - type: IconSmooth
     key: walls # Frontier: windows<walls
@@ -93,13 +93,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2000
+        damage: 6500 # Backup / 9k too more, 6500 norm - Forge
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 4000 # vanilla (500) / CombatOverhaul (6000) - Mono / to 4000 - Forge
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -141,13 +141,13 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/plastitanium_window_diagonal.rsi # Frontier
+    sprite: Forge/Structures/Windows/plastitanium_window_diagonal.rsi # Forge-change
     state: state0
   - type: Tag
     tags:
     - Diagonal
   - type: Icon
-    sprite: _NF/Structures/Windows/plastitanium_window_diagonal.rsi # Frontier
+    sprite: Forge/Structures/Windows/plastitanium_window_diagonal.rsi # Forge-change
     state: state0
   - type: IconSmooth
     mode: Diagonal
@@ -195,13 +195,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2000
+        damage: 6500 # Forge-change
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 4000 # vanilla (500) / CombatOverhaul (6000) - Mono / to 4000 - Forge
       behaviors:
       - !type:PlaySoundBehavior
         sound:

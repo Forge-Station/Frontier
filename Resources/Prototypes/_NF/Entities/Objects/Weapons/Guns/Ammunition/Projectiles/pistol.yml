@@ -76,8 +76,12 @@
   - type: Projectile
     damage:
       types:
-        Shock: 7
-        Blunt: 6
+        Shock: 5
+        Blunt: 8
+  - type: EmpOnTrigger
+    range: 0.3
+    energyConsumption: 2700000
+    disableDuration: 5
   - type: StaminaDamageOnCollide
     damage: 4 # 15 hits to slowdown
 
@@ -171,8 +175,12 @@
   - type: Projectile
     damage:
       types:
-        Shock: 17
-        Blunt: 10
+        Shock: 10
+        Blunt: 17
+  - type: EmpOnTrigger
+    range: 0.3
+    energyConsumption: 2700000
+    disableDuration: 10
   - type: StaminaDamageOnCollide
     damage: 6 # 10 hits to slowdown
 

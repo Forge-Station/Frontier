@@ -5,7 +5,7 @@
     proto: ShoesCapableNF
   price: 0
   equipment:
-    shoes: ClothingShoesBootsWinterParamedic
+    shoes: ClothingShoesBootsLaceup
 
 - type: loadout
   id: ParaMedicalShoes2
@@ -24,3 +24,49 @@
   price: 0
   equipment:
     shoes: ClothingShoesColorBlack
+
+# region Winter
+- type: loadout
+  id: MedicalWinterShoes1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterParamedic
+
+- type: loadout
+  id: MedicalWinterShoes2
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterMed
+
+- type: loadout
+  id: MedicalWinterShoes3
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterChem
+
+- type: loadout
+  id: MedicalWinterShoes4
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterViro
+
+- type: loadout
+  id: MedicalWinterShoes5
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsWinterGenetics

@@ -5,8 +5,8 @@
   components:
     - type: GameRule
       delay:
-        min:  40 #CorvaxFrontier
-        max:  50 #CorvaxFrontier
+        min:  40 # Forge-Change
+        max:  50 # Forge-Change
 
 - type: entity
   id: NFBluespaceCargoCrate
@@ -15,7 +15,7 @@
   - type: StationEvent
     startAnnouncement: bluespace-cargo-event-announcement
     startAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_normal_crate.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_normal_crate.ogg # Forge-Change
     weight: 5
     duration: 35
     reoccurrenceDelay: 120
@@ -34,7 +34,7 @@
   #Todo add path to  start warning and end Voiceover
     startAnnouncement: bluespace-cargo-event-announcement
     startAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_normal_crate.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_normal_crate.ogg # Forge-Change
     earliestStart: 20
     weight: 5
     duration: 35
@@ -52,7 +52,7 @@
   - type: StationEvent
     startAnnouncement: bluespace-syndicate-crate-event-announcement
     startAudio:
-      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_syndie_crate.ogg # Corvax-Frontier
+      path: /Audio/_Forge/Announcements/Events/oleg_bluespace_syndie_crate.ogg # Forge-Change
     weight: 1
     duration: 35
     earliestStart: 90

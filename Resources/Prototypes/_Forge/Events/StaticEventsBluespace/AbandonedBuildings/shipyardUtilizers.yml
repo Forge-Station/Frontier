@@ -1,21 +1,21 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Notes:
-
+#
 - type: pointOfInterest
   id: shipyardUtilizers
   name: Заброшенная Верфь
   minimumDistance: 2000
   maximumDistance: 3000
-  gridPath: /Maps/Forge/Events/Elementary/AbandonedBuildings/shipyardUtilizers.yml
+  gridPath: /Maps/_Forge/Events/Elementary/AbandonedBuildings/shipyardUtilizers.yml
   addComponents:
   - type: IFF
     color: "#a88732"
@@ -26,7 +26,7 @@
 - type: gameMap
   id: shipyardUtilizers
   mapName: Заброшенная Верфь
-  mapPath: /Maps/Forge/Events/Elementary/AbandonedBuildings/shipyardUtilizers.yml
+  mapPath: /Maps/_Forge/Events/Elementary/AbandonedBuildings/shipyardUtilizers.yml
   minPlayers: 0
   stations:
     shipyardUtilizers:

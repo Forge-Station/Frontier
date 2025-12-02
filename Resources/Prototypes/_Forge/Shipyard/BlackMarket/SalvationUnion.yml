@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: SalvationUnion
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 42400
   category: Small
   group: BlackMarket
-  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/SalvationUnion.yml
+  shuttlePath: /Maps/_Forge/Shuttles/BlackMarket/salvationUnion.yml
   addComponents:
   - type: IFF
     flags: [HideLabel]
@@ -25,8 +25,8 @@
 
 - type: gameMap
   id: SalvationUnion
-  mapName: 'SalvationUnion'
-  mapPath: /Maps/Forge/Shuttles/BlackMarket/SalvationUnion.yml
+  mapName: 'Союз Спасения'
+  mapPath: /Maps/_Forge/Shuttles/BlackMarket/salvationUnion.yml
   minPlayers: 0
   stations:
     SalvationUnion:

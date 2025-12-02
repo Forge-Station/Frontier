@@ -94,8 +94,8 @@
     examineCaliber: gun-examine-hitscan-high
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: NFRedHeavyLaser
+  - type: ProjectileBatteryAmmoProvider # Corvax-Forge: Weapons Update
+    proto: NFBulletLaserHeavy
     fireCost: 80
 
 - type: entity
@@ -106,8 +106,9 @@
     examineCaliber: gun-examine-pulse-low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg # Corvax-Forge: Weapons Update
-  - type: HitscanBatteryAmmoProvider
-    proto: HeavyPulse # Corvax-Forge: Weapons Update
+    projectileSpeed: 50
+  - type: ProjectileBatteryAmmoProvider # Corvax-Forge: Weaponary update
+    proto: ForgeBulletHeavyPulse
     fireCost: 100
 
 - type: entity

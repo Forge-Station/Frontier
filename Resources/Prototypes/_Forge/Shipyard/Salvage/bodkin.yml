@@ -16,7 +16,7 @@
   price: 54800 #Grid appraises at 35000. Slapped on a ~10% markup.
   category: Medium
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/bodkin.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/bodkin.yml
   guidebookPage: ShipyardBodkin
   class:
   - Salvage
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Bodkin
   mapName: 'SBB Стилет'
-  mapPath: /Maps/Forge/Shuttles/Salvage/bodkin.yml
+  mapPath: /Maps/_Forge/Shuttles/Salvage/bodkin.yml
   minPlayers: 0
   stations:
     Bodkin:

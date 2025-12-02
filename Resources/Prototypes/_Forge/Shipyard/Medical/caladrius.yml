@@ -8,7 +8,6 @@
 
 # Shuttle Notes:
 #
-
 - type: vessel
   id: Caladrius
   parent: BaseVessel
@@ -18,7 +17,7 @@
   category: Large
   group: Medical
   access: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/caladrius.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/caladrius.yml
   guidebookPage: ShipyardCaladrius
   class:
   - Medical
@@ -28,7 +27,7 @@
 - type: gameMap
   id: Caladrius
   mapName: 'FSB Каладрий'
-  mapPath: /Maps/Forge/Shuttles/Medical/caladrius.yml
+  mapPath: /Maps/_Forge/Shuttles/Medical/caladrius.yml
   minPlayers: 0
   stations:
     Caladrius:

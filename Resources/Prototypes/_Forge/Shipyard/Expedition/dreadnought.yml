@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 #- type: vessel
 #  id: dreadnought
 #  parent: BaseVessel
@@ -18,14 +18,14 @@
 #  price: 169000
 #  category: Medium
 #  group: Expedition
-#  shuttlePath: /Maps/Forge/Shuttles/Expedition/dreadnought.yml
+#  shuttlePath: /Maps/_Forge/Shuttles/Expedition/dreadnought.yml
 #  class:
 #  - Expedition
 
 #- type: gameMap
 #  id: dreadnought
 #  mapName: 'TL Дредноут'
-#  mapPath: /Maps/Forge/Shuttles/Expedition/dreadnought.yml
+#  mapPath: /Maps/_Forge/Shuttles/Expedition/dreadnought.yml
 #  minPlayers: 0
 #  stations:
 #    dreadnought:

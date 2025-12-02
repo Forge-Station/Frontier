@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Sanare
+  parent: BaseVessel
+  name: NMS Санаре
+  description: Малогабаритный медицинский шаттл. Рекомендованный состав команды 1-2 человек.
+  price: 24500
+  category: Small
+  group: Medical
+  access: Medical
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/sanare.yml
+  class:
+  - Medical
+
+- type: gameMap
+  id: Sanare
+  mapName: 'NMS Санаре'
+  mapPath: /Maps/_Forge/Shuttles/Medical/sanare.yml
+  minPlayers: 0
+  stations:
+    Sanare:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Санаре {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            paraMedicalInterview: [ 0, 0 ]

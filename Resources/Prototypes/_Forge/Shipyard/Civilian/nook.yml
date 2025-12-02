@@ -16,7 +16,7 @@
   price: 23000 #20502 0.05 21527.1
   category: Small
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/nook.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/nook.yml
   guidebookPage: ShipyardNook
   class:
   - Civilian
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Nook
   mapName: 'WSE Закоулок'
-  mapPath: /Maps/Forge/Shuttles/Civilian/nook.yml
+  mapPath: /Maps/_Forge/Shuttles/Civilian/nook.yml
   minPlayers: 0
   stations:
     Nook:

@@ -14,9 +14,10 @@
   parent: BaseMachinePowered
   name: базовый сервер управления стрельбой
   description: Manages the remote operation of ship weapons.
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: Forge/Structures/Machines/telecomms.rsi
+    sprite: _Mono/Structures/Machines/tele_bus.rsi
     snapCardinals: true
     layers:
     - state: icon
@@ -111,7 +112,7 @@
 
 - type: entity
   id: GunneryServerUltra
-  parent: [GunneryServerBase] # removed BaseStructureDisableToolUse
+  parent: [GunneryServerBase, BaseStructureDisableToolUse]
   name: сервер управления стрельбой ультра высокой мощности
   components:
   - type: Machine

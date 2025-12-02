@@ -16,15 +16,15 @@
   price: 50000 #~41500
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Service/akupara.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Service/akupara.yml
   guidebookPage: ShipyardAkupara
   class:
   - Botany
 
 - type: gameMap
   id: Akupara
-  mapName: 'Акупара'
-  mapPath: /Maps/Forge/Shuttles/Service/akupara.yml
+  mapName: 'UW Акупара'
+  mapPath: /Maps/_Forge/Shuttles/Service/akupara.yml
   minPlayers: 0
   stations:
     Akupara:

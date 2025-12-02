@@ -15,13 +15,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 1500 # Mono
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 750 # Mono 150->750
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -83,13 +83,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 225
+        damage: 700 # Mono
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 113
+        damage: 350 # 75->350 - Mono
       behaviors:
       - !type:PlaySoundBehavior
         sound:

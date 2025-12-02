@@ -8,16 +8,22 @@
   - NuclearOperative
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 1 # 48 hours
+      time: 144000 # 40 hours
     - !type:RoleTimeRequirement
       role: JobparaMedical
+      time: 72000 # 20 hours
+    - !type:RoleTimeRequirement
+      role: JobBrigmedic
+      time: 36000 # 10 hours
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
       time: 36000 # 10 hours
  # whitelisted: true
   startingGear: MedSynGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
   canBeAntag: true
-  icon: "JobIconBrigmedic"
+  icon: "JobIconMedSyn"
   supervisors: job-supervisors-syndicate
   weight: 40
   displayWeight: 40

@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Orange
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 18000 #Appraisal is 14500
   category: Small
   group: Scrap
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/orange.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/orange.yml
   guidebookPage: Null
   class:
   - Scrapyard
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Orange
   mapName: 'SV Обломок'
-  mapPath: /Maps/Forge/Shuttles/Scrap/orange.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/orange.yml
   minPlayers: 0
   stations:
     Orange:

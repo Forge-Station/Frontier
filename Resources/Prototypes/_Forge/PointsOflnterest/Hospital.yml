@@ -1,9 +1,21 @@
+# Author Info
+# GitHub: -
+# Discord: FireFoxPhoenix
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Notes:
+#
 #- type: pointOfInterest
 #  id: Hospital
 #  name: "Клиника Здоровый лис"
 #  minimumDistance: 1000
 #  maximumDistance: 1800
-#  gridPath: /Maps/Forge/POI/Hospital.yml
+#  gridPath: /Maps/_Forge/POI/Hospital.yml
 #  addComponents:
 #  - type: IFF
 #    color: "#1895a3"
@@ -13,7 +25,7 @@
 #- type: gameMap
 #  id: Hospital
 #  mapName: 'Клиника Здоровый лис'
-#  mapPath: /Maps/Forge/POI/Hospital.yml
+#  mapPath: /Maps/_Forge/POI/Hospital.yml
 #  minPlayers: 0
 #  stations:
 #    Hospital:

@@ -1,19 +1,55 @@
 - type: jobIcon
   parent: JobIcon
-  id: JobIconStormtrooper
-  icon:
-    sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
-    state: stormtrooper
-  jobName: job-name-stormtrooper
-  allowSelection: false # Frontier
-
-- type: jobIcon
-  parent: JobIcon
   id: JobIconCommander
   icon:
     sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
     state: commander
-  jobName: job-name-commander
+  jobName: forge-job-name-syndicommander
+  allowSelection: false # Frontier
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconStormtrooper
+  icon:
+    sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
+    state: stormtrooper
+  jobName: forge-job-name-stormtroop
+  allowSelection: false # Frontier
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedSyn
+  icon:
+    sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
+    state: medsyn
+  jobName: forge-job-name-medsyn
+  allowSelection: false # Frontier
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconEngineerSyn
+  icon:
+    sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
+    state: engysyn
+  jobName: forge-job-name-engineersyn
+  allowSelection: false # Frontier
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSmuggler
+  icon:
+    sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
+    state: smuggler
+  jobName: forge-job-name-smuggler
+  allowSelection: false # Frontier
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconBodyguardSmuggler
+  icon:
+    sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
+    state: bodyguard
+  jobName: forge-job-name-smugglerbodyguard
   allowSelection: false # Frontier
 
 - type: jobIcon
@@ -32,3 +68,12 @@
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: valet
   jobName: forge-job-name-outpostservice
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDocForge
+  icon:
+    sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
+    state: doc
+  jobName: job-name-doc
+  allowSelection: false # Frontier

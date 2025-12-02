@@ -1,13 +1,15 @@
-# Author MrIzo
+# Author Info
 # GitHub: -
 # Discord: letstrythisone.
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
-# Corvax-Frontier
-
+# Shuttle Notes:
+#
 - type: vessel
   id: bootlegger
   parent: BaseVessel
@@ -16,7 +18,7 @@
   price: 25500 # (19697)
   category: Small
   group: Scrap
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/bootlegger.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/bootlegger.yml
   guidebookPage: Null
   class:
   - Kitchen
@@ -24,7 +26,7 @@
 - type: gameMap
   id: bootlegger
   mapName: 'ST Бутлегер'
-  mapPath: /Maps/Forge/Shuttles/Scrap/bootlegger.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/bootlegger.yml
   minPlayers: 0
   stations:
     bootlegger:

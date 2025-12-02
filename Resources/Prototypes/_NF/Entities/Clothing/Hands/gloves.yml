@@ -25,7 +25,7 @@
     fiberColor: fibers-brown
 
 - type: entity
-  parent: ClothingHandsGlovesCombat
+  parent: [BaseC2ContrabandUnredeemable, ClothingHandsGlovesCombat] # Corvax-Forge: +BaseC2ContrabandUnredeemable
   id: ClothingHandsGlovesCombatNfsdBrown
   name: NFSD combat gloves
   description: Insulated gloves for a deputy sheriff.

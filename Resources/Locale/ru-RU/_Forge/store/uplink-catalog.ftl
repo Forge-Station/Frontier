@@ -68,3 +68,10 @@ uplink-smug-bundle200-name = ящик припасов синдиката чет
 uplink-smug-bundle200-desc = Содержит случайное снаряжение Синдиката, общей стоимостью в 200 телекристаллов. Оно может быть как бесполезным хламом, так и реально крутым.
 uplink-smug-bundle250-name = ящик припасов синдиката пятого класса
 uplink-smug-bundle250-desc = Содержит случайное снаряжение Синдиката, общей стоимостью в 250 телекристаллов. Оно может быть как бесполезным хламом, так и реально крутым.
+uplink-FSyndicateProtolathe-name = { ent-FSyndicateProtolathe }
+uplink-FSyndicateProtolathe-desc = { ent-FSyndicateProtolathe.desc }
+uplink-ClothingBackpackSyndicateRaidBundle-name = комплект рейдерского костюма синдиката
+uplink-ClothingBackpackSyndicateRaidBundle-desc = Комплект, в который входит рейдерский костюм и шлем, противогаз и боевые перчатки.
+
+forge-uplink-security-magbootspro-name = продвинутые магнитные сапоги ДСБФ
+forge-uplink-security-magbootspro-desc = Магнитные ботинки со встроенным джетпаком и местом под личное оружие, не замедляющие движения своего владельца благодаря ослабленному магнитному притяжению.

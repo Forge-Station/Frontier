@@ -1,0 +1,40 @@
+- type: entity
+  id: NFBulletRifle60AP
+  name: bullet (.60 rifle)
+  parent: NFBaseBulletAntiMateriel
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage: # Corvax-Forge-change
+      types:
+        Piercing: 45
+        Structural: 300
+    penetrationThreshold: 700
+    ignoreResistances: true
+    penetrationDamageTypeRequirement:
+    - Structural
+
+- type: entity
+  id: NFBulletRifle60Incendiary
+  name: bullet (.60 Incendiary)
+  parent: NFBaseBulletAntiMateriel
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage: # Corvax-Forge-change
+      types:
+        Piercing: 25
+        Heat: 20
+        Structural: 100
+    penetrationThreshold: 360
+    penetrationDamageTypeRequirement:
+    - Structural
+  - type: PointLight
+    enabled: true
+    color: "#ff4300"
+    radius: 1.1
+    energy: 3.0
+  - type: IgniteOnCollide
+    fireStacks: 1
+  - type: IgnitionSource
+    ignited: true

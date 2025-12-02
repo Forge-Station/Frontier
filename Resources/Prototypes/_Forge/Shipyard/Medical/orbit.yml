@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Orbit
+  parent: BaseVessel
+  name: NMS Орбита
+  description: Малогабаритный медицинский шаттл. Рекомендованный состав команды 1-2 человек.
+  price: 17500
+  category: Small
+  group: Medical
+  access: Medical
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/orbit.yml
+  class:
+  - Medical
+
+- type: gameMap
+  id: Orbit
+  mapName: 'NMS Орбита'
+  mapPath: /Maps/_Forge/Shuttles/Medical/orbit.yml
+  minPlayers: 0
+  stations:
+    Orbit:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Орбита {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            paraMedicalInterview: [ 0, 0 ]

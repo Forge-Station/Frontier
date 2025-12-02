@@ -67,6 +67,7 @@
   components:
   - type: Contraband
     allowedDepartments: [ CentralCommand ]
+    allowedJobs: [ StationRepresentative ] # Corvax-Forge-add
 
 - type: entity
   id: BaseCommandContraband

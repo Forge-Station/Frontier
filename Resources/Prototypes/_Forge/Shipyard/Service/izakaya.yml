@@ -2,6 +2,10 @@
 # GitHub: AF-Buyrcsp2
 # Discord: Buyrcsp2
 
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
 # Shuttle Notes:
 #
 - type: vessel
@@ -12,7 +16,7 @@
   price: 65000 # ~57808 0.1 63588.8
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Service/izakaya.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Service/izakaya.yml
   guidebookPage: ShipyardIzakaya
   class:
   - Kitchen
@@ -22,7 +26,7 @@
 - type: gameMap
   id: Izakaya
   mapName: 'SSS Изакая'
-  mapPath: /Maps/Forge/Shuttles/Service/izakaya.yml
+  mapPath: /Maps/_Forge/Shuttles/Service/izakaya.yml
   minPlayers: 0
   stations:
     Izakaya:

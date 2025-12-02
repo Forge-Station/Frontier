@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Horizonts
+  parent: BaseVessel
+  name: NT Горизонт
+  description: Среднегабаритный экспедиционный шаттл. Рекомендованный размер команды 3-6 человек.
+  price: 71000
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_Forge/Shuttles/Expedition/horizonts.yml
+  guidebookPage: null
+  class:
+  - Expedition
+
+- type: gameMap
+  id: Horizonts
+  mapName: 'NT Горизонт'
+  mapPath: /Maps/_Forge/Shuttles/Expedition/horizonts.yml
+  minPlayers: 0
+  stations:
+    Horizonts:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Горизонт {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

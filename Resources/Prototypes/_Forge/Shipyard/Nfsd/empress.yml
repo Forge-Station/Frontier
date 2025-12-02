@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Empress
   parent: BaseVessel
@@ -17,7 +17,7 @@
   category: Large
   group: Security
   access: Bailiff
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/empress.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/empress.yml
   guidebookPage: Null
   class:
   - Capital
@@ -28,7 +28,7 @@
 - type: gameMap
   id: Empress
   mapName: 'NSF Императрица'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/empress.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/empress.yml
   minPlayers: 0
   stations:
     Empress:

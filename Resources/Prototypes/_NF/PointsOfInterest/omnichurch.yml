@@ -3,8 +3,8 @@
 # Discord: BlackSails (??)
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Notes:
 #
@@ -17,7 +17,7 @@
   gridPath: /Maps/_NF/POI/beacon.yml
   addComponents:
   - type: ProtectedGrid
-    noGridCollision: true #CorvaxFrontier
+    noGridCollision: true #Forge-Change
   - type: StationTransit
     routes:
       MinorPointsOfInterest: 40

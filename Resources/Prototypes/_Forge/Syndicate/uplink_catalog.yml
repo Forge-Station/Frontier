@@ -1220,18 +1220,18 @@
   categories:
   - UplinkDeceptionSmugger
 
-- type: listing
-  id: SmuggerUplinkBribe
-  name: uplink-bribe-name
-  description: uplink-bribe-desc
-  productEntity: BriefcaseSyndieLobbyingBundleFilled
-  discountCategory: usualDiscounts
-  discountDownTo:
-    TelecrystalDamaged: 4
-  cost:
-    TelecrystalDamaged: 8
-  categories:
-    - UplinkDeceptionSmugger
+# - type: listing
+#   id: SmuggerUplinkBribe
+#   name: uplink-bribe-name
+#   description: uplink-bribe-desc
+#   productEntity: BriefcaseSyndieLobbyingBundleFilled
+#   discountCategory: usualDiscounts
+#   discountDownTo:
+#     TelecrystalDamaged: 4
+#   cost:
+#     TelecrystalDamaged: 8
+#   categories:
+#     - UplinkDeceptionSmugger
 
 # - type: listing
 #   id: SmuggerUplinkGigacancerScanner
@@ -2850,5 +2850,25 @@
   productEntity: PowerCellSyndicate
   cost:
     TelecrystalDamaged: 20
+  categories:
+  - UplinkWearablesSmugger
+
+- type: listing
+  id: SmuggerUplinkFSyndicateProtolathe
+  name: uplink-FSyndicateProtolathe-name
+  description: uplink-FSyndicateProtolathe-desc
+  productEntity: FSyndicateProtolatheFlatpack
+  cost:
+    TelecrystalDamaged: 100
+  categories:
+  - UplinkJobSmugger
+
+- type: listing
+  id: SmuggerUplinkClothingBackpackSyndicateRaidBundle
+  name: uplink-ClothingBackpackSyndicateRaidBundle-name
+  description: uplink-ClothingBackpackSyndicateRaidBundle-desc
+  productEntity: ClothingBackpackSyndicateRaidBundle
+  cost:
+    TelecrystalDamaged: 24
   categories:
   - UplinkWearablesSmugger

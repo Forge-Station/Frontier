@@ -1,44 +1,46 @@
 # Author Info
-# GitHub: erhardsteinhauer
-# Discord: erhardsteinhauer
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
-# GitHub: erhardsteinhauer
-# Discord: erhardsteinhauer
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
 
 # Shuttle Notes:
 #
-# - type: vessel
-#   id: Pioneer1
-#   parent: BaseVessel
-#   name: LVHI Пионер
-#   description: Одноместный грузовой контейнер, переоборудованный под выход в открытый космос.
-#   price: 12200 # ~10600$ on mapinit + ~1600$ from 15% markup
-#   category: Small
-#   group: Salvage
-#   shuttlePath: /Maps/Forge/Shuttles/Salvage/pioneer.yml
-#   guidebookPage: null
-#   class:
-#   - Salvage
+- type: vessel
+  id: Pioneer
+  parent: BaseVessel
+  name: LVHI Пионер
+  description: Двухместный грузовой контейнер, переоборудованный под выход в открытый космос. Погодите... тот самый?
+  price: 22000
+  category: Small
+  group: Salvage
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/pioneer2.yml
+  guidebookPage: null
+  class:
+  - Salvage
 
 
 
-# - type: gameMap
-#   id: Pioneer1
-#   mapName: 'Пионер'
-#   mapPath: /Maps/Forge/Shuttles/Salvage/pioneer.yml
-#   minPlayers: 0
-#   stations:
-#     Pioneer1:
-#       stationProto: StandardFrontierVessel
-#       components:
-#         - type: StationNameSetup
-#           mapNameTemplate: 'Пионер {1}'
-#           nameGenerator:
-#             !type:NanotrasenNameGenerator
-#             prefixCreator: '14'
-#         - type: StationJobs
-#           availableJobs:
-#             ContractorInterview: [ 0, 0 ]
-#             PilotInterview: [ 0, 0 ]
-#             MercenaryInterview: [ 0, 0 ]
+- type: gameMap
+  id: Pioneer
+  mapName: 'LVHI Пионер'
+  mapPath: /Maps/_Forge/Shuttles/Salvage/pioneer2.yml
+  minPlayers: 0
+  stations:
+    Pioneer:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Пионер {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

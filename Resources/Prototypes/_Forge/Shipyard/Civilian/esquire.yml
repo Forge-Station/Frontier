@@ -1,13 +1,13 @@
 # Author Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Esquire
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 41000
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/Forge/Shuttles/Civilian/esquire.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/esquire.yml
   guidebookPage: Null
   class:
   - Civilian
@@ -24,7 +24,7 @@
 - type: gameMap
   id: Esquire
   mapName: 'NT Дворянин'
-  mapPath: /Maps/Forge/Shuttles/Civilian/esquire.yml
+  mapPath: /Maps/_Forge/Shuttles/Civilian/esquire.yml
   minPlayers: 0
   stations:
     Esquire:

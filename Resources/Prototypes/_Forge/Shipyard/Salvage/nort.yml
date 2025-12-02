@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Nort
   parent: BaseVessel
@@ -18,14 +18,14 @@
   price: 65600
   category: Small
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/nort.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/nort.yml
   class:
   - Salvage
 
 - type: gameMap
   id: Nort
   mapName: 'TL Север'
-  mapPath: /Maps/Forge/Shuttles/Salvage/nort.yml
+  mapPath: /Maps/_Forge/Shuttles/Salvage/nort.yml
   minPlayers: 0
   stations:
     Nort:

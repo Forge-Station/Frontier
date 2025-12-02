@@ -43,3 +43,26 @@
   - type: Clothing
     sprite: Forge/Clothing/Uniforms/Jumpskirts/engineering.rsi
 # NFSD end
+
+# region Old textures
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtParamedicOld
+  name: paramedic jumpskirt
+  description: It's got a plus on it, that's a good thing right?
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Old/Uniforms/Jumpskirts/paramedic.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Old/Uniforms/Jumpskirts/paramedic.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtVirologyOld
+  name: virology jumpskirt
+  description: It's made of a special fiber that gives special protection against biohazards. It has a virologist rank stripe on it.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Old/Uniforms/Jumpskirts/virology.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Old/Uniforms/Jumpskirts/virology.rsi

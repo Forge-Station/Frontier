@@ -65,3 +65,40 @@
     maxFillLevels: 4
     fillBaseName: hypo_fill
     solutionName: hypospray
+
+- type: entity
+  name: боевой стимулятор
+  parent: [ BaseCentcommContraband, ChemicalMedipen ]
+  id: CombatNaniteMedipen
+  description: "Экспериментальный автоинъектор созданный для быстрого возращения в бой бойца, после использования рекомендуется обратиться к настоящему врачу.\nВнимание! Не рекомендуется использовать более двух инъекторов за раз."
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#101010"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#101010"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: atropen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: atropen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 10
+        reagents:
+        - ReagentId: Desoxyephedrine
+          Quantity: 5
+        - ReagentId: CombatNanites
+          Quantity: 5

@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Efira-11
+  parent: BaseVessel
+  name: NT Эфира-11
+  description: Среднегабаритный инженерный шаттл. Рекомендованный размер команды 2-4 человек.
+  price: 45700
+  category: Medium
+  group: Engineering
+  shuttlePath: /Maps/_Forge/Shuttles/Engineering/efira-11.yml
+  guidebookPage: null
+  class:
+  - Atmospherics
+
+- type: gameMap
+  id: Efira-11
+  mapName: 'NT Эфира-11'
+  mapPath: /Maps/_Forge/Shuttles/Engineering/efira-11.yml
+  minPlayers: 0
+  stations:
+    Efira-11:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Эфира-11 {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

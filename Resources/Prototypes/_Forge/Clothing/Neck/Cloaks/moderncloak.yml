@@ -1,0 +1,313 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakModernCloak
+  name: Плащ "Модерн"
+  description: Прочный плащ из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/ModernCloak/moderncloak.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodModernCloak
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodModernCloak
+  name: Капюшон "Модерн"
+  description: Прочный капюшон из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhood.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhood.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+#Blue
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakModernCloakBlue
+  name: Плащ "Модерн" [Синий]
+  description: Прочный плащ из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/ModernCloak/moderncloakBlue.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodModernCloakBlue
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodModernCloakBlue
+  name: Капюшон "Модерн" [Синий]
+  description: Прочный капюшон из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodBlue.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodBlue.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+#Pink
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakModernCloakPink
+  name: Плащ "Модерн" [Розовый]
+  description: Прочный плащ из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/ModernCloak/moderncloakPink.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodModernCloakPink
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodModernCloakPink
+  name: Капюшон "Модерн" [Розовый]
+  description: Прочный капюшон из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodPink.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodPink.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+#Black + Red (BRed)
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakModernCloakBRed
+  name: Плащ "Модерн" [Чёрно-красный]
+  description: Прочный плащ из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/ModernCloak/moderncloakBRed.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodModernCloakBRed
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodModernCloakBRed
+  name: Капюшон "Модерн" [Чёрно-красный]
+  description: Прочный капюшон из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodBRed.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodBRed.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+#Black + Yellow (BYellow)
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakModernCloakBYellow
+  name: Плащ "Модерн" [Чёрно-жёлтый]
+  description: Прочный плащ из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/ModernCloak/moderncloakBYellow.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodModernCloakBYellow
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodModernCloakBYellow
+  name: Капюшон "Модерн" [Чёрно-жёлтый]
+  description: Прочный капюшон из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodBYellow.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodBYellow.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+#Black + Yellow (BPurple)
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakModernCloakBPurple
+  name: Плащ "Модерн" [Чёрно-фиолетовый]
+  description: Прочный плащ из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/ModernCloak/moderncloakBPurple.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodModernCloakBPurple
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodModernCloakBPurple
+  name: Капюшон "Модерн" [Чёрно-фиолетовый]
+  description: Прочный капюшон из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodBPurple.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodBYellow.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+#Grey
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakModernCloakGrey
+  name: Плащ "Модерн" [Серый]
+  description: Прочный плащ из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/ModernCloak/moderncloakGrey.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodModernCloakGrey
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodModernCloakGrey
+  name: Капюшон "Модерн" [Серый]
+  description: Прочный капюшон из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodGrey.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodGrey.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+#Red
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakModernCloakRed
+  name: Плащ "Модерн" [Красный]
+  description: Прочный плащ из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/ModernCloak/moderncloakRed.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodModernCloakRed
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodModernCloakRed
+  name: Капюшон "Модерн" [Красный]
+  description: Прочный капюшон из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodRed.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodRed.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+#Desert
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakModernCloakDesert
+  name: Плащ "Модерн" [Красный]
+  description: Прочный плащ из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/ModernCloak/moderncloakDesert.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodModernCloakDesert
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodModernCloakDesert
+  name: Капюшон "Модерн" [Красный]
+  description: Прочный капюшон из современных материалов.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodDesert.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Head/Hats/ModernHood/modernhoodDesert.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair

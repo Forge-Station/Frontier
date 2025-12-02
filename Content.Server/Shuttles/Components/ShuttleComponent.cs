@@ -74,5 +74,8 @@ namespace Content.Server.Shuttles.Components
         /// </summary>
         [DataField]
         public float DampingModifier;
+
+        [DataField] // Frontier
+        public string? TargetPOI = null;
     }
 }

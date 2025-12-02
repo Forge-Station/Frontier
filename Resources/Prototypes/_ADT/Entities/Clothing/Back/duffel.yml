@@ -1,0 +1,16 @@
+# Med
+- type: entity
+  parent: ClothingBackpackDuffelMedical
+  id: ADTClothingBackpackDuffelPathologist
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Back/pathologist_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffelMedical
+  id: ADTClothingBackpackDuffelParamedic
+  name: parsmedical duffel bag
+  description: A large duffel bag to hold paramedical equipment
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Back/paramedic_duffel.rsi

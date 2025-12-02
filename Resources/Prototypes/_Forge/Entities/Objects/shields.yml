@@ -1,0 +1,63 @@
+- type: entity
+  name: продвинутый энергощит
+  description: "Энергетический щит, способный отражать все энергетические снаряды, а также обеспечивать всестороннюю защиту от большинства других атак.\nСтандартное снаряжение элиты NanoTrasen."
+  parent: [BaseCentcommContraband, EnergyShield]
+  suffix: Эскадрон Смерти
+  categories: [ DoNotMap ]
+  id: EnergyShieldAdvanced
+  components:
+    - type: Sprite
+      sprite: Forge/Objects/Weapons/Melee/cc_e_shield.rsi
+    - type: Item
+      sprite: Forge/Objects/Weapons/Melee/cc_e_shield.rsi
+    - type: PointLight
+      color: red
+    - type: Reflect
+      reflectProb: 0.95
+      reflects:
+        - Energy
+        - NonEnergy
+    - type: Blocking
+      passiveBlockFraction: 0.95
+      passiveBlockModifier:
+        coefficients:
+          Blunt: 0.3
+          Slash: 0.3
+          Piercing: 0.3
+          Heat: 0.3
+        flatReductions:
+          Heat: 5
+          Piercing: 5
+      activeBlockModifier:
+        coefficients:
+          Blunt: 0.1
+          Slash: 0.1
+          Piercing: 0.1
+          Heat: 0.1
+        flatReductions:
+          Heat: 10
+          Piercing: 10
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 2800
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 2000
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: GlassBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                BrokenEnergyShield:
+                  min: 1
+                  max: 1
+    - type: StaticPrice
+      price: 350

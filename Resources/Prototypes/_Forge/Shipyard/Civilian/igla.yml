@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Igla
+  parent: BaseVessel
+  name: NC Игла
+  description: Малогабаритный грузовой шаттл. Рекомендованный состав команды 1-2 человека.
+  price: 7000
+  category: Micro
+  group: Shipyard
+  shuttlePath: /Maps/_Forge/Shuttles/Civilian/igla.yml
+  guidebookPage: null
+  class:
+  - Cargo
+
+- type: gameMap
+  id: Igla
+  mapName: 'NC Игла'
+  mapPath: /Maps/_Forge/Shuttles/Civilian/igla.yml
+  minPlayers: 0
+  stations:
+    Igla:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Игла {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

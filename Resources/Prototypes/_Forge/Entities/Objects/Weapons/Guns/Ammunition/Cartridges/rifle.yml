@@ -1,0 +1,23 @@
+- type: entity
+  id: NFCartridgeRifle60AP
+  name: cartridge (.60 пробивные)
+  parent: NFBaseCartridgeRifle60
+  components:
+  - type: CartridgeAmmo
+    proto: NFBulletRifle60AP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+
+- type: entity
+  id: NFCartridgeRifle60Incendiary
+  name: cartridge (.60 зажигательные)
+  parent: NFBaseCartridgeRifle60
+  components:
+  - type: CartridgeAmmo
+    proto: NFBulletRifle60Incendiary
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]

@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: alexmactep
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: scurvy
   parent: BaseVessel
@@ -18,7 +18,7 @@
   price: 46600
   category: Small
   group: BlackMarket
-  shuttlePath: /Maps/Forge/Shuttles/BlackMarket/scurvy.yml
+  shuttlePath: /Maps/_Forge/Shuttles/BlackMarket/scurvy.yml
   addComponents:
   - type: IFF
     flags: [HideLabel]
@@ -27,8 +27,8 @@
 
 - type: gameMap
   id: scurvy
-  mapName: 'scurvy'
-  mapPath: /Maps/Forge/Shuttles/BlackMarket/scurvy.yml
+  mapName: 'Цинга'
+  mapPath: /Maps/_Forge/Shuttles/BlackMarket/scurvy.yml
   minPlayers: 0
   stations:
     scurvy:

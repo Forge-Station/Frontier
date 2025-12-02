@@ -15,8 +15,9 @@
       - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: HeavyPulse
+    projectileSpeed: 40
+  - type: ProjectileBatteryAmmoProvider
+    proto: ForgeBulletHeavyPulse
     fireCost: 50
   - type: Battery
     maxCharge: 50
@@ -39,8 +40,9 @@
       - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: ImmolationLaser
+    projectileSpeed: 40
+  - type: ProjectileBatteryAmmoProvider
+    proto: ForgeBulletImmolationLaser
     fireCost: 100
   - type: Battery
     maxCharge: 100
@@ -63,8 +65,9 @@
       - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: FiredartLaser
+    projectileSpeed: 40
+  - type: ProjectileBatteryAmmoProvider
+    proto: ForgeBulletFiredartLaser
     fireCost: 30
   - type: Battery
     maxCharge: 30
@@ -87,8 +90,9 @@
       - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: FiredartLaser
+    projectileSpeed: 40
+  - type: ProjectileBatteryAmmoProvider
+    proto: ForgeBulletFiredartLaser
     fireCost: 10
   - type: Battery
     maxCharge: 10
@@ -111,8 +115,9 @@
       - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: ForgeXrayLaser
+    projectileSpeed: 40
+  - type: ProjectileBatteryAmmoProvider
+    proto: ForgeBulletXrayLaser
     fireCost: 120
   - type: Appearance
   - type: Battery
@@ -129,7 +134,7 @@
     sprite: Forge/Objects/Specific/Mech/mech_equipment.rsi
     state: mecha_teslacannon
   - type: Gun
-    projectileSpeed: 6
+    projectileSpeed: 12
     fireRate: 0.4
     selectedMode: SemiAuto
     availableModes:
@@ -164,6 +169,7 @@
       - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    projectileSpeed: 40
   - type: ProjectileBatteryAmmoProvider
     proto: NFBulletDisabler
     fireCost: 10
@@ -188,8 +194,9 @@
       - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+    projectileSpeed: 40
   - type: ProjectileBatteryAmmoProvider
-    proto: NFShellShotgunBuckshot
+    proto: NFShellShotgunBuckshotOverpressure
     fireCost: 30
   - type: Battery
     maxCharge: 30
@@ -212,6 +219,7 @@
       - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+    projectileSpeed: 40
   - type: ProjectileBatteryAmmoProvider
     proto: NFShellShotgunIncendiary
     fireCost: 40
@@ -238,8 +246,9 @@
       - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+    projectileSpeed: 40
   - type: ProjectileBatteryAmmoProvider
-    proto: NFCartridgeRifle30
+    proto: NFCartridgeRifle30Overpressure
     fireCost: 5
   - type: Battery
     maxCharge: 5

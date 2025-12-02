@@ -751,8 +751,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
-  - type: ZombificationResistance
-    zombificationResistanceCoefficient: 0.75
+  - type: ZombificationResistance # Corvax-Forge: Armor rebalance
+    zombificationResistanceCoefficient: 0
 
 #Deathsquad Hardsuit
 - type: entity

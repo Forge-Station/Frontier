@@ -1,4 +1,4 @@
-<div class="header" align="center">
+<div class="header" align="center"> 
 <img alt="Frontier Station" height="300" src="https://github.com/Forge-Station/Frontier/blob/master/Resources/Textures/_NF/Logo/logo.png?raw=true" />
 </div>
 

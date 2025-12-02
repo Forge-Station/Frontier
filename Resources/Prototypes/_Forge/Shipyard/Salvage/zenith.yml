@@ -1,13 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: autsaider_m
-# License: CC-BY-NC-ND-3.0
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
+#
 - type: vessel
   id: Zenith
   parent: BaseVessel
@@ -16,7 +18,7 @@
   price: 123200
   category: Medium
   group: Salvage
-  shuttlePath: /Maps/Forge/Shuttles/Salvage/zenith.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/zenith.yml
   guidebookPage: Null
   class:
   - Cargo
@@ -27,7 +29,7 @@
 - type: gameMap
   id: Zenith
   mapName: 'TL Зенит'
-  mapPath: /Maps/Forge/Shuttles/Salvage/zenith.yml
+  mapPath: /Maps/_Forge/Shuttles/Salvage/zenith.yml
   minPlayers: 0
   stations:
     Zenith:

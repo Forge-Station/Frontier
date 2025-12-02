@@ -11,11 +11,11 @@
 - type: pointOfInterest
   id: Medical
   parent: BasePOI
-  name: 'Госпиталь' #CorvaxFrontier
+  name: 'Госпиталь' #Forge-Change
   minimumDistance: 1650
-  maximumDistance: 2400 #CorvaxFrontier
+  maximumDistance: 2400 #Forge-Change
   spawnGroup: Required
-  gridPath: /Maps/Forge/POI/medical.yml #CorvaxFrontier
+  gridPath: /Maps/_Forge/POI/medical.yml #Forge-Change
   addComponents:
   - type: IFF
     color: "#00b7eb"
@@ -23,12 +23,12 @@
     routes:
       SpawnPoints: 30
   - type: ProtectedGrid
-    noGridCollision: true #CorvaxFrontier
+    noGridCollision: true #Forge-Change
 
 - type: gameMap
   id: Medical
   mapName: 'Medical Dispatch'
-  mapPath: /Maps/Forge/POI/medical.yml #CorvaxFrontier
+  mapPath: /Maps/_Forge/POI/medical.yml #Forge-Change
   minPlayers: 0
   stations:
     Medical:

@@ -189,6 +189,8 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: ZombificationResistance # Corvax-Forge: Armor rebalance
+    zombificationResistanceCoefficient: 0
 
 - type: entity
   abstract: true

@@ -1,15 +1,15 @@
 # Author Info
 # GitHub: -
 # Discord: vldaad
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
 # Shuttle Notes:
-
+#
 # - type: vessel
 #   id: theScavenger
 #   parent: BaseVessel
@@ -18,14 +18,14 @@
 #   price: 36450
 #   category: Medium
 #   group: Salvage
-#   shuttlePath: /Maps/Forge/Shuttles/Salvage/theScavenger.yml
+#   shuttlePath: /Maps/_Forge/Shuttles/Salvage/theScavenger.yml
 #   class:
 #   - Salvage
 
 # - type: gameMap
 #   id: theScavenger
 #   mapName: 'NMS Мусорщик'
-#   mapPath: /Maps/Forge/Shuttles/Salvage/theScavenger.yml
+#   mapPath: /Maps/_Forge/Shuttles/Salvage/theScavenger.yml
 #   minPlayers: 0
 #   stations:
 #     theScavenger:

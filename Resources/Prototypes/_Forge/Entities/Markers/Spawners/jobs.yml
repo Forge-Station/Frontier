@@ -73,3 +73,21 @@
     layers:
       - state: green
       - state: technicalassistant
+
+- type: entity
+  id: SpawnPointSmugglerBodyguard
+  parent: SpawnPointPassenger
+  name: Телохранитель
+  suffix: Forge
+  components:
+  - type: SpawnPoint
+    job_id: smugglerBodyguard
+
+- type: entity
+  id: SpawnPointEngineerSyn
+  parent: SpawnPointPassenger
+  name: Техник Синдиката
+  suffix: Forge
+  components:
+  - type: SpawnPoint
+    job_id: EngineerSyn

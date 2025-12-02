@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Hunter
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 54000
   category: Small
   group: Syndicate
-  shuttlePath: /Maps/Forge/Shuttles/Syndicate/hunter.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Syndicate/hunter.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -30,7 +30,7 @@
 - type: gameMap
   id: Hunter
   mapName: 'Охотник'
-  mapPath: /Maps/Forge/Shuttles/Syndicate/hunter.yml
+  mapPath: /Maps/_Forge/Shuttles/Syndicate/hunter.yml
   minPlayers: 0
   stations:
     Hunter:

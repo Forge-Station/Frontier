@@ -1,6 +1,13 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: MPL-2.0
+
 // Copyright Rane (elijahrane@gmail.com) 2025
 // All rights reserved. Relicensed under AGPL with permission
 
+using System.Linq;
 using Content.Client.UserInterface.Controls;
 using Content.Shared._Mono.FireControl;
 using Content.Shared._Mono.ShipGuns;
@@ -27,6 +34,8 @@ public sealed partial class FireControlWindow : FancyWindow
     // Dictionary to store weapon entity to type mapping
     private readonly Dictionary<NetEntity, ShipGunType> _weaponTypes = new();
 
+    private FireControlConsoleBoundInterfaceState? _currentState;
+
     public FireControlWindow()
     {
         RobustXamlLoader.Load(this);
@@ -47,6 +56,8 @@ public sealed partial class FireControlWindow : FancyWindow
         }
 
         OnWeaponSelectionChanged?.Invoke();
+
+        UpdateAllWeaponButtonTexts();
     }
 
     private void UnselectAllWeapons(BaseButton.ButtonEventArgs args)
@@ -57,6 +68,8 @@ public sealed partial class FireControlWindow : FancyWindow
         }
 
         OnWeaponSelectionChanged?.Invoke();
+
+        UpdateAllWeaponButtonTexts();
     }
 
     private void SelectBallisticWeapons(BaseButton.ButtonEventArgs args)
@@ -80,6 +93,7 @@ public sealed partial class FireControlWindow : FancyWindow
         }
 
         OnWeaponSelectionChanged?.Invoke();
+        UpdateAllWeaponButtonTexts();
     }
 
     private void SelectEnergyWeapons(BaseButton.ButtonEventArgs args)
@@ -103,6 +117,7 @@ public sealed partial class FireControlWindow : FancyWindow
         }
 
         OnWeaponSelectionChanged?.Invoke();
+        UpdateAllWeaponButtonTexts();
     }
 
     private void SelectMissileWeapons(BaseButton.ButtonEventArgs args)
@@ -126,10 +141,53 @@ public sealed partial class FireControlWindow : FancyWindow
         }
 
         OnWeaponSelectionChanged?.Invoke();
+        UpdateAllWeaponButtonTexts();
+    }
+
+    /// <summary>
+    /// Updates the text of a weapon button based on its selection state and manual reload status.
+    /// </summary>
+    private void UpdateWeaponButtonText(Button button, FireControllableEntry controllable)
+    {
+        if (button.Pressed && controllable.HasManualReload && controllable.AmmoCount.HasValue)
+        {
+            button.Text = Loc.GetString("gunnery-gun-select-ammo", ("name", controllable.Name), ("ammo", controllable.AmmoCount.Value));
+
+            if (controllable.AmmoCount.Value == 0)
+            {
+                button.ModulateSelfOverride = Color.Red;
+            }
+            else
+            {
+                button.ModulateSelfOverride = null;
+            }
+        }
+        else
+        {
+            button.Text = Loc.GetString("gunnery-gun-select", ("name", controllable.Name));
+            button.ModulateSelfOverride = null;
+        }
+    }
+
+    /// <summary>
+    /// Updates all weapon button texts based on current selection state.
+    /// </summary>
+    private void UpdateAllWeaponButtonTexts()
+    {
+        foreach (var (netEntity, button) in WeaponsList)
+        {
+            var controllable = _currentState?.FireControllables?.FirstOrDefault(c => c.NetEntity == netEntity);
+
+            if (controllable.HasValue)
+            {
+                UpdateWeaponButtonText(button, controllable.Value);
+            }
+        }
     }
 
     public void UpdateStatus(FireControlConsoleBoundInterfaceState state)
     {
+        _currentState = state;
         NavRadar.UpdateState(state.NavState);
 
         if (state.Connected)
@@ -145,6 +203,8 @@ public sealed partial class FireControlWindow : FancyWindow
         }
 
         UpdateWeaponsList(state);
+
+        UpdateAllWeaponButtonTexts();
 
         // Update the category buttons state based on whether weapons of that type are available
         bool hasBallisticWeapons = false;
@@ -201,6 +261,7 @@ public sealed partial class FireControlWindow : FancyWindow
             if (WeaponsList.TryGetValue(controllable.NetEntity, out var existingButton))
             {
                 toRemove.Remove(controllable.NetEntity);
+                UpdateWeaponButtonText(existingButton, controllable);
             }
             else
             {
@@ -213,10 +274,16 @@ public sealed partial class FireControlWindow : FancyWindow
                     Margin = new Thickness(4, 1)
                 };
 
-                button.OnToggled += _ => OnWeaponSelectionChanged?.Invoke();
+                button.OnToggled += _ =>
+                {
+                    OnWeaponSelectionChanged?.Invoke();
+                    UpdateAllWeaponButtonTexts();
+                };
 
                 ControllablesBox.AddChild(button);
                 WeaponsList.Add(controllable.NetEntity, button);
+
+                UpdateWeaponButtonText(button, controllable);
             }
         }
 

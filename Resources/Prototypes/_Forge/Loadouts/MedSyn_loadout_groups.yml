@@ -71,7 +71,7 @@
   - SmugglerNeck2
   - SmugglerNeck3
   - SmugglerNeck4
-  - StormtrooperNeck5
+  - StormtrooperNeck3
   fallbacks:
   - SmugglerNeck1
 
@@ -96,3 +96,14 @@
   - PouchSyndicateMedLd
   subgroups:
   - SyndicateBackpackItems
+
+- type: loadoutGroup
+  id: MedSynHead
+  name: loadout-group-contractor-head
+  minLimit: 1
+  loadouts:
+  - MedSynClothingHead1
+  - StormtrooperClothingHead2
+  - StormtrooperClothingHead3
+  fallbacks:
+  - MedSynClothingHead1

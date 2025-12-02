@@ -85,7 +85,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 75
+        damage: 150 # Mono
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -94,7 +94,7 @@
           collection: WindowShatter
     - trigger:
         !type:DamageTrigger
-        damage: 37
+        damage: 75 # Mono 37->75
       behaviors:
       - !type:PlaySoundBehavior
         sound:

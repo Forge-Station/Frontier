@@ -1,0 +1,24 @@
+- type: entity
+  id: ToolboxEngineerSyn
+  name: suspicious box of uncertainty
+  suffix: Engineer
+  description: What should I take this time?
+  parent: [ BaseItem, BaseC3SyndicateContraband ] # Frontier: BaseMinorContraband<BaseC3SyndicateContraband
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Misc/Syndicatebox.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SyndEngineer1Set
+    - SyndEngineer2Set
+    - SyndEngineer3Set
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+  - type: Contraband # Frontier
+    hideValues: true # Frontier

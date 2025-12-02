@@ -10,6 +10,25 @@
   equipment:
     outerClothing: ClothingOuterWinterMed
 
+ # pathologist
+- type: loadout
+  id: OMedLdPathologistOuter1
+  price: 0
+  equipment:
+    outerClothing: ADTClothingOuterCoatLabPathologist
+
+- type: loadout
+  id: OMedLdPathologistOuter2
+  price: 0
+  equipment:
+    outerClothing: ADTClothingOuterCoatLabPathologist_alt
+
+- type: loadout
+  id: OMedLdPathologistOuter3
+  price: 0
+  equipment:
+    outerClothing: ADTClothingOuterApronPathologist
+
 # Химик
 - type: loadout
   id: ClothingOuterCoatLabChemOMedLd

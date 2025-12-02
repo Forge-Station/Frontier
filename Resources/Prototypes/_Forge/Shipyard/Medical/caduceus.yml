@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: caduceus
   parent: BaseVessel
@@ -17,7 +17,7 @@
   category: Large
   group: Medical
   access: Medical
-  shuttlePath: /Maps/Forge/Shuttles/Medical/caduceus.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/caduceus.yml
   guidebookPage: Null
   class:
   - Medical
@@ -26,7 +26,7 @@
 - type: gameMap
   id: caduceus
   mapName: 'NM Кадуцей'
-  mapPath: /Maps/Forge/Shuttles/Medical/caduceus.yml
+  mapPath: /Maps/_Forge/Shuttles/Medical/caduceus.yml
   minPlayers: 0
   stations:
     caduceus:

@@ -1,20 +1,21 @@
 # Author Info
 # GitHub: mersen_tyn
 # Discord: kvasen and mersen
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: -
+# Discord: -
 
 # Notes:
 # just a little loot n shoot POI. Pretty much the second POI to even exist
-
 - type: pointOfInterest
   id: Epsilon
   name: Ретранслятор Эпсилон
   minimumDistance: 4500
   maximumDistance: 6500
-  gridPath: /Maps/Forge/Events/Elementary/Syndicate/epsilon.yml
+  gridPath: /Maps/_Forge/Events/Elementary/Syndicate/epsilon.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -34,7 +35,7 @@
 - type: gameMap
   id: Epsilon
   mapName: Ретранслятор Эпсилон
-  mapPath: /Maps/Forge/Events/Elementary/Syndicate/epsilon.yml
+  mapPath: /Maps/_Forge/Events/Elementary/Syndicate/epsilon.yml
   minPlayers: 0
   stations:
     Epsilon:

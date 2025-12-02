@@ -1,15 +1,15 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: letstrythisone.
-# License: CC-BY-NC-ND-3.0
-# Corvax_frontier
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
-# Shuttle notes:
-
+# Shuttle Notes:
+#
 - type: vessel
   id: Serge
   parent: BaseVessel
@@ -18,7 +18,7 @@
   price: 11000 # (5964)
   category: Micro
   group: Custom
-  shuttlePath: /Maps/Forge/Shuttles/Scrap/Serge.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/serge.yml
   guidebookPage: Null
   class:
   - Scrapyard
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Serge
   mapName: 'ST Сердж'
-  mapPath: /Maps/Forge/Shuttles/Scrap/Serge.yml
+  mapPath: /Maps/_Forge/Shuttles/Scrap/serge.yml
   minPlayers: 0
   stations:
     Serge:

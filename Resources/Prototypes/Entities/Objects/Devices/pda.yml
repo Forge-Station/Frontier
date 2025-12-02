@@ -817,6 +817,11 @@
     id: ParamedicIDCard
     bookSlot:
       startingItem: BookParamedic
+      priority: -2 # Forge-change: whitelist fix
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
@@ -1011,6 +1016,7 @@
       - WantedListCartridge
       - MedTekCartridge
       - AstroNavCartridge
+      - LedgerCartridge # Corvax-Forge
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener

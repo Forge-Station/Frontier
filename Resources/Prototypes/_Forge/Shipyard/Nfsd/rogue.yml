@@ -1,4 +1,4 @@
-# Author -
+# Author Info
 # GitHub: -
 # Discord: -
 
@@ -7,7 +7,7 @@
 # Discord: -
 
 # Shuttle Notes:
-
+#
 - type: vessel
   id: Rogue
   parent: BaseVessel
@@ -16,7 +16,7 @@
   price: 25125 #the appraisal is 9100$
   category: Micro
   group: Custom
-  shuttlePath: /Maps/Forge/Shuttles/Nfsd/rogue.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/rogue.yml
   guidebookPage: Null
   class:
   - Fighter
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Rogue
   mapName: 'NSF Плут'
-  mapPath: /Maps/Forge/Shuttles/Nfsd/rogue.yml
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/rogue.yml
   minPlayers: 0
   stations:
     Rogue:

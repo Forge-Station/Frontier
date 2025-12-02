@@ -1,4 +1,17 @@
 - type: entity
+  id: NFBaseWeaponFrameRifleSniperNanotrasen
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleSniper ]
+  abstract: true
+  components:
+  - type: Gun
+    angleIncrease: 0.5
+    angleDecay: 3.5
+    fireRate: 0.8
+    projectileSpeed: 50
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+
+- type: entity
   name: Scar12
   parent: [NFBaseWeaponRifleAssaultChamber30, BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssaultNanotrasen]
   id: WeaponRifleScar12
@@ -499,3 +512,29 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+
+- type: entity
+  parent: [ NFBaseWeaponRifleChamber60Magazine, BaseGunWieldable, NFBaseWeaponFrameRifleSniperNanotrasen]
+  id: WeaponSniperBrute
+  name: Брут
+  description: Смертоносная крупнокалиберная снайперская винтовка. Очевидно, что она не предназначена для разгона мирных демонстраций... Хотя, кто с вами будет спорить?
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Snipers/brute.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    sprite: Forge/Objects/Weapons/Guns/Snipers/brute.rsi
+    size: Huge
+    shape:
+      - 0,0,3,2
+    storedRotation: 45
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Snipers/brute.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage

@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: -
+# Discord: t4k_dnh
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Ko-mp-otik
+# Discord: ko_mp_otik
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Ryugu
+  parent: BaseVessel
+  name: NMS Рюгу
+  description: Малогабаритный медицинский шаттл. Рекомендованный состав команды 1-2 человек.
+  price: 22500
+  category: Small
+  group: Medical
+  access: Medical
+  shuttlePath: /Maps/_Forge/Shuttles/Medical/ryugu.yml
+  class:
+  - Medical
+
+- type: gameMap
+  id: Ryugu
+  mapName: 'NMS Рюгу'
+  mapPath: /Maps/_Forge/Shuttles/Medical/ryugu.yml
+  minPlayers: 0
+  stations:
+    Ryugu:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Рюгу {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            paraMedicalInterview: [ 0, 0 ]

@@ -8,8 +8,9 @@
   components:
   - type: Contraband
     severity: Class1
-    # Pretty much everyone.
-    allowedDepartments: [ Civilian, Security, Command, Frontier, CentralCommand ]
+    # Corvax-Forge change:
+    allowedDepartments: [ Security, Command, CentralCommand ]
+    allowedJobs: [ StationRepresentative, StationTrafficController, SecurityGuard, Mercenary, Pilot ]
 
 - type: entity
   parent: BaseC1Contraband
@@ -31,8 +32,9 @@
   components:
   - type: Contraband
     severity: Class2
-    # Security and heads only (finally, shotgun traffic controller)
+    # Corvax-Forge change:
     allowedDepartments: [ Security, Command, CentralCommand ]
+    allowedJobs: [ StationRepresentative, StationTrafficController, SecurityGuard ]
 
 # Engineering equipment that's potentially hazardous in use
 - type: entity
@@ -41,7 +43,9 @@
   abstract: true
   components:
   - type: Contraband
+    # Corvax-Forge change:
     allowedDepartments: [ Engineering, CentralCommand ]
+    allowedJobs: [ StationRepresentative]
 
 - type: entity
   parent: BaseC2ContrabandUnredeemable
