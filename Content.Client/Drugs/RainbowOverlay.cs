@@ -1,6 +1,6 @@
 using Content.Shared.CCVar;
 using Content.Shared.Drugs;
-using Content.Shared.StatusEffectNew; // Forge-Change
+using Content.Shared.StatusEffectNew;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Configuration;
@@ -19,8 +19,8 @@ public sealed class RainbowOverlay : Overlay
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IEntitySystemManager _sysMan = default!;
-    [Dependency] private readonly IGameTiming _timing = default!; // Forge-Change
-    private readonly StatusEffectsSystem _statusEffects = default!; // Forge-Change
+    [Dependency] private readonly IGameTiming _timing = default!;
+    private readonly StatusEffectsSystem _statusEffects = default!;
 
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
     public override bool RequestScreenTexture => true;
@@ -28,9 +28,12 @@ public sealed class RainbowOverlay : Overlay
 
     public float Intoxication = 0.0f;
     public float TimeTicker = 0.0f;
+    public float Phase = 0.0f;
 
     private const float VisualThreshold = 10.0f;
     private const float PowerDivisor = 250.0f;
+    private float _timeScale = 0.0f;
+    private float _warpScale = 0.0f;
 
     private float EffectScale => Math.Clamp((Intoxication - VisualThreshold) / PowerDivisor, 0.0f, 1.0f);
 
@@ -42,6 +45,12 @@ public sealed class RainbowOverlay : Overlay
 
         _rainbowShader = _prototypeManager.Index(Shader).InstanceUnique();
         _config.OnValueChanged(CCVars.ReducedMotion, OnReducedMotionChanged, invokeImmediately: true);
+    }
+
+    private void OnReducedMotionChanged(bool reducedMotion)
+    {
+        _timeScale = reducedMotion ? 0.0f : 1.0f;
+        _warpScale = reducedMotion ? 0.0f : 1.0f;
     }
 
     protected override void FrameUpdate(FrameEventArgs args)
@@ -81,16 +90,15 @@ public sealed class RainbowOverlay : Overlay
 
     protected override void Draw(in OverlayDrawArgs args)
     {
-        // TODO disable only the motion part or ike's idea (single static frame of the overlay)
-        if (_config.GetCVar(CCVars.ReducedMotion))
-            return;
-
         if (ScreenTexture == null)
             return;
 
         var handle = args.WorldHandle;
         _rainbowShader.SetParameter("SCREEN_TEXTURE", ScreenTexture);
-        _rainbowShader.SetParameter("effectScale", EffectScale);
+        _rainbowShader.SetParameter("colorScale", EffectScale);
+        _rainbowShader.SetParameter("timeScale", _timeScale);
+        _rainbowShader.SetParameter("warpScale", _warpScale * EffectScale);
+        _rainbowShader.SetParameter("phase", Phase);
         handle.UseShader(_rainbowShader);
         handle.DrawRect(args.WorldBounds, Color.White);
         handle.UseShader(null);

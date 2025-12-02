@@ -78,8 +78,6 @@ public sealed partial class MechSystem : SharedMechSystem
     [Dependency] private readonly PowerCellSystem _powerCell = default!;
     [Dependency] protected readonly IGameTiming Timing = default!;
 
-    private static readonly ProtoId<ToolQualityPrototype> PryingQuality = "Prying";
-
     /// <inheritdoc/>
     public override void Initialize()
     {

@@ -139,7 +139,15 @@
   id: MechEquipment
   name: lathe-category-mech-weaponary
 
-# Sec
+- type: latheCategory
+  id: Modules
+  name: lathe-category-modules
+
+- type: latheCategory
+  id: Robotics
+  name: lathe-category-robotics
+
+# Security TechFab
 - type: latheCategory
   id: Ammo
   name: lathe-category-ammo
@@ -181,6 +189,7 @@
   id: Neck
   name: lathe-category-neck
 
+# Forge-Change-Start
 - type: latheCategory
   id: SyndicateTradingConsoleFirearmsWeapons
   name: lathe-category-syndicate-1
@@ -208,3 +217,4 @@
 - type: latheCategory
   id: SyndicateTradingConsoleConventor
   name: lathe-category-syndicate-7
+# Forge-Change-End

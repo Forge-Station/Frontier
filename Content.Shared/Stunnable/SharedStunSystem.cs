@@ -101,13 +101,6 @@ public abstract partial class SharedStunSystem : EntitySystem
         }
 
     }
-    // Forge-Change-Start
-    private void OnStunShutdown(Entity<StunnedComponent> ent, ref ComponentShutdown args)
-    {
-        // This exists so the client can end their funny animation if they're playing one.
-        UpdateCanMove(ent, ent.Comp, args);
-        Appearance.RemoveData(ent, StunVisuals.SeeingStars);
-    }
 
     private void OnStunShutdown(Entity<StunnedComponent> ent, ref ComponentShutdown args)
     {
@@ -120,7 +113,7 @@ public abstract partial class SharedStunSystem : EntitySystem
     {
         Blocker.UpdateCanMove(uid);
     }
-    // Forge-Change-End
+
     private void OnStunOnContactCollide(Entity<StunOnContactComponent> ent, ref StartCollideEvent args)
     {
         if (args.OurFixtureId != ent.Comp.FixtureId)
@@ -304,15 +297,6 @@ public abstract partial class SharedStunSystem : EntitySystem
         Knockdown(uid, null, false, true, true);
         OnStunnedSuccessfully(uid, duration);
 
-        var knockedEv = new KnockedDownEvent(time);
-        RaiseLocalEvent(uid, ref knockedEv);
-
-        UpdateKnockdownTime((uid, component), knockedEv.Time, refresh);
-
-        Alerts.ShowAlert(uid, KnockdownAlert, null, (GameTiming.CurTime, component.NextUpdate));
-
-        _adminLogger.Add(LogType.Stamina, LogImpact.Medium, $"{ToPrettyString(uid):user} knocked down for {time.Seconds} seconds");
-        // Forge-Change-End
         return true;
     }
 

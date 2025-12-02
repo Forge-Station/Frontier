@@ -258,11 +258,11 @@ public sealed partial class ShuttleSystem
                 continue;
 
             if (stunTime.TotalSeconds > 1.0f) //Forge-Change
-                _stuns.TryStun(uid, stunTime, true); //Forge-Change
+                _stuns.TryKnockdown(uid, stunTime, true); //Forge-Change
 
             if (direction.LengthSquared() > minsq)
             {
-                _stuns.TryCrawling(uid, knockdownTime);
+                _stuns.TryKnockdown(uid, stunTime, true);
                 _throwing.TryThrow(uid, direction, physics, Transform(uid), _projQuery, direction.Length(), playSound: false);
             }
             else

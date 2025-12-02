@@ -5,31 +5,6 @@
   id: BaseMechPartRecipe
   completetime: 10
 
-- type: latheRecipe
-  abstract: true
-  parent: BaseMechPartRecipe
-  id: BaseRipleyLimbRecipe
-  materials:
-    Steel: 1000
-    Glass: 750
-
-- type: latheRecipe
-  abstract: true
-  parent: BaseMechPartRecipe
-  id: BaseHonkerLimbRecipe
-  materials:
-    Steel: 2000
-    Glass: 750
-    Bananium: 250
-
-- type: latheRecipe
-  abstract: true
-  parent: BaseMechPartRecipe
-  id: BaseHamtrLimbRecipe
-  materials:
-    Steel: 800
-    Glass: 600
-
 ## Recipes
 
 # Ripley

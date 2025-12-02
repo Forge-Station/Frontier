@@ -47,12 +47,6 @@ public sealed class StandingStateSystem : EntitySystem
             args.Cancelled = true;
         }
     }
-    // Forge-Change-Start
-    private void OnRefreshMovementSpeedModifiers(Entity<StandingStateComponent> entity, ref RefreshMovementSpeedModifiersEvent args)
-    {
-        if (!entity.Comp.Standing)
-            args.ModifySpeed(entity.Comp.SpeedModifier);
-    }
 
     private void OnRefreshFrictionModifiers(Entity<StandingStateComponent> entity, ref RefreshFrictionModifiersEvent args)
     {

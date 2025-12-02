@@ -580,7 +580,6 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         var damage = GetDamage(meleeUid, user, component);
         var resistanceBypass = GetResistanceBypass(meleeUid, user, component);
         var entities = GetEntityList(ev.Entities);
-        var resistanceBypass = GetResistanceBypass(meleeUid, user, component); // Forge-Edit: ignoreResistances heavy attack fix
 
         if (entities.Count == 0)
         {

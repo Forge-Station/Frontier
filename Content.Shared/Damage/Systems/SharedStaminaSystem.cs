@@ -220,18 +220,6 @@ public abstract partial class SharedStaminaSystem : EntitySystem
 
         TakeStaminaDamage(target, component.Damage, source: uid, sound: component.Sound);
     }
-    // Forge-Change-Start
-    private void UpdateStaminaVisuals(Entity<StaminaComponent> entity)
-    {
-        SetStaminaAlert(entity, entity.Comp);
-        SetStaminaAnimation(entity);
-    }
-
-    // Here so server can properly tell all clients in PVS range to start the animation
-    protected virtual void SetStaminaAnimation(Entity<StaminaComponent> entity){}
-
-    // Forge-Change-End
-
     private void UpdateStaminaVisuals(Entity<StaminaComponent> entity)
     {
         SetStaminaAlert(entity, entity.Comp);
@@ -464,12 +452,4 @@ public abstract partial class SharedStaminaSystem : EntitySystem
     {
         public NetEntity Entity = entity;
     }
-
-    // Forge-Change-Start
-    [Serializable, NetSerializable]
-    public sealed class StaminaAnimationEvent(NetEntity entity) : EntityEventArgs
-    {
-        public NetEntity Entity = entity;
-    }
-    // Forge-Change-End
 }

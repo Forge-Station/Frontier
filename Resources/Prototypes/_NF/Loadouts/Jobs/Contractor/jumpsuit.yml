@@ -989,6 +989,7 @@
   price: 500
   equipment:
     jumpsuit: ClothingUniformRandomArmlessNoSkirt
+  groupBy: "colorfulJumpsuit"
 
 - type: loadout
   id: ContractorClothingUniformRandomPunkCroptopShorts
@@ -1033,17 +1034,6 @@
   equipment:
     jumpsuit: ClothingUniformRandomPunkShortsOnly
   groupBy: "punkJumpsuit"
-
-- type: loadout
-  id: ContractorClothingUniformRandomArmlessNoSkirt
-  name: sleeveless jumpsuit (random)
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
-  price: 500
-  equipment:
-    jumpsuit: ClothingUniformRandomArmlessNoSkirt
-  groupBy: "colorfulJumpsuit"
 
 - type: loadout
   id: ContractorClothingUniformRandomArmless

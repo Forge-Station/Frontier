@@ -375,7 +375,7 @@ public sealed class ProjectileSystem : SharedProjectileSystem
 
         _statusEffectsSystem.TryAddStatusEffectDuration(
             target,
-            TemporaryBlindnessSystem.BlindingStatusEffect,
+            "TemporaryBlindness",
             statusTimeSpan);
     }
 }

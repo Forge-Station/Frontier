@@ -80,6 +80,8 @@ using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared.Mech.Components;
+using Content.Shared.Hands.Components;
 
 namespace Content.Shared.Weapons.Ranged.Systems;
 

@@ -21,7 +21,6 @@ using Content.Shared.Movement.Events;
 using Content.Shared.Salvage;
 using Content.Shared.Shuttles.Systems;
 using Content.Shared.Throwing;
-using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Server.GameStates;
 using Robust.Shared.Audio.Systems;
@@ -41,7 +40,6 @@ using Content.Shared.Maps;
 
 namespace Content.Server.Shuttles.Systems;
 
-[UsedImplicitly]
 public sealed partial class ShuttleSystem : SharedShuttleSystem
 {
     [Dependency] private readonly IAdminLogManager _logger = default!;
@@ -80,7 +78,6 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly TurfSystem _turf = default!;
 
     public const float TileDensityMultiplier = 0.5f; // Forge-Change
-    [Dependency] private readonly TurfSystem _turf = default!;
 
     private EntityQuery<BuckleComponent> _buckleQuery;
     private EntityQuery<MapGridComponent> _gridQuery;

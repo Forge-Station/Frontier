@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.Storage.EntitySystems;
 using Content.Shared._NF.CrateMachine;
@@ -21,7 +21,6 @@ public sealed partial class CrateMachineSystem : SharedCrateMachineSystem
     [Dependency] private readonly TurfSystem _turf = default!;
     [Dependency] private readonly EntityStorageSystem _storage = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
-    [Dependency] private readonly TurfSystem _turf = default!;
 
     /// <summary>
     /// Checks if there is a crate on the crate machine.

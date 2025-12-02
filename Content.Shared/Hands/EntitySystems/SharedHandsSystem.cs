@@ -13,8 +13,6 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Hands.EntitySystems;
 
-// Forge-Change full (refactory b.y. wizard)
-
 public abstract partial class SharedHandsSystem
 {
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
@@ -203,21 +201,6 @@ public abstract partial class SharedHandsSystem
 
         item = held;
         return true;
-    }
-
-    /// <summary>
-    /// Attempts to retrieve the entity's active hand.
-    /// </summary>
-    public bool TryGetActiveHand(Entity<HandsComponent?> entity, [NotNullWhen(true)] out Hand? hand)
-    {
-        if (!Resolve(entity, ref entity.Comp, false))
-        {
-            hand = null;
-            return false;
-        }
-
-        hand = entity.Comp.ActiveHand;
-        return hand != null;
     }
 
     /// <summary>

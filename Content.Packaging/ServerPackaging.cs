@@ -48,6 +48,8 @@ public static class ServerPackaging
         "Npgsql",
         "Microsoft",
         "NetCord",
+        "Discord",
+        "QRCoder",
     };
 
     private static readonly List<string> ServerNotExtraAssemblies = new()
