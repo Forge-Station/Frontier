@@ -50,7 +50,6 @@ admin_chat_sound_path = "/Audio/Items/pop.ogg"
 admin_chat_sound_volume = -5.0
 
 [physics]
-broadphase_expand = 2.0
 target_minimum_tickrate = 60
 grid_fixtures = true
 grid_fixture_enlargement = -0.0099999997764826
