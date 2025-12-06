@@ -1,5 +1,5 @@
 using Content.Shared.Drowsiness;
-using Content.Shared.StatusEffectNew; // Forge-Change
+using Content.Shared.StatusEffectNew;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Player;
@@ -10,23 +10,23 @@ public sealed class DrowsinessSystem : SharedDrowsinessSystem
 {
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IOverlayManager _overlayMan = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!; // Forge-Change
+    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
 
     private DrowsinessOverlay _overlay = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-        // Forge-Change-Start
+
         SubscribeLocalEvent<DrowsinessStatusEffectComponent, StatusEffectAppliedEvent>(OnDrowsinessApply);
         SubscribeLocalEvent<DrowsinessStatusEffectComponent, StatusEffectRemovedEvent>(OnDrowsinessShutdown);
 
         SubscribeLocalEvent<DrowsinessStatusEffectComponent, StatusEffectRelayedEvent<LocalPlayerAttachedEvent>>(OnStatusEffectPlayerAttached);
         SubscribeLocalEvent<DrowsinessStatusEffectComponent, StatusEffectRelayedEvent<LocalPlayerDetachedEvent>>(OnStatusEffectPlayerDetached);
-        // Forge-Change-End
+
         _overlay = new();
     }
-    // Forge-Change-Start
+
     private void OnDrowsinessApply(Entity<DrowsinessStatusEffectComponent> ent, ref StatusEffectAppliedEvent args)
     {
         if (_player.LocalEntity == args.Target)
@@ -54,7 +54,6 @@ public sealed class DrowsinessSystem : SharedDrowsinessSystem
     {
         if (_player.LocalEntity is null)
             return;
-    // Forge-Change-End
         if (!_statusEffects.HasEffectComp<DrowsinessStatusEffectComponent>(_player.LocalEntity.Value))
         {
             _overlay.CurrentPower = 0;

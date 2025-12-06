@@ -37,7 +37,8 @@ public sealed class ConfigPresetTests
                 foreach (var preset in presets)
                 {
                     var stream = resources.ContentFileRead(preset);
-                    Assert.DoesNotThrow(() => config.LoadDefaultsFromTomlStream(stream));
+                    Assert.DoesNotThrow(() => config.LoadDefaultsFromTomlStream(stream),
+                        $"Preset {preset} failed to load.");
                 }
             });
 

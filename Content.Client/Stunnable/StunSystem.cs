@@ -1,7 +1,6 @@
 using System.Numerics;
 using Content.Shared.CombatMode;
 using Content.Shared.Interaction;
-using Content.Shared.Mobs;
 using Content.Shared.Stunnable;
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
@@ -9,12 +8,8 @@ using Robust.Shared.Animations;
 using Robust.Shared.Input;
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Random;
-using Robust.Shared.Timing;
-using Robust.Shared.Utility;
 
 namespace Content.Client.Stunnable;
-
-// Forge-Change full (refactory b.y. wizard)
 
 public sealed class StunSystem : SharedStunSystem
 {
@@ -26,6 +21,7 @@ public sealed class StunSystem : SharedStunSystem
 
     public override void Initialize()
     {
+        base.Initialize();
 
         SubscribeLocalEvent<StunVisualsComponent, ComponentInit>(OnComponentInit);
         SubscribeLocalEvent<StunVisualsComponent, AppearanceChangeEvent>(OnAppearanceChanged);

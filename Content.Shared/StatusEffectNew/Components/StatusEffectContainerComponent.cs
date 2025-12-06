@@ -1,8 +1,6 @@
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 
-// Forge-Change full (refactory b.y. wizard)
-
 namespace Content.Shared.StatusEffectNew.Components;
 
 /// <summary>

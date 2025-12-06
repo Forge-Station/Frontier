@@ -107,8 +107,8 @@
   metabolisms:
     Narcotic:
       effects:
-      - !type:ModifyStatusEffect # Forge-Change
-        effectProto: StatusEffectSeeingRainbow # Forge-Change
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
         time: 5
         type: Add
         refresh: false

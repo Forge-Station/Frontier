@@ -1,5 +1,5 @@
 using Content.Shared.Drowsiness;
-using Content.Shared.StatusEffectNew; // Forge-Change
+using Content.Shared.StatusEffectNew;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Enums;
@@ -10,12 +10,14 @@ namespace Content.Client.Drowsiness;
 
 public sealed class DrowsinessOverlay : Overlay
 {
+    private static readonly ProtoId<ShaderPrototype> Shader = "Drowsiness";
+
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IEntitySystemManager _sysMan = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    private readonly StatusEffectsSystem _statusEffects = default!; // Forge-Change
+    private readonly StatusEffectsSystem _statusEffects = default!;
 
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
     public override bool RequestScreenTexture => true;
@@ -31,9 +33,9 @@ public sealed class DrowsinessOverlay : Overlay
     {
         IoCManager.InjectDependencies(this);
 
-        _statusEffects = _sysMan.GetEntitySystem<StatusEffectsSystem>(); // Forge-Change
+        _statusEffects = _sysMan.GetEntitySystem<StatusEffectsSystem>();
 
-        _drowsinessShader = _prototypeManager.Index<ShaderPrototype>("Drowsiness").InstanceUnique();
+        _drowsinessShader = _prototypeManager.Index(Shader).InstanceUnique();
     }
 
     protected override void FrameUpdate(FrameEventArgs args)
@@ -43,11 +45,11 @@ public sealed class DrowsinessOverlay : Overlay
         if (playerEntity == null)
             return;
 
-        if (!_statusEffects.TryGetEffectsEndTimeWithComp<DrowsinessStatusEffectComponent>(playerEntity, out var endTime)) // Forge-Change
+        if (!_statusEffects.TryGetEffectsEndTimeWithComp<DrowsinessStatusEffectComponent>(playerEntity, out var endTime))
             return;
 
-        endTime ??= TimeSpan.MaxValue; // Forge-Change
-        var timeLeft = (float)(endTime - _timing.CurTime).Value.TotalSeconds; // Forge-Change
+        endTime ??= TimeSpan.MaxValue;
+        var timeLeft = (float)(endTime - _timing.CurTime).Value.TotalSeconds;
         CurrentPower += 8f * (0.5f * timeLeft - CurrentPower) * args.DeltaSeconds / (timeLeft + 1);
     }
 

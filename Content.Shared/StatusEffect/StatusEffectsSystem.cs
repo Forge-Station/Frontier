@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Alert;
 using Content.Shared.Rejuvenate;
-using Content.Shared.StatusEffectNew; // Forge-Change
+using Content.Shared.StatusEffectNew;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
@@ -120,7 +120,7 @@ namespace Content.Shared.StatusEffect
             if (HasComp<T>(uid))
                 return true;
 
-            EntityManager.AddComponent<T>(uid);
+            AddComp<T>(uid);
             status.ActiveEffects[key].RelevantComponent = Factory.GetComponentName<T>();
             return true;
 
@@ -136,10 +136,10 @@ namespace Content.Shared.StatusEffect
             if (TryAddStatusEffect(uid, key, time, refresh, status))
             {
                 // If they already have the comp, we just won't bother updating anything.
-                if (!EntityManager.HasComponent(uid, Factory.GetRegistration(component).Type))
+                if (!HasComp(uid, Factory.GetRegistration(component).Type))
                 {
                     var newComponent = (Component) Factory.GetComponent(component);
-                    EntityManager.AddComponent(uid, newComponent);
+                    AddComp(uid, newComponent);
                     status.ActiveEffects[key].RelevantComponent = component;
                 }
                 return true;
@@ -279,7 +279,7 @@ namespace Content.Shared.StatusEffect
                 && Factory.TryGetRegistration(state.RelevantComponent, out var registration))
             {
                 var type = registration.Type;
-                EntityManager.RemoveComponent(uid, type);
+                RemComp(uid, type);
             }
 
             if (proto.Alert != null)
@@ -353,7 +353,7 @@ namespace Content.Shared.StatusEffect
             if (!Resolve(uid, ref status, false))
                 return false;
 
-            var ev = new BeforeStatusEffectAddedEvent(key);
+            var ev = new BeforeOldStatusEffectAddedEvent(key);
             RaiseLocalEvent(uid, ref ev);
             if (ev.Cancelled)
                 return false;
@@ -480,6 +480,13 @@ namespace Content.Shared.StatusEffect
             return true;
         }
     }
+
+    /// <summary>
+    /// Raised on an entity before a status effect is added to determine if adding it should be cancelled.
+    /// Obsolete version of <see cref="BeforeStatusEffectAddedEvent" />
+    /// </summary>
+    [ByRefEvent, Obsolete("Migration to StatusEffectNew.StatusEffectsSystem is required")]
+    public record struct BeforeOldStatusEffectAddedEvent(string EffectKey, bool Cancelled = false);
 
     public readonly struct StatusEffectAddedEvent
     {
