@@ -994,7 +994,7 @@ entities:
       id: Ravager
     - type: NavMap
     - type: ImplicitRoof
-- proto: 255mmCartridge
+- proto: Forge255mmCartridgeHE
   entities:
   - uid: 561
     components:
@@ -8249,7 +8249,7 @@ entities:
     - type: Transform
       pos: 7.5,10.5
       parent: 3
-- proto: Magazine30mmWeak
+- proto: ForgeAmmoDrum30mmBase
   entities:
   - uid: 612
     components:

@@ -43,29 +43,17 @@ ent-Forge255mmCartridgeHESH = снаряд 255мм (HESH)
 
 # cartridge
 ent-Forge20mmCartridgeBase = патрон 20мм
-    .desc = " "
 ent-Forge20mmCartridgeAPHE = патрон 20мм (APHE)
-    .desc = " "
 ent-Forge20mmCartridgeAPCBC = патрон 20мм (APCBC)
-    .desc = " "
 
 ent-Forge30mmCartridgeBase = патрон 30мм
-    .desc = " "
 ent-Forge30mmCartridgeAPHE = патрон 30мм (APHE)
-    .desc = " "
 ent-Forge30mmCartridgeAPCBC = патрон 30мм (APCBC)
-    .desc = " "
 
 ent-Forge57mmCartridgeBase = снаряд 57мм
-    .desc = " "
 ent-Forge57mmCartridgeAPHE = снаряд 57мм (APHE)
-    .desc = " "
 ent-Forge57mmCartridgeAPCBC = снаряд 57мм (APCBC)
-    .desc = " "
 
 ent-Forge90mmCartridge = снаряд 90мм
-    .desc = " "
 ent-Forge90mmCartridgeAPHE = снаряд 90мм (APHE)
-    .desc = " "
 ent-Forge90mmCartridgeAPHEBC = снаряд 90мм (APHEBC)
-    .desc = " "

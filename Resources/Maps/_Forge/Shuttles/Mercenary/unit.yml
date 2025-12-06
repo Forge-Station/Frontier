@@ -486,8 +486,6 @@ entities:
           - 0
         chunkSize: 4
     - type: GasTileOverlay
-    - type: BecomesStation
-      id: Unit
     - type: MercenaryBountyDatabase
       totalBounties: 6
       bounties:
@@ -2344,7 +2342,7 @@ entities:
     - type: Transform
       pos: 6.5,14.5
       parent: 1
-- proto: Magazine90mmWeak
+- proto: ForgeMagazine90mm
   entities:
   - uid: 243
     components:
