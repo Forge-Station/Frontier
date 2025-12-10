@@ -95,8 +95,8 @@
   abstract: true
   components:
   - type: BindToStation # Forge-change
-  - type: Anchorable
-    delay: 10
+#  - type: Anchorable
+#    delay: 10
   - type: Pullable
   - type: PirateBountyItem # not putting this on the other, because like. how do you get a cyrexa for your bounty. thats stupid.
     id: ShipWeapon
@@ -185,8 +185,8 @@
   abstract: true
   components:
   - type: BindToStation # Forge-change
-  - type: Anchorable
-    delay: 10
+#  - type: Anchorable
+#    delay: 10
   - type: Pullable
   - type: PirateBountyItem # not putting this on the other, because like. how do you get a cyrexa for your bounty. thats stupid.
     id: ShipWeapon
@@ -291,8 +291,8 @@
   abstract: true
   components:
   - type: BindToStation # Forge-change
-  - type: Anchorable
-    delay: 10
+#  - type: Anchorable
+#    delay: 10
   - type: Pullable
   - type: PirateBountyItem # not putting this on the other, because like. how do you get a cyrexa for your bounty. thats stupid.
     id: ShipWeapon

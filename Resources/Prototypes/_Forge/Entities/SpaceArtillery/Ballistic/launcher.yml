@@ -1,20 +1,31 @@
-# SPDX-FileCopyrightText: 2025 Ilya246
-# SPDX-FileCopyrightText: 2025 kasature90
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: MPL-2.0
-
 - type: entity
-  id: WeaponTurretRAC30
-  name: RAC-30 Draupnir Autocannon
+  id: ForgeWeaponTurretStardust
+  name: Stardust 16mm cannon
   parent: BallisticArtilleryMagazine
-  description: A more heavy duty rapid rife autocannon, firing a hail of rounds much like its namesake became a hail of spears.
+  description: desc
   components:
   - type: BindToStation # Forge-change
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+    OnBump: false
+    OnAttacked: false
+    OnHandInteract: false
+    OnInteractUsing: false
   - type: StaticPrice
-    price: 1000
+    price: 750
+  - type: Gun
+    fireRate: 1.5
+    projectileSpeed: 95
+    minAngle: 3
+    maxAngle: 6
+    shootThermalSignature: 10000 # relatively low for a shipgun, ~693m signature if firing continuously
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/Gunshots/slammer.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: Sprite
-    sprite: _Mono/Objects/ShuttleWeapons/rac-30_draupnir.rsi
+    sprite: Forge/Objects/ShuttleWeapons/adler.rsi
     layers:
     - state: space_artillery
   - type: Appearance
@@ -26,16 +37,6 @@
 #  - type: DeviceLinkSink # Разве этого нету в базовом прототипе..?
 #    ports:
 #    - Toggle # К тому же тут неправильныый стоит..
-  - type: Gun
-    fireRate: 24 # Forge-change: rebalance
-    projectileSpeed: 130 # Forge-change: rebalance
-    minAngle: 4 # Forge-change: rebalance
-    maxAngle: 14 # Forge-change: rebalance
-    shootThermalSignature: 100000 # ~4.5km if firing continuously
-    soundGunshot:
-      path: /Audio/_Mono/Weapons/Guns/Gunshots/slammer.ogg
-    soundEmpty:
-      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: SpaceArtillery
     powerChargeRate: 100
     powerUsePassive: 100
@@ -47,19 +48,19 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: ForgeAmmoDrum30mmBase # Forge-change: rebalance
+        startingItem: ForgeAmmoDrum16mmBase # Forge-change
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - Magazine30mm
+          - Magazine16mm
         whitelistFailPopup: gun-magazine-whitelist-fail
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 10000
+        damage: 7500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -70,8 +71,10 @@
     resistance: 8
   - type: RadarBlip
     radarColor: "#FF0000"
-    scale: 1.5
+    scale: 1
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
-    shipClass: Medium
+    shipClass: Light
+# region WIP: test Ammo counter
+  - type: AmmoCounter

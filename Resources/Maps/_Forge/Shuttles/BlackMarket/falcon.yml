@@ -2575,7 +2575,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -2.5,-8.5
       parent: 3
-- proto: MagazineBox53mmPF
+- proto: ForgeMagazine57mmBase
   entities:
   - uid: 158
     components:
@@ -3781,7 +3781,7 @@ entities:
     - type: Transform
       pos: 3.5,-9.5
       parent: 3
-- proto: WeaponNavalCannon53mmUnanchor
+- proto: WeaponTurretDravon
   entities:
   - uid: 192
     components:
@@ -3789,7 +3789,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 5.5,0.5
       parent: 3
-- proto: WeaponNavalCannon53mm
+- proto: WeaponTurretDravon
   entities:
   - uid: 452
     components:

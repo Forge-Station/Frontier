@@ -534,14 +534,14 @@
     startingCharge: 50000
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 500
+    autoRechargeRate: 225 # Forge-change: rebalance
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
     fireRate: 20
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 4 # Forge-change: rebalance
     shootThermalSignature: 2000000
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
@@ -550,7 +550,7 @@
   - type: SpaceArtillery
     powerChargeRate: 200
     powerUsePassive: 300
-    powerUseActive: 0
+    powerUseActive: 190 # Forge-change: rebalance
   - type: FireControlRotate
   - type: Actions
   - type: HitscanBatteryAmmoProvider

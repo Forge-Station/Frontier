@@ -6799,7 +6799,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: MagazineBox53mmPF
+- proto: ForgeMagazine57mmBase
   entities:
   - uid: 14
     components:
@@ -9510,7 +9510,7 @@ entities:
           startTime: 253705.5018406
           length: 0.5
         storage: {}
-- proto: WeaponNavalCannon53mm
+- proto: WeaponTurretDravon
   entities:
   - uid: 12
     components:
@@ -9524,7 +9524,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -7.5,0.5
       parent: 1
-- proto: WeaponNavalCannon53mmUnanchor
+- proto: WeaponTurretDravon
   entities:
   - uid: 13
     components:

@@ -1,4 +1,44 @@
 # Base - APHE - APCBC
+# region 16mm
+# 16mm base
+- type: entity
+  id: ForgeAmmoDrum16mmBase
+  name: "16mm ammo drum"
+  parent: Magazine20mmPiercing
+  components:
+  - type: Tag
+    tags:
+    - Magazine16mm
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_20mm.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge16mmCartridgeBase
+    capacity: 65
+    whitelist:
+      tags:
+      - 16mmCartridge
+
+- type: entity
+  id: Forge16mmCartridgeBase
+  name: "cartridge 16mm"
+  parent: 20mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 16mm
+  - type: CartridgeAmmo
+    proto: Forge16mmSpread
+  - type: Tag
+    tags:
+    - Cartridge
+    - 16mmCartridge
 
 # region 20mm
 # 20mm base

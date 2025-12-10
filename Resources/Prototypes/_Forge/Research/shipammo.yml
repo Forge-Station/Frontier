@@ -16,7 +16,9 @@
 - type: technology
   id: ForgeResearchShipAmmoAPCBC20
   name: forge-research-technology-shipammo20apcbc
-  entityIcon: ForgeResearchShipAmmoAPCBC
+  icon:
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    state: research-apcbc
   discipline: NFArsenalMercenary
   tier: 1
   cost: 4000

@@ -10,6 +10,7 @@
   parent: BallisticArtilleryUnanchorableMagazine
   description: Fires 140mm HEAT shells in a 10 round burst from an internal autoloader.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 15000
   - type: Sprite

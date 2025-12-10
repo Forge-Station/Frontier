@@ -109,7 +109,7 @@
     fixtureID: projectile
   - type: ExplodeOnTrigger
   - type: Explosive # Forge-change
-    explosionType: Default
+    explosionType: DefaultShipGun # Forge-change
     maxIntensity: 100
     intensitySlope: 3
     totalIntensity: 30

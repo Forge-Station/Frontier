@@ -16,7 +16,7 @@
       types:
         Structural: 80
         Blunt: 14
-        Piercing: 28
+        Piercing: 24
   - type: ShipWeaponProjectile
   - type: TimedDespawn
     lifetime: 2
@@ -39,8 +39,8 @@
     damage:
       types:
         Structural: 95
-        Blunt: 20
-        Piercing: 32
+        Blunt: 21
+        Piercing: 23
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/50_armorpiercing_machinegun_casing.rsi
     layers:
@@ -67,8 +67,8 @@
     damage:
       types:
         Structural: 120
-        Blunt: 34
-        Piercing: 46
+        Blunt: 16
+        Piercing: 29
 
 # region 30mm
 - type: entity
@@ -79,9 +79,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 95
-        Blunt: 35
-        Piercing: 65
+        Structural: 124
+        Blunt: 29
+        Piercing: 38
   - type: ShipWeaponProjectile
   - type: TimedDespawn
     lifetime: 3
@@ -102,9 +102,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 115
-        Blunt: 45
-        Piercing: 72
+        Structural: 131
+        Blunt: 53
+        Piercing: 38
   - type: PointLight
     color: orange
   - type: TriggerOnCollide
@@ -125,9 +125,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 153
-        Blunt: 45
-        Piercing: 94
+        Structural: 193
+        Blunt: 29
+        Piercing: 78
 
 # region 57mm
 
@@ -142,7 +142,7 @@
       types:
         Structural: 168 # expl + structural? no no no
         Blunt: 66
-        Piercing: 141
+        Piercing: 78
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/57_shell.rsi
     layers:
@@ -178,7 +178,7 @@
       types:
         Structural: 192
         Blunt: 76
-        Piercing: 163
+        Piercing: 94
   - type: TriggerOnCollide
     fixtureID: projectile
   - type: ExplodeOnTrigger
@@ -216,9 +216,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 740
-        Blunt: 100
-        Piercing: 250
+        Structural: 940
+        Blunt: 89
+        Piercing: 95
   - type: TimedDespawn
     lifetime: 4.2
   - type: PointLight
@@ -471,3 +471,33 @@
     totalIntensity: 2950
     intensitySlope: 60
     maxIntensity: 2300
+
+# region Forge Ammo
+# 16mm - scatter
+- type: entity
+  id: Forge16mm
+  name: 16 mm
+  parent: 20mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 17
+        Piercing: 12
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/50_armorpiercing_machinegun_casing.rsi
+    layers:
+    - state: base-projectile
+  - type: PointLight
+    color: orange
+
+- type: entity
+  id: Forge16mmSpread
+  categories: [ HideSpawnMenu ]
+  parent: Forge16mm
+  components:
+  - type: ProjectileSpread
+    proto: Forge16mm
+    count: 6
+    spread: 13
