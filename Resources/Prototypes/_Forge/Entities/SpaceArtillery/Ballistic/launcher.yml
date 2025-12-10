@@ -5,13 +5,6 @@
   description: desc
   components:
   - type: BindToStation # Forge-change
-  - type: Electrified
-    enabled: false
-    usesApcPower: true
-    OnBump: false
-    OnAttacked: false
-    OnHandInteract: false
-    OnInteractUsing: false
   - type: StaticPrice
     price: 750
   - type: Gun
