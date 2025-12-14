@@ -121,16 +121,9 @@
     addComponentsLeaveGrid:
     - type: TimedDespawn
       lifetime: 15
-    - type: PassiveDamage
-      allowedStates:
-      - Alive
-      damage:
-        types:
-          Cellular: 1
     - type: Pacified
     removeComponentsReturnGrid:
     - type: TimedDespawn
-    - type: PassiveDamage
     - type: Pacified
 
 - type: entity
@@ -434,7 +427,7 @@
   - MobBloodstream
   - MobFlammable
   - MobEnhancedMovement
-  - BaseMobSpecies
+  - BaseMobSpeciesNPC
   - MobHumanoidHostileAIComplex
   - BaseC3MobHuman
   - NFBaseMobRestrictions
