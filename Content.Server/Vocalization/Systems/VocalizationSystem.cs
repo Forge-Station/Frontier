@@ -2,9 +2,11 @@ using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Vocalization.Components;
 using Content.Shared.ActionBlocker;
+using Robust.Shared.GameObjects; //Forge-Change
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-using Robust.Shared.Player; // Frontier
+using Robust.Server.GameObjects; //Forge-Change
+using Robust.Shared.Player; //Forge-Change
 
 namespace Content.Server.Vocalization.Systems;
 
@@ -19,6 +21,7 @@ public sealed partial class VocalizationSystem : EntitySystem
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly EntityLookupSystem _lookup = default!; //Forge-Change
 
     public override void Initialize()
     {
@@ -26,7 +29,6 @@ public sealed partial class VocalizationSystem : EntitySystem
 
         SubscribeLocalEvent<VocalizerComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<VocalizerRequiresPowerComponent, TryVocalizeEvent>(OnRequiresPowerTryVocalize);
-        SubscribeLocalEvent<ActorComponent, TryVocalizeEvent>(OnActorTryVocalize);
 
     }
 
@@ -43,19 +45,47 @@ public sealed partial class VocalizationSystem : EntitySystem
         args.Cancelled |= !receiver.Powered;
     }
 
-    // Frontier: no player advertisements
-    private static void OnActorTryVocalize(EntityUid uid, ActorComponent actor, ref TryVocalizeEvent args)
-    {
-        args.Cancelled = true;
-    }
-    // End Frontier
-
     /// <summary>
     /// Try speaking by raising a TryVocalizeEvent
     /// This event is passed to systems adding a message to it and setting it to handled
     /// </summary>
     private void TrySpeak(Entity<VocalizerComponent> entity)
     {
+        //Forge-Change-Start
+        // Players can't use vocalizers.
+        if (HasComp<ActorComponent>(entity.Owner))
+            return;
+
+        if (entity.Comp.PlayerDistance is float distance)
+        {
+            var xform = Transform(entity.Owner);
+            var foundPlayer = false;
+            var actorQuery = GetEntityQuery<ActorComponent>();
+            foreach (var near in _lookup.GetEntitiesInRange(xform.Coordinates, distance))
+            {
+                if (!actorQuery.HasComponent(near))
+                    continue;
+
+                // If we don't require the same grid, we found a player and can stop checking.
+                if (!entity.Comp.RequireSameGrid)
+                {
+                    foundPlayer = true;
+                    break;
+                }
+
+                // Otherwise, check if they are on the same grid.
+                var playerXform = Transform(near);
+                if (playerXform.GridUid == xform.GridUid)
+                {
+                    foundPlayer = true;
+                    break;
+                }
+            }
+
+            if (!foundPlayer)
+                return;
+        }
+        //Forge-Change-End
         var tryVocalizeEvent = new TryVocalizeEvent();
         RaiseLocalEvent(entity.Owner, ref tryVocalizeEvent);
 

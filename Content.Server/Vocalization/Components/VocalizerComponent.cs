@@ -34,4 +34,19 @@ public sealed partial class VocalizerComponent : Component
     /// </summary>
     [DataField]
     public bool HideChat;
+    //Forge-Change-Start
+    /// <summary>
+    /// How close a player has to be for the entity to vocalize.
+    /// If null, it will always vocalize regardless of player proximity.
+    /// </summary>
+    [DataField]
+    public float? PlayerDistance = 50f;
+
+    /// <summary>
+    /// If true, the entity will only vocalize if a player is on the same grid.
+    /// Only has an effect if PlayerDistance is not null.
+    /// </summary>
+    [DataField]
+    public bool RequireSameGrid = true;
+    //Forge-Change-End
 }
