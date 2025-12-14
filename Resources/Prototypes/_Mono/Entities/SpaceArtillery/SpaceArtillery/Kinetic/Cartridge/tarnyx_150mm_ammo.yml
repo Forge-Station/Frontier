@@ -14,7 +14,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 1750 # Forge-change
+        Structural: 1750 # Forge-change: rebalance
+        Piercing: 99 # Forge-change: rebalance
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/150_shell.rsi
     layers:
@@ -60,7 +61,7 @@
   - type: EmpDescription
     range: 10
     energyConsumption: 500000
-    disableDuration: 5.5
+    disableDuration: 6.5
   - type: Destructible
     thresholds:
     - trigger:

@@ -38,8 +38,8 @@
     projectileSpeed: 175
     minAngle: 0
     maxAngle: 1
-    fireRate: 0.2
-    burstCooldown: 14
+    fireRate: 0.1 # Forge-change: rebalance
+    burstCooldown: 18 # Forge-change: rebalance
     burstFireRate: 2
     shotsPerBurst: 2
     selectedMode: Burst

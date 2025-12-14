@@ -31,7 +31,7 @@
     range: 500
   - type: Gun
     fireRate: 0.1
-    projectileSpeed: 400
+    projectileSpeed: 240 # Forge-change: rebalance
     shootThermalSignature: 8000000 # ~2.8km after firing - relatively low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
