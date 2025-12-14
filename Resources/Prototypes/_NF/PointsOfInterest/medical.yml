@@ -37,7 +37,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Medical Dispatch'
         - type: ExtraStationInformation
-          iconPath: /Textures/_NF/Markers/jobs.rsi/medic.png
+          iconPath: /Textures/Forge/Logo/Icon/medic.png #Forge-Change
           stationSubtext: 'frontier-lobby-medical-subtext'
           stationDescription: 'frontier-lobby-medical-description'
           lobbySortOrder: 4
