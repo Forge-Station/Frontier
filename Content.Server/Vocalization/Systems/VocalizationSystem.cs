@@ -2,11 +2,9 @@ using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Vocalization.Components;
 using Content.Shared.ActionBlocker;
-using Robust.Shared.GameObjects; //Forge-Change
+using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-using Robust.Server.GameObjects; //Forge-Change
-using Robust.Shared.Player; //Forge-Change
 
 namespace Content.Server.Vocalization.Systems;
 
@@ -60,12 +58,9 @@ public sealed partial class VocalizationSystem : EntitySystem
         {
             var xform = Transform(entity.Owner);
             var foundPlayer = false;
-            var actorQuery = GetEntityQuery<ActorComponent>();
-            foreach (var near in _lookup.GetEntitiesInRange(xform.Coordinates, distance))
+            // TODO: This should be using a view subscription.
+            foreach (var (actor, _) in _lookup.GetEntitiesInRange<ActorComponent>(xform.Coordinates, distance))
             {
-                if (!actorQuery.HasComponent(near))
-                    continue;
-
                 // If we don't require the same grid, we found a player and can stop checking.
                 if (!entity.Comp.RequireSameGrid)
                 {
@@ -74,7 +69,7 @@ public sealed partial class VocalizationSystem : EntitySystem
                 }
 
                 // Otherwise, check if they are on the same grid.
-                var playerXform = Transform(near);
+                var playerXform = Transform(actor);
                 if (playerXform.GridUid == xform.GridUid)
                 {
                     foundPlayer = true;
