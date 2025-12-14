@@ -35,11 +35,11 @@
         layer:
         - MachineLayer
   - type: Gun
-    projectileSpeed: 275
+    projectileSpeed: 175
     minAngle: 0
     maxAngle: 1
     fireRate: 0.2
-    burstCooldown: 10
+    burstCooldown: 14
     burstFireRate: 2
     shotsPerBurst: 2
     selectedMode: Burst
@@ -73,7 +73,7 @@
     whitelist:
       tags:
       - 220mmCartridge
-    capacity: 12 # Forge-change: rebalance
+    capacity: 6 # Forge-change: rebalance
     proto: Forge220mmCartridgeHE # Forge-change: rebalance
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
