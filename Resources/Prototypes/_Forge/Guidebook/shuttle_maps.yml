@@ -1,0 +1,11 @@
+- type: entity
+  parent: PosterBase
+  id: ShuttleMapDomra
+  name: "GS Domra"
+  description: "Detailed map of a Domra shuttle."
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Forge/Guidebook/shuttle_maps/128x96.rsi
+    state: domra
+    scale: 1, 1

@@ -40,7 +40,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Аванпост ДСБФ'
         - type: ExtraStationInformation
-          iconPath: /Textures/_NF/Structures/Decoration/banner.rsi/nfsd-banner.png
+          iconPath: /Textures/Forge/Logo/Icon/nfsd-banner.png  #Forge-Change
           stationSubtext: 'frontier-lobby-nfsd-subtext'
           stationDescription: 'frontier-lobby-nfsd-description'
           lobbySortOrder: 2
