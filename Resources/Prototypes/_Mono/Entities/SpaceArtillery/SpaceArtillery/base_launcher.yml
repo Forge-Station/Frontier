@@ -80,6 +80,7 @@
   - type: LightningTarget
     priority: 1
   - type: ThermalSignature # at least most have a thermal signature when firing
+  - type: AmmoCounter # Forge-change
 
 - type: entity
   id: BallisticArtilleryUnanchorable
@@ -100,6 +101,7 @@
   - type: Pullable
   - type: PirateBountyItem # not putting this on the other, because like. how do you get a cyrexa for your bounty. thats stupid.
     id: ShipWeapon
+  - type: AmmoCounter # Forge-change
 
 - type: entity
   id: BallisticArtilleryBaseCartridge
@@ -108,6 +110,7 @@
     mode: SnapgridCenter
   components:
   - type: BindToStation # Forge-change
+  - type: AmmoCounter # Forge-change
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
@@ -185,6 +188,7 @@
   abstract: true
   components:
   - type: BindToStation # Forge-change
+  - type: AmmoCounter # Forge-change
 #  - type: Anchorable
 #    delay: 10
   - type: Pullable
@@ -206,6 +210,7 @@
     mode: SnapgridCenter
   components:
   - type: BindToStation # Forge-change
+  - type: AmmoCounter # Forge-change
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
@@ -291,6 +296,7 @@
   abstract: true
   components:
   - type: BindToStation # Forge-change
+  - type: AmmoCounter # Forge-change
 #  - type: Anchorable
 #    delay: 10
   - type: Pullable
@@ -303,4 +309,5 @@
   abstract: true
   components:
   - type: BindToStation # Forge-change
+  - type: AmmoCounter # Forge-change
   - type: RequiresGrid
