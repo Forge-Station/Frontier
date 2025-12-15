@@ -6,8 +6,6 @@ using Content.Shared.Stunnable;
 
 namespace Content.Shared.Movement.Systems;
 
-// Forge-Change full (refactory b.y. wizard)
-
 /// <summary>
 /// This handles the worm component
 /// </summary>

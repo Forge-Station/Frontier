@@ -410,7 +410,7 @@
 
 - type: entity
   id: WeaponDOCLaserPistol
-  parent: [ BaseWeaponEnergyPistolFireModesSyndie, BaseWeaponFrameEnergyPistolSyndie, BaseC1Contraband ]
+  parent: [ BaseWeaponEnergyPistolFireModesDOC, NFBaseWeaponFrameEnergyPistolNanotrasen ]
   name: DOC pistol
   description: |-
     Powerful laser pistol specially designed by Vitezstvi for the Director of Care
@@ -426,3 +426,32 @@
     autoRecharge: true
     autoRechargeRate: 35
   - type: Tag
+
+- type: entity
+  id: BaseWeaponEnergyPistolFireModesDOC
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-energybolt-high
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletLaserDOC
+    fireCost: 120
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletLaserDOC
+      fireCost: 120
+    - proto: NFBulletDisabler
+      fireCost: 80
+
+- type: entity
+  id: BulletLaserDOC
+  parent: NFBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 10

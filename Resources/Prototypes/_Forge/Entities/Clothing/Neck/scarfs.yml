@@ -1,0 +1,76 @@
+- type: entity
+  parent: ClothingScarfBase
+  id: ClothingNeckScarfBlackNiko
+  name: long cat's black scarf
+  description: I'm not a cat!
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/black.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/black.rsi
+
+- type: entity
+  parent: ClothingScarfBase
+  id: ClothingNeckScarfBlueNiko
+  name: long cat's blue scarf
+  description: I'm not a cat!
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/blue.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/blue.rsi
+
+- type: entity
+  parent: ClothingScarfBase
+  id: ClothingNeckScarfGrayNiko
+  name: long cat's gray scarf
+  description: I'm not a cat!
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/gray.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/gray.rsi
+
+- type: entity
+  parent: ClothingScarfBase
+  id: ClothingNeckScarfGreenNiko
+  name: long cat's green scarf
+  description: I'm not a cat!
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/green.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/green.rsi
+
+- type: entity
+  parent: ClothingScarfBase
+  id: ClothingNeckScarfPurpleNiko
+  name: long cat's purple scarf
+  description: I'm not a cat!
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/purple.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/purple.rsi
+
+- type: entity
+  parent: ClothingScarfBase
+  id: ClothingNeckScarfRedNiko
+  name: long cat's red scarf
+  description: I'm not a cat!
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/red.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/red.rsi
+
+- type: entity
+  parent: ClothingScarfBase
+  id: ClothingNeckScarfYellowNiko
+  name: long cat's yellow scarf
+  description: I'm not a cat!
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/yellow.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Scarfs/NikoScarfs/yellow.rsi

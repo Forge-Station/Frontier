@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
+using System.Numerics;
 
 namespace Content.Shared.Humanoid;
 

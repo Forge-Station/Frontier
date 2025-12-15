@@ -10,6 +10,7 @@ using Content.Shared.Emag.Components;
 using Content.Shared.Emag.Systems;
 using Content.Shared.Maps;
 using Robust.Server.GameObjects;
+using Content.Shared.Coordinates.Helpers;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Random;
@@ -25,6 +26,7 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly TurfSystem _turf = default!;
 
     private readonly List<BluespaceHarvesterTap> _taps =
     [
@@ -237,12 +239,11 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
             var testCoords = coords.Offset(offset);
             if (testCoords == coords)
                 continue;
-            var tile = testCoords.GetTileRef(EntityManager);
+            var tile = _turf.GetTileRef(testCoords);
             if (tile == null)
                 continue;
 
-            var tileDef = tile.Value.GetContentTileDefinition();
-            if (tileDef.ID == "Space")
+            if (tile.Value.Tile.IsEmpty)
                 continue;
 
             if (_lookup.GetEntitiesIntersecting(testCoords.ToMap(EntityManager, _transform), LookupFlags.Static).Any())

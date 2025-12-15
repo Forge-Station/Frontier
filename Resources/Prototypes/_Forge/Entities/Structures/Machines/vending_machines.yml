@@ -38,8 +38,6 @@
     ejectState: eject-unshaded
     denyState: deny-unshaded
     ejectDelay: 0.6
-  - type: Advertise
-    pack: NanoMedAds
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
@@ -60,7 +58,7 @@
     color: "#9dc5c9"
   - type: GuideHelp
     guides:
-    - Medical Doctor
+    - MedicalDoctor
   - type: AccessReader
     access: [["SyndicateAgent"]]
 
@@ -139,8 +137,6 @@
     initialStockQuality: 0.69
   - type: MarketModifier
     mod: 200
-  - type: Advertise
-    pack: GetmoreChocolateCorpAds
   - type: SpeakOnUIClosed
     pack: GetmoreChocolateCorpGoodbyes
   - type: Sprite
@@ -176,8 +172,6 @@
     initialStockQuality: 1
   - type: MarketModifier
     mod: 200
-  - type: Advertise
-    pack: GetmoreChocolateCorpAds
   - type: SpeakOnUIClosed
     pack: GetmoreChocolateCorpGoodbyes
   - type: Sprite

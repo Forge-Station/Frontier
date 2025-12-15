@@ -92,9 +92,9 @@
   - type: ExplosionResistance
     damageCoefficient: 0.65
   - type: ZombificationResistance
-    zombificationResistanceCoefficient: 0.65
+    zombificationResistanceCoefficient: 0
   - type: FireProtection
-    reduction: 0.65
+    reduction: 0.4
   - type: TemperatureProtection
     heatingCoefficient: 0.001
     coolingCoefficient: 0.001
@@ -106,7 +106,7 @@
         Piercing: 0.65
         Heat: 0.65
         Radiation: 0.65
-        Caustic: 0.65
+        Caustic: 0.4
   - type: HeldSpeedModifier
   - type: ClothingSpeedModifier
     walkModifier: 1

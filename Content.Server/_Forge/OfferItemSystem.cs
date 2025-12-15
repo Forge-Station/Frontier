@@ -3,11 +3,13 @@
 using Content.Shared.Alert;
 using Content.Shared._Forge.OfferItem;
 using Content.Shared.Hands.Components;
+using Content.Server.Hands.Systems;
 
 namespace Content.Server._Forge.OfferItem;
 
 public sealed class OfferItemSystem : SharedOfferItemSystem
 {
+    [Dependency] private readonly HandsSystem _hands = default!;
     [Dependency] private readonly AlertsSystem _alertsSystem = default!;
 
     private float _offerAcc = 0;
@@ -25,10 +27,10 @@ public sealed class OfferItemSystem : SharedOfferItemSystem
         var query = EntityQueryEnumerator<OfferItemComponent, HandsComponent>();
         while (query.MoveNext(out var uid, out var offerItem, out var hands))
         {
-            if (hands.ActiveHand is null)
+            if (hands.ActiveHandId is null)
                 continue;
 
-            if (offerItem.Hand is not null && hands.Hands[offerItem.Hand].HeldEntity is null)
+            if (offerItem.Hand is not null && !_hands.TryGetHand(uid, offerItem.Hand, out _))
                 if (offerItem.Target is not null)
                 {
                     UnReceive(offerItem.Target.Value, offerItem: offerItem);

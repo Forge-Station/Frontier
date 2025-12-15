@@ -53,13 +53,7 @@ public sealed class SkeletonReformOnDeathSystem : EntitySystem
             return;
         var skullProto = poly.Configuration.Entity;
 
-        if (_ent.TryGetComponent(body, out HandsComponent? handsC))
-        {
-            foreach (var kvp in handsC.Hands)
-            {
-                _hands.TryDrop(body, kvp.Value, null, false, false, handsC);
-            }
-        }
+        _hands.TryDrop(body);
 
         if (_ent.TryGetComponent(body, out InventoryComponent? invC))
         {

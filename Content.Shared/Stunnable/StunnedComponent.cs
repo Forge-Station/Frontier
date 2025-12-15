@@ -1,6 +1,9 @@
 using Robust.Shared.GameStates;
 
 namespace Content.Shared.Stunnable;
- // Forge-Change full (refactory b.y. wizard)
+
+/// <summary>
+/// This is used to temporarily prevent an entity from moving or acting.
+/// </summary>
 [RegisterComponent, NetworkedComponent, Access(typeof(SharedStunSystem))]
 public sealed partial class StunnedComponent : Component;
