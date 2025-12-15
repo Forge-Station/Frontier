@@ -127,9 +127,9 @@
   - type: SolutionContainerVisuals
     fillBaseName: syndie-
   - type: Slippery
-    staminaDamage: 50 # Forge-Change
+    staminaDamage: 50
     slipData:
-      knockdownTime: 3 # Forge-Change
+      knockdownTime: 3
       launchForwardsMultiplier: 3
   - type: Item
     heldPrefix: syndie
@@ -142,6 +142,8 @@
   - type: Residue
     residueAdjective: residue-slippery
     residueColor: residue-red
+  - type: StaticPrice
+    price: 500
 
 - type: entity
   name: soaplet
@@ -218,9 +220,9 @@
   - type: SolutionContainerVisuals
     fillBaseName: omega-
   - type: Slippery
-    staminaDamage: 50 # Forge-Change
+    staminaDamage: 50
     slipData:
-      knockdownTime: 5.0 # Forge-Change
+      knockdownTime: 5.0
       launchForwardsMultiplier: 3.0
   - type: Item
     heldPrefix: omega

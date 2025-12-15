@@ -18,9 +18,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:ModifyStatusEffect # Forge-Change
-        effectProto: StatusEffectDrowsiness # Forge-Change
-        time: 1 # Forge-Change
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 1
         type: Remove
 
 - type: reagent
@@ -80,9 +80,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:ModifyStatusEffect # Forge-Change
-        effectProto: StatusEffectDrowsiness # Forge-Change
-        time: 2 # Forge-Change
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
       - !type:AdjustReagent
         reagent: Theobromine

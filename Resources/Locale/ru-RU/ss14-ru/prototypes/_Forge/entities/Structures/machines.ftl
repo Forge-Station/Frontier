@@ -1,4 +1,4 @@
-ent-MachineMaterialSilo = Хранилище материалов
+ent-MachineMaterialSilo = хранилище материалов
     .desc = Продвинутая машина, способная использовать блю-спейс технологию для передачи материалов на ближайшие станки.
 ent-MachineMaterialSiloPOI = { ent-MachineMaterialSilo }
     .desc = { ent-MachineMaterialSilo.desc }

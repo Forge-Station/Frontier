@@ -102,7 +102,7 @@ public sealed class ProjectileSystem : SharedProjectileSystem
             origin: component.Shooter);
         var deleted = Deleted(target);
 
-        if (modifiedDamage is not null && EntityManager.EntityExists(component.Shooter))
+        if (modifiedDamage is not null && Exists(component.Shooter))
         {
             if (modifiedDamage.AnyPositive() && !deleted)
             {
@@ -375,7 +375,7 @@ public sealed class ProjectileSystem : SharedProjectileSystem
 
         _statusEffectsSystem.TryAddStatusEffectDuration(
             target,
-            TemporaryBlindnessSystem.BlindingStatusEffect,
+            "TemporaryBlindness",
             statusTimeSpan);
     }
 }

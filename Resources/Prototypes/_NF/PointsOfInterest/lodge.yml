@@ -39,7 +39,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Экпедиционная База'
         - type: ExtraStationInformation
-          iconPath: /Textures/_NF/Markers/jobs.rsi/mercenary.png
+          iconPath: /Textures/Forge/Logo/Icon/mercenary.png #Forge-Change
           stationSubtext: 'frontier-lobby-exped-subtext'
           stationDescription: 'frontier-lobby-exped-description'
           lobbySortOrder: 3

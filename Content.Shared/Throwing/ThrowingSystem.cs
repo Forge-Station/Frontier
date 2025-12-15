@@ -237,21 +237,21 @@ public sealed class ThrowingSystem : EntitySystem
         RaiseLocalEvent(user.Value, ref pushEv);
         const float massLimit = 5f;
 
-                if (pushEv.Push || _gravity.IsWeightless(user.Value))
-                     _physics.ApplyLinearImpulse(user.Value, -impulseVector / physics.Mass * pushbackRatio * MathF.Min(massLimit, physics.Mass), body: userPhysics);
-                // Frontier: apply impulse to buckled object if buckled
-                if (TryComp<BuckleComponent>(user, out var buckle) && buckle.BuckledTo is not null)
-                {
-                    if(TryComp<PhysicsComponent>(buckle.BuckledTo, out var buckledPhys))
-                        _physics.ApplyLinearImpulse(buckle.BuckledTo.Value, -impulseVector / buckledPhys.Mass * pushbackRatio * MathF.Min(massLimit, physics.Mass), body: buckledPhys);
-                }
-                else
-                {
-                    _physics.ApplyLinearImpulse(user.Value, -impulseVector / physics.Mass * pushbackRatio * MathF.Min(massLimit, physics.Mass), body: userPhysics);
-                }
-                // End Frontier
-                //_physics.ApplyLinearImpulse(user.Value, -impulseVector / physics.Mass * pushbackRatio * MathF.Min(massLimit, physics.Mass), body: userPhysics); // Frontier: old implementation
-                // Forge-Change-End
+        if (pushEv.Push)
+        {
+            // Frontier: apply impulse to buckled object if buckled
+            if (TryComp<BuckleComponent>(user, out var buckle) && buckle.BuckledTo is not null)
+            {
+                if (TryComp<PhysicsComponent>(buckle.BuckledTo, out var buckledPhys))
+                    _physics.ApplyLinearImpulse(buckle.BuckledTo.Value, -impulseVector / buckledPhys.Mass * pushbackRatio * MathF.Min(massLimit, physics.Mass), body: buckledPhys);
+            }
+            else
+            {
+                _physics.ApplyLinearImpulse(user.Value, -impulseVector / physics.Mass * pushbackRatio * MathF.Min(massLimit, physics.Mass), body: userPhysics);
+            }
+            // End Frontier
+            // _physics.ApplyLinearImpulse(user.Value, -impulseVector / physics.Mass * pushbackRatio * MathF.Min(massLimit, physics.Mass), body: userPhysics);
         }
 
+    }
 }
