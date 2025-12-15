@@ -530,16 +530,16 @@
   - type: Appearance
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 50000
-    startingCharge: 50000
+    maxCharge: 5000 # Forge-change: rebalance
+    startingCharge: 50000 # Forge-change: rebalance
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 225 # Forge-change: rebalance
+    autoRechargeRate: 75 # Forge-change: rebalance
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 20
+    fireRate: 14 # Forge-change: rebalance
     minAngle: 0
     maxAngle: 4 # Forge-change: rebalance
     shootThermalSignature: 2000000
