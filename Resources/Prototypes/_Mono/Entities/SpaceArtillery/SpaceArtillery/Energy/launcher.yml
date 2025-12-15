@@ -531,10 +531,10 @@
   - type: AmmoCounter
   - type: Battery
     maxCharge: 5000 # Forge-change: rebalance
-    startingCharge: 50000 # Forge-change: rebalance
+    startingCharge: 5000 # Forge-change: rebalance
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 75 # Forge-change: rebalance
+    autoRechargeRate: 55 # Forge-change: rebalance
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500

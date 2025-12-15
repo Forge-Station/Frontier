@@ -38,7 +38,7 @@
     projectileSpeed: 225
     minAngle: 0
     maxAngle: 1
-    fireRate: 0.1
+    fireRate: 0.05 # Forge-change: rebalance
     shootThermalSignature: 80000000 # ~9km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
@@ -65,7 +65,7 @@
     whitelist:
       tags:
       - 255mmCartridge
-    capacity: 8
+    capacity: 2 # Forge-change: rebalance
     proto: Forge255mmCartridgeHE # Forge-change: rebalance
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg

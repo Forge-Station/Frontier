@@ -448,9 +448,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
-    totalIntensity: 2650
-    intensitySlope: 35
-    maxIntensity: 2300
+    totalIntensity: 8950
+    intensitySlope: 55
+    maxIntensity: 5500
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
@@ -468,9 +468,9 @@
         Blunt: 7444
   - type: Explosive
     explosionType: HardBombShipGun
-    totalIntensity: 2950
-    intensitySlope: 60
-    maxIntensity: 2300
+    totalIntensity: 11433
+    intensitySlope: 55
+    maxIntensity: 7900
 
 # region Forge Ammo
 # 16mm - scatter
