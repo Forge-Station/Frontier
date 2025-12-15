@@ -14,3 +14,5 @@ ent-NFAmmunitionBoxShellShotgunSlug = коробка ружейных патро
     .desc = { ent-BaseMagazineBoxRifle.desc }
 ent-NFAmmunitionBoxShellShotgunFlare = коробка ружейных патронов (.50 фальшфлеер)
     .desc = { ent-BaseMagazineBoxRifle.desc }
+ent-NFAmmunitionBoxShellShotgunTranquilizer = коробка ружейных патронов (.50 транквилизатор)
+    .desc = { ent-BaseMagazineBoxRifle.desc }

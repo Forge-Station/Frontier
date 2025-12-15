@@ -281,16 +281,16 @@ uplink-speedloader-magnum-non-ap-desc = Быстрый зарядник на 6 �
 uplink-syndicate-segway-name = Синдикатский Сигвей
 uplink-syndicate-segway-desc = Передвигайся со стилем, не пачкая свои кроваво-красные ботинки.
 
-uplink-pirate-nightvision-name = очки ночного виденья
+uplink-pirate-nightvision-name = Очки ночного виденья
 uplink-pirate-nightvision-desc = Арх!!!! Я вижу все.
 
-uplink-security-nightvision-name = очки ночного виденья
+uplink-security-nightvision-name = Очки ночного виденья
 uplink-security-nightvision-desc = Я вижу все.
 
-uplink-clothing-nightvision-name = очки ночного виденья
+uplink-clothing-nightvision-name = Очки ночного виденья
 uplink-clothing-nightvision-desc = Я вижу все.
 
-uplink-clothing-nightvisionplus-name = очки ночного виденья улучшенные
+uplink-clothing-nightvisionplus-name = Очки ночного виденья улучшенные
 uplink-clothing-nightvisionplus-desc = Я вижу все.
 
 uplink-clothing-thermalvision-name = термальные очки

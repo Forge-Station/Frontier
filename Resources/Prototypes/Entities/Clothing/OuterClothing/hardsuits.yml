@@ -478,9 +478,14 @@
   - type: Armor
     modifiers:
       coefficients:
-        Caustic: 0.1
+        Blunt: 0.9 #CorvaxFrontier
+        Slash: 0.9 #CorvaxFrontier
+        Piercing: 0.9 #CorvaxFrontier
+        Heat: 0.9 #CorvaxFrontier
+        Radiation: 0.85 #CorvaxFrontier
+        Caustic: 0.85 #CorvaxFrontier
   - type: ZombificationResistance
-    zombificationResistanceCoefficient: 0.4
+    zombificationResistanceCoefficient: 0
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95

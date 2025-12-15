@@ -153,41 +153,41 @@
   - type: Armor
     modifiers:
       coefficients:
-        Radiation: 0.85 #CorvaxFrontier
-        Caustic: 0.85 #CorvaxFrontier
-        Blunt: 0.90 #CorvaxFrontier
-        Slash: 0.90 #CorvaxFrontier
-        Piercing: 0.85 #CorvaxFrontier
-        Heat: 0.9 #CorvaxFrontier
+        Blunt: 0.8 #CorvaxFrontier
+        Slash: 0.8 #CorvaxFrontier
+        Piercing: 0.8 #CorvaxFrontier
+        Heat: 0.8 #CorvaxFrontier
+        Radiation: 0.5 #CorvaxFrontier
+        Caustic: 0.8 #CorvaxFrontier
   - type: GroupExamine
   - type: StealTarget
     stealGroup: ClothingOuterHardsuitVoidParamed
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetVoidParamed
-  - type: ItemToggle
-    onUse: false
-    soundActivate:
-      path: /Audio/Items/flashlight_on.ogg
-    soundDeactivate:
-      path: /Audio/Items/flashlight_off.ogg
-  - type: ItemToggleActiveSound
-    activeSound:
-      path: /Audio/Effects/Vehicle/ambulancesiren.ogg #not the best sound, but after looking through all of current freesound regarding sirens and ambulance, this was the best compromise
-      params:
-        volume: -4
-  - type: UseDelay
-    delay: 1.0
-  - type: ToggleClothing
-    action: ActionToggleParamedicSiren
-  - type: ItemTogglePointLight
+  # - type: ItemToggle
+  #   onUse: true
+  #   soundActivate:
+  #     path: /Audio/Items/flashlight_on.ogg
+  #   soundDeactivate:
+  #     path: /Audio/Items/flashlight_off.ogg
+  # - type: ItemToggleActiveSound
+  #   activeSound:
+  #     path: /Audio/Effects/Vehicle/ambulancesiren.ogg #not the best sound, but after looking through all of current freesound regarding sirens and ambulance, this was the best compromise
+  #     params:
+  #       volume: -4
+  # - type: UseDelay
+  #   delay: 1.0
+  # - type: ToggleClothing
+  #   action: ActionToggleParamedicSiren
+  # - type: ItemTogglePointLight
   - type: PointLight
     enabled: false
     radius: 2
     energy: 2
     color: blue
     mask: /Textures/Effects/LightMasks/double_cone.png
-  - type: RotatingLight
-    speed: 360
+  # - type: RotatingLight
+  #   speed: 360
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}

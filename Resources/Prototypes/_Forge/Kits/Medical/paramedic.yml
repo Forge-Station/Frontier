@@ -11,7 +11,7 @@
     maxSelectedSets: 1
     possibleSets:
     - ParamedNonlethalSet
-    - ParamedChemicalSet
+    - ParamedMobileSet
     - ParamedDisablerSet
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
@@ -58,20 +58,23 @@
   - ClothingShoesBootsMagParamed
 
 - type: thiefBackpackSet
-  id: ParamedChemicalSet
-  name: thief-backpack-category-chemical-name
-  description: thief-backpack-category-chemical-description
+  id: ParamedMobileSet
+  name: thief-backpack-category-mobile-name
+  description: thief-backpack-category-mobile-description
   sprite:
-    sprite: _NF/Structures/Machines/medical_assembler.rsi
+    sprite: Clothing/OuterClothing/Hardsuits/medical.rsi
     state: icon
   content:
-  - MedicalAssemblerFlatpack
   - MedkitAdvancedFilled
   - PaperWrittenMedic
   - JetpackParamedFilled
-  - ClothingOuterHardsuitVoidParamed
+  - ClothingOuterHardsuitMedical
   - DefibrillatorCompact
   - ClothingShoesBootsMagParamed
+  - HandHeldMassScannerEmpty
+  - HandheldCrewMonitorEmpty
+  - PowerCellHigh
+  - PowerCellHigh
 
 - type: thiefBackpackSet
   id: ParamedDisablerSet
