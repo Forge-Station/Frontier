@@ -90,4 +90,7 @@
           task: MeleeCombatCompound
     - tasks:
         - !type:HTNCompoundTask
+          task: SpaceHostileCompound
+    - tasks:
+        - !type:HTNCompoundTask
           task: IdleCompound

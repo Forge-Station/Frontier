@@ -1,0 +1,46 @@
+# Главная точка входа для космических НПС
+- type: htnCompound
+  id: SpaceHostileCompound
+  branches:
+    # ВЕТКА 1: КОСМИЧЕСКИЙ БОЙ
+    # Эта ветка активируется, только если SpaceNpcComponent нашел цель.
+    - tasks:
+        # 1. Проверяем, есть ли цель в памяти (через твой C# оператор)
+        - !type:HTNPrimitiveTask
+          operator: !type:TargetExistOperator
+            targetKey: Target
+        
+        # 2. Если цель есть — выполняем задачу стрельбы
+        - !type:HTNCompoundTask
+          task: SpaceGunCombatCompound
+
+    # ВЕТКА 2: СТАНДАРТНОЕ ПОВЕДЕНИЕ (FALLBACK)
+    # Если в космосе никого нет, работает старая логика (патруль, обычный бой на станции)
+    - tasks:
+        - !type:HTNCompoundTask
+          task: SimpleHostileCompound # Или GunCombatCompound, как у тебя было
+
+# Логика стрельбы в космосе (Без движения/Pathfinding)
+- type: htnCompound
+  id: SpaceGunCombatCompound
+  branches:
+    # Если в руках есть оружие
+    - preconditions:
+        - !type:ActiveHandComponentPrecondition
+          components:
+            - type: Gun
+      tasks:
+        # Просто стреляем. Не пытаемся идти (MoveTo), так как в космосе нет пола.
+        # Бот будет стоять на месте (или лететь по инерции) и стрелять.
+        - !type:HTNPrimitiveTask
+          operator: !type:GunOperator
+            targetKey: Target
+
+    # Если оружия нет — просто смотрим (пока не написали логику тарана)
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:WaitOperator
+            key: IdleTime
+          preconditions:
+            - !type:KeyExistsPrecondition
+              key: IdleTime

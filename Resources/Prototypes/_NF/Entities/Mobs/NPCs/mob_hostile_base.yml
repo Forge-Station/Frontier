@@ -433,6 +433,9 @@
   - NFBaseMobRestrictions
   id: MobHumanoidHostileBase
   components:
+  - type: SpaceNpc
+    visionRadius: 40.0
+    scanFrequency: 1
   - type: NPCRetaliation
     attackMemoryLength: 10
   - type: MobMover
