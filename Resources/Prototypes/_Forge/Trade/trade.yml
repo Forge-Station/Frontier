@@ -43,6 +43,8 @@
     - state: "on"
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
+    - state: "keyboard"
+    - state: "panel"
   - type: PointLight
     radius: 2.5
     energy: 1
