@@ -21,7 +21,7 @@
   productEntity: ClothingOuterHardsuitPirateCap
   icon: { sprite: Clothing/OuterClothing/Hardsuits/piratecaptain.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 5
   categories:
     - UplinkPirateHardsuits
   conditions:
@@ -40,7 +40,7 @@
   productEntity: ClothingOuterHardsuitPirateElite
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/pirate_elite.rsi, state: icon }
   cost:
-    Doubloon: 10
+    Doubloon: 13
   categories:
     - UplinkPirateHardsuits
   conditions:
@@ -152,21 +152,6 @@
           - PirateUplink
 
 - type: listing
-  id: UplinkPirateEnergySwordTL
-  name:  Опытный образцец 4
-  description: Клинок странной формы, украденный у какой то корпорации, и почему братсво требует за него такие деньги?
-  productEntity: EnergySwordTL
-  cost:
-    Doubloon: 15
-  categories:
-    - UplinkPirateWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-
-- type: listing
   id: UplinkPirateCannon
   name:  uplink-pirate-cannon-name
   description: uplink-pirate-cannon-desc
@@ -208,7 +193,7 @@
   productEntity: EnergyCutlass
   icon: { sprite: Objects/Weapons/Melee/e_cutlass.rsi, state: e_cutlass }
   cost:
-    Doubloon: 4 #CorvaxFrontier
+    Doubloon: 7 #CorvaxFrontier
   categories:
     - UplinkPirateWeapons
   conditions:
@@ -396,117 +381,6 @@
         tags:
           - PirateUplink
 
-- type: listing #CorvaxFrontier
-  id: UplinkPirateLaserGun
-  name:  Старомодный лазерный бластер
-  description: старый пистолет стреляющий концентрированным светом, что может быть круче?
-  productEntity: NFWeaponEnergyPistolLaserMakeshift
-  icon: { sprite: _NF/Objects/Weapons/Guns/Battery/makeshift.rsi, state: base }
-  cost:
-    Doubloon: 2
-  categories:
-    - UplinkPirateWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-
-- type: listing #CorvaxFrontier
-  id: UplinkPiratBreachingCharge
-  name:  Пробивающий заряд
-  description: Заряд способный пробить любую стену шаттлов корпоративных крыс!
-  productEntity: BreachingCharge
-  icon: { sprite: _DV/Objects/Weapons/Bombs/breaching.rsi, state: icon }
-  cost:
-    Doubloon: 2
-  categories:
-    - UplinkPirateExplosives
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-
-- type: listing #CorvaxFrontier
-  id: UplinkPiratBoxMRE
-  name:  Сухой паёк
-  description: Коробка старых военных ИРП, они на удивление не испортились.
-  productEntity: BoxMRE
-  cost:
-    Doubloon: 2
-  categories:
-    - UplinkPirateUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-
-- type: listing #CorvaxFrontier
-  id: UplinkPiratBoxLightRifle
-  name:  Коробка винтовочных патрон
-  description: Коробка винтовочных патрон используемых некоторым пиратским оружием, пускай и не такие мощные, зато какие дешёвые!
-  productEntity: NFAmmunitionBoxRifle30
-  cost:
-    Doubloon: 2
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-
-- type: listing #CorvaxFrontier
-  id: UplinkPiratSpeedLoaderMagnumAP
-  name:  Спидлоадер Бронебойных Патрон
-  description: Спидлоадер с шестью бронебойными патронами 45 калибра если необходимо пробить что по крепче шкур корпоративных крыс.
-  productEntity: NFSpeedLoaderPistol45
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon}
-  cost:
-    Doubloon: 9
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-
-- type: listing #CorvaxFrontier
-  id: UplinkPiratBoxT2SuperCapacitor
-  name:  Набор Модификации Двигателей
-  description: Набор старых конденсаторов для модификации вашей посудины!
-  productEntity: BoxT2SuperCapacitor
-  cost:
-    Doubloon: 4
-  categories:
-    - UplinkPirateUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-
-- type: listing #CorvaxFrontier
-  id: UplinkPiratBoxZiptiePirat
-  name:  Набор стяжек
-  description: Набор самодельных стяжек для успокоения самых буйных пиратов во время пьянки.
-  productEntity: BoxZiptiePirat
-  cost:
-    Doubloon: 3
-  categories:
-    - UplinkPirateUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-
 - type: listing
   id: UplinkPirateAccessConfigurator
   name:  uplink-pirate-accessconfigurator-captain-name
@@ -536,119 +410,6 @@
     Doubloon: 2
   categories:
   - UplinkPirateUtility
-
-- type: listing #CorvaxFrontier
-  id: UplinkPiratBoxDeathRattleImplantsPirat
-  name:  Набор растворения
-  description: Нажми на место укола рукой с случае захвата корпоративными крысами и мы отправим тебе помощь!
-  productEntity: BoxDeathRattleImplantsPirat
-  cost:
-    Doubloon: 4
-  categories:
-    - UplinkPirateUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-
-
-- type: listing #CorvaxFrontier
-  id: UplinkPiratWeaponSubMachineGunTypewriter
-  name:  Пишущая машинка
-  description: Старый пистолет-пулемет используемый самыми опасными членами братства. Ярррр!
-  productEntity: NFWeaponSubMachineGunTypewriter
-  cost:
-    Doubloon: 6
-  categories:
-    - UplinkPirateWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-
-
-- type: listing #CorvaxFrontier
-  id: UplinkPiratMagazinePistolSubMachineGunEmpty
-  name:  Пишущая лента
-  description: Лента используемая пиратами для "печатных машинок". Ярррр!
-  productEntity: NFMagazineSubMachineGun35
-  cost:
-    Doubloon: 3
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-
-
-- type: listing #CorvaxFrontier
-  id: UplinkPiratNFAmmunitionBoxPistol35
-  name:  Коробка чернил
-  description: Коробка с чернилами для дозаправки "Пишущей машинки". Ярррр!
-  productEntity: NFAmmunitionBoxPistol35
-  cost:
-    Doubloon: 2
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-
-- type: listing #CorvaxFrontier
-  id: UplinkPiratBoxPirateAssault
-  name:  Набор для абордажа
-  description: набор из крюка, сканера и батарейки для начинающих абордажных групп.
-  productEntity: BoxPirateAssault
-  cost:
-    Doubloon: 5
-  categories:
-    - UplinkPirateUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-
-- type: listing # Corvax-Frontier
-  id: UplinkPiratShuttleGunPirateCannonFlatpack
-  name:  Пушка пиратского корабля
-  description: упакованная стационарная пушка пиратского корабля на случай поломки основных орудий.
-  productEntity: ShuttleGunPirateCannonFlatpack
-  cost:
-    Doubloon: 15
-  categories:
-    - UplinkPirateWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-
-- type: listing # Corvax-Frontier
-  id: UplinkPiratCrateFunParty
-  name:  Набор для вечеринки
-  description: Отпразнуйте славную победу над корпоративными крысами! Ярррр!
-  productEntity: CrateFunParty
-  cost:
-    Doubloon: 4
-  categories:
-    - UplinkPirateUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
 
 - type: listing
   id: UplinkPirateRepairKit

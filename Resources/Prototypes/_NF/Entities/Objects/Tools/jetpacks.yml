@@ -45,11 +45,10 @@
     sprite: _NF/Objects/Tanks/Jetpacks/pirate.rsi
   - type: Clothing
     sprite: _NF/Objects/Tanks/Jetpacks/pirate.rsi
-  - type: Tag
-    tags:
-      - DemagImmune
-  - type: Jetpack
-    radarBlip: false
+  # Forge-change
+  # - type: Tag
+  #   tags:
+  #     - DemagImmune
 
 #Filled pirate
 - type: entity

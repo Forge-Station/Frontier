@@ -9,6 +9,7 @@
   id: Magazine30mm
   name: "30x173mm AP ammo drum"
   parent: [BaseItem, RecyclableItemSteelTiny]
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   components:
   - type: Tag
     tags:
@@ -17,7 +18,7 @@
     size: Small
   - type: BallisticAmmoProvider
     proto: 30mmCartridge
-    capacity: 2000
+    capacity: 600
     mayTransfer: true
     whitelist:
       tags:
@@ -42,6 +43,7 @@
   id: 30mmCartridge
   name: cartridge (30x173mm AP)
   parent: [ BaseCartridge, BaseC1Contraband ]
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   components:
   - type: Tag
     tags:
@@ -82,6 +84,7 @@
   id: Magazine30mmWeak
   name: "30x173mm ammo drum"
   parent: Magazine30mm
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   components:
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
@@ -91,6 +94,7 @@
   id: 30mmCartridgeWeak
   name: "cartridge (30x173mm)"
   parent: 30mmCartridge
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   components:
   - type: CartridgeAmmo
     proto: 30mmBulletWeak

@@ -445,20 +445,46 @@
   - FSynLRecClothingShoesSwat
   - FSynLRecClothingWalletLeatherSyndi
   - FSynLRecFComputerShuttleAntagCircuitboard
+  - FSynLRecRecAmmoDrum20mmAPCBC
+  - FSynLRecAmmoDrum30mmAPCBC
+  - FSynLRecMagazine57mmAPCBC
+  - FSynLRecMagazine90mmAPHE
 
 - type: latheRecipePack
   id: ForgePackShipAmmo
   recipes:
-  - FRecMagazine20mmWeak
-  - FRecMagazine30mmWeak
-  - FRecMagazine57mmWeak
+  - ForgeAmmoDrum20mmBase
+  - ForgeAmmoDrum30mmBase
+  - ForgeMagazine57mmBase
+  - ForgeAmmoDrum20mmAPCBC
+  - ForgeAmmoDrum30mmAPCBC
+  - ForgeMagazine57mmAPCBC
   - FRecMagazine90mmWeak
   - FRecTovekCartridge
   - FRec150mmEmpShell
 
 - type: latheRecipePack
-  id: ForgePackShipAmmoNfsd
+  id: ForgePackNfsd
   recipes:
+  - NFClothingBackpackElectropack
+  - JetpackNfsd
+  - FRecClothingOuterHardsuitNfsdBronze
+  - FRecClothingOuterHardsuitNfsdSilver
+  - FRecClothingOuterHardsuitNfsdCombat
+  - FRecClothingOuterHardsuitNfsdCommand
+  - FRecClothingOuterHardsuitNfsdExperimental
+  - FRecClothingShoesBootsMagNFSD
+  - FRecClothingShoesBootsMagAdvsPromax
+  - FRecAdvancedRadarConsoleCircuitboard
+  - FRecComputerIFFCircuitboard
+  - ForgeAmmoDrum20mmAPHE
+  - ForgeAmmoDrum30mmAPHE
+  - ForgeMagazine57mmAPHE
+  - FRecMagazine90mmAPHE
+  - FRecMagazine90mmAPHEBC
   - FRec203mmCartridge
   - FRec220mmCartridge
   - FRec255mmCartridge
+  - FRec203mmCartridgeHESH
+  - FRec220mmCartridgeHESH
+  - FRec255mmCartridgeHESH

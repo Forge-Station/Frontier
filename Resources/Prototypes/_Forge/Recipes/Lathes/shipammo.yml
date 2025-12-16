@@ -1,7 +1,7 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: FRecMagazine20mmWeak
-  result: Magazine20mmWeak
+  id: ForgeAmmoDrum20mmBase
+  result: ForgeAmmoDrum20mmBase
   materials:
     Steel: 1050
     Plastic: 280
@@ -10,8 +10,8 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: FRecMagazine30mmWeak
-  result: Magazine30mmWeak
+  id: ForgeAmmoDrum30mmBase
+  result: ForgeAmmoDrum30mmBase
   materials:
     Steel: 1500
     Plastic: 320
@@ -20,8 +20,8 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: FRecMagazine57mmWeak
-  result: Magazine57mmWeak
+  id: ForgeMagazine57mmBase
+  result: ForgeMagazine57mmBase
   materials:
     Steel: 1820
     Plastic: 360
@@ -31,12 +31,108 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: FRecMagazine90mmWeak
-  result: Magazine90mmWeak
+  result: ForgeMagazine90mm
   materials:
     Steel: 1620
     Plastic: 420
     Glass: 160
     Plasteel: 900
+
+# APCBC
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeAmmoDrum20mmAPCBC
+  result: ForgeAmmoDrum20mmAPCBC
+  materials:
+    Steel: 1050
+    Plastic: 280
+    Glass: 100
+    Plasteel: 180
+    Silver: 420
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeAmmoDrum30mmAPCBC
+  result: ForgeAmmoDrum30mmAPCBC
+  materials:
+    Steel: 1500
+    Plastic: 320
+    Glass: 120
+    Plasteel: 220
+    Silver: 420
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeMagazine57mmAPCBC
+  result: ForgeMagazine57mmAPCBC
+  materials:
+    Steel: 1820
+    Plastic: 360
+    Glass: 140
+    Plasteel: 260
+    Silver: 420
+
+# APHE
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeAmmoDrum20mmAPHE
+  result: ForgeAmmoDrum20mmAPHE
+  materials:
+    Steel: 1050
+    Plastic: 280
+    Glass: 100
+    Plasteel: 180
+    Silver: 420
+    Plasma: 880
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeAmmoDrum30mmAPHE
+  result: ForgeAmmoDrum30mmAPHE
+  materials:
+    Steel: 1500
+    Plastic: 320
+    Glass: 120
+    Plasteel: 220
+    Silver: 420
+    Plasma: 880
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeMagazine57mmAPHE
+  result: ForgeMagazine57mmAPHE
+  materials:
+    Steel: 1820
+    Plastic: 360
+    Glass: 140
+    Plasteel: 260
+    Silver: 420
+    Plasma: 880
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecMagazine90mmAPHE
+  result: ForgeMagazine90mmAPHE
+  materials:
+    Steel: 1620
+    Plastic: 420
+    Glass: 160
+    Plasteel: 900
+    Plasma: 980
+
+# APHEBC
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecMagazine90mmAPHEBC
+  result: ForgeMagazine90mmAPHEBC
+  materials:
+    Steel: 1620
+    Plastic: 420
+    Glass: 160
+    Plasteel: 900
+    Plasma: 1280
+    Uranium: 880
 
 # EMP
 - type: latheRecipe
@@ -65,29 +161,68 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: FRec203mmCartridge
-  result: 203mmCartridge
+  result: Forge203mmCartridgeHE
   materials:
     Steel: 1700
     Plastic: 480
     Glass: 180
     Plasteel: 960
+    Plasma: 680
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: FRec220mmCartridge
-  result: 220mmCartridge
+  result: Forge220mmCartridgeHE
   materials:
     Steel: 1840
     Plastic: 500
     Glass: 180
     Plasteel: 980
+    Plasma: 680
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: FRec255mmCartridge
-  result: 255mmCartridge
+  result: Forge255mmCartridgeHE
   materials:
     Steel: 2820
     Plastic: 540
     Glass: 200
     Plasteel: 2000
+    Plasma: 680
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRec203mmCartridgeHESH
+  result: Forge203mmCartridgeHESH
+  materials:
+    Steel: 1700
+    Plastic: 480
+    Glass: 180
+    Plasteel: 960
+    Plasma: 1480
+    Uranium: 980
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRec220mmCartridgeHESH
+  result: Forge220mmCartridgeHESH
+  materials:
+    Steel: 1840
+    Plastic: 500
+    Glass: 180
+    Plasteel: 980
+    Plasma: 1680
+    Uranium: 1000
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRec255mmCartridgeHESH
+  result: Forge255mmCartridgeHESH
+  materials:
+    Steel: 2820
+    Plastic: 540
+    Glass: 200
+    Plasteel: 2000
+    Plasma: 1880
+    Uranium: 1000

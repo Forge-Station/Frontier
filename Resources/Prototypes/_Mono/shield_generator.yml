@@ -10,6 +10,7 @@
   parent: [ ShieldGenerator, BaseStructureDisableToolUse, BaseStructureIndestructible ]
   name: FS-421 "Fortress" Shield Generator
   components:
+  - type: BindToStation # Forge-change
   - type: ShipShieldEmitter
     healPerSecond: 5000
     damageExp: 0.5
@@ -44,6 +45,7 @@
   parent: BaseMachinePowered
   name: MS-500 "Titan" Shield Generator
   components:
+  - type: BindToStation # Forge-change
   - type: AmbientOnPowered
   - type: AmbientSound
     volume: -5
@@ -115,6 +117,7 @@
   parent: ShieldGenerator
   name: MS-250 "Aegis" Shield Generator
   components:
+  - type: BindToStation # Forge-change
   - type: ShipShieldEmitter
     healPerSecond: 400 # Base is 250
     damageExp: 1.15 # Base is 1.1
@@ -149,6 +152,7 @@
   parent: ShieldGenerator
   name: MS-100 "Sentinel" Shield Generator
   components:
+  - type: BindToStation # Forge-change
   - type: ShipShieldEmitter
     healPerSecond: 200 # Mono
     damageExp: 1.2 # Mono

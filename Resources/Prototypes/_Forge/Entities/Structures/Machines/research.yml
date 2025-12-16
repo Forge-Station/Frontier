@@ -1,0 +1,27 @@
+- type: entity
+  id: ForgeRnDNFSDServer
+  parent: ResearchAndDevelopmentServer
+  name: R&D NFSD server
+  description: Contains the extent of somebody's hard-earned knowledge. Handle with care.
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+     - NFEngineering
+     - NFMedical
+     - NFArsenalMercenary
+     - NFArsenalNfsd
+     - NFSalvage
+     - NFScience
+     - NFService
+     - ForgeNFSDtechDiscipline
+  - type: Sprite
+    sprite: Forge/Structures/Machines/server.rsi
+    snapCardinals: true
+    layers:
+      - state: server-off
+      - state: server-on
+        visible: false
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
+      - state: variant-nfsd
+      - state: server_o
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]

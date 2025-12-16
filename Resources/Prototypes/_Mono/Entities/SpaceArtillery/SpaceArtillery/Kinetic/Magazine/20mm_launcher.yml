@@ -10,6 +10,7 @@
   parent: BallisticArtilleryMagazine
   description: A light 20mm ballistic autocannon designed for rapid fire and suppressing smaller targets at close range. Cheap, light, and can be remotely activated or linked up to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 250
   - type: Sprite
@@ -27,9 +28,9 @@
 #    - Toggle # К тому же тут неправильныый стоит..
   - type: Gun
     fireRate: 12
-    projectileSpeed: 160
-    minAngle: 0
-    maxAngle: 5
+    projectileSpeed: 130  # Forge-change: rebalance
+    minAngle: 1 # Forge-change: rebalance
+    maxAngle: 6  # Forge-change: rebalance
     shootThermalSignature: 10000 # relatively low for a shipgun, ~693m signature if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/slammer.ogg
@@ -46,7 +47,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine20mmWeak
+        startingItem: ForgeAmmoDrum20mmBase # Forge-change
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2

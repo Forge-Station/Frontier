@@ -12,6 +12,7 @@
   name: 255mm shell
   description: A chemically-propelled shell for Bofors 255mm cannons.
   parent: BaseGrenade
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance
   components:
   - type: Tag
     tags:
@@ -50,6 +51,7 @@
 - type: entity
   id: 255mmCartridgeWeak
   parent: 255mmCartridge
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance
   components:
   - type: CartridgeAmmo
     proto: ShipBoforsProjectileWeak

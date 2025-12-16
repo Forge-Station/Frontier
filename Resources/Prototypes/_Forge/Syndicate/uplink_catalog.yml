@@ -2872,3 +2872,14 @@
     TelecrystalDamaged: 24
   categories:
   - UplinkWearablesSmugger
+
+# ShipAmmo
+- type: listing
+  id: SmuggerUplink150mmApShell
+  name: uplink-150mmApShell
+  description: uplink-150mmApShell-desc
+  productEntity: 150mmApShell
+  cost:
+    TelecrystalDamaged: 6
+  categories:
+  - UplinkAmmoSmugger

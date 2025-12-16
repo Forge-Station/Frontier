@@ -22,10 +22,9 @@
   id: DefaultShipGun
   damagePerIntensity:
     types:
-      Heat: 2
-      Blunt: 2
-      Piercing: 2
-      Structural: 2
+      Heat: 1 # Forge-change: rebalance
+      Blunt: 1 # Forge-change: rebalance
+      Structural: 3 # Forge-change: rebalance
   tileBreakChance: [0, 0.5, 1]
   tileBreakIntensity: [0, 15, 30]
   tileBreakRerollReduction: 20
@@ -37,10 +36,9 @@
   id: HardBombShipGun
   damagePerIntensity:
     types:
-      Heat: 7.5
-      Blunt: 7.5
-      Piercing: 3
-      Structural: 20
+      Heat: 1 # Forge-change: rebalance
+      Blunt: 1 # Forge-change: rebalance
+      Structural: 11 # Forge-change: rebalance
   tileBreakChance: [ 0, 0.5, 1 ]
   tileBreakIntensity: [ 0, 15, 30 ]
   tileBreakRerollReduction: 10

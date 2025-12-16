@@ -10,6 +10,7 @@
   parent: BallisticArtilleryMagazine
   description: A more heavy duty rapid rife autocannon, firing a hail of rounds much like its namesake became a hail of spears.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 1000
   - type: Sprite
@@ -26,10 +27,10 @@
 #    ports:
 #    - Toggle # К тому же тут неправильныый стоит..
   - type: Gun
-    fireRate: 80
-    projectileSpeed: 180
-    minAngle: 0
-    maxAngle: 8
+    fireRate: 24 # Forge-change: rebalance
+    projectileSpeed: 130 # Forge-change: rebalance
+    minAngle: 4 # Forge-change: rebalance
+    maxAngle: 14 # Forge-change: rebalance
     shootThermalSignature: 100000 # ~4.5km if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/slammer.ogg
@@ -46,7 +47,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine30mmWeak
+        startingItem: ForgeAmmoDrum30mmBase # Forge-change: rebalance
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2

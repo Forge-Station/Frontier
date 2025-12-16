@@ -1491,18 +1491,19 @@
   - NFBasicPersonalPropulsion
   position: 1, 36
 
-- type: technology
-  id: NFArsenalNfsdPropulsion
-  name: nf-research-technology-security-personal-propulsion
-  entityIcon: JetpackNfsd
-  discipline: NFArsenalNfsd
-  tier: 1
-  cost: 1000
-  recipeUnlocks:
-  - JetpackNfsd
-  technologyPrerequisites:
-  - NFArsenalMercenaryPropulsion
-  position: 1, 37
+# Forge-change: Move to NFSD Techtree: _Forge/Research/nfsd.yml
+#- type: technology
+#  id: NFArsenalNfsdPropulsion
+#  name: nf-research-technology-security-personal-propulsion
+#  entityIcon: JetpackNfsd
+#  discipline: NFArsenalNfsd
+#  tier: 1
+#  cost: 1000
+#  recipeUnlocks:
+#  - JetpackNfsd
+#  technologyPrerequisites:
+#  - NFArsenalMercenaryPropulsion
+#  position: 1, 37
 
 - type: technology
   id: NFAdvancedPersonalPropulsion
@@ -1827,19 +1828,20 @@
   - NFAdvancedRiotControl
   position: 3, 42
 
-- type: technology
-  id: NFSpecialMeans
-  name: nf-research-technology-special-means
-  entityIcon: ClothingBackpackElectropack
-  discipline: NFArsenalNfsd
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - NFClothingBackpackElectropack
-  prerequisiteLineType: Diagonal
-  technologyPrerequisites:
-  - NFAdvancedRiotControl
-  position: 3, 43
+# Forge-change: Move to NFSD Techtree: _Forge/Research/nfsd.yml
+# - type: technology
+#  id: NFSpecialMeans
+#  name: nf-research-technology-special-means
+#  entityIcon: ClothingBackpackElectropack
+#  discipline: NFArsenalNfsd # Forge-change
+#  tier: 1
+#  cost: 5000
+#  recipeUnlocks:
+#  - NFClothingBackpackElectropack
+#  prerequisiteLineType: Diagonal
+#  technologyPrerequisites:
+#  - NFAdvancedRiotControl
+#  position: 3, 46 # Forge-change: Move to NFSD Tech
 
 - type: technology
   id: NFBulkRifleAmmo

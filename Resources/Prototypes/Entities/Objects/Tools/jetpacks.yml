@@ -131,12 +131,13 @@
     #slots:
     #  - Back
     # End DeltaV modifications
+  # Forge-change: NO
   # Frontier: emaggable jetpacks
-  - type: Tag
-    tags:
-      - DemagImmune
-  - type: Jetpack
-    radarBlip: false
+  # - type: Tag
+  #   tags:
+  #     - DemagImmune
+  # - type: Jetpack
+  #   radarBlip: false
   # End Frontier: emaggable jetpacks
 #  - type: StaticPrice # Frontier
 #    price: 1000 # Frontier

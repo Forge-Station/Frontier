@@ -373,8 +373,8 @@
   - type: HitscanBasicDamage
     damage:
      types:
-      Heat: 100
-      Structural: 100
+      Heat: 38 # Forge-change: rebalance
+      Structural: 87 # Forge-change: rebalance
   - type: HitscanBasicRaycast
     maxDistance: 400
 

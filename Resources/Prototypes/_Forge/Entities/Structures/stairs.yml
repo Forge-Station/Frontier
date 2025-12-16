@@ -30,7 +30,7 @@
   suffix: Steel, stage, portal
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: Forge/Structures/stairs.rsi
     state: stairs_stage_steel
     drawdepth: FloorTiles
 
@@ -50,7 +50,7 @@
   suffix: White, stage, portal
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: Forge/Structures/stairs.rsi
     state: stairs_stage_white
     drawdepth: FloorTiles
 
@@ -70,7 +70,7 @@
   suffix: Dark, stage, portal
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: Forge/Structures/stairs.rsi
     state: stairs_stage_dark
     drawdepth: FloorTiles
 

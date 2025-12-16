@@ -659,17 +659,11 @@
     collection: FootstepTile
   itemDrop: FloorTileItemLino
   heatCapacity: 10000
-
+# Forge-Change-Start
 - type: tile
   id: FloorSteelDirty
   name: tiles-dirty-steel-floor
-  sprite: /Textures/Tiles/steel_dirty.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  sprite: /Textures/Forge//Tiles/steel_dirty.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -677,6 +671,7 @@
     collection: FootstepPlating
   itemDrop: FloorTileItemDirty
   heatCapacity: 10000
+# Forge-Change-end
 
 - type: tile
   id: FloorElevatorShaft
