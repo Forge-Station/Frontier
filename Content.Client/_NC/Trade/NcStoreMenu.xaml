@@ -7,7 +7,7 @@
     StyleClasses="WindowLarge">
 
     <!-- Корневой контейнер -->
-    <BoxContainer Orientation="Vertical" StyleClasses="PanelBackgroundBase">
+    <BoxContainer Orientation="Vertical" StyleClasses="PanelBackgroundBaseDark">
 
         <!-- ───── Верхняя панель (баланс + поиск) ───── -->
         <BoxContainer Orientation="Horizontal" Margin="4 4 4 0" StyleClasses="PanelBackgroundBaseDark">

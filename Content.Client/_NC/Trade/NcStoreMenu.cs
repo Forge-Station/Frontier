@@ -26,6 +26,7 @@ public sealed partial class NcStoreMenu : FancyWindow
 
     private static readonly Color CatSelected = Color.FromHex("#1f1f1f");
     private static readonly Color CatIdle = Color.FromHex("#333333");
+    private readonly Dictionary<string, int> _balancesByCurrency = new();
 
     private readonly Dictionary<string, (NcStoreListingControl Ctrl, string Sig)> _buyCache = new();
     private readonly Dictionary<string, Button> _buyCatButtons = new();
@@ -95,8 +96,12 @@ public sealed partial class NcStoreMenu : FancyWindow
         BalanceInfo.SetMarkup("[font size=14][color=yellow]0[/color][/font]");
 
         MassSellPulledCrateButton.Disabled = true;
-        MassSellPulledCrateButton.Text = "Продать содержимое тащимого ящика";
+        MassSellPulledCrateButton.ClipText = true; // один раз, тут
+        MassSellPulledCrateButton.Text = "Продать содержимое";
+        MassSellPulledCrateButton.ToolTip =
+            "Для массовой продажи необходимо:\n• Ящик должен быть ЗАКРЫТ\n• Вы должны его тянуть";
         MassSellPulledCrateButton.OnPressed += _ => OnMassSellPulledCrate?.Invoke();
+
     }
 
     public event Action<string>? OnSearchChanged;
@@ -112,38 +117,70 @@ public sealed partial class NcStoreMenu : FancyWindow
         BalanceInfo.SetMarkup($"[font size=14][color=yellow]{balance}[/color][/font]");
     }
 
+    private int GetBalanceForCurrency(string currencyId)
+    {
+        if (string.IsNullOrWhiteSpace(currencyId))
+            return 0;
+
+        return _balancesByCurrency.TryGetValue(currencyId, out var v) ? v : 0;
+    }
+
+    public void SetBalancesByCurrency(Dictionary<string, int> balances)
+    {
+        _balancesByCurrency.Clear();
+
+        foreach (var (cur, amt) in balances)
+        {
+            if (string.IsNullOrWhiteSpace(cur))
+                continue;
+
+            _balancesByCurrency[cur] = amt;
+        }
+    }
+
     public void SetMassSellTotals(Dictionary<string, int> totals)
     {
         _massSellTotals.Clear();
         foreach (var (cur, amt) in totals)
             _massSellTotals[cur] = amt;
+        MassSellPulledCrateButton.Text = "Продать содержимое";
+        MassSellPulledCrateButton.ClipText = true;
 
         if (_massSellTotals.Count == 0)
         {
-            MassSellPulledCrateButton.Text = "Продать содержимое тащимого ящика";
+            MassSellPulledCrateButton.ToolTip =
+                "Для массовой продажи необходимо:\n• Ящик должен быть ЗАКРЫТ\n• Вы должны его тянуть";
             MassSellPulledCrateButton.Disabled = true;
             return;
         }
 
         MassSellPulledCrateButton.Disabled = false;
 
-        var text = string.Join(
-            ", ",
-            _massSellTotals.Select(p =>
-            {
-                var curName = CurrencyName(p.Key);
-                return $"{p.Value} {curName}";
-            }));
+        var parts = _massSellTotals
+            .Where(p => p.Value > 0 && !string.IsNullOrWhiteSpace(p.Key))
+            .Select(p => $"{p.Value} {CurrencyName(p.Key)}")
+            .ToList();
 
-        MassSellPulledCrateButton.Text = $"Продать содержимое ({text})";
+        var full = parts.Count > 0 ? string.Join(", ", parts) : "—";
+
+        MassSellPulledCrateButton.ToolTip =
+            "Для массовой продажи необходимо:\n• Ящик должен быть ЗАКРЫТ\n• Вы должны его тянуть\n\n" +
+            $"Получите: {full}";
     }
 
-    public void ApplyState(int balance, List<StoreListingData> list, Dictionary<string, int> massTotals)
+    public void ApplyState(
+        int balance,
+        Dictionary<string, int> balancesByCurrency,
+        List<StoreListingData> list,
+        Dictionary<string, int> massTotals
+    )
     {
         SetBalance(balance);
+        SetBalancesByCurrency(balancesByCurrency);
         SetMassSellTotals(massTotals);
         Populate(list);
     }
+
 
     public void Populate(List<StoreListingData> list)
     {
@@ -381,7 +418,9 @@ public sealed partial class NcStoreMenu : FancyWindow
                         var itemDesc = new Label
                         {
                             Text = targetProto.Description,
-                            Margin = new(28, 0, 0, 2)
+                            Margin = new(28, 0, 0, 2),
+                            ClipText = true,
+                            HorizontalExpand = true
                         };
                         itemDesc.StyleClasses.Add("LabelSubText");
                         root.AddChild(itemDesc);
@@ -433,6 +472,8 @@ public sealed partial class NcStoreMenu : FancyWindow
                     var itemDesc = new Label
                     {
                         Text = targetProto.Description,
+                        ClipText = true,
+                        HorizontalExpand = true,
                         Margin = new(0, 0, 0, 4)
                     };
                     itemDesc.StyleClasses.Add("LabelSubText");
@@ -828,7 +869,12 @@ public sealed partial class NcStoreMenu : FancyWindow
         for (var i = startExclusive; i < endExclusive; i++)
         {
             var it = source[i];
-            var sig = Sig(it, _balance);
+
+            var balanceHint = mode == StoreMode.Buy
+                ? GetBalanceForCurrency(it.CurrencyId)
+                : int.MaxValue;
+
+            var sig = Sig(it, balanceHint);
 
             NcStoreListingControl ctrl;
             if (cache.TryGetValue(it.Id, out var tuple) && tuple.Sig == sig)
@@ -839,7 +885,7 @@ public sealed partial class NcStoreMenu : FancyWindow
 
                 var actionsEnabled = true;
 
-                ctrl = new(it, _sprites, _balance, initQty, actionsEnabled);
+                ctrl = new(it, _sprites, balanceHint, initQty, actionsEnabled);
                 ctrl.OnQtyChanged += newQty => _qtyCache[it.Id] = newQty;
 
                 switch (mode)
@@ -868,6 +914,7 @@ public sealed partial class NcStoreMenu : FancyWindow
             }
         }
     }
+
 
     private static void RemoveMoreButtons(Control pane)
     {

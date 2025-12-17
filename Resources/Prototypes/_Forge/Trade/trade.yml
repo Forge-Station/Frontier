@@ -52,13 +52,13 @@
     - state: "on" # Экран
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
-    - state: "keyboard" # Клавитуару
+    - state: "keyboard" # Клавитуара
     - state: "keys" # Кнопки
       shader: unshaded
   - type: PointLight
     radius: 2.5
     energy: 1
-    color: "#b34747"
+    color: "#8897db"
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
 

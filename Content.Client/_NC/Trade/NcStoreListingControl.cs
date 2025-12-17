@@ -24,10 +24,10 @@ public sealed class NcStoreListingControl : PanelContainer
     private const int DescMaxChars = 220;
 
     // Forge Frontier
-    private const int IconTiny = 16;    // вторичные элементы
-    private const int IconSmall = 48;   // награды, валюта
-    private const int IconMedium = 24;  // иконки
-    private const int IconLarge = 80;   // слот
+    private const int IconTiny = 16;
+    private const int IconSmall = 48;
+    private const int IconMedium = 24;
+    private const int IconLarge = 80;
     // Forge Frontier end
 
     private readonly int _maxQty;
