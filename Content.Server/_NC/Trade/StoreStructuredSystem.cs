@@ -51,7 +51,7 @@ public sealed class StoreStructuredSystem : EntitySystem
         ev.Cancel();
         var user = ev.User;
 
-        if (!_ui.HasUi(uid, StoreUiKey.Key))
+        if (!_ui.HasUi(uid, NcStoreUiKey.NcKey))
             return;
 
         if (!_storeSystem.CanUseStore(uid, comp, user))
@@ -78,15 +78,15 @@ public sealed class StoreStructuredSystem : EntitySystem
         UpdateStoreWatch(uid, user, crateUid);
 
 
-        if (!_ui.IsUiOpen(uid, StoreUiKey.Key, user))
-            _ui.OpenUi(uid, StoreUiKey.Key, user);
+        if (!_ui.IsUiOpen(uid, NcStoreUiKey.NcKey, user))
+            _ui.OpenUi(uid, NcStoreUiKey.NcKey, user);
 
         UpdateUiState(uid, comp, user);
     }
 
     private void OnUiClosed(EntityUid uid, NcStoreComponent comp, BoundUIClosedEvent ev)
     {
-        if (!ev.UiKey.Equals(StoreUiKey.Key))
+        if (!ev.UiKey.Equals(NcStoreUiKey.NcKey))
             return;
 
         comp.CurrentUser = null;
@@ -105,7 +105,7 @@ public sealed class StoreStructuredSystem : EntitySystem
 
         if (!_storeSystem.CanUseStore(uid, comp, user))
         {
-            _ui.CloseUi(uid, StoreUiKey.Key, user);
+            _ui.CloseUi(uid, NcStoreUiKey.NcKey, user);
             comp.CurrentUser = null;
             _openStoreUids.Remove(uid);
             UnregisterStoreWatch(uid);
@@ -135,7 +135,7 @@ public sealed class StoreStructuredSystem : EntitySystem
     {
         if (!_storeSystem.CanUseStore(uid, comp, user))
         {
-            _ui.CloseUi(uid, StoreUiKey.Key, user);
+            _ui.CloseUi(uid, NcStoreUiKey.NcKey, user);
             comp.CurrentUser = null;
             _openStoreUids.Remove(uid);
             UnregisterStoreWatch(uid);
@@ -402,7 +402,7 @@ public sealed class StoreStructuredSystem : EntitySystem
         var balancesByCurrency = new Dictionary<string, int>(userSnap.StackTypeCounts);
         _ui.SetUiState(
             uid,
-            StoreUiKey.Key,
+            NcStoreUiKey.NcKey,
             new StoreUiState(comp.UiRevision, balance, balancesByCurrency, listings, crateTotals, contracts));
     }
 
@@ -446,7 +446,7 @@ public sealed class StoreStructuredSystem : EntitySystem
 
             if (!_xform.InRange(xform.Coordinates, userXform.Coordinates, AutoCloseDistance))
             {
-                _ui.CloseUi(uid, StoreUiKey.Key, userUid);
+                _ui.CloseUi(uid, NcStoreUiKey.NcKey, userUid);
                 store.CurrentUser = null;
                 _openStoreUids.Remove(uid);
                 UnregisterStoreWatch(uid);
@@ -455,7 +455,7 @@ public sealed class StoreStructuredSystem : EntitySystem
 
             if (!_storeSystem.CanUseStore(uid, store, userUid))
             {
-                _ui.CloseUi(uid, StoreUiKey.Key, userUid);
+                _ui.CloseUi(uid, NcStoreUiKey.NcKey, userUid);
                 store.CurrentUser = null;
                 _openStoreUids.Remove(uid);
                 UnregisterStoreWatch(uid);
@@ -479,7 +479,7 @@ public sealed class StoreStructuredSystem : EntitySystem
         {
             if (!_storeSystem.CanUseStore(uid, store, user))
             {
-                _ui.CloseUi(uid, StoreUiKey.Key, user);
+                _ui.CloseUi(uid, NcStoreUiKey.NcKey, user);
                 store.CurrentUser = null;
                 _openStoreUids.Remove(uid);
                 UnregisterStoreWatch(uid);

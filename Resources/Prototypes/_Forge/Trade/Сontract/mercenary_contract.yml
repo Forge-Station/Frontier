@@ -4,38 +4,7 @@
   - mercenary_contract_collection
   - mercenary_contract_randomstaff
 
-- type: storeContract
-  id: caravan_contract_guns
-  name: Спизди это!
-  description: "Спизди вещи ТЛ, дабы я перенёс их по нормальным папкам, а то пиздец"
-  targetCount: { min: 1, max: 3 }
-  bonusPickCount: { min: 1, max: 5 }
-  difficulty: Easy
-  targets:
-  - id: NFClothingEyesNightVisionGoggleTL
-    required: { min: 1, max: 2 }
-    weight: 5
-  - id: ClothingMaskGasTL
-    required: 1
-    weight: 5
-  - id: ClothingUniformJumpsuitTL
-    required: { min: 1, max: 1 }
-    weight: 5
-  currencies:
-  - id: Credit
-    min: 0
-    max: 1000
-  - id: Credit
-    min: 0
-    max: 500
-  rewardItems:
-    - id: FoodBoxDonkpocketDink
-      weight: 12
-      always: true
-    - id: DrinkColaBottleFull
-      weight: 1
-      mode: Replace
-
+# region Easy
 - type: storeContract
   id: mercenary_contract_collection
   name: Коллекционер
@@ -79,14 +48,7 @@
     max: 3
   - id: Credit
     min: 0
-    max: 750
-  rewardItems:
-    - id: MercenaryToken
-      weight: 12
-      always: true
-    # - id: DrinkColaBottleFull
-    #   weight: 1
-    #   mode: Replace
+    max: 5000
 
 - type: storeContract
   id: mercenary_contract_randomstaff
@@ -126,68 +88,46 @@
     max: 2
   - id: Credit
     min: 0
-    max: 1150
-  # rewardItems:
-  #   - id: MercenaryToken
-  #     weight: 12
-  #     always: true
-    # - id: DrinkColaBottleFull
-    #   weight: 1
-    #   mode: Replace
+    max: 3000
+
+# region Medium
+# а почему тут пусто?..
 
 
-- type: storeContract
-  id: mercenary_contract_plushie
-  name: Неизвестный эльф
-  description: "Молча и побыстрее, пожалуйста.."
-  targetCount: { min: 2, max: 2 }
-  bonusPickCount: { min: 1, max: 5 }
-  difficulty: Medium
-  targets:
-  - id: EuphoniumInstrument
-    required: { min: 1, max: 1 }
-    weight: 5
-  - id: BikeHornInstrument
-    required: { min: 1, max: 1 }
-    weight: 5
-  currencies:
-  - id: MercenaryToken
-    min: 1
-    max: 2
-  - id: Credit
-    min: 0
-    max: 1150
+# region Hard
+# и тут пусто, етить!
 
-  # - id: GoldRingDiamond
-  #   required: { min: 1, max: 1 }
-  #   weight: 5
 
+
+#  region Пример
 # - type: storeContract
-#   id: caravan_contract_scrap
-#   name:
-#   description: "Найди девушку Грому. Найдешь он тебя отблагодарит."
-#   difficulty: Medium
-#   targetCount: 2
-#   bonusPickCount: 4
+#   id: caravan_contract_guns
+#   name: Спизди это!
+#   description: "Спизди вещи ТЛ, дабы я перенёс их по нормальным папкам, а то пиздец"
+#   targetCount: { min: 1, max: 3 }
+#   bonusPickCount: { min: 1, max: 5 }
+#   difficulty: Easy
 #   targets:
-#   - id: TelecrystalDamaged1
+#   - id: NFClothingEyesNightVisionGoggleTL
+#     required: { min: 1, max: 2 }
+#     weight: 5
+#   - id: ClothingMaskGasTL
 #     required: 1
 #     weight: 5
-#   - id: SyndicateIDCardSmuggler
-#     required: 1
-#     weight: 2
-#   - id: SyndicateIDCardSmuggler
-#     required: 1
-#     weight: 1
+#   - id: ClothingUniformJumpsuitTL
+#     required: { min: 1, max: 1 }
+#     weight: 5
 #   currencies:
-#   - id: TelecrystalDamaged
+#   - id: Credit
 #     min: 0
 #     max: 1000
-#   - id: TelecrystalDamaged
+#   - id: Credit
 #     min: 0
-#     max: 50
+#     max: 500
 #   rewardItems:
-#   - id: SyndicateIDCardSmuggler
-#     weight: 6
-#   - id: SyndicateIDCardSmuggler
-#     weight: 2
+#     - id: FoodBoxDonkpocketDink
+#       weight: 12
+#       always: true
+#     - id: DrinkColaBottleFull
+#       weight: 1
+#       mode: Replace

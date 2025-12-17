@@ -5,9 +5,9 @@ namespace Content.Shared._NC.Trade;
 
 
 [Serializable, NetSerializable,]
-public enum StoreUiKey : byte
+public enum NcStoreUiKey : byte
 {
-    Key
+    NcKey
 }
 
 [Serializable, NetSerializable]

@@ -1,3 +1,5 @@
+# Базовый прототип, наследуемся от него.
+# Дополню потом немного, не думаю что сломается что-то..
 - type: entity
   id: BaseTrademachine
   name: Base trade machine
@@ -7,10 +9,10 @@
   components:
   - type: UserInterface
     interfaces:
-      enum.StoreUiKey.Key:
+      enum.NcStoreUiKey.NcKey:
         type: NcStoreStructuredBoundUi
   - type: ActivatableUI
-    key: enum.StoreUiKey.Key
+    key: enum.NcStoreUiKey.NcKey
   - type: Clickable
   - type: InteractionOutline
   - type: Transform
@@ -30,6 +32,7 @@
         layer:
         - MachineLayer
 
+# Остальные консоли
 - type: entity
   parent: BaseTrademachine
   id: Trademachine
@@ -61,50 +64,3 @@
     color: "#8897db"
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
-
-- type: storePresetStructured
-  id: mercenary_buy
-  currency: MercenaryToken
-  catalog:
-      # От дешёвого к дорогому
-      Оружие:
-      # Лазерное (Дополнительное - Основное)
-      - proto: NFWeaponEnergyPistolLaserAntique
-        price: 22
-      - proto: NFWeaponEnergySubMachineGunDeltaV
-        price: 11
-      # Баллистик (Дополнительное - Основное)
-      - proto: NFWeaponRevolverArgenti
-        price: 4
-      - proto: NFWeaponRevolverLucky
-        price: 6
-      - proto: WeaponPistolMoonWhisper
-        price: 14
-      - proto: NFWeaponSubMachineGunTypewriter
-        price: 7
-      Броня:
-      - proto: ClothingOuterArmorHeavyGreen
-        price: 13
-      - proto: ClothingOuterArmorRiot
-        price: 14
-      Скафандры:
-      - proto: ClothingOuterHardsuitTacticalMaid
-        price: 10
-      - proto: ClothingOuterHardsuitScaf
-        price: 20
-      - proto: ClothingOuterHardsuitMercenaryElite
-        price: 40
-      Разное:
-      - proto: ResearchDisk5000
-        price: 10
-      Обменник:
-      - proto: SpaceCash1000
-        price: 8
-
-- type: storePresetStructured
-  id: mercenary_sell
-  currency: MercenaryToken
-  catalog:
-      Оружие:
-      - proto: TelecrystalDamaged1
-        price: 1
