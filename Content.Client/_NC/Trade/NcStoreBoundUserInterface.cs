@@ -34,7 +34,7 @@ public sealed class NcStoreStructuredBoundUi(EntityUid owner, Enum uiKey)
 
         _lastRevision = st.Revision;
 
-        _menu.ApplyState(st.Balance, st.Listings.ToList(), st.MassSellTotals);
+        _menu.ApplyState(st.Balance, st.BalanceByCurrency, st.Listings.ToList(), st.MassSellTotals);
         _menu.PopulateContracts(st.Contracts);
         _menu.Visible = true;
     }

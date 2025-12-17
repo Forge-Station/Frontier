@@ -1,16 +1,10 @@
 - type: entity
-  id: Trademachine
-  name: Консоль MercHunter™
-  description: Консоль, предоставляющая доступ к обширной сети заказчиков MercHunter (Торговая марка).
-  suffix: Mercenary
+  id: BaseTrademachine
+  name: Base trade machine
+  abstract: true
+  placement:
+    mode: SnapgridCenter
   components:
-  - type: NcStore
-    buyPresets:
-      - mercenary_buy
-    sellPresets:
-      - mercenary_sell
-    contractPresets:
-      - mercenary_contract
   - type: UserInterface
     interfaces:
       enum.StoreUiKey.Key:
@@ -35,16 +29,32 @@
         - MachineMask
         layer:
         - MachineLayer
+
+- type: entity
+  parent: BaseTrademachine
+  id: Trademachine
+  name: Консоль MercHunter™
+  description: Консоль, предоставляющая доступ к обширной сети заказчиков MercHunter (Торговая марка).
+  suffix: Mercenary
+  components:
+  - type: NcStore
+    buyPresets:
+      - mercenary_buy
+    sellPresets:
+      - mercenary_sell
+    contractPresets:
+      - mercenary_contract
   - type: Sprite
     sprite: Forge/merchunted.rsi
     layers:
-    - state: "base"
+    - state: "base" # База - сама структура
       map: ["enum.VendingMachineVisualLayers.Base"]
-    - state: "on"
+    - state: "on" # Экран
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
-    - state: "keyboard"
-    - state: "panel"
+    - state: "keyboard" # Клавитуару
+    - state: "keys" # Кнопки
+      shader: unshaded
   - type: PointLight
     radius: 2.5
     energy: 1

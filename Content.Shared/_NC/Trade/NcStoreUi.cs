@@ -14,6 +14,7 @@ public enum StoreUiKey : byte
 public sealed class StoreUiState(
     int revision,
     int balance,
+    Dictionary<string, int> balanceByCurrency,
     List<StoreListingData> listings,
     Dictionary<string, int> massSellTotals,
     List<ContractClientData> contracts)
@@ -22,9 +23,11 @@ public sealed class StoreUiState(
     public int Revision = revision;
 
     public int Balance = balance;
-    public List<ContractClientData> Contracts = contracts;
+    public Dictionary<string, int> BalanceByCurrency = balanceByCurrency;
+
     public List<StoreListingData> Listings = listings;
     public Dictionary<string, int> MassSellTotals = massSellTotals;
+    public List<ContractClientData> Contracts = contracts;
 }
 
 

@@ -24,8 +24,8 @@ public sealed partial class NcStoreMenu : FancyWindow
     private const int PageSize = 96;
     private const string CrateCategory = "Готово к продаже в ящике";
 
-    private static readonly Color CatSelected = new(0xD9, 0xA4, 0x41);
-    private static readonly Color CatIdle = new(0x7C, 0x66, 0x24);
+    private static readonly Color CatSelected = Color.FromHex("#1f1f1f");
+    private static readonly Color CatIdle = Color.FromHex("#333333");
 
     private readonly Dictionary<string, (NcStoreListingControl Ctrl, string Sig)> _buyCache = new();
     private readonly Dictionary<string, Button> _buyCatButtons = new();
@@ -249,8 +249,8 @@ public sealed partial class NcStoreMenu : FancyWindow
             {
                 PanelOverride = new StyleBoxFlat
                 {
-                    BackgroundColor = new(0.06f, 0.06f, 0.07f, 0.98f),
-                    BorderColor = new(0f, 0f, 0f, 0.9f),
+                    BackgroundColor = Color.FromHex("#131317"),
+                    BorderColor = Color.FromHex("#2e2e2e"),
                     BorderThickness = new(1),
                     ContentMarginLeftOverride = 8,
                     ContentMarginRightOverride = 8,
@@ -272,7 +272,7 @@ public sealed partial class NcStoreMenu : FancyWindow
             {
                 Orientation = BoxContainer.LayoutOrientation.Horizontal,
                 HorizontalExpand = true,
-                Margin = new(0, 0, 0, 4)
+                Margin = new(4, 4, 4, 4)
             };
 
             var diffStrip = new PanelContainer
@@ -362,7 +362,7 @@ public sealed partial class NcStoreMenu : FancyWindow
                             {
                                 Texture = targetTex,
                                 Stretch = TextureRect.StretchMode.KeepAspectCentered,
-                                MinSize = new(24, 24),
+                                MinSize = new(48, 48),
                                 Margin = new(0, 0, 4, 0)
                             });
                     }

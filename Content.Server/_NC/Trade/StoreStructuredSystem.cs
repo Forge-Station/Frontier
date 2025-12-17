@@ -18,11 +18,9 @@ public sealed class StoreStructuredSystem : EntitySystem
 {
     private const float AutoCloseDistance = 3f;
     private const float CheckInterval = 0.2f;
-
     [Dependency] private readonly NcContractSystem _contracts = default!;
     [Dependency] private readonly NcStoreLogicSystem _logic = default!;
     private readonly HashSet<EntityUid> _openStoreUids = new();
-
     [Dependency] private readonly PopupSystem _popups = default!;
     private readonly Dictionary<EntityUid, HashSet<EntityUid>> _storesByWatchedRoot = new();
     [Dependency] private readonly NcStoreSystem _storeSystem = default!;
@@ -30,8 +28,6 @@ public sealed class StoreStructuredSystem : EntitySystem
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
     private readonly Dictionary<EntityUid, (EntityUid User, EntityUid? Crate)> _watchByStore = new();
     [Dependency] private readonly SharedTransformSystem _xform = default!;
-
-
     private TimeSpan _nextCheck = TimeSpan.Zero;
 
     public override void Initialize()
@@ -41,7 +37,6 @@ public sealed class StoreStructuredSystem : EntitySystem
         SubscribeLocalEvent<NcStoreComponent, ActivatableUIOpenAttemptEvent>(
             OnUiOpenAttempt,
             new[] { typeof(ActivatableUISystem), });
-
         SubscribeLocalEvent<NcStoreComponent, BoundUIClosedEvent>(OnUiClosed);
         SubscribeLocalEvent<NcStoreComponent, RequestUiRefreshMessage>(OnUiRefreshRequest);
         SubscribeLocalEvent<AccessReaderComponent, AccessReaderConfigurationChangedEvent>(OnAccessReaderChanged);
@@ -76,7 +71,12 @@ public sealed class StoreStructuredSystem : EntitySystem
         if (!wasInUse)
             _openStoreUids.Add(uid);
 
-        UpdateStoreWatch(uid, comp);
+        EntityUid? crateUid = null;
+        if (TryGetPulledClosedCrate(user, out var pulledCrate))
+            crateUid = pulledCrate;
+
+        UpdateStoreWatch(uid, user, crateUid);
+
 
         if (!_ui.IsUiOpen(uid, StoreUiKey.Key, user))
             _ui.OpenUi(uid, StoreUiKey.Key, user);
@@ -115,6 +115,22 @@ public sealed class StoreStructuredSystem : EntitySystem
         UpdateUiState(uid, comp, user);
     }
 
+    private bool EnsureCrateWatchUpToDate(EntityUid storeUid, EntityUid user)
+    {
+        EntityUid? crateUid = null;
+        if (TryGetPulledClosedCrate(user, out var pulledCrate))
+            crateUid = pulledCrate;
+
+        if (_watchByStore.TryGetValue(storeUid, out var prev))
+        {
+            if (prev.User == user && prev.Crate == crateUid)
+                return false;
+        }
+
+        UpdateStoreWatch(storeUid, user, crateUid);
+        return true;
+    }
+
     public void UpdateUiState(EntityUid uid, NcStoreComponent comp, EntityUid user)
     {
         if (!_storeSystem.CanUseStore(uid, comp, user))
@@ -126,14 +142,17 @@ public sealed class StoreStructuredSystem : EntitySystem
             return;
         }
 
-        var userSnap = _logic.BuildInventorySnapshot(user);
-
         EntityUid? crateUid = null;
-        if (TryComp(user, out PullerComponent? puller) &&
-            puller.Pulling is { } pulled &&
-            TryComp(pulled, out EntityStorageComponent? storage) &&
-            !storage.Open)
-            crateUid = pulled;
+        if (TryGetPulledClosedCrate(user, out var pulledCrate))
+            crateUid = pulledCrate;
+
+        UpdateStoreWatch(uid, user, crateUid);
+
+        _logic.InvalidateInventoryCache(user);
+        if (crateUid is { } cInv)
+            _logic.InvalidateInventoryCache(cInv);
+
+        var userSnap = _logic.BuildInventorySnapshot(user);
 
         NcStoreLogicSystem.InventorySnapshot? crateSnap = null;
         if (crateUid is { } crateEntity)
@@ -336,11 +355,23 @@ public sealed class StoreStructuredSystem : EntitySystem
                         if (string.IsNullOrWhiteSpace(t.TargetItem) || t.Required <= 0)
                             continue;
 
-                        targets.Add(new(t.TargetItem, t.Required, t.Progress));
+                        var td = new ContractTargetClientData(t.TargetItem, t.Required, t.Progress)
+                        {
+                            MatchMode = t.MatchMode
+                        };
+
+                        targets.Add(td);
                     }
                 }
                 else if (!string.IsNullOrWhiteSpace(c.TargetItem) && c.Required > 0)
-                    targets.Add(new(c.TargetItem, c.Required, c.Progress));
+                {
+                    var td = new ContractTargetClientData(c.TargetItem, c.Required, c.Progress)
+                    {
+                        MatchMode = c.MatchMode
+                    };
+
+                    targets.Add(td);
+                }
 
                 var client = new ContractClientData(
                     c.Id,
@@ -368,11 +399,11 @@ public sealed class StoreStructuredSystem : EntitySystem
             .ToList();
 
         comp.UiRevision = unchecked(comp.UiRevision + 1);
-
+        var balancesByCurrency = new Dictionary<string, int>(userSnap.StackTypeCounts);
         _ui.SetUiState(
             uid,
             StoreUiKey.Key,
-            new StoreUiState(comp.UiRevision, balance, listings, crateTotals, contracts));
+            new StoreUiState(comp.UiRevision, balance, balancesByCurrency, listings, crateTotals, contracts));
     }
 
 
@@ -429,7 +460,11 @@ public sealed class StoreStructuredSystem : EntitySystem
                 _openStoreUids.Remove(uid);
                 UnregisterStoreWatch(uid);
                 _popups.PopupEntity(Loc.GetString("ncstore-no-access"), uid, userUid);
+                continue;
             }
+
+            if (EnsureCrateWatchUpToDate(uid, userUid))
+                UpdateUiState(uid, store, userUid);
         }
     }
 
@@ -491,25 +526,19 @@ public sealed class StoreStructuredSystem : EntitySystem
             _storesByWatchedRoot.Remove(root);
     }
 
-    private void UpdateStoreWatch(EntityUid storeUid, NcStoreComponent store)
+    private void UpdateStoreWatch(EntityUid storeUid, EntityUid user, EntityUid? crate)
     {
-        if (store.CurrentUser is not { } user)
+        if (user == EntityUid.Invalid)
         {
             UnregisterStoreWatch(storeUid);
             return;
         }
 
-        EntityUid? crate = null;
-        if (TryGetPulledClosedCrate(user, out var pulledCrate))
-            crate = pulledCrate;
-
-        // Сравниваем с прошлым состоянием, чтобы не дёргать словари лишний раз.
         if (_watchByStore.TryGetValue(storeUid, out var prev))
         {
             if (prev.User == user && prev.Crate == crate)
                 return;
 
-            // Удаляем старые root'ы.
             if (prev.User != EntityUid.Invalid)
                 RemoveWatchedRoot(prev.User, storeUid);
 
@@ -523,6 +552,7 @@ public sealed class StoreStructuredSystem : EntitySystem
         if (crate is { } c)
             AddWatchedRoot(c, storeUid);
     }
+
 
     private void UnregisterStoreWatch(EntityUid storeUid)
     {
@@ -555,10 +585,6 @@ public sealed class StoreStructuredSystem : EntitySystem
             }
         }
 
-        // Поднимаемся вверх, проверяя на каждом уровне:
-        // - сам entity
-        // - контейнерного владельца (если есть)
-        // - обычного transform parent
         var cur = changedEntity;
 
         for (var i = 0; i < 64; i++)
@@ -572,7 +598,6 @@ public sealed class StoreStructuredSystem : EntitySystem
             if (parent == EntityUid.Invalid || parent == cur)
                 break;
 
-            // Если parent реально содержит cur в одном из контейнеров — считаем parent владельцем контейнера.
             if (TryComp(parent, out ContainerManagerComponent? parentContainers))
             {
                 foreach (var container in parentContainers.Containers.Values)
@@ -580,13 +605,11 @@ public sealed class StoreStructuredSystem : EntitySystem
                     if (!container.Contains(cur))
                         continue;
 
-                    // Контейнерный владелец найден — он и есть следующий "root-кандидат"
                     cur = parent;
                     goto NextStep;
                 }
             }
 
-            // иначе обычная transform-цепочка
             cur = parent;
 
             NextStep: ;
@@ -604,12 +627,6 @@ public sealed class StoreStructuredSystem : EntitySystem
                 UnregisterStoreWatch(storeUid);
                 continue;
             }
-
-            UpdateStoreWatch(storeUid, store);
-
-            _logic.InvalidateInventoryCache(user);
-            if (TryGetPulledClosedCrate(user, out var crate))
-                _logic.InvalidateInventoryCache(crate);
 
             UpdateUiState(storeUid, store, user);
         }
@@ -654,14 +671,19 @@ public sealed class StoreStructuredSystem : EntitySystem
 
     private void UpdateContractsProgress(NcStoreComponent comp, EntityUid user)
     {
-        var userSnap = _logic.BuildInventorySnapshot(user);
+        _logic.InvalidateInventoryCache(user);
 
         NcStoreLogicSystem.InventorySnapshot? crateSnap = null;
         if (TryGetPulledClosedCrate(user, out var crate))
+        {
+            _logic.InvalidateInventoryCache(crate);
             crateSnap = _logic.BuildInventorySnapshot(crate);
+        }
 
+        var userSnap = _logic.BuildInventorySnapshot(user);
         UpdateContractsProgress(comp, userSnap, crateSnap);
     }
+
 
     private void UpdateContractsProgress(
         NcStoreComponent comp,

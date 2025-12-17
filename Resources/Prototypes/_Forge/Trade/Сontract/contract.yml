@@ -42,9 +42,9 @@
   description: "Требуются следующие вещи для пополнения коллекции..."
   targetCount: { min: 1, max: 2 }
   bonusPickCount: { min: 1, max: 5 }
-  difficulty: Hard
+  difficulty: Easy
   targets:
-# Часы
+# Watch
   - id: WristwatchGold
     required: { min: 1, max: 1 }
     weight: 5
@@ -80,10 +80,10 @@
   - id: Credit
     min: 0
     max: 750
-  # rewardItems:
-  #   - id: MercenaryToken
-  #     weight: 12
-  #     always: true
+  rewardItems:
+    - id: MercenaryToken
+      weight: 12
+      always: true
     # - id: DrinkColaBottleFull
     #   weight: 1
     #   mode: Replace
@@ -135,6 +135,28 @@
     #   weight: 1
     #   mode: Replace
 
+
+- type: storeContract
+  id: mercenary_contract_plushie
+  name: Неизвестный эльф
+  description: "Молча и побыстрее, пожалуйста.."
+  targetCount: { min: 2, max: 2 }
+  bonusPickCount: { min: 1, max: 5 }
+  difficulty: Medium
+  targets:
+  - id: EuphoniumInstrument
+    required: { min: 1, max: 1 }
+    weight: 5
+  - id: BikeHornInstrument
+    required: { min: 1, max: 1 }
+    weight: 5
+  currencies:
+  - id: MercenaryToken
+    min: 1
+    max: 2
+  - id: Credit
+    min: 0
+    max: 1150
 
   # - id: GoldRingDiamond
   #   required: { min: 1, max: 1 }

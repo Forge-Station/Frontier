@@ -23,6 +23,13 @@ public sealed class NcStoreListingControl : PanelContainer
     private const int MaxTotalDisplay = 999_999;
     private const int DescMaxChars = 220;
 
+    // Forge Frontier
+    private const int IconTiny = 16;    // вторичные элементы
+    private const int IconSmall = 48;   // награды, валюта
+    private const int IconMedium = 24;  // иконки
+    private const int IconLarge = 80;   // слот
+    // Forge Frontier end
+
     private readonly int _maxQty;
     private readonly LineEdit _qtyEdit;
     private Label? _priceLbl;
@@ -46,8 +53,8 @@ public sealed class NcStoreListingControl : PanelContainer
             HorizontalExpand = true,
             PanelOverride = new StyleBoxFlat
             {
-                BackgroundColor = new(0.08f, 0.08f, 0.09f, 0.9f),
-                BorderColor = Color.FromHex("#B08D3B"),
+                BackgroundColor = Color.FromHex("#131317"),
+                BorderColor = Color.FromHex("#2e2e2e"),
                 BorderThickness = new(1),
                 PaddingLeft = 10,
                 PaddingRight = 10,
@@ -71,10 +78,11 @@ public sealed class NcStoreListingControl : PanelContainer
         var title = new Label
         {
             Text = proto?.Name ?? data.ProductEntity,
+            Modulate = Color.FromHex("#9b8056"),
             HorizontalExpand = true,
             ClipText = true,
             ToolTip = proto?.Name ?? data.ProductEntity,
-            Margin = new(2, 0, 2, 4)
+            Margin = new(10, 5, 6, 8)
         };
         title.StyleClasses.Add(StyleBase.StyleClassLabelHeading);
         mainCol.AddChild(title);
@@ -92,7 +100,9 @@ public sealed class NcStoreListingControl : PanelContainer
             Orientation = BoxContainer.LayoutOrientation.Vertical,
             SeparationOverride = 4,
             HorizontalExpand = false,
-            MinSize = new Vector2i(SlotPx, 0)
+            // VerticalAlignment = VAlignment.Center, // Forge Frontier
+            MinSize = new Vector2i(SlotPx, 0),
+            Margin = new(20, 0, 0, 20)
         };
 
         if (MakeSlot(proto, sprites) is { } slot)
@@ -105,6 +115,7 @@ public sealed class NcStoreListingControl : PanelContainer
             SeparationOverride = 2,
             HorizontalExpand = true,
             VerticalExpand = false
+            // VerticalAlignment = VAlignment.Center // Forge Frontier
         };
 
         var desc = MakeDescription(proto);
@@ -118,6 +129,8 @@ public sealed class NcStoreListingControl : PanelContainer
             Orientation = BoxContainer.LayoutOrientation.Vertical,
             SeparationOverride = 4,
             HorizontalExpand = false,
+            VerticalAlignment = VAlignment.Center, // Forge Frontier
+            Margin = new Thickness(0, 0, 20, 0),
             MinSize = new Vector2i(PriceW, PriceH)
         };
 
@@ -270,7 +283,7 @@ public sealed class NcStoreListingControl : PanelContainer
                 {
                     Text = data.Mode == StoreMode.Buy ? "Нет в наличии" : "Закупка завершена",
                     HorizontalAlignment = HAlignment.Center,
-                    Modulate = Color.FromHex("#C0C0C0"),
+                    Modulate = Color.FromHex("#666666"),
                     Margin = new(0, 8, 0, 0)
                 });
         }
@@ -288,7 +301,7 @@ public sealed class NcStoreListingControl : PanelContainer
                         ? $"Осталось: {data.Remaining}"
                         : $"Скупим: {data.Remaining}",
                     HorizontalAlignment = HAlignment.Center,
-                    Modulate = Color.FromHex("#C0C0C0"),
+                    Modulate = Color.FromHex("#666666"),
                     Margin = new(0, 2, 0, 0)
                 });
         }
@@ -300,7 +313,7 @@ public sealed class NcStoreListingControl : PanelContainer
                 {
                     Text = $"У вас: {data.Owned}",
                     HorizontalAlignment = HAlignment.Center,
-                    Modulate = Color.FromHex("#C0C0C0"),
+                    Modulate = Color.FromHex("#666666"),
                     Margin = new(0, 2, 0, 0)
                 });
         }
@@ -350,6 +363,11 @@ public sealed class NcStoreListingControl : PanelContainer
             {
                 Texture = tex,
                 Stretch = TextureRect.StretchMode.KeepAspectCentered,
+                // Forge Frontier: пробуем штуки, иконка не по центру.
+                MinSize = new(IconLarge, IconLarge),
+                HorizontalAlignment = HAlignment.Center,
+                VerticalAlignment = VAlignment.Center,
+                // Forge Frontier end
                 Margin = new(2)
             });
 
@@ -372,7 +390,8 @@ public sealed class NcStoreListingControl : PanelContainer
             HorizontalExpand = false,
             VerticalExpand = false,
             MaxWidth = TextMax,
-            ToolTip = full
+            ToolTip = full,
+            Modulate = Color.FromHex("#404040")
         };
         rtl.SetMessage(msg);
         return rtl;
@@ -401,7 +420,7 @@ public sealed class NcStoreListingControl : PanelContainer
             MinSize = new Vector2i(PriceW, PriceH),
             MaxSize = new Vector2i(PriceW, PriceH),
             ClipText = true,
-            Margin = new(8, 0, 0, 0),
+            Margin = new Thickness(0, 0, 20, 0),
             StyleClasses = { StyleNano.StyleClassButtonBig, },
             Disabled = !actionsEnabled
                 || data.Remaining == 0
@@ -429,15 +448,17 @@ public sealed class NcStoreListingControl : PanelContainer
                     {
                         Texture = tex,
                         Stretch = TextureRect.StretchMode.KeepAspectCentered,
-                        MinSize = new Vector2i(PriceH - 6, PriceH - 6),
-                        MaxSize = new Vector2i(PriceH - 6, PriceH - 6),
-                        Margin = new(2, 2, 0, 2)
+                        MinSize = new Vector2i(IconSmall, IconSmall), // Forge Frontier
+                        MaxSize = new Vector2i(IconSmall, IconSmall), // Forge Frontier
+                        Margin = new(2, 2, 0, 2),
+                        VerticalAlignment = VAlignment.Center // Forge Frontier
                     });
             }
         }
 
         _priceLbl = new()
         {
+            Modulate = Color.FromHex("#0d0d0d"),
             Text = data.Price.ToString(),
             HorizontalExpand = true,
             HorizontalAlignment = HAlignment.Center,

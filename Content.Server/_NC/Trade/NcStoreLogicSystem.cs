@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Shared._NC.Trade;
+using Content.Shared.Clothing.Components;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
@@ -64,6 +65,9 @@ public sealed class NcStoreLogicSystem : EntitySystem
 
         foreach (var ent in EnumerateDeepItemsUnique(root))
         {
+            if (IsProtectedFromDirectSale(root, ent))
+                continue;
+
             if (_ents.TryGetComponent(ent, out StackComponent? stack))
             {
                 var cnt = Math.Max(stack.Count, 0);
@@ -73,7 +77,6 @@ public sealed class NcStoreLogicSystem : EntitySystem
                     stackTypeCounts[stack.StackTypeId] = prev + cnt;
                 }
 
-                // For stack-based products we always match by StackTypeId; no need to count proto/ancestors.
                 continue;
             }
 
@@ -93,6 +96,7 @@ public sealed class NcStoreLogicSystem : EntitySystem
 
         return new(protoCounts, ancestorCounts, stackTypeCounts);
     }
+
 
     public int GetOwnedFromSnapshot(in InventorySnapshot snapshot, string productProtoId) =>
         GetOwnedFromSnapshot(snapshot, productProtoId, PrototypeMatchMode.Exact);
@@ -440,9 +444,13 @@ public sealed class NcStoreLogicSystem : EntitySystem
         var total = 0;
 
         var expectedStackType = GetProductStackType(productProtoId);
+        var effective = ResolveMatchMode(productProtoId, matchMode);
 
         foreach (var ent in EnumerateDeepItemsUnique(root))
         {
+            if (IsProtectedFromDirectSale(root, ent))
+                continue;
+
             if (expectedStackType != null &&
                 _ents.TryGetComponent(ent, out StackComponent? stack) &&
                 stack.StackTypeId == expectedStackType)
@@ -453,8 +461,6 @@ public sealed class NcStoreLogicSystem : EntitySystem
 
             if (!_ents.TryGetComponent(ent, out MetaDataComponent? meta) || meta.EntityPrototype is null)
                 continue;
-
-            var effective = ResolveMatchMode(productProtoId, matchMode);
 
             if (effective == PrototypeMatchMode.Descendants)
             {
@@ -470,6 +476,7 @@ public sealed class NcStoreLogicSystem : EntitySystem
 
         return total;
     }
+
 
     public int GetOwned(EntityUid user, string productProtoId) =>
         GetOwnedInternal(user, productProtoId, PrototypeMatchMode.Exact);
@@ -498,13 +505,15 @@ public sealed class NcStoreLogicSystem : EntitySystem
 
             var effective = ResolveMatchMode(protoId, matchMode);
 
-            // Exact-only: remove only the requested prototype.
             if (effective == PrototypeMatchMode.Exact)
             {
                 foreach (var ent in EnumerateDeepItemsUnique(root))
                 {
                     if (left <= 0)
                         break;
+
+                    if (IsProtectedFromDirectSale(root, ent))
+                        continue;
 
                     if (!_ents.TryGetComponent(ent, out MetaDataComponent? meta) || meta.EntityPrototype is null)
                         continue;
@@ -522,11 +531,13 @@ public sealed class NcStoreLogicSystem : EntitySystem
                 return left <= 0;
             }
 
-            // Descendants: consume exact first (if present), then any descendants.
             foreach (var ent in EnumerateDeepItemsUnique(root))
             {
                 if (left <= 0)
                     break;
+
+                if (IsProtectedFromDirectSale(root, ent))
+                    continue;
 
                 if (!_ents.TryGetComponent(ent, out MetaDataComponent? meta) || meta.EntityPrototype is null)
                     continue;
@@ -546,10 +557,12 @@ public sealed class NcStoreLogicSystem : EntitySystem
                 if (left <= 0)
                     break;
 
+                if (IsProtectedFromDirectSale(root, ent))
+                    continue;
+
                 if (!_ents.TryGetComponent(ent, out MetaDataComponent? meta) || meta.EntityPrototype is null)
                     continue;
 
-                // exact was already consumed above
                 if (meta.EntityPrototype.ID == protoId)
                     continue;
 
@@ -566,12 +579,14 @@ public sealed class NcStoreLogicSystem : EntitySystem
             return left <= 0;
         }
 
-        // Stack-based products: always match by StackTypeId.
         var leftStack = amount;
         foreach (var ent in EnumerateDeepItemsUnique(root))
         {
             if (leftStack <= 0)
                 break;
+
+            if (IsProtectedFromDirectSale(root, ent))
+                continue;
 
             if (!_ents.TryGetComponent(ent, out StackComponent? stack) || stack.StackTypeId != stackType)
                 continue;
@@ -591,6 +606,7 @@ public sealed class NcStoreLogicSystem : EntitySystem
 
         return leftStack <= 0;
     }
+
 
     public bool TryTakeProductUnits(EntityUid user, string protoId, int amount) =>
         TryTakeProductUnitsInternal(user, protoId, amount, PrototypeMatchMode.Exact);
@@ -1115,6 +1131,41 @@ public sealed class NcStoreLogicSystem : EntitySystem
         }
 
         return true;
+    }
+
+    private bool IsHeldInHands(EntityUid user, EntityUid item)
+    {
+        if (!_ents.TryGetComponent(user, out HandsComponent? hands))
+            return false;
+
+        foreach (var handId in hands.Hands.Keys)
+        {
+            if (_hands.TryGetHeldItem((user, hands), handId, out var heldEntity) &&
+                heldEntity.HasValue &&
+                heldEntity.Value == item)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private bool IsDirectChildOf(EntityUid root, EntityUid item) =>
+        _ents.TryGetComponent(item, out TransformComponent? xform) && xform.ParentUid == root;
+
+    private bool IsProtectedFromDirectSale(EntityUid root, EntityUid item)
+    {
+        if (!_ents.HasComponent<InventoryComponent>(root))
+            return false;
+
+        if (!IsDirectChildOf(root, item))
+            return false;
+
+        if (IsHeldInHands(root, item))
+            return false;
+
+        return _ents.HasComponent<ClothingComponent>(item);
     }
 
 

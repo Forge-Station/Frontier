@@ -11,10 +11,15 @@ namespace Content.Server._NC.Trade;
 
 public sealed class NcContractSystem : EntitySystem
 {
+    private const double Golden = 0.6180339887498948;
+    private const double DefaultJitter = 0.06;
     private static readonly ISawmill Sawmill = Logger.GetSawmill("nccontracts");
 
     [Dependency] private readonly NcStoreLogicSystem _logic = default!;
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
+
+    // key -> phase [0..1)
+    private readonly Dictionary<string, double> _quasiPhase = new(StringComparer.Ordinal);
     [Dependency] private readonly IRobustRandom _random = default!;
 
     public void InitContractsForStore(EntityUid uid, NcStoreComponent comp)
@@ -71,8 +76,8 @@ public sealed class NcContractSystem : EntitySystem
             return false;
         }
 
+        var crateUid = GetPulledClosedCrate(user);
 
-        var pulledCrate = GetPulledClosedCrate(user);
         var requiredByKey = new Dictionary<(string ProtoId, PrototypeMatchMode MatchMode), int>();
 
         foreach (var t in targets)
@@ -90,15 +95,30 @@ public sealed class NcContractSystem : EntitySystem
                 requiredByKey[key] = checked(requiredByKey[key] + t.Required);
         }
 
+        _logic.InvalidateInventoryCache(user);
+        if (crateUid is { } c0)
+            _logic.InvalidateInventoryCache(c0);
+
+        var userSnap = _logic.BuildInventorySnapshot(user);
+
+        var hasCrateSnap = false;
+        NcStoreLogicSystem.InventorySnapshot crateSnap = default;
+
+        if (crateUid is { } c1)
+        {
+            crateSnap = _logic.BuildInventorySnapshot(c1);
+            hasCrateSnap = true;
+        }
+
         foreach (var kvp in requiredByKey)
         {
             var (protoId, matchMode) = kvp.Key;
             var required = kvp.Value;
 
-            var owned = _logic.GetOwned(user, protoId, matchMode);
+            var owned = _logic.GetOwnedFromSnapshot(userSnap, protoId, matchMode);
 
-            if (pulledCrate is { } crateUid)
-                owned += _logic.GetOwnedInRoot(crateUid, protoId, matchMode);
+            if (hasCrateSnap)
+                owned += _logic.GetOwnedFromSnapshot(crateSnap, protoId, matchMode);
 
             if (owned < required)
                 return false;
@@ -111,23 +131,27 @@ public sealed class NcContractSystem : EntitySystem
 
             var left = required;
 
-            var ownedUser = _logic.GetOwned(user, protoId, matchMode);
+            var ownedUser = _logic.GetOwnedFromSnapshot(userSnap, protoId, matchMode);
             var takeFromUser = Math.Min(left, ownedUser);
 
-            if (takeFromUser > 0 &&
-                !_logic.TryTakeProductUnits(user, protoId, takeFromUser, matchMode))
+            if (takeFromUser > 0)
             {
-                Sawmill.Error(
-                    $"[Claim] Failed to take {takeFromUser}x {protoId} " +
-                    $"from user {ToPrettyString(user)} for contract '{contractId}' on {ToPrettyString(store)}.");
-                return false;
-            }
+                _logic.InvalidateInventoryCache(user);
 
-            left -= takeFromUser;
+                if (!_logic.TryTakeProductUnits(user, protoId, takeFromUser, matchMode))
+                {
+                    Sawmill.Error(
+                        $"[Claim] Failed to take {takeFromUser}x {protoId} " +
+                        $"from user {ToPrettyString(user)} for contract '{contractId}' on {ToPrettyString(store)}.");
+                    return false;
+                }
+
+                left -= takeFromUser;
+            }
 
             if (left > 0)
             {
-                if (pulledCrate is not { } crateUid)
+                if (crateUid is not { } crateEntity)
                 {
                     Sawmill.Error(
                         $"[Claim] Missing {left}x {protoId} but user has no pulled closed crate. " +
@@ -135,11 +159,13 @@ public sealed class NcContractSystem : EntitySystem
                     return false;
                 }
 
-                if (!_logic.TryTakeProductUnitsFromRoot(crateUid, protoId, left, matchMode))
+                _logic.InvalidateInventoryCache(crateEntity);
+
+                if (!_logic.TryTakeProductUnitsFromRoot(crateEntity, protoId, left, matchMode))
                 {
                     Sawmill.Error(
                         $"[Claim] Failed to take {left}x {protoId} " +
-                        $"from crate {ToPrettyString(crateUid)} for contract '{contractId}' on {ToPrettyString(store)}.");
+                        $"from crate {ToPrettyString(crateEntity)} for contract '{contractId}' on {ToPrettyString(store)}.");
                     return false;
                 }
             }
@@ -173,12 +199,12 @@ public sealed class NcContractSystem : EntitySystem
             contract.Required = totalRequired;
             contract.Progress = totalProgress;
 
-            if (contract.Targets.Count > 0)
-                contract.TargetItem = contract.Targets[0].TargetItem;
+            contract.TargetItem = contract.Targets[0].TargetItem;
         }
         else
             contract.Progress = contract.Required;
 
+        // 4) Награды
         if (contract.RewardCurrencies is { Count: > 0, })
         {
             foreach (var kvp in contract.RewardCurrencies)
@@ -266,7 +292,7 @@ public sealed class NcContractSystem : EntitySystem
                 continue;
             }
 
-            comp.Contracts[contractId] = CreateContractData(proto);
+            comp.Contracts[contractId] = CreateContractData(uid, proto);
 
             if (fillOnlyFirstMissing)
                 break;
@@ -396,7 +422,16 @@ public sealed class NcContractSystem : EntitySystem
         }
     }
 
-    private static int Roll(IRobustRandom rng, IntRange range, int minClamp, int maxClamp = int.MaxValue)
+
+    private double NextUnit() => _random.NextFloat();
+
+    private int RollSmooth(
+        string key,
+        IntRange range,
+        int minClamp,
+        int maxClamp = int.MaxValue,
+        double jitter = DefaultJitter
+    )
     {
         var min = range.Min;
         var max = range.Max;
@@ -410,22 +445,39 @@ public sealed class NcContractSystem : EntitySystem
         if (max <= min)
             return min;
 
-        // Next(maxExclusive), поэтому +1
-        return rng.Next(min, max + 1);
+        if (_quasiPhase.Count > 4096)
+            _quasiPhase.Clear();
+
+        if (!_quasiPhase.TryGetValue(key, out var p))
+            p = NextUnit();
+
+        var j = (NextUnit() - 0.5) * 2.0 * jitter;
+
+        p = p + Golden + j;
+        p -= Math.Floor(p);
+
+        _quasiPhase[key] = p;
+
+        var buckets = max - min + 1;
+        var idx = (int) Math.Floor(p * buckets);
+        if (idx >= buckets)
+            idx = buckets - 1;
+
+        return min + idx;
     }
 
-    private ContractServerData CreateContractData(StoreContractPrototype proto)
+    private ContractServerData CreateContractData(EntityUid store, StoreContractPrototype proto)
     {
-        // 1. Цели контракта
         var targets = new List<ContractTargetServerData>();
 
         var targetItem = proto.TargetItem ?? string.Empty;
-        var required = Roll(_random, proto.Required, 1);
+        var required = RollSmooth($"req:{store}:{proto.ID}", proto.Required, 1);
 
+        var matchMode = proto.MatchMode;
 
         if (proto.Targets is { Count: > 0, })
         {
-            var targetCount = Roll(_random, proto.TargetCount, 1);
+            var targetCount = RollSmooth($"tc:{store}:{proto.ID}", proto.TargetCount, 1);
 
             if (targetCount <= 0)
                 targetCount = 1;
@@ -437,7 +489,7 @@ public sealed class NcContractSystem : EntitySystem
                 {
                     targetItem = chosen.TargetItemId;
 
-                    var chosenReq = Roll(_random, chosen.Required, 1);
+                    var chosenReq = RollSmooth($"treq:{store}:{proto.ID}:{chosen.TargetItemId}", chosen.Required, 1);
                     if (chosenReq > 0)
                         required = chosenReq;
                 }
@@ -456,7 +508,7 @@ public sealed class NcContractSystem : EntitySystem
                     pool.Remove(chosen);
 
                     var itemId = chosen.TargetItemId;
-                    var rolledReq = Roll(_random, chosen.Required, 1);
+                    var rolledReq = RollSmooth($"treq:{store}:{proto.ID}:{chosen.TargetItemId}", chosen.Required, 1);
                     var req = rolledReq > 0 ? rolledReq : required;
 
                     targets.Add(
@@ -464,13 +516,15 @@ public sealed class NcContractSystem : EntitySystem
                         {
                             TargetItem = itemId,
                             Required = req,
-                            Progress = 0
+                            Progress = 0,
+                            MatchMode = matchMode
                         });
                 }
 
                 if (targets.Count > 0)
                 {
                     targetItem = targets[0].TargetItem;
+
                     required = 0;
                     foreach (var t in targets)
                         required += t.Required;
@@ -494,7 +548,8 @@ public sealed class NcContractSystem : EntitySystem
                 if (max < min)
                     (min, max) = (max, min);
 
-                min = Math.Max(min, 0);
+                if (min < 0)
+                    min = 0;
                 if (max < 0)
                     continue;
 
@@ -543,7 +598,6 @@ public sealed class NcContractSystem : EntitySystem
             }
         }
 
-
         if (proto.Reward > 0 && !string.IsNullOrWhiteSpace(proto.RewardCurrency))
         {
             var currencyId = proto.RewardCurrency;
@@ -555,8 +609,7 @@ public sealed class NcContractSystem : EntitySystem
                 rewardCurrencies[currencyId] = amount;
         }
 
-        if (!string.IsNullOrWhiteSpace(proto.RewardItem) &&
-            proto.RewardItemCount > 0)
+        if (!string.IsNullOrWhiteSpace(proto.RewardItem) && proto.RewardItemCount > 0)
         {
             var protoId = proto.RewardItem!;
             var count = proto.RewardItemCount;
@@ -621,23 +674,21 @@ public sealed class NcContractSystem : EntitySystem
 
             if (randomRewards.Count > 0)
             {
-                var picks = Roll(_random, proto.BonusPickCount, 0);
+                var picks = RollSmooth($"bp:{store}:{proto.ID}", proto.BonusPickCount, 0);
 
-                if (picks <= 0)
-                    goto DoneBonus;
-
-                for (var i = 0; i < picks; i++)
+                if (picks > 0)
                 {
-                    var bonus = PickWeighted(_random, randomRewards, b => b.Weight);
-                    if (bonus == null)
-                        break;
+                    for (var i = 0; i < picks; i++)
+                    {
+                        var bonus = PickWeighted(_random, randomRewards, b => b.Weight);
+                        if (bonus == null)
+                            break;
 
-                    var effective = ResolveEffective(bonus);
-                    ApplyBonusReward(effective, rewardCurrencies, rewardItems, anyBonusApplied);
-                    anyBonusApplied = true;
+                        var effective = ResolveEffective(bonus);
+                        ApplyBonusReward(effective, rewardCurrencies, rewardItems, anyBonusApplied);
+                        anyBonusApplied = true;
+                    }
                 }
-
-                DoneBonus: ;
             }
         }
 
@@ -684,6 +735,7 @@ public sealed class NcContractSystem : EntitySystem
             TargetItem = targetItem,
             Required = required,
             Progress = 0,
+            MatchMode = matchMode,
 
             Reward = mainCurrencyAmount,
             RewardCurrency = mainCurrency ?? string.Empty,
