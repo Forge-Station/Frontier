@@ -25,9 +25,11 @@ public sealed class AutoSalarySystem : EntitySystem
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly BankSystem _bank = default!;
 
+    private const string AutoSalaryConfigId = "AutoSalaryConfig";
+
     private TimeSpan _payInterval = TimeSpan.FromSeconds(1200);
     private readonly Dictionary<EntityUid, TimeSpan> _elapsed = new();
-    private readonly Dictionary<string, int> _salary = new();
+    private readonly Dictionary<string, int> _salaries = new();
 
     public override void Initialize()
     {
@@ -38,7 +40,7 @@ public sealed class AutoSalarySystem : EntitySystem
 
     private void LoadConfig()
     {
-        _payInterval = _protoMan.TryIndex<AutoSalaryConfigPrototype>("AutoSalaryConfig", out var config)
+        _payInterval = _protoMan.TryIndex<AutoSalaryConfigPrototype>(AutoSalaryConfigId, out var config)
             ? TimeSpan.FromSeconds(config.PayIntervalSeconds)
             : TimeSpan.FromSeconds(1200);
     }
@@ -55,10 +57,14 @@ public sealed class AutoSalarySystem : EntitySystem
 
     private void LoadSalaryPrototypes()
     {
-        _salary.Clear();
+        _salaries.Clear();
         foreach (var proto in _protoMan.EnumeratePrototypes<AutoSalaryJobPrototype>())
         {
-            _salary[proto.ID] = proto.Salary;
+            _salaries[proto.ID] = proto.Salary;
+            if (!string.IsNullOrEmpty(proto.LocalizedName))
+            {
+                _salaries[proto.LocalizedName] = proto.Salary;
+            }
         }
     }
 
@@ -78,28 +84,30 @@ public sealed class AutoSalarySystem : EntitySystem
 
     private void ProcessEntity(EntityUid body, float frameTime)
     {
-        if (ShouldSkipEntity(body, out var pay))
+        if (ShouldSkipEntity(body))
         {
             _elapsed.Remove(body);
             return;
         }
+
+        if (!TryGetJobAndSalary(body, out var pay))
+        {
+            // No ID card or no salary for this job.
+            // We don't reset the timer here, just pause it.
+            return;
+        }
+
         ProcessSalary(body, pay, frameTime);
     }
 
-    private bool ShouldSkipEntity(EntityUid body, out int pay)
+    private bool ShouldSkipEntity(EntityUid body)
     {
-        pay = 0;
         if (IsEntityDead(body))
             return true;
         if (!HasActivePlayer(body))
             return true;
-        if (!TryGetJobKey(body, out var jobKey))
-            return true;
-        if (!_salary.TryGetValue(jobKey, out pay))
-            return true;
         return false;
     }
-
     private bool IsEntityDead(EntityUid body)
     {
         return !TryComp<MobStateComponent>(body, out var mobState) || _mobState.IsDead(body, mobState);
@@ -129,22 +137,19 @@ public sealed class AutoSalarySystem : EntitySystem
         }
     }
 
-    private bool TryGetJobKey(EntityUid body, out string jobKey)
+    private bool TryGetJobAndSalary(EntityUid body, out int salary)
     {
-        jobKey = string.Empty;
+        salary = 0;
 
         if (!TryGetIdCard(body, out var id) || id == null)
             return false;
 
-        if (!string.IsNullOrEmpty(id.JobTitle) && _salary.ContainsKey(id.JobTitle))
+        if (!string.IsNullOrEmpty(id.LocalizedJobTitle) && _salaries.TryGetValue(id.LocalizedJobTitle, out salary))
         {
-            jobKey = id.JobTitle;
             return true;
         }
-
-        if (!string.IsNullOrEmpty(id.LocalizedJobTitle) && _salary.ContainsKey(id.LocalizedJobTitle))
+        if (!string.IsNullOrEmpty(id.JobTitle) && _salaries.TryGetValue(id.JobTitle, out salary))
         {
-            jobKey = id.LocalizedJobTitle;
             return true;
         }
 

@@ -9,4 +9,7 @@ public sealed class AutoSalaryJobPrototype : IPrototype
 
     [DataField("salary", required: true)]
     public int Salary { get; private set; }
+
+    [DataField("localizedName")]
+    public string? LocalizedName { get; private set; }
 }
