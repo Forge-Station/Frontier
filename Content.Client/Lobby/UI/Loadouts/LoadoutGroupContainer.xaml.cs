@@ -235,11 +235,7 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         var cont = new LoadoutContainer(proto, !enabled, reason);
 
-        // Forge-change: custom name back
-        cont.Text = string.IsNullOrEmpty(proto.Name)
-            ? loadoutSystem.GetName(proto)
-            : proto.Name;
-        // Forge-change end
+        cont.Text = string.IsNullOrEmpty(proto.Name) ? loadoutSystem.GetName(proto) : proto.Name; // Frontier custom name
 
         cont.Select.Pressed = pressed;
 
