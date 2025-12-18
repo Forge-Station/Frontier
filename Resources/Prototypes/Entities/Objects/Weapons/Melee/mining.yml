@@ -141,7 +141,7 @@
   - type: LeechOnMarker
     leech:
       groups:
-        Brute: -6
+        Brute: -10
   - type: Gun
     soundGunshot: /Audio/Weapons/plasma_cutter.ogg
     fireRate: 1
@@ -156,20 +156,20 @@
     capacity: 1
     count: 1
   - type: MeleeWeapon
-    attackRate: 1
+    attackRate: 1.5
     wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 6
-        Slash: 4
+        Blunt: 10
+        Slash: 5
     soundHit:
       collection: MetalThud
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 6
-        Slash: 2
+        Blunt: 2.5
+        Slash: 2.5
         Structural: 30
   - type: GunRequiresWield
   - type: DisarmMalus
@@ -225,7 +225,7 @@
   parent: [ WeaponCrusher, BaseC1Contraband] # Frontier: BaseSecurityCargoContraband<BaseC1Contraband
   id: WeaponCrusherGlaive
   name: crusher glaive
-  description: An early design of the proto-kinetic accelerator, in glaive form. Provides better healing in exchange for less charged damage.
+  description: An early design of the proto-kinetic accelerator, in glaive form.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Melee/crusher_glaive.rsi
@@ -242,7 +242,7 @@
   - type: UseDelay
     delay: 1.9
   - type: BasicEntityAmmoProvider
-    proto: BulletChargeGlaive
+    proto: NFBulletCharge
     capacity: 1
     count: 1
   - type: LeechOnMarker
