@@ -1,7 +1,6 @@
 using Content.Shared.Clothing.Components;
 using Content.Shared.Gravity;
 using Content.Shared.Inventory;
-using Content.Shared.Mobs.Components; // Forge-Change
 using Content.Shared.Standing;
 
 namespace Content.Shared.Clothing.EntitySystems;
@@ -24,16 +23,7 @@ public sealed class AntiGravityClothingSystem : EntitySystem
         SubscribeLocalEvent<AntiGravityClothingComponent, ClothingGotUnequippedEvent>(OnUnequipped);
         SubscribeLocalEvent<AntiGravityClothingComponent, InventoryRelayedEvent<DownedEvent>>(OnDowned);
         SubscribeLocalEvent<AntiGravityClothingComponent, InventoryRelayedEvent<StoodEvent>>(OnStood);
-
-        SubscribeLocalEvent<MobStateComponent, EntParentChangedMessage>(OnParentChanged); // Forge-Change
     }
-    // Forge-Change-Start
-    private void OnParentChanged(EntityUid uid, MobStateComponent component, ref EntParentChangedMessage args)
-    {
-        // We need to refresh weightlessness when the parent changes to handle moving between grids and space.
-        _gravity.RefreshWeightless(uid);
-    }
-    // Forge-Change-End
 
     private void OnIsWeightless(Entity<AntiGravityClothingComponent> ent, ref InventoryRelayedEvent<IsWeightlessEvent> args)
     {
