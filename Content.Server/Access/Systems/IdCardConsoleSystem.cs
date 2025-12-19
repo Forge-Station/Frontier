@@ -176,6 +176,7 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
         {
             _idCard.TryChangeJobIcon(targetId, jobIcon, player: player);
             _idCard.TryChangeJobDepartment(targetId, job);
+            _idCard.TryChangeJob(targetId, job); // Corvax-Forge: Fix IdCardComponent.JobPrototype property
         }
 
         UpdateStationRecord(uid, targetId, newFullName, newJobTitle, job);
