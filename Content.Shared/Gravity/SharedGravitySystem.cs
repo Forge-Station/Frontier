@@ -184,7 +184,7 @@ public abstract partial class SharedGravitySystem : EntitySystem
     private void OnGravityChange(ref GravityChangedEvent args)
     {
         var gravity = AllEntityQuery<GravityAffectedComponent, TransformComponent>();
-        while(gravity.MoveNext(out var uid, out var weightless, out var xform))
+        while (gravity.MoveNext(out var uid, out var weightless, out var xform))
         {
             if (xform.GridUid != args.ChangedGridIndex)
                 continue;
