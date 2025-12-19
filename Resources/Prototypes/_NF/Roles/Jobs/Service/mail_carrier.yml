@@ -26,6 +26,9 @@
   - !type:GiveItemOnHolidaySpecial # Frontier
     holiday: FrontierBirthday # Frontier
     prototype: FrontierBirthdayGift # Frontier
+  - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
+    holiday: NewYear
+    prototype: PresentRandom
 
 - type: startingGear
   id: MailCarrierGear

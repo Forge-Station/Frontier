@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/14/2025 20:30:43
-  entityCount: 800
+  time: 12/19/2025 19:54:07
+  entityCount: 813
 maps: []
 grids:
 - 1
@@ -2523,6 +2523,18 @@ entities:
     - type: Transform
       pos: 2.5234375,15.082594
       parent: 1
+  - uid: 812
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 2.429088,14.449629
+      parent: 1
+  - uid: 813
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 2.612282,14.577068
+      parent: 1
 - proto: CleanerDispenser
   entities:
   - uid: 93
@@ -3209,6 +3221,67 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+- proto: Forge57mmCartridgeAPHE
+  entities:
+  - uid: 730
+    components:
+    - type: Transform
+      pos: -0.3200965,5.5380793
+      parent: 1
+  - uid: 744
+    components:
+    - type: Transform
+      pos: -0.51722944,5.502237
+      parent: 1
+  - uid: 809
+    components:
+    - type: Transform
+      pos: -0.6785196,5.4305525
+      parent: 1
+  - uid: 810
+    components:
+    - type: Transform
+      pos: 5.629725,5.627685
+      parent: 1
+  - uid: 811
+    components:
+    - type: Transform
+      pos: 5.558039,5.376789
+      parent: 1
+- proto: ForgeAmmoDrum20mmBase
+  entities:
+  - uid: 767
+    components:
+    - type: Transform
+      pos: -0.37385988,5.611335
+      parent: 1
+  - uid: 806
+    components:
+    - type: Transform
+      pos: 5.791014,5.7009406
+      parent: 1
+  - uid: 807
+    components:
+    - type: Transform
+      pos: 5.665568,5.5396504
+      parent: 1
+  - uid: 808
+    components:
+    - type: Transform
+      pos: -0.40970278,5.521729
+      parent: 1
+- proto: ForgeMagazine57mmBase
+  entities:
+  - uid: 748
+    components:
+    - type: Transform
+      pos: -0.71436155,5.716818
+      parent: 1
+  - uid: 749
+    components:
+    - type: Transform
+      pos: 5.5401196,5.627212
+      parent: 1
 - proto: FuelDispenser
   entities:
   - uid: 611

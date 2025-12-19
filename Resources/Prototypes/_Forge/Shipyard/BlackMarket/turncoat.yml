@@ -11,7 +11,7 @@
 - type: vessel
   id: Turncoat
   parent: BaseVesselAntag
-  name: Перебезчик
+  name: Перебежчик
   description: Разбойник, но подождите, что то тут не так...
   price: 55000
   category: Medium
@@ -28,7 +28,7 @@
 
 - type: gameMap
   id: Turncoat
-  mapName: 'Перебезчик'
+  mapName: 'Перебежчик'
   mapPath: /Maps/_Forge/Shuttles/BlackMarket/turncoat.yml
   minPlayers: 0
   stations:
@@ -36,7 +36,7 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Brigand {1}'
+          mapNameTemplate: 'Разбойник {1}' #Sneaky spoofed name
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

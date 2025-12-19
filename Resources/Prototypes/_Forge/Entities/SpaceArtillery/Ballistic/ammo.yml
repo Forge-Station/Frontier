@@ -39,6 +39,8 @@
     tags:
     - Cartridge
     - 16mmCartridge
+  - type: StaticPrice
+    price: 1
 
 # region 20mm
 # 20mm base
@@ -70,6 +72,8 @@
     - state: 20mm
   - type: CartridgeAmmo
     proto: Forge20mmBulletBase
+  - type: StaticPrice
+    price: 1
 
 # 20mm APHE
 - type: entity
@@ -101,6 +105,8 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: CartridgeAmmo
     proto: Forge20mmBulletAPHE
+  - type: StaticPrice
+    price: 1
 
 # 20mm APCBC
 - type: entity
@@ -132,6 +138,8 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: CartridgeAmmo
     proto: Forge20mmBulletAPCBC
+  - type: StaticPrice
+    price: 1
 
 # region 30mm
 # 30mm base
@@ -164,6 +172,8 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: CartridgeAmmo
     proto: Forge30mmBulletBase
+  - type: StaticPrice
+    price: 1
 
 # 30mm APHE
 - type: entity
@@ -194,6 +204,8 @@
     - state: 30aphe
   - type: CartridgeAmmo
     proto: Forge30mmBulletAPHE
+  - type: StaticPrice
+    price: 1
 
 # 30mm APCBC
 - type: entity
@@ -224,6 +236,8 @@
     - state: 30apcbc
   - type: CartridgeAmmo
     proto: Forge30mmBulletAPCBC
+  - type: StaticPrice
+    price: 1
 
 # region 57mm
 # 57mm Base
@@ -255,6 +269,8 @@
     - state: 57mm
   - type: CartridgeAmmo
     proto: ForgeDravonBase
+  - type: StaticPrice
+    price: 1
 
 # 57mm APHE
 - type: entity
@@ -285,6 +301,8 @@
     - state: 57aphe
   - type: CartridgeAmmo
     proto: ForgeDravonAPHE
+  - type: StaticPrice
+    price: 1
 
 # 57mm APCBC
 - type: entity
@@ -315,6 +333,8 @@
     - state: 57apcbc
   - type: CartridgeAmmo
     proto: ForgeDravonAPCBC
+  - type: StaticPrice
+    price: 1
 
 # region 90mm
 # 90mm base (тоже взрывается, но слабее.. дя)
@@ -349,6 +369,8 @@
     - state: 90mm
   - type: CartridgeAmmo
     proto: Forge90mmBulletBase
+  - type: StaticPrice
+    price: 1
 
 # 90mm APHE
 - type: entity
@@ -382,6 +404,8 @@
     - state: 90aphe
   - type: CartridgeAmmo
     proto: Forge90mmBulletAPHE
+  - type: StaticPrice
+    price: 1
 
 # 90mm APHEBC
 - type: entity
@@ -415,6 +439,8 @@
     - state: 90aphebc
   - type: CartridgeAmmo
     proto: Forge90mmBulletAPHEBC
+  - type: StaticPrice
+    price: 1
 
 # region 203mm
 # 203mm HE
@@ -457,6 +483,8 @@
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
+  - type: StaticPrice
+    price: 400
 
 - type: entity
   id: Forge203mmCartridgeHESH
@@ -472,6 +500,8 @@
     layers:
     - state: 203hesh
       map: ["enum.AmmoVisualLayers.Base"]
+  - type: StaticPrice
+    price: 500
 
 # region 220mm
 - type: entity
@@ -513,6 +543,8 @@
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
+  - type: StaticPrice
+    price: 500
 
 - type: entity
   id: Forge220mmCartridgeHESH
@@ -528,6 +560,8 @@
     layers:
     - state: 220hesh
       map: ["enum.AmmoVisualLayers.Base"]
+  - type: StaticPrice
+    price: 600
 
 # region 255mm
 - type: entity
@@ -569,6 +603,8 @@
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
+  - type: StaticPrice
+    price: 600
 
 - type: entity
   id: Forge255mmCartridgeHESH
@@ -584,3 +620,5 @@
     layers:
     - state: 255hesh
       map: ["enum.AmmoVisualLayers.Base"]
+  - type: StaticPrice
+    price: 600

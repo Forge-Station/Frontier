@@ -157,6 +157,19 @@
     Silver: 520
     Plasteel: 260
 
+# BOMBS
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecLightFighterOrdinanceGPOProjectile
+  result: LightFighterOrdinanceGPOProjectile
+  materials:
+    Steel: 3700
+    Plastic: 550
+    Plasteel: 300
+    Plasma: 4250
+    Uranium: 1000
+    Silver: 700
+
 # NFSD
 - type: latheRecipe
   parent: BaseAmmoRecipe

@@ -16,9 +16,7 @@
 - type: technology
   id: ForgeResearchShipAmmoAPCBC20
   name: forge-research-technology-shipammo20apcbc
-  icon:
-    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
-    state: research-apcbc
+  entityIcon: ForgeResearchShipAmmoAPCBC
   discipline: NFArsenalMercenary
   tier: 1
   cost: 4000
@@ -66,6 +64,19 @@
   technologyPrerequisites:
   - ForgeResearchShipAmmoAll
   position: 0, 50
+
+- type: technology
+  id: ForgeResearchShipBombMerc
+  name: forge-research-technology-bombmerc
+  entityIcon: LightFighterOrdinanceGPOProjectile
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 8500
+  recipeUnlocks:
+  - FRecLightFighterOrdinanceGPOProjectile
+  technologyPrerequisites:
+  - ForgeResearchShipAmmo90
+  position: 0, 51
 
 # EMP Base
 - type: technology

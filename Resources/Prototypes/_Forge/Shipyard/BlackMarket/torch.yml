@@ -38,7 +38,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Факел {1}' #Sneaky spoofed name
+          mapNameTemplate: 'Прожектор {1}' #Sneaky spoofed name
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

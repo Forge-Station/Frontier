@@ -50,6 +50,7 @@
           - PirateUplink
     - !type:BuyerJobCondition
       whitelist:
+        - NFPirateFirstMate
         - NFPirateCaptain
 
 #- type: listing #CorvaxFrontier
