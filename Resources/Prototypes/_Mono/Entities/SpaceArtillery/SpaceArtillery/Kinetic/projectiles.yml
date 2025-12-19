@@ -77,9 +77,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 300
-        Blunt: 75
-        Piercing: 100
+        Structural: 160
+        Blunt: 14
+        Piercing: 28
     ignoreWeaponGrid: true
   - type: ShipWeaponProjectile
   - type: TimedDespawn
@@ -102,8 +102,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 12
-        Piercing: 18
+        Structural: 160
+        Piercing: 28
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/50_armorpiercing_machinegun_casing.rsi
     layers:
@@ -120,8 +120,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 240
-        Piercing: 100
+        Structural: 140
+        Piercing: 26
 
 # 30mm
 
@@ -133,9 +133,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 350
-        Blunt: 100
-        Piercing: 125
+        Structural: 180
+        Blunt: 40
+        Piercing: 70
   - type: ShipWeaponProjectile
   - type: TimedDespawn
     lifetime: 3
@@ -156,9 +156,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 280
-        Blunt: 80
-        Piercing: 100
+        Structural: 155
+        Blunt: 35
+        Piercing: 65
 
 # 57mm Dravon
 
@@ -171,7 +171,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 820
+        Structural: 280 # expl + structural? no no no
         Blunt: 120
         Piercing: 210
   - type: Sprite
@@ -206,7 +206,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 656
+        Structural: 256
         Blunt: 96
         Piercing: 168
   - type: Explosive
@@ -246,7 +246,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 1800
+        Structural: 900
         Blunt: 100
         Piercing: 250
   - type: Sprite
@@ -269,8 +269,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 1440
-        Blunt: 80
+        Structural: 740 # expl + structural? no no no
+        Blunt: 130
         Piercing: 200
   - type: Explosive
     totalIntensity: 20
@@ -299,7 +299,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 2700
+        Piercing: 525
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -335,7 +335,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 2160
+        Piercing: 460
   - type: Explosive
     totalIntensity: 320
     intensitySlope: 15
@@ -352,8 +352,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 6500
-        Blunt: 10000
+        Structural: 4200
+        Blunt: 7000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -389,8 +389,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 5200
-        Blunt: 8000
+        Structural: 4100
+        Blunt: 7500
   - type: Explosive
     totalIntensity: 1040
     intensitySlope: 15
@@ -407,8 +407,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 8500
-        Blunt: 12000
+        Structural: 4500
+        Blunt: 6000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:

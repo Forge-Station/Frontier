@@ -13,6 +13,7 @@ using Content.Client.Launcher;
 using Content.Client.Mapping;
 using Content.Client.Parallax.Managers;
 using Content.Client.Players.PlayTimeTracking;
+using Content.Client.Playtime;
 using Content.Client.Replay;
 using Content.Client.Screenshot;
 using Content.Client.Stylesheets;
@@ -66,6 +67,7 @@ namespace Content.Client.IoC
             collection.Register<DiscordAuthManager>(); // Forge-Change
             collection.Register<SponsorManager>(); // Forge-Change
             collection.Register<ISharedSponsorManager, SponsorManager>(); // Forge-Change
+            collection.Register<ClientsidePlaytimeTrackingManager>();
         }
     }
 }

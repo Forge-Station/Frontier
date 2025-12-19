@@ -1327,3 +1327,48 @@
     Glass: 2000
     Gold: 500
     Silver: 500
+
+# region ShipAmmo
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FSynLRecRecAmmoDrum20mmAPCBC
+  result: ForgeAmmoDrum20mmAPCBC
+  materials:
+    Steel: 1050
+    Plastic: 280
+    Glass: 100
+    Plasteel: 180
+    Silver: 420
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FSynLRecAmmoDrum30mmAPCBC
+  result: ForgeAmmoDrum30mmAPCBC
+  materials:
+    Steel: 1500
+    Plastic: 320
+    Glass: 120
+    Plasteel: 220
+    Silver: 420
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FSynLRecMagazine57mmAPCBC
+  result: ForgeMagazine57mmAPCBC
+  materials:
+    Steel: 1820
+    Plastic: 360
+    Glass: 140
+    Plasteel: 260
+    Silver: 420
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FSynLRecMagazine90mmAPHE
+  result: ForgeMagazine90mmAPHE
+  materials:
+    Steel: 1620
+    Plastic: 420
+    Glass: 160
+    Plasteel: 900
+    Plasma: 980

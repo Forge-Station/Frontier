@@ -10,35 +10,35 @@
 
 # Shuttle Notes:
 #
-- type: vessel
-  id: centurion
-  parent: BaseVessel
-  name: NSF Центурион
-  description: Штурмовое судно Центурион. Произведено частной военно-производственной компаний Vitezstvi по чертежам шаттла "Мародер" по спец. заказу НТ. Рекомендуемый состав команды 3-7 человек.
-  price: 265030
-  category: Large
-  group: Security
-  access: Bailiff
-  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/centurion.yml
-  class:
-  - Capital
-  addComponents:
-  - type: ShuttleFaction
-    faction: NFSD
+# - type: vessel
+#   id: centurion
+#   parent: BaseVessel
+#   name: NSF Центурион
+#   description: Штурмовое судно Центурион. Произведено частной военно-производственной компаний Vitezstvi по чертежам шаттла "Мародер" по спец. заказу НТ. Рекомендуемый состав команды 3-7 человек.
+#   price: 265030
+#   category: Large
+#   group: Security
+#   access: Bailiff
+#   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/centurion.yml
+#   class:
+#   - Capital
+#   addComponents:
+#   - type: ShuttleFaction
+#     faction: NFSD
 
-- type: gameMap
-  id: centurion
-  mapName: 'NSF Центурион'
-  mapPath: /Maps/_Forge/Shuttles/Nfsd/centurion.yml
-  minPlayers: 0
-  stations:
-    centurion:
-      stationProto: StandardFrontierSecurityVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Центурион {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs: {}
+# - type: gameMap
+#   id: centurion
+#   mapName: 'NSF Центурион'
+#   mapPath: /Maps/_Forge/Shuttles/Nfsd/centurion.yml
+#   minPlayers: 0
+#   stations:
+#     centurion:
+#       stationProto: StandardFrontierSecurityVessel
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: 'Центурион {1}'
+#           nameGenerator:
+#             !type:NanotrasenNameGenerator
+#             prefixCreator: '14'
+#         - type: StationJobs
+#           availableJobs: {}

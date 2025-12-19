@@ -1,0 +1,46 @@
+# я не смог сделать через icon: в исследованиях,
+# и сделал HideSpawn ентити для иконок исследований. Мда.
+
+- type: entity
+  parent: BloodCultProp01
+  id: ForgeResearchShipAmmoAPCBC
+  name: APCBC
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: research-apcbc
+
+- type: entity
+  parent: BloodCultProp01
+  id: ForgeResearchShipAmmoAPHE
+  name: APHE
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: research-aphe
+
+- type: entity
+  parent: BloodCultProp01
+  id: ForgeResearchShipAmmoAPHEBC
+  name: APHEBC
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: research-aphebc
+
+- type: entity
+  parent: BloodCultProp01
+  id: ForgeResearchShipAmmoALL
+  name: ALL
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 20m30m57m

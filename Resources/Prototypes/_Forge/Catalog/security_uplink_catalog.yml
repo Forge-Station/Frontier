@@ -328,23 +328,24 @@
   categories:
     - UplinkSecurityUtility
 
-- type: listing
-  id: UplinkSecurityMagbootsProMax
-  name: forge-uplink-security-magbootspro-name
-  description: forge-uplink-security-magbootspro-desc
-  productEntity: ClothingShoesBootsMagNFSDPromax
-  icon: { sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots_promax.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 10
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+# Move to NFSD Techtree
+#- type: listing
+#  id: UplinkSecurityMagbootsProMax
+#  name: forge-uplink-security-magbootspro-name
+#  description: forge-uplink-security-magbootspro-desc
+#  productEntity: ClothingShoesBootsMagNFSDPromax
+#  icon: { sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots_promax.rsi, state: icon }
+#  cost:
+#    FrontierUplinkCoin: 10
+#  categories:
+#    - UplinkSecurityUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - SecurityUplink
+#    - !type:BuyerJobCondition
+#      whitelist:
+#        - Bailiff
+#        - SeniorOfficer
+#        - Sheriff

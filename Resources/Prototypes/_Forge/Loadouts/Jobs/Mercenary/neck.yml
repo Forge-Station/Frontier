@@ -17,6 +17,78 @@
     neck: ClothingNeckPonchoSmallBlack
 
 - type: loadout
+  id: ForgeMercModernCloak
+  price: 1000
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT2
+  equipment:
+    neck: ClothingNeckCloakModernCloak
+
+- type: loadout
+  id: ForgeMercModernCloakGrey
+  price: 1000
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT3
+  equipment:
+    neck: ClothingNeckCloakModernCloakGrey
+
+- type: loadout
+  id: ForgeMercModernCloakBlue
+  price: 1000
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT3
+  equipment:
+    neck: ClothingNeckCloakModernCloakBlue
+
+- type: loadout
+  id: ForgeMercModernCloakPink
+  price: 3200
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT3
+  equipment:
+    neck: ClothingNeckCloakModernCloakPink
+
+- type: loadout
+  id: ForgeMercModernCloakDesert
+  price: 1250
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT3
+  equipment:
+    neck: ClothingNeckCloakModernCloakDesert
+
+- type: loadout
+  id: ForgeMercModernCloakBYellow
+  price: 2000
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT3
+  equipment:
+    neck: ClothingNeckCloakModernCloakBYellow
+
+- type: loadout
+  id: ForgeMercModernCloakBRed
+  price: 2000
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT3
+  equipment:
+    neck: ClothingNeckCloakModernCloakBRed
+
+- type: loadout
+  id: ForgeMercModernCloakBPurple
+  price: 2000
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ForgeMercT3
+  equipment:
+    neck: ClothingNeckCloakModernCloakBPurple
+
+- type: loadout
   id: ForgeMercNeckCloakSanabi
   price: 500
   effects:

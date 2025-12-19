@@ -1,5 +1,7 @@
+using System.Numerics;
 using Content.Shared.CCVar;
 using Robust.Shared.Configuration;
+using System.Numerics;
 
 namespace Content.Client.UserInterface.Systems;
 
@@ -43,7 +45,7 @@ public sealed class ProgressColorSystem : EntitySystem
 
             // lerp
             var hue = 5f / 18f * progress;
-            return Color.FromHsv((hue, 1f, 0.75f, 1f));
+            return Color.FromHsv(new Vector4(hue, 1f, 0.75f, 1f));
         }
 
         return InterpolateColorGaussian(Plasma, progress);

@@ -10,6 +10,7 @@
   parent: BallisticArtilleryUnanchorableCartridge
   description: A main battery with dual barrels, delivering rapid, punishing salvos at extreme range. Fires 220mm auto shells with slightly reduced brute strength. Can be remotely activated or linked up to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 15000
   - type: Sprite
@@ -34,12 +35,12 @@
         layer:
         - MachineLayer
   - type: Gun
-    projectileSpeed: 275
+    projectileSpeed: 175
     minAngle: 0
     maxAngle: 1
-    fireRate: 0.2
-    burstCooldown: 10
-    burstFireRate: 2
+    fireRate: 0.1 # Forge-change: rebalance
+    burstCooldown: 18 # Forge-change: rebalance
+    burstFireRate: 0.8 # Forge-change: rebalance
     shotsPerBurst: 2
     selectedMode: Burst
     availableModes: Burst
@@ -72,8 +73,8 @@
     whitelist:
       tags:
       - 220mmCartridge
-    capacity: 24
-    proto: 220mmCartridgeWeak
+    capacity: 6 # Forge-change: rebalance
+    proto: Forge220mmCartridgeHE # Forge-change: rebalance
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: ShipGunType

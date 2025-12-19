@@ -7,12 +7,18 @@ ent-PortableGeneratorSuperPacmanShuttle = { ent-PortableGeneratorSuperPacman }
 ent-PortableGeneratorJrPacmanShuttle = { ent-PortableGeneratorJrPacman }
     .suffix = Сварочное топливо, 5 кВ, Шаттл
     .desc = { ent-PortableGeneratorJrPacman.desc }
-ent-PortableGeneratorHyperPacman = Г.И.П.Е.Р.П.А.К.М.А.Н.
+ent-PortableGeneratorDKJr = М.И.Н.И.Г.И.П.Е.Р.П.А.К.М.А.Н.
     .desc =
-        Генератор нового поколения для питания станций.
+        Уменьшенная версия генератора нового поколения для питания станций.
         Работает на бананиуме и рассчитан на мощность до 100 кВт.
         Крайне радиоактивен.
     .suffix = Бананиум, 60 kW
-ent-PortableGeneratorHyperPacmanShuttle = { ent-PortableGeneratorHyperPacman }
+ent-PortableGeneratorDKJrShuttle = { ent-PortableGeneratorDKJr }
     .suffix = Бананиум, 60 kW, Шаттл
     .desc = { ent-PortableGeneratorHyperPacman.desc }
+ent-PortableGeneratorDK = Г.И.П.Е.Р.П.А.К.М.А.Н.
+    .suffix = Бананиум, 60 kW, Шаттл
+    .desc =
+        Генератор нового поколения для питания станций.
+        Работает на бананиуме и рассчитан на мощность до 120 кВт.
+        Крайне радиоактивен.

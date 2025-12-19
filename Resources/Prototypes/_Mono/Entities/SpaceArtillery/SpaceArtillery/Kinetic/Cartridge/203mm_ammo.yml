@@ -12,6 +12,7 @@
   name: 203mm shell
   description: A chemically-propelled shell for Kargil 220mm cannons.
   parent: BaseGrenade
+  categories: [ HideSpawnMenu ]
   components:
   - type: Tag
     tags:
@@ -50,6 +51,7 @@
 - type: entity
   id: 203mmCartridgeWeak
   parent: 203mmCartridge
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance
   components:
   - type: CartridgeAmmo
     proto: ShipKargilProjectileWeak

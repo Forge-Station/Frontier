@@ -38,8 +38,6 @@
     ejectState: eject-unshaded
     denyState: deny-unshaded
     ejectDelay: 0.6
-  - type: Advertise
-    pack: NanoMedAds
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
@@ -60,7 +58,7 @@
     color: "#9dc5c9"
   - type: GuideHelp
     guides:
-    - Medical Doctor
+    - MedicalDoctor
   - type: AccessReader
     access: [["SyndicateAgent"]]
 
@@ -71,6 +69,11 @@
   components:
   - type: VendingMachine
     pack: WeaponryWorksVendPOIInventoryMedic
+    dispenseOnHitChance: 0
+    dispenseOnHitThreshold: 900
+    ejectRandomMax: 0
+    ejectRandomCounter: 0
+    canShoot: false
 
 - type: entity
   parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]
@@ -80,6 +83,11 @@
   components:
   - type: VendingMachine
     pack: WeaponryWorksVendPOIInventoryMers
+    dispenseOnHitChance: 0
+    dispenseOnHitThreshold: 900
+    ejectRandomMax: 0
+    ejectRandomCounter: 0
+    canShoot: false
 
 - type: entity
   parent: [VendingMachinePickNPack, BaseStructureDisableAnchoring]
@@ -89,6 +97,11 @@
   components:
   - type: VendingMachine
     pack: PickNPackPOIInventoryMers
+    dispenseOnHitChance: 0
+    dispenseOnHitThreshold: 900
+    ejectRandomMax: 0
+    ejectRandomCounter: 0
+    canShoot: false
   - type: AccessReader
     access: [["Mercenary"], ["Security"], ["HeadOfPersonnel"], ["HeadOfSecurity"]]
   - type: ActivatableUIRequiresAccess
@@ -104,6 +117,11 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    dispenseOnHitChance: 0
+    dispenseOnHitThreshold: 900
+    ejectRandomMax: 0
+    ejectRandomCounter: 0
+    canShoot: false
   - type: Sprite
     sprite: Forge/Structures/Machines/offidrobe.rsi
     layers:
@@ -139,8 +157,6 @@
     initialStockQuality: 0.69
   - type: MarketModifier
     mod: 200
-  - type: Advertise
-    pack: GetmoreChocolateCorpAds
   - type: SpeakOnUIClosed
     pack: GetmoreChocolateCorpGoodbyes
   - type: Sprite
@@ -176,8 +192,6 @@
     initialStockQuality: 1
   - type: MarketModifier
     mod: 200
-  - type: Advertise
-    pack: GetmoreChocolateCorpAds
   - type: SpeakOnUIClosed
     pack: GetmoreChocolateCorpGoodbyes
   - type: Sprite

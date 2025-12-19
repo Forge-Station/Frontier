@@ -46,6 +46,8 @@ public sealed class DrugOverlaySystem : EntitySystem
     {
         if (_player.LocalEntity != args.Target)
             return;
+
+        _overlay.Phase = _random.NextFloat(MathF.Tau); // random starting phase for movement effect
         _overlayMan.AddOverlay(_overlay);
     }
 

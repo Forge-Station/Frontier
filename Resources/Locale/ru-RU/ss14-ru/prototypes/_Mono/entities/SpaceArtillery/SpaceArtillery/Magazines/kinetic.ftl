@@ -27,13 +27,13 @@ ent-CharonetteSlugAmmo = M194 «Чароннета» 280мм снаряд
 ent-CharonetteSlugAmmoWeak = { ent-CharonetteSlugAmmo }
     .desc = { ent-CharonetteSlugAmmo.desc }
 
-ent-ShipTarnyxProjectile = «Тарникс» 150мм ЭМИ снаряд
-ent-150mmEmpShell = 150мм ЭМИ снаряд
+ent-ShipTarnyxProjectile = снаряд 150мм (EMP)
+ent-150mmEmpShell = снаряд 150мм (EMP)
     .desc = Химический ЭМИ-снаряд, используемый в 150мм орудиях, вроде «Тарникс». Ничего особенного.
 
-ent-ShipTarnyxApProjectile = «Тарникс» 150мм бронебойный снаряд
-ent-150mmApShell = «Тарникс» 150мм бронебойный снаряд
-    .desc = Химический бронебойный снаряд для 150мм орудий. Он не очень хорош, поскольку большинство 150мм орудий оптимизированы под ЭМИ снаряды. Это грубый метод, и он точно не пройдёт таможенную проверку..
+ent-ShipTarnyxApProjectile = снаряд 150мм (APHE)
+ent-150mmApShell = снаряд 150мм (APHE)
+    .desc = Химический каморный снаряд для 150мм орудий. Не лучший выбор, поскольку большинство 150мм орудий оптимизированы под ЭМИ снаряды. Это грубый метод, и он точно не пройдёт таможенную проверку..
 
 # Magazine
 ent-Magazine20mmPiercing = барабан 20мм (бронебойные)
