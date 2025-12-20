@@ -5,9 +5,9 @@ using Robust.Shared.ViewVariables;
 namespace Content.Server.Npc.Components
 {
     [RegisterComponent]
-    public sealed partial class SpaceNpcComponent : Component // Добавьте partial, это стандарт для компонентов
+    public sealed partial class SpaceNpcComponent : Component
     {
-        // ВАЖНО: Это должно быть public float, без { get; set; } и без Func<>
+
         [DataField("visionRadius"), ViewVariables(VVAccess.ReadWrite)]
         public float VisionRadius = 30f;
 
