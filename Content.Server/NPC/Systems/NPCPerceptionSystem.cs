@@ -98,7 +98,7 @@ public sealed partial class NPCPerceptionSystem : EntitySystem
     private void FindNewTarget(EntityUid uid, NPCPerceptionComponent npc, HTNComponent htn, MapCoordinates ourMapPos)
     {
         EntityUid? bestTarget = null;
-        var closestDist = float.MaxValue;
+        var closestDistSqr = float.MaxValue;
 
         var mobs = _mobHashSetPool.Get();
         _lookup.GetEntitiesInRange<MobStateComponent>(ourMapPos, npc.VisionRadius, mobs);
@@ -118,9 +118,9 @@ public sealed partial class NPCPerceptionSystem : EntitySystem
 
             var targetXform = _xformQuery.GetComponent(target);
             var targetMapPos = _transform.GetMapCoordinates(target, targetXform);
-            var dist = (targetMapPos.Position - ourMapPos.Position).Length();
+            var distSqr = (targetMapPos.Position - ourMapPos.Position).LengthSquared();
 
-            if (dist >= closestDist)
+            if (distSqr >= closestDistSqr)
             {
                 continue;
             }
@@ -128,7 +128,7 @@ public sealed partial class NPCPerceptionSystem : EntitySystem
             if (!CanSee(ourMapPos, targetMapPos, uid, target, (int)npc.VisionMask))
                 continue;
 
-            closestDist = dist;
+            closestDistSqr = distSqr;
             bestTarget = target;
         }
 

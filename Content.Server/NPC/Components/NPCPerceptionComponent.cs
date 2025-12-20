@@ -28,6 +28,6 @@ namespace Content.Server.Npc.Components
         /// Collision groups to consider for line of sight.
         /// </summary>
         [DataField("visionMask"), ViewVariables(VVAccess.ReadWrite)]
-        public CollisionGroup VisionMask = CollisionGroup.Impassable | CollisionGroup.InteractImpassable | CollisionGroup.Opaque;
+        public CollisionGroup VisionMask = CollisionGroup.Impassable;
     }
 }

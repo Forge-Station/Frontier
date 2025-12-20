@@ -129,29 +129,28 @@ public sealed partial class NPCSteeringSystem
             // Try climbing obstacles
             else if ((component.Flags & PathFlags.Climbing) != 0x0 && isClimbable)
             {
-                if (TryComp<ClimbingComponent>(uid, out var climbing))
+                TryComp<ClimbingComponent>(uid, out var climbing);
+
+                if (climbing != null)
                 {
                     if (climbing.IsClimbing)
-                    {
                         return SteeringObstacleStatus.Completed;
-                    }
-                    else if (climbing.NextTransition != null)
-                    {
+
+                    if (climbing.NextTransition != null)
                         return SteeringObstacleStatus.Continuing;
-                    }
+                }
 
-                    var climbableQuery = GetEntityQuery<ClimbableComponent>();
+                var climbableQuery = GetEntityQuery<ClimbableComponent>();
 
-                    // Get the relevant obstacle
-                    foreach (var ent in obstacleEnts)
+                // Get the relevant obstacle
+                foreach (var ent in obstacleEnts)
+                {
+                    if (climbableQuery.TryGetComponent(ent, out var table) &&
+                        _climb.CanVault(table, uid, uid, out _) &&
+                        _climb.TryClimb(uid, uid, ent, out id, table, climbing))
                     {
-                        if (climbableQuery.TryGetComponent(ent, out var table) &&
-                            _climb.CanVault(table, uid, uid, out _) &&
-                            _climb.TryClimb(uid, uid, ent, out id, table, climbing))
-                        {
-                            component.DoAfterId = id;
-                            return SteeringObstacleStatus.Continuing;
-                        }
+                        component.DoAfterId = id;
+                        return SteeringObstacleStatus.Continuing;
                     }
                 }
 

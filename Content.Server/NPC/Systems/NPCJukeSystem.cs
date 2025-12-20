@@ -125,7 +125,7 @@ public sealed class NPCJukeSystem : EntitySystem
 
             for (var i = 0; i < SharedNPCSteeringSystem.InterestDirections; i++)
             {
-                var result = -Vector2.Dot(norm, NPCSteeringSystem.Directions[i]) * weight;
+                var result = Vector2.Dot(norm, NPCSteeringSystem.Directions[i]) * weight;
 
                 if (result < 0f)
                     continue;

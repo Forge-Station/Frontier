@@ -350,6 +350,14 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
         Span<float> interest = stackalloc float[InterestDirections];
         Span<float> danger = stackalloc float[InterestDirections];
 
+        // Get obstacles we are trying to interact with so we don't avoid them.
+        List<EntityUid>? targetObstacles = null;
+        if (steering.CurrentPath.TryPeek(out var node) && !IsFreeSpace(uid, steering, node))
+        {
+            targetObstacles = new();
+            GetObstacleEntities(node, mask, layer, targetObstacles);
+        }
+
         // TODO: This should be fly
         steering.CanSeek = true;
 

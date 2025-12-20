@@ -55,6 +55,14 @@ public sealed partial class NPCSteeringSystem
         {
             return true;
         }
+        // This node is a climbable object we need to handle.
+        else if ((node.Data.Flags & PathfindingBreadcrumbFlag.Climb) != 0x0 &&
+                 (steering.Flags & PathFlags.Climbing) != 0x0)
+        {
+            // Don't do the static check below as it will fail.
+            // We return false here to ensure TryHandleFlags gets called.
+            return false;
+        }
 
         // TODO: Ideally for "FreeSpace" we check all entities on the tile and build flags dynamically (pathfinder refactor in future).
         var ents = _entSetPool.Get();
@@ -502,7 +510,8 @@ public sealed partial class NPCSteeringSystem
         int layer,
         int mask,
         TransformComponent xform,
-        Span<float> danger)
+        Span<float> danger,
+        List<EntityUid>? ignoredEnts = null)
     {
         var objectRadius = 0.25f;
         var detectionRadius = MathF.Max(0.35f, agentRadius + objectRadius);
@@ -521,6 +530,9 @@ public sealed partial class NPCSteeringSystem
             {
                 continue;
             }
+
+            if (ignoredEnts?.Contains(ent) == true)
+                continue;
 
             var xformB = _xformQuery.GetComponent(ent);
 
