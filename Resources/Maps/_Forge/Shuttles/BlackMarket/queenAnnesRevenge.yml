@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/19/2025 19:54:07
-  entityCount: 813
+  time: 12/20/2025 11:14:18
+  entityCount: 824
 maps: []
 grids:
 - 1
@@ -996,6 +996,8 @@ entities:
     - type: Transform
       pos: 4.5,-8.5
       parent: 1
+    - type: AmeController
+      injecting: True
     - type: ContainerContainer
       containers:
         fuelSlot: !type:ContainerSlot
@@ -1084,6 +1086,9 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 6.5,-8.5
       parent: 1
+    - type: PointLight
+      radius: 2
+      enabled: True
   - uid: 327
     components:
     - type: Transform
@@ -2146,11 +2151,6 @@ entities:
     - type: Transform
       pos: 1.5,-10.5
       parent: 1
-  - uid: 390
-    components:
-    - type: Transform
-      pos: 0.5,-10.5
-      parent: 1
   - uid: 391
     components:
     - type: Transform
@@ -2160,11 +2160,6 @@ entities:
     components:
     - type: Transform
       pos: 3.5,-10.5
-      parent: 1
-  - uid: 393
-    components:
-    - type: Transform
-      pos: 4.5,-10.5
       parent: 1
   - uid: 394
     components:
@@ -2215,6 +2210,26 @@ entities:
     components:
     - type: Transform
       pos: 1.5,-7.5
+      parent: 1
+  - uid: 818
+    components:
+    - type: Transform
+      pos: -0.5,-11.5
+      parent: 1
+  - uid: 819
+    components:
+    - type: Transform
+      pos: 5.5,-11.5
+      parent: 1
+  - uid: 820
+    components:
+    - type: Transform
+      pos: 3.5,-11.5
+      parent: 1
+  - uid: 821
+    components:
+    - type: Transform
+      pos: 1.5,-11.5
       parent: 1
 - proto: CableMV
   entities:
@@ -3248,6 +3263,23 @@ entities:
     - type: Transform
       pos: 5.558039,5.376789
       parent: 1
+- proto: Forge90mmCartridgeAPHEBC
+  entities:
+  - uid: 100
+    components:
+    - type: Transform
+      pos: 1.4387045,4.3654184
+      parent: 1
+  - uid: 148
+    components:
+    - type: Transform
+      pos: 1.2025938,4.5320854
+      parent: 1
+  - uid: 822
+    components:
+    - type: Transform
+      pos: 6.461893,-1.5802965
+      parent: 1
 - proto: ForgeAmmoDrum20mmBase
   entities:
   - uid: 767
@@ -3270,6 +3302,13 @@ entities:
     - type: Transform
       pos: -0.40970278,5.521729
       parent: 1
+- proto: ForgeMagazine57mmAPCBC
+  entities:
+  - uid: 823
+    components:
+    - type: Transform
+      pos: 4.744025,-7.4377213
+      parent: 1
 - proto: ForgeMagazine57mmBase
   entities:
   - uid: 748
@@ -3281,6 +3320,23 @@ entities:
     components:
     - type: Transform
       pos: 5.5401196,5.627212
+      parent: 1
+  - uid: 824
+    components:
+    - type: Transform
+      pos: 3.4245806,11.49131
+      parent: 1
+- proto: ForgeMagazine90mm
+  entities:
+  - uid: 814
+    components:
+    - type: Transform
+      pos: -0.3615594,5.668365
+      parent: 1
+  - uid: 815
+    components:
+    - type: Transform
+      pos: 5.622549,5.598921
       parent: 1
 - proto: FuelDispenser
   entities:
@@ -4204,6 +4260,16 @@ entities:
     - type: Transform
       pos: 5.5,-6.5
       parent: 1
+  - uid: 816
+    components:
+    - type: Transform
+      pos: -0.5,-11.5
+      parent: 1
+  - uid: 817
+    components:
+    - type: Transform
+      pos: 5.5,-11.5
+      parent: 1
 - proto: GravityGeneratorMini
   entities:
   - uid: 734
@@ -4223,7 +4289,7 @@ entities:
     - type: Transform
       pos: -0.5,-7.5
       parent: 1
-- proto: GunneryServerMedium
+- proto: GunneryServerHigh
   entities:
   - uid: 99
     components:
@@ -5995,6 +6061,20 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,-4.5
       parent: 1
+- proto: WeaponTurretAK570
+  entities:
+  - uid: 154
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 7.5,4.5
+      parent: 1
+  - uid: 190
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -2.5,4.5
+      parent: 1
 - proto: WeaponTurretCharonReload
   entities:
   - uid: 368
@@ -6005,55 +6085,43 @@ entities:
       parent: 1
 - proto: WeaponTurretDravon
   entities:
-  - uid: 148
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 7.5,4.5
-      parent: 1
-  - uid: 303
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -2.5,4.5
-      parent: 1
-- proto: WeaponTurretL85Autocannon
-  entities:
-  - uid: 100
+  - uid: 244
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 8.5,-0.5
       parent: 1
+  - uid: 303
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -3.5,-0.5
+      parent: 1
+  - uid: 390
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 8.5,0.5
+      parent: 1
+  - uid: 393
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -3.5,0.5
+      parent: 1
+- proto: WeaponTurretL85Autocannon
+  entities:
   - uid: 123
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 6.5,8.5
       parent: 1
-  - uid: 154
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,0.5
-      parent: 1
-  - uid: 190
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,0.5
-      parent: 1
   - uid: 230
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -1.5,9.5
-      parent: 1
-  - uid: 244
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,-0.5
       parent: 1
   - uid: 283
     components:

@@ -38,7 +38,7 @@
     powerUseActive: 4000
   - type: Actions
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     whitelist:
       tags:
       - CharonetteSlug

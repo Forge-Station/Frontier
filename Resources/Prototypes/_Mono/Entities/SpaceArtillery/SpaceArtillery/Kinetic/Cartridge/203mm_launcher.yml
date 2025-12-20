@@ -61,11 +61,11 @@
         sound:
           collection: MetalBreak
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     whitelist:
       tags:
       - 203mmCartridge
-    capacity: 12
+    capacity: 6 # Forge-change: rebalance
     proto: Forge203mmCartridgeHE # Forge-change: rebalance
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg

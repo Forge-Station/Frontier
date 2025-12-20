@@ -59,7 +59,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
     proto: Forge20mmCartridgeBase
-    capacity: 150
+    capacity: 180
 
 - type: entity
   id: Forge20mmCartridgeBase
@@ -91,7 +91,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
     proto: Forge20mmCartridgeAPHE
-    capacity: 150
+    capacity: 180
 
 - type: entity
   id: Forge20mmCartridgeAPHE
@@ -124,7 +124,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
     proto: Forge20mmCartridgeAPCBC
-    capacity: 150
+    capacity: 180
 
 - type: entity
   id: Forge20mmCartridgeAPCBC
@@ -158,7 +158,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
     proto: Forge30mmCartridgeBase
-    capacity: 200
+    capacity: 250
 
 - type: entity
   id: Forge30mmCartridgeBase
@@ -191,7 +191,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
     proto: Forge30mmCartridgeAPHE
-    capacity: 200
+    capacity: 250
 
 - type: entity
   id: Forge30mmCartridgeAPHE
@@ -223,7 +223,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
     proto: Forge30mmCartridgeAPCBC
-    capacity: 200
+    capacity: 250
 
 - type: entity
   id: Forge30mmCartridgeAPCBC
@@ -256,7 +256,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
     proto: Forge57mmCartridgeBase
-    capacity: 80
+    capacity: 95
 
 - type: entity
   id: Forge57mmCartridgeBase
@@ -288,7 +288,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
     proto: Forge57mmCartridgeAPHE
-    capacity: 80
+    capacity: 95
 
 - type: entity
   id: Forge57mmCartridgeAPHE
@@ -320,7 +320,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
     proto: Forge57mmCartridgeAPCBC
-    capacity: 80
+    capacity: 95
 
 - type: entity
   id: Forge57mmCartridgeAPCBC
