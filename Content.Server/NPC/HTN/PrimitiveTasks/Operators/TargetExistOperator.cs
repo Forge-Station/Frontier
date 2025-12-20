@@ -29,14 +29,14 @@ namespace Content.Server.NPC.HTN.PrimitiveTasks.Operators
                 return HTNOperatorStatus.Failed;
             }
 
-            if (!_entityManager.TryGetComponent<SpaceNpcComponent>(owner, out var npcComp))
+            if (!_entityManager.TryGetComponent<NPCPerceptionComponent>(owner, out var perceptionComp))
             {
                 return HTNOperatorStatus.Failed;
             }
 
-            if (npcComp.CurrentTarget != null && _entityManager.EntityExists(npcComp.CurrentTarget))
+            if (blackboard.TryGetValue<EntityUid>(perceptionComp.TargetKey, out var target, _entityManager) && _entityManager.EntityExists(target))
             {
-                blackboard.SetValue(TargetKey, npcComp.CurrentTarget.Value);
+                blackboard.SetValue(TargetKey, target);
 
                 return HTNOperatorStatus.Finished;
             }
