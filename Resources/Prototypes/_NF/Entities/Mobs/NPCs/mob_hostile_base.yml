@@ -376,6 +376,8 @@
         true
       NavPry: !type:Bool
         true
+      CanOpenContainers: !type:Bool
+        true
       NavSmash: !type:Bool # They use this option too much for my liking, but I'll keep it here as an option
         true
 
@@ -393,6 +395,8 @@
         true
       NavPry: !type:Bool
         true
+      CanOpenContainers: !type:Bool
+        true
       NavSmash: !type:Bool # They use this option too much for my liking, but I'll keep it here as an option
         true
 
@@ -409,6 +413,8 @@
       NavInteract: !type:Bool
         true
       NavPry: !type:Bool
+        true
+      CanOpenContainers: !type:Bool
         true
 #      NavSmash: !type:Bool # They use this option too much for my liking, but I'll keep it here as an option
 #        true

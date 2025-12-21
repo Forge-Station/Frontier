@@ -2,6 +2,16 @@
 - type: htnCompound
   id: IdleCompound
   branches:
+    - preconditions:
+        - !type:KeyExistsPrecondition
+          key: CanOpenContainers
+          value: true
+        - !type:BuckledPrecondition
+          isBuckled: true
+      tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:OpenStorageOperator
+            targetKey: BuckledEntity
     - tasks:
         - !type:HTNPrimitiveTask
           operator: !type:WaitOperator
@@ -25,6 +35,9 @@
           operator: !type:MoveToOperator
             pathfindInPlanning: false
 
+        - !type:HTNCompoundTask
+          task: CautiousOpenContainerCompound
+
         - !type:HTNPrimitiveTask
           operator: !type:RandomOperator
             targetKey: IdleTime
@@ -37,6 +50,34 @@
           preconditions:
             - !type:KeyExistsPrecondition
               key: IdleTime
+
+- type: htnCompound
+  id: CautiousOpenContainerCompound
+  branches:
+    # This branch tries to open a container
+    - preconditions:
+        - !type:KeyExistsPrecondition
+          key: CanOpenContainers
+          value: true
+      tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:UtilityOperator
+            proto: NearbyCrates
+            targetKey: Target
+        - !type:HTNPrimitiveTask
+          preconditions:
+            - !type:KeyExistsPrecondition
+              key: Target
+          operator: !type:MoveToOperator
+            targetEntityKey: Target
+        - !type:HTNPrimitiveTask
+          preconditions:
+            - !type:KeyExistsPrecondition
+              key: Target
+          operator: !type:OpenStorageOperator
+            targetKey: Target
+    # This is the fallback branch that does nothing and ensures the compound task always succeeds.
+    - tasks: []
 
 # Spin to a random rotation and idle.
 - type: htnCompound

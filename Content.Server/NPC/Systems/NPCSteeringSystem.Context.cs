@@ -66,7 +66,7 @@ public sealed partial class NPCSteeringSystem
 
         // TODO: Ideally for "FreeSpace" we check all entities on the tile and build flags dynamically (pathfinder refactor in future).
         var ents = _entSetPool.Get();
-        _lookup.GetLocalEntitiesIntersecting(node.GraphUid, node.Box.Enlarged(-0.04f), ents, flags: LookupFlags.Static);
+        _lookup.GetLocalEntitiesIntersecting(node.GraphUid, node.Box.Enlarged(-0.04f), ents, flags: LookupFlags.Static | LookupFlags.Dynamic);
         var result = true;
 
         if (ents.Count > 0)
@@ -76,6 +76,9 @@ public sealed partial class NPCSteeringSystem
 
             foreach (var intersecting in ents)
             {
+                if (intersecting == uid)
+                    continue;
+
                 if (!_physics.IsCurrentlyHardCollidable((uid, fixtures, physics), intersecting))
                 {
                     continue;
@@ -679,8 +682,8 @@ public sealed partial class NPCSteeringSystem
          */
 
         // IDK why I didn't do this sooner but blending is a lot better than lastdir for fixing stuttering.
-        const float BlendWeight = 10f;
-        var blendValue = Math.Min(1f, frameTime * BlendWeight);
+        const float blendWeight = 10f;
+        var blendValue = Math.Min(1f, frameTime * blendWeight);
 
         for (var i = 0; i < InterestDirections; i++)
         {
