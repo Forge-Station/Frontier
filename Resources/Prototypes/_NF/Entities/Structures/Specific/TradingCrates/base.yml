@@ -117,7 +117,7 @@
   - type: Contraband
     turnInValues:
       FrontierUplinkCoin: 3
-      Doubloon: 2
+      Doubloon: 4 # Forge-change
   - type: ShipyardSellCondition
     blockSale: true
     reason: shipyard-console-contraband-onboard

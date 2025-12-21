@@ -18,6 +18,8 @@
     size: Small
   - type: StaticPrice
     price: 450
+  - type: PirateBountyItem # Forge-change
+    id: FGoldprint
 
 - type: entity
   parent: ClothingHandsGoldBraset
@@ -40,3 +42,5 @@
     available:
       - gemColor:
           gem: Rainbow
+  - type: PirateBountyItem # Forge-change
+    id: FGem

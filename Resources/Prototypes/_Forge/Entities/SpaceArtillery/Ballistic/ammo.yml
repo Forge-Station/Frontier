@@ -485,6 +485,8 @@
     damageModifierSet: Metallic
   - type: StaticPrice
     price: 400
+  - type: PirateBountyItem
+    id: ShipBigAmmoHEAll
 
 - type: entity
   id: Forge203mmCartridgeHESH
@@ -502,6 +504,8 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: StaticPrice
     price: 500
+  - type: PirateBountyItem
+    id: ShipBigAmmoHESHAll
 
 # region 220mm
 - type: entity
@@ -545,6 +549,8 @@
     damageModifierSet: Metallic
   - type: StaticPrice
     price: 500
+  - type: PirateBountyItem
+    id: ShipBigAmmoHEAll
 
 - type: entity
   id: Forge220mmCartridgeHESH
@@ -562,6 +568,8 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: StaticPrice
     price: 600
+  - type: PirateBountyItem
+    id: ShipBigAmmoHESHAll
 
 # region 255mm
 - type: entity
@@ -605,6 +613,8 @@
     damageModifierSet: Metallic
   - type: StaticPrice
     price: 600
+  - type: PirateBountyItem
+    id: ShipBigAmmoHEAll
 
 - type: entity
   id: Forge255mmCartridgeHESH
@@ -622,3 +632,5 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: StaticPrice
     price: 600
+  - type: PirateBountyItem
+    id: ShipBigAmmoHESHAll
