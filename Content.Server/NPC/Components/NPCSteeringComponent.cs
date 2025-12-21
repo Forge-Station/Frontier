@@ -54,7 +54,7 @@ public sealed partial class NPCSteeringComponent : Component
     [DataField("lastStuckCoordinates")]
     public EntityCoordinates LastStuckCoordinates;
 
-    [DataField("lastStuckTime", customTypeSerializer:typeof(TimeOffsetSerializer))]
+    [DataField("lastStuckTime", customTypeSerializer: typeof(TimeOffsetSerializer))]
     [AutoPausedField]
     public TimeSpan LastStuckTime;
 
@@ -119,6 +119,31 @@ public sealed partial class NPCSteeringComponent : Component
     /// </summary>
     [DataField("doAfterId")]
     public DoAfterId? DoAfterId = null;
+
+    /// <summary>
+    /// The NPC is trying to find a grid to land on.
+    /// </summary>
+    [DataField("needsGrid")]
+    public bool NeedsGrid;
+
+    /// <summary>
+    /// The entity to spawn when flying in space.
+    /// </summary>
+    [DataField("flyEffectPrototype")]
+    public string? FlyEffectPrototype = "JetpackEffect";
+
+    [DataField("flyEffectCooldown")]
+    [AutoPausedField]
+    public TimeSpan FlyEffectCooldown;
+
+    [ViewVariables(VVAccess.ReadWrite), DataField("acceleration")]
+    public float Acceleration = 1f;
+
+    [ViewVariables(VVAccess.ReadWrite), DataField("friction")]
+    public float Friction = 0.25f;
+
+    [ViewVariables(VVAccess.ReadWrite), DataField("weightlessModifier")]
+    public float WeightlessModifier = 1.2f;
 }
 
 public enum SteeringStatus : byte

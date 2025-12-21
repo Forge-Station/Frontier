@@ -31,6 +31,7 @@ using Robust.Shared.Utility;
 using Content.Shared.Prying.Systems;
 using Microsoft.Extensions.ObjectPool;
 using Prometheus;
+using Robust.Shared.Map.Components;
 
 namespace Content.Server.NPC.Systems;
 
@@ -312,6 +313,12 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
         float frameTime,
         TimeSpan curTime)
     {
+        if (steering.NeedsGrid && xform.GridUid == null)
+        {
+            HandleNeedsGrid(uid, steering, xform);
+            // After this, steering.Coordinates might be updated.
+        }
+
         if (Deleted(steering.Coordinates.EntityId))
         {
             SetDirection(uid, mover, steering, Vector2.Zero);
@@ -343,7 +350,27 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
         // Use rotation relative to parent to rotate our context vectors by.
         var offsetRot = -_mover.GetParentGridAngle(mover);
         _modifierQuery.TryGetComponent(uid, out var modifier);
-        var moveSpeed = GetSprintSpeed(uid, modifier);
+        float moveSpeed;
+
+        if (xform.GridUid == null)
+        {
+            var user = EnsureComp<JetpackUserComponent>(uid);
+            user.WeightlessModifier = steering.WeightlessModifier;
+            user.WeightlessAcceleration = steering.Acceleration;
+            user.WeightlessFriction = steering.Friction;
+            user.WeightlessFrictionNoInput = steering.Friction;
+
+            var baseSpeed = MovementSpeedModifierComponent.DefaultBaseSprintSpeed;
+            if (modifier != null)
+                baseSpeed = modifier.BaseSprintSpeed;
+            moveSpeed = steering.WeightlessModifier * baseSpeed;
+        }
+        else
+        {
+            RemComp<JetpackUserComponent>(uid);
+            moveSpeed = GetSprintSpeed(uid, modifier);
+        }
+
         var body = _physicsQuery.GetComponent(uid);
         var dangerPoints = steering.DangerPoints;
         dangerPoints.Clear();
@@ -416,9 +443,67 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
             resultDirection = new Angle(desiredDirection * InterestRadians).ToVec();
         }
 
+        if (xform.GridUid == null && resultDirection != Vector2.Zero && steering.FlyEffectPrototype != null)
+        {
+            if (curTime > steering.FlyEffectCooldown)
+            {
+                // TODO: This is so bad for perf oh my god.
+                // Frontier - change random to 0.1f, 0.2f
+                steering.FlyEffectCooldown = curTime + TimeSpan.FromSeconds(_random.NextFloat(0.1f, 0.2f));
+                Spawn(steering.FlyEffectPrototype, xform.Coordinates);
+            }
+        }
+
         steering.LastSteerDirection = resultDirection;
         DebugTools.Assert(!float.IsNaN(resultDirection.X));
         SetDirection(uid, mover, steering, resultDirection, false);
+    }
+
+    private void HandleNeedsGrid(EntityUid uid, NPCSteeringComponent steering, TransformComponent xform)
+    {
+        // We are already pathing to a grid.
+        if (steering.Pathfind)
+            return;
+
+        // Find nearest grid
+        var nearestGrid = EntityUid.Invalid;
+        var minDistance = float.MaxValue;
+
+        // Using a hardcoded 40f range. This should be enough to see a grid from a distance.
+        var searchRange = 40f;
+        var grids = new HashSet<Entity<MapGridComponent>>();
+        _lookup.GetEntitiesInRange<MapGridComponent>(_transform.GetMapCoordinates(uid, xform), searchRange, grids);
+
+        var ourPos = _transform.GetWorldPosition(xform);
+
+        foreach (var grid in grids)
+        {
+            var gridXform = _xformQuery.GetComponent(grid.Owner);
+            var distSqr = (_transform.GetWorldPosition(gridXform) - ourPos).LengthSquared();
+            if (distSqr < minDistance)
+            {
+                minDistance = distSqr;
+                nearestGrid = grid.Owner;
+            }
+        }
+
+        if (!nearestGrid.IsValid())
+        {
+            // No grid in range, just float around.
+            return;
+        }
+
+        // Found a grid, now find a landing spot.
+        // We can just try to path to the grid entity itself. Pathfinding should find the nearest valid poly.
+        var gridCoords = new EntityCoordinates(nearestGrid, Vector2.Zero);
+
+        // Check if we are already going to this grid.
+        if (steering.Coordinates.EntityId == nearestGrid)
+            return;
+
+        steering.NeedsGrid = false;
+        // Use Register to set the new target.
+        Register(uid, gridCoords, steering);
     }
 
     private EntityCoordinates GetCoordinates(PathPoly poly)
@@ -438,6 +523,13 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
         // If we're in range then just beeline them; this can avoid stutter stepping and is an easy way to look nicer.
         if (steering.Pathfind || targetDistance < steering.RepathRange)
             return;
+
+        // Don't pathfind in space unless we are trying to return to a grid.
+        if (xform.GridUid == null && !steering.NeedsGrid)
+        {
+            steering.CurrentPath.Clear();
+            return;
+        }
 
         // Short-circuit with no path.
         var targetPoly = _pathfindingSystem.GetPoly(steering.Coordinates);

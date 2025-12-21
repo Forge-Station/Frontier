@@ -73,6 +73,8 @@ public sealed partial class NPCCombatSystem
             {
                 comp.Status = CombatStatus.TargetUnreachable;
                 comp.ShootAccumulator = 0f;
+                if (xform.GridUid == null)
+                    steering.NeedsGrid = true;
                 continue;
             }
 
@@ -81,6 +83,8 @@ public sealed partial class NPCCombatSystem
             {
                 comp.Status = CombatStatus.TargetUnreachable;
                 comp.ShootAccumulator = 0f;
+                if (xform.GridUid == null && _steeringQuery.TryGetComponent(uid, out steering))
+                    steering.NeedsGrid = true;
                 continue;
             }
 
@@ -88,6 +92,8 @@ public sealed partial class NPCCombatSystem
             {
                 comp.Status = CombatStatus.TargetUnreachable;
                 comp.ShootAccumulator = 0f;
+                if (xform.GridUid == null && _steeringQuery.TryGetComponent(uid, out steering))
+                    steering.NeedsGrid = true;
                 continue;
             }
 
@@ -147,6 +153,12 @@ public sealed partial class NPCCombatSystem
                 if (TryComp(uid, out steering))
                 {
                     steering.ForceMove = true;
+                }
+
+                if (xform.GridUid == null)
+                {
+                    if (TryComp(uid, out steering))
+                        steering.NeedsGrid = true;
                 }
 
                 continue;
