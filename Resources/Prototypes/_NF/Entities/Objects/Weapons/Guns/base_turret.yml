@@ -154,6 +154,9 @@
   name: energy turret
   abstract: true
   components:
+  - type: HTN
+    rootTask:
+      task: EnergyTurretCompound
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Turrets/disabler.rsi
     drawdepth: Mobs
