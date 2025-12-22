@@ -1691,8 +1691,6 @@ entities:
       pos: -0.5,-0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 337
     - type: AtmosPipeColor
@@ -1704,8 +1702,6 @@ entities:
       pos: -0.5,-6.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 337
     - type: AtmosPipeColor
@@ -1719,8 +1715,6 @@ entities:
       pos: 5.5,-5.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 337
     - type: AtmosPipeLayers
@@ -1735,8 +1729,6 @@ entities:
     - type: AtmosPipeLayers
       pipeLayer: Secondary
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 337
     - type: AtmosPipeColor
