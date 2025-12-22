@@ -80,6 +80,8 @@
   - type: NFWeaponDetails
     class: weapon-details-class-assault-rifle
     manufacturer: weapon-details-manufacturer-TechnicLogistic
+  - type: PirateBountyItem
+    id: FTechLogisticGuns
 
 - type: entity
   name: Dakota
@@ -155,6 +157,8 @@
   - type: NFWeaponDetails
     class: weapon-details-class-assault-rifle
     manufacturer: weapon-details-manufacturer-TechnicLogistic
+  - type: PirateBountyItem
+    id: FTechLogisticGuns
 
 - type: entity
   name: dagger
@@ -236,6 +240,8 @@
   - type: NFWeaponDetails
     class: weapon-details-class-assault-rifle
     manufacturer: weapon-details-manufacturer-TechnicLogistic
+  - type: PirateBountyItem
+    id: FTechLogisticGuns
 
 - type: entity
   name: Cascade
@@ -317,6 +323,8 @@
   - type: NFWeaponDetails
     class: weapon-details-class-rifle
     manufacturer: weapon-details-manufacturer-TechnicLogistic
+  - type: PirateBountyItem
+    id: FTechLogisticGuns
 
 - type: entity
   name: Union-M1
@@ -390,6 +398,8 @@
   - type: NFWeaponDetails
     class: weapon-details-class-rifle
     manufacturer: weapon-details-manufacturer-TechnicLogistic
+  - type: PirateBountyItem
+    id: FTechLogisticGuns
 
 - type: entity
   name: Рет-Cог

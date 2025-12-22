@@ -12,7 +12,7 @@
   name: department-Civilian
   description: department-NFCivilian-description # Frontier
   color: "#9FED58"
-  weight: -10
+  weight: 110
   roles:
   # - Bartender # Frontier
   # - Botanist # Frontier
@@ -52,7 +52,7 @@
   - DeathSquad # Corvax-Frontier
   - ERTMailCarrier # Frontier
   editorHidden: true
-  weight: 120
+  weight: 300
 
 - type: department
   id: Command
@@ -80,6 +80,7 @@
   - Sheriff # Frontier
   - PlantManager # Frontier
   - StationTrafficController # Frontier
+  - DirectorOfCare # Forge-change
   primary: false
   weight: 100
   editorHidden: true # Frontier
@@ -89,7 +90,7 @@
   name: department-Engineering
   description: department-Engineering-description
   color: "#EFB341"
-  weight: -94
+  weight: 75
   primary: false
   roles:
   # - AtmosphericTechnician # Frontier
@@ -113,7 +114,7 @@
   name: department-Security
   description: department-NFSecurity-description # Frontier
   color: "#5C7D4D" # Frontier: DE3A3A<5C7D4D
-  weight: 1 # Frontier: 20<1 - accounted for in jobs
+  weight: 90 # Frontier: 20<1 - accounted for in jobs
   roles:
 #  - Detective # Frontier
 #  - HeadOfSecurity # Frontier

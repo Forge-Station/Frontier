@@ -531,6 +531,7 @@
   - type: WorldLoader
     disabled: true
     radius: 0 # Just in case.
+  - type: StationAiWhitelist # Forge-change
 
 - type: entity
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseStructureAccessReaderImmuneToEmag, BaseComputerShuttle, BaseComputerTraffic]
@@ -551,6 +552,7 @@
   components:
   - type: NFDroneConsoleTarget
     id: Frontier
+  - type: StationAiWhitelist # Forge-change
 
 - type: entity
   parent: BaseComputerTrafficRemote
@@ -561,6 +563,7 @@
   components:
   - type: NFDroneConsole
     id: Frontier
+  - type: StationAiWhitelist # Forge-change
 
 - type: entity
   parent: BaseComputerTrafficLocal
@@ -571,6 +574,7 @@
   components:
   - type: NFDroneConsoleTarget
     id: Trade
+  - type: StationAiWhitelist # Forge-change
 
 - type: entity
   parent: BaseComputerTrafficRemote
@@ -581,3 +585,4 @@
   components:
   - type: NFDroneConsole
     id: Trade
+  - type: StationAiWhitelist # Forge-change

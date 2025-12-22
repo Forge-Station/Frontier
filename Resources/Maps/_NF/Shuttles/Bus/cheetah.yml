@@ -32,6 +32,18 @@ entities:
       parent: invalid
     - type: BecomesStation
       id: Cheetah
+    - type: ProtectedGrid
+      preventArtifactTriggers: true
+      preventEmpEvents: true
+      preventExplosions: true
+      preventFloorPlacement: true
+      preventFloorRemoval: true
+      preventRCDUse: true
+      killHostileMobs: true
+    - type: IFF
+      color: "#DAA520"
+      flags:
+        - HideLabel
     - type: MapGrid
       chunks:
         -1,-1:

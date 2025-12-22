@@ -300,7 +300,7 @@
     - id: BlueprintSeismicCharge # Frontier
     - id: WeaponCrusherGlaive
     - id: ClothingOuterHardsuitSalvage
-    - id: ChemistryBottleOmnizine
+    # - id: ChemistryBottleOmnizine # Forge-change
     - !type:GroupSelector
       children:
       - id: JetpackBlueFilled

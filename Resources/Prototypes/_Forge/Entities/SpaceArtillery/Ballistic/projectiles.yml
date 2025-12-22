@@ -140,7 +140,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 168 # expl + structural? no no no
+        Structural: 198 # expl + structural? no no no
         Blunt: 66
         Piercing: 78
   - type: Sprite
@@ -176,7 +176,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 192
+        Structural: 212
         Blunt: 76
         Piercing: 94
   - type: TriggerOnCollide
@@ -198,7 +198,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 222
+        Structural: 242
         Blunt: 96
         Piercing: 183
 

@@ -170,7 +170,7 @@
     Uranium: 1000
     Silver: 700
 
-# NFSD
+# region NFSD
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: FRec203mmCartridge
@@ -239,3 +239,57 @@
     Plasteel: 2000
     Plasma: 1880
     Uranium: 1000
+
+# region Pirate
+# overprice ammo
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeAmmoPirate20mm
+  result: ForgeAmmoDrum20mmBase
+  materials:
+    Steel: 1350
+    Plastic: 280
+    Glass: 100
+    Plasteel: 250
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeAmmoPirate57mm
+  result: ForgeMagazine57mmBase
+  materials:
+    Steel: 1620
+    Plastic: 360
+    Glass: 140
+    Plasteel: 360
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeAmmoPirate90mm
+  result: ForgeMagazine90mm
+  materials:
+    Steel: 2220
+    Plastic: 420
+    Glass: 160
+    Plasteel: 900
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgePirateTovek
+  result: TovekCartridge
+  materials:
+    Steel: 860
+    Uranium: 880
+    Gold: 620
+    Silver: 420
+    Plasteel: 260
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgePirate150mm
+  result: 150mmEmpShell
+  materials:
+    Steel: 1060
+    Uranium: 980
+    Gold: 920
+    Silver: 520
+    Plasteel: 260

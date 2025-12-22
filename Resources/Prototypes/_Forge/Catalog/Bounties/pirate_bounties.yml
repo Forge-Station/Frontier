@@ -61,7 +61,7 @@
   - name: forge-pirate-bounty-item-gem
     amount: 2
     id: FGem
-    
+
 - type: pirateBounty
   id: ForgePirateBountyDiamond
   reward: 7
@@ -70,3 +70,31 @@
   - name: forge-pirate-bounty-item-diamond
     amount: 3
     id: FDiamond
+
+- type: pirateBounty
+  id: ForgePirateBountyCoin
+  reward: 3
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-coin
+    amount: 15
+    id: FCoin
+
+- type: pirateBounty
+  id: ForgePirateBountyPrizeTicket
+  reward: 9
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-prizeticket
+    amount: 100
+    id: FPrizeTicket
+
+# были бы ещё какие компании.. грустный баунти
+- type: pirateBounty
+  id: ForgePirateBountyTechLogisticGuns
+  reward: 6
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-techloggun
+    amount: 3
+    id: FTechLogisticGuns
