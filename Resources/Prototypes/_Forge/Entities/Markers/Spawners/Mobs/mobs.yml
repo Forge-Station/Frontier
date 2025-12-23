@@ -1,0 +1,25 @@
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobGoliath
+  name: Спавнер голиафа
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGoliath
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobHivelord
+  name: Спавнер повелителя роя
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobHivelord
