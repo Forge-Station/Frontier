@@ -2276,17 +2276,6 @@ entities:
     components:
     - type: Transform
       parent: 770
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 778
-    - type: InsideEntityStorage
 - proto: ClothingHeadHelmetMercenary
   entities:
   - uid: 135
