@@ -33,3 +33,8 @@ forge-research-technology-shipammo255 = Весомый аргумент
 forge-research-technology-shipammo203hesh = Взрывной аргумент
 forge-research-technology-shipammo220hesh = Сотрясающий аргумент
 forge-research-technology-shipammo255hesh = Умопомрочительный аргумент
+
+forge-research-technology-nfsd-nightvision = Даже во тьме
+forge-research-technology-nfsd-thermalvision = Даже сквозь стены
+forge-research-technology-nfsd-nightthermalvision = СБ видит тебя
+forge-research-technology-nfsd-advtools = Продвинутые инструменты

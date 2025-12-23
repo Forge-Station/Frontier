@@ -29,13 +29,12 @@
 - type: startingGear
   id: EngineerNfsdGear
   equipment:
-    id: EngineerNfsdPDA
-    belt: ClothingBeltNfsdEngineerFilled
-    eyes: ClothingEyesGlassesEngineerNfsd
+    suitstorage: SecBreachingHammer
   storage:
     back:
     - NfsdTechFabFlatpack
     - EngineeringTechFabFlatpack
+    - BaseSecurityUplinkRadioOfficer # for rnd disk
 
 - type: chameleonOutfit
   id: EngineerNfsdChameleonOutfit

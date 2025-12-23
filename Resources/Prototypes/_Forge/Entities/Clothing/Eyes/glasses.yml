@@ -12,3 +12,28 @@
     tags:
     - WhitelistChameleon
   - type: EyeProtection
+
+- type: entity
+  parent: [ClothingEyesNightVisionGoggles, ShowSecurityIcons, BaseC2ContrabandUnredeemable]
+  id: ClothingEyesNightThermalVisionNfsd
+  name: night-thermal vision goggles
+  description: Now you can see in the dark everyone!
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Eyes/Goggles/therm_nightvision.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Eyes/Goggles/therm_nightvision.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: StaticPrice
+    price: 30
+  - type: ShowHealthBars
+  - type: NightVision
+    color: "#b2cb50"
+    flashDurationMultiplier: 2
+    isEquipment: true
+  - type: ThermalVision
+    flashDurationMultiplier: 2
+    pulseTime: 2
+    isEquipment: true
+    toggleAction: PulseThermalVision

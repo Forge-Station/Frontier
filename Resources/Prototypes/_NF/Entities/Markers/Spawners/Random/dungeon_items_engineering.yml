@@ -456,7 +456,7 @@
     - PicoManipulatorStockPart
     - SuperMatterBinStockPart
     # Engi related things
-    - SpawnDungeonLootPowerCell
+    # - SpawnDungeonLootPowerCell # Forge-change
     - ProximitySensor
     - RemoteSignaller
     - Igniter
@@ -469,6 +469,7 @@
     rarePrototypes:
     #- HandheldStationMap
     # T4
+    - SpawnDungeonLootPowerCell # Forge-change
     - QuadraticCapacitorStockPart
     - FemtoManipulatorStockPart
     - BluespaceMatterBinStockPart
@@ -492,12 +493,13 @@
   - type: RandomSpawner
     prototypes:
     - PowerCellMedium
-    - PowerCellHigh
-    - PowerCellHyper
+    # - PowerCellHigh # Forge-change
+    # - PowerCellHyper
     chance: 0.95
     offset: 0.0
     rarePrototypes:
-    - PowerCellMicroreactor
+    # - PowerCellMicroreactor
+    - PowerCellHigh
     - PowerCellPotato
     rareChance: 0.01
 

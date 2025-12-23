@@ -1573,12 +1573,12 @@
   components:
   - type: Mail
     contents:
-      - id: PowerCellMicroreactor
-        orGroup: PowerCell
-        prob: 0.60
-      - id: PowerCellAntiqueProto
-        orGroup: PowerCell
-        prob: 0.20
+      # - id: PowerCellMicroreactor
+      #   orGroup: PowerCell
+      #   prob: 0.60
+      # - id: PowerCellAntiqueProto
+      #   orGroup: PowerCell
+      #   prob: 0.20
       - id: PowerCellHyper
         orGroup: PowerCell
         prob: 0.20

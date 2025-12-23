@@ -493,21 +493,22 @@
         tags:
           - SecurityUplink
 
-- type: listing
-  id: UplinkSecurityJetpack
-  name:  uplink-security-jetpack-name
-  description: uplink-security-jetpack-desc
-  productEntity: JetpackNfsdFilled
-  icon: { sprite: _NF/Objects/Tanks/Jetpacks/nfsd.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 1
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+# Forge-change: Move to RnD
+# - type: listing
+#   id: UplinkSecurityJetpack
+#   name:  uplink-security-jetpack-name
+#   description: uplink-security-jetpack-desc
+#   productEntity: JetpackNfsdFilled
+#   icon: { sprite: _NF/Objects/Tanks/Jetpacks/nfsd.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 1
+#   categories:
+#     - UplinkSecurityUtility
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
 
 - type: listing
   id: UplinkSecurityMagboots
@@ -542,6 +543,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
+        - EngineerNfsd
         - Sheriff
 
 - type: listing
@@ -599,6 +601,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
+        - EngineerNfsd
         - Bailiff
         - SeniorOfficer
         - Sheriff
@@ -918,6 +921,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
+        - EngineerNfsd
         - Bailiff
         - SeniorOfficer
         - Sheriff
@@ -1341,27 +1345,6 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-# Corvax-Frontier
-- type: listing
-  id: UplinkSecurityResearchDisk10000
-  name:  uplink-security-research-disk-10000-name
-  description: uplink-security-research-disk-10000-desc
-  productEntity: ResearchDisk10000
-  icon: { sprite: Objects/Specific/Research/researchdisk.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 5
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
         - Sheriff
 
 - type: listing

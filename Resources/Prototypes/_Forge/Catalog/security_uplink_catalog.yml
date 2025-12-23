@@ -1,19 +1,20 @@
 #region hardsuits
-- type: listing
-  id: UplinkNFClothingEyesNightVisionGoggleDSBF
-  name:  uplink-security-nightvision-name
-  description: uplink-security-nightvision-desc
-  productEntity: NFClothingEyesNightVisionGoggleDSBF
-  icon: { sprite: _White/Clothing/Eyes/Goggles/snightvision.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 6
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+# Move to RnD
+# - type: listing
+#   id: UplinkNFClothingEyesNightVisionGoggleDSBF
+#   name:  uplink-security-nightvision-name
+#   description: uplink-security-nightvision-desc
+#   productEntity: NFClothingEyesNightVisionGoggleDSBF
+#   icon: { sprite: _White/Clothing/Eyes/Goggles/snightvision.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 6
+#   categories:
+#     - UplinkSecurityUtility
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
 
 #region mechs
 - type: listing
@@ -272,30 +273,32 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
+        - EngineerNfsd
         - Bailiff
         - SeniorOfficer
         - Sheriff
 
-- type: listing
-  id: UplinkSecurityEngiBeltFilled
-  name:  uplink-security-engibelt-name
-  description: uplink-security-engibelt-desc
-  productEntity: ClothingBeltNfsdEngineerFilled
-  icon: { sprite: Forge/Clothing/Belt/nfsd_engi_belt.rsi, state: icon}
-  cost:
-    FrontierUplinkCoin: 10
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+# Move to RnD
+# - type: listing
+#   id: UplinkSecurityEngiBeltFilled
+#   name:  uplink-security-engibelt-name
+#   description: uplink-security-engibelt-desc
+#   productEntity: ClothingBeltNfsdEngineerFilled
+#   icon: { sprite: Forge/Clothing/Belt/nfsd_engi_belt.rsi, state: icon}
+#   cost:
+#     FrontierUplinkCoin: 10
+#   categories:
+#     - UplinkSecurityUtility
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - Bailiff
+#         - SeniorOfficer
+#         - Sheriff
 
 - type: listing
   id: UplinkPowerCellNFSD
@@ -314,6 +317,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
+        - EngineerNfsd
         - Bailiff
         - SeniorOfficer
         - Sheriff
@@ -346,6 +350,7 @@
 #          - SecurityUplink
 #    - !type:BuyerJobCondition
 #      whitelist:
+#        - EngineerNfsd
 #        - Bailiff
 #        - SeniorOfficer
 #        - Sheriff
@@ -367,6 +372,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
+        - EngineerNfsd
         - Bailiff
         - SeniorOfficer
         - Sheriff
@@ -377,7 +383,7 @@
   description: forge-uplink-security-researchpoointmedium-desc
   productEntity: ResearchDisk5000
   cost:
-    FrontierUplinkCoin: 12
+    FrontierUplinkCoin: 11
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -387,6 +393,29 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
+        - EngineerNfsd
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityResearchDisk10000
+  name:  uplink-security-research-disk-10000-name
+  description: uplink-security-research-disk-10000-desc
+  productEntity: ResearchDisk10000
+  icon: { sprite: Objects/Specific/Research/researchdisk.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 19
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - EngineerNfsd
         - Bailiff
         - SeniorOfficer
         - Sheriff
