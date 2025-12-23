@@ -23,9 +23,9 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 1250
+        Radiation: 50 # Forge-change
         Structural: 4250
-        Heat: 350
+        Heat: 160 # Forge-change
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/plasmashot.rsi
     layers:
@@ -61,8 +61,8 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 600
-        Structural: 900
+        Radiation: 20 # Forge-change
+        Structural: 1100  # Forge-change
         Heat: 120
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/plasmashot.rsi
@@ -83,11 +83,17 @@
     radarColor: "#FF0040"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
-    totalIntensity: 25
-    intensitySlope: 2
-    maxIntensity: 40
+    explosionType: HardBombShipGun
+    totalIntensity: 35
+    intensitySlope: 35
+    maxIntensity: 25
     maxTileBreak: 1
+  # - type: Explosive
+  #   explosionType: DefaultShipGun
+  #   totalIntensity: 25
+  #   intensitySlope: 2
+  #   maxIntensity: 40
+  #   maxTileBreak: 1
 
 # Type 241
 

@@ -11,8 +11,8 @@
   description: Fires 140mm HEAT shells in a 10 round burst from an internal autoloader.
   components:
   - type: BindToStation # Forge-change
-  - type: StaticPrice
-    price: 15000
+  - type: StaticPrice # Forge-change
+    price: 1 # Чисто чтоб цена шаттлов не сильно менялась. На совесть мапперам.
   - type: Sprite
     sprite: _Mono/Objects/ShuttleWeapons/longbow.rsi
     layers:

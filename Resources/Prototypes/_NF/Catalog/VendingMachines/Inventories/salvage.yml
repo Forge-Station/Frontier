@@ -1,23 +1,25 @@
 - type: vendingMachineInventory
   id: NFSalvageEquipmentInventory
   startingInventory:
-    NFWeaponHoloflareGun: 4
-    NFWeaponPka: 4
-    WeaponCrusher: 6
-    WeaponCrusherDagger: 8
-    WeaponGrapplingGun: 10
-    Pickaxe: 10
-    OreBag: 6
+    NFWeaponHoloflareGun: 2 # Forge-change
+    NFWeaponPka: 2 # Forge-change
+    # WeaponCrusher: 6 # Forge-change
+    WeaponCrusherDagger: 1 # Forge-change
+    WeaponGrapplingGun: 3 # Forge-change
+    Pickaxe: 4 # Forge-change
+    OreBag: 3 # Forge-change
     Floodlight: 10
     BoxDispenserFlare: 5
     FlashlightLantern: 15
     RadioHandheldNF: 5
+    # Forge-change
+    MiningDrill: 3 # Infinite
 
 - type: vendingMachineInventory
   id: NFSalvageEquipmentPOIInventory
   startingInventory:
     NFWeaponPka: 4294967295 # Infinite
-    WeaponCrusher: 4294967295 # Infinite
+    # WeaponCrusher: 4294967295 # Infinite
     WeaponCrusherDagger: 4294967295 # Infinite
     WeaponGrapplingGun: 4294967295 # Infinite
     Pickaxe: 4294967295 # Infinite
@@ -26,4 +28,6 @@
     BoxDispenserFlare: 4294967295 # Infinite
     FlashlightLantern: 4294967295 # Infinite
     RadioHandheldNF: 4294967295 # Infinite
+    # Forge-change
+    MiningDrill: 4294967295 # Infinite
 

@@ -14,8 +14,8 @@
   description: A relatively small, armored munitions bay capable of holding up to two lightweight ordinance packages. Typically found on light spacecraft, particularly bombers, and provide a limited use method of damaging targets far above the user's weight class.
   components:
   - type: BindToStation # Forge-change
-  - type: StaticPrice
-    price: 1000
+  - type: StaticPrice # Forge-change
+    price: 1 # Чисто чтоб цена шаттлов не сильно менялась. На совесть мапперам.
   - type: Sprite
     sprite: _Mono/Objects/ShuttleWeapons/lightmunitionsbay.rsi
     layers:

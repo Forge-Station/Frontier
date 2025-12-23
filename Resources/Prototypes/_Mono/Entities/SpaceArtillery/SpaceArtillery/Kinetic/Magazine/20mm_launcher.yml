@@ -11,8 +11,8 @@
   description: A light 20mm ballistic autocannon designed for rapid fire and suppressing smaller targets at close range. Cheap, light, and can be remotely activated or linked up to a GCS.
   components:
   - type: BindToStation # Forge-change
-  - type: StaticPrice
-    price: 250
+  - type: StaticPrice # Forge-change
+    price: 1 # Чисто чтоб цена шаттлов не сильно менялась. На совесть мапперам.
   - type: Sprite
     sprite: _Mono/Objects/ShuttleWeapons/50cal.rsi
     layers:

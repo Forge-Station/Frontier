@@ -349,3 +349,44 @@
 #        - Bailiff
 #        - SeniorOfficer
 #        - Sheriff
+
+# research points
+- type: listing
+  id: UplinkResearchPointSmall
+  name: forge-uplink-security-researchpoointsmall-name
+  description: forge-uplink-security-researchpoointsmall-desc
+  productEntity: ResearchDisk
+  cost:
+    FrontierUplinkCoin: 4
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
+
+- type: listing
+  id: UplinkResearchPointMedium
+  name: forge-uplink-security-researchpoointmedium-name
+  description: forge-uplink-security-researchpoointmedium-desc
+  productEntity: ResearchDisk5000
+  cost:
+    FrontierUplinkCoin: 12
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff

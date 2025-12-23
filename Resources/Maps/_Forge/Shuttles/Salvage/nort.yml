@@ -3988,17 +3988,9 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -7.5,22.5
       parent: 1051
-- proto: WeaponCrusher
+- proto: WeaponCrusherDagger
   entities:
   - uid: 289
-    components:
-    - type: Transform
-      parent: 287
-    - type: Physics
-      canCollide: False
-- proto: WeaponCrusherGlaive
-  entities:
-  - uid: 290
     components:
     - type: Transform
       parent: 287

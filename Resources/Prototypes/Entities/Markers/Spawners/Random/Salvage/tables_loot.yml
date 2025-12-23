@@ -282,7 +282,7 @@
     - id: MineralScanner
       weight: 0.5
     - id: WeaponCrusher
-      weight: 0.5
+      weight: 0.3 # Forge-change
     - !type:GroupSelector
       children:
       - id: JetpackBlue
@@ -299,6 +299,7 @@
     - id: BlueprintFulton # Frontier
     - id: BlueprintSeismicCharge # Frontier
     - id: WeaponCrusherGlaive
+      weight: 0.2 # Forge-change
     - id: ClothingOuterHardsuitSalvage
     # - id: ChemistryBottleOmnizine # Forge-change
     - !type:GroupSelector

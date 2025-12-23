@@ -50,7 +50,7 @@
     prototypes:
     - WeaponCrusherDagger
     - WeaponCrusher
-    - WeaponCrusherGlaive
+    # - WeaponCrusherGlaive # Forge-change: move to rare
     - NFWeaponPka
     - NFWeaponPkaSawn
     - OreBag
@@ -64,6 +64,7 @@
     chance: 0.9
     offset: 0.0
     rarePrototypes:
+    - WeaponCrusherGlaive # Forge-change: move to rare
     - NFWeaponPkaCannon
     - OreBagOfHolding
     - HandHeldMassScanner

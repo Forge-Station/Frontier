@@ -1,6 +1,6 @@
 - type: entity
   name: гипоспрей ДСБФ
-  parent: [BaseItem, BaseC2ContrabandUnredeemable]
+  parent: [BaseItem, BaseForgeNfsdContraband]
   description: Стерильный инъектор для быстрого введения лекарств пациентам.
   id: NfsdHypo
   components:
@@ -34,7 +34,7 @@
 
 - type: entity
   name: гипоспрей врача NT-MED-74
-  parent: [BaseItem, BaseC2ContrabandUnredeemable]
+  parent: [BaseItem, BaseForgeMedicContraband]
   description: Стерильный инъектор для быстрого введения лекарств пациентам.
   id: MedHypo
   components:

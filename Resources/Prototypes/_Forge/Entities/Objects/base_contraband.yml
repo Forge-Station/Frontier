@@ -1,0 +1,41 @@
+# Paramedic-staff contraband: medic or NFSD
+- type: contrabandSeverity
+  id: ForgeMedicClass
+  examineText: forge-contraband-examine-text-medic
+
+- type: entity
+  id: BaseForgeMedicContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: ForgeMedicClass
+    # Corvax-Forge change:
+    allowedDepartments: [ MedicalDepartment, Security, Frontier, Command, CentralCommand ]
+
+# NFSD-staff contraband
+- type: contrabandSeverity
+  id: ForgeNfsdClass
+  examineText: forge-contraband-examine-text-nfsd
+
+- type: entity
+  id: BaseForgeNfsdContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: ForgeNfsdClass
+    allowedDepartments: [ Security, Command, CentralCommand ]
+    allowedJobs: [ SecurityGuard ]
+
+# License & NFSD contraband
+- type: contrabandSeverity
+  id: ForgeLicenseClass
+  examineText: forge-contraband-examine-text-license
+
+- type: entity
+  id: BaseForgeLicenseContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: ForgeLicenseClass
+    allowedDepartments: [ Security, Command, CentralCommand ]
+    allowedJobs: [ SecurityGuard ]

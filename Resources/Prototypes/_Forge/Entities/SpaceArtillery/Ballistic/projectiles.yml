@@ -140,7 +140,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 198 # expl + structural? no no no
+        Structural: 268 # expl + structural? no no no
         Blunt: 66
         Piercing: 78
   - type: Sprite
@@ -176,7 +176,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 212
+        Structural: 244
         Blunt: 76
         Piercing: 94
   - type: TriggerOnCollide
@@ -198,7 +198,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 242
+        Structural: 392
         Blunt: 96
         Piercing: 183
 
@@ -269,7 +269,7 @@
     explosionType: DefaultShipGun
     totalIntensity: 50
     intensitySlope: 3.5
-    maxIntensity: 50
+    maxIntensity: 100
     maxTileBreak: 1
 
 # 90mm APHEBC
@@ -299,10 +299,10 @@
     radarColor: "#1df1f5"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
+    explosionType: HardBombShipGun
     totalIntensity: 70
     intensitySlope: 40
-    maxIntensity: 5
+    maxIntensity: 50
     maxTileBreak: 1
 
 # region 203mm
