@@ -91,3 +91,11 @@
   components:
   - type: SpawnPoint
     job_id: EngineerSyn
+
+- type: entity
+  id: SpawnPointEngineerNfsd
+  parent: SpawnPointSecurityOfficer
+  name: Specialist Nfsd
+  components:
+  - type: SpawnPoint
+    job_id: EngineerNfsd

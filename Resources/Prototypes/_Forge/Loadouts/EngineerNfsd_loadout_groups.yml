@@ -1,0 +1,36 @@
+- type: loadoutGroup
+  id: EngineerNfsdHead
+  name: loadout-group-contractor-head
+  loadouts:
+  - EngineerNfsdClothingHead1
+  - EngineerNfsdClothingHead2
+  fallbacks:
+  - EngineerNfsdClothingHead1
+
+- type: loadoutGroup
+  id: EngineerNfsdJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - EngineerNfsdJumpsuit1
+  - EngineerNfsdJumpsuit2
+  fallbacks:
+  - EngineerNfsdJumpsuit1
+
+- type: loadoutGroup
+  id: EngineerNfsdBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - PouchNFSDTechLd
+  subgroups:
+  - ContractorBackpackItems
+
+- type: loadoutGroup
+  id: EngineerNfsdNeck
+  name: loadout-group-contractor-neck
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - DeputyClothingNeckBadgeEngineerNfsd
+  fallbacks:
+  - DeputyClothingNeckBadgeEngineerNfsd

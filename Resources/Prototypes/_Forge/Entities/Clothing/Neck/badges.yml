@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckNfsdBadge
+  id: ClothingNeckNfsdBadgeEngineer
+  suffix: Silver - Specialist
+  name: NFSD specialist badge
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Scarfs/badges/engynfsd.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/Scarfs/badges/engynfsd.rsi

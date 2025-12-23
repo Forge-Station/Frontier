@@ -93,6 +93,10 @@ ent-ClothingUniformJumpskirtNfsdForgeCoronerAlt = свитер коронера 
 ent-ClothingUniformJumpskirtNfsdSpecialist = униформа специалиста ДСБФ
     .desc = Универсальная униформа для технических специалистов. Сочетает прочность, комфорт и профессиональный вид.
 
+ent-ClothingNeckNfsdBadgeEngineer = значок специалиста ДСБФ
+    .suffix = Серебро - Специалист
+    .desc = { ent-ClothingNeckNfsdBadge.desc }
+
 ent-ClothingUniformJumpsuitMilitaryMerc = чёрный комбинезон
     .desc = Обычный комбинезон без знаков отличия.
 ent-ClothingUniformJumpsuitMilitaryMercTac = чёрный тактический комбинезон
