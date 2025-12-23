@@ -158,6 +158,9 @@
   - type: NFDroneConsoleTarget
     id: Nfsd
   - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
 
 - type: entity
   parent: BaseComputerTrafficRemote
@@ -169,6 +172,9 @@
   - type: NFDroneConsole
     id: Nfsd
   - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
 
 # Edsion Local and Remote
 - type: entity
@@ -181,6 +187,9 @@
   - type: NFDroneConsoleTarget
     id: Edison
   - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
 
 - type: entity
   parent: BaseComputerTrafficRemote
@@ -192,6 +201,9 @@
   - type: NFDroneConsole
     id: Edison
   - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
 
 # wrf lodge local & reomte traffic console???
 - type: entity
@@ -204,6 +216,9 @@
   - type: NFDroneConsoleTarget
     id: Lodge
   - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
 
 - type: entity
   parent: BaseComputerTrafficRemote
@@ -215,6 +230,9 @@
   - type: NFDroneConsole
     id: Lodge
   - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
 
 # OMG medical traffic console local'n'remoteS
 - type: entity
@@ -227,6 +245,9 @@
   - type: NFDroneConsoleTarget
     id: Medical
   - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
 
 - type: entity
   parent: BaseComputerTrafficRemote
@@ -238,3 +259,6 @@
   - type: NFDroneConsole
     id: Medical
   - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
