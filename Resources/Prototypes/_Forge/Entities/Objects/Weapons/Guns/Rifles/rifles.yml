@@ -97,7 +97,7 @@
         map: ["enum.GunVisualLayers.Base"]
   - type: GunRequiresWield
   - type: Clothing
-    sprite: /Corvax/Objects/Weapons/Guns/Rifles/m4a1.rsi
+    sprite: Forge/Objects/Weapons/Guns/Rifles/m4a1.rsi
     quickEquip: false
     slots:
     - Back
@@ -195,21 +195,22 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: NFMagazineRifle30
+        startingItem: NFMagazineRifle20
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - NFMagazineRifle30
+            - NFMagazineRifle20
+            - NFMagazineDrumRifle20
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: NFCartridgeRifle30
+        startingItem: NFCartridgeRifle20
         priority: 1
         whitelist:
           tags:
-            - NFCartridgeRifle30
+            - NFCartridgeRifle20
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container

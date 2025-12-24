@@ -8,3 +8,30 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCentralCommand ]
+
+- type: entity
+  parent: AirlockNfsdGlass
+  id: AirlockSergeantGlassLocked
+  suffix: NFSD, Sergeant, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSergeant ]
+
+- type: entity
+  parent: AirlockNfsd
+  id: AirlockSergeantLocked
+  suffix: NFSD, Sergeant, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSergeant ]
+
+# region BOARD
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsSergeant
+  suffix: Sergeant, Locked
+  components:
+  - type: AccessReader
+    access: [["Sergeant"]]

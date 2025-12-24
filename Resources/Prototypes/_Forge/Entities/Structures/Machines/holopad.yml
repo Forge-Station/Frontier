@@ -1,0 +1,12 @@
+- type: entity
+  parent: Holopad
+  id: ForgeHolopadLocal
+  name: Local holopad
+  suffix: One Grid
+  description: "A floor-mounted device for projecting holographic images."
+  components:
+  - type: Telephone
+    transmissionRange: Grid
+    compatibleRanges:
+    - Grid
+    ignoreTelephonesOnSameGrid: false
