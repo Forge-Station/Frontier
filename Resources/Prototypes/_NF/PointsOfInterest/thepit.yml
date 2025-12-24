@@ -12,8 +12,8 @@
   id: ThePit
   parent: BasePOI
   name: "Бойцовская Яма"
-  minimumDistance: 2200
-  maximumDistance: 4200
+  minimumDistance: 2800 # Forge-change: 441 - long distances
+  maximumDistance: 4400 # Forge-change: 441 - long distances
   spawnGroup: Arena
   gridPath: /Maps/_NF/POI/arena.yml
   addComponents:

@@ -12,8 +12,8 @@
   id: Omnichurch
   parent: BasePOI
   name: "Маяк ВсеЦеркви"
-  minimumDistance: 2200
-  maximumDistance: 4900
+  minimumDistance: 1750 # Forge-change: 441 - свят-свят-свят
+  maximumDistance: 2900 # Forge-change: 441
   gridPath: /Maps/_NF/POI/beacon.yml
   addComponents:
   - type: ProtectedGrid

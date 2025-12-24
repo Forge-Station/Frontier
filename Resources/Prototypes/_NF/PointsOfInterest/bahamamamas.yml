@@ -12,8 +12,8 @@
   id: Bahama
   parent: BasePOI
   name: "Багамская Мама"
-  minimumDistance: 1200
-  maximumDistance: 2900
+  minimumDistance: 2200 # Forge-change: 441 - long distances
+  maximumDistance: 3100 # Forge-change: 441 - long distances
   spawnGamePreset: [ NFAdventure, NFPirate ]
   spawnGroup: RestStop
   gridPath: /Maps/_NF/POI/bahama.yml

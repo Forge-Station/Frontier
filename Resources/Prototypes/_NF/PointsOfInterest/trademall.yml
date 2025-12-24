@@ -12,8 +12,8 @@
   id: TradeMall
   parent: BasePOI
   name: Торговая Станция #Forge-Change
-  minimumDistance: 1500
-  maximumDistance: 2500
+  minimumDistance: 1200 # Forge-change: 441 - я хочу смотреть ТС их окна.
+  maximumDistance: 1900 # Forge-change: 441
   spawnGroup: MarketStation
   gridPath: /Maps/_Forge/POI/trademall.yml #Forge-Change
   addComponents:

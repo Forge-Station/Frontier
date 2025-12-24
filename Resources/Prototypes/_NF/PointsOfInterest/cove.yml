@@ -12,8 +12,8 @@
   id: Cove
   parent: BasePOI
   name: Пиратская Бухта
-  minimumDistance: 10000
-  maximumDistance: 15000
+  minimumDistance: 12000 # Forge-change: 441 - long distances
+  maximumDistance: 16000 # Forge-change: 441 - long distances
   spawnGamePreset: [ NFPirate ]
   spawnGroup: Required
   gridPath: /Maps/_Forge/POI/cove.yml #Forge-Change

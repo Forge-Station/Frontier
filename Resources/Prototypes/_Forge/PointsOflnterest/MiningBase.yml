@@ -14,8 +14,8 @@
   id: MiningBase
   parent: BasePOI
   name: 'База Шахтёров'
-  minimumDistance: 1650
-  maximumDistance: 3400
+  minimumDistance: 1250 # Forge-change: 441 - i think spawnpoints its is an organized crime group, and they should be together.
+  maximumDistance: 2400 # Forge-change: 441 - long distances
   spawnGroup: Required
   gridPath: /Maps/_Forge/POI/MiningBase.yml
   addComponents:

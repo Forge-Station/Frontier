@@ -11,8 +11,8 @@
 - type: pointOfInterest
   id: AnomalousGeode
   name: 'Аномальная Жеода'
-  minimumDistance: 2100
-  maximumDistance: 3800
+  minimumDistance: 3500 # Forge-change: 441 - long distances
+  maximumDistance: 4800 # Forge-change: 441 - long distances
   spawnGroup: ScienceLab
   gridPath: /Maps/_NF/POI/anomalousgeode.yml
   addComponents:
