@@ -1,4 +1,4 @@
-ent-BaseMailLarge = mail-large-item-name-unaddressed
+ent-BaseMailLarge = посылка
     .desc = { ent-BaseMail.desc }
 ent-MailLargeAdminFun = { ent-BaseMailLarge }
     .suffix = адмеме
