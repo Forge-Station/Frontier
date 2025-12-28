@@ -16,6 +16,7 @@ using Robust.Shared.Input;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Numerics;
+using System.Linq; // Forge-change
 
 namespace Content.Client._NF.Research.UI;
 
@@ -29,6 +30,11 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
 
+    /// <summary>
+    /// Default pre-open techBranch
+    /// </summary>
+    public ProtoId<TechBranchPrototype> DefaultBranch = "General";
+    private Vector2 _position = new Vector2(45, 250);
     private readonly ResearchSystem _research;
     private readonly SpriteSystem _sprite;
     private readonly AccessReaderSystem _accessReader;
@@ -81,12 +87,12 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
     /// <summary>
     /// the distance between elements on the grid.
     /// </summary>
-    private const int GridSize = 90;
+    private const int GridSize = 150;
 
     /// <summary>
     /// technology cards size.
     /// </summary>
-    private const int CardSize = 64;
+    private const int CardSize = 150;
 
     /// <summary>
     /// the origin point of the grid.
@@ -103,11 +109,13 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
         _sprite = _entity.System<SpriteSystem>();
         _accessReader = _entity.System<AccessReaderSystem>();
 
+        // Forge-change: we dont use Scroll
         // Set up scroll container properties
-        TechScrollContainer.ScrollSpeedX = 100;
-        TechScrollContainer.ScrollSpeedY = 100;
-        TechScrollContainer.HScrollEnabled = false;
-        TechScrollContainer.VScrollEnabled = true;
+        // TechScrollContainer.ScrollSpeedX = 100;
+        // TechScrollContainer.ScrollSpeedY = 100;
+        // TechScrollContainer.HScrollEnabled = false;
+        // TechScrollContainer.VScrollEnabled = true;
+        // Forge-change end
 
         // Frontier: Initialize parallax background
         _parallaxControl = new ParallaxControl
@@ -126,7 +134,8 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
         _parallaxControl.SetPositionInParent(0);
 
         // The drag container should be in the middle
-        TechScrollContainer.SetPositionInParent(1);
+        // TechScrollContainer.SetPositionInParent(1);
+        DragContainer.SetPositionInParent(1); // Forge-change: we dont use Scroll
 
         // Apply scrollbar styling
         ApplyScrollbarStyling();
@@ -163,8 +172,20 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
         var bounds = new Box2i();
         var boundsSet = false;
 
+        // Forge-change: techBranch
+        // take List, check disciplines branch and filter for current branch
+        var filteredList = List
+            .Where(t =>
+            {
+                var proto = _prototype.Index<TechnologyPrototype>(t.Key);
+                var discipline = _prototype.Index<TechDisciplinePrototype>(proto.Discipline);
+                return discipline.Branch == DefaultBranch;
+            })
+            .ToDictionary(k => k.Key, v => v.Value);
+        // Forge-change end
+
         // Calculate bounds
-        foreach (var tech in List)
+        foreach (var tech in filteredList)
         {
             var proto = _prototype.Index<TechnologyPrototype>(tech.Key);
             var position = DefaultPosition + (GridSize * proto.Position.X, GridSize * proto.Position.Y);
@@ -198,7 +219,7 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
         }
 
         // Add tech items
-        foreach (var tech in List)
+        foreach (var tech in filteredList)
         {
             var proto = _prototype.Index<TechnologyPrototype>(tech.Key);
             var control = new FancyResearchConsoleItem(proto, _sprite, tech.Value);
@@ -209,8 +230,8 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
             var leftPadding = 20;
             var topPadding = 20;
             var uiPosition = new Vector2(
-                proto.Position.X * GridSize - _bounds.Left + leftPadding,
-                proto.Position.Y * GridSize - _bounds.Bottom + topPadding
+                proto.Position.X * GridSize - _bounds.Left + leftPadding + _position.X,
+                proto.Position.Y * GridSize - _bounds.Bottom + topPadding + _position.Y
             );
 
             LayoutContainer.SetPosition(control, uiPosition);
@@ -218,6 +239,58 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
             control.IsSelected = tech.Key == CurrentTech;
         }
     }
+
+    /// <summary>
+    /// Forge-change: techBranch
+    /// Create buttons for branches:
+    /// button changes the branch and updates the list of technologies.
+    /// </summary>
+    private void TechBranchTab(TechnologyDatabaseComponent database)
+    {
+        BranchesContainer.RemoveAllChildren();
+
+        var branchIds = database.SupportedDisciplines
+            .Select(disciplineId => _prototype.Index<TechDisciplinePrototype>(disciplineId).Branch)
+            .Distinct()
+            .ToList();
+
+        // if none DefaultBranch, take 1st available branch (for nfsdbranch or smth)
+        if (branchIds.Count > 0 && !_prototype.HasIndex<TechBranchPrototype>(DefaultBranch))
+        {
+            DefaultBranch = branchIds[0];
+        }
+
+        foreach (var branchId in branchIds)
+        {
+            var branchProto = _prototype.Index<TechBranchPrototype>(branchId);
+
+            var button = new Button
+            {
+                Text = Loc.GetString(branchProto.UiName),
+                HorizontalExpand = true,
+                MinWidth = 100,
+                ToggleMode = true
+            };
+            button.Pressed = branchId == DefaultBranch;
+
+            button.OnPressed += _ =>
+            {
+                foreach (var child in BranchesContainer.Children)
+                {
+                    if (child is Button b)
+                        b.Pressed = false;
+                }
+
+                button.Pressed = true;
+                DefaultBranch = branchId;
+
+                UpdatePanels(List);
+            };
+
+            BranchesContainer.AddChild(button);
+        }
+    }
+    // Forge-change end
 
     public void UpdateInformationPanel(int points)
     {
@@ -230,6 +303,10 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
 
         if (!_entity.TryGetComponent(Entity, out TechnologyDatabaseComponent? database))
             return;
+
+        // Forge-change add
+        // rbuild branch for the current server
+        TechBranchTab(database);
 
         TierDisplayContainer.RemoveAllChildren();
         foreach (var disciplineId in database.SupportedDisciplines)
@@ -267,12 +344,17 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
     {
         base.MouseMove(args);
 
-        if (!_draggin)
-            return;
+        // Forge-change: we dont use scroll
+        if (_draggin)
+        {
+            _position += args.Relative;
 
-        // Adjust scroll position with drag
-        var scrollSpeed = 2.0f;
-        TechScrollContainer.VScrollTarget -= args.Relative.Y * scrollSpeed;
+            foreach (var child in DragContainer.Children)
+            {
+                LayoutContainer.SetPosition(child, child.Position + args.Relative);
+            }
+        }
+        // Forge-change end
     }
 
     /// <summary>
@@ -328,8 +410,22 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
 
     public void Recenter()
     {
-        // Reset scroll position
-        TechScrollContainer.VScrollTarget = 0;
+        _position = new Vector2(45, 250);
+
+        foreach (var item in DragContainer.Children)
+        {
+            if (item is not FancyResearchConsoleItem research)
+                continue;
+
+            var leftPadding = 20;
+            var topPadding = 20;
+            var uiPosition = new Vector2(
+                research.Prototype.Position.X * GridSize - _bounds.Left + leftPadding + _position.X,
+                research.Prototype.Position.Y * GridSize - _bounds.Bottom + topPadding + _position.Y
+            );
+
+            LayoutContainer.SetPosition(item, uiPosition);
+        }
     }
 
     public override void Close()

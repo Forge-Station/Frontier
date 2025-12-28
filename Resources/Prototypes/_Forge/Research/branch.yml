@@ -1,0 +1,13 @@
+# only ID and uiName, nothing more
+- type: techBranch
+  id: General
+  uiName: forge-techbranch-name-general
+
+- type: techBranch
+  id: Nfsd
+  uiName: forge-techbranch-name-nfsd
+
+# test branch, no one disciplines do not use that
+- type: techBranch
+  id: Ardente
+  uiName: forge-techbranch-name-ardente

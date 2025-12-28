@@ -4,11 +4,18 @@
                       xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls;assembly=Content.Client"
                       xmlns:nf="clr-namespace:Content.Client._NF.Research.UI"
                       Title="{Loc 'research-console-menu-title'}"
-                      SetSize="1000 600"
+                      SetSize="1000 700"
                       MinSize="800 400">
     <BoxContainer Orientation="Vertical"
                   HorizontalExpand="True"
                   VerticalExpand="True">
+        <controls:StripeBack MinSize="52 52">
+            <BoxContainer Name="BranchesContainer"
+            Orientation="Horizontal"
+            HorizontalAlignment="Stretch"
+            MinHeight="52"
+            Margin="5"/>
+        </controls:StripeBack>
         <BoxContainer Orientation="Horizontal"
                       HorizontalExpand="True"
                       VerticalExpand="False"
@@ -31,35 +38,31 @@
                           VerticalExpand="True"
                           HorizontalExpand="True"
                           SizeFlagsStretchRatio="3"
+                          MinWidth="400"
                           Margin="0 0 0 10">
-                <PanelContainer Name="ResearchesContainer" VerticalExpand="True" HorizontalExpand="True">
+                <PanelContainer Name="ResearchesContainer"
+                                VerticalExpand="True"
+                                HorizontalExpand="True"
+                                Margin="6"
+                                RectClipContent="True">
                     <PanelContainer.PanelOverride>
                         <gfx:StyleBoxFlat BackgroundColor="#0F1419" />
                     </PanelContainer.PanelOverride>
-                    <!-- Add ScrollContainer - vertical only -->
-                    <ScrollContainer
-                        Name="TechScrollContainer"
-                        Access="Public"
-                        HorizontalExpand="True"
-                        VerticalExpand="True"
-                        HScrollEnabled="False"
-                        VScrollEnabled="True"
-                        ReserveScrollbarSpace="True"
-                        StyleClasses="PdaScrollContainer">
                         <nf:ResearchesContainerPanel
+                            Name="DragContainer"
+                            Access="Public"
                             HorizontalExpand="True"
                             VerticalExpand="True"
-                            Name="DragContainer"
                             MouseFilter="Pass"
-                            RectClipContent="True"
-                            HorizontalAlignment="Left">
+                            RectClipContent="True">
                             <!-- There lives all of technologies -->
                         </nf:ResearchesContainerPanel>
-                    </ScrollContainer>
-                    <Button Name="RecenterButton" Text="{Loc 'research-console-menu-recenter-button'}" MinHeight="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5 -5"/>
+                    <Button Name="RecenterButton" Text="{Loc 'research-console-menu-recenter-button'}" MinHeight="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5 5"/>
                 </PanelContainer>
             </BoxContainer>
-            <PanelContainer SizeFlagsStretchRatio="2">
+            <PanelContainer SizeFlagsStretchRatio="2"
+                            MinWidth="350"
+                            HorizontalAlignment="Right">
                 <PanelContainer.PanelOverride>
                     <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
                 </PanelContainer.PanelOverride>
@@ -68,7 +71,8 @@
                     VerticalExpand="True"
                     HorizontalExpand="True"
                     SizeFlagsStretchRatio="1"
-                    Margin="0">
+                    Margin="0"
+                    HorizontalAlignment="Right">
                     <Control
                         Margin="5"
                         MinWidth="350"

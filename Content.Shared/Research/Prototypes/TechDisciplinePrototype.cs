@@ -45,4 +45,11 @@ public sealed partial class TechDisciplinePrototype : IPrototype
     /// </summary>
     [DataField("lockoutTier")]
     public int LockoutTier = 3;
+
+    /// </summary>
+    /// Forge-change
+    /// The branch the discipline belongs to.
+    /// </summary>
+    [DataField("branch")]
+    public ProtoId<TechBranchPrototype> Branch { get; private set; } = "General";
 }
