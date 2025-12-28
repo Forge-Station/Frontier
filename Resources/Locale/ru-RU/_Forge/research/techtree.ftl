@@ -11,7 +11,7 @@ forge-research-technology-shipammo57apcbc = Бронебойная сила 57-�
 forge-research-technology-shipammo20aphe = Каморные 20-ти миллиметровые
 forge-research-technology-shipammo30aphe = Каморные 30-ти миллиметровые
 forge-research-technology-shipammo57aphe = Каморные 57-ми миллиметровые
-forge-research-technology-bombmerc = Неумправляемая 50-ти килограммовая бомба
+forge-research-technology-bombmerc = Неуправляемая 50-ти килограммовая бомба
 
 # NFSD research
 ent-ForgeRnDNFSDServer = сервер ДСБФ

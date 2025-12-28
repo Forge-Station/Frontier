@@ -115,3 +115,6 @@ ent-ClothingUniformJumpsuitVirologyOld = { ent-ClothingUniformJumpsuitVirology }
     .desc = { ent-ClothingUniformJumpsuitVirology.desc }
 ent-ClothingUniformJumpskirtVirologyOld = { ent-ClothingUniformJumpskirtVirology }
     .desc = { ent-ClothingUniformJumpskirtVirology.desc }
+
+ent-ClothingHeadHatHardhatNfsdEngiArmored = рабочая каска специалиста
+    .desc = Бронированная рабочая каска. Обеспечивает лучшее из двух миров в плане защиты и практичности - идеально подходит для специалиста с передовой.
