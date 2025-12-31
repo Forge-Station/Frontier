@@ -6,7 +6,7 @@
   molarMass: 30
   color: ed4ddc
   reagent: Respiron
-  pricePerMole: 0.2
+  pricePerMole: 0.6 # Forge-change: gas production is unprofitable. Small price buff
 
 - type: gas
   id: 10
@@ -16,4 +16,4 @@
   molarMass: 4
   color: ed4ddc
   reagent: Helium
-  pricePerMole: 3
+  pricePerMole: 3.5 # Forge-change: gas production is unprofitable. Small price buff

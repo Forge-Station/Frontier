@@ -13,8 +13,8 @@
 - type: pointOfInterest
   id: ShipyardTL
   name: Заброшенная Верфь TechnicLogistic
-  minimumDistance: 2000
-  maximumDistance: 3000
+  minimumDistance: 4000
+  maximumDistance: 5500
   gridPath: /Maps/_Forge/POI/Shipyard.yml
   addComponents:
   - type: IFF
