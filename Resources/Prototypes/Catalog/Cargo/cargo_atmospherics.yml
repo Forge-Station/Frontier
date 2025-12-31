@@ -4,7 +4,7 @@
     sprite: _NF/Structures/Storage/canister.rsi # Frontier: _NF
     state: air # Frontier grey<air
   product: AirCanister
-  cost: 1100 # Frontier: 600<1100
+  cost: 1300 # Forge-change: 441 Price fix
   category: cargoproduct-category-name-atmospherics
   group: market
 
@@ -14,7 +14,7 @@
     sprite: _NF/Structures/Storage/canister.rsi # Frontier: _NF
     state: oxygen # Frontier blue<oxygen
   product: OxygenCanister
-  cost: 1100 # Frontier: 600<1100
+  cost: 1200 # Forge-change: 441 Price fix
   category: cargoproduct-category-name-atmospherics
   group: market
 
@@ -35,7 +35,7 @@
     sprite: _NF/Structures/Storage/canister.rsi # Frontier: _NF
     state: nitrogen # Frontier red<nitrogen
   product: NitrogenCanister
-  cost: 1100 # Frontier: 500<1100
+  cost: 1500 # Forge-change: 441 Price fix
   category: cargoproduct-category-name-atmospherics
   group: market
 
@@ -99,7 +99,7 @@
     sprite: _NF/Structures/Storage/canister.rsi # Frontier: _NF
     state: plasma # Frontier orange<plasma
   product: PlasmaCanister
-  cost: 4200 # for reference, bagel's 3x1 roundstart plasma chamber contains ~16kmol for free, this is $4.2k for 2769 mol
+  cost: 6700 # Forge-change: 441 Price fix
   category: cargoproduct-category-name-atmospherics
   group: market
 
