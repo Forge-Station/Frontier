@@ -29,7 +29,7 @@
     sprite: Objects/Weapons/Guns/Pistols/N1984.rsi
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 4
-    projectileSpeed: 40
+    projectileSpeed: 35
 
 - type: entity
   id: NFWeaponPistolCobra
@@ -40,7 +40,7 @@
   components:
   - type: Gun
     fireRate: 4 # Corvax-Forge: Weaponary update
-    projectileSpeed: 40
+    projectileSpeed: 35
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
       params:
@@ -59,7 +59,7 @@
   components:
   - type: Gun
     fireRate: 5 # Corvax-Forge: Weaponary update
-    projectileSpeed: 38
+    projectileSpeed: 30
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
   - type: Sprite
@@ -75,7 +75,7 @@
     The Mark 32 Offensive Service Pistol. On the handle is a label that says 'for authorized use only.'
   components: &universalComponents
   - type: Gun
-    projectileSpeed: 38
+    projectileSpeed: 30
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
 
