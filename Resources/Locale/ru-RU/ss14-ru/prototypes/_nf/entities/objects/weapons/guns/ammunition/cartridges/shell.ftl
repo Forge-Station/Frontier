@@ -16,3 +16,5 @@ ent-NFShellShotgunBeanbag = патрон (.50 травматический)
     .desc = { ent-BaseCartridgeRifle.desc }
 ent-NFShellShotgunFlare = патрон (.50 фальшфлеер)
     .desc = { ent-BaseCartridgeRifle.desc }
+ent-NFShellShotgunImprovised = патрон (.50 самодельный)
+    .desc = { ent-BaseCartridgeRifle.desc }

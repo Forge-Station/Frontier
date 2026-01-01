@@ -1,0 +1,88 @@
+# no anonce Ratvar
+- type: entity
+  parent: MobRatvarBase
+  id: MobRatvarSpawnNoAnonce
+  suffix: Spawn, No Anonce
+  components:
+  - type: Sprite
+    layers:
+    - state: spawn
+      shader: unshaded
+  - type: TimedDespawn
+    lifetime: 3.5
+  - type: SpawnOnDespawn
+    prototype: MobRatvar
+
+- type: entity
+  parent: [MobRatvarBase, BaseMob]
+  id: MobRatvarNoAnonce
+  categories: [ HideSpawnMenu ]
+  components:
+  # - type: AnnounceOnSpawn
+  #   message: ratvar-has-risen
+  #   sender: ratvar-has-risen-sender
+  #   sound:
+  #     path: /Audio/Misc/ratvar_reveal.ogg
+  #   color: "#BE8700"
+  - type: CargoSellBlacklist
+  - type: ContentEye
+    maxZoom: 2.0,2.0
+  - type: Fixtures
+    fixtures:
+      EventHorizonCollider:
+        shape:
+          !type:PhysShapeCircle
+            radius: 5
+        hard: false
+        restitution: 0.8
+        density: 1
+        mask:
+        - SingularityLayer
+        layer:
+        - SingularityLayer
+      EventHorizonConsumer:
+        shape:
+          !type:PhysShapeCircle
+            radius: 5
+        hard: false
+        mask:
+        - SingularityLayer
+        layer:
+        - SingularityLayer
+  - type: Input
+    context: "ghost"
+  - type: MovementIgnoreGravity
+  - type: IntrinsicRadioReceiver
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Command
+    - CentCom
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Syndicate
+    globalReceive: true
+  - type: Physics
+    bodyType: Dynamic
+    bodyStatus: InAir
+  - type: CanMoveInAir
+  - type: EventHorizon
+    radius: 5
+    canBreachContainment: true
+  - type: GravityWell
+    baseRadialAcceleration: 6
+    maxRange: 8
+  - type: Tag
+    tags:
+    - GhostOnlyWarp
+  - type: WarpPoint
+    follow: true
+    location: Ratvar
+    blacklist:
+      tags:
+      - GhostOnlyWarp
