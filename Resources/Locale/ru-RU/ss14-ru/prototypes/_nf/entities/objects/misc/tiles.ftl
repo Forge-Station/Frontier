@@ -1,15 +1,3 @@
-ent-FloorTileItemGrassDark = тёмный травяной пол
-  .desc = { "" }
-
-ent-FloorTileItemGrassLight = светлый травяной пол
-  .desc = { "" }
-
-ent-FloorTileItemDirt = земляной пол
-  .desc = { "" }
-
-ent-FloorTileItemBedrock = базальт (бедрок)
-  .desc = { "" }
-
 ent-FloorTileItemGoldMono = золотая моно‑плитка
   .desc = { "" }
 
