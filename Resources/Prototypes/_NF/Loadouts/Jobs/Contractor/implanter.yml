@@ -1,7 +1,7 @@
 #T0
 - type: loadout
   id: ContractorMedicalTrackingImplanter
-  name: медицинский трекер #Corvax-Frontier
+  name: медицинский трекер # Forge-change
   storage:
     back:
     - MedicalTrackingImplanter
@@ -9,7 +9,7 @@
 #T1
 - type: loadout
   id: ContractorLightImplanter
-  name: имплантер фонарика #Corvax-Frontier
+  name: имплантер фонарика # Forge-change
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -19,7 +19,7 @@
 
 - type: loadout
   id: ContractorBikeHornImplanter
-  name: имплантер хонк-гудка #Corvax-Frontier
+  name: имплантер хонк-гудка # Forge-change
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -29,7 +29,7 @@
 
 - type: loadout
   id: ContractorSadTromboneImplanter
-  name: имплант "Грустный тромбон" #Corvax-Frontier
+  name: имплант "Грустный тромбон" # Forge-change
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -40,7 +40,7 @@
 #T2
 - type: loadout
   id: ContractorMimePowersImplanter
-  name: mime vow implanter
+  name: имплант клятвы мима # Forge-change
   description: For the budding mime. Take your vow today.
   effects:
   - !type:GroupLoadoutEffect
@@ -51,7 +51,7 @@
 
 - type: loadout
   id: ContractorBibleUserImplanter
-  name: faith implanter
+  name: имплант веры # Forge-change
   description: For the budding chaplain. Perform miracles, proselytize, and grow your flock.
   effects:
   - !type:GroupLoadoutEffect

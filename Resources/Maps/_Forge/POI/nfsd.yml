@@ -25341,4 +25341,21 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 8.5,16.5
       parent: 1
+- proto: SpawnPointEngineerNfsd #Forge
+  entities:
+  - uid: 3603
+    components:
+    - type: Transform
+      pos: 1.5,-2.5
+      parent: 1
+  - uid: 3604
+    components:
+    - type: Transform
+      pos: 18.5,8.5
+      parent: 1
+  - uid: 3605
+    components:
+    - type: Transform
+      pos: 18.5,4.5
+      parent: 1
 ...

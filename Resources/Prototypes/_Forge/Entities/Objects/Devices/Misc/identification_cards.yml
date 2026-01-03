@@ -1,0 +1,12 @@
+- type: entity
+  parent: CadetIDCard
+  id: EngineerNfsdIDCard
+  name: NFSD specialist ID card
+  components:
+  - type: PresetIdCard
+    job: EngineerNfsd
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: nfsd
+    - state: idengynfsd

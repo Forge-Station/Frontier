@@ -280,3 +280,29 @@
   - type: Tag
     tags:
     - DoorBumpOpener
+
+- type: entity
+  parent: BaseSecurityPDA
+  id: EngineerNfsdPDA
+  name: specialist PDA
+  description: Whosoever bears this PDA is close to being the law.
+  components:
+  - type: Pda
+    id: EngineerNfsdIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookNfsdSop
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-deputy
+  - type: PdaBorderColor
+    borderColor: "#FFFDD0"
+    accentHColor: "#896b49"
+  - type: Icon
+    state: pda-deputy

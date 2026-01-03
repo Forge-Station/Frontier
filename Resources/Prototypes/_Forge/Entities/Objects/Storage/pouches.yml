@@ -256,3 +256,55 @@
       pocket:
       - state: equipped-BELT
         color: "#1a1a1a"
+
+- type: entity
+  id: PouchTechnicLogistic
+  parent: NFPouchUtility
+  name: syndicate pouch
+  suffix: TechnicLogistic
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    layers:
+    - state: base_Syndi
+    - state: close_Syndi
+      map: ["closeLayer"]
+    - state: open_TL
+      map: ["openLayer"]
+      visible: false
+    - state: inside
+      map: ["insideLayer"]
+      visible: false
+    - state: fill-util4-1
+      map: [ "pouchFill4" ]
+      visible: false
+    - state: fill-util3-1
+      map: [ "pouchFill3" ]
+      visible: false
+    - state: fill-util2-1
+      map: [ "pouchFill2" ]
+      visible: false
+    - state: fill-util1-1
+      map: [ "pouchFill1" ]
+      visible: false
+    - state: decal_TL
+      map: [ "decal1" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#1a1a1a"
+      right:
+      - state: inhand-right
+        color: "#1a1a1a"
+  - type: Clothing
+    quickEquip: false
+    sprite: Forge/Objects/Storage/Pouches/pouch.rsi
+    slots: [ belt, pocket ]
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+        color: "#1a1a1a"
+      pocket:
+      - state: equipped-BELT
+        color: "#1a1a1a"

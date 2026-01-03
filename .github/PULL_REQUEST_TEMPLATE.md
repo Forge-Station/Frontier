@@ -1,41 +1,41 @@
-<!-- Guidelines: https://docs.spacestation14.io/en/getting-started/pr-guideline -->
+<!-- Руководство: https://docs.spacestation14.io/en/getting-started/pr-guideline -->
 
-## About the PR
-<!-- What did you change? -->
-<!-- If this is a code change, summarize at high level how your new code works. This makes it easier to review. -->
+## О PR
+<!-- Что вы изменили? -->
+<!-- Если это изменение кода, кратко опишите, как работает ваш новый код. Это облегчит проверку. -->
 
-## Why / Balance
-<!-- Discuss how this would affect game balance or explain why it was changed. Link any relevant discussions or issues. -->
+## Зачем / Баланс
+<!-- Обсудите, как это повлияет на игровой баланс, или объясните, почему это было изменено. Прикрепите ссылки на любые соответствующие обсуждения или проблемы. -->
 
-## Technical details
-<!-- Summary of code changes for easier review. -->
+## Технические детали
+<!-- Краткое изложение изменений кода для облегчения проверки. -->
 
-## How to test
-<!-- Describe a procedure to test this feature, along with expected output/behavior. -->
+## Как тестировать
+<!-- Опишите процедуру для тестирования этой функции, а также ожидаемый результат/поведение. -->
 
-## Media
-<!-- Attach media if the PR makes ingame changes (clothing, items, features, etc).
-Small fixes/refactors are exempt. Media may be used in SS14 progress reports with credit. -->
+## Медиа
+<!-- Прикрепите медиа, если PR вносит внутриигровые изменения (одежда, предметы, функции и т.д.).
+Небольшие исправления/рефакторинги освобождаются от этого требования. Медиа могут быть использованы в отчетах о проделанной работе SS14 с указанием авторства. -->
 
-## Requirements
-<!-- Confirm the following by placing an X in the brackets [X]: -->
-- [ ] I have read [CONTRIBUTING.md](https://github.com/new-frontiers-14/frontier-station-14/blob/master/CONTRIBUTING.md) and and am following the [Pull Request and Changelog Guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
-- [ ] I have added media to this PR or it does not require an ingame showcase.
-- [ ] I have reviewed the [Ship Submission Guidelines](https://frontierstation.wiki.gg/wiki/Ship_Submission_Guidelines) if relevant.
-- [ ] I confirm that the content in this PR is my own work, and/or is properly attributed to the original author(s).
-<!-- You should understand that not following the above may get your PR closed at maintainer’s discretion -->
+## Требования
+<!-- Подтвердите следующее, поставив X в скобки [X]: -->
+- [ ] Я прочитал [CONTRIBUTING.md](https://github.com/new-frontiers-14/frontier-station-14/blob/master/CONTRIBUTING.md) и следую [Руководству по Pull Request и Changelog](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
+- [ ] Я добавил медиа к этому PR, или он не требует внутриигровой демонстрации.
+- [ ] Я ознакомился с [Руководством по отправке кораблей](https://frontierstation.wiki.gg/wiki/Ship_Submission_Guidelines), если это применимо.
+- [ ] Я подтверждаю, что содержимое этого PR является моей собственной работой и/или должным образом атрибутировано оригинальному автору(ам).
+<!-- Вы должны понимать, что несоблюдение вышеуказанных правил может привести к закрытию вашего PR по усмотрению мейнтейнера -->
 
-## Breaking changes
-<!-- List any breaking changes, including namespaces, public class/method/field changes, prototype renames; and provide instructions for fixing them. -->
+## Критические изменения
+<!-- Перечислите любые критические изменения, включая пространства имен, изменения открытых классов/методов/полей, переименования прототипов; и предоставьте инструкции по их исправлению. -->
 
-**Changelog**
-<!-- Add a Changelog entry to make players aware of new features or changes that could affect gameplay.
-Make sure to read the guidelines and take this Changelog template out of the comment block in order for it to show up.
-Changelog must have a :cl: symbol, so the bot recognizes the changes and adds them to the game's changelog. -->
+**Список изменений**
+<!-- Добавьте запись в список изменений, чтобы игроки были в курсе новых функций или изменений, которые могут повлиять на игровой процесс.
+Обязательно прочтите руководство и извлеките этот шаблон списка изменений из блока комментариев, чтобы он отображался.
+Список изменений должен иметь символ :cl:, чтобы бот распознал изменения и добавил их в список изменений игры. -->
 <!--
 :cl:
-- add: Added fun!
-- remove: Removed fun!
-- tweak: Changed fun!
-- fix: Fixed fun!
+- add: Добавлено веселье!
+- remove: Удалено веселье!
+- tweak: Изменено веселье!
+- fix: Исправлено веселье!
 -->
