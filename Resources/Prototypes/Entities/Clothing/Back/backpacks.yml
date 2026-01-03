@@ -207,7 +207,9 @@
     sprite: Clothing/Back/Backpacks/ertleader.rsi
   - type: Storage
     grid:
-    - 0,0,10,3
+    - 0,0,11,5 #Forge-change
+  - type: ExplosionResistance #Forge-change
+    damageCoefficient: 0
 
 - type: entity
   parent: ClothingBackpackERTLeader

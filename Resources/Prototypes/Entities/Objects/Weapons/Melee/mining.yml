@@ -169,6 +169,7 @@
         Blunt: 10
         Slash: 5
         Structural: 70  # Forge-change
+      armorPenetration: 0.15 # Forge-Change
     soundHit:
       collection: MetalThud
   - type: Wieldable
@@ -272,6 +273,7 @@
         Blunt: 3
         Slash: 7
         Structural: 90  # Forge-change
+      armorPenetration: 0.1 # Forge-Change
   - type: IncreaseDamageOnWield
     damage:
       types:

@@ -114,6 +114,18 @@ public sealed partial class GunSystem
         };
 
         _damageExamine.AddDamageExamine(args.Message, Damageable.ApplyUniversalAllModifiers(damageSpec), damageType);
+
+        if (TryComp<ProjectileBatteryAmmoProviderComponent>(uid, out var projectileComp))
+        {
+            var ap = GetProjectilePenetration(projectileComp.Prototype);
+            if (ap == 0)
+                return;
+
+            var abs = Math.Abs(ap);
+            args.Message.AddMarkupPermissive("\n" + Loc.GetString("armor-penetration", ("arg", ap/abs), ("abs", abs)));
+
+            return;
+        }
     }
 
     private DamageSpecifier? GetDamage(BatteryAmmoProviderComponent component)

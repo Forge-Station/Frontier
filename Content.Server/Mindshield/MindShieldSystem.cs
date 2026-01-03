@@ -2,6 +2,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Mind;
 using Content.Server.Popups;
 using Content.Server.Roles;
+using Content.Shared._Forge.Overlord.Components; // forge-change: New overlord implant
 using Content.Shared.Database;
 using Content.Shared.Implants;
 using Content.Shared.Mindshield.Components;
@@ -43,7 +44,7 @@ public sealed class MindShieldSystem : EntitySystem
     /// </summary>
     private void MindShieldRemovalCheck(EntityUid implanted, EntityUid implant)
     {
-        if (HasComp<HeadRevolutionaryComponent>(implanted))
+        if (HasComp<HeadRevolutionaryComponent>(implanted) || HasComp<OverlordComponent>(implanted)) // forge-change: New overlord implant
         {
             _popupSystem.PopupEntity(Loc.GetString("head-rev-break-mindshield"), implanted);
             QueueDel(implant);

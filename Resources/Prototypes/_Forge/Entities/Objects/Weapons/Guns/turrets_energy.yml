@@ -1,0 +1,58 @@
+- type: entity
+  parent: [WeaponEnergyTurretStationBase, MobLaserReflect]
+  id: WeaponEnergyTurretSyndicate
+  suffix: Syndicate
+  components:
+  - type: AccessReader
+    access: [["SyndicateAgent", "NuclearOperative"]]
+  - type: TurretTargetSettings
+    exemptAccessLevels:
+    - SyndicateAgent
+    - NuclearOperative
+  - type: Machine
+    board: WeaponEnergyTurretSyndicateMachineCircuitboard
+  - type: DeviceNetwork
+    receiveFrequencyId: TurretControlSynd
+    transmitFrequencyId: TurretSynd
+
+- type: entity
+  parent: WeaponEnergyTurretStationMachineCircuitboardBase
+  id: WeaponEnergyTurretSyndicateMachineCircuitboard
+  suffix: Security
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: security
+  - type: MachineBoard
+    prototype: WeaponEnergyTurretSyndicate
+
+- type: entity
+  parent: WeaponEnergyTurretStationControlPanelBase
+  id: WeaponEnergyTurretSyndicateControlPanel
+  suffix: AI, Silicon
+  components:
+  - type: AccessReader
+    access: [["SyndicateAgent", "NuclearOperative"]]
+  - type: DeviceNetwork
+    receiveFrequencyId: TurretSynd
+    transmitFrequencyId: TurretControlSynd
+  - type: TurretTargetSettings
+    exemptAccessLevels:
+    - SyndicateAgent
+    - NuclearOperative
+  - type: DeployableTurretController
+    accessLevels:
+    - SyndicateAgent
+    - NuclearOperative
+
+# Turret controllers send data to their turrets on this frequency
+- type: deviceFrequency
+  id: TurretControlSynd
+  name: device-frequency-prototype-name-turret-control
+  frequency: 1984
+
+# Turrets send data to their controllers on this frequency
+- type: deviceFrequency
+  id: TurretSynd
+  name: device-frequency-prototype-name-turret
+  frequency: 1984

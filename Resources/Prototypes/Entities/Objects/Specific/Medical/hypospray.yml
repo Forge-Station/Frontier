@@ -176,6 +176,9 @@
     price: 35 # These are limited supply items.
   - type: TrashOnSolutionEmpty
     solution: pen
+  - type: Tag # Forge-Change
+    tags:
+    - ChemicalMedipen
 
 - type: entity
   name: emergency medipen

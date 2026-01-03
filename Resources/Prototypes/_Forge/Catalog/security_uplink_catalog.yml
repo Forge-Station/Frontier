@@ -323,6 +323,27 @@
         - Sheriff
 
 - type: listing
+  id: UplinkSecurityMedkitMilitary
+  name: uplink-security-medkit-military-name
+  description: uplink-security-medkit-military-desc
+  productEntity: MedkitMilitaryFilled
+  icon: { sprite: Forge/Objects/Specific/Medical/firstaidkits.rsi, state: blackkit }
+  cost:
+    FrontierUplinkCoin: 12
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Brigmedic
+        - Sheriff
+
+# region explosives
+- type: listing
   id: UplinkC4
   name:  uplink-security-C4-name
   description: uplink-security-C4-desc
@@ -330,7 +351,7 @@
   cost:
     FrontierUplinkCoin: 6
   categories:
-    - UplinkSecurityUtility
+    - UplinkSecurityExplosives
 
 # Move to NFSD Techtree
 #- type: listing

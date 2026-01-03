@@ -17,9 +17,11 @@
             - !type:TargetInLOSPrecondition
               targetKey: Target
               rangeKey: RangedRange
+              opaqueKey: true # corvax-forge
           operator: !type:GunOperator
             targetKey: Target
             requireLOS: true
+            opaqueKey: true # corvax-forge
           services:
             - !type:UtilityService
               id: RangedService

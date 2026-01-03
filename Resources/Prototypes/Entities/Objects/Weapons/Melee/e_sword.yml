@@ -178,6 +178,7 @@
         Slash: 15
         Heat: 15
         Structural: 20
+      armorPenetration: 0.2 # Forge-Change
   - type: MeleeWeapon
     wideAnimationRotation: -135
     attackRate: 1
@@ -257,6 +258,7 @@
         types:
             Slash: 10
             Heat: 10
+        armorPenetration: 0.1 # Forge-Change
     deactivatedSecret: true
   - type: ItemToggleActiveSound
     activeSound:
@@ -327,6 +329,7 @@
       types:
         Slash: 10
         Heat: 10
+      armorPenetration: 0.1 # Forge-Change
   - type: ComponentToggler
     components:
     - type: Sharp
@@ -397,6 +400,7 @@
             Slash: 15 # Forge
             Heat: 15 # Forge
             Structural: 20 # Forge
+        armorPenetration: 0.3 # Forge-Change
     deactivatedSecret: true
   - type: Sprite
     sprite: Objects/Weapons/Melee/e_cutlass.rsi
@@ -438,6 +442,7 @@
             Slash: 16 # Forge-change
             Heat: 19 # Forge-change
             Structural: 21 # Forge-change
+        armorPenetration: 0.1 # Forge-Change
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Weapons/ebladehum.ogg

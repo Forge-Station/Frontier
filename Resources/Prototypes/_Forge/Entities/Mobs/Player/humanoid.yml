@@ -325,13 +325,14 @@
     mask: ClothingMaskGasDeathSquad
     eyes: ClothingEyesGlassesCentComm
     ears: ClothingHeadsetAltCentCom
-    gloves: ClothingHandsGlovesCombat
+    gloves: ClothingHandsGlovesCombatUpgrade
     outerClothing: ClothingOuterHardsuitDeathsquad
     shoes: ClothingShoesBootsMagCombatERT
     id: DeathsquadPDA
-    pocket1: EnergySword
+    pocket1: EnergySwordBlue
     pocket2: EnergyShieldAdvanced
-    belt: ClothingBeltMilitaryWebbingMed
+    belt: ClothingBeltMilitaryWebbingMedExpResist
+    wallet: ClothingWalletLeatherBlack
   storage:
     back:
       - NFWeaponEnergyPistolPulse
@@ -342,20 +343,16 @@
       - ToolDebug
       - WelderExperimental
     belt:
-      - NaniteskitFilled
-      - Hypospray
+      - CentCommHypoNanites
+      - CentCommHypo
       - ChemistryBottleEpinephrine
       - ChemistryBottleEpinephrine
       - ChemistryBottleEphedrine
       - ChemistryBottleEphedrine
       - ChemistryBottleOmnizine
       - ChemistryBottleOmnizine
-      - SyringePhalanximine
-      - SyringePhalanximine
-      - SyringePhalanximine
-      - SyringePhalanximine
   inhand:
-  - WeaponDSPulseGun
+    - WeaponDSPulseGun
 
 
 ## ERT Leader
@@ -386,6 +383,7 @@
     - Sheleg
     - Harpy
     - Android
+    - Skrell
   components:
     - type: GhostRole
       name: ghost-role-information-ert-leader-name
@@ -411,19 +409,20 @@
     outerClothing: ClothingOuterHardsuitERTLeader
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
-    pocket1: NFWeaponPistolN1984
+    belt: ClothingBeltAssaultFilled
+    pocket1: EnergySwordBlue
     pocket2: FlashlightSeclite
+    wallet: ClothingWalletLeatherBlack
   storage:
     back:
-    - NFAmmunitionBoxBigRifle20Overpressure
-    - NFAmmunitionBoxBigRifle20Overpressure
-    - MedkitCombatFilled
+    - MedkitMilitaryFilled
     - NFMagazinePistol45
     - NFWeaponEnergyPistolDisabler
     - JawsOfLife
+    - NFWeaponEnergyPistolPulse
+    - NFWeaponPistolN1984
   inhand:
-  - WeaponCaseLongM4A1
+    - pulse20
 
 ## ERT Janitor
 
@@ -453,6 +452,7 @@
     - Sheleg
     - Harpy
     - Android
+    - Skrell
   components:
     - type: GhostRole
       name: ghost-role-information-ert-janitor-name
@@ -479,14 +479,16 @@
     id: ERTJanitorPDA
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltJanitorFilled
-    pocket1: Flare
+    pocket1: NFWeaponEnergyPistolPulse
+    wallet: ClothingWalletLeatherBlack
   storage:
     back:
-    - BoxLightMixed
-    - BoxLightMixed
-    - LightReplacer
-    - Soap
-    - CrowbarRed
+      - MedkitMilitaryFilled
+      - BoxLightMixed
+      - BoxLightMixed
+      - LightReplacer
+      - Soap
+      - CrowbarRed
   inhand:
     - AdvMopItem
 
@@ -516,6 +518,7 @@
     - Sheleg
     - Harpy
     - Android
+    - Skrell
   components:
     - type: GhostRole
       name: ghost-role-information-ert-engineer-name
@@ -534,7 +537,7 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTEngineer
     back: ClothingBackpackERTEngineer
-    shoes: ClothingShoesBootsMagAdv
+    shoes: ClothingShoesBootsMagCombatERT
     mask: ClothingMaskGasERT
     eyes: ClothingEyesGlassesCentComm
     gloves: ClothingHandsGlovesCombat
@@ -542,20 +545,22 @@
     id: ERTEngineerPDA
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltChiefEngineerFilled
-    pocket1: Flare
+    pocket1: EnergySwordBlue
     pocket2: GasAnalyzer
+    wallet: ClothingWalletLeatherBlack
   storage:
     back:
-    - NFAmmunitionBoxBigRifle20Overpressure
-    - trayScanner
-    - RCD
-    - RCDAmmo
-    - RCDAmmo
-    - CableMVStack
-    - CableHVStack
-    - CableApcStack
+      - MedkitMilitaryFilled
+      - trayScanner
+      - RCD
+      - RCDAmmo
+      - RCDAmmo
+      - CableMVStack
+      - CableHVStack
+      - CableApcStack
+      - NFWeaponEnergyPistolPulse
   inhand:
-    - WeaponCaseLongWeaponSubMachineGunScorpion
+    - NFWeaponEnergyRifleAssaultPulseCarbine
 
 ## ERT Security
 
@@ -584,6 +589,7 @@
     - Sheleg
     - Harpy
     - Android
+    - Skrell
   components:
     - type: GhostRole
       name: ghost-role-information-ert-security-name
@@ -602,24 +608,24 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTSecurity
     back: ClothingBackpackERTSecurity
-    shoes: ClothingShoesBootsMagAdv
+    shoes: ClothingShoesBootsMagCombatERT
     mask: ClothingMaskGasERT
     eyes: ClothingEyesGlassesCentComm
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTSecurity
     id: ERTSecurityPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
-    pocket1: NFWeaponPistolUniversalNfsd
+    belt: ClothingBeltAssaultFilled
+    pocket1: EnergySwordBlue
     pocket2: FlashlightSeclite
+    wallet: ClothingWalletLeatherBlack
   storage:
     back:
-    - NFAmmunitionBoxBigRifle20Overpressure
-    - MedkitCombatFilled
-    - CrowbarRed
-    - NFMagazineHighCapacityPistol35Overpressure
+      - MedkitMilitaryFilled
+      - CrowbarRed
+      - NFWeaponEnergyPistolPulse
   inhand:
-    - WeaponCaseLongWeaponRifleLecter
+    - NFWeaponEnergyRifleAssaultPulseCarbine
 
 ## ERT Medic
 
@@ -648,6 +654,7 @@
     - Sheleg
     - Harpy
     - Android
+    - Skrell
   components:
     - type: GhostRole
       name: ghost-role-information-ert-medical-name
@@ -666,26 +673,25 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTMedic
     back: ClothingBackpackERTMedical
-    shoes: ClothingShoesBootsMagAdv
+    shoes: ClothingShoesBootsMagCombatERT
     mask: ClothingMaskGasERT
     eyes: ClothingEyesGlassesCentComm
-    gloves: ClothingHandsGlovesNitrile
+    gloves: ClothingHandsGlovesLatexSurgeon
     outerClothing: ClothingOuterHardsuitERTMedical
     id: ERTMedicPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltMilitaryWebbingMed
-    pocket1: Flare
+    belt: ClothingBeltMilitaryWebbingMedExpResist
+    pocket1: EnergySwordBlue
+    wallet: ClothingWalletLeatherBlack
   storage:
     back:
-      - NFAmmunitionBoxShellShotgunOverpressure
-      - NFAmmunitionBoxShellShotgunOverpressure
-      - NFAmmunitionBoxShellShotgunOverpressure
-      - NFAmmunitionBoxShellShotgunOverpressure
-      - MedkitCombatFilled
-      - MedkitCombatFilled
+      - MedkitMilitaryFilled
+      - MedkitMilitaryFilled
       - CrowbarRed
+      - NFWeaponEnergyPistolPulse
     belt:
-      - Hypospray
+      - DefibrillatorCompact
+      - CentCommHypo
       - ChemistryBottleEpinephrine
       - ChemistryBottleEpinephrine
       - ChemistryBottleEpinephrine
@@ -693,11 +699,8 @@
       - ChemistryBottleEphedrine
       - ChemistryBottleOmnizine
       - ChemistryBottleOmnizine
-      - Syringe
-      - Syringe
-      - Syringe
   inhand:
-    - WeaponCaseLongAD12
+    - NFWeaponEnergyRifleAssaultPulseCarbine
 ## CBURN
 
 - type: entity
@@ -725,6 +728,7 @@
     - Sheleg
     - Harpy
     - Android
+    - Skrell
   components:
     - type: Loadout
       prototypes: [ ForgeCBURNGear ]
@@ -752,39 +756,103 @@
     ears: ClothingHeadsetAltCentCom
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitCBURN
-    shoes: ClothingShoesBootsMagAdv
+    shoes: ClothingShoesBootsMagCombatERT
     id: CBURNPDA
-    pocket1: RadioHandheldNF
-    pocket2: NFWeaponEnergyPistolLaser
+    pocket1: EnergySwordBlue
+    pocket2: NFWeaponEnergyPistolPulse
     belt: ClothingBeltBandolier
+    wallet: ClothingWalletLeatherBlack
   storage:
     back:
-    - NFAmmunitionBoxShellShotgunIncendiary
-    - NFAmmunitionBoxShellShotgunIncendiary
-    - NFAmmunitionBoxShellShotgunIncendiary
-    - NFAmmunitionBoxShellShotgunIncendiary
-    - GrenadeFlashBang
-    - PillAmbuzolPlus
-    - PillAmbuzol
+      - NFAmmunitionBoxShellShotgunIncendiary
+      - NFAmmunitionBoxShellShotgunIncendiary
+      - NFAmmunitionBoxShellShotgunIncendiary
+      - NFAmmunitionBoxShellShotgunIncendiary
+      - MedkitMilitaryFilled
+      - GrenadeFlashBang
+      - PillAmbuzolPlus
+      - PillAmbuzol
   inhand:
    - WeaponCaseLongAD12
 
 # Флот УСФ
+- type: entity
+  id: ForgeRandomHumanoidSpawnerMSFNavyOffic
+  name: Полевой офицер
+  suffix: Роль УСФ
+  components:
+    - type: Sprite
+      sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/navy_gold.rsi
+    - type: RandomHumanoidSpawner
+      settings: ForgeMSFNavyOffic
+
+- type: randomHumanoidSettings
+  id: ForgeMSFNavyOffic
+  parent: EventHumanoidCentcomm
+  speciesBlacklist:
+    - Diona
+    - Gingerbread
+    - Skeleton
+    - Vox
+    - Oni
+    - Elzuosa
+    - Goblin
+    - Sheleg
+    - Harpy
+    - Android
+    - Skrell
+  components:
+    - type: Loadout
+      prototypes: [ MSFNavyOfficGear ]
+      roleLoadout: [ RoleSurvivalEVA ]
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirst
+      - NamesLast
+      nameFormat: name-format-standard
+    - type: BankAccount
+
+- type: startingGear
+  id: MSFNavyOfficGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNavyGold
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesCombatUpgrade
+    outerClothing: ClothingOuterArmorMKVIVestWeb
+    mask: ClothingMaskGasSecurity
+    id: CentcomPDA
+    ears: ClothingHeadsetCentCom
+    pocket1: NFWeaponEnergyPistolPulse
+    back: ClothingBackpackSatchelLeather
+    belt: ClothingBeltAssaultFilled
+    wallet: ClothingWalletLeatherBlack
+  storage:
+    back:
+      - MedkitMilitaryFilled
+      - CrowbarRed
+
+
+
 - type: startingGear
   id: MSFAdmiralGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitNavyGold
-    shoes: ClothingShoesBootsJack
+    mask: ClothingMaskGasDeathSquad
+    jumpsuit: ClothingUniformJumpsuitNanotrasenRepresentative
+    shoes: ClothingShoesBootsJackAdvanced
     head: ClothingHeadHatBeretCommander
     eyes: ClothingEyesGlassesCentComm
     gloves: ClothingHandsGlovesHeavyGoldenTrim
+    outerClothing: ClothingOuterArmorMKVIVestWeb
     id: MSFAdmiralPDA
     ears: ClothingHeadsetCentCom
     pocket1: RubberStampMSFAdmiral
-    pocket2: MindShieldImplanter
+    pocket2: CentCommHypoNanites
     back: ClothingBackpackSatchelLeather
     belt: ClothingBeltOfficerSheathFilled
     wallet: ClothingWalletLeatherBlack
+  inhand:
+   - MindShieldImplanter
 
 - type: startingGear
   id: MSFNavyRepGear
@@ -794,14 +862,15 @@
     head: ClothingHeadHatBeretCommander
     eyes: ClothingEyesGlassesCentComm
     gloves: ClothingHandsGlovesHeavyGoldenTrim
-    outerClothing: ClothingOuterVest
+    outerClothing: ClothingOuterArmorMKVIVestWeb
     id: MSFRepPDA
     ears: ClothingHeadsetCentCom
     pocket1: NFWeaponEnergyPistolPulse
-    pocket2: MindShieldImplanter
     back: ClothingBackpackSatchelLeather
     belt: ClothingBeltOfficerSheathFilled
     wallet: ClothingWalletLeatherBlack
+  inhand:
+   - MindShieldImplanter
 
 - type: startingGear
   id: MSFOperatorGear
@@ -812,6 +881,27 @@
     gloves: ClothingHandsGlovesSr
     id: MSFOperatorPDA
     ears: ClothingHeadsetCentCom
-    pocket2: MindShieldImplanter
     back: ClothingBackpackSatchelLeather
     wallet: ClothingWalletLeatherBlack
+  inhand:
+   - MindShieldImplanter
+
+- type: startingGear
+  id: MSFSpecOpsGear
+  equipment:
+    head: ClothingHeadHatSpecOper
+    jumpsuit: ClothingUniformJumpsuitSpecOper
+    shoes: ClothingShoesBootsJackAdvanced
+    eyes: ClothingEyesGlassesCentComm
+    gloves: ClothingHandsGlovesCombatUpgrade
+    outerClothing: ClothingOuterCoatSpecOperGreatcoat
+    id: SpecOperPDA
+    ears: ClothingHeadsetCentCom
+    pocket1: NFWeaponEnergyPistolPulse
+    pocket2: CentCommHypoNanites
+    belt: ClothingBeltOfficerSheathFilled
+    back: ClothingBackpackSatchelLeather
+    wallet: ClothingWalletLeatherBlack
+    mask: ClothingMaskGasDeathSquad
+  inhand:
+   - MindShieldImplanter

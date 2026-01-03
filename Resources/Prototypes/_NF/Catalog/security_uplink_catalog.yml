@@ -1169,7 +1169,7 @@
   name:  uplink-security-breachingcharge-box-name
   description: uplink-security-breachingcharge-box-desc
   productEntity: BoxBreachingCharges
-  icon: { sprite: _DV/Objects/Weapons/Bombs/breaching.rsi, state: icon}
+  icon: { sprite: Forge/Objects/Weapons/Bombs/breaching.rsi, state: icon} # Forge-change: resprite
   cost:
     FrontierUplinkCoin: 3
   categories:

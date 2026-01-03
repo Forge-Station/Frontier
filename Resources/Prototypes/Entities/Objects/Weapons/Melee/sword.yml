@@ -87,6 +87,7 @@
     damage:
       types:
         Slash: 17 #cmon, it has to be at least BETTER than the rest.
+      armorPenetration: 0.15 # Forge
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Reflect
@@ -161,6 +162,7 @@
     damage:
       types:
         Slash: 30
+      armorPenetration: 0.25 # Forge-Change
   - type: Item
     storedSprite:
       state: storage

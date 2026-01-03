@@ -57,8 +57,8 @@
     visuals:
       enum.BatteryWeaponFireModeVisuals.State:
         enum.DeployableTurretVisuals.Weapon:
-          BulletEnergyTurretDisabler: { state: stun }
-          BulletEnergyTurretLaser: { state: lethal }
+          NFBulletDisabler: { state: stun } # Forge
+          NFBulletEnergyTurretLaser: { state: lethal } # Forge
       enum.DeployableTurretVisuals.Broken:
         base:
           True: { state: destroyed }
@@ -74,14 +74,14 @@
     factions:
     - AllHostile
   - type: ProjectileBatteryAmmoProvider
-    # proto: BulletEnergyTurretDisabler # Frontier
+    proto: NFBulletDisabler # Forge
     fireCost: 100
   - type: BatteryWeaponFireModes
-    fireModes: [] # Frontier: add empty list
-    # - proto: BulletEnergyTurretDisabler # Frontier
-    #   fireCost: 100 # Frontier
-    # - proto: BulletEnergyTurretLaser # Frontier
-    #   fireCost: 100 # Frontier
+    fireModes:
+    - proto: NFBulletDisabler # Forge
+      fireCost: 100 # Forge
+    - proto: NFBulletEnergyTurretLaser # Forge
+      fireCost: 100 # Forge
   - type: DeployableTurret
     retractedDamageModifierSetId: Metallic
     deployedDamageModifierSetId: FlimsyMetallic
@@ -136,6 +136,8 @@
   - type: LockedWiresPanel
   - type: UseDelay
     delay: 1.2
+  - type: Gun # Forge
+    projectileSpeed: 40
 
 - type: entity
   parent: WeaponEnergyTurretStationBase

@@ -30,7 +30,7 @@
     energy: 3
 
 - type: entity
-  parent: [ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase, BaseC3SyndicateContraband]
+  parent: [ClothingHeadHardsuitBase, BaseC3SyndicateContraband]
   id: ClothingHeadHelmetHardsuitSyndieSST
   name: шлем кроваво-чёрного скафандра
   description: Тяжелобронированный шлем, предназначенный для элитных операций. Собственность Ударного подразделения Синдиката.
@@ -45,10 +45,6 @@
       - state: off-equipped-HELMET
       - state: equipped-HELMET-unshaded
         shader: unshaded
-  - type: PointLight
-    color: darkred
-    radius: 7
-    energy: 3
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000

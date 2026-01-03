@@ -80,12 +80,13 @@
   suffix: CentCom
   components:
   - type: Sprite
+    color: "#bfe3ff" # Forge-Change: Fax-color-fix
     layers:
       - state: icon
         map: [ "base" ]
-        color: "#bfe3ff"
+        # color: "#bfe3ff" # Forge-Change: Fax-color-fix
   - type: FaxMachine
-    name: "Central Command"
+    name: "Штаб УСФ" # Forge-Lore-Change: CentCom -> MSF
     notifyAdmins: true
 
 - type: entity
@@ -95,14 +96,15 @@
   suffix: Syndicate
   components:
   - type: Sprite
+    color: "#a3a3a3" # Forge-Change: Fax-color-fix
     layers:
       - state: icon
         map: [ "base" ]
-        color: "#a3a3a3"
+        #color: "#a3a3a3" # Forge-Change: Fax-color-fix
   - type: FaxMachine
     name: "ERR*?*%!"
     responsePings: false
-    notifyAdmins: true
+    notifyAdmins: false # Forge-Change false<true
   - type: Emagged
     emagType: Interaction
 

@@ -122,6 +122,8 @@
     price: 200
   - type: Jetpack #CorvaxFrontier
     radarBlip: false
+  - type: ClothingSlowOnDamageModifier # Corvax-Forge
+    modifier: 0.5
 
 - type: entity
   parent: BaseAction

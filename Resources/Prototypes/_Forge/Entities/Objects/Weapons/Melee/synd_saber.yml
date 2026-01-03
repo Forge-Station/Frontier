@@ -49,12 +49,12 @@
   - type: Sprite
     sprite: Forge/Objects/Weapons/Melee/syndicate_sabre.rsi
   - type: MeleeWeapon
-    resistanceBypass: true
     attackRate: 1.5
     angle: 0
     damage:
       types:
         Slash: 19
+      armorPenetration: 0.4
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Reflect

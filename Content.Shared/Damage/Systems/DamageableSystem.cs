@@ -199,7 +199,8 @@ namespace Content.Shared.Damage
                 {
                     // TODO DAMAGE PERFORMANCE
                     // use a local private field instead of creating a new dictionary here..
-                    damage = DamageSpecifier.ApplyModifierSet(damage, modifierSet);
+                    damage = DamageSpecifier.ApplyModifierSet(damage,
+                        DamageSpecifier.PenetrateArmor(modifierSet, damage.ArmorPenetration)); // Forge edit
                 }
 
                 var ev = new DamageModifyEvent(damage, origin);

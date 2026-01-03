@@ -39,6 +39,10 @@ namespace Content.Shared.Damage
         [IncludeDataField(customTypeSerializer: typeof(DamageSpecifierDictionarySerializer), readOnly: true)]
         public Dictionary<string, FixedPoint2> DamageDict { get; set; } = new();
 
+        // Forge
+        [DataField]
+        public float ArmorPenetration { get; set; }
+
         /// <summary>
         ///     Returns a sum of the damage values.
         /// </summary>
@@ -89,12 +93,19 @@ namespace Content.Shared.Damage
         /// </summary>
         public DamageSpecifier() { }
 
+        // Forge
+        public DamageSpecifier(float armorPenetration)
+        {
+            ArmorPenetration = armorPenetration;
+        }
+
         /// <summary>
         ///     Constructor that takes another DamageSpecifier instance and copies it.
         /// </summary>
         public DamageSpecifier(DamageSpecifier damageSpec)
         {
             DamageDict = new(damageSpec.DamageDict);
+            ArmorPenetration = damageSpec.ArmorPenetration; // Forge
         }
 
         /// <summary>
@@ -346,10 +357,52 @@ namespace Content.Shared.Damage
             }
         }
 
+        // Forge - partial AP. Returns new armor modifier set.
+        public static DamageModifierSet PenetrateArmor(DamageModifierSet modifierSet, float penetration)
+        {
+            if (penetration == 0f ||
+                penetration > 0f && (modifierSet.IgnoreArmorPierceFlags & (int) PartialArmorPierceFlags.Positive) != 0 ||
+                penetration < 0f && (modifierSet.IgnoreArmorPierceFlags & (int) PartialArmorPierceFlags.Negative) != 0)
+                return modifierSet;
+
+            var result = new DamageModifierSet();
+            if (penetration >= 1f)
+                return result;
+
+            var inversePen = 1f - penetration;
+
+            foreach (var (type, coef) in modifierSet.Coefficients)
+            {
+                // Negative coefficients are not modified by this,
+                // coefficients above 1 will actually be lowered which is not desired
+                if (coef is <= 0 or >= 1)
+                {
+                    result.Coefficients.Add(type, coef);
+                    continue;
+                }
+
+                result.Coefficients.Add(type, MathF.Pow(coef, inversePen));
+            }
+
+            foreach (var (type, flat) in modifierSet.FlatReduction)
+            {
+                // Negative flat reductions are not modified by this
+                if (flat <= 0)
+                {
+                    result.FlatReduction.Add(type, flat);
+                    continue;
+                }
+
+                result.FlatReduction.Add(type, flat * inversePen);
+            }
+
+            return result;
+        }
+
         #region Operators
         public static DamageSpecifier operator *(DamageSpecifier damageSpec, FixedPoint2 factor)
         {
-            DamageSpecifier newDamage = new();
+            DamageSpecifier newDamage = new(damageSpec.ArmorPenetration);
             foreach (var entry in damageSpec.DamageDict)
             {
                 newDamage.DamageDict.Add(entry.Key, entry.Value * factor);
@@ -359,7 +412,7 @@ namespace Content.Shared.Damage
 
         public static DamageSpecifier operator *(DamageSpecifier damageSpec, float factor)
         {
-            DamageSpecifier newDamage = new();
+            DamageSpecifier newDamage = new(damageSpec.ArmorPenetration);
             foreach (var entry in damageSpec.DamageDict)
             {
                 newDamage.DamageDict.Add(entry.Key, entry.Value * factor);
@@ -369,7 +422,7 @@ namespace Content.Shared.Damage
 
         public static DamageSpecifier operator /(DamageSpecifier damageSpec, FixedPoint2 factor)
         {
-            DamageSpecifier newDamage = new();
+            DamageSpecifier newDamage = new(damageSpec.ArmorPenetration);
             foreach (var entry in damageSpec.DamageDict)
             {
                 newDamage.DamageDict.Add(entry.Key, entry.Value / factor);
@@ -379,7 +432,7 @@ namespace Content.Shared.Damage
 
         public static DamageSpecifier operator /(DamageSpecifier damageSpec, float factor)
         {
-            DamageSpecifier newDamage = new();
+            DamageSpecifier newDamage = new(damageSpec.ArmorPenetration);
 
             foreach (var entry in damageSpec.DamageDict)
             {

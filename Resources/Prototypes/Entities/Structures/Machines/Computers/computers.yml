@@ -687,6 +687,7 @@
     access: [["HeadOfPersonnel"], ["HeadOfSecurity"]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-station
+    canShuttle: false  #Corvax-Forge
     global: true #SR WILL NOT BE IGNORED
   - type: DeviceNetwork
     deviceNetId: Wireless
@@ -800,7 +801,7 @@
   - type: CommunicationsConsole
     title: comms-console-announcement-title-centcom
     color: "#1d8bad"
-    canShuttle: false
+    #canShuttle: false #Corvax-Forge
     global: true
   - type: Computer
     board: CentcommCommsComputerCircuitboard

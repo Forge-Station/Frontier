@@ -243,11 +243,11 @@
       - AstroNavCartridge
 
 - type: entity
-  name: КПК Центком
+  name: КПК УСФ
   description: Светло-зелёный символ ходячей бюрократии.
   parent: CentcomPDA
   id: MSFAdmiralPDA
-  suffix: адмирал УСФ
+  suffix: адмирал Флота
   components:
   - type: Pda
     id: CentcomIDCardMSFAdmiral
@@ -256,7 +256,7 @@
     - DoorBumpOpener
 
 - type: entity
-  name: КПК Центком
+  name: КПК УСФ
   description: Светло-зелёный символ ходячей бюрократии.
   parent: CentcomPDA
   id: MSFOperatorPDA
@@ -269,7 +269,7 @@
     - DoorBumpOpener
 
 - type: entity
-  name: КПК Центком
+  name: КПК УСФ
   description: Светло-зелёный символ ходячей бюрократии.
   parent: CentcomPDA
   id: MSFRepPDA
