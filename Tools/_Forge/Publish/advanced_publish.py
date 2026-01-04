@@ -108,10 +108,9 @@ def main():
 
 def get_files_to_publish(release_dir: str) -> Iterable[str]:
     try:
-        with os.scandir(release_dir) as d:
-            for entry in d:
-                if entry.is_file():
-                    yield entry.path
+        for root, dirs, files in os.walk(release_dir):
+            for file in files:
+                yield os.path.join(root, file)
     except FileNotFoundError:
         logger.error(f"Release directory '{release_dir}' not found")
         return []
@@ -122,7 +121,7 @@ def get_files_to_publish(release_dir: str) -> Iterable[str]:
 
 def get_engine_version() -> str:
     try:
-        proc = subprocess.run(["git", "describe","--tags", "--abbrev=0"], stdout=subprocess.PIPE, cwd="RobustToolbox", check=True, encoding="UTF-8")
+        proc = subprocess.run(["git", "describe","--tags", "--abbrev=0"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd="RobustToolbox", check=True, encoding="UTF-8", timeout=20)
         tag = proc.stdout.strip()
         if not tag.startswith("v"):
             logger.warning(f"Unexpected tag format: {tag}")
@@ -130,10 +129,13 @@ def get_engine_version() -> str:
         return tag[1:]
     except subprocess.CalledProcessError as e:
         stderr = (e.stderr or "").strip()
-        logger.error(f"Failed to get engine version: {stderr}")
+        logger.error(f"Failed to get engine version: {stderr[:300]}")
         return "unknown"
     except FileNotFoundError:
         logger.error("RobustToolbox directory not found")
+        return "unknown"
+    except subprocess.TimeoutExpired:
+        logger.error("Git command timed out")
         return "unknown"
 
 def upload_file(file_path: str, fork_id: str, publish_token: str, version: str, max_workers: int):
