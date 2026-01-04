@@ -49,23 +49,6 @@ z_offset = -5.0
 admin_chat_sound_path = "/Audio/Items/pop.ogg"
 admin_chat_sound_volume = -5.0
 
-[physics]
-broadphase_expand = 2.0
-target_minimum_tickrate = 60
-grid_fixtures = true
-grid_fixture_enlargement = -0.0099999997764826
-relative_movement = true
-tile_friction = 40.0
-stop_speed = 0.100000001490116
-
-[movement]
-mob_pushing = false
-
-[interface]
-audio = true
-click_sound = "/Audio/UserInterface/click.ogg"
-hover_sound = "/Audio/UserInterface/hover.ogg"
-
 [discord]
 rich_main_icon_id = "devstation"
 rich_second_icon_id = "logo"
@@ -117,8 +100,6 @@ server_ban_ip_ban_default = true
 server_ban_hwid_ban_default = true
 server_ban_use_last_details = true
 server_ban_erase_player = false
-
-[nf14]
 
 [nf14.respawn]
 enabled = true

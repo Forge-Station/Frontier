@@ -26,10 +26,7 @@
     preventExplosions: False
     preventEmpEvents: True
     preventRCDUse: True
-    preventFloorPlacement: True
-    preventFloorRemoval: True
     killHostileMobs: False
-    noGridCollision: True
 
 - type: gameMap
   id: BastilleOutpost
@@ -43,7 +40,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Транспортное депо Бастилия'
         - type: ExtraStationInformation
-          iconPath: /Textures/_NF/Objects/Storage/Barrels/black.rsi/icon.png
+          iconPath: /Textures/Forge/Logo/Icon/canister_black.png
           stationSubtext: 'frontier-lobby-Bastille-subtext'
           stationDescription: 'frontier-lobby-Bastille-description'
           lobbySortOrder: 4

@@ -107,3 +107,12 @@
     colorOptions:
       - "#ebf0e9"
     blockHacking: true
+
+- type: entity
+  parent: [ BaseCentcommContraband, EnergySword ]
+  id: EnergySwordBlue
+  suffix: MSF, blue
+  components:
+  - type: EnergySword
+    colorOptions:
+    - "#2288ff" # can only be blue

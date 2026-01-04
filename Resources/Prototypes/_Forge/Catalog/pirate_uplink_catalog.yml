@@ -1,3 +1,4 @@
+# region Tools
 - type: listing
   id: UplinkNFClothingEyesNightVisionGogglePirate
   name:  uplink-pirate-nightvision-name
@@ -50,11 +51,334 @@
           - PirateUplink
     - !type:BuyerJobCondition
 
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxT2SuperCapacitor
+  name:  Набор Модификации Двигателей
+  description: Набор старых конденсаторов для модификации вашей посудины!
+  productEntity: BoxT2SuperCapacitor
+  cost:
+    Doubloon: 4
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxZiptiePirat
+  name:  Набор стяжек
+  description: Набор самодельных стяжек для успокоения самых буйных пиратов во время пьянки.
+  productEntity: BoxZiptiePirat
+  cost:
+    Doubloon: 3
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxPirateAssault
+  name:  Набор для абордажа
+  description: набор из крюка, сканера и батарейки для начинающих абордажных групп.
+  productEntity: BoxPirateAssault
+  cost:
+    Doubloon: 4
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+
+- type: listing # Corvax-Frontier
+  id: UplinkPiratCrateFunParty
+  name:  Набор для вечеринки
+  description: Отпразнуйте славную победу над корпоративными крысами! Ярррр!
+  productEntity: CrateFunParty
+  cost:
+    Doubloon: 4
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxDeathRattleImplantsPirat
+  name:  Набор растворения
+  description: Нажми на место укола рукой с случае захвата корпоративными крысами и мы отправим тебе помощь!
+  productEntity: BoxDeathRattleImplantsPirat
+  cost:
+    Doubloon: 6
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxMRE
+  name:  Сухой паёк
+  description: Коробка старых военных ИРП, они на удивление не испортились.
+  productEntity: BoxMRE
+  cost:
+    Doubloon: 2
+  categories:
+    - UplinkPirateUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+
+# region Weapon
+- type: listing #CorvaxFrontier
+  id: UplinkPiratWeaponSubMachineGunTypewriter
+  name:  Пишущая машинка
+  description: Старый пистолет-пулемет используемый самыми опасными членами братства. Ярррр!
+  productEntity: NFWeaponSubMachineGunTypewriter
+  cost:
+    Doubloon: 5
+  categories:
+    - UplinkPirateWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
+- type: listing # Corvax-Frontier
+  id: UplinkPiratShuttleGunPirateCannonFlatpack
+  name:  Пушка пиратского корабля
+  description: упакованная стационарная пушка пиратского корабля на случай поломки основных орудий.
+  productEntity: ShuttleGunPirateCannonFlatpack
+  cost:
+    Doubloon: 15
+  categories:
+    - UplinkPirateWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
+- type: listing #CorvaxFrontier
+  id: UplinkPirateLaserGun
+  name:  Старомодный лазерный бластер
+  description: старый пистолет стреляющий концентрированным светом, что может быть круче?
+  productEntity: NFWeaponEnergyPistolLaserMakeshift
+  icon: { sprite: _NF/Objects/Weapons/Guns/Battery/makeshift.rsi, state: base }
+  cost:
+    Doubloon: 2
+  categories:
+    - UplinkPirateWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+
+- type: listing
+  id: UplinkPirateEnergySwordTL
+  name:  Опытный образцец 4
+  description: Клинок странной формы, украденный у какой то корпорации, и почему братсво требует за него такие деньги?
+  productEntity: EnergySwordTL
+  cost:
+    Doubloon: 21
+  categories:
+    - UplinkPirateWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
+- type: listing #CorvaxFrontier
+  id: UplinkPirateNFWeaponRifleBarlowsBolt
+  name: (Хит продаж!) Кардашёв-Мосин
+  description: Оружие охоты, или бесконечной окопной войны...
+  productEntity: NFWeaponRifleBarlowsBolt
+  icon: { sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi, state: base }
+  cost:
+    Doubloon: 4
+  categories:
+    - UplinkPirateWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
+# region Ammo
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBoxLightRifle
+  name:  Коробка винтовочных патрон
+  description: Коробка винтовочных патрон используемых некоторым пиратским оружием, пускай и не такие мощные, зато какие дешёвые!
+  productEntity: NFAmmunitionBoxRifle30
+  cost:
+    Doubloon: 2
+  categories:
+    - UplinkPirateAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratSpeedLoaderMagnumAP
+  name:  Спидлоадер Бронебойных Патрон
+  description: Спидлоадер с шестью бронебойными патронами 45 калибра если необходимо пробить что по крепче шкур корпоративных крыс.
+  productEntity: NFSpeedLoaderPistol45
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon}
+  cost:
+    Doubloon: 9
+  categories:
+    - UplinkPirateAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratMagazinePistolSubMachineGunEmpty
+  name:  Пишущая лента
+  description: Лента используемая пиратами для "печатных машинок". Ярррр!
+  productEntity: NFMagazineSubMachineGun35
+  cost:
+    Doubloon: 2
+  categories:
+    - UplinkPirateAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
+- type: listing #CorvaxFrontier
+  id: UplinkPiratNFAmmunitionBoxPistol35
+  name:  Коробка чернил
+  description: Коробка с чернилами для дозаправки "Пишущей машинки". Ярррр!
+  productEntity: NFAmmunitionBoxPistol35
+  cost:
+    Doubloon: 2
+  categories:
+    - UplinkPirateAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
 - type: listing # Corvax-Frontier
   id: UplinkPiratMagazine20mm
   name:  барабан корабельных снарядов 20мм
   description: Барабан корабельных снарядов 20мм, что подойдёт для пулемёта L85 «Аспид».
-  productEntity: Magazine20mmPiercing
+  productEntity: ForgeAmmoDrum20mmBase
+  cost:
+    Doubloon: 3
+  categories:
+    - UplinkPirateAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
+- type: listing # Corvax-Frontier
+  id: UplinkPiratMagazine57mm
+  name: барабан корабельных снарядов 57мм
+  description: Барабан корабельных снарядов 57мм, что подойдёт для пулемёта ADBP-7 «Дравон».
+  productEntity: ForgeMagazine57mmBase
+  cost:
+    Doubloon: 6
+  categories:
+    - UplinkPirateAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate
+
+- type: listing # Corvax-Frontier
+  id: UplinkPiratTovekCartridge
+  name: лакомство для Товека
+  description: Вкусняшка для любимого ЭМИ питомца "Товека"..
+  productEntity: TovekCartridge
   cost:
     Doubloon: 4
   categories:
@@ -66,25 +390,10 @@
           - PirateUplink
 
 - type: listing # Corvax-Frontier
-  id: UplinkPiratMagazine30mm
-  name:  барабан корабельных снарядов 30мм
-  description: Барабан корабельных снарядов 20мм, что подойдёт для пулемёта RAC-30 «Драупнир».
-  productEntity: Magazine30mm
-  cost:
-    Doubloon: 5
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-
-- type: listing # Corvax-Frontier
-  id: UplinkPiratMagazine57mm
-  name: барабан корабельных снарядов 57мм
-  description: Барабан корабельных снарядов 57мм, что подойдёт для пулемёта ADBP-7 «Дравон».
-  productEntity: Magazine57mm
+  id: UplinkPiratShipTarnyxProjectile
+  name: 150 см Тарникс (ЭМИ начинка)
+  description: 150 сантиметровая пицца "Тарникс" с начинкой из ЭМИ - это лучший выбор, для любителей наживы.
+  productEntity: ShipTarnyxProjectile
   cost:
     Doubloon: 6
   categories:
@@ -95,15 +404,17 @@
         tags:
           - PirateUplink
 
-- type: listing # Corvax-Frontier
-  id: UplinkPiratMagazine90mm
-  name: барабан корабельных снарядов 90мм
-  description: Барабан корабельных снарядов 90мм, что подойдёт для AK570 «Клычки» 90мм.
-  productEntity: Magazine90mm
+# region Other
+- type: listing #CorvaxFrontier
+  id: UplinkPiratBreachingCharge
+  name:  Пробивающий заряд
+  description: Заряд способный пробить любую стену шаттлов корпоративных крыс!
+  productEntity: BreachingCharge
+  icon: { sprite: _DV/Objects/Weapons/Bombs/breaching.rsi, state: icon }
   cost:
-    Doubloon: 8
+    Doubloon: 2
   categories:
-    - UplinkPirateAmmo
+    - UplinkPirateExplosives
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:

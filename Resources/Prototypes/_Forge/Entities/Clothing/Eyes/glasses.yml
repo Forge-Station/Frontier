@@ -1,0 +1,14 @@
+- type: entity
+  parent: [ ClothingEyesGlassesMeson, ClothingEyesGlassesSecurity ]
+  id: ClothingEyesGlassesEngineerNfsd
+  name: Nfsd specialist goggles
+  description: Green-tinted goggles using a proprietary polymer that provides protection from eye damage of all types.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/meson.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/meson.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: EyeProtection

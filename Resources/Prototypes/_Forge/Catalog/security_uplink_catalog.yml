@@ -319,23 +319,13 @@
         - Sheriff
 
 - type: listing
-  id: UplinkC4
-  name:  uplink-security-C4-name
-  description: uplink-security-C4-desc
-  productEntity: C4
+  id: UplinkSecurityMedkitMilitary
+  name: uplink-security-medkit-military-name
+  description: uplink-security-medkit-military-desc
+  productEntity: MedkitMilitaryFilled
+  icon: { sprite: Forge/Objects/Specific/Medical/firstaidkits.rsi, state: blackkit }
   cost:
-    FrontierUplinkCoin: 6
-  categories:
-    - UplinkSecurityUtility
-
-- type: listing
-  id: UplinkSecurityMagbootsProMax
-  name: forge-uplink-security-magbootspro-name
-  description: forge-uplink-security-magbootspro-desc
-  productEntity: ClothingShoesBootsMagNFSDPromax
-  icon: { sprite: Forge/Clothing/Shoes/Boots/nfsd_magboots_promax.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 10
+    FrontierUplinkCoin: 12
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -345,6 +335,16 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
+        - Brigmedic
         - Sheriff
+
+# region explosives
+- type: listing
+  id: UplinkC4
+  name:  uplink-security-C4-name
+  description: uplink-security-C4-desc
+  productEntity: C4
+  cost:
+    FrontierUplinkCoin: 6
+  categories:
+    - UplinkSecurityExplosives

@@ -185,7 +185,7 @@
     - CorvaxShuttleGunsDynamic #Corvax-Frontier
     - CorvaxAmmoDynamic #Corvax-Frontier
     - ForgePackShipAmmo # forge-change
-    - ForgePackShipAmmoNfsd # Forge-change
+    - ForgePackNfsd # Forge-change
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -293,8 +293,8 @@
   - type: LitOnPowered
   - type: ApcPowerReceiver
     powerLoad: 200
-  - type: Advertise
-    pack: CuddlyCritterAds
+  - type: DatasetVocalizer
+    dataset: CuddlyCritterAds
   - type: PointLight
     radius: 1.5
     energy: 1.6

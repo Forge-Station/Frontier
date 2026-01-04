@@ -14,6 +14,7 @@
     damage:
       types:
         Heat: 40
+      armorPenetration: 0.4
 
 - type: entity
   name: лазерный снаряд
@@ -26,6 +27,7 @@
     damage:
       types:
         Heat: 20
+      armorPenetration: 0.2
 
 - type: entity
   name: радиактивный снаряд
@@ -45,6 +47,7 @@
       types:
         Heat: 20
         Radiation: 20
+      armorPenetration: 0.2
 
 - type: entity
   name: импульсный снаряд
@@ -64,6 +67,7 @@
       types:
         Heat: 30
         Structural: 100
+      armorPenetration: 0.4
 
 - type: entity
   name: тяжёлый импульсный снаряд
@@ -83,9 +87,10 @@
       types:
         Heat: 100
         Structural: 1000
+      armorPenetration: 0.5
 
 - type: entity
-  name: Убить
+  name: тяжёлый импульсный снаряд
   id: ForgeBulletHeavyPulse
   parent: NFBaseBulletLaser
   categories: [ HideSpawnMenu ]
@@ -102,6 +107,7 @@
       types:
         Heat: 50
         Structural: 500
+      armorPenetration: 0.5
 
 - type: entity
   name: Уничтожить

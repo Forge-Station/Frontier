@@ -4,8 +4,6 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared.Stunnable;
 
-// Forge-Change full (refactory b.y. wizard)
-
 public abstract partial class SharedStunSystem
 {
     public void InitializeAppearance()

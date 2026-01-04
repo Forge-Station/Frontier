@@ -1,0 +1,503 @@
+# region Forge rebalance
+# rebalance Monolith kinetic projectiles
+
+# BulletBase - "stock"/standart - обычный
+# APHE - бронебойный, взрывчатка
+# APCBC - повыш. бронебойный, без взрыва
+
+# region 20mm
+- type: entity
+  id: Forge20mmBulletBase
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 80
+        Blunt: 14
+        Piercing: 24
+  - type: ShipWeaponProjectile
+  - type: TimedDespawn
+    lifetime: 2
+  - type: PointLight
+    radius: 3.5
+    energy: 0.5
+  - type: RadarBlip
+    scale: 0.85
+    requireNoGrid: true
+    shape: triangle
+    radarColor: "#1df1f5"
+
+- type: entity
+  id: Forge20mmBulletAPHE
+  name: 20mm AP bullet
+  parent: Forge20mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 95
+        Blunt: 21
+        Piercing: 23
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/50_armorpiercing_machinegun_casing.rsi
+    layers:
+    - state: base-projectile
+  - type: PointLight
+    color: orange
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DefaultShipGun
+    totalIntensity: 20
+    intensitySlope: 15
+    maxIntensity: 25
+    maxTileBreak: 1
+
+- type: entity
+  id: Forge20mmBulletAPCBC
+  name: 20mm bullet
+  parent: Forge20mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 120
+        Blunt: 16
+        Piercing: 29
+
+# region 30mm
+- type: entity
+  id: Forge30mmBulletBase
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 124
+        Blunt: 29
+        Piercing: 38
+  - type: ShipWeaponProjectile
+  - type: TimedDespawn
+    lifetime: 3
+  - type: PointLight
+    radius: 3.5
+    energy: 0.5
+  - type: RadarBlip
+    scale: 1.15
+    requireNoGrid: true
+    shape: arrow
+    radarColor: "#1df1f5"
+
+- type: entity
+  id: Forge30mmBulletAPHE
+  parent: Forge30mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 131
+        Blunt: 53
+        Piercing: 38
+  - type: PointLight
+    color: orange
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DefaultShipGun
+    totalIntensity: 6
+    intensitySlope: 15
+    maxIntensity: 5
+    maxTileBreak: 1
+
+- type: entity
+  id: Forge30mmBulletAPCBC
+  parent: Forge30mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 193
+        Blunt: 29
+        Piercing: 78
+
+# region 57mm
+
+- type: entity
+  id: ForgeDravonBase
+  name: DRAVON 57mm projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 168 # expl + structural? no no no
+        Blunt: 66
+        Piercing: 78
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/57_shell.rsi
+    layers:
+    - state: 57-shell
+    scale: 1, 1
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 2.5
+    requireNoGrid: true
+    shape: triangle
+    radarColor: "#1df1f5"
+  - type: TimedDespawn
+    lifetime: 7
+  - type: PointLight
+    color: "#FCBA03"
+#  - type: ExplodeOnTrigger
+#  - type: Explosive
+#    explosionType: DefaultShipGun
+#    totalIntensity: 5
+#    intensitySlope: 5
+#    maxIntensity: 25
+#    maxTileBreak: 1
+
+# 57mm APHE
+- type: entity
+  id: ForgeDravonAPHE
+  name: 57mm APHE
+  parent: ForgeDravonBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 192
+        Blunt: 76
+        Piercing: 94
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DefaultShipGun
+    totalIntensity: 25
+    intensitySlope: 3
+    maxIntensity: 25
+
+# 57mm APCBC
+- type: entity
+  id: ForgeDravonAPCBC
+  name: 57mm APCBC
+  parent: ForgeDravonBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 222
+        Blunt: 96
+        Piercing: 183
+
+# region 90mm
+- type: entity
+  id: Forge90mmBulletBase
+  name: 90mm
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+  - type: Projectile
+    damage:
+      types:
+        Structural: 940
+        Blunt: 89
+        Piercing: 95
+  - type: TimedDespawn
+    lifetime: 4.2
+  - type: PointLight
+    color: orange
+    radius: 3.5
+    energy: 0.5
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 1.5
+    requireNoGrid: true
+    shape: triangle
+    radarColor: "#1df1f5"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DefaultShipGun
+    totalIntensity: 25
+    intensitySlope: 2
+    maxIntensity: 5
+    maxTileBreak: 1
+
+# 90mm APHE
+- type: entity
+  id: Forge90mmBulletAPHE
+  name: 90mm
+  parent: Forge90mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 1140
+        Blunt: 100
+        Piercing: 250
+  - type: TimedDespawn
+    lifetime: 4.2
+  - type: PointLight
+    color: orange
+    radius: 3.5
+    energy: 0.5
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 1.5
+    requireNoGrid: true
+    shape: triangle
+    radarColor: "#1df1f5"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DefaultShipGun
+    totalIntensity: 50
+    intensitySlope: 3.5
+    maxIntensity: 50
+    maxTileBreak: 1
+
+# 90mm APHEBC
+- type: entity
+  id: Forge90mmBulletAPHEBC
+  name: 90mm
+  parent: Forge90mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 1569
+        Blunt: 175
+        Piercing: 293
+  - type: TimedDespawn
+    lifetime: 4.2
+  - type: PointLight
+    color: orange
+    radius: 3.5
+    energy: 0.5
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 1.5
+    requireNoGrid: true
+    shape: triangle
+    radarColor: "#1df1f5"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DefaultShipGun
+    totalIntensity: 70
+    intensitySlope: 40
+    maxIntensity: 5
+    maxTileBreak: 1
+
+# region 203mm
+# 203 base = HE
+- type: entity
+  id: Forge203ProjectileHE
+  name: 203mm HE
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 8500
+        Blunt: 6500
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 2, 2
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 2.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 5.15
+  - type: PointLight
+    color: "#fc8c03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 1550
+    intensitySlope: 55
+    maxIntensity: 1600
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+# 203 HESH
+- type: entity
+  id: Forge203ProjectileHESH
+  name: 203mm HESH
+  parent: Forge203ProjectileHE
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 9300
+        Blunt: 7500
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 1650
+    intensitySlope: 45
+    maxIntensity: 1900
+
+# region 220mm
+- type: entity
+  id: Forge220ProjectileHE
+  name: 220mm HE
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 9424
+        Blunt: 6983
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 2, 2
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 3.25
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 5.15
+  - type: PointLight
+    color: "#FCBA03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 2350
+    intensitySlope: 55
+    maxIntensity: 1800
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+- type: entity
+  id: Forge220ProjectileHESH
+  name: 220mm HESH
+  parent: Forge220ProjectileHE
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 10424
+        Blunt: 6983
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 2350
+    intensitySlope: 60
+    maxIntensity: 1800
+
+# region 255mm
+- type: entity
+  id: Forge255ProjectileHE
+  name: Bofors 255mm projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 13460
+        Blunt: 7244
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 2, 2
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 2.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 5.5
+  - type: PointLight
+    color: "#fc5a03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 8950
+    intensitySlope: 55
+    maxIntensity: 5500
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+- type: entity
+  id: Forge255ProjectileHESH
+  name: 255mm HESH
+  parent: Forge255ProjectileHE
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 14123
+        Blunt: 7444
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 11433
+    intensitySlope: 55
+    maxIntensity: 7900
+
+# region Forge Ammo
+# 16mm - scatter
+- type: entity
+  id: Forge16mm
+  name: 16 mm
+  parent: 20mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 17
+        Piercing: 12
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/50_armorpiercing_machinegun_casing.rsi
+    layers:
+    - state: base-projectile
+  - type: PointLight
+    color: orange
+
+- type: entity
+  id: Forge16mmSpread
+  categories: [ HideSpawnMenu ]
+  parent: Forge16mm
+  components:
+  - type: ProjectileSpread
+    proto: Forge16mm
+    count: 6
+    spread: 13

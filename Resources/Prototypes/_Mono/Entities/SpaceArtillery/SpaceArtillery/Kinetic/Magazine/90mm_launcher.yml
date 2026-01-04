@@ -10,6 +10,7 @@
   parent: BallisticArtilleryMagazine
   description: A dual-barrel, heavy 90mm autocannon firing general-purpose APHE rounds, effective for sustained fire against medium targets. Can be remotely activated or linked up to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 1000
   - type: Sprite
@@ -22,11 +23,11 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 2.5
-    projectileSpeed: 170
+    fireRate: 1.5 # Forge-change: rebalance
+    projectileSpeed: 105 # Forge-change: rebalance
     minAngle: 0
     maxAngle: 3
-    burstCooldown: 0.5
+    burstCooldown: 0.9 # Forge-change: rebalance
     burstFireRate: 10
     shotsPerBurst: 2
     selectedMode: Burst
@@ -48,7 +49,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine90mmWeak
+        startingItem: ForgeMagazine90mm # Forge-change: rebalance
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2

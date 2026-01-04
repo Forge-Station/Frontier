@@ -125,7 +125,7 @@ public sealed class InjectorFabticatorSystem : EntitySystem
             return;
 
         var quantity = new ReagentQuantity(args.ReagentId, transferAmount);
-        if (_solutionSystem.RemoveReagent(beakerSolution.Value, quantity))
+        if (_solutionSystem.RemoveReagent(beakerSolution.Value, quantity) > 0)
         {
             _solutionSystem.TryAddReagent(bufferSolution.Value, quantity, out _);
 
@@ -157,7 +157,7 @@ public sealed class InjectorFabticatorSystem : EntitySystem
             return;
 
         var quantity = new ReagentQuantity(args.ReagentId, transferAmount);
-        if (_solutionSystem.RemoveReagent(bufferSolution.Value, quantity))
+        if (_solutionSystem.RemoveReagent(bufferSolution.Value, quantity) > 0)
         {
             _solutionSystem.TryAddReagent(beakerSolution.Value, quantity, out _);
 
@@ -273,7 +273,7 @@ public sealed class InjectorFabticatorSystem : EntitySystem
                 var available = buffer.GetReagentQuantity(reagent);
                 var toTransfer = FixedPoint2.Min(amount, available);
 
-                if (toTransfer > 0 && _solutionSystem.RemoveReagent(bufferSolution.Value, reagent, toTransfer))
+                if (toTransfer > 0 && _solutionSystem.RemoveReagent(bufferSolution.Value, reagent, toTransfer) > 0)
                 {
                     _solutionSystem.TryAddReagent(injectorSolution.Value, reagent, toTransfer, out _);
                 }

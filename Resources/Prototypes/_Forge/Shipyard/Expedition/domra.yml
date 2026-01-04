@@ -19,6 +19,7 @@
   category: Large
   group: Expedition
   shuttlePath: /Maps/_Forge/Shuttles/Expedition/domra.yml
+  guidebookPage: ShipyardDomra
 
 - type: gameMap
   id: Domra
@@ -30,7 +31,7 @@
       stationProto: StandardFrontierExpeditionVessel
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'GS Домра {1}'
+        mapNameTemplate: 'Домра {1}'
         nameGenerator: !type:NanotrasenNameGenerator
           prefixCreator: '14'
       - type: StationJobs

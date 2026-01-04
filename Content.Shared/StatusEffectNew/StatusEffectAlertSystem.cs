@@ -4,8 +4,6 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared.StatusEffectNew;
 
-// Forge-Change full (refactory b.y. wizard)
-
 /// <summary>
 /// Handles displaying status effects that should show an alert, optionally with a duration.
 /// </summary>

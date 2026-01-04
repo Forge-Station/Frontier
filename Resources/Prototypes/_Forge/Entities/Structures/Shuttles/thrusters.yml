@@ -125,10 +125,44 @@
     - Off
     - Toggle
 
+- type: entity
+  id: WorkedRustedThruster
+  name: rusted thruster
+  suffix: Worked
+  description: An old, rusty thruster... Still work for some reason...
+  parent: [ BaseThruster, ConstructibleMachine ]
+  components:
+  - type: Machine
+    board: ThrusterMachineCircuitboard
+  - type: Sprite
+    sprite: Structures/Shuttles/old_thruster.rsi
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 1
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+    - On
+    - Off
+    - Toggle
+
 # DefaultThruster
 - type: entity
   id: ThrusterCentCom
-  name: двигатель ЦентКом
+  name: двигатель УСФ
   parent: ThrusterSecurity
   components:
   - type: Sprite
@@ -295,7 +329,7 @@
 
 - type: entity
   id: ThrusterMediumCentcom
-  name: средний двигатель ЦентКом
+  name: средний двигатель УСФ
   parent: BaseThrusterMedium
   components:
   - type: Machine
@@ -460,7 +494,7 @@
 
 - type: entity
   id: ThrusterMediumLongCentCom
-  name: длинный двигатель ЦентКом
+  name: длинный двигатель УСФ
   parent: BaseThrusterMediumLong
   components:
   - type: Machine
@@ -624,7 +658,7 @@
 
 - type: entity
   id: ThrusterBigCentCom
-  name: большой двигатель ЦентКом
+  name: большой двигатель УСФ
   parent: BaseThrusterBig
   components:
   - type: Machine

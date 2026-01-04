@@ -39,6 +39,7 @@
     damage:
       types:
         Piercing: 12
+      armorPenetration: 0.1 # Forge-Change
     angle: 0
     animation: WeaponArcThrust
     soundHit:
@@ -131,6 +132,7 @@
     damage:
       types:
         Piercing: 15
+      armorPenetration: 0.1 # Forge-Change
   - type: DamageOtherOnHit
     damage:
       types:
@@ -151,6 +153,7 @@
     damage:
       types:
         Piercing: 18
+      armorPenetration: 0.15 # Forge-Change
   - type: DamageOtherOnHit
     damage:
       types:
@@ -172,6 +175,7 @@
       types:
         Piercing: 10
         Radiation: 8
+      armorPenetration: 0.15 # Forge-Change
   - type: DamageOtherOnHit
     damage:
       types:
@@ -228,6 +232,7 @@
     damage:
       types:
         Piercing: 18 #same as plasma spear
+      armorPenetration: 0.2 # Forge-Change
   - type: DamageOtherOnHit
     damage:
       types:

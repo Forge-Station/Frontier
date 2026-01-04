@@ -25,6 +25,9 @@
   displayWeight: 40
   setPreference: true
   special:
+  - !type:AddImplantSpecial
+    implants:
+    - OverlordImplant
   - !type:AddComponentSpecial
     components:
     - type: MailDisabled

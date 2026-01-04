@@ -43,3 +43,17 @@
     - id: PowerDrillNfsd
     - id: WelderNfsd
     - id: MultitoolNfsd
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbing
+  id: ClothingBeltMilitaryWebbingMedExpResist
+  name: medical chest rig
+  suffix: Explosion Resistant
+  description: A set of tactical webbing worn by medic operatives.
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/militarywebbingmed.rsi
+  - type: Clothing
+    sprite: Clothing/Belt/militarywebbingmed.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0

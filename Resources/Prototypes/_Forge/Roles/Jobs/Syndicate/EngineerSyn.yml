@@ -8,16 +8,10 @@
   - NuclearOperative
   requirements:
     - !type:RoleTimeRequirement
-      role: JobSecurityOfficer
-      time: 72000 # 20 hours
+      role: JobStormtrooper
+      time: 108000 # 30 hours
     - !type:RoleTimeRequirement
-      role: JobSeniorOfficer
-      time: 36000 # 10 hours
-    - !type:RoleTimeRequirement
-      role: JobPlantTechnician
-      time: 72000 # 20 hours
-    - !type:RoleTimeRequirement
-      role: JobOutpostEngineer
+      role: JobEngineerNfsd
       time: 36000 # 10 hours
  # whitelisted: true
   startingGear: EngineerSynGear
@@ -30,6 +24,9 @@
   displayWeight: 40
   setPreference: true
   special:
+  - !type:AddImplantSpecial
+    implants:
+    - OverlordImplant
   - !type:AddComponentSpecial
     components:
     - type: MailDisabled

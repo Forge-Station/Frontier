@@ -27,6 +27,8 @@
     magbootsAlert: MagbootsSyndElite
   - type: Jetpack
     radarBlip: false
+  - type: ClothingSlowOnDamageModifier # Corvax-Forge
+    modifier: 0.5
 
 - type: alert
   id: MagbootsSyndElite
@@ -248,6 +250,8 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.9
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.3
 
 
 - type: alert

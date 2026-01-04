@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 262.0.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/22/2025 14:13:32
-  entityCount: 801
+  time: 12/14/2025 20:30:43
+  entityCount: 800
 maps: []
 grids:
 - 1
@@ -668,21 +668,22 @@ entities:
           0,0:
             0: 61678
           -1,0:
-            0: 35020
+            0: 34956
+            1: 64
             2: 8209
-            1: 256
+            3: 256
           0,1:
             0: 65535
           -1,1:
             0: 136
             2: 16418
-            1: 512
+            3: 512
           0,2:
             0: 61439
           0,3:
             0: 17646
           -1,3:
-            1: 8
+            3: 8
             2: 2176
           0,4:
             2: 17409
@@ -695,13 +696,13 @@ entities:
           1,1:
             0: 4403
             2: 16520
-            1: 2048
+            3: 2048
           1,2:
             0: 273
             2: 68
-            1: 16384
+            3: 16384
           1,3:
-            1: 2
+            3: 2
             2: 544
           1,4:
             2: 1
@@ -709,16 +710,16 @@ entities:
             0: 26159
           2,0:
             2: 17
-            1: 256
+            3: 256
           2,-1:
             2: 4352
             0: 3
-            1: 32
+            3: 32
           0,-4:
             2: 3600
-            1: 256
+            3: 256
           -1,-4:
-            1: 128
+            3: 128
             2: 20480
           0,-3:
             0: 65535
@@ -727,20 +728,20 @@ entities:
           -1,-3:
             0: 57344
             2: 2
-            3: 1536
-            1: 4
+            4: 1536
+            3: 4
           -1,-2:
             0: 48896
-            4: 6
+            5: 6
           -1,-1:
             0: 52367
             2: 4352
           1,-4:
-            1: 288
+            3: 288
             2: 16400
           1,-3:
             0: 65297
-            1: 4
+            3: 4
             2: 8
           1,-2:
             0: 48911
@@ -753,7 +754,7 @@ entities:
             2: 512
           -1,2:
             2: 68
-            1: 16384
+            3: 16384
           -2,-3:
             2: 2048
           -2,-2:
@@ -761,7 +762,7 @@ entities:
             0: 34816
           -2,-1:
             0: 8
-            1: 128
+            3: 128
           0,5:
             2: 10
         uniqueMixes:
@@ -781,7 +782,22 @@ entities:
           - 0
           - 0
         - volume: 2500
-          immutable: True
+          temperature: 293.14996
+          moles:
+          - 20.078888
+          - 75.53487
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.15
           moles:
           - 0
           - 0
@@ -796,7 +812,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          temperature: 293.15
+          immutable: True
           moles:
           - 0
           - 0
@@ -849,6 +865,7 @@ entities:
       color: '#FFC000FF'
       flags: HideLabel
     - type: NavMap
+    - type: ImplicitRoof
 - proto: AirAlarm
   entities:
   - uid: 663
@@ -1182,6 +1199,12 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 9.5,-3.5
+      parent: 1
+  - uid: 367
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 2.5,14.5
       parent: 1
 - proto: AtmosFixBlockerMarker
   entities:
@@ -2500,12 +2523,6 @@ entities:
     - type: Transform
       pos: 2.5234375,15.082594
       parent: 1
-  - uid: 368
-    components:
-    - type: Transform
-      parent: 367
-    - type: Physics
-      canCollide: False
 - proto: CleanerDispenser
   entities:
   - uid: 93
@@ -3001,14 +3018,6 @@ entities:
     - type: Transform
       pos: 2.6875,14.546444
       parent: 1
-- proto: EnergyCutlass
-  entities:
-  - uid: 730
-    components:
-    - type: Transform
-      parent: 728
-    - type: Physics
-      canCollide: False
 - proto: FaxMachineShipAntag
   entities:
   - uid: 726
@@ -4141,9 +4150,9 @@ entities:
     - type: Transform
       pos: -0.5,-7.5
       parent: 1
-- proto: GunneryServerLow
+- proto: GunneryServerMedium
   entities:
-  - uid: 123
+  - uid: 99
     components:
     - type: Transform
       pos: 1.5,1.5
@@ -4151,7 +4160,7 @@ entities:
     - type: Battery
       startingCharge: 0
     - type: ApcPowerReceiver
-      powerLoad: 5
+      powerLoad: 10
 - proto: GunSafe
   entities:
   - uid: 129
@@ -4227,6 +4236,24 @@ entities:
     - type: Transform
       pos: -1.5,1.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14923
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: Lock
       locked: False
   - uid: 282
@@ -4879,7 +4906,7 @@ entities:
         weapon1: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: 730
+          ent: null
         weapon2: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -5895,55 +5922,21 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,-4.5
       parent: 1
-- proto: WeaponNavalCannon53mmUnanchor
+- proto: WeaponTurretCharonReload
   entities:
-  - uid: 99
+  - uid: 368
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5,9.5
+      rot: 3.141592653589793 rad
+      pos: 2.5,16.5
       parent: 1
-  - uid: 100
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,-0.5
-      parent: 1
+- proto: WeaponTurretDravon
+  entities:
   - uid: 148
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 7.5,4.5
-      parent: 1
-  - uid: 154
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5,8.5
-      parent: 1
-  - uid: 190
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,-0.5
-      parent: 1
-  - uid: 230
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.5,8.5
-      parent: 1
-  - uid: 244
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.5,9.5
-      parent: 1
-  - uid: 283
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,0.5
       parent: 1
   - uid: 303
     components:
@@ -5951,30 +5944,56 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -2.5,4.5
       parent: 1
-  - uid: 304
+- proto: WeaponTurretL85Autocannon
+  entities:
+  - uid: 100
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 8.5,-0.5
+      parent: 1
+  - uid: 123
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,8.5
+      parent: 1
+  - uid: 154
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -3.5,0.5
       parent: 1
-- proto: WeaponNavalCannonCharonReload
-  entities:
-  - uid: 367
+  - uid: 190
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 2.5,16.5
+      rot: 1.5707963267948966 rad
+      pos: 8.5,0.5
       parent: 1
-    - type: BallisticAmmoProvider
-      entities:
-      - 368
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 368
+  - uid: 230
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -1.5,9.5
+      parent: 1
+  - uid: 244
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -3.5,-0.5
+      parent: 1
+  - uid: 283
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -1.5,8.5
+      parent: 1
+  - uid: 304
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,9.5
+      parent: 1
 - proto: WindowFrostedDirectional
   entities:
   - uid: 596

@@ -12,3 +12,5 @@ ent-NFCartridgePistol35Rubber = патрон (.35 пистолетный рез�
     .desc = { ent-BaseCartridgeRifle.desc }
 ent-NFBulletPistol35Emp = патрон (.35 пистолетный ЭМИ)
     .desc = { ent-BaseCartridgeRifle.desc }
+ent-NFCartridgePistol45AP = патрон (.45 магнум бронебойный)
+    .desc = { ent-BaseCartridgeRifle.desc }

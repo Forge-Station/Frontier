@@ -14,7 +14,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 5000
+        Structural: 1750 # Forge-change: rebalance
+        Piercing: 99 # Forge-change: rebalance
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/150_shell.rsi
     layers:
@@ -51,7 +52,7 @@
     proto: ShipTarnyxProjectile
     deleteOnSpawn: true
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/150mmtarnyx.rsi
+    sprite: Forge/Objects/SpaceArtillery/150mmtarnyx.rsi
     layers:
     - state: 150mm_emp
       map: ["enum.AmmoVisualLayers.Base"]
@@ -60,7 +61,7 @@
   - type: EmpDescription
     range: 10
     energyConsumption: 500000
-    disableDuration: 5.5
+    disableDuration: 6.5
   - type: Destructible
     thresholds:
     - trigger:
@@ -105,6 +106,14 @@
     shape: triangle
   - type: TimedDespawn
     lifetime: 5
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: ExplodeOnTrigger
+  - type: Explosive # Forge-change
+    explosionType: DefaultShipGun # Forge-change
+    maxIntensity: 100
+    intensitySlope: 3
+    totalIntensity: 30
 
 - type: entity
   id: 150mmApShell
@@ -121,7 +130,7 @@
     proto: ShipTarnyxApProjectile
     deleteOnSpawn: true
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/150mmtarnyx.rsi
+    sprite: Forge/Objects/SpaceArtillery/150mmtarnyx.rsi
     layers:
     - state: 150mm_standard
       map: ["enum.AmmoVisualLayers.Base"]

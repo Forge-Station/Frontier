@@ -3,6 +3,7 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Client.GameObjects;
 using Robust.Shared.IoC;
 using System;
+using System.Numerics;
 using Content.Client.Stylesheets;
 using Content.Shared.APC;
 using Robust.Client.Graphics;
@@ -11,6 +12,7 @@ using Robust.Shared.GameObjects;
 using Robust.Shared.Localization;
 using Robust.Shared.Maths;
 using FancyWindow = Content.Client.UserInterface.Controls.FancyWindow;
+using System.Numerics;
 
 namespace Content.Client.Power.APC.UI
 {

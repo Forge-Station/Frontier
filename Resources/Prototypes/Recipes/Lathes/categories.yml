@@ -20,10 +20,6 @@
   name: lathe-category-parts
 
 - type: latheCategory
-  id: Robotics
-  name: lathe-category-robotics
-
-- type: latheCategory
   id: Tiles
   name: lathe-category-tiles
 
@@ -106,6 +102,10 @@
   id: Wood
   name: lathe-category-wood
 
+- type: latheCategory
+  id: Marble
+  name: lathe-category-marble
+
 # Science
 - type: latheCategory
   id: Mech
@@ -139,7 +139,15 @@
   id: MechEquipment
   name: lathe-category-mech-weaponary
 
-# Sec
+- type: latheCategory
+  id: Modules
+  name: lathe-category-modules
+
+- type: latheCategory
+  id: Robotics
+  name: lathe-category-robotics
+
+# Security TechFab
 - type: latheCategory
   id: Ammo
   name: lathe-category-ammo
@@ -181,6 +189,7 @@
   id: Neck
   name: lathe-category-neck
 
+# Forge-Change-Start
 - type: latheCategory
   id: SyndicateTradingConsoleFirearmsWeapons
   name: lathe-category-syndicate-1
@@ -208,3 +217,4 @@
 - type: latheCategory
   id: SyndicateTradingConsoleConventor
   name: lathe-category-syndicate-7
+# Forge-Change-End

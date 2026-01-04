@@ -1,81 +1,81 @@
-#"Map":
+":construction: Карты :construction:":
+- changed-files:
+  - any-glob-to-any-file: "Resources/Maps/**/*.yml"
+
+# "Карты-Администрация":
 # - changed-files:
-#   - any-glob-to-any-file: "Resources/Maps/**/*.yml" # All .yml files in the Resources/Maps directory, recursive.
+#   - any-glob-to-any-file: "Resources/Maps/_Forge/Admin/**/*.yml" # Grid Files
 
-"Map-Admin":
-- changed-files:
-  - any-glob-to-any-file: "Resources/Maps/_NF/Admin/**/*.yml" # Grid Files
+# "Карты-Ивенты":
+# - changed-files:
+#   - any-glob-to-any-file: "Resources/Maps/_Forge/Bluespace/**/*.yml" # Grid Files
 
-"Map-Bluespace":
-- changed-files:
-  - any-glob-to-any-file: "Resources/Maps/_NF/Bluespace/**/*.yml" # Grid Files
+# "Карты-Данжи":
+# - changed-files:
+#   - any-glob-to-any-file: "Resources/Maps/_NF/Dungeon/**/*.yml" # Grid Files
 
-"Map-Dungeon":
-- changed-files:
-  - any-glob-to-any-file: "Resources/Maps/_NF/Dungeon/**/*.yml" # Grid Files
+# "Карты-Аванпосты":
+# - changed-files:
+#   - any-glob-to-any-file:
+#     - "Resources/Maps/_NF/Outpost/*.yml" # Map Files
+#     - "Resources/Prototypes/_NF/Maps/Outpost/*.yml" # Prototypes Files
 
-"Map-Outpost":
-- changed-files:
-  - any-glob-to-any-file:
-    - "Resources/Maps/_NF/Outpost/*.yml" # Map Files
-    - "Resources/Prototypes/_NF/Maps/Outpost/*.yml" # Prototypes Files
+# "Карты-Шаттлы":
+# - changed-files:
+#   - any-glob-to-any-file:
+#     - "Resources/Maps/_NF/Shuttles/**/*.yml" # Grid Files
+#     - "Resources/Prototypes/_NF/Shipyard/**/*.yml" # Prototypes Files
 
-"Map-Shuttle":
-- changed-files:
-  - any-glob-to-any-file:
-    - "Resources/Maps/_NF/Shuttles/**/*.yml" # Grid Files
-    - "Resources/Prototypes/_NF/Shipyard/**/*.yml" # Prototypes Files
+# "Карты-Точки Интереса":
+# - changed-files:
+#   - any-glob-to-any-file:
+#     - "Resources/Maps/_NF/POI/**/*.yml" # Grid Files
+#     - "Resources/Prototypes/_NF/Maps/POI/**/*.yml" # Prototypes Files
 
-"Map-POI":
-- changed-files:
-  - any-glob-to-any-file:
-    - "Resources/Maps/_NF/POI/**/*.yml" # Grid Files
-    - "Resources/Prototypes/_NF/Maps/POI/**/*.yml" # Prototypes Files
-
-"Sprites":
+":art: Спрайты :art:":
 - changed-files:
   - any-glob-to-any-file:
     - "**/*.rsi/*.png"
     - "**/*.rsi/*.json"
 
-"UI":
+":computer: Интерфейс :computer:":
 - changed-files:
   - any-glob-to-any-file: "**/*.xaml*"
 
-"C#":
+":shark: C# :shark:":
 - changed-files:
   - any-glob-to-any-file: "**/*.cs"
 
-"Shaders":
+":art: Шейдеры :art:":
 - changed-files:
   - any-glob-to-any-file: '**/*.swsl'
 
-"Audio":
+":musical_note: Аудио :musical_note:":
 - changed-files:
   - any-glob-to-any-file: '**/*.ogg'
 
-"No C#":
+"Без C#":
 - changed-files:
   - all-globs-to-all-files: "!**/*.cs"
 
-"Docs":
+":book: Документация :book:":
 - changed-files:
   - any-glob-to-any-file:
     - "**/*.xml"
     - "**/*.md"
 
-"FTL":
+":page_facing_up: Локализация :page_facing_up:":
 - changed-files:
   - any-glob-to-any-file: "Resources/Locale/**/*.ftl"
 
-"YML":
+":baby_chick: Прототипы :baby_chick:":
 - all:
   - changed-files:
     - any-glob-to-any-file: "**/*.yml"
     - all-globs-to-any-file:
-      - "!Resources/Maps/_NF/**/*.yml"
-      - "!Resources/Prototypes/Maps/_NF/**/*.yml"
+      - "!Resources/Maps/_Forge/**/*.yml"
+      - "!Resources/Prototypes/Maps/_Forge/**/*.yml"
 
-"DB Migration":
+":earth_africa: Миграция Файлов :earth_africa:":
 - changed-files:
   - any-glob-to-any-file: "Content.Server.Database/Migrations/**/*.cs"

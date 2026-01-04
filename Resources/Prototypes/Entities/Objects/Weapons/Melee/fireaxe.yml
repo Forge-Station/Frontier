@@ -23,6 +23,7 @@
         Blunt: 5
         Slash: 10
         Structural: 10
+      armorPenetration: 0.3 # Forge-Change
     soundHit:
       collection: MetalThud
   - type: Wieldable
@@ -57,11 +58,18 @@
 - type: entity
   id: FireAxeFlaming
   name: fire axe
-  parent: [ BaseC3SyndicateContraband, FireAxe ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseC3SyndicateContraband, FireAxe] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   description: Why fight fire with an axe when you can fight with fire and axe? Now featuring rugged rubberized handle!
   components:
   - type: MeleeWeapon
     wideAnimationRotation: 90
+    damage:
+      types:
+        # axes are kinda like sharp hammers, you know?
+        Blunt: 5
+        Slash: 10
+        Structural: 10
+      armorPenetration: 0.35 # Forge-Change
   - type: IgniteOnMeleeHit
     fireStacks: 1
   - type: Sprite

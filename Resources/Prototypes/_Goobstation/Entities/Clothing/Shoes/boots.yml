@@ -30,3 +30,5 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: StepHeavyBoots
+  - type: ClothingSlowOnDamageModifier # Corvax-Forge
+    modifier: 0.2

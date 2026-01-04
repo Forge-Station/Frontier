@@ -1,0 +1,91 @@
+# region Outer
+- type: latheRecipe
+  id: FRecClothingOuterHardsuitNfsdBronze
+  parent: NFBaseHardSuitArmoredRecipe
+  result: ClothingOuterHardsuitNfsdBronze
+  completetime: 4
+  materials:
+    Steel: 1000
+    Plastic: 1000
+    Durathread: 800
+    Brass: 300
+
+- type: latheRecipe
+  id: FRecClothingOuterHardsuitNfsdSilver
+  parent: NFBaseHardSuitArmoredRecipe
+  result: ClothingOuterHardsuitNfsdSilver
+  completetime: 4
+  materials:
+    Steel: 1000
+    Plastic: 1000
+    Durathread: 800
+    Silver: 900
+
+- type: latheRecipe
+  id: FRecClothingOuterHardsuitNfsdCombat
+  parent: NFBaseHardSuitArmoredRecipe
+  result: ClothingOuterHardsuitNfsdCombat
+  completetime: 8
+  materials:
+    Steel: 1500
+    Plastic: 3000
+    Plasteel: 2500
+    Durathread: 1000
+    Gold: 1300
+
+- type: latheRecipe
+  id: FRecClothingOuterHardsuitNfsdCommand
+  parent: NFBaseHardSuitArmoredRecipe
+  result: ClothingOuterHardsuitNfsdCommand
+  completetime: 8
+  materials:
+    Steel: 2000
+    Plastic: 3000
+    Plasteel: 2600
+    Durathread: 1100
+    Gold: 1300
+
+- type: latheRecipe
+  id: FRecClothingOuterHardsuitNfsdExperimental
+  parent: NFBaseHardSuitArmoredRecipe
+  result: ClothingOuterHardsuitNfsdExperimental
+  completetime: 8
+  materials:
+    PlasmaGlass: 1500
+    UraniumGlass: 1500
+    Plastic: 6000
+    Plasteel: 9000
+    Durathread: 8000
+    Silver: 4000
+    Gold: 6000
+    Brass: 2000
+
+# region Magboots
+- type: latheRecipe
+  id: FRecClothingShoesBootsMagNFSD
+  parent: NFBaseMagBootsRecipe
+  result: ClothingShoesBootsMagNfsdFilled
+  completetime: 4
+
+- type: latheRecipe
+  id: FRecClothingShoesBootsMagNFSDPromax
+  parent: NFBaseMagBootsRecipe
+  result: ClothingShoesBootsMagNFSDPromax
+  completetime: 6
+  materials:
+    Silver: 1500
+    Gold: 1000
+    Plasteel: 500
+
+# region Other
+- type: latheRecipe
+  parent: [BaseGoldCircuitboardRecipe, BaseEngineeringMachineRecipeCategory]
+  id: FRecAdvancedRadarConsoleCircuitboard
+  result: AdvancedRadarConsoleCircuitboard
+  completetime: 10
+
+- type: latheRecipe
+  parent: [BaseGoldCircuitboardRecipe, BaseEngineeringMachineRecipeCategory]
+  id: FRecComputerIFFCircuitboard
+  result: ComputerIFFCircuitboard
+  completetime: 10

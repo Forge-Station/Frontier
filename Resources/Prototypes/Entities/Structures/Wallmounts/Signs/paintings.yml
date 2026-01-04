@@ -3,10 +3,7 @@
   id: PaintingBase
   abstract: true
   components:
-  - type: WallMount
-    arc: 360
   - type: Sprite
-    drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/paintings.rsi
 
 - type: entity

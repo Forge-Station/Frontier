@@ -9,6 +9,7 @@
   id: Magazine90mm
   name: "90x427mm APHE ammo drum"
   parent: [BaseItem, RecyclableItemSteelTiny]
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance
   components:
   - type: Tag
     tags:
@@ -18,7 +19,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
     proto: 90mmCartridge
-    capacity: 400
+    capacity: 80
     mayTransfer: true
     whitelist:
       tags:
@@ -42,6 +43,7 @@
 - type: entity
   id: 90mmCartridge
   name: cartridge (90x427mm APHE)
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance
   parent: [ BaseCartridge, BaseC1Contraband ]
   components:
   - type: Tag
@@ -74,6 +76,7 @@
   id: Magazine90mmWeak
   name: "90x427mm ammo drum"
   parent: Magazine90mm
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance
   components:
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
@@ -83,6 +86,7 @@
   id: 90mmCartridgeWeak
   name: "cartridge (90x427mm)"
   parent: 90mmCartridge
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance
   components:
   - type: CartridgeAmmo
     proto: 90mmBulletWeak

@@ -21,3 +21,33 @@
     onlyAffectsMobs: false
   - type: UseDelay
     delay: 0.2
+
+- type: entity # Forge
+  name: combat centcomm hypospray
+  parent: CentCommHypo
+  description: Reserved for Nanotrasen's top doctors. It utilizes experimental bluespace technology.
+  suffix: nanites
+  id: CentCommHypoNanites
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/hypospray.rsi  # _Goobstation/Objects/Specific/Medical/centcomm_hypo.rsi
+    state: combat_hypo # hypo
+  - type: Item
+    sprite: Objects/Specific/Medical/hypospray.rsi # _Goobstation/Objects/Specific/Medical/centcomm_hypo.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 50
+        reagents:
+        - ReagentId: CombatNanites
+          Quantity: 50
+  - type: SolutionRegeneration
+    solution: hypospray
+    generated:
+      reagents:
+      - ReagentId: CombatNanites
+        Quantity: 0.24
+  - type: Hypospray
+    onlyAffectsMobs: false
+    preventCombatInjection: true # Forge
+    doAfterTime: 1.5 # Forge

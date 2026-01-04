@@ -95,6 +95,12 @@
       components:
         - SecretStash
         - WrappedParcel
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSilicon
+  - type: Tag
+    tags:
+    - SiliconEmotes
 
 - type: entity
   parent: [ PersonalAI, BaseC1Contraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband #Corvax-Frontier КБ
@@ -129,6 +135,11 @@
           Off: { state: syndicate-pai-off-overlay }
           Searching: { state: syndicate-pai-searching-overlay }
           On: { state: syndicate-pai-on-overlay }
+  - type: StaticPrice
+    price: 500
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSiliconSyndicate
 
 - type: entity
   parent: PersonalAI

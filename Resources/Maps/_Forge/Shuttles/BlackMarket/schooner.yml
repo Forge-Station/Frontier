@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 262.0.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/08/2025 14:14:19
-  entityCount: 542
+  time: 12/14/2025 20:34:09
+  entityCount: 549
 maps: []
 grids:
 - 1
@@ -449,33 +449,33 @@ entities:
             0: 14190
           -1,2:
             0: 35854
-            2: 256
+            1: 256
           0,3:
             0: 3
-            1: 13056
+            2: 13056
           -1,3:
             0: 8
-            1: 34816
+            2: 34816
           0,4:
-            1: 273
+            2: 273
           0,-1:
             0: 58623
           1,2:
-            2: 256
+            1: 256
           1,0:
-            2: 8706
-            1: 17472
+            1: 8706
+            2: 17472
           1,1:
-            2: 514
-            1: 68
+            1: 514
+            2: 68
           1,-1:
-            2: 8226
-            1: 68
+            1: 8226
+            2: 68
           0,-3:
             0: 29184
           -1,-3:
             0: 51200
-            2: 256
+            1: 256
           0,-2:
             0: 49663
           -1,-2:
@@ -483,28 +483,43 @@ entities:
           -1,-1:
             0: 58606
           1,-3:
-            2: 256
+            1: 256
           1,-2:
-            2: 8224
-            1: 17408
+            1: 8224
+            2: 17408
           -2,0:
-            1: 17472
-            2: 34824
+            2: 17472
+            1: 34824
           -2,1:
-            1: 68
-            2: 2056
+            2: 68
+            1: 2056
           -2,-1:
-            2: 32904
-            1: 68
+            1: 32904
+            2: 68
           -2,-2:
-            1: 17408
-            2: 32896
+            2: 17408
+            1: 32896
         uniqueMixes:
         - volume: 2500
           temperature: 293.15
           moles:
           - 21.824879
           - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.15
+          moles:
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -530,21 +545,6 @@ entities:
           - 0
           - 0
           - 0
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
@@ -553,6 +553,7 @@ entities:
     - type: IFF
       color: '#FFC000FF'
       flags: HideLabel
+    - type: ImplicitRoof
 - proto: AirlockGlassShuttleSyndicatePirateLocked
   entities:
   - uid: 3
@@ -590,6 +591,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -1.5,-1.5
+      parent: 1
+- proto: AmmoLoader
+  entities:
+  - uid: 204
+    components:
+    - type: Transform
+      pos: -0.5,5.5
       parent: 1
 - proto: APCBasic
   entities:
@@ -2124,6 +2132,13 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -1.5,9.5
       parent: 1
+- proto: ForgeMagazine57mmBase
+  entities:
+  - uid: 504
+    components:
+    - type: Transform
+      pos: 0.39299506,5.711146
+      parent: 1
 - proto: GravityGeneratorMini
   entities:
   - uid: 245
@@ -2548,11 +2563,6 @@ entities:
       parent: 1
 - proto: Rack
   entities:
-  - uid: 204
-    components:
-    - type: Transform
-      pos: -0.5,5.5
-      parent: 1
   - uid: 304
     components:
     - type: Transform
@@ -3133,6 +3143,37 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 6.5,5.5
       parent: 1
+- proto: TovekCartridge
+  entities:
+  - uid: 505
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.67780507,5.794778
+      parent: 1
+  - uid: 506
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.76143724,5.687251
+      parent: 1
+  - uid: 507
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.65391046,5.543882
+      parent: 1
+  - uid: 508
+    components:
+    - type: Transform
+      pos: 1.4185462,2.6526031
+      parent: 1
+  - uid: 549
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -0.4236316,0.8738105
+      parent: 1
 - proto: ToyFigurineCaptain
   entities:
   - uid: 399
@@ -3578,7 +3619,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -1.5,-6.5
       parent: 1
-- proto: WeaponNavalCannon53mmUnanchor
+- proto: WeaponTurretDravon
   entities:
   - uid: 265
     components:
@@ -3603,6 +3644,14 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -5.5,3.5
+      parent: 1
+- proto: WeaponTurretTovek
+  entities:
+  - uid: 503
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,18.5
       parent: 1
 - proto: Window
   entities:

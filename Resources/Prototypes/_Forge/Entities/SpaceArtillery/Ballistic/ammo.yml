@@ -1,0 +1,586 @@
+# Base - APHE - APCBC
+# region 16mm
+# 16mm base
+- type: entity
+  id: ForgeAmmoDrum16mmBase
+  name: "16mm ammo drum"
+  parent: Magazine20mmPiercing
+  components:
+  - type: Tag
+    tags:
+    - Magazine16mm
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_20mm.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge16mmCartridgeBase
+    capacity: 65
+    whitelist:
+      tags:
+      - 16mmCartridge
+
+- type: entity
+  id: Forge16mmCartridgeBase
+  name: "cartridge 16mm"
+  parent: 20mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 16mm
+  - type: CartridgeAmmo
+    proto: Forge16mmSpread
+  - type: Tag
+    tags:
+    - Cartridge
+    - 16mmCartridge
+
+# region 20mm
+# 20mm base
+- type: entity
+  id: ForgeAmmoDrum20mmBase
+  name: "20x124mm ammo drum"
+  parent: Magazine20mmPiercing
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_20mm.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge20mmCartridgeBase
+    capacity: 150
+
+- type: entity
+  id: Forge20mmCartridgeBase
+  name: "cartridge (20x124mm)"
+  parent: 20mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 20mm
+  - type: CartridgeAmmo
+    proto: Forge20mmBulletBase
+
+# 20mm APHE
+- type: entity
+  id: ForgeAmmoDrum20mmAPHE
+  name: "APHE 20mm ammo drum"
+  parent: Magazine20mmPiercing
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_20mm.rsi
+    layers:
+    - state: aphe
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge20mmCartridgeAPHE
+    capacity: 150
+
+- type: entity
+  id: Forge20mmCartridgeAPHE
+  name: "cartridge 20mm APHE"
+  parent: 20mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 20aphe
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: CartridgeAmmo
+    proto: Forge20mmBulletAPHE
+
+# 20mm APCBC
+- type: entity
+  id: ForgeAmmoDrum20mmAPCBC
+  name: "APCBC 20mm ammo drum"
+  parent: Magazine20mmPiercing
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_20mm.rsi
+    layers:
+    - state: apcbc
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge20mmCartridgeAPCBC
+    capacity: 150
+
+- type: entity
+  id: Forge20mmCartridgeAPCBC
+  name: "cartridge 20mm APCBC"
+  parent: 20mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 20apcbc
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: CartridgeAmmo
+    proto: Forge20mmBulletAPCBC
+
+# region 30mm
+# 30mm base
+- type: entity
+  id: ForgeAmmoDrum30mmBase
+  name: "30mm ammo drum"
+  parent: Magazine30mm
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_30mm.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge30mmCartridgeBase
+    capacity: 200
+
+- type: entity
+  id: Forge30mmCartridgeBase
+  name: "cartridge (30x173mm)"
+  parent: 30mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 30mm
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: CartridgeAmmo
+    proto: Forge30mmBulletBase
+
+# 30mm APHE
+- type: entity
+  id: ForgeAmmoDrum30mmAPHE
+  name: "APHE 30mm ammo drum"
+  parent: Magazine30mm
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_30mm.rsi
+    layers:
+    - state: aphe
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge30mmCartridgeAPHE
+    capacity: 200
+
+- type: entity
+  id: Forge30mmCartridgeAPHE
+  name: "cartridge (30x173mm)"
+  parent: 30mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 30aphe
+  - type: CartridgeAmmo
+    proto: Forge30mmBulletAPHE
+
+# 30mm APCBC
+- type: entity
+  id: ForgeAmmoDrum30mmAPCBC
+  name: "APCBC 30mm ammo drum"
+  parent: Magazine30mm
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_30mm.rsi
+    layers:
+    - state: apcbc
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge30mmCartridgeAPCBC
+    capacity: 200
+
+- type: entity
+  id: Forge30mmCartridgeAPCBC
+  name: "cartridge (30x173mm)"
+  parent: 30mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 30apcbc
+  - type: CartridgeAmmo
+    proto: Forge30mmBulletAPCBC
+
+# region 57mm
+# 57mm Base
+- type: entity
+  id: ForgeMagazine57mmBase
+  name: "57 ammo drum"
+  parent: Magazine57mm
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge57mmCartridgeBase
+    capacity: 80
+
+- type: entity
+  id: Forge57mmCartridgeBase
+  name: "cartridge (57x210mm)"
+  parent: 57mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 57mm
+  - type: CartridgeAmmo
+    proto: ForgeDravonBase
+
+# 57mm APHE
+- type: entity
+  id: ForgeMagazine57mmAPHE
+  name: "APHE 57mm ammo drum"
+  parent: Magazine57mm
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
+    layers:
+    - state: aphe
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge57mmCartridgeAPHE
+    capacity: 80
+
+- type: entity
+  id: Forge57mmCartridgeAPHE
+  name: "cartridge (57x210mm)"
+  parent: 57mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 57aphe
+  - type: CartridgeAmmo
+    proto: ForgeDravonAPHE
+
+# 57mm APCBC
+- type: entity
+  id: ForgeMagazine57mmAPCBC
+  name: "APCBC 57mm ammo drum"
+  parent: Magazine57mm
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_57mm.rsi
+    layers:
+    - state: apcbc
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge57mmCartridgeAPCBC
+    capacity: 80
+
+- type: entity
+  id: Forge57mmCartridgeAPCBC
+  name: "cartridge (57x210mm)"
+  parent: 57mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 57apcbc
+  - type: CartridgeAmmo
+    proto: ForgeDravonAPCBC
+
+# region 90mm
+# 90mm base (тоже взрывается, но слабее.. дя)
+- type: entity
+  id: ForgeMagazine90mm
+  name: "90mm ammo drum"
+  parent: Magazine90mm
+  components:
+  - type: Tag
+    tags:
+    - Magazine90mm
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_90mm.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge90mmCartridge
+    capacity: 60
+
+- type: entity
+  id: Forge90mmCartridge
+  name: "cartridge 90mm"
+  parent: 90mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 90mm
+  - type: CartridgeAmmo
+    proto: Forge90mmBulletBase
+
+# 90mm APHE
+- type: entity
+  id: ForgeMagazine90mmAPHE
+  name: "90mm ammo drum APHE"
+  parent: ForgeMagazine90mm
+  components:
+  - type: Tag
+    tags:
+    - Magazine90mm
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_90mm.rsi
+    layers:
+    - state: aphe
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge90mmCartridgeAPHE
+    capacity: 60
+
+- type: entity
+  id: Forge90mmCartridgeAPHE
+  name: "cartridge 90mm APHE"
+  parent: Forge90mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 90aphe
+  - type: CartridgeAmmo
+    proto: Forge90mmBulletAPHE
+
+# 90mm APHEBC
+- type: entity
+  id: ForgeMagazine90mmAPHEBC
+  name: "90mm ammo drum APHEBC"
+  parent: ForgeMagazine90mm
+  components:
+  - type: Tag
+    tags:
+    - Magazine90mm
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/magazine_90mm.rsi
+    layers:
+    - state: aphebc
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: true
+    proto: Forge90mmCartridgeAPHEBC
+    capacity: 60
+
+- type: entity
+  id: Forge90mmCartridgeAPHEBC
+  name: "cartridge 90mm APHEBC"
+  parent: 90mmCartridge
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 90aphebc
+  - type: CartridgeAmmo
+    proto: Forge90mmBulletAPHEBC
+
+# region 203mm
+# 203mm HE
+- type: entity
+  id: Forge203mmCartridgeHE
+  name: 203mm HE
+  description: A chemically-propelled shell for Kargil 203mm cannons.
+  parent: BaseGrenade
+  components:
+  - type: Tag
+    tags:
+    - 203mmCartridge
+  - type: Item
+    size: Huge
+  - type: CartridgeAmmo
+    proto: Forge203ProjectileHE
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 203mm
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 3
+    totalIntensity: 25
+  - type: ExplodeOnTrigger
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+
+- type: entity
+  id: Forge203mmCartridgeHESH
+  parent: Forge203mmCartridgeHE
+  components:
+  - type: Tag
+    tags:
+    - 203mmCartridge
+  - type: CartridgeAmmo
+    proto: Forge203ProjectileHESH
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 203hesh
+      map: ["enum.AmmoVisualLayers.Base"]
+
+# region 220mm
+- type: entity
+  id: Forge220mmCartridgeHE
+  name: 220mm HE
+  description: A chemically-propelled shell for CYREXA 220mm cannons.
+  parent: BaseGrenade
+  components:
+  - type: Tag
+    tags:
+    - 220mmCartridge
+  - type: Item
+    size: Huge
+  - type: CartridgeAmmo
+    proto: Forge220ProjectileHE
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 220mm
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 3
+    totalIntensity: 30
+  - type: ExplodeOnTrigger
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+
+- type: entity
+  id: Forge220mmCartridgeHESH
+  parent: Forge220mmCartridgeHE
+  components:
+  - type: Tag
+    tags:
+    - 220mmCartridge
+  - type: CartridgeAmmo
+    proto: Forge220ProjectileHESH
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 220hesh
+      map: ["enum.AmmoVisualLayers.Base"]
+
+# region 255mm
+- type: entity
+  id: Forge255mmCartridgeHE
+  name: 255mm shell
+  description: A chemically-propelled shell for Bofors 255mm cannons.
+  parent: BaseGrenade
+  components:
+  - type: Tag
+    tags:
+    - 255mmCartridge
+  - type: Item
+    size: Huge
+  - type: CartridgeAmmo
+    proto: Forge255ProjectileHE
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 255mm
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 3
+    totalIntensity: 75
+  - type: ExplodeOnTrigger
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+
+- type: entity
+  id: Forge255mmCartridgeHESH
+  parent: 255mmCartridge
+  components:
+  - type: Tag
+    tags:
+    - 255mmCartridge
+  - type: CartridgeAmmo
+    proto: Forge255ProjectileHESH
+  - type: Sprite
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    layers:
+    - state: 255hesh
+      map: ["enum.AmmoVisualLayers.Base"]

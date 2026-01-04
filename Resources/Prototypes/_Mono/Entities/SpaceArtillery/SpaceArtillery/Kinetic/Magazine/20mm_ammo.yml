@@ -10,6 +10,7 @@
   id: Magazine20mmPiercing
   name: "20x124mm AP ammo drum"
   parent: [BaseItem, RecyclableItemSteelTiny]
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   components:
   - type: Tag
     tags:
@@ -18,7 +19,7 @@
     size: Small
   - type: BallisticAmmoProvider
     proto: 20mmCartridge
-    capacity: 600
+    capacity: 400
     mayTransfer: true
     whitelist:
       tags:
@@ -45,6 +46,7 @@
   id: 20mmCartridge
   name: cartridge (20x124mm AP)
   parent: [ BaseCartridge, BaseC1Contraband ]
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   components:
   - type: Tag
     tags:
@@ -84,6 +86,7 @@
   id: Magazine20mmWeak
   name: "20x124mm ammo drum"
   parent: Magazine20mmPiercing
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   components:
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
@@ -92,6 +95,7 @@
 - type: entity
   id: 20mmCartridgeWeak
   name: "cartridge (20x124mm)"
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   parent: 20mmCartridge
   components:
   - type: CartridgeAmmo

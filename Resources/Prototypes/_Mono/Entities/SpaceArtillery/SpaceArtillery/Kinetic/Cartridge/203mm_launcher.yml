@@ -10,6 +10,7 @@
   parent: BallisticArtilleryUnanchorableCartridge
   description: A cruiser artillery cannon that launches devastating 203mm shells for long-range ship-to-ship combat. Can be remotely activated or linked up to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 12500
   - type: Sprite
@@ -34,7 +35,7 @@
         layer:
         - MachineLayer
   - type: Gun
-    projectileSpeed: 255
+    projectileSpeed: 155
     minAngle: 0
     maxAngle: 3
     fireRate: 0.2
@@ -65,7 +66,7 @@
       tags:
       - 203mmCartridge
     capacity: 12
-    proto: 203mmCartridgeWeak
+    proto: Forge203mmCartridgeHE # Forge-change: rebalance
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: RadarBlip

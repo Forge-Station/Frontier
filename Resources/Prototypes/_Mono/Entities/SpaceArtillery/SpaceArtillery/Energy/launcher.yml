@@ -25,6 +25,7 @@
   parent: BallisticArtillery
   description: Launches magnetically contained balls of plasma at targets. Can be remotely activated, or linked up to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 2000
   - type: Sprite
@@ -94,6 +95,7 @@
   parent: BallisticArtillery
   description: Uses mechanisms to launch... something. Destroys rock easily.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 1500
   - type: Sprite
@@ -161,6 +163,7 @@
   suffix: TSF ONLY, ADS ONLY
   description: A rapidly firing energy weapon, dealing a large amount of damage to its targets. Takes a long time to recharge.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 4000
   - type: Sprite
@@ -231,6 +234,7 @@
   suffix: TSF ONLY, ADS ONLY
   description: A devastating weapon, usually used for large scale fire support and strategic destruction.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 50000
   - type: Sprite
@@ -309,6 +313,7 @@
   parent: BallisticArtillery #Could possibly create a ConstructibleTurret proto if more are added; comps currently do nothing upgrade wise
   description: Uses mechanisms to launch... something. Destroys rock easily. Limited range.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 1500
   - type: Sprite
@@ -378,6 +383,7 @@
   parent: BallisticArtillery
   description: Launches EMP projectiles at ships, disabling systems with powerful electromagnetic pulses. Ideal for non-lethal engagements and can be remotely activated or linked to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 3500
   - type: Sprite
@@ -440,6 +446,7 @@
   suffix: TSF ONLY, ADS ONLY
   description: Aetherion Dynamics' most iconic supercapital battery. Fires enormous ionized gas projectiles that melt through the toughest ship armor. Can be remotely activated or linked to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 50000
   - type: Sprite
@@ -513,6 +520,7 @@
   parent: BallisticArtillery
   description: A light laser emplactment designed by the Pantheon Collective, used to shred threats of all types
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 3000
   - type: Sprite
@@ -522,18 +530,18 @@
   - type: Appearance
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 50000
-    startingCharge: 50000
+    maxCharge: 5000 # Forge-change: rebalance
+    startingCharge: 5000 # Forge-change: rebalance
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 500
+    autoRechargeRate: 55 # Forge-change: rebalance
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 20
+    fireRate: 14 # Forge-change: rebalance
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 4 # Forge-change: rebalance
     shootThermalSignature: 2000000
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
@@ -542,7 +550,7 @@
   - type: SpaceArtillery
     powerChargeRate: 200
     powerUsePassive: 300
-    powerUseActive: 0
+    powerUseActive: 190 # Forge-change: rebalance
   - type: FireControlRotate
   - type: Actions
   - type: HitscanBatteryAmmoProvider
@@ -578,6 +586,7 @@
   name: L-20 Apollo Heavy Laser Cannon
   description: One of the Pantheon Collective's top weapons, the Apollo is aptly named for its beams heating surfaces to beyond the temperature of nearby stars.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 15000
   - type: Sprite
@@ -649,6 +658,7 @@
   suffix: ADS ONLY
   description: A terrifying weapon to have aimed at you, the Reaper is an ancient piece of pre-fracture tech capable of shattering the strongest of hulls within one or two blasts.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 1500000
   - type: Sprite
@@ -723,6 +733,7 @@
   suffix: ADS ONLY
   description: One of the most powerful EMP weapons in sector, its a sign of doom for its targets.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 1250000
   - type: Sprite
@@ -798,6 +809,7 @@
   suffix: ADS ONLY
   description: A potent proton cannon from before the Fracture, known for melting holes through both inorganic and organic matter with ease.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 30000
   - type: Sprite
@@ -867,6 +879,7 @@
   suffix: ADS ONLY
   description: A steadily firing neutron repeater, dealing solid damage to most targets. A pre-fracture marvel of weapons technology
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 40000
   - type: Sprite
@@ -937,6 +950,7 @@
   suffix: ADS ONLY
   description: A unique pre-fracture weapon, the Flayer fires a storm of tungsten alloy darts at near the speed of light, barraging targets to pieces.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 25000
   - type: Sprite

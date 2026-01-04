@@ -10,6 +10,7 @@
   parent: BallisticArtilleryMagazine
   description: A single-barrel autocannon made by Aetherion Dynamics. Medium artillery piece with high fire rate but relatively low impact, firing HEAT shells to damage ship armor and systems. Can be remotely activated or linked up to a GCS.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 650
   - type: Sprite
@@ -22,8 +23,8 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 1.5
-    projectileSpeed: 250
+    fireRate: 8.5
+    projectileSpeed: 145 # Forge-change: rebalance
     minAngle: 0
     maxAngle: 2
     shootThermalSignature: 2000000 # ~3.5km signature if firing continuously
@@ -40,7 +41,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine57mmWeak
+        startingItem: ForgeMagazine57mmBase # Forge-change
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2

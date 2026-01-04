@@ -16,6 +16,11 @@
     useStationName: true
   - type: ApcPowerReceiver
     powerDisabled: true #starts off
+  - type: Sprite # Forge-Change: Fax-color-fix
+    color: "#a3a3a3"
+    layers:
+      - state: icon
+        map: [ "base" ]
 
 # Outpost
 - type: entity

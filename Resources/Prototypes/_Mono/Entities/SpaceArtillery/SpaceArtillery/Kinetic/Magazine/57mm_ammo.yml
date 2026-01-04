@@ -8,6 +8,7 @@
   id: Magazine57mm
   name: "57x210mm APHE ammo drum"
   parent: [BaseItem, RecyclableItemSteelTiny]
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   components:
   - type: Tag
     tags:
@@ -16,7 +17,7 @@
     size: Small
   - type: BallisticAmmoProvider
     proto: 57mmCartridge
-    capacity: 600
+    capacity: 300
     mayTransfer: true
     whitelist:
       tags:
@@ -41,6 +42,7 @@
   id: 57mmCartridge
   name: cartridge (57x210mm APHE)
   parent: [ BaseCartridge, BaseC1Contraband ]
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   components:
   - type: Tag
     tags:
@@ -81,6 +83,7 @@
   id: Magazine57mmWeak
   name: "57x210mm ammo drum"
   parent: Magazine57mm
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   components:
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
@@ -90,6 +93,7 @@
   id: 57mmCartridgeWeak
   name: "cartridge (57x210mm)"
   parent: 57mmCartridge
+  categories: [ HideSpawnMenu ] # Forge-change: rebalance ShipGun
   components:
   - type: CartridgeAmmo
     proto: ShipDravonProjectileWeak

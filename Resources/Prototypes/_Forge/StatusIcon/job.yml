@@ -77,3 +77,11 @@
     state: doc
   jobName: job-name-doc
   allowSelection: false # Frontier
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconEngineerNfsd
+  icon:
+    sprite: /Textures/Forge/Interface/Misc/job_icons.rsi
+    state: engynfsd
+  jobName: forge-job-name-engineernfsd

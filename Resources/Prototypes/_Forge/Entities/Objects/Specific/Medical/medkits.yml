@@ -1,0 +1,53 @@
+- type: entity
+  name: military medical kit
+  description: "For the giant weapons among us."
+  parent: Medkit
+  id: MedkitMilitary
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Specific/Medical/firstaidkits.rsi
+    state: blackkit
+  - type: Item
+    heldPrefix: blackkit
+    size: Normal
+    shape:
+    - 0,0,1,1
+    sprite: Forge/Objects/Specific/Medical/firstaidkits.rsi
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,3,3
+    whitelist:
+      tags:
+      - Pill            # Таблетки
+      - PillCanister    # Таблетницы
+      - ChemicalMedipen # Медипены
+      - Syringe         # Шприцы
+      - Gauze           # Бинты
+      - Brutepack       # Набор для ушибов / мед. нить
+      - Ointment        # Мазь от ожогов / регенеративная сеть
+      - Bloodpack       # Пакеты крови
+  - type: StaticPrice
+    price: 900
+
+- type: entity
+  id: MedkitMilitaryFilled
+  name: military medical kit
+  description: "For the giant weapons among us."
+  parent: MedkitMilitary
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: MedicatedSuture
+      - id: MedicatedSuture
+      - id: RegenerativeMesh
+      - id: RegenerativeMesh
+      - id: PunctAutoInjector
+      - id: PyraAutoInjector
+      - id: PunctAutoInjector
+      - id: PyraAutoInjector
+      - id: HemostasisAutoInjector
+      - id: HemostasisAutoInjector
+      - id: RadAutoInjector
+      - id: AntiPoisonMedipen

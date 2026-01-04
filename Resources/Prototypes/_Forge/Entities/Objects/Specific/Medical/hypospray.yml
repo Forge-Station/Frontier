@@ -96,9 +96,7 @@
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 10
+        maxVol: 5
         reagents:
-        - ReagentId: Desoxyephedrine
-          Quantity: 5
         - ReagentId: CombatNanites
           Quantity: 5

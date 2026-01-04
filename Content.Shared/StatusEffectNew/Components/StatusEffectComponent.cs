@@ -4,8 +4,6 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-// Forge-Change full (refactory b.y. wizard)
-
 namespace Content.Shared.StatusEffectNew.Components;
 
 /// <summary>

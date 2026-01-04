@@ -1,0 +1,83 @@
+# region Base
+- type: technology
+  id: ForgeResearchShipAmmoAll
+  name: forge-research-technology-shipammoall
+  entityIcon: ForgeResearchShipAmmoALL
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 9000
+  recipeUnlocks:
+  - ForgeAmmoDrum20mmBase
+  - ForgeAmmoDrum30mmBase
+  - ForgeMagazine57mmBase
+  position: 0, 47
+
+# region APCBC
+- type: technology
+  id: ForgeResearchShipAmmoAPCBC20
+  name: forge-research-technology-shipammo20apcbc
+  icon:
+    sprite: Forge/Objects/SpaceArtillery/ammo.rsi
+    state: research-apcbc
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 4000
+  recipeUnlocks:
+  - ForgeAmmoDrum20mmAPCBC
+  technologyPrerequisites:
+  - ForgeResearchShipAmmoAll
+  position: 1, 47
+
+- type: technology
+  id: ForgeResearchShipAmmoAPCBC30
+  name: forge-research-technology-shipammo30apcbc
+  entityIcon: ForgeResearchShipAmmoAPCBC
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 4000
+  recipeUnlocks:
+  - ForgeAmmoDrum30mmAPCBC
+  technologyPrerequisites:
+  - ForgeResearchShipAmmoAll
+  position: 1, 48
+
+- type: technology
+  id: ForgeResearchShipAmmoAPCBC57
+  name: forge-research-technology-shipammo57apcbc
+  entityIcon: ForgeResearchShipAmmoAPCBC
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 4000
+  recipeUnlocks:
+  - ForgeMagazine57mmAPCBC
+  technologyPrerequisites:
+  - ForgeResearchShipAmmoAll
+  position: 1, 49
+
+- type: technology
+  id: ForgeResearchShipAmmo90
+  name: forge-research-technology-shipammo90
+  entityIcon: 90mmCartridge
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 4500
+  recipeUnlocks:
+  - FRecMagazine90mmWeak
+  technologyPrerequisites:
+  - ForgeResearchShipAmmoAll
+  position: 0, 50
+
+# EMP Base
+- type: technology
+  id: ForgeResearchShipAmmoEMP
+  name: forge-research-technology-shipammoemp
+  entityIcon: TovekCartridge
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 8000
+  recipeUnlocks:
+  - FRecTovekCartridge
+  - FRec150mmEmpShell
+  technologyPrerequisites:
+  - ForgeResearchShipAmmoAll
+  position: 0, 46
