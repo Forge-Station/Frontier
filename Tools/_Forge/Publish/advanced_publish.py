@@ -5,6 +5,8 @@ Github: FireFoxPhoenix
 
 #!/usr/bin/env python3
 
+#!/usr/bin/env python3
+
 import argparse
 import requests
 import os
@@ -22,7 +24,7 @@ logger = logging.getLogger(__name__)
 # CONFIGURATION PARAMETERS
 # Forks should change these to publish to their own infrastructure.
 #
-ROBUST_CDN_URL = "https://cdn.corvaxforge.ru/" # TODO: сделать через arguments
+ROBUST_CDN_URL = "https://cdn.corvaxforge.ru/"
 
 def main():
     parser = argparse.ArgumentParser()
@@ -49,13 +51,13 @@ def main():
         logger.critical(f"Publish token is empty")
         sys.exit(1)   
     
-    if "GITHUB_SHA" not in os.environ: # TODO: сделать через argument
-        logger.critical("GITHUB_SHA environment variable not set")
-        sys.exit(1)
+    #if "GITHUB_SHA" not in os.environ: # TODO: сделать через argument
+    #    logger.critical("GITHUB_SHA environment variable not set")
+    #    sys.exit(1)
     version = os.environ["GITHUB_SHA"]
     logger.info(f"Starting publish on Robust.Cdn for version {version}")
 
-    session = create_session(publish_token)
+    session = create_session(publish_token, max_workers=max_workers)
     data = {
         "version": version,
         "engineVersion": get_engine_version(),
@@ -70,14 +72,13 @@ def main():
     files = list(get_files_to_publish(release_dir))
     if not files:
         logger.warning("No files found to publish")
-        return
         
     logger.info(f"Uploading {len(files)} files using {max_workers} parallel workers...")
     successful = 0
     failed = 0
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         future_files = {
-            executor.submit(upload_file, file, fork_id, publish_token, version): file for file in files
+            executor.submit(upload_file, str(file), fork_id, publish_token, version, max_workers): file for file in files
         }
         for future in as_completed(future_files):
             file_path = future_files[future]
@@ -88,7 +89,7 @@ def main():
             except Exception as e:
                 failed += 1
                 logger.warning(f"Failed to publish {os.path.basename(file_path)}: {e}")
-    if failed > 0:
+    if failed:
         logger.warning(f"Upload completed with {failed} failures")
         # sys.exit(1)
     else:
@@ -104,7 +105,7 @@ def main():
     resp = session.post(f"{ROBUST_CDN_URL}fork/{fork_id}/publish/finish", json=data, headers=headers)
     resp.raise_for_status()
 
-    logger.info("SUCCESS!")
+    logger.info("Publish completed")
 
 
 def get_files_to_publish(release_dir: str) -> Iterable[str]:
@@ -130,15 +131,16 @@ def get_engine_version() -> str:
             return tag
         return tag[1:]
     except subprocess.CalledProcessError as e:
-        logger.error(f"Failed to get engine version: {e.stderr}")
-        raise
+        stderr = (e.stderr or "").strip()
+        logger.error(f"Failed to get engine version: {stderr}")
+        return "unknown"
     except FileNotFoundError:
         logger.error("RobustToolbox directory not found")
-        raise
+        return "unknown"
 
-def upload_file(file_path: str, fork_id: str, publish_token: str, version: str):
+def upload_file(file_path: str, fork_id: str, publish_token: str, version: str, max_workers: int):
     if not hasattr(thread_session, "session"):
-        thread_session.session = create_session(publish_token)
+        thread_session.session = create_session(publish_token, max_workers)
     session = thread_session.session
     with open(file_path, "rb") as file:
         headers = {
@@ -150,11 +152,11 @@ def upload_file(file_path: str, fork_id: str, publish_token: str, version: str):
         resp.raise_for_status()
     return file_path
 
-def create_session(publish_token: str) -> requests.Session:
+def create_session(publish_token: str, max_workers: int) -> requests.Session:
     session = requests.Session()
     adapter = requests.adapters.HTTPAdapter(
-        pool_connections=10,
-        pool_maxsize=10,
+        pool_connections=max(10, max_workers * 2),
+        pool_maxsize=max(10, max_workers * 2),
         max_retries=3
     )
     session.mount("https://", adapter)
