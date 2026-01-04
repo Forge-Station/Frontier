@@ -48,7 +48,7 @@ jobs:
       run: python3 Tools/_Forge/Publish/advanced_publish.py --fork-id frontier --publish-token PUBLISH_TOKEN
       env:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
-        GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }} # почему не GITHUB_SHA
+        GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }}
 
     # - name: Publish changelog (Discord)
     #   continue-on-error: true
