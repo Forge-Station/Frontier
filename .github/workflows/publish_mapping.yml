@@ -38,7 +38,7 @@ jobs:
       run: dotnet run --project Content.Packaging client --no-wipe-release
 
     - name: Publish version
-      run: Tools/publish_multi_request_mapping.py
+      run: python3 Tools/_Forge/Publish/advanced_publish.py --fork-id frontier_mapping --publish-token PUBLISH_MAPPING_TOKEN
       env:
         PUBLISH_MAPPING_TOKEN: ${{ secrets.PUBLISH_MAPPING_TOKEN }}
         FORK_ID_MAPPING: ${{ vars.FORK_ID_MAPPING }}
