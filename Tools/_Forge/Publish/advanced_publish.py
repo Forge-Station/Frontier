@@ -5,8 +5,6 @@ Github: FireFoxPhoenix
 
 #!/usr/bin/env python3
 
-#!/usr/bin/env python3
-
 import argparse
 import requests
 import os
