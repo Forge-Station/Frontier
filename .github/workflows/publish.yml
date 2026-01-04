@@ -44,10 +44,10 @@ jobs:
       run: dotnet run --project Content.Packaging client --no-wipe-release
 
     - name: Publish version
-      run: Tools/publish_multi_request.py
+      run: python3 Tools/_Forge/Publish/advanced_publish.py --fork-id frontier --publish-token PUBLISH_TOKEN
       env:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
-        GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }}
+        GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }} # почему не GITHUB_SHA
 
     # - name: Publish changelog (Discord)
     #   continue-on-error: true
