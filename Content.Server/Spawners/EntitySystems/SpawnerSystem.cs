@@ -1,7 +1,8 @@
 using Content.Server.Spawners.Components;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs.Components; // Forge-Change
+using Content.Shared.Mobs; // Forge-Change
 
 namespace Content.Server.Spawners.EntitySystems;
 
@@ -45,36 +46,51 @@ public sealed class SpawnerSystem : EntitySystem
             return;
 
         // Forge-Change start
-        CleanupSpawnedEntities(uid, component);
-        
-        var aliveEntitiesCount = CountAliveEntities(component);
-        
-        if (aliveEntitiesCount >= component.MaximumEntitiesPerGrid)
-            return;
-        
-        var maxAllowedEntities = component.MaximumEntitiesPerGrid - aliveEntitiesCount;
-        var maxToSpawn = Math.Min(component.MaximumEntitiesSpawned, maxAllowedEntities);
-        
-        if (maxToSpawn < component.MinimumEntitiesSpawned)
-            return;
-
-        var number = _random.Next(component.MinimumEntitiesSpawned, maxToSpawn);
-        // Forge-Change end
-        var coordinates = Transform(uid).Coordinates;
-
-        for (var i = 0; i < number; i++)
+        if (component.MaximumEntitiesPerGrid > 0)
         {
-            var entity = _random.Pick(component.Prototypes);
-            var spawned = SpawnAtPosition(entity, coordinates); // Forge-Change
-            component.SpawnedEntities.Add(spawned); // Forge-Change
+            CleanupSpawnedEntities(uid, component);
+
+            var aliveEntitiesCount = CountAliveEntities(component);
+
+            if (aliveEntitiesCount >= component.MaximumEntitiesPerGrid)
+                return;
+
+            var maxAllowedEntities = component.MaximumEntitiesPerGrid - aliveEntitiesCount;
+            var maxToSpawn = Math.Min(component.MaximumEntitiesSpawned, maxAllowedEntities);
+
+            if (maxToSpawn < component.MinimumEntitiesSpawned)
+                return;
+
+            var number = _random.Next(component.MinimumEntitiesSpawned, maxToSpawn);
+
+            var coordinates = Transform(uid).Coordinates;
+
+            for (var i = 0; i < number; i++)
+            {
+                var entity = _random.Pick(component.Prototypes);
+                var spawned = SpawnAtPosition(entity, coordinates);
+                component.SpawnedEntities.Add(spawned);
+            }
         }
+        else
+        {
+            var number = _random.Next(component.MinimumEntitiesSpawned, component.MaximumEntitiesSpawned);
+            var coordinates = Transform(uid).Coordinates;
+
+            for (var i = 0; i < number; i++)
+            {
+                var entity = _random.Pick(component.Prototypes);
+                SpawnAtPosition(entity, coordinates);
+            }
+        }
+        // Forge-Change end
     }
 
     // Forge-Change start
     private void CleanupSpawnedEntities(EntityUid spawnerUid, TimedSpawnerComponent component)
     {
         var toRemove = new List<EntityUid>();
-        
+
         foreach (var entityUid in component.SpawnedEntities)
         {
             if (!Exists(entityUid))
@@ -82,7 +98,7 @@ public sealed class SpawnerSystem : EntitySystem
                 toRemove.Add(entityUid);
             }
         }
-        
+
         foreach (var entityUid in toRemove)
         {
             component.SpawnedEntities.Remove(entityUid);
@@ -91,16 +107,19 @@ public sealed class SpawnerSystem : EntitySystem
 
     private int CountAliveEntities(TimedSpawnerComponent component)
     {
+        if (component.MaximumEntitiesPerGrid <= 0)
+            return 0;
+
         var count = 0;
-        
+
         foreach (var entityUid in component.SpawnedEntities)
         {
             if (!Exists(entityUid))
                 continue;
-            
+
             if (TryComp<MobStateComponent>(entityUid, out var mobState))
             {
-                if (mobState.CurrentState == MobState.Alive || 
+                if (mobState.CurrentState == MobState.Alive ||
                     mobState.CurrentState == MobState.Critical)
                 {
                     count++;
@@ -111,7 +130,7 @@ public sealed class SpawnerSystem : EntitySystem
                 count++;
             }
         }
-        
+
         return count;
     }
     // Forge-Change end
