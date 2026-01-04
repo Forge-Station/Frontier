@@ -153,7 +153,7 @@ def upload_file(file_path: str, fork_id: str, publish_token: str, version: str, 
 def create_session(publish_token: str, max_workers: int) -> requests.Session:
     session = requests.Session()
     adapter = requests.adapters.HTTPAdapter(
-        pool_connections=max(10, max_workers * 2),
+        pool_connections=5,
         pool_maxsize=max(10, max_workers * 2),
         max_retries=3
     )
