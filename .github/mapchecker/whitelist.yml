@@ -8,6 +8,12 @@ Lodge: true
 Medical: true
 Edison: true
 
+# Shuttles
+false_left_side_of_he_ship_orion: true
+false_right_side_of_he_ship_orion: true
+false_left_side_of_he_ship_un4: true
+false_right_side_of_he_ship_un4: true
+
 # TECHNICAL DEBT BELOW. These ones were added to this list to ensure other PR's would not break upon merging. It is
 # the intention for this list to become empty in separate PR's.
 Tinnia:
