@@ -1,0 +1,37 @@
+- type: entity
+  name: Спавнер спецназовца TL
+  id: SpawnMobTechnicLogisticT3
+  parent: MarkerBase
+  suffix: ИИ, Враждебный, T3, TechnicLogistic
+  components:
+  - type: Sprite
+    layers:
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Forge/Clothing/Uniforms/Jumpsuits/jumpsuit_techniclogistic.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: Forge/Clothing/Shoes/Boots/boots_techniclogistic.rsi
+      state: equipped-FEET
+    - sprite: Forge/Clothing/Mask/mask_techniclogistic.rsi
+      state: equipped-MASK
+    - sprite: Forge/Clothing/Head/Helmets/helmet_techniclogistic.rsi
+      state: equipped-HELMET
+    - sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+      state: equipped-NECK-on
+      color: "#9c0de1"
+    - sprite: Forge/Clothing/Eyes/Goggles/glasses_techniclogistic.rsi
+      state: equipped-EYES
+    - sprite: Forge/Clothing/OuterClothing/Armor/vest_techniclogistic.rsi
+      state: equipped-OUTHERCLOTHING
+    - sprite: Forge/Clothing/Hands/Gloves/hand_techniclogistic.rsi
+      state: equipped-HAND
+    - sprite: Forge/Objects/Weapons/Guns/Rifles/dagger.rsi
+      state: wielded-inhand-left
+  - type: RandomSpawner
+    prototypes:
+    - MobTechnicLogisticSpecialistAssault
+    chance: 1
+    offset: 0.0
+    rarePrototypes:
+    - MobTechnicLogisticSpecialistAssault
+    rareChance: 0.2

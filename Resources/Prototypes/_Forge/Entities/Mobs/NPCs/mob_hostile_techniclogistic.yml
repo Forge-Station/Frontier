@@ -1,0 +1,62 @@
+- type: startingGear
+  id: MobHumanoidTechnicLogisticGearRangedT3Alt
+  equipment:
+    gloves: WeaponRifleDagger
+    back: ClothingBackpackDuffelTL
+    belt: ClothingBeltTL
+
+- type: entity
+  name: подозрительный военный
+  parent:
+  - MobMovementSpeedModifierRanged
+  - MobMercenaryBase
+  id: MobTechnicLogisticSpecialistAssault
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Loadout
+    prototypes:
+    - MobHumanoidTechnicLogisticGearRangedT3Alt
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Forge/Clothing/Uniforms/Jumpsuits/jumpsuit_techniclogistic.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: Forge/Clothing/Shoes/Boots/boots_techniclogistic.rsi
+      state: equipped-FEET
+    - sprite: Forge/Clothing/Mask/mask_techniclogistic.rsi
+      state: equipped-MASK
+    - sprite: Forge/Clothing/Head/Helmets/helmet_techniclogistic.rsi
+      state: equipped-HELMET
+    - sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+      state: equipped-NECK-on
+      color: "#9c0de1"
+    - sprite: Forge/Clothing/Eyes/Goggles/glasses_techniclogistic.rsi
+      state: equipped-EYES
+    - sprite: Forge/Clothing/OuterClothing/Armor/vest_techniclogistic.rsi
+      state: equipped-OUTHERCLOTHING
+    - sprite: Forge/Clothing/Hands/Gloves/hand_techniclogistic.rsi
+      state: equipped-HAND
+    - sprite: Forge/Objects/Weapons/Guns/Rifles/dagger.rsi
+      state: wielded-inhand-left
+  - type: BasicEntityAmmoProvider
+    proto: NFCartridgeRifle25
+    capacity: 15
+    count: 15
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 6
+    rechargeSound:
+      path: /Audio/_NF/Effects/silence.ogg
+  - type: Gun
+    showExamineText: false
+    fireRate: 5
+    projectileSpeed: 38
+    minAngle: 8
+    maxAngle: 20
+    angleIncrease: 4
+    angleDecay: 3
+    selectedMode: Burst
+    availableModes:
+    - Burst
+    soundGunshot: /Audio/_NF/Weapons/Guns/Gunshots/rifle.ogg
