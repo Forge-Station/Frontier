@@ -29,12 +29,18 @@ def main():
     parser.add_argument("--fork-id", required=True)
     parser.add_argument("--publish-token")
     parser.add_argument("--max-workers", type=int, default=4)
+    parser.add_argument("--pool-connections", type=int, default=3)
+    parser.add_argument("--pool-maxsize", type=int, default=10)
+    parser.add_argument("--max-retries", type=int, default=3)
     parser.add_argument("--release_dir", default="release")
 
     args = parser.parse_args()
     fork_id = args.fork_id
     publish_token = args.publish_token
     max_workers = args.max_workers
+    pool_connections = args.pool_connections
+    pool_maxsize = args.pool_maxsize
+    max_retries = args.max_retries
     release_dir = args.release_dir
     
     if fork_id == "" or fork_id == None:
@@ -49,20 +55,18 @@ def main():
         logger.critical(f"Publish token is empty")
         sys.exit(1)   
     
-    #if "GITHUB_SHA" not in os.environ: # TODO: сделать через argument
+    #if "GITHUB_SHA" not in os.environ:
     #    logger.critical("GITHUB_SHA environment variable not set")
     #    sys.exit(1)
     version = os.environ["GITHUB_SHA"]
     logger.info(f"Starting publish on Robust.Cdn for version {version}")
 
-    session = create_session(publish_token, max_workers=max_workers)
+    session = create_session(publish_token, pool_connections, pool_maxsize, max_retries)
     data = {
         "version": version,
         "engineVersion": get_engine_version(),
     }
-    headers = {
-        "Content-Type": "application/json"
-    }
+    headers = { "Content-Type": "application/json" }
     resp = session.post(f"{ROBUST_CDN_URL}fork/{fork_id}/publish/start", json=data, headers=headers)
     resp.raise_for_status()
     logger.info("Publish successfully started, adding files...")
@@ -76,7 +80,7 @@ def main():
     failed = 0
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         future_files = {
-            executor.submit(upload_file, str(file), fork_id, publish_token, version, max_workers): file for file in files
+            executor.submit(upload_file, str(file), fork_id, publish_token, pool_connections, pool_maxsize, max_retries, version): file for file in files
         }
         for future in as_completed(future_files):
             file_path = future_files[future]
@@ -94,15 +98,10 @@ def main():
         logger.info(f"All {successful} files uploaded successfully")
     
     logger.info("Finishing publish...")
-    data = {
-        "version": version
-    }
-    headers = {
-        "Content-Type": "application/json"
-    }
+    data = { "version": version }
+    headers = { "Content-Type": "application/json" }
     resp = session.post(f"{ROBUST_CDN_URL}fork/{fork_id}/publish/finish", json=data, headers=headers)
     resp.raise_for_status()
-
     logger.info("Publish completed")
 
 
@@ -138,9 +137,9 @@ def get_engine_version() -> str:
         logger.error("Git command timed out")
         return "unknown"
 
-def upload_file(file_path: str, fork_id: str, publish_token: str, version: str, max_workers: int):
+def upload_file(file_path: str, fork_id: str, publish_token: str, pool_connections: int, pool_maxsize: int, max_retries: int, version: str):
     if not hasattr(thread_session, "session"):
-        thread_session.session = create_session(publish_token, max_workers)
+        thread_session.session = create_session(publish_token, pool_connections, pool_maxsize, max_retries)
     session = thread_session.session
     with open(file_path, "rb") as file:
         headers = {
@@ -152,18 +151,16 @@ def upload_file(file_path: str, fork_id: str, publish_token: str, version: str, 
         resp.raise_for_status()
     return file_path
 
-def create_session(publish_token: str, max_workers: int) -> requests.Session:
+def create_session(publish_token: str, pool_connections: int, pool_maxsize: int, max_retries: int) -> requests.Session:
     session = requests.Session()
     adapter = requests.adapters.HTTPAdapter(
-        pool_connections=5,
-        pool_maxsize=max(10, max_workers * 2),
-        max_retries=3
+        pool_connections=pool_connections,
+        pool_maxsize=pool_maxsize,
+        max_retries=max_retries
     )
     session.mount("https://", adapter)
     session.mount("http://", adapter)
-    session.headers = {
-        "Authorization": f"Bearer {publish_token}",
-    }
+    session.headers = { "Authorization": f"Bearer {publish_token}" }
     return session
 
 if __name__ == '__main__':
