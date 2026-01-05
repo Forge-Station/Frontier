@@ -6,7 +6,7 @@ namespace Content.Shared._Forge.Speech.Synthesis;
 /// A prototype for the available barges.
 /// </summary>
 [Prototype("bark")]
-public sealed class BarkPrototype : IPrototype
+public sealed partial class BarkPrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; } = default!;
