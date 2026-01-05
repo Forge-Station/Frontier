@@ -8,9 +8,39 @@
     contents:
     - id: WeaponInterstellarRifleM4A1
       amount: 1
-    - id: NFMagazineRifle20
+    - id: NFMagazineRifle30
       amount: 2
-    - id: NFAmmunitionBoxRifle20
+    - id: NFAmmunitionBoxRifle30
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponRifleCascade
+  name: Кейс с Каскадом
+  suffix: Аплинк ДСБФ, Каскад
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleCascade
+      amount: 1
+    - id: MagazineRifle45
+      amount: 2
+    - id: NFAmmunitionBoxPistol45
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponRifleAnarchist
+  name: Кейс с Анархистом
+  suffix: Аплинк ДСБФ, Анархист
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleAnarchist
+      amount: 1
+    - id: MagazineRifle45
+      amount: 2
+    - id: NFAmmunitionBoxPistol45
       amount: 2
 
 - type: entity
@@ -86,6 +116,19 @@
     - id: NFWeaponPistolMk58
       amount: 1
     - id: NFMagazinePistol35
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseLongeWeaponPistolPeacemake
+  name: Кейс с Миротворцем
+  suffix: Аплинк ДСБФ, Миротворец
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponPistolPeacemake
+      amount: 1
+    - id: NFMagazinePistol45
       amount: 2
 
 # - type: entity
@@ -164,6 +207,19 @@
   - type: StorageFill
     contents:
     - id: NFWeaponShotgunEnforcer
+      amount: 1
+    - id: NFAmmunitionBoxShellShotgunBuckshot
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongWeaponShotgunChimera
+  name: Кейс с Химерой
+  suffix: Аплинк ДСБФ, Химера
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponShotgunChimera
       amount: 1
     - id: NFAmmunitionBoxShellShotgunBuckshot
       amount: 2

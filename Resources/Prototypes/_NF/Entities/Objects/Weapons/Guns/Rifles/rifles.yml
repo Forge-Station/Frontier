@@ -11,6 +11,8 @@
     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
   - type: AltFireMelee
     attackType: Light
+  - type: StaticPrice
+    price: 280
 
 - type: entity
   id: NFWeaponRifleMusket
@@ -83,6 +85,8 @@
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 3
     projectileSpeed: 40
+  - type: StaticPrice
+    price: 380
 
 - type: entity
   id: NFWeaponRifleSVS
@@ -99,3 +103,5 @@
     sprite: _NF/Objects/Weapons/Guns/Rifles/svs42.rsi
   - type: AltFireMelee
     attackType: Light
+  - type: StaticPrice
+    price: 600

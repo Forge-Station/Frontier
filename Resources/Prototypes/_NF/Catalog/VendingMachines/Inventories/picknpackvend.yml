@@ -1,30 +1,33 @@
+# Forge-Change
 - type: vendingMachineInventory
   id: PickNPackInventory
   startingInventory:
   # Weapons
     NFWeaponPistolMk58: 3
     NFWeaponPistolPollock: 3
-    NFWeaponRifleAssaultGestio: 3
     NFWeaponRifleAssaultNovaliteC1: 3
+    NFWeaponRifleAssaultGestio: 3
     NFWeaponShotgunKammerer: 3
-    NFWeaponEnergyPistolLaser: 3 #CorvaxFrontier
-    NFWeaponRevolverArgenti: 3 #CorvaxFrontier
-    NFWeaponRevolverFitz: 3 #CorvaxFrontier
-    NFWeaponRifleRepeater: 3 #CorvaxFrontier
-    NFWeaponShotgunDoubleBarreled: 3 #CorvaxFrontier
-    ClothingHandsKnuckleDusters: 3 #CorvaxFrontier
-    SurvivalKnife: 3 #CorvaxFrontier
-    WeaponSubMachineGunVector45: 3 #CorvaxFrontier
-  # Magazines
-    NFMagazinePistol35Empty: 6
-    NFMagazineLowCapacityRifle30Empty: 6
-    NFMagazineClipRifle20Empty: 6
-  # Ammo boxes
-    NFAmmunitionBoxPistol35: 6
-    NFAmmunitionBoxRifle20: 6
-    NFAmmunitionBoxRifle30: 6
-    NFAmmunitionBoxShellShotgunBuckshot: 6
-    NFAmmunitionBoxShellShotgunBeanbag: 6
+    NFWeaponEnergyPistolLaser: 3 
+    # NFWeaponRevolverArgenti: 3 
+    NFWeaponRevolverFitz: 3 
+    NFWeaponRifleRepeater: 3 
+    NFWeaponShotgunDoubleBarreled: 3 
+    ClothingHandsKnuckleDusters: 3 
+    CombatKnife: 3 
+    WeaponSubMachineGunVector45: 3 
+    NFWeaponEnergyRifleCarbine: 3
+    NFWeaponRifleSVS: 3 
+  # # Magazines
+  #   NFMagazinePistol35Empty: 6
+  #   NFMagazineLowCapacityRifle30Empty: 6
+  #   NFMagazineClipRifle20Empty: 6
+  # # Ammo boxes
+  #   NFAmmunitionBoxPistol35: 6
+  #   NFAmmunitionBoxRifle20: 6
+  #   NFAmmunitionBoxRifle30: 6
+  #   NFAmmunitionBoxShellShotgunBuckshot: 6
+  #   NFAmmunitionBoxShellShotgunBeanbag: 6
 
 - type: vendingMachineInventory
   id: PickNPackPOIInventory
@@ -35,11 +38,13 @@
     NFWeaponRifleAssaultNovaliteC1: 4294967295
     NFWeaponRifleAssaultGestio: 4294967295
     NFWeaponShotgunKammerer: 4294967295
-    NFWeaponEnergyPistolLaser: 4294967295 #CorvaxFrontier
-    NFWeaponRevolverArgenti: 4294967295 #CorvaxFrontier
-    NFWeaponRevolverFitz: 4294967295 #CorvaxFrontier
-    NFWeaponRifleRepeater: 4294967295 #CorvaxFrontier
-    NFWeaponShotgunDoubleBarreled: 4294967295 #CorvaxFrontier
-    ClothingHandsKnuckleDusters: 4294967295 #CorvaxFrontier
-    SurvivalKnife: 4294967295 #CorvaxFrontier
-    WeaponSubMachineGunVector45: 4294967295 #CorvaxFrontier
+    NFWeaponEnergyPistolLaser: 4294967295 
+    # NFWeaponRevolverArgenti: 4294967295 
+    NFWeaponRevolverFitz: 4294967295 
+    NFWeaponRifleRepeater: 4294967295 
+    NFWeaponShotgunDoubleBarreled: 4294967295 
+    ClothingHandsKnuckleDusters: 4294967295 
+    CombatKnife: 4294967295 
+    WeaponSubMachineGunVector45: 4294967295 
+    NFWeaponEnergyRifleCarbine: 4294967295
+    NFWeaponRifleSVS: 4294967295  

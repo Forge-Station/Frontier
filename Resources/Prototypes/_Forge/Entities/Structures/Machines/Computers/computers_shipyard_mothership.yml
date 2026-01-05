@@ -185,3 +185,110 @@
     shuttles:
     - Owl
     - Sergeant
+
+- type: entity
+  id: ComputerShipyardNfsdModules
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
+  name: Консоль верфи модулей
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_nfsd
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Modules
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Modules:
+        type: ShipyardConsoleBoundUserInterface
+  - type: ShipyardConsole
+    shipyardChannel: Nfsd
+    newAccessLevels: [Captain, Security, Brig, Modules]
+
+- type: entity
+  id: OrionMothershipComputer
+  parent: BaseMothershipComputer
+  name: консоль модулей Ориона
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_nfsd
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Modules
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Modules:
+        type: ShipyardConsoleBoundUserInterface
+  - type: ShipyardConsole
+    newJobTitle: null
+    shipyardChannel: Nfsd
+    newAccessLevels: [Captain, Security, Brig, Modules]
+  - type: ShipyardListing
+    shuttles:
+    - false_right_side_of_he_ship_orion
+    - false_left_side_of_he_ship_orion
+
+- type: entity
+  id: OrionMothershipComputerTL
+  parent: BaseMothershipComputer
+  name: консоль верфи Ориона
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_nfsd
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ShipyardConsole
+    newJobTitle: null
+    shipyardChannel: Nfsd
+    newAccessLevels: [Captain, Security, Brig, Modules]
+  - type: ShipyardListing
+    shuttles:
+    - Warrior2
+    - Wing
+
+- type: entity
+  id: Union4MothershipComputer
+  parent: BaseMothershipComputer
+  name: консоль модулей Союза
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_nfsd
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ShipyardConsole
+    newJobTitle: null
+    shipyardChannel: Nfsd
+    newAccessLevels: [Captain, Security, Brig, Modules]
+  - type: ShipyardListing
+    shuttles:
+    - false_left_side_of_he_ship_un4
+    - false_right_side_of_he_ship_un4

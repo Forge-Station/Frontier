@@ -40,3 +40,4 @@ id-card-access-level-station-ai = Искусственный интеллект
 id-card-access-level-borg = Борги
 id-card-access-level-basic-silicon = Силиконы
 id-card-access-level-basic-xenoborg = Ксенборг
+id-card-access-level-basic-modules = Модули

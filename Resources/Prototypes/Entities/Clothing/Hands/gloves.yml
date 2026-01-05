@@ -484,6 +484,8 @@
     tags:
     - WhitelistChameleon
     - Kangaroo
+  - type: StaticPrice
+    price: 30
 
 - type: entity
   parent: [ClothingHandsKnuckleDusters, BaseC1Contraband] #Craftable version of base knuckledusters # Frontier: BaseMinorContraband

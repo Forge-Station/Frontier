@@ -1,0 +1,43 @@
+# Author -
+# GitHub: -
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Union4
+  parent: BaseVessel
+  name: TL Союз-M4
+  description: Крупногабаритный эсминец ДСБФ. Рекомендованный состав команды 5+ человек.
+  price: 226350
+  category: Large
+  group: Security
+  access: Bailiff
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/union4.yml
+  guidebookPage: Null
+  class:
+  - Capital
+  - Detainment
+  - Expedition
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
+
+- type: gameMap
+  id: Union4
+  mapName: 'TL Союз-M4'
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/union4.yml
+  minPlayers: 0
+  stations:
+    Union4:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Союз-M4 {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

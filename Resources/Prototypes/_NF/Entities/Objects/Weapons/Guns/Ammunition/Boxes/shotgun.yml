@@ -31,6 +31,8 @@
     - state: decal-shell-buckshot
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  - type: StaticPrice
+    price: 61
 
 - type: entity
   id: NFAmmunitionBoxShellShotgunOverpressure
@@ -158,6 +160,8 @@
     - state: decal-shell-flare
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  - type: StaticPrice
+    price: 61
 
 - type: entity
   id: NFAmmunitionBoxShellShotgunTranquilizer

@@ -38,6 +38,7 @@
   components:
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 2.6
+    projectileSpeed: 35
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/deckard.rsi
     layers:
@@ -49,9 +50,9 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Revolvers/deckard.rsi
   - type: RevolverAmmoProvider
-    capacity: 5
-    chambers: [ True, True, True, True, True ]
-    ammoSlots: [ null, null, null, null, null ]
+    capacity: 7
+    chambers: [ True, True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null, null ]
   - type: MagazineVisuals
     magState: mag
     steps: 4
@@ -114,6 +115,14 @@
     sprite: _DV/Objects/Weapons/Guns/Revolvers/fitz.rsi
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Revolvers/fitz.rsi
+  - type: Gun # Corvax-Forge
+    projectileSpeed: 35
+  - type: RevolverAmmoProvider
+    capacity: 6
+    chambers: [ True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null ]
+  - type: StaticPrice
+    price: 200
 
 - type: entity
   id: NFWeaponRevolverFaith
@@ -160,6 +169,7 @@
     price: 200
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 3
+    projectileSpeed: 30
 
 # Frontier: Rubber
 - type: entity

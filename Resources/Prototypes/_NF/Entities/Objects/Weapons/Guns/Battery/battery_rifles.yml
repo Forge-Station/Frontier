@@ -14,6 +14,9 @@
     sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 2.2
+    projectileSpeed: 45
+  - type: StaticPrice
+    price: 560
 
 - type: entity
   id: NFWeaponEnergyRifleCarbinePractice

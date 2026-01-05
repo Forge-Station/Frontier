@@ -135,3 +135,24 @@
   - type: ShipyardVoucher
     access:
     - StationTrafficController
+
+# Forge-Frontier
+- type: entity
+  parent: [BaseShipVoucher, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
+  id: ShipVoucherNfsdModul
+  name: ваучер на покупку модуля шаттла
+  description: Позволяет бесплатно приобрести один корабельный модуль ДСБФ. Уничтожается при продаже.
+  components:
+  - type: Sprite
+    layers:
+    - state: nfsd
+    - state: vouchermodul
+  - type: Item
+    heldPrefix: nfsd
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: Modules
+    access:
+    - Modules # Frontier
+  - type: StaticPrice #CorvaxFrontier
+    price: 1200

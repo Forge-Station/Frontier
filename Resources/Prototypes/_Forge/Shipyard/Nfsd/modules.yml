@@ -1,0 +1,131 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# Corvax_frontier
+
+# Maintainer Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+
+# Shuttle Notes:
+
+- type: vessel
+  id: false_right_side_of_he_ship_un4
+  parent: BaseVessel
+  name: TL Фальшивый правый борт Союза
+  description: Закрывает часть стыковочных шахт и орудий, значительно умешьшает мобильность.
+  price: 1
+  category: Large
+  group: Modules
+  access: Modules
+  shuttlePath: /Maps/_Forge/Shuttles/Modules/false_right_side_of_he_ship_un4.yml
+  guidebookPage: Null
+  addComponents:
+  - type: IFF
+    flags: [HideLabel]
+
+- type: gameMap
+  id: false_right_side_of_he_ship_un4
+  mapName: 'TL Фальшивый правый борт Союза'
+  mapPath: /Maps/_Forge/Shuttles/Modules/false_right_side_of_he_ship_un4.yml
+  minPlayers: 1
+  stations:
+    false_right_side_of_he_ship_un4:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Фальшивый правый борт Союза {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+
+- type: vessel
+  id: false_left_side_of_he_ship_un4
+  parent: BaseVessel
+  name: TL Фальшивый левый борт Союза
+  description: Закрывает часть стыковочных шахт и орудий, значительно умешьшает мобильность.
+  price: 1
+  category: Large
+  group: Modules
+  access: Modules
+  shuttlePath: /Maps/_Forge/Shuttles/Modules/false_left_side_of_he_ship_un4.yml
+  guidebookPage: Null
+  addComponents:
+  - type: IFF
+    flags: [HideLabel]
+
+- type: gameMap
+  id: false_left_side_of_he_ship_un4
+  mapName: 'TL Фальшивый левый борт Союза'
+  mapPath: /Maps/_Forge/Shuttles/Modules/false_left_side_of_he_ship_un4.yml
+  minPlayers: 1
+  stations:
+    false_left_side_of_he_ship_un4:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Фальшивый левый борт Союза {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+
+- type: vessel
+  id: false_right_side_of_he_ship_orion
+  parent: BaseVessel
+  name: TL Фальшивый правый борт Ориона
+  description: Закрывает часть стыковочных шахт и орудий, значительно умешьшает мобильность.
+  price: 1
+  category: Large
+  group: Modules
+  access: Modules
+  shuttlePath: /Maps/_Forge/Shuttles/Modules/false_right_side_of_he_ship_orion.yml
+  guidebookPage: Null
+  addComponents:
+  - type: IFF
+    flags: [HideLabel]
+
+- type: gameMap
+  id: false_right_side_of_he_ship_orion
+  mapName: 'TL Фальшивый правый борт Ориона'
+  mapPath: /Maps/_Forge/Shuttles/Modules/false_right_side_of_he_ship_orion.yml
+  minPlayers: 1
+  stations:
+    false_right_side_of_he_ship_orion:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Фальшивый правый борт Ориона {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+
+- type: vessel
+  id: false_left_side_of_he_ship_orion
+  parent: BaseVessel
+  name: TL Фальшивый левый борт Ориона
+  description: Закрывает часть стыковочных шахт и орудий, значительно умешьшает мобильность.
+  price: 1
+  category: Large
+  group: Modules
+  access: Modules
+  shuttlePath: /Maps/_Forge/Shuttles/Modules/false_left_side_of_he_ship_orion.yml
+  guidebookPage: Null
+  addComponents:
+  - type: IFF
+    flags: [HideLabel]
+
+- type: gameMap
+  id: false_left_side_of_he_ship_orion
+  mapName: 'TL Фальшивый левый борт Ориона'
+  mapPath: /Maps/_Forge/Shuttles/Modules/false_left_side_of_he_ship_orion.yml
+  minPlayers: 1
+  stations:
+    false_left_side_of_he_ship_orion:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Фальшивый левый борт Ориона {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
