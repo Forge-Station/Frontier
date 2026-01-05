@@ -111,6 +111,8 @@
     animation: WeaponArcThrust
     soundHit:
       path: /Audio/Effects/bite.ogg
+  - type: MercenaryBountyItem # Corvax-Frontier
+    id: StaffDarkBolt
 
 - type: entity
   id: WizardStaffDarkBolt
