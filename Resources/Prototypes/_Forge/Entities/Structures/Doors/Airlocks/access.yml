@@ -39,12 +39,3 @@
   - type: ApcPowerReceiver
     needsPower: false
     powerLoad: 0
-
-# region BOARD
-- type: entity
-  parent: DoorElectronics
-  id: DoorElectronicsSergeant
-  suffix: Sergeant, Locked
-  components:
-  - type: AccessReader
-    access: [["Sergeant"]]
