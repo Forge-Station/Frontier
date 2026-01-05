@@ -8,6 +8,7 @@
   components:
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 2.5
+    projectileSpeed: 35
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/inspector.rsi
   - type: Clothing
@@ -25,7 +26,8 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi
   - type: Gun
-    fireRate: 3.5
+    fireRate: 3.5 # Corvax-Forge: Weaponary update
+    projectileSpeed: 35
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
 
@@ -38,6 +40,7 @@
   components:
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 2.6
+    projectileSpeed: 35
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/deckard.rsi
     layers:
@@ -68,6 +71,8 @@
     sprite: Objects/Weapons/Guns/Revolvers/python.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Revolvers/python.rsi
+  - type: Gun
+    projectileSpeed: 35 # Corvax-Forge: Weaponary update
 
 - type: entity
   id: NFWeaponRevolverPirate
@@ -114,6 +119,8 @@
     sprite: _DV/Objects/Weapons/Guns/Revolvers/fitz.rsi
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Revolvers/fitz.rsi
+  - type: Gun
+    projectileSpeed: 35 # Corvax-Forge: Weaponary update
 
 - type: entity
   id: NFWeaponRevolverFaith
@@ -126,6 +133,8 @@
     sprite: _DV/Objects/Weapons/Guns/Revolvers/faith.rsi
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Revolvers/faith.rsi
+  - type: Gun
+    projectileSpeed: 35 # Corvax-Forge: Weaponary update
   - type: RevolverAmmoProvider
     capacity: 4
     chambers: [ True, True, True, True ]
@@ -142,6 +151,8 @@
     sprite: _DV/Objects/Weapons/Guns/Revolvers/lucky.rsi
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Revolvers/lucky.rsi
+  - type: Gun
+    projectileSpeed: 35 # Corvax-Forge: Weaponary update
 
 #region Frontier
 - type: entity

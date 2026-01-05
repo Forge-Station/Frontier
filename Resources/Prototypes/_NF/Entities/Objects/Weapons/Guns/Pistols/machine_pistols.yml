@@ -32,10 +32,14 @@
   components:
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 6
+    projectileSpeed: 30
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/viper.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+  - type: NFWeaponDetails
+    class: weapon-details-class-pistol
+    manufacturer: weapon-details-manufacturer-gorlex-steel-works
 
 #region DeltaV
 - type: entity
@@ -46,10 +50,14 @@
   components:
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 4.5
+    projectileSpeed: 30
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Pistols/pollock.rsi
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Pistols/pollock.rsi
+  - type: NFWeaponDetails
+    class: weapon-details-class-pistol
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions
 
 - type: entity
   id: NFWeaponPistolPollockHighCapacityMag
