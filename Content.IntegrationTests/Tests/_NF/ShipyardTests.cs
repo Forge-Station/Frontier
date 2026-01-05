@@ -1,6 +1,7 @@
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 using Content.Server.Cargo.Systems;
+using Content.Shared._NF.Shipyard;
 using Content.Shared._NF.Shipyard.Prototypes;
 using Robust.Server.GameObjects;
 using Robust.Shared.EntitySerialization.Systems;
@@ -77,14 +78,14 @@ public sealed class ShipyardTest
         var protoManager = server.ResolveDependency<IPrototypeManager>();
         var pricing = server.ResolveDependency<IEntitySystemManager>().GetEntitySystem<PricingSystem>();
 
-        var factionMarkups = new Dictionary<string, float>()
+        var factionMarkups = new Dictionary<ShipyardConsoleUiKey, float>()
         {
-            { "Security", 1.35f },
-            { "Syndicate", 1.5f },
-            { "BlackMarket", 1.4f },
-            { "Mercenary", 1.3f },
-            { "Medical", 1.3f },
-            { "Scrap", 1.15f }
+            { ShipyardConsoleUiKey.Security, 1.35f },
+            { ShipyardConsoleUiKey.Syndicate, 1.5f },
+            { ShipyardConsoleUiKey.BlackMarket, 1.4f },
+            { ShipyardConsoleUiKey.Mercenary, 1.3f },
+            { ShipyardConsoleUiKey.Medical, 1.3f },
+            { ShipyardConsoleUiKey.Scrap, 1.15f }
         };
     
         const float defaultMarkup = 1.2f;
@@ -124,18 +125,14 @@ public sealed class ShipyardTest
                     var shipyardConsole = vessel.Group;
                     float minMarkup;
                     
-                    if (!string.IsNullOrEmpty(shipyardConsole) && factionMarkups.TryGetValue(shipyardConsole, out var factionMarkup))
+                    if (factionMarkups.TryGetValue(shipyardConsole, out var factionMarkup))
                     {
                         minMarkup = factionMarkup;
                     }
                     else
                     {
                         minMarkup = defaultMarkup;
-                        
-                        if (!string.IsNullOrEmpty(shipyardConsole))
-                        {
-                            Console.WriteLine($"Faction '{shipyardConsole}' not found in markup dictionary. Using default markup: {defaultMarkup}");
-                        }
+                        Console.WriteLine($"Faction '{shipyardConsole}' not found in markup dictionary. Using default markup: {defaultMarkup}");
                     }
                     
                     var idealMinPrice = appraisePrice * minMarkup;
@@ -145,7 +142,7 @@ public sealed class ShipyardTest
                         $"Arbitrage possible on {vessel.ID}. " +
                         $"Minimal price should be {idealMinPrice:F2}, " +
                         $"{markupPercent:F1}% over the appraise price ({appraisePrice:F2}). " +
-                        $"Faction: {shipyardConsole ?? "Not specified"} " +
+                        $"Faction: {shipyardConsole} " +
                         $"(Markup: {minMarkup:F2}, Prototype MinPriceMarkup: {vessel.MinPriceMarkup:F2})");
 
                     map.DeleteMap(mapId);
