@@ -134,6 +134,8 @@
       - Burst
     soundGunshot:
       path: /Audio/_NF/Weapons/Guns/Gunshots/rifle.ogg
+  - type: StaticPrice
+    price: 720
 
 - type: entity
   id: NFWeaponRifleAssaultNovaliteC1
@@ -154,3 +156,5 @@
       - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
+  - type: StaticPrice
+    price: 610

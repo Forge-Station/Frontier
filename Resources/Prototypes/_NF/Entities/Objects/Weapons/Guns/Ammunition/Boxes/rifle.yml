@@ -282,6 +282,8 @@
     - state: decal-calibre-20
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  - type: StaticPrice
+    price: 61
 
 - type: entity
   id: NFAmmunitionBoxRifle20Overpressure
@@ -698,6 +700,8 @@
     - state: decal-calibre-30
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  - type: StaticPrice
+    price: 61
 
 - type: entity
   id: NFAmmunitionBoxRifle30Overpressure

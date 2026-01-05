@@ -47,6 +47,8 @@
     node: start
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-frontier-gunsmith-consortium
+  - type: StaticPrice
+    price: 410
 
 - type: entity
   id: NFWeaponShotgunEnforcer
@@ -88,6 +90,8 @@
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
   - type: Gun # Corvax-Forge: Weaponary update
     projectileSpeed: 35
+  - type: StaticPrice
+    price: 1250
 
 - type: entity
   id: NFWeaponShotgunSawn

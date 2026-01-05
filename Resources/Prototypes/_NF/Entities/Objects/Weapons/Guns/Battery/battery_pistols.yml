@@ -127,6 +127,9 @@
         shader: unshaded
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 2.8
+    projectileSpeed: 45
+  - type: StaticPrice
+    price: 250
 
 #region Pulse
 - type: entity
