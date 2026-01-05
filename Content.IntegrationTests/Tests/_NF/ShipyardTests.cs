@@ -76,6 +76,18 @@ public sealed class ShipyardTest
         var protoManager = server.ResolveDependency<IPrototypeManager>();
         var pricing = server.ResolveDependency<IEntitySystemManager>().GetEntitySystem<PricingSystem>();
 
+        var factionMarkups = new Dictionary<string, float>()
+        {
+            { "Security", 1.35f },
+            { "Syndicate", 1.5f },
+            { "BlackMarket", 1.4f },
+            { "Mercenary", 1.3f },
+            { "Medical", 1.3f },
+            { "Scrap", 1.15f }
+        };
+    
+        const float defaultMarkup = 1.2f;
+
         await server.WaitAssertion(() =>
         {
             Assert.Multiple(() =>
@@ -100,7 +112,6 @@ public sealed class ShipyardTest
                     Assert.That(mapLoaded, Is.True, $"Failed to load shuttle {vessel} ({vessel.ShuttlePath}): TryLoadGrid returned false.");
                     Assert.That(entManager.HasComponent<MapGridComponent>(shuttle.Value), Is.True);
 
-                    // Grid failed to load, continue to the next map.
                     if (!mapLoaded)
                         continue;
 
@@ -108,11 +119,33 @@ public sealed class ShipyardTest
                     {
                         appraisePrice += price;
                     });
-
-                    var idealMinPrice = appraisePrice * vessel.MinPriceMarkup;
+                    
+                    var shipyardConsole = vessel.Group;
+                    float minMarkup;
+                    
+                    if (!string.IsNullOrEmpty(shipyardConsole) && factionMarkups.TryGetValue(shipyardConsole, out var factionMarkup))
+                    {
+                        minMarkup = factionMarkup;
+                    }
+                    else
+                    {
+                        minMarkup = defaultMarkup;
+                        
+                        if (!string.IsNullOrEmpty(shipyardConsole))
+                        {
+                            Console.WriteLine($"Faction '{shipyardConsole}' not found in markup dictionary. Using default markup: {defaultMarkup}");
+                        }
+                    }
+                    
+                    var idealMinPrice = appraisePrice * minMarkup;
+                    var markupPercent = (minMarkup - 1.0f) * 100;
 
                     Assert.That(vessel.Price, Is.AtLeast(idealMinPrice),
-                        $"Arbitrage possible on {vessel.ID}. Minimal price should be {idealMinPrice}, {(vessel.MinPriceMarkup - 1.0f) * 100}% over the appraise price ({appraisePrice}).");
+                        $"Arbitrage possible on {vessel.ID}. " +
+                        $"Minimal price should be {idealMinPrice:F2}, " +
+                        $"{markupPercent:F1}% over the appraise price ({appraisePrice:F2}). " +
+                        $"Faction: {shipyardConsole ?? "Not specified"} " +
+                        $"(Markup: {minMarkup:F2}, Prototype MinPriceMarkup: {vessel.MinPriceMarkup:F2})");
 
                     map.DeleteMap(mapId);
                 }
