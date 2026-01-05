@@ -156,6 +156,7 @@ if __name__ == "__main__":
 
     # Set up collectors.
     violations: Dict[str, List[str]] = dict()
+    map_overrides: Dict[str, str] = dict()
 
     # Check all maps for illegal prototypes.
     for map_proto in map_proto_paths:
@@ -192,11 +193,6 @@ if __name__ == "__main__":
                 logger.debug(f"Map proto {map_proto} did not specify a map file location. Skipping.")
                 continue
 
-            # CHECKPOINT - If the map_name is blanket-whitelisted, skip it, but log a warning.
-            if map_name in whitelisted_maps:
-                logger.warning(f"Map '{map_name}' (from prototype '{map_proto}') was blanket-whitelisted. Skipping it.")
-                continue
-
             if shipyard_override is not None:
                 # Log a warning, indicating the override and the normal group this shuttle belongs to, then set
                 # shipyard_group to the override.
@@ -204,7 +200,19 @@ if __name__ == "__main__":
                                f"This map will be treated as a '{shipyard_override}' shuttle. (Normally: "
                                f"'{shipyard_group}'))")
                 shipyard_group = shipyard_override
-
+                map_overrides[map_name] = shipyard_override
+                
+            whitelisted = False
+            if map_name in whitelisted_maps:
+                logger.warning(f"Map '{map_name}' (from prototype '{map_proto}') was blanket-whitelisted. Skipping it.")
+                whitelisted = True
+            elif shipyard_override is not None and shipyard_override in whitelisted_maps:
+                logger.warning(f"Map '{map_name}' (checking as override '{shipyard_override}') was blanket-whitelisted. Skipping it.")
+                whitelisted = True
+            
+            if whitelisted:
+                continue
+            
             logger.debug(f"Starting checks for '{map_name}' (Path: '{map_file_location}' | Shipyard: '{shipyard_group}')")
 
             # Now construct a temporary list of all prototype ID's that are illegal for this map based on conditionals.
@@ -243,14 +251,20 @@ if __name__ == "__main__":
     # PHASE 3: Filtering findings and reporting.
     logger.debug(f"Violations aggregator before whitelist processing: {violations}")
 
-    # Filter out all prototypes that are whitelisted.
-    for key in whitelisted_protos.keys():
-        if violations.get(key) is None:
+    # Filter out all prototypes that are whitelisted.# Filter out all prototypes that are whitelisted.
+    for map_key in list(violations.keys()):
+        if len(violations[map_key]) == 0:
             continue
-
-        for whitelisted_proto in whitelisted_protos[key]:
-            if whitelisted_proto in violations[key]:
-                violations[key].remove(whitelisted_proto)
+        if map_key in whitelisted_protos:
+            for whitelisted_proto in whitelisted_protos[map_key]:
+                if whitelisted_proto in violations[map_key]:
+                    violations[map_key].remove(whitelisted_proto)
+        if map_key in map_overrides:
+            override_key = map_overrides[map_key]
+            if override_key in whitelisted_protos:
+                for whitelisted_proto in whitelisted_protos[override_key]:
+                    if whitelisted_proto in violations[map_key]:
+                        violations[map_key].remove(whitelisted_proto)
 
     logger.debug(f"Violations aggregator after whitelist processing: {violations}")
 
