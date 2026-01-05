@@ -112,7 +112,7 @@ public sealed partial class MindTests
             Assert.That(entMan.EntityExists(attachedEntity), Is.True);
             Assert.That(attachedEntity, Is.Not.EqualTo(playerEnt));
             Assert.That(entMan.HasComponent<GhostComponent>(attachedEntity));
-            var transform = entMan.GetComponent<TransformComponent>(attachedEntity.Value);
+            var transform = entMan.GetComponent<TransformComponent>(attachedEntity!.Value);
             Assert.That(transform.MapID, Is.Not.EqualTo(MapId.Nullspace));
             Assert.That(transform.MapID, Is.Not.EqualTo(testMap.MapId));
 #pragma warning restore NUnit2045
