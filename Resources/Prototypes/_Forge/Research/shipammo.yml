@@ -68,12 +68,12 @@
 - type: technology
   id: ForgeResearchShipBombMerc
   name: forge-research-technology-bombmerc
-  entityIcon: LightFighterOrdinanceGPOProjectile
+  entityIcon: LightFighterOrdinanceGPOItem
   discipline: NFArsenalMercenary
   tier: 1
   cost: 8500
   recipeUnlocks:
-  - FRecLightFighterOrdinanceGPOProjectile
+  - FRecLightFighterOrdinanceGPOItem
   technologyPrerequisites:
   - ForgeResearchShipAmmo90
   position: 0, 51
