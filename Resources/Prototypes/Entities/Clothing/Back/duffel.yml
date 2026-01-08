@@ -15,6 +15,9 @@
     walkModifier: 1
     sprintModifier: 0.9
   - type: HeldSpeedModifier
+  - type: StaticPrice # Forge-change add
+    price: 150
+    vendPrice: 280
 
 - type: entity
   parent: NFClothingDuffel # Frontier: ClothingBackpackDuffelNFClothingDuffel

@@ -1,0 +1,29 @@
+- type: entity
+  id: ForgeSpawnerRestockFood
+  name: vending food restock
+  parent: MarkerBasePlaceFree
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Specific/Service/vending_machine_restock.rsi
+        state: base
+      - sprite: Objects/Specific/Service/vending_machine_restock.rsi
+        state: refill_discount
+  - type: RandomSpawner
+    prototypes:
+      - VendingMachineRestockChang
+      - VendingMachineRestockDonut
+      - VendingMachineRestockDiscountDans
+      - VendingMachineRestockGetmoreChocolateCorp
+      - VendingMachineRestockRobustSoftdrinks
+      - VendingMachineRestockHotDrinks
+      - VendingMachineRestockHappyHonk
+      - VendingMachineRestockCondimentStation
+      - VendingMachineRestockBooze
+      - VendingMachineRestockDonkies
+      - VendingMachineRestockChefvend
+      - VendingMachineRestockSeeds
+    chance: 1.0
+    offset: 0.0

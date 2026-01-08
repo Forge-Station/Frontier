@@ -36,6 +36,9 @@
     tags:
     - WhitelistChameleon
     - Backpack
+  - type: StaticPrice # Forge-change add
+    price: 150
+    vendPrice: 260
 
 - type: entity
   parent: NFClothingBackpack # Frontier: ClothingBackpack<NFClothingBackpack

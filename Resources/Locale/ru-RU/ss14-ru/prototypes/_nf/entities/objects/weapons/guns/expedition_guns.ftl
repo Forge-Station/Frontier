@@ -128,3 +128,10 @@ ent-NFWeaponLightMachineGunL6Expedition = { ent-NFWeaponLightMachineGunL6 }
   .desc = { ent-NFWeaponLightMachineGunL6.desc }
 ent-WeaponTurretAsmgtHostileUniversallyPackedExpedition = { ent-WeaponTurretAsmgtHostileUniversallyPacked }
   .desc = { ent-WeaponTurretAsmgtHostileUniversallyPacked.desc }
+
+ent-NFWeaponShotgunEnforcerExpedition = { ent-NFWeaponShotgunEnforcer }
+  .desc = { ent-NFWeaponShotgunEnforcer.desc }
+ent-NFWeaponRifleMusketExpedition = { ent-NFWeaponRifleMusket }
+  .desc = { ent-NFWeaponRifleMusket.desc }
+ent-NFWeaponSubMachineGunTypewriterExpedition = { ent-NFWeaponSubMachineGunTypewriter }
+  .desc = { ent-NFWeaponSubMachineGunTypewriter.desc }
