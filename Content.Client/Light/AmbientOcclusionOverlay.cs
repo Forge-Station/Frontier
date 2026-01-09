@@ -33,6 +33,8 @@ public sealed class AmbientOcclusionOverlay : Overlay
     // Couldn't figure out a way to avoid this so if you can then please do.
     private IRenderTexture? _aoStencilTarget;
 
+    private bool _drawing;
+
     public AmbientOcclusionOverlay()
     {
         IoCManager.InjectDependencies(this);
@@ -41,6 +43,12 @@ public sealed class AmbientOcclusionOverlay : Overlay
 
     protected override void Draw(in OverlayDrawArgs args)
     {
+        // Prevent recursive drawing.
+        if (_drawing)
+        {
+            return;
+        }
+
         /*
          * tl;dr
          * - we draw a black square on each "ambient occlusion" entity.
@@ -88,6 +96,7 @@ public sealed class AmbientOcclusionOverlay : Overlay
         }
 
         // Draw the texture data to the texture.
+        _drawing = true;
         args.WorldHandle.RenderInRenderTarget(_aoTarget,
             () =>
             {
@@ -141,6 +150,7 @@ public sealed class AmbientOcclusionOverlay : Overlay
         // Draw the Blurred AO texture finally.
         worldHandle.UseShader(_proto.Index(StencilEqualDrawShader).Instance());
         worldHandle.DrawTextureRect(_aoTarget!.Texture, worldBounds, color);
+        _drawing = false;
 
         args.WorldHandle.SetTransform(Matrix3x2.Identity);
         args.WorldHandle.UseShader(null);
