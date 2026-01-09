@@ -508,7 +508,8 @@ namespace Content.Shared.Interaction
             RaiseLocalEvent(user, ev);
             if (ev.Handled)
             {
-                _adminLogger.Add(LogType.InteractHand, LogImpact.Low, $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target}, but it was handled by another system");
+                if (HasComp<ActorComponent>(user))
+                    _adminLogger.Add(LogType.InteractHand, LogImpact.Low, $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target}, but it was handled by another system");
                 return;
             }
 
@@ -520,7 +521,8 @@ namespace Content.Shared.Interaction
             // Frontier modification: adds extra things to the log
             var extraLogs = LoggingExtensions.GetExtraLogs(EntityManager, target);
 
-            _adminLogger.Add(LogType.InteractHand, LogImpact.Low, $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target}{extraLogs}");
+            if (HasComp<ActorComponent>(user))
+                _adminLogger.Add(LogType.InteractHand, LogImpact.Low, $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target}{extraLogs}");
             DoContactInteraction(user, target, message);
             if (message.Handled)
                 return;
@@ -544,17 +546,23 @@ namespace Content.Shared.Interaction
 
             if (target != null)
             {
-                _adminLogger.Add(
-                    LogType.InteractUsing,
-                    LogImpact.Low,
-                    $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target} using {ToPrettyString(used):used}");
+                if (HasComp<ActorComponent>(user))
+                {
+                    _adminLogger.Add(
+                        LogType.InteractUsing,
+                        LogImpact.Low,
+                        $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target} using {ToPrettyString(used):used}");
+                }
             }
             else
             {
-                _adminLogger.Add(
-                    LogType.InteractUsing,
-                    LogImpact.Low,
-                    $"{ToPrettyString(user):user} interacted with *nothing* using {ToPrettyString(used):used}");
+                if (HasComp<ActorComponent>(user))
+                {
+                    _adminLogger.Add(
+                        LogType.InteractUsing,
+                        LogImpact.Low,
+                        $"{ToPrettyString(user):user} interacted with *nothing* using {ToPrettyString(used):used}");
+                }
             }
 
             if (RangedInteractDoBefore(user, used, target, clickLocation, inRangeUnobstructed, checkDeletion: false))
@@ -1043,10 +1051,13 @@ namespace Content.Shared.Interaction
             if (checkCanUse && !_actionBlockerSystem.CanUseHeldEntity(user, used))
                 return false;
 
-            _adminLogger.Add(
-                LogType.InteractUsing,
-                LogImpact.Low,
-                $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target} using {ToPrettyString(used):used}");
+            if (HasComp<ActorComponent>(user))
+            {
+                _adminLogger.Add(
+                    LogType.InteractUsing,
+                    LogImpact.Low,
+                    $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target} using {ToPrettyString(used):used}");
+            }
 
             if (RangedInteractDoBefore(user, used, target, clickLocation, canReach: true, checkDeletion: false))
                 return true;
@@ -1173,7 +1184,8 @@ namespace Content.Shared.Interaction
             {
                 DoContactInteraction(user, used);
                 if (!activateMsg.WasLogged)
-                    _adminLogger.Add(LogType.InteractActivate, LogImpact.Low, $"{ToPrettyString(user):user} activated {ToPrettyString(used):used}");
+                    if (HasComp<ActorComponent>(user))
+                        _adminLogger.Add(LogType.InteractActivate, LogImpact.Low, $"{ToPrettyString(user):user} activated {ToPrettyString(used):used}");
 
                 if (delayComponent != null)
                     _useDelay.TryResetDelay(used, component: delayComponent);
@@ -1191,7 +1203,8 @@ namespace Content.Shared.Interaction
             if (delayComponent != null)
                 _useDelay.TryResetDelay(used, component: delayComponent);
 
-            _adminLogger.Add(LogType.InteractActivate, LogImpact.Low, $"{ToPrettyString(user):user} activated {ToPrettyString(used):used}");
+            if (HasComp<ActorComponent>(user))
+                _adminLogger.Add(LogType.InteractActivate, LogImpact.Low, $"{ToPrettyString(user):user} activated {ToPrettyString(used):used}");
             return true;
         }
         #endregion
@@ -1271,7 +1284,8 @@ namespace Content.Shared.Interaction
             {
                 var extraLogs = LoggingExtensions.GetExtraLogs(EntityManager, item);
 
-                _adminLogger.Add(LogType.Drop, LogImpact.Low, $"{ToPrettyString(user):user} dropped {ToPrettyString(item):entity}{extraLogs}");
+                if (HasComp<ActorComponent>(user))
+                    _adminLogger.Add(LogType.Drop, LogImpact.Low, $"{ToPrettyString(user):user} dropped {ToPrettyString(item):entity}{extraLogs}");
             }
             // End Frontier
 
