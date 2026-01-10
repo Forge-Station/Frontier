@@ -1,9 +1,9 @@
+#!/usr/bin/env python3
+
 """
-Продвинутый паблиш с параллельной загрузкой и аргументами
+Продвинутый паблиш с параллельной загрузкой, аргументами и публикацией статуса паблиша в дискорд
 Github: FireFoxPhoenix
 """
-
-#!/usr/bin/env python3
 
 import argparse
 import requests
@@ -12,6 +12,7 @@ import subprocess
 import threading
 import logging
 import sys
+from discord_webhook import DiscordWebhook, DiscordEmbed
 from typing import Iterable
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -22,12 +23,13 @@ logger = logging.getLogger(__name__)
 # CONFIGURATION PARAMETERS
 # Forks should change these to publish to their own infrastructure.
 #
-ROBUST_CDN_URL = "https://cdn.corvaxforge.ru/"
+ROBUST_CDN_URL = "https://cdn.corvaxforge.ru/" # добавить в аругмент
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--fork-id", required=True)
-    parser.add_argument("--publish-token")
+    parser.add_argument("--publish-token", required=True)
+    parser.add_argument("--publish-webhook", required=False, default=None)
     parser.add_argument("--max-workers", type=int, default=4)
     parser.add_argument("--pool-connections", type=int, default=3)
     parser.add_argument("--pool-maxsize", type=int, default=10)
@@ -37,23 +39,38 @@ def main():
     args = parser.parse_args()
     fork_id = args.fork_id
     publish_token = args.publish_token
+    publish_webhook = args.publish_webhook
     max_workers = args.max_workers
     pool_connections = args.pool_connections
     pool_maxsize = args.pool_maxsize
     max_retries = args.max_retries
     release_dir = args.release_dir
+
+    if publish_webhook and publish_webhook not in os.environ:
+        publish_webhook = None
+        logger.warning("Publish webhook not found")
+    publish_webhook = os.environ[publish_token]
+    if not publish_webhook:
+        publish_webhook = None
+        logger.warning(f"Publish webhook is empty")
     
     if fork_id == "" or fork_id == None:
-        logger.critical("Fork id was not entered")
+        message = "Fork id was not entered"
+        logger.critical(message)
+        send_discord_message(message, "Critical", "ffa500", publish_webhook)
         raise KeyError()
     
     if publish_token not in os.environ:
-        logger.critical("Publish token not found")
+        message = "Publish token not found"
+        logger.critical(message)
+        send_discord_message(message, "Critical", "ffa500", publish_webhook)
         sys.exit(1)
     publish_token = os.environ[publish_token]
     if not publish_token:
-        logger.critical(f"Publish token is empty")
-        sys.exit(1)   
+        message = f"Publish token is empty"
+        logger.critical(message)
+        send_discord_message(message, "Critical", "ffa500", publish_webhook)
+        sys.exit(1)
     
     #if "GITHUB_SHA" not in os.environ:
     #    logger.critical("GITHUB_SHA environment variable not set")
@@ -73,7 +90,9 @@ def main():
 
     files = list(get_files_to_publish(release_dir))
     if not files:
-        logger.warning("No files found to publish")
+        message = "No files found to publish"
+        logger.warning(message)
+        send_discord_message(message, "Warning", "ffff00", publish_webhook)
         
     logger.info(f"Uploading {len(files)} files using {max_workers} parallel workers...")
     successful = 0
@@ -92,18 +111,23 @@ def main():
                 failed += 1
                 logger.warning(f"Failed to publish {os.path.basename(file_path)}: {e}")
     if failed:
-        logger.warning(f"Upload completed with {failed} failures")
+        message = f"Upload completed with {failed} failures"
+        logger.warning(message)
+        send_discord_message(message, "Warning", "ffff00", publish_webhook)
         # sys.exit(1)
     else:
-        logger.info(f"All {successful} files uploaded successfully")
+        message = f"All {successful} files uploaded successfully"
+        logger.info(message)
+        # send_discord_message(message, "Info", "03b2f8", publish_webhook)
     
     logger.info("Finishing publish...")
     data = { "version": version }
     headers = { "Content-Type": "application/json" }
     resp = session.post(f"{ROBUST_CDN_URL}fork/{fork_id}/publish/finish", json=data, headers=headers)
     resp.raise_for_status()
-    logger.info("Publish completed")
-
+    message = "Publish completed"
+    logger.info(message)
+    send_discord_message(message, "Info", "03b2f8", publish_webhook)
 
 def get_files_to_publish(release_dir: str) -> Iterable[str]:
     try:
@@ -116,7 +140,6 @@ def get_files_to_publish(release_dir: str) -> Iterable[str]:
     except PermissionError:
         logger.error(f"No permission to read directory '{release_dir}'")
         return []
-
 
 def get_engine_version() -> str:
     try:
@@ -162,6 +185,29 @@ def create_session(publish_token: str, pool_connections: int, pool_maxsize: int,
     session.mount("http://", adapter)
     session.headers = { "Authorization": f"Bearer {publish_token}" }
     return session
+
+def send_discord_message(message: str, status: str, color: str = "00ff00", publish_webhook: str = None):
+    if not publish_webhook:
+        return
+    try:
+        webhook = DiscordWebhook(
+            url=publish_webhook,
+            username="Publish Status",
+            rate_limit_retry=True
+        )
+        embed = DiscordEmbed(
+            title="Publish",
+            color=color
+        )
+        embed.add_embed_field(name=status, value=message)
+        embed.set_timestamp()
+        webhook.add_embed(embed)
+        response = webhook.execute()
+        if not response.status_code in [200, 204]:
+            logger.warning("The Discord message was not sent")
+    except Exception as e:
+        logger.error(f"The Discord message was not sent: {e}")
+        return
 
 if __name__ == '__main__':
     main()

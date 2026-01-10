@@ -15,6 +15,11 @@ jobs:
       with:
         submodules: 'recursive'
 
+    - name: Install Python dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip3 install discord-webhook requests
+
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v4.1.0
       with:
@@ -38,7 +43,8 @@ jobs:
       run: dotnet run --project Content.Packaging client --no-wipe-release
 
     - name: Publish version
-      run: python3 Tools/_Forge/Publish/advanced_publish.py --fork-id frontier_mapping --publish-token PUBLISH_MAPPING_TOKEN
+      run: python3 Tools/_Forge/Publish/advanced_publish.py --fork-id frontier_mapping --publish-token PUBLISH_MAPPING_TOKEN --publish-webhook PUBLISH_WEBHOOK
       env:
         PUBLISH_MAPPING_TOKEN: ${{ secrets.PUBLISH_MAPPING_TOKEN }}
+        PUBLISH_WEBHOOK: ${{ secrets.PUBLISH_WEBHOOK }}
         FORK_ID_MAPPING: ${{ vars.FORK_ID_MAPPING }}
