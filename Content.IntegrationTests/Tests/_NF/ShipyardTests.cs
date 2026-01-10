@@ -1,7 +1,7 @@
-using System.Collections.Generic;
+using System.Collections.Generic; // Forge-Change
 using System.Linq;
 using Content.Server.Cargo.Systems;
-using Content.Shared._NF.Shipyard;
+using Content.Shared._NF.Shipyard; // Forge-Change
 using Content.Shared._NF.Shipyard.Prototypes;
 using Robust.Server.GameObjects;
 using Robust.Shared.EntitySerialization.Systems;
@@ -78,6 +78,7 @@ public sealed class ShipyardTest
         var protoManager = server.ResolveDependency<IPrototypeManager>();
         var pricing = server.ResolveDependency<IEntitySystemManager>().GetEntitySystem<PricingSystem>();
 
+        // Forge-Change start
         var factionMarkups = new Dictionary<ShipyardConsoleUiKey, float>()
         {
             { ShipyardConsoleUiKey.Security, 1.35f },
@@ -89,6 +90,7 @@ public sealed class ShipyardTest
         };
     
         const float defaultMarkup = 1.2f;
+        // Forge-Change end
 
         await server.WaitAssertion(() =>
         {
@@ -121,7 +123,8 @@ public sealed class ShipyardTest
                     {
                         appraisePrice += price;
                     });
-                    
+
+                    // Forge-Change start
                     var shipyardConsole = vessel.Group;
                     float minMarkup;
                     
@@ -147,6 +150,7 @@ public sealed class ShipyardTest
                                     $"Faction: {shipyardConsole} " +
                                     $"(Markup: {minMarkup:F2}, Prototype MinPriceMarkup: {vessel.MinPriceMarkup:F2})");
                     }
+                    // Forge-Change end
 
                     map.DeleteMap(mapId);
                 }
