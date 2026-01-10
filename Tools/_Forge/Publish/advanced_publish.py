@@ -63,19 +63,19 @@ def main():
     if fork_id == "" or fork_id == None:
         message = "Fork id was not entered"
         logger.critical(message)
-        send_discord_message(message, "Critical", "ffa500", publish_webhook)
+        send_discord_message(message, "Critical", "ffa500", fork_id, publish_webhook)
         raise KeyError()
     
     if publish_token not in os.environ:
         message = "Publish token not found"
         logger.critical(message)
-        send_discord_message(message, "Critical", "ffa500", publish_webhook)
+        send_discord_message(message, "Critical", "ffa500", fork_id, publish_webhook)
         sys.exit(1)
     publish_token = os.environ[publish_token]
     if not publish_token:
         message = f"Publish token is empty"
         logger.critical(message)
-        # send_discord_message(message, "Critical", "ffa500", publish_webhook)
+        # send_discord_message(message, "Critical", "ffa500", fork_id, publish_webhook)
         sys.exit(1)
     
     #if "GITHUB_SHA" not in os.environ:
@@ -98,7 +98,7 @@ def main():
     if not files:
         message = "No files found to publish"
         logger.warning(message)
-        send_discord_message(message, "Warning", "ffff00", publish_webhook)
+        send_discord_message(message, "Warning", "ffff00", fork_id, publish_webhook)
         
     logger.info(f"Uploading {len(files)} files using {max_workers} parallel workers...")
     successful = 0
@@ -119,12 +119,12 @@ def main():
     if failed:
         message = f"Upload completed with {failed} failures"
         logger.warning(message)
-        send_discord_message(message, "Warning", "ffff00", publish_webhook)
+        send_discord_message(message, "Warning", "ffff00", fork_id, publish_webhook)
         # sys.exit(1)
     else:
         message = f"All {successful} files uploaded successfully"
         logger.info(message)
-        # send_discord_message(message, "Info", "03b2f8", publish_webhook)
+        # send_discord_message(message, "Info", "03b2f8", fork_id, publish_webhook)
     
     logger.info("Finishing publish...")
     data = { "version": version }
@@ -133,7 +133,7 @@ def main():
     resp.raise_for_status()
     message = "Publish completed"
     logger.info(message)
-    send_discord_message(message, "Info", "03b2f8", publish_webhook)
+    send_discord_message(message, "Info", "03b2f8", fork_id, publish_webhook)
 
 def get_files_to_publish(release_dir: str) -> Iterable[str]:
     try:
@@ -211,9 +211,11 @@ def create_session(publish_token: str, pool_connections: int, pool_maxsize: int,
     )
     return session
 
-def send_discord_message(message: str, status: str, color: str = "00ff00", publish_webhook: str = None):
+def send_discord_message(message: str, status: str, fork_id: str = None, color: str = "00ff00", publish_webhook: str = None):
     if not publish_webhook:
         return
+    if not fork_id:
+        fork_id = "unknown"
     try:
         webhook = DiscordWebhook(
             url=publish_webhook,
@@ -221,7 +223,7 @@ def send_discord_message(message: str, status: str, color: str = "00ff00", publi
             rate_limit_retry=True
         )
         embed = DiscordEmbed(
-            title="Publish",
+            title=f"Publish for {fork_id}",
             color=color
         )
         embed.add_embed_field(name=status, value=message)
