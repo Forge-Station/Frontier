@@ -46,11 +46,13 @@ def main():
     max_retries = args.max_retries
     release_dir = args.release_dir
 
-    if publish_webhook and publish_webhook not in os.environ:
-        publish_webhook = None
-        logger.warning("Publish webhook not found")
-    publish_webhook = os.environ[publish_token]
-    if not publish_webhook:
+    if publish_webhook:
+        if publish_webhook not in os.environ:
+            publish_webhook = None
+            logger.warning("Publish webhook not found")
+        else:
+            publish_webhook = os.environ[publish_token]
+    else:
         publish_webhook = None
         logger.warning(f"Publish webhook is empty")
     
@@ -69,7 +71,7 @@ def main():
     if not publish_token:
         message = f"Publish token is empty"
         logger.critical(message)
-        send_discord_message(message, "Critical", "ffa500", publish_webhook)
+        # send_discord_message(message, "Critical", "ffa500", publish_webhook)
         sys.exit(1)
     
     #if "GITHUB_SHA" not in os.environ:
@@ -161,18 +163,25 @@ def get_engine_version() -> str:
         return "unknown"
 
 def upload_file(file_path: str, fork_id: str, publish_token: str, pool_connections: int, pool_maxsize: int, max_retries: int, version: str):
-    if not hasattr(thread_session, "session"):
-        thread_session.session = create_session(publish_token, pool_connections, pool_maxsize, max_retries)
-    session = thread_session.session
-    with open(file_path, "rb") as file:
-        headers = {
-            "Content-Type": "application/octet-stream",
-            "Robust-Cdn-Publish-File": os.path.basename(file_path),
-            "Robust-Cdn-Publish-Version": version
-        }
-        resp = session.post(f"{ROBUST_CDN_URL}fork/{fork_id}/publish/file", data=file, headers=headers)
-        resp.raise_for_status()
-    return file_path
+    try:
+        if not hasattr(thread_session, "session"):
+            thread_session.session = create_session(publish_token, pool_connections, pool_maxsize, max_retries)
+        session = thread_session.session
+        with open(file_path, "rb") as file:
+            headers = {
+                "Content-Type": "application/octet-stream",
+                "Robust-Cdn-Publish-File": os.path.basename(file_path),
+                "Robust-Cdn-Publish-Version": version
+            }
+            resp = session.post(f"{ROBUST_CDN_URL}fork/{fork_id}/publish/file", data=file, headers=headers)
+            resp.raise_for_status()
+        return file_path
+    except FileNotFoundError:
+        logger.error("File '{file_path}' not found")
+    except IOError as e:
+        logger.error("IO error reading '{file_path}': {e}")
+    except Exception as e:
+        logger.error("Unexpected error with '{file_path}': {e}")
 
 def create_session(publish_token: str, pool_connections: int, pool_maxsize: int, max_retries: int) -> requests.Session:
     session = requests.Session()
