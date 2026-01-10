@@ -15,6 +15,7 @@ import sys
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from typing import Iterable
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from urllib3.util.retry import Retry
 
 thread_session = threading.local()
 logger = logging.getLogger(__name__)
@@ -47,11 +48,14 @@ def main():
     release_dir = args.release_dir
 
     if publish_webhook:
-        if publish_webhook not in os.environ:
-            publish_webhook = None
-            logger.warning("Publish webhook not found")
+        if publish_webhook.startswith("https://discord.com/api/webhooks/"):
+            pass
         else:
-            publish_webhook = os.environ[publish_token]
+            if publish_webhook in os.environ:
+                publish_webhook = os.environ[publish_webhook]
+            else:
+                publish_webhook = None
+                logger.warning("Publish webhook not found")
     else:
         publish_webhook = None
         logger.warning(f"Publish webhook is empty")
@@ -173,26 +177,38 @@ def upload_file(file_path: str, fork_id: str, publish_token: str, pool_connectio
                 "Robust-Cdn-Publish-File": os.path.basename(file_path),
                 "Robust-Cdn-Publish-Version": version
             }
-            resp = session.post(f"{ROBUST_CDN_URL}fork/{fork_id}/publish/file", data=file, headers=headers)
+            resp = session.post(f"{ROBUST_CDN_URL}fork/{fork_id}/publish/file", data=file, headers=headers, timeout=(15,30))
             resp.raise_for_status()
         return file_path
     except FileNotFoundError:
-        logger.error("File '{file_path}' not found")
+        logger.error(f"File '{file_path}' not found")
+        raise
     except IOError as e:
-        logger.error("IO error reading '{file_path}': {e}")
+        logger.error(f"IO error reading '{file_path}': {e}")
+        raise
     except Exception as e:
-        logger.error("Unexpected error with '{file_path}': {e}")
+        logger.error(f"Unexpected error with '{file_path}': {e}")
+        raise
 
 def create_session(publish_token: str, pool_connections: int, pool_maxsize: int, max_retries: int) -> requests.Session:
     session = requests.Session()
+    r = Retry(
+        total=max_retries,
+        backoff_factor=0.5,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["HEAD", "GET", "PUT", "POST", "DELETE", "OPTIONS", "TRACE"]
+    )
     adapter = requests.adapters.HTTPAdapter(
         pool_connections=pool_connections,
         pool_maxsize=pool_maxsize,
-        max_retries=max_retries
+        max_retries=r
     )
     session.mount("https://", adapter)
     session.mount("http://", adapter)
-    session.headers = { "Authorization": f"Bearer {publish_token}" }
+    session.headers.update({ "Authorization": f"Bearer {publish_token}" })
+    session.request = lambda method, url, **kwargs: requests.Session.request(
+        session, method, url, timeout=(5,30), **kwargs
+    )
     return session
 
 def send_discord_message(message: str, status: str, color: str = "00ff00", publish_webhook: str = None):
@@ -212,7 +228,7 @@ def send_discord_message(message: str, status: str, color: str = "00ff00", publi
         embed.set_timestamp()
         webhook.add_embed(embed)
         response = webhook.execute()
-        if not response.status_code in [200, 204]:
+        if response.status_code not in [200, 204]:
             logger.warning("The Discord message was not sent")
     except Exception as e:
         logger.error(f"The Discord message was not sent: {e}")
