@@ -46,6 +46,9 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     [DataField(required: true)]
     public ShipyardConsoleUiKey Group = ShipyardConsoleUiKey.Shipyard;
 
+    [DataField]
+    public bool MapcheckerException = false;
+
     /// <summary>
     ///     The purpose of the vessel. (e.g. Service, Cargo, Engineering etc.)
     /// </summary>
