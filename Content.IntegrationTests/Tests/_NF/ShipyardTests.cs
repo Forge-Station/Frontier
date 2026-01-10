@@ -141,7 +141,7 @@ public sealed class ShipyardTest
                     var idealMinPrice = appraisePrice * minMarkup;
                     var markupPercent = (minMarkup - 1.0f) * 100;
 
-                    if (!vessel.mapcheckerException)
+                    if (!vessel.MapcheckerException)
                     {
                         Assert.That(vessel.Price, Is.AtLeast(idealMinPrice),
                                     $"Arbitrage possible on {vessel.ID}. " +
