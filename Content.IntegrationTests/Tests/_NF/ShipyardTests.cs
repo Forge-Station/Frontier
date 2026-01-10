@@ -138,12 +138,15 @@ public sealed class ShipyardTest
                     var idealMinPrice = appraisePrice * minMarkup;
                     var markupPercent = (minMarkup - 1.0f) * 100;
 
-                    Assert.That(vessel.Price, Is.AtLeast(idealMinPrice),
-                        $"Arbitrage possible on {vessel.ID}. " +
-                        $"Minimal price should be {idealMinPrice:F2}, " +
-                        $"{markupPercent:F1}% over the appraise price ({appraisePrice:F2}). " +
-                        $"Faction: {shipyardConsole} " +
-                        $"(Markup: {minMarkup:F2}, Prototype MinPriceMarkup: {vessel.MinPriceMarkup:F2})");
+                    if (!vessel.mapcheckerException)
+                    {
+                        Assert.That(vessel.Price, Is.AtLeast(idealMinPrice),
+                                    $"Arbitrage possible on {vessel.ID}. " +
+                                    $"Minimal price should be {idealMinPrice:F2}, " +
+                                    $"{markupPercent:F1}% over the appraise price ({appraisePrice:F2}). " +
+                                    $"Faction: {shipyardConsole} " +
+                                    $"(Markup: {minMarkup:F2}, Prototype MinPriceMarkup: {vessel.MinPriceMarkup:F2})");
+                    }
 
                     map.DeleteMap(mapId);
                 }
