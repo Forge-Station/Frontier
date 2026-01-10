@@ -568,9 +568,12 @@ public sealed partial class ChatSystem : SharedChatSystem
         var ev = new EntitySpokeEvent(source, message, channel, obfuscatedMessage);
         RaiseLocalEvent(source, ev, true);
 
+        // Corvax-Forge-start
         // To avoid logging any messages sent by entities that are not players.
         if (!HasComp<ActorComponent>(source))
             return;
+        // Corvax-Forge-end
+
 
         if (!hideLog)
             if (originalMessage == message)
@@ -626,9 +629,12 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         SendInVoiceRange(ChatChannel.Emotes, action, wrappedMessage, source, range, author);
 
+        // Corvax-Forge-start
         // To avoid logging any messages sent by entities that are not players.
         if (!HasComp<ActorComponent>(source))
             return;
+        // Corvax-Forge-end
+
 
         if (!hideLog)
             if (name != Name(source))

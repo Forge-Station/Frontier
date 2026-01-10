@@ -8,7 +8,7 @@ using Content.Shared.Popups;
 using Content.Shared.Prying.Components;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Player;
+using Robust.Shared.Player; // Corvax-Forge
 using Robust.Shared.Serialization;
 using PryUnpoweredComponent = Content.Shared.Prying.Components.PryUnpoweredComponent;
 
@@ -142,6 +142,7 @@ public sealed class PryingSystem : EntitySystem
             NeedHand = tool != user,
         };
 
+    // Corvax-Forge-start
         // don't log NPC prying
         if (HasComp<ActorComponent>(user))
         {
@@ -156,6 +157,7 @@ public sealed class PryingSystem : EntitySystem
         }
         return _doAfterSystem.TryStartDoAfter(doAfterArgs, out id);
     }
+    // Corvax-Forge-end
 
     private void OnDoAfter(EntityUid uid, DoorComponent door, DoorPryDoAfterEvent args)
     {

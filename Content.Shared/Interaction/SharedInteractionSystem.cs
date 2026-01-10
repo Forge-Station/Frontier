@@ -506,13 +506,14 @@ namespace Content.Shared.Interaction
             // allow for special logic before main interaction
             var ev = new BeforeInteractHandEvent(target);
             RaiseLocalEvent(user, ev);
+            // Corvax-Forge-start
             if (ev.Handled)
             {
                 if (HasComp<ActorComponent>(user))
                     _adminLogger.Add(LogType.InteractHand, LogImpact.Low, $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target}, but it was handled by another system");
                 return;
             }
-
+            // Corvax-Forge-end
             DebugTools.Assert(!IsDeleted(user) && !IsDeleted(target));
             // all interactions should only happen when in range / unobstructed, so no range check is needed
             var message = new InteractHandEvent(user, target);
@@ -520,9 +521,10 @@ namespace Content.Shared.Interaction
 
             // Frontier modification: adds extra things to the log
             var extraLogs = LoggingExtensions.GetExtraLogs(EntityManager, target);
-
+            // Corvax-Forge-start
             if (HasComp<ActorComponent>(user))
                 _adminLogger.Add(LogType.InteractHand, LogImpact.Low, $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target}{extraLogs}");
+            // Corvax-Forge-end
             DoContactInteraction(user, target, message);
             if (message.Handled)
                 return;
@@ -546,6 +548,7 @@ namespace Content.Shared.Interaction
 
             if (target != null)
             {
+                // Corvax-Forge-start
                 if (HasComp<ActorComponent>(user))
                 {
                     _adminLogger.Add(
@@ -553,9 +556,11 @@ namespace Content.Shared.Interaction
                         LogImpact.Low,
                         $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target} using {ToPrettyString(used):used}");
                 }
+                // Corvax-Forge-end
             }
             else
             {
+                // Corvax-Forge-start
                 if (HasComp<ActorComponent>(user))
                 {
                     _adminLogger.Add(
@@ -563,6 +568,7 @@ namespace Content.Shared.Interaction
                         LogImpact.Low,
                         $"{ToPrettyString(user):user} interacted with *nothing* using {ToPrettyString(used):used}");
                 }
+                // Corvax-Forge-end
             }
 
             if (RangedInteractDoBefore(user, used, target, clickLocation, inRangeUnobstructed, checkDeletion: false))
@@ -1051,6 +1057,7 @@ namespace Content.Shared.Interaction
             if (checkCanUse && !_actionBlockerSystem.CanUseHeldEntity(user, used))
                 return false;
 
+            // Corvax-Forge-start
             if (HasComp<ActorComponent>(user))
             {
                 _adminLogger.Add(
@@ -1058,6 +1065,7 @@ namespace Content.Shared.Interaction
                     LogImpact.Low,
                     $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target} using {ToPrettyString(used):used}");
             }
+            // Corvax-Forge-end
 
             if (RangedInteractDoBefore(user, used, target, clickLocation, canReach: true, checkDeletion: false))
                 return true;
@@ -1184,9 +1192,10 @@ namespace Content.Shared.Interaction
             {
                 DoContactInteraction(user, used);
                 if (!activateMsg.WasLogged)
+                    //Change-Forge-Start
                     if (HasComp<ActorComponent>(user))
                         _adminLogger.Add(LogType.InteractActivate, LogImpact.Low, $"{ToPrettyString(user):user} activated {ToPrettyString(used):used}");
-
+                    //Change-Forge-End
                 if (delayComponent != null)
                     _useDelay.TryResetDelay(used, component: delayComponent);
                 return true;
@@ -1202,9 +1211,10 @@ namespace Content.Shared.Interaction
             // Still need to call this even without checkUseDelay in case this gets relayed from Activate.
             if (delayComponent != null)
                 _useDelay.TryResetDelay(used, component: delayComponent);
-
+            //Change-Forge-Start
             if (HasComp<ActorComponent>(user))
                 _adminLogger.Add(LogType.InteractActivate, LogImpact.Low, $"{ToPrettyString(user):user} activated {ToPrettyString(used):used}");
+            //Change-Forge-End
             return true;
         }
         #endregion
