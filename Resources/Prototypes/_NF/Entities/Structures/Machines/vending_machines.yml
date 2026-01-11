@@ -10,7 +10,7 @@
     brokenState: broken
     normalState: normal-unshaded
     # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
-    initialStockQuality: 0.75 # Forge-change
+    initialStockQuality: 0.9 # Forge-change
   - type: DatasetVocalizer
     dataset: CuddlyCritterAds
   - type: Sprite
@@ -367,7 +367,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-    initialStockQuality: 0.65 # Forge-change
+    initialStockQuality: 0.60 # Forge-change
   - type: DatasetVocalizer
     dataset: MegaSeedAds
   - type: Sprite
