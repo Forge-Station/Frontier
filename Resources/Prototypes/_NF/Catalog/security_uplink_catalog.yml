@@ -1094,7 +1094,23 @@
       whitelist:
         tags:
           - SecurityUplink
-
+# Forge-Change
+- type: listing
+  id: UplinkSecurityVendingMachineRestockModules
+  name:  uplink-security-modules-name
+  description: uplink-security-modules-desc
+  productEntity: VendingMachineRestockModules
+  icon: { sprite: Objects/Specific/Service/vending_machine_restock.rsi, state: base }
+  cost:
+    FrontierUplinkCoin: 6
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+# Forge-Change-End
 - type: listing
   id: UplinkSecurityEmpGrenadeBox
   name:  uplink-security-empgrenade-box-name
@@ -1522,7 +1538,7 @@
       whitelist:
         - Bailiff
         - Sheriff
-
+# Forge-Change
 - type: listing
   id: UplinkSecurityAnarchist
   name:  Анархист
@@ -1530,7 +1546,7 @@
   productEntity: WeaponCaseLongWeaponRifleAnarchist
   icon: { sprite: Forge/Objects/Weapons/Guns/Rifles/anarchist.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 23
+    FrontierUplinkCoin: 20
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -1562,7 +1578,7 @@
       whitelist:
         - Bailiff
         - Sheriff
-
+# Forge-Change-End
 - type: listing
   id: UplinkSecurityCrateEngineeringDSBF
   productEntity: CrateEngineeringDSBF
