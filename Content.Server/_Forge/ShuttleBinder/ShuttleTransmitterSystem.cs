@@ -44,7 +44,7 @@ public sealed class ShuttleTransmitterSystem : EntitySystem
         if (activeTransmitter != null && activeTransmitter != uid)
         {
             component.LinkedBeacon = null;
-            _popup.PopupCoordinates("Another transmitter is already active on this shuttle. Activate this one to make it active.", xform.Coordinates);
+            _popup.PopupCoordinates(Loc.GetString("shuttle-transmitter-popup-another-active"), xform.Coordinates);
         }
         else
         {
@@ -90,7 +90,7 @@ public sealed class ShuttleTransmitterSystem : EntitySystem
         if (component.LinkedBeacon != null)
         {
             UnlinkFromBeacon(uid, component);
-            _popup.PopupEntity("Transmitter unlinked from beacon", args.User);
+            _popup.PopupEntity(Loc.GetString("shuttle-transmitter-popup-unlinked"), args.User);
 
             var nextTransmitter = FindNextTransmitter(shuttleUid, uid);
             if (nextTransmitter != null && TryComp<ShuttleTransmitterComponent>(nextTransmitter, out var nextComponent))
@@ -101,7 +101,7 @@ public sealed class ShuttleTransmitterSystem : EntitySystem
         else
         {
             MakeTransmitterActive(uid, component, shuttleUid);
-            _popup.PopupEntity("Transmitter activated", args.User);
+            _popup.PopupEntity(Loc.GetString("shuttle-transmitter-popup-activated"), args.User);
         }
 
         args.Handled = true;
@@ -188,7 +188,7 @@ public sealed class ShuttleTransmitterSystem : EntitySystem
             if (stationUid != null)
             {
                 shuttle.TargetPOI = stationUid.Value.ToString();
-                _popup.PopupCoordinates($"Shuttle target set", xform.Coordinates);
+                _popup.PopupCoordinates(Loc.GetString("shuttle-transmitter-popup-target-set"), xform.Coordinates);
             }
             else
             {

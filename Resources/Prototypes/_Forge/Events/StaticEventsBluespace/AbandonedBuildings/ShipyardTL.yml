@@ -1,5 +1,5 @@
 # Author Info
-# GitHub: -
+# GitHub: https://github.com/Autsaider-IM
 # Discord: autsaider_m
 # License: CC-BY-NC-ND-4.0
 # CorvaxForge
@@ -15,7 +15,7 @@
   name: Заброшенная Верфь TechnicLogistic
   minimumDistance: 4000
   maximumDistance: 5500
-  gridPath: /Maps/_Forge/POI/Shipyard.yml
+  gridPath: /Maps/_Forge/POI/shipyard_tl.yml
   addComponents:
   - type: IFF
     color: "#575757"
@@ -25,7 +25,7 @@
 - type: gameMap
   id: ShipyardTL
   mapName: Заброшенная Верфь TechnicLogistic
-  mapPath: /Maps/_Forge/POI/Shipyard.yml
+  mapPath: /Maps/_Forge/POI/shipyard_tl.yml
   minPlayers: 0
   stations:
     ShipyardTL:

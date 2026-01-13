@@ -15,16 +15,19 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 6 # Forge-change
         reagents:
         - ReagentId: Fiber
-          Quantity: 10
+          Quantity: 6 # Forge-change
   - type: Tag
     tags:
     - ClothMade
     - Recyclable
     - WhitelistChameleon
   - type: ProtectedFromStepTriggers
+  - type: StaticPrice # Forge-change add
+    price: 160
+    vendPrice: 400
 
 - type: entity
   abstract: true
@@ -55,6 +58,9 @@
           tags:
           - Knife
           - Sidearm
+  - type: StaticPrice # Forge-change: jackboots cool.. yea
+    price: 160
+    vendPrice: 500
 
 - type: entity
   abstract: true
@@ -75,3 +81,6 @@
   - type: TemperatureProtection
     heatingCoefficient: 1.025
     coolingCoefficient: 0.5
+  - type: StaticPrice # Forge-change
+    price: 120
+    vendPrice: 250

@@ -10,6 +10,7 @@
     brokenState: broken
     normalState: normal-unshaded
     # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
+    initialStockQuality: 0.9 # Forge-change
   - type: DatasetVocalizer
     dataset: CuddlyCritterAds
   - type: Sprite
@@ -168,6 +169,7 @@
     # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
 #  - type: DatasetVocalizer
 #    dataset: BountyVendAds
+    initialStockQuality: 0.90 # Forge-change: he-he-he-he
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/bountyvend.rsi
     layers:
@@ -190,6 +192,7 @@
   components:
   - type: VendingMachine
     pack: BountyVendPOIInventory
+    initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   id: VendingMachineArcadia
@@ -207,6 +210,7 @@
       # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
       # denyState: deny-unshaded
       ejectDelay: 3
+      initialStockQuality: 0.75 # Forge-change
     - type: DatasetVocalizer
       dataset: ArcadiaDrobeAds
     - type: Sprite
@@ -240,6 +244,7 @@
       ejectState: eject-unshaded
       denyState: deny-unshaded
       ejectDelay: 3
+      initialStockQuality: 0.70 # Forge-change
     - type: DatasetVocalizer
       dataset: LessLethalVendAds
     - type: Sprite
@@ -264,6 +269,7 @@
   components:
     - type: VendingMachine
       pack: LessLethalVendPOIInventory
+      initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   parent: VendingMachine
@@ -281,6 +287,7 @@
       ejectState: eject-unshaded
       denyState: deny-unshaded
       ejectDelay: 3
+      initialStockQuality: 0.80 # Forge-change
     - type: DatasetVocalizer
       dataset: LessLethalVendAds
     - type: Sprite
@@ -360,6 +367,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    initialStockQuality: 0.60 # Forge-change
   - type: DatasetVocalizer
     dataset: MegaSeedAds
   - type: Sprite
@@ -494,6 +502,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    initialStockQuality: 0.8 # Forge-change
   - type: DatasetVocalizer
     dataset: VandalizedBountyVendAds
   - type: Sprite
@@ -533,6 +542,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    initialStockQuality: 0.8 # Forge-change
   - type: DatasetVocalizer
     dataset: VandalizedBountyVendAds
   - type: Sprite
@@ -719,6 +729,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    initialStockQuality: 0.70 # Forge-change
   - type: DatasetVocalizer
     dataset: VandalizedBountyVendAds
   - type: Sprite
@@ -747,6 +758,7 @@
   components:
   - type: VendingMachine
     pack: WeaponryWorksVendPOIInventory
+    initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   parent: [VendingMachineEngivend, BaseStructureDisableAnchoring]
@@ -755,6 +767,7 @@
   components:
   - type: VendingMachine
     pack: EngiVendPOIInventory
+    initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   parent: [VendingMachineVendomat, BaseStructureDisableAnchoring]
@@ -763,6 +776,7 @@
   components:
   - type: VendingMachine
     pack: VendomatPOIInventory
+    initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   parent: [VendingMachineYouTool, BaseStructureDisableAnchoring]
@@ -771,6 +785,7 @@
   components:
   - type: VendingMachine
     pack: YouToolPOIInventory
+    initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   parent: [VendingMachineSalvage, BaseStructureDisableAnchoring]
@@ -779,6 +794,7 @@
   components:
   - type: VendingMachine
     pack: NFSalvageEquipmentPOIInventory
+    initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   parent: [VendingMachineMediDrobe, BaseStructureDisableAnchoring]
@@ -787,6 +803,7 @@
   components:
   - type: VendingMachine
     pack: MediDrobeInventory
+    initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   parent: [VendingMachinePottedPlantVend, BaseStructureDisableAnchoring]
@@ -795,6 +812,7 @@
   components:
   - type: VendingMachine
     pack: PottedPlantVendInventory
+    initialStockQuality: 0.65 # Forge-change
 
 - type: entity
   parent: [VendingMachineGames, BaseStructureDisableAnchoring]
@@ -803,6 +821,7 @@
   components:
   - type: VendingMachine
     pack: GoodCleanFunInventory
+    initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   parent: [VendingMachineCigs, BaseStructureDisableAnchoring]
@@ -811,6 +830,7 @@
   components:
   - type: VendingMachine
     pack: CigaretteMachineInventory
+    initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   parent: [VendingMachineBooze, BaseStructureDisableAnchoring]
@@ -819,6 +839,7 @@
   components:
   - type: VendingMachine
     pack: BoozeOMatInventory
+    initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   parent: [VendingMachineCuddlyCritterVend, BaseStructureDisableAnchoring]
@@ -839,6 +860,7 @@
   components:
   - type: VendingMachine
     pack: TankDispenserEVAPOIInventory
+    initialStockQuality: 1.0 # Forge-change
 
 - type: entity
   parent: [VendingMachinePickNPack, BaseStructureDisableAnchoring]
@@ -847,6 +869,7 @@
   components:
   - type: VendingMachine
     pack: PickNPackPOIInventory
+    initialStockQuality: 1.0 # Forge-change
   - type: AccessReader
     access: [["Mercenary"], ["Security"], ["HeadOfPersonnel"], ["HeadOfSecurity"]]
   - type: ActivatableUIRequiresAccess

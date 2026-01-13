@@ -22,15 +22,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 11 # Forge-change
         reagents:
         - ReagentId: Fiber
-          Quantity: 30
+          Quantity: 11 # Forge-change
   - type: Tag
     tags:
     - ClothMade
     - Recyclable
     - WhitelistChameleon
+  - type: StaticPrice # Forge-change add
+    price: 100
+    vendPrice: 600
 
 - type: entity
   abstract: true
@@ -40,6 +43,9 @@
   - type: Clothing
     slots: [innerclothing]
     femaleMask: UniformTop
+  - type: StaticPrice # Forge-change add
+    price: 100
+    vendPrice: 600
 
 - type: entity
   abstract: true
@@ -54,6 +60,9 @@
   # - type: WirelessNetworkConnection # Frontier - Remove range for long space sensors
   #   range: 1200 # Frontier - Remove range for long space sensors
   # - type: StationLimitedNetwork # Frontier - Remove range for long space sensors
+  - type: StaticPrice # Forge-change add
+    price: 100
+    vendPrice: 600
 
 - type: entity
   abstract: true
@@ -63,3 +72,6 @@
   - type: Clothing
     slots: [innerclothing]
     femaleMask: UniformTop
+  - type: StaticPrice # Forge-change add
+    price: 100
+    vendPrice: 600

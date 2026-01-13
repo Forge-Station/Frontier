@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseItem
   id: ShuttleTransmitter
-  name: shuttle transmitter
-  description: A device that can be linked to navigation beacons and installed on shuttles for automated return.
+  name: Устройство связи с базой
+  description: Передатчик для связи с маяком на точке интереса, при связывании и помещении на шаттл, в дальнейшем при БЛ перемещениях маяк будет притягивать шаттл к себе.
   components:
   - type: Sprite
     sprite: Objects/Devices/signaller.rsi
@@ -15,8 +15,8 @@
 - type: entity
   parent: BaseItem
   id: ShuttleExpeditionBeacon
-  name: shuttle beacon
-  description: A navigation beacon that shuttles can lock onto for automated return.
+  name: Маяк базы
+  description: Маяк базы. При связывании с устройством связи в дальнейшем будет стараться притянуть к себе объект, на котором находится устройство.
   placement:
     mode: SnapgridCenter
   components:

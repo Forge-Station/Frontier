@@ -284,6 +284,12 @@
       state: shipyard_nfsd
     - map: ["computerLayerKeys"]
       state: telesci_key
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Modules
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Modules:
+        type: ShipyardConsoleBoundUserInterface
   - type: ShipyardConsole
     newJobTitle: null
     shipyardChannel: Nfsd
