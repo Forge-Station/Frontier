@@ -15,7 +15,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
 {
     private const double BlipStaleSeconds = 3.0;
     private static readonly List<(Vector2, float, Color, RadarBlipShape)> EmptyBlipList = new();
-    private static readonly List<(NetEntity? Grid, Vector2 Position, float Scale, Color Color, RadarBlipShape Shape)> EmptyRawBlipList = new();
+    private static readonly List<(NetEntity? Grid, Vector2 Position, Vector2 Velocity, float Scale, Color Color, RadarBlipShape Shape)> EmptyRawBlipList = new();
     private static readonly List<(NetEntity? Grid, Vector2 Start, Vector2 End, float Thickness, Color Color)> EmptyHitscanList = new();
     private TimeSpan _lastRequestTime = TimeSpan.Zero;
     private static readonly TimeSpan RequestThrottle = TimeSpan.FromMilliseconds(250);
@@ -27,7 +27,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _xform = default!;
 
     private TimeSpan _lastUpdatedTime;
-    private List<(NetEntity? Grid, Vector2 Position, float Scale, Color Color, RadarBlipShape Shape)> _blips = new();
+    private List<(NetEntity? Grid, Vector2 Position, Vector2 Velocity, float Scale, Color Color, RadarBlipShape Shape)> _blips = new();
     private List<(NetEntity? Grid, Vector2 Start, Vector2 End, float Thickness, Color Color)> _hitscans = new();
     private Vector2 _radarWorldPosition;
 
@@ -106,17 +106,8 @@ public sealed partial class RadarBlipSystem : EntitySystem
             if (blip.Grid == null)
             {
                 worldPosition = blip.Position;
-
-                // Distance culling for world position blips
-                if (Vector2.DistanceSquared(worldPosition, _radarWorldPosition) > MaxBlipRenderDistance * MaxBlipRenderDistance)
-                    continue;
-
-                result.Add((worldPosition, blip.Scale, blip.Color, blip.Shape));
-                continue;
             }
-
-            // If grid exists, transform from grid-local to world coordinates
-            if (TryGetEntity(blip.Grid, out var gridEntity))
+            else if (TryGetEntity(blip.Grid, out var gridEntity))
             {
                 // Transform the grid-local position to world position
                 var worldPos = _xform.GetWorldPosition(gridEntity.Value);
@@ -125,13 +116,17 @@ public sealed partial class RadarBlipSystem : EntitySystem
                 // Rotate the local position by grid rotation and add grid position
                 var rotatedLocalPos = gridRot.RotateVec(blip.Position);
                 worldPosition = worldPos + rotatedLocalPos;
-
-                // Distance culling for grid position blips
-                if (Vector2.DistanceSquared(worldPosition, _radarWorldPosition) > MaxBlipRenderDistance * MaxBlipRenderDistance)
-                    continue;
-
-                result.Add((worldPosition, blip.Scale, blip.Color, blip.Shape));
             }
+            else
+            {
+                continue;
+            }
+
+            worldPosition += blip.Velocity * (float)(_timing.CurTime - _lastUpdatedTime).TotalSeconds;
+
+            if (Vector2.DistanceSquared(worldPosition, _radarWorldPosition) > MaxBlipRenderDistance * MaxBlipRenderDistance)
+                continue;
+            result.Add((worldPosition, blip.Scale, blip.Color, blip.Shape));
         }
         return result;
     }
@@ -139,7 +134,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
     /// <summary>
     /// Gets the raw blips data which includes grid information for more accurate rendering.
     /// </summary>
-    public List<(NetEntity? Grid, Vector2 Position, float Scale, Color Color, RadarBlipShape Shape)> GetRawBlips()
+    public List<(NetEntity? Grid, Vector2 Position, Vector2 Velocity, float Scale, Color Color, RadarBlipShape Shape)> GetRawBlips()
     {
         if (_timing.CurTime.TotalSeconds - _lastUpdatedTime.TotalSeconds > BlipStaleSeconds)
             return EmptyRawBlipList;
@@ -148,7 +143,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
         if (_blips.Count == 0)
             return _blips;
 
-        var filteredBlips = new List<(NetEntity? Grid, Vector2 Position, float Scale, Color Color, RadarBlipShape Shape)>(_blips.Count);
+        var filteredBlips = new List<(NetEntity? Grid, Vector2 Position, Vector2 Velocity, float Scale, Color Color, RadarBlipShape Shape)>(_blips.Count);
 
         foreach (var blip in _blips)
         {

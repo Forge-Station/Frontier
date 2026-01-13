@@ -34,6 +34,7 @@
     radarColor: "#FCBA03"
     scale: 1
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: hexagon
   - type: TimedDespawn
     lifetime: 3.5
@@ -99,6 +100,7 @@
     radarColor: "#FCBA03"
     scale: 1.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: hexagon
   - type: TimedDespawn
     lifetime: 4.5
@@ -164,6 +166,7 @@
     radarColor: "#FCBA03"
     scale: 4
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: hexagon
   - type: TimedDespawn
     lifetime: 15
@@ -212,6 +215,7 @@
     radarColor: "#FB00FF"
     scale: 1
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: hexagon
   - type: TimedDespawn
     lifetime: 6.5
@@ -274,6 +278,7 @@
     radarColor: "#FCBA03"
     scale: 4
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: hexagon
   - type: TimedDespawn
     lifetime: 15

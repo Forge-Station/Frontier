@@ -26,6 +26,7 @@
   - type: RadarBlip
     scale: 0.85
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
     radarColor: "#1df1f5"
 
@@ -93,6 +94,7 @@
     requireNoGrid: true
     shape: arrow
     radarColor: "#1df1f5"
+    visibleFromOtherGrids: true
 
 - type: entity
   id: Forge30mmBulletAPHE
@@ -152,6 +154,7 @@
   - type: RadarBlip
     scale: 2.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
     radarColor: "#1df1f5"
   - type: TimedDespawn
@@ -229,6 +232,7 @@
   - type: RadarBlip
     scale: 1.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
     radarColor: "#1df1f5"
   - type: ExplodeOnTrigger
@@ -329,6 +333,7 @@
   - type: RadarBlip
     scale: 2.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 5.15
@@ -385,6 +390,7 @@
   - type: RadarBlip
     scale: 3.25
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 5.15
@@ -440,6 +446,7 @@
   - type: RadarBlip
     scale: 2.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 5.5

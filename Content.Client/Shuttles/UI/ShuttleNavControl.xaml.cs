@@ -56,7 +56,8 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
     private List<Entity<MapGridComponent>> _grids = new();
 
-    public ShuttleNavControl() : base(64f, 256f, 256f)
+    // Forge-change: up distance for ship fights
+    public ShuttleNavControl() : base(64f, 512f, 512f)
     {
         RobustXamlLoader.Load(this);
         _shuttles = EntManager.System<SharedShuttleSystem>();
@@ -444,6 +445,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         // Draw all blips on the map at this point.
         NFDrawBlips(handle, blipDataList);
         // End Frontier: draw target
+        DrawShields(handle, xform, worldToShuttle); // Forge-change
 
         // If we've set the controlling console, and it's on a different grid
         // to the shuttle itself, then draw an additional marker to help the
@@ -468,44 +470,55 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         handle.DrawLine(origin, origin + angle.ToVec() * ScaledMinimapRadius * 1.42f, Color.Red.WithAlpha(0.1f));
 
         // Get raw blips with grid information
-        var rawBlips = _blips.GetRawBlips();
+        var rawBlips = _blips.GetCurrentBlips(); // Forge-change
 
         // Prepare view bounds for culling
         var blipViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);
 
         // Draw blips using the same grid-relative transformation approach as docks
-        foreach (var blip in rawBlips)
+        // foreach (var blip in rawBlips)
+        // {
+        //     Vector2 blipPosInView;
+
+        //     // Handle differently based on if there's a grid
+        //     if (blip.Grid == null)
+        //     {
+        //         // For world-space blips without a grid, use standard world transformation
+        //         blipPosInView = Vector2.Transform(blip.Position, worldToShuttle * shuttleToView);
+        //     }
+        //     else if (EntManager.TryGetEntity(blip.Grid, out var gridEntity))
+        //     {
+        //         // For grid-relative blips, transform using the grid's transform
+        //         var gridToWorld = _transform.GetWorldMatrix(gridEntity.Value);
+        //         var gridToView = gridToWorld * worldToShuttle * shuttleToView;
+
+        //         // Transform the grid-local position
+        //         blipPosInView = Vector2.Transform(blip.Position, gridToView);
+        //     }
+        //     else
+        //     {
+        //         // Skip blips with invalid grid references
+        //         continue;
+        //     }
+
+        //     // Check if this blip is within view bounds before drawing
+        //     if (blipViewBounds.Contains(blipPosInView))
+        //     {
+        //         DrawBlipShape(handle, blipPosInView, blip.Scale * 3f, blip.Color.WithAlpha(0.8f), blip.Shape);
+        //     }
+        // }
+        // End Frontier
+
+        // Forge-change
+        foreach (var (position, scale, color, shape) in rawBlips)
         {
-            Vector2 blipPosInView;
-
-            // Handle differently based on if there's a grid
-            if (blip.Grid == null)
-            {
-                // For world-space blips without a grid, use standard world transformation
-                blipPosInView = Vector2.Transform(blip.Position, worldToShuttle * shuttleToView);
-            }
-            else if (EntManager.TryGetEntity(blip.Grid, out var gridEntity))
-            {
-                // For grid-relative blips, transform using the grid's transform
-                var gridToWorld = _transform.GetWorldMatrix(gridEntity.Value);
-                var gridToView = gridToWorld * worldToShuttle * shuttleToView;
-
-                // Transform the grid-local position
-                blipPosInView = Vector2.Transform(blip.Position, gridToView);
-            }
-            else
-            {
-                // Skip blips with invalid grid references
-                continue;
-            }
-
-            // Check if this blip is within view bounds before drawing
+            var blipPosInView = Vector2.Transform(position, worldToShuttle * shuttleToView);
             if (blipViewBounds.Contains(blipPosInView))
             {
-                DrawBlipShape(handle, blipPosInView, blip.Scale * 3f, blip.Color.WithAlpha(0.8f), blip.Shape);
+                DrawBlipShape(handle, blipPosInView, scale * 3f, color.WithAlpha(0.8f), shape);
             }
         }
-        // End Frontier
+        // Forge-change end
     }
 
     private void DrawDocks(DrawingHandleScreen handle, EntityUid uid, Matrix3x2 gridToView)

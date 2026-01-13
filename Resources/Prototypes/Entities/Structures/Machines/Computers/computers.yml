@@ -132,7 +132,7 @@
           type: WiresBoundUserInterface
   - type: RadarConsole
   - type: WorldLoader
-    radius: 256
+    radius: 512 # Forge-change
   - type: PointLight
     radius: 1.5
     energy: 1.6
@@ -197,6 +197,8 @@
       key_slots:
       - EncryptionKeyTraffic
   # End Frontier
+  - type: RadarConsole # Forge-change
+    maxRange: 512
 
 - type: entity
   parent: BaseComputerShuttle
@@ -221,7 +223,7 @@
     tags:
       - Syndicate
   - type: RadarConsole
-    maxRange: 384
+    maxRange: 512 # Forge-change
   - type: WorldLoader
     radius: 1536
   - type: PointLight
@@ -254,7 +256,7 @@
     components:
       - type: CargoShuttle
   - type: RadarConsole
-    maxRange: 256
+    maxRange: 512 # Forge-change
   - type: PointLight
     radius: 1.5
     energy: 1.6
@@ -868,7 +870,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: RadarConsole
-    maxRange: 256 # Frontier
+    maxRange: 512 # Forge-change
     maxIffRange: 512 # Frontier
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key

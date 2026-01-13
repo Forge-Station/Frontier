@@ -39,7 +39,7 @@ public sealed class GiveBlipsEvent : EntityEventArgs
     /// If grid entity is null, position is in world coordinates.
     /// If grid entity is not null, position is in grid-local coordinates.
     /// </summary>
-    public readonly List<(NetEntity? Grid, Vector2 Position, float Scale, Color Color, RadarBlipShape Shape)> Blips;
+    public readonly List<(NetEntity? Grid, Vector2 Position, Vector2 Velocity, float Scale, Color Color, RadarBlipShape Shape)> Blips; // Forge-change: add Velocity
 
     /// <summary>
     /// Hitscan lines to display on the radar as (grid entity, start position, end position, thickness, color).
@@ -54,7 +54,7 @@ public sealed class GiveBlipsEvent : EntityEventArgs
     /// <param name="blips">List of blips as (position, scale, color).</param>
     public GiveBlipsEvent(List<(Vector2, float, Color)> blips)
     {
-        Blips = blips.Select(b => ((NetEntity?)null, b.Item1, b.Item2, b.Item3, RadarBlipShape.Circle)).ToList();
+        Blips = blips.Select(b => ((NetEntity?)null, Vector2.Zero, b.Item1, b.Item2, b.Item3, RadarBlipShape.Circle)).ToList(); // Forge-change
         HitscanLines = new();
     }
 
@@ -62,7 +62,7 @@ public sealed class GiveBlipsEvent : EntityEventArgs
     /// Constructor for the full blip format.
     /// </summary>
     /// <param name="blips">List of blips as (grid, position, scale, color, shape).</param>
-    public GiveBlipsEvent(List<(NetEntity? Grid, Vector2 Position, float Scale, Color Color, RadarBlipShape Shape)> blips)
+    public GiveBlipsEvent(List<(NetEntity? Grid, Vector2 Position, Vector2 Velocity, float Scale, Color Color, RadarBlipShape Shape)> blips) // Forge-change: add Velocity
     {
         Blips = blips;
         HitscanLines = new();
@@ -74,7 +74,7 @@ public sealed class GiveBlipsEvent : EntityEventArgs
     /// <param name="blips">List of blips as (grid, position, scale, color, shape).</param>
     /// <param name="hitscans">List of hitscan lines as (grid, start, end, thickness, color).</param>
     public GiveBlipsEvent(
-        List<(NetEntity? Grid, Vector2 Position, float Scale, Color Color, RadarBlipShape Shape)> blips,
+        List<(NetEntity? Grid, Vector2 Position, Vector2 Velocity, float Scale, Color Color, RadarBlipShape Shape)> blips, // Forge-change: add Velocity
         List<(NetEntity? Grid, Vector2 Start, Vector2 End, float Thickness, Color Color)> hitscans)
     {
         Blips = blips;

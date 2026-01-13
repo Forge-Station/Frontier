@@ -6,6 +6,7 @@ using Content.Shared.Movement.Components;
 using Content.Shared.Shuttles.Components;
 using Robust.Shared.Network;
 using Robust.Shared.Timing;
+using Robust.Shared.Physics.Components; // Forge-change
 
 namespace Content.Server._NF.Radar;
 
@@ -23,7 +24,7 @@ public sealed partial class RadarBlipSystem : SharedRadarBlipSystem
     private Dictionary<NetUserId, TimeSpan> _nextBlipRequestPerUser = new();
 
     // The minimum amount of time between handled blip requests.
-    private static readonly TimeSpan MinRequestPeriod = TimeSpan.FromSeconds(1);
+    private static readonly TimeSpan MinRequestPeriod = TimeSpan.FromMilliseconds(250); // Forge-change
     // Maximum distance for blips to be considered visible
     private const float MaxBlipRenderDistance = 300f;
 
@@ -68,9 +69,9 @@ public sealed partial class RadarBlipSystem : SharedRadarBlipSystem
     /// <summary>
     /// Assembles a list of radar blips visible to the given radar console.
     /// </summary>
-    private List<(NetEntity? Grid, Vector2 Position, float Scale, Color Color, RadarBlipShape Shape)> AssembleBlipsReport(Entity<RadarConsoleComponent> ent)
+    private List<(NetEntity? Grid, Vector2 Position, Vector2 Velocity, float Scale, Color Color, RadarBlipShape Shape)> AssembleBlipsReport(Entity<RadarConsoleComponent> ent) // Forge-change: add Velocity
     {
-        var blips = new List<(NetEntity? Grid, Vector2 Position, float Scale, Color Color, RadarBlipShape Shape)>();
+        var blips = new List<(NetEntity? Grid, Vector2 Position, Vector2 Velocity, float Scale, Color Color, RadarBlipShape Shape)>(); // Forge-change: add Velocity
 
         if (!TryComp(ent, out TransformComponent? radarXform))
             return blips;
@@ -122,13 +123,32 @@ public sealed partial class RadarBlipSystem : SharedRadarBlipSystem
             }
 
             // Convert blip position to grid coords if needed.
+            // NetEntity? blipNetGrid = null;
+            // if (blipGrid != null)
+            // {
+            //     blipNetGrid = GetNetEntity(blipGrid.Value);
+            //     blipPosition = Vector2.Transform(blipPosition, _xform.GetInvWorldMatrix(blipGrid.Value));
+            // }
+
             NetEntity? blipNetGrid = null;
-            if (blipGrid != null)
+            // Forge-change start
+            Vector2 velocity = Vector2.Zero;
+            if (TryComp<PhysicsComponent>(blipUid, out var physics))
+            {
+                velocity = physics.LinearVelocity;
+            }
+
+            if (velocity != Vector2.Zero)
+            {
+                blipNetGrid = null;
+            }
+            else if (blipGrid != null)
+            // Forge-change end
             {
                 blipNetGrid = GetNetEntity(blipGrid.Value);
                 blipPosition = Vector2.Transform(blipPosition, _xform.GetInvWorldMatrix(blipGrid.Value));
             }
-            blips.Add((blipNetGrid, blipPosition, blip.Scale, blip.RadarColor, blip.Shape));
+            blips.Add((blipNetGrid, blipPosition, velocity, blip.Scale, blip.RadarColor, blip.Shape)); // Forge-change: add Velocity
         }
         return blips;
     }

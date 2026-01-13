@@ -37,6 +37,7 @@
     radarColor: "#C92BCC"
     scale: 2.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 6.6
@@ -76,6 +77,7 @@
     radarColor: "#C92BCC"
     scale: 1.45
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: arrow
   - type: TimedDespawn
     lifetime: 4.2
@@ -121,6 +123,7 @@
     radarColor: "#FF00AA"
     scale: 2.4
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: arrow
   - type: TimedDespawn
     lifetime: 24
@@ -160,6 +163,7 @@
     radarColor: "#C92BCC"
     scale: 0.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 5
@@ -194,6 +198,7 @@
     radarColor: "#C92BCC"
     scale: 0.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 3
@@ -226,6 +231,7 @@
     radarColor: "#035EFC"
     scale: 2
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: circle
   - type: TimedDespawn
     lifetime: 6.6
@@ -260,6 +266,7 @@
     radarColor: "#C92BCC"
     scale: 3.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 10
@@ -302,6 +309,7 @@
     radarColor: "#ffffff"
     scale: 2.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 3
@@ -338,6 +346,7 @@
     radarColor: "#9507fa"
     scale: 3
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: circle
   - type: TimedDespawn
     lifetime: 10

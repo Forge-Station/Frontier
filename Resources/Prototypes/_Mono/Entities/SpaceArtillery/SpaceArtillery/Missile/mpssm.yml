@@ -28,6 +28,7 @@
     radarColor: "#FCBA03"
     scale: 1
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 10
@@ -79,6 +80,7 @@
     radarColor: "#FCBA03"
     scale: 1
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 10
