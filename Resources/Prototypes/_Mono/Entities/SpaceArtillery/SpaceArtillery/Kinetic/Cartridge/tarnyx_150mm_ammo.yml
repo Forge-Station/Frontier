@@ -105,7 +105,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 15
   - type: TriggerOnCollide
     fixtureID: projectile
   - type: ExplodeOnTrigger
