@@ -74,7 +74,7 @@
         - id: NFSalvageSuitStorageSpawner
           prob: 0.1
         - id: RandomArtifactSpawner
-          prob: 0.009
+          prob: 0.01 # Forge-change: more artifact's cauz more artifact 0.01>0.009
         - id: NFSalvageTankSpawnerHighCapacity
           prob: 0.0005
         # Medical
@@ -86,9 +86,15 @@
         # Room
         - id: NFWreckRoomMarker
           prob: 0.01
-        # Corvax-Frontier Clothing
+        # Forge-change start
+        # TODO: create another WreckBase and another loot spawners
+        - id: ForgeSpawnerRestockFood
+          prob: 0.07
         - id: SchoolgirlUniformSpawner
-          prob: 0.06
+          prob: 0.05
+        - id: ForgeSpawnerRandomStaff
+          prob: 0.04
+        # Forge-change end
       Plating: *floor
       Lattice:
         - prob: 1 # Intentional blank.

@@ -173,7 +173,7 @@ public sealed partial class ShipShieldsSystem : EntitySystem
         }
     }
 
-    private void OnEmitterShutdown(EntityUid uid, ShipShieldEmitterComponent emitter, ComponentShutdown args) // Mono 
+    private void OnEmitterShutdown(EntityUid uid, ShipShieldEmitterComponent emitter, ComponentShutdown args) // Mono
     {
         if (emitter.Shielded != null)
         {
@@ -257,7 +257,7 @@ public sealed partial class ShipShieldsSystem : EntitySystem
         if (!Resolve(uid, ref component, false))
             return false;
 
-        Del(component.Shield);
+        TryQueueDel(component.Shield);
         RemComp<ShipShieldedComponent>(uid);
         return true;
     }

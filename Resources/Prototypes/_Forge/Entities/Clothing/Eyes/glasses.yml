@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingEyesGlassesMeson, ClothingEyesGlassesSecurity, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingEyesGlassesMeson, ShowSecurityIcons, BaseC2ContrabandUnredeemable ]
   id: ClothingEyesGlassesEngineerNfsd
   name: Nfsd specialist goggles
   description: Green-tinted goggles using a proprietary polymer that provides protection from eye damage of all types.
@@ -11,7 +11,14 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+  - type: FlashImmunity
   - type: EyeProtection
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
 
 - type: entity
   parent: [ClothingEyesNightVisionGoggles, ShowSecurityIcons, BaseC2ContrabandUnredeemable]
