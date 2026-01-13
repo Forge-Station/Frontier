@@ -10,6 +10,8 @@
   parent: BallisticArtilleryMagazine
   description: A dual-barrel, heavy 90mm autocannon firing general-purpose APHE rounds, effective for sustained fire against medium targets. Can be remotely activated or linked up to a GCS.
   components:
+  - type: AmmoCounter
+  - type: MagazineAmmoProvider
   - type: BindToStation # Forge-change
   - type: StaticPrice # Forge-change
     price: 1 # Чисто чтоб цена шаттлов не сильно менялась. На совесть мапперам.
@@ -19,7 +21,6 @@
     - state: space_artillery
   - type: Appearance
   - type: FireControlRotate
-  - type: AmmoCounter
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun

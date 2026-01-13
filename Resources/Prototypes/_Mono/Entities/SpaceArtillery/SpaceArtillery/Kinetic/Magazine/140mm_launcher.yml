@@ -10,6 +10,8 @@
   parent: BallisticArtilleryUnanchorableMagazine
   description: Fires 140mm HEAT shells in a 10 round burst from an internal autoloader.
   components:
+  - type: AmmoCounter
+  - type: MagazineAmmoProvider
   - type: BindToStation # Forge-change
   - type: StaticPrice # Forge-change
     price: 1 # Чисто чтоб цена шаттлов не сильно менялась. На совесть мапперам.
@@ -20,7 +22,6 @@
     scale: 1, 1
   - type: Appearance
   - type: FireControlRotate
-  - type: AmmoCounter
   - type: WirelessNetworkConnection
     range: 500
   - type: Fixtures

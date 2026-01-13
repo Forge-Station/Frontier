@@ -10,6 +10,8 @@
   parent: BallisticArtilleryMagazine
   description: A more heavy duty rapid rife autocannon, firing a hail of rounds much like its namesake became a hail of spears.
   components:
+  - type: AmmoCounter
+  - type: MagazineAmmoProvider
   - type: BindToStation # Forge-change
   - type: StaticPrice # Forge-change
     price: 1 # Чисто чтоб цена шаттлов не сильно менялась. На совесть мапперам.

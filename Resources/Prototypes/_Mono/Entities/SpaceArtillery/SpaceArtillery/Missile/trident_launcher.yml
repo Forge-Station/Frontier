@@ -1,15 +1,9 @@
-# SPDX-FileCopyrightText: 2025 Onezero0
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
   id: WeaponTurretASM220
-  name: ASM-220 torpedo VLS
+  name: ASM-220 "Trident" 500mm torpedo rack
   parent: BallisticArtilleryUnanchorableCartridge
-  description: A heavy torpedo VLS relying on manual loading to work, usually done at harbor. However, it has high-yield missiles for its size.
+  description: A heavy built-in torpedo rack for cruisers which relies on manual loading, usually done at harbor. Despite this, it has the largest missiles in the sector.
   components:
-  - type: BindToStation # Forge-change
   - type: StaticPrice
     price: 10000
   - type: Sprite
@@ -22,6 +16,7 @@
     range: 500
   - type: Gun
     fireRate: 0.1
+    # recoil: 10
     shootThermalSignature: 16000000 # 4000m after firing
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
@@ -57,3 +52,6 @@
     shipType: Missile
   - type: ShipGunClass
     shipClass: Medium
+  # - type: ShipRepairable
+  #   repairTime: 30
+  #   repairCost: 100

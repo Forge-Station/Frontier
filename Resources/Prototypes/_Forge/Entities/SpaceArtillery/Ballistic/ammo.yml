@@ -17,9 +17,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge16mmCartridgeBase
     capacity: 65
+    mayTransfer: true
     whitelist:
       tags:
       - 16mmCartridge
@@ -57,9 +58,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge20mmCartridgeBase
     capacity: 180
+    mayTransfer: true
 
 - type: entity
   id: Forge20mmCartridgeBase
@@ -89,9 +91,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge20mmCartridgeAPHE
     capacity: 180
+    mayTransfer: true
 
 - type: entity
   id: Forge20mmCartridgeAPHE
@@ -122,9 +125,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge20mmCartridgeAPCBC
     capacity: 180
+    mayTransfer: true
 
 - type: entity
   id: Forge20mmCartridgeAPCBC
@@ -156,9 +160,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge30mmCartridgeBase
     capacity: 250
+    mayTransfer: true
 
 - type: entity
   id: Forge30mmCartridgeBase
@@ -189,9 +194,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge30mmCartridgeAPHE
     capacity: 250
+    mayTransfer: true
 
 - type: entity
   id: Forge30mmCartridgeAPHE
@@ -221,9 +227,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge30mmCartridgeAPCBC
     capacity: 250
+    mayTransfer: true
 
 - type: entity
   id: Forge30mmCartridgeAPCBC
@@ -254,9 +261,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge57mmCartridgeBase
     capacity: 95
+    mayTransfer: true
 
 - type: entity
   id: Forge57mmCartridgeBase
@@ -286,9 +294,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge57mmCartridgeAPHE
     capacity: 95
+    mayTransfer: true
 
 - type: entity
   id: Forge57mmCartridgeAPHE
@@ -318,9 +327,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge57mmCartridgeAPCBC
     capacity: 95
+    mayTransfer: true
 
 - type: entity
   id: Forge57mmCartridgeAPCBC
@@ -354,9 +364,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge90mmCartridge
     capacity: 60
+    mayTransfer: true
 
 - type: entity
   id: Forge90mmCartridge
@@ -389,9 +400,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge90mmCartridgeAPHE
     capacity: 60
+    mayTransfer: true
 
 - type: entity
   id: Forge90mmCartridgeAPHE
@@ -424,9 +436,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge90mmCartridgeAPHEBC
     capacity: 60
+    mayTransfer: true
 
 - type: entity
   id: Forge90mmCartridgeAPHEBC

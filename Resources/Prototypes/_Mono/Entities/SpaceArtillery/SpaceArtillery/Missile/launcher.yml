@@ -38,7 +38,7 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.6
+    fireRate: 0.25
     shootThermalSignature: 32000000 # ~5.6km
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
@@ -47,9 +47,10 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+    powerUseActive: 0
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 70
+    autoRechargeRate: 50
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMissileASM501
@@ -87,7 +88,8 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.5
+    fireRate: 0.2
+    # recoil: 10
     shootThermalSignature: 32000000 # ~5.6km
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
@@ -96,6 +98,7 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+    powerUseActive: 0
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 70
@@ -110,3 +113,6 @@
     shipType: Missile
   - type: ShipGunClass
     shipClass: Heavy
+  # - type: ShipRepairable
+  #   repairTime: 30
+  #   repairCost: 120

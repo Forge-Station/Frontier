@@ -92,3 +92,58 @@
   technologyPrerequisites:
   - ForgeResearchShipAmmoAll
   position: 0, 46
+
+# region Missle
+- type: technology
+  id: ForgeResearchVesperaMagazine
+  name: forge-research-technology-vesperamagazine
+  entityIcon: VesperaMagazine
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 8500
+  recipeUnlocks:
+  - FRecVesperaMagazine
+  technologyPrerequisites:
+  - ForgeResearchVanykCartridge
+  position: 2, 52
+
+- type: technology
+  id: ForgeResearchVanykCartridge
+  name: forge-research-technology-vanykcartridge
+  entityIcon: VanykCartridge
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - FRecVanykCartridge
+  technologyPrerequisites:
+  - ForgeResearchShipBombMerc
+  position: 1, 52
+
+- type: technology
+  id: ForgeResearchTovekCartridgeEMPHE
+  name: forge-research-technology-tovek-emphe
+  entityIcon: TovekCartridgeEMPHE
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 6000
+  recipeUnlocks:
+  - FRecTovekCartridgeEMPHE
+  technologyPrerequisites:
+  - ForgeResearchShipAmmo90
+  - ForgeResearchShipAmmoEMP
+  position: 0, 53
+
+- type: technology
+  id: ForgeResearchTovekCartridgeAPHE
+  name: forge-research-technology-tovek-aphe
+  entityIcon: TovekCartridgeAPHE
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 4500
+  recipeUnlocks:
+  - FRecTovekCartridgeAPHE
+  technologyPrerequisites:
+  - ForgeResearchVanykCartridge
+  - ForgeResearchTovekCartridgeEMPHE
+  position: 2, 53

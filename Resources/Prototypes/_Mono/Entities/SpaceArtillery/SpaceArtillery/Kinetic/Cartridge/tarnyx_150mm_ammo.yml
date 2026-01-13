@@ -27,6 +27,7 @@
     radarColor: "#035EFC"
     scale: 1.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: circle
   - type: TimedDespawn
     lifetime: 15

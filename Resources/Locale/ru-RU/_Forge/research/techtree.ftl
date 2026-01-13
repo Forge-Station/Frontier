@@ -12,6 +12,10 @@ forge-research-technology-shipammo20aphe = Каморные 20-ти миллим
 forge-research-technology-shipammo30aphe = Каморные 30-ти миллиметровые
 forge-research-technology-shipammo57aphe = Каморные 57-ми миллиметровые
 forge-research-technology-bombmerc = Неуправляемая 50-ти килограммовая бомба
+forge-research-technology-vesperamagazine = Разгон до 26 снарядов свободы
+forge-research-technology-vanykcartridge = Космическая 155мм ракетка
+forge-research-technology-tovek-emphe = Взрывоопасный ЭМИ
+forge-research-technology-tovek-aphe = Разрывная 250мм ракета
 
 # NFSD research
 ent-ForgeRnDNFSDServer = сервер ДСБФ

@@ -170,6 +170,55 @@
     Uranium: 1000
     Silver: 700
 
+# ROCKET JUMP
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecVanykCartridge
+  result: VanykCartridge
+  materials:
+    Steel: 750
+    Plastic: 350
+    Plasteel: 1200
+    Plasma: 950
+    Uranium: 230
+    Silver: 150
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecVesperaMagazine
+  result: VesperaMagazine
+  materials:
+    Steel: 3800
+    Plastic: 850
+    Plasteel: 1200
+    Plasma: 4550
+    Uranium: 950
+    Silver: 950
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecTovekCartridgeEMPHE
+  result: TovekCartridgeEMPHE
+  materials:
+    Steel: 650
+    Plasteel: 260
+    Uranium: 480
+    Plasma: 350
+    Gold: 620
+    Silver: 420
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecTovekCartridgeAPHE
+  result: TovekCartridgeAPHE
+  materials:
+    Steel: 650
+    Plasteel: 260
+    Uranium: 480
+    Plasma: 350
+    Gold: 620
+    Silver: 420
+
 # region NFSD
 - type: latheRecipe
   parent: BaseAmmoRecipe
