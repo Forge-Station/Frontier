@@ -29,13 +29,13 @@
     requireNoGrid: true
     shape: circle
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 15
   - type: PointLight
     color: "#FB00FF"
   - type: EmpOnTrigger
-    range: 10
+    range: 14
     energyConsumption: 500000
-    disableDuration: 5.5
+    disableDuration: 9.5
 
 - type: entity
   id: 150mmEmpShell
@@ -109,11 +109,11 @@
   - type: TriggerOnCollide
     fixtureID: projectile
   - type: ExplodeOnTrigger
-  - type: Explosive # Forge-change
-    explosionType: DefaultShipGun # Forge-change
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 400
+    intensitySlope: 40
     maxIntensity: 100
-    intensitySlope: 3
-    totalIntensity: 30
 
 - type: entity
   id: 150mmApShell
