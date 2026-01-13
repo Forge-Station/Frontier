@@ -156,6 +156,31 @@
   - type: GuideHelp
     guides:
     - ShuttleCraft
+  - type: TargetSeekerAlert # Mono
+    targetGainSound:
+      path: /Audio/_Mono/Effects/Alerts/rwr_beep.ogg
+      params:
+        volume: 1.55
+    distanceAlertSettings:
+    - maximumDistance: 64
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/launchwarning.ogg
+        params:
+          loop: true
+          volume: 0.9
+    - maximumDistance: 128
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1.2
+          pitch: 1.15
+    - maximumDistance: 256
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1
 
 - type: entity
   parent: [BaseComputerShuttle, BaseShuttleIntercom] # Frontier - BaseShuttleIntercom
@@ -886,6 +911,31 @@
     radius: 1.5
     energy: 1.6
     color: "#e6e227"
+  - type: TargetSeekerAlert # Mono
+    targetGainSound:
+      path: /Audio/_Mono/Effects/Alerts/rwr_beep.ogg
+      params:
+        volume: 1.55
+    distanceAlertSettings:
+    - maximumDistance: 128
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/launchwarning.ogg
+        params:
+          loop: true
+          volume: 0.9
+    - maximumDistance: 256
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1.2
+          pitch: 1.15
+    - maximumDistance: 512
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1
 
 - type: entity
   id: ComputerCargoOrders

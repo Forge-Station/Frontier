@@ -19,7 +19,7 @@
         Piercing: 24
   - type: ShipWeaponProjectile
   - type: TimedDespawn
-    lifetime: 2
+    lifetime: 4
   - type: PointLight
     radius: 3.5
     energy: 0.5
@@ -85,7 +85,7 @@
         Piercing: 38
   - type: ShipWeaponProjectile
   - type: TimedDespawn
-    lifetime: 3
+    lifetime: 6
   - type: PointLight
     radius: 3.5
     energy: 0.5
@@ -158,7 +158,7 @@
     shape: triangle
     radarColor: "#1df1f5"
   - type: TimedDespawn
-    lifetime: 7
+    lifetime: 14
   - type: PointLight
     color: "#FCBA03"
 #  - type: ExplodeOnTrigger
@@ -223,7 +223,7 @@
         Blunt: 89
         Piercing: 95
   - type: TimedDespawn
-    lifetime: 4.2
+    lifetime: 12
   - type: PointLight
     color: orange
     radius: 3.5
@@ -336,7 +336,7 @@
     visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5.15
+    lifetime: 14
   - type: PointLight
     color: "#fc8c03"
   - type: ExplodeOnTrigger
@@ -393,7 +393,7 @@
     visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5.15
+    lifetime: 14
   - type: PointLight
     color: "#FCBA03"
   - type: ExplodeOnTrigger
@@ -449,7 +449,7 @@
     visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5.5
+    lifetime: 15
   - type: PointLight
     color: "#fc5a03"
   - type: ExplodeOnTrigger
