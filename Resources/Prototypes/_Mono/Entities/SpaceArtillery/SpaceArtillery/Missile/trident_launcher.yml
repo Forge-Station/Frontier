@@ -4,8 +4,9 @@
   parent: BallisticArtilleryUnanchorableCartridge
   description: A heavy built-in torpedo rack for cruisers which relies on manual loading, usually done at harbor. Despite this, it has the largest missiles in the sector.
   components:
+  - type: BindToStation # Forge-change
   - type: StaticPrice
-    price: 10000
+    price: 1 # Forge-change
   - type: Sprite
     sprite: _Mono/Objects/ShuttleWeapons/asm220.rsi
     layers:

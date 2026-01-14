@@ -23,6 +23,7 @@
     radarColor: "#ffff00"
     scale: 2
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: square
   - type: TimedDespawn
     lifetime: 30
@@ -132,6 +133,7 @@
     radarColor: "#ffff00"
     scale: 2
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 10
@@ -250,6 +252,7 @@
   - type: RadarBlip
     radarColor: "#CF0E0E"
     scale: 2
+    visibleFromOtherGrids: true
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn

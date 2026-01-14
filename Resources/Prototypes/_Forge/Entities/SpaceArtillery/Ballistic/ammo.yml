@@ -60,7 +60,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge20mmCartridgeBase
-    capacity: 180
+    capacity: 240
     mayTransfer: true
 
 - type: entity
@@ -93,7 +93,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge20mmCartridgeAPHE
-    capacity: 180
+    capacity: 240
     mayTransfer: true
 
 - type: entity
@@ -127,7 +127,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge20mmCartridgeAPCBC
-    capacity: 180
+    capacity: 240
     mayTransfer: true
 
 - type: entity
@@ -162,7 +162,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge30mmCartridgeBase
-    capacity: 250
+    capacity: 360
     mayTransfer: true
 
 - type: entity
@@ -196,7 +196,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge30mmCartridgeAPHE
-    capacity: 250
+    capacity: 360
     mayTransfer: true
 
 - type: entity
@@ -229,7 +229,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge30mmCartridgeAPCBC
-    capacity: 250
+    capacity: 360
     mayTransfer: true
 
 - type: entity
@@ -263,7 +263,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge57mmCartridgeBase
-    capacity: 95
+    capacity: 80
     mayTransfer: true
 
 - type: entity
@@ -296,7 +296,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge57mmCartridgeAPHE
-    capacity: 95
+    capacity: 80
     mayTransfer: true
 
 - type: entity
@@ -329,7 +329,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge57mmCartridgeAPCBC
-    capacity: 95
+    capacity: 80
     mayTransfer: true
 
 - type: entity
@@ -366,7 +366,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge90mmCartridge
-    capacity: 60
+    capacity: 80
     mayTransfer: true
 
 - type: entity
@@ -402,7 +402,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge90mmCartridgeAPHE
-    capacity: 60
+    capacity: 80
     mayTransfer: true
 
 - type: entity
@@ -438,7 +438,7 @@
   - type: BallisticAmmoProvider
     infiniteUnspawned: false
     proto: Forge90mmCartridgeAPHEBC
-    capacity: 60
+    capacity: 80
     mayTransfer: true
 
 - type: entity

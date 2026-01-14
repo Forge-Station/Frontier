@@ -33,7 +33,7 @@
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#c51515"
-    scale: 3
+    scale: 1.8
     requireNoGrid: true
     visibleFromOtherGrids: true
     shape: triangle
@@ -313,7 +313,7 @@
   - type: Ammo
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 3.25
+    scale: 1.95
     requireNoGrid: true
     visibleFromOtherGrids: true
     shape: arrow
@@ -538,7 +538,7 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 4.25
+    scale: 3.25
     requireNoGrid: true
     visibleFromOtherGrids: true
     shape: triangle
@@ -635,7 +635,7 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 3.25
+    scale: 2.25
     requireNoGrid: true
     visibleFromOtherGrids: true
     shape: triangle
@@ -673,14 +673,15 @@
     scale: 1, 1
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 2.5
+    scale: 1.9
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
-    radarColor: "#1df1f5"
+    radarColor: "#ffffff"
   - type: TimedDespawn
     lifetime: 5
   - type: PointLight
-    color: "#FCBA03"
+    color: "#ffffff"
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default

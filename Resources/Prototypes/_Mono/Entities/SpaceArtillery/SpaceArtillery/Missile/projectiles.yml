@@ -71,7 +71,7 @@
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#FCBA03"
-    scale: 1.5
+    scale: 1.2
     requireNoGrid: true
     visibleFromOtherGrids: true
     shape: hexagon
@@ -121,7 +121,7 @@
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#FCBA03"
-    scale: 4
+    scale: 1.8
     requireNoGrid: true
     visibleFromOtherGrids: true
     shape: hexagon
@@ -198,8 +198,8 @@
     acceleration: 200
     detectionRange: 600
     scanArc: 45
-    launchSpeed: 50
-    maxSpeed: 125
+    launchSpeed: 55
+    maxSpeed: 145
     trackDelay: 0.6
 
 # Forge-change add APHE & EMPHE version's
@@ -251,7 +251,7 @@
     acceleration: 200
     detectionRange: 600
     scanArc: 45
-    launchSpeed: 50
+    launchSpeed: 45
     maxSpeed: 125
     trackDelay: 0.6
 
@@ -290,7 +290,7 @@
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#FCBA03"
-    scale: 4
+    scale: 2
     requireNoGrid: true
     visibleFromOtherGrids: true
     shape: hexagon
