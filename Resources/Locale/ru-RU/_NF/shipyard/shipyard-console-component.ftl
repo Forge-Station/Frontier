@@ -92,6 +92,6 @@ shipyard-console-name-empty = Название не может быть пуст
 
 shipyard-console-name-too-long = Имя корабля не может превышать { $max } символов.
 shipyard-console-rename-success = Шаттл переименован в «{ $name }».
-shipyard-console-rename-failed = Не удалось переименовать корабль.
-shipyard-console-rename-cooldown = Переименовать корабль можно будет через { $minutes } минут.
+shipyard-console-rename-failed = Не удалось переименовать шаттл.
+shipyard-console-rename-cooldown = Повторно переименовать можно будет через { $minutes } минут.
 shipyard-console-rename-price = Стоимость переименования составляет 1000$.
