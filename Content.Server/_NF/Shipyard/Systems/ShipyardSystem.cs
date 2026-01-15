@@ -78,6 +78,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         SubscribeLocalEvent<ShipyardConsoleComponent, EntRemovedFromContainerMessage>(OnItemSlotChanged);
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
         SubscribeLocalEvent<StationDeedSpawnerComponent, MapInitEvent>(OnInitDeedSpawner);
+        SubscribeLocalEvent<ShipyardConsoleComponent, ShipyardConsoleUnassignDeedMessage>(OnUnassignDeedMessage); // Mono:388
+        SubscribeLocalEvent<ShipyardConsoleComponent, ShipyardConsoleRenameMessage>(OnRenameMessage); // Mono:671
     }
     public override void Shutdown()
     {
@@ -343,6 +345,19 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             shuttleDeed.ShuttleName = newName;
             shuttleDeed.ShuttleNameSuffix = newSuffix;
             Dirty(uid, shuttleDeed);
+
+            var query = EntityQueryEnumerator<ShuttleDeedComponent>();
+            while (query.MoveNext(out var deedEntity, out var deed))
+            {
+                if (deedEntity == uid)
+                    continue;
+                if (deed.ShuttleUid == shuttle)
+                {
+                    deed.ShuttleName = newName;
+                    deed.ShuttleNameSuffix = newSuffix;
+                    Dirty(deedEntity, deed);
+                }
+            }
 
             var fullName = GetFullName(shuttleDeed);
             _station.RenameStation(shuttleStation, fullName, loud: false);

@@ -49,6 +49,7 @@ public sealed partial class ShuttleRecordsSystem
         bool targetIdValid = targetIdEntity is { Valid: true };
         string? targetIdFullName = null;
         string? targetIdVesselName = null;
+        string? targetIdModelName = null; // Forge-change
         if (targetIdValid)
         {
             try
@@ -69,6 +70,7 @@ public sealed partial class ShuttleRecordsSystem
             isTargetIdPresent: targetIdValid,
             targetIdFullName: targetIdFullName,
             targetIdVesselName: targetIdVesselName,
+            targetIdModelName: targetIdModelName, // Forge-change
             transactionPercentage: component.TransactionPercentage,
             minTransactionPrice: component.MinTransactionPrice,
             maxTransactionPrice: component.MaxTransactionPrice,
@@ -97,6 +99,7 @@ public sealed partial class ShuttleRecordsSystem
             bool targetIdValid = targetIdEntity is { Valid: true };
             string? targetIdFullName = null;
             string? targetIdVesselName = null;
+            string? targetIdModelName = null; // Forge-change
             if (targetIdValid)
             {
                 try
@@ -117,6 +120,7 @@ public sealed partial class ShuttleRecordsSystem
                 isTargetIdPresent: targetIdValid,
                 targetIdFullName: targetIdFullName,
                 targetIdVesselName: targetIdVesselName,
+                targetIdModelName: targetIdModelName, // Forge-change
                 transactionPercentage: component.TransactionPercentage,
                 minTransactionPrice: component.MinTransactionPrice,
                 maxTransactionPrice: component.MaxTransactionPrice,
@@ -204,6 +208,7 @@ public sealed partial class ShuttleRecordsSystem
         deed.ShuttleUid = shuttleEntity;
         deed.ShuttleOwner = shuttleRecord.OwnerName;
         deed.ShuttleName = shuttleRecord.Name;
+        deed.ShuttleModel = shuttleRecord.ModelName; // Forge-change
         deed.ShuttleNameSuffix = shuttleRecord.Suffix;
         deed.PurchasedWithVoucher = shuttleRecord.PurchasedWithVoucher;
         Dirty(targetId, deed);

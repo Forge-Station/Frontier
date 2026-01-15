@@ -27,4 +27,8 @@ public sealed partial class ShuttleDeedComponent : Component
 
     [DataField, AutoNetworkedField]
     public bool PurchasedWithVoucher;
+
+    // Forge-change
+    [DataField, AutoNetworkedField]
+    public string? ShuttleModel = "Unknown";
 }

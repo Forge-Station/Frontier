@@ -93,7 +93,7 @@ public sealed class ConfirmButton : Button
             DrawModeChanged();
         }
 
-        if (Disabled && _gameTiming.CurTime > _nextCooldown)
+        if (IsConfirming && Disabled && _gameTiming.CurTime > _nextCooldown) // Mono:388
             Disabled = false;
     }
 

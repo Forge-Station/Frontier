@@ -15,6 +15,7 @@ public class ShuttleRecord(
     bool purchasedWithVoucher,
     uint purchasePrice,
     string vesselPrototypeId,
+    string modelName, // Forge-change
     TimeSpan? timeOfPurchase = null,
     TimeSpan? timeOfSale = null
 )
@@ -54,4 +55,8 @@ public class ShuttleRecord(
 
     [ViewVariables]
     public bool PurchasedWithVoucher { get; set; } = purchasedWithVoucher;
+
+    // Forge-change: add modelName, cauz renamed
+    [ViewVariables]
+    public string ModelName { get; set; } = modelName;
 }

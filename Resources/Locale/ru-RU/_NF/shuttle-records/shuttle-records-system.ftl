@@ -19,3 +19,5 @@ shuttle-records-search = Название шаттла или имя его Вл
 shuttle-records-time-of-purchase = Дата покупки: [color=white]{ $time }[/color]
 shuttle-records-show-active-only = Показывать только активные шаттлы
 shuttle-records-purchased-voucher = Шаттл был оплачен ваучером.
+
+shuttle-records-shuttle-model-label = Модель: { $model }

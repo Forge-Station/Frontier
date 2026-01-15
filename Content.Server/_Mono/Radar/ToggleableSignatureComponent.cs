@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Shared._NF.Radar;
+using Content.Server._Mono.Radar;
 
 namespace Content.Server._Mono.Radar;
 

@@ -8,12 +8,16 @@ using Robust.Shared.Collections;
 using Robust.Client.UserInterface;
 using Robust.Shared.Input;
 using Robust.Shared.Timing;
-using Content.Shared._NF.Radar;
+// using Content.Shared._NF.Radar;
 using Content.Client.Station;
-using Content.Client._NF.Radar;
+// using Content.Client._NF.Radar;
 using Robust.Shared.Physics.Collision.Shapes; // Forge-change
 using Content.Shared._Crescent.ShipShields; // Forge-change: we need to shield visuals
 using Robust.Shared.Physics; // Forge-change
+using Content.Shared._Mono.Radar;
+using Content.Client._Mono.Radar;
+using Content.Shared._Mono.Company;
+using Robust.Shared.Prototypes;
 
 // Purposefully colliding with base namespace.
 namespace Content.Client.Shuttles.UI;
@@ -22,7 +26,7 @@ public sealed partial class ShuttleNavControl
 {
     // Dependency
     private readonly StationSystem _station;
-    private readonly RadarBlipSystem _blips; //Mono
+    private readonly RadarBlipsSystem _blips;
 
     // Constants for gunnery system
     // These 2 handle timing updates
@@ -92,8 +96,22 @@ public sealed partial class ShuttleNavControl
     /// <summary>
     /// Adds a blip to the blip data list for later drawing.
     /// </summary>
-    private static void NFAddBlipToList(List<BlipData> blipDataList, bool isOutsideRadarCircle, Vector2 uiPosition, int uiXCentre, int uiYCentre, Color color)
+    private static void NfAddBlipToList(List<BlipData> blipDataList, bool isOutsideRadarCircle, Vector2 uiPosition, int uiXCentre, int uiYCentre, Color color, EntityUid gridUid = default)
     {
+        // Check if the entity has a company component and use that color if available
+        Color blipColor = color;
+
+        if (gridUid != default &&
+            IoCManager.Resolve<IEntityManager>().TryGetComponent(gridUid, out Shared._Mono.Company.CompanyComponent? companyComp) &&
+            !string.IsNullOrEmpty(companyComp.CompanyName))
+        {
+            var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
+            if (prototypeManager.TryIndex<CompanyPrototype>(companyComp.CompanyName, out var prototype) && prototype != null)
+            {
+                blipColor = prototype.Color;
+            }
+        }
+
         blipDataList.Add(new BlipData
         {
             IsOutsideRadarCircle = isOutsideRadarCircle,
