@@ -47,7 +47,7 @@
             </BoxContainer>
         </ScrollContainer>
         <GridContainer Columns="4" HorizontalExpand="True" Margin="0 8 0 2">
-            <Button Name="TargetIdButton" Access="Public"/>
+            <Button Name="TargetIdButton" Access="Public" MaxWidth="140"/>
             <controls:ConfirmButton Name="SellShipButton"
                     Text="{Loc 'shipyard-console-sell-button'}"
                     ConfirmationText="{Loc 'shipyard-console-confirm-unassign'}"
@@ -61,14 +61,21 @@
                 <Label Name="DeedTitle"
                     Text=""/>
             </BoxContainer>
-            <BoxContainer Orientation="Horizontal" Margin="0 2 0 2" Name="RenameContainer" Visible="False">
-                <LineEdit Name="RenameLineEdit"
-                        PlaceHolder="{Loc 'shipyard-console-rename-placeholder'}"
-                        MinWidth="140"
-                        Editable="False" />
-                <Button Name="RenameButton"
-                        Text="{Loc 'shipyard-console-rename-label'}"
-                        Disabled="True" />
+            <BoxContainer Orientation="Vertical" Margin="0 2 0 2" Name="RenameContainer" Visible="False">
+                <!-- Горизонтальная строка: LineEdit + Button -->
+                <BoxContainer Orientation="Horizontal">
+                    <LineEdit Name="RenameLineEdit"
+                            PlaceHolder="{Loc 'shipyard-console-rename-placeholder'}"
+                            MinWidth="280"
+                            Editable="False" />
+                    <Button Name="RenameButton"
+                            Text="{Loc 'shipyard-console-rename-label'}"
+                            Disabled="True" />
+                </BoxContainer>
+                <Label Name="RenameCostLabel"
+                    Text="{Loc 'shipyard-console-rename-price'}"
+                    StyleClasses="LabelSubText"
+                    Margin="2 0 0 0"/>
             </BoxContainer>
         </GridContainer>
     </BoxContainer>

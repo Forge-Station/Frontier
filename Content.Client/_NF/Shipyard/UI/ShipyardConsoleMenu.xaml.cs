@@ -330,8 +330,7 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
 
         ShipAppraisalLabel.Text = $"{BankSystemExtensions.ToSpesoString(shipPrice)} ({state.SellRate * 100.0f:F1}%)";
         SellShipButton.Disabled = state.ShipDeedTitle == null;
-        SellShipButton.Disabled = state.ShipDeedTitle == null; // Mono:388
-        UnassignDeedButton.Disabled = state.ShipDeedTitle == null; // Mono:671
+        UnassignDeedButton.Disabled = state.ShipDeedTitle == null; // Mono:388
 
         // Mono:671
         // Show/hide and enable/disable rename controls based on whether there's a ship deed

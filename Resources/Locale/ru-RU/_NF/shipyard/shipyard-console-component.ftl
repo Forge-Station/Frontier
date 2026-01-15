@@ -94,3 +94,4 @@ shipyard-console-name-too-long = Имя корабля не может прев�
 shipyard-console-rename-success = Шаттл переименован в «{ $name }».
 shipyard-console-rename-failed = Не удалось переименовать корабль.
 shipyard-console-rename-cooldown = Переименовать корабль можно будет через { $minutes } минут.
+shipyard-console-rename-price = Стоимость переименования составляет 1000$.

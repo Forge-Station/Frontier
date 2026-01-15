@@ -333,12 +333,44 @@ public sealed class FireControlNavControl : BaseShuttleControl
         // Draw blips using the same grid-relative transformation approach as docks
         foreach (var blip in rawBlips)
         {
-            var blipPosInView = Vector2.Transform(_transform.ToMapCoordinates(blip.Position).Position, worldToShuttle * shuttleToView);
+            var blipPos = Vector2.Transform(_transform.ToMapCoordinates(blip.Position).Position, worldToShuttle * shuttleToView);
 
             // Check if this blip is within view bounds before drawing
-            if (monoViewBounds.Contains(blipPosInView))
+            if (monoViewBounds.Contains(blipPos))
             {
-                DrawBlipShape(handle, blipPosInView, blip.Scale * 3f, blip.Color.WithAlpha(0.8f), blip.Shape);
+                DrawBlipShape(handle, blipPos, blip.Scale * 3f, blip.Color.WithAlpha(0.8f), blip.Shape);
+            }
+            // Forge-change
+            if (_isMouseInside && _controllables != null)
+            {
+                var worldPos = _transform.ToMapCoordinates(blip.Position).Position;
+
+                var isFireControllable = _controllables.Any(c =>
+                {
+                    var coords = EntManager.GetCoordinates(c.Coordinates);
+                    var entityMapPos = _transform.ToMapCoordinates(coords);
+                    return Vector2.Distance(entityMapPos.Position, worldPos) < 0.1f &&
+                        _selectedWeapons.Contains(c.NetEntity);
+                });
+
+                if (isFireControllable)
+                {
+                    var cursorViewPos = InverseScalePosition(_lastMousePos);
+                    cursorViewPos = ScalePosition(cursorViewPos);
+
+                    Matrix3x2.Invert(worldToShuttle * shuttleToView, out var viewToWorld);
+                    var cursorWorldPos = Vector2.Transform(cursorViewPos, viewToWorld);
+
+                    var direction = cursorWorldPos - worldPos;
+                    var ray = new CollisionRay(worldPos, direction.Normalized(), (int)CollisionGroup.Impassable);
+
+                    var results = _physics.IntersectRay(xform.MapID, ray, direction.Length(), ignoredEnt: _coordinates?.EntityId);
+
+                    if (!results.Any())
+                    {
+                        handle.DrawLine(blipPos, cursorViewPos, blip.Item4.WithAlpha(0.3f));
+                    }
+                }
             }
         }
 

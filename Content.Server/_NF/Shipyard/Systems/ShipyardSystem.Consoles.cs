@@ -955,6 +955,15 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             originalSellValue = currentState.ShipSellValue;
         }
 
+        const int renamePrice = 1000;
+
+        if (!_bank.TryBankWithdraw(player, renamePrice))
+        {
+            PlayDenySound(player, uid, component);
+            return;
+        }
+        _bank.TrySectorDeposit(SectorBankAccount.Frontier, renamePrice, LedgerEntryType.ShipyardRenameFee);
+
         // Rename the ship using the existing method
         if (TryRenameShuttle(targetId, deed, newName, deed.ShuttleNameSuffix))
         {
