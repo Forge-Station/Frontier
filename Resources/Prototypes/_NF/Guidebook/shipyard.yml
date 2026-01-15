@@ -4,7 +4,8 @@
   text: "/ServerInfo/_NF/Guidebook/Shipyard.xml"
   priority: 7
   children:
-  - ShipyardDomra
+  - ShipyardMethedor # Forge-Change
+  - ShipyardDomra # Forge-Change
   - ShipyardAdder
   - ShipyardAkupara
   - ShipyardAmbition
@@ -62,6 +63,11 @@
   - ShipyardTide
   - ShipyardVagabond
   - ShipyardVitalis
+
+- type: guideEntry # Forge-Change start
+  id: ShipyardMethedor
+  name: guide-entry-shipyard-methedor
+  text: "/ServerInfo/_Forge/Guidebook/Shipyard/Methedor.xml" # Forge-Change end
 
 - type: guideEntry
   id: ShipyardAdder

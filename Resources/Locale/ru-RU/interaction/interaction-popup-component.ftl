@@ -83,6 +83,8 @@ petting-failure-syndicate-cyborg = Вы тянетесь погладить { $t
 petting-failure-derelict-cyborg = Вы тянетесь погладить { $target }, но { POSS-ADJ($target) } ржавый и рваный внешний вид заставляет вас передумать.
 petting-failure-station-ai = Вы тянетесь погладить { $target }, но { POSS-ADJ($target) } разряд заставляет вас отдёрнуть руку.
 petting-success-station-ai-others = { CAPITALIZE($user) } гладит { $target } по { POSS-ADJ($target) } холодному, квадратному экрану.
+petting-success-beery = Вы гладите { $target } по { POSS-ADJ($target) } прекрасному шерстяному парику.
+petting-failure-beery = Вы тянетесь погладить { $target }, но { POSS-ADJ($target) } проходит мимо и не замечает вас.
 
 ## Rattling fences
 

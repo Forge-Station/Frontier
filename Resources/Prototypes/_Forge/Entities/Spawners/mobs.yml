@@ -10,3 +10,17 @@
   - type: ConditionalSpawner
     prototypes:
       - MobCatSigmis
+
+- type: entity
+  name: Spawn Beery [AI]
+  id: SpawnMobSiliconBeery
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Forge/Mobs/Silicon/Beery.rsi
+      state: icon
+  - type: ConditionalSpawner
+    prototypes:
+      - MobSiliconBeery

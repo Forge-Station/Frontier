@@ -1,0 +1,69 @@
+<Document>
+    # METHEDOR-SYNDICATE CARGO SHUTTLE
+    <Box>
+      <GuideEntityEmbed Entity="SyndicateMicrowave"/>
+      <GuideEntityEmbed Entity="PlushieNuke"/>
+      <GuideEntityEmbed Entity="MedkitFilled"/>
+	  <GuideEntityEmbed Entity="ClothingOuterEVASuitSyndicate"/>
+    </Box>
+    <Box>
+    <GuideEntityEmbed Entity="ShuttleMapMethedor" Caption=""/>
+    </Box>
+  
+    [color=#a4885c]Ship Size:[/color] Small
+
+    [color=#a4885c]Recommended Crew:[/color] 1-3
+
+    [color=#a4885c]Power Gen Type:[/color] Uranium
+
+    [color=#a4885c]Expeditions:[/color] None
+
+    [color=#a4885c]IFF Console:[/color] None
+
+    "A compact smuggler's shuttle equipped with a large cargo compartment and two AK570s and a large number of engines."
+
+    # PREFLIGHT CHECKLIST
+
+    ## 1. Power supply
+
+    ## 1.1. Battery units
+    <Box>
+        <GuideEntityEmbed Entity="SubstationBasic"/>
+        <GuideEntityEmbed Entity="APCBasic"/>
+    </Box>
+
+    - Check the substation unit.
+    - Check that the APC unit's Main Breaker is toggled on.
+    - Check the APC unit's current Load* (W).
+
+    ## 1.2. S.U.P.E.R.P.A.C.M.A.N. generator unit
+    <Box>
+        <GuideEntityEmbed Entity="PortableGeneratorSuperPacman"/>
+        <GuideEntityEmbed Entity="SheetUranium"/>
+        <GuideEntityEmbed Entity="SignRadiationMed"/>
+    </Box>
+
+  ## 2. Atmospherics
+
+  ## 2.1. Distribution Loop
+  <Box>
+        <GuideEntityEmbed Entity="AirCanister"/>
+        <GuideEntityEmbed Entity="GasPort"/>
+    </Box>
+
+    ## 2.2. Waste Loop
+    <Box>
+        <GuideEntityEmbed Entity="GasVentScrubber"/>
+        <GuideEntityEmbed Entity="AirAlarm"/>
+		<GuideEntityEmbed Entity="GasPassiveVent"/>
+    </Box>
+
+    ## 3. Main Machine check
+    <Box>
+        <GuideEntityEmbed Entity="GyroscopeSyndicate"/>
+        <GuideEntityEmbed Entity="GravityGeneratorMini"/>
+        <GuideEntityEmbed Entity="BlastDoor"/>
+		<GuideEntityEmbed Entity="ThrusterSyndicate"/>
+    </Box>
+
+</Document>

@@ -17,10 +17,10 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _Mono/Structures/Machines/tele_bus.rsi
+    sprite: Forge/Structures/Machines/armoryservers.rsi # Forge-Change
     snapCardinals: true
     layers:
-    - state: icon
+    - state: serverbase # Forge-Change
     - state: unlit
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
@@ -60,6 +60,10 @@
   components:
   - type: Machine
     board: MachineGCSLowCircuitboard
+  - type: Sprite
+    layers:
+    - state: serverbase # Forge-Change
+    - state: unlit
   - type: FireControlServer
     processingPower: 24
   - type: Battery
@@ -79,6 +83,10 @@
   components:
   - type: Machine
     board: MachineGCSMediumCircuitboard
+  - type: Sprite
+    layers:
+    - state: serverlow # Forge-Change
+    - state: unlit
   - type: FireControlServer
     processingPower: 42
   - type: Battery
@@ -98,6 +106,10 @@
   components:
   - type: Machine
     board: MachineGCSHighCircuitboard
+  - type: Sprite
+    layers:
+    - state: servermedium # Forge-Change
+    - state: unlit
   - type: FireControlServer
     processingPower: 60
   - type: Battery
@@ -117,6 +129,10 @@
   components:
   - type: Machine
     board: MachineGCSUltraCircuitboard
+  - type: Sprite
+    layers:
+    - state: serverhigh # Forge-Change
+    - state: unlit
   - type: FireControlServer
     processingPower: 90
   - type: Battery
@@ -138,6 +154,10 @@
   components:
   - type: Machine
     board: MachineGCSUltraCircuitboard
+  - type: Sprite
+    layers:
+    - state: serverultra # Forge-Change
+    - state: unlit
   - type: FireControlServer
     processingPower: 150
   - type: Battery
@@ -160,6 +180,10 @@
   components:
   - type: Machine
     board: MachineGCSStationCircuitboard
+  - type: Sprite
+    layers:
+    - state: serverstation # Forge-Change
+    - state: unlit
   - type: FireControlServer
     processingPower: 3000
   - type: Battery
@@ -212,18 +236,18 @@
   - type: ExtensionCableReceiver
   - type: ActivatableUIRequiresPower
   - type: Sprite
-    sprite: _Mono/Structures/Machines/computers.rsi
+    sprite: Forge/Structures/Machines/computers.rsi # Forge-Change-Start
     layers:
     - map: ["computerLayerBody"]
-      state: computer_not_rot
+      state: computer_armory
     - map: ["computerLayerKeyboard"]
-      state: gunnery_keyboard
+      state: generic_keyboard
     - map: ["computerLayerScreen"]
-      state: gunnery_screen
+      state: armoryconsole
+      shader: unshaded
+      visible: false
     - map: ["computerLayerKeys"]
-      state: gunnery_keys
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
+      state: generic_keys # Forge-Change-End
   - type: FireControlConsole
   - type: ActivatableUI
     key: enum.FireControlConsoleUiKey.Key
