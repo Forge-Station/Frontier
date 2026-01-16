@@ -223,7 +223,7 @@ public sealed partial class CCVars
     /// </summary>
     [CVarControl(AdminFlags.VarEdit)]
     public static readonly CVarDef<float> TileBreakEnergyMultiplier =
-        CVarDef.Create("shuttle.impact.tile_break_energy", 30000f, CVar.SERVERONLY); // Frontier 3000f<35000f
+        CVarDef.Create("shuttle.impact.tile_break_energy", 3000f, CVar.SERVERONLY); // Change-Forge: 3000f<35000f
 
     /// <summary>
     /// Multiplier of damage done to entities on colliding areas

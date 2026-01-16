@@ -73,7 +73,6 @@ public sealed partial class ShuttleSystem
 
         Subs.CVar(_cfg, CCVars.ImpactEnabled, value => _enabled = value, true);
         Subs.CVar(_cfg, CCVars.MinimumImpactInertia, value => _minimumImpactInertia = value, true);
-        Subs.CVar(_cfg, CCVars.MinimumImpactInertia, value => _minimumImpactInertia = value, true);
         Subs.CVar(_cfg, CCVars.MinimumImpactVelocity, value => _minimumImpactVelocity = value, true);
         Subs.CVar(_cfg, CCVars.TileBreakEnergyMultiplier, value => _tileBreakEnergyMultiplier = value, true);
         Subs.CVar(_cfg, CCVars.ImpactDamageMultiplier, value => _damageMultiplier = value, true);
@@ -142,7 +141,7 @@ public sealed partial class ShuttleSystem
             var effectiveInertia = jungleDiff * effectiveInertiaMult;
 
             // TODO: squish damage so that a tiny splinter grid can't stop 2 big grids by being in the way
-            if (jungleDiff < _minimumImpactVelocity && effectiveInertia < _minimumImpactInertia
+            if (jungleDiff < _minimumImpactVelocity || effectiveInertia < _minimumImpactInertia // Change-Forge
                 || ourXform.MapUid == null
                 || float.IsNaN(jungleDiff))
             {
@@ -176,12 +175,12 @@ public sealed partial class ShuttleSystem
             // E = MV^2/2
             var energyMult = MathF.Pow(jungleDiff, 2) / 2;
             // mass-based damage reduction to grid with more mass so that plastitanium block rammer doesn't die to lattice
-            var ourMassDR = MathF.Max(otherMass / ourMass, 1f);
-            var otherMassDR = MathF.Max(ourMass / otherMass, 1f);
+            var ourMassDR = MathF.Pow(otherMass / ourMass, _massBias); // Change-Forge: var ourMassDR = MathF.Max(otherMass / ourMass, 1f);
+            var otherMassDR = MathF.Pow(ourMass / otherMass, _massBias); // Change-Forge: var otherMassDR = MathF.Max(ourMass / otherMass, 1f);
             // multiplier to make large grids not just bonk against each other
             var inertiaMult = MathF.Pow(effectiveInertiaMult / _baseShuttleMass, _inertiaScaling);
-            var toUsEnergy = otherMass * energyMult * inertiaMult * ourMassDR;
-            var toOtherEnergy = ourMass * energyMult * inertiaMult * otherMassDR;
+            var toUsEnergy = otherMass * energyMult * inertiaMult / ourMassDR; // Change-Forge: var toUsEnergy = otherMass * energyMult * inertiaMult * ourMassDR;
+            var toOtherEnergy = ourMass * energyMult * inertiaMult / otherMassDR; // Change-Forge: var toOtherEnergy = ourMass * energyMult * inertiaMult * otherMassDR;
 
             var impact = LogImpact.High;
             // if impact isn't tiny, log it as extreme
@@ -262,7 +261,9 @@ public sealed partial class ShuttleSystem
 
             if (direction.LengthSquared() > minsq)
             {
-                _stuns.TryKnockdown(uid, stunTime, true);
+                if (stunTime.TotalSeconds > 1.0f) //Forge-Change
+                    _stuns.TryKnockdown(uid, stunTime, true); //Forge-Change
+
                 _throwing.TryThrow(uid, direction, physics, Transform(uid), _projQuery, direction.Length(), playSound: false);
             }
             else
@@ -381,9 +382,10 @@ public sealed partial class ShuttleSystem
                 if (_dmgQuery.TryComp(localEnt, out var damageable))
                 {
                     // Apply damage scaled by distance but capped to prevent gibbing
-                    var scaledDamage = tileData.Energy * _damageMultiplier;
+                    var scaledDamage = tileData.Energy * _damageMultiplier * 2; // Forge-Change: *2 < 0
                     damageSpec.DamageDict["Blunt"] = scaledDamage;
-                    damageSpec.DamageDict["Structural"] = scaledDamage * _structuralDamage;
+                    damageSpec.DamageDict["Structural"] = scaledDamage * _structuralDamage * 4; // Forge-Change: *4 < 0
+
 
                     _damageSys.TryChangeDamage(localEnt, damageSpec, damageable: damageable);
                 }
