@@ -139,22 +139,22 @@ public sealed class NFCCVars
     /// Taking another dead drop note will cause the oldest one to be destroyed.
     /// </summary>
     public static readonly CVarDef<int> SmugglingMaxSimultaneousPods =
-        CVarDef.Create("nf14.smuggling.max_simultaneous_pods", 5, CVar.REPLICATED);
+        CVarDef.Create("nf14.smuggling.max_simultaneous_pods", 2, CVar.REPLICATED); // 2<5
     /// <summary>
     /// The maximum number of dead drops (places to get smuggling notes) to place at once.
     /// </summary>
     public static readonly CVarDef<int> SmugglingMaxDeadDrops =
-        CVarDef.Create("nf14.smuggling.max_sector_dead_drops", 10, CVar.REPLICATED);
+        CVarDef.Create("nf14.smuggling.max_sector_dead_drops", 4, CVar.REPLICATED); // 4<10
     /// <summary>
     /// The minimum number of FUCs to spawn for anti-smuggling work.
     /// </summary>
     public static readonly CVarDef<int> SmugglingMinFucPayout =
-        CVarDef.Create("nf14.smuggling.min_fuc_payout", 1, CVar.REPLICATED);
+        CVarDef.Create("nf14.smuggling.min_fuc_payout", 2, CVar.REPLICATED); // 2<1
     /// <summary>
     /// The shortest time to wait before a dead drop spawns a new smuggling note.
     /// </summary>
     public static readonly CVarDef<int> DeadDropMinTimeout =
-        CVarDef.Create("nf14.smuggling.min_timeout", 900, CVar.REPLICATED);
+        CVarDef.Create("nf14.smuggling.min_timeout", 1800, CVar.REPLICATED); // 1800<900
     /// <summary>
     /// The longest time to wait before a dead drop spawns a new smuggling note.
     /// </summary>
@@ -164,12 +164,12 @@ public sealed class NFCCVars
     /// The shortest distance that a smuggling pod will spawn away from Frontier Outpost.
     /// </summary>
     public static readonly CVarDef<int> DeadDropMinDistance =
-        CVarDef.Create("nf14.smuggling.min_distance", 6500, CVar.REPLICATED);
+        CVarDef.Create("nf14.smuggling.min_distance", 7000, CVar.REPLICATED); // 7000<6500
     /// <summary>
     /// The longest distance that a smuggling pod will spawn away from Frontier Outpost.
     /// </summary>
     public static readonly CVarDef<int> DeadDropMaxDistance =
-        CVarDef.Create("nf14.smuggling.max_distance", 8000, CVar.REPLICATED);
+        CVarDef.Create("nf14.smuggling.max_distance", 12000, CVar.REPLICATED); // 1800<8000
     /// <summary>
     /// The smallest number of dead drop hints (paper clues to dead drop locations) at round start.
     /// </summary>

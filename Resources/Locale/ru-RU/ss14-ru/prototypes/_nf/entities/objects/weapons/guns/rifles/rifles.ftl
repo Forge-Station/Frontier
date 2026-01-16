@@ -14,3 +14,8 @@ ent-WeaponRifleJackdaw = CAWS-25 "Галка"
     .desc = Начало конца возвещается песней галки. Использует безгильзовые патроны .25.
 ent-WeaponRifleVulcanRubber = { ent-WeaponRifleVulcan }
   .desc = { ent-WeaponRifleVulcan.desc }
+
+ent-NFWeaponRifleSVS = { ent-WeaponRifleSVS }
+  .desc = { ent-WeaponRifleSVS.desc }
+ent-NFWeaponLauncherRocket = { ent-WeaponLauncherRocket }
+  .desc = { ent-WeaponLauncherRocket.desc }

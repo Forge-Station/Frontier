@@ -39,3 +39,16 @@
   - type: ApcPowerReceiver
     needsPower: false
     powerLoad: 0
+
+- type: entity
+  parent: AirlockNfsdLocked
+  id: AirlockNfsdLockedLockedDebug
+  name: шлюз
+  suffix: ДСБФ, ДЕБАГ
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+  - type: ApcPowerReceiver
+    needsPower: false
+    powerLoad: 0

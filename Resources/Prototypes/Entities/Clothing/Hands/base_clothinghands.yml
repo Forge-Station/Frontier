@@ -15,10 +15,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 4 # Forge-change
         reagents:
         - ReagentId: Fiber
-          Quantity: 10
+          Quantity: 4 # Forge-change
   - type: Tag
     tags:
     - ClothMade

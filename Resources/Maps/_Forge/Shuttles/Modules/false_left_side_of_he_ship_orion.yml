@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 01/05/2026 08:33:18
-  entityCount: 93
+  time: 01/07/2026 12:56:28
+  entityCount: 99
 maps: []
 grids:
 - 1
@@ -68,7 +68,7 @@ entities:
           6,5:
             0: 2
           6,6:
-            1: 1028
+            1: 1542
           6,7:
             0: 16416
           6,4:
@@ -117,20 +117,46 @@ entities:
     - type: RadiationGridResistance
 - proto: AirlockGlassShuttleNfsdLockedDebug
   entities:
-  - uid: 51
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 26.5,24.5
-      parent: 1
   - uid: 52
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 26.5,26.5
       parent: 1
+  - uid: 94
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 26.5,24.5
+      parent: 1
+- proto: AirlockNfsdLocked
+  entities:
+  - uid: 7
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.5,26.5
+      parent: 1
+  - uid: 51
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.5,24.5
+      parent: 1
 - proto: AtmosDeviceFanDirectional
   entities:
+  - uid: 5
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.5,24.5
+      parent: 1
+  - uid: 89
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.5,26.5
+      parent: 1
   - uid: 98
     components:
     - type: Transform
@@ -142,6 +168,32 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 26.5,24.5
+      parent: 1
+- proto: AtmosFixAirMarker
+  entities:
+  - uid: 91
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 26.5,26.5
+      parent: 1
+  - uid: 92
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.5,24.5
+      parent: 1
+  - uid: 96
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 26.5,24.5
+      parent: 1
+  - uid: 97
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.5,26.5
       parent: 1
 - proto: AtmosFixBlockerMarker
   entities:
@@ -187,22 +239,20 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 25.5,20.5
       parent: 1
-- proto: AtmosFixOxygenMarker
-  entities:
-  - uid: 89
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 26.5,24.5
-      parent: 1
-  - uid: 91
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 26.5,26.5
-      parent: 1
 - proto: Catwalk
   entities:
+  - uid: 88
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.5,26.5
+      parent: 1
+  - uid: 90
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.5,24.5
+      parent: 1
   - uid: 93
     components:
     - type: Transform
@@ -215,28 +265,18 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 26.5,26.5
       parent: 1
-- proto: WallPlastitanium
+- proto: WallPlastitaniumShuttle
   entities:
   - uid: 4
     components:
     - type: Transform
       pos: 25.5,27.5
       parent: 1
-  - uid: 5
-    components:
-    - type: Transform
-      pos: 25.5,26.5
-      parent: 1
   - uid: 6
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 25.5,25.5
-      parent: 1
-  - uid: 7
-    components:
-    - type: Transform
-      pos: 25.5,24.5
       parent: 1
   - uid: 8
     components:

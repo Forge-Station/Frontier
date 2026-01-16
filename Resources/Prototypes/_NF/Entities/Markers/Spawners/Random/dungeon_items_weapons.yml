@@ -177,9 +177,14 @@
     - WeaponCaseShortDeckardExpedition
     - WeaponCaseShortRitland45Expedition
     - WeaponCaseLongBarlowsBoltExpedition
-    - WeaponCaseLongRepeaterExpedition
-    - WeaponCaseLongSniperCeremonialExpedition
-    chance: 1.0
+    # Forge-change: move to t2
+    # - WeaponCaseLongRepeaterExpedition
+    # - WeaponCaseLongSniperCeremonialExpedition
+    # Forge-change add
+    - WeaponCaseMercLaserMakeshift
+    - WeaponCaseMercPistolLaser
+    - WeaponCaseMercWaterBlaster
+    chance: 0.8 # Forge-change
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootGunT2
@@ -204,20 +209,24 @@
       color: red
   - type: RandomSpawner
     prototypes:
-    - WeaponCaseShortCobra
-    - WeaponCaseShortN1984Expedition
-    - WeaponCaseShortViper
+    # Forge-change: mote to t3 spawner
+    # - WeaponCaseShortCobra
+    # - WeaponCaseShortN1984Expedition
+    # - WeaponCaseShortViper
     - WeaponCaseShortFitzExpedition
-    - WeaponCaseShortWard45Expedition
+    # - WeaponCaseShortWard45Expedition # Forge-change: move to t5
     - WeaponCaseShortRevolverPirate
-    - WeaponCaseLongC20r
-    - WeaponCaseLongJackdaw
+    # - WeaponCaseLongC20r # Forge-change: Move to t4
+    # - WeaponCaseLongJackdaw
     - WeaponCaseLongGestioExpedition
     - WeaponCaseLongWeaponRifleNovaliteC1Expedition
     - WeaponCaseLongSVSExpedition
     - WeaponCaseLongKammererExpedition
     - WeaponCaseShortLaserGunExpedition
-    chance: 1.0
+    # Forge-change
+    - WeaponCaseLongRepeaterExpedition
+    - WeaponCaseLongSniperCeremonialExpedition
+    chance: 0.9 # Forge-change
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootGunT3
@@ -243,17 +252,21 @@
   - type: RandomSpawner
     prototypes:
     - WeaponCaseLongTypewriterExpedition
-    - WeaponCaseLongAtreidesExpedition
-    - WeaponCaseLongWT550Expedition
-    - WeaponCaseLongDrozdExpedition
+     # Forge-change: move to t4
+    # - WeaponCaseLongAtreidesExpedition
+    # - WeaponCaseLongWT550Expedition
+    # - WeaponCaseLongDrozdExpedition
     - WeaponCaseLongM90Expedition
     - WeaponCaseLongLecterExpedition
-    - WeaponCaseSubMachineGunVector22 #CorvaxFrontier
-    - WeaponCaseWeaponSubMachineP90LRK #CorvaxFrontier
     - WeaponCaseShortSvalinnExpedition
-    - WeaponCaseLongHristovExpedition
+    # - WeaponCaseLongHristovExpedition # Forge-change: move to t5
     - WeaponCaseLongMusketExpedition
-    chance: 1.0
+    # Forge-change
+    - WeaponCaseShortCobra
+    - WeaponCaseShortN1984Expedition
+    - WeaponCaseShortViper
+    # Forge-change end
+    chance: 0.9 # Forge-change
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootGunT4
@@ -287,7 +300,15 @@
     - WeaponCaseLongLaserCarbineExpedition
     - WeaponCaseLongXrayCannonExpedition
     - WeaponCaseLongTemperatureGunExpedition
-    chance: 1.0
+    # Forge-change
+    - WeaponCaseLongC20r
+    - WeaponCaseLongJackdaw
+    - WeaponCaseLongHristovExpedition
+    - WeaponCaseLongAtreidesExpedition
+    - WeaponCaseLongWT550Expedition
+    - WeaponCaseLongDrozdExpedition
+    # Forge-change end
+    chance: 0.9 # Forge-change
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootGunT5
@@ -318,7 +339,12 @@
     - WeaponCaseLongEnergyGunExpedition
     - WeaponCaseLongLaserCannonExpedition
     - WeaponCaseHeavyAsmgtExpeditions
-    chance: 1.0
+    # Forge-change add
+    - WeaponCaseShortWard45Expedition
+    - WeaponCaseSubMachineGunVector22
+    - WeaponCaseWeaponSubMachineP90LRK
+    # Forge-change end
+    chance: 0.9 # Forge-change
     offset: 0.0
 
 #region bombs T1
@@ -419,6 +445,7 @@
   - type: RandomSpawner
     prototypes:
     - WeaponCaseShortExGrenade
+    - 150mmApShell # Forge-change add
     chance: 0.4
     offset: 0.0
     rarePrototypes:

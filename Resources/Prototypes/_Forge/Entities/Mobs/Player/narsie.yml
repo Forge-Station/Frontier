@@ -12,7 +12,7 @@
   - type: TimedDespawn
     lifetime: 3.5
   - type: SpawnOnDespawn
-    prototype: MobNarsie
+    prototype: MobNarsieNoAnonce
 
 - type: entity
   parent: [MobNarsieBase, BaseMob]

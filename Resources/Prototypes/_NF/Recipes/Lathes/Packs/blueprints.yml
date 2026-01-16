@@ -255,6 +255,18 @@
   - DurandCentralElectronics
   - DurandPeripheralsElectronics
   - DurandTargetingElectronics
+  # Forge-frog change add
+  - ForgeAmmoDrum20mmBase
+  - ForgeAmmoDrum30mmBase
+  - ForgeMagazine57mmBase
+  - ForgeAmmoDrum20mmAPCBC
+  - ForgeAmmoDrum30mmAPCBC
+  - ForgeMagazine57mmAPCBC
+  - FRecMagazine90mmWeak
+  - FRecTovekCartridge
+  - FRec150mmEmpShell
+  - FRecLightFighterOrdinanceGPOItem
+  # Forge-change end
 
 # region NFSD
 - type: latheRecipePack
@@ -281,6 +293,49 @@
   - MechEquipmentXRayProjector
   - MechEquipmentImmolationGun
   - MechEquipmentMissileRack6
+  # Forge-change add:
+  - NFClothingBackpackElectropack
+  - JetpackNfsd
+  - FRecMultitoolNfsd
+  - FRecPowerDrillNfsd
+  - FRecRCDNfsd
+  - FRecRCDAmmo
+  - FRecJawsOfLifeNfsd
+  - FRecWelderNfsd
+  - FRecNightVisionNfsd
+  - FRecThermalVisionNfsd
+  - FRecNightThermalVisionNfsd
+  - FRecClothingOuterHardsuitNfsdBronze
+  - FRecClothingOuterHardsuitNfsdSilver
+  - FRecClothingOuterHardsuitNfsdCombat
+  - FRecClothingOuterHardsuitNfsdCommand
+  - FRecClothingOuterHardsuitNfsdExperimental
+  - FRecClothingShoesBootsMagNFSD
+  - FRecClothingShoesBootsMagNFSDPromax
+  - FRecAdvancedRadarConsoleCircuitboard
+  - FRecComputerIFFCircuitboard
+  - ForgeAmmoDrum20mmAPHE
+  - ForgeAmmoDrum30mmAPHE
+  - ForgeMagazine57mmAPHE
+  - FRecMagazine90mmAPHE
+  - FRecMagazine90mmAPHEBC
+  - FRec203mmCartridge
+  - FRec220mmCartridge
+  - FRec255mmCartridge
+  - FRec203mmCartridgeHESH
+  - FRec220mmCartridgeHESH
+  - FRec255mmCartridgeHESH
+  - ForgeAmmoDrum20mmBase
+  - ForgeAmmoDrum30mmBase
+  - ForgeMagazine57mmBase
+  - ForgeAmmoDrum20mmAPCBC
+  - ForgeAmmoDrum30mmAPCBC
+  - ForgeMagazine57mmAPCBC
+  - FRecMagazine90mmWeak
+  - FRecTovekCartridge
+  - FRec150mmEmpShell
+  - FRecLightFighterOrdinanceGPOItem
+  # Forge-change end
 
 # region Salvage
 - type: latheRecipePack

@@ -218,7 +218,7 @@
         layer:
         - MachineLayer
   - type: ApcPowerReceiver
-    powerLoad: 10000
+    powerLoad: 3000
   - type: Thruster
     thrust: 364
     baseThrust: 280
@@ -230,6 +230,13 @@
   - type: Anchorable
   - type: StaticPrice
     price: 1500
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+    - On
+    - Off
+    - Toggle
 
 - type: entity
   id: ThrusterMedium
@@ -387,7 +394,7 @@
         layer:
         - MachineLayer
   - type: ApcPowerReceiver
-    powerLoad: 10000
+    powerLoad: 4000
   - type: Thruster
     thrust: 364
     baseThrust: 280
@@ -399,6 +406,13 @@
   - type: Anchorable
   - type: StaticPrice
     price: 1500
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+    - On
+    - Off
+    - Toggle
 
 - type: entity
   id: ThrusterMediumLong
@@ -560,9 +574,16 @@
         layer:
         - MachineLayer
   - type: ApcPowerReceiver
-    powerLoad: 10000
+    powerLoad: 8000
   - type: StaticPrice
     price: 1500
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+    - On
+    - Off
+    - Toggle
 
 - type: entity
   id: ThrusterBig

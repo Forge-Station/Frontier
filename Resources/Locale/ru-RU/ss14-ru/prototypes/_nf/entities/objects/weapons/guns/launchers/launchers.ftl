@@ -11,3 +11,5 @@ ent-WeaponLauncherNfsdLake = Гранатомёт ДСБФ
 
 ent-NFWeaponLauncherPirateCannon = пиратская пушка
     .desc = Кабум!
+ent-NFWeaponLauncherChinaLake = { ent-WeaponLauncherChinaLake }
+    .desc = { ent-WeaponLauncherChinaLake.desc }

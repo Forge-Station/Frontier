@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 262.0.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 10/20/2025 10:09:15
-  entityCount: 2235
+  time: 01/07/2026 14:26:33
+  entityCount: 2237
 maps: []
 grids:
 - 1
@@ -1557,7 +1557,7 @@ entities:
       pos: 27.5,21.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -3488.2434
+      secondsUntilStateChange: -3535.8103
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1569,7 +1569,7 @@ entities:
       pos: 28.5,21.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -3487.9434
+      secondsUntilStateChange: -3535.5103
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11740,6 +11740,21 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 14.5,18.5
+      parent: 1
+- proto: ShuttleExpeditionBeaconPOI
+  entities:
+  - uid: 2237
+    components:
+    - type: Transform
+      pos: 25.5,20.5
+      parent: 1
+- proto: ShuttleTransmitter
+  entities:
+  - uid: 2236
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 23.735348,20.835596
       parent: 1
 - proto: SignalButtonWindows
   entities:

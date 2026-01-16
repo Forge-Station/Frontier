@@ -9,6 +9,9 @@
   - type: Clothing
     sprite: Clothing/Shoes/Boots/workboots.rsi
   - type: Matchbox
+  - type: StaticPrice # Forge-change
+    price: 160
+    vendPrice: 415
 
 - type: entity
   parent: ClothingShoesMilitaryBase #Corvax-Frontier удалена строка КБ
@@ -35,6 +38,9 @@
   - type: Clothing
     sprite: Clothing/Shoes/Boots/explorer.rsi
   - type: Matchbox
+  - type: StaticPrice # Forge-change add
+    price: 160
+    vendPrice: 450
 
 - type: entity
   parent: ClothingShoesBaseButcherable
@@ -188,12 +194,12 @@
     ignoreReagents:
       - Fiber
   - type: SolutionContainerManager
-    solutions: # 6 (3 (fiber count of web) * 2 (to craft)) + 4 (magical crafting bonus)
+    solutions: # 6 (3 (fiber count of web) * 2 (to craft)) + 4 (magical crafting bonus) # Forge-change: 4 magical bonus?? i think 2 - is good
       food:
-        maxVol: 10
+        maxVol: 8 # Forge-change
         reagents:
         - ReagentId: Fiber
-          Quantity: 10
+          Quantity: 8 # Forge-change
   - type: Butcherable
     spawned:
     - id: MaterialWebSilk1
