@@ -456,9 +456,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         RefreshState(uid, bank.Balance, true, null, 0, refreshId, (ShipyardConsoleUiKey)args.UiKey, voucherUsed);
     }
 
-
-    /// Checks if a player is currently on the unassign cooldown and returns the remaining time.
-    /// </summary>
+    // Forge-change-start: take from _Mono:671
+    // Checks if a player is currently on the unassign cooldown and returns the remaining time.
     private TimeSpan? GetRemainingCooldownTime(EntityUid player)
     {
         if (!TryComp<ShipyardUnassignCooldownComponent>(player, out var cooldown))
@@ -470,6 +469,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
         return cooldown.NextUnassignTime - currentTime;
     }
+    // Forge-change-end
 
     private void OnConsoleUIOpened(EntityUid uid, ShipyardConsoleComponent component, BoundUIOpenedEvent args)
     {
@@ -612,6 +612,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
             var fullName = deed != null ? GetFullName(deed) : null;
 
+            // Forge-change-start: take from _Mono:388
             // If the player is on cooldown, disable the unassign button
             var remainingCooldown = GetRemainingCooldownTime(player);
             if (remainingCooldown.HasValue)
@@ -619,6 +620,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 // TODO: Update UI to show cooldown time on button
                 // For now we'll just let them see the cooldown message when they try to use it
             }
+            // Forge-change-end
 
             RefreshState(uid,
                 bank.Balance,
@@ -893,7 +895,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     }
     #endregion Ship Pricing
 
-    // Mono:671
+    // Forge-change-start: take from _Mono:671
     public void OnRenameMessage(EntityUid uid, ShipyardConsoleComponent component, ShipyardConsoleRenameMessage args)
     {
         if (args.Actor is not { Valid: true } player)
@@ -990,7 +992,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         }
     }
 
-    // Mono:388
+    // Forge-change: take from _Mono:388
     public void OnUnassignDeedMessage(EntityUid uid, ShipyardConsoleComponent component, ShipyardConsoleUnassignDeedMessage args)
     {
         if (args.Actor is not { Valid: true } player)
@@ -1056,4 +1058,5 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         _adminLogger.Add(LogType.ShipYardUsage, LogImpact.Low,
             $"{ToPrettyString(player):actor} unassigned deed for ship '{shipName}' from {ToPrettyString(targetId)} via {ToPrettyString(uid)}");
     }
+    // Forge-change-end
 }

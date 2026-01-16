@@ -8,16 +8,16 @@ using Robust.Shared.Collections;
 using Robust.Client.UserInterface;
 using Robust.Shared.Input;
 using Robust.Shared.Timing;
-// using Content.Shared._NF.Radar;
 using Content.Client.Station;
-// using Content.Client._NF.Radar;
-using Robust.Shared.Physics.Collision.Shapes; // Forge-change
-using Content.Shared._Crescent.ShipShields; // Forge-change: we need to shield visuals
-using Robust.Shared.Physics; // Forge-change
+// Forge-change-start: take BlipsSystem from _Mono
+using Robust.Shared.Physics.Collision.Shapes;
+using Content.Shared._Crescent.ShipShields;
+using Robust.Shared.Physics;
 using Content.Shared._Mono.Radar;
 using Content.Client._Mono.Radar;
 using Content.Shared._Mono.Company;
 using Robust.Shared.Prototypes;
+// Forge-change-end
 
 // Purposefully colliding with base namespace.
 namespace Content.Client.Shuttles.UI;
@@ -96,8 +96,9 @@ public sealed partial class ShuttleNavControl
     /// <summary>
     /// Adds a blip to the blip data list for later drawing.
     /// </summary>
-    private static void NfAddBlipToList(List<BlipData> blipDataList, bool isOutsideRadarCircle, Vector2 uiPosition, int uiXCentre, int uiYCentre, Color color, EntityUid gridUid = default)
+    private static void NFAddBlipToList(List<BlipData> blipDataList, bool isOutsideRadarCircle, Vector2 uiPosition, int uiXCentre, int uiYCentre, Color color, EntityUid gridUid = default) // Forge-change: add EntityUid gridUid = default
     {
+        // Forge-change-start: take from _Mono
         // Check if the entity has a company component and use that color if available
         Color blipColor = color;
 
@@ -111,6 +112,7 @@ public sealed partial class ShuttleNavControl
                 blipColor = prototype.Color;
             }
         }
+        // Forge-change-end
 
         blipDataList.Add(new BlipData
         {
@@ -352,7 +354,7 @@ public sealed partial class ShuttleNavControl
 
         handle.DrawPrimitives(DrawPrimitiveTopology.TriangleFan, vertices, color);
     }
-    // Forge-change start
+    // Forge-change-start
     private void DrawShields(DrawingHandleScreen handle, TransformComponent consoleXform, Matrix3x2 matrix)
     {
         var shields = EntManager.AllEntityQueryEnumerator<ShipShieldVisualsComponent, FixturesComponent, TransformComponent>();
@@ -396,5 +398,5 @@ public sealed partial class ShuttleNavControl
             }
         }
     }
-    // Forge-change end
+    // Forge-change-end
 }

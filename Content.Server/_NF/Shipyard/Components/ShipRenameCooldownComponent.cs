@@ -13,7 +13,7 @@ public sealed partial class ShipyardRenameCooldownComponent : Component
     /// How long the player must wait between rename actions.
     /// </summary>
     [DataField]
-    public TimeSpan CooldownDuration = TimeSpan.FromMinutes(5);
+    public TimeSpan CooldownDuration = TimeSpan.FromMinutes(10);
 
     /// <summary>
     /// When the player can next rename a ship.

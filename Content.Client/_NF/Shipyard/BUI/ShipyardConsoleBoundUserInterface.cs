@@ -27,8 +27,8 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
             _menu = this.CreateWindow<ShipyardConsoleMenu>();
             _menu.OnOrderApproved += ApproveOrder;
             _menu.OnSellShip += SellShip;
-            _menu.OnUnassignDeed += UnassignDeed; // Mono:388
-            _menu.OnRenameShip += RenameShip; // Mono:671
+            _menu.OnUnassignDeed += UnassignDeed; // Forge-change: take from _Mono:388
+            _menu.OnRenameShip += RenameShip; // Forge-change: take from _Mono:671
             _menu.TargetIdButton.OnPressed += _ => SendMessage(new ItemSlotButtonPressedEvent("ShipyardConsole-targetId"));
 
             // Disable the NFSD popup for now.
@@ -86,15 +86,17 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
         SendMessage(new ShipyardConsoleSellMessage());
     }
 
-    // Mono: 388
+    // Forge-change start
+    // take from _Mono: 388
     private void UnassignDeed(ButtonEventArgs args)
     {
         SendMessage(new ShipyardConsoleUnassignDeedMessage());
     }
 
-    // Mono:671
+    // take from _Mono:671
     private void RenameShip(string newName)
     {
         SendMessage(new ShipyardConsoleRenameMessage(newName));
     }
+    // Forge-change end
 }

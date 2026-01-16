@@ -102,7 +102,7 @@ public sealed partial class ShuttleRecordsWindow : FancyWindow
                                     shuttleRecord.Name.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase) ||
                                     (shuttleRecord.Suffix != null && shuttleRecord.Suffix.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase)) ||
                                      shuttleRecord.OwnerName.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase) ||
-                                     shuttleRecord.ModelName.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase))
+                                     shuttleRecord.ModelName.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase)) // Forge-change
             .Where(shuttleRecord => !onlyShowActive || ShuttleExists(netEntity: shuttleRecord.EntityUid))
             .Select(shuttleRecord =>
                 new ShuttleRecordViewStatePair(

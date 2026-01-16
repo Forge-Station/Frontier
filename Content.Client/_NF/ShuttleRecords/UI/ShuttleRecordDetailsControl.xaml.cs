@@ -11,6 +11,7 @@ public sealed partial class ShuttleRecordDetailsControl : PanelContainer
     public sealed class ViewState(string shuttleName, string shuttleOwnerName, string activity, string toolTip, string timeOfPurchase, string voucherStatus, string transactionCost, string shuttlePrice, string shuttleModel)
     {
         public string ShuttleName { get; } = shuttleName;
+
         public string ShuttleModel { get; } = shuttleModel; // Forge-change
 
         public string ShuttleOwnerName { get; } = shuttleOwnerName;

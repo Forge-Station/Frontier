@@ -13,7 +13,6 @@ using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
 using Content.Shared._Crescent.ShipShields;
-// using Content.Shared._NF.Radar;
 using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
@@ -24,7 +23,6 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Timing;
-// using Content.Client._NF.Radar;
 using Content.Client._Mono.Radar;
 using Content.Shared._Mono.Radar;
 
@@ -328,7 +326,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
         var rawBlips = _blips.GetCurrentBlips();
 
         // Prepare view bounds for culling
-        var monoViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);
+        var blipViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);
 
         // Draw blips using the same grid-relative transformation approach as docks
         foreach (var blip in rawBlips)
@@ -336,7 +334,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
             var blipPos = Vector2.Transform(_transform.ToMapCoordinates(blip.Position).Position, worldToShuttle * shuttleToView);
 
             // Check if this blip is within view bounds before drawing
-            if (monoViewBounds.Contains(blipPos))
+            if (blipViewBounds.Contains(blipPos))
             {
                 DrawBlipShape(handle, blipPos, blip.Scale * 3f, blip.Color.WithAlpha(0.8f), blip.Shape);
             }
@@ -382,7 +380,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
             var endPosInView = Vector2.Transform(line.End, worldToShuttle * shuttleToView);
 
             // Only draw lines if at least one endpoint is within view
-            if (monoViewBounds.Contains(startPosInView) || monoViewBounds.Contains(endPosInView))
+            if (blipViewBounds.Contains(startPosInView) || blipViewBounds.Contains(endPosInView))
             {
                 // Draw the line with the specified thickness and color
                 handle.DrawLine(startPosInView, endPosInView, line.Color);

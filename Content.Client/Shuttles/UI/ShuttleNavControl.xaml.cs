@@ -13,8 +13,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Content.Client.Station; // Frontier
-using Content.Shared._Mono.Radar;
-using Content.Client._Mono.Radar;
+using Content.Client._Mono.Radar; // Forge-change: take BlipsSystem from _Mono
 
 namespace Content.Client.Shuttles.UI;
 
@@ -66,7 +65,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         // Frontier
         _station = EntManager.System<StationSystem>();
-        _blips = EntManager.System<RadarBlipsSystem>();//Mono
+        _blips = EntManager.System<RadarBlipsSystem>(); // Forge-change: take BlipsSystem from _Mono
 
         OnMouseEntered += HandleMouseEntered;
         OnMouseExited += HandleMouseExited;
@@ -342,7 +341,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                     }
                 }
 
-                NfAddBlipToList(blipDataList, isOutsideRadarCircle, uiPosition, uiXCentre, uiYCentre, labelColor, gUid); // Frontier code
+                NFAddBlipToList(blipDataList, isOutsideRadarCircle, uiPosition, uiXCentre, uiYCentre, labelColor, gUid); // Frontier code
                 // End Frontier: IFF drawing functions
             }
 
@@ -439,13 +438,14 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                 handle.DrawString(Font, (uiPosition + coordOffset) * UIScale, coordsText, 0.7f * UIScale, coordColor);
             }
 
-            NfAddBlipToList(blipDataList, isOutsideRadarCircle, uiPosition, uiXCentre, uiYCentre, labelColor); // Frontier code
+            NFAddBlipToList(blipDataList, isOutsideRadarCircle, uiPosition, uiXCentre, uiYCentre, labelColor); // Frontier code
             // End Frontier: IFF drawing functions
         }
 
         // Draw all blips on the map at this point.
         NFDrawBlips(handle, blipDataList);
         // End Frontier: draw target
+
         DrawShields(handle, xform, worldToShuttle); // Forge-change
 
         // If we've set the controlling console, and it's on a different grid
@@ -471,26 +471,26 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         handle.DrawLine(origin, origin + angle.ToVec() * ScaledMinimapRadius * 1.42f, Color.Red.WithAlpha(0.1f));
 
         // Get raw blips with grid information
-        var rawBlips = _blips.GetCurrentBlips();
+        var rawBlips = _blips.GetCurrentBlips(); // Forge-change: GetCurrentBlips>GetRawBlips
 
         // Prepare view bounds for culling
-        var blipViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);
-
-        // Prepare view bounds for culling
-        var monoViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);
+        var blipViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f); // Forge-change: take BlipsSystem from _Mono
 
         // Draw blips using the same grid-relative transformation approach as docks
         foreach (var blip in rawBlips)
         {
             var blipPosInView = Vector2.Transform(_transform.ToMapCoordinates(blip.Position).Position, worldToShuttle * shuttleToView);
 
+            // Forge-change-start: take BlipsSystem from _Mono
             // Check if this blip is within view bounds before drawing
-            if (monoViewBounds.Contains(blipPosInView))
+            if (blipViewBounds.Contains(blipPosInView))
             {
                 DrawBlipShape(handle, blipPosInView, blip.Scale * 3f, blip.Color.WithAlpha(0.8f), blip.Shape);
             }
+            // Forge-change-end
         }
 
+        // Forge-change-start: take BlipsSystem from _Mono
         // Draw hitscan lines from the radar blips system
         var hitscanLines = _blips.GetHitscanLines();
         foreach (var line in hitscanLines)
@@ -499,7 +499,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             var endPosInView = Vector2.Transform(line.End, worldToShuttle * shuttleToView);
 
             // Only draw lines if at least one endpoint is within view
-            if (monoViewBounds.Contains(startPosInView) || monoViewBounds.Contains(endPosInView))
+            if (blipViewBounds.Contains(startPosInView) || blipViewBounds.Contains(endPosInView))
             {
                 // Draw the line with the specified thickness and color
                 handle.DrawLine(startPosInView, endPosInView, line.Color);
@@ -521,6 +521,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                 }
             }
         }
+        // Forge-change-end
     }
 
     private void DrawDocks(DrawingHandleScreen handle, EntityUid uid, Matrix3x2 gridToView)
