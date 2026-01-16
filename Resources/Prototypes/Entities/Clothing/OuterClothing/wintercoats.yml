@@ -35,8 +35,9 @@
     - ClothMade
     - Recyclable
     - WhitelistChameleon
-  - type: StaticPrice
-    price: 50
+  - type: StaticPrice # Forge-change add
+    price: 200
+    vendPrice: 900
 
 - type: entity
   parent: ClothingOuterWinterCoat

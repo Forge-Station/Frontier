@@ -1,0 +1,79 @@
+- type: entity
+  id: ForgeSpawnerRestockFood
+  name: vending food restock
+  parent: MarkerBasePlaceFree
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Specific/Service/vending_machine_restock.rsi
+        state: base
+      - sprite: Objects/Specific/Service/vending_machine_restock.rsi
+        state: refill_discount
+  - type: RandomSpawner
+    prototypes:
+      - VendingMachineRestockChang
+      - VendingMachineRestockDonut
+      - VendingMachineRestockDiscountDans
+      - VendingMachineRestockGetmoreChocolateCorp
+      - VendingMachineRestockRobustSoftdrinks
+      - VendingMachineRestockHotDrinks
+      - VendingMachineRestockHappyHonk
+      - VendingMachineRestockCondimentStation
+      - VendingMachineRestockBooze
+      - VendingMachineRestockDonkies
+      - VendingMachineRestockChefvend
+      - VendingMachineRestockSeeds
+    chance: 1.0
+    offset: 0.0
+
+- type: entity
+  id: ForgeSpawnerRandomStaff
+  name: random staff spawner
+  parent: MarkerBasePlaceFree
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Specific/Service/vending_machine_restock.rsi
+        state: base
+      - sprite: Objects/Specific/Service/vending_machine_restock.rsi
+        state: refill_discount
+  - type: RandomSpawner
+    prototypes:
+      - PairedChopsticks
+      - Cablecuffs
+      - DrinkSakeCupEmpty
+      - Lighter
+      - BirdToyInstrument
+      - DrinkJar
+      - FoodShakerSalt
+      - FoodCondimentPacketSugar
+      - ToyRubberDuck
+      - PillCanister
+      - SnapPop
+      - NFAshtray
+      - DrinkMugMetal
+      - Envelope
+    # clothing
+      - ClothingUniformJumpsuitMilitaryColorTeal
+      - ClothingUniformJumpsuitTshirtJeans
+      - ClothingHeadBandMercenary
+      - ClothingHeadHatSombrero
+      - ClothingKimonoPink
+      - ClothingUniformKendoHakama
+      - ClothingUniformJumpsuitMilitarySalvageSpecialist
+      - ClothingUniformJumpsuitMilitaryService
+    chance: 1.0
+    offset: 0.0
+    rarePrototypes:
+      - Binoculars
+      - Bola
+      - Hairball
+      - RollingPin
+      - ClothingHeadHelmetKendoMen
+      - ClothingOuterArmorKendoBogu
+      - ClothingOuterVestHazard
+    rareChance: 0.2

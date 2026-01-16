@@ -142,9 +142,9 @@
     rarePrototypes:
     - SpawnDungeonLootMeleeT3
     - SpawnDungeonLootGunT3
-    - SpawnDungeonLootGunT6
+    # - SpawnDungeonLootGunT6
     - SpawnDungeonLootExplosivesT2
-    rareChance: 0.1
+    rareChance: 0.05 # Forge-change
 
 - type: entity
   name: random weapon
@@ -191,14 +191,14 @@
     - SpawnDungeonLootGunT3
     - SpawnDungeonLootGunT3
     - SpawnDungeonLootMeleeT3
-    - SpawnDungeonLootGunT6
-    chance: 0.9
+    chance: 0.8 # Forge-change
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootMeleeT4
     - SpawnDungeonLootGunT4
     - SpawnDungeonLootExplosivesT3
-    rareChance: 0.1
+    - SpawnDungeonLootGunT6 # Forge-change
+    rareChance: 0.05 # Forge-change
 
 - type: entity
   name: random weapon

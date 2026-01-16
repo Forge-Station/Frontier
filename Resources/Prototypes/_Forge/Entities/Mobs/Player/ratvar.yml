@@ -11,7 +11,7 @@
   - type: TimedDespawn
     lifetime: 3.5
   - type: SpawnOnDespawn
-    prototype: MobRatvar
+    prototype: MobRatvarNoAnonce
 
 - type: entity
   parent: [MobRatvarBase, BaseMob]

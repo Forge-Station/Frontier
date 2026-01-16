@@ -20,6 +20,6 @@
   - type: TriggerOnBeingGibbed
   - type: GibOnTrigger
     deleteItems: true
-    deleteOrgans: true
+    deleteOrgans: false # Forge-change: i think that not bad idea
     gib: false
     useArgumentEntity: true

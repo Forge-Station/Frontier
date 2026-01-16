@@ -33,6 +33,9 @@
     - ClothMade
     - Recyclable
     - WhitelistChameleon
+  - type: StaticPrice # Forge-change add
+    price: 50
+    vendPrice: 300
 
 - type: entity
   abstract: true
