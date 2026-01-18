@@ -8,3 +8,5 @@ ent-PouchSyndicateMed = сумка санитара
     .desc = { ent-NFPouchBase.desc }
 ent-PouchSyndicateTech = сумка техника синдиката
     .desc = { ent-NFPouchBase.desc }
+ent-PouchTechnicLogistic = сумка TechnicLogistic
+    .desc = { ent-NFPouchBase.desc }

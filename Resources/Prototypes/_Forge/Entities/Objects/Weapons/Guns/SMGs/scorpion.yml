@@ -24,8 +24,8 @@
     tags:
     - Sidearm
   - type: Gun
-    fireRate: 8
-    projectileSpeed: 35
+    fireRate: 6.5
+    projectileSpeed: 40
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
   - type: ChamberMagazineAmmoProvider
@@ -64,3 +64,5 @@
         showEnts: False
         occludes: True
         ent: null
+  - type: PirateBountyItem
+    id: FTechLogisticGuns

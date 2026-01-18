@@ -145,17 +145,17 @@
   - type: RandomSpawner
     prototypes:
     - WeaponCaseLongJackdaw1
-    - WeaponCaseLongWeaponRifleCascadeExpedition
+    # - WeaponCaseLongWeaponRifleCascadeExpedition
     - WeaponCaseLongWeaponRifleDaggerExpedition
     - WeaponCaseLongWeaponShotgunSuppressorExpedition
     - WeaponCaseLongWeaponSubMachineGunGalemExpedition
     - WeaponCaseLongWeaponSubMachineGunScorpionExpedition
     - WeaponCaseLongWeaponSniperSignExpedition
     - WeaponCaseLongWeaponWeaponPistolSwiftExpedition
-    - WeaponCaseLongWeaponSniperDawnExpedition
-    chance: 1.0
+    # - WeaponCaseLongWeaponSniperDawnExpedition
+    chance: 0.85
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootGunT4
-    rareChance: 0.15
+    rareChance: 0.1
 

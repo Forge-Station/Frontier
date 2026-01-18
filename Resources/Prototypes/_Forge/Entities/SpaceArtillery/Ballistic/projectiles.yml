@@ -14,18 +14,19 @@
   - type: Projectile
     damage:
       types:
-        Structural: 80
+        Structural: 90
         Blunt: 14
         Piercing: 24
   - type: ShipWeaponProjectile
   - type: TimedDespawn
-    lifetime: 2
+    lifetime: 4
   - type: PointLight
     radius: 3.5
     energy: 0.5
   - type: RadarBlip
-    scale: 0.85
+    scale: 0.65
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
     radarColor: "#1df1f5"
 
@@ -38,7 +39,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 95
+        Structural: 100
         Blunt: 21
         Piercing: 23
   - type: Sprite
@@ -84,15 +85,16 @@
         Piercing: 38
   - type: ShipWeaponProjectile
   - type: TimedDespawn
-    lifetime: 3
+    lifetime: 6
   - type: PointLight
     radius: 3.5
     energy: 0.5
   - type: RadarBlip
-    scale: 1.15
+    scale: 0.85
     requireNoGrid: true
     shape: arrow
     radarColor: "#1df1f5"
+    visibleFromOtherGrids: true
 
 - type: entity
   id: Forge30mmBulletAPHE
@@ -140,9 +142,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 168 # expl + structural? no no no
-        Blunt: 66
-        Piercing: 78
+        Structural: 768 # expl + structural? no no no
+        Blunt: 50
+        Piercing: 61
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/57_shell.rsi
     layers:
@@ -150,12 +152,13 @@
     scale: 1, 1
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 2.5
+    scale: 1.3
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
     radarColor: "#1df1f5"
   - type: TimedDespawn
-    lifetime: 7
+    lifetime: 20
   - type: PointLight
     color: "#FCBA03"
 #  - type: ExplodeOnTrigger
@@ -176,9 +179,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 192
+        Structural: 684
         Blunt: 76
-        Piercing: 94
+        Piercing: 73
   - type: TriggerOnCollide
     fixtureID: projectile
   - type: ExplodeOnTrigger
@@ -198,9 +201,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 222
+        Structural: 1126
         Blunt: 96
-        Piercing: 183
+        Piercing: 83
 
 # region 90mm
 - type: entity
@@ -220,7 +223,7 @@
         Blunt: 89
         Piercing: 95
   - type: TimedDespawn
-    lifetime: 4.2
+    lifetime: 12
   - type: PointLight
     color: orange
     radius: 3.5
@@ -229,6 +232,7 @@
   - type: RadarBlip
     scale: 1.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
     radarColor: "#1df1f5"
   - type: ExplodeOnTrigger
@@ -269,7 +273,7 @@
     explosionType: DefaultShipGun
     totalIntensity: 50
     intensitySlope: 3.5
-    maxIntensity: 50
+    maxIntensity: 100
     maxTileBreak: 1
 
 # 90mm APHEBC
@@ -299,10 +303,10 @@
     radarColor: "#1df1f5"
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: DefaultShipGun
+    explosionType: HardBombShipGun
     totalIntensity: 70
     intensitySlope: 40
-    maxIntensity: 5
+    maxIntensity: 50
     maxTileBreak: 1
 
 # region 203mm
@@ -329,9 +333,10 @@
   - type: RadarBlip
     scale: 2.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5.15
+    lifetime: 14
   - type: PointLight
     color: "#fc8c03"
   - type: ExplodeOnTrigger
@@ -383,11 +388,12 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 3.25
+    scale: 2.75
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5.15
+    lifetime: 14
   - type: PointLight
     color: "#FCBA03"
   - type: ExplodeOnTrigger
@@ -438,11 +444,12 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 2.5
+    scale: 3
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5.5
+    lifetime: 15
   - type: PointLight
     color: "#fc5a03"
   - type: ExplodeOnTrigger

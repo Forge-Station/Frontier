@@ -11,6 +11,7 @@
   icon: "JobIconDoc"
   supervisors: job-supervisors-sr
   weight: 80
+  salary: 9000
   displayWeight: 20 # Second from the bottom
   canBeAntag: false
   access:
@@ -33,6 +34,9 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
+    holiday: NewYear
+    prototype: PresentRandom
 
 - type: startingGear
   id: OutpostMedicGear

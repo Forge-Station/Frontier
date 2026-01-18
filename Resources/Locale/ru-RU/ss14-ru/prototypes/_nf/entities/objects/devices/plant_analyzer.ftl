@@ -1,4 +1,4 @@
-ent-BasePlantAnalyzer = Анализатор растений
+ent-BasePlantAnalyzer = анализатор растений
     .desc = Портативное устройство, которое позволяет сканировать семена и растения, чтобы получить подробную информацию об их генах.
 ent-PlantAnalyzer = { ent-BasePlantAnalyzer }
     .desc = { ent-BasePlantAnalyzer.desc }

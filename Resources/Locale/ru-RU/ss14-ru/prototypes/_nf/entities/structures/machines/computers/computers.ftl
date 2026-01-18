@@ -34,9 +34,35 @@ ent-ComputerPirateBountyRedemption = консоль пиратских возн�
 ent-ComputerShuttleAntag = { ent-ComputerShuttleAntagEmpty }
     .desc = { ent-ComputerShuttleAntagEmpty.desc }
 
+# Gas Sale console
 ent-GasSaleConsole = консоль продажи газа
     .desc = Продаёт газ, закачанный в связанный порт/пункт продажи газа.
-ent-ComputerShuttleTradeOutpostLocal = консоль трафика Торговой Станции
-    .desc = Следит за движением транспорта вокруг Торгового аванпоста.
-ent-ComputerShuttleTradeOutpostRemote = консоль трафика Торговой Станции
-    .desc = Следит за движением транспорта вокруг Торгового аванпоста.
+    .suffix = Средняя ставка
+
+ent-GasSaleConsoleVeryLow =  { ent-GasSaleConsole }
+    .desc = { ent-GasSaleConsole.desc }
+    .suffix = Очень низкая
+ent-GasSaleConsoleLow =  { ent-GasSaleConsole }
+    .desc = { ent-GasSaleConsole.desc }
+    .suffix = Низкая ставка
+ent-GasSaleConsoleHigh =  { ent-GasSaleConsole }
+    .desc = { ent-GasSaleConsole.desc }
+    .suffix = Высокая ставка
+ent-GasSaleConsoleVeryHigh =  { ent-GasSaleConsole }
+    .desc = { ent-GasSaleConsole.desc }
+    .suffix = Очень высокая
+
+# Traffic console
+ent-ComputerShuttleFrontierOutpostLocal = Консоль трафика Фронтира
+    .desc = Отслеживает движение вокруг Фронтира.
+    .suffix = Локальная
+ent-ComputerShuttleFrontierOutpostRemote = Консоль трафика Фронтира
+    .desc = Отслеживает движение вокруг Фронтира.
+    .suffix = Удалённая
+
+ent-ComputerShuttleTradeOutpostLocal = Консоль трафика Торговой Станции
+    .desc = Отслеживает движение вокруг Торговой Станции.
+    .suffix = Локальная
+ent-ComputerShuttleTradeOutpostRemote = Консоль трафика Торговой Станции
+    .desc = Отслеживает движение вокруг Торговой Станции.
+    .suffix = Удалённая

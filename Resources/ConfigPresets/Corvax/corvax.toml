@@ -117,3 +117,14 @@ login_host_user = "Kill_Me_I_Noobs"
 
 [voice]
 barks_enabled = true
+
+[nf14.smuggling]
+max_simultaneous_pods = 2
+max_sector_dead_drops = 4
+min_fuc_payout = 2
+min_timeout = 1800
+max_timeout = 4800
+min_distance = 7000
+max_distance = 12000
+min_hints = 1
+max_hints = 2

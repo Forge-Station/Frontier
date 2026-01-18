@@ -153,12 +153,12 @@
   - type: RandomSpawner
     prototypes:
     - PowerCellHyper
-    - PowerCellMicroreactor
     chance: 1.0
     offset: 0.0
     rarePrototypes:
+    - PowerCellMicroreactor
     - PowerCellAntiqueProto
-    rareChance: 0.4
+    rareChance: 0.1
 
 - type: entity
   id: RandomHarvesterScrapOre

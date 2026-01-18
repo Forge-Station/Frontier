@@ -51,10 +51,15 @@
         - sprite: Objects/Weapons/Melee/crusher.rsi
           state: icon
     - type: RandomSpawner
-      prototypes:
+      rarePrototypes:
       - WeaponCrusher
-      - WeaponCrusherDagger
       - WeaponCrusherGlaive
+      - MobSharkSalvage
+      rareChance: 0.2
+      prototypes:
+      # - WeaponCrusher # Forge-change
+      - WeaponCrusherDagger
+      # - WeaponCrusherGlaive # Forge-change
       - MiningDrill
       offset: 0.0
 

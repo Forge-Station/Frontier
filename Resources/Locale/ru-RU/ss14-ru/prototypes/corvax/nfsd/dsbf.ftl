@@ -35,3 +35,5 @@ uplink-security-contraband-forensics-AD12 = Отбойник
 uplink-security-contraband-forensics-AD12-desc = Автоматический Дробовик 12 модели поставляется ограниченными партиями для сил дсбф компанией TechnicLogistic.
 uplink-security-contraband-forensics-M4A1 = M4A1
 uplink-security-contraband-forensics-M4A1-desc = Винтовка штурмовых подразделений сил ДСБФ использующая боеприпасы калибра .20. Поставлялась силам дсбф компанией TechnicLogistic по специальному заказу.
+uplink-security-contraband-forensics-Cascade = Каскад
+uplink-security-contraband-forensics-Cascade-desc = Штурмовой карабин особых подразделений сил самообороны TechnicLogistic на базе винтовки союз, отличается более дорогой конструкцией, точностью и калибром, однако для этого пришлось пожертвовать весом оружия и темпом огня.

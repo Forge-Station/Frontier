@@ -28,3 +28,13 @@ ent-BaseSecurityUplinkRadioPirateCaptain = { ent-BasePirateUplink }
 ent-BaseSecurityUplinkPirateCrew = { ent-BasePirateUplink }
     .suffix = Матрос 15 ДБ
     .desc = { ent-BasePirateUplink.desc }
+
+ent-PinpointerScannerUnpowered = сканер целей пинпойнтера
+    .desc = Сканер, который ищет сигналы пинпойнтера.
+ent-PinpointerScanner = { ent-PinpointerScannerUnpowered }
+    .desc = { ent-PinpointerScannerUnpowered.desc }
+ent-PinpointerScannerEmpty = { ent-PinpointerScannerUnpowered }
+    .desc = { ent-PinpointerScannerUnpowered.desc }
+
+ent-IonizedBluespaceDustBag = мешок ионизированной блюспейс-пыли
+    .desc = Одни утверждают, что он очищает магнитные навигационные поля пинпоинтера... Другие считают, что это просто мешок синей пыли.

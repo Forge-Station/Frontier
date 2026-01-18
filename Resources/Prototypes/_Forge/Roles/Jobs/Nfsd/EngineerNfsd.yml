@@ -1,0 +1,42 @@
+- type: job
+  id: EngineerNfsd
+  name: forge-job-name-engineernfsd
+  description: forge-job-desc-engineernfsd
+  playTimeTracker: JobEngineerNfsd
+  accessGroups:
+  - EngineerNfsdAccess
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 108000 # 30 hours
+  alternateRequirementSets:
+    longerPlaytimeLessSec:
+    - !type:RoleTimeRequirement
+      role: JobEngineerSyn
+      time: 36000 # 10 hours
+ # whitelisted: true
+  startingGear: EngineerNfsdGear
+  canBeAntag: false
+  icon: JobIconEngineerNfsd
+  supervisors: job-supervisors-sergeant
+  weight: 40
+  displayWeight: 40
+  setPreference: true
+  salary: 11000
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+
+- type: startingGear
+  id: EngineerNfsdGear
+  equipment:
+    suitstorage: SecBreachingHammer
+  storage:
+    back:
+    - NfsdTechFabFlatpack
+    - EngineeringTechFabFlatpack
+    - BaseSecurityUplinkRadioOfficer # for rnd disk
+
+- type: chameleonOutfit
+  id: EngineerNfsdChameleonOutfit
+  job: EngineerNfsd

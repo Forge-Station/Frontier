@@ -1,5 +1,5 @@
 ent-NFHolopadShip = блюспейс голопад
-  .desc = Напольное устройство для проецирования голографических изображений, обеспечивающее связь между кораблями.
+  .desc = Напольное устройство для проецирования голографических изображений, обеспечивающее связь между кораблями и станциями.
 ent-NFHolopadShipAntag = { ent-NFHolopadShip }
   .desc = { ent-NFHolopadShip.desc }
 ent-NFHolopadPoiBase = { ent-NFHolopadShip }
@@ -37,4 +37,6 @@ ent-NFHolopadNFSDLobby = { ent-NFHolopadShip }
 ent-NFHolopadEdisonReception = { ent-NFHolopadShip }
   .desc = { ent-NFHolopadShip.desc }
 ent-NFHolopadTinnia = { ent-NFHolopadShip }
+  .desc = { ent-NFHolopadShip.desc }
+ent-NFHolopadBarrier = { ent-NFHolopadShip }
   .desc = { ent-NFHolopadShip.desc }

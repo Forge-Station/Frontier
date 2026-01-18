@@ -24,7 +24,7 @@
   - NFWeaponEnergyPistolDisabler
   - ContrabandAppraisalTool
   - HoloprojectorNfsd
-  - NFClothingBackpackElectropack
+  # - NFClothingBackpackElectropack
   - PowerCageRechargerCircuitboard
   - PowerCageHigh
   - PowerCageMedium
@@ -77,3 +77,60 @@
   - NFSpeedLoaderPistol35Empty
   - NFSpeedLoaderPistol45Empty
   - MagazineAsmgtUniversalEmpty
+
+- type: latheRecipePack
+  id: NfsdToolsStatic
+  recipes:
+  - ClothingOuterEVASuitNfsd
+  - ClothingOuterEVASuitPrisoner
+  #- ClothingHeadHelmetEVALarge
+  - ClothingEyesHudNfsd
+  - NFCombatKnife
+  - NFFlash
+  - NFForensicPad
+  - NFHandcuffs
+  - NFRiotShield
+  - NFZipties
+  - ContrabandAppraisalTool
+  - HoloprojectorNfsd
+  - NFClothingBackpackElectropack
+  - PowerCageHigh
+  - PowerCageMedium
+  - PowerCageSmall
+  - PowerCageRechargerCircuitboard
+  - NFClothingNeckCardNfsdWrit
+
+- type: latheRecipePack
+  id: NfsdTargetsStatic
+  recipes:
+  - NFTargetClown
+  - NFTargetHuman
+  - NFTargetSyndicate
+
+- type: latheRecipePack
+  id: NfsdWeaponsStatic
+  recipes:
+  - NFCombatKnife
+  #- WeaponLaserSvalinn # After the changes made to windows shouldn't be that much of an issue now if it's widely available
+  - NFWeaponEnergyPistolLaser
+  - NFWeaponRevolverArgenti
+  - NFWeaponPistolMk58
+  - NFWeaponShotgunDoubleBarreled
+  - NFWeaponRifleAssaultNovaliteC1
+  - NFWeaponRifleAssaultGestio
+  - WeaponPistolPollock
+  - NFStunbaton
+  - NFWeaponEnergyPistolDisabler
+
+- type: latheRecipePack
+  id: NfsdBoardsStatic
+  recipes:
+  - GyroscopeNfsdMachineCircuitboard
+  - ThrusterNfsdMachineCircuitboard
+
+- type: latheRecipePack
+  id: NfsdReportingStatic
+  recipes:
+    - CassetteTape
+    - TapeRecorder
+    - ClothingNeckBodyCameraNFSD

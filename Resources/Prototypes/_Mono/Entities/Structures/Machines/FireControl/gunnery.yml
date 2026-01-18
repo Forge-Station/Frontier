@@ -235,12 +235,38 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: RadarConsole
-    maxRange: 768 # Mono
+    maxRange: 512 # Forge-change
   - type: WorldLoader
-    radius: 384 # Mono
+    radius: 512 # Forge-change
   - type: Computer
     board: GunneryControlComputerCircuitboard
   - type: PointLight
     radius: 1.5
     energy: 1.6
     color: "#ff8400"
+  - type: TargetSeekerAlert
+    targetGainSound:
+      path: /Audio/_Mono/Effects/Alerts/rwr_beep.ogg
+    distanceAlertSettings:
+    - maximumDistance: 128 # curse of...
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/launchwarning.ogg
+        params:
+          loop: true
+          volume: 0.9
+          pitch: 1.05
+    - maximumDistance: 256
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1.3
+          pitch: 1.15
+    - maximumDistance: 512
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1.2
+          pitch: 1.05
+          variation: 0.05

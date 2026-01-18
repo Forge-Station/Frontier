@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Spark
+  parent: BaseVessel
+  name: TL Искра
+  description: Малогабаритный шахтерский шаттл. Рекомендованный состав команды 1-3 человек.
+  price: 38500
+  category: Small
+  group: Salvage
+  shuttlePath: /Maps/_Forge/Shuttles/Salvage/spark.yml
+  class:
+  - Salvage
+
+
+
+- type: gameMap
+  id: Spark
+  mapName: 'TL Искра'
+  mapPath: /Maps/_Forge/Shuttles/Salvage/spark.yml
+  minPlayers: 0
+  stations:
+    Spark:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Искра {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

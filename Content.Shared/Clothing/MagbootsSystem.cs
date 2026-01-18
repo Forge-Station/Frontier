@@ -26,7 +26,6 @@ public sealed class SharedMagbootsSystem : EntitySystem
         SubscribeLocalEvent<MagbootsComponent, ItemToggledEvent>(OnToggled);
         SubscribeLocalEvent<MagbootsComponent, ClothingGotEquippedEvent>(OnGotEquipped);
         SubscribeLocalEvent<MagbootsComponent, ClothingGotUnequippedEvent>(OnGotUnequipped);
-        SubscribeLocalEvent<MagbootsComponent, IsWeightlessEvent>(OnIsWeightless);
         SubscribeLocalEvent<MagbootsComponent, InventoryRelayedEvent<IsWeightlessEvent>>(OnIsWeightless);
     }
 
@@ -52,7 +51,7 @@ public sealed class SharedMagbootsSystem : EntitySystem
         if (TryComp<MovedByPressureComponent>(user, out var moved))
             moved.Enabled = !state;
 
-        _gravity.RefreshWeightless(user, !state);
+        _gravity.RefreshWeightless(user);
 
         if (state)
             _alerts.ShowAlert(user, ent.Comp.MagbootsAlert);
@@ -60,21 +59,16 @@ public sealed class SharedMagbootsSystem : EntitySystem
             _alerts.ClearAlert(user, ent.Comp.MagbootsAlert);
     }
 
-    private void OnIsWeightless(Entity<MagbootsComponent> ent, ref IsWeightlessEvent args)
+    private void OnIsWeightless(Entity<MagbootsComponent> ent, ref InventoryRelayedEvent<IsWeightlessEvent> args)
     {
-        if (args.Handled || !_toggle.IsActivated(ent.Owner))
+        if (args.Args.Handled || !_toggle.IsActivated(ent.Owner))
             return;
 
         // do not cancel weightlessness if the person is in off-grid.
-        if (ent.Comp.RequiresGrid && !_gravity.EntityOnGravitySupportingGridOrMap(ent.Owner))
+        if (ent.Comp.RequiresGrid && !_gravity.EntityOnGravitySupportingGridOrMap(args.Owner))
             return;
 
-        args.IsWeightless = false;
-        args.Handled = true;
-    }
-
-    private void OnIsWeightless(Entity<MagbootsComponent> ent, ref InventoryRelayedEvent<IsWeightlessEvent> args)
-    {
-        OnIsWeightless(ent, ref args.Args);
+        args.Args.IsWeightless = false;
+        args.Args.Handled = true;
     }
 }

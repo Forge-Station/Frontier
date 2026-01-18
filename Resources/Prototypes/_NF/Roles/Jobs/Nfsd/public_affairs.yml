@@ -19,6 +19,7 @@
   canBeAntag: false
   weight: 105
   displayWeight: 16
+  salary: 15000 # Corvax-Forge-Salary
   accessGroups:
   - CadetNfsdAccess
   special:
@@ -27,6 +28,9 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
+    holiday: NewYear
+    prototype: PresentRandom
 
 - type: startingGear
   id: PublicAffairGear

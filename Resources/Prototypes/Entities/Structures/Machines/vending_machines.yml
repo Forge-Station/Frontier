@@ -207,6 +207,7 @@
   - type: VendingMachine
     pack: CondimentInventory
     offState: off
+    initialStockQuality: 0.75 # Forge-change
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/condiments.rsi
     drawdepth: SmallObjects
@@ -245,6 +246,7 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    initialStockQuality: 0.75 # Forge-change
   - type: DatasetVocalizer
     dataset: CondimentVendAds
   - type: SpeakOnUIClosed
@@ -275,6 +277,7 @@
     normalState: normal-unshaded
     denyState: deny-unshaded
     loopDeny: false
+    initialStockQuality: 0.75 # Forge-change
   - type: DatasetVocalizer
     dataset: BoozeOMatAds
   - type: SpeakOnUIClosed
@@ -309,6 +312,7 @@
     normalState: normal-unshaded
     denyState: deny-unshaded
     loopDeny: false
+    initialStockQuality: 1.0 # Forge-change
   - type: DatasetVocalizer
     dataset: BruiseOMatAds
   - type: SpeakOnUIClosed
@@ -372,6 +376,7 @@
     brokenState: broken
     normalState: normal-unshaded
     ejectState: eject-unshaded
+    initialStockQuality: 0.8 # Forge-change
   - type: DatasetVocalizer
     dataset: ChefvendAds
   - type: SpeakOnUIClosed
@@ -408,6 +413,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    initialStockQuality: 0.95 # Forge-change
   - type: DatasetVocalizer
     dataset: CigaretteMachineAds
   - type: SpeakOnUIClosed
@@ -825,6 +831,7 @@
     brokenState: broken
     normalState: normal-unshaded
     ejectState: eject-unshaded
+    initialStockQuality: 0.85 # Forge-change
   - type: DatasetVocalizer
     dataset: DinnerwareAds
   - type: SpeakOnUIClosed
@@ -992,6 +999,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    initialStockQuality: 0.7 # Forge-change
   - type: DatasetVocalizer
     dataset: NutriMaxAds
   - type: SpeakOnUIClosed
@@ -1067,6 +1075,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    initialStockQuality: 0.65 # Forge-change
   - type: DatasetVocalizer
     dataset: MegaSeedAds
   - type: SpeakOnUIClosed

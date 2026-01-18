@@ -1,6 +1,6 @@
 - type: entity
   id: BaseMeleeWeaponEnergyTL # more generic naming in case someone makes like, idk, an energy axe
-  parent: BaseItem
+  parent: EnergySword
   categories: [ HideSpawnMenu ]
   abstract: true
   components:
@@ -101,9 +101,26 @@
   components:
   - type: Sprite
     sprite: Forge/Objects/Weapons/Melee/tl_e_sword.rsi
+# region WIP
+    layers:
+    - state: e_sword
+    - state: e_sword_blade
+      color: "#FFFFFF"
+      visible: false
+      shader: unshaded
+      map: [ "blade" ]
   - type: Item
     sprite: Forge/Objects/Weapons/Melee/tl_e_sword-inhands.rsi
   - type: EnergySword
     colorOptions:
       - "#ebf0e9"
     blockHacking: true
+
+- type: entity
+  parent: [ BaseCentcommContraband, EnergySword ]
+  id: EnergySwordBlue
+  suffix: MSF, blue
+  components:
+  - type: EnergySword
+    colorOptions:
+    - "#2288ff" # can only be blue

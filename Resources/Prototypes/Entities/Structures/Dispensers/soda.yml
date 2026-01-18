@@ -34,16 +34,20 @@
   - type: StorageFill
     contents:
     - id: DrinkCoconutWaterJug
+      prob: 0.98
     - id: DrinkCoffeeJug
+      prob: 0.80
     - id: DrinkColaBottleFull
     - id: DrinkCreamCartonXL
     - id: DrinkDrGibbJug
     - id: DrinkEnergyDrinkJug
     - id: DrinkGreenTeaJug
+      prob: 0.80
     - id: DrinkIceJug
     - id: DrinkJuiceLimeCartonXL
     - id: DrinkJuiceOrangeCartonXL
     - id: DrinkLemonLimeJug
+      prob: 0.70
     - id: DrinkRootBeerJug
     - id: DrinkSodaWaterBottleFull
     - id: DrinkSpaceMountainWindBottleFull
@@ -52,6 +56,7 @@
     - id: DrinkTeaJug
     - id: DrinkTonicWaterBottleFull
     - id: DrinkWaterMelonJuiceJug
+      prob: 0.95
     - id: JugCaramexinin # Frontier
   - type: Transform
     noRot: false

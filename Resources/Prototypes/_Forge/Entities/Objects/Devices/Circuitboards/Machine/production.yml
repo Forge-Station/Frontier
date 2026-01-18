@@ -154,7 +154,7 @@
 - type: entity
   id: ThrusterCentcomMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: ракетный двигатель ЦентКом (машинная плата)
+  name: ракетный двигатель УСФ (машинная плата)
   components:
   - type: Sprite
     state: supply
@@ -229,7 +229,7 @@
 - type: entity
   id: ThrusterMediumCentcomMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: средний ракетный двигатель ЦентКом (машинная плата)
+  name: средний ракетный двигатель УСФ (машинная плата)
   components:
   - type: Sprite
     state: supply
@@ -305,7 +305,7 @@
 - type: entity
   id: ThrusterMLongCentcomMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: длинный ракетный двигатель ЦентКом (машинная плата)
+  name: длинный ракетный двигатель УСФ (машинная плата)
   components:
   - type: Sprite
     state: supply
@@ -381,7 +381,7 @@
 - type: entity
   id: ThrusterBigCentComMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: большой ракетный двигатель ЦентКом (машинная плата)
+  name: большой ракетный двигатель УСФ (машинная плата)
   components:
   - type: Sprite
     state: supply

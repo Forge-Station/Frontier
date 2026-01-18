@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/14/2025 20:34:09
-  entityCount: 549
+  time: 01/17/2026 12:03:43
+  entityCount: 552
 maps: []
 grids:
 - 1
@@ -449,33 +449,33 @@ entities:
             0: 14190
           -1,2:
             0: 35854
-            1: 256
+            2: 256
           0,3:
             0: 3
-            2: 13056
+            1: 13056
           -1,3:
             0: 8
-            2: 34816
+            1: 34816
           0,4:
-            2: 273
+            1: 273
           0,-1:
             0: 58623
           1,2:
-            1: 256
+            2: 256
           1,0:
-            1: 8706
-            2: 17472
+            2: 8706
+            1: 17472
           1,1:
-            1: 514
-            2: 68
+            2: 514
+            1: 68
           1,-1:
-            1: 8226
-            2: 68
+            2: 8226
+            1: 68
           0,-3:
             0: 29184
           -1,-3:
             0: 51200
-            1: 256
+            2: 256
           0,-2:
             0: 49663
           -1,-2:
@@ -483,22 +483,22 @@ entities:
           -1,-1:
             0: 58606
           1,-3:
-            1: 256
+            2: 256
           1,-2:
-            1: 8224
-            2: 17408
+            2: 8224
+            1: 17408
           -2,0:
-            2: 17472
-            1: 34824
+            1: 17472
+            2: 34824
           -2,1:
-            2: 68
-            1: 2056
+            1: 68
+            2: 2056
           -2,-1:
-            1: 32904
-            2: 68
+            2: 32904
+            1: 68
           -2,-2:
-            2: 17408
-            1: 32896
+            1: 17408
+            2: 32896
         uniqueMixes:
         - volume: 2500
           temperature: 293.15
@@ -516,7 +516,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          temperature: 293.15
+          immutable: True
           moles:
           - 0
           - 0
@@ -531,7 +531,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          immutable: True
+          temperature: 293.15
           moles:
           - 0
           - 0
@@ -2973,6 +2973,27 @@ entities:
     components:
     - type: Transform
       pos: -2.5688212,-0.6004522
+      parent: 1
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 552
+    components:
+    - type: Transform
+      pos: 1.5,4.5
+      parent: 1
+- proto: SpawnPointNFPirate
+  entities:
+  - uid: 550
+    components:
+    - type: Transform
+      pos: -0.5,4.5
+      parent: 1
+- proto: SpawnPointNFPirateFirstMate
+  entities:
+  - uid: 551
+    components:
+    - type: Transform
+      pos: 0.5,4.5
       parent: 1
 - proto: StatueVenusRed
   entities:

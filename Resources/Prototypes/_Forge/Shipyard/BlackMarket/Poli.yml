@@ -35,7 +35,11 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Полюс {1}'
+          mapNameTemplate: 'Газовый Гигант {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            NFPirate: [ 3, 3 ]
+            NFPirateFirstMate: [ 1, 1 ]

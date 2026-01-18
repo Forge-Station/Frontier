@@ -33,8 +33,9 @@
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#c51515"
-    scale: 3
+    scale: 1.8
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 2.2
@@ -90,6 +91,7 @@
   - type: RadarBlip
     scale: 0.85
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
     radarColor: "#1df1f5"
 
@@ -145,6 +147,7 @@
   - type: RadarBlip
     scale: 1.15
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: arrow
     radarColor: "#1df1f5"
 
@@ -183,6 +186,7 @@
   - type: RadarBlip
     scale: 2.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
     radarColor: "#1df1f5"
   - type: TimedDespawn
@@ -233,6 +237,7 @@
   - type: RadarBlip
     scale: 1.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
     radarColor: "#1df1f5"
 
@@ -308,8 +313,9 @@
   - type: Ammo
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 3.25
+    scale: 1.95
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: arrow
     radarColor: "#f7dc0c"
   - type: TimedDespawn
@@ -365,6 +371,7 @@
   - type: RadarBlip
     scale: 3.25
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 5.15
@@ -420,6 +427,7 @@
   - type: RadarBlip
     scale: 2.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 5.5
@@ -475,6 +483,7 @@
   - type: RadarBlip
     scale: 2.5
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 5.15
@@ -529,8 +538,9 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 4.25
+    scale: 3.25
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 10
@@ -625,8 +635,9 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 3.25
+    scale: 2.25
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
     lifetime: 6
@@ -641,3 +652,40 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+
+# Drone
+
+- type: entity
+  id: ShipShardProjectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 300
+        Blunt: 50
+        Piercing: 50
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/57_shell.rsi
+    layers:
+    - state: 57-shell
+    scale: 1, 1
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 1.9
+    requireNoGrid: true
+    visibleFromOtherGrids: true
+    shape: triangle
+    radarColor: "#ffffff"
+  - type: TimedDespawn
+    lifetime: 5
+  - type: PointLight
+    color: "#ffffff"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 12
+    intensitySlope: 2
+    maxIntensity: 2
+    maxTileBreak: 1

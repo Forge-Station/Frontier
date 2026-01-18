@@ -133,10 +133,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 5
+        maxVol: 4 # Forge-change
         reagents:
         - ReagentId: Fiber
-          Quantity: 5
+          Quantity: 4 # Forge-change
   - type: Tag
     tags:
       - ClothMade

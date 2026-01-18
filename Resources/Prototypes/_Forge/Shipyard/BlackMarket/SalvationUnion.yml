@@ -33,7 +33,11 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Союз Спасения {1}'
+          mapNameTemplate: 'Квазар {1}' # i think that bad idea, BUT
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            NFPirate: [ 1, 1 ]
+            NFPirateFirstMate: [ 1, 1 ]

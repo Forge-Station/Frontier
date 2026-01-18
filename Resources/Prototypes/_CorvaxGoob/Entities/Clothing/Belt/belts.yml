@@ -22,40 +22,6 @@
   - type: Clothing
     sprite: _CorvaxGoob/Clothing/Belt/sheriff_sheath.rsi
 
-#Filled версия ножен шерифа
-- type: entity
-  id: ClothingBeltSheriffSheathFilled
-  parent: ClothingBeltSheriffSheath
-  suffix: Filled
-  components:
-  - type: ContainerFill
-    containers:
-      item:
-      - SheriffSabre
-
-- type: entity
-  parent: [ClothingBeltSheath, BaseCentcommContraband]
-  id: ClothingBeltCentcomSheath
-  name: centcom sabre sheath
-  description: Practicality, durability, the saber will definitely not end up in your leg.
-  components:
-  - type: Sprite
-    sprite: _CorvaxGoob/Clothing/Belt/sheriff_sheath.rsi
-    state: sheath
-  - type: Clothing
-    sprite: _CorvaxGoob/Clothing/Belt/sheriff_sheath.rsi
-
-#Filled версия ножен ЦК
-- type: entity
-  id: ClothingBeltCentcomSheathFilled
-  parent: ClothingBeltCentcomSheath
-  suffix: Filled
-  components:
-  - type: ContainerFill
-    containers:
-      item:
-      - CentcomSabre
-
 - type: entity
   parent: [ClothingBeltSheath, BaseCentcommContraband]
   id: ClothingBeltOfficerSheath
@@ -67,6 +33,17 @@
     state: sheath
   - type: Clothing
     sprite: Forge/Clothing/Belt/officer_sheath.rsi
+
+#Filled версия ножен шерифа
+- type: entity
+  id: ClothingBeltSheriffSheathFilled
+  parent: ClothingBeltSheriffSheath
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - SheriffSabre
 
 #Filled версия ножен офицера
 - type: entity

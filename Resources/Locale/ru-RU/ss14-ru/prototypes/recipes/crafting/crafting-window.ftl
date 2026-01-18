@@ -1,4 +1,4 @@
-#Импровизированные вещи
+# Импровизированные вещи
 recipe-bat-name = { ent-BaseBallBat }
 recipe-bat-desc = { ent-BaseBallBat.desc }
 recipe-ghost_sheet-name = { ent-ClothingOuterGhostSheet }
@@ -719,7 +719,7 @@ recipe-WebDoor-name = { ent-WebDoor }
 recipe-WebDoor-desc = { ent-WebDoor.desc }
 recipe-WebNest-name = { ent-WebNest }
 recipe-WebNest-desc = { ent-WebNest.desc }
-#NewFrontier
+# NewFrontier
 recipe-ImprovisedCrossbow-name = { ent-CrossbowImprovised }
 recipe-ImprovisedCrossbow-desc = { ent-CrossbowImprovised.desc }
 recipe-CraftCrossbowBoltGlassShard-name = { ent-CrossbowBoltGlassShard }
@@ -996,7 +996,7 @@ musical-instrument-any = любой музыкальный инструмент
 mail-any = любую почтовую посылку
 item-bible = библию
 security-helmet = шлем СБ
-#НеСтакающиесяПредметы
+# НеСтакающиесяПредметы
 step-a-banana-peel = банановую кожуру
 step-a-clown-suit = { ent-ClothingUniformJumpsuitClown }
 step-clown-shoes = { ent-ClothingShoesClown }

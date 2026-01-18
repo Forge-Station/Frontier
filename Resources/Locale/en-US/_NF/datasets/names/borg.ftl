@@ -37,7 +37,7 @@ names-nf-borg-dataset-36 = Makeshifter
 names-nf-borg-dataset-37 = Twin
 names-nf-borg-dataset-38 = S.A.U.L
 names-nf-borg-dataset-39 = Honker
-names-nf-borg-dataset-40 = Clanker 
+names-nf-borg-dataset-40 = Clanker
 names-nf-borg-dataset-41 = Is-The-Robot
 names-nf-borg-dataset-42 = 9 of 7
 # removed the space

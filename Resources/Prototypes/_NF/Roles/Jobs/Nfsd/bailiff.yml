@@ -28,6 +28,7 @@
   weight: 150
   displayWeight: 60
   canBeAntag: false
+  salary: 13500 # Corvax-Forge-Salary
   access:
   - Armory
   - Sergeant
@@ -41,6 +42,9 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
+    holiday: NewYear
+    prototype: PresentRandom
 
 - type: startingGear
   id: BailiffGear

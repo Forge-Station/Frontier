@@ -42,3 +42,18 @@
     - id: MedkitFilled
     - id: ClothingEyesHudMedical
 # endregion
+
+#region Pilot
+- type: entityTable
+  id: NFStorageFillGearPilot
+  table: !type:AllSelector
+    children:
+    - id: ClothingBeltPilotFilled
+    - id: BoxInflatable
+    - id: NFInflatableFloorStack
+    - id: NFWeaponHoloflareGun
+    - id: RadioHandheldNF
+    - id: SurvivalKnife
+    - id: NFInflatableWindowStack
+    - id: NFInflatableDockStack
+# endregion

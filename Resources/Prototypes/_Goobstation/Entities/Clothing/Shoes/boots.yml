@@ -30,3 +30,5 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: StepHeavyBoots
+  - type: ClothingSlowOnDamageModifier # Forge-Change
+    modifier: 0.2

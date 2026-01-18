@@ -12,8 +12,8 @@
   id: Tinnia
   parent: BasePOI
   name: "Ресторан Тринньки"
-  minimumDistance: 1200
-  maximumDistance: 2900
+  minimumDistance: 2200 # Forge-change: 441 - long distances
+  maximumDistance: 3400 # Forge-change: 441 - long distances
   spawnGroup: RestStop
   gridPath: /Maps/_NF/POI/tinnia.yml
   addComponents:

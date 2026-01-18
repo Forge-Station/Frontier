@@ -17,9 +17,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge16mmCartridgeBase
     capacity: 65
+    mayTransfer: true
     whitelist:
       tags:
       - 16mmCartridge
@@ -39,6 +40,8 @@
     tags:
     - Cartridge
     - 16mmCartridge
+  - type: StaticPrice
+    price: 1
 
 # region 20mm
 # 20mm base
@@ -55,9 +58,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge20mmCartridgeBase
-    capacity: 150
+    capacity: 240
+    mayTransfer: true
 
 - type: entity
   id: Forge20mmCartridgeBase
@@ -70,6 +74,8 @@
     - state: 20mm
   - type: CartridgeAmmo
     proto: Forge20mmBulletBase
+  - type: StaticPrice
+    price: 1
 
 # 20mm APHE
 - type: entity
@@ -85,9 +91,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge20mmCartridgeAPHE
-    capacity: 150
+    capacity: 240
+    mayTransfer: true
 
 - type: entity
   id: Forge20mmCartridgeAPHE
@@ -101,6 +108,8 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: CartridgeAmmo
     proto: Forge20mmBulletAPHE
+  - type: StaticPrice
+    price: 1
 
 # 20mm APCBC
 - type: entity
@@ -116,9 +125,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge20mmCartridgeAPCBC
-    capacity: 150
+    capacity: 240
+    mayTransfer: true
 
 - type: entity
   id: Forge20mmCartridgeAPCBC
@@ -132,6 +142,8 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: CartridgeAmmo
     proto: Forge20mmBulletAPCBC
+  - type: StaticPrice
+    price: 1
 
 # region 30mm
 # 30mm base
@@ -148,9 +160,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge30mmCartridgeBase
-    capacity: 200
+    capacity: 360
+    mayTransfer: true
 
 - type: entity
   id: Forge30mmCartridgeBase
@@ -164,6 +177,8 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: CartridgeAmmo
     proto: Forge30mmBulletBase
+  - type: StaticPrice
+    price: 1
 
 # 30mm APHE
 - type: entity
@@ -179,9 +194,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge30mmCartridgeAPHE
-    capacity: 200
+    capacity: 360
+    mayTransfer: true
 
 - type: entity
   id: Forge30mmCartridgeAPHE
@@ -194,6 +210,8 @@
     - state: 30aphe
   - type: CartridgeAmmo
     proto: Forge30mmBulletAPHE
+  - type: StaticPrice
+    price: 1
 
 # 30mm APCBC
 - type: entity
@@ -209,9 +227,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge30mmCartridgeAPCBC
-    capacity: 200
+    capacity: 360
+    mayTransfer: true
 
 - type: entity
   id: Forge30mmCartridgeAPCBC
@@ -224,6 +243,8 @@
     - state: 30apcbc
   - type: CartridgeAmmo
     proto: Forge30mmBulletAPCBC
+  - type: StaticPrice
+    price: 1
 
 # region 57mm
 # 57mm Base
@@ -240,9 +261,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge57mmCartridgeBase
     capacity: 80
+    mayTransfer: true
 
 - type: entity
   id: Forge57mmCartridgeBase
@@ -255,6 +277,8 @@
     - state: 57mm
   - type: CartridgeAmmo
     proto: ForgeDravonBase
+  - type: StaticPrice
+    price: 1
 
 # 57mm APHE
 - type: entity
@@ -270,9 +294,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge57mmCartridgeAPHE
     capacity: 80
+    mayTransfer: true
 
 - type: entity
   id: Forge57mmCartridgeAPHE
@@ -285,6 +310,8 @@
     - state: 57aphe
   - type: CartridgeAmmo
     proto: ForgeDravonAPHE
+  - type: StaticPrice
+    price: 1
 
 # 57mm APCBC
 - type: entity
@@ -300,9 +327,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge57mmCartridgeAPCBC
     capacity: 80
+    mayTransfer: true
 
 - type: entity
   id: Forge57mmCartridgeAPCBC
@@ -315,6 +343,8 @@
     - state: 57apcbc
   - type: CartridgeAmmo
     proto: ForgeDravonAPCBC
+  - type: StaticPrice
+    price: 1
 
 # region 90mm
 # 90mm base (тоже взрывается, но слабее.. дя)
@@ -334,9 +364,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge90mmCartridge
-    capacity: 60
+    capacity: 80
+    mayTransfer: true
 
 - type: entity
   id: Forge90mmCartridge
@@ -349,6 +380,8 @@
     - state: 90mm
   - type: CartridgeAmmo
     proto: Forge90mmBulletBase
+  - type: StaticPrice
+    price: 1
 
 # 90mm APHE
 - type: entity
@@ -367,9 +400,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge90mmCartridgeAPHE
-    capacity: 60
+    capacity: 80
+    mayTransfer: true
 
 - type: entity
   id: Forge90mmCartridgeAPHE
@@ -382,6 +416,8 @@
     - state: 90aphe
   - type: CartridgeAmmo
     proto: Forge90mmBulletAPHE
+  - type: StaticPrice
+    price: 1
 
 # 90mm APHEBC
 - type: entity
@@ -400,9 +436,10 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
-    infiniteUnspawned: true
+    infiniteUnspawned: false
     proto: Forge90mmCartridgeAPHEBC
-    capacity: 60
+    capacity: 80
+    mayTransfer: true
 
 - type: entity
   id: Forge90mmCartridgeAPHEBC
@@ -415,6 +452,8 @@
     - state: 90aphebc
   - type: CartridgeAmmo
     proto: Forge90mmBulletAPHEBC
+  - type: StaticPrice
+    price: 1
 
 # region 203mm
 # 203mm HE
@@ -457,6 +496,10 @@
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
+  - type: StaticPrice
+    price: 400
+  - type: PirateBountyItem
+    id: ShipBigAmmoHEAll
 
 - type: entity
   id: Forge203mmCartridgeHESH
@@ -472,6 +515,10 @@
     layers:
     - state: 203hesh
       map: ["enum.AmmoVisualLayers.Base"]
+  - type: StaticPrice
+    price: 500
+  - type: PirateBountyItem
+    id: ShipBigAmmoHESHAll
 
 # region 220mm
 - type: entity
@@ -513,6 +560,10 @@
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
+  - type: StaticPrice
+    price: 500
+  - type: PirateBountyItem
+    id: ShipBigAmmoHEAll
 
 - type: entity
   id: Forge220mmCartridgeHESH
@@ -528,6 +579,10 @@
     layers:
     - state: 220hesh
       map: ["enum.AmmoVisualLayers.Base"]
+  - type: StaticPrice
+    price: 600
+  - type: PirateBountyItem
+    id: ShipBigAmmoHESHAll
 
 # region 255mm
 - type: entity
@@ -569,6 +624,10 @@
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
+  - type: StaticPrice
+    price: 600
+  - type: PirateBountyItem
+    id: ShipBigAmmoHEAll
 
 - type: entity
   id: Forge255mmCartridgeHESH
@@ -584,3 +643,7 @@
     layers:
     - state: 255hesh
       map: ["enum.AmmoVisualLayers.Base"]
+  - type: StaticPrice
+    price: 600
+  - type: PirateBountyItem
+    id: ShipBigAmmoHESHAll

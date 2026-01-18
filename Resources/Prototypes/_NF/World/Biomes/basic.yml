@@ -18,37 +18,37 @@
   id: NFAsteroidsNear
   parent: NFBiomeBase
   priority: 2
-  distanceRange: 0, 5000
+  distanceRange: 300, 6000 # Forge-change: Small distance up
   chunkComponents:
   - type: SimpleDebrisSelector
     debrisTable:
     # Small
     - id: NFAsteroidDebrisSmall
-      prob: 0.8
+      prob: 2.0 # Forge-change
       orGroup: debris
     - id: NFAsteroidScrapDebrisSmall
-      prob: 0.8
+      prob: 2.0 # Forge-change
       orGroup: debris
     # Medium
     - id: NFAsteroidDebrisMedium
-      prob: 1.5
+      prob: 1.0 # Forge-change
       orGroup: debris
     - id: NFAsteroidScrapDebrisMedium
-      prob: 1.5
+      prob: 1.0 # Forge-change
       orGroup: debris
     # Large
     - id: NFAsteroidDebrisLarge
-      prob: 2.0
+      prob: 0.8 # Forge-change
       orGroup: debris
     - id: NFAsteroidScrapDebrisLarge
-      prob: 2.0
+      prob: 0.8 # Forge-change
       orGroup: debris
     # Extra Large
     - id: NFAsteroidDebrisExtraLarge
-      prob: 0.8
+      prob: 0.6 # Forge-change
       orGroup: debris
     - id: NFAsteroidScrapDebrisExtraLarge
-      prob: 0.8
+      prob: 0.6 # Forge-change
       orGroup: debris
     # Huge
     - id: NFAsteroidDebrisHuge
@@ -74,13 +74,13 @@
   - type: NoiseDrivenDebrisSelector
     debrisTable:
     - id: NFWreckDebrisSmall
-      prob: 1
+      prob: 2 # Forge-change
       orGroup: wreck
     - id: NFWreckDebrisMedium
-      prob: 0.3
+      prob: 0.1 # Forge-change
       orGroup: wreck
     - id: NFWreckDebrisLarge
-      prob: 0.1
+      prob: 0.05 # Forge-change
       orGroup: wreck
     - id: NFWreckDebrisExtraLarge
       prob: 0.03
@@ -91,7 +91,7 @@
   id: NFAsteroidsMid
   parent: NFBiomeBase
   priority: 1
-  distanceRange: 5000, 9500
+  distanceRange: 6000, 10500  # Forge-change: Small distance up
   chunkComponents:
   - type: SimpleDebrisSelector
     debrisTable:

@@ -14,8 +14,8 @@
   description: A capital-class railgun that fires a massive slug at extreme velocity, capable of catastrophic damage to enemy ships. Heavy linear accelerator, can be remotely activated or linked up to a GCS. This one feeds from an autoloader somewhere, and doesn't need manual reloads.
   components:
   - type: BindToStation # Forge-change
-  - type: StaticPrice
-    price: 30000
+  - type: StaticPrice # Forge-change
+    price: 1 # Чисто чтоб цена шаттлов не сильно менялась. На совесть мапперам.
   - type: Sprite
     sprite: _Mono/Objects/ShuttleWeapons/charon.rsi
     layers:

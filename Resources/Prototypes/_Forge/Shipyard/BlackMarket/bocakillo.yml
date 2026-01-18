@@ -38,7 +38,11 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Сэндвич {1}' #Sneaky spoofed name
+          mapNameTemplate: 'Фудтрак {1}' #Sneaky spoofed name
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            NFPirate: [ 1, 1 ]
+            NFPirateFirstMate: [ 1, 1 ]

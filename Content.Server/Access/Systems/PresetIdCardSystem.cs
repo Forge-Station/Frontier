@@ -84,5 +84,6 @@ public sealed class PresetIdCardSystem : EntitySystem
 
         if (_prototypeManager.TryIndex(job.Icon, out var jobIcon))
             _cardSystem.TryChangeJobIcon(uid, jobIcon);
+        _cardSystem.TryChangeJob(uid, job); // Corvax-Forge: Fix IdCardComponent.JobPrototype property
     }
 }

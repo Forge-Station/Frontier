@@ -637,3 +637,43 @@
   completetime: 1
   materials:
     CreditCounterfeit: 79999
+
+- type: latheRecipe
+  id: ForgeMagazine90mmRecipe
+  categories: [SyndicateTexSynAmmo]
+  result: ForgeMagazine90mm
+  completetime: 1
+  materials:
+    CreditCounterfeit: 10000
+
+- type: latheRecipe
+  id: ForgeMagazine90mmAPHERecipe
+  categories: [SyndicateTexSynAmmo]
+  result: ForgeMagazine90mmAPHE
+  completetime: 1
+  materials:
+    CreditCounterfeit: 13550
+
+- type: latheRecipe
+  id: ForgeAmmoDrum30mmBaseRecipe
+  categories: [SyndicateTexSynAmmo]
+  result: ForgeAmmoDrum30mmBase
+  completetime: 1
+  materials:
+    CreditCounterfeit: 8500
+
+- type: latheRecipe
+  id: ForgeAmmoDrum30mmAPCBCRecipe
+  categories: [SyndicateTexSynAmmo]
+  result: ForgeAmmoDrum30mmAPCBC
+  completetime: 1
+  materials:
+    CreditCounterfeit: 11300
+
+- type: latheRecipe
+  id: LightFighterOrdinanceGPOItemRecipe
+  categories: [SyndicateTexSynAmmo]
+  result: LightFighterOrdinanceGPOItem
+  completetime: 1
+  materials:
+    CreditCounterfeit: 20000

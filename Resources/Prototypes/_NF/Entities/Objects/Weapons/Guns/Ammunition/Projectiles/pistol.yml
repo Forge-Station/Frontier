@@ -23,6 +23,7 @@
     damage:
       types:
         Piercing: 12.5
+      armorPenetration: 0.1 # Forge-Change
   - type: StaminaDamageOnCollide
     damage: 5 # 12 hits to slowdown
 
@@ -122,6 +123,7 @@
     damage:
       types:
         Piercing: 27
+      armorPenetration: 0.1 # Forge-Change
   - type: StaminaDamageOnCollide
     damage: 7 # ~9 hits to slowdown
 
@@ -207,7 +209,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 12
-    ignoreResistances: true
+        Piercing: 25
+      armorPenetration: 0.8 # Forge-Change
   - type: StaminaDamageOnCollide
     damage: 6 # 10 hits to slowdown

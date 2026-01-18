@@ -25,6 +25,7 @@
   weight: 140
   displayWeight: 50
   canBeAntag: false
+  salary: 12000 # Corvax-Forge-Salary
   access:
   - Sergeant
   accessGroups:
@@ -35,6 +36,9 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
+    holiday: NewYear
+    prototype: PresentRandom
 
 - type: startingGear
   id: SeniorOfficerGear

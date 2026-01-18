@@ -13,6 +13,8 @@
   - type: TemperatureProtection
     heatingCoefficient: 1.1
     coolingCoefficient: 0.5
+  - type: PirateBountyItem
+    id: PonchosAll
 
 - type: entity
   parent: ClothingNeckPonchoBlack
@@ -24,6 +26,8 @@
     sprite: _Mono/Clothing/Neck/Ponchos/blackstripe.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Neck/Ponchos/blackstripe.rsi
+  - type: PirateBountyItem
+    id: PonchosAll
 
 - type: entity
   parent: ClothingNeckPonchoBlack
@@ -35,6 +39,8 @@
     sprite: _Mono/Clothing/Neck/Ponchos/syndicate.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Neck/Ponchos/syndicate.rsi
+  - type: PirateBountyItem
+    id: PonchosAll
 
 - type: entity
   parent: ClothingNeckPonchoBlack
@@ -46,6 +52,8 @@
     sprite: _Mono/Clothing/Neck/Ponchos/blacksmall.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Neck/Ponchos/blacksmall.rsi
+  - type: PirateBountyItem
+    id: PonchosAll
 
 # Forge-change: add blue, green, white versions
 - type: entity
@@ -58,6 +66,8 @@
     sprite: _Mono/Clothing/Neck/Ponchos/blackstripeblue.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Neck/Ponchos/blackstripeblue.rsi
+  - type: PirateBountyItem
+    id: PonchosAll
 
 - type: entity
   parent: ClothingNeckPonchoBlack
@@ -69,6 +79,8 @@
     sprite: _Mono/Clothing/Neck/Ponchos/blackstripegreen.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Neck/Ponchos/blackstripegreen.rsi
+  - type: PirateBountyItem
+    id: PonchosAll
 
 - type: entity
   parent: ClothingNeckPonchoBlack
@@ -80,4 +92,6 @@
     sprite: _Mono/Clothing/Neck/Ponchos/blackstripewhite.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Neck/Ponchos/blackstripewhite.rsi
+  - type: PirateBountyItem
+    id: PonchosAll
 # Forge-change end

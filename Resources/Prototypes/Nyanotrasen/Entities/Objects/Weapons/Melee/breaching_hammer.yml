@@ -16,7 +16,7 @@
       types:
         Blunt: 10
         Piercing: 3
-        Structural: 10
+        Structural: 105 # Forge-change: wall buff
     soundHit:
       path: /Audio/Nyanotrasen/Weapons/club.ogg
     bluntStaminaDamageFactor: 1.50 # 15 stamina damage
@@ -29,7 +29,7 @@
       types:
         Blunt: 20
         Piercing: 2
-        Structural: 20
+        Structural: 65 # Forge-change: wall buff
   - type: Tool
     qualities:
       - Prying

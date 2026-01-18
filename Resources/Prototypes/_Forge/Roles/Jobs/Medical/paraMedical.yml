@@ -16,6 +16,7 @@
   weight: 40
   displayWeight: 40
   setPreference: true
+  salary: 10000
   access:
   - Medical
   accessGroups:
@@ -27,6 +28,9 @@
       recordGeneration: FalseRecord
   - !type:AddImplantSpecial
     implants: [ MedicalTrackingImplanter ]
+  - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
+    holiday: NewYear
+    prototype: PresentRandom
 
 - type: job
   id: paraMedicalInterview

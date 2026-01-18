@@ -116,8 +116,8 @@
         - MachineLayer
   - type: Contraband
     turnInValues:
-      FrontierUplinkCoin: 3
-      Doubloon: 2
+      FrontierUplinkCoin: 3 # Forge-change: rare contraband
+      Doubloon: 5 # Forge-change: rare contraband
   - type: ShipyardSellCondition
     blockSale: true
     reason: shipyard-console-contraband-onboard

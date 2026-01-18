@@ -23,6 +23,7 @@
         Blunt: 5
         Slash: 10
         Structural: 10
+      armorPenetration: 0.3 # Forge-Change
     soundHit:
       collection: MetalThud
   - type: Wieldable
@@ -62,6 +63,13 @@
   components:
   - type: MeleeWeapon
     wideAnimationRotation: 90
+    damage:
+      types:
+        # axes are kinda like sharp hammers, you know?
+        Blunt: 5
+        Slash: 10
+        Structural: 10
+      armorPenetration: 0.35 # Forge-Change
   - type: IgniteOnMeleeHit
     fireStacks: 1
   - type: Sprite

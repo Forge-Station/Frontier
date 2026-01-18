@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 262.0.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/08/2025 13:58:18
-  entityCount: 559
+  time: 01/17/2026 11:57:31
+  entityCount: 563
 maps: []
 grids:
 - 3
@@ -361,6 +361,26 @@ entities:
       color: '#FFC000FF'
       flags: HideLabel
     - type: RadiationGridResistance
+    - type: ImplicitRoof
+- proto: 150mmApShell
+  entities:
+  - uid: 525
+    components:
+    - type: Transform
+      pos: 4.692544,-1.3683574
+      parent: 3
+- proto: 150mmEmpShell
+  entities:
+  - uid: 192
+    components:
+    - type: Transform
+      pos: 4.4058065,-1.296673
+      parent: 3
+  - uid: 452
+    components:
+    - type: Transform
+      pos: 4.5133333,-1.4579632
+      parent: 3
 - proto: AirlockCaptainGlassLocked
   entities:
   - uid: 271
@@ -2575,13 +2595,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -2.5,-8.5
       parent: 3
-- proto: ForgeMagazine57mmBase
-  entities:
-  - uid: 158
-    components:
-    - type: Transform
-      pos: 4.490365,-1.5215087
-      parent: 3
 - proto: MiningWindow
   entities:
   - uid: 13
@@ -3134,6 +3147,20 @@ entities:
     - type: Transform
       pos: -0.5,-7.5
       parent: 3
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 541
+    components:
+    - type: Transform
+      pos: 0.5,-2.5
+      parent: 3
+- proto: SpawnPointNFPirate
+  entities:
+  - uid: 539
+    components:
+    - type: Transform
+      pos: 4.5,-7.5
+      parent: 3
 - proto: SpawnPointNFPirateCaptain
   entities:
   - uid: 538
@@ -3147,6 +3174,11 @@ entities:
     components:
     - type: Transform
       pos: 1.5,-6.5
+      parent: 3
+  - uid: 540
+    components:
+    - type: Transform
+      pos: 4.5,-6.5
       parent: 3
 - proto: StoolBar
   entities:
@@ -3781,21 +3813,13 @@ entities:
     - type: Transform
       pos: 3.5,-9.5
       parent: 3
-- proto: WeaponTurretDravon
+- proto: WeaponTurretTarnyxReload
   entities:
-  - uid: 192
+  - uid: 158
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 5.5,0.5
-      parent: 3
-- proto: WeaponTurretDravon
-  entities:
-  - uid: 452
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 4.5,0.5
       parent: 3
 - proto: Windoor
   entities:

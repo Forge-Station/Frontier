@@ -1,0 +1,23 @@
+- type: entity
+  id: WeaponPistolPeacemake
+  parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolNanotrasen ]
+  name: Peacemake
+  description: A pistol developed for the TechnicLogistic Self-Defense Forces special forces based on the Swift. It has a larger caliber than its predecessor, but cannot use underbarrel modifications or a suppressor.
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Pistols/peacemake.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Pistols/peacemake.rsi
+  - type: Gun
+    projectileSpeed: 45
+    angleDecay: 4
+    fireRate: 3
+    burstFireRate: 2
+    shotsPerBurst: 2
+    burstCooldown: 1
+    availableModes:
+    - Burst
+    selectedMode: Burst
+  - type: NFWeaponDetails
+    class: weapon-details-class-pistol
+    manufacturer: weapon-details-manufacturer-TechnicLogistic

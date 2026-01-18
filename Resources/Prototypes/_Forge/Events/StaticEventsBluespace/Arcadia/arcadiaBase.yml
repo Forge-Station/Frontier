@@ -5,16 +5,16 @@
 # CorvaxForge
 
 # Maintainer Info
-# GitHub: https://github.com/mersen-tyn
-# Discord: mersen
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
 
 # Notes:
 #
 - type: pointOfInterest
   id: arcadiaBase
   name: База Аркадии
-  minimumDistance: 5500
-  maximumDistance: 8000
+  minimumDistance: 6500
+  maximumDistance: 10000
   gridPath: /Maps/_Forge/Events/Elementary/Arcadia/arcadiaBase.yml
   addComponents:
   - type: IFF

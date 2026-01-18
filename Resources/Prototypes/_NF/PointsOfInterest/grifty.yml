@@ -12,8 +12,8 @@
   id: Grifty
   parent: BasePOI
   name: "Заправка Зекинса"
-  minimumDistance: 3250
-  maximumDistance: 5600
+  minimumDistance: 3650 # Forge-change: 441 - long distances
+  maximumDistance: 6200 # Forge-change: 441 - long distances
   spawnGroup: Scrapyard
   gridPath: /Maps/_NF/POI/grifty.yml
   addComponents:

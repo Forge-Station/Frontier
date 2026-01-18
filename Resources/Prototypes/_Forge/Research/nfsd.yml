@@ -27,7 +27,7 @@
   entityIcon: ClothingOuterHardsuitNfsdCombat
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 1500
+  cost: 3000
   prerequisiteLineType: Diagonal
   recipeUnlocks:
   - FRecClothingOuterHardsuitNfsdBronze
@@ -58,7 +58,7 @@
   entityIcon: ClothingShoesBootsMagNfsdFilled
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 1500
+  cost: 2000
   recipeUnlocks:
   - FRecClothingShoesBootsMagNFSD
   technologyPrerequisites:
@@ -86,7 +86,7 @@
   discipline: ForgeNFSDtechDiscipline
   prerequisiteLineType: Diagonal
   tier: 1
-  cost: 2500
+  cost: 3500
   recipeUnlocks:
   - FRecAdvancedRadarConsoleCircuitboard
   technologyPrerequisites:
@@ -113,7 +113,7 @@
   entityIcon: ClothingBackpackElectropack
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 1500
+  cost: 1000
   recipeUnlocks:
   - NFClothingBackpackElectropack
   prerequisiteLineType: Diagonal
@@ -127,12 +127,69 @@
   entityIcon: JetpackNfsd
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 1000
+  cost: 1500
   recipeUnlocks:
   - JetpackNfsd
   technologyPrerequisites:
   - ForgeResearchNfsdBase
   position: 3, 46
+
+- type: technology
+  id: ForgeNFSDtechDisciplineNightVision
+  name: forge-research-technology-nfsd-nightvision
+  entityIcon: NFClothingEyesNightVisionGoggleDSBF
+  discipline: ForgeNFSDtechDiscipline
+  tier: 1
+  cost: 4500
+  recipeUnlocks:
+  - FRecNightVisionNfsd
+  technologyPrerequisites:
+  - ForgeNFSDtechDisciplinePropulsion
+  position: 3, 45
+
+- type: technology
+  id: ForgeNFSDtechDisciplineThermals
+  name: forge-research-technology-nfsd-thermalvision
+  entityIcon: ClothingEyesThermalVisionGoggles
+  discipline: ForgeNFSDtechDiscipline
+  tier: 1
+  cost: 4500
+  recipeUnlocks:
+  - FRecThermalVisionNfsd
+  technologyPrerequisites:
+  - ForgeNFSDtechDisciplineNightVision
+  position: 4, 45
+
+- type: technology
+  id: ForgeNFSDtechDisciplineThermalNight
+  name: forge-research-technology-nfsd-nightthermalvision
+  entityIcon: ClothingEyesNightThermalVisionNfsd
+  discipline: ForgeNFSDtechDiscipline
+  tier: 1
+  cost: 8000
+  recipeUnlocks:
+  - FRecNightThermalVisionNfsd
+  technologyPrerequisites:
+  - ForgeNFSDtechDisciplineThermals
+  position: 5, 45
+
+- type: technology
+  id: ForgeNfsdAdvancedToolsTech
+  name: forge-research-technology-nfsd-advtools
+  entityIcon: PowerDrillNfsd
+  discipline: ForgeNFSDtechDiscipline
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - FRecMultitoolNfsd
+  - FRecPowerDrillNfsd
+  - FRecRCDNfsd
+  - FRecRCDAmmo
+  - FRecJawsOfLifeNfsd
+  - FRecWelderNfsd
+  technologyPrerequisites:
+  - ForgeResearchNfsdBase
+  position: 2, 47
 
 # region ShipAmmo
 #- type: technology
@@ -184,7 +241,7 @@
   entityIcon: ForgeResearchShipAmmoAPHE
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 6000
+  cost: 6500
   recipeUnlocks:
   - ForgeAmmoDrum30mmAPHE
   prerequisiteLineType: Diagonal
@@ -199,7 +256,7 @@
   entityIcon: ForgeResearchShipAmmoAPHE
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 6000
+  cost: 6500
   recipeUnlocks:
   - ForgeMagazine57mmAPHE
   prerequisiteLineType: Diagonal
@@ -214,7 +271,7 @@
   entityIcon: Forge203mmCartridgeHE
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 4000
+  cost: 5000
   recipeUnlocks:
   - FRec203mmCartridge
   technologyPrerequisites:
@@ -227,7 +284,7 @@
   entityIcon: Forge220mmCartridgeHE
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 4000
+  cost: 5000
   recipeUnlocks:
   - FRec220mmCartridge
   technologyPrerequisites:
@@ -240,7 +297,7 @@
   entityIcon: Forge255mmCartridgeHE
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 4000
+  cost: 5000
   recipeUnlocks:
   - FRec255mmCartridge
   technologyPrerequisites:
@@ -253,7 +310,7 @@
   entityIcon: Forge203mmCartridgeHESH
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 4000
+  cost: 5000
   recipeUnlocks:
   - FRec203mmCartridgeHESH
   technologyPrerequisites:
@@ -266,7 +323,7 @@
   entityIcon: Forge220mmCartridgeHESH
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 4000
+  cost: 5000
   recipeUnlocks:
   - FRec220mmCartridgeHESH
   technologyPrerequisites:
@@ -279,7 +336,7 @@
   entityIcon: Forge255mmCartridgeHESH
   discipline: ForgeNFSDtechDiscipline
   tier: 1
-  cost: 4000
+  cost: 5000
   recipeUnlocks:
   - FRec255mmCartridgeHESH
   technologyPrerequisites:

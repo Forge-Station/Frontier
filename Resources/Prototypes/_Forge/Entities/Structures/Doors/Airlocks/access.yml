@@ -8,3 +8,47 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCentralCommand ]
+
+- type: entity
+  parent: AirlockNfsdGlass
+  id: AirlockSergeantGlassLocked
+  suffix: NFSD, Sergeant, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSergeant ]
+
+- type: entity
+  parent: AirlockNfsd
+  id: AirlockSergeantLocked
+  suffix: NFSD, Sergeant, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSergeant ]
+
+- type: entity
+  parent: AirlockGlassShuttleNfsd
+  id: AirlockGlassShuttleNfsdLockedDebug
+  name: стыковочный шлюз
+  suffix: ДСБФ, ДЕБАГ
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+  - type: ApcPowerReceiver
+    needsPower: false
+    powerLoad: 0
+
+- type: entity
+  parent: AirlockNfsdLocked
+  id: AirlockNfsdLockedLockedDebug
+  name: шлюз
+  suffix: ДСБФ, ДЕБАГ
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+  - type: ApcPowerReceiver
+    needsPower: false
+    powerLoad: 0

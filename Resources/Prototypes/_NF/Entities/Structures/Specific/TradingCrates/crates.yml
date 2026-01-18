@@ -107,8 +107,8 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 5000
-    valueElsewhere: 2500
+    valueAtDestination: 7000 # Forge-change: rare contraband
+    valueElsewhere: 1500 # Forge-change: rare contraband
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -136,11 +136,11 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 6000
-    valueElsewhere: 2500
+    valueAtDestination: 8000 # Forge-change: rare contraband
+    valueElsewhere: 1500 # Forge-change: rare contraband
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
-    expressOnTimeBonus: 2000
-    expressLatePenalty: 1500
+    expressOnTimeBonus: 4000 # Forge-change: rare contraband
+    expressLatePenalty: 6500 # Forge-change: rare contraband
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -168,11 +168,11 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 8000
-    valueElsewhere: 4000
+    valueAtDestination: 12000 # Forge-change: rare contraband
+    valueElsewhere: 2000 # Forge-change: rare contraband
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
-    expressOnTimeBonus: 4000
-    expressLatePenalty: 3000
+    expressOnTimeBonus: 8000 # Forge-change: rare contraband
+    expressLatePenalty: 10000 # Forge-change: rare contraband
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -201,11 +201,11 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 12000
-    valueElsewhere: 5000
+    valueAtDestination: 18000 # Forge-change: rare contraband
+    valueElsewhere: 3000 # Forge-change: rare contraband
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
-    expressOnTimeBonus: 6000
-    expressLatePenalty: 3000
+    expressOnTimeBonus: 12000 # Forge-change: rare contraband
+    expressLatePenalty: 16000 # Forge-change: rare contraband
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -234,9 +234,9 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 12000
-    valueElsewhere: 6000
+    valueAtDestination: 18000 # Forge-change: rare contraband
+    valueElsewhere: 3000 # Forge-change: rare contraband
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
-    expressOnTimeBonus: 6000
-    expressLatePenalty: 3000
+    expressOnTimeBonus: 12000 # Forge-change: rare contraband
+    expressLatePenalty: 16000 # Forge-change: rare contraband
 # endregion Contraband Crates

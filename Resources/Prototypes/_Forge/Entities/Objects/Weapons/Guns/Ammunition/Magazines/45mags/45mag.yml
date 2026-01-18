@@ -1,0 +1,149 @@
+- type: entity
+  id: BaseMagazineRifle45
+  name: магазин (.45 магнум)
+  parent: [ BaseC1Contraband, RecyclableItemSteelTiny, BaseMagazineRifle ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineRifle45
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - NFCartridgePistol45
+    proto: NFCartridgePistol45
+    capacity: 20
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/45magazine.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+  - type: Item
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/45magazine.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+- type: entity
+  id: MagazineRifle45Empty
+  name: магазин (.45 магнум, любой)
+  parent: BaseMagazineRifle45
+  suffix: empty
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: MagazineRifle45
+  name: магазин (.45 магнум)
+  parent: BaseMagazineRifle45
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgePistol45
+
+- type: entity
+  id: MagazineRifle45Rubber
+  name: магазин (.45 магнум, травматический)
+  parent: BaseMagazineRifle45
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgePistol45Rubber
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/45magazine.rsi
+    layers:
+    - state: rubber
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineRifle45AP
+  name: магазин (.45 магнум, бронебойный)
+  parent: BaseMagazineRifle45
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgePistol45AP
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/45magazine.rsi
+    layers:
+    - state: AP
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineRifle45Emp
+  name: магазин (.45 магнум, ЭМИ)
+  parent: BaseMagazineRifle45
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgePistol45Emp
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/45magazine.rsi
+    layers:
+    - state: EMP
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineRifle45Uranium
+  name: магазин (.45 магнум, урановый)
+  parent: BaseMagazineRifle45
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgePistol45Uranium
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/45magazine.rsi
+    layers:
+    - state: Uranium
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineRifle45Practice
+  name: магазин (.45 магнум, тренировочный)
+  parent: BaseMagazineRifle45
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgePistol45Practice
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/45magazine.rsi
+    layers:
+    - state: Practice
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineRifle45Overpressure
+  name: магазин (.45 магнум, высокоскоростной)
+  parent: BaseMagazineRifle45
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgePistol45Overpressure
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/45magazine.rsi
+    layers:
+    - state: Overpressure
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineRifle45Incendiary
+  name: магазин (.45 магнум, зажигательный)
+  parent: BaseMagazineRifle45
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgePistol45Incendiary
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Magazine/45magazine.rsi
+    layers:
+    - state: Incendiary
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]

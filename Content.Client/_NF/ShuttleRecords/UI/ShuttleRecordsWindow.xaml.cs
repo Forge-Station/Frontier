@@ -101,7 +101,8 @@ public sealed partial class ShuttleRecordsWindow : FancyWindow
             .Where(shuttleRecord => string.IsNullOrEmpty(_searchText) ||
                                     shuttleRecord.Name.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase) ||
                                     (shuttleRecord.Suffix != null && shuttleRecord.Suffix.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase)) ||
-                                     shuttleRecord.OwnerName.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase))
+                                     shuttleRecord.OwnerName.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase) ||
+                                     shuttleRecord.ModelName.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase)) // Forge-change
             .Where(shuttleRecord => !onlyShowActive || ShuttleExists(netEntity: shuttleRecord.EntityUid))
             .Select(shuttleRecord =>
                 new ShuttleRecordViewStatePair(
@@ -157,7 +158,8 @@ public sealed partial class ShuttleRecordsWindow : FancyWindow
             timeOfPurchase: timeOfPurchaseText,
             voucherStatus: shuttleRecord.PurchasedWithVoucher ? _loc.GetString(messageId: "shuttle-records-purchased-voucher") : "",
             transactionCost: _loc.GetString(messageId: "shuttle-records-transaction-cost",
-                arg: ("cost", transactionPrice))
+                arg: ("cost", transactionPrice)),
+            shuttleModel: _loc.GetString("shuttle-records-shuttle-model-label", ("model", shuttleRecord.ModelName)) // Forge-change
             );
         var control = new ShuttleRecordDetailsControl(state: viewState);
         control.CopyDeedButton.Disabled = !shuttleExists;

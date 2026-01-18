@@ -46,10 +46,13 @@
   components:
   - type: Gun # Corvax-Forge: Weaponary update
     fireRate: 4.5
+    projectileSpeed: 38
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Pistols/pollock.rsi
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Pistols/pollock.rsi
+  - type: StaticPrice
+    price: 450
 
 - type: entity
   id: NFWeaponPistolPollockHighCapacityMag

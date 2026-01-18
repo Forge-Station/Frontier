@@ -77,7 +77,7 @@
 
 - type: entity
   name: combat knife
-  parent: [BaseKnife, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  parent: BaseKnife # Forge-change: remove contraband
   id: CombatKnife
   description: A deadly knife intended for melee confrontations.
   components:
@@ -126,10 +126,12 @@
         - ItemMask
         restitution: 0.3
         friction: 0.2
+  - type: StaticPrice
+    price: 75
 
 - type: entity
   name: survival knife
-  parent: [BaseC1Contraband, CombatKnife] # BaseSecurityCargoContraband<BaseC1Contraband
+  parent: CombatKnife # Forge-change: remove contraband
   id: SurvivalKnife
   description: Weapon of first and last resort for combatting space carp.
   components:

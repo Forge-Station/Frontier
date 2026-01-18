@@ -13,7 +13,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Content.Client.Station; // Frontier
-using Content.Client._NF.Radar; // Frontier
+using Content.Client._Mono.Radar; // Forge-change: take BlipsSystem from _Mono
 
 namespace Content.Client.Shuttles.UI;
 
@@ -56,7 +56,8 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
     private List<Entity<MapGridComponent>> _grids = new();
 
-    public ShuttleNavControl() : base(64f, 256f, 256f)
+    // Forge-change: up distance for ship fights
+    public ShuttleNavControl() : base(64f, 512f, 512f)
     {
         RobustXamlLoader.Load(this);
         _shuttles = EntManager.System<SharedShuttleSystem>();
@@ -64,7 +65,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         // Frontier
         _station = EntManager.System<StationSystem>();
-        _blips = EntManager.System<RadarBlipSystem>();//Mono
+        _blips = EntManager.System<RadarBlipsSystem>(); // Forge-change: take BlipsSystem from _Mono
 
         OnMouseEntered += HandleMouseEntered;
         OnMouseExited += HandleMouseExited;
@@ -340,7 +341,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                     }
                 }
 
-                NFAddBlipToList(blipDataList, isOutsideRadarCircle, uiPosition, uiXCentre, uiYCentre, labelColor); // Frontier code
+                NFAddBlipToList(blipDataList, isOutsideRadarCircle, uiPosition, uiXCentre, uiYCentre, labelColor, gUid); // Frontier code
                 // End Frontier: IFF drawing functions
             }
 
@@ -445,6 +446,8 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         NFDrawBlips(handle, blipDataList);
         // End Frontier: draw target
 
+        DrawShields(handle, xform, worldToShuttle); // Forge-change
+
         // If we've set the controlling console, and it's on a different grid
         // to the shuttle itself, then draw an additional marker to help the
         // player determine where they are relative to the shuttle.
@@ -468,44 +471,57 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         handle.DrawLine(origin, origin + angle.ToVec() * ScaledMinimapRadius * 1.42f, Color.Red.WithAlpha(0.1f));
 
         // Get raw blips with grid information
-        var rawBlips = _blips.GetRawBlips();
+        var rawBlips = _blips.GetCurrentBlips(); // Forge-change: GetCurrentBlips>GetRawBlips
 
         // Prepare view bounds for culling
-        var blipViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);
+        var blipViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f); // Forge-change: take BlipsSystem from _Mono
 
         // Draw blips using the same grid-relative transformation approach as docks
         foreach (var blip in rawBlips)
         {
-            Vector2 blipPosInView;
+            var blipPosInView = Vector2.Transform(_transform.ToMapCoordinates(blip.Position).Position, worldToShuttle * shuttleToView);
 
-            // Handle differently based on if there's a grid
-            if (blip.Grid == null)
-            {
-                // For world-space blips without a grid, use standard world transformation
-                blipPosInView = Vector2.Transform(blip.Position, worldToShuttle * shuttleToView);
-            }
-            else if (EntManager.TryGetEntity(blip.Grid, out var gridEntity))
-            {
-                // For grid-relative blips, transform using the grid's transform
-                var gridToWorld = _transform.GetWorldMatrix(gridEntity.Value);
-                var gridToView = gridToWorld * worldToShuttle * shuttleToView;
-
-                // Transform the grid-local position
-                blipPosInView = Vector2.Transform(blip.Position, gridToView);
-            }
-            else
-            {
-                // Skip blips with invalid grid references
-                continue;
-            }
-
+            // Forge-change-start: take BlipsSystem from _Mono
             // Check if this blip is within view bounds before drawing
             if (blipViewBounds.Contains(blipPosInView))
             {
                 DrawBlipShape(handle, blipPosInView, blip.Scale * 3f, blip.Color.WithAlpha(0.8f), blip.Shape);
             }
+            // Forge-change-end
         }
-        // End Frontier
+
+        // Forge-change-start: take BlipsSystem from _Mono
+        // Draw hitscan lines from the radar blips system
+        var hitscanLines = _blips.GetHitscanLines();
+        foreach (var line in hitscanLines)
+        {
+            var startPosInView = Vector2.Transform(line.Start, worldToShuttle * shuttleToView);
+            var endPosInView = Vector2.Transform(line.End, worldToShuttle * shuttleToView);
+
+            // Only draw lines if at least one endpoint is within view
+            if (blipViewBounds.Contains(startPosInView) || blipViewBounds.Contains(endPosInView))
+            {
+                // Draw the line with the specified thickness and color
+                handle.DrawLine(startPosInView, endPosInView, line.Color);
+
+                // For thicker lines, draw multiple lines side by side
+                if (line.Thickness > 1.0f)
+                {
+                    // Calculate perpendicular vector for thickness
+                    var dir = (endPosInView - startPosInView).Normalized();
+                    var perpendicular = new Vector2(-dir.Y, dir.X) * 0.5f;
+
+                    // Draw additional lines for thickness
+                    for (float i = 1; i <= line.Thickness; i += 1.0f)
+                    {
+                        var offset = perpendicular * i;
+                        handle.DrawLine(startPosInView + offset, endPosInView + offset, line.Color);
+                        handle.DrawLine(startPosInView - offset, endPosInView - offset, line.Color);
+                    }
+                }
+            }
+        }
+        // Forge-change-end
     }
 
     private void DrawDocks(DrawingHandleScreen handle, EntityUid uid, Matrix3x2 gridToView)

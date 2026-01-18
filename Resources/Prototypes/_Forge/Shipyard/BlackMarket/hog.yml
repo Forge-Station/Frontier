@@ -39,3 +39,7 @@
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            NFPirate: [ 3, 3 ]
+            NFPirateFirstMate: [ 1, 1 ]

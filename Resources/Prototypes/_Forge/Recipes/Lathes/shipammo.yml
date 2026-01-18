@@ -157,7 +157,69 @@
     Silver: 520
     Plasteel: 260
 
-# NFSD
+# BOMBS
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecLightFighterOrdinanceGPOItem
+  result: LightFighterOrdinanceGPOItem
+  materials:
+    Steel: 3700
+    Plastic: 550
+    Plasteel: 300
+    Plasma: 4250
+    Uranium: 1000
+    Silver: 700
+
+# ROCKET JUMP
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecVanykCartridge
+  result: VanykCartridge
+  materials:
+    Steel: 750
+    Plastic: 350
+    Plasteel: 1200
+    Plasma: 950
+    Uranium: 230
+    Silver: 150
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecVesperaMagazine
+  result: VesperaMagazine
+  materials:
+    Steel: 3800
+    Plastic: 850
+    Plasteel: 1200
+    Plasma: 4550
+    Uranium: 950
+    Silver: 950
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecTovekCartridgeEMPHE
+  result: TovekCartridgeEMPHE
+  materials:
+    Steel: 650
+    Plasteel: 260
+    Uranium: 480
+    Plasma: 350
+    Gold: 620
+    Silver: 420
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: FRecTovekCartridgeAPHE
+  result: TovekCartridgeAPHE
+  materials:
+    Steel: 650
+    Plasteel: 260
+    Uranium: 480
+    Plasma: 350
+    Gold: 620
+    Silver: 420
+
+# region NFSD
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: FRec203mmCartridge
@@ -226,3 +288,57 @@
     Plasteel: 2000
     Plasma: 1880
     Uranium: 1000
+
+# region Pirate
+# overprice ammo
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeAmmoPirate20mm
+  result: ForgeAmmoDrum20mmBase
+  materials:
+    Steel: 1350
+    Plastic: 280
+    Glass: 100
+    Plasteel: 250
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeAmmoPirate57mm
+  result: ForgeMagazine57mmBase
+  materials:
+    Steel: 1620
+    Plastic: 360
+    Glass: 140
+    Plasteel: 360
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgeAmmoPirate90mm
+  result: ForgeMagazine90mm
+  materials:
+    Steel: 2220
+    Plastic: 420
+    Glass: 160
+    Plasteel: 900
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgePirateTovek
+  result: TovekCartridge
+  materials:
+    Steel: 860
+    Uranium: 880
+    Gold: 620
+    Silver: 420
+    Plasteel: 260
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ForgePirate150mm
+  result: 150mmEmpShell
+  materials:
+    Steel: 1060
+    Uranium: 980
+    Gold: 920
+    Silver: 520
+    Plasteel: 260

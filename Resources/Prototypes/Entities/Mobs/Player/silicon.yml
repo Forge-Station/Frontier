@@ -9,22 +9,32 @@
     channels:
     - Binary
     - Common
+    - Traffic # Forge-change
+    - Greeting # Forge-change
     - Command
     - Engineering
     - Medical
+    - Hospital # Forge-change
     - Science
     - Security
+    - Nfsd # Forge-change
+    - MercenaryFM # Forge-change
     - Service
     - Supply
   - type: ActiveRadio
     channels:
     - Binary
     - Common
+    - Traffic # Forge-change
+    - Greeting # Forge-change
     - Command
     - Engineering
     - Medical
+    - Hospital # Forge-change
     - Science
     - Security
+    - Nfsd # Forge-change
+    - MercenaryFM # Forge-change
     - Service
     - Supply
   - type: IgnoreUIRange
@@ -280,6 +290,7 @@
     - HideContextMenu
     - StationAi
     - NoConsoleSound
+    - CanPilot # Forge-change
   - type: StartingMindRole
     mindRole: "MindRoleSiliconBrain"
     silent: true

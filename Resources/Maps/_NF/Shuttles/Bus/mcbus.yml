@@ -34,6 +34,17 @@ entities:
       parent: invalid
     - type: BecomesStation
       id: McBus
+    - type: ProtectedGrid
+      preventArtifactTriggers: true
+      preventEmpEvents: true
+      preventExplosions: true
+      preventFloorPlacement: true
+      preventFloorRemoval: true
+      preventRCDUse: true
+      killHostileMobs: true
+    - type: IFF
+      flags:
+        - HideLabel
     - type: MapGrid
       chunks:
         -1,-1:

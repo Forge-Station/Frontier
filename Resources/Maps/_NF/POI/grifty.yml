@@ -6,7 +6,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 08/04/2025 17:34:24
-  entityCount: 899
+  entityCount: 898
 maps: []
 grids:
 - 1
@@ -2583,14 +2583,6 @@ entities:
         - 0
         - 0
         - 0
-- proto: ClothingUniformJumpsuitST
-  entities:
-  - uid: 899
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -5.460486,2.551206
-      parent: 1
 - proto: ComputerSolarControl
   entities:
   - uid: 381

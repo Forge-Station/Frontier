@@ -95,8 +95,8 @@
     contents:
       - id: MedicatedSuture
       - id: RegenerativeMesh
-      - id: SyringeEphedrine
-      - id: SyringeSaline
+      - id: EphedrineAutoInjector  # Forge-Change: - id: SyringeEphedrine
+      - id: HemostasisAutoInjector # Forge-Change: - id: SyringeSaline
       - id: BruteAutoInjector
       - id: BurnAutoInjector
 

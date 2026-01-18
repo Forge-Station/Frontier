@@ -342,10 +342,11 @@
 
 # region Departments
 - type: entity
-  id: LockerWallColorHydroponicsFilled
-  suffix: Filled, Frontier
-  parent: [LockerWallColorHydroponics, LockerBotanistFilled]
-  components: # fixes sprite errors from parenting
+  id: LockerWallColorHydroponicsEmpty
+  suffix: Empty, Frontier
+  parent: [LockerWallColorHydroponics, BaseStructureWallmount]
+  name: botanist wall locker
+  components:
   - type: EntityStorageVisuals
     stateBaseClosed: base
     stateDoorOpen: open
@@ -366,15 +367,23 @@
         ents: []
 
 - type: entity
-  id: LockerWallColorHydroponicsEmpty
-  suffix: Empty, Frontier
-  parent:
-  - LockerWallColorHydroponics
-  - BaseStructureWallmount
-  name: botanist wall locker
-  components: # fixes sprite errors from parenting
-  - type: EntityStorageVisuals
-    stateBaseClosed: base
-    stateDoorOpen: open
-    stateDoorClosed: door
+  id: LockerWallColorHydroponicsFilled
+  suffix: Filled, Frontier
+  parent: LockerWallColorHydroponicsEmpty
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: FillLockerBotanist
+
+- type: entity
+  parent: LockerWallColorPilot
+  id: LockerWallColorPilotFilled
+  suffix: Filled, Frontier
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: NFStorageFillGearPilot
+
 # endregion

@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/14/2025 13:52:52
-  entityCount: 497
+  time: 01/17/2026 11:42:28
+  entityCount: 504
 maps: []
 grids:
 - 1
@@ -304,78 +304,80 @@ entities:
             0: 8183
           -1,0:
             0: 49391
-            1: 4096
+            2: 4096
           0,1:
             0: 13095
-            2: 128
+            1: 128
           -1,1:
             0: 34828
-            2: 32
+            1: 32
           0,2:
             0: 13107
-            1: 32768
+            2: 32768
           -1,2:
             0: 34952
-            1: 8192
+            2: 8192
           0,3:
             0: 3
-            2: 72
+            1: 72
           -1,3:
             0: 8
-            2: 66
+            1: 66
           1,0:
             0: 15
-            1: 4608
-            2: 3072
+            2: 4608
+            1: 52224
           1,-1:
             0: 60928
-            2: 9
+            1: 15
           2,0:
             0: 1
-            2: 4352
-            1: 8192
+            1: 4352
+            2: 8192
+          1,1:
+            1: 8
+          2,1:
+            1: 4625
+            2: 2
           2,-1:
             0: 4352
-            1: 1
-          2,1:
-            2: 4625
-            1: 2
+            2: 1
           -1,-1:
             0: 3820
-            2: 1
+            1: 1
           0,-2:
-            2: 32768
+            1: 32768
           1,-2:
-            1: 2048
-            2: 32768
+            2: 2048
+            1: 32768
           2,-2:
-            1: 4352
-            2: 512
+            2: 4352
+            1: 512
           -3,0:
             0: 8
-            1: 32768
+            2: 32768
           -3,-1:
             0: 34816
           -2,0:
             0: 47
-            2: 5888
-            1: 2048
-          -3,1:
-            1: 8
+            1: 30464
             2: 2048
+          -3,1:
+            2: 8
+            1: 2048
           -2,1:
-            2: 4113
+            1: 4115
           -2,-1:
             0: 65312
-            1: 1
-            2: 2
+            2: 1
+            1: 14
           -3,-2:
-            2: 2048
+            1: 2048
           -2,-2:
-            1: 4864
-            2: 8192
+            2: 4864
+            1: 8192
           -1,-2:
-            2: 8192
+            1: 8192
         uniqueMixes:
         - volume: 2500
           temperature: 293.15
@@ -393,7 +395,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          temperature: 293.15
+          immutable: True
           moles:
           - 0
           - 0
@@ -408,7 +410,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          immutable: True
+          temperature: 293.15
           moles:
           - 0
           - 0
@@ -499,12 +501,6 @@ entities:
         - - AmmoLoaderLoad
           - SpaceArtilleryLoad
         492:
-        - - AmmoLoaderLoad
-          - SpaceArtilleryLoad
-        485:
-        - - AmmoLoaderLoad
-          - SpaceArtilleryLoad
-        484:
         - - AmmoLoaderLoad
           - SpaceArtilleryLoad
         497:
@@ -836,6 +832,26 @@ entities:
     components:
     - type: Transform
       pos: 6.5,3.5
+      parent: 1
+  - uid: 498
+    components:
+    - type: Transform
+      pos: -5.5,-3.5
+      parent: 1
+  - uid: 499
+    components:
+    - type: Transform
+      pos: -4.5,-3.5
+      parent: 1
+  - uid: 500
+    components:
+    - type: Transform
+      pos: 5.5,-3.5
+      parent: 1
+  - uid: 501
+    components:
+    - type: Transform
+      pos: 6.5,-3.5
       parent: 1
 - proto: Bed
   entities:
@@ -1580,7 +1596,12 @@ entities:
   - uid: 479
     components:
     - type: Transform
-      pos: 2.964276,1.5728338
+      pos: -1.5257444,3.86124
+      parent: 1
+  - uid: 484
+    components:
+    - type: Transform
+      pos: -1.5257444,3.595615
       parent: 1
 - proto: GasMixerOnFlipped
   entities:
@@ -2227,17 +2248,19 @@ entities:
     - type: Transform
       pos: -1.5,11.5
       parent: 1
-- proto: GunneryServerLow
+- proto: GunneryServerMedium
   entities:
-  - uid: 164
+  - uid: 478
     components:
     - type: Transform
       pos: 7.5,-1.5
       parent: 1
     - type: Battery
-      startingCharge: 0
+      startingCharge: 15.001557
     - type: ApcPowerReceiver
-      powerLoad: 5
+      powerLoad: 10
+    - type: ApcPowerReceiverBattery
+      enabled: True
 - proto: GyroscopeNfsd
   entities:
   - uid: 373
@@ -2249,6 +2272,38 @@ entities:
     components:
     - type: Transform
       pos: 8.5,-3.5
+      parent: 1
+- proto: LightFighterOrdinanceGPOItem
+  entities:
+  - uid: 485
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.382416,-1.4925064
+      parent: 1
+  - uid: 490
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.241791,-1.4925064
+      parent: 1
+  - uid: 502
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.523041,-1.4768814
+      parent: 1
+  - uid: 503
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.679291,-1.5081314
+      parent: 1
+  - uid: 504
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.788666,-1.4925064
       parent: 1
 - proto: LockableButtonBrig
   entities:
@@ -2884,20 +2939,6 @@ entities:
     - type: Transform
       pos: 4.5,3.5
       parent: 1
-- proto: TovekCartridge
-  entities:
-  - uid: 478
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5520904,1.7878873
-      parent: 1
-  - uid: 490
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.718624,1.923822
-      parent: 1
 - proto: VendingMachineTankDispenserEVA
   entities:
   - uid: 193
@@ -3457,24 +3498,15 @@ entities:
       parent: 1
 - proto: WeaponTurretLightMunitionsBay
   entities:
+  - uid: 164
+    components:
+    - type: Transform
+      pos: 5.5,-3.5
+      parent: 1
   - uid: 497
     components:
     - type: Transform
       pos: -4.5,-3.5
-      parent: 1
-- proto: WeaponTurretTovek
-  entities:
-  - uid: 484
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -5.5,3.5
-      parent: 1
-  - uid: 485
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,3.5
       parent: 1
 - proto: WindoorSecureSecurityLocked
   entities:

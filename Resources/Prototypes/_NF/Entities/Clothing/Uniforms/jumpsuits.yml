@@ -1,7 +1,7 @@
 - type: entity
   id: ClothingUniformJumpsuitArcadia
   name: arcadia jumpsuit
-  parent: [ ClothingUniformBase, BaseC3ContrabandNoValue, ContrabandClothing ]
+  parent: [ ClothingUniformBase, BaseC1Contraband ] # Forge-Change: T1<T3
   description: A jumpsuit produced by Arcadia Industries. Designed to reduce chaffing between the legs for the comfort of skin, slime, scales, fluff, and wood.
   components:
   - type: Sprite

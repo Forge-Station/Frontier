@@ -3,7 +3,7 @@
   name: department-Syndicate
   description: department-Syndicate-description
   color: "#DE3A3A"
-  weight: -20 # accounted for in jobs
+  weight: -10 # accounted for in jobs
   roles:
   - Commander
   - MedSyn
@@ -18,7 +18,7 @@
   name: department-medical
   description: department-medical-description
   color: "#74c3f7"
-  weight: -20 # accounted for in jobs
+  weight: 70 # accounted for in jobs
   roles:
   - DirectorOfCare
   - paraMedical

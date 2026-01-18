@@ -133,7 +133,10 @@ namespace Content.Server.Access.Systems
             _cardSystem.TryChangeJobIcon(uid, jobIcon, idCard);
 
             if (TryFindJobProtoFromIcon(jobIcon, out var job))
+            {
                 _cardSystem.TryChangeJobDepartment(uid, job, idCard);
+                _cardSystem.TryChangeJob(uid, job); // Corvax-Forge: Fix IdCardComponent.JobPrototype property
+            }
         }
 
         private bool TryFindJobProtoFromIcon(JobIconPrototype jobIcon, [NotNullWhen(true)] out JobPrototype? job)

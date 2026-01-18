@@ -931,8 +931,6 @@ entities:
       pos: -3.5,-2.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
       - 501
@@ -3626,8 +3624,6 @@ entities:
       pos: -1.5,-0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 501
   - uid: 508
@@ -3636,8 +3632,6 @@ entities:
       pos: 0.5,-1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 500
       - 501
@@ -3647,8 +3641,6 @@ entities:
       pos: -3.5,-3.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 501
   - uid: 510

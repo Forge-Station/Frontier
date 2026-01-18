@@ -1,12 +1,11 @@
-
-#- type: pirateBounty #CorvaxFrontier
-#  id: PirateBountyMail
-#  reward: 3
-#  description: pirate-bounty-description-generic
-#  entries:
-#  - name: pirate-bounty-item-mail
-#    amount: 3
-#    id: Mail
+- type: pirateBounty
+  id: PirateBountyMail
+  reward: 3
+  description: pirate-bounty-description-generic
+  entries:
+  - name: pirate-bounty-item-mail
+    amount: 3
+    id: Mail
 
 - type: pirateBounty
   id: PirateBountyPDA
@@ -158,14 +157,14 @@
     amount: 1
     id: ClothingOuterHardsuitRd
 
-#- type: pirateBounty #CorvaxFrontier
-#  id: PirateBountyMK58
-#  reward: 5
-#  description: pirate-bounty-description-generic
-#  entries:
-#  - name: pirate-bounty-item-mk58
-#    amount: 2
-#    id: WeaponPistolMk58
+- type: pirateBounty #CorvaxFrontier
+  id: PirateBountyMK58
+  reward: 5
+  description: pirate-bounty-description-generic
+  entries:
+  - name: pirate-bounty-item-mk58
+    amount: 2
+    id: WeaponPistolMk58
 
 - type: pirateBounty
   id: PirateBountyArtifactAnalyzer
@@ -176,15 +175,15 @@
     amount: 2
     id: ArtifactAnalyzerMachineCircuitboard
 
-#- type: pirateBounty #CorvaxFrontier
-#  id: PirateBountyHotplate
-#  reward: 3
-#  description: pirate-bounty-description-generic
-#  spawnChest: false
-#  entries:
-#  - name: pirate-bounty-item-hotplate
-#    amount: 1
-#    id: ChemistryHotplate
+- type: pirateBounty #CorvaxFrontier
+  id: PirateBountyHotplate
+  reward: 3
+  description: pirate-bounty-description-generic
+  spawnChest: false
+  entries:
+  - name: pirate-bounty-item-hotplate
+    amount: 1
+    id: ChemistryHotplate
 
 - type: pirateBounty
   id: PirateBountyDeepFryer
@@ -206,14 +205,14 @@
 #     amount: 3
 #     id: EncryptionKeyCommon
 
-#- type: pirateBounty #CorvaxFrontier
-#  id: PirateBountyMedicalFabBoard
-#  reward: 3
-#  description: pirate-bounty-description-generic
-#  entries:
-#  - name: pirate-bounty-item-medicalfabboard
-#    amount: 1
-#    id: MedicalTechFabCircuitboard
+- type: pirateBounty #CorvaxFrontier
+  id: PirateBountyMedicalFabBoard
+  reward: 2
+  description: pirate-bounty-description-generic
+  entries:
+  - name: pirate-bounty-item-medicalfabboard
+    amount: 1
+    id: MedicalTechFabCircuitboard
 
 - type: pirateBounty
   id: PirateBountyHypo

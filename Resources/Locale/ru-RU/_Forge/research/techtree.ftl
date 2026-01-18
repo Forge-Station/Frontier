@@ -11,6 +11,11 @@ forge-research-technology-shipammo57apcbc = Бронебойная сила 57-�
 forge-research-technology-shipammo20aphe = Каморные 20-ти миллиметровые
 forge-research-technology-shipammo30aphe = Каморные 30-ти миллиметровые
 forge-research-technology-shipammo57aphe = Каморные 57-ми миллиметровые
+forge-research-technology-bombmerc = Неуправляемая 50-ти килограммовая бомба
+forge-research-technology-vesperamagazine = Разгон до 26 снарядов свободы
+forge-research-technology-vanykcartridge = Космическая 155мм ракетка
+forge-research-technology-tovek-emphe = Взрывоопасный ЭМИ
+forge-research-technology-tovek-aphe = Разрывная 250мм ракета
 
 # NFSD research
 ent-ForgeRnDNFSDServer = сервер ДСБФ
@@ -32,3 +37,8 @@ forge-research-technology-shipammo255 = Весомый аргумент
 forge-research-technology-shipammo203hesh = Взрывной аргумент
 forge-research-technology-shipammo220hesh = Сотрясающий аргумент
 forge-research-technology-shipammo255hesh = Умопомрочительный аргумент
+
+forge-research-technology-nfsd-nightvision = Даже во тьме
+forge-research-technology-nfsd-thermalvision = Даже сквозь стены
+forge-research-technology-nfsd-nightthermalvision = СБ видит тебя
+forge-research-technology-nfsd-advtools = Продвинутые инструменты
