@@ -1,6 +1,6 @@
 # Author Info
-# GitHub: https://github.com/Autsaider-IM
-# Discord: autsaider_m
+# GitHub: -
+# Discord: urkplay
 # License: CC-BY-NC-ND-4.0
 # CorvaxForge
 
@@ -11,16 +11,16 @@
 # Notes:
 #
 - type: vessel
-  id: Cvasar
+  id: StormS
   parent: BaseVessel
-  name: NSF Квазар
-  description: Шаттл перехватчик Квазар. Произведен частной военно-производственной компаний Vitezstvi по спец. заказу НТ. Рекомендуемый состав команды 1-2 человека.
-  price: 42700
+  name: NSF Гроза
+  description: Шаттл перехватчик Гроза. Рекомендуемый состав команды 1-2 человека.
+  price: 27550
   group: Security
   category: Small
   access: Security
   mapchecker_group_override: Security
-  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/cvasar.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/storm.yml
   class:
   - Fighter
   addComponents:
@@ -28,16 +28,16 @@
     faction: NFSD
 
 - type: gameMap
-  id: Cvasar
-  mapName: 'NSF Квазар'
-  mapPath: /Maps/_Forge/Shuttles/Nfsd/cvasar.yml
+  id: StormS
+  mapName: 'NSF Гроза'
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/storm.yml
   minPlayers: 0
   stations:
-    Cvasar:
+    StormS:
       stationProto: StandardFrontierSecurityVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Квазар {1}'
+          mapNameTemplate: 'Гроза {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

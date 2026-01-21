@@ -8,38 +8,38 @@
 
 # Shuttle Notes:
 #
-- type: vessel
-  id: Infiltrator
-  parent: BaseVessel
-  name: Лазутчик
-  description: Среднегабаритный экспедиционный шаттл синдиката. Рекомендованный состав команды 2-5 человек.
-  price: 119500
-  category: Medium
-  group: Syndicate
-  shuttlePath: /Maps/_Forge/Shuttles/Syndicate/infiltrator.yml
-  addComponents:
-  - type: IFF
-    color: "#850d09"
-    flags: [HideLabel]
-  - type: ShuttleFaction
-    faction: Syndicate
-  guidebookPage: Null
-  class:
-  - Syndicate
+# - type: vessel
+#   id: Infiltrator
+#   parent: BaseVessel
+#   name: Лазутчик
+#   description: Среднегабаритный экспедиционный шаттл синдиката. Рекомендованный состав команды 2-5 человек.
+#   price: 119500
+#   category: Medium
+#   group: Syndicate
+#   shuttlePath: /Maps/_Forge/Shuttles/Syndicate/infiltrator.yml
+#   addComponents:
+#   - type: IFF
+#     color: "#850d09"
+#     flags: [HideLabel]
+#   - type: ShuttleFaction
+#     faction: Syndicate
+#   guidebookPage: Null
+#   class:
+#   - Syndicate
 
-- type: gameMap
-  id: Infiltrator
-  mapName: 'Лазутчик'
-  mapPath: /Maps/_Forge/Shuttles/Syndicate/infiltrator.yml
-  minPlayers: 0
-  stations:
-    Infiltrator:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Лазутчик {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs: {}
+# - type: gameMap
+#   id: Infiltrator
+#   mapName: 'Лазутчик'
+#   mapPath: /Maps/_Forge/Shuttles/Syndicate/infiltrator.yml
+#   minPlayers: 0
+#   stations:
+#     Infiltrator:
+#       stationProto: StandardFrontierVessel
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: 'Лазутчик {1}'
+#           nameGenerator:
+#             !type:NanotrasenNameGenerator
+#             prefixCreator: '14'
+#         - type: StationJobs
+#           availableJobs: {}

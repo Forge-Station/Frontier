@@ -16,11 +16,11 @@
   name: TL Крыло
   description: Шаттл бомбардировщик Крыло. Произведено частной военно-производственной компаний TechnicLogistic по спец. заказу НТ. Рекомендуемый состав команды 1-2 человека.
   price: 32500
-  group: Security
+  group: Custom
   category: Small
-  access: Security
-  mapchecker_group_override: Security
   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/wing.yml
+  class:
+  - Fighter
   addComponents:
   - type: ShuttleFaction
     faction: NFSD

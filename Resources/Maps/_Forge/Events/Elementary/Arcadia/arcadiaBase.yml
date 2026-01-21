@@ -8510,13 +8510,6 @@ entities:
           - 1835
           - 1836
           - 1834
-- proto: ShieldGeneratorPOI
-  entities:
-  - uid: 322
-    components:
-    - type: Transform
-      pos: -23.5,18.5
-      parent: 174
 - proto: SignDangerMed
   entities:
   - uid: 357

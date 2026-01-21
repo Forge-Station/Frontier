@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 01/17/2026 04:20:12
-  entityCount: 2923
+  time: 01/20/2026 11:31:05
+  entityCount: 2939
 maps: []
 grids:
 - 2
@@ -2313,9 +2313,6 @@ entities:
       parent: 2
     - type: DeviceLinkSource
       linkedPorts:
-        529:
-        - - AmmoLoaderLoad
-          - SpaceArtilleryLoad
         703:
         - - AmmoLoaderLoad
           - SpaceArtilleryLoad
@@ -2329,9 +2326,6 @@ entities:
         632:
         - - AmmoLoaderLoad
           - SpaceArtilleryLoad
-        530:
-        - - AmmoLoaderLoad
-          - SpaceArtilleryLoad
   - uid: 1482
     components:
     - type: Transform
@@ -2339,10 +2333,7 @@ entities:
       parent: 2
     - type: DeviceLinkSource
       linkedPorts:
-        704:
-        - - AmmoLoaderLoad
-          - SpaceArtilleryLoad
-        905:
+        530:
         - - AmmoLoaderLoad
           - SpaceArtilleryLoad
         730:
@@ -2358,10 +2349,7 @@ entities:
         892:
         - - AmmoLoaderLoad
           - SpaceArtilleryLoad
-        636:
-        - - AmmoLoaderLoad
-          - SpaceArtilleryLoad
-        533:
+        529:
         - - AmmoLoaderLoad
           - SpaceArtilleryLoad
 - proto: APCBasic
@@ -6085,6 +6073,66 @@ entities:
     components:
     - type: Transform
       pos: -0.5,-2.5
+      parent: 2
+  - uid: 2928
+    components:
+    - type: Transform
+      pos: -3.5,21.5
+      parent: 2
+  - uid: 2929
+    components:
+    - type: Transform
+      pos: -2.5,21.5
+      parent: 2
+  - uid: 2930
+    components:
+    - type: Transform
+      pos: -1.5,21.5
+      parent: 2
+  - uid: 2931
+    components:
+    - type: Transform
+      pos: -0.5,21.5
+      parent: 2
+  - uid: 2932
+    components:
+    - type: Transform
+      pos: 0.5,21.5
+      parent: 2
+  - uid: 2933
+    components:
+    - type: Transform
+      pos: 1.5,21.5
+      parent: 2
+  - uid: 2934
+    components:
+    - type: Transform
+      pos: 2.5,21.5
+      parent: 2
+  - uid: 2935
+    components:
+    - type: Transform
+      pos: 3.5,21.5
+      parent: 2
+  - uid: 2936
+    components:
+    - type: Transform
+      pos: 4.5,21.5
+      parent: 2
+  - uid: 2937
+    components:
+    - type: Transform
+      pos: 5.5,21.5
+      parent: 2
+  - uid: 2938
+    components:
+    - type: Transform
+      pos: 6.5,21.5
+      parent: 2
+  - uid: 2939
+    components:
+    - type: Transform
+      pos: 6.5,20.5
       parent: 2
 - proto: CableMV
   entities:
@@ -15850,6 +15898,29 @@ entities:
       rot: 3.141592653589793 rad
       pos: 1.5,3.5
       parent: 2
+  - uid: 2924
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -9.5,-0.5
+      parent: 2
+  - uid: 2925
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,-0.5
+      parent: 2
+  - uid: 2926
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -9.5,-2.5
+      parent: 2
+  - uid: 2927
+    components:
+    - type: Transform
+      pos: 6.5,-2.5
+      parent: 2
 - proto: WallPlastitaniumShuttle
   entities:
   - uid: 1
@@ -18974,6 +19045,18 @@ entities:
       parent: 2
 - proto: WeaponLaserTurretL1Phalanx
   entities:
+  - uid: 704
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,41.5
+      parent: 2
+  - uid: 905
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -9.5,41.5
+      parent: 2
   - uid: 1178
     components:
     - type: Transform
@@ -19012,20 +19095,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -11.5,31.5
       parent: 2
-- proto: WeaponTurretBofors
-  entities:
-  - uid: 636
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -9.5,38.5
-      parent: 2
-  - uid: 905
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.5,38.5
-      parent: 2
 - proto: WeaponTurretHades
   entities:
   - uid: 943
@@ -19060,6 +19129,20 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 5.5,-1.5
       parent: 2
+- proto: WeaponTurretKargil
+  entities:
+  - uid: 529
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -9.5,38.5
+      parent: 2
+  - uid: 530
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,38.5
+      parent: 2
 - proto: WeaponTurretM220
   entities:
   - uid: 1288
@@ -19074,34 +19157,20 @@ entities:
       rot: 3.141592653589793 rad
       pos: -2.5,50.5
       parent: 2
-- proto: WeaponTurretTarnyxReload
+- proto: WeaponTurretType35
   entities:
-  - uid: 529
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -10.5,1.5
-      parent: 2
-  - uid: 530
+  - uid: 533
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 7.5,1.5
       parent: 2
-  - uid: 533
+  - uid: 636
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -9.5,41.5
+      pos: -10.5,1.5
       parent: 2
-  - uid: 704
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.5,41.5
-      parent: 2
-- proto: WeaponTurretType35
-  entities:
   - uid: 1298
     components:
     - type: Transform

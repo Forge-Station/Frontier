@@ -900,52 +900,52 @@
 
 #region Hoverbikes
 # Corvax Frontier
-#- type: entity
-#  parent: BaseNFFlatpack
-#  id: HoverbikeFlatpack
-#  name: hoverbike flatpack
-#  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
-#  components:
-#  - type: Flatpack
-#    entity: NFVehicleHoverbikeKeys
-#  - type: StaticPrice
-#    price: 2000
-#  - type: Sprite
-#    layers:
-#    - state: command_airlock
+- type: entity
+  parent: BaseNFFlatpack
+  id: HoverbikeFlatpack
+  name: hoverbike flatpack
+  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
+  components:
+  - type: Flatpack
+    entity: NFVehicleHoverbikeKeys
+  - type: StaticPrice
+    price: 2000
+  - type: Sprite
+    layers:
+    - state: command_airlock
 
-#- type: entity
-#  parent: HoverbikeFlatpack
-#  id: HoverbikeMailcarrierFlatpack
-#  name: mail carrier hoverbike flatpack
-#  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
-#  components:
-#  - type: Flatpack
-#    entity: VehicleHoverbikeMailcarrierKey
-#  - type: StaticPrice
-#    price: 75
+- type: entity
+  parent: HoverbikeFlatpack
+  id: HoverbikeMailcarrierFlatpack
+  name: mail carrier hoverbike flatpack
+  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
+  components:
+  - type: Flatpack
+    entity: VehicleHoverbikeMailcarrierKey
+  - type: StaticPrice
+    price: 75
 
-#- type: entity
-#  parent: [HoverbikeFlatpack, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
-#  id: HoverbikeNfsdFlatpack
-#  name: NFSD hoverbike flatpack
-#  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
-#  components:
-#  - type: Flatpack
-#    entity: NFVehicleHoverbikeNfsdKey
-#  - type: StaticPrice
-#    price: 750
+- type: entity
+  parent: [HoverbikeFlatpack, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
+  id: HoverbikeNfsdFlatpack
+  name: NFSD hoverbike flatpack
+  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
+  components:
+  - type: Flatpack
+    entity: NFVehicleHoverbikeNfsdKey
+  - type: StaticPrice
+    price: 750
 
-#- type: entity
-#  parent: [HoverbikeFlatpack, BaseC3Contraband] #Corvax-Frontier КБ
-#  id: HoverbikeSyndicateFlatpack
-#  name: syndicate hoverbike flatpack
-#  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
-#  components:
-#  - type: Flatpack
-#    entity: VehicleHoverbikeSyndicateKey
-#  - type: StaticPrice
-#    price: 750
+- type: entity
+  parent: [HoverbikeFlatpack, BaseC3Contraband] #Corvax-Frontier КБ
+  id: HoverbikeSyndicateFlatpack
+  name: syndicate hoverbike flatpack
+  description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
+  components:
+  - type: Flatpack
+    entity: VehicleHoverbikeSyndicateKey
+  - type: StaticPrice
+    price: 750
 
 - type: entity
   parent: BaseNFFlatpack

@@ -8707,13 +8707,6 @@ entities:
       parent: 1
     - type: Lock
       locked: False
-- proto: ShieldGeneratorPOI
-  entities:
-  - uid: 1764
-    components:
-    - type: Transform
-      pos: 48.5,26.5
-      parent: 1
 - proto: Shovel
   entities:
   - uid: 824

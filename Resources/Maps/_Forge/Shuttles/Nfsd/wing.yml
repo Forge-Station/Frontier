@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 01/15/2026 11:47:19
-  entityCount: 348
+  time: 01/19/2026 02:00:51
+  entityCount: 337
 maps: []
 grids:
 - 1
@@ -341,25 +341,6 @@ entities:
     - type: ContainedSolution
       containerName: food
       container: 247
-  - uid: 258
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - glass
-    - type: Transform
-      parent: 257
-    - type: Solution
-      solution:
-        maxVol: 10
-        name: glass
-        reagents:
-        - data: []
-          ReagentId: Silicon
-          Quantity: 10
-    - type: ContainedSolution
-      containerName: glass
-      container: 257
   - uid: 265
     mapInit: true
     paused: true
@@ -401,31 +382,6 @@ entities:
     - type: ContainedSolution
       containerName: glass
       container: 266
-  - uid: 274
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - hvcable
-    - type: Transform
-      parent: 273
-    - type: Solution
-      solution:
-        maxVol: 6
-        name: hvcable
-        reagents:
-        - data: []
-          ReagentId: Iron
-          Quantity: 3
-        - data: []
-          ReagentId: Copper
-          Quantity: 2
-        - data: []
-          ReagentId: Carbon
-          Quantity: 1
-    - type: ContainedSolution
-      containerName: hvcable
-      container: 273
   - uid: 291
     mapInit: true
     paused: true
@@ -1389,6 +1345,21 @@ entities:
       parent: 1
 - proto: CableApcExtension
   entities:
+  - uid: 62
+    components:
+    - type: Transform
+      pos: -1.5,3.5
+      parent: 1
+  - uid: 63
+    components:
+    - type: Transform
+      pos: 2.5,4.5
+      parent: 1
+  - uid: 90
+    components:
+    - type: Transform
+      pos: 3.5,4.5
+      parent: 1
   - uid: 166
     mapInit: true
     paused: true
@@ -1603,26 +1574,6 @@ entities:
       containers:
         solution@hvcable: !type:ContainerSlot
           ent: 246
-  - uid: 273
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 93
-    - type: Stack
-      count: 5
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - hvcable
-    - type: EmitSoundOnCollide
-      nextSound: -698.6560501
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@hvcable: !type:ContainerSlot
-          ent: 274
 - proto: CableMV
   entities:
   - uid: 158
@@ -1723,16 +1674,6 @@ entities:
       nextSound: -698.6560501
     - type: Physics
       canCollide: False
-  - uid: 261
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 90
-    - type: EmitSoundOnCollide
-      nextSound: -698.6560501
-    - type: Physics
-      canCollide: False
   - uid: 268
     mapInit: true
     paused: true
@@ -1769,16 +1710,6 @@ entities:
     components:
     - type: Transform
       parent: 97
-    - type: EmitSoundOnCollide
-      nextSound: -698.6560501
-    - type: Physics
-      canCollide: False
-  - uid: 275
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 93
     - type: EmitSoundOnCollide
       nextSound: -698.6560501
     - type: Physics
@@ -3552,88 +3483,25 @@ entities:
       nextSound: -698.6560501
     - type: Physics
       canCollide: False
-- proto: GyroscopeNfsd
+- proto: GunneryServerLow
   entities:
-  - uid: 90
-    mapInit: true
-    paused: true
+  - uid: 31
     components:
     - type: Transform
       pos: -0.5,3.5
       parent: 1
-    - type: Thruster
-      nextFire: 1.2104213
-    - type: PointLight
-      enabled: True
-    - type: ContainerContainer
-      containers:
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 256
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 257
-          - 259
-          - 260
-          - 261
-- proto: GyroscopeNfsdMachineCircuitboard
+    - type: Battery
+      startingCharge: 0
+    - type: ApcPowerReceiver
+      powerLoad: 5
+- proto: GyroscopeNfsd
   entities:
-  - uid: 256
-    mapInit: true
-    paused: true
+  - uid: 61
     components:
     - type: Transform
-      parent: 90
-    - type: EmitSoundOnCollide
-      nextSound: -698.6560501
-    - type: Physics
-      canCollide: False
-- proto: LightFighterOrdinanceGPOItem
-  entities:
-  - uid: 56
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 55
-    - type: EmitSoundOnCollide
-      nextSound: -686.4227824
-    - type: Physics
-      canCollide: False
-  - uid: 57
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 55
-    - type: EmitSoundOnCollide
-      nextSound: -686.4227824
-    - type: Physics
-      canCollide: False
-  - uid: 62
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 61
-    - type: EmitSoundOnCollide
-      nextSound: -686.4227824
-    - type: Physics
-      canCollide: False
-  - uid: 63
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 61
-    - type: EmitSoundOnCollide
-      nextSound: -686.4227824
-    - type: Physics
-      canCollide: False
+      rot: -1.5707963267948966 rad
+      pos: 5.5,5.5
+      parent: 1
 - proto: LightTube
   entities:
   - uid: 276
@@ -3813,26 +3681,6 @@ entities:
       canCollide: False
 - proto: MicroManipulatorStockPart
   entities:
-  - uid: 259
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 90
-    - type: EmitSoundOnCollide
-      nextSound: -698.6560501
-    - type: Physics
-      canCollide: False
-  - uid: 260
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 90
-    - type: EmitSoundOnCollide
-      nextSound: -698.6560501
-    - type: Physics
-      canCollide: False
   - uid: 289
     mapInit: true
     paused: true
@@ -3936,59 +3784,13 @@ entities:
           showEnts: False
           occludes: True
           ent: 341
-- proto: PortableGeneratorPacmanMachineCircuitboard
-  entities:
-  - uid: 272
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 93
-    - type: EmitSoundOnCollide
-      nextSound: -698.6560501
-    - type: Physics
-      canCollide: False
 - proto: PortableGeneratorPacmanShuttle
   entities:
-  - uid: 93
-    mapInit: true
-    paused: true
+  - uid: 55
     components:
     - type: Transform
       pos: 1.5,3.5
       parent: 1
-    - type: MaterialStorage
-      storage:
-        FuelGradePlasma: 463
-    - type: SolidFuelGeneratorAdapter
-      fractionalMaterial: 0.33905903
-    - type: PowerSupplier
-      supplyRampPosition: 15000
-      supplyRate: 15000
-    - type: MaterialStorageMagnetPickup
-      nextScan: 14718.8664714
-    - type: UseDelay
-      delays:
-        default:
-          endTime: 12.2332677
-          startTime: 0
-          length: 1
-    - type: DeviceNetwork
-      address: 429F-914C
-      receiveFrequency: 1280
-    - type: ContainerContainer
-      containers:
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 272
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 273
-          - 275
 - proto: PosterContrabandTrueEnemy
   entities:
   - uid: 137
@@ -4287,26 +4089,6 @@ entities:
       receiveFrequency: 1173
 - proto: SheetGlass1
   entities:
-  - uid: 257
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 90
-    - type: Stack
-      count: 2
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - glass
-    - type: EmitSoundOnCollide
-      nextSound: -698.6560501
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@glass: !type:ContainerSlot
-          ent: 258
   - uid: 266
     mapInit: true
     paused: true
@@ -5761,78 +5543,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 0.5,5.5
       parent: 1
-- proto: WeaponTurretLightMunitionsBay
-  entities:
-  - uid: 55
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,11.5
-      parent: 1
-    - type: Gun
-      nextFire: -686.4227824
-    - type: DeviceLinkSink
-      ports:
-      - SpaceArtilleryFire
-      - SpaceArtilleryLoad
-      - Trigger
-      - Toggle
-      - On
-      - Off
-    - type: DeviceNetwork
-      address: 6BCA-AC9B
-      receiveFrequency: 1280
-    - type: FireControllable
-      nextFire: -698.6560501
-    - type: BallisticAmmoProvider
-      entities:
-      - 56
-      - 57
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 56
-          - 57
-  - uid: 61
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,11.5
-      parent: 1
-    - type: Gun
-      nextFire: -686.4227824
-    - type: DeviceLinkSink
-      ports:
-      - SpaceArtilleryFire
-      - SpaceArtilleryLoad
-      - Trigger
-      - Toggle
-      - On
-      - Off
-    - type: DeviceNetwork
-      address: 6A80-BB10
-      receiveFrequency: 1280
-    - type: FireControllable
-      nextFire: -698.6560501
-    - type: BallisticAmmoProvider
-      entities:
-      - 62
-      - 63
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 62
-          - 63
 - proto: WeaponTurretM220
   entities:
   - uid: 23
@@ -5852,23 +5562,20 @@ entities:
       nextFire: -698.6560501
     - type: ThermalSignature
       storedHeat: 1.6160249
-  - uid: 31
-    mapInit: true
-    paused: true
+- proto: WeaponTurretType35
+  entities:
+  - uid: 56
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 5.5,5.5
+      rot: 3.141592653589793 rad
+      pos: 1.5,11.5
       parent: 1
-    - type: Gun
-      nextFire: -686.4227824
-    - type: DeviceNetwork
-      address: 30CB-2206
-      receiveFrequency: 1280
-    - type: FireControllable
-      nextFire: -698.6560501
-    - type: ThermalSignature
-      storedHeat: 1.6160249
+  - uid: 57
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,11.5
+      parent: 1
 - proto: WindowFrostedDirectional
   entities:
   - uid: 85

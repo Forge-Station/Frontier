@@ -1,5 +1,5 @@
 # Author Info
-# GitHub: -
+# GitHub: https://github.com/Autsaider-IM
 # Discord: autsaider_m
 # License: CC-BY-NC-ND-4.0
 # CorvaxForge
@@ -16,11 +16,11 @@
   name: TL Варриор MK2
   description: Шаттл перехватчик Варриор. Произведено частной военно-производственной компаний TechnicLogistic по спец. заказу НТ. Рекомендуемый состав команды 1-2 человека.
   price: 29500
-  group: Security
+  group: Custom
   category: Small
-  access: Security
-  mapchecker_group_override: Security
   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/warrior2.yml
+  class:
+  - Fighter
   addComponents:
   - type: ShuttleFaction
     faction: NFSD

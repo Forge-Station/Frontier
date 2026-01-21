@@ -1,6 +1,6 @@
 # Author Info
-# GitHub: https://github.com/Autsaider-IM
-# Discord: autsaider_m
+# GitHub: -
+# Discord: urkplay
 # License: CC-BY-NC-ND-4.0
 # CorvaxForge
 
@@ -8,17 +8,17 @@
 # GitHub: https://github.com/Autsaider-IM
 # Discord: autsaider_m
 
-# Shuttle Notes:
+# Notes:
 #
 - type: vessel
-  id: separatist
+  id: Mefest
   parent: BaseVessel
-  name: Сепаратист
-  description: Медицинский шаттл штурмового парамедика. Рекомендуемый экипаж 2-4 человека.
-  price: 75000
+  name: Мефест
+  description: Среднегабаритный шаттл синдиката. Рекомендованный состав команды 2-4 человек.
+  price: 119500
   category: Medium
   group: Syndicate
-  shuttlePath: /Maps/_Forge/Shuttles/Syndicate/separatist.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Syndicate/mefest.yml
   addComponents:
   - type: IFF
     color: "#850d09"
@@ -30,16 +30,16 @@
   - Syndicate
 
 - type: gameMap
-  id: separatist
-  mapName: 'Сепаратист'
-  mapPath: /Maps/_Forge/Shuttles/Syndicate/separatist.yml
+  id: Mefest
+  mapName: 'Мефест'
+  mapPath: /Maps/_Forge/Shuttles/Syndicate/mefest.yml
   minPlayers: 0
   stations:
-    separatist:
+    Mefest:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Сепаратист {1}'
+          mapNameTemplate: 'Мефест {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
