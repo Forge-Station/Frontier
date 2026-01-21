@@ -42,6 +42,11 @@ using Content.Server.StationEvents.Components;
 using Content.Shared.Forensics.Components;
 using Robust.Server.Player;
 using Robust.Shared.Timing;
+using Content.Shared._Mono.Ships.Components; // Forge-change
+using Content.Shared._Mono.Shipyard; // Forge-change
+using Content.Server._Mono.Shipyard; // Forge-change
+using Content.Shared.Tag; // Forge-change
+using Content.Shared._Mono.Company; // Forge-change
 
 namespace Content.Server._NF.Shipyard.Systems;
 
@@ -65,8 +70,10 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private readonly MindSystem _mind = default!;
     [Dependency] private readonly ShuttleRecordsSystem _shuttleRecordsSystem = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
+    [Dependency] private readonly TagSystem _tagSystem = default!; // Forge-change
 
     private static readonly Regex DeedRegex = new(@"\s*\([^()]*\)");
+    private static readonly ProtoId<TagPrototype> CrewedShuttleTag = "CrewedShuttle"; // Forge-change
 
     public void InitializeConsole()
     {
@@ -115,6 +122,19 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return;
         }
 
+        // Forge-change-start
+        if (!string.IsNullOrEmpty(vessel.RequiredCompany))
+        {
+            if (!TryComp<CompanyComponent>(player, out var companyComp) ||
+                companyComp.CompanyName != vessel.RequiredCompany)
+            {
+                ConsolePopup(player, Loc.GetString("shipyard-console-company-denied"));
+                PlayDenySound(player, shipyardConsoleUid, component);
+                return;
+            }
+        }
+        // Forge-change-end
+
         if (!GetAvailableShuttles(shipyardConsoleUid, targetId: targetId).available.Contains(vessel.ID))
         {
             PlayDenySound(player, shipyardConsoleUid, component);
@@ -125,6 +145,11 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         var name = vessel.Name;
         if (vessel.Price <= 0)
             return;
+
+        // Forge-change-start
+        if (!vessel.RequireCrew && vessel.Classes.Contains(VesselClass.Capital))
+            vessel.RequireCrew = true;
+        // Forge-change-end
 
         if (_station.GetOwningStation(shipyardConsoleUid) is not { Valid: true } station)
         {
@@ -140,6 +165,33 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return;
         }
 
+        // Forge-change-start: Mono:1112
+        if (!TryPurchaseShuttle(station, vessel.ShuttlePath, out var shuttleUidOut))
+        {
+            PlayDenySound(player, shipyardConsoleUid, component);
+            return;
+        }
+
+        var shuttleUid = shuttleUidOut.Value;
+        if (!_entityManager.TryGetComponent<ShuttleComponent>(shuttleUid, out var shuttle))
+        {
+            ConsolePopup(player, Loc.GetString("cargo-console-insufficient-funds", ("cost", vessel.Price)));
+            PlayDenySound(player, shipyardConsoleUid, component);
+            return;
+        }
+
+        var ev = new AttemptShipyardShuttlePurchaseEvent(shuttleUid, args.Actor, vessel);
+        RaiseLocalEvent(ref ev);
+
+        if (ev.Cancelled)
+        {
+            PlayDenySound(player, shipyardConsoleUid, component);
+            ConsolePopup(player, Loc.GetString(ev.CancelReason));
+            TryQueueDel(shuttleUid);
+            return;
+        }
+        // Forge-change-end
+
         // Keep track of whether or not a voucher was used.
         // TODO: voucher purchase should be done in a separate function.
         bool voucherUsed = false;
@@ -147,6 +199,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         {
             if (voucher!.RedemptionsLeft <= 0)
             {
+                Del(shuttleUid);
                 ConsolePopup(player, Loc.GetString("shipyard-console-no-voucher-redemptions"));
                 PlayDenySound(player, shipyardConsoleUid, component);
                 if (voucher!.DestroyOnEmpty)
@@ -157,6 +210,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             }
             else if (voucher!.ConsoleType != (ShipyardConsoleUiKey)args.UiKey)
             {
+                Del(shuttleUid);
                 ConsolePopup(player, Loc.GetString("shipyard-console-invalid-voucher-type"));
                 PlayDenySound(player, shipyardConsoleUid, component);
                 return;
@@ -168,24 +222,36 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         {
             if (!_bank.TryBankWithdraw(player, vessel.Price))
             {
+                Del(shuttleUid);
                 ConsolePopup(player, Loc.GetString("cargo-console-insufficient-funds", ("cost", vessel.Price)));
                 PlayDenySound(player, shipyardConsoleUid, component);
                 return;
             }
         }
 
-        if (!TryPurchaseShuttle(station, vessel.ShuttlePath, out var shuttleUidOut))
-        {
-            PlayDenySound(player, shipyardConsoleUid, component);
-            return;
-        }
+        // if (!TryPurchaseShuttle(station, vessel.ShuttlePath, out var shuttleUidOut))
+        // {
+        //     PlayDenySound(player, shipyardConsoleUid, component);
+        //     return;
+        // }
 
-        var shuttleUid = shuttleUidOut.Value;
-        if (!TryComp<ShuttleComponent>(shuttleUid, out var shuttle))
+        // var shuttleUid = shuttleUidOut.Value;
+        // if (!TryComp<ShuttleComponent>(shuttleUid, out var shuttle))
+        // {
+        //     PlayDenySound(player, shipyardConsoleUid, component);
+        //     return;
+        // }
+
+        // Forge-change-start: Mono Add company information to the shuttle
+        if (TryComp<Content.Shared._Mono.Company.CompanyComponent>(player, out var playerCompany) &&
+            !string.IsNullOrEmpty(playerCompany.CompanyName))
         {
-            PlayDenySound(player, shipyardConsoleUid, component);
-            return;
+            var shipCompany = EnsureComp<Content.Shared._Mono.Company.CompanyComponent>(shuttleUid);
+            shipCompany.CompanyName = playerCompany.CompanyName;
+            Dirty(shuttleUid, shipCompany);
         }
+        // Forge-change-end
+
         EntityUid? shuttleStation = null;
         // setting up any stations if we have a matching game map prototype to allow late joins directly onto the vessel
         if (_prototypeManager.TryIndex<GameMapPrototype>(vessel.ID, out var stationProto))
@@ -212,6 +278,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
         var shuttleOwner = Name(player).Trim();
         AssignShuttleDeedProperties((targetId, deedID), shuttleUid, name, shuttleOwner, voucherUsed);
+        deedID.DeedHolder = targetId; // Forge-change
 
         var deedShuttle = EnsureComp<ShuttleDeedComponent>(shuttleUid);
         AssignShuttleDeedProperties((shuttleUid, deedShuttle), shuttleUid, name, shuttleOwner, voucherUsed);
@@ -279,6 +346,25 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         if (component.SecretShipyardChannel is { } secretChannel)
             SendPurchaseMessage(shipyardConsoleUid, player, name, secretChannel, secret: true);
 
+        // Forge-change-start
+        var vesselStore = EnsureComp<VesselComponent>(shuttleUid);
+        vesselStore.VesselId = vessel.ID;
+
+        _entityManager.System<ShipyardDirectionSystem>().SendShipDirectionMessage(player, shuttleUid);
+
+        EnsureComp<TagComponent>(shuttleUid);
+        _tagSystem.TryAddTags(shuttleUid, vessel.Tags);
+
+        if (vessel.Category == VesselSize.Large || _tagSystem.HasTag(shuttleUid, CrewedShuttleTag))
+            vessel.RequireCrew = true;
+
+        if (vessel.Classes.Contains(VesselClass.Capital) || _tagSystem.HasTag(shuttleUid, CrewedShuttleTag))
+            vessel.RequireCrew = true;
+
+        if (vessel.RequireCrew)
+            EnsureComp<CrewedShuttleComponent>(shuttleUid);
+        // Forge-change-end
+
         PlayConfirmSound(player, shipyardConsoleUid, component);
         if (voucherUsed)
             _adminLogger.Add(LogType.ShipYardUsage, LogImpact.Low, $"{ToPrettyString(player):actor} used {ToPrettyString(targetId)} to purchase shuttle {ToPrettyString(shuttleUid)} with a voucher via {ToPrettyString(shipyardConsoleUid)}");
@@ -303,6 +389,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             );
         }
 
+        var purchaseEv = new ShipyardShuttlePurchaseEvent(shuttleUid, player); // Forge-change - Mono: half of this shit could be an event.
+        RaiseLocalEvent(purchaseEv);
         RefreshState(shipyardConsoleUid, bank.Balance, true, name, sellValue, targetId, (ShipyardConsoleUiKey)args.UiKey, voucherUsed);
     }
 

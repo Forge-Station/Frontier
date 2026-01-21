@@ -6,6 +6,7 @@ using Robust.Client.Player;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Shared._Mono.Company; // Forge-change
 
 namespace Content.Client.Lobby
 {
@@ -62,6 +63,21 @@ namespace Content.Client.Lobby
         public void UpdateCharacter(ICharacterProfile profile, int slot)
         {
             var collection = IoCManager.Instance!;
+
+            // Forge-change-start
+            // Verify company exists if this is a humanoid profile
+            if (profile is HumanoidCharacterProfile humanoidProfile)
+            {
+                var protoManager = IoCManager.Resolve<IPrototypeManager>();
+                if (!string.IsNullOrEmpty(humanoidProfile.Company) &&
+                    humanoidProfile.Company != "None" &&
+                    !protoManager.HasIndex<CompanyPrototype>(humanoidProfile.Company))
+                {
+                    profile = humanoidProfile.WithCompany("None");
+                }
+            }
+            // Forge-change-end
+
             profile.EnsureValid(_playerManager.LocalSession!, collection);
             var characters = new Dictionary<int, ICharacterProfile>(Preferences.Characters) {[slot] = profile};
             Preferences = new PlayerPreferences(characters, Preferences.SelectedCharacterIndex, Preferences.AdminOOCColor, Preferences.ConstructionFavorites);

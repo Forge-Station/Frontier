@@ -4,6 +4,8 @@
   description: forge-job-desc-syndicommander
   playTimeTracker: JobCommander
   requirements:
+    - !type:MinPlayersRequirement
+      min: 20
     - !type:OverallPlaytimeRequirement
       time: 144000 # 40 hours
     - !type:RoleTimeRequirement

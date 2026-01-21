@@ -30,6 +30,7 @@ using Content.Shared.Interaction;
 using Content.Shared._Mono.ShipGuns;
 using Content.Shared.Examine;
 using Content.Server.Salvage.Expeditions;
+using Content.Shared.UserInterface;
 
 namespace Content.Server._Mono.FireControl;
 

@@ -25,6 +25,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Shared._Mono.Company; // Forge-change
 
 namespace Content.Client.Lobby;
 
@@ -186,6 +187,7 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
             PreviewPanel.SetSprite(EntityUid.Invalid);
             PreviewPanel.SetSummaryText(string.Empty);
             PreviewPanel.SetBankBalanceText(string.Empty); // Frontier
+            PreviewPanel.SetCompanyText(string.Empty); // Forge-change Company Display
             return;
         }
 
@@ -193,6 +195,18 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
         PreviewPanel.SetSprite(dummy);
         PreviewPanel.SetSummaryText(humanoid.Summary);
         PreviewPanel.SetBankBalanceText(humanoid.BankBalanceText); // Frontier
+
+        // Forge-change-start: Company Display
+        var companyId = humanoid.Company;
+        if (_prototypeManager.TryIndex<CompanyPrototype>(companyId, out var company))
+        {
+            PreviewPanel.SetCompanyText($"[color={company.Color.ToHex()}]{company.Name}[/color]");
+        }
+        else
+        {
+            PreviewPanel.SetCompanyText(Loc.GetString("humanoid-profile-editor-company-label") + $" [color=yellow]{companyId}[/color]");
+        }
+        // Forge-change-end
     }
 
     private void RefreshProfileEditor()

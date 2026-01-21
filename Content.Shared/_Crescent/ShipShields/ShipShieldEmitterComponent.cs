@@ -10,7 +10,10 @@ namespace Content.Shared._Crescent.ShipShields;
 [RegisterComponent]
 public sealed partial class ShipShieldEmitterComponent : Component
 {
+    [ViewVariables]
     public EntityUid? Shield;
+
+    [ViewVariables]
     public EntityUid? Shielded;
 
     [DataField]
@@ -71,7 +74,9 @@ public sealed partial class ShipShieldEmitterComponent : Component
     [DataField]
     public Color ShieldColor = Color.White;
 
+    [ViewVariables]
     public float OverloadAccumulator = 0f;
+
     /// <summary>
     /// On power up, players for all on vessel, pitched down.
     /// </summary>

@@ -2,6 +2,7 @@ using Content.Shared.Guidebook;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
 using Robust.Shared.Utility;
+using Content.Shared.Tag; // Forge-change
 
 namespace Content.Shared._NF.Shipyard.Prototypes;
 
@@ -95,6 +96,29 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     [DataField]
     [AlwaysPushInheritance]
     public ComponentRegistry AddComponents { get; set; } = new();
+
+    // Forge-change-start: take from _Mono
+
+    /// <summary>
+    ///     Whether the ship should be crewed or not
+    ///     This is automatically set to true when the ship is a Capital-class ship.
+    /// </summary>
+    [DataField]
+    public bool RequireCrew;
+
+    /// <summary>
+    ///     The amount of this ship that can active at any given time.
+    ///     0 for unlimited.
+    /// </summary>
+    [DataField("limit")]
+    public int LimitActive;
+
+    [DataField]
+    public HashSet<ProtoId<TagPrototype>> Tags = new();
+
+    [DataField("requiredCompany")]
+    public string? RequiredCompany;
+    // Forge-change-end
 }
 
 public enum VesselSize : byte

@@ -27,6 +27,8 @@ using Content.Shared.Construction.Components; // Frontier
 using Content.Shared._NF.Shuttles.Events; // Frontier
 using System.Linq; // Frontier
 using Robust.Shared.Map.Components; // Frontier
+using Content.Shared._Mono.Ships.Components; // Forge-change
+using Content.Server._Mono.Ships.Systems; // Forge-change
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -45,6 +47,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
     [Dependency] private readonly SharedContentEyeSystem _eyeSystem = default!;
     [Dependency] private readonly AccessReaderSystem _access = default!;
+    [Dependency] private readonly CrewedShuttleSystem _crewedShuttle = default!; // Forge-change
 
     private EntityQuery<MetaDataComponent> _metaQuery;
     private EntityQuery<TransformComponent> _xformQuery;
@@ -161,8 +164,21 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     private void OnConsoleUIOpenAttempt(EntityUid uid, ShuttleConsoleComponent component,
         ActivatableUIOpenAttemptEvent args)
     {
-//        if (!TryPilot(args.User, uid)) Frontier
-//            args.Cancel();
+        // Forge-change-start
+        var shuttle = _transform.GetParentUid(uid);
+        var uiOpen = _crewedShuttle.AnyGunneryConsoleActiveByPlayer(shuttle, args.User);
+        var hasComp = HasComp<CrewedShuttleComponent>(shuttle);
+
+        // Crewed shuttles should not allow people to have both gunnery and shuttle consoles open.
+        if (uiOpen && hasComp)
+        {
+            args.Cancel();
+            _popup.PopupClient(Loc.GetString("shuttle-console-crewed"), args.User);
+            return;
+        }
+        // if (!TryPilot(args.User, uid)) Frontier
+        //     args.Cancel();
+        // Forge-change-end
 
         // Frontier start
         var griduid = Transform(uid).GridUid;

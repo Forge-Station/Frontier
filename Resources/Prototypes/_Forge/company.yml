@@ -1,0 +1,222 @@
+# "None" - DO NOT REMOVE!
+- type: company
+  id: None
+  form: Neutral # Do NOT apply "Neutral" to anywhere outside "None"
+  name: Свободный
+  color: "#FFFFFF"
+
+# ==== DO NOT TOUCH - ADMIN COMPANIES ====
+# On a less serious note, these are just companies that are auto-assigned to jobs.
+# You can add to this in CompanySystem.cs in Content.Server
+
+- type: company
+  id: NFSD
+  form: Protagonist
+  name: ДСБФ
+  color: "#5c7d4d"
+  disabled: true
+  entityIcon: BannerNfsd
+
+- type: company
+  id: Syndicate
+  form: Antagonist
+  name: Синдикат
+  color: "#5c0d1a"
+  disabled: true
+  entityIcon: BannerSyndicate
+  spawnSound: !type:SoundPathSpecifier
+    path: "/Audio/Ambience/Antag/traitor_start.ogg"
+
+- type: company
+  id: Hospital
+  form: Protagonist
+  name: Госпиталь
+  color: "#74c3f7"
+  disabled: true
+  entityIcon: BannerMedical
+
+- type: company
+  id: Nanotrasen # Nanotrasen?..
+  form: Protagonist
+  name: Nanotrasen
+  description: company-nanotrasen-description
+  color: "#253461"
+  # image: /Textures/_NF/Structures/Decoration/banner.rsi/banner-wizard.png
+  entityIcon: BannerNanotrasen
+  logins:
+    - Eifall
+    - IMERATOR
+    - mersen
+    - Weilpatent
+    - v6st
+    - Ruki
+    - goster
+    - LeviyNosok
+    - DanielDelo
+    - Protection
+    - Ryomzeck
+
+# ==== GENERAL COMPANIES ====
+
+- type: company
+  id: EMS
+  form: Protagonist
+  name: Emergency Medical Society
+  description: company-ems-description
+  color: "#0079c9"
+  # image: /Textures/_NF/Structures/Decoration/banner.rsi/banner-wizard.png
+  entityIcon: NFSignEms1
+
+- type: company
+  id: LVHI
+  form: Protagonist
+  name: Langstad-Voigt Heavy Industries
+  description: company-lvhi-description
+  color: "#c78256"
+  # image: /Textures/_NF/Structures/Decoration/banner.rsi/banner-wizard.png
+  entityIcon: NFPosterContrabandLvhiStation
+
+- type: company
+  id: FarStarBiotech
+  form: Protagonist
+  name: Far Star Biotech
+  description: company-far-star-biotech-description
+  color: "#006479"
+  # image: /Textures/_NF/Structures/Decoration/banner.rsi/banner-fsb.png
+  entityIcon: BannerFsb
+
+- type: company
+  id: ArdenteGroup
+  form: Protagonist
+  name: Ardente Group
+  description: company-ardente-description
+  color: "#a07a3c"
+  # image: /Textures/_NF/Structures/Decoration/banner.rsi/banner-wizard.png
+  entityIcon: PosterLegitArdenteGroup
+
+# Logins company
+- type: company
+  id: Daybreak
+  form: Protagonist
+  name: Рассвет
+  description: company-daybreak-description
+  color: "#bd6566"
+  # image: /Textures/_NF/Structures/Decoration/banner.rsi/banner-wizard.png
+  entityIcon: BannerDaybreak
+  disabled: true
+  logins:
+    - Eifall
+    - IMERATOR
+    - mersen
+    - v6st
+    - Weilpatent
+    - Ruki
+    - LeviyNosok
+    - DanielDelo
+    - Bingu
+    - Protection
+    - Ryomzeck
+    - shlakoblokun
+    - eyes_of_wisdom
+    - Egor17777
+    - GGONZALES
+    - Marsello
+    - JunJun
+    - Borisovych
+    - beybasigma
+    - Wehaid
+    - Wasdom
+    - JaBa909
+    - Gmkhts_sh
+    - nykeoke
+    - Atima
+    - IDontKnowWHatToD_2
+
+- type: company
+  id: ArdenteAdvM
+  form: Protagonist
+  name: Ardente Advanced Manufacturing
+  description: company-ardente-manufacture-description
+  color: "#6c8079"
+  # image: /Textures/_NF/Structures/Decoration/banner.rsi/banner-wizard.png
+  entityIcon: PosterLegitArdenteAM
+  logins: # Yep, AAM
+    - Eifall
+    - IMERATOR
+    - mersen
+    - v6st
+    - Weilpatent
+    - Ruki
+    - shlakoblokun
+    - LeviyNosok
+    - DanielDelo
+    - Bingu
+    - JaBa909
+    - Gmkhts_sh
+    - Atima
+
+- type: company
+  id: TechnicLogistic
+  form: Protagonist
+  name: TechnicLogistic
+  description: company-techniclogistic-description
+  color: "#83489d"
+  # image: /Textures/_NF/Structures/Decoration/banner.rsi/banner-wizard.png
+  entityIcon: BannerTL
+  logins:
+    - Eifall
+    - IMERATOR
+    - mersen
+    - v6st
+
+- type: company
+  id: Gobliniade
+  form: Protagonist
+  name: Великий Гоблинат
+  description: company-gobliniade-description
+  color: "#564d91"
+  # image: /Textures/_NF/Structures/Decoration/banner.rsi/banner-wizard.png
+  entityIcon: BannerGoblin01
+  spawnSound: !type:SoundPathSpecifier
+    path: "/Audio/Ambience/Antag/pirate_start.ogg"
+  logins:
+    - Eifall
+    - IMERATOR
+    - mersen
+    - v6st
+    - Xent
+
+- type: company
+  id: USSP
+  form: Protagonist
+  name: СССП
+  description: company-ussp-description
+  color: "#921d1b"
+  # image: /Textures/_NF/Structures/Decoration/banner.rsi/banner-wizard.png
+  entityIcon: PosterContrabandCommunistState
+  spawnSound: !type:SoundPathSpecifier
+    path: "/Audio/Ambience/Antag/headrev_start.ogg"
+  logins:
+    - Eifall
+    - IMERATOR
+    - mersen
+    - v6st
+    - Ruki
+    - LeviyNosok
+    - DanielDelo
+
+- type: company
+  id: Nexus
+  form: Protagonist
+  name: Nexus Star Consortium
+  description: company-nexus-description
+  color: "#0f3b62"
+  # image: /Textures/_NF/Structures/Decoration/banner.rsi/banner-wizard.png
+  entityIcon: BannerNexus
+  logins:
+    - Eifall
+    - IMERATOR
+    - mersen
+    - v6st
+    - Ruki
+    - LeviyNosok

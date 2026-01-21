@@ -60,7 +60,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
     private const float FireRateLimit = 0.1f;
 
     public Action<EntityCoordinates>? OnRadarClick;
-    public bool ShowIFF { get; set; } = true;
+    public bool ShowIFF { get; set; } = false;
     public bool RotateWithEntity { get; set; } = true;
 
     // Add a limit to how often we update the cursor position to prevent network spam

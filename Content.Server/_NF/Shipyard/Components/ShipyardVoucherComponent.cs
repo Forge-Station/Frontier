@@ -34,4 +34,9 @@ public sealed partial class ShipyardVoucherComponent : Component
     /// </summary>
     [DataField(required: true)]
     public ShipyardConsoleUiKey ConsoleType;
+
+    // Forge-change-start: _Mono company
+    [DataField]
+    public string? CompanyName;
+    // Forge-change-end
 }

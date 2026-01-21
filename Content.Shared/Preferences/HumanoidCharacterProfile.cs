@@ -18,6 +18,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
+using Content.Shared._Mono.Company; // Forge-change: _Mono company, y
 
 namespace Content.Shared.Preferences
 {
@@ -144,6 +145,12 @@ namespace Content.Shared.Preferences
         public PreferenceUnavailableMode PreferenceUnavailable { get; private set; } =
             PreferenceUnavailableMode.SpawnAsOverflow;
 
+        /// <summary>
+        /// The company affiliation of the character
+        /// </summary>
+        [DataField]
+        public string Company { get; private set; } = "None"; // Forge-change: take _Mono company
+
         public HumanoidCharacterProfile(
             string name,
             string flavortext,
@@ -160,7 +167,8 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts,
-            string barkVoice) // Corvax-Frontier-Barks
+            string barkVoice, // Corvax-Frontier-Barks
+            string company = "None") // Forge-change: _Mono company
         {
             Name = name;
             FlavorText = flavortext;
@@ -178,6 +186,7 @@ namespace Content.Shared.Preferences
             _traitPreferences = traitPreferences;
             _loadouts = loadouts;
             BarkVoice = barkVoice; // Corvax-Frontier-Barks
+            Company = company; // Forge-change: _Mono company
         }
 
         /// <summary>Copy constructor but with overridable references (to prevent useless copies)</summary>
@@ -188,7 +197,7 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
             : this(other.Name, other.FlavorText, other.Species, other.Voice, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
-                jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts, other.BarkVoice)
+                jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts, other.BarkVoice, other.Company)
         {
         }
 
@@ -209,7 +218,8 @@ namespace Content.Shared.Preferences
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
                 new Dictionary<string, RoleLoadout>(other.Loadouts),
-                other.BarkVoice) // Corvax-Frontier-Barks
+                other.BarkVoice, // Corvax-Frontier-Barks
+                other.Company)
         {
         }
 
@@ -425,6 +435,12 @@ namespace Content.Shared.Preferences
             return new(this) { PreferenceUnavailable = mode };
         }
 
+         // Forge-change: _Mono company
+        public HumanoidCharacterProfile WithCompany(string company)
+        {
+            return new(this) { Company = company };
+        }
+
         public HumanoidCharacterProfile WithAntagPreferences(IEnumerable<ProtoId<AntagPrototype>> antagPreferences)
         {
             return new(this)
@@ -552,6 +568,11 @@ namespace Content.Shared.Preferences
             if (Species != other.Species)
             {
                 error = $"Вид: {Species} не совпадает с {other.Species}";
+                return false;
+            }
+            if (Company != other.Company) // Forge-change: _Mono company
+            {
+                error = $"Компания: {Company} не совпадает с {other.Company}";
                 return false;
             }
             if (BankBalance != other.BankBalance) // Frontier
@@ -781,6 +802,16 @@ namespace Content.Shared.Preferences
             BankBalance = bankBalance;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
+
+            // Forge-change-start: _Mono company
+            // Check if the company exists, if not set to "None"
+            if (!string.IsNullOrEmpty(Company) &&
+                Company != "None" &&
+                !prototypeManager.HasIndex<CompanyPrototype>(Company))
+            {
+                Company = "None";
+            }
+            // Forge-change-start
 
             _jobPriorities.Clear();
 

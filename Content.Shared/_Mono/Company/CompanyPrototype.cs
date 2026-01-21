@@ -6,6 +6,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Robust.Shared.Prototypes;
+using Robust.Shared.Audio; // Forge-change
 
 namespace Content.Shared._Mono.Company;
 
@@ -66,4 +67,12 @@ public sealed class CompanyPrototype : IPrototype
     /// </summary>
     [DataField("image")]
     public string? Image { get; private set; }
+
+    // Forge-change
+    [DataField("entityIcon", required: false)]
+    public EntProtoId? EntityIcon { get; private set; }
+
+    [DataField("spawnSound")]
+    public SoundSpecifier? SpawnSound;
+    // Forge-change-end
 }

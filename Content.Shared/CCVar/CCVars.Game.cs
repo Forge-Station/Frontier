@@ -403,4 +403,9 @@ public sealed partial class CCVars
     /// </summary>
     public static readonly CVarDef<bool> GameHostnameInTitlebar =
         CVarDef.Create("game.hostname_in_titlebar", true, CVar.SERVER | CVar.REPLICATED);
+
+    // Forge-change-start
+    public static readonly CVarDef<bool> MinPlayersRequirement =
+        CVarDef.Create("game.role_minplayers_req", true, CVar.SERVER | CVar.ARCHIVE);
+    // Forge-change-end
 }

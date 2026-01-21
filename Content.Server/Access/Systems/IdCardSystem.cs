@@ -11,6 +11,8 @@ using Content.Shared.Popups;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Content.Server.Kitchen.EntitySystems;
+using Content.Shared._Mono.Company; // Forge-change
+using Content.Shared.Examine; // Forge-change
 
 namespace Content.Server.Access.Systems;
 
@@ -28,7 +30,29 @@ public sealed class IdCardSystem : SharedIdCardSystem
         base.Initialize();
 
         SubscribeLocalEvent<IdCardComponent, BeingMicrowavedEvent>(OnMicrowaved);
+        SubscribeLocalEvent<IdCardComponent, ExaminedEvent>(OnExamined); // Forge-change
     }
+
+    // Forge-change-start: _Mono company
+    private void OnExamined(EntityUid uid, IdCardComponent component, ExaminedEvent args)
+    {
+        if (!args.IsInDetailsRange)
+            return;
+
+        // Show only company information if available
+        if (!string.IsNullOrWhiteSpace(component.CompanyName) && component.CompanyName != "None")
+        {
+            if (_prototypeManager.TryIndex<CompanyPrototype>(component.CompanyName, out var companyProto))
+            {
+                args.PushMarkup($"[color={companyProto.Color.ToHex()}]{companyProto.Name}[/color]");
+            }
+            else
+            {
+                args.PushMarkup(component.CompanyName);
+            }
+        }
+    }
+    // Forge-change-end
 
     private void OnMicrowaved(EntityUid uid, IdCardComponent component, BeingMicrowavedEvent args)
     {

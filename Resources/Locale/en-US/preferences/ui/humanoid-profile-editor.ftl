@@ -64,3 +64,7 @@ humanoid-profile-editor-trait-count-hint = Points available: [{$current}/{$max}]
 trait-category-disabilities = Disabilities
 trait-category-speech = Speech traits
 trait-category-quirks = Quirks
+
+# Company
+humanoid-profile-editor-company-tab = Company
+humanoid-profile-editor-company-label = Company:

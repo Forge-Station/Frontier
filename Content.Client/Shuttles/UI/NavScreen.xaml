@@ -71,6 +71,11 @@
                              Text="{controls:Loc 'shuttle-console-iffshuttles-toggle'}"
                              TextAlign="Center"
                              ToggleMode="True"/>
+                    <!-- Forge-change: hide company -->
+                    <controls:Button Name="CompanyToggle"
+                            Text="{controls:Loc 'shuttle-console-extra-info-toggle'}"
+                            TextAlign="Center"
+                            ToggleMode="True"/>
                     <!-- End Frontier: hide player shuttles -->
                     <controls:Button Name="DockToggle"
                             Text="{controls:Loc 'shuttle-console-dock-toggle'}"

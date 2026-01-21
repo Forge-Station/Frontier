@@ -39,6 +39,8 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Direction = Robust.Shared.Maths.Direction;
+using Content.Shared._Mono.Company; // Forge-change
+using Content.Client._Forge.Company.UI; // Forge-change
 
 namespace Content.Client.Lobby.UI
 {
@@ -108,6 +110,8 @@ namespace Content.Client.Lobby.UI
 
         private ColorSelectorSliders _rgbSkinColorSelector;
 
+        private CompanySelectControl? _companySelect; // Forge-change
+
         private bool _isDirty;
 
         [ValidatePrototypeId<GuideEntryPrototype>]
@@ -144,6 +148,7 @@ namespace Content.Client.Lobby.UI
             _controller = UserInterfaceManager.GetUIController<LobbyUIController>();
             _sprite = _entManager.System<SpriteSystem>();
             _sponsorMan = sponsorMan;
+            _companySelect = new CompanySelectControl(); // Forge-change
 
             _maxNameLength = _cfgManager.GetCVar(CCVars.MaxNameLength);
             _allowFlavorText = _cfgManager.GetCVar(CCVars.FlavorText);
@@ -441,11 +446,48 @@ namespace Content.Client.Lobby.UI
 
             RefreshTraits();
 
+            // Forge-change-start: take _Mono company
+            #region Company
+
+            TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-company-tab"));
+
+            var username = _playerManager.LocalPlayer?.Session?.Name;
+            var companies = _prototypeManager.EnumeratePrototypes<CompanyPrototype>()
+                .Where(c => !c.Disabled || (username != null && c.Logins.Contains(username)))
+                .OrderBy(c => c.Name)
+                .ToList();
+
+            // Переносим "None" в начало списка
+            var noneIndex = companies.FindIndex(c => c.ID == "None");
+            if (noneIndex != -1)
+            {
+                var none = companies[noneIndex];
+                companies.RemoveAt(noneIndex);
+                companies.Insert(0, none);
+            }
+
+            _companySelect?.Populate(companies, Profile?.Company);
+
+            if (_companySelect != null)
+            {
+                _companySelect.OnCompanySelected += companyId =>
+                {
+                    // Сохраняем выбор сразу
+                    Profile = Profile?.WithCompany(companyId);
+                    SetDirty();
+                };
+            }
+
+            CompanyContainer.AddChild(_companySelect!);
+
+            #endregion Company
+            // Forge-change-end
+
             TabContainer.SetTabTitle(2, Loc.GetString("humanoid-profile-editor-traits-tab")); // Frontier: 3<2
 
             #region Markings
 
-            TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-markings-tab")); // Frontier: 4<3
+            TabContainer.SetTabTitle(4, Loc.GetString("humanoid-profile-editor-markings-tab")); // Forge-change
 
             Markings.OnMarkingAdded += OnMarkingChange;
             Markings.OnMarkingRemoved += OnMarkingChange;
@@ -483,6 +525,7 @@ namespace Content.Client.Lobby.UI
             SpeciesInfoButton.OnPressed += OnSpeciesInfoButtonPressed;
 
             UpdateSpeciesGuidebookIcon();
+            UpdateCompanyControls(); // Forge-change
             IsDirty = false;
         }
 
@@ -788,15 +831,37 @@ namespace Content.Client.Lobby.UI
         private void SetDirty()
         {
             // If it equals default then reset the button.
-            if (Profile == null ||
-                _preferencesManager.Preferences?.SelectedCharacter.MemberwiseEquals(Profile, out _) == true) // Forge-Change
+            // if (Profile == null ||
+            //     _preferencesManager.Preferences?.SelectedCharacter.MemberwiseEquals(Profile, out _) == true) // Forge-Change
+            // If profile is null, we can't be dirty
+            if (Profile == null)
             {
                 IsDirty = false;
                 return;
             }
 
             // TODO: Check if profile matches default.
-            IsDirty = true;
+            // IsDirty = true;
+
+            // If we have no selected character to compare against, we're dirty
+            if (_preferencesManager.Preferences?.SelectedCharacter == null)
+            {
+                IsDirty = true;
+                return;
+            }
+
+            // Get the selected character for comparison
+            var selectedCharacter = (HumanoidCharacterProfile)_preferencesManager.Preferences.SelectedCharacter;
+
+            // Check explicitly if company changed
+            if (selectedCharacter.Company != Profile.Company)
+            {
+                IsDirty = true;
+                return;
+            }
+
+            // Check if entire profile matches
+            IsDirty = !selectedCharacter.MemberwiseEquals(Profile, out _);
         }
 
         /// <summary>
@@ -864,6 +929,7 @@ namespace Content.Client.Lobby.UI
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
+            UpdateCompanyControls();
 
             RefreshAntags();
             RefreshJobs();
@@ -1712,8 +1778,11 @@ namespace Content.Client.Lobby.UI
 
         private void UpdateSaveButton()
         {
-            SaveButton.Disabled = Profile is null || !IsDirty;
-            ResetButton.Disabled = Profile is null || !IsDirty;
+            // SaveButton.Disabled = Profile is null || !IsDirty;
+            // ResetButton.Disabled = Profile is null || !IsDirty;
+            var canSave = Profile is not null;
+            SaveButton.Disabled = !canSave || !IsDirty;
+            ResetButton.Disabled = !canSave || !IsDirty;
         }
 
         private void SetPreviewRotation(Direction direction)
@@ -1827,5 +1896,34 @@ namespace Content.Client.Lobby.UI
             ImportButton.Disabled = false;
             ExportButton.Disabled = false;
         }
+
+        // Forge-change-start: take _Mono company
+        private void UpdateCompanyControls()
+        {
+            if (Profile is null)
+                return;
+
+            var username = _playerManager.LocalPlayer?.Session?.Name;
+            var companies = _prototypeManager.EnumeratePrototypes<CompanyPrototype>()
+                .Where(c => !c.Disabled || (username != null && c.Logins.Contains(username)))
+                .OrderBy(c => c.Name)
+                .ToList();
+
+            var noneIndex = companies.FindIndex(c => c.ID == "None");
+            if (noneIndex != -1)
+            {
+                var none = companies[noneIndex];
+                companies.RemoveAt(noneIndex);
+                companies.Insert(0, none);
+            }
+
+            _companySelect?.Populate(companies, Profile?.Company);
+
+            if (Profile?.Company != null && !companies.Any(c => c.ID == Profile.Company))
+            {
+                Profile = Profile.WithCompany("None");
+            }
+        }
+        // Forge-change-end
     }
 }

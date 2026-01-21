@@ -1,0 +1,47 @@
+<BoxContainer xmlns="https://spacestation14.io"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              x:Class="Content.Client._Forge.Company.UI.CompanySelectControl"
+              Orientation="Vertical"
+              SeparationOverride="10"
+              Margin="10"
+              VerticalExpand="True">
+
+    <!-- Dropdown - select company button -->
+    <OptionButton Name="CompanyDropdown"
+                  HorizontalExpand="True"
+                  MinSize="200 0"
+                  StyleClasses="Button" />
+    <BoxContainer Orientation="Horizontal" SeparationOverride="10" VerticalExpand="True">
+        <!-- Icon block -->
+        <PanelContainer Name="CompanyImagePanel"
+                        StyleClasses="BackgroundDark"
+                        MinSize="192 192"
+                        MaxSize="256 256"
+                        SizeFlagsStretchRatio="1"
+                        VerticalAlignment="Top">
+            <EntityPrototypeView Name="CompanyImage"
+                                 MinSize="192 192"
+                                 MaxSize="256 256"
+                                 Scale="4 4"
+                                 HorizontalExpand="True"
+                                 VerticalExpand="True" />
+        </PanelContainer>
+        <!-- Description block -->
+        <PanelContainer Name="CompanyDescriptionPanel"
+                        StyleClasses="BackgroundDark"
+                        Margin="5 10 5 5"
+                        HorizontalExpand="True"
+                        VerticalExpand="True"
+                        SizeFlagsStretchRatio="3">
+            <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
+                <RichTextLabel Name="CompanyDescription"
+                               Access="Public"
+                               VerticalAlignment="Top"
+                               StyleClasses="LabelSubText LabelLarge"
+                               Margin="10 15 10 5"
+                               MinSize="200 0"
+                               MaxWidth="500" />
+            </ScrollContainer>
+        </PanelContainer>
+    </BoxContainer>
+</BoxContainer>
