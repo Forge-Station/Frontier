@@ -425,6 +425,8 @@ namespace Content.Server.Database
 
         [Column("pref_unavailable")] public DbPreferenceUnavailableMode PreferenceUnavailable { get; set; }
 
+        public string Company { get; set; } = "None"; // Forge-Change: Mono
+
         public int PreferenceId { get; set; }
         public Preference Preference { get; set; } = null!;
     }
