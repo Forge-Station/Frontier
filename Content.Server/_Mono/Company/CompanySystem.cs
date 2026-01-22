@@ -9,6 +9,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Server.Audio; // Forge-change: spawnSound
 using Robust.Shared.Audio; // Forge-change: spawnSound
+using Content.Shared.Examine;
 
 namespace Content.Server._Mono.Company;
 
@@ -64,6 +65,14 @@ public sealed class CompanySystem : EntitySystem
         "MailCarrier",
     };
 
+    // Freelancers = no company
+    private readonly HashSet<string> _noneJobs = new()
+    {
+        "NFPirateCaptain",
+        "NFPirateFirstMate",
+        "NFPirate",
+    };
+
     private readonly HashSet<string> _hospitalJobs = new()
     {
         "DirectorOfCare",
@@ -79,6 +88,9 @@ public sealed class CompanySystem : EntitySystem
 
         // Subscribe to player detached event to clean up stored preferences
         SubscribeLocalEvent<PlayerDetachedEvent>(OnPlayerDetached);
+
+        // Subscribe to examination to show the company on examine
+        SubscribeLocalEvent<Shared._Mono.Company.CompanyComponent, ExaminedEvent>(OnExamined);
     }
 
     private void OnPlayerDetached(PlayerDetachedEvent args)
@@ -123,6 +135,11 @@ public sealed class CompanySystem : EntitySystem
         {
             // Assign Syndicate company
             companyComp.CompanyName = "Nanotrasen";
+        }
+        else if (args.JobId != null && _noneJobs.Contains(args.JobId))
+        {
+            // Assign "None" company
+            companyComp.CompanyName = "None";
         }
         else
         {
@@ -193,5 +210,26 @@ public sealed class CompanySystem : EntitySystem
         {
             _idCardSystem.TryChangeCompanyName(cardId, companyName, idCard);
         }
+    }
+
+    private void OnExamined(EntityUid uid, Shared._Mono.Company.CompanyComponent component, ExaminedEvent args)
+    {
+        if (_prototypeManager.TryIndex<CompanyPrototype>(component.CompanyName, out var prototype) && component.CompanyName != "None")
+        {
+            // Use the color from the prototype with gender-appropriate pronoun
+            args.PushMarkup(Loc.GetString("examine-company",
+                ("entity", uid),
+                ("company", $"[color={prototype.Color.ToHex()}]{prototype.Name}[/color]")),
+                priority: 100); // Much higher priority (100) will ensure it's at the top
+        }
+        else if (component.CompanyName != "None" && component.CompanyName != "Syndicate") // Forge-change: add Syndicate
+        {
+            // Fallback for companies without prototypes
+            args.PushMarkup(Loc.GetString("examine-company",
+                ("entity", uid),
+                ("company", $"[color=yellow]{component.CompanyName}[/color]")),
+                priority: 100);
+        }
+        // Don't show anything for "None" company // Forge-change: and for Syndicate
     }
 }

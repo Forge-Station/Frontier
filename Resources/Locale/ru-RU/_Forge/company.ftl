@@ -1,9 +1,23 @@
+# -- random staff --
 company-select-button = Выбрать
 company-leave-button = Покинуть
 humanoid-profile-editor-company-tab = Компании
 humanoid-profile-editor-company-label = Компания:
+company-examine = Состоит в: {$company}
+
+# Company examination text with gender-appropriate pronouns
+
+examine-company = {GENDER($entity) ->
+    [male] Он состоит в {$company}.
+    [female] Она состоит в {$company}.
+    *[other] Они состоят в {$company}.
+}
+
+comp-pda-ui-owner-with-company = Владелец: [color=white]{$actualOwnerName}[/color] ([color={$companyColor}]{$companyName}[/color])
 company-none-description = Свобода - тоже выбор.
 company-no-logins-tooltip = Вы не приглашены в компанию.
+
+# -- Descriptions --
 
 company-nanotrasen-description = Описания не будет, идите вики читать. Его же кто-то делает, да?? ДА??
 

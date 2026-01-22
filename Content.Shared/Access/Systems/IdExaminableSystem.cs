@@ -4,6 +4,8 @@ using Content.Shared.Inventory;
 using Content.Shared.PDA;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
+using Content.Shared._Mono.Company; // Forge-change
+using Robust.Shared.Prototypes; // Forge-change
 
 namespace Content.Shared.Access.Systems;
 
@@ -11,6 +13,7 @@ public sealed class IdExaminableSystem : EntitySystem
 {
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!; // Forge-change
 
     public override void Initialize()
     {
@@ -69,12 +72,30 @@ public sealed class IdExaminableSystem : EntitySystem
     {
         var jobSuffix = string.IsNullOrWhiteSpace(id.LocalizedJobTitle) ? string.Empty : $" ({id.LocalizedJobTitle})";
 
+        // Forge-change-start: take _Mono company
+        // Get company information if available
+        var companySuffix = string.Empty;
+        if (!string.IsNullOrWhiteSpace(id.CompanyName) && id.CompanyName != "None")
+        {
+            if (_prototypeManager.TryIndex<CompanyPrototype>(id.CompanyName, out var companyProto))
+            {
+                companySuffix = $" - [color={companyProto.Color.ToHex()}]{companyProto.Name}[/color]";
+            }
+            else
+            {
+                companySuffix = $" - {id.CompanyName}";
+            }
+        }
+        // Forge-change-end
+
         var val = string.IsNullOrWhiteSpace(id.FullName)
             ? Loc.GetString(id.NameLocId,
-                ("jobSuffix", jobSuffix))
+                ("jobSuffix", jobSuffix),
+                ("companySuffix", companySuffix)) // Forge-change
             : Loc.GetString(id.FullNameLocId,
                 ("fullName", id.FullName),
-                ("jobSuffix", jobSuffix));
+                ("jobSuffix", jobSuffix),
+                ("companySuffix", companySuffix)); // Forge-change
 
         return val;
     }

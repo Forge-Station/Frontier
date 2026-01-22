@@ -23,12 +23,6 @@
         <controls:ScrollContainer VerticalExpand="True" HScrollEnabled="False"
                                   ReturnMeasure="True">
             <controls:BoxContainer Name="DockPorts" Orientation="Vertical"/>
-        <!-- Forge-change -->
-        <controls:Button Name="UndockAllButton"
-                         Text="{controls:Loc 'shuttle-console-undock-all-label'}"
-                         Margin="5 5 5 5"
-                         StyleClasses="ButtonSquare"/>
-        <!-- Forge-change -->
         </controls:ScrollContainer>
     </controls:BoxContainer>
 </controls:BoxContainer>
