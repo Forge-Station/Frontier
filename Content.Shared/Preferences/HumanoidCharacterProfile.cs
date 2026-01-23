@@ -526,6 +526,16 @@ namespace Content.Shared.Preferences
             };
         }
 
+        // Forge-change-start: take from _Monolith 37 & 2522
+        public HumanoidCharacterProfile WithoutAllTraitPreferences()
+        {
+            return new(this)
+            {
+                _traitPreferences = new HashSet<ProtoId<TraitPrototype>>(),
+            };
+        }
+        // Forge-change-end
+
         public string Summary =>
             Loc.GetString(
                 "humanoid-character-profile-summary",

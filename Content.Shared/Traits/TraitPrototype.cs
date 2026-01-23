@@ -1,5 +1,6 @@
 using Content.Shared.Whitelist;
 using Robust.Shared.Prototypes;
+using Content.Shared.Humanoid.Prototypes; // Forge-change: _Mono:2522
 
 namespace Content.Shared.Traits;
 
@@ -60,4 +61,19 @@ public sealed partial class TraitPrototype : IPrototype
     /// </summary>
     [DataField]
     public ProtoId<TraitCategoryPrototype>? Category;
+
+    // Forge-change-start: _Mono:2522
+
+    /// <summary>
+    ///     List of traits that ca't be taken together with this one.
+    /// </summary>
+    [DataField]
+    public HashSet<ProtoId<TraitPrototype>> MutuallyExclusiveTraits { get; private set; } = new();
+
+    /// <summary>
+    ///     List of species that can't have this trait.
+    /// </summary>
+    [DataField]
+    public HashSet<ProtoId<SpeciesPrototype>> SpeciesBlacklist { get; private set; } = new();
+    // Forge-change-end
 }

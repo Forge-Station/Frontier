@@ -53,5 +53,11 @@ humanoid-profile-editor-traits-tab = Черты персонажа
 humanoid-profile-editor-no-traits = Нет доступных черт
 humanoid-profile-editor-trait-count-hint = Доступно очков: [{ $current }/{ $max }]
 trait-category-disabilities = Ограничения
-trait-category-speech = Черты речи
+trait-category-speech = Акцент
 trait-category-quirks = Причуды
+
+# Mono
+humanoid-profile-editor-clear-all-traits-button = Очистить всё
+humanoid-profile-editor-clear-all-traits-confirm = Подтвердить
+
+trait-category-physical = Физические

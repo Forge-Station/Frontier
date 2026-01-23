@@ -10,3 +10,9 @@
 - type: traitCategory
   id: Quirks
   name: trait-category-quirks
+
+# Forge-change: take from _Mono
+- type: traitCategory
+  id: Physical
+  name: trait-category-physical
+  maxTraitPoints: 6

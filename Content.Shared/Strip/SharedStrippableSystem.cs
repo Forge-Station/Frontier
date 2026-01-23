@@ -697,6 +697,15 @@ public abstract class SharedStrippableSystem : EntitySystem
         if (viewer == null)
             return true;
 
-        return !HasComp<BypassInteractionChecksComponent>(viewer);
+        // Forge-change-start: take from _Monolith 37 & 2522
+        // return !HasComp<BypassInteractionChecksComponent>(viewer);
+        if (HasComp<BypassInteractionChecksComponent>(viewer.Value))
+            return false;
+
+        if (TryComp<ThievingComponent>(viewer.Value, out var thief) && thief.IdentifyHidden) // Mono
+            return false;
+
+        return true;
+        // Forge-change-end
     }
 }

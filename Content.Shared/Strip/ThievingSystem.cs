@@ -27,6 +27,7 @@ public sealed partial class ThievingSystem : EntitySystem
         if (args.Stealth)
         {
             args.Additive -= component.StripTimeReduction;
+            args.Multiplier *= component.TimeMultiplier; // Forge-change: take Mono 2522
         }
     }
 
