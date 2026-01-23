@@ -116,6 +116,9 @@ public sealed class VesselPrototype : IPrototype, IInheritingPrototype
     [DataField]
     public HashSet<ProtoId<TagPrototype>> Tags = new();
 
+    /// </summary>
+    /// The company that can buy this shuttle
+    /// </summary>
     [DataField("requiredCompany")]
     public string? RequiredCompany;
     // Forge-change-end

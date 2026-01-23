@@ -187,7 +187,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         {
             PlayDenySound(player, shipyardConsoleUid, component);
             ConsolePopup(player, Loc.GetString(ev.CancelReason));
-            TryQueueDel(shuttleUid);
+            Del(shuttleUid);
             return;
         }
         // Forge-change-end
@@ -204,7 +204,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 PlayDenySound(player, shipyardConsoleUid, component);
                 if (voucher!.DestroyOnEmpty)
                 {
-                    QueueDel(targetId);
+                    Del(targetId);
                 }
                 return;
             }
@@ -220,6 +220,14 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         }
         else
         {
+            if (bank.Balance <= vessel.Price)
+            {
+                Del(shuttleUid);
+                ConsolePopup(player, Loc.GetString("cargo-console-insufficient-funds", ("cost", vessel.Price)));
+                PlayDenySound(player, shipyardConsoleUid, component);
+                return;
+            }
+
             if (!_bank.TryBankWithdraw(player, vessel.Price))
             {
                 Del(shuttleUid);
@@ -242,12 +250,27 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         //     return;
         // }
 
-        // Forge-change-start: Mono Add company information to the shuttle
-        if (TryComp<Content.Shared._Mono.Company.CompanyComponent>(player, out var playerCompany) &&
-            !string.IsNullOrEmpty(playerCompany.CompanyName))
+        // Add company information to the shuttle from the ID card or voucher
+        string? companyName = null;
+
+        // First try to get company from ID card
+        if (TryComp<IdCardComponent>(targetId, out var idCardCompany) &&
+            !string.IsNullOrEmpty(idCardCompany.CompanyName))
         {
-            var shipCompany = EnsureComp<Content.Shared._Mono.Company.CompanyComponent>(shuttleUid);
-            shipCompany.CompanyName = playerCompany.CompanyName;
+            companyName = idCardCompany.CompanyName;
+        }
+        // If no ID card company, try to get from voucher
+        else if (TryComp<ShipyardVoucherComponent>(targetId, out var voucherCompany) &&
+                 !string.IsNullOrEmpty(voucherCompany.CompanyName))
+        {
+            companyName = voucherCompany.CompanyName;
+        }
+
+        // Apply company to ship if we found one
+        if (!string.IsNullOrEmpty(companyName))
+        {
+            var shipCompany = EnsureComp<CompanyComponent>(shuttleUid);
+            shipCompany.CompanyName = companyName;
             Dirty(shuttleUid, shipCompany);
         }
         // Forge-change-end
@@ -286,6 +309,12 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         if (!voucherUsed && component.NewJobTitle != null && !HasComp<PreventShipyardTitleOverwriteComponent>(args.Actor))
         {
             _idSystem.TryChangeJobTitle(targetId, Loc.GetString(component.NewJobTitle), idCard, player);
+        }
+
+        if (!voucherUsed)
+        {
+            if (!string.IsNullOrEmpty(component.NewJobTitle))
+                _idSystem.TryChangeJobTitle(targetId, component.NewJobTitle, idCard, player);
         }
 
         // The following block of code is entirely to do with trying to sanely handle moving records from station to station.
@@ -598,6 +627,15 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         }
 
         var fullName = deed != null ? GetFullName(deed) : null;
+
+        // If the player is on cooldown, disable the unassign button
+        var remainingCooldown = GetRemainingCooldownTime(player);
+        if (remainingCooldown.HasValue)
+        {
+            // TODO: Update UI to show cooldown time on button
+            // For now we'll just let them see the cooldown message when they try to use it
+        }
+
         RefreshState(uid, bank.Balance, true, fullName, sellValue, targetId, (ShipyardConsoleUiKey)args.UiKey, voucherUsed);
     }
 
@@ -700,15 +738,15 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
             var fullName = deed != null ? GetFullName(deed) : null;
 
-            // Forge-change-start: take from _Mono:388
-            // If the player is on cooldown, disable the unassign button
-            var remainingCooldown = GetRemainingCooldownTime(player);
-            if (remainingCooldown.HasValue)
-            {
-                // TODO: Update UI to show cooldown time on button
-                // For now we'll just let them see the cooldown message when they try to use it
-            }
-            // Forge-change-end
+            // // Forge-change-start: take from _Mono:388
+            // // If the player is on cooldown, disable the unassign button
+            // var remainingCooldown = GetRemainingCooldownTime(player);
+            // if (remainingCooldown.HasValue)
+            // {
+            //     // TODO: Update UI to show cooldown time on button
+            //     // For now we'll just let them see the cooldown message when they try to use it
+            // }
+            // // Forge-change-end
 
             RefreshState(uid,
                 bank.Balance,

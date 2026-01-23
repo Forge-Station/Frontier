@@ -1,15 +1,12 @@
-// SPDX-FileCopyrightText: 2025 sleepyyapril
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Server.Power.Components;
 using Content.Server.Shuttles.Components;
 using Content.Shared._Mono.Ships.Components;
 using Content.Shared._Mono.Shipyard;
 using Content.Shared._NF.Shipyard;
 using Robust.Shared.Timing;
-using Robust.Shared.Prototypes;
-using Content.Shared._NF.Shipyard.Prototypes;
+using Robust.Shared.Prototypes; // Forge-change
+using Content.Shared._NF.Shipyard.Prototypes; // Forge-change
+using Robust.Shared.Configuration; // Forge-change
 
 namespace Content.Server._Mono.Ships.Systems;
 
@@ -21,10 +18,11 @@ public sealed class LimitedShuttleSystem : EntitySystem
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly ShuttleDeedSystem _shuttleDeed = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!; // Forge-change
+    [Dependency] private readonly IConfigurationManager _configurationManager = default!; // Forge-change
 
     private TimeSpan _lastUpdate = TimeSpan.Zero;
-    private readonly TimeSpan _interval = TimeSpan.FromMinutes(10);
+    private readonly TimeSpan _interval = TimeSpan.FromMinutes(1);
 
     private const double PoweredInactivityThreshold = 0.5;
 
@@ -102,26 +100,6 @@ public sealed class LimitedShuttleSystem : EntitySystem
             ev.CancelReason = "shipyard-console-limited";
             ev.Cancel();
         }
-
-        // Forge-change-start: only 1 Capital-ship
-        if (ev.Vessel.Classes.Contains(VesselClass.Capital))
-        {
-            var capitalQuery = EntityQueryEnumerator<VesselComponent>();
-
-            while (capitalQuery.MoveNext(out var uid, out var targetVessel))
-            {
-                if (!_prototypeManager.TryIndex(targetVessel.VesselId, out VesselPrototype? proto))
-                    continue;
-
-                if (!proto.Classes.Contains(VesselClass.Capital))
-                    continue;
-
-                ev.CancelReason = "shipyard-console-capital-limited";
-                ev.Cancel();
-                return;
-            }
-        }
-        // Forge-change-end
     }
 
     private bool IsActive(Entity<VesselComponent?> vessel)
@@ -154,26 +132,5 @@ public sealed class LimitedShuttleSystem : EntitySystem
             return true;
 
         return false;
-    }
-    public int GetRemainingPurchases(VesselPrototype vessel)
-    {
-        if (vessel.LimitActive <= 0)
-            return int.MaxValue;
-
-        var query = EntityQueryEnumerator<VesselComponent>();
-        var activeCount = 0;
-
-        while (query.MoveNext(out var uid, out var targetVessel))
-        {
-            if (targetVessel.VesselId != vessel.ID)
-                continue;
-
-            if (!TryComp<ShipActivityComponent>(uid, out var inactivity) || inactivity.InactivePastThreshold)
-                continue;
-
-            activeCount++;
-        }
-
-        return Math.Max(0, vessel.LimitActive - activeCount);
     }
 }

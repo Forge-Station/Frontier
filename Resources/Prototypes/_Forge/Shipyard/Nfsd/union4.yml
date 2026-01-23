@@ -21,10 +21,10 @@
   access: Bailiff
   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/union4.yml
   guidebookPage: Null
+  limit: 1
   class:
   - Capital
   - Detainment
-  - Expedition
   addComponents:
   - type: ShuttleFaction
     faction: NFSD
