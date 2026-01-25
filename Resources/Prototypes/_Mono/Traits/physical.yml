@@ -1,11 +1,12 @@
-- type: trait
-  id: PrybarProsthetics
-  name: trait-prybar-prosthetics-name
-  description: trait-prybar-prosthetics-desc
-  category: Physical
-  cost: 2
-  components:
-  - type: PrybarProsthetics
+# Forge-change: move to skills
+# - type: trait
+#   id: PrybarProsthetics
+#   name: trait-prybar-prosthetics-name
+#   description: trait-prybar-prosthetics-desc
+#   category: Physical
+#   cost: 2
+#   components:
+#   - type: PrybarProsthetics
 
 - type: trait
   id: Vigor
@@ -26,7 +27,7 @@
   name: trait-lethargy-name
   description: trait-lethargy-desc
   category: Physical
-  cost: -3
+  cost: -1
   mutuallyExclusiveTraits:
   - Vigor
   speciesBlacklist:
@@ -86,7 +87,7 @@
   name: trait-will-to-die-name
   description: trait-will-to-die-desc
   category: Physical
-  cost: -2
+  cost: -1
   mutuallyExclusiveTraits:
   - WillToLive
   speciesBlacklist:
@@ -126,7 +127,7 @@
   name: trait-osteogenesis-imperfecta-name
   description: trait-osteogenesis-imperfecta-desc
   category: Physical
-  cost: -4
+  cost: -3
   mutuallyExclusiveTraits:
   - Tenacity
   speciesBlacklist:
@@ -215,11 +216,11 @@
 #   components:
 #     - type: TrapAvoider
 
-- type: trait
-  id: SelfAware
-  name: trait-self-aware-name
-  description: trait-self-aware-desc
-  category: Physical
-  cost: 2
-  components:
-  - type: SelfAware
+# - type: trait
+#   id: SelfAware
+#   name: trait-self-aware-name
+#   description: trait-self-aware-desc
+#   category: Physical
+#   cost: 2
+#   components:
+#   - type: SelfAware

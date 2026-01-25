@@ -541,7 +541,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             foreach (var (account, taxCoeff) in component.TaxAccounts)
             {
                 var tax = CalculateSalesTax(originalBill, taxCoeff);
-                _bank.TrySectorDeposit(account, tax, LedgerEntryType.BlackMarketShipyardTax);
+                _bank.TrySectorDeposit(account, tax, LedgerEntryType.ShipyardTax); // Forge-change take Mono taxes: BlackMarketShipyardTax->ShipyardTAx
                 bill -= tax;
             }
             bill = int.Max(0, bill);

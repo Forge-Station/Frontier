@@ -141,6 +141,9 @@
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
     expressOnTimeBonus: 4000 # Forge-change: rare contraband
     expressLatePenalty: 6500 # Forge-change: rare contraband
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: -0.20
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -173,6 +176,9 @@
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
     expressOnTimeBonus: 8000 # Forge-change: rare contraband
     expressLatePenalty: 10000 # Forge-change: rare contraband
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: -0.20
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -206,6 +212,9 @@
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
     expressOnTimeBonus: 12000 # Forge-change: rare contraband
     expressLatePenalty: 16000 # Forge-change: rare contraband
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: -0.20
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -239,4 +248,7 @@
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
     expressOnTimeBonus: 12000 # Forge-change: rare contraband
     expressLatePenalty: 16000 # Forge-change: rare contraband
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: -0.20
 # endregion Contraband Crates

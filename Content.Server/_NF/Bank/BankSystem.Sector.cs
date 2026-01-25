@@ -32,7 +32,7 @@ public sealed partial class BankSystem : SharedBankSystem
     {
         if (amount <= 0)
         {
-            _log.Info($"TryBankWithdraw: {amount} is invalid");
+            _log.Info($"TryBankWithdraw: {amount} is invalid. Sector budget withdraw attempt. Parameters: Acc: {account} Am: {amount} Rsn: {reason}"); // Forge-change: take Mono taxes
             return false;
         }
 
@@ -52,7 +52,7 @@ public sealed partial class BankSystem : SharedBankSystem
         var bankAccount = CollectionsMarshal.GetValueRefOrNullRef(bank.Accounts, account);
         if (bankAccount.Balance < amount)
         {
-            _log.Info($"TryBankWithdraw: account has less money {bankAccount.Balance} than requested {amount}");
+            _log.Info($"TryBankWithdraw: account has less money {bankAccount.Balance} than requested {amount}. Sector budget withdraw attempt. Parameters: Acc: {account} Am: {amount} Rsn: {reason}"); // Forge-change: take Mono taxes
             return false;
         }
 
@@ -73,7 +73,7 @@ public sealed partial class BankSystem : SharedBankSystem
     {
         if (amount <= 0)
         {
-            _log.Info($"TryBankDeposit: {amount} is invalid");
+            _log.Info($"TryBankDeposit: {amount} is invalid, Sector budget deposit attempt. Parameters: Acc: {account} Am: {amount} Rsn: {reason}"); // Forge-change: take Mono taxes
             return false;
         }
 

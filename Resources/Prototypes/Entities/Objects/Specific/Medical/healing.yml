@@ -13,6 +13,9 @@
   - type: Appearance
   - type: StaticPrice
     price: 0
+  - type: ItemTax # Mono
+    taxAccounts:
+      Medical: 0.8
 
 - type: entity
   name: ointment

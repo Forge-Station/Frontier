@@ -11,6 +11,9 @@
   - type: Tag
     tags:
     - SurgeryTool
+  - type: ItemTax # Mono
+    taxAccounts:
+      Medical: 0.5
 
 # Cautery
 

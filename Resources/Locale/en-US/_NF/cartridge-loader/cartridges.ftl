@@ -41,3 +41,14 @@ ledger-entry-type-StationWithdrawalWorkOrder = Work Orders
 ledger-entry-type-StationWithdrawalSupplies = Supply Expenses
 ledger-entry-type-StationWithdrawalBounty = Bounties
 ledger-entry-type-StationWithdrawalOther = Misc. Expenses
+
+ledger-entry-type-AtmTax = ATM Taxes
+ledger-entry-type-ShipyardTax = Shipyard Taxes
+ledger-entry-type-BlackMarketSales = Smuggling Sales
+ledger-entry-type-ColonialOutpostSales = Cargo Crate Taxes
+ledger-entry-type-TSFMCSales = Weapons Sale Taxes
+ledger-entry-type-MedicalSales = Medical Sale Taxes
+ledger-entry-type-BlackMarketPenalties = Asset Seizure
+ledger-entry-type-ColonialOutpostPenalties = Illegaly Sold Contraband
+ledger-entry-type-TSFMCPenalties = Illegaly Sold Contraband
+ledger-entry-type-MedicalPenalties = Drug Control Fines

@@ -58,7 +58,7 @@ public sealed partial class BankSystem : SharedBankSystem
     {
         if (amount <= 0)
         {
-            _log.Info($"TryBankWithdraw: {amount} is invalid");
+            _log.Info($"TryBankWithdraw: {amount} is invalid from Uid {mobUid}"); // Forge-change: take Mono taxes
             return false;
         }
 
@@ -106,7 +106,7 @@ public sealed partial class BankSystem : SharedBankSystem
     {
         if (amount <= 0)
         {
-            _log.Info($"TryBankDeposit: {amount} is invalid");
+            _log.Info($"TryBankDeposit: {amount} is invalid from Uid {mobUid}"); // Forge-change: take Mono taxes
             return false;
         }
 
@@ -160,7 +160,7 @@ public sealed partial class BankSystem : SharedBankSystem
         newBalance = null; // Default return
         if (amount <= 0)
         {
-            _log.Info($"TryBankWithdraw: {amount} is invalid");
+            _log.Info($"TryBankWithdraw: {amount} is invalid. Admin remove money variation."); // Forge-change: take Mono taxes
             return false;
         }
 
@@ -203,7 +203,7 @@ public sealed partial class BankSystem : SharedBankSystem
         newBalance = null; // Default return
         if (amount <= 0)
         {
-            _log.Info($"TryBankDeposit: {amount} is invalid");
+            _log.Info($"TryBankDeposit: {amount} is invalid. Admin add money variation."); // Forge-change: take Mono taxes
             return false;
         }
 

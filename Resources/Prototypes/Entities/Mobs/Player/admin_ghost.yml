@@ -89,8 +89,10 @@
     maxIffRange: null # Frontier
   - type: NFCargoOrderConsole
     taxAccounts: # Frontier
-      Frontier: 0.25 # Frontier
-      Nfsd: 0.15 # Frontier
+      # Frontier: 0.25 # Frontier
+      # Nfsd: 0.15 # Frontier
+      Frontier: 0 # Mono - Tax Removed
+      Nfsd: 0 # Mono - Tax removed
   - type: CrewMonitoringConsole
   - type: GeneralStationRecordConsole
     canDeleteEntries: true

@@ -43,7 +43,7 @@
   unit: materials-unit-sheet
   icon: { sprite: /Textures/Objects/Materials/Sheets/metal.rsi, state: plastitanium }
   color: "#5c5c5c"
-  price: 10 # 3000
+  price: 5 # 1500
 
 - type: entity
   parent: MaterialBase
@@ -102,7 +102,7 @@
   unit: materials-unit-sheet
   icon: { sprite: /Textures/Objects/Materials/Sheets/metal.rsi, state: titanium }
   color: "#5c5c5c"
-  price: 5 # 1500
+  price: 3 # 900
 
 - type: entity
   parent: MaterialBase

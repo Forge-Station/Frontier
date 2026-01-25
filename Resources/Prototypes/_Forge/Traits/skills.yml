@@ -33,3 +33,21 @@
     stealthy: true
     timeMultiplier: 0.67
     identifyHidden: true
+
+- type: trait
+  id: SelfAware
+  name: trait-self-aware-name
+  description: trait-self-aware-desc
+  category: Skills
+  cost: 2
+  components:
+  - type: SelfAware
+
+- type: trait
+  id: PrybarProsthetics
+  name: trait-prybar-prosthetics-name
+  description: trait-prybar-prosthetics-desc
+  category: Physical
+  cost: 2
+  components:
+  - type: PrybarProsthetics
