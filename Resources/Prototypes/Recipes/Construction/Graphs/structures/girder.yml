@@ -284,6 +284,55 @@
               amount: 2
               doAfter: 1
 
+        # Forge-change-start
+        - to: wallReinforcedDiagonal
+          completed:
+            - !type:SnapToGrid
+              southRotation: false
+          conditions:
+            - !type:EntityAnchored { }
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - material: Plasteel
+              amount: 2
+              doAfter: 1
+
+        - to: wallPlastitaniumDiagonal
+          completed:
+          - !type:SnapToGrid
+            southRotation: false
+          conditions:
+          - !type:EntityAnchored { }
+          steps:
+          - tool: Screwing
+            doAfter: 1
+          - tool: Welding
+            doAfter: 2
+          - material: Plasteel
+            amount: 4
+            doAfter: 1
+          - material: Plastitanium
+            amount: 5
+            doAfter: 1
+
+        - to: plastitaniumWall
+          completed:
+          - !type:SnapToGrid
+            southRotation: true
+          conditions:
+          - !type:EntityAnchored { }
+          steps:
+          - tool: Welding
+            doAfter: 20
+          - material: Plasteel
+            amount: 5
+            doAfter: 1
+          - material: Plastitanium
+            amount: 10
+            doAfter: 1
+        # Forge-change-end
+
         - to: shuttleWall
           completed:
             - !type:SnapToGrid
@@ -520,6 +569,106 @@
               doAfter: 1
             - tool: Cutting
               doAfter: 1
+
+    # Forge-change-start
+    # Diagonal's wall
+    - node: wallReinforcedDiagonal
+      entity: WallReinforcedDiagonal
+      edges:
+        - to: reinforcedGirder
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 2
+          steps:
+            - tool: Cutting
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+            - tool: Welding
+              doAfter: 5
+            - tool: Prying
+              doAfter: 1
+            - tool: Anchoring
+              doAfter: 1
+            - tool: Welding
+              doAfter: 10
+            - tool: Prying
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+            - tool: Cutting
+              doAfter: 1
+
+    - node: wallPlastitaniumDiagonal
+      entity: WallPlastitaniumDiagonal
+      edges:
+      - to: reinforcedGirder
+        completed:
+        - !type:SpawnPrototype
+          prototype: ScrapSteel
+          amount: 1
+        steps:
+        - tool: Cutting
+          doAfter: 1
+        - tool: Screwing
+          doAfter: 1
+        - tool: Welding
+          doAfter: 5
+        - tool: Prying
+          doAfter: 1
+        - tool: Anchoring
+          doAfter: 1
+        - tool: Welding
+          doAfter: 10
+        - tool: Prying
+          doAfter: 1
+        - tool: Screwing
+          doAfter: 1
+        - tool: Cutting
+          doAfter: 1
+        - tool: Welding
+          doAfter: 15
+        - tool: Prying
+          doAfter: 5
+        - tool: Anchoring
+          doAfter: 1
+    # Diagonal's end
+
+    - node: plastitaniumWall
+      entity: WallPlastitanium
+      edges:
+      - to: reinforcedGirder
+        completed:
+        - !type:SpawnPrototype
+          prototype: ScrapSteel
+          amount: 2
+        steps:
+        - tool: Cutting
+          doAfter: 1
+        - tool: Screwing
+          doAfter: 1
+        - tool: Welding
+          doAfter: 5
+        - tool: Prying
+          doAfter: 1
+        - tool: Anchoring
+          doAfter: 1
+        - tool: Welding
+          doAfter: 10
+        - tool: Prying
+          doAfter: 1
+        - tool: Screwing
+          doAfter: 1
+        - tool: Cutting
+          doAfter: 1
+        - tool: Welding
+          doAfter: 15
+        - tool: Prying
+          doAfter: 5
+        - tool: Anchoring
+          doAfter: 1
+    # Forge-change-end
 
     - node: wallrust
       entity: WallSolidRust

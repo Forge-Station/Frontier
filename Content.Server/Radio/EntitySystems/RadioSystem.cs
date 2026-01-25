@@ -18,9 +18,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
-using Content.Shared._EinsteinEngines.Language; // Forge-change: take Einstein Engines - Language
-using Content.Shared._EinsteinEngines.Language.Systems; // Forge-change
-using Content.Server._EinsteinEngines.Language; // Forge-change
+using Content.Shared._EE.Language; // Forge-change: take Einstein Engines - Language
+using Content.Shared._EE.Language.Systems; // Forge-change
+using Content.Server._EE.Language; // Forge-change
 
 namespace Content.Server.Radio.EntitySystems;
 

@@ -77,7 +77,7 @@
     <ui:MenuButton
         Name="LanguageButton"
         Access="Internal"
-        Icon="{xe:Tex '/Textures/_EinsteinEngines/Interface/language.png'}"
+        Icon="{xe:Tex '/Textures/_EE/Interface/language.png'}"
         BoundKey = "{x:Static is:ContentKeyFunctions.OpenLanguageMenu}"
         ToolTip="Open the Language Menu"
         MinSize="42 64"

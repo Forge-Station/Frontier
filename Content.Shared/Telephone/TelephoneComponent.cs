@@ -3,7 +3,7 @@ using Content.Shared.Speech;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
-using Content.Shared._EinsteinEngines.Language; // Forge-change: take EE Lang
+using Content.Shared._EE.Language; // Forge-change: take EE Lang
 
 namespace Content.Shared.Telephone;
 

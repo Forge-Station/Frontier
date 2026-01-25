@@ -2,6 +2,10 @@
 # we should add them here in the order they are in the list, for organization. Maybe add more languages later.
 
 trait-category-languages = Языки
+trait-category-skills = Навыки
+
+trait-crp-name = СЛР
+trait-crp-desc = Вы умеете делать сердечно-лёгочную реанимацию.
 
 trait-language-foreigner-light-name = Начинающий
 trait-language-foreigner-light-desc =

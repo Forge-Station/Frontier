@@ -1,3 +1,4 @@
+# region Magmite
 - type: entity
   parent: SheetOtherBase
   id: SheetMagmite
@@ -33,3 +34,121 @@
   components:
   - type: Stack
     count: 1
+
+# region Plastitanium
+- type: material
+  id: Plastitanium
+  stackEntity: SheetPlastitanium1
+  name: materials-plastitanium
+  unit: materials-unit-sheet
+  icon: { sprite: /Textures/Objects/Materials/Sheets/metal.rsi, state: plastitanium }
+  color: "#5c5c5c"
+  price: 10 # 3000
+
+- type: entity
+  parent: MaterialBase
+  id: SheetPlastitanium
+  name: plastitanium
+  description: plastitanium desc.
+  suffix: Full
+  components:
+  - type: Sprite
+    sprite: /Textures/Objects/Materials/Sheets/metal.rsi
+    state: plastitanium_3
+    layers:
+    - state: plastitanium_3
+      map: ["base"]
+  - type: Tag
+    tags:
+    - Sheet
+  - type: Item
+    sprite: /Textures/Objects/Materials/Sheets/metal.rsi
+    heldPrefix: plastitanium
+  - type: Stack
+    stackType: Plastitanium
+    count: 30
+    baseLayer: base
+    layerStates:
+    - plastitanium
+    - plastitanium_2
+    - plastitanium_3
+  - type: Material
+  - type: Appearance
+  - type: PhysicalComposition
+    materialComposition:
+      Plastitanium: 100
+
+- type: entity
+  parent: SheetPlastitanium
+  id: SheetPlastitanium1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: entity
+  parent: SheetPlastitanium
+  id: SheetPlastitanium10
+  suffix: 10
+  components:
+  - type: Stack
+    count: 10
+
+# region Titanium
+- type: material
+  id: Titanium
+  stackEntity: SheetTitanium1
+  name: materials-titanium
+  unit: materials-unit-sheet
+  icon: { sprite: /Textures/Objects/Materials/Sheets/metal.rsi, state: titanium }
+  color: "#5c5c5c"
+  price: 5 # 1500
+
+- type: entity
+  parent: MaterialBase
+  id: SheetTitanium
+  name: titanium
+  description: titanium desc.
+  suffix: Full
+  components:
+  - type: Sprite
+    sprite: /Textures/Objects/Materials/Sheets/metal.rsi
+    state: titanium_3
+    layers:
+    - state: titanium_3
+      map: ["base"]
+  - type: Tag
+    tags:
+    - Sheet
+  - type: Item
+    sprite: /Textures/Objects/Materials/Sheets/metal.rsi
+    heldPrefix: titanium
+  - type: Stack
+    stackType: Titanium
+    count: 30
+    baseLayer: base
+    layerStates:
+    - titanium
+    - titanium_2
+    - titanium_3
+  - type: Material
+  - type: Appearance
+  - type: PhysicalComposition
+    materialComposition:
+      Titanium: 100
+
+- type: entity
+  parent: SheetTitanium
+  id: SheetTitanium1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: entity
+  parent: SheetTitanium
+  id: SheetTitanium10
+  suffix: 10
+  components:
+  - type: Stack
+    count: 10

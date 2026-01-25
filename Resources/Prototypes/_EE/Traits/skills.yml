@@ -1,0 +1,35 @@
+- type: trait
+  id: CPRTraining
+  name: trait-crp-name
+  description: trait-crp-desc
+  category: Skills
+  cost: 2
+  components:
+  - type: CPRTraining
+
+- type: trait
+  id: TrapAvoider
+  name: trait-trap-avoider-name
+  description: trait-trap-avoider-desc
+  category: Skills
+  cost: 2
+  speciesBlacklist:
+    - Felinid
+    - Tajaran
+    - Harpy
+  components:
+    - type: TrapAvoider
+
+- type: trait
+  id: Thieving
+  name: trait-thieving-name
+  description: trait-thieving-desc
+  category: Skills
+  cost: 2
+  speciesBlacklist:
+  - Felinid
+  components:
+  - type: Thieving
+    stealthy: true
+    timeMultiplier: 0.67
+    identifyHidden: true

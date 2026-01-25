@@ -1,6 +1,6 @@
 using Content.Shared.Chat;
 using Content.Shared.Radio;
-using Content.Shared._EinsteinEngines.Language; // Forge-change: take Einstein Engines - Language
+using Content.Shared._EE.Language; // Forge-change: take Einstein Engines - Language
 
 namespace Content.Server.Radio;
 

@@ -23,7 +23,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using System.Linq;
 using Content.Shared._Forge.TTS;
-using Content.Server._EinsteinEngines.Language; // Forge-change: Einstein Engines - Languages
+using Content.Server._EE.Language; // Forge-change: Einstein Engines - Languages
 
 namespace Content.Server.Telephone;
 

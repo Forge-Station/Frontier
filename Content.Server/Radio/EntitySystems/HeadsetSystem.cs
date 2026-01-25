@@ -9,7 +9,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Content.Shared.Chat; // Forge-change: take Einstein Engines - Language
 using Content.Server.Speech; // Forge-change
-using Content.Server._EinsteinEngines.Language; // Forge-change
+using Content.Server._EE.Language; // Forge-change
 
 namespace Content.Server.Radio.EntitySystems;
 

@@ -37,9 +37,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
-using Content.Server._EinsteinEngines.Language; // Einstein Engines - Language
+using Content.Server._EE.Language; // Einstein Engines - Language
 using Content.Server.Speech; // Einstein Engines - Language
-using Content.Shared._EinsteinEngines.Language; // Einstein Engines - Language
+using Content.Shared._EE.Language; // Einstein Engines - Language
 
 namespace Content.Server.Chat.Systems;
 

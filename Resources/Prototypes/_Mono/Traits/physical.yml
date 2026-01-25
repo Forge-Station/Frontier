@@ -97,19 +97,20 @@
   components:
   - type: WillToDie
 
-- type: trait
-  id: Thieving
-  name: trait-thieving-name
-  description: trait-thieving-desc
-  category: Physical
-  cost: 3
-  speciesBlacklist:
-  - Felinid
-  components:
-  - type: Thieving
-    stealthy: true
-    timeMultiplier: 0.67
-    identifyHidden: true
+# Forge-change: move to Skills
+# - type: trait
+#   id: Thieving
+#   name: trait-thieving-name
+#   description: trait-thieving-desc
+#   category: Physical
+#   cost: 3
+#   speciesBlacklist:
+#   - Felinid
+#   components:
+#   - type: Thieving
+#     stealthy: true
+#     timeMultiplier: 0.67
+#     identifyHidden: true
 
 - type: trait
   id: BionicLegs
@@ -200,18 +201,19 @@
         "45": 0.70
         "65": 0.46
 
-- type: trait
-  id: TrapAvoider
-  name: trait-trap-avoider-name
-  description: trait-trap-avoider-desc
-  category: Physical
-  cost: 4
-  speciesBlacklist:
-    - Felinid
-    - Tajaran
-    - Harpy
-  components:
-    - type: TrapAvoider
+# Forge-change move to Skills
+# - type: trait
+#   id: TrapAvoider
+#   name: trait-trap-avoider-name
+#   description: trait-trap-avoider-desc
+#   category: Physical
+#   cost: 4
+#   speciesBlacklist:
+#     - Felinid
+#     - Tajaran
+#     - Harpy
+#   components:
+#     - type: TrapAvoider
 
 - type: trait
   id: SelfAware

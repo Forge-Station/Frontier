@@ -1,5 +1,5 @@
 using JetBrains.Annotations;
-using Content.Client._EinsteinEngines.Language;
+using Content.Client._EE.Language;
 using Content.Client.Gameplay;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Input;

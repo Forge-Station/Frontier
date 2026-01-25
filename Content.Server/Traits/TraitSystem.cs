@@ -5,7 +5,7 @@ using Content.Shared.Roles;
 using Content.Shared.Traits;
 using Content.Shared.Whitelist;
 using Robust.Shared.Prototypes;
-using Content.Server._EinsteinEngines.Language; // Forge-change: Einstein Engines - Languages
+using Content.Server._EE.Language; // Forge-change: Einstein Engines - Languages
 
 namespace Content.Server.Traits;
 

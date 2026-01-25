@@ -11,9 +11,9 @@ using Robust.Shared.Random;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Robust.Shared.Utility;
-using Content.Server._EinsteinEngines.Language; // Einstein Engines - Language
+using Content.Server._EE.Language; // Einstein Engines - Language
 using Content.Server.Speech; // Einstein Engines - Language
-using Content.Shared._EinsteinEngines.Language; // Einstein Engines - Language
+using Content.Shared._EE.Language; // Einstein Engines - Language
 
 namespace Content.Server._Forge.TTS;
 

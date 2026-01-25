@@ -7,7 +7,7 @@ using Content.Shared.Chat.Prototypes;
 using Content.Shared.Puppet;
 using Content.Shared.Speech;
 using Content.Shared.Speech.Muting;
-using Content.Server._EinsteinEngines.Language; // Forge-change: take Einstein Engines - Language
+using Content.Server._EE.Language; // Forge-change: take Einstein Engines - Language
 
 namespace Content.Server.Speech.Muting
 {

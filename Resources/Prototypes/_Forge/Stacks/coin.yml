@@ -1,0 +1,12 @@
+- type: stack
+  id: ColiseumCoin
+  name: coliseum-coin
+  icon: { sprite: Forge/Objects/Materials/Coliseum/coliseum_coin.rsi, state: coin }
+  spawn: ColiseumCoin
+  maxCount: 10
+
+- type: stack
+  id: MercenaryToken
+  name: quantum-crystal
+  icon: Forge/Objects/Specific/Mercenary/quantumcrystal.rsi
+  spawn: MercenaryToken

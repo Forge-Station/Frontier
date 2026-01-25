@@ -21,7 +21,7 @@ using Content.Shared.Access.Systems; // Frontier
 using Content.Shared.Verbs; //Frontier
 using Robust.Shared.Utility; // Frontier
 using Content.Shared.ActionBlocker; //Frontier
-using Content.Server._EinsteinEngines.Language; // Forge-change: take Einstein Engines - Language
+using Content.Server._EE.Language; // Forge-change: take Einstein Engines - Language
 
 namespace Content.Server.Radio.EntitySystems;
 
