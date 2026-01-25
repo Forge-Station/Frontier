@@ -43,9 +43,7 @@
     eyes: ClothingEyesGlassesMeson #ClothingEyesGlassesSecurity
     hands: ClothingHandsGlovesColorYellow
     ears: ClothingHeadsetEngineering
-  storage:
-    back:
-    - AccessConfigurator
+    pocket1: AccessConfigurator
   encryptionKeys:
   - EncryptionKeyService
   - EncryptionKeyEngineering

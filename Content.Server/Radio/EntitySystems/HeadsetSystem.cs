@@ -7,6 +7,9 @@ using Content.Shared.Radio.Components;
 using Content.Shared.Radio.EntitySystems;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
+using Content.Shared.Chat; // Forge-change: take Einstein Engines - Language
+using Content.Server.Speech; // Forge-change
+using Content.Server._EinsteinEngines.Language; // Forge-change
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -14,6 +17,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
 {
     [Dependency] private readonly INetManager _netMan = default!;
     [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private readonly LanguageSystem _language = default!; // Forge-change: take Einstein Engines - Language
 
     public override void Initialize()
     {
@@ -104,15 +108,15 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
         // to have an ActiveRadioComponent
 
         var parent = Transform(uid).ParentUid;
-
-        if (parent.IsValid())
-        {
-            var relayEvent = new HeadsetRadioReceiveRelayEvent(args);
-            RaiseLocalEvent(parent, ref relayEvent);
-        }
-
         if (TryComp(parent, out ActorComponent? actor))
-            _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+        {
+            var canUnderstand = _language.CanUnderstand(parent, args.Language.ID);
+            var msg = new MsgChatMessage
+            {
+                Message = canUnderstand ? args.OriginalChatMsg : args.LanguageObfuscatedChatMsg
+            };
+            _netMan.ServerSendMessage(msg, actor.PlayerSession.Channel);
+        }
     }
 
     private void OnEmpPulse(EntityUid uid, HeadsetComponent component, ref EmpPulseEvent args)

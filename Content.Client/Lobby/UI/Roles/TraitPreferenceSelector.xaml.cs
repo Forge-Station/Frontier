@@ -121,7 +121,7 @@ public sealed partial class TraitPreferenceSelector : Control
             // Preserve the darker gray background if this trait is selected
             if (Preference)
             {
-                TraitButton.ModulateSelfOverride = Color.FromHex("#3c3c3d");
+                TraitButton.ModulateSelfOverride = Color.FromHex("#3d3b3b");
             }
         }
         else
@@ -132,7 +132,7 @@ public sealed partial class TraitPreferenceSelector : Control
             // Restore the appropriate background color based on selection state
             if (Preference)
             {
-                TraitButton.ModulateSelfOverride = Color.FromHex("#626662");
+                TraitButton.ModulateSelfOverride = Color.FromHex("#3e6c45");
             }
             else
             {

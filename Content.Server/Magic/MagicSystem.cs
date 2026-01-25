@@ -6,6 +6,7 @@ using Content.Shared.Magic.Events;
 using Content.Shared.Mind;
 using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
+using Content.Shared.Chat; // Forge-change: take Einstein Engines - Language
 
 namespace Content.Server.Magic;
 

@@ -51,6 +51,13 @@
     - Mew
     - Growl
     - Purr
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - Nekomimetic
+    understands:
+    - ForgeGalacticStandard
+    - Nekomimetic
   - type: DamageOnHighSpeedImpact # Landing on all fours!
     damage:
       types:

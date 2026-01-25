@@ -32,6 +32,9 @@ public sealed class TenacitySystem : EntitySystem
 
     private void AdjustCritThreshold(EntityUid uid, int deltaPoints, MobThresholdsComponent? thresholdsComp = null)
     {
+        if (!Resolve(uid, ref thresholdsComp, false))
+            return;
+
         if (!_mobThresholds.TryGetThresholdForState(uid, MobState.Critical, out var current, thresholdsComp))
             return;
 

@@ -31,6 +31,13 @@
     speechVerb: Moth
     speechSounds: Moth # Frontier: upstream#37297
     allowedEmotes: ['Chitter', 'Squeak']
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - Moffic
+    understands:
+    - ForgeGalacticStandard
+    - Moffic
   - type: TypingIndicator
     proto: moth
   - type: Butcherable

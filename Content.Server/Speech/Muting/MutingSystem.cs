@@ -7,12 +7,15 @@ using Content.Shared.Chat.Prototypes;
 using Content.Shared.Puppet;
 using Content.Shared.Speech;
 using Content.Shared.Speech.Muting;
+using Content.Server._EinsteinEngines.Language; // Forge-change: take Einstein Engines - Language
 
 namespace Content.Server.Speech.Muting
 {
     public sealed class MutingSystem : EntitySystem
     {
         [Dependency] private readonly PopupSystem _popupSystem = default!;
+        [Dependency] private readonly LanguageSystem _languages = default!; // Forge-change: EE Lang
+
         public override void Initialize()
         {
             base.Initialize();
@@ -48,6 +51,12 @@ namespace Content.Server.Speech.Muting
         private void OnSpeakAttempt(EntityUid uid, MutedComponent component, SpeakAttemptEvent args)
         {
             // TODO something better than this.
+
+            // Forge-change-start: take EE Lang
+            var language = _languages.GetLanguage(uid);
+            if (!language.SpeechOverride.RequireSpeech)
+                return; // Cannot mute if there's no speech involved
+            // Forge-change-end
 
             if (HasComp<MimePowersComponent>(uid))
                 _popupSystem.PopupEntity(Loc.GetString("mime-cant-speak"), uid, uid);

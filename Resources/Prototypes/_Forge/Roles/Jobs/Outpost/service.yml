@@ -34,15 +34,16 @@
   - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
     holiday: NewYear
     prototype: PresentRandom
+  - !type:AddLanguageSpecial
+    languagesUnderstood:
+    - Sign
 
 - type: startingGear
   id: OutpostServiceGear
   equipment:
     ears: ClothingHeadsetService
     eyes: ClothingEyesGlassesSunglasses #ClothingEyesGlassesSecurity
-  storage:
-    back:
-    - BoxFolderClipboard
+    pocket1: BoxFolderClipboard
   encryptionKeys:
   - EncryptionKeyService
   - EncryptionKeyGreeting

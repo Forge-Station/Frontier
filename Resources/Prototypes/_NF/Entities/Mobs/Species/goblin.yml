@@ -44,6 +44,11 @@
     - GoblinThroatSinging
     - Hiss
     - Belch
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - ForgeGalacticStandard
+    understands:
+    - ForgeGalacticStandard
   - type: DamageOnHighSpeedImpact
     damage:
       types:

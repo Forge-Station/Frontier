@@ -32,6 +32,9 @@ public sealed class WillToDieSystem : EntitySystem
 
     private void AdjustDeathThreshold(EntityUid uid, int deltaPoints, MobThresholdsComponent? thresholdsComp = null)
     {
+        if (!Resolve(uid, ref thresholdsComp, false))
+            return;
+
         if (!_mobThresholds.TryGetThresholdForState(uid, MobState.Dead, out var current, thresholdsComp))
             return;
 

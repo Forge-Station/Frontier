@@ -31,6 +31,11 @@
     speechSounds: Sheleg
     speechVerb: Sheleg
 #    allowedEmotes: [ 'Belch' ]
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - ForgeGalacticStandard
+    understands:
+    - ForgeGalacticStandard
   - type: TypingIndicator
     proto: sheleg
   - type: Butcherable

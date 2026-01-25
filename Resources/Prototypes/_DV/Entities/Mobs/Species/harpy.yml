@@ -116,6 +116,13 @@
       Male: SoundsHarpy
       Female: SoundsHarpy
       Unsexed: SoundsHarpy
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - ForgeGalacticStandard
+    - ValyrianStandard
+    understands:
+    - ForgeGalacticStandard
+    - ValyrianStandard
   - type: InstrumentVisuals
   - type: GenericVisualizer
     visuals:

@@ -96,7 +96,7 @@ public sealed partial class ParrotMemorySystem : EntitySystem
 
     private void OnHeadsetReceive(Entity<ParrotListenerComponent> entity, ref HeadsetRadioReceiveRelayEvent args)
     {
-        var message = args.RelayedEvent.Message;
+        var message = args.RelayedEvent.LanguageObfuscatedChatMsg.Message; // Forge-change: idk, i fix issue?
         var source = args.RelayedEvent.MessageSource;
 
         TryLearn(entity.Owner, message, source);

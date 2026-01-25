@@ -39,6 +39,11 @@
   - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
     holiday: NewYear
     prototype: PresentRandom
+  - !type:AddLanguageSpecial
+    languagesSpoken:
+    - ForgeAshen
+    languagesUnderstood:
+    - ForgeAshen
 
 - type: startingGear
   id: NFPirateCaptainGear

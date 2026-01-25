@@ -3,6 +3,7 @@ using Content.Shared.Speech;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
+using Content.Shared._EinsteinEngines.Language; // Forge-change: take EE Lang
 
 namespace Content.Shared.Telephone;
 
@@ -173,7 +174,7 @@ public readonly record struct TelephoneMessageSentEvent(string Message, MsgChatM
 /// Raised when a chat message is received by a telephone from another
 /// </summary>
 [ByRefEvent]
-public readonly record struct TelephoneMessageReceivedEvent(string Message, MsgChatMessage ChatMsg, EntityUid MessageSource, Entity<TelephoneComponent> TelephoneSource);
+public readonly record struct TelephoneMessageReceivedEvent(string Message, MsgChatMessage ChatMsg, EntityUid MessageSource, Entity<TelephoneComponent> TelephoneSource, LanguagePrototype? Language = null); // Forge-change: Einstein Engines - Language
 
 #endregion
 

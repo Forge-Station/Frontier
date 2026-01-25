@@ -1,0 +1,330 @@
+# Languages spoken by various animals and critters.
+- type: language
+  id: Cat
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 2
+    replacement:
+    # Forge-change
+    # - murr
+    # - meow
+    # - purr
+    # - mrow
+    - мрр
+    - мяу
+    - мурр
+    - мрау
+
+- type: language
+  id: Dog
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 2
+    replacement:
+    # Forge-change
+    # - woof
+    # - bark
+    # - ruff
+    # - bork
+    # - raff
+    # - garr
+    - гав
+    - лай
+    - ррр
+    - тяв
+    - урр
+    - хрр
+
+
+- type: language
+  id: Fox
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 2
+    replacement:
+    # Forge-change
+    # - ruff
+    # - raff
+    # - garr
+    # - yip
+    # - yap
+    # - myah
+    - ррр
+    - хрр
+    - гяр
+    - йип
+    - йап
+    - мяа
+
+- type: language
+  id: Xeno
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 8 # I was crazy once
+    replacement:
+    # Forge-change
+    # - s
+    # - S
+    - с 
+    - ш
+    - С 
+    - сс
+    - й
+
+- type: language
+  id: Monkey
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 4 # They locked me in a room... #Mono: 8 >> 4
+    replacement: #Mono: Expanded just o and k with a more monke syllable set
+    # Forge-change
+    # - A
+    # - AA
+    # - AH
+    # - HA
+    # - HH
+    # - O
+    # - OO
+    # - OOK
+    # - OKO
+    - А
+    - Аа
+    - Ах
+    - У
+    - Хя
+    - О
+    - УО
+    - УУК
+    - ОКУ
+    - УУ
+    - ОУ
+
+- type: language
+  id: Mouse
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 2
+    maxSyllables: 3
+    replacement:
+    # Forge-change
+    # - squ
+    # - eak
+    # - pi
+    # - ep
+    # - chuu
+    # - ee
+    # - fwi
+    # - he
+    - пис
+    - пии
+    - чии
+    - чуу
+    - иии
+    - фви
+    - сквик
+    - эп
+
+- type: language
+  id: Chicken
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement:
+    # Forge-change
+    # - co
+    # - coo
+    # - ot
+    - ко
+    - коо
+    - курр
+    - кок
+
+- type: language
+  id: Duck
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement:
+    # Forge-change
+    # - qu
+    # - ack
+    # - quack
+    - кря
+    - кряк
+    - квак
+
+- type: language
+  id: Cow
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement:
+    # Forge-change
+    # - moo
+    # - mooo
+    - му
+    - муу
+    - мууу
+
+- type: language
+  id: Sheep
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement:
+    # Forge-change
+    # - ba
+    # - baa
+    # - aa
+    - бе
+    - бее
+    - мее
+
+- type: language
+  id: Kangaroo
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement:
+    # Forge-change
+    # - shre
+    # - ack
+    # - chuu
+    # - choo
+    - шрр
+    - ак
+    - чуу
+    - чо
+    - хоп
+
+- type: language
+  id: Pig
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement:
+    # Forge-change
+    # - oink # Please someone come up with something better
+    - хрю
+    - хрюк
+    - оинк
+
+- type: language
+  id: Crab
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement:
+    # Forge-change
+    # - click
+    # - clack
+    # - ti
+    # - pi
+    # - tap
+    # - cli
+    # - ick
+    - щелк
+    - клац
+    - клак
+    - тик
+    - пи
+    - тап
+    - клик
+
+- type: language
+  id: Kobold
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 2
+    maxSyllables: 4
+    replacement:
+    # Forge-change
+    # - yip
+    # - yap
+    # - gar
+    # - grr
+    # - ar
+    # - scre
+    # - et
+    # - gronk
+    # - hiss
+    # - ss
+    # - ee
+    - йип
+    - йап
+    - гар
+    - грр
+    - ар
+    - скре
+    - ет
+    - гронак
+    - хисс
+    - сс
+    - еэ
+
+- type: language
+  id: Hissing
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 2
+    maxSyllables: 4
+    replacement:
+    # Forge-change
+    # - hss
+    # - iss
+    # - ss
+    # - is
+    - хсс
+    - исс
+    - ссс
+    - иш
+
+- type: language
+  id: Penguin
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 2
+    maxSyllables: 3
+    replacement: # I'm out of ideas
+    # Forge-change
+    # - pen
+    # - peng
+    # - won
+    # - wonk
+    # - wong
+    - пен
+    - пенг
+    - пинг
+    - понг
+    - пнг
+    - вонк
+    - вунк
+    - уинк
+
+- type: language # Goobstation - For Deer
+  id: Deer
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement:
+    # Forge-change
+    # - neigh
+    # - ni
+    # - brr
+    - мее
+    - ни
+    - брр
+    - бру

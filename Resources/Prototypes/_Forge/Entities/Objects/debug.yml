@@ -1,0 +1,415 @@
+- type: entity
+  parent: MobMedibot
+  id: ForgeGalacticStandard
+  name: MediLanguageBot
+  description: No substitute for a doctor, but better than nothing.
+  suffix: ForgeGalacticStandard
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    understands:
+    - ForgeGalacticStandard
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotBubblish
+  name: Bubblish
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Bubblish
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Bubblish
+    understands:
+    - Bubblish
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotRootSpeak
+  name: RootSpeak
+  description: No substitute for a doctor, but better than nothing.
+  suffix: RootSpeak
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - RootSpeak
+    understands:
+    - RootSpeak
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotNekomimetic
+  name: Nekomimetic
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Nekomimetic
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Nekomimetic
+    understands:
+    - Nekomimetic
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotDraconic
+  name: Draconic
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Draconic
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Draconic
+    understands:
+    - Draconic
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotCanilunzt
+  name: Canilunzt
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Canilunzt
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Canilunzt
+    understands:
+    - Canilunzt
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotMoffic
+  name: Moffic
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Moffic
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Moffic
+    understands:
+    - Moffic
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotChittin
+  name: Chittin
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Chittin
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Chittin
+    understands:
+    - Chittin
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotXeeplian
+  name: Xeeplian
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Xeeplian
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Xeeplian
+    understands:
+    - Xeeplian
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotRobotTalk
+  name: RobotTalk
+  description: No substitute for a doctor, but better than nothing.
+  suffix: RobotTalk
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - RobotTalk
+    understands:
+    - RobotTalk
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotCalcic
+  name: Calcic
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Calcic
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Calcic
+    understands:
+    - Calcic
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotMarish
+  name: Marish
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Marish
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Marish
+    understands:
+    - Marish
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotAzaziba
+  name: Azaziba
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Azaziba
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Azaziba
+    understands:
+    - Azaziba
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotHydraspeak
+  name: Hydraspeak
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Hydraspeak
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Hydraspeak
+    understands:
+    - Hydraspeak
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotForgeEarthClassic
+  name: ForgeEarthClassic
+  description: No substitute for a doctor, but better than nothing.
+  suffix: ForgeEarthClassic
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeEarthClassic
+    understands:
+    - ForgeEarthClassic
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotForgeTradeband
+  name: ForgeTradeband
+  description: No substitute for a doctor, but better than nothing.
+  suffix: ForgeTradeband
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeTradeband
+    understands:
+    - ForgeTradeband
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotForgeAshen
+  name: ForgeAshen
+  description: No substitute for a doctor, but better than nothing.
+  suffix: ForgeAshen
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeAshen
+    understands:
+    - ForgeAshen
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotForgeSibera
+  name: ForgeSibera
+  description: No substitute for a doctor, but better than nothing.
+  suffix: ForgeSibera
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeSibera
+    understands:
+    - ForgeSibera
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotEldritch
+  name: Eldritch
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Eldritch
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Eldritch
+    understands:
+    - Eldritch
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotSecurityCodebase
+  name: SecurityCodebase
+  description: No substitute for a doctor, but better than nothing.
+  suffix: SecurityCodebase
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - SecurityCodebase
+    understands:
+    - SecurityCodebase
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotWarCode
+  name: WarCode
+  description: No substitute for a doctor, but better than nothing.
+  suffix: WarCode
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - WarCode
+    understands:
+    - WarCode
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotBlob
+  name: Blob
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Blob
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Blob
+    understands:
+    - Blob
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotSign
+  name: Sign
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Sign
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Sign
+    understands:
+    - Sign
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotDroneTalk
+  name: DroneTalk
+  description: No substitute for a doctor, but better than nothing.
+  suffix: DroneTalk
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - DroneTalk
+    understands:
+    - DroneTalk
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotValyrianStandard
+  name: ValyrianStandard
+  description: No substitute for a doctor, but better than nothing.
+  suffix: ValyrianStandard
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ValyrianStandard
+    understands:
+    - ValyrianStandard
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotSiikMaas
+  name: SiikMaas
+  description: No substitute for a doctor, but better than nothing.
+  suffix: SiikMaas
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - SiikMaas
+    understands:
+    - SiikMaas
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotNalRasan
+  name: NalRasan
+  description: No substitute for a doctor, but better than nothing.
+  suffix: NalRasan
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - NalRasan
+    understands:
+    - NalRasan
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotSiikTajr
+  name: SiikTajr
+  description: No substitute for a doctor, but better than nothing.
+  suffix: SiikTajr
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - SiikTajr
+    understands:
+    - SiikTajr
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotYaSsa
+  name: YaSsa
+  description: No substitute for a doctor, but better than nothing.
+  suffix: YaSsa
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - YaSsa
+    understands:
+    - YaSsa
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotDelvahii
+  name: Delvahii
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Delvahii
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Delvahii
+    understands:
+    - Delvahii
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotShadowmind
+  name: Shadowmind
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Shadowmind
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Shadowmind
+    understands:
+    - Shadowmind
+
+- type: entity
+  parent: MobMedibot
+  id: MediLanguageBotQiilour
+  name: Qiilour
+  description: No substitute for a doctor, but better than nothing.
+  suffix: Qiilour
+  components:
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Qiilour
+    understands:
+    - Qiilour

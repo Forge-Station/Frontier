@@ -45,6 +45,13 @@
       Male: Skeleton
       Female: Skeleton
       Unsexed: Skeleton
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - ForgeGalacticStandard
+    - Calcic
+    understands:
+    - ForgeGalacticStandard
+    - Calcic
   - type: SkeletonAccent
   - type: Fixtures
     fixtures:

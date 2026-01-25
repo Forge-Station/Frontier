@@ -109,6 +109,14 @@
   - type: Appearance
   - type: WiresVisuals
   # Frontier: vending machine modifications
+  - type: LanguageSpeaker # Einstein Engines - Languages
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - RobotTalk
+    understands:
+    - ForgeGalacticStandard
+    - RobotTalk
   - type: MarketModifier
     mod: 10
   - type: PotentialDeadDrop

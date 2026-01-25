@@ -96,6 +96,13 @@
       Male: UnisexDiona
       Female: UnisexDiona
       Unsexed: UnisexDiona
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - RootSpeak
+    understands:
+    - ForgeGalacticStandard
+    - RootSpeak
   - type: TypingIndicator
     proto: diona
   - type: BodyEmotes

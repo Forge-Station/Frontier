@@ -96,6 +96,11 @@
   - type: CargoSellBlacklist # Frontier
   - type: PirateBountyItem
     id: Mail
+  - type: LanguageSpeaker # Einstein Engines - Language
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - GalacticStandard # So that them foreigners can't understand what the broken mail is saying
+    understands: []
 
 # This empty parcel is allowed to exist and evade the tests for the admin
 # mailto command.

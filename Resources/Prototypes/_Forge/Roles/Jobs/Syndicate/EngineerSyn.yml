@@ -42,6 +42,11 @@
   - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
     holiday: NewYear
     prototype: PresentRandomUnsafe # Unsafe for Syndicate
+  - !type:AddLanguageSpecial
+    languagesSpoken:
+    - WarCode
+    languagesUnderstood:
+    - WarCode
 
 - type: startingGear
   id: EngineerSynGear

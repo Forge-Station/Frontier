@@ -1,0 +1,216 @@
+# Language spoken by Harpies and Squackroaches.
+# Based on Polish, Greek, Serbian, Turkish.
+- type: language
+  id: ValyrianStandard
+  isVisibleLanguage: true
+  speech:
+   # fontId: Delius # Goob Edit - Different Font / Monolith Edit - FONTS NOT ALREADY HERE ARE NOT BEING ADDED
+   # fontSize: 13 # Goob Edit - Increased by 1 to account for slight size difference.
+    color: "#46ce83" # Goob Edit - Original "#008ecc"
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 2
+    maxSyllables: 5
+    replacement:
+    - š
+    - ž
+    - ź
+    - ż
+    - ö
+    - ü
+    - çi
+    - bü
+    - ca
+    - çu
+    - dü
+    - do
+    - fa
+    - fe
+    - fi
+    - gü
+    # Forge-change
+    # - ha
+    # - je
+    # - jü
+    # - la
+    # - le
+    # - li
+    # - me
+    # - mi
+    # - mo
+    # - çe
+    # - nj
+    # - ba
+    # - ce
+    # - da
+    # - fi
+    # - go
+    # - ha
+    # - ji
+    # - ka
+    # - la
+    # - ma
+    # - na
+    # - pa
+    # - ra
+    # - sa
+    # - ta
+    # - wa
+    # - za
+    # - ab
+    # - ed
+    # - if
+    # - og
+    # - up
+    # - yk
+    # - za
+    # - ta
+    # - va
+    # - čk
+    # - žd
+    # - sak
+    # - anz
+    # - emn
+    # - okl
+    # - upn
+    # - bab
+    # - cic
+    # - ded
+    # - fig
+    # - gog
+    # - hib
+    # - juj
+    # - kik
+    # - lal
+    # - mam
+    # - nan
+    # - pap
+    # - rar
+    # - sas
+    # - tat
+    # - wab
+    # - zab
+    # - stras
+    # - bram
+    # - klam
+    # - tram
+    # - stry
+    # - zrak
+    # - deck
+    # - mist
+    # - ale
+    # - ogn
+    # - emt
+    # - brat
+    # - skar
+    # - plik
+    # - klat
+    # - ae
+    # - ai
+    # - au
+    # - ei
+    # - ou
+    # - bl
+    # - dr
+    # - fl
+    # - gr
+    # - pr
+    # - sz
+    # - cz
+    # - zk
+    # - jn
+    - ш
+    - ж
+    - ч
+    - щ
+    - ц
+    - ź
+    - ż
+    - ö
+    - ü
+    - ç
+    - bü
+    - dü
+    - gü
+    - ha
+    - je
+    - jü
+    - ла
+    - ле
+    - ли
+    - ме
+    - ми
+    - мо
+    - ба
+    - да
+    - го
+    - ка
+    - ма
+    - на
+    - па
+    - ра
+    - са
+    - та
+    - ва
+    - за
+    - аб
+    - ед
+    - ог
+    - уп
+    - ик
+    - чк
+    - жд
+    - сак
+    - анз
+    - емн
+    - окл
+    - упн
+    - баб
+    - цис
+    - дед
+    - фиг
+    - гог
+    - хиб
+    - жуж
+    - кик
+    - лал
+    - мам
+    - нан
+    - пап
+    - ррр
+    - сас
+    - тат
+    - ваб
+    - заб
+    - страс
+    - брам
+    - клам
+    - трам
+    - стры
+    - зрак
+    - дек
+    - мист
+    - але
+    - огн
+    - емт
+    - брат
+    - скар
+    - плик
+    - клат
+    - ае
+    - аи
+    - ау
+    - еи
+    - оу
+    - бл
+    - др
+    - фл
+    - гр
+    - пр
+    - шз
+    - чз
+    - жн
+    - ндж
+    - трр
+    - крр
+    - хрр

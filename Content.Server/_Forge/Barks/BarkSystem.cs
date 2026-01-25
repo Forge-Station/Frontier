@@ -6,6 +6,7 @@ using Robust.Server.Audio;
 using Robust.Shared.Audio;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
+using Content.Shared.Chat; // Forge-change: Einstein Engines - Languages
 
 namespace Content.Server._Forge.Speech.Synthesis.System;
 
@@ -33,7 +34,7 @@ public sealed class BarkSystem : EntitySystem
             !_configurationManager.GetCVar(ForgeVars.BarksEnabled))
             return;
 
-        bool isObfuscated = args.ObfuscatedMessage != null;
+        bool isObfuscated = args.IsWhisper; // idk i just try to fix the error - v6st
         var sourceEntity = _entityManager.GetNetEntity(uid);
         var soundPath = barkProto.SoundFiles[new Random().Next(barkProto.SoundFiles.Count)];
         RaiseNetworkEvent(new PlayBarkEvent(soundPath, sourceEntity, args.Message, comp.PlaybackSpeed, isObfuscated));

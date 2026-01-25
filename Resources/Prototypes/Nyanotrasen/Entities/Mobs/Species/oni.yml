@@ -6,6 +6,11 @@
   components:
   - type: Speech
     speechSounds: Baritone
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard # Nothing else because Rouge said she was adding a language for Oni
+    understands:
+    - ForgeGalacticStandard
   - type: HumanoidAppearance
     species: Oni
     hideLayersOnEquip: # Frontier
