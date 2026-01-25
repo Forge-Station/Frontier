@@ -241,13 +241,13 @@
     - map: ["computerLayerBody"]
       state: computer_armory
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: armory_keyboard
     - map: ["computerLayerScreen"]
       state: armoryconsole
       shader: unshaded
       visible: false
     - map: ["computerLayerKeys"]
-      state: generic_keys # Forge-Change-End
+      state: armory_keys # Forge-Change-End
   - type: FireControlConsole
   - type: ActivatableUI
     key: enum.FireControlConsoleUiKey.Key

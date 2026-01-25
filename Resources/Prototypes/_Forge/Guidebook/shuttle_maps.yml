@@ -22,3 +22,15 @@
     state: methedor
     scale: 1, 1
 
+- type: entity
+  parent: PosterBase
+  id: ShuttleMapBootlegger
+  name: "Methedor"
+  description: "Detailed map of a Methedor shuttle."
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Forge/Guidebook/shuttle_maps/96x128.rsi
+    state: bootlegger
+    scale: 1, 1
+
