@@ -3,7 +3,7 @@
 #   id: PrybarProsthetics
 #   name: trait-prybar-prosthetics-name
 #   description: trait-prybar-prosthetics-desc
-#   category: Physical
+#   category: Skills # Forge-change: switch to Skills
 #   cost: 2
 #   components:
 #   - type: PrybarProsthetics
@@ -12,7 +12,7 @@
   id: Vigor
   name: trait-vigor-name
   description: trait-vigor-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: 6
   mutuallyExclusiveTraits:
   - Lethargy
@@ -26,7 +26,7 @@
   id: Lethargy
   name: trait-lethargy-name
   description: trait-lethargy-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: -1
   mutuallyExclusiveTraits:
   - Vigor
@@ -43,7 +43,7 @@
   id: GlassJaw
   name: trait-glass-jaw-name
   description: trait-glass-jaw-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: -2
   mutuallyExclusiveTraits:
   - Tenacity
@@ -56,7 +56,7 @@
   id: Tenacity
   name: trait-tenacity-name
   description: trait-tenacity-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: 2
   mutuallyExclusiveTraits:
   - GlassJaw
@@ -70,7 +70,7 @@
   id: WillToLive
   name: trait-will-to-live-name
   description: trait-will-to-live-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: 2
   mutuallyExclusiveTraits:
   - WillToDie
@@ -86,7 +86,7 @@
   id: WillToDie
   name: trait-will-to-die-name
   description: trait-will-to-die-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: -1
   mutuallyExclusiveTraits:
   - WillToLive
@@ -103,7 +103,7 @@
 #   id: Thieving
 #   name: trait-thieving-name
 #   description: trait-thieving-desc
-#   category: Physical
+#   category: Skills # Forge-change: switch to Skills
 #   cost: 3
 #   speciesBlacklist:
 #   - Felinid
@@ -117,7 +117,7 @@
   id: BionicLegs
   name: trait-bionic-legs-name
   description: trait-bionic-legs-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: 3
   components:
   - type: BionicLegs
@@ -126,7 +126,7 @@
   id: OsteogenesisImperfecta
   name: trait-osteogenesis-imperfecta-name
   description: trait-osteogenesis-imperfecta-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: -3
   mutuallyExclusiveTraits:
   - Tenacity
@@ -143,7 +143,7 @@
   id: Hemophilia
   name: trait-hemophilia-name
   description: trait-hemophilia-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: -2
   speciesBlacklist:
   - Ipc
@@ -157,7 +157,7 @@
   id: Voracious
   name: trait-voracious-name
   description: trait-voracious-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: 1
   speciesBlacklist:
     - Ipc
@@ -172,7 +172,7 @@
   id: BionicSpinarette
   name: trait-bionic-spinarette-name
   description: trait-bionic-spinarette-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: 2
   speciesBlacklist:
     - Ipc
@@ -191,7 +191,7 @@
   id: Feeble
   name: trait-feeble-name
   description: trait-feeble-desc
-  category: Physical
+  category: Skills # Forge-change: switch to Skills
   cost: -2
   speciesBlacklist:
     - Felinid
@@ -207,7 +207,7 @@
 #   id: TrapAvoider
 #   name: trait-trap-avoider-name
 #   description: trait-trap-avoider-desc
-#   category: Physical
+#   category: Skills # Forge-change: switch to Skills
 #   cost: 4
 #   speciesBlacklist:
 #     - Felinid
@@ -220,7 +220,7 @@
 #   id: SelfAware
 #   name: trait-self-aware-name
 #   description: trait-self-aware-desc
-#   category: Physical
+#   category: Skills # Forge-change: switch to Skills
 #   cost: 2
 #   components:
 #   - type: SelfAware

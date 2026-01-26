@@ -1,4 +1,4 @@
-humanoid-profile-editor-traits-not-have = Вы не должны иметь один из этих недостатков: { $names }
+humanoid-profile-editor-traits-not-have = Вы не должны иметь одну из этих черт: { $names }
 humanoid-profile-editor-traits-not-be = Вы не должны быть: { $names }
 humanoid-profile-editor-traits-expand-all = Развернуть всё
 humanoid-profile-editor-traits-collapse-all = Свернуть всё
