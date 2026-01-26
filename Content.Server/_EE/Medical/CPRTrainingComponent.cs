@@ -16,7 +16,7 @@ public sealed partial class CPRTrainingComponent : Component
     {
         DamageDict =
         {
-            ["Asphyxiation"] = -6
+            ["Asphyxiation"] = -5
         }
     };
 

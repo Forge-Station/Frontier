@@ -15,9 +15,6 @@
   startNode: start
   targetNode: wallReinforcedDiagonal
   category: construction-category-structures
-  icon:
-    sprite: /Textures/_NF/Structures/Walls/reinforced_diagonal.rsi
-    state: state0
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
@@ -31,9 +28,6 @@
   startNode: start
   targetNode: wallPlastitaniumDiagonal
   category: construction-category-structures
-  icon:
-    sprite: /Textures/Forge/Structures/Walls/plastitanium_diagonal.rsi
-    state: state0
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
@@ -47,9 +41,6 @@
   startNode: start
   targetNode: plastitaniumWall
   category: construction-category-structures
-  icon:
-    sprite: /Textures/Forge/Structures/Walls/plastitanium.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false

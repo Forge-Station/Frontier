@@ -8,6 +8,7 @@ using Robust.Shared.Player;
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared._NF.Bank.Events;
 using Content.Shared.GameTicking;
+using Content.Shared._Mono.Traits.Physical; // Forge-change: take Mono trait Ironman
 
 namespace Content.Server._NF.Bank;
 
@@ -65,6 +66,13 @@ public sealed partial class BankSystem : SharedBankSystem
         if (!TryComp<BankAccountComponent>(mobUid, out var bank))
         {
             _log.Info($"TryBankWithdraw: {mobUid} has no bank account");
+            return false;
+        }
+
+        // Forge-change: take Mono Ironman trait
+        if (HasComp<IronmanComponent>(mobUid))
+        {
+            _log.Info($"TryBankWithdraw: {mobUid} is blocked from withdrawals (Ironman)");
             return false;
         }
 
@@ -230,6 +238,13 @@ public sealed partial class BankSystem : SharedBankSystem
     /// <returns>true if the account was successfully queried.</returns>
     public bool TryGetBalance(EntityUid ent, out int balance)
     {
+        // Forge-change: take Mono trait Ironman
+        if (HasComp<IronmanComponent>(ent))
+        {
+            balance = 0;
+            return true;
+        }
+
         if (!_playerManager.TryGetSessionByEntity(ent, out var session) ||
             !_prefsManager.TryGetCachedPreferences(session.UserId, out var prefs))
         {
@@ -257,6 +272,13 @@ public sealed partial class BankSystem : SharedBankSystem
     /// <returns>true if the account was successfully queried.</returns>
     public bool TryGetBalance(ICommonSession session, out int balance)
     {
+        // Forge-change: take Mono trait Ironman
+        if (session.AttachedEntity is { } attached && HasComp<IronmanComponent>(attached))
+        {
+            balance = 0;
+            return true;
+        }
+
         if (!_prefsManager.TryGetCachedPreferences(session.UserId, out var prefs))
         {
             _log.Info($"{session.UserId} has no cached prefs");

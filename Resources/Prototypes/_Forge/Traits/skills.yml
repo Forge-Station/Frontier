@@ -1,11 +1,33 @@
 - type: trait
-  id: CPRTraining
+  id: BaseCPR
   name: trait-crp-name
   description: trait-crp-desc
   category: Skills
-  cost: 2
+  cost: 1
+  mutuallyExclusiveTraits:
+  - AdvancedCPR
   components:
   - type: CPRTraining
+    cPRHealing:
+      types:
+        Asphyxiation: -5
+        Blunt: 1
+
+- type: trait
+  id: AdvancedCPR
+  name: trait-advcrp-name
+  description: trait-advcrp-desc
+  category: Skills
+  cost: 2
+  mutuallyExclusiveTraits:
+  - BaseCPR
+  components:
+  - type: CPRTraining
+    doAfterDuration: 3
+    cPRHealing:
+      types:
+        Asphyxiation: -6
+    resuscitationChance: 0.1
 
 - type: trait
   id: TrapAvoider
@@ -39,15 +61,25 @@
   name: trait-self-aware-name
   description: trait-self-aware-desc
   category: Skills
-  cost: 2
+  cost: 1
   components:
   - type: SelfAware
 
+# idk, maybe that bad idea?
 - type: trait
   id: PrybarProsthetics
   name: trait-prybar-prosthetics-name
   description: trait-prybar-prosthetics-desc
-  category: Physical
-  cost: 2
+  category: Skills
+  cost: 3
   components:
   - type: PrybarProsthetics
+
+- type: trait
+  id: Ironman
+  name: trait-ironman-name
+  description: trait-ironman-desc
+  category: Skills
+  cost: -3
+  components:
+  - type: Ironman
