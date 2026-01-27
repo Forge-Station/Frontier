@@ -19,6 +19,8 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
 
     public event Action<ButtonEventArgs>? OnSellShip;
     public event Action<ButtonEventArgs>? OnOrderApproved;
+    public event Action<ButtonEventArgs>? OnUnassignDeed; // Forge-change: take from _Mono:388
+    public event Action<string>? OnRenameShip; // Forge-change: take from _Mono:671
     private readonly List<VesselSize> _categoryStrings = new();
     private readonly List<VesselClass> _classStrings = new();
     private readonly List<VesselEngine> _engineStrings = new();
@@ -42,6 +44,8 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
         Classes.OnItemSelected += OnClassItemSelected;
         Engines.OnItemSelected += OnEngineItemSelected;
         SellShipButton.OnPressed += (args) => { OnSellShip?.Invoke(args); };
+        UnassignDeedButton.OnPressed += (args) => { OnUnassignDeed?.Invoke(args); }; // Forge-change: take from _Mono:388
+        RenameButton.OnPressed += OnRenameButtonPressed; // Forge-change: take from _Mono:671
     }
 
 
@@ -63,6 +67,24 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
         SetEngineText(args.Id);
         PopulateProducts(_lastAvailableProtos, _lastUnavailableProtos, _freeListings, _validId);
     }
+
+    // Forge-change: take from _Mono:671
+    private void OnRenameButtonPressed(ButtonEventArgs args)
+    {
+        var newName = RenameLineEdit.Text.Trim();
+        if (string.IsNullOrEmpty(newName))
+            return;
+
+        // Validate length (30 characters max, matching ShuttleDeedComponent.MaxNameLength)
+        if (newName.Length > 30)
+        {
+            newName = newName[..30];
+        }
+
+        OnRenameShip?.Invoke(newName);
+        RenameLineEdit.Text = "";
+    }
+    // Forge-change end
 
     private void OnSearchBarTextChanged(LineEdit.LineEditEventArgs args)
     {
@@ -105,7 +127,7 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
 
         SortVesselsByPrice(newVessels); // Forge-Change
         SortVesselsByPrice(newUnavailableVessels); // Forge-Change
-        
+
         AddVesselsToControls(newVessels, search, free, canPurchase);
         AddVesselsToControls(newUnavailableVessels, search, free, false);
 
@@ -123,7 +145,7 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
             .ToList();
 
         //vesselList.Sort((x, y) => Forge-Change
-            //string.Compare(x!.Name, y!.Name, StringComparison.CurrentCultureIgnoreCase)); Forge-Change
+        //string.Compare(x!.Name, y!.Name, StringComparison.CurrentCultureIgnoreCase)); Forge-Change
         return vesselList;
     }
 
@@ -309,6 +331,16 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
 
         ShipAppraisalLabel.Text = $"{BankSystemExtensions.ToSpesoString(shipPrice)} ({state.SellRate * 100.0f:F1}%)";
         SellShipButton.Disabled = state.ShipDeedTitle == null;
+        UnassignDeedButton.Disabled = state.ShipDeedTitle == null; // Mono:388
+
+        // Forge-change: take from _Mono:671
+        // Show/hide and enable/disable rename controls based on whether there's a ship deed
+        var hasShipDeed = state.ShipDeedTitle != null;
+        RenameContainer.Visible = hasShipDeed;
+        RenameLineEdit.Editable = hasShipDeed;
+        RenameButton.Disabled = !hasShipDeed;
+        // Forge-change end
+
         TargetIdButton.Text = state.IsTargetIdPresent
             ? Loc.GetString("id-card-console-window-eject-button")
             : Loc.GetString("id-card-console-window-insert-button");

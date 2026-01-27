@@ -57,6 +57,7 @@
     damage:
       types:
         Piercing: 16.5
+      armorPenetration: 0.1 # Forge-Change
 
 - type: entity
   id: NFBulletRifle20Incendiary
@@ -128,6 +129,7 @@
     damage:
       types:
         Piercing: 14.5
+      armorPenetration: 0.1 # Forge-Change
 
 - type: entity
   id: NFBulletRifle25Incendiary
@@ -211,6 +213,7 @@
     damage:
       types:
         Piercing: 18.5
+      armorPenetration: 0.1 # Forge-Change
 
 - type: entity
   id: NFBulletRifle30Incendiary
@@ -272,6 +275,7 @@
       types:
         Piercing: 70
         Structural: 100
+      armorPenetration: 0.5 # Forge-Change
     penetrationThreshold: 360
     penetrationDamageTypeRequirement:
     - Structural

@@ -1,50 +1,46 @@
 # Author Info
-# GitHub: -
+# GitHub: https://github.com/Autsaider-IM
 # Discord: autsaider_m
 # License: CC-BY-NC-ND-4.0
 # CorvaxForge
 
 # Maintainer Info
-# GitHub: https://github.com/mersen-tyn
-# Discord: mersen
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
 
-# Shuttle Notes:
+# Notes:
 #
-# - type: vessel
-#   id: Orion
-#   parent: BaseVessel
-#   name: TL Орион
-#   description: Крупногабаритный ударный авианосец. Рекомендованный состав команды 4-8 человек.
-#   price: 180000 #Appraisal value is 150000
-#   category: Large
-#   group: Security
-#   access: Bailiff
-#   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/orion.yml
-#   guidebookPage: Null
-#   class:
-#   - Capital
-#   addComponents:
-#   - type: ShuttleFaction
-#     faction: NFSD
+- type: vessel
+  id: Orion
+  parent: BaseVessel
+  name: TL Орион MK2
+  description: Крупногабаритный линейный крейсер. Рекомендованный состав команды 4-8 человек.
+  price: 523100
+  category: Large
+  group: Security
+  access: Frontier
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/orion.yml
+  guidebookPage: Null
+  class:
+  - Capital
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
 
-# - type: gameMap
-#   id: Orion
-#   mapName: 'TL Орион'
-#   mapPath: /Maps/_Forge/Shuttles/Nfsd/orion.yml
-#   minPlayers: 0
-#   stations:
-#     Orion:
-#       stationProto: StandardFrontierSecurityVessel
-#       components:
-#         - type: StationNameSetup
-#           mapNameTemplate: 'Орион {1}'
-#           nameGenerator:
-#             !type:NanotrasenNameGenerator
-#             prefixCreator: '14'
-#         - type: StationJobs
-#           availableJobs:
-# #            PrisonGuard: [ 0, 0 ]
-# #            SecurityOfficer: [ 0, 0 ]
-# #            Warden: [ 0, 0 ]
-# #            Brigmedic: [ 0, 0 ]
-#             Chef: [ 0, 0 ]
+- type: gameMap
+  id: Orion
+  mapName: 'TL Орион MK2'
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/orion.yml
+  minPlayers: 0
+  stations:
+    Orion:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Орион MK2 {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Chef: [ 0, 0 ]

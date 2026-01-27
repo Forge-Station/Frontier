@@ -93,7 +93,8 @@
     sprite: _NF/Objects/Fun/sharkminnow.rsi
     state: sharkminnowplush
   - type: Item
-    heldPrefix: sharkminnowplush
+    sprite: _NF/Objects/Fun/sharkminnow.rsi # Forge-change: fix inhand
+    # heldPrefix: sharkminnowplush
     inhandVisuals:
       left:
       - state: inhand-left

@@ -61,7 +61,7 @@
 - type: entity
   id: ClothingNeckMantleBH
   name: "bounty hunter's mantle"
-  parent:  ClothingNeckMantleHOS #Corvax-Frontier удалена строка КБ
+  parent: ClothingNeckBase # Forge-change: change parent to ClothingNeckBase, cauz contraband class 2
   description: "I can bring you in warm or I can bring you in cold. Or you can outbid the bounty."
   components:
   - type: Sprite

@@ -1,6 +1,6 @@
 - type: entity
   name: hypospray
-  parent: BaseItem # Frontier: remove BaseGrandTheftContraband
+  parent: [ BaseItem, BaseForgeMedicContraband ] # Forge-change: BaseGrandTheftContraband to BaseForgeMedicContraband
   description: A sterile injector for rapid administration of drugs to patients.
   id: Hypospray
   components:
@@ -176,6 +176,9 @@
     price: 35 # These are limited supply items.
   - type: TrashOnSolutionEmpty
     solution: pen
+  - type: Tag # Forge-Change
+    tags:
+    - ChemicalMedipen
 
 - type: entity
   name: emergency medipen

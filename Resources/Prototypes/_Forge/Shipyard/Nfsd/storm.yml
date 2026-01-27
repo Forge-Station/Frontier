@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: -
+# Discord: urkplay
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+
+# Notes:
+#
+- type: vessel
+  id: StormS
+  parent: BaseVessel
+  name: NSF Гроза
+  description: Шаттл перехватчик Гроза. Рекомендуемый состав команды 1-2 человека.
+  price: 27550
+  group: Security
+  category: Small
+  access: Security
+  mapchecker_group_override: Security
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/storm.yml
+  class:
+  - Fighter
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
+
+- type: gameMap
+  id: StormS
+  mapName: 'NSF Гроза'
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/storm.yml
+  minPlayers: 0
+  stations:
+    StormS:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Гроза {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

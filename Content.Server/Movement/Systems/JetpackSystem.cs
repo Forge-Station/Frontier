@@ -5,6 +5,7 @@ using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
 using Robust.Shared.Collections;
 using Robust.Shared.Timing;
+using Content.Server._Mono.Radar; // Forge-change: take BlipsSystem from _Mono
 
 namespace Content.Server.Movement.Systems;
 
@@ -12,6 +13,18 @@ public sealed class JetpackSystem : SharedJetpackSystem
 {
     [Dependency] private readonly GasTankSystem _gasTank = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly EntityManager _entityManager = default!; // Forge-change: take BlipsSystem from _Mono
+
+ // Forge-change-start: take BlipsSystem from _Mono
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        // Subscribe to ActiveJetpackComponent events
+        SubscribeLocalEvent<ActiveJetpackComponent, ComponentStartup>(OnJetpackActivated);
+        SubscribeLocalEvent<ActiveJetpackComponent, ComponentShutdown>(OnJetpackDeactivated);
+    }
+    // Forge-change-end
 
     protected override bool CanEnable(EntityUid uid, JetpackComponent component)
     {
@@ -19,6 +32,27 @@ public sealed class JetpackSystem : SharedJetpackSystem
                TryComp<GasTankComponent>(uid, out var gasTank) &&
                !(gasTank.Air.TotalMoles < component.MoleUsage);
     }
+
+    /// <summary>
+    /// Forge-change-start: take BlipsSystem from _Mono
+    /// Adds radar blip to jetpacks when they are activated
+    /// </summary>
+    private void OnJetpackActivated(EntityUid uid, ActiveJetpackComponent component, ComponentStartup args)
+    {
+        var blip = EnsureComp<RadarBlipComponent>(uid);
+        blip.RadarColor = Color.Cyan;
+        blip.Scale = 0.5f;
+        blip.VisibleFromOtherGrids = true;
+    }
+
+    /// <summary>
+    /// Removes radar blip from jetpacks when they are deactivated
+    /// </summary>
+    private void OnJetpackDeactivated(EntityUid uid, ActiveJetpackComponent component, ComponentShutdown args)
+    {
+        RemComp<RadarBlipComponent>(uid);
+    }
+    // Forge-change-end: take BlipsSystem from _Mono
 
     public override void Update(float frameTime)
     {

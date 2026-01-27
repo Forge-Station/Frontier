@@ -14,8 +14,8 @@
   id: BastilleOutpost
   parent: BasePOI
   name: 'Транспортное депо Бастилия'
-  minimumDistance: 2900
-  maximumDistance: 3500
+  minimumDistance: 3500 # Forge-change: 441 - long distances
+  maximumDistance: 4400 # Forge-change: 441 - long distances
   spawnGroup: Required
   gridPath: /Maps/_Forge/POI/Bastille.yml
   addComponents:

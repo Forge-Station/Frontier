@@ -17,5 +17,7 @@ shuttle-records-transaction-confirm = Вы уверены?
 shuttle-records-transaction-cost = Стоимость транзакции: { $cost }
 shuttle-records-search = Название шаттла или имя его Владельца
 shuttle-records-time-of-purchase = Дата покупки: [color=white]{ $time }[/color]
-shuttle-records-show-active-only = Показывать только активные шаттлы
+shuttle-records-show-active-only = Только активные шаттлы
 shuttle-records-purchased-voucher = Шаттл был оплачен ваучером.
+
+shuttle-records-shuttle-model-label = Модель: { $model }

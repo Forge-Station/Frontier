@@ -87,7 +87,7 @@
   name: Отбойник
   parent: [BaseItem, NFBaseWeaponFrameShotgunWieldable, BaseC2Contraband]
   id: WeaponShotgunAD12
-  description:  Автоматический Дробовик 12 модели поставляется ограниченными партиями для сил дсбф компанией TechnicLogistic, барабанная система подачи боеприпасов позволяет оружию развить чудовищную скорострельность и убойную силу.
+  description:  The Model 12 Automatic Shotgun is supplied in limited quantities to the DSBF forces by TechnicLogistic. The drum ammunition feeding system allows the weapon to develop a monstrous rate of fire and killing power.
   components:
   - type: Sprite
     sprite: Forge/Objects/Weapons/Guns/Shotguns/ad12.rsi
@@ -151,6 +151,8 @@
   - type: NFWeaponDetails
     class: weapon-details-class-shotgun
     manufacturer: weapon-details-manufacturer-TechnicLogistic
+  - type: PirateBountyItem
+    id: FTechLogisticGuns
 
 - type: entity
   name: Suppressor
@@ -216,5 +218,32 @@
     walkModifier: 0.95
     sprintModifier: 0.95
   - type: NFWeaponDetails
-    class: weapon-details-class-pistol
+    class: weapon-details-class-shotgun
     manufacturer: weapon-details-manufacturer-TechnicLogistic
+
+- type: entity
+  id: WeaponShotgunChimera
+  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  name: Химера
+  description: Нет
+  components:
+  - type: Gun
+    fireRate: 1.7
+    projectileSpeed: 37
+    soundGunshot:
+      path: /Audio/_Forge/Weapons/Guns/Gunshots/shotgun_metal.ogg
+  - type: BallisticAmmoProvider
+    capacity: 10
+    proto: NFShellShotgunBuckshot
+    whitelist:
+      tags:
+      - ShellShotgun
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Shotguns/chimera.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Shotguns/chimera.rsi
+  - type: NFWeaponDetails
+    class: weapon-details-class-shotgun
+    manufacturer: weapon-details-manufacturer-TechnicLogistic
+  - type: PirateBountyItem
+    id: FTechLogisticGuns

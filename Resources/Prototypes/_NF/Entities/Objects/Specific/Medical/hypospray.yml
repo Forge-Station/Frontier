@@ -118,8 +118,8 @@
     onlyAffectsMobs: false
     injectOnly: true
     transferAmount: 15 # Explicitly redefined in case parent changes
-  - type: Tag
-    tags: []
+  # - type: Tag # Forge-Change
+  #   tags: []
 
 - type: entity
   name: hemostasis auto-injector

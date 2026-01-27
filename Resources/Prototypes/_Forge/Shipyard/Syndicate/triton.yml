@@ -1,0 +1,47 @@
+# Author Info
+# GitHub: -
+# Discord: urkplay
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+
+# Notes:
+#
+- type: vessel
+  id: Triton
+  parent: BaseVessel
+  name: Тритон SN-1
+  description: "Эсминец синдиката созданный неизвестной компанией. Рекомендованный экипаж 2-5 человек"
+  price: 295500
+  category: Medium
+  group: Syndicate
+  shuttlePath: /Maps/_Forge/Shuttles/Syndicate/triton.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+  - type: ShuttleFaction
+    faction: Syndicate
+  guidebookPage: Null
+  class:
+  - Syndicate
+
+- type: gameMap
+  id: Triton
+  mapName: 'Тритон SN-1'
+  mapPath: /Maps/_Forge/Shuttles/Syndicate/triton.yml
+  minPlayers: 0
+  stations:
+    Triton:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Тритон SN-1 {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

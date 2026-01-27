@@ -493,21 +493,22 @@
         tags:
           - SecurityUplink
 
-- type: listing
-  id: UplinkSecurityJetpack
-  name:  uplink-security-jetpack-name
-  description: uplink-security-jetpack-desc
-  productEntity: JetpackNfsdFilled
-  icon: { sprite: _NF/Objects/Tanks/Jetpacks/nfsd.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 1
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+# Forge-change: Move to RnD
+# - type: listing
+#   id: UplinkSecurityJetpack
+#   name:  uplink-security-jetpack-name
+#   description: uplink-security-jetpack-desc
+#   productEntity: JetpackNfsdFilled
+#   icon: { sprite: _NF/Objects/Tanks/Jetpacks/nfsd.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 1
+#   categories:
+#     - UplinkSecurityUtility
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
 
 - type: listing
   id: UplinkSecurityMagboots
@@ -542,6 +543,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
+        - EngineerNfsd
         - Sheriff
 
 - type: listing
@@ -599,6 +601,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
+        - EngineerNfsd
         - Bailiff
         - SeniorOfficer
         - Sheriff
@@ -918,6 +921,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
+        - EngineerNfsd
         - Bailiff
         - SeniorOfficer
         - Sheriff
@@ -1090,7 +1094,23 @@
       whitelist:
         tags:
           - SecurityUplink
-
+# Forge-Change
+- type: listing
+  id: UplinkSecurityVendingMachineRestockModules
+  name:  uplink-security-modules-name
+  description: uplink-security-modules-desc
+  productEntity: VendingMachineRestockModules
+  icon: { sprite: Objects/Specific/Service/vending_machine_restock.rsi, state: base }
+  cost:
+    FrontierUplinkCoin: 6
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+# Forge-Change-End
 - type: listing
   id: UplinkSecurityEmpGrenadeBox
   name:  uplink-security-empgrenade-box-name
@@ -1165,7 +1185,7 @@
   name:  uplink-security-breachingcharge-box-name
   description: uplink-security-breachingcharge-box-desc
   productEntity: BoxBreachingCharges
-  icon: { sprite: _DV/Objects/Weapons/Bombs/breaching.rsi, state: icon}
+  icon: { sprite: Forge/Objects/Weapons/Bombs/breaching.rsi, state: icon} # Forge-change: resprite
   cost:
     FrontierUplinkCoin: 3
   categories:
@@ -1342,27 +1362,6 @@
     - !type:BuyerJobCondition
       whitelist:
         - Sheriff
-# Corvax-Frontier
-- type: listing
-  id: UplinkSecurityResearchDisk10000
-  name:  uplink-security-research-disk-10000-name
-  description: uplink-security-research-disk-10000-desc
-  productEntity: ResearchDisk10000
-  icon: { sprite: Objects/Specific/Research/researchdisk.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 5
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
 
 - type: listing
   id: UplinkSecurityAmmoUran
@@ -1507,7 +1506,7 @@
   productEntity: WeaponCaseLongM4A1
   icon: { sprite: Forge/Objects/Weapons/Guns/Rifles/m4a1.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 20
+    FrontierUplinkCoin: 18
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -1518,9 +1517,68 @@
     - !type:BuyerJobCondition
       whitelist:
         - Bailiff
-        - SeniorOfficer
         - Sheriff
 
+- type: listing
+  id: UplinkSecurityChimera
+  name:  Химера
+  description: Дробовик, сконструированный на базе "Анархиста", в отличии от оригинальной винтовки обладает большим калибром, однако не может больше использовать магазины. Для увеличения калибра пришлось пожертвовать весом оружия, из за этого многие штурмовики TechnicLogistic отказывались от его применения.
+  productEntity: WeaponCaseLongWeaponShotgunChimera
+  icon: { sprite: Forge/Objects/Weapons/Guns/Shotguns/chimera.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+# Forge-Change
+- type: listing
+  id: UplinkSecurityAnarchist
+  name:  Анархист
+  description: Штурмовой карабин сил самообороны TechnicLogistic, обладает повышенными точностью и темпом огня, однако большой калибр сделал оружие весьма громоздким.
+  productEntity: WeaponCaseLongWeaponRifleAnarchist
+  icon: { sprite: Forge/Objects/Weapons/Guns/Rifles/anarchist.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 30
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityCascade
+  name:  uplink-security-contraband-forensics-Cascade
+  description: uplink-security-contraband-forensics-Cascade-desc
+  productEntity: WeaponCaseLongWeaponRifleCascade
+  icon: { sprite: Forge/Objects/Weapons/Guns/Rifles/cascade_64.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 37
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+# Forge-Change-End
 - type: listing
   id: UplinkSecurityCrateEngineeringDSBF
   productEntity: CrateEngineeringDSBF
@@ -1662,10 +1720,11 @@
         - Sheriff
 
 - type: listing
-  id: UplinkSecurityWeaponN1984
-  name: N1984
-  description: Запасное оружие любого уважающего себя офицера. Выпускается в калибре .45 магнум, самом богоугодном калибре.
-  productEntity: NFWeaponPistolN1984
+  id: UplinkSecurityWeaponPistolPeacemake
+  name: Миротворец
+  description: Пистолет, созданный для сил спецназа сил самообороны TechnicLogistic на базе "Стрижа". Обладает большим калибром в отличие от предшественника, однако не может использовать подствольные модификации и глушитель.
+  productEntity: WeaponCaseLongeWeaponPistolPeacemake
+  icon: { sprite: Forge/Objects/Weapons/Guns/Pistols/peacemake.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 10
   categories:
@@ -1678,6 +1737,26 @@
     - !type:BuyerJobCondition
       whitelist:
         - Sheriff
+        - Bailiff
+
+- type: listing
+  id: UplinkSecurityWeaponN1984
+  name: N1984
+  description: Запасное оружие любого уважающего себя офицера. Выпускается в калибре .45 магнум, самом богоугодном калибре.
+  productEntity: NFWeaponPistolN1984
+  cost:
+    FrontierUplinkCoin: 8
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Bailiff
 
 - type: listing
   id: UplinkSecurityBoxPistol45AP

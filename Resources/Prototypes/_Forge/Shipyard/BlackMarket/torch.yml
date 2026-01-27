@@ -15,7 +15,7 @@
   parent: BaseVessel
   name: Факел
   description: Малогабаритный пиратский шаттл, предположительно украденный у ничем невиноватых парамедиков. Рекомендуемый размер экипажа 2-4 человека.
-  price: 48400 #Cheap
+  price: 59000 # 441 Price fix
   category: Small
   group: BlackMarket
   shuttlePath: /Maps/_Forge/Shuttles/BlackMarket/torch.yml
@@ -38,7 +38,11 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Факел {1}' #Sneaky spoofed name
+          mapNameTemplate: 'Прожектор {1}' #Sneaky spoofed name
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            NFPirate: [ 1, 1 ]
+            NFPirateFirstMate: [ 1, 1 ]

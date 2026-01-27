@@ -28,6 +28,9 @@
       recordGeneration: FalseRecord
   - !type:AddImplantSpecial
     implants: [ MedicalTrackingImplanter ]
+  - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
+    holiday: NewYear
+    prototype: PresentRandom
 
 - type: job
   id: paraMedicalInterview

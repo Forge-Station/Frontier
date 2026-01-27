@@ -11,7 +11,9 @@ ent-ClothingHeadHelmetHardsuitAAMrAdv = шлем AAM R-44
 ent-ClothingOuterArmorSheriffVestWeb = бронежилет шерифа
     .desc = Высококачественный бронированный жилет из прочного синтетического материала. Несмотря на внушительную защиту, он гибкий и лёгкий.
 
-ent-ClothingOuterHardsuitDOC = продвинутый скафандр ММО
+ent-ClothingOuterArmorMKVIVestWeb = бронежилет MK.VI
+    .desc = Бронежилет ограниченного производства, усиленный пластитановым сплавом для дополнительной защиты.
+ent-ClothingOuterHardsuitDOC = продвинутый медицинский скафандр
     .desc = Более укреплённый, чем старые версии скафандра. Собственность Менеджера Медицинских Операций.
-ent-ClothingHeadHelmetHardsuitDOC = шлем продвинутого скафандра ММО
+ent-ClothingHeadHelmetHardsuitDOC = шлем продвинутого медицинского скафандра
     .desc = Специализированный шлем для скафандра Менеджера Медицинских Операций.

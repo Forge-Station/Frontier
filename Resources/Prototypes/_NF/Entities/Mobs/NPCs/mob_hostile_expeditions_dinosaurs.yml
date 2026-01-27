@@ -116,7 +116,7 @@
     animation: WeaponArcClaw
     damage:
       types:
-        Slash: 8
+        Slash: 14 # Forge-change
         Structural: 20
   - type: FootstepModifier
     footstepSoundCollection:
@@ -153,7 +153,7 @@
     animation: WeaponArcBite
     damage:
       types:
-        Slash: 8
+        Slash: 14 # Forge-change
         Caustic: 2
         Structural: 25
 
@@ -196,7 +196,7 @@
     animation: WeaponArcClaw
     damage:
       types:
-        Slash: 18
+        Slash: 22  # Forge-change
         Structural: 30
 
 #region parasaurolophus
@@ -236,7 +236,7 @@
     animation: WeaponArcClaw
     damage:
       types:
-        Blunt: 6
+        Blunt: 12 # Forge-change
         Structural: 20
 
 #region kentrosaurus
@@ -278,7 +278,7 @@
     animation: WeaponArcPunch
     damage:
       types:
-        Blunt: 10
+        Blunt: 14 # Forge-change
         Structural: 20
 
 #region triceratops
@@ -320,7 +320,7 @@
     animation: WeaponArcClaw
     damage:
       types:
-        Piercing: 12
+        Piercing: 18 # Forge-change
         Structural: 20
 
 #region ankylosaurus
@@ -362,7 +362,7 @@
     animation: WeaponArcPunch
     damage:
       types:
-        Blunt: 12
+        Blunt: 16 # Forge-change
         Structural: 20
 
 #region spinosaurus
@@ -402,7 +402,7 @@
     animation: WeaponArcBite
     damage:
       types:
-        Blunt: 12
+        Blunt: 18 # Forge-change
         Structural: 20
 
 #region stegosaurus
@@ -444,8 +444,8 @@
     animation: WeaponArcClaw
     damage:
       types:
-        Blunt: 12
-        Piercing: 8
+        Blunt: 16 # Forge-change
+        Piercing: 10 # Forge-change
         Structural: 20
 
 #region tyrannosaurus (boss)
@@ -487,8 +487,8 @@
     animation: WeaponArcBite
     damage:
       types:
-        Slash: 15
-        Piercing: 10
+        Slash: 22 # Forge-change
+        Piercing: 16 # Forge-change
         Structural: 20
   # Ghost role stuff
   - type: GhostRole

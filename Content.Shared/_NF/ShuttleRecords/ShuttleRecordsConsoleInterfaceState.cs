@@ -8,6 +8,7 @@ public sealed class ShuttleRecordsConsoleInterfaceState(
     bool isTargetIdPresent,
     string? targetIdFullName,
     string? targetIdVesselName,
+    string? targetIdModelName, // Forge-change
     double transactionPercentage,
     uint minTransactionPrice,
     uint maxTransactionPrice,
@@ -18,6 +19,7 @@ public sealed class ShuttleRecordsConsoleInterfaceState(
     public List<ShuttleRecord>? Records { get; set; } = records; // To cut down on bandwidth, states without changes to records imply no change to the last state seen.
     public string? TargetIdFullName { get; set; } = targetIdFullName;
     public string? TargetIdVesselName { get; set; } = targetIdVesselName;
+    public string? TargetIdModelName { get; set; } = targetIdModelName; // Forge-change
     public double TransactionPercentage { get; set; } = transactionPercentage;
     public uint MinTransactionPrice { get; set; } = minTransactionPrice;
     public uint MaxTransactionPrice { get; set; } = maxTransactionPrice;

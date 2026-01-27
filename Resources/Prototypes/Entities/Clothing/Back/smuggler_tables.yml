@@ -127,7 +127,7 @@
     - id: ChemistryBottleEphedrine
       amount: !type:RangeNumberSelector
         range: 1, 5
-    - id: ChemistryBottleOmnizine
+    # - id: ChemistryBottleOmnizine # Forge-change
     - id: ChemistryBottleCognizine
     - id: ChemistryBottleToxin
     - id: ChemistryBottleNocturine

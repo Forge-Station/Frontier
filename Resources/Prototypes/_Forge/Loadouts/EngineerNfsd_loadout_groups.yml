@@ -8,6 +8,18 @@
   - EngineerNfsdClothingHead1
 
 - type: loadoutGroup
+  id: EngineerNfsdOuter
+  name: loadout-group-contractor-outerclothing
+  loadouts:
+  - ForgeEngiNfsdOuterBase
+  - ForgeEngiNfsdOuter2
+  - ForgeEngiNfsdOuter3
+  fallbacks:
+  - ForgeEngiNfsdOuterBase
+  subgroups:
+  - DeputyOuterClothing
+
+- type: loadoutGroup
   id: EngineerNfsdJumpsuit
   name: loadout-group-contractor-jumpsuit
   loadouts:
@@ -34,3 +46,30 @@
   - DeputyClothingNeckBadgeEngineerNfsd
   fallbacks:
   - DeputyClothingNeckBadgeEngineerNfsd
+
+- type: loadoutGroup
+  id: EngineerNfsdEyes
+  name: loadout-group-contractor-glasses
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - ForgeEngiNfsdEyes
+  fallbacks:
+  - ForgeEngiNfsdEyes
+
+- type: loadoutGroup
+  id: EngineerNfsdBelt
+  name: loadout-group-contractor-belt
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - ForgeEngiNfsdBelt
+  fallbacks:
+  - ForgeEngiNfsdBelt
+
+- type: loadoutGroup
+  id: EngineerNfsdPDA
+  name: loadout-group-contractor-pda
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - ForgeEngiNfsdPDA
+  fallbacks:
+  - ForgeEngiNfsdPDA

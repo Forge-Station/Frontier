@@ -929,6 +929,11 @@
         Heat: 0.80
         Radiation: 0.80
         Caustic: 0.95
+  - type: ThermalVision
+    flashDurationMultiplier: 2
+    isEquipment: true
+    color: "#98EEFB"
+    toggleAction: ToggleThermalVision
 
 #MISC. HARDSUITS
 #Clown Hardsuit

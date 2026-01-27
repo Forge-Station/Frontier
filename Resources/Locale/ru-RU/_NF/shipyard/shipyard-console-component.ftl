@@ -81,3 +81,17 @@ shipyard-console-station-resources = На борту обнаружены жиз
 shipyard-console-dangerous-materials = На борту обнаружены опасные материалы.
 shipyard-console-invalid-voucher-type = Этот ваучер не может быть использован на этой консоли.
 shipyard-console-fallback-prevent-sale = Обнаружены ошибки класса YML на борту. Пожалуйста, отправьте отчет об ошибке, когда это возможно.
+
+shipyard-console-unassign-deed = Отвязать
+shipyard-console-deed-unassigned = Шаттл был успешно отвязан от ID карты.
+shipyard-console-confirm-unassign = Вы уверены?
+shipyard-console-unassign-cooldown = Подождите {$minutes} минут, прежде чем отвязать шаттл.
+shipyard-console-rename-label = Переименовать
+shipyard-console-rename-placeholder = Название
+shipyard-console-name-empty = Название не может быть пустым
+
+shipyard-console-name-too-long = Имя корабля не может превышать { $max } символов.
+shipyard-console-rename-success = Шаттл переименован в «{ $name }».
+shipyard-console-rename-failed = Не удалось переименовать шаттл.
+shipyard-console-rename-cooldown = Повторно переименовать можно будет через { $minutes } минут.
+shipyard-console-rename-price = Стоимость переименования составляет 1000$.

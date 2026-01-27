@@ -28,6 +28,7 @@ public enum LedgerEntryType : byte
     VendorTax,
     CargoTax,
     MailDelivered,
+    ShipyardRenameFee, // Forge-change
     BlackMarketAtmTax,
     BlackMarketShipyardTax,
     BluespaceReward,

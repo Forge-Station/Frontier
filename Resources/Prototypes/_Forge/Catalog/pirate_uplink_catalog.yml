@@ -334,75 +334,76 @@
         - NFPirateFirstMate
         - NFPirate
 
-- type: listing # Corvax-Frontier
-  id: UplinkPiratMagazine20mm
-  name:  барабан корабельных снарядов 20мм
-  description: Барабан корабельных снарядов 20мм, что подойдёт для пулемёта L85 «Аспид».
-  productEntity: ForgeAmmoDrum20mmBase
-  cost:
-    Doubloon: 3
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - NFPirateCaptain
-        - NFPirateFirstMate
-        - NFPirate
+# Move to PirateTechfab
+# - type: listing # Corvax-Frontier
+#   id: UplinkPiratMagazine20mm
+#   name:  барабан корабельных снарядов 20мм
+#   description: Барабан корабельных снарядов 20мм, что подойдёт для пулемёта L85 «Аспид».
+#   productEntity: ForgeAmmoDrum20mmBase
+#   cost:
+#     Doubloon: 3
+#   categories:
+#     - UplinkPirateAmmo
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - PirateUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - NFPirateCaptain
+#         - NFPirateFirstMate
+#         - NFPirate
 
-- type: listing # Corvax-Frontier
-  id: UplinkPiratMagazine57mm
-  name: барабан корабельных снарядов 57мм
-  description: Барабан корабельных снарядов 57мм, что подойдёт для пулемёта ADBP-7 «Дравон».
-  productEntity: ForgeMagazine57mmBase
-  cost:
-    Doubloon: 6
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - NFPirateCaptain
-        - NFPirateFirstMate
-        - NFPirate
+# - type: listing # Corvax-Frontier
+#   id: UplinkPiratMagazine57mm
+#   name: барабан корабельных снарядов 57мм
+#   description: Барабан корабельных снарядов 57мм, что подойдёт для пулемёта ADBP-7 «Дравон».
+#   productEntity: ForgeMagazine57mmBase
+#   cost:
+#     Doubloon: 6
+#   categories:
+#     - UplinkPirateAmmo
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - PirateUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - NFPirateCaptain
+#         - NFPirateFirstMate
+#         - NFPirate
 
-- type: listing # Corvax-Frontier
-  id: UplinkPiratTovekCartridge
-  name: лакомство для Товека
-  description: Вкусняшка для любимого ЭМИ питомца "Товека"..
-  productEntity: TovekCartridge
-  cost:
-    Doubloon: 4
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
+# - type: listing # Corvax-Frontier
+#   id: UplinkPiratTovekCartridge
+#   name: лакомство для Товека
+#   description: Вкусняшка для любимого ЭМИ питомца "Товека"..
+#   productEntity: TovekCartridge
+#   cost:
+#     Doubloon: 4
+#   categories:
+#     - UplinkPirateAmmo
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - PirateUplink
 
-- type: listing # Corvax-Frontier
-  id: UplinkPiratShipTarnyxProjectile
-  name: 150 см Тарникс (ЭМИ начинка)
-  description: 150 сантиметровая пицца "Тарникс" с начинкой из ЭМИ - это лучший выбор, для любителей наживы.
-  productEntity: ShipTarnyxProjectile
-  cost:
-    Doubloon: 6
-  categories:
-    - UplinkPirateAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
+# - type: listing # Corvax-Frontier
+#   id: UplinkPiratShipTarnyxProjectile
+#   name: 150 см Тарникс (ЭМИ начинка)
+#   description: 150 сантиметровая пицца "Тарникс" с начинкой из ЭМИ - это лучший выбор, для любителей наживы.
+#   productEntity: ShipTarnyxProjectile
+#   cost:
+#     Doubloon: 6
+#   categories:
+#     - UplinkPirateAmmo
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - PirateUplink
 
 # region Other
 - type: listing #CorvaxFrontier
@@ -420,3 +421,8 @@
       whitelist:
         tags:
           - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFPirateCaptain
+        - NFPirateFirstMate
+        - NFPirate

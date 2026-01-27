@@ -32,13 +32,13 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 3500
+    startingCharge: 3500
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.1
+    fireRate: 0.25
     shootThermalSignature: 32000000 # ~5.6km
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
@@ -47,9 +47,10 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+    powerUseActive: 0
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 60
+    autoRechargeRate: 50
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMissileASM501
@@ -81,13 +82,14 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 2100
+    startingCharge: 2100
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.5
+    fireRate: 0.2
+    # recoil: 10
     shootThermalSignature: 32000000 # ~5.6km
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
@@ -96,9 +98,10 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+    powerUseActive: 0
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 60
+    autoRechargeRate: 70
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMissileSerpent
@@ -110,3 +113,6 @@
     shipType: Missile
   - type: ShipGunClass
     shipClass: Heavy
+  # - type: ShipRepairable
+  #   repairTime: 30
+  #   repairCost: 120

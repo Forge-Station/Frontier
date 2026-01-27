@@ -24,6 +24,9 @@
   displayWeight: 40
   setPreference: true
   special:
+  - !type:AddImplantSpecial
+    implants:
+    - OverlordImplant
   - !type:AddComponentSpecial
     components:
     - type: MailDisabled
@@ -34,6 +37,9 @@
       - NFSyndicate
   - !type:AddImplantSpecial
     implants: [ DeathRattleImplanter ]
+  - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
+    holiday: NewYear
+    prototype: PresentRandomUnsafe # Unsafe for Syndicate
 
 - type: startingGear
   id: EngineerSynGear

@@ -291,18 +291,16 @@
   - NFFission
   position: 4, 26
 
-- type: technology
-  id: ForgeAdvancedProMaxBoots
-  name: forge-research-technology-advpromax
-  entityIcon: ClothingShoesBootsMagAdvsPromax
-  discipline: NFScience
-  tier: 1
-  cost: 10000
-  recipeUnlocks:
-  - FRecClothingShoesBootsMagAdvsPromax
-  technologyPrerequisites:
-  - NFMagnetsTechAdvanced
-  position: 3, 14
+# - type: technology
+#   id: TechnicLogisticProduction
+#   name: Промышленность TechnicLogistic
+#   entityIcon: BannerTL
+#   discipline: NFArsenalMercenary
+#   tier: 1
+#   cost: 10000
+#   recipeUnlocks:
+#   - WeaponPistolSwift
+#   position: 0, 48
 
 - type: technology
   id: ForgeBattleProMaxBoots
@@ -316,5 +314,5 @@
   - FRecClothingShoesBootsMagBattlePromax
   technologyPrerequisites:
   - NFMagnetsTechCombat
-  - ForgeAdvancedProMaxBoots
+  # - ForgeAdvancedProMaxBoots
   position: 4, 13

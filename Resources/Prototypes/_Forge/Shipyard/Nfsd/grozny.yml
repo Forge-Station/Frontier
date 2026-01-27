@@ -1,0 +1,44 @@
+# Author -
+# GitHub: -
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
+
+# - type: vessel
+#   id: Grozny
+#   parent: BaseVessel
+#   name: TL Грозный
+#   description: Крупногабаритный патрульшый шаттл ДСБФ. Рекомендованный состав команды 4-8 человек.
+#   price: 382500 #Appraisal value is 150000
+#   category: Large
+#   group: Security
+#   access: Bailiff
+#   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/grozny.yml
+#   guidebookPage: Null
+#   class:
+#   - Capital
+#   addComponents:
+#   - type: ShuttleFaction
+#     faction: NFSD
+
+# - type: gameMap
+#   id: Grozny
+#   mapName: 'TL Грозный'
+#   mapPath: /Maps/_Forge/Shuttles/Nfsd/grozny.yml
+#   minPlayers: 0
+#   stations:
+#     Grozny:
+#       stationProto: StandardFrontierSecurityVessel
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: 'Императрица {1}'
+#           nameGenerator:
+#             !type:NanotrasenNameGenerator
+#             prefixCreator: '14'
+#         - type: StationJobs
+#           availableJobs:
+#             Chef: [ 0, 0 ]

@@ -18,6 +18,7 @@
       types:
         Heat: 20
         Shock: 10
+      armorPenetration: 0.3
 
 - type: entity
   name: magnum window-piercing bolt
@@ -38,6 +39,7 @@
     damage:
       types:
         Heat: 15
+      armorPenetration: 0.2
   - type: Fixtures
     fixtures:
       projectile:

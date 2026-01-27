@@ -1,0 +1,47 @@
+# Author Info
+# GitHub: -
+# Discord: urkplay
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+
+# Notes:
+#
+- type: vessel
+  id: Mefest
+  parent: BaseVessel
+  name: Мефест
+  description: Среднегабаритный шаттл синдиката. Рекомендованный состав команды 2-4 человек.
+  price: 119500
+  category: Medium
+  group: Syndicate
+  shuttlePath: /Maps/_Forge/Shuttles/Syndicate/mefest.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+  - type: ShuttleFaction
+    faction: Syndicate
+  guidebookPage: Null
+  class:
+  - Syndicate
+
+- type: gameMap
+  id: Mefest
+  mapName: 'Мефест'
+  mapPath: /Maps/_Forge/Shuttles/Syndicate/mefest.yml
+  minPlayers: 0
+  stations:
+    Mefest:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Мефест {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

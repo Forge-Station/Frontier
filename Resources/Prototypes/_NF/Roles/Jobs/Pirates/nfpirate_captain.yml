@@ -8,8 +8,8 @@
       time: 172800 # 48 hours
     - !type:RoleTimeRequirement
       role: JobSeniorOfficer
-      time: 10800 # 3 hours
-  whitelisted: true
+      time: 108000 # 30 hours
+  whitelisted: false
   startingGear: NFPirateCaptainGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
@@ -36,6 +36,9 @@
   - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
+    holiday: NewYear
+    prototype: PresentRandom
 
 - type: startingGear
   id: NFPirateCaptainGear
@@ -46,6 +49,8 @@
   storage:
     back:
     - AppraisalTool
+    - PirateTechFabFlatpack
+    - RadioJammer # Forge-change
 
 - type: chameleonOutfit
   id: NFPirateCaptainChameleonOutfit

@@ -12,7 +12,7 @@
   id: Nightlight
   parent: BaseVessel
   name: FSB Ночник
-  description: Среднегабаритный шаттл-ресторан от компании "The Far Star Biotech". Рекомендованный размер команды 1-4 человек.
+  description: Среднегабаритный шаттл-ресторан от компании "Far Star Biotech". Рекомендованный размер команды 1-4 человек.
   price: 45000 # Botany bay
   category: Medium
   group: Shipyard
@@ -25,7 +25,7 @@
 
 - type: gameMap
   id: Nightlight
-  mapName: 'FSB Nightlight'
+  mapName: 'FSB Ночник'
   mapPath: /Maps/_Forge/Shuttles/Service/nightlight.yml
   minPlayers: 0
   stations:

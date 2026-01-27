@@ -1,20 +1,17 @@
 - type: loadout
   id: SheriffClothingMaskSheriff
-  storage:
-    back:
-    - ClothingMaskGasSheriff
+  equipment: # Forge-change
+    mask: ClothingMaskGasSheriff
 
 - type: loadout
   id: BrigmedicClothingMaskBrigmedic
-  storage:
-    back:
-    - ClothingMaskBreathMedicalSecurity
+  equipment: # Forge-change
+    mask: ClothingMaskBreathMedicalSecurity
 
 - type: loadout
   id: NfsdClothingMaskGasNfsd
-  storage:
-    back:
-    - ClothingMaskGasNfsd
+  equipment: # Forge-change
+    mask: ClothingMaskGasNfsd
 
 - type: loadout
   id: NfsdVoxClothingMaskGasNfsd
@@ -27,13 +24,11 @@
 # Forge add
 - type: loadout
   id: NfsdClothingMaskGasAlt
-  storage:
-    back:
-    - ClothingMaskGasNfsdAlt
+  equipment: # Forge-change
+    mask: ClothingMaskGasNfsdAlt
 
 - type: loadout
   id: NfsdClothingMaskGasCoroner
-  storage:
-    back:
-    - ClothingMaskGasNfsdCoroner
+  equipment: # Forge-change
+    mask: ClothingMaskGasNfsdCoroner
 # Forge end

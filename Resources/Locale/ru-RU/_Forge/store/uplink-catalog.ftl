@@ -78,3 +78,8 @@ forge-uplink-security-magbootspro-desc = Магнитные ботинки со 
 
 uplink-150mmApShell = снаряд 150мм (APHE)
 uplink-150mmApShell-desc = Химический каморный снаряд для 150мм орудий. Не лучший выбор, поскольку большинство 150мм орудий оптимизированы под ЭМИ снаряды. Это грубый метод, и он точно не пройдёт таможенную проверку..
+
+forge-uplink-security-researchpoointsmall-name = диск исследовательских очков (1000)
+forge-uplink-security-researchpoointsmall-desc = Диск для сервера РНД, содержащий 1000 очков.
+forge-uplink-security-researchpoointmedium-name = диск исследовательских очков (5000)
+forge-uplink-security-researchpoointmedium-desc = Диск для сервера РНД, содержащий 5000 очков.

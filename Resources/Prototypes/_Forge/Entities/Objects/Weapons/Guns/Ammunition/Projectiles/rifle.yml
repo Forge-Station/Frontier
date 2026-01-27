@@ -5,12 +5,12 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
-    damage: # Corvax-Forge-change
+    damage:
       types:
-        Piercing: 45
+        Piercing: 70
         Structural: 300
+      armorPenetration: 0.85
     penetrationThreshold: 700
-    ignoreResistances: true
     penetrationDamageTypeRequirement:
     - Structural
 
@@ -21,11 +21,12 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
-    damage: # Corvax-Forge-change
+    damage:
       types:
         Piercing: 25
         Heat: 20
         Structural: 100
+      armorPenetration: 0.6
     penetrationThreshold: 360
     penetrationDamageTypeRequirement:
     - Structural

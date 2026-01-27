@@ -15,7 +15,7 @@
 
 - type: entity
   id: NFEnergyPickaxe
-  parent: [EnergySword, BaseC1Contraband] # Has a reflect chance
+  parent: [BaseMeleeWeaponEnergy, BaseC1Contraband] # Forge-change: change to BaseMeleeWeaponEnergy parent becauz contraband
   name: holopickaxe
   description: A holographic mining tool with blades comprised of hard light. Doesn't pack the same punch as an energy weapon, but more compact than most mining tools when turned off.
   components:

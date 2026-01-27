@@ -103,3 +103,17 @@
     size: Normal
     shape: # Corvax-Forge
     - 0,0,1,1
+  - type: Storage # Forge-Change
+    maxItemSize: Small
+    grid:
+    - 0,0,3,1
+    whitelist:
+      tags:
+      - Pill            # Таблетки
+      - PillCanister    # Таблетницы
+      - ChemicalMedipen # Медипены
+      - Syringe         # Шприцы
+      - Gauze           # Бинты
+      - Brutepack       # Набор для ушибов / мед. нить
+      - Ointment        # Мазь от ожогов / регенеративная сеть
+      - Bloodpack       # Пакеты крови

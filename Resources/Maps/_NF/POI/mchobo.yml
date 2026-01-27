@@ -6,7 +6,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 08/04/2025 17:18:02
-  entityCount: 1073
+  entityCount: 1072
 maps: []
 grids:
 - 1
@@ -2902,14 +2902,6 @@ entities:
     components:
     - type: Transform
       pos: -3.7478323,15.448365
-      parent: 1
-- proto: ClothingUniformJumpsuitST
-  entities:
-  - uid: 419
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.3256228,15.629316
       parent: 1
 - proto: ComputerTabletopBroken
   entities:

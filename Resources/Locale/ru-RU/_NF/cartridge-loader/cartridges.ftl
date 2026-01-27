@@ -42,3 +42,5 @@ ledger-entry-type-StationWithdrawalBounty = Награды
 ledger-entry-type-StationWithdrawalOther = Прочее
 # Fallback, if this displays, something's wrong.
 ledger-entry-type-PowerTransmission = Экспорт энергии
+
+ledger-entry-type-ShipyardRenameFee = Верфь

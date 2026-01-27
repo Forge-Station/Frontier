@@ -1,7 +1,7 @@
 - type: entity
   name: L2RPK
   id: WeaponLightMachineGunL2RPK
-  parent: [NFBaseWeaponLightMachineGunChamber20, NFBaseWeaponFrameLightMachineGun ]
+  parent: [NFBaseWeaponLightMachineGunChamber20, BaseC2ContrabandUnredeemable, NFBaseWeaponFrameLightMachineGun ]
   description: The RPK-L2 is a heavy machine gun from the TechnicLogistic family, designed based on the well-known L6. This machine gun stands out for its increased accuracy and low production cost. However, its design features have made it very bulky.
   components:
   - type: Sprite

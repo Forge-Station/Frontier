@@ -21,7 +21,7 @@
   productEntity: ClothingOuterHardsuitPirateCap
   icon: { sprite: Clothing/OuterClothing/Hardsuits/piratecaptain.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 6
   categories:
     - UplinkPirateHardsuits
   conditions:
@@ -40,7 +40,7 @@
   productEntity: ClothingOuterHardsuitPirateElite
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/pirate_elite.rsi, state: icon }
   cost:
-    Doubloon: 13
+    Doubloon: 16
   categories:
     - UplinkPirateHardsuits
   conditions:
@@ -50,6 +50,7 @@
           - PirateUplink
     - !type:BuyerJobCondition
       whitelist:
+        - NFPirateFirstMate
         - NFPirateCaptain
 
 #- type: listing #CorvaxFrontier

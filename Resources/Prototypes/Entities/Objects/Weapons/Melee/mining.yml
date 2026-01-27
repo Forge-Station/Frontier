@@ -26,7 +26,7 @@
       groups:
         Brute: 10
       types:
-        Structural: 30
+        Structural: 75 # Forge-change
   - type: Item
     size: Normal
     shape:
@@ -36,7 +36,8 @@
     storedRotation: -45
   - type: UseDelay
   - type: StaticPrice # Forge-Change
-    price: 10
+    price: 100
+    vendPrice: 10
   - type: Clothing # Forge-Change
     quickEquip: false # Forge-Change
     slots: # Forge-Change
@@ -67,12 +68,14 @@
     wideAnimationRotation: -90
     soundHit:
       path: "/Audio/Items/drill_hit.ogg"
-    attackRate: 4
+    attackRate: 2.5 # Forge-change
     damage:
       groups:
-        Brute: 3
+        Brute: 4 # Forge-change
       types:
-        Structural: 15
+        Structural: 50 # Forge-change
+  - type: StaticPrice # Forge-Change
+    price: 15
 
 - type: entity
   name: diamond tipped mining drill
@@ -89,13 +92,16 @@
     wideAnimationRotation: -90
     soundHit:
       path: "/Audio/Items/drill_hit.ogg"
-    attackRate: 4
+    attackRate: 3 # Forge-change
     damage:
       groups:
-        Brute: 6
+        Brute: 9 # Forge-change
       types:
-        Structural: 30
+        Structural: 90 # Forge-change
   - type: MiningGatheringHard # Frontier
+  - type: StaticPrice # Forge-Change
+    price: 1000
+    vendPrice: 25
 
 
 - type: entity
@@ -162,6 +168,8 @@
       types:
         Blunt: 10
         Slash: 5
+        Structural: 70  # Forge-change
+      armorPenetration: 0.15 # Forge-Change
     soundHit:
       collection: MetalThud
   - type: Wieldable
@@ -170,14 +178,16 @@
       types:
         Blunt: 2.5
         Slash: 2.5
-        Structural: 30
   - type: GunRequiresWield
   - type: DisarmMalus
   - type: Prying
+  - type: StaticPrice # Forge-Change
+    price: 1500
+    vendPrice: 25
 
 # No mark ability in exchange for wideswing, autoattack, and being one-handed
 - type: entity
-  parent: [ BaseKnife, BaseWeaponCrusher, BaseC1Contraband] # Frontier: BaseSecurityCargoContraband<BaseC1Contraband
+  parent: [ BaseKnife, BaseWeaponCrusher] # Forge-change: remove contraband
   id: WeaponCrusherDagger
   name: crusher dagger
   description: A scaled down version of a proto-kinetic crusher. Uses kinetic energy to vibrate the blade at high speeds.
@@ -188,10 +198,11 @@
   - type: MeleeWeapon
     autoAttack: true
     wideAnimationRotation: -135
-    attackRate: 2
+    attackRate: 0.9 # Forge-change
     damage:
       types:
-        Slash: 12
+        Slash: 11 # Forge-change
+        Structural: 20 # Forge-change
   - type: EmbeddableProjectile
     sound: /Audio/Weapons/star_hit.ogg
     offset: -0.15,0.0
@@ -219,6 +230,8 @@
         - ItemMask
         restitution: 0.3
         friction: 0.2
+  - type: StaticPrice # Forge-Change
+    price: 20
 
 # Less mark damage in exchange for more healing. Also has a better ratio of blunt to slash damage, but less structural.
 - type: entity
@@ -259,9 +272,13 @@
       types:
         Blunt: 3
         Slash: 7
+        Structural: 90  # Forge-change
+      armorPenetration: 0.1 # Forge-Change
   - type: IncreaseDamageOnWield
     damage:
       types:
         Blunt: 2
         Slash: 6
-        Structural: 20
+  - type: StaticPrice # Forge-Change
+    price: 2500
+    vendPrice: 40

@@ -12,8 +12,8 @@
   id: Medical
   parent: BasePOI
   name: 'Госпиталь' #Forge-Change
-  minimumDistance: 1650
-  maximumDistance: 2400 #Forge-Change
+  minimumDistance: 1250 # Forge-change: 441 - long distances
+  maximumDistance: 2600 # Forge-change: 441 - long distances
   spawnGroup: Required
   gridPath: /Maps/_Forge/POI/medical.yml #Forge-Change
   addComponents:

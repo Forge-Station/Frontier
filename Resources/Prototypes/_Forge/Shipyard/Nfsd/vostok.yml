@@ -1,24 +1,24 @@
 # Author Info
-# GitHub: -
+# GitHub: https://github.com/Autsaider-IM
 # Discord: autsaider_m
 # License: CC-BY-NC-ND-4.0
 # CorvaxForge
 
 # Maintainer Info
-# GitHub: https://github.com/mersen-tyn
-# Discord: mersen
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
 
-# Shuttle Notes:
+# Notes:
 #
 - type: vessel
   id: Vostok
   parent: BaseVessel
   name: TL Восток
   description: Тяжелый авианосец сил дсбф для подавления крупных восстаний.
-  price: 242000
+  price: 342000
   category: Large
   group: Security
-  access: Bailiff
+  access: Frontier
   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/vostok.yml
   guidebookPage: Null
   class:

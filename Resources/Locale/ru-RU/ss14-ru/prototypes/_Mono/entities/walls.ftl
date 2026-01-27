@@ -24,4 +24,4 @@ ent-WallPlastitaniumCapital = { ent-WallPlastitaniumIndestructible }
 
 ent-WallPlastitaniumDiagonalCapital = { ent-WallPlastitaniumDiagonal }
     .desc = { ent-WallPlastitaniumDiagonal.desc }
-    .suffix = Диагональ, АВАНПОСТ
+    .suffix = Диагональ, КАПИТАЛ

@@ -1,0 +1,100 @@
+- type: pirateBounty
+  id: ForgePirateBountyModern
+  reward: 2
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-modern
+    amount: 3
+    id: ModernNeckAll
+
+- type: pirateBounty
+  id: ForgePirateBountyPoncho
+  reward: 2
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-poncho
+    amount: 3
+    id: PonchosAll
+
+- type: pirateBounty
+  id: ForgePirateBountyShipBigHEAmmo
+  reward: 7
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-shipbigammohe
+    amount: 3
+    id: ShipBigAmmoHEAll
+
+- type: pirateBounty
+  id: ForgePirateBountyShipBigHESHAmmo
+  reward: 8
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-shipbigammohesh
+    amount: 3
+    id: ShipBigAmmoHESHAll
+
+# region Ювелирка
+- type: pirateBounty
+  id: ForgePirateBountyGold
+  reward: 4
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-gold
+    amount: 2
+    id: FGoldprint
+
+- type: pirateBounty
+  id: ForgePirateBountySilver
+  reward: 2
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-silver
+    amount: 3
+    id: FSilver
+
+- type: pirateBounty
+  id: ForgePirateBountyGem
+  reward: 6
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-gem
+    amount: 2
+    id: FGem
+
+- type: pirateBounty
+  id: ForgePirateBountyDiamond
+  reward: 7
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-diamond
+    amount: 3
+    id: FDiamond
+
+- type: pirateBounty
+  id: ForgePirateBountyCoin
+  reward: 3
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-coin
+    amount: 15
+    id: FCoin
+
+- type: pirateBounty
+  id: ForgePirateBountyPrizeTicket
+  reward: 9
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-prizeticket
+    amount: 100
+    id: FPrizeTicket
+
+# были бы ещё какие компании.. грустный баунти
+- type: pirateBounty
+  id: ForgePirateBountyTechLogisticGuns
+  reward: 6
+  description: pirate-bounty-description-generic
+  entries:
+  - name: forge-pirate-bounty-item-techloggun
+    amount: 3
+    id: FTechLogisticGuns

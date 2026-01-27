@@ -56,7 +56,7 @@
     severity: Class2Expedition
     turnInValues: &oneFUC
       FrontierUplinkCoin: 1
-      Doubloon: 1
+      Doubloon: 2 # Forge-change
 
 - type: entity
   parent: BaseC2ContrabandUnredeemable
@@ -66,7 +66,7 @@
   - type: Contraband
     turnInValues: &noFUCs
       FrontierUplinkCoin: 0
-      Doubloon: 0
+      Doubloon: 1 # Forge-change
 
 - type: entity
   parent: BaseC2Contraband
@@ -154,7 +154,7 @@
   components:
   - type: Contraband
     turnInValues:
-      FrontierUplinkCoin: 1
+      FrontierUplinkCoin: 2 # Forge-change
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -244,6 +244,6 @@
     severity: PirateTarget
     # Security and heads only
     turnInValues:
-      Doubloon: 1
+      Doubloon: 2 # Forge-change
     hideCarryStatus: true
 # endregion

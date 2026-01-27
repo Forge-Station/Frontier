@@ -25,17 +25,18 @@
   - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#035EFC"
-    scale: 1.5
+    scale: 1.3
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: circle
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 15
   - type: PointLight
     color: "#FB00FF"
   - type: EmpOnTrigger
-    range: 10
+    range: 14
     energyConsumption: 500000
-    disableDuration: 5.5
+    disableDuration: 9.5
 
 - type: entity
   id: 150mmEmpShell
@@ -101,19 +102,20 @@
     muzzleFlash: null
   - type: ShipWeaponProjectile
   - type: RadarBlip
-    scale: 1.75
+    scale: 1.3
     requireNoGrid: true
+    visibleFromOtherGrids: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 15
   - type: TriggerOnCollide
     fixtureID: projectile
   - type: ExplodeOnTrigger
-  - type: Explosive # Forge-change
-    explosionType: DefaultShipGun # Forge-change
+  - type: Explosive
+    explosionType: HardBombShipGun
+    totalIntensity: 400
+    intensitySlope: 40
     maxIntensity: 100
-    intensitySlope: 3
-    totalIntensity: 30
 
 - type: entity
   id: 150mmApShell
@@ -145,11 +147,16 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:ExplodeBehavior
+  # - type: Explosive
+  #   explosionType: Default
+  #   maxIntensity: 100
+  #   intensitySlope: 3
+  #   totalIntensity: 30
   - type: Explosive
-    explosionType: Default
+    explosionType: HardBombShipGun
+    totalIntensity: 1900
+    intensitySlope: 40
     maxIntensity: 100
-    intensitySlope: 3
-    totalIntensity: 30
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic

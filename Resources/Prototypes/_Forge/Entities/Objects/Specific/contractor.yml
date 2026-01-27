@@ -76,6 +76,11 @@
     state: pinpointer_thief
   - type: Item
     sprite: Forge/Objects/Devices/contr_pinpointer.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
 
 - type: entity
   parent: BaseItem

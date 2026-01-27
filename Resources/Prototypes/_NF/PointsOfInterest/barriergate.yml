@@ -11,9 +11,9 @@
 - type: pointOfInterest
   id: BarrierGate
   parent: BasePOI
-  name: 'Barrier Gate'
-  minimumDistance: 11000
-  maximumDistance: 12000
+  name: 'Барьерные Врата' # Forge-change: translate, i think
+  minimumDistance: 14000 # Forge-change: 441 - long distances
+  maximumDistance: 16000 # Forge-change: 441 - long distances
   # minimumClearance: 8000 # To make sure it doesn't pop in next to the Cove. Offline for now.
   spawnGroup: Required
   gridPath: /Maps/_NF/POI/barriergate.yml

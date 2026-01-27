@@ -300,6 +300,7 @@
   id: MobStaminaFodder
   abstract: true
   components:
+  - type: MobThrowableOnHit
   - type: Stamina
     critThreshold: 80
 
@@ -307,6 +308,7 @@
   id: MobStaminaSpecial
   abstract: true
   components:
+  - type: MobThrowableOnHit
   - type: Stamina
     critThreshold: 200
 

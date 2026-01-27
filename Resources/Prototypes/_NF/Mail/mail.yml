@@ -154,11 +154,11 @@
   components:
   - type: Mail
     contents:
-    - id: ClothingOuterWizard
-    - id: ClothingHeadHatWizard
+    - id: ClothingOuterFakeWizard
+    - id: ClothingHeadHatFakeWizard
     - id: ClothingShoesWizard
     - id: RubberStampWizard
-    - id: WizardStaffMeleeBase
+    - id: FakeWizardStaff
       orGroup: Staff
       prob: 0.6
     - id: PonderingOrb
@@ -1573,12 +1573,12 @@
   components:
   - type: Mail
     contents:
-      - id: PowerCellMicroreactor
-        orGroup: PowerCell
-        prob: 0.60
-      - id: PowerCellAntiqueProto
-        orGroup: PowerCell
-        prob: 0.20
+      # - id: PowerCellMicroreactor
+      #   orGroup: PowerCell
+      #   prob: 0.60
+      # - id: PowerCellAntiqueProto
+      #   orGroup: PowerCell
+      #   prob: 0.20
       - id: PowerCellHyper
         orGroup: PowerCell
         prob: 0.20

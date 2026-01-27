@@ -1,0 +1,18 @@
+- type: entity
+  id: OverlordImplanter
+  name: overlord implanter
+  parent: [ BaseImplantOnlyImplanterSyndi ] # Frontier: add BaseC2ContrabandUnredeemable
+  suffix: overlord
+  components:
+    - type: Implanter
+      implant: OverlordImplant
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: OverlordImplant
+  name: overlord implant
+  description: This implant will ensure loyalty to Syndicate.
+  categories: [ HideSpawnMenu ]
+  components:
+   - type: SubdermalImplant
+   - type: OverlordImplant

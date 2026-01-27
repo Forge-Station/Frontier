@@ -6,3 +6,5 @@ ent-FoodEgg = яйцо
     .desc = { ent-FoodEggBase.desc }
 ent-FoodEggBoiled = варёное яйцо
     .desc = Вкусное варёное яйцо.
+ent-FoodEggLaid = яйцо
+    .desc = Прямо с фермы, ещё тёплое!

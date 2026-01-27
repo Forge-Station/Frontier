@@ -22,7 +22,7 @@
         maxVol: 31
         reagents:
         - ReagentId: Nutriment
-          Quantity: 20
+          Quantity: 10 # Forge-change: debuff bread.. what im even doing here?..
         - ReagentId: Flavorol
           Quantity: 5
 
@@ -210,7 +210,7 @@
         maxVol: 25
         reagents:
         - ReagentId: Nutriment
-          Quantity: 15
+          Quantity: 11 # Forge-change
         - ReagentId: Flavorol
           Quantity: 5
 # Tastes like bread, banana, nut.
@@ -262,7 +262,7 @@
         maxVol: 40
         reagents:
         - ReagentId: Nutriment
-          Quantity: 20
+          Quantity: 15 # Forge-change
         - ReagentId: Vitamin
           Quantity: 5
         - ReagentId: Flavorol
@@ -318,7 +318,7 @@
         maxVol: 50
         reagents:
         - ReagentId: Nutriment
-          Quantity: 30
+          Quantity: 24 # Forge-change
         - ReagentId: Vitamin
           Quantity: 5
         - ReagentId: Flavorol
@@ -536,7 +536,7 @@
         maxVol: 60
         reagents:
         - ReagentId: Nutriment
-          Quantity: 30
+          Quantity: 20 # Forge-change
         - ReagentId: Vitamin
           Quantity: 5
         - ReagentId: Toxin
@@ -604,7 +604,7 @@
         maxVol: 60 # Frontier: 48<60
         reagents:
         - ReagentId: Nutriment
-          Quantity: 30
+          Quantity: 20 # Forge-change
         - ReagentId: Protein
           Quantity: 12
         - ReagentId: Flavorol # Frontier
@@ -659,7 +659,7 @@
         maxVol: 45
         reagents:
         - ReagentId: Nutriment
-          Quantity: 30
+          Quantity: 20 # Forge-change
         - ReagentId: Vitamin
           Quantity: 5
         - ReagentId: Flavorol

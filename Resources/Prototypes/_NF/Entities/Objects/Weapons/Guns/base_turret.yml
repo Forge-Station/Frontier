@@ -154,6 +154,16 @@
   name: energy turret
   abstract: true
   components:
+  # corvax-forge-start
+  - type: HTN
+    rootTask:
+      task: EnergyTurretCompound
+    blackboard:
+      RotateSpeed: !type:Single
+        3.141
+      SoundTargetInLOS: !type:SoundPathSpecifier
+        path: /Audio/Effects/double_beep.ogg
+  # corvax-forge-end
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Turrets/disabler.rsi
     drawdepth: Mobs

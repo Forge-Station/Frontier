@@ -1,6 +1,6 @@
 - type: entity
   name: гипоспрей ДСБФ
-  parent: [BaseItem, BaseC2ContrabandUnredeemable]
+  parent: [BaseItem, BaseForgeNfsdContraband]
   description: Стерильный инъектор для быстрого введения лекарств пациентам.
   id: NfsdHypo
   components:
@@ -34,7 +34,7 @@
 
 - type: entity
   name: гипоспрей врача NT-MED-74
-  parent: [BaseItem, BaseC2ContrabandUnredeemable]
+  parent: [BaseItem, BaseForgeMedicContraband]
   description: Стерильный инъектор для быстрого введения лекарств пациентам.
   id: MedHypo
   components:
@@ -96,9 +96,37 @@
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 10
+        maxVol: 5
         reagents:
-        - ReagentId: Desoxyephedrine
-          Quantity: 5
         - ReagentId: CombatNanites
           Quantity: 5
+
+- type: entity
+  name: combat centcomm hypospray
+  parent: CentCommHypo
+  description: Reserved for Nanotrasen's top doctors. It utilizes experimental bluespace technology.
+  suffix: nanites
+  id: CentCommHypoNanites
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/hypospray.rsi
+    state: combat_hypo
+  - type: Item
+    sprite: Objects/Specific/Medical/hypospray.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 50
+        reagents:
+        - ReagentId: CombatNanites
+          Quantity: 50
+  - type: SolutionRegeneration
+    solution: hypospray
+    generated:
+      reagents:
+      - ReagentId: CombatNanites
+        Quantity: 0.24
+  - type: Hypospray
+    onlyAffectsMobs: false
+    preventCombatInjection: true
+    doAfterTime: 1.5

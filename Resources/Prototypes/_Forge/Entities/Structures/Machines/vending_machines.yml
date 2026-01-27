@@ -1,8 +1,8 @@
 - type: entity
   id: ColiseumVendingMachine
   parent: [BaseStructureDisableAnchoring, VendingMachine]
-  name: ColiseumMate
-  description: Buy items for a beautiful battle in the coliseum!
+  name: Раздатчик ваучеров
+  description: Раздатчик, продающий ваучеры для модификации некоторых шаттлов ДСБФ.
   components:
   - type: VendingMachine
     pack: ColiseumVendingMachineInventory

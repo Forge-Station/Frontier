@@ -22,6 +22,7 @@
   weight: 40
   displayWeight: 40
   setPreference: true
+  salary: 11000
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
@@ -29,13 +30,12 @@
 - type: startingGear
   id: EngineerNfsdGear
   equipment:
-    id: EngineerNfsdPDA
-    belt: ClothingBeltNfsdEngineerFilled
-    eyes: ClothingEyesGlassesEngineerNfsd
+    suitstorage: SecBreachingHammer
   storage:
     back:
     - NfsdTechFabFlatpack
     - EngineeringTechFabFlatpack
+    - BaseSecurityUplinkRadioOfficer # for rnd disk
 
 - type: chameleonOutfit
   id: EngineerNfsdChameleonOutfit

@@ -89,3 +89,76 @@
   id: FRecComputerIFFCircuitboard
   result: ComputerIFFCircuitboard
   completetime: 10
+
+# region Glasses
+- type: latheRecipe
+  id: FRecNightVisionNfsd
+  result: NFClothingEyesNightVisionGoggleDSBF
+  categories:
+  - Clothing
+  completetime: 10
+  materials:
+    Steel: 2500
+    Glass: 2000
+    Gold: 2000
+    Silver: 2000
+
+- type: latheRecipe
+  id: FRecThermalVisionNfsd
+  result: ClothingEyesThermalVisionGoggles
+  categories:
+  - Clothing
+  completetime: 10
+  materials:
+    Plasteel: 1000
+    Glass: 1800
+    Gold: 2000
+    Plasma: 1200
+    Silver: 2000
+    PlasmaGlass: 1200
+
+- type: latheRecipe
+  id: FRecNightThermalVisionNfsd
+  result: ClothingEyesNightThermalVisionNfsd
+  categories:
+  - Clothing
+  completetime: 20
+  materials:
+    Plasteel: 1200
+    Glass: 2000
+    Gold: 2500
+    Plasma: 2800
+    Silver: 2500
+    PlasmaGlass: 2000
+    Brass: 2000
+
+# region Tools
+- type: latheRecipe
+  parent: Multitool
+  id: FRecMultitoolNfsd
+  result: MultitoolNfsd
+
+- type: latheRecipe
+  parent: PowerDrill
+  id: FRecPowerDrillNfsd
+  result: PowerDrillNfsd
+
+- type: latheRecipe
+  parent: RCD
+  id: FRecRCDNfsd
+  result: RCDNfsd
+
+- type: latheRecipe
+  parent: RCDAmmo
+  id: FRecRCDAmmo
+  result: RCDAmmo
+
+- type: latheRecipe
+  parent: JawsOfLife
+  id: FRecJawsOfLifeNfsd
+  result: JawsOfLifeNfsd
+
+- type: latheRecipe
+  parent: WelderExperimental
+  id: FRecWelderNfsd
+  result: WelderNfsd

@@ -12,8 +12,8 @@
   id: LPBravo
   parent: BasePOI
   name: 'Прослушивающий пункт Браво'
-  minimumDistance: 4000
-  maximumDistance: 6000
+  minimumDistance: 6000 # Forge-change: 441 - long distances
+  maximumDistance: 8000 # Forge-change: 441 - long distances
   spawnGroup: SyndicateFOB
   gridPath: /Maps/_Forge/POI/lpbravo.yml #Forge-Change
   hideWarp: true

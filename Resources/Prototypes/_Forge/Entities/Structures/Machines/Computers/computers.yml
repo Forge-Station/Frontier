@@ -145,3 +145,120 @@
     energy: 1.6
     color: "#b89f25"
   - type: Godmode
+
+# region Traffic
+# NFSD Local and Remote
+- type: entity
+  parent: BaseComputerTrafficLocal
+  id: ComputerShuttleNFSDOutpostLocal
+  name: NFSD Outpost traffic console
+  suffix: Local
+  description: Monitors the traffic around the Trade Outpost.
+  components:
+  - type: NFDroneConsoleTarget
+    id: Nfsd
+  - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
+
+- type: entity
+  parent: BaseComputerTrafficRemote
+  id: ComputerShuttleNFSDOutpostRemote
+  name: NFSD Outpost traffic console
+  suffix: Remote
+  description: Monitors the traffic around the Trade Outpost.
+  components:
+  - type: NFDroneConsole
+    id: Nfsd
+  - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
+
+# Edsion Local and Remote
+- type: entity
+  parent: BaseComputerTrafficLocal
+  id: ComputerShuttleEdisonOutpostLocal
+  name: edison traffic console
+  suffix: Local
+  description: Monitors the traffic around the Trade Outpost.
+  components:
+  - type: NFDroneConsoleTarget
+    id: Edison
+  - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
+
+- type: entity
+  parent: BaseComputerTrafficRemote
+  id: ComputerShuttleEdisonOutpostRemote
+  name: edison traffic console
+  suffix: Remote
+  description: Monitors the traffic around the Trade Outpost.
+  components:
+  - type: NFDroneConsole
+    id: Edison
+  - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
+
+# wrf lodge local & reomte traffic console???
+- type: entity
+  parent: BaseComputerTrafficLocal
+  id: ComputerShuttleMercenaryLodgeLocal
+  name: lodge traffic console
+  suffix: Local
+  description: Monitors the traffic around the Trade Outpost.
+  components:
+  - type: NFDroneConsoleTarget
+    id: Lodge
+  - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
+
+- type: entity
+  parent: BaseComputerTrafficRemote
+  id: ComputerShuttleMercenaryLodgeRemote
+  name: lodge traffic console
+  suffix: Remote
+  description: Monitors the traffic around the Trade Outpost.
+  components:
+  - type: NFDroneConsole
+    id: Lodge
+  - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
+
+# OMG medical traffic console local'n'remoteS
+- type: entity
+  parent: BaseComputerTrafficLocal
+  id: ComputerShuttleMedicalHospitalLocal
+  name: hospital traffic console
+  suffix: Local
+  description: Monitors the traffic around the Trade Outpost.
+  components:
+  - type: NFDroneConsoleTarget
+    id: Medical
+  - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
+
+- type: entity
+  parent: BaseComputerTrafficRemote
+  id: ComputerShuttleMedicalHospitalRemote
+  name: hospital traffic console
+  suffix: Remote
+  description: Monitors the traffic around the Trade Outpost.
+  components:
+  - type: NFDroneConsole
+    id: Medical
+  - type: StationAiWhitelist # Forge-change
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi

@@ -1,0 +1,36 @@
+- type: entity
+  parent: BaseSign
+  id: BaseTLFlag
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Wallmounts/flags.rsi
+  - type: StaticPrice
+    price: 25
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger: !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/poster_broken.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialCloth:
+            min: 5
+            max: 5
+        offset: 0
+
+- type: entity
+  parent: BaseTLFlag
+  id: TLFlag
+  name: флаг TechnicLogistic
+  description: Выглядит довольно странно... Судя по всему в конструкции присутствует тритий.

@@ -1,4 +1,4 @@
-ent-ColiseumVendingMachine = КолизейМат
-    .desc = Купи вещи для красивого боя в колизее!
+ent-ColiseumVendingMachine = Раздатчик ваучеров ДСБФ
+    .desc = Купи ваучер... свой ваучер!
 ent-VendingMachineAmmoPOIMedic = { ent-VendingMachineAmmo }
     .desc = { ent-VendingMachineAmmo.desc }

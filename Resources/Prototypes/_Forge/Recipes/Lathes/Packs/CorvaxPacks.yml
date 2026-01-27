@@ -31,7 +31,7 @@
   - ShuttleRifleAmmoBox
   - ShuttleMagnumRifleAmmoBox
 
-#Снаряжение
+#region Equipment
 - type: latheRecipePack
   id: CorvaxEquipment
   recipes:
@@ -45,14 +45,14 @@
   - WeaponMagmiteCrusherGlaive
   - WeaponMagmitePlasmaCutter
 
-#Материалы
+# regoin Materials
 
 - type: latheRecipePack
   id: CorvaxMaterialsStatic
   recipes:
   - SheetMagmite1
 
-#Обменники
+# region Exchangers
 
 - type: latheRecipePack
   id: CorvaxExchangerStatic
@@ -101,7 +101,7 @@
   - MachineBluespaceHarvesterCircuitboard
   - MachineBluespaceTransitorCircuitboard
 
-# Одежда
+# region Clothing
 - type: latheRecipePack
   id: CFClothing
   recipes:
@@ -120,7 +120,7 @@
   - ClothingOuterVestArmorMedSec
   - ClothingOuterArmorHoSVestWeb
 
-# Автомат торгов Синдиката
+# region SyndiTrade
 - type: latheRecipePack
   id: SyndicateTradingConsoleWeapons
   recipes:
@@ -243,7 +243,7 @@
   - BoxT3ComponentsAssortedSTrade
   - RadioJammerSTrade
 
-# Interdyne обменник
+# region InterdyneFab
 - type: latheRecipePack
   id: InterdyneFabMed
   recipes:
@@ -308,14 +308,14 @@
   - JugBluespaceInter # - 50000 спесо (контрабандные)
   - PowerCellSyndicateInter
 
-# Конвертер кэша
+# region CashConverter
 - type: latheRecipePack
   id: SyndicateTradingCash
   recipes:
   - SpaceCashSyndicateTORecipe
   - SpaceCashSyndicateFROMRecipe
 
-# Syndicate lathe
+# region Syndilathe
 - type: latheRecipePack
   id: FSyndicateProtolathePack
   recipes:
@@ -450,6 +450,7 @@
   - FSynLRecMagazine57mmAPCBC
   - FSynLRecMagazine90mmAPHE
 
+# region ShipAmmo
 - type: latheRecipePack
   id: ForgePackShipAmmo
   recipes:
@@ -462,19 +463,33 @@
   - FRecMagazine90mmWeak
   - FRecTovekCartridge
   - FRec150mmEmpShell
+  - FRecLightFighterOrdinanceGPOItem
+  - FRecVesperaMagazine
+  - FRecVanykCartridge
+  - FRecTovekCartridgeEMPHE
+  - FRecTovekCartridgeAPHE
 
 - type: latheRecipePack
   id: ForgePackNfsd
   recipes:
   - NFClothingBackpackElectropack
   - JetpackNfsd
+  - FRecMultitoolNfsd
+  - FRecPowerDrillNfsd
+  - FRecRCDNfsd
+  - FRecRCDAmmo
+  - FRecJawsOfLifeNfsd
+  - FRecWelderNfsd
+  - FRecNightVisionNfsd
+  - FRecThermalVisionNfsd
+  - FRecNightThermalVisionNfsd
   - FRecClothingOuterHardsuitNfsdBronze
   - FRecClothingOuterHardsuitNfsdSilver
   - FRecClothingOuterHardsuitNfsdCombat
   - FRecClothingOuterHardsuitNfsdCommand
   - FRecClothingOuterHardsuitNfsdExperimental
   - FRecClothingShoesBootsMagNFSD
-  - FRecClothingShoesBootsMagAdvsPromax
+  - FRecClothingShoesBootsMagNFSDPromax
   - FRecAdvancedRadarConsoleCircuitboard
   - FRecComputerIFFCircuitboard
   - ForgeAmmoDrum20mmAPHE
@@ -488,3 +503,13 @@
   - FRec203mmCartridgeHESH
   - FRec220mmCartridgeHESH
   - FRec255mmCartridgeHESH
+
+# region PirateFab
+- type: latheRecipePack
+  id: ForgePackPirate
+  recipes:
+  - ForgeAmmoPirate20mm
+  - ForgeAmmoPirate57mm
+  - ForgeAmmoPirate90mm
+  - ForgePirateTovek
+  - ForgePirate150mm

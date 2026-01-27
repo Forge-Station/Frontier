@@ -11,9 +11,11 @@
     sprite: Forge/Clothing/Shoes/Boots/magboots-combat.rsi #Corvax-Frontier респрайт
   - type: Magboots
     magbootsAlert: MagbootsSecurity
-  - type: ClothingSpeedModifier # Corvax-Forge: Armor rebalance
+  - type: ClothingSpeedModifier #Forge-change: Armor rebalance
     walkModifier: 0.95
     sprintModifier: 0.9
+  - type: ClothingSlowOnDamageModifier #Forge-change
+    modifier: 0.5
 
 - type: entity
   parent: [ClothingShoesBootsMagSecurity, BaseC2ContrabandUnredeemable] #Corvax-Frontier КБ
@@ -58,7 +60,7 @@
   - type: NoSlip
 
 - type: entity
-  parent: [BaseC1Contraband, ClothingShoesBootsMagSyndie] #Corvax-Frontier КБ
+  parent: [BaseC3PirateContraband, ClothingShoesBootsMagSyndie] #Forge-change КБ
   id: ClothingShoesBootsMagPirate
   name: pirate magboots
   description: Pirate magnetic boots, often used during extravehicular activity to ensure the user remains safely attached to the vehicle.
@@ -70,7 +72,7 @@
     sprite: _NF/Clothing/Shoes/Boots/magboots-pirate.rsi
   - type: Magboots
     magbootsAlert: MagbootsPirate
-  - type: ClothingSpeedModifier #Forge Frontier: PR 294
+  - type: ClothingSpeedModifier #Forge-change: PR 294
     walkModifier: 0.95
     sprintModifier: 0.8
   - type: GasTank

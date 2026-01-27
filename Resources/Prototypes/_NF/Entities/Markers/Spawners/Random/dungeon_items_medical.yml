@@ -260,7 +260,7 @@
     - Stimpack
     - StimpackMini
     - ChemistryBottleCognizine
-    - ChemistryBottleOmnizine
+    # - ChemistryBottleOmnizine # Forge-change
     rareChance: 0.01
 
 - type: entity
@@ -699,7 +699,7 @@
     offset: 0.0
     rarePrototypes:
     - ChemistryBottleCognizine
-    - ChemistryBottleOmnizine
+    # - ChemistryBottleOmnizine # Forge-change
     - ChemistryBottlePax
     - ChemistryBottleMuteToxin
     - ChemistryBottleToxin

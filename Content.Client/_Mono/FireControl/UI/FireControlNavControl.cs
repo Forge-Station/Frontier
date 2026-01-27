@@ -13,7 +13,6 @@ using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
 using Content.Shared._Crescent.ShipShields;
-using Content.Shared._NF.Radar;
 using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
@@ -24,7 +23,8 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Timing;
-using Content.Client._NF.Radar;
+using Content.Client._Mono.Radar;
+using Content.Shared._Mono.Radar;
 
 namespace Content.Client._Mono.FireControl.UI;
 
@@ -33,7 +33,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
     [Dependency] private readonly IMapManager _mapManager = default!;
     private readonly SharedShuttleSystem _shuttles;
     private readonly SharedTransformSystem _transform;
-    private readonly RadarBlipSystem _blips;
+    private readonly RadarBlipsSystem _blips;
     private readonly SharedPhysicsSystem _physics;
 
     private EntityCoordinates? _coordinates;
@@ -67,12 +67,13 @@ public sealed class FireControlNavControl : BaseShuttleControl
     private float _lastCursorUpdateTime = 0f;
     private const float CursorUpdateInterval = 0.1f; // 10 updates per second
 
-    public FireControlNavControl() : base(64f, 768f, 768f)
+    // Forge-change: 512>768
+    public FireControlNavControl() : base(64f, 512f, 512f)
     {
         IoCManager.InjectDependencies(this);
         _shuttles = EntManager.System<SharedShuttleSystem>();
         _transform = EntManager.System<SharedTransformSystem>();
-        _blips = EntManager.System<RadarBlipSystem>();
+        _blips = EntManager.System<RadarBlipsSystem>();
         _physics = EntManager.System<SharedPhysicsSystem>();
 
         OnMouseEntered += HandleMouseEntered;
@@ -321,31 +322,33 @@ public sealed class FireControlNavControl : BaseShuttleControl
         var origin = ScalePosition(-new Vector2(Offset.X, -Offset.Y));
         handle.DrawLine(origin, origin + angle.ToVec() * ScaledMinimapRadius * 1.42f, Color.Red.WithAlpha(0.1f));
 
-        var blips = _blips.GetCurrentBlips();
+        // Get raw blips with grid information
+        var rawBlips = _blips.GetCurrentBlips();
 
-        foreach (var blip in blips)
+        // Prepare view bounds for culling
+        var blipViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);
+
+        // Draw blips using the same grid-relative transformation approach as docks
+        foreach (var blip in rawBlips)
         {
-            var blipPos = Vector2.Transform(blip.Item1, worldToShuttle * shuttleToView);
+            var blipPos = Vector2.Transform(_transform.ToMapCoordinates(blip.Position).Position, worldToShuttle * shuttleToView);
 
-            if (blip.Item4 == RadarBlipShape.Ring)
+            // Check if this blip is within view bounds before drawing
+            if (blipViewBounds.Contains(blipPos))
             {
-                DrawShieldRing(handle, blipPos, blip.Item2, blip.Item3.WithAlpha(0.8f));
+                DrawBlipShape(handle, blipPos, blip.Scale * 3f, blip.Color.WithAlpha(0.8f), blip.Shape);
             }
-            else
-            {
-                // For other shapes, use the regular drawing method
-                DrawBlipShape(handle, blipPos, blip.Item2 * 3f, blip.Item3.WithAlpha(0.8f), blip.Item4);
-            }
-
+            // Forge-change
             if (_isMouseInside && _controllables != null)
             {
-                var worldPos = blip.Item1;
+                var worldPos = _transform.ToMapCoordinates(blip.Position).Position;
+
                 var isFireControllable = _controllables.Any(c =>
                 {
                     var coords = EntManager.GetCoordinates(c.Coordinates);
                     var entityMapPos = _transform.ToMapCoordinates(coords);
                     return Vector2.Distance(entityMapPos.Position, worldPos) < 0.1f &&
-                           _selectedWeapons.Contains(c.NetEntity);
+                        _selectedWeapons.Contains(c.NetEntity);
                 });
 
                 if (isFireControllable)
@@ -363,59 +366,40 @@ public sealed class FireControlNavControl : BaseShuttleControl
 
                     if (!results.Any())
                     {
-                        handle.DrawLine(blipPos, cursorViewPos, blip.Item3.WithAlpha(0.3f));
+                        handle.DrawLine(blipPos, cursorViewPos, blip.Item4.WithAlpha(0.3f));
                     }
                 }
             }
         }
 
         // Draw hitscan lines from the radar blips system
-        var hitscanLines = _blips.GetRawHitscanLines();
+        var hitscanLines = _blips.GetHitscanLines();
         foreach (var line in hitscanLines)
         {
-            Vector2 startPosInView;
-            Vector2 endPosInView;
+            var startPosInView = Vector2.Transform(line.Start, worldToShuttle * shuttleToView);
+            var endPosInView = Vector2.Transform(line.End, worldToShuttle * shuttleToView);
 
-            // Handle differently based on if there's a grid
-            if (line.Grid == null)
+            // Only draw lines if at least one endpoint is within view
+            if (blipViewBounds.Contains(startPosInView) || blipViewBounds.Contains(endPosInView))
             {
-                // For world-space lines without a grid, use standard world transformation
-                startPosInView = Vector2.Transform(line.Start, worldToShuttle * shuttleToView);
-                endPosInView = Vector2.Transform(line.End, worldToShuttle * shuttleToView);
-            }
-            else
-            {
-                // For grid-relative lines, we need to transform from grid space to world space first
-                var gridEntity = EntManager.GetEntity(line.Grid.Value);
-                if (EntManager.TryGetComponent<TransformComponent>(gridEntity, out var gridXform))
+                // Draw the line with the specified thickness and color
+                handle.DrawLine(startPosInView, endPosInView, line.Color);
+
+                // For thicker lines, draw multiple lines side by side
+                if (line.Thickness > 1.0f)
                 {
-                    var gridToWorld = _transform.GetWorldMatrix(gridEntity);
-                    var gridStartWorld = Vector2.Transform(line.Start, gridToWorld);
-                    var gridEndWorld = Vector2.Transform(line.End, gridToWorld);
+                    // Calculate perpendicular vector for thickness
+                    var dir = (endPosInView - startPosInView).Normalized();
+                    var perpendicular = new Vector2(-dir.Y, dir.X) * 0.5f;
 
-                    startPosInView = Vector2.Transform(gridStartWorld, worldToShuttle * shuttleToView);
-                    endPosInView = Vector2.Transform(gridEndWorld, worldToShuttle * shuttleToView);
+                    // Draw additional lines for thickness
+                    for (float i = 1; i <= line.Thickness; i += 1.0f)
+                    {
+                        var offset = perpendicular * i;
+                        handle.DrawLine(startPosInView + offset, endPosInView + offset, line.Color);
+                        handle.DrawLine(startPosInView - offset, endPosInView - offset, line.Color);
+                    }
                 }
-                else
-                {
-                    // Fallback to treating as world coordinates if grid transform is not available
-                    startPosInView = Vector2.Transform(line.Start, worldToShuttle * shuttleToView);
-                    endPosInView = Vector2.Transform(line.End, worldToShuttle * shuttleToView);
-                }
-            }
-
-            // Check if the line is within the view bounds before drawing
-            var viewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);
-            var lineBounds = new Box2(
-                Math.Min(startPosInView.X, endPosInView.X),
-                Math.Min(startPosInView.Y, endPosInView.Y),
-                Math.Max(startPosInView.X, endPosInView.X),
-                Math.Max(startPosInView.Y, endPosInView.Y)
-            );
-
-            if (viewBounds.Intersects(lineBounds))
-            {
-                handle.DrawLine(startPosInView, endPosInView, line.Color.WithAlpha(0.8f));
             }
         }
 
