@@ -10,6 +10,7 @@ forge-research-technology-arsenal-science = Достижения науки
 forge-research-technology-arsenal-service = Сервисные технологии
 nf-research-technology-hardsuits-armored-advanced-aamr = Проект "Спектр"
 nf-research-technology-hardsuits-armored-advanced-aamr2 = Проект "Галиус"
+nf-research-technology-anomaly-harnessing-gen = Создание аномалий
 # Forge-Change-End
 research-techology-advanced-personal-propulsion = Системы персонального перемещения
 research-technology-advanced-personal-propulsion = Системы персонального перемещения

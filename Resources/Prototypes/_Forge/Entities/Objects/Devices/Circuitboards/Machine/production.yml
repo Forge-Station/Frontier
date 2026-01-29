@@ -420,12 +420,12 @@
 - type: entity
   parent: BaseMachineCircuitboard
   id: MachineMiniAnomalyGeneratorCircuitboard
-  name: плата мини генератора аномалий
-  description: Прочерк
+  name: компактный генератор аномалий(Машинная плата)
+  description: плата позволяющая создать небольшой генератор анормалий. А как оно вообще работает?
   components:
   - type: Sprite
     sprite: Forge/Bluespace/module.rsi
-    state: bluespace
+    state: bluespaceanom
   - type: MachineBoard
     prototype: MachineMiniAnomalyGenerator
     stackRequirements:
