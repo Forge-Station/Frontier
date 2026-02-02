@@ -19,6 +19,8 @@
     - CorvaxFrontierRule5
     - CorvaxFrontierRule6
     - CorvaxFrontierRule7
+    - CorvaxFrontierRule7_1
+    - CorvaxFrontierRule7_2
     - CorvaxFrontierRule8
     - CorvaxFrontierRule9
 
@@ -103,7 +105,19 @@
 - type: guideEntry
   id: CorvaxFrontierRule7
   name: guide-entry-frontier-rule-7
-  text: "/ServerInfo/_Forge/Rules/7_SectorZones.xml"
+  text: "/ServerInfo/_Forge/Rules/7_SafeZones.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule7_1
+  name: guide-entry-frontier-rule-7.1
+  text: "/ServerInfo/_Forge/Rules/7-1_UnsafeZones.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: CorvaxFrontierRule7_2
+  name: guide-entry-frontier-rule-7.2
+  text: "/ServerInfo/_Forge/Rules/7-2_DangerousZones.xml"
   ruleEntry: true
 
 - type: guideEntry

@@ -1,0 +1,27 @@
+<Document>
+  <ColorBox Color="#333333" OutlineColor="#555555" OutlineThickness="2" Margin="5">
+    <Box Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
+      # 7.2. Опасные зоны сектора.
+
+      [italic]Всё что касается правил зон повышенной опасности вне территории аванпоста Фронтир.[/italic]
+      <ColorBox Color="#442222" OutlineColor="#553333" OutlineThickness="1" Margin="0 0 0 0">
+        <Box Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
+          [bold]Красная зона (от 5 до 12 км от Аванпоста, радиус 300м вокруг ПОИ)[/bold]
+          - [bold]Эскалация[/bold] конфликтов допускается наёмниками.
+          - [bold]Мелкий антагонизм[/bold] разрешён для гражданских (мелкие кражи, локальные конфликты, действия без серьёзного ущерба).
+          - [bold]Провокация ДСБФ[/bold] позволяет им применять летальную силу.
+          - [bold]Важно:[/bold] Намеренное раздувание конфликта с целью устроить массовую резню запрещено.
+        </Box>
+      </ColorBox>
+
+      <ColorBox Color="#222222" OutlineColor="#333333" OutlineThickness="1" Margin="0 0 0 0">
+        <Box Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
+          [bold]Чёрная зона (дальше 12 км от Аванпоста)[/bold]
+          - [bold]Эскалация[/bold] не требуется для любых сторон.
+          - [bold]Крупный антагонизм[/bold] разрешён для гражданских (грабежи, мародёрство, вооружённые конфликты с серьёзным ущербом).
+          - [bold]ДСБФ[/bold] не обязаны реагировать на события в этой зоне. Невыполнение их требований позволяет применять против вас любую летальную силу.
+      </Box>
+     </ColorBox>
+    </Box>
+  </ColorBox>
+</Document>
