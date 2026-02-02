@@ -1,6 +1,6 @@
 - type: entity
   id: MachineMiniAnomalyGenerator
-  parent: MachineAnomalyGenerator
+  parent: [MachineAnomalyGenerator, ConstructibleMachine]
   name: mini anomaly generator
   description: The peak of pseudoscientific technology.
   placement:
@@ -63,11 +63,9 @@
   - type: MaterialStorage
     whitelist:
       tags:
-        - RawMaterial 
+        - RawMaterial
     materialWhiteList:
-    - Anomalite 
+    - Anomalite
     storage:
       Anomalite: 300
     storageLimit: 300
-  - type: Machine
-    board: MachineMiniAnomalyGeneratorCircuitboard
