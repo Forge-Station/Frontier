@@ -1,0 +1,46 @@
+# Author Info
+# GitHub: https://github.com/MrIzodem
+# Discord: MrIzo aka letstrythisone.
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Notes:
+# Не забудьте передать привет Барри)
+- type: pointOfInterest
+  id: OldFrontierTavern
+  name: 'Таверна Старый Фронтир'
+  minimumDistance: 12500
+  maximumDistance: 15000
+  spawnGroup: Required
+  gridPath: /Maps/_Forge/POI/oldfrontier.yml
+  addComponents:
+  - type: Shuttle
+  - type: IFF
+    color: "#BA55D3"
+  - type: ProtectedGrid
+    preventArtifactTriggers: True
+    preventExplosions: True
+    preventEmpEvents: True
+    preventRCDUse: True
+    killHostileMobs: False
+
+- type: gameMap
+  id: OldFrontierTavern
+  mapName: 'Таверна Старый Фронтир'
+  mapPath: /Maps/_Forge/POI/oldfrontier.yml
+  minPlayers: 0
+  stations:
+    OldFrontierTavern:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Таверна Старый Фронтир'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt
+
+
