@@ -1,196 +1,195 @@
 <Document>
-  # Syndicate Naval Forces
-  
-  In the far-off Spinward Periphery, a coalition of corporate entities allied against NanoTrasen
-  In the expansive Spinward Periphery, a covert force known as the Spinward Syndicate came into existence a few decades ago, guided by Cybersun Industries. It is a diverse coalition of groups united in their determination to challenge the dominance of Nanotrasen. The Syndicate's United Naval (SUN) branch primarily consists of Gorlex Marauders and is responsible for undermining NanoTrasen's efforts in the Frontier Sector.
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # Known Variants
-  # "Syndicate deckhand"
-  
-  Lowest ranking member of the Syndicate Naval Forces. Your regular "Johnny-on-the-spot" when it comes to menial tasks.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalDeckhandA"/>
-  <GuideEntityEmbed Entity="MobSyndicateNavalDeckhandVoid"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)[bold][color=#a4885c]*[/color][/bold]
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 16 [color=yellow]Piercing[/color] (.35 round)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 30%; [color=orange]Heat[/color] 20%; [color=orange]Caustic[/color] 10%; [color=yellow]Explosion[/color] 10% (armor vest)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (Viper)
-  
-  [bold][color=#a4885c]*[/color][/bold] - [italic]an average human can run at 4.5 m/s and walk at 2.5 m/s.[/italic]
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Syndicate engineer"
-  
-  On a shuttle, the engineer has the annoying job of making sure absolutely everything is running correctly. Syndicate shuttles are no different.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalEngineerA"/>
-  <GuideEntityEmbed Entity="MobSyndicateNavalEngineerVoid"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 10 [color=yellow]Piercing[/color] (shotgun cartridge)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 30%; [color=orange]Heat[/color] 20%; [color=orange]Caustic[/color] 10%; [color=yellow]Explosion[/color] 10% (armor vest)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (Shotgun)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Syndicate saboteur"
-  
-  Specialist trained in the art of sabotaging NT shuttles and facilities. Equipped with EMP rounds, take caution.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalSaboteurA"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 0; EMP rounds (discharges batteries)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 30%; [color=orange]Heat[/color] 20%; [color=orange]Caustic[/color] 10%; [color=yellow]Explosion[/color] 10% (armor vest)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (Viper)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Syndicate medic"
-  
-  Medical specialist. Knows how to treat patients humanely and how to treat prisoners inhumanely. Uses darts laced with harmful chemicals - impedrezene or chloral hydrate.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalMedicA"/>
-  <GuideEntityEmbed Entity="MobSyndicateNavalMedicVoid"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 6 [color=yellow]Piercing[/color], 6 [color=lime]Poison[/color] (syndicate dart)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color] 20%; [color=red]Slash[/color] 15%; [color=yellow]Piercing[/color] 35%; [color=orange]Heat[/color] 15%; [color=orange]Caustic[/color] 25% (armored medical gown)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (syndicate dart)
-  
-  <GuideReagentEmbed Reagent="Impedrezene"/>
-  <GuideReagentEmbed Reagent="ChloralHydrate"/>
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Syndicate operative"
-  
-  "Everything is a nail if you have a hammer." In this case, everything is a target because he has an SMG and an itchy trigger finger.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalOperatorA"/>
-  <GuideEntityEmbed Entity="MobSyndicateNavalOperatorVoid"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 16 [color=yellow]Piercing[/color] (.35 round)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color] and [color=red]Slash[/color] 10%; [color=yellow]Piercing[/color] 60%; [color=orange]Heat[/color] 10%; [color=yellow]Explosion[/color] 20% (bulletproof vest)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (SMG)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Syndicate grenadier"
-  
-  "Huh? Say it louder! I can't hear you!" Equipped with the infamous China Lake, grenadiers have immense destructive capability, and should be priority targets.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalGrenadierA"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] Varied [color=yellow]Explosion[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 10%; [color=orange]Heat[/color] 25%; [color=yellow]Explosion[/color] 85% (syndicate bomb suit)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (China Lake)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Syndicate chemwarrior"
-  
-  Carrying tanks filled with dangerous chemicals, chemwarriors attack their enemies with a noxious spray.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalChemwarriorA"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] varied
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (spray nozzle)
-  
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalChemwarriorB"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] varied
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=yellow]Piercing[/color] 60%; [color=orange]Heat[/color] 40%; [color=yellow]Caustic[/color] 60% (syndicate bio suit)
-  - [bold][color=#a4885c]Damage weaknesses:[/color][/bold] [color=red]Slash[/color] 20%; [color=yellow]Explosion[/color] 40%
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (spray nozzle)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Syndicate second officer"
-  
-  The captain's right hand is entrusted with relaying the captain's orders to the crew and ensuring they are carried out promptly. Carries a laser pistol for self-defense.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalSecondOfficerA"/>
-  <GuideEntityEmbed Entity="MobSyndicateNavalSecondOfficerVoid"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 17 [color=orange]Heat[/color] (advanced laser pistol)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 30%; [color=orange]Heat[/color] 20%; [color=orange]Caustic[/color] 10%; [color=yellow]Explosion[/color] 10% (armor vest)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (advanced laser pistol)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Syndicate captain"
+# Военно-морские силы Синдиката
 
-  The executive officer in lieu of the commander, syndicate captains ensure operations onboard go smoothly. Equipped with a magnum revolver.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalCaptainA"/>
-  <GuideEntityEmbed Entity="MobSyndicateNavalCaptainVoid"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 35 [color=yellow]Piercing[/color] (.45 round)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color], [color=yellow]Piercing[/color] and [color=orange]Heat[/color] 30%;  [color=orange]Caustic[/color] 25%; [color=yellow]Explosion[/color] 10% (syndicate's armored coat)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (python revolver)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Syndicate commander"
-  
-  A regional commander of Syndicate operations, this officer holds ultimate local command and responsibility. Armed with an assault rifle and heavily armored.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalCommanderA"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 35 [color=yellow]Piercing[/color] (.30 round)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color], [color=yellow]Piercing[/color] 40%; [color=orange]Heat[/color] 80%; [color=orange]Caustic[/color] 50%; [color=lime]Radiation[/color] 99%; [color=yellow]Explosion[/color] 80% (syndicate's elite hardsuit)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (akms)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # Mission Objectives
-  ## Elimination
-  <Box>
-  <GuideEntityEmbed Entity="MobSyndicateNavalCommanderA"/>
-  </Box>
-  Eliminate a large and dangerous creature - a [color=#a4885c]syndicate commander[/color] within given time constraints to earn a monetary reward.
-  
-  ## Destruction
-  <Box>
-  <GuideEntityEmbed Entity="CybersunDataMiner"/>
-  </Box>
-  Destroy a certain number of [color=#a4885c]cybersun data miners[/color] within given time constraints to earn a monetary reward.
+В далёкой Спинвардской периферии коалиция корпоративных образований объединилась против NanoTrasen.
+В обширной Спинвардской периферии несколько десятилетий назад под руководством Cybersun Industries возникла тайная сила, известная как Спинвардский Синдикат. Это разнообразная коалиция групп, объединённых решимостью бросить вызов доминированию NanoTrasen. Объединённый военно-морской (ОВМ) филиал Синдиката состоит в основном из мародеров Горлекс и отвечает за подрыв усилий NanoTrasen в секторе Фронтир.
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# Известные разновидности
+# "Рядовой Синдиката"
+
+Низший по званию член Военно-морских сил Синдиката. Ваш обычный "Джонни на месте", когда речь заходит о черновой работе.
+
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalDeckhandA"/>
+<GuideEntityEmbed Entity="MobSyndicateNavalDeckhandVoid"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)[bold][color=#a4885c]*[/color][/bold]
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 16 [color=yellow]Колющий[/color] (.35 патрон)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 30%; [color=orange]Огонь[/color] 20%; [color=orange]Коррозионный[/color] 10%; [color=yellow]Взрывной[/color] 10% (бронежилет)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (Viper)
+
+[bold][color=#a4885c]*[/color][/bold] - [italic]средний человек может бежать со скоростью 4.5 м/с и идти со скоростью 2.5 м/с.[/italic]
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Инженер Синдиката"
+
+На шаттле у инженера есть раздражающая работа — следить за тем, чтобы абсолютно всё работало правильно. Шаттлы Синдиката — не исключение.
+
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalEngineerA"/>
+<GuideEntityEmbed Entity="MobSyndicateNavalEngineerVoid"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 10 [color=yellow]Колющий[/color] (патрон для дробовика)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 30%; [color=orange]Огонь[/color] 20%; [color=orange]Коррозионный[/color] 10%; [color=yellow]Взрывной[/color] 10% (бронежилет)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (Дробовик)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Диверсант Синдиката"
+
+Специалист, обученный искусству саботажа шаттлов и объектов NT. Оснащён EMP патронами, соблюдайте осторожность.
+
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalSaboteurA"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 0; EMP патроны (разряжает батареи)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 30%; [color=orange]Огонь[/color] 20%; [color=orange]Коррозионный[/color] 10%; [color=yellow]Взрывной[/color] 10% (бронежилет)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (Viper)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Медик Синдиката"
+
+Медицинский специалист. Знает, как лечить пациентов гуманно, и как лечить пленников негуманно. Использует дротики с вредными химикатами — импедрезином или хлоралгидратом.
+
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalMedicA"/>
+<GuideEntityEmbed Entity="MobSyndicateNavalMedicVoid"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 6 [color=yellow]Колющий[/color], 6 [color=lime]Яд[/color] (дротик Синдиката)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color] 20%; [color=red]Режущий[/color] 15%; [color=yellow]Колющий[/color] 35%; [color=orange]Огонь[/color] 15%; [color=orange]Коррозионный[/color] 25% (бронированный медицинский халат)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (дротик Синдиката)
+
+<GuideReagentEmbed Reagent="Impedrezene"/>
+<GuideReagentEmbed Reagent="ChloralHydrate"/>
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Оперативник Синдиката"
+
+"Всё гвоздь, если у тебя есть молоток." В данном случае всё цель, потому что у него есть ПП и зудящий палец на спусковом крючке.
+
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalOperatorA"/>
+<GuideEntityEmbed Entity="MobSyndicateNavalOperatorVoid"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 16 [color=yellow]Колющий[/color] (.35 патрон)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color] и [color=red]Режущий[/color] 10%; [color=yellow]Колющий[/color] 60%; [color=orange]Огонь[/color] 10%; [color=yellow]Взрывной[/color] 20% (пуленепробиваемый жилет)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (ПП)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Гранатомётчик Синдиката"
+
+"А? Говори громче! Я не слышу!" Оснащённый печально известным China Lake, гранатомётчики обладают огромной разрушительной способностью и должны быть приоритетными целями.
+
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalGrenadierA"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] Различный [color=yellow]Взрывной[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 10%; [color=orange]Огонь[/color] 25%; [color=yellow]Взрывной[/color] 85% (взрывозащитный костюм Синдиката)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (China Lake)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Химвоин Синдиката"
+
+Неся баки, наполненные опасными химикатами, химвоины атакуют своих врагов ядовитым распылением.
+
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalChemwarriorA"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] различный
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] отсутствует
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (распылительная насадка)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalChemwarriorB"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] различный
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=yellow]Колющий[/color] 60%; [color=orange]Огонь[/color] 40%; [color=yellow]Коррозионный[/color] 60% (биокостюм Синдиката)
+- [bold][color=#a4885c]Слабости к урону:[/color][/bold] [color=red]Режущий[/color] 20%; [color=yellow]Взрывной[/color] 40%
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (распылительная насадка)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Второй офицер Синдиката"
+
+Правая рука капитана, которой поручено передавать приказы капитана экипажу и следить за их незамедлительным выполнением. Носит лазерный пистолет для самообороны.
+
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalSecondOfficerA"/>
+<GuideEntityEmbed Entity="MobSyndicateNavalSecondOfficerVoid"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 17 [color=orange]Огонь[/color] (продвинутый лазерный пистолет)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 30%; [color=orange]Огонь[/color] 20%; [color=orange]Коррозионный[/color] 10%; [color=yellow]Взрывной[/color] 10% (бронежилет)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (продвинутый лазерный пистолет)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Капитан Синдиката"
+
+Исполняющий обязанности командира, капитаны Синдиката следят за бесперебойным проведением операций на борту. Оснащён револьвером Magnum.
+
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalCaptainA"/>
+<GuideEntityEmbed Entity="MobSyndicateNavalCaptainVoid"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 35 [color=yellow]Колющий[/color] (.45 патрон)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color], [color=yellow]Колющий[/color] и [color=orange]Огонь[/color] 30%; [color=orange]Коррозионный[/color] 25%; [color=yellow]Взрывной[/color] 10% (бронированное пальто Синдиката)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (револьвер Python)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Командир Синдиката"
+
+Региональный командир операций Синдиката, этот офицер обладает высшим локальным командованием и ответственностью. Вооружён штурмовой винтовкой и имеет тяжёлую броню.
+
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalCommanderA"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 35 [color=yellow]Колющий[/color] (.30 патрон)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color], [color=yellow]Колющий[/color] 40%; [color=orange]Огонь[/color] 80%; [color=orange]Коррозионный[/color] 50%; [color=lime]Радиационный[/color] 99%; [color=yellow]Взрывной[/color] 80% (элитный хардсьют Синдиката)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (АКМС)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# Цели миссий
+## Уничтожение
+<Box>
+<GuideEntityEmbed Entity="MobSyndicateNavalCommanderA"/>
+</Box>
+Уничтожить крупное и опасное существо — [color=#a4885c]командира Синдиката[/color] в установленные временные рамки, чтобы получить денежное вознаграждение.
+
+## Разрушение
+<Box>
+<GuideEntityEmbed Entity="CybersunDataMiner"/>
+</Box>
+Уничтожить определенное количество [color=#a4885c]датамайнеров Cybersun[/color] в установленные временные рамки, чтобы получить денежное вознаграждение.
 </Document>

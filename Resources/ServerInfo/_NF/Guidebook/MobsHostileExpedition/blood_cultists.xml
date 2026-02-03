@@ -1,200 +1,200 @@
 <Document>
-  # Blood Cult
-  
-  There are some things that we may never fully understand. There are entities in the depths of space, ancient and powerful, desiring to bring destruction to the universe and mold it in their own image. They extend their influence from the void, manipulating the minds of humans in the hope of returning to this plane of existence.
+# Культ Крови
 
-  Despite efforts to eliminate such practices, a cult has arisen, centered around blood rituals and the worship of a being named "Nar'Sie". United in their purpose to bring Nar'Sie into this realm, the Blood Cultists gather the blood necessary for their twisted rites with zealous fervor.
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # Known Variants
-  # "Blood Cult Priest"
-  
-  Enlightened by the whispers of The Void That Is, these individuals are initiated into secret rituals. They lead the blood harvest and perform rites, bringing the day when Nar'Sie rises ever closer.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobBloodCultistPriest"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 140 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)[bold][color=#a4885c]*[/color][/bold]
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 10 [color=red]Slash[/color] (blood lightning)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=orange]Heat[/color] 50%; [color=yellow]Piercing[/color] 40% (acolyte armor)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Caster (blood lightning)
-  
-  [bold][color=#a4885c]*[/color][/bold] - [italic]an average human can run at 4.5 m/s and walk at 2.5 m/s.[/italic]
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Blood Cult Janitor"
-  
-  The fate of blood cults on space stations hinges on the actions of a single individual - the station janitor. This humble worker serves as the primary line of defense against the presence of blood cults, but even the most resolute individuals can be swayed by corruption.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobBloodCultistJanitor"/>
-  <GuideEntityEmbed Entity="ClothingBeltCultForceField"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 140 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 0-35 [color=red]Slash[/color] (1 [color=red]Slash[/color] per soaplet)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=orange]Heat[/color] 10%; [color=yellow]Piercing[/color] 60%; [color=yellow]Explosion[/color] 20% (cult janitor robes)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Caster (cluster razor soap), Reflection (10%, all projectiles)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Blood Cult Acolyte"
-  
-  The acolyte - The most trusted cult follower and bodyguard of a priest, clad in the finest armor the cult has to offer and armed with the most vile weapons: eldrich blades and unholy halberds.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobBloodCultistAcolyte"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 140 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 16 [color=red]Slash[/color] (eldrich sword)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=orange]Heat[/color] 50%; [color=yellow]Piercing[/color] 40% (acolyte armor)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] none
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Blood Cult Zealots"
-  
-  Adorned in matching red robes symbolizing devotion to their dark deity, each member is eager to prove their loyalty in the most gruesome ways.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobBloodCultistZealotMelee"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 140 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 12 [color=red]Slash[/color] (ritual dagger)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 30%; [color=orange]Heat[/color] 20%; [color=orange]Heat[/color] and [color=yellow]Explosion[/color] 10% (Cult robes)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] none
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobBloodCultistZealotRanged"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 140 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 20 [color=red]Slash[/color], 5 [color=#9A54BF]Bloodloss[/color] (blooddrinker crossbow bolt)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 30%; [color=orange]Heat[/color] 20%; [color=orange]Heat[/color] and [color=yellow]Explosion[/color] 10% (Cult robes)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (blooddrinker crossbow bolt)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobBloodCultistCaster"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 140 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 5 [color=red]Slash[/color], 2 [color=#9A54BF]Bloodloss[/color] (Blood Bolt Spell)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 30%; [color=orange]Heat[/color] 20%; [color=orange]Heat[/color] and [color=yellow]Explosion[/color] 10% (Cult robes)
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Caster (Blood Bolt Spell)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Blood Leech"
-  
-  This cultist, once human, is now a twisted and corrupted abomination, its body warped and distorted by the dark energies of Nar'Sie's influence.
-  
-  [color=#a4885c]Regeneration (weak)[/color]: can slowly regenerate lost health while alive or in critical condition, but cannot regenerate upon death.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobBloodCultLeech"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 80 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 6 m/s (4 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 10 [color=red]Slash[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Regeneration (weak)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Blood Pylon"
-  
-  Through blood rites, the entrapped souls of sacrificed cultists have been gathered in this pylon to defend their living members. Behaves like a sentry turret.
-  
-  <Box>
-  <GuideEntityEmbed Entity="BloodCultTurret"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 300
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 0 m/s (0 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 5 [color=red]Slash[/color], 2 [color=#9A54BF]Bloodloss[/color] (Blood Bolt Spell)
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Turret, Caster (Blood Bolt Spell)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Ascended Cultist"
-  
-  Elevated above their mortal forms by Nar'Sie herself as a reward for their devotion.
-  
-  [color=#a4885c]Flier[/color]: creature levitates above the ground and can bypass low obstacles such as tables, machine frames, or railings without being blocked or slowed down.
-  
-  [color=#a4885c]Summoner[/color]: every 55 seconds summons two [color=#a4885c]drained ones[/color] that will exist for 110 seconds.
-  
-  [color=#a4885c]Reflection (30%, energy)[/color]: has a 30% chance to reflect energy based attacks aimed against the creature.
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobBloodCultistAscended"/>
-  <GuideEntityEmbed Entity="ClothingNeckAmuletBloodCult"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 300 (crit), 400 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 20 [color=red]Slash[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Flier, Summoner (Drained One), Reflection (30%, energy)
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Drained One"
-  
-  A tortured soul, stripped of free will and left as a mere shadow of a human, enslaved and bound to obey its captors.
-  
-  [color=#a4885c]Regeneration (weak)[/color]: can slowly regenerate lost health while alive or in critical condition, but cannot regenerate upon death.
-  
-  [color=#a4885c]Incorporeal[/color]: can only be damaged by melee attacks or energy weapons. 
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobBloodCultDrainedOneGuidebook"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 4 [color=#9A54BF]Asphyxiation[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Regeneration (weak), Incorporeal
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # "Shade"
-  
-  A cultist's shade, brought back to reality through foul means to gather more blood.
-  
-  [color=#a4885c]Regeneration (weak)[/color]: can slowly regenerate lost health while alive or in critical condition, but cannot regenerate upon death.
-  
-  [color=#a4885c]Incorporeal[/color]: can only be damaged by melee attacks or energy weapons. 
-  
-  <Box>
-  <GuideEntityEmbed Entity="MobBloodCultShadeGuidebook"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 2 [color=red]Slash[/color], 2 [color=#9A54BF]Bloodloss[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Regeneration (weak), Incorporeal
-  
-  [bold][color=#a4885c]________________________________________________________________________[/color]
-  
-  # Mission Objectives
-  ## Elimination
-  <Box>
-  <GuideEntityEmbed Entity="MobBloodCultistAscended"/>
-  </Box>
-  Eliminate a large and dangerous creature - an [color=#a4885c]ascended cultist[/color] within given time constraints to earn a monetary reward.
-  
-  ## Destruction
-  <Box>
-  <GuideEntityEmbed Entity="BloodCollector"/>
-  </Box>
-  Destroy a certain number of [color=#a4885c]blood collectors[/color] within given time constraints to earn a monetary reward.
+Есть вещи, которые нам, возможно, никогда не понять полностью. В глубинах космоса существуют древние и могущественные сущности, желающие принести разрушение вселенной и переделать её по своему образу и подобию. Они простирают своё влияние из пустоты, манипулируя умами людей в надежде вернуться в этот план существования.
+
+Несмотря на усилия по искоренению подобных практик, возник культ, сосредоточенный вокруг кровавых ритуалов и поклонения существу по имени "Нар'Си". Объединённые целью привести Нар'Си в этот мир, Культисты Крови с фанатичным рвением собирают кровь, необходимую для их извращённых обрядов.
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# Известные разновидности
+# "Жрец Культа крови"
+
+Просветлённые шёпотом Сущей Пустоты, эти личности посвящены в тайные ритуалы. Они руководят сбором крови и проводят обряды, приближая день восхождения Нар'Си.
+
+<Box>
+<GuideEntityEmbed Entity="MobBloodCultistPriest"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 140 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)[bold][color=#a4885c]*[/color][/bold]
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 10 [color=red]Режущий[/color] (кровавая молния)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=orange]Огонь[/color] 50%; [color=yellow]Колющий[/color] 40% (доспех послушника)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Заклинатель (кровавая молния)
+
+[bold][color=#a4885c]*[/color][/bold] - [italic]средний человек может бежать со скоростью 4.5 м/с и идти со скоростью 2.5 м/с.[/italic]
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Уборщик Культа крови"
+
+Судьба кровавых культов на космических станциях зависит от действий одного человека — уборщика станции. Этот скромный работник служит главной линией обороны против присутствия кровавых культов, но даже самые стойкие личности могут быть совращены порчей.
+
+<Box>
+<GuideEntityEmbed Entity="MobBloodCultistJanitor"/>
+<GuideEntityEmbed Entity="ClothingBeltCultForceField"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 140 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 0-35 [color=red]Режущий[/color] (1 [color=red]Режущий[/color] за мыльный осколок)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=orange]Огонь[/color] 10%; [color=yellow]Колющий[/color] 60%; [color=yellow]Взрывной[/color] 20% (рясы культиста-уборщика)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Заклинатель (скопление бритвенного мыла), Отражение (10%, все снаряды)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Послушник Культа крови"
+
+Послушник — самый доверенный последователь культа и телохранитель жреца, облачённый в лучшие доспехи, которые может предложить культ, и вооружённый самыми мерзкими оружиями: элдричскими клинками и нечестивыми алебардами.
+
+<Box>
+<GuideEntityEmbed Entity="MobBloodCultistAcolyte"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 140 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 16 [color=red]Режущий[/color] (элдричский меч)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=orange]Огонь[/color] 50%; [color=yellow]Колющий[/color] 40% (доспех послушника)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] отсутствуют
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Фанатики Культа крови"
+
+Облачённые в одинаковые красные рясы, символизирующие преданность их тёмному божеству, каждый член стремится доказать свою верность самыми ужасными способами.
+
+<Box>
+<GuideEntityEmbed Entity="MobBloodCultistZealotMelee"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 140 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 12 [color=red]Режущий[/color] (ритуальный кинжал)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 30%; [color=orange]Огонь[/color] 20%; [color=orange]Огонь[/color] и [color=yellow]Взрывной[/color] 10% (Рясы культа)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] отсутствуют
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+<Box>
+<GuideEntityEmbed Entity="MobBloodCultistZealotRanged"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 140 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 20 [color=red]Режущий[/color], 5 [color=#9A54BF]Кровопотеря[/color] (болт арбалета-кровопийцы)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 30%; [color=orange]Огонь[/color] 20%; [color=orange]Огонь[/color] и [color=yellow]Взрывной[/color] 10% (Рясы культа)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (болт арбалета-кровопийцы)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+<Box>
+<GuideEntityEmbed Entity="MobBloodCultistCaster"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 140 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 5 [color=red]Режущий[/color], 2 [color=#9A54BF]Кровопотеря[/color] (Заклинание Кровавого Болта)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 30%; [color=orange]Огонь[/color] 20%; [color=orange]Огонь[/color] и [color=yellow]Взрывной[/color] 10% (Рясы культа)
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Заклинатель (Заклинание Кровавого Болта)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Кровавая Пиявка"
+
+Этот культист, некогда человек, теперь — искажённое и испорченное чудовище, тело которого изуродовано и искажено тёмными энергиями влияния Нар'Си.
+
+[color=#a4885c]Регенерация (слабая)[/color]: может медленно восстанавливать потерянное здоровье, пока жив или в критическом состоянии, но не может регенерировать после смерти.
+
+<Box>
+<GuideEntityEmbed Entity="MobBloodCultLeech"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 80 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 6 м/с (4 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 10 [color=red]Режущий[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] отсутствует
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Регенерация (слабая)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Кровавая Пилон"
+
+Посредством кровавых ритуалов, заточенные души принесённых в жертву культистов собраны в этом пилоне для защиты их живых собратьев. Ведут себя как сторожевые турели.
+
+<Box>
+<GuideEntityEmbed Entity="BloodCultTurret"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 300
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 0 м/с (0 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 5 [color=red]Режущий[/color], 2 [color=#9A54BF]Кровопотеря[/color] (Заклинание Кровавого Болта)
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] отсутствует
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Турель, Заклинатель (Заклинание Кровавого Болта)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Вознёсшийся Культист"
+
+Возвышенный над своими смертными формами самой Нар'Си в награду за свою преданность.
+
+[color=#a4885c]Летун[/color]: существо левитирует над землей и может преодолевать низкие препятствия, такие как столы, каркасы машин или перила, не блокируясь и не замедляясь.
+
+[color=#a4885c]Призыватель[/color]: каждые 55 секунд призывает двух [color=#a4885c]иссушенных[/color], которые будут существовать 110 секунд.
+
+[color=#a4885c]Отражение (30%, энергия)[/color]: имеет 30% шанс отразить энергетические атаки, направленные против существа.
+
+<Box>
+<GuideEntityEmbed Entity="MobBloodCultistAscended"/>
+<GuideEntityEmbed Entity="ClothingNeckAmuletBloodCult"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 300 (критическое), 400 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 20 [color=red]Режущий[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] отсутствует
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Летун, Призыватель (Иссушенный), Отражение (30%, энергия)
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Иссушенный"
+
+Замученная душа, лишённая свободы воли и оставленная лишь тенью человека, порабощённая и обязанная подчиняться своим похитителям.
+
+[color=#a4885c]Регенерация (слабая)[/color]: может медленно восстанавливать потерянное здоровье, пока жив или в критическом состоянии, но не может регенерировать после смерти.
+
+[color=#a4885c]Бесплотный[/color]: может быть повреждён только ближними атаками или энергетическим оружием.
+
+<Box>
+<GuideEntityEmbed Entity="MobBloodCultDrainedOneGuidebook"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 4 [color=#9A54BF]Асфиксия[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] отсутствует
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Регенерация (слабая), Бесплотный
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# "Тень"
+
+Тень культиста, возвращённая в реальность порочными средствами для сбора большего количества крови.
+
+[color=#a4885c]Регенерация (слабая)[/color]: может медленно восстанавливать потерянное здоровье, пока жив или в критическом состоянии, но не может регенерировать после смерти.
+
+[color=#a4885c]Бесплотный[/color]: может быть повреждён только ближними атаками или энергетическим оружием.
+
+<Box>
+<GuideEntityEmbed Entity="MobBloodCultShadeGuidebook"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега (ходьбы):[/color][/bold] 4.5 м/с (2.5 м/с)
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 2 [color=red]Режущий[/color], 2 [color=#9A54BF]Кровопотеря[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] отсутствует
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Регенерация (слабая), Бесплотный
+
+[bold][color=#a4885c]________________________________________________________________________[/color]
+
+# Цели миссий
+## Уничтожение
+<Box>
+<GuideEntityEmbed Entity="MobBloodCultistAscended"/>
+</Box>
+Уничтожить крупное и опасное существо — [color=#a4885c]вознёсшегося культиста[/color] в установленные временные рамки, чтобы получить денежное вознаграждение.
+
+## Разрушение
+<Box>
+<GuideEntityEmbed Entity="BloodCollector"/>
+</Box>
+Уничтожить определенное количество [color=#a4885c]сборщиков крови[/color] в установленные временные рамки, чтобы получить денежное вознаграждение.
 </Document>

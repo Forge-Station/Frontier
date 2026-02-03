@@ -1,20 +1,20 @@
 <Document>
-# Sector Topology
+# Топология сектора
 
-<!-- Note: range values will not scale with the world size cvar! -->
+<!-- Примечание: значения дальности не будут масштабироваться в зависимости от настройки размера мира! -->
 
-The Frontier sector consists of a large, disk-like asteroid belt. In the center of the belt, Frontier Outpost serves as the arrival point for greenhorns and seasoned pilgrims alike.
+Сектор Фронтир состоит из большого, похожего на диск пояса астероидов. В центре пояса Аванпост Фронтира служит точкой прибытия как для новичков, так и для опытных исследователей космоса.
 
-The area immediately around Frontier Outpost is mostly empty space. Beyond this, there are [bold]three distinct zones[/bold]:
+Область непосредственно вокруг Заставы Фронтира — в основном пустое пространство. За её пределами есть [bold]три различные зоны[/bold]:
 
 <Box Margin="0">
   <GuideEntityEmbed Entity="NFSectorMap" Caption="" Margin="-20"/>
 </Box>
 
-- The [color=#c73232]inner ring[/color] ([color=gold]≤5 km[/color]) has been developed into a base for service stations like [color=forestgreen]Trade Outpost[/color] and [color=mediumturquoise]Medical Dispatch[/color]. You can still find errant scrap, small asteroids, and the occasional wreck, but better materials are found further out. At the edge of this zone, you'll find [color=green]Cargo Depots[/color], the destination for most cargo freighters.
-- The [color=#fbf236]middle ring[/color] ([color=gold]~5–9 km[/color]) is the foundation for our industrial base. With a wide variety of [color=orchid]minerals[/color] available for mining and a variety of [color=lightpink]gas deposits[/color] available for drilling, this is a [color=peru]miner's[/color] breadbasket.
-- The [color=#286c9c]outer ring[/color] ([color=gold]~9–15 km[/color]) is where you'll find massive [color=skyblue]icy asteroids[/color] and unusual [color=orange]brass wrecks[/color]. This ring is the subject of interest for most [color=plum]researchers[/color] in the sector.
+- [color=#c73232]Внутреннее кольцо[/color] ([color=gold]≤5 км[/color]) было развито в базу для сервисных станций, таких как [color=forestgreen]Торговая застава[/color] и [color=mediumturquoise]Медицинский диспетчерский пункт[/color]. Вы всё ещё можете найти случайный хлам, небольшие астероиды и изредка обломки, но лучшие материалы находятся дальше. На краю этой зоны вы найдёте [color=green]Грузовые депо[/color] — пункт назначения для большинства грузовых судов.
+- [color=#fbf236]Среднее кольцо[/color] ([color=gold]~5–9 км[/color]) — это основа нашей промышленной базы. С широким разнообразием доступных для добычи [color=orchid]минералов[/color] и множеством доступных для бурения [color=lightpink]газовых месторождений[/color], это — житница для [color=peru]шахтёров[/color].
+- [color=#286c9c]Внешнее кольцо[/color] ([color=gold]~9–15 км[/color]) — это место, где вы найдёте массивные [color=skyblue]ледяные астероиды[/color] и необычные [color=orange]латунные обломки[/color]. Это кольцо представляет интерес для большинства [color=plum]исследователей[/color] в секторе.
 
-Beyond this, there is a massive void between any nearby sector. Without engines capable of inter-sector travel, leaving the edge of the asteroid belt is not recommended.
+За его пределами находится огромная пустота между любыми соседними секторами. Без двигателей, способных на межсекторные путешествия, покидать край пояса астероидов не рекомендуется.
 
 </Document>
