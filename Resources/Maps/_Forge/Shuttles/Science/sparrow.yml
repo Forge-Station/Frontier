@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 01/17/2026 07:21:23
-  entityCount: 512
+  time: 02/02/2026 08:03:11
+  entityCount: 511
 maps: []
 grids:
 - 174
@@ -656,12 +656,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,2.5
-      parent: 174
-  - uid: 213
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -3.5,5.5
       parent: 174
   - uid: 368
     components:
@@ -2906,6 +2900,20 @@ entities:
     - type: Transform
       pos: -5.5,-2.5
       parent: 174
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        machine_parts: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        disk_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 - proto: ShuttersNormalOpen
   entities:
   - uid: 477
@@ -3954,4 +3962,3 @@ entities:
       pos: 0.5,-1.5
       parent: 174
 ...
-
