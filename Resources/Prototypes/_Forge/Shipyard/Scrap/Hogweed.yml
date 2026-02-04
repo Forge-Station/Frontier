@@ -2,43 +2,37 @@
 # GitHub: -
 # Discord: letstrythisone.
 # License: CC-BY-NC-ND-4.0
-# CorvaxForge
 
 # Maintainer Info
 # GitHub: https://github.com/mersen-tyn
 # Discord: mersen
 
-# Shuttle Notes:
-# Спокойной ночи, Капитан.
 - type: vessel
-  id: Nansen
+  id: Hogweed
   parent: BaseVessel
-  name: ST Капитан Нансен
+  name: ST Борщевик
   description: Огромный, непоколебимый бастион шахтерской деятельности и независимости, видавший свои лучшие годы... Размер команды от 8 и более человек.
-  price: 291000 # (206 308)
-  category: Large
+  price: 34000 # (27 973)
+  category: Small
   group: Scrap
-  shuttlePath: /Maps/_Forge/Shuttles/Scrap/nansen.yml
+  shuttlePath: /Maps/_Forge/Shuttles/Scrap/hogweed.yml
   guidebookPage: Null
   class:
   - Scrapyard
-  - Expedition
-  - Salvage
-  - Cargo
   engine:
   - Uranium
 
 - type: gameMap
-  id: Nansen
-  mapName: 'ST Капитан Нансен'
-  mapPath: /Maps/_Forge/Shuttles/Scrap/nansen.yml
+  id: Hogweed
+  mapName: 'ST Борщевик'
+  mapPath: /Maps/_Forge/Shuttles/Scrap/hogweed.yml
   minPlayers: 0
   stations:
-    Nansen:
+    Hogweed:
       stationProto: StandardFrontierVessel
       components:        
         - type: StationNameSetup
-          mapNameTemplate: 'Капитан Нансен {1}'
+          mapNameTemplate: 'Борщевик {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
