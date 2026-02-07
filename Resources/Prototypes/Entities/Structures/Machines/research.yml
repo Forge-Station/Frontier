@@ -87,7 +87,8 @@
     containers:
       machine_board: !type:Container
       machine_parts: !type:Container
-  - type: ItemSlots
+      disk_slot: !type:Container # Forge-Change
+  - type: ItemSlots # Forge-Change-Comp
     slots:
       disk_slot:
         ejectOnInteract: true
