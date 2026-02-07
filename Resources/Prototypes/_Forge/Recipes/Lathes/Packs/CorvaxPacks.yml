@@ -557,17 +557,17 @@
     Steel: 1000
 
 # region Учёные
-- type: latheRecipePack
-  id: ForgePackMachineMiniAnomalyGenerator
-  recipes:
-  - MachineMiniAnomalyGeneratorCircuitboard
+#- type: latheRecipePack
+#  id: ForgePackMachineMiniAnomalyGenerator
+#  recipes:
+#  - MachineMiniAnomalyGeneratorCircuitboard
 
-- type: latheRecipe
-  id: MachineMiniAnomalyGeneratorCircuitboard
-  result: MachineMiniAnomalyGeneratorCircuitboard
-  completetime: 6
-  materials:
-    Gold: 5000
-    Steel: 1000
-    Plasma: 2000
-    
+#- type: latheRecipe
+#  id: MachineMiniAnomalyGeneratorCircuitboard
+#  result: MachineMiniAnomalyGeneratorCircuitboard
+#  completetime: 6
+#  materials:
+#    Gold: 5000
+#    Steel: 1000
+#    Plasma: 2000
+

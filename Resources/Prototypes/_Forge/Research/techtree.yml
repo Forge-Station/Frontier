@@ -1188,14 +1188,14 @@
   position: 9, 1
 
 - type: technology
-  id: NFHardsuitsExperimentalIndustrialMaxims 
+  id: NFHardsuitsExperimentalIndustrialMaxims
   name: nf-research-technology-hardsuits-experimental-industrial-maxims
   entityIcon: ClothingOuterHardsuitMaxim
   discipline: NFSalvage
   tier: 1
   cost: 10000
   recipeUnlocks:
-  - ClothingOuterHardsuitMaxims 
+  - ClothingOuterHardsuitMaxims
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFHardsuitsExperimentalIndustrial
@@ -1888,19 +1888,19 @@
   - NFBasicAnomalousResearch
   position: -1, 4
 
-- type: technology
-  id: NFMiniAnomalyGeneratorTechnology
-  name: nf-research-technology-anomaly-harnessing-gen
-  entityIcon: MachineMiniAnomalyGenerator
-  discipline: NFScience
-  tier: 1
-  cost: 11000
-  recipeUnlocks:
-  - MachineMiniAnomalyGeneratorCircuitboard
-  prerequisiteLineType: Diagonal
-  technologyPrerequisites:
-  - NFAnomalyCoreHarnessing
-  position: -2, 5
+#- type: technology
+#  id: NFMiniAnomalyGeneratorTechnology
+#  name: nf-research-technology-anomaly-harnessing-gen
+#  entityIcon: MachineMiniAnomalyGenerator
+#  discipline: NFScience
+#  tier: 1
+#  cost: 11000
+#  recipeUnlocks:
+#  - MachineMiniAnomalyGeneratorCircuitboard
+#  prerequisiteLineType: Diagonal
+#  technologyPrerequisites:
+#  - NFAnomalyCoreHarnessing
+#  position: -2, 5
 
 # region Сервис
 - type: technology
