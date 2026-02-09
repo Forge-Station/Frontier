@@ -33,6 +33,7 @@ namespace Content.Server.Connection
     {
         void Initialize();
         void PostInit();
+        Task<bool> HasPrivilegedJoin(NetUserId userId); // Forge-Change
 
         /// <summary>
         /// Temporarily allow a user to bypass regular connection requirements.
@@ -409,6 +410,16 @@ namespace Content.Server.Connection
             var assigned = new NetUserId(Guid.NewGuid());
             await _db.AssignUserIdAsync(name, assigned);
             return assigned;
+        }
+
+        public async Task<bool> HasPrivilegedJoin(NetUserId userId)
+        {
+            var isAdmin = await _db.GetAdminDataForAsync(userId) != null;
+            var isSponsor = _sponsorMan.Sponsors.ContainsKey(userId); // Forge-Change
+            var wasInGame = EntitySystem.TryGet<GameTicker>(out var ticker) &&
+                            ticker.PlayerGameStatuses.TryGetValue(userId, out var status) &&
+                            status == PlayerGameStatus.JoinedGame;
+            return isAdmin || isSponsor || wasInGame; // Forge-Change
         }
     }
 }
