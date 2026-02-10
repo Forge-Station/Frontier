@@ -20,6 +20,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Maths;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
@@ -44,21 +45,27 @@ namespace Content.MapRenderer.Painters
         {
             var stopwatch = RStopwatch.StartNew();
 
+            Logger.Log($"Map type: {_map.GetType().Name}");
+            Logger.Log($"Map: {_map}");
+
             var poolSettings = new PoolSettings
             {
                 DummyTicker = false,
                 Connected = true,
                 Destructive = true,
                 Fresh = true,
-                // Seriously whoever made MapPainter use GameMapPrototype I wish you step on a lego one time.
                 Map = _map is RenderMapPrototype prototype ? prototype.Prototype : PoolManager.TestMap,
             };
+
+            Logger.Log($"Pool map setting: {poolSettings.Map}");
+
             _pair = await PoolManager.GetServerClient(poolSettings, _testContextLike);
 
-            Console.WriteLine($"Loaded client and server in {(int)stopwatch.Elapsed.TotalMilliseconds} ms");
+            Logger.Log($"Loaded client and server in {(int)stopwatch.Elapsed.TotalMilliseconds} ms");
 
             if (_map is RenderMapFile mapFile)
             {
+                Logger.Log($"Loading RenderMapFile: {mapFile.FileName}");
                 using var stream = File.OpenRead(mapFile.FileName);
 
                 await _pair.Server.WaitPost(() =>
@@ -76,7 +83,36 @@ namespace Content.MapRenderer.Painters
                         throw new IOException($"File {mapFile.FileName} could not be read");
 
                     _grids = loadResult.Grids.ToArray();
+                    Logger.Log($"Loaded {_grids.Length} grids from RenderMapFile");
                 });
+            }
+            else if (_map is RenderMapGrid gridFile)
+            {
+                Logger.Log($"Loading RenderMapGrid: {gridFile.FileName}");
+                await _pair.Server.WaitPost(() =>
+                {
+                    var mapSystem = _pair.Server.System<SharedMapSystem>();
+                    var mapManager = _pair.Server.ResolveDependency<IMapManager>();
+                    var mapLoader = _pair.Server.System<MapLoaderSystem>();
+
+                    Logger.Log($"Creating empty map");
+                    var mapUid = mapSystem.CreateMap(out var mapId, false);
+                    Logger.Log($"Created map entity {mapUid} with ID: {mapId}");
+
+                    var path = new ResPath(gridFile.FileName);
+                    var opts = new DeserializationOptions { StoreYamlUids = true };
+
+                    Logger.Log($"Loading grid from: {path}");
+                    if (!mapLoader.TryLoadGrid(mapId, path, out var loadedGrid, opts))
+                        throw new IOException($"Grid file {gridFile.FileName} could not be loaded");
+
+                    _grids = mapManager.GetAllGrids(mapId).ToArray();
+                    Logger.Log($"Loaded {_grids.Length} grids from RenderMapGrid");
+                });
+            }
+            else
+            {
+                Logger.Log($"Using RenderMapPrototype with default map loading");
             }
         }
 
@@ -192,7 +228,7 @@ namespace Content.MapRenderer.Painters
                 var tiles = mapSys.GetAllTiles(uid, grid).ToList();
                 if (tiles.Count == 0)
                 {
-                    Console.WriteLine($"Warning: Grid {uid} was empty. Skipping image rendering.");
+                    Logger.Log($"Warning: Grid {uid} was empty. Skipping image rendering.");
                     continue;
                 }
                 var tileXSize = grid.TileSize * TilePainter.TileImageSize;

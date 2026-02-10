@@ -36,20 +36,18 @@ public sealed class RenderMapPrototype : RenderMap
     }
 }
 
-/// <summary>
-/// Specifies a map file on disk that the map renderer should render.
-/// </summary>
-public sealed class RenderMapFile : RenderMap
+public abstract class RenderMapFileBase : RenderMap
 {
-    /// <summary>
-    /// The path to the file that should be rendered. This is an OS disk path, *not* a <see cref="ResPath"/>.
-    /// </summary>
     public required string FileName;
 
     public override string ShortName => Path.GetFileNameWithoutExtension(FileName);
 
-    public override string ToString()
-    {
-        return $"{nameof(RenderMapFile)}({FileName})";
-    }
+    public override string ToString() => $"{GetType().Name}({FileName})";
 }
+
+/// <summary>
+/// Specifies a map file on disk that the map renderer should render.
+/// </summary>
+public sealed class RenderMapFile : RenderMapFileBase {}
+
+public sealed class RenderMapGrid : RenderMapFileBase {}

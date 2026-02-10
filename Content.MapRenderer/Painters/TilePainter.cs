@@ -81,7 +81,7 @@ namespace Content.MapRenderer.Painters
                 i++;
             });
 
-            Console.WriteLine($"{nameof(TilePainter)} painted {i} tiles on grid {gridUid} in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
+            Logger.Log($"{nameof(TilePainter)} painted {i} tiles on grid {gridUid} in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
         }
 
         private Dictionary<string, List<Image>> GetTileImages(
@@ -119,7 +119,7 @@ namespace Content.MapRenderer.Painters
                 }
             }
 
-            Console.WriteLine($"Indexed all tile images in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
+            Logger.Log($"Indexed all tile images in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
 
             return images;
         }
