@@ -1,0 +1,11 @@
+- type: entity
+  name: soul contract
+  parent: BaseItem
+  id: SoulContract
+  description: На станции, даже ваша душа имеет цену
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/Bikehorn.rsi
+    state: icon
+  - type: SoulContract
+    reward: 100000

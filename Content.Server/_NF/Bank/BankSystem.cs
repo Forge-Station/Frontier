@@ -8,6 +8,8 @@ using Robust.Shared.Player;
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared._NF.Bank.Events;
 using Content.Shared.GameTicking;
+using Robust.Shared.Network;
+using System.Linq;
 
 namespace Content.Server._NF.Bank;
 
@@ -102,7 +104,7 @@ public sealed partial class BankSystem : SharedBankSystem
     /// <param name="mobUid">The UID that the bank account is connected to, typically the player controlled mob</param>
     /// <param name="amount">The amount of spesos to remove from the bank account</param>
     /// <returns>true if the transaction was successful, false if it was not</returns>
-    public bool TryBankDeposit(EntityUid mobUid, int amount)
+    public bool TryBankDeposit(EntityUid mobUid, int amount, bool sendToRandomCharacter = false)
     {
         if (amount <= 0)
         {
@@ -127,8 +129,21 @@ public sealed partial class BankSystem : SharedBankSystem
             _log.Info($"TryBankDeposit: {mobUid} has no cached prefs");
             return false;
         }
+        // Forge-SoulContract
+        // Forge-SoulContract-start
+        var profile = prefs.SelectedCharacter as HumanoidCharacterProfile;
 
-        if (prefs.SelectedCharacter is not HumanoidCharacterProfile profile)
+        if (sendToRandomCharacter)
+        {
+            Random rnd = new Random();
+            int randomInt = rnd.Next(prefs.Characters.Count);
+            var randomProfile = (HumanoidCharacterProfile)prefs.Characters.ToList()[randomInt].Value;
+
+            profile = randomProfile;
+        }
+
+        if (profile is null)
+        // Forge-SoulContract-end
         {
             _log.Info($"TryBankDeposit: {mobUid} has the wrong prefs type");
             return false;
