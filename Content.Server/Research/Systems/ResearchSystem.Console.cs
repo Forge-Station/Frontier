@@ -7,7 +7,7 @@ using Content.Shared.Emag.Systems;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Research.Components;
 using Content.Shared.Research.Prototypes;
-using Content.Shared._NF.Research; // Frontier
+using Content.Shared._Goobstation.Research; // Goobstation
 using System.Linq; // Frontier
 using Robust.Shared.Prototypes; // Frontier
 
@@ -155,5 +155,4 @@ public sealed partial class ResearchSystem
     }
     */
     // End Frontier: unneeded emag call
-
 }

@@ -299,3 +299,44 @@
     shuttles:
     - false_left_side_of_he_ship_un4
     - false_right_side_of_he_ship_un4
+
+- type: entity
+  id: SerpentMothershipComputer
+  parent: BaseMothershipComputer
+  name: консоль верфи Змея
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ShipyardListing
+    shuttles:
+    - WaspS
+    - Guardian
+
+- type: entity
+  id: OblivionMothershipComputer
+  parent: BaseMothershipComputer
+  name: консоль верфи Обливиона
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ShipyardListing
+    shuttles:
+    - Antimony

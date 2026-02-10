@@ -1,0 +1,73 @@
+- type: entity
+  id: RenegateLockerBaseSecure
+  parent: LockerBaseSecure
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Storage/ren_closet.rsi
+
+- type: entity
+  id: LockerRenBaron
+  parent: [RenegateLockerBaseSecure, LockerSecurity]
+  name: Renegate Baron locker
+  suffix: Ренегаты, Барон
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: renegate_com
+    stateDoorOpen: renegate_com_open
+    stateDoorClosed: renegate_com_door
+
+- type: entity
+  id: LockerRenRnd
+  parent: [RenegateLockerBaseSecure, LockerSecurity]
+  name: Renegate Scientist locker
+  suffix: Ренегаты, Куратор
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: renegate_rnd
+    stateDoorOpen: renegate_rnd_open
+    stateDoorClosed: renegate_rnd_door
+
+- type: entity
+  id: LockerRenCom
+  parent: [RenegateLockerBaseSecure, LockerSecurity]
+  name: Renegate Comander locker
+  suffix: Ренегаты, Смотрящий
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: renegate_idk
+    stateDoorOpen: renegate_idk_open
+    stateDoorClosed: renegate_idk_door
+
+- type: entity
+  id: LockerRenMed
+  parent: [RenegateLockerBaseSecure, LockerSecurity]
+  name: Renegate Medical locker
+  suffix: Ренегаты, Костоправ
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: renegate_med
+    stateDoorOpen: renegate_med_open
+    stateDoorClosed: renegate_med_door
+
+- type: entity
+  id: LockerRenSpec
+  parent: [RenegateLockerBaseSecure, LockerSecurity]
+  name: Renegate Specialist locker
+  suffix: Ренегаты, Штейгер
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: renegate_salt
+    stateDoorOpen: renegate_salt_open
+    stateDoorClosed: renegate_salt_door
+
+- type: entity
+  id: LockerRen
+  parent: [RenegateLockerBaseSecure, LockerSecurity]
+  name: Renegate locker
+  suffix: Ренегаты
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: renegate
+    stateDoorOpen: renegate_open
+    stateDoorClosed: renegate_door

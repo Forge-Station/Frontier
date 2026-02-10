@@ -1,5 +1,5 @@
 using Robust.Shared.Serialization;
-using Content.Shared._NF.Research; // Frontier
+using Content.Shared._Goobstation.Research; // Goobstation
 
 namespace Content.Shared.Research.Components
 {

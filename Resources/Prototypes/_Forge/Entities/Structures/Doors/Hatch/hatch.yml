@@ -1,0 +1,8 @@
+- type: entity
+  parent: AirlockHatch
+  id: AirlockHatchRenegades
+  name: airtight hatch
+  suffix: Ренегаты
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Doors/Hatch/ren_hatch.rsi

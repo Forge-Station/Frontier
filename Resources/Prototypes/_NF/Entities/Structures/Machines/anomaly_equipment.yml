@@ -1,6 +1,6 @@
 - type: entity
   id: MachineMiniAnomalyGenerator
-  parent: MachineAnomalyGenerator
+  parent: [MachineAnomalyGenerator, ConstructibleMachine]
   name: mini anomaly generator
   description: The peak of pseudoscientific technology.
   placement:
@@ -59,3 +59,13 @@
         enum.AnomalyGeneratorVisualLayers.Base:
           True: { visible: true }
           False: { visible: false }
+# Forge-Change
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - RawMaterial
+    materialWhiteList:
+    - Anomalite
+    storage:
+      Anomalite: 300
+    storageLimit: 300

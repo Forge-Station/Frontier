@@ -1,72 +1,310 @@
 - type: technology
-  id: NFNightVision
-  name: nf-research-technology-nightvision-goggles
-  entityIcon: NFClothingEyesNightVisionGoggles
-  discipline: NFArsenalMercenary
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - NFClothingEyesNightVisionGoggles
-  technologyPrerequisites:
-  - NFBountyHunting
-  position: 1, 41
-
-- type: technology
-  id: NFThermalVision
-  name: nf-research-technology-thermal-vision-goggles
-  entityIcon: ClothingEyesThermalVisionGoggles
-  discipline: NFArsenalMercenary
-  tier: 2
-  cost: 5000
-  recipeUnlocks:
-  - ClothingEyesThermalVisionGoggles
-  technologyPrerequisites:
-  - NFNightVision
-  position: 1, 40
-
-- type: technology
-  id: BluespaceHarvester
-  name: nf-research-technology-bluespace
-  entityIcon: BluespaceHarvester
+  id: ForgeTechnologyDevelopmentStrategy
+  name: forge-research-technology-development-strategy
+  entityIcon: SignScience
   discipline: NFScience
-  tier: 3
-  cost: 40000
-  recipeUnlocks:
-  - MachineBluespaceHarvesterCircuitboard
-  - MachineBluespaceTransitorCircuitboard
-  technologyPrerequisites:
-  - NFBluespaceTimeManipulation
-  position: 5, 5
-
-- type: technology
-  id: ForgeHardsuitsArmoredAdvanced
-  name: nf-research-technology-hardsuits-armored-advanced
-  entityIcon: ClothingOuterHardsuitMercenaryElite
-  discipline: NFArsenalMercenary
   tier: 1
-  cost: 35000
-  recipeUnlocks:
-  - ClothingOuterHardsuitMercenaryElite
-  - ClothingOuterHardsuitAAMr
-  - ClothingOuterHardsuitAAMrAdv
-  technologyPrerequisites:
-  - NFHardsuitsArmored
-  position: 5, 9
+  cost: 0
+  position: 0, 0
 
+# region Инженеры
 - type: technology
-  id: NFHonkerEquipment
-  name: nf-research-technology-honker-equipment
-  entityIcon: WeaponMechSpecialBananaMortar
+  id: ForgeTechnologyEngineering
+  name: forge-research-technology-engineering
+  entityIcon: EngineeringTechFab
   discipline: NFEngineering
   tier: 1
-  cost: 10000
+  cost: 1000
   recipeUnlocks:
-  - MechEquipmentHonkerMousetrapMortar
-  - MechEquipmentHonkerBananaMortar
+  - EngineeringTechFabCircuitboard
   technologyPrerequisites:
-  - NFHONKMech
-  - NFPushHorn
-  position: 3, 18
+  - ForgeTechnologyDevelopmentStrategy
+  position: 0, -2
+
+- type: technology
+  id: NFMiscellaneousItemsOrganization
+  name: nf-research-technology-personal-storage-solutions
+  entityIcon: NFPouchEngineering
+  discipline: NFEngineering
+  secondaryDiscipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - NFPouchUtility
+  - NFPouchEngineering
+  - NFPouchFirstAid
+  - NFPouchFirstAidAlt
+  - NFPouchScience
+  - NFPouchSalvage
+  - NFPouchAtmospherics
+  - NFPouchHydroponics
+  - NFPouchChaplain
+  - NFPouchPunk
+  - NFPouchMercenary
+  - NFPouchPrivateSecurity
+  - NFPouchJanitor
+  - NFPouchContractor
+  - NFPouchClown
+  - NFPouchMime
+  - NFPouchCaptain
+  - NFPouchCargo
+  technologyPrerequisites:
+  - ForgeTechnologyEngineering
+  position: 0, -3
+
+- type: technology
+  id: NFAtmosphericTech
+  name: nf-research-technology-atmospheric-tech
+  entityIcon: GasThermoMachineFreezer
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - ThermomachineFreezerMachineCircuitBoard
+  - GasRecyclerMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ForgeTechnologyEngineering
+  position: 1, -3
+
+- type: technology
+  id: NFAdvancedAtmosphericsPortable
+  name: nf-research-technology-advanced-atmospherics-portable
+  entityIcon: PortableScrubber
+  discipline: NFEngineering
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - PortableScrubberMachineCircuitBoard
+  technologyPrerequisites:
+  - NFAtmosphericTech
+  position: 1, -4
+
+- type: technology
+  id: NFAdvancedAtmospherics
+  name: nf-research-technology-advanced-atmospherics
+  entityIcon: GasThermoMachineHellfireFreezer
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - HellfireFreezerMachineCircuitBoard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAdvancedAtmosphericsPortable
+  position: 1, -5
+
+- type: technology
+  id: NFAdvancedAtmosphericsTools
+  name: nf-research-technology-advanced-atmospherics-tools
+  entityIcon: HolofanProjector
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - HolofanProjector
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAdvancedAtmosphericsPortable
+  position: 2, -5
+
+- type: technology
+  id: NFIndustrialSilo
+  name: nf-research-technology-industrial-silo
+  entityIcon: MachineMaterialSilo
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - MaterialSiloMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ForgeTechnologyEngineering
+  position: -1, -3
+
+- type: technology
+  id: NFMechanicalCompression
+  name: nf-research-technology-mechanical-compression
+  entityIcon: MachineFlatpacker
+  discipline: NFEngineering
+  tier: 1
+  cost: 3500
+  recipeUnlocks:
+  - FlatpackerMachineCircuitboard
+  technologyPrerequisites:
+  - NFIndustrialSilo
+  position: -1, -4
+
+- type: technology
+  id: NFRapidConstruction
+  name: nf-research-technology-rapid-construction
+  entityIcon: ShipyardRCD
+  discipline: NFEngineering
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - ShipyardRCD
+  - ShipyardRCDAmmo
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFMechanicalCompression
+  position: -1, -5
+
+- type: technology
+  id: NFAdvancedBeltTechnology
+  name: nf-research-technology-advanced-belt
+  entityIcon: ClothingBeltChiefEngineer
+  discipline: NFEngineering
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - ClothingBeltChiefEngineer
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFMiscellaneousItemsOrganization
+  position: 0, -5
+
+- type: technology
+  id: NFAdvancedParts
+  name: nf-research-technology-advanced-parts
+  entityIcon: AdvancedMatterBinStockPart
+  discipline: NFEngineering
+  tier: 1
+  cost: 5500
+  recipeUnlocks:
+  - AdvancedCapacitorStockPart
+  - AdvancedMatterBinStockPart
+  - NanoManipulatorStockPart
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAdvancedBeltTechnology
+  - NFRapidConstruction
+  - NFAdvancedAtmospherics
+  position: 0, -6
+
+- type: technology
+  id: NFIndustrialEngineering
+  name: nf-research-technology-industrial-engineering
+  entityIcon: ProtolatheHyperConvection
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - AutolatheHyperConvectionMachineCircuitboard
+  - ProtolatheHyperConvectionMachineCircuitboard
+  - CircuitImprinterHyperConvectionMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFRapidPartExchange
+  position: 0, -8
+
+- type: technology
+  id: NFRapidPartExchange
+  name: nf-research-technology-rped
+  entityIcon: RPED
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - RPED
+  technologyPrerequisites:
+  - NFAdvancedParts
+  position: 0, -7
+
+- type: technology
+  id: NFBasicRobotics
+  name: nf-research-technology-basic-robotics
+  entityIcon: ExosuitFabricator
+  discipline: NFEngineering
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - ProximitySensor
+  prerequisiteLineType: Tree
+  technologyPrerequisites:
+  - NFAdvancedParts
+  - NFIndustrialEngineering
+  position: 2, -7
+
+- type: technology
+  id: NFCritterMechs
+  name: nf-research-technology-critter-mechs
+  entityIcon: MechHamtr
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - HamtrHarness
+  - HamtrLArm
+  - HamtrRArm
+  - HamtrLLeg
+  - HamtrRLeg
+  - HamtrCentralElectronics
+  - HamtrPeripheralsElectronics
+  - VimHarness
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFRipleyAPLU
+  position: 4, -6
+
+- type: technology
+  id: NFRipleyAPLU
+  name: nf-research-technology-ripley-aplu
+  entityIcon: MechRipley
+  discipline: NFEngineering
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - RipleyHarness
+  - RipleyLArm
+  - RipleyRArm
+  - RipleyLLeg
+  - RipleyRLeg
+  - RipleyCentralElectronics
+  - RipleyPeripheralsElectronics
+  technologyPrerequisites:
+  - NFBasicRobotics
+  position: 3, -7
+
+- type: technology
+  id: NFBasicRoboticsEquipment
+  name: nf-research-technology-basic-robotics-equipment
+  entityIcon: MechEquipmentFork
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - MechEquipmentFork
+  technologyPrerequisites:
+  - NFRipleyAPLU
+  position: 3, -8
+
+- type: technology
+  id: NFRoboticsEquipment
+  name: nf-research-technology-robotics-equipment
+  entityIcon: MechEquipmentGrabberSmall
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - MechEquipmentGrabberSmall
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFBasicRoboticsEquipment
+  position: 3, -9
+
+- type: technology
+  id: NFAdvancedRoboticsEquipment
+  name: nf-research-technology-advanced-robotics-equipment
+  entityIcon: MechEquipmentGrabber
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - MechEquipmentGrabber
+  technologyPrerequisites:
+  - NFRoboticsEquipment
+  position: 3, -10
 
 - type: technology
   id: NFClarkeMech
@@ -86,7 +324,7 @@
   - ClarkePeripheralsElectronics
   technologyPrerequisites:
   - NFRipleyAPLU
-  position: 2, 16
+  position: 4, -7
 
 - type: technology
   id: NFMechDrill
@@ -99,7 +337,7 @@
   - MechEquipmentDrill
   technologyPrerequisites:
   - NFClarkeMech
-  position: 3, 15
+  position: 4, -8
 
 - type: technology
   id: NFMechDiamondDrill
@@ -112,7 +350,7 @@
   - MechEquipmentDrillDiamond
   technologyPrerequisites:
   - NFMechDrill
-  position: 4, 15
+  position: 4, -9
 
 - type: technology
   id: NFMechKineticAccelerator
@@ -125,7 +363,7 @@
   - MechEquipmentKineticAccelerator
   technologyPrerequisites:
   - NFMechDrill
-  position: 5, 15
+  position: 4, -10
 
 - type: technology
   id: NFGygaxMech
@@ -147,7 +385,7 @@
   - GygaxTargetingElectronics
   technologyPrerequisites:
   - NFClarkeMech
-  position: 3, 16
+  position: 5, -7
 
 - type: technology
   id: NFBaseWeaponMech
@@ -161,7 +399,7 @@
   - MechEquipmentShotgun
   technologyPrerequisites:
   - NFGygaxMech
-  position: 4, 16
+  position: 5, -8
 
 - type: technology
   id: NFShotgunIncendiaryMech
@@ -174,7 +412,7 @@
   - MechEquipmentShotgunIncendiary
   technologyPrerequisites:
   - NFBaseWeaponMech
-  position: 5, 16
+  position: 5, -9
 
 - type: technology
   id: NFDurandMech
@@ -196,7 +434,7 @@
   - DurandTargetingElectronics
   technologyPrerequisites:
   - NFGygaxMech
-  position: 3, 17
+  position: 6, -7
 
 - type: technology
   id: NFBaseLaserWeaponMech
@@ -210,7 +448,21 @@
   - MechEquipmentSolarisLaser
   technologyPrerequisites:
   - NFDurandMech
-  position: 4, 17
+  position: 7, -7
+
+- type: technology
+  id: NFXRayGunMech
+  name: nf-research-technology-mech-xray-laser
+  entityIcon: WeaponMechCombatXRayProjector
+  discipline: NFArsenalNfsd
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - MechEquipmentXRayProjector
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFBaseLaserWeaponMech
+  position: 8, -6
 
 - type: technology
   id: NFImmolationGunMech
@@ -223,20 +475,7 @@
   - MechEquipmentImmolationGun
   technologyPrerequisites:
   - NFBaseLaserWeaponMech
-  position: 5, 17
-
-- type: technology
-  id: NFXRayGunMech
-  name: nf-research-technology-mech-xray-laser
-  entityIcon: WeaponMechCombatXRayProjector
-  discipline: NFArsenalNfsd
-  tier: 3
-  cost: 20000
-  recipeUnlocks:
-  - MechEquipmentXRayProjector
-  technologyPrerequisites:
-  - NFImmolationGunMech
-  position: 6, 17
+  position: 8, -7
 
 - type: technology
   id: NFBaseMissileRackMech
@@ -249,7 +488,7 @@
   - MechEquipmentMissileRack8
   technologyPrerequisites:
   - NFDurandMech
-  position: 4, 18
+  position: 6, -8
 
 - type: technology
   id: NFMissileRack6Mech
@@ -262,7 +501,966 @@
   - MechEquipmentMissileRack6
   technologyPrerequisites:
   - NFBaseMissileRackMech
-  position: 5, 18
+  position: 7, -8
+
+- type: technology
+  id: NFHONKMech
+  name: nf-research-technology-honk-mech
+  entityIcon: MechHonker
+  discipline: NFEngineering
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - HonkerHarness
+  - HonkerLArm
+  - HonkerRArm
+  - HonkerLLeg
+  - HonkerRLeg
+  - HonkerCentralElectronics
+  - HonkerPeripheralsElectronics
+  - HonkerTargetingElectronics
+  technologyPrerequisites:
+  - NFBasicRobotics
+  position: 2, -8
+
+- type: technology
+  id: NFPushHorn
+  name: nf-research-technology-clowning-utilities
+  entityIcon: PushHorn
+  discipline: NFService
+  tier: 1
+  cost: 1500
+  recipeUnlocks:
+  - PushHorn
+  technologyPrerequisites:
+  - NFHONKMech
+  position: 2, -9
+
+- type: technology
+  id: NFHornRoboticsEquipment
+  name: nf-research-technology-horn-robotics-equipment
+  entityIcon: MechEquipmentHorn
+  discipline: NFEngineering
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - MechEquipmentHorn
+  technologyPrerequisites:
+  - NFPushHorn
+  position: 2, -10
+
+- type: technology
+  id: NFHonkerEquipment
+  name: nf-research-technology-honker-equipment
+  entityIcon: WeaponMechSpecialBananaMortar
+  discipline: NFEngineering
+  tier: 1
+  cost: 7000
+  recipeUnlocks:
+  - MechEquipmentHonkerMousetrapMortar
+  - MechEquipmentHonkerBananaMortar
+  technologyPrerequisites:
+  - NFHornRoboticsEquipment
+  position: 2, -11
+
+- type: technology
+  id: NFBluespaceStorage
+  name: nf-research-technology-bluespace-storage
+  entityIcon: ClothingBackpackHolding
+  discipline: NFEngineering
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - ClothingBackpackHolding
+  - ClothingBackpackSatchelHolding
+  - ClothingBackpackDuffelHolding
+  - ClothingBackpackMessengerHolding
+  - ConstructionBagOfHolding
+  technologyPrerequisites:
+  - NFIndustrialEngineering
+  - NFSuperParts
+  position: 0, -9
+
+- type: technology
+  id: NFBluespaceGasTanks
+  name: nf-research-technology-bluespace-gas-tanks
+  entityIcon: BluespaceAirTank
+  discipline: NFSalvage
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - BluespaceAirTank
+  - SmallBluespaceAirTank
+  technologyPrerequisites:
+  - NFBluespaceStorage
+  position: 0, -10
+
+- type: technology
+  id: NFAdvancedWelderTechnology
+  name: nf-research-technology-advanced-welder
+  entityIcon: WelderExperimental
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - WelderExperimental
+  - ClothingMaskWeldingGas
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAdvancedParts
+  position: -1, -7
+
+- type: technology
+  id: NFAdvancedToolsTechnology
+  name: nf-research-technology-advanced-tools
+  entityIcon: PowerDrill
+  discipline: NFEngineering
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - PowerDrill
+  - JawsOfLife
+  - SignallerAdvanced
+  technologyPrerequisites:
+  - NFAdvancedWelderTechnology
+  position: -1, -8
+
+- type: technology
+  id: NFAdvancedCyborgToolsTechnology
+  name: nf-research-technology-advanced-cyborg-tools
+  entityIcon: BorgModuleAdvancedTool
+  discipline: NFEngineering
+  tier: 1
+  cost: 1500
+  recipeUnlocks:
+  - BorgModuleAdvancedTool
+  technologyPrerequisites:
+  - NFAdvancedToolsTechnology
+  position: -1, -9
+
+- type: technology
+  id: NFMatterEnergyConversion
+  name: nf-research-technology-matter-energy-conversion
+  entityIcon: BorgModuleRCD
+  discipline: NFEngineering
+  tier: 1
+  cost: 2000
+  recipeUnlocks:
+  - BorgModuleRCD
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAdvancedToolsTechnology
+  position: -2, -9
+
+- type: technology
+  id: NFSpaceScanning
+  name: nf-research-technology-space-scanning
+  entityIcon: ComputerRadar
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - RadarConsoleCircuitboard
+  prerequisiteLineType: Tree
+  technologyPrerequisites:
+  - NFAdvancedParts
+  position: -3, -7
+
+- type: technology
+  id: NFAdvancedPowercells
+  name: nf-research-technology-advanced-powercells
+  entityIcon: PowerCellHigh
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - PowerCellHigh
+  prerequisiteLineType: Tree
+  technologyPrerequisites:
+  - NFAdvancedParts
+  position: -3, -5
+
+- type: technology
+  id: NFSpaceHandHeldScanning
+  name: nf-research-technology-space-handheld-scanning
+  entityIcon: HandHeldMassScanner
+  discipline: NFEngineering
+  tier: 1
+  cost: 2000
+  recipeUnlocks:
+  - HandHeldMassScanner
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFSpaceScanning
+  position: -4, -8
+
+- type: technology
+  id: NFShuttlecraftThrustSmall
+  name: nf-research-technology-shuttlecraft-thrust-small
+  entityIcon: SmallThruster
+  discipline: NFEngineering
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - SmallThrusterMachineCircuitboard
+  - SmallGyroscopeMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFSpaceScanning
+  position: -4, -7
+
+- type: technology
+  id: NFShuttlecraftThrust
+  name: nf-research-technology-shuttlecraft-thrust
+  entityIcon: Thruster
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ThrusterMachineCircuitboard
+  - GyroscopeMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFSpaceScanning
+  position: -5, -7
+
+- type: technology
+  id: NFShuttlecraft
+  name: nf-research-technology-shuttlecraft
+  entityIcon: ComputerShuttle
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ShuttleConsoleCircuitboard
+  - MiniGravityGeneratorCircuitboard
+  - MiniStationAnchorCircuitboard
+  technologyPrerequisites:
+  - NFShuttlecraftThrust
+  - NFSpaceHandHeldScanning
+  position: -6, -8
+
+- type: technology
+  id: NFTrashPowerGeneration
+  name: nf-research-technology-trash-power-generators
+  entityIcon: PortableGeneratorJrPacman
+  discipline: NFEngineering
+  tier: 1
+  cost: 500
+  recipeUnlocks:
+  - PortableGeneratorJrPacmanMachineCircuitboard
+  technologyPrerequisites:
+  - NFAdvancedPowercells
+  position: -3, -4
+
+- type: technology
+  id: NFBasicPowerGeneration
+  name: nf-research-technology-basic-power-generators
+  entityIcon: PortableGeneratorPacman
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - PortableGeneratorPacmanMachineCircuitboard
+  technologyPrerequisites:
+  - NFTrashPowerGeneration
+  position: -4, -4
+
+- type: technology
+  id: NFPowerGeneration
+  name: nf-research-technology-power-generators
+  entityIcon: PortableGeneratorSuperPacman
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - PortableGeneratorSuperPacmanMachineCircuitboard
+  technologyPrerequisites:
+  - NFBasicPowerGeneration
+  position: -5, -4
+
+- type: technology
+  id: NFAdvancedPowerGeneration
+  name: nf-research-technology-fission-generators
+  entityIcon: PortableGeneratorDKJr
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - PortableGeneratorDKJrMachineCircuitboard
+  technologyPrerequisites:
+  - NFPowerGeneration
+  position: -6, -4
+
+- type: technology
+  id: NFAdvancedSMES
+  name: nf-research-technology-advanced-smes
+  entityIcon: SMESAdvancedEmpty
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - SMESAdvancedMachineCircuitboard
+  technologyPrerequisites:
+  - NFAdvancedPowercells
+  position: -4, -5
+
+- type: technology
+  id: NFFission
+  name: nf-research-technology-fission-powercells
+  entityIcon: PowerCellMicroreactor
+  discipline: NFEngineering
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - PowerCellMicroreactor
+  technologyPrerequisites:
+  - NFAdvancedSMES
+  position: -5, -5
+
+- type: technology
+  id: ForgePowercellNTTech
+  name: research-technology-powercellnt
+  entityIcon: PowerCellNanoT
+  discipline: NFEngineering
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - PowerCellNTRecipe
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFFission
+  - NFAdvancedPowerGeneration
+  position: -7, -5
+
+- type: technology
+  id: NFAdvancedCharging
+  name: nf-research-technology-advanced-charging
+  entityIcon: TurboItemRecharger
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - TurboItemRechargerCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFFission
+  position: -6, -6
+
+- type: technology
+  id: NFPortableFission
+  name: nf-research-technology-portable-fission
+  entityIcon: PortableRecharger
+  discipline: NFEngineering
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - NFPortableRecharger
+  technologyPrerequisites:
+  - NFAdvancedCharging
+  position: -7, -6
+
+- type: technology
+  id: NFPowerSolar
+  name: nf-research-technology-power-solar
+  entityIcon: SolarPanel
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - SolarControlComputerCircuitboard
+  - SolarTrackerElectronics
+  technologyPrerequisites:
+  - NFTrashPowerGeneration
+  position: -3, -3
+
+- type: technology
+  id: NFEmitter
+  name: nf-research-technology-particle-emission
+  entityIcon: Emitter
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - EmitterCircuitboard
+  technologyPrerequisites:
+  - NFPowerSolar
+  position: -4, -3
+
+- type: technology
+  id: NFParticleDecelerator
+  name: nf-research-technology-portable-particle-emission
+  entityIcon: NFWeaponParticleDecelerator
+  discipline: NFEngineering
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - NFWeaponParticleDecelerator
+  technologyPrerequisites:
+  - NFEmitter
+  position: -5, -3
+
+# region Медики
+- type: technology
+  id: ForgeTechnologyMedical
+  name: forge-research-technology-medical
+  entityIcon: MedicalTechFab
+  discipline: NFMedical
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - MedicalTechFabCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ForgeTechnologyDevelopmentStrategy
+  position: 3, -3
+
+- type: technology
+  id: NFBiochemicalStasis
+  name: nf-research-technology-biochemical-stasis
+  entityIcon: CryostasisBeaker
+  discipline: NFMedical
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - CryostasisBeaker
+  - SyringeCryostasis
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFReinforcedJug
+  position: 5, -4
+
+- type: technology
+  id: NFHardsuitsMedical
+  name: nf-research-technology-hardsuits-medical
+  entityIcon: ClothingOuterHardsuitMedical
+  discipline: NFMedical
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - ClothingOuterHardsuitMedical
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFBiochemicalStasis
+  position: 6, -5
+
+- type: technology
+  id: NFBluespaceChemistry
+  name: nf-research-technology-bluespace-chemistry
+  entityIcon: BluespaceBeaker
+  discipline: NFMedical
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - BluespaceBeaker
+  - SyringeBluespace
+  - JugBluespace
+  - VialBluespace
+  technologyPrerequisites:
+  - NFBiochemicalStasis
+  position: 6, -4
+
+- type: technology
+  id: NFMechanizedTreatment
+  name: nf-research-technology-mechanized-treatment
+  entityIcon: BorgModuleAdvancedParamedic
+  discipline: NFMedical
+  tier: 1
+  cost: 1500
+  recipeUnlocks:
+  - BorgModuleAdvancedParamedic
+  - BorgModuleAdvancedChemical
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFBluespaceChemistry
+  - NFEngineeringMedicine
+  position: 7, -4
+
+- type: technology
+  id: NFReinforcedJug
+  name: nf-research-technology-reinforced-jug
+  entityIcon: ReinforcedJug
+  discipline: NFMedical
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - ReinforcedJug
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ForgeTechnologyMedical
+  position: 4, -4
+
+- type: technology
+  id: NFBasicMedicine
+  name: nf-research-technology-basic-medicine
+  entityIcon: ChemDispenserEmpty
+  discipline: NFMedical
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ChemMasterMachineCircuitboard
+  - ChemDispenserMachineCircuitboard
+  technologyPrerequisites:
+  - ForgeTechnologyMedical
+  position: 5, -3
+
+- type: technology
+  id: NFEngineeringMedicine
+  name: nf-research-technology-industrial-medicine
+  entityIcon: MedicalAssembler
+  discipline: NFMedical
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - MedicalAssemblerMachineCircuitboard
+  - HotplateMachineCircuitboard
+  - DefibrillatorCompact
+  technologyPrerequisites:
+  - NFBasicMedicine
+  position: 6, -3
+
+- type: technology
+  id: NFAppliedBiochemicalStasis
+  name: nf-research-technology-applied-biochemical-stasis
+  entityIcon: StasisBed
+  discipline: NFMedical
+  tier: 1
+  cost: 3500
+  recipeUnlocks:
+  - StasisBedMachineCircuitboard
+  - CryoPodMachineCircuitboard
+  technologyPrerequisites:
+  - NFEngineeringMedicine
+  position: 7, -3
+
+- type: technology
+  id: NFSyringeGun
+  name: nf-research-technology-syringe-gun
+  entityIcon: LauncherSyringe
+  discipline: NFMedical
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - LauncherSyringe
+  - MiniSyringe
+  technologyPrerequisites:
+  - NFAppliedBiochemicalStasis
+  position: 8, -3
+
+# region Утилизаторы
+- type: technology
+  id: ForgeTechnologySalvage
+  name: forge-research-technology-salvage
+  entityIcon: SalvageTechfabNF
+  discipline: NFSalvage
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - SalvageTechFabCircuitboardNF
+  technologyPrerequisites:
+  - ForgeTechnologyDevelopmentStrategy
+  prerequisiteLineType: Diagonal
+  position: 3, 0
+
+- type: technology
+  id: NFHardsuitsBasic
+  name: nf-research-technology-hardsuits-basic
+  entityIcon: ClothingOuterHardsuitSpatio
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - ClothingOuterHardsuitSpatio
+  - ClothingOuterHardsuitPilot
+  technologyPrerequisites:
+  - ForgeTechnologySalvage
+  position: 4, 0
+
+- type: technology
+  id: NFBasicPersonalPropulsion
+  name: nf-research-technology-basic-personal-propulsion
+  entityIcon: JetpackBlue
+  discipline: NFSalvage
+  secondaryDiscipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - JetpackBlue
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFHardsuitsBasic
+  position: 5, -1
+
+- type: technology
+  id: NFPersonalPropulsion
+  name: nf-research-technology-personal-propulsion
+  entityIcon: JetpackCaptain
+  discipline: NFSalvage
+  secondaryDiscipline: NFEngineering
+  tier: 1
+  cost: 4500
+  recipeUnlocks:
+  - JetpackCaptain
+  technologyPrerequisites:
+  - NFArsenalMercenaryPropulsion
+  position: 7, -1
+
+- type: technology
+  id: NFArsenalMercenaryPropulsion
+  name: nf-research-technology-combat-propulsion
+  entityIcon: JetpackSecurity
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - JetpackSecurity
+  technologyPrerequisites:
+  - NFBasicPersonalPropulsion
+  position: 6, -1
+
+- type: technology
+  id: NFAdvancedPersonalPropulsion
+  name: nf-research-technology-advanced-personal-propulsion
+  entityIcon: JetpackVoid
+  discipline: NFSalvage
+  secondaryDiscipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - JetpackVoid
+  technologyPrerequisites:
+  - NFArsenalMercenaryPropulsion
+  position: 8, -1
+
+- type: technology
+  id: NFHardsuitsField
+  name: nf-research-technology-hardsuits-field
+  entityIcon: ClothingOuterHardsuitSalvage
+  discipline: NFSalvage
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ClothingOuterHardsuitSalvage
+  technologyPrerequisites:
+  - NFHardsuitsBasic
+  position: 5, 0
+
+- type: technology
+  id: NFIndustrialOreProcessor
+  name: nf-research-technology-salvage-equipment
+  entityIcon: OreProcessorIndustrial
+  discipline: NFSalvage
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - OreProcessorIndustrialMachineCircuitboard
+  technologyPrerequisites:
+  - ForgeTechnologySalvage
+  prerequisiteLineType: Diagonal
+  position: 5, 2
+
+- type: technology
+  id: NFHardsuitsExperimentalRD
+  name: nf-research-technology-hardsuits-experimental-rd
+  entityIcon: ClothingOuterHardsuitRd
+  discipline: NFScience
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - ClothingOuterHardsuitRd
+  technologyPrerequisites:
+  - NFHardsuitsAdvanced
+  position: 8, 0
+
+- type: technology
+  id: NFHardsuitsExperimentalIndustrial
+  name: nf-research-technology-hardsuits-experimental-industrial
+  entityIcon: ClothingOuterHardsuitMaximPrototype
+  discipline: NFSalvage
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+   - ClothingOuterHardsuitMaximPrototype
+  prerequisiteLineType: Tree
+  technologyPrerequisites:
+  - NFHardsuitsExperimentalRD
+  - NFImprovedSalvageWeapons
+  position: 9, 1
+
+- type: technology
+  id: NFHardsuitsExperimentalIndustrialMaxims
+  name: nf-research-technology-hardsuits-experimental-industrial-maxims
+  entityIcon: ClothingOuterHardsuitMaxim
+  discipline: NFSalvage
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - ClothingOuterHardsuitMaxims
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFHardsuitsExperimentalIndustrial
+  - NFAdvancedPersonalPropulsion
+  position: 10, 1
+
+- type: technology
+  id: NFSalvageGrapplingEquipment
+  name: nf-research-technology-salvage-grappling-equipment
+  entityIcon: WeaponGrapplingGun
+  discipline: NFSalvage
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - WeaponGrapplingGun
+  technologyPrerequisites:
+  - NFIndustrialOreProcessor
+  position: 5, 3
+
+- type: technology
+  id: NFExcavation
+  name: nf-research-technology-excavation
+  entityIcon: MiningDrill
+  discipline: NFSalvage
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - MiningDrill
+  - MineralScannerEmpty
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFIndustrialOreProcessor
+  position: 6, 3
+
+- type: technology
+  id: NFMassExcavation
+  name: nf-research-technology-mass-excavation
+  entityIcon: MiningDrillDiamond
+  discipline: NFSalvage
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - MiningDrillDiamond
+  - AdvancedMineralScannerEmpty
+  technologyPrerequisites:
+  - NFExcavation
+  position: 7, 3
+
+- type: technology
+  id: NFIndustrialGoldprinter
+  name: nf-research-technology-salvage-goldprinter
+  entityIcon: Goldprinter
+  discipline: NFSalvage
+  tier: 1
+  cost: 25000
+  recipeUnlocks:
+  - GoldprinterMachineCircuitboard
+  technologyPrerequisites:
+  - NFMassExcavation
+  prerequisiteLineType: Diagonal
+  position: 8, 4
+
+- type: technology
+  id: NFSalvageWeapons
+  name: nf-research-technology-salvage-weapons
+  entityIcon: NFWeaponPka
+  discipline: NFSalvage
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - NFWeaponPka
+  - WeaponCrusher
+  - WeaponCrusherDagger
+  technologyPrerequisites:
+  - NFIndustrialOreProcessor
+  position: 6, 2
+
+- type: technology
+  id: NFAdvancedSalvageWeapons
+  name: nf-research-technology-advanced-salvage-weapons
+  entityIcon: WeaponCrusherGlaive
+  discipline: NFSalvage
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - WeaponCrusherGlaive
+  technologyPrerequisites:
+  - NFSalvageWeapons
+  position: 7, 2
+
+- type: technology
+  id: NFImprovedSalvageWeapons
+  name: nf-research-technology-salvage-weapons-improved
+  entityIcon: NFWeaponPkaCannon
+  discipline: NFSalvage
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - NFWeaponPkaCannon
+  technologyPrerequisites:
+  - NFAdvancedSalvageWeapons
+  position: 8, 2
+
+- type: technology
+  id: NFHardsuitsEngineering
+  name: nf-research-technology-hardsuits-engineering
+  entityIcon: ClothingOuterHardsuitEngineering
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - ClothingOuterHardsuitAtmos
+  - ClothingOuterHardsuitEngineering
+  technologyPrerequisites:
+  - NFHardsuitsField
+  position: 6, 0
+
+- type: technology
+  id: NFHardsuitsAdvanced
+  name: nf-research-technology-hardsuits-advanced
+  entityIcon: ClothingOuterHardsuitLuxury
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ClothingOuterHardsuitCap
+  - ClothingOuterHardsuitEngineeringWhite # CE
+  - ClothingOuterHardsuitLuxury
+  technologyPrerequisites:
+  - NFHardsuitsEngineering
+  position: 7, 0
+
+- type: technology
+  id: NFBluespaceOreStorage
+  name: nf-research-technology-excavation-storage
+  entityIcon: OreBagOfHolding
+  discipline: NFSalvage
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - OreBagOfHolding
+  - BorgModuleAdvancedMining
+  technologyPrerequisites:
+  - NFMassExcavation
+  position: 8, 3
+
+- type: technology
+  id: NFAdvancedSalvageCyborg
+  name: nf-research-technology-advanced-salvage-cyborg
+  entityIcon: BorgModuleAdvancedMining
+  discipline: NFSalvage
+  tier: 1
+  cost: 1500
+  recipeUnlocks:
+  - BorgModuleAdvancedMining
+  technologyPrerequisites:
+  - NFBluespaceOreStorage
+  position: 9, 3
+
+# region Арсенал
+- type: technology
+  id: ForgeTechnologyArsenalMercenary
+  name: forge-research-technology-arsenal-mercenary
+  entityIcon: MercenaryTechFab
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - MercenaryTechFabCircuitboardNF
+  technologyPrerequisites:
+  - ForgeTechnologyDevelopmentStrategy
+  position: -3, 0
+
+- type: technology
+  id: NFDeterrenceTechnologies
+  name: nf-research-technology-deterrence
+  entityIcon: HoloprojectorField
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 1500
+  recipeUnlocks:
+  - HoloprojectorField
+  technologyPrerequisites:
+  - ForgeTechnologyArsenalMercenary
+  position: -3, 1
+
+- type: technology
+  id: NFBasicAmmunitionProduction
+  name: nf-research-technology-basic-ammunition
+  entityIcon: NFAmmunitionBoxPistol45
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - NFAmmunitionBoxShellShotgunBuckshot
+  - NFAmmunitionBoxShellShotgunSlug
+  - NFAmmunitionBoxRifle20
+  - NFAmmunitionBoxRifle25
+  - NFAmmunitionBoxRifle30
+  - NFAmmunitionBoxPistol35
+  - NFAmmunitionBoxPistol45
+  - NFMagazineSubMachineGun35Empty
+  - NFSpeedLoaderPistol35Empty
+  - NFSpeedLoaderPistol45Empty
+  - NFMagazineClipRifle20Empty
+  - MagazineLightRifleLowCapacityEmpty
+  - NFMagazinePistol35Empty
+  technologyPrerequisites:
+  - ForgeTechnologyArsenalMercenary
+  position: -4, 0
+
+- type: technology
+  id: NFNonlethalAmmunition
+  name: nf-research-technology-nonlethal-ammunition
+  entityIcon: NFAmmunitionBoxShellShotgunBeanbag
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - NFAmmunitionBoxShellShotgunBeanbag
+  - NFAmmunitionBoxRifle20Rubber
+  - NFAmmunitionBoxRifle25Rubber
+  - NFAmmunitionBoxRifle30Rubber
+  - NFAmmunitionBoxPistol35Rubber
+  - NFAmmunitionBoxPistol45Rubber
+  - NFAmmunitionBoxShellShotgunTranquilizer
+  technologyPrerequisites:
+  - NFBasicAmmunitionProduction
+  position: -4, 1
+
+- type: technology
+  id: NFImprovedPistolAmmo
+  name: nf-research-technology-pistol-ammo-improved
+  entityIcon: NFAmmunitionBoxPistol35Overpressure
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - NFAmmunitionBoxPistol35Overpressure
+  - NFAmmunitionBoxPistol45Overpressure
+  - NFMagazineHighCapacityPistol35Empty
+  - NFMagazinePistol45Empty
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFBasicAmmunitionProduction
+  position: -5, 0
+
+- type: technology
+  id: NFImprovedRifleAmmo
+  name: nf-research-technology-rifle-ammo-improved
+  entityIcon: NFAmmunitionBoxRifle30Overpressure
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - NFAmmunitionBoxRifle20Overpressure
+  - NFAmmunitionBoxRifle30Overpressure
+  - NFAmmunitionBoxShellShotgunOverpressure
+  - NFMagazineRifle20Empty
+  - NFMagazineRifle30Empty
+  - NFMagazineDrumRifle20Empty
+  - MagazineAsmgtUniversalEmpty
+  technologyPrerequisites:
+  - NFImprovedPistolAmmo
+  position: -6, 0
 
 - type: technology
   id: NFImprovedSMGAmmo
@@ -274,33 +1472,285 @@
   recipeUnlocks:
   - NFAmmunitionBoxRifle25Overpressure
   - NFMagazineSubMachineGunTopMounted35Empty
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFImprovedPistolAmmo
-  position: 2, 45
+  position: -6, 1
 
 - type: technology
-  id: ForgePowercellNTTech
-  name: research-technology-powercellnt
-  entityIcon: PowerCellNanoT
-  discipline: NFEngineering
+  id: NFBulkRifleAmmo
+  name: nf-research-technology-rifle-ammo-bulk
+  entityIcon: NFAmmunitionBoxBigRifle20
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - NFAmmunitionBoxBigRifle20
+  - NFAmmunitionBoxBigRifle20Overpressure
+  - NFAmmunitionBoxBigRifle25
+  - NFAmmunitionBoxBigRifle25Overpressure
+  - NFAmmunitionBoxBigRifle30
+  - NFAmmunitionBoxBigRifle30Overpressure
+  technologyPrerequisites:
+  - NFImprovedSMGAmmo
+  - NFImprovedRifleAmmo
+  position: -7, 0
+
+- type: technology
+  id: NFBountyHunting
+  name: nf-research-technology-bounty-hunting
+  entityIcon: Handcuffs
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - BolaNF
+  - NFHandcuffs
+  - ClothingOuterArmorBulletproofNF
+  - ClothingOuterCoatBHTrench
+  - PinpointerUniversalNF
+  - ClothingEyesHudBountyHunter
+  - NFForensicPad
+  - FlashlightSecliteNF
+  technologyPrerequisites:
+  - ForgeTechnologyArsenalMercenary
+  position: -4, -1
+
+- type: technology
+  id: NFAdvancedRiotControl
+  name: nf-research-technology-advanced-riot-control
+  entityIcon: TelescopicShield
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 3000
+  recipeUnlocks:
+  - NFTelescopicShield
+  technologyPrerequisites:
+  - NFBountyHunting
+  position: -5, -1
+
+- type: technology
+  id: NFArsenalStyle
+  name: nf-research-technology-arsenal-style
+  entityIcon: ClothingOuterArmorPunkOrange
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - ClothingEyesPunkInfoShades
+  - ClothingOuterArmorPunkRandomized
+  - ClothingOuterArmorPunkRed
+  - ClothingOuterArmorPunkGreen
+  - ClothingOuterArmorPunkOrange
+  - ClothingOuterArmorElitePunkRandomized
+  - ClothingBeltPunkRandomized
+  - ClothingShoesBootsPunkRandomized
+  - ClothingEyesPunkGoggles
+  - ClothingEyesPunkInfoShades
+  - ClothingMaskPunkHalf
+  - ClothingUniformRandomPunkTanktop
+  - ClothingUniformRandomPunkTanktopShorts
+  - ClothingUniformRandomPunkCroptop
+  - ClothingUniformRandomPunkCroptopShorts
+  - ClothingOuterCoatLettermanRandomized
+  - ClothingOuterCoatBomberRandomized
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAdvancedRiotControl
+  position: -6, -1
+
+- type: technology
+  id: NFHardsuitsArmored
+  name: nf-research-technology-hardsuits-armored
+  entityIcon: ClothingOuterHardsuitMercenary
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - ClothingOuterHardsuitMercenary
+  - ClothingOuterHardsuitPrivateSecurity
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFArsenalStyle
+  position: -7, -1
+
+- type: technology
+  id: NFNightVision
+  name: nf-research-technology-nightvision-goggles
+  entityIcon: NFClothingEyesNightVisionGoggles
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - NFClothingEyesNightVisionGoggles
+  technologyPrerequisites:
+  - NFHardsuitsArmored
+  position: -7, -2
+
+- type: technology
+  id: ForgeHardsuitsArmoredAdvanced
+  name: nf-research-technology-hardsuits-armored-advanced
+  entityIcon: ClothingOuterHardsuitMercenaryElite
+  discipline: NFArsenalMercenary
   tier: 1
   cost: 15000
   recipeUnlocks:
-  - PowerCellNTRecipe
+  - ClothingOuterHardsuitMercenaryElite
   technologyPrerequisites:
-  - NFFission
-  position: 4, 26
+  - NFHardsuitsArmored
+  position: -8, -1
 
-# - type: technology
-#   id: TechnicLogisticProduction
-#   name: Промышленность TechnicLogistic
-#   entityIcon: BannerTL
-#   discipline: NFArsenalMercenary
-#   tier: 1
-#   cost: 10000
-#   recipeUnlocks:
-#   - WeaponPistolSwift
-#   position: 0, 48
+- type: technology
+  id: ForgeHardsuitsArmoredAdvancedAAMr
+  name: nf-research-technology-hardsuits-armored-advanced-aamr
+  entityIcon: ClothingOuterHardsuitAAMr
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 25000
+  recipeUnlocks:
+  - ClothingOuterHardsuitAAMr
+  technologyPrerequisites:
+  - ForgeHardsuitsArmoredAdvanced
+  position: -9, -1
+
+- type: technology
+  id: ForgeHardsuitsArmoredAdvancedAAMr2
+  name: nf-research-technology-hardsuits-armored-advanced-aamr2
+  entityIcon: ClothingOuterHardsuitAAMr
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 31000
+  recipeUnlocks:
+  - ClothingOuterHardsuitAAMrAdv
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ForgeHardsuitsArmoredAdvancedAAMr
+  position: -10, -2
+
+- type: technology
+  id: NFThermalVision
+  name: nf-research-technology-thermal-vision-goggles
+  entityIcon: ClothingEyesThermalVisionGoggles
+  discipline: NFArsenalMercenary
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - ClothingEyesThermalVisionGoggles
+  technologyPrerequisites:
+  - NFNightVision
+  position: -8, -2
+
+- type: technology
+  id: NFExplosiveTechnology
+  name: nf-research-technology-explosive-technology
+  entityIcon: ChemicalPayload
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - SignalTrigger
+  - VoiceTrigger
+  - TimerTrigger
+  - FlashPayload
+  - ChemicalPayload
+  technologyPrerequisites:
+  - NFBulkRifleAmmo
+  position: -8, 0
+
+# region Учёные
+- type: technology
+  id: ForgeTechnologyScience
+  name: forge-research-technology-arsenal-science
+  entityIcon: BannerScience
+  discipline: NFScience
+  tier: 1
+  cost: 1000
+  technologyPrerequisites:
+  - ForgeTechnologyDevelopmentStrategy
+  position: 0, 2
+
+- type: technology
+  id: NFBasicMagnetsTech
+  name: nf-research-technology-basic-magnets-tech
+  entityIcon: ClothingShoesBootsMagSci
+  discipline: NFScience
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - ClothingShoesBootsMagSci
+  technologyPrerequisites:
+  - ForgeTechnologyScience
+  position: 2, 3
+
+- type: technology
+  id: NFMagnetsTech
+  name: nf-research-technology-magnets-tech
+  entityIcon: ClothingShoesBootsMag
+  discipline: NFEngineering
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - ClothingShoesBootsMag
+  technologyPrerequisites:
+  - NFBasicMagnetsTech
+  position: 2, 4
+
+- type: technology
+  id: NFMagnetsTechCombat
+  name: nf-research-technology-magnets-tech-combat
+  entityIcon: ClothingShoesBootsMagMercenary
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ClothingShoesBootsMagSecurity
+  - ClothingShoesBootsMagMercenary
+  technologyPrerequisites:
+  - NFMagnetsTechAdvanced
+  position: 2, 6
+
+- type: technology
+  id: NFMagnetsTechAdvanced
+  name: nf-research-technology-magnets-tech-advanced
+  entityIcon: ClothingShoesBootsMagAdv
+  discipline: NFScience
+  secondaryDiscipline: NFService
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - ClothingShoesBootsMagAdv
+  technologyPrerequisites:
+  - NFMagnetsTech
+  position: 2, 5
+
+- type: technology
+  id: NFQuantumFiberWeaving
+  name: nf-research-technology-quantum-fiber-weaving
+  entityIcon: ClothingShoesBootsSpeed
+  discipline: NFScience
+  secondaryDiscipline: NFService
+  tier: 1
+  cost: 11000
+  recipeUnlocks:
+  - ClothingShoesBootsSpeed
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFMagnetsTechAdvanced
+  - NFGravityResistantTech
+  position: 3, 6
+
+- type: technology
+  id: NFGravityResistantTech
+  name: nf-research-technology-anti-gravitational-fields
+  entityIcon: NFClothingShoesBootsMoon
+  discipline: NFScience
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - NFClothingShoesBootsMoon
+  technologyPrerequisites:
+  - NFMagnetsTech
+  position: 3, 4
 
 - type: technology
   id: ForgeBattleProMaxBoots
@@ -308,11 +1758,482 @@
   entityIcon: ClothingShoesBootsMagMercPromax
   discipline: NFArsenalMercenary
   tier: 1
-  cost: 15000
+  cost: 5000
   recipeUnlocks:
   - FRecClothingShoesBootsMagMercPromax
   - FRecClothingShoesBootsMagBattlePromax
+  prerequisiteLineType: Tree
   technologyPrerequisites:
   - NFMagnetsTechCombat
-  # - ForgeAdvancedProMaxBoots
-  position: 4, 13
+  - NFSuperParts
+  position: 1, 7
+
+- type: technology
+  id: NFBasicXenoArcheology
+  name: nf-research-technology-basic-xenoarcheology
+  entityIcon: MachineArtifactAnalyzer
+  discipline: NFScience
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - NodeScanner
+  - AnalysisComputerCircuitboard
+  - ArtifactAnalyzerMachineCircuitboard
+  - ResearchComputerCircuitboard
+  technologyPrerequisites:
+  - ForgeTechnologyScience
+  position: 0, 3
+
+- type: technology
+  id: NFBasicAnomalousResearch
+  name: nf-research-technology-basic-anomalous-research
+  entityIcon: MachineAnomalyVessel
+  discipline: NFScience
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - AnomalyScanner
+  - AnomalyLocator
+  - AnomalyLocatorWide
+  - APECircuitboard
+  - AnomalyVesselCircuitboard
+  technologyPrerequisites:
+  - NFBasicXenoArcheology
+  position: 0, 4
+
+- type: technology
+  id: NFAdvancedAnomalyResearch
+  name: nf-research-technology-advanced-anomaly-research
+  entityIcon: MachineAnomalyVesselExperimental
+  discipline: NFScience
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - NFWeaponPistolCHIMP
+  - AnomalyVesselExperimentalCircuitboard
+  technologyPrerequisites:
+  - NFBasicAnomalousResearch
+  position: 0, 5
+
+- type: technology
+  id: NFSuperParts
+  name: nf-research-technology-super-parts
+  entityIcon: SuperMatterBinStockPart
+  discipline: NFScience
+  secondaryDiscipline: NFEngineering
+  tier: 1
+  cost: 12000
+  recipeUnlocks:
+  - SuperCapacitorStockPart
+  - SuperMatterBinStockPart
+  - PicoManipulatorStockPart
+  technologyPrerequisites:
+  - NFAdvancedAnomalyResearch
+  - NFAdvancedParts
+  position: 0, 6
+
+- type: technology
+  id: NFBluespaceTimeManipulation
+  name: nf-research-technology-bluespace-time-manipulation
+  entityIcon: DeviceDesynchronizer
+  discipline: NFScience
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - DeviceDesynchronizer
+  prerequisiteLineType: Tree
+  technologyPrerequisites:
+  - NFAdvancedAnomalyResearch
+#  - NFMiniAnomalyGeneratorTechnology
+  position: -1, 6
+
+- type: technology
+  id: BluespaceHarvester
+  name: nf-research-technology-bluespace
+  entityIcon: BluespaceHarvester
+  discipline: NFScience
+  tier: 3
+  cost: 40000
+  recipeUnlocks:
+  - MachineBluespaceHarvesterCircuitboard
+  - MachineBluespaceTransitorCircuitboard
+  technologyPrerequisites:
+  - NFBluespaceTimeManipulation
+  - NFAdvancedAnomalyResearch
+  position: -1, 8
+
+- type: technology
+  id: NFAbnormalArtifactManipulation
+  name: nf-research-technology-abnormal-artifact-manipulation
+  entityIcon: MachineArtifactCrusher
+  discipline: NFScience
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - ArtifactCrusherMachineCircuitboard
+  technologyPrerequisites:
+  - NFBasicXenoArcheology
+  position: -1, 3
+
+- type: technology
+  id: NFAnomalyCoreHarnessing
+  name: nf-research-technology-anomaly-harnessing
+  entityIcon: WeaponGauntletGorilla
+  discipline: NFScience
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - WeaponGauntletGorilla
+  technologyPrerequisites:
+  - NFBasicAnomalousResearch
+  position: -1, 4
+
+#- type: technology
+#  id: NFMiniAnomalyGeneratorTechnology
+#  name: nf-research-technology-anomaly-harnessing-gen
+#  entityIcon: MachineMiniAnomalyGenerator
+#  discipline: NFScience
+#  tier: 1
+#  cost: 11000
+#  recipeUnlocks:
+#  - MachineMiniAnomalyGeneratorCircuitboard
+#  prerequisiteLineType: Diagonal
+#  technologyPrerequisites:
+#  - NFAnomalyCoreHarnessing
+#  position: -2, 5
+
+# region Сервис
+- type: technology
+  id: ForgeTechnologyService
+  name: forge-research-technology-arsenal-service
+  entityIcon: ServiceTechFab
+  discipline: NFService
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - ServiceTechFabCircuitboard
+  technologyPrerequisites:
+  - ForgeTechnologyDevelopmentStrategy
+  prerequisiteLineType: Diagonal
+  position: -3, 3
+
+- type: technology
+  id: NFAdvancedHydroponicsEquipment
+  name: nf-research-technology-advanced-botanical-equipment
+  entityIcon: PlantAnalyzer
+  discipline: NFService
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - PlantAnalyzer
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ForgeTechnologyService
+  position: -4, 4
+
+- type: technology
+  id: NFBasicSpray
+  name: nf-research-technology-basic-spray
+  entityIcon: MegaSprayBottle
+  discipline: NFService
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - MegaSprayBottle
+  technologyPrerequisites:
+  - ForgeTechnologyService
+  position: -5, 3
+
+- type: technology
+  id: NFHydroponics
+  name: nf-research-technology-basic-hydroponics
+  entityIcon: hydroponicsTray
+  discipline: NFService
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - HydroponicsTrayMachineCircuitboard
+  technologyPrerequisites:
+  - NFAdvancedHydroponicsEquipment
+  position: -5, 4
+
+- type: technology
+  id: NFSeedExtractor
+  name: nf-research-technology-seed-extractor
+  entityIcon: SeedExtractor
+  discipline: NFService
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - SeedExtractorMachineCircuitboard
+  technologyPrerequisites:
+  - NFSelectiveDropper
+  position: -7, 6
+
+- type: technology
+  id: NFBiogenerator
+  name: nf-research-technology-biogenerator
+  entityIcon: Biogenerator
+  discipline: NFService
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - BiogeneratorMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFHydroponics
+  position: -6, 4
+
+- type: technology
+  id: NFBiomass
+  name: nf-research-technology-biomass
+  entityIcon: BiomassReclaimer
+  discipline: NFService
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - BiomassReclaimerMachineCircuitboard
+  technologyPrerequisites:
+  - NFBiogenerator
+  position: -7, 4
+
+- type: technology
+  id: NFAdvancedSpray
+  name: nf-research-technology-advanced-spray
+  entityIcon: WeaponSprayNozzle
+  discipline: NFService
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - WeaponSprayNozzle
+  - ClothingBackpackWaterTank
+  technologyPrerequisites:
+  - NFBasicSpray
+  position: -6, 3
+
+- type: technology
+  id: NFPortablePump
+  name: nf-research-technology-portable-cleaning
+  entityIcon: PortablePump
+  discipline: NFService
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - PortablePumpMachineCircuitBoard
+  technologyPrerequisites:
+  - NFAdvancedSpray
+  position: -7, 3
+
+- type: technology
+  id: NFAdvancedCleaning
+  name: nf-research-technology-advanced-cleaning
+  entityIcon: AdvMopItem
+  discipline: NFService
+  tier: 1
+  cost: 3500
+  recipeUnlocks:
+  - AdvMopItem
+  technologyPrerequisites:
+  - NFPortablePump
+  position: -8, 3
+
+- type: technology
+  id: NFJanicart
+  name: nf-research-technology-janicart
+  entityIcon: NFVehicleJanicart
+  discipline: NFService
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - JanicartFlatpack
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAdvancedCleaningCyborg
+  position: -9, 5
+
+- type: technology
+  id: NFSelectiveDropper
+  name: nf-research-technology-food-filtration
+  entityIcon: ServiceSelectiveDropper
+  discipline: NFService
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - ServiceSelectiveDropper
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAdvancedHydroponicsEquipment
+  position: -6, 6
+
+- type: technology
+  id: NFAdvancedHydroponicsStorge
+  name: nf-research-technology-advanced-botanical-storage
+  entityIcon: PlantBagOfHolding
+  discipline: NFService
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - PlantBagOfHolding
+  technologyPrerequisites:
+  - NFSeedExtractor
+  position: -8, 6
+
+- type: technology
+  id: NFAdvancedCleaningCyborg
+  name: nf-research-technology-advanced-cleaning-cyborg
+  entityIcon: BorgModuleAdvancedCleaning
+  discipline: NFService
+  tier: 1
+  cost: 1500
+  recipeUnlocks:
+  - BorgModuleAdvancedCleaning
+  technologyPrerequisites:
+  - NFPortablePump
+  position: -8, 4
+
+- type: technology
+  id: NFFoodService
+  name: nf-research-technology-food-service
+  entityIcon: KitchenMicrowave
+  discipline: NFService
+  tier: 1
+  cost: 5100
+  recipeUnlocks:
+  - MicrowaveMachineCircuitboard
+  - ReagentGrinderMachineCircuitboard
+  - ElectricGrillMachineCircuitboard
+  - BoozeDispenserMachineCircuitboard
+  - SodaDispenserMachineCircuitboard
+  - ImpCoffeeMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAdvancedHydroponicsEquipment
+  position: -5, 6
+
+- type: technology
+  id: NFAdvancedFoodService
+  name: nf-research-technology-advanced-food-service
+  entityIcon: KitchenElectricRange
+  discipline: NFService
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - ElectricRangeMachineCircuitboard
+  - KitchenAssemblerMachineCircuitboard
+  - ReagentGrinderIndustrialMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFFoodService
+  position: -6, 7
+
+- type: technology
+  id: NFDeepFryer
+  name: nf-research-technology-deep-fryer
+  entityIcon: KitchenDeepFryer
+  discipline: NFService
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - DeepFryerMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAdvancedFoodService
+  position: -7, 7
+
+- type: technology
+  id: NFMeatManipulation
+  name: nf-research-technology-meat-manipulation
+  entityIcon: FatExtractor
+  discipline: NFService
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - FatExtractorMachineCircuitboard
+  technologyPrerequisites:
+  - NFDeepFryer
+  position: -8, 7
+
+- type: technology
+  id: NFAudioVisualCommunication
+  name: nf-research-technology-audio-visual-communication
+  entityIcon: SurveillanceCameraRouterConstructed
+  discipline: NFService
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - SurveillanceCameraRouterCircuitboard
+  - SurveillanceCameraMonitorCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ForgeTechnologyService
+  position: -3, 6
+
+- type: technology
+  id: NFHologramCommunication
+  name: nf-research-technology-hologram-communication
+  entityIcon: NFHolopadShip
+  discipline: NFService
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - NFHolopadShipMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAudioVisualCommunication
+  position: -4, 7
+
+- type: technology
+  id: NFWirelessAudioVisualCommunication
+  name: nf-research-technology-wireless-audio-visual-communication
+  entityIcon: TelecomServer
+  discipline: NFService
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - TelecomServerCircuitboard
+  technologyPrerequisites:
+  - NFAudioVisualCommunication
+  position: -3, 7
+
+- type: technology
+  id: NFAdvancedEntertainment
+  name: nf-research-technology-advanced-entertainment
+  entityIcon: ComputerTelevision
+  discipline: NFService
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - ComputerTelevisionCircuitboard
+  - SurveillanceWirelessCameraMovableCircuitboard
+  - SurveillanceWirelessCameraAnchoredCircuitboard
+  technologyPrerequisites:
+  - NFWirelessAudioVisualCommunication
+  position: -3, 8
+
+- type: technology
+  id: NFAdvancedInstruments
+  name: nf-research-technology-advanced-instruments
+  entityIcon: DawInstrument
+  discipline: NFService
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - SynthesizerInstrument
+  - DawInstrumentMachineCircuitboard
+  - JukeboxCircuitBoard
+  technologyPrerequisites:
+  - NFAdvancedEntertainment
+  position: -3, 9
+
+- type: technology
+  id: NFJournalism
+  name: nf-research-technology-journalism
+  entityIcon: ComputerMassMedia
+  discipline: NFService
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - MassMediaCircuitboard
+  technologyPrerequisites:
+  - NFAdvancedEntertainment
+  position: -4, 8

@@ -42,6 +42,13 @@ public sealed partial class ResearchServerComponent : Component
 
     [DataField("researchConsoleUpdateTime"), ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan ResearchConsoleUpdateTime = TimeSpan.FromSeconds(1);
+
+    // Forge-change
+    [AutoNetworkedField]
+    [DataField("insertedDisks")]
+    [ViewVariables(VVAccess.ReadOnly)]
+    public List<EntityUid> InsertedDisks = new();
+    // Forge-change end
 }
 
 /// <summary>

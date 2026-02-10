@@ -6,15 +6,17 @@
     "x": 32,
     "y": 32
   },
-  "states": [
-    {
-      "name": "computer",
-      "directions": 4
-    },
-     {
+  "states":
+    [
+        {
+        "name": "computer",
+        "directions": 4
+        },
+        {
             "name": "Nansenshipyard",
             "directions": 4,
-            "delays": [
+            "delays":
+            [
                 [
                     0.4,
                     0.4,
@@ -41,22 +43,11 @@
                 ]
             ]
         },
-    {
-    "name": "generic_keyboard",
-    "directions": 4
-    },
-    {
-      "name": "telesci_key",
-      "directions": 4
-    },
-    {
-      "name": "computer_engi",
-      "directions": 4
-    },
-     {
-            "name": "shipyard_engi",
+        {
+            "name": "shipyard_renegate",
             "directions": 4,
-            "delays": [
+            "delays":
+            [
                 [
                     0.4,
                     0.4,
@@ -82,7 +73,126 @@
                     0.4
                 ]
             ]
+        },
+        {
+        "name": "generic_keyboard",
+        "directions": 4
+        },
+        {
+        "name": "generic_renegate_keyboard",
+        "directions": 4
+        },
+        {
+        "name": "generic_panel_open",
+        "directions": 4
+        },
+        {
+        "name": "telesci_key",
+        "directions": 4
+        },
+        {
+        "name": "renegate_key",
+        "directions": 4
+        },
+        {
+        "name": "ren_key",
+        "directions": 4
+        },
+        {
+        "name": "computer_engi",
+        "directions": 4
+        },
+        {
+        "name": "computer_renegate",
+        "directions": 4
+        },
+        {
+        "name": "ren_shuttle",
+        "directions": 4
+        },
+        {
+            "name": "shipyard_engi",
+            "directions": 4,
+            "delays":
+            [
+                [
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.4
+                ],
+                [
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.4
+                ],
+                [
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.4
+                ],
+                [
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.4
+                ]
+            ]
+        },
+        {
+            "name": "renegatebounty",
+            "directions": 4,
+            "delays": [
+                [
+                    0.5,
+                    0.5
+                ],
+                [
+                    0.5,
+                    0.5
+                ],
+                [
+                    0.5,
+                    0.5
+                ],
+                [
+                    0.5,
+                    0.5
+                ]
+            ]
+        },
+        {
+            "name": "contraband",
+            "directions": 4,
+            "delays": [
+                [
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45
+                ],
+                [
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45
+                ],
+                [
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45
+                ],
+                [
+                    0.45,
+                    0.45,
+                    0.45,
+                    0.45
+                ]
+            ]
         }
-  ]
+    ]
 }
 

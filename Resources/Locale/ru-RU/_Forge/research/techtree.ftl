@@ -14,7 +14,7 @@ forge-research-technology-shipammo57aphe = Каморные 57-ми миллим
 forge-research-technology-bombmerc = Неуправляемая 50-ти килограммовая бомба
 forge-research-technology-vesperamagazine = Разгон до 26 снарядов свободы
 forge-research-technology-vanykcartridge = Космическая 155мм ракетка
-forge-research-technology-tovek-emphe = Взрывоопасный ЭМИ
+forge-research-technology-tovek-emphe = Взрывоопасное ЭМИ
 forge-research-technology-tovek-aphe = Разрывная 250мм ракета
 
 # NFSD research

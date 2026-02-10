@@ -513,3 +513,61 @@
   - ForgeAmmoPirate90mm
   - ForgePirateTovek
   - ForgePirate150mm
+
+# region Нулевые технологии
+- type: latheRecipePack
+  id: ForgePackZero
+  recipes:
+  - MedicalTechFabCircuitboard
+  - EngineeringTechFabCircuitboard
+  - ServiceTechFabCircuitboard
+  - MercenaryTechFabCircuitboardNF
+  - SalvageTechFabCircuitboardNF
+
+- type: latheRecipe
+  id: MedicalTechFabCircuitboard
+  result: MedicalTechFabCircuitboard
+  completetime: 6
+  materials:
+    Gold: 500
+    Steel: 1000
+
+- type: latheRecipe
+  id: EngineeringTechFabCircuitboard
+  result: EngineeringTechFabCircuitboard
+  completetime: 6
+  materials:
+    Gold: 500
+    Steel: 1000
+
+- type: latheRecipe
+  id: ServiceTechFabCircuitboard
+  result: ServiceTechFabCircuitboard
+  completetime: 6
+  materials:
+    Gold: 500
+    Steel: 1000
+
+- type: latheRecipe
+  id: MercenaryTechFabCircuitboardNF
+  result: MercenaryTechFabCircuitboardNF
+  completetime: 6
+  materials:
+    Gold: 500
+    Steel: 1000
+
+# region Учёные
+#- type: latheRecipePack
+#  id: ForgePackMachineMiniAnomalyGenerator
+#  recipes:
+#  - MachineMiniAnomalyGeneratorCircuitboard
+
+#- type: latheRecipe
+#  id: MachineMiniAnomalyGeneratorCircuitboard
+#  result: MachineMiniAnomalyGeneratorCircuitboard
+#  completetime: 6
+#  materials:
+#    Gold: 5000
+#    Steel: 1000
+#    Plasma: 2000
+

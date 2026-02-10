@@ -1,0 +1,29 @@
+- type: entity
+  parent: [ComputerBankATM]
+  id: ComputerBankATMRenegade
+  suffix: Ренегаты
+  components:
+  - type: Sprite
+    netsync: false
+    noRot: true
+    sprite: Forge/Structures/Machines/ATM/ren_ATM.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: icon
+    - map: ["computerLayerScreen"]
+      state: unshaded
+
+- type: entity
+  parent: [ComputerWallmountBankATM]
+  id: ComputerWallmountBankATMRenegade
+  suffix: Настенный, Ренегаты
+  components:
+  - type: Sprite
+    netsync: false
+    noRot: true
+    sprite: Forge/Structures/Machines/ATM/ren_ATM_wallmount.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: icon
+    - map: ["computerLayerScreen"]
+      state: unshaded

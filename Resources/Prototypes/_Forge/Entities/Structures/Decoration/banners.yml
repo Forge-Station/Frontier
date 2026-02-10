@@ -1,4 +1,15 @@
 - type: entity
+  id: BannerScrapTech
+  parent: BannerBase
+  name: Scrap Tech banner
+  suffix: DT/ST
+  description: A banner displaying some crappy company. He,s covered with dirt and engine fluid.
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Decoration/banner.rsi
+    state: banner_scraptech
+
+- type: entity
   id: BannerTL
   parent: BannerBase
   name: Banner TL
@@ -7,3 +18,24 @@
   - type: Sprite
     sprite: Forge/Structures/Decoration/banner.rsi
     state: banner_tl
+
+- type: entity
+  id: BannerNSC
+  parent: BannerBase
+  name: Banner NSC
+  description: The banner of the trade alliance Nexus Star Consortium smells like expensive paint.
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Decoration/banner.rsi
+    state: banner_nexus
+
+- type: entity
+  id: BannerRen
+  parent: BannerBase
+  name: Banner Renegates
+  description: Banner of the Renegates.
+  suffix: Ренегаты
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Decoration/banner.rsi
+    state: banner_renegate

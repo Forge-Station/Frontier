@@ -262,3 +262,141 @@
   - type: Wires
     boardName: wires-board-name-computer
     layoutId: ComputerAi
+
+#region Renegates
+- type: entity
+  id: ComputerRenegateBounty
+  parent: BaseComputer
+  name: renegate bounty computer
+  description: Avast, get ye pirate bounties here.
+  suffix: Ренегаты
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_renegate
+    - map: ["computerLayerKeyboard"]
+      state: generic_renegate_keyboard
+    - map: ["computerLayerScreen"]
+      state: renegatebounty
+    - map: ["computerLayerKeys"]
+      state: renegate_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: PirateBountyConsole
+    spawnChestSound:
+      path: /Audio/Effects/Lightning/lightningbolt.ogg
+      params:
+        volume: -5
+        variation: 0.2
+  - type: ActivatableUI
+    key: enum.PirateConsoleUiKey.Bounty
+  - type: UserInterface
+    interfaces:
+      enum.PirateConsoleUiKey.Bounty:
+        type: PirateBountyConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: Null # Really shouldn't spawn anything on destruction
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  # - type: GuideHelp # Frontier
+  #   guides: # Frontier
+  #   - Pirate # Frontier: eventually?  maybe?
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Construction
+    graph: ComputerPirateBounty
+    node: repaired
+
+- type: entity
+  name: renegate bounty redemption computer
+  parent: [ComputerPirateBounty, BaseC3Contraband]
+  id: ComputerRenegateBountyRedemption
+  description: Back from a voyage? Redeem yer bounties here, matey.
+  suffix: Ренегаты
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_renegate
+    - map: ["computerLayerKeyboard"]
+      state: generic_renegate_keyboard
+    - map: ["computerLayerScreen"]
+      state: contraband
+    - map: ["computerLayerKeys"]
+      state: renegate_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: PirateBountyRedemptionConsole
+  - type: ActivatableUI
+    key: enum.PirateConsoleUiKey.BountyRedemption
+  - type: UserInterface
+    interfaces:
+      enum.PirateConsoleUiKey.BountyRedemption:
+        type: PirateBountyRedemptionConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: Null
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Construction
+    graph: ComputerPirateBountyRedemption
+    node: repaired
+
+- type: entity
+  parent: ComputerShuttleAntag
+  id: ComputerShuttleRenegate
+  suffix: Ренегаты
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_renegate
+    - map: ["computerLayerKeyboard"]
+      state: generic_renegate_keyboard
+    - map: ["computerLayerScreen"]
+      state: ren_shuttle
+    - map: ["computerLayerKeys"]
+      state: ren_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#c94242"
+  - type: Computer # Forge-change
+    board: FComputerShuttleAntagCircuitboard

@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 262.0.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 11/27/2025 14:06:36
-  entityCount: 202
+  time: 02/05/2026 10:51:35
+  entityCount: 203
 maps: []
 grids:
 - 1573
@@ -212,11 +212,8 @@ entities:
           -1,1:
             0: 207
             1: 61696
-          0,2:
-            1: 1
           -1,2:
             0: 12
-            1: 2
           -2,0:
             1: 136
           -2,1:
@@ -930,6 +927,23 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 1674
+- proto: ForgeAmmoDrum20mmBase
+  entities:
+  - uid: 34
+    components:
+    - type: Transform
+      pos: -2.6417084,4.7434607
+      parent: 1573
+  - uid: 35
+    components:
+    - type: Transform
+      pos: -2.3012066,4.6180124
+      parent: 1573
+  - uid: 36
+    components:
+    - type: Transform
+      pos: -2.552103,4.474643
+      parent: 1573
 - proto: FuelPlasma
   entities:
   - uid: 1694
@@ -1044,23 +1058,6 @@ entities:
     components:
     - type: Transform
       pos: -2.5,1.5
-      parent: 1573
-- proto: ForgeAmmoDrum20mmBase
-  entities:
-  - uid: 34
-    components:
-    - type: Transform
-      pos: -2.6417084,4.7434607
-      parent: 1573
-  - uid: 35
-    components:
-    - type: Transform
-      pos: -2.3012066,4.6180124
-      parent: 1573
-  - uid: 36
-    components:
-    - type: Transform
-      pos: -2.552103,4.474643
       parent: 1573
 - proto: NFHolopadShip
   entities:
@@ -1534,6 +1531,13 @@ entities:
     components:
     - type: Transform
       pos: -4.5,5.5
+      parent: 1573
+- proto: WarpPoint
+  entities:
+  - uid: 37
+    components:
+    - type: Transform
+      pos: -0.5,3.5
       parent: 1573
 - proto: WeaponTurretL85Autocannon
   entities:

@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseSign
-  id: BaseTLFlag
+  id: BaseFlagForge
   abstract: true
   components:
   - type: Sprite
@@ -30,7 +30,33 @@
         offset: 0
 
 - type: entity
-  parent: BaseTLFlag
+  parent: BaseFlagForge
   id: TLFlag
   name: флаг TechnicLogistic
   description: Выглядит довольно странно... Судя по всему в конструкции присутствует тритий.
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Wallmounts/flags.rsi
+    state: techniclogistic_flag
+
+- type: entity
+  parent: BaseFlagForge
+  id: NSCFlag
+  name: flag NSC
+  description: The flag of the trade alliance Nexus Star Consortium smells like expensive paint.
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Wallmounts/flags.rsi
+    state: nexus_flag
+
+
+- type: entity
+  parent: BaseFlagForge
+  id: RenFlag
+  name: флаг Ренегатов
+  description: Свобода звёздам!
+  suffix: Ренегаты
+  components:
+   - type: Sprite
+     sprite: Forge/Structures/Wallmounts/flags.rsi
+     state: flag_renegate

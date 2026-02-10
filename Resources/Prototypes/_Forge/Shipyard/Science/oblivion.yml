@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: https://github.com/LeviyNosok
+# Discord: no_idea_for_name, autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+
+# Notes:
+#
+- type: vessel
+  id: Oblivion
+  parent: BaseVessel
+  name: NSC Обливион
+  description: Крупногабаритный научный шаттл компании Nexus Star Consortium. Рекомендуемый экипаж 5 человек.
+  price: 211900
+  category: Large
+  group: Shipyard
+  shuttlePath: /Maps/_Forge/Shuttles/Science/oblivion.yml
+  guidebookPage: Null
+  class:
+  - Science
+
+- type: gameMap
+  id: Oblivion
+  mapName: 'NSC Обливион'
+  mapPath: /Maps/_Forge/Shuttles/Science/oblivion.yml
+  minPlayers: 0
+  stations:
+    Oblivion:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Обливион {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]
