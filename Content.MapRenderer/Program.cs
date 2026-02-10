@@ -50,11 +50,15 @@ namespace Content.MapRenderer
             var testContext = new ExternalTestContext("Content.MapRenderer", Console.Out);
 
             PoolManager.Startup();
+
+            var maps = new List<RenderMap>();
+
             if (arguments.Maps.Count == 0)
             {
                 Console.WriteLine("Didn't specify any maps to paint! Loading the map list...");
 
                 await using var pair = await PoolManager.GetServerClient(testContext: testContext);
+                var protoManager = pair.Server.ResolveDependency<IPrototypeManager>();
                 var mapIds = pair.Server
                     .ResolveDependency<IPrototypeManager>()
                     .EnumeratePrototypes<GameMapPrototype>()
@@ -113,18 +117,29 @@ namespace Content.MapRenderer
                     selectedMapPrototypes.Add(mapIds[id]);
                 }
 
-                arguments.Maps.AddRange(selectedMapPrototypes);
-
                 if (selectedMapPrototypes.Count == 0)
                 {
                     Logger.Log(NoMapsChosenMessage);
                     return;
                 }
 
+                foreach (var protoId in selectedMapPrototypes)
+                {
+                    if (protoManager.TryIndex<GameMapPrototype>(protoId, out var proto))
+                    {
+                        if (proto.IsGrid)
+                        {
+                            maps.Add(new RenderMapGrid { FileName = proto.MapPath.ToString() });
+                        }
+                        else
+                        {
+                            maps.Add(new RenderMapPrototype { Prototype = protoId });
+                        }
+                    }
+                }
+
                 Logger.Log($"Selected maps: {string.Join(", ", selectedMapPrototypes)}");
             }
-
-            var maps = new List<RenderMap>();
 
             if (arguments.ArgumentsAreFileNames)
             {
@@ -199,9 +214,27 @@ namespace Content.MapRenderer
             }
             else
             {
+                await using var pair = await PoolManager.GetServerClient();
+                var protoManager = pair.Server.ResolveDependency<IPrototypeManager>();
+
                 foreach (var map in arguments.Maps)
                 {
-                    maps.Add(new RenderMapPrototype { Prototype = map });
+                    if (protoManager.TryIndex<GameMapPrototype>(map, out var proto))
+                    {
+                        if (proto.IsGrid)
+                        {
+                            maps.Add(new RenderMapGrid { FileName = proto.MapPath.ToString() });
+                            Logger.Log($"Found grid prototype: {proto.MapName}");
+                        }
+                        else
+                        {
+                            maps.Add(new RenderMapPrototype { Prototype = map });
+                        }
+                    }
+                    else
+                    {
+                        Logger.Log($"Failed to find prototype: {map}");
+                    }
                 }
             }
 

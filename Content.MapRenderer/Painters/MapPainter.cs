@@ -20,6 +20,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Maths;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
@@ -80,26 +81,22 @@ namespace Content.MapRenderer.Painters
             }
             else if (_map is RenderMapGrid gridFile)
             {
-                using var stream = File.OpenRead(gridFile.FileName);
-
                 await _pair.Server.WaitPost(() =>
                 {
+                    var mapSystem = _pair.Server.System<SharedMapSystem>();
                     var mapManager = _pair.Server.ResolveDependency<IMapManager>();
-                    var sEntityManager = _pair.Server.ResolveDependency<IServerEntityManager>();
-                    var mapLoaderSystem = _pair.Server.System<MapLoaderSystem>();
+                    var mapLoader = _pair.Server.System<MapLoaderSystem>();
 
-                    var loadOptions = new MapLoadOptions
-                    {
-                        DeserializationOptions =
-                        {
-                            LogOrphanedGrids = false,
-                        },
-                    };
+                    var mapId = new MapId(1);
+                    mapSystem.CreateMap(mapId, false);
 
-                    if (!mapLoaderSystem.TryLoadGeneric(stream, gridFile.FileName, out var loadResult, loadOptions))
-                        throw new IOException($"Grid file {gridFile.FileName} could not be read");
+                    var path = new ResPath(gridFile.FileName);
+                    var opts = new DeserializationOptions { StoreYamlUids = true };
 
-                    _grids = loadResult.Grids.ToArray();
+                    if (!mapLoader.TryLoadGrid(mapId, path, out var loadedGrid, opts))
+                        throw new IOException($"Grid file {gridFile.FileName} could not be loaded");
+
+                    _grids = mapManager.GetAllGrids(mapId).ToArray();
                 });
             }
         }
