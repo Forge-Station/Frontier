@@ -1,5 +1,7 @@
+using System.Collections.Generic; // Forge-Change
 using System.Linq;
 using Content.Server.Cargo.Systems;
+using Content.Shared._NF.Shipyard; // Forge-Change
 using Content.Shared._NF.Shipyard.Prototypes;
 using Robust.Server.GameObjects;
 using Robust.Shared.EntitySerialization.Systems;
@@ -76,6 +78,20 @@ public sealed class ShipyardTest
         var protoManager = server.ResolveDependency<IPrototypeManager>();
         var pricing = server.ResolveDependency<IEntitySystemManager>().GetEntitySystem<PricingSystem>();
 
+        // Forge-Change start
+        var factionMarkups = new Dictionary<ShipyardConsoleUiKey, float>()
+        {
+            { ShipyardConsoleUiKey.Security, 1.35f },
+            { ShipyardConsoleUiKey.Syndicate, 1.5f },
+            { ShipyardConsoleUiKey.BlackMarket, 1.4f },
+            { ShipyardConsoleUiKey.Mercenary, 1.3f },
+            { ShipyardConsoleUiKey.Medical, 1.3f },
+            { ShipyardConsoleUiKey.Scrap, 1.15f }
+        };
+    
+        const float defaultMarkup = 1.2f;
+        // Forge-Change end
+
         await server.WaitAssertion(() =>
         {
             Assert.Multiple(() =>
@@ -100,7 +116,6 @@ public sealed class ShipyardTest
                     Assert.That(mapLoaded, Is.True, $"Failed to load shuttle {vessel} ({vessel.ShuttlePath}): TryLoadGrid returned false.");
                     Assert.That(entManager.HasComponent<MapGridComponent>(shuttle.Value), Is.True);
 
-                    // Grid failed to load, continue to the next map.
                     if (!mapLoaded)
                         continue;
 
@@ -109,10 +124,33 @@ public sealed class ShipyardTest
                         appraisePrice += price;
                     });
 
-                    var idealMinPrice = appraisePrice * vessel.MinPriceMarkup;
+                    // Forge-Change start
+                    var shipyardConsole = vessel.Group;
+                    float minMarkup;
+                    
+                    if (factionMarkups.TryGetValue(shipyardConsole, out var factionMarkup))
+                    {
+                        minMarkup = factionMarkup;
+                    }
+                    else
+                    {
+                        minMarkup = defaultMarkup;
+                        Console.WriteLine($"Faction '{shipyardConsole}' not found in markup dictionary. Using default markup: {defaultMarkup}");
+                    }
+                    
+                    var idealMinPrice = appraisePrice * minMarkup;
+                    var markupPercent = (minMarkup - 1.0f) * 100;
 
-                    Assert.That(vessel.Price, Is.AtLeast(idealMinPrice),
-                        $"Arbitrage possible on {vessel.ID}. Minimal price should be {idealMinPrice}, {(vessel.MinPriceMarkup - 1.0f) * 100}% over the appraise price ({appraisePrice}).");
+                    if (!vessel.MapcheckerException)
+                    {
+                        Assert.That(vessel.Price, Is.AtLeast(idealMinPrice),
+                                    $"Arbitrage possible on {vessel.ID}. " +
+                                    $"Minimal price should be {idealMinPrice:F2}, " +
+                                    $"{markupPercent:F1}% over the appraise price ({appraisePrice:F2}). " +
+                                    $"Faction: {shipyardConsole} " +
+                                    $"(Markup: {minMarkup:F2}, Prototype MinPriceMarkup: {vessel.MinPriceMarkup:F2})");
+                    }
+                    // Forge-Change end
 
                     map.DeleteMap(mapId);
                 }

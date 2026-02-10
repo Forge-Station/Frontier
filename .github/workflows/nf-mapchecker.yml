@@ -7,10 +7,11 @@ on:
     # Entity pathspecs - If any of these change (i.e. suffix changes etc), this check should run.
     - "Resources/Prototypes/Entities/**/*.yml"
     - "Resources/Prototypes/_NF/Entities/**/*.yml"
+    - "Resources/Prototypes/_Forge/Entities/**/*.yml"
     - "Resources/Prototypes/Nyanotrasen/Entities/**/*.yml"
     - "Resources/Prototypes/_DV/Entities/**/*.yml"
     # Map pathspecs - If any maps are changed, this should run.
-    # - "Resources/Maps/**/*.yml"
+    - "Resources/Maps/**/*.yml"
     # Also the mapchecker itself
     - ".github/mapchecker/**"
 
@@ -34,4 +35,6 @@ jobs:
         pip install -r .github/mapchecker/requirements.txt
     - name: Run mapchecker
       run: |
-        python3 .github/mapchecker/mapchecker.py
+        python3 .github/mapchecker/mapchecker.py --map_path "Resources/Prototypes/_NF/Maps/Outpost" "Resources/Prototypes/_NF/PointsOfInterest" "Resources/Prototypes/_NF/Shipyard"
+      
+        # python3 .github/mapchecker/mapchecker.py --map_path "Resources/Prototypes/_NF/Maps/Outpost" "Resources/Prototypes/_NF/PointsOfInterest" "Resources/Prototypes/_NF/Shipyard" "Resources/Prototypes/_Forge/Maps/Outpost" "Resources/Prototypes/_Forge/PointsOfInterest" "Resources/Prototypes/_Forge/Shipyard"
