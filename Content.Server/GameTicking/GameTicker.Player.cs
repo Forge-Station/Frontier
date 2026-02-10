@@ -56,7 +56,7 @@ namespace Content.Server.GameTicking
 
                     // Make the player actually join the game.
                     // timer time must be > tick length
-                    Timer.Spawn(0, () => _playerManager.JoinGame(args.Session));
+                    // Timer.Spawn(0, () => _playerManager.JoinGame(args.Session)); // Forge-Change ломает авторизацию, держать в комменте
 
                     var record = await _db.GetPlayerRecordByUserId(args.Session.UserId);
                     var firstConnection = record != null &&

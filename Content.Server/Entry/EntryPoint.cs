@@ -1,4 +1,5 @@
-using Content.Server._Forge.Discord; // Forge-Change
+using Content.Server._Forge.Discord;
+using Content.Server._Forge.JoinQueue; // Forge-Change
 using Content.Server._Forge.Sponsor;
 using Content.Server._Forge.TTS; // Forge-Change
 using Content.Server._NF.Auth;
@@ -17,6 +18,7 @@ using Content.Server.GhostKick;
 using Content.Server.GuideGenerator;
 using Content.Server.Info;
 using Content.Server.IoC;
+// Forge-Change
 using Content.Server.Maps;
 using Content.Server.NodeContainer.NodeGroups;
 using Content.Server.Objectives;
@@ -116,6 +118,7 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<ServerInfoManager>().Initialize();
                 IoCManager.Resolve<ServerApi>().Initialize();
                 IoCManager.Resolve<MiniAuthManager>();
+                IoCManager.Resolve<JoinQueueManager>().Initialize(); // Forge-Change
                 IoCManager.Resolve<DiscordAuthManager>().Initialize(); // Forge-Change
                 IoCManager.Resolve<TTSManager>().Initialize(); // Corvax-TTS
 
