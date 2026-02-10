@@ -28,3 +28,34 @@
   - type: ResearchPointSource
     pointspersecond: 1
     active: true
+
+- type: entity
+  id: ForgeRnDRenegateServer
+  parent: ResearchAndDevelopmentServer
+  name: R&D Renegate server
+  description: Contains the extent of somebody's hard-earned knowledge. Handle with care.
+  suffix: Ренегаты
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+     - NFEngineering
+     - NFMedical
+     - NFArsenalMercenary
+     - NFArsenalNfsd
+     - NFSalvage
+     - NFScience
+     - NFService
+  - type: Sprite
+    sprite: Forge/Structures/Machines/server.rsi
+    snapCardinals: true
+    layers:
+      - state: ren_server-off
+      - state: ren_server-on
+        visible: false
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
+      - state: variant-ren
+      - state: server_o
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: ResearchPointSource
+    pointspersecond: 1
+    active: true

@@ -110,6 +110,18 @@
     sprite: Forge/Clothing/Uniforms/Jumpsuits/engineersynjumpsuit.rsi
 
 - type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitST
+  name: Scrap Tech jumpsuit
+  suffix: DT/ST
+  description: Old and dirty orange salvage jumpsuit with belts and harness system, belong to some crappy company named Scrap Tech.
+  components:
+    - type: Sprite
+      sprite: Forge/Clothing/Uniforms/Jumpsuits/scraptech.rsi
+    - type: Clothing
+      sprite: Forge/Clothing/Uniforms/Jumpsuits/scraptech.rsi
+
+- type: entity
   parent: [ ClothingUniformBase, BaseCentcommContraband ]
   id: ClothingUniformJumpsuitFormalSpecOper
   name: special operations officer formal uniform

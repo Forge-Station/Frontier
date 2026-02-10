@@ -5,7 +5,7 @@
   description: ТехФаб созданный Синдикатом для ряда диверсионных групп сектора Фронтир.
   components:
   - type: Sprite
-    sprite: Forge/Structures/Machines/techfab.rsi
+    sprite: Forge/Structures/Machines/syn_techfab.rsi
     layers:
     - state: icon
       map: ["enum.LatheVisualLayers.IsRunning"]
@@ -112,3 +112,48 @@
       machine_board: !type:Container
       machine_parts: !type:Container
       blueprint: !type:Container
+
+- type: entity
+  parent: UniformPrinter
+  id: UniformPrinterRenegade
+  name: uniform printer
+  description: Prints new or replacement uniforms.
+  suffix: Ренегаты
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Machines/ren_uniform_printer.rsi
+
+- type: entity
+  id: RenegateTechFab
+  parent: [ SyndicateTechFab ]
+  name: ТехФаб Ренегатов
+  description: ТехФаб созданный Ренегатами для ряда диверсионных групп сектора Фронтир.
+  suffix: Ренегаты
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Machines/ren_techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: renegate
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: SyndicateTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticPacks:
+    - SyndicateTechfabStatic
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - SSpaceCash
+        - Sheet
+        - RawMaterial
+        - Ingot

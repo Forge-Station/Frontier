@@ -1,0 +1,15 @@
+- type: entity
+  parent: Airlock
+  id: AirlockRenegade
+  suffix: Ренегаты
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Doors/Standard/ren_door.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockRenegadeCom
+  suffix: Ренегаты, Командование
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Doors/Standard/ren_command.rsi

@@ -277,7 +277,7 @@
   id: UplinkPiratSpeedLoaderMagnumAP
   name:  Спидлоадер Бронебойных Патрон
   description: Спидлоадер с шестью бронебойными патронами 45 калибра если необходимо пробить что по крепче шкур корпоративных крыс.
-  productEntity: NFSpeedLoaderPistol45
+  productEntity: NFSpeedLoaderPistol45AP
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon}
   cost:
     Doubloon: 9
@@ -315,10 +315,10 @@
         - NFPirate
 
 - type: listing #CorvaxFrontier
-  id: UplinkPiratNFAmmunitionBoxPistol35
+  id: UplinkPiratNFAmmunitionBoxRifle25
   name:  Коробка чернил
   description: Коробка с чернилами для дозаправки "Пишущей машинки". Ярррр!
-  productEntity: NFAmmunitionBoxPistol35
+  productEntity: NFAmmunitionBoxRifle25
   cost:
     Doubloon: 2
   categories:

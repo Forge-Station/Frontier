@@ -95,3 +95,28 @@
     interfaces:
       enum.ShipyardConsoleUiKey.Engineering:
        type: ShipyardConsoleBoundUserInterface
+
+- type: entity
+  id: ComputerShipyardRenegate
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
+  name: renegate shipyard console
+  description: Shipyard console with renegates shuttles.
+  suffix: Ренегаты
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_renegate
+    - map: ["computerLayerKeyboard"]
+      state: generic_renegate_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_renegate
+    - map: ["computerLayerKeys"]
+      state: renegate_key
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Renegates
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Renegates:
+       type: ShipyardConsoleBoundUserInterface

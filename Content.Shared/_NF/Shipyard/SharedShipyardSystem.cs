@@ -26,7 +26,8 @@ public enum ShipyardConsoleUiKey : byte
     Salvage, // Corvax-Frontier
     Debug, // Corvax-Frontier
     Engineering, // Corvax-Frontier
-    Modules // Corvax-Frontier
+    Modules, // Corvax-Frontier
+    Renegates // Corvax-Frontier
 }
 
 public abstract class SharedShipyardSystem : EntitySystem

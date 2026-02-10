@@ -48,3 +48,15 @@
   - type: Sprite
     sprite: Forge/Structures/Wallmounts/flags.rsi
     state: nexus_flag
+
+
+- type: entity
+  parent: BaseTLFlag
+  id: RenFlag
+  name: флаг Ренегатов
+  description: Свобода звёздам!
+  suffix: Ренегаты
+  components:
+   - type: Sprite
+     sprite: Forge/Structures/Wallmounts/flags.rsi
+     state: flag_renegate
