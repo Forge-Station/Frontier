@@ -1,0 +1,101 @@
+<Document>
+    # BOOTLEGGER-SCRAP CARGO SHUTTLE
+    <Box>
+      <GuideEntityEmbed Entity="RubberStampTrader"/>
+      <GuideEntityEmbed Entity="Thruster"/>
+      <GuideEntityEmbed Entity="WoodenKegWine"/>
+    </Box>
+    <Box>
+    <GuideEntityEmbed Entity="ShuttleMapBootlegger" Caption=""/>
+    </Box>
+  
+    [color=#a4885c]Ship Size:[/color] Small
+
+    [color=#a4885c]Recommended Crew:[/color] 1-3
+
+    [color=#a4885c]Power Gen Type:[/color] Plasma
+
+    [color=#a4885c]Expeditions:[/color] None
+
+    [color=#a4885c]IFF Console:[/color] None
+
+    "He past through many repairs and additions, but he,s finally here! Revived by Scrap Tech, this old trade-cargo shuttle now can be purchased by you"
+
+    # PREFLIGHT CHECKLIST
+
+    ## 1. Power supply
+
+    ## 1.1. Battery units
+    <Box>
+        <GuideEntityEmbed Entity="SubstationWallBasic"/>
+        <GuideEntityEmbed Entity="APCBasic"/>
+    </Box>
+
+    - Check the substation unit.
+    - Check that the APC unit's Main Breaker is toggled on.
+    - Check the APC unit's current Load* (W).
+
+    ## 1.2. P.A.C.M.A.N. generator unit
+    <Box>
+        <GuideEntityEmbed Entity="PortableGeneratorPacmanShuttle"/>
+        <GuideEntityEmbed Entity="SheetPlasma10"/>
+    </Box>
+	-Check if P.A.C.M.A.N fueled and on
+
+  ## 2. Atmospherics
+	Atmosphere on shuttle is fully functional and dont have issues
+	
+  ## 2.1. Distribution Loop
+  <Box>
+        <GuideEntityEmbed Entity="AirCanister"/>
+        <GuideEntityEmbed Entity="GasPort"/>
+		<GuideEntityEmbed Entity="GasPressurePumpOn"/>
+		<GuideEntityEmbed Entity="GasVentPump"/>
+    </Box>
+	-Check if canister is anchored
+	-Check if pump are on
+
+    ## 2.2. Waste Loop
+    <Box>
+        <GuideEntityEmbed Entity="GasVentScrubber"/>
+        <GuideEntityEmbed Entity="GasVolumePumpOn"/>
+		<GuideEntityEmbed Entity="GasPassiveVent"/>
+    </Box>
+	-Check if pump are on
+
+    ## 3. Main Machine check
+    <Box>
+        <GuideEntityEmbed Entity="SmallGyroscope"/> X1
+        <GuideEntityEmbed Entity="GravityGeneratorMini"/> X1
+        <GuideEntityEmbed Entity="SmallThruster"/> X3
+		<GuideEntityEmbed Entity="Thruster"/> X10
+    </Box>
+	Bootlegger-one of the most fastest shuttle of Frontier, be careful with his speed, cause he slow in spinning around
+	
+	## 4. Other Checks
+	<Box>
+        <GuideEntityEmbed Entity="LockerWallEVAColorCargoFilled"/>
+        <GuideEntityEmbed Entity="ComputerWithdrawBankATM"/>
+        <GuideEntityEmbed Entity="VendingMachineTankDispenserEVA"/>
+		<GuideEntityEmbed Entity="BoxPaperCaptainsThoughts"/>
+    </Box>
+	Bootlegger store many things for trading and office work-papers, pens, stamps, and other office stuff. Shuttle also contain his own trade bay with withdraw ATM, so you can sell what you salvage for shift.
+	
+	[color=#FF4500] ## 5. Stored alcohol [/color]
+	 <GuideEntityEmbed Entity="CrateServiceBoozeDispenser"/>
+	 <GuideEntityEmbed Entity="VendingMachineBoozeFlatpack"/>
+	 <GuideEntityEmbed Entity="DrinkVodkaBottleFull"/>
+	 <GuideEntityEmbed Entity="DrinkCoffeeLiqueurBottleFull"/>
+	 <GuideEntityEmbed Entity="DrinkWineBottleFull"/>
+	 <GuideEntityEmbed Entity="DrinkVermouthBottleFull"/>
+	 <GuideEntityEmbed Entity="DrinkBeerBottleFull"/>
+	 <GuideEntityEmbed Entity="DrinkPremiumWhiskeyBottleFull"/>
+	 <GuideEntityEmbed Entity="DrinkCognacBottleFull"/>
+	 <GuideEntityEmbed Entity="DrinkRootBeerCan"/>
+	 <GuideEntityEmbed Entity="WoodenKegRootBeer"/>
+	 <GuideEntityEmbed Entity="WoodenKegWine"/>
+	 <GuideEntityEmbed Entity="DrinkPoisonWinebottleFull"/>
+	-Check if you have a boots with cow hoof soles
+	-Check if you have tuxedo suit, fedora, and typewriter
+
+</Document>

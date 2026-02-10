@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: https://github.com/MrIzodem
+# Discord: letstrythisone.
+# License: CC-BY-NC-ND-4.0
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+- type: vessel
+  id: Trolley
+  parent: BaseVessel
+  name: NT Дрезина
+  description: Маленький шаттл специалиста ДСБФ. Содержит на борту все необходимое для старта инженерных и утилизационных работ. Рекомендуемый экипаж-1 специалист.
+  price: 58000 # (26 803)
+  category: Small
+  group: Security
+  access: Engineering
+  shuttlePath: /Maps/_Forge/Shuttles/Nfsd/trolley.yml
+  class:
+  - Salvage
+  - Engineering
+  engine:
+  - Plasma
+  addComponents:
+  - type: ShuttleFaction
+    faction: NFSD
+
+- type: gameMap
+  id: Trolley
+  mapName: 'NT Дрезина'
+  mapPath: /Maps/_Forge/Shuttles/Nfsd/trolley.yml
+  minPlayers: 0
+  stations:
+    Trolley:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Дрезина {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

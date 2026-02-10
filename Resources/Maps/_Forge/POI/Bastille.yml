@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 01/17/2026 09:11:37
-  entityCount: 8650
+  time: 02/02/2026 19:54:31
+  entityCount: 8653
 maps: []
 grids:
 - 1
@@ -9557,7 +9557,7 @@ entities:
       pos: 13.5,-29.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -19192.207
+      secondsUntilStateChange: -19235.475
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -31618,6 +31618,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -7.5,-22.5
       parent: 1
+  - uid: 8652
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 3.5,14.5
+      parent: 1
 - proto: DisposalJunction
   entities:
   - uid: 4030
@@ -31625,6 +31631,11 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -14.5,8.5
+      parent: 1
+  - uid: 4099
+    components:
+    - type: Transform
+      pos: 5.5,14.5
       parent: 1
 - proto: DisposalJunctionFlipped
   entities:
@@ -31997,11 +32008,6 @@ entities:
     - type: Transform
       pos: -7.5,8.5
       parent: 1
-  - uid: 4099
-    components:
-    - type: Transform
-      pos: 5.5,14.5
-      parent: 1
   - uid: 4100
     components:
     - type: Transform
@@ -32109,6 +32115,18 @@ entities:
     - type: Transform
       pos: -0.5,-1.5
       parent: 1
+  - uid: 8651
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 3.5,13.5
+      parent: 1
+  - uid: 8653
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 4.5,14.5
+      parent: 1
 - proto: DisposalTrunk
   entities:
   - uid: 4121
@@ -32156,6 +32174,12 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,-25.5
+      parent: 1
+  - uid: 5558
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 3.5,12.5
       parent: 1
 - proto: DisposalUnit
   entities:
@@ -63663,7 +63687,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -56039.125
+      secondsUntilStateChange: -56082.395
       state: Opening
     - type: Airlock
       autoClose: False

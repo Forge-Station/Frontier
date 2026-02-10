@@ -1,0 +1,31 @@
+- type: entity
+  parent:
+  - MobSiliconBase
+  id: MobSiliconBeery
+  name: Beery
+  categories: [ HideSpawnMenu ]
+  description: Brass-plated smiley waiter bot. Kind of walkie-talkie, but deaf
+  components:
+  - type: Sprite
+    sprite: Forge/Mobs/Silicon/Beery.rsi
+    layers:
+    - state: beery
+    - state: beery-unshaded
+      shader: unshaded
+  - type: Anchorable
+  - type: InteractionPopup
+    interactSuccessString: petting-success-beery
+    interactFailureString: petting-failure-beery
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: Vocalizer
+    minVocalizeInterval: 5
+    maxVocalizeInterval: 25
+  - type: DatasetVocalizer
+    dataset: berrysiliconchatter
+  - type: NoSlip
+  - type: Insulated
+  - type: PointLight
+    radius: 3
+    energy: 3
+    color: "#FFFF00"

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Minertasks and Minerrecieve, Nansen shipyard by MrIzo; all other belong to Corvax Frontier",
+  "copyright": "Minertasks and Minerrecieve, Engineer shipyard, armory console and armory computer, also a Nansen shipyard by MrIzo; all other belong to Corvax Frontier",
   "size": {
     "x": 32,
     "y": 32
@@ -73,6 +73,64 @@
                     0.4
                 ]
             ]
+        },
+        {
+            "name": "armoryconsole",
+            "directions": 4,
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+       {
+     "name": "generic_keyboard",
+     "directions": 4
+       },
+       {
+     "name": "armory_keyboard",
+     "directions": 4
+       },
+       {
+       "name": "telesci_key",
+       "directions": 4
+       },
+       {
+       "name": "generic_keys",
+       "directions": 4
+       },
+       {
+       "name": "armory_keys",
+       "directions": 4
+       },
+       {
+       "name": "computer_engi",
+       "directions": 4
+        },
+        {
+        "name": "computer_armory",
+        "directions": 4
         },
         {
         "name": "generic_keyboard",

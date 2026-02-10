@@ -1,13 +1,12 @@
 - type: entity
   id: InflatableWall
   name: inflatable barricade
-  description: An inflated membrane. Activate to deflate. Do not puncture.
-  categories: [ HideSpawnMenu ] # Frontier
+  description: An inflated membrane. Activate to deflate. Do not puncture
   components:
   - type: Clickable
   - type: InteractionOutline
   - type: Sprite
-    sprite: Objects/Misc/inflatable_wall.rsi
+    sprite: Forge/Objects/Misc/inflatable_wall.rsi
     state: inflatable_wall
   - type: Physics
     bodyType: Static
@@ -45,12 +44,11 @@
   name: inflatable door
   parent: BaseMaterialDoor
   description: An inflated membrane. Activate to deflate. Now with a door. Do not puncture.
-  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Clickable
   - type: InteractionOutline
   - type: Sprite
-    sprite: Objects/Misc/inflatable_door.rsi
+    sprite: Forge/Objects/Misc/inflatable_door.rsi
     state: closed
   - type: Physics
     bodyType: Static
