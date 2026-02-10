@@ -1,0 +1,22 @@
+name: Optimize Publish Settings
+on:
+  workflow_dispatch:
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4.2.2
+    
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: pip install requests
+    
+    - name: Run optimization script
+      run: python3 Tools/_Forge/Publish/calculate_publish_settings.py --files-dir release --server-url "https://cdn.corvaxforge.ru/"
