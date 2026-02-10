@@ -87,6 +87,10 @@
     containers:
       machine_board: !type:Container
       machine_parts: !type:Container
+      disk_slot: !type:ContainerSlot
+        showEnts: false
+        occludes: true
+        ent: null
   - type: ItemSlots # Forge-Change-Comp
     slots:
       disk_slot:
