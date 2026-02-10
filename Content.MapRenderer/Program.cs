@@ -134,7 +134,14 @@ namespace Content.MapRenderer
                 {
                     if (File.Exists(map))
                     {
-                        maps.Add(new RenderMapFile { FileName = map });
+                        if (IsGridFile(map))
+                        {
+                            maps.Add(new RenderMapGrid { FileName = map });
+                        }
+                        else
+                        {
+                            maps.Add(new RenderMapFile { FileName = map });
+                        }
                     }
                     else
                     {
@@ -270,6 +277,38 @@ namespace Content.MapRenderer
             Logger.Log($@"::set-output name=map_names::{mapNamesString}");
             Logger.Log($"Processed {arguments.Maps.Count} maps.");
             Console.WriteLine($"It's now safe to manually exit the process (automatic exit in a few moments...)");
+        }
+
+        private static bool IsGridFile(string filePath)
+        {
+            try
+            {
+                using (var reader = new StreamReader(filePath))
+                {
+                    string? line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        if (line.Contains("meta:"))
+                        {
+                            while ((line = reader.ReadLine()) != null)
+                            {
+                                if (line.Contains("category:"))
+                                    return line.Contains("Grid");
+
+                                if (!line.StartsWith(" ") && !string.IsNullOrWhiteSpace(line))
+                                    break;
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log($"Error checking if file is grid: {ex.Message}");
+            }
+
+            return false;
         }
     }
 }

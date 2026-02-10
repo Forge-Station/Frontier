@@ -78,6 +78,30 @@ namespace Content.MapRenderer.Painters
                     _grids = loadResult.Grids.ToArray();
                 });
             }
+            else if (_map is RenderMapGrid gridFile)
+            {
+                using var stream = File.OpenRead(gridFile.FileName);
+
+                await _pair.Server.WaitPost(() =>
+                {
+                    var mapManager = _pair.Server.ResolveDependency<IMapManager>();
+                    var sEntityManager = _pair.Server.ResolveDependency<IServerEntityManager>();
+                    var mapLoaderSystem = _pair.Server.System<MapLoaderSystem>();
+
+                    var loadOptions = new MapLoadOptions
+                    {
+                        DeserializationOptions =
+                        {
+                            LogOrphanedGrids = false,
+                        },
+                    };
+
+                    if (!mapLoaderSystem.TryLoadGeneric(stream, gridFile.FileName, out var loadResult, loadOptions))
+                        throw new IOException($"Grid file {gridFile.FileName} could not be read");
+
+                    _grids = loadResult.Grids.ToArray();
+                });
+            }
         }
 
         public async Task SetupView(bool showMarkers)
