@@ -12,6 +12,7 @@ using Content.Server.Maps;
 using Robust.Shared.Prototypes;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Webp;
+using Robust.Shared.Utility;
 //using Robust.Shared.Log;
 
 namespace Content.MapRenderer

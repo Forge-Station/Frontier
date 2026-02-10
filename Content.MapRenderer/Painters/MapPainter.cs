@@ -95,9 +95,9 @@ namespace Content.MapRenderer.Painters
                     var mapManager = _pair.Server.ResolveDependency<IMapManager>();
                     var mapLoader = _pair.Server.System<MapLoaderSystem>();
 
-                    var mapId = new MapId(1);
-                    Logger.Log($"Creating empty map with ID: {mapId}");
-                    mapSystem.CreateMap(mapId, false);
+                    Logger.Log($"Creating empty map");
+                    var mapUid = mapSystem.CreateMap(out var mapId, false);
+                    Logger.Log($"Created map entity {mapUid} with ID: {mapId}");
 
                     var path = new ResPath(gridFile.FileName);
                     var opts = new DeserializationOptions { StoreYamlUids = true };
