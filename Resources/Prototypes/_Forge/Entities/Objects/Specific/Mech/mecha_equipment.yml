@@ -47,3 +47,33 @@
     tags:
     - SmallMech
 # TODO: Make medical mech with equipment.
+
+- type: entity
+  id: MeowMechKit
+  parent: BaseItem
+  name: nutribrick
+  description: A carefully synthesized brick designed to contain the highest ratio of nutriment to volume. Tastes like shit.
+  components:
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: Forge/Objects/Storage/Cases/guncaselong.rsi
+    layers:
+    - map: [ base ]
+      state: icon
+    - state: unshaded
+      shader: unshaded
+  - type: Item
+    sprite: Forge/Objects/Storage/Cases/guncaselong.rsi
+    size: Ginormous
+    shape:
+    - 0,0,8,3
+  - type: SpawnItemsOnUse
+    items:
+      - id: MechAirTankFilled
+      - id: MechMeow
+      - id: PowerCageSmall
+      - id: HoloparasiteInfo
+    sound:
+      path: /Audio/Effects/tesla_collapse.ogg
+  - type: StaticPrice
+    price: 500

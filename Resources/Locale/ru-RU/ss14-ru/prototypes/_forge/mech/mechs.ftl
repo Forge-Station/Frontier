@@ -75,3 +75,8 @@ ent-MechGygaxPirateBattery = { ent-MechGygaxPirate }
 ent-MechGygaxPirateFilled = { ent-MechGygaxPirateBattery }
     .suffix = Батарея, Заполненный
     .desc = { ent-MechGygaxPirateBattery.desc }
+
+ent-MechMeow = М.Я.У
+    .desc = Механический Яростный Уничтожитель подпольно созданный на одной из пиратских баз, пахнет кошкой.
+ent-WeaponMechSpecialBola = Боламёт
+    .desc = Наспех созданная пушка плетущая и выбрасывающая самодельные сети из заранее загруженных в неё верёвок, пахнет кошкой.

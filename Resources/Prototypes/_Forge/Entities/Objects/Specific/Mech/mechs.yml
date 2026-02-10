@@ -688,6 +688,43 @@
 
 # Black Pearal
 - type: entity
+  parent: [ BaseMech, SmallMech ] # Forge-Change: +SmallMech
+  id: MechMeow
+  name: MEOW
+  description: "An experimental mech which uses a brain–computer interface to connect directly to a hamsters brain."
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Forge/Objects/Specific/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: Meow
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    baseState: Meow
+    openState: Meow-open
+    brokenState: Meow-broken
+    mechToPilotDamageMultiplier: 0.65
+    maxEquipmentAmount: 2
+    airtight: true
+    pilotWhitelist:
+      tags:
+      - Cat
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 30 #thwack
+        Structural: 170
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.4
+    baseSprintSpeed: 3.7
+
+- type: entity
   id: MechGygaxPirate
   parent: [ BaseMech, CombatMech, SyndieMech, BaseC3PirateContraband ]
   name: Black Pearal

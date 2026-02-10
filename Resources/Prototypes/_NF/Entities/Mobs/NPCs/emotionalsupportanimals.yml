@@ -54,6 +54,12 @@
   - type: RotationVisuals
     defaultRotation: 90
     horizontalRotation: 90
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - VimPilot
+    - Cat
 
 - type: entity
   id: BaseEmotionalGhostDog
