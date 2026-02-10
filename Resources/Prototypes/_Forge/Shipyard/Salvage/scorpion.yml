@@ -10,36 +10,35 @@
 
 # Notes:
 #
-- type: vessel
-  id: Scorpion1
-  parent: BaseVessel
-  name: TL Скорпион
-  description: Одноместный шахтерский шаттл. Является перестроенным истребителем TL.
-  price: 13200
-  category: Small
-  group: Salvage
-  shuttlePath: /Maps/_Forge/Shuttles/Salvage/scorpion.yml
-  guidebookPage: null
-  class:
-  - Salvage
+# - type: vessel
+#   id: Scorpion1
+#   parent: BaseVessel
+#   name: TL Скорпион
+#   description: Одноместный шахтерский шаттл. Является перестроенным истребителем TL.
+#   price: 13200
+#   category: Small
+#   group: Salvage
+#   shuttlePath: /Maps/_Forge/Shuttles/Salvage/scorpion.yml
+#   guidebookPage: null
+#   class:
+#   - Salvage
 
-
-- type: gameMap
-  id: Scorpion1
-  mapName: 'TL Скорпион'
-  mapPath: /Maps/_Forge/Shuttles/Salvage/scorpion.yml
-  minPlayers: 0
-  stations:
-    Scorpion1:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Скорпион {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            ContractorInterview: [ 0, 0 ]
-            PilotInterview: [ 0, 0 ]
-            MercenaryInterview: [ 0, 0 ]
+# - type: gameMap
+#   id: Scorpion1
+#   mapName: 'TL Скорпион'
+#   mapPath: /Maps/_Forge/Shuttles/Salvage/scorpion.yml
+#   minPlayers: 0
+#   stations:
+#     Scorpion1:
+#       stationProto: StandardFrontierVessel
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: 'Скорпион {1}'
+#           nameGenerator:
+#             !type:NanotrasenNameGenerator
+#             prefixCreator: '14'
+#         - type: StationJobs
+#           availableJobs:
+#             ContractorInterview: [ 0, 0 ]
+#             PilotInterview: [ 0, 0 ]
+#             MercenaryInterview: [ 0, 0 ]

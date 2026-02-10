@@ -6,3 +6,30 @@
   components:
     - type: PriorityDock
       tag: Postman
+
+- type: entity
+  parent: AirlockShuttleSyndicatePirateLocked
+  id: AirlockExternalShuttleRenegades
+  name: external airlock
+  suffix: Внешний, Стыковочный, Ренегаты
+  components:
+    - type: Sprite
+      sprite: Forge/Structures/Doors/Airlocks/Standard/ren_locked.rsi
+
+- type: entity
+  parent: AirlockGlassShuttleSyndicatePirateLocked
+  id: AirlockExternalShuttlePlasmaRenegades
+  name: external airlock
+  suffix: Внешний, Стеклянный, Ренегаты, Плазма
+  components:
+    - type: Sprite
+      sprite: Forge/Structures/Doors/Airlocks/Glass/ren_plasma.rsi
+
+- type: entity
+  parent: AirlockGlassShuttleSyndicatePirateLocked
+  id: AirlockExternalShuttleBrassRenegades
+  name: external airlock
+  suffix: Внешний, Стеклянный, Ренегаты, Латунь
+  components:
+    - type: Sprite
+      sprite: Forge/Structures/Doors/Airlocks/Glass/ren_brass.rsi

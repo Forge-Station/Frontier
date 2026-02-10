@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+
+# Notes:
+#
+- type: vessel
+  id: Guardian
+  parent: BaseVessel
+  name: TL Страж
+  description: Среднегабаритный исследовательский шаттл, построенный по чертежам одного из судов NT. Рекомендованный экипаж 1-3 человека.
+  price: 66300
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_Forge/Shuttles/Science/guardian.yml
+  class:
+  - Science
+
+- type: gameMap
+  id: Guardian
+  mapName: 'TL Страж'
+  mapPath: /Maps/_Forge/Shuttles/Science/guardian.yml
+  minPlayers: 0
+  stations:
+    Guardian:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Страж {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

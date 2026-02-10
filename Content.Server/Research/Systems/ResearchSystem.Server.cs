@@ -1,11 +1,14 @@
 using System.Linq;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Research.Components;
+using Content.Shared.Research.Prototypes; // Forge-change
+using Robust.Shared.Containers; // Forge-change
 
 namespace Content.Server.Research.Systems;
 
 public sealed partial class ResearchSystem
 {
+    [Dependency] private readonly SharedContainerSystem _container = default!; // Forge-change
     private void InitializeServer()
     {
         SubscribeLocalEvent<ResearchServerComponent, ComponentStartup>(OnServerStartup);
@@ -13,6 +16,9 @@ public sealed partial class ResearchSystem
         SubscribeLocalEvent<ResearchServerComponent, TechnologyDatabaseModifiedEvent>(OnServerDatabaseModified);
         SubscribeLocalEvent<ResearchServerComponent, AnchorStateChangedEvent>(OnServerAnchorChanged); // Frontier
         SubscribeLocalEvent<ResearchServerComponent, EntParentChangedMessage>(OnServerParentChanged); // Frontier
+
+        SubscribeLocalEvent<ResearchServerComponent, EntInsertedIntoContainerMessage>(OnDiskInserted); // Forge-change
+        SubscribeLocalEvent<ResearchServerComponent, EntRemovedFromContainerMessage>(OnDiskRemoved); // Forge-change
     }
 
     private void OnServerStartup(EntityUid uid, ResearchServerComponent component, ComponentStartup args)
@@ -226,4 +232,76 @@ public sealed partial class ResearchSystem
             Dirty(ent);
     }
     // End Frontier
+
+    // Forge-change-start
+    private void OnDiskInserted(EntityUid uid, ResearchServerComponent server, ref EntInsertedIntoContainerMessage args)
+    {
+        if (args.Container.ID != "disk_slot")
+            return;
+
+        if (!HasComp<TechDiskComponent>(args.Entity))
+            return;
+
+        server.InsertedDisks.Add(args.Entity);
+
+        if (TryComp<TechnologyDatabaseComponent>(uid, out var db))
+        {
+            var disk = Comp<TechDiskComponent>(args.Entity);
+
+            foreach (var discipline in disk.Disciplines)
+            {
+                if (!db.SupportedDisciplines.Contains(discipline))
+                    db.SupportedDisciplines.Add(discipline);
+            }
+
+            foreach (var tech in disk.UnlockedTechnologies)
+            {
+                if (!db.UnlockedTechnologies.Contains(tech))
+                    db.UnlockedTechnologies.Add(tech);
+            }
+        }
+
+        Dirty(uid, server);
+        var ev = new TechnologyDatabaseModifiedEvent();
+        RaiseLocalEvent(uid, ref ev);
+        UpdateConsoleInterface(uid);
+    }
+
+    private void OnDiskRemoved(EntityUid uid, ResearchServerComponent server, EntRemovedFromContainerMessage args)
+    {
+        if (args.Container.ID != "disk_slot")
+            return;
+
+        server.InsertedDisks.Remove(args.Entity);
+
+        if (TryComp<TechDiskComponent>(args.Entity, out var disk) &&
+            TryComp<TechnologyDatabaseComponent>(uid, out var db))
+        {
+            foreach (var discipline in disk.Disciplines)
+            {
+                bool stillPresent = server.InsertedDisks.Any(d =>
+                    TryComp<TechDiskComponent>(d, out var otherDisk) &&
+                    otherDisk.Disciplines.Contains(discipline));
+
+                if (!stillPresent)
+                    db.SupportedDisciplines.Remove(discipline);
+            }
+
+            foreach (var tech in disk.UnlockedTechnologies)
+            {
+                bool stillPresent = server.InsertedDisks.Any(d =>
+                    TryComp<TechDiskComponent>(d, out var otherDisk) &&
+                    otherDisk.UnlockedTechnologies.Contains(tech));
+
+                if (!stillPresent)
+                    db.UnlockedTechnologies.Remove(tech);
+            }
+        }
+
+        Dirty(uid, server);
+        var ev = new TechnologyDatabaseModifiedEvent();
+        RaiseLocalEvent(uid, ref ev);
+        UpdateConsoleInterface(uid);
+    }
+    // Forge-change-end
 }

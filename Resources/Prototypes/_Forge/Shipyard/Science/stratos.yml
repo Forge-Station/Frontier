@@ -1,19 +1,21 @@
 ﻿# Author Info
-# GitHub: -
-# Discord: -
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
-# GitHub: -
-# Discord: -
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
 
-# Shuttle Notes:
+# Notes:
 #
 - type: vessel
   id: Stratos
   parent: BaseVessel
-  name: NR Стратег
+  name: TL Стратег
   description: Среднегабаритный исследовательский шаттл. Рекомендованный состав команды 2-6 человек.
-  price: 95000 # 450 MEGA Price fix
+  price: 153000 # 450 MEGA Price fix
   category: Medium
   group: Shipyard
   shuttlePath: /Maps/_Forge/Shuttles/Science/stratos.yml
@@ -23,7 +25,7 @@
 
 - type: gameMap
   id: Stratos
-  mapName: 'NR Стратег'
+  mapName: 'TL Стратег'
   mapPath: /Maps/_Forge/Shuttles/Science/stratos.yml
   minPlayers: 0
   stations:

@@ -74,7 +74,7 @@ public sealed partial class ResearchSystem
         if (!Resolve(client, ref component, ref clientDatabase, false))
             return false;
 
-        if (!TryGetClientServer(client, out var serverEnt, out _, component))
+        if (!TryGetClientServer(client, out var serverEnt, out var serverComp, component))
             return false;
 
         if (!CanServerUnlockTechnology(client, prototype, clientDatabase, component))
@@ -84,6 +84,20 @@ public sealed partial class ResearchSystem
         // TrySetMainDiscipline(prototype, serverEnt.Value); // Goobstation commented
         ModifyServerPoints(serverEnt.Value, -prototype.Cost);
         UpdateTechnologyCards(serverEnt.Value);
+
+        // Forge-change-start
+        foreach (var diskUid in serverComp.InsertedDisks)
+        {
+            if (!TryComp<TechDiskComponent>(diskUid, out var disk))
+                continue;
+
+            if (disk.Disciplines.Contains(prototype.Discipline))
+            {
+                if (!disk.UnlockedTechnologies.Contains(prototype.ID))
+                    disk.UnlockedTechnologies.Add(prototype.ID);
+            }
+        }
+        // Forge-change-end
 
         _adminLog.Add(LogType.Action, LogImpact.Medium,
             $"{ToPrettyString(user):player} unlocked {prototype.ID} (discipline: {prototype.Discipline}, tier: {prototype.Tier}) at {ToPrettyString(client)}, for server {ToPrettyString(serverEnt.Value)}.");

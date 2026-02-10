@@ -1,0 +1,14 @@
+# - type: entity
+#   id: TechDiskBasic
+#   parent: BaseItem
+#   name: technology disk (NFSD)
+#   description: Disk with NFSD technology. Wait, THAT DEBUG STAFF!
+#   components:
+#   - type: TechnologyDisk
+#     disciplines:
+#     - ForgeNFSDtechDiscipline
+#   - type: Item
+#     size: Small
+#   - type: Sprite
+#     sprite: Objects/Specific/Research/researchdisk.rsi
+#     state: icon

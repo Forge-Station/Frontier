@@ -215,25 +215,23 @@
   cost: 7500
   recipeUnlocks:
   - FRecMagazine90mmAPHE
-  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - ForgeResearchShipAmmo90
-  - ForgeResearchNfsdBase
-  position: 2, 50
+  position: -10, 2
 
-- type: technology
-  id: ForgeResearchShipAmmo90APHEBC
-  name: forge-research-technology-shipammo90aphebc
-  entityIcon: ForgeResearchShipAmmoAPHEBC
-  discipline: NFArsenalMercenary
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-  - FRecMagazine90mmAPHEBC
-  prerequisiteLineType: Diagonal
-  technologyPrerequisites:
-  - ForgeResearchShipAmmo90APHE
-  position: 2, 51
+# - type: technology
+#   id: ForgeResearchShipAmmo90APHEBC
+#   name: forge-research-technology-shipammo90aphebc
+#   entityIcon: ForgeResearchShipAmmoAPHEBC
+#   discipline: NFArsenalMercenary
+#   tier: 1
+#   cost: 7500
+#   recipeUnlocks:
+#   - FRecMagazine90mmAPHEBC
+#   prerequisiteLineType: Diagonal
+#   technologyPrerequisites:
+#   - ForgeResearchShipAmmo90APHE
+#   position: 2, 51
 
 - type: technology
   id: ForgeResearchShipAmmoAPHE30

@@ -14,9 +14,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 90
-        Blunt: 14
-        Piercing: 24
+        Structural: 75
+        Blunt: 3
+        Piercing: 4
   - type: ShipWeaponProjectile
   - type: TimedDespawn
     lifetime: 4

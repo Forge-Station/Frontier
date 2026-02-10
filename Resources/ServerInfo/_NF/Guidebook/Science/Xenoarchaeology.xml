@@ -1,55 +1,55 @@
 <Document>
-# Xenoarchaeology
-Xenoarchaeology is a field of science focused on researching and experimenting on alien artifacts.
+# Ксеноархеология
+Ксеноархеология - это область науки, сосредоточенная на исследовании и экспериментировании с инопланетными артефактами.
 
-Artifacts can be found by mining asteroids found around the sector, or you can buy some from miners or salvagers.
+Артефакты можно найти, добывая астероиды в секторе, или купить у шахтёров или утилизаторов.
 
-By researching the unique things each artifact can do, you gain Research Points, increase the artifact's sale value, and potentially discover a useful ability or two!
+Исследуя уникальные свойства каждого артефакта, вы получаете Очки Исследований, повышаете продажную стоимость артефакта и потенциально обнаруживаете одно-два полезных умения!
 
-## Artifact Nodes
+## Узлы артефакта
 <Box>
 <GuideEntityEmbed Entity="ComplexXenoArtifact" Caption=""/>
 <GuideEntityEmbed Entity="ComplexXenoArtifactItem" Caption=""/>
 </Box>
-Artifacts consist of a randomly-generated tree of nodes. These nodes have a "[color=#a4885c]depth[/color]", representing how dangerous the node is, and the number of other nodes connected to it, called "[color=#a4885c]edges[/color]",
+Артефакты состоят из случайно сгенерированного дерева узлов. У этих узлов есть "[color=#a4885c]глубина[/color]", представляющая опасность узла, и количество других узлов, соединённых с ним, называемых "[color=#a4885c]связями[/color]".
 
-Artifacts always start at depth zero, the root of the tree. Travelling the tree to find as many nodes as possible is the main goal of the scientists working on them. Knowledge is extracted from nodes to gain Research Points and increase the artifact's sale value.
+Артефакты всегда начинаются с глубины ноль, корня дерева. Путешествие по дереву для нахождения как можно большего количества узлов — основная цель учёных, работающих с ними. Знание извлекается из узлов для получения Очков Исследований и увеличения продажной стоимости артефакта.
 
-Each node has two components: its [color=#a4885c]stimulus[/color] and a [color=#a4885c]reaction[/color].
+Каждый узел имеет два компонента: его [color=#a4885c]стимул[/color] и [color=#a4885c]реакцию[/color].
 
-A stimulus is the external behavior that triggers the reaction. There's a variety of these, and higher depth nodes have more difficult to accomplish stimuli. Some stimuli will need improvisation to trigger, and you may need special materials or resources to get everything you need.
+Стимул — это внешнее воздействие, которое запускает реакцию. Существует множество таких воздействий, и узлы большей глубины имеют более сложные для выполнения стимулы. Некоторые стимулы потребуют импровизации для запуска, и вам могут понадобиться специальные материалы или ресурсы, чтобы получить всё необходимое.
 
-Some reactions are instantaneous effects while others are permanent changes. Once an artifact is triggered, the reaction causes the artifact to randomly move to another node it is linked to.
+Некоторые реакции представляют собой мгновенные эффекты, в то время как другие — постоянные изменения. Как только артефакт активирован, реакция заставляет артефакт случайным образом перемещаться к другому узлу, с которым он связан.
 
-With some experimental science, you can begin to grasp how the different nodes of an artifact are connected, and how to move between them by repeatedly activating nodes.
+С помощью экспериментальной науки вы можете начать понимать, как различные узлы артефакта связаны между собой и как перемещаться между ними, многократно активируя узлы.
 
-All non-zero-depth nodes will have exactly one edge that leads up to its parent node. All other edges a node has lead down to the next depth.
+Все узлы с ненулевой глубиной будут иметь ровно одну связь, ведущую вверх к их родительскому узлу. Все остальные связи, которые имеет узел, ведут вниз к следующей глубине.
 
-## Artifact Analyzer and Analysis Console
+## Анализатор артефактов и консоль анализа
 <Box>
 <GuideEntityEmbed Entity="MachineArtifactAnalyzer"/>
 <GuideEntityEmbed Entity="ComputerAnalysisConsole"/>
 </Box>
-The main equipment that you'll be using for Xenoarchaeology is the [color=#a4885c]artifact analyzer[/color] and the [color=#a4885c]analysis console[/color]. You can use these to create reports that contain valuable information about an artifact.
+Основное оборудование, которое вы будете использовать для ксеноархеологии, — это [color=#a4885c]анализатор артефактов[/color] и [color=#a4885c]консоль анализа[/color]. Вы можете использовать их для создания отчётов, содержащих ценную информацию об артефакте.
 
-To set them up, simply link them with a network configurator and set an artifact on top of the analyzer. Every science vessel has at least one of these machines already set up.
+Чтобы настроить их, просто свяжите их сетевым конфигуратором и поместите артефакт на анализатор. На каждом научном судне есть как минимум одна такая машина, уже настроенная.
 
-Use the console's [color=#a4885c]scan[/color] button to discover what stimulus the artifact needs and what its reaction will do. Scanning takes thirty seconds.
+Используйте кнопку [color=#a4885c]сканировать[/color] на консоли, чтобы обнаружить, какой стимул нужен артефакту и что будет делать его реакция. Сканирование занимает тридцать секунд.
 
-Use the [color=#a4885c]print[/color] button to save the scan result, so you can refer to it later.
+Используйте кнопку [color=#a4885c]печатать[/color], чтобы сохранить результат сканирования для последующего использования.
 
-Once you've discovered a new node, you can extract points from the artifact using the [color=#a4885c]Extract[/color] button.
+После того как вы обнаружили новый узел, вы можете извлечь очки из артефакта с помощью кнопки [color=#a4885c]Извлечь[/color].
 
-## Artifexium and You
+## Артефиксиум и вы
 
-Some nodes can be particularly difficult to reach. One way to mitigate this is with [color=#a4885c]artifexium[/color]. When [color=#a4885c]sprayed[/color] or [color=#a4885c]splashed[/color] on an artifact. This will start unlocking nodes if the artifact isn't already doing it, and it will count as a wildcard stimulus for the triggers.
+Некоторые узлы могут быть особенно труднодостижимы. Один из способов смягчить это — использовать [color=#a4885c]артифексий[/color]. Когда [color=#a4885c]распыляется[/color] или [color=#a4885c]проливается[/color] на артефакт, он начинает разблокировать узлы, если артефакт ещё не делает этого, и считается универсальным стимулом для триггеров.
 
-In order to get artifexium, artifact fragments can be [color=#a4885c]ground[/color] in a [color=#a4885c]reagent grinder[/color].
+Чтобы получить артифексий, осколки артефактов можно [color=#a4885c]измельчить[/color] в [color=#a4885c]измельчителе реагентов[/color].
 
-It is worth note that using artifexium taints the observation process, resulting in fewer research points and value generated in the artifacts. Still, it is a useful tool in a pinch.
+Стоит отметить, что использование артифексия загрязняет процесс наблюдения, что приводит к меньшему количеству генерируемых очков исследований и стоимости артефактов. Тем не менее, это полезный инструмент в крайнем случае.
 
-## Assembling Artifacts
-<GuideEntityEmbed Entity="ArtifactFragment" Caption="Artifact Fragment"/>
+## Сборка артефактов
+<GuideEntityEmbed Entity="ArtifactFragment" Caption="Осколок артефакта"/>
 
-It is possible to gather multiple artifact fragments and assemble them into a working artifact. You can ask for these from mining ships, who usually find these while mining asteroids or on Expeditions.
+Можно собрать несколько осколков артефактов и собрать их в рабочий артефакт. Вы можете попросить их у горнодобывающих кораблей, которые обычно находят их при добыче астероидов или в Экспедициях.
 </Document>

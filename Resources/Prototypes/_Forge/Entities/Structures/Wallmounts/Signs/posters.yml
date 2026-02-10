@@ -7,3 +7,14 @@
     - type: Sprite
       sprite: Forge/Structures/Wallmounts/posters.rsi
       state: cf_poster1_contraband
+
+- type: entity
+  parent: PosterBase
+  id: PosterRenegate
+  name: Тёмный космос
+  description: "Плакат свободных звёзд"
+  suffix: Ренегаты
+  components:
+    - type: Sprite
+      sprite: Forge/Structures/Wallmounts/posters.rsi
+      state: ren

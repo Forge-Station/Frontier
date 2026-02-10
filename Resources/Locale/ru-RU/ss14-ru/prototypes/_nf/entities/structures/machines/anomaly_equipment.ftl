@@ -1,2 +1,2 @@
-ent-MachineMiniAnomalyGenerator = мини-генератор аномалий
+ent-MachineMiniAnomalyGenerator = компактный генератор аномалий
   .desc = Компактное чудо аноманауки, способное породить хаос из ничего.

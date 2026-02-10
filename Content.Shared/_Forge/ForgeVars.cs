@@ -100,4 +100,11 @@ public sealed class ForgeVars
     /// </summary>
     public static readonly CVarDef<int> TTSRateLimitCount =
         CVarDef.Create("tts.rate_limit_count", 3, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Controls if the connections queue is enabled
+    ///     If enabled plyaers will be added to a queue instead of being kicked after SoftMaxPlayers is reached
+    /// </summary>
+    public static readonly CVarDef<bool> QueueEnabled =
+        CVarDef.Create("queue.enabled", true, CVar.SERVERONLY); // Forge-Change
 }

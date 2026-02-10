@@ -1,0 +1,10 @@
+- type: entity
+  parent: BaseFlag
+  id: ScrapFlag
+  name: Scrap Tech Flag
+  suffix: DT/ST
+  description: Some piece of light-orange cloth with gray lines, its covered with oil...
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Wallmounts/flags.rsi
+    state: scrap_tech

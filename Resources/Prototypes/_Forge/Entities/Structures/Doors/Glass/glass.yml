@@ -1,0 +1,7 @@
+- type: entity
+  parent: AirlockGlass
+  id: AirlockGlassRenegades
+  suffix: Ренегаты
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Doors/Glass/ren_glass.rsi

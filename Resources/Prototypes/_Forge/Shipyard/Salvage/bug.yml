@@ -1,27 +1,27 @@
 # Author Info
-# GitHub: erhardsteinhauer
-# Discord: erhardsteinhauer
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
 
 # Maintainer Info
-# GitHub: erhardsteinhauer
-# Discord: erhardsteinhauer
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
 
-# Shuttle Notes:
+# Notes:
 #
 - type: vessel
   id: Bug
   parent: BaseVessel
   name: TL Жук
   description: Одноместный шахтерский шаттл. Является перестроенным истребителем TL.
-  price: 12300
+  price: 21300
   category: Small
   group: Salvage
   shuttlePath: /Maps/_Forge/Shuttles/Salvage/bug.yml
   guidebookPage: null
   class:
   - Salvage
-
-
 
 - type: gameMap
   id: Bug

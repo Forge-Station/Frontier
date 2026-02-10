@@ -1,146 +1,146 @@
 <Document>
-  # Explorers
+# Искатели приключений
 
-  These foolhardy souls scavenge through ruins for the promise of loot and high adventure, similar to you. Unlike you, however, they do not possess the license to operate in NT-controlled space. Exterminate with prejudice.
+Эти безрассудные души рыщут по руинам в поисках добычи и острых ощущений, подобно вам. Однако, в отличие от вас, у них нет лицензии на деятельность в космосе, контролируемом NT. Уничтожайте без пощады.
 
-  [bold][color=#a4885c]________________________________________________________________________[/color]
+[bold][color=#a4885c]________________________________________________________________________[/color]
 
-  # Known Variants
-  # "Looter"
+# Известные разновидности
+# "Мародёр"
 
-  Armed with a trusty pickaxe and greed, every group needs its grunts.
+Вооружённый верной киркой и жадностью — каждой группе нужны свои бойцы.
 
-  <Box>
-  <GuideEntityEmbed Entity="MobExplorerMeleeT1"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run speed:[/color][/bold] 4.5 m/s[bold][color=#a4885c]*[/color][/bold]
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 6 [color=red]Blunt[/color], 6 [color=yellow]Piercing[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] none
+<Box>
+<GuideEntityEmbed Entity="MobExplorerMeleeT1"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега:[/color][/bold] 4.5 м/с[bold][color=#a4885c]*[/color][/bold]
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 6 [color=red]Дробящий[/color], 6 [color=yellow]Колющий[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] отсутствует
+- [bold][color=#a4885c]Особые способности:[/color][/bold] отсутствуют
 
-  [bold][color=#a4885c]*[/color][/bold] - [italic]an average human can run at 4.5 m/s and walk at 2.5 m/s.[/italic]
+[bold][color=#a4885c]*[/color][/bold] - [italic]средний человек может бежать со скоростью 4.5 м/с и идти со скоростью 2.5 м/с.[/italic]
 
-  [bold][color=#a4885c]________________________________________________________________________[/color]
+[bold][color=#a4885c]________________________________________________________________________[/color]
 
-  # "Scrapper"
+# "Собиратель"
 
-  Proto-kinetic accelerator in one hand, flashlight in the other, beer in the belly. That's how you explore.
+Протокинетический ускоритель в одной руке, фонарик в другой, пиво в животе. Вот как нужно исследовать.
 
-  <Box>
-  <GuideEntityEmbed Entity="MobExplorerRangedT1"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run speed:[/color][/bold] 4 m/s
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 12 [color=red]Blunt[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (unwielded PKA)
+<Box>
+<GuideEntityEmbed Entity="MobExplorerRangedT1"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега:[/color][/bold] 4 м/с
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 12 [color=red]Дробящий[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] отсутствует
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (неподобранный ПКА)
 
-  [bold][color=#a4885c]________________________________________________________________________[/color]
+[bold][color=#a4885c]________________________________________________________________________[/color]
 
-  # "Scavenger"
+# "Сборщик"
 
-  A looter that scavenged enough coins to afford some decent equipment.
+Мародёр, который насобирал достаточно монет, чтобы обзавестись приличным снаряжением.
 
-  <Box>
-  <GuideEntityEmbed Entity="MobExplorerMeleeT2"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run speed:[/color][/bold] 4.5 m/s
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 7 [color=red]Blunt[/color], 6 [color=red]Slash[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 10%; [color=orange]Heat[/color] 5%; [color=orange]Caustic[/color] 10%
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] none
+<Box>
+<GuideEntityEmbed Entity="MobExplorerMeleeT2"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега:[/color][/bold] 4.5 м/с
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 7 [color=red]Дробящий[/color], 6 [color=red]Режущий[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 10%; [color=orange]Огонь[/color] 5%; [color=orange]Коррозионный[/color] 10%
+- [bold][color=#a4885c]Особые способности:[/color][/bold] отсутствуют
 
-  [bold][color=#a4885c]________________________________________________________________________[/color]
+[bold][color=#a4885c]________________________________________________________________________[/color]
 
-  # "Salvager"
+# "Утилизатор"
 
-  Sawn-off proto-kinetic accelerator in one hand, crusher dagger in the other, magm-ale both in the belly and in the hardsuit's boots.
+Обрезанный протокинетический ускоритель в одной руке, дробящий кинжал в другой, магмовое пиво и в животе, и в ботинках хардсьюта.
 
-  <Box>
-  <GuideEntityEmbed Entity="MobExplorerRangedT2"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run speed:[/color][/bold] 4 m/s
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 12 [color=red]Blunt[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 10%; [color=orange]Heat[/color] 5%; [color=orange]Caustic[/color] 10%
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (unwielded PKA)
+<Box>
+<GuideEntityEmbed Entity="MobExplorerRangedT2"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега:[/color][/bold] 4 м/с
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 12 [color=red]Дробящий[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 10%; [color=orange]Огонь[/color] 5%; [color=orange]Коррозионный[/color] 10%
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (неподобранный ПКА)
 
-  [bold][color=#a4885c]________________________________________________________________________[/color]
+[bold][color=#a4885c]________________________________________________________________________[/color]
 
-  # "Miner"
+# "Шахтёр"
 
-  Drilling in the name of... drilling. No rock formation can withstand the power of dual-wielded mining drills - good thing you aren't a rock.
+Бурение во имя... бурения. Никакая скальная формация не устоит перед мощью двух буровых установок — хорошо, что вы не скала.
 
-  <Box>
-  <GuideEntityEmbed Entity="MobExplorerMeleeT3"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run speed:[/color][/bold] 4.5 m/s
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 2 [color=red]Blunt[/color], 2 [color=red]Slash[/color], 2 [color=yellow]Piercing[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 15%; [color=orange]Heat[/color] 10%; [color=orange]Caustic[/color] 15%
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] none
+<Box>
+<GuideEntityEmbed Entity="MobExplorerMeleeT3"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега:[/color][/bold] 4.5 м/с
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 2 [color=red]Дробящий[/color], 2 [color=red]Режущий[/color], 2 [color=yellow]Колющий[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 15%; [color=orange]Огонь[/color] 10%; [color=orange]Коррозионный[/color] 15%
+- [bold][color=#a4885c]Особые способности:[/color][/bold] отсутствуют
 
-  [bold][color=#a4885c]________________________________________________________________________[/color]
+[bold][color=#a4885c]________________________________________________________________________[/color]
 
-  # "Explorer"
+# "Исследователь"
 
-  Veteran scrappers, these salvagers are wealthy enough to explore abandoned ruins for the adrenaline rush and adventure alone.
+Ветераны среди старьёвщиков, эти утилизаторы достаточно богаты, чтобы исследовать заброшенные руины ради одного лишь адреналина и приключений.
 
-  <Box>
-  <GuideEntityEmbed Entity="MobExplorerRangedT3"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
-  - [bold][color=#a4885c]Run speed:[/color][/bold] 4 m/s
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 16 [color=red]Blunt[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color], [color=red]Slash[/color] and [color=yellow]Piercing[/color] 15%; [color=orange]Heat[/color] 10%; [color=orange]Caustic[/color] 15%
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shooter (wielded PKA)
+<Box>
+<GuideEntityEmbed Entity="MobExplorerRangedT3"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 100 (критическое), 130 (смерть)
+- [bold][color=#a4885c]Скорость бега:[/color][/bold] 4 м/с
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 16 [color=red]Дробящий[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color], [color=red]Режущий[/color] и [color=yellow]Колющий[/color] 15%; [color=orange]Огонь[/color] 10%; [color=orange]Коррозионный[/color] 15%
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Стрелок (подобранный ПКА)
 
-  [bold][color=#a4885c]________________________________________________________________________[/color]
+[bold][color=#a4885c]________________________________________________________________________[/color]
 
-  # "Hauler"
+# "Мародёр"
 
-  Loaded with heavy equipment for industrial-scale looting. Pardon me, "asset recovery".
+Загружен тяжёлым оборудованием для мародёрства в промышленных масштабах. Простите, "возврата активов".
 
-  [color=#a4885c]Immunity[/color]: invulnerable to specific types of damage.
+[color=#a4885c]Иммунитет[/color]: неуязвим к определённым типам урона.
 
-  <Box>
-  <GuideEntityEmbed Entity="MobExplorerHauler"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 200 (death)
-  - [bold][color=#a4885c]Run speed:[/color][/bold] 4.5 m/s
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 20 [color=red]Blunt[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color] 30%; [color=red]Slash[/color] 50%; [color=yellow]Piercing[/color] 30%; [color=orange]Caustic[/color] 10%
-  - [bold][color=#a4885c]Damage weaknesses:[/color][/bold] [color=orange]Structural[/color] 20%; [color=orange]Shock[/color] 50%; [color=lime]Radiation[/color] 20%
-  - [bold][color=#a4885c]Special abilities:[/color][/bold] Immunity ([color=orange]Cold[/color], [color=lime]Poison[/color], [color=#9A54BF]Asphyxiation[/color], [color=#9A54BF]Bloodloss[/color], [color=#da8b8b]Cellular[/color])
+<Box>
+<GuideEntityEmbed Entity="MobExplorerHauler"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 200 (смерть)
+- [bold][color=#a4885c]Скорость бега:[/color][/bold] 4.5 м/с
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 20 [color=red]Дробящий[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color] 30%; [color=red]Режущий[/color] 50%; [color=yellow]Колющий[/color] 30%; [color=orange]Коррозионный[/color] 10%
+- [bold][color=#a4885c]Слабости к урону:[/color][/bold] [color=orange]Структурный[/color] 20%; [color=orange]Электрический[/color] 50%; [color=lime]Радиационный[/color] 20%
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Иммунитет ([color=orange]Холод[/color], [color=lime]Яд[/color], [color=#9A54BF]Асфиксия[/color], [color=#9A54BF]Кровопотеря[/color], [color=#da8b8b]Клеточный[/color])
 
-  [bold][color=#a4885c]________________________________________________________________________[/color]
+[bold][color=#a4885c]________________________________________________________________________[/color]
 
-  # "Explorer captain"
+# "Капитан исследователей"
 
-  Fearless and battle-hardened salvage team leaders, it takes years picking through the darkest corners of space and navigating the galaxy's criminal underbelly of the galaxy before you can become a captain. Not to be underestimated.
+Бесстрашные и закалённые в боях лидеры команд утилизаторов. Чтобы стать капитаном, требуются годы рыскания по самым тёмным уголкам космоса и навигации по преступному миру галактики. Не стоит недооценивать.
 
-  <Box>
-  <GuideEntityEmbed Entity="MobExplorerBoss"/>
-  </Box>
-  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 120 (crit), 150 (death)
-  - [bold][color=#a4885c]Run speed:[/color][/bold] 4.5 m/s
-  - [bold][color=#a4885c]Damage (type):[/color][/bold] 16 [color=orange]Heat[/color], 4 [color=yellow]Piercing[/color]
-  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color] and [color=red]Slash[/color] 50%; [color=yellow]Piercing[/color] 50%; [color=orange]Heat[/color] 30%; [color=orange]Caustic[/color] 50%
-  - [bold][color=#a4885c]Special abilities: Deflection (2.5%)
+<Box>
+<GuideEntityEmbed Entity="MobExplorerBoss"/>
+</Box>
+- [bold][color=#a4885c]Пороги здоровья:[/color][/bold] 120 (критическое), 150 (смерть)
+- [bold][color=#a4885c]Скорость бега:[/color][/bold] 4.5 м/с
+- [bold][color=#a4885c]Урон (тип):[/color][/bold] 16 [color=orange]Огонь[/color], 4 [color=yellow]Колющий[/color]
+- [bold][color=#a4885c]Сопротивление урону:[/color][/bold] [color=red]Дробящий[/color] и [color=red]Режущий[/color] 50%; [color=yellow]Колющий[/color] 50%; [color=orange]Огонь[/color] 30%; [color=orange]Коррозионный[/color] 50%
+- [bold][color=#a4885c]Особые способности:[/color][/bold] Отражение (2.5%)
 
-  [bold][color=#a4885c]________________________________________________________________________[/color]
+[bold][color=#a4885c]________________________________________________________________________[/color]
 
-  # Mission Objectives
-  ## Elimination
-  <Box>
-  <GuideEntityEmbed Entity="MobExplorerBoss"/>
-  </Box>
-  Eliminate a large and dangerous creature - an [color=#a4885c]explorer captain[/color] within given time constraints to earn a monetary reward.
+# Цели миссий
+## Уничтожение
+<Box>
+<GuideEntityEmbed Entity="MobExplorerBoss"/>
+</Box>
+Уничтожить крупное и опасное существо — [color=#a4885c]капитана исследователей[/color] в установленные временные рамки, чтобы получить денежное вознаграждение.
 
-  ## Destruction
-  <Box>
-  <GuideEntityEmbed Entity="ExplorersLootRadar"/>
-  </Box>
-  Destroy a certain number of [color=#a4885c]salvage radars[/color] within given time constraints to earn a monetary reward.
+## Разрушение
+<Box>
+<GuideEntityEmbed Entity="ExplorersLootRadar"/>
+</Box>
+Уничтожить определенное количество [color=#a4885c]радаров для поиска добычи[/color] в установленные временные рамки, чтобы получить денежное вознаграждение.
 </Document>

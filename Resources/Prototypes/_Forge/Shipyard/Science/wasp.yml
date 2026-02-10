@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+
+# Notes:
+#
+- type: vessel
+  id: WaspS
+  parent: BaseVessel
+  name: TL Оса
+  description: Крохотный транспортный челнок, ранее являвшийся истребителем поддержки TL. Рекомендованный экипаж 1 человек.
+  price: 16900
+  category: Small
+  group: Custom
+  shuttlePath: /Maps/_Forge/Shuttles/Science/wasp.yml
+  class:
+  - Science
+
+- type: gameMap
+  id: WaspS
+  mapName: 'TL Оса'
+  mapPath: /Maps/_Forge/Shuttles/Science/wasp.yml
+  minPlayers: 0
+  stations:
+    WaspS:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Оса {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

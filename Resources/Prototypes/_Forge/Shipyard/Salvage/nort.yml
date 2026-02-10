@@ -10,34 +10,34 @@
 
 # Shuttle Notes:
 #
-- type: vessel
-  id: Nort
-  parent: BaseVessel
-  name: TL Север
-  description: Среднегабаритный добывающий шаттл. Рекомендуемый состав команды 2-6 человек.
-  price: 65600
-  category: Small
-  group: Salvage
-  shuttlePath: /Maps/_Forge/Shuttles/Salvage/nort.yml
-  class:
-  - Salvage
+# - type: vessel
+#   id: Nort
+#   parent: BaseVessel
+#   name: TL Север
+#   description: Среднегабаритный добывающий шаттл. Рекомендуемый состав команды 2-6 человек.
+#   price: 65600
+#   category: Small
+#   group: Salvage
+#   shuttlePath: /Maps/_Forge/Shuttles/Salvage/nort.yml
+#   class:
+#   - Salvage
 
-- type: gameMap
-  id: Nort
-  mapName: 'TL Север'
-  mapPath: /Maps/_Forge/Shuttles/Salvage/nort.yml
-  minPlayers: 0
-  stations:
-    Nort:
-      stationProto: StandardFrontierExpeditionVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Север {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            ContractorInterview: [ 0, 0 ]
-            PilotInterview: [ 0, 0 ]
-            MercenaryInterview: [ 0, 0 ]
+# - type: gameMap
+#   id: Nort
+#   mapName: 'TL Север'
+#   mapPath: /Maps/_Forge/Shuttles/Salvage/nort.yml
+#   minPlayers: 0
+#   stations:
+#     Nort:
+#       stationProto: StandardFrontierExpeditionVessel
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: 'Север {1}'
+#           nameGenerator:
+#             !type:NanotrasenNameGenerator
+#             prefixCreator: '14'
+#         - type: StationJobs
+#           availableJobs:
+#             ContractorInterview: [ 0, 0 ]
+#             PilotInterview: [ 0, 0 ]
+#             MercenaryInterview: [ 0, 0 ]
