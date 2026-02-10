@@ -55,7 +55,7 @@ namespace Content.MapRenderer.Painters
             };
             _pair = await PoolManager.GetServerClient(poolSettings, _testContextLike);
 
-            Console.WriteLine($"Loaded client and server in {(int)stopwatch.Elapsed.TotalMilliseconds} ms");
+            Logger.Log($"Loaded client and server in {(int)stopwatch.Elapsed.TotalMilliseconds} ms");
 
             if (_map is RenderMapFile mapFile)
             {
@@ -192,7 +192,7 @@ namespace Content.MapRenderer.Painters
                 var tiles = mapSys.GetAllTiles(uid, grid).ToList();
                 if (tiles.Count == 0)
                 {
-                    Console.WriteLine($"Warning: Grid {uid} was empty. Skipping image rendering.");
+                    Logger.Log($"Warning: Grid {uid} was empty. Skipping image rendering.");
                     continue;
                 }
                 var tileXSize = grid.TileSize * TilePainter.TileImageSize;

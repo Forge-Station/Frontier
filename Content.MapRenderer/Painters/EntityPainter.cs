@@ -49,7 +49,7 @@ public sealed class EntityPainter
             Run(canvas, entity, xformSystem, customOffset);
         }
 
-        Console.WriteLine($"{nameof(EntityPainter)} painted {entities.Count} entities in {(int)stopwatch.Elapsed.TotalMilliseconds} ms");
+        Logger.Log($"{nameof(EntityPainter)} painted {entities.Count} entities in {(int)stopwatch.Elapsed.TotalMilliseconds} ms");
     }
 
     public void Run(Image canvas, EntityData entity, SharedTransformSystem xformSystem, Vector2 customOffset = default)
@@ -120,7 +120,7 @@ public sealed class EntityPainter
             var rect = new Rectangle(x, y, width, height);
             if (!new Rectangle(Point.Empty, image.Size).Contains(rect))
             {
-                Console.WriteLine($"Invalid layer {rsi!.Path}/{layer.RsiState.Name}.png for entity {_sEntityManager.ToPrettyString(entity.Owner)} at ({entity.X}, {entity.Y})");
+                Logger.Log($"Invalid layer {rsi!.Path}/{layer.RsiState.Name}.png for entity {_sEntityManager.ToPrettyString(entity.Owner)} at ({entity.X}, {entity.Y})");
                 return;
             }
 

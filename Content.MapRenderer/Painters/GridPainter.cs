@@ -50,7 +50,7 @@ namespace Content.MapRenderer.Painters
 
             if (!_entities.TryGetValue(gridUid, out var entities))
             {
-                Console.WriteLine($"No entities found on grid {gridUid}");
+                Logger.Log($"No entities found on grid {gridUid}");
                 return;
             }
 
@@ -60,7 +60,7 @@ namespace Content.MapRenderer.Painters
 
 
             _entityPainter.Run(gridCanvas, entities, customOffset);
-            Console.WriteLine($"{nameof(GridPainter)} painted grid {gridUid} in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
+            Logger.Log($"{nameof(GridPainter)} painted grid {gridUid} in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
         }
 
         private ConcurrentDictionary<EntityUid, List<EntityData>> GetEntities()
@@ -96,7 +96,7 @@ namespace Content.MapRenderer.Painters
                 }
             }
 
-            Console.WriteLine($"Found {components.Values.Sum(l => l.Count)} entities on {components.Count} grids in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
+            Logger.Log($"Found {components.Values.Sum(l => l.Count)} entities on {components.Count} grids in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
 
             return components;
         }
@@ -128,7 +128,7 @@ namespace Content.MapRenderer.Painters
                 }
             }
 
-            Console.WriteLine($"Found {decals.Values.Sum(l => l.Count)} decals on {decals.Count} grids in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
+            Logger.Log($"Found {decals.Values.Sum(l => l.Count)} decals on {decals.Count} grids in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
             return decals;
         }
 

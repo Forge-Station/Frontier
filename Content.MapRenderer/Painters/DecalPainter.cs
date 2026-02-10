@@ -51,7 +51,7 @@ public sealed class DecalPainter
             Run(canvas, decal, customOffset);
         }
 
-        Console.WriteLine($"{nameof(DecalPainter)} painted {decals.Length} decals in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
+        Logger.Log($"{nameof(DecalPainter)} painted {decals.Length} decals in {(int) stopwatch.Elapsed.TotalMilliseconds} ms");
     }
 
     private void Run(Image canvas, DecalData data, Vector2 customOffset = default)
@@ -59,7 +59,7 @@ public sealed class DecalPainter
         var decal = data.Decal;
         if (!_decalTextures.TryGetValue(decal.Id, out var sprite))
         {
-            Console.WriteLine($"Decal {decal.Id} did not have an associated prototype.");
+            Logger.Log($"Decal {decal.Id} did not have an associated prototype.");
             return;
         }
 

@@ -22,6 +22,8 @@ namespace Content.MapRenderer
 
         internal static async Task Main(string[] args)
         {
+            Logger.Logger.Init();
+
             if (!CommandLineArguments.TryParse(args, out var arguments))
                 return;
 
@@ -49,7 +51,7 @@ namespace Content.MapRenderer
                 var input = Console.ReadLine();
                 if (input == null)
                 {
-                    Console.WriteLine(NoMapsChosenMessage);
+                    Logger.Log(NoMapsChosenMessage);
                     return;
                 }
 
@@ -63,7 +65,7 @@ namespace Content.MapRenderer
                     var inputArray = input.Split(',');
                     if (inputArray.Length == 0)
                     {
-                        Console.WriteLine(NoMapsChosenMessage);
+                        Logger.Log(NoMapsChosenMessage);
                         return;
                     }
 
@@ -71,7 +73,7 @@ namespace Content.MapRenderer
                     {
                         if (!int.TryParse(idString.Trim(), out var id))
                         {
-                            Console.WriteLine(ChosenMapIdNotIntMessage(idString));
+                            Logger.Log(ChosenMapIdNotIntMessage(idString));
                             return;
                         }
 
@@ -84,7 +86,7 @@ namespace Content.MapRenderer
                 {
                     if (id < 0 || id >= mapIds.Length)
                     {
-                        Console.WriteLine(NoMapFoundWithIdMessage(id));
+                        Logger.Log(NoMapFoundWithIdMessage(id));
                         return;
                     }
 
@@ -95,18 +97,18 @@ namespace Content.MapRenderer
 
                 if (selectedMapPrototypes.Count == 0)
                 {
-                    Console.WriteLine(NoMapsChosenMessage);
+                    Logger.Log(NoMapsChosenMessage);
                     return;
                 }
 
-                Console.WriteLine($"Selected maps: {string.Join(", ", selectedMapPrototypes)}");
+                Logger.Log($"Selected maps: {string.Join(", ", selectedMapPrototypes)}");
             }
 
             var maps = new List<RenderMap>();
 
             if (arguments.ArgumentsAreFileNames)
             {
-                Console.WriteLine("Retrieving maps by file names...");
+                Logger.Log("Retrieving maps by file names...");
 
                 //
                 // Handle legacy command line processing:
@@ -142,7 +144,7 @@ namespace Content.MapRenderer
 
                 if (lookupPrototypeFiles.Count > 0)
                 {
-                    Console.Write($"Following map files did not exist on disk directly, searching through prototypes: {string.Join(", ", lookupPrototypeFiles)}");
+                    Logger.Log($"Following map files did not exist on disk directly, searching through prototypes: {string.Join(", ", lookupPrototypeFiles)}");
 
                     await using var pair = await PoolManager.GetServerClient();
                     var mapPrototypes = pair.Server
@@ -157,12 +159,12 @@ namespace Content.MapRenderer
                             if (mapPrototype.MapPath.Filename == toFind)
                             {
                                 maps.Add(new RenderMapPrototype { Prototype = mapPrototype, });
-                                Console.WriteLine($"Found matching map prototype: {mapPrototype.MapName}");
+                                Logger.Log($"Found matching map prototype: {mapPrototype.MapName}");
                                 goto found;
                             }
                         }
 
-                        await Console.Error.WriteLineAsync($"Found no map prototype for file '{toFind}'!");
+                        Logger.Log($"Found no map prototype for file '{toFind}'!"); // was async
 
                         found: ;
                     }
@@ -185,14 +187,14 @@ namespace Content.MapRenderer
             List<RenderMap> toRender,
             ExternalTestContext testContext)
         {
-            Console.WriteLine($"Creating images for {toRender.Count} maps");
+            Logger.Log($"Creating images for {toRender.Count} maps");
 
             var parallaxOutput = arguments.OutputParallax ? new ParallaxOutput(arguments.OutputPath) : null;
 
             var mapNames = new List<string>();
             foreach (var map in toRender)
             {
-                Console.WriteLine($"Painting map {map}");
+                Logger.Log($"Painting map {map}");
 
                 await using var painter = new MapPainter(map, testContext);
                 await painter.Initialize();
@@ -215,7 +217,7 @@ namespace Content.MapRenderer
 
                         var savePath = $"{directory}{Path.DirectorySeparatorChar}{mapShort}-{i}.{arguments.Format}";
 
-                        Console.WriteLine($"Writing grid of size {grid.Width}x{grid.Height} to {savePath}");
+                        Logger.Log($"Writing grid of size {grid.Width}x{grid.Height} to {savePath}");
 
                         switch (arguments.Format)
                         {
@@ -244,8 +246,7 @@ namespace Content.MapRenderer
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Painting map {map} failed due to an internal exception:");
-                    Console.WriteLine(ex);
+                    Logger.Log($"Painting map {map} failed due to an internal exception:", ex);
                     continue;
                 }
 
@@ -261,13 +262,13 @@ namespace Content.MapRenderer
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"Exception while shutting down painter: {e}");
+                    Logger.Log($"Exception while shutting down painter: {e}");
                 }
             }
 
             var mapNamesString = $"[{string.Join(',', mapNames.Select(s => $"\"{s}\""))}]";
-            Console.WriteLine($@"::set-output name=map_names::{mapNamesString}");
-            Console.WriteLine($"Processed {arguments.Maps.Count} maps.");
+            Logger.Log($@"::set-output name=map_names::{mapNamesString}");
+            Logger.Log($"Processed {arguments.Maps.Count} maps.");
             Console.WriteLine($"It's now safe to manually exit the process (automatic exit in a few moments...)");
         }
     }
