@@ -503,3 +503,10 @@
   - type: InteractionPopup
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - RobotTalk
+    understands:
+    - ForgeGalacticStandard
+    - RobotTalk

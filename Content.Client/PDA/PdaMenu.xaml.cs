@@ -154,8 +154,22 @@ namespace Content.Client.PDA
             if (state.PdaOwnerInfo.ActualOwnerName != null)
             {
                 _pdaOwner = state.PdaOwnerInfo.ActualOwnerName;
-                PdaOwnerLabel.SetMarkup(Loc.GetString("comp-pda-ui-owner",
-                    ("actualOwnerName", _pdaOwner)));
+
+                // Forge-change-start: take _Mono company
+                // Check if we have company information to display
+                if (!string.IsNullOrWhiteSpace(state.PdaOwnerInfo.CompanyName))
+                {
+                    PdaOwnerLabel.SetMarkup(Loc.GetString("comp-pda-ui-owner-with-company",
+                        ("actualOwnerName", _pdaOwner),
+                        ("companyName", state.PdaOwnerInfo.CompanyName),
+                        ("companyColor", state.PdaOwnerInfo.CompanyColor.ToHex())));
+                }
+                else
+                {
+                    PdaOwnerLabel.SetMarkup(Loc.GetString("comp-pda-ui-owner",
+                        ("actualOwnerName", _pdaOwner)));
+                }
+                // Forge-change-end
                 PdaOwnerLabel.Visible = true;
             }
             else

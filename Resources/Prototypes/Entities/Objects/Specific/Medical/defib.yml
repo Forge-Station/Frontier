@@ -42,6 +42,12 @@
       - MedicalDoctor
     - type: PirateBountyItem # Frontier
       id: Defibrillator # Frontier
+    - type: LanguageSpeaker # Einstein Engines - Language
+    - type: LanguageKnowledge # Einstein Engines - Language
+      speaks:
+      - ForgeGalacticStandard
+      understands:
+      - ForgeGalacticStandard
 
 - type: entity
   id: Defibrillator

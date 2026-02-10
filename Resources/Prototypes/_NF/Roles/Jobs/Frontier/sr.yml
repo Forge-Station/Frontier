@@ -31,6 +31,12 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  - !type:AddLanguageSpecial
+    languagesSpoken:
+    - SecurityCodebase
+    languagesUnderstood:
+    - SecurityCodebase
+    - Sign
 
 - type: startingGear
   id: SrGear

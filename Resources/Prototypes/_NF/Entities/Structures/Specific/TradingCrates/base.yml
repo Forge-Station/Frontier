@@ -93,6 +93,9 @@
       paper_label: !type:ContainerSlot
   - type: ItemSlots
   - type: RequireProjectileTarget
+  - type: ItemTax # Mono
+    taxAccounts:
+      Frontier: 0.3
 
 - type: entity
   parent:
@@ -126,3 +129,6 @@
     - BlackMarket
   - type: PirateBountyItem
     id: ContrabandCrate
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: -0.15

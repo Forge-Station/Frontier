@@ -42,6 +42,7 @@
     - Sergeant # Frontier
     accessGroups: # Frontier
     - GeneralNfsdAccess # Frontier
+    companyName: NFSD
 
 - type: entity
   parent: ShipVoucherNfsdSergeant
@@ -60,6 +61,7 @@
     - Bailiff # Frontier
     accessGroups: # Frontier
     - GeneralNfsdAccess # Frontier
+    companyName: NFSD
 
 # Frontier vouchers
 - type: entity
@@ -79,6 +81,7 @@
     consoleType: Sr
     access:
     - Janitor
+    companyName: Nanotrasen
 
 - type: entity
   parent: ShipVoucherFrontierJanitor
@@ -93,6 +96,7 @@
   - type: ShipyardVoucher
     access:
     - Service
+    companyName: Nanotrasen
 
 - type: entity
   parent: ShipVoucherFrontierJanitor
@@ -107,6 +111,7 @@
   - type: ShipyardVoucher
     access:
     - Mail
+    companyName: Nanotrasen
 
 - type: entity
   parent: ShipVoucherFrontierJanitor
@@ -121,6 +126,7 @@
   - type: ShipyardVoucher
     access:
     - Brig # odd, but potentially restricts cadets in lieu of a security guard-only access level
+    companyName: Nanotrasen
 
 - type: entity
   parent: ShipVoucherFrontierJanitor
@@ -135,6 +141,7 @@
   - type: ShipyardVoucher
     access:
     - StationTrafficController
+    companyName: Nanotrasen
 
 # Forge-Frontier
 - type: entity
@@ -154,5 +161,6 @@
     consoleType: Modules
     access:
     - Modules # Frontier
+    companyName: NFSD
   - type: StaticPrice #CorvaxFrontier
     price: 1200

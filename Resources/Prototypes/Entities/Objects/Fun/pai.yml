@@ -101,6 +101,46 @@
   - type: Tag
     tags:
     - SiliconEmotes
+  # Einstein Engines - Language begin
+  - type: LanguageKnowledge
+    speaks:
+    - ForgeGalacticStandard # Add individual languages so they can speak in said language for privacy.
+    - ForgeEarthClassic 
+    - ForgeSibera
+    # - ForgeAshen
+    - ForgeTradeband 
+    - Canilunzt
+    - Bubblish
+    - Nekomimetic
+    - Draconic
+    - RootSpeak
+    - Moffic
+    - ValyrianStandard
+    - Chittin
+    - SiikMaas
+    - RobotTalk
+    - DroneTalk
+    - Marish
+    understands:
+    - ForgeGalacticStandard # Add individual languages so they can understand without understanding animals.
+    - ForgeEarthClassic 
+    - ForgeSibera
+    # - ForgeAshen
+    - ForgeTradeband 
+    - Canilunzt
+    - Bubblish
+    - Nekomimetic
+    - Draconic
+    - RootSpeak
+    - Moffic
+    - ValyrianStandard
+    - Chittin
+    - SiikMaas
+    - RobotTalk
+    - DroneTalk
+    - Marish
+    - Sign # Should know it but not speak it, for obvious reasons.
+  # Einstein Engines - Language end
 
 - type: entity
   parent: [ PersonalAI, BaseC1Contraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband #Corvax-Frontier КБ

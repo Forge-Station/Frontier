@@ -109,6 +109,13 @@
   - type: MobsterAccent
   - type: Speech
     speechVerb: SmallMob
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - Mouse
+    understands:
+    - ForgeGalacticStandard
+    - Mouse
   - type: Butcherable
     spawned:
     - id: ClothingHeadHatFancyCrown #how did that get there?
@@ -210,6 +217,12 @@
     - map: [ "enum.DamageStateVisualLayers.BaseUnshaded"]
       state: eyes
       shader: unshaded
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Mouse
+    understands:
+    - Mouse
+    - ForgeGalacticStandard
 
   - type: SpriteMovement
     movementLayers:

@@ -49,6 +49,11 @@
     interactSuccessSound: /Audio/Effects/sparks1.ogg
     messagePerceivedByOthers: pat-success-elzuosa-others
   - type: Carriable # Carrying system from nyanotrasen.
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    understands:
+    - ForgeGalacticStandard
 
 - type: entity
   parent: BaseSpeciesDummy

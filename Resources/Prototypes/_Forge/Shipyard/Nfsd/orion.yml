@@ -15,12 +15,13 @@
   parent: BaseVessel
   name: TL Орион MK2
   description: Крупногабаритный линейный крейсер. Рекомендованный состав команды 4-8 человек.
-  price: 523100
+  price: 100
   category: Large
   group: Security
   access: Frontier
   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/orion.yml
   guidebookPage: Null
+  limit: 1
   class:
   - Capital
   addComponents:

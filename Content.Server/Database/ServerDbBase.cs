@@ -268,6 +268,10 @@ namespace Content.Server.Database
                 loadouts[role.RoleName] = loadout;
             }
 
+            // Forge-Change: Mono
+            // Get the company with fallback to default "None"
+            var company = profile.Company ?? "None";
+
             // Forge-Change Corvax-Wega-Hair-Extended-start
             List<Color> hairColors;
             try
@@ -307,7 +311,8 @@ namespace Content.Server.Database
                 antags.ToHashSet(),
                 traits.ToHashSet(),
                 loadouts,
-                barkVoice // Corvax-Frontier-Barks
+                barkVoice, // Corvax-Frontier-Barks
+                company // Forge-Change: Mono
             );
         }
 

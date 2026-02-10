@@ -7,6 +7,8 @@
   - SyndicateAgent
   - NuclearOperative
   requirements:
+    - !type:MinPlayersRequirement
+      min: 20
     - !type:OverallPlaytimeRequirement
       time: 144000 # 40 hours
     - !type:RoleTimeRequirement
@@ -45,6 +47,11 @@
   - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
     holiday: NewYear
     prototype: PresentRandomUnsafe # Unsafe for Syndicate
+  - !type:AddLanguageSpecial
+    languagesSpoken:
+    - WarCode
+    languagesUnderstood:
+    - WarCode
 
 - type: startingGear
   id: MedSynGear

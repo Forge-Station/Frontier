@@ -20,6 +20,7 @@ shuttle-console-nav-settings = Настройки
 shuttle-console-iff-toggle = Показ системы опознавания
 shuttle-console-dock-toggle = Показ стыковочных портов
 shuttle-console-iffshuttles-toggle = Показать шаттлы
+shuttle-console-extra-info-toggle = Показать доп. информацию
 
 # MAP
 
@@ -50,3 +51,4 @@ shuttle-console-orientation-value = {$angle}
 shuttle-console-linear-velocity-value = {$X}, {$Y}
 shuttle-console-angular-velocity-value = {$angularVelocity}
 shuttle-console-ftl-state-Invalid = Неверный
+shuttle-console-undock-all-label = Отстыковать все

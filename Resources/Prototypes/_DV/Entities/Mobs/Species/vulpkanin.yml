@@ -30,6 +30,13 @@
     speechSounds: Vulpkanin
     speechVerb: Vulpkanin
     allowedEmotes: ['Bark', 'Snarl', 'Whine', 'Howl', 'Awoo', 'Growl']
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - Canilunzt
+    understands:
+    - ForgeGalacticStandard
+    - Canilunzt
   - type: Sprite
     netsync: false
     noRot: true

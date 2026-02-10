@@ -31,4 +31,10 @@ public sealed partial class ShuttleDeedComponent : Component
     // Forge-change
     [DataField, AutoNetworkedField]
     public string? ShuttleModel = "Unknown";
+
+    /// <summary>
+    /// The ID card entity that holds this deed
+    /// </summary>
+    [DataField]
+    public EntityUid? DeedHolder;
 }

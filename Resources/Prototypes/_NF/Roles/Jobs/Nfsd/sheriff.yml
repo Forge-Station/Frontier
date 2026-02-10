@@ -50,6 +50,11 @@
   - !type:GiveItemOnHolidaySpecial # Forge-change: Happy New Year!
     holiday: NewYear
     prototype: PresentRandom
+  - !type:AddLanguageSpecial
+    languagesSpoken:
+    - SecurityCodebase
+    languagesUnderstood:
+    - SecurityCodebase
 
 - type: startingGear
   id: SheriffGear

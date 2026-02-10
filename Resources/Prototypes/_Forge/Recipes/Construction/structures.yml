@@ -8,3 +8,42 @@
   objectType: Structure
   canRotate: true
   canBuildInImpassable: true
+
+- type: construction
+  id: wallReinforcedDiagonal
+  graph: Girder
+  startNode: start
+  targetNode: wallReinforcedDiagonal
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: wallPlastitaniumDiagonal
+  graph: Girder
+  startNode: start
+  targetNode: wallPlastitaniumDiagonal
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: PlastitaniumWall
+  graph: Girder
+  startNode: start
+  targetNode: plastitaniumWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

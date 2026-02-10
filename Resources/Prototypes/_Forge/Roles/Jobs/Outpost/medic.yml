@@ -42,9 +42,7 @@
   id: OutpostMedicGear
   equipment:
     ears: ClothingHeadsetMedical
-  storage:
-    back:
-    - MedHypo
+    pocket1: MedHypo
   encryptionKeys:
   - EncryptionKeyService
   - EncryptionKeyMedical

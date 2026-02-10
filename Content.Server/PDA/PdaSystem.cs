@@ -26,6 +26,8 @@ using Content.Shared._NF.Bank.Components; // Frontier
 using Content.Shared._NF.Shipyard.Components; // Frontier
 using Content.Server._NF.Shipyard.Systems; // Frontier
 using Content.Server._NF.SectorServices; // Frontier
+using Content.Shared._Mono.Company; // Forge-change
+using Robust.Shared.Prototypes; // Forge-change
 
 namespace Content.Server.PDA
 {
@@ -42,6 +44,7 @@ namespace Content.Server.PDA
         [Dependency] private readonly ContainerSystem _containerSystem = default!;
         [Dependency] private readonly IdCardSystem _idCard = default!;
         [Dependency] private readonly SectorServiceSystem _sectorService = default!;
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!; // Forge-change
 
         public override void Initialize()
         {
@@ -215,6 +218,25 @@ namespace Content.Server.PDA
                 ownedShipName = ShipyardSystem.GetFullName(shuttleDeedComp);
             // End Frontier: balance & ship deeds
 
+            // Forge-change-start: take _Mono company
+            // Get company information from ID card
+            string? companyName = null;
+            Color companyColor = Color.White;
+            if (id?.CompanyName != null && !string.IsNullOrWhiteSpace(id.CompanyName) && id.CompanyName != "None")
+            {
+                if (_prototypeManager.TryIndex<CompanyPrototype>(id.CompanyName, out var companyProto))
+                {
+                    companyName = companyProto.Name; // Use the display name, not the ID
+                    companyColor = companyProto.Color;
+                }
+                else
+                {
+                    // Fallback to ID if prototype not found
+                    companyName = id.CompanyName;
+                }
+            }
+            // Forge-change-end
+
             var state = new PdaUpdateState(
                 programs,
                 GetNetEntity(loader.ActiveProgram),
@@ -227,6 +249,8 @@ namespace Content.Server.PDA
                     ActualOwnerName = pda.OwnerName,
                     IdOwner = id?.FullName,
                     JobTitle = id?.LocalizedJobTitle,
+                    CompanyName = companyName, // Forge-change: Mono company
+                    CompanyColor = companyColor, // Forge-change
                     StationAlertLevel = pda.StationAlertLevel,
                     StationAlertColor = pda.StationAlertColor
                 },

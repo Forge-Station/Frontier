@@ -1,5 +1,5 @@
 - type: entity
-  parent: WallPlastitaniumIndestructible
+  parent: WallPlastitanium
   id: WallPlastitaniumShuttle
   name: пластитановая стена
   suffix: Ослабленная, 5K
@@ -24,7 +24,7 @@
 #      reflectProb: 0.15 # Frontier
 
 - type: entity
-  parent: WallPlastitaniumIndestructible
+  parent: WallPlastitanium
   id: WallPlastitaniumVeryShuttle
   name: пластитановая стена
   suffix: Ослабленная, 2.5

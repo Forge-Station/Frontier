@@ -52,8 +52,13 @@
     flavorKind: station-event-random-sentience-flavor-organic
   - type: Bloodstream
     bloodMaxVolume: 50
-  - type: ReplacementAccent
-    accent: mouse
+  # - type: ReplacementAccent
+  #   accent: mouse
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Mouse
+    understands:
+    - Mouse
   - type: MeleeWeapon
     soundHit:
         path: /Audio/Effects/bite.ogg
@@ -269,8 +274,13 @@
     eggSpawn:
     - id: FoodEggLaid # Frontier: FoodEgg<FoodEggLaid
   - type: ExaminableHunger
-  - type: ReplacementAccent
-    accent: chicken
+  # - type: ReplacementAccent
+  #   accent: chicken
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Chicken
+    understands:
+    - Chicken
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
   - type: NpcFactionMember
@@ -433,6 +443,9 @@
       - !type:GibBehavior
         recursive: false
   - type: NonSpreaderZombie
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks: [Hissing]
+    understands: [Hissing]
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
   - type: MeleeWeapon
@@ -578,8 +591,13 @@
       prob: 0.3 # Frontier
   - type: Extractable
     grindableSolutionName: food
-  - type: ReplacementAccent
-    accent: mothroach
+  # - type: ReplacementAccent
+  #   accent: mothroach
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Moffic
+    understands:
+    - Moffic
   - type: ZombieAccentOverride
     accent: zombieMoth
   - type: Vocal
@@ -722,8 +740,13 @@
     eggSpawn:
     - id: FoodEggLaid # Frontier: FoodEgg<FoodEggLaid
   - type: ExaminableHunger
-  - type: ReplacementAccent
-    accent: duck
+  # - type: ReplacementAccent
+  #   accent: duck
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Duck
+    understands:
+    - Duck
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
   - type: NpcFactionMember
@@ -1003,8 +1026,13 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
-  - type: ReplacementAccent
-    accent: crab
+  # - type: ReplacementAccent
+  #   accent: crab
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Crab
+    understands:
+    - Crab
   - type: Bloodstream
     bloodMaxVolume: 50
     bloodReagent: CopperBlood
@@ -1281,8 +1309,13 @@
   - type: Inventory
     speciesId: kangaroo
     templateId: kangaroo
-  - type: ReplacementAccent
-    accent: kangaroo
+  # - type: ReplacementAccent
+  #   accent: kangaroo
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Kangaroo
+    understands:
+    - Kangaroo
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -1476,7 +1509,13 @@
   - type: Speech
     speechSounds: Monkey
     speechVerb: Monkey
-  - type: MonkeyAccent
+  # - type: MonkeyAccent
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Monkey
+    understands:
+    - Monkey
+    - Kobold
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-primate
   - type: AlwaysRevolutionaryConvertible
@@ -1515,7 +1554,14 @@
   - type: Speech
     speechSounds: Monkey
     speechVerb: Monkey
-  - type: MonkeyAccent
+  # - type: MonkeyAccent
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Monkey
+    understands:
+    - Monkey
+    - Kobold
+    - ForgeGalacticStandard # Understanding your nukeops partners.
   - type: NpcFactionMember
     factions:
     - Syndicate
@@ -1560,8 +1606,14 @@
   - type: NameIdentifier
     group: Kobold
   - type: LizardAccent
-  - type: ReplacementAccent
-    accent: kobold
+  # - type: ReplacementAccent
+  #   accent: kobold
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Kobold
+    understands:
+    - Kobold
+    - Monkey
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
@@ -1845,8 +1897,13 @@
     spawned:
     - id: FoodMeatRat
       amount: 1
-  - type: ReplacementAccent
-    accent: mouse
+  # - type: ReplacementAccent
+  #   accent: mouse
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Mouse
+    understands:
+    - Mouse
   - type: Tag
     tags:
     - Trash
@@ -2291,6 +2348,11 @@
     interfaces:
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - ForgeGalacticStandard
+    understands:
+    - ForgeGalacticStandard
   - type: InteractionPopup
     successChance: 0.6
     interactSuccessString: petting-success-bird
@@ -2378,6 +2440,9 @@
     heatDamage:
       types:
         Heat : 0.2 #per second, scales with temperature & other constants
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks: [Penguin]
+    understands: [Penguin]
 
 - type: entity
   name: grenade penguin
@@ -2499,6 +2564,9 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks: [Hissing]
+    understands: [Hissing]
 
 # Code unique spider prototypes or combine them all into one spider and get a
 # random sprite state when you spawn it.
@@ -2544,8 +2612,13 @@
   - type: MeleeChemicalInjector
     transferAmount: 0.75
     solution: melee
-  - type: ReplacementAccent
-    accent: xeno
+  # - type: ReplacementAccent
+  #   accent: xeno
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Xeno
+    understands:
+    - Xeno
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-tarantula
@@ -2713,10 +2786,15 @@
   description: This spider looks a little magical
   suffix: Wizard
   components:
-  - type: Accentless
-    removes:
-    - type: ReplacementAccent
-      accent: xeno  #let this wizard speak
+  # - type: Accentless
+  #   removes:
+  #   - type: ReplacementAccent
+  #     accent: xeno  #let this wizard speak
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Universal # Should allow them to understand everything and speak it too. Might need to change this.
+    understands:
+    - Universal
 
 - type: entity
   name: possum
@@ -2770,6 +2848,11 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Hissing
+    understands:
+    - Hissing
 
 - type: entity
   name: possum
@@ -2845,6 +2928,11 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Hissing
+    understands:
+    - Hissing
 
 - type: entity
   name: fox
@@ -2924,6 +3012,11 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Fox
+    understands:
+    - Fox
 
 - type: entity
   abstract: true
@@ -2985,8 +3078,13 @@
     spawned:
     - id: FoodMeat
       amount: 2
-  - type: ReplacementAccent
-    accent: dog
+  # - type: ReplacementAccent
+  #   accent: dog
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Dog
+    understands:
+    - Dog
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-corgi
   - type: Tag
@@ -3124,8 +3222,13 @@
     spawned:
     - id: FoodMeat
       amount: 3
-  - type: ReplacementAccent
-    accent: cat
+  # - type: ReplacementAccent
+  #   accent: cat
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Cat
+    understands:
+    - Cat
   - type: InteractionPopup
     successChance: 0.7
     interactSuccessString: petting-success-cat
@@ -3233,6 +3336,12 @@
         Slash: 6
         Piercing: 6
         Structural: 15
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Cat
+    understands:
+    - Cat
+    - ForgeGalacticStandard # Needs to understand your nukie ops.
 
 - type: entity
   name: space cat
@@ -3384,6 +3493,11 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Hissing
+    understands:
+    - Hissing
 
 - type: entity
   name: ferret
@@ -3439,6 +3553,11 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Hissing
+    understands:
+    - Hissing
 
 - type: entity
   name: hamster
@@ -3536,8 +3655,13 @@
     spawned:
     - id: FoodMeat
       amount: 1
-  - type: ReplacementAccent
-    accent: mouse
+  # - type: ReplacementAccent
+  #   accent: mouse
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Mouse
+    understands:
+    - Mouse
   - type: Tag
     tags:
     - VimPilot
@@ -3653,8 +3777,13 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/pig_oink.ogg
-  - type: ReplacementAccent
-    accent: pig
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Pig
+    understands:
+    - Pig
+  # - type: ReplacementAccent
+  #   accent: pig
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
   - type: NpcFactionMember
@@ -3745,6 +3874,12 @@
     reformTime: 10
     popupText: diona-reform-attempt
     reformPrototype: MobDionaReformed
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - RootSpeak
+    understands:
+    - RootSpeak
+    - ForgeGalacticStandard
 
 - type: entity
   parent: MobDionaNymph
@@ -3815,6 +3950,11 @@
       task: SimpleHostileCompound
   - type: Puller
     needsHands: false
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - Deer
+    understands:
+    - Deer
 
 - type: entity
   name: reindeer doe

@@ -12,13 +12,14 @@
   id: Empress
   parent: BaseVessel
   name: NSF Императрица
-  description: Крупногабаритный патрульшый шаттл ДСБФ. Рекомендованный состав команды 4-8 человек.
+  description: Крупногабаритный патрульный шаттл ДСБФ. Рекомендованный состав команды 4-8 человек.
   price: 382500 #Appraisal value is 150000
   category: Large
   group: Security
   access: Frontier
   shuttlePath: /Maps/_Forge/Shuttles/Nfsd/empress.yml
   guidebookPage: Null
+  limit: 1
   class:
   - Capital
   addComponents:

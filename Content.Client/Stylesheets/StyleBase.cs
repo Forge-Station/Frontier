@@ -21,9 +21,11 @@ namespace Content.Client.Stylesheets
         public const string ClassAngleRect = "AngleRect";
 
         public const string ButtonOpenRight = "OpenRight";
+        public const string ButtonOpenRightSelected = "OpenRightSelected"; // Forge-change: take from _Monolith 37 & 2522
         public const string ButtonOpenLeft = "OpenLeft";
         public const string ButtonOpenBoth = "OpenBoth";
-        public const string ButtonSquare = "ButtonSquare";
+        public const string ButtonOpenBothSelected = "OpenBothSelected";
+        public const string ButtonSquare = "ButtonSquare"; // Forge-change: take from _Monolith 37 & 2522
 
         public const string ButtonCaution = "Caution";
 

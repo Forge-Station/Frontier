@@ -48,6 +48,7 @@
   - type: AnimatedEmotes # goob edit - animated emotes
   - type: StunVisuals # Forge-Change
   - type: TTS # Corvax-TTS
+  - type: LanguageSpeaker # Einstein Engines - Language. This component is required to support speech, but it does not define known languages.
 
 - type: entity
   save: false

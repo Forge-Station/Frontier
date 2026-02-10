@@ -18,3 +18,23 @@
   - type: Sprite
     sprite: Forge/Structures/Decoration/banner.rsi
     state: banner_tl
+
+- type: entity
+  id: BannerNexus
+  parent: BannerBase
+  name: Banner Nexus
+  description: Nexus corporation banner.
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Decoration/banner.rsi
+    state: banner_nexus
+
+- type: entity
+  id: BannerDaybreak
+  parent: BannerBase
+  name: Banner Daybreak
+  description: Daybreak corporation banner.
+  components:
+  - type: Sprite
+    sprite: Forge/Structures/Decoration/banner.rsi
+    state: banner_sune

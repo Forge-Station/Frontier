@@ -52,6 +52,13 @@
       Male: UnisexDwarf
       Female: FemaleDwarf
       Unsexed: UnisexDwarf
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - ForgeEarthClassic
+    understands:
+    - ForgeGalacticStandard
+    - ForgeEarthClassic
   - type: ReplacementAccent
     accent: dwarf
   - type: Speech

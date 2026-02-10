@@ -1,0 +1,70 @@
+- type: trait
+  id: ForgeEarthClassic
+  name: trait-language-forgeearth-name
+  description: trait-language-forgeearth-desc
+  category: LanguageTraits
+  cost: 1
+  speciesBlacklist:
+    - Human
+    - Dwarf
+    - DemonSpecies
+  components:
+  - type: LanguageSpeaker
+  languagesSpoken:
+    - ForgeEarthClassic
+  languagesUnderstood:
+    - ForgeEarthClassic
+
+- type: trait
+  id: ForgeTradeband
+  name: trait-language-forgetradeband-name
+  description: trait-language-forgetradeband-desc
+  category: LanguageTraits
+  cost: 1
+  components:
+  - type: LanguageSpeaker
+  languagesSpoken:
+    - ForgeTradeband
+  languagesUnderstood:
+    - ForgeTradeband
+
+- type: trait
+  id: ForgeAshen
+  name: trait-language-forgeashen-name
+  description: trait-language-forgeashen-desc
+  category: LanguageTraits
+  cost: 1
+  components:
+  - type: LanguageSpeaker
+  languagesSpoken:
+    - ForgeAshen
+  languagesUnderstood:
+    - ForgeAshen
+
+- type: trait
+  id: ForgeSibera
+  name: trait-language-forgesibera-name
+  description: trait-language-forgesibera-desc
+  category: LanguageTraits
+  cost: 1
+  components:
+  - type: LanguageSpeaker
+  languagesSpoken:
+    - ForgeSibera
+  languagesUnderstood:
+    - ForgeSibera
+
+- type: trait
+  id: ForgeValyrianStandard
+  name: trait-language-valyrian-name
+  description: trait-language-valyrian-desc
+  category: LanguageTraits
+  cost: 1
+  speciesBlacklist:
+    - Harpy
+  components:
+  - type: LanguageSpeaker
+  languagesSpoken:
+    - ValyrianStandard
+  languagesUnderstood:
+    - ValyrianStandard

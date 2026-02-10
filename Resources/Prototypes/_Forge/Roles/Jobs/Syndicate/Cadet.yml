@@ -22,6 +22,8 @@
   description: forge-job-desc-smugglerbodyguard
   playTimeTracker: JobsmugglerBodyguard
   requirements:
+    - !type:MinPlayersRequirement
+      min: 20
     - !type:OverallPlaytimeRequirement
       time: 72000 # 20 hours
     - !type:RoleTimeRequirement

@@ -16,6 +16,8 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared._Mono.Company; // Forge-change: Mono company
+using Robust.Shared.Prototypes; // Forge-change
 
 namespace Content.Client.Shuttles.UI;
 
@@ -327,6 +329,18 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
                 var beaconUiPos = ScalePosition(localPos);
                 var mapObject = GetMapObject(localPos, Angle.Zero, scale: 0.75f, scalePosition: true);
 
+                // Forge-change-start: take from _Mono
+                // Get company color if the beacon has it
+                var displayColor = beaconColor;
+                if (mapO is GridMapObject gridObj &&
+                    EntManager.TryGetComponent(gridObj.Entity, out Shared._Mono.Company.CompanyComponent? companyComp) &&
+                    !string.IsNullOrEmpty(companyComp.CompanyName) &&
+                    IoCManager.Resolve<IPrototypeManager>().TryIndex<CompanyPrototype>(companyComp.CompanyName, out var beaconCompanyProto))
+                {
+                    displayColor = Color.FromSrgb(beaconCompanyProto.Color);
+                }
+                // Forge-change-end
+
                 var existingVerts = _verts.GetOrNew(beaconColor);
                 var existingEdges = _edges.GetOrNew(beaconColor);
 
@@ -403,8 +417,19 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
             foreach (var (gridUiPos, iffText) in sendStrings)
             {
-                var textWidth = handle.GetDimensions(_font, iffText, 1f);
-                handle.DrawString(_font, gridUiPos + textWidth with { X = -textWidth.X / 2f, Y = textWidth.Y * UIScale }, iffText, adjustedColor);
+                // Forge-change-start: take from _Mono
+                var lines = iffText.Split('\n');
+                float yOffset = 0f;
+
+                foreach (var line in lines)
+                {
+                    var lineDims = handle.GetDimensions(_font, line, 1f);
+                    var linePos = gridUiPos + new Vector2(-lineDims.X / 2f, yOffset);
+                    handle.DrawString(_font, linePos, line, adjustedColor);
+
+                    yOffset += lineDims.Y;
+                }
+                // Forge-change-end
             }
         }
 

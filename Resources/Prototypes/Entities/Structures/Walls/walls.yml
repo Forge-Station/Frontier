@@ -518,6 +518,8 @@
       damageModifierSet: StructuralMetallicStrong
     - type: RadiationBlocker
       resistance: 5
+    - type: StaticPrice
+      price: 35 # Forge-change
 
 - type: entity
   parent: WallPlastitaniumIndestructible
@@ -544,6 +546,9 @@
                   max: 1
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
+    - type: Construction
+      graph: Girder
+      node: plastitaniumWall
 
 - type: entity
   parent: WallPlastitaniumDiagonalIndestructible

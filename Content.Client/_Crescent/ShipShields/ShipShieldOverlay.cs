@@ -21,10 +21,10 @@ namespace Content.Client._Crescent.ShipShields;
 
 public sealed class ShipShieldOverlay : Overlay
 {
-    private readonly IResourceCache _resourceCache;
-    private readonly IEntityManager _entManager;
     private readonly FixtureSystem _fixture;
     private readonly SharedPhysicsSystem _physics;
+    private readonly IResourceCache _resourceCache;
+    private readonly IEntityManager _entManager;
     private readonly ShaderInstance _unshadedShader;
     private readonly List<DrawVertexUV2D> _verts = new(128); // Mono
 
@@ -59,7 +59,7 @@ public sealed class ShipShieldOverlay : Overlay
 
             var fixture = _fixture.GetFixtureOrNull(uid, "shield", fixtures);
 
-            if (fixture == null || fixture.Shape is not ChainShape chain)
+            if (fixture is not { Shape: ChainShape chain })
                 continue;
 
             var texture = _resourceCache.GetTexture("/Textures/_Crescent/ShipShields/shieldtex.png");

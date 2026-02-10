@@ -111,6 +111,13 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Pai #couldn't decide if this should be borg or pai sounds so I flipped a coin.
+  - type: LanguageKnowledge # Einstein Engines - Languages # Goob moved to MobRobotic since it is parent for MobSiliconBase
+    speaks:
+    - ForgeGalacticStandard
+    - RobotTalk
+    understands:
+    - ForgeGalacticStandard
+    - RobotTalk
 
 - type: entity
   parent: MobSiliconBase

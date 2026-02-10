@@ -140,6 +140,13 @@
                         <BoxContainer Name="TraitsList" Orientation="Vertical" />
                     </ScrollContainer>
                 </BoxContainer>
+                <!-- Monolith: Company Tab -->
+                <BoxContainer Orientation="Vertical" Margin="10">
+                    <ScrollContainer HorizontalExpand="True" VerticalExpand="True">
+                        <BoxContainer Name="CompanyContainer" Orientation="Vertical" />
+                    </ScrollContainer>
+                </BoxContainer>
+                <!-- Monolith end -->
                 <BoxContainer Name="MarkingsTab" Orientation="Vertical" Margin="10">
                     <!-- Markings -->
                     <ScrollContainer VerticalExpand="True">

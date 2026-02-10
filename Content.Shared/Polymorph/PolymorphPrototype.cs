@@ -148,6 +148,19 @@ public sealed partial record PolymorphConfiguration
     /// </summary>
     [DataField]
     public LocId? ExitPolymorphPopup = "polymorph-revert-popup-generic";
+
+    // Einstein Engines - Language begin
+    /// <summary>
+    /// The exact names of components to copy over when this polymorph is applied.
+    /// </summary>
+    [DataField(serverOnly: true)]
+    public HashSet<string> CopiedComponents = new()
+    {
+        "LanguageKnowledge",
+        "LanguageSpeaker",
+        "Grammar"
+    };
+    // Einstein Engines - Language end
 }
 
 public enum PolymorphInventoryChange : byte

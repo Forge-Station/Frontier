@@ -64,4 +64,11 @@ public sealed partial class IdCardComponent : Component
 
     [DataField]
     public bool CanMicrowave = true;
+
+    /// <summary>
+    /// The company name associated with this ID card
+    /// </summary>
+    [DataField]
+    [AutoNetworkedField]
+    public string? CompanyName;
 }

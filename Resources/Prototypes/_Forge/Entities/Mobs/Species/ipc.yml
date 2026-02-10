@@ -17,6 +17,13 @@
     templateId: Ipc
   - type: ContentEye
   - type: Speech
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - RobotTalk
+    understands:
+    - ForgeGalacticStandard
+    - RobotTalk
   - type: BodyEmotes
     soundsId: IpcEmotes
   - type: Vocal

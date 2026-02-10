@@ -827,6 +827,13 @@ namespace Content.Client.Stylesheets
                     .Class(ButtonOpenRight)
                     .Prop(ContainerButton.StylePropertyStyleBox, BaseButtonOpenRight),
 
+                // Forge-change-start: take from _Monolith 37 & 2522
+                Element<ContainerButton>().Class(ContainerButton.StyleClassButton)
+                    .Class(ButtonOpenRightSelected)
+                    .Prop(ContainerButton.StylePropertyStyleBox, BaseButtonOpenRight)
+                    .Prop(Control.StylePropertyModulateSelf, ButtonColorGoodDefault),
+                // Forge-change-end
+
                 Element<ContainerButton>().Class(ContainerButton.StyleClassButton)
                     .Class(ButtonOpenLeft)
                     .Prop(ContainerButton.StylePropertyStyleBox, BaseButtonOpenLeft),
@@ -1984,6 +1991,22 @@ namespace Content.Client.Stylesheets
                     {
                         new StyleProperty(TextureButton.StylePropertyTexture, resCache.GetTexture("/Textures/Interface/Bwoink/un_pinned.png"))
                     }),
+
+                // Forge-change-start: take from _Monolith 37 & 2522
+                // Add the style rule for OpenRightSelected
+                Element<Button>().Class(ButtonOpenRightSelected)
+                    .Prop(ContainerButton.StylePropertyStyleBox, new StyleBoxTexture(BaseButtonOpenRight)
+                    {
+                        Modulate = ButtonColorGoodDefault
+                    }),
+
+                // Add the style rule for OpenBothSelected
+                Element<Button>().Class(ButtonOpenBothSelected)
+                    .Prop(ContainerButton.StylePropertyStyleBox, new StyleBoxTexture(BaseButtonOpenBoth)
+                    {
+                        Modulate = ButtonColorGoodDefault
+                    }),
+                // Forge-change-end
 
                 Element<PanelContainer>()
                     .Class(StyleClassInset)

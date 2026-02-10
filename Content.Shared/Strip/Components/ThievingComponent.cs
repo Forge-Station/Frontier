@@ -35,6 +35,25 @@ public sealed partial class ThievingComponent : Component
     /// Get mogged.
     /// </summary>
     public override bool SendOnlyToOwner => true;
+
+    // Forge-change-start: take _Monolith 37 & 2522
+
+    /// <summary>
+    /// Mono: Multiplies the strip time.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("timeMultiplier")]
+    [AutoNetworkedField]
+    public float TimeMultiplier = 1f;
+
+    /// <summary>
+    /// Mono: If true, this entity can identify hidden strip slots.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("identifyHidden")]
+    [AutoNetworkedField]
+    public bool IdentifyHidden;
+    // Forge-change-end
 }
 
 /// <summary>

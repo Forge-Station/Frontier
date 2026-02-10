@@ -7,6 +7,8 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Physics.Components;
+using Content.Shared._Mono.Company; // Forge-change
+using Robust.Shared.Prototypes; // Forge-change
 
 namespace Content.Client.Shuttles.UI;
 
@@ -14,6 +16,7 @@ namespace Content.Client.Shuttles.UI;
 public sealed partial class NavScreen : BoxContainer
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!; // Forge-change
     private SharedTransformSystem _xformSystem;
 
     private EntityUid? _consoleEntity; // Entity of controlling console
@@ -34,22 +37,53 @@ public sealed partial class NavScreen : BoxContainer
         DockToggle.OnToggled += OnDockTogglePressed;
         DockToggle.Pressed = NavRadar.ShowDocks;
 
+        CompanyToggle.OnToggled += OnCompanyTogglePressed;
+        CompanyToggle.Pressed = NavRadar.ShowCompany;
+
         NfInitialize(); // Frontier Initialization for the NavScreen
     }
 
     // Frontier - IFF search
+    // Forge-change-start: take _Mono company
     private void OnIffSearchChanged(string text)
     {
         text = text.Trim();
 
         NavRadar.IFFFilter = text.Length == 0
             ? null // If empty, do not filter
-            : (entity, grid, iff) => // Otherwise use simple search criteria
+            : (entity, grid, iff, hideLabel, name) => // Otherwise use simple search criteria
             {
-                _entManager.TryGetComponent<MetaDataComponent>(entity, out var metadata);
-                return metadata != null && metadata.EntityName.Contains(text, StringComparison.OrdinalIgnoreCase);
+                // Check entity name
+                if (name.Contains(text, StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+                if (hideLabel)
+                    return false;
+
+                // Check company name
+                if (_entManager.TryGetComponent<CompanyComponent>(entity, out var companyComp) &&
+                    !string.IsNullOrEmpty(companyComp.CompanyName))
+                {
+                    // Try to match the company ID directly
+                    if (companyComp.CompanyName.Contains(text, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return true;
+                    }
+
+                    // Try to match company name from prototype
+                    if (_prototypeManager.TryIndex<CompanyPrototype>(
+                        companyComp.CompanyName, out var prototype) &&
+                        prototype.Name.Contains(text, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
             };
     }
+    // Forge-change-end
 
     public void SetShuttle(EntityUid? shuttle)
     {
@@ -74,6 +108,12 @@ public sealed partial class NavScreen : BoxContainer
     {
         NavRadar.ShowIFFShuttles ^= true;
         args.Button.Pressed = NavRadar.ShowIFFShuttles;
+    }
+
+    private void OnCompanyTogglePressed(BaseButton.ButtonEventArgs args)
+    {
+        NavRadar.ShowCompany ^= true;
+        args.Button.Pressed = NavRadar.ShowCompany;
     }
 
     private void OnDockTogglePressed(BaseButton.ButtonEventArgs args)

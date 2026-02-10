@@ -43,6 +43,16 @@
   - type: ContentEye
   - type: Speech
     allowedEmotes: ['Purr']
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - SiikMaas
+    - SiikTajr
+    understands:
+    - ForgeGalacticStandard
+    - SiikMaas
+    - SiikTajr
+    - NalRasan
   - type: Vocal
     sounds:
       Male: MaleTajaran

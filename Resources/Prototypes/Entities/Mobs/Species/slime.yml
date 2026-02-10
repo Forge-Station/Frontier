@@ -53,6 +53,13 @@
       Male: MaleSlime
       Female: FemaleSlime
       Unsexed: MaleSlime
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - Bubblish
+    understands:
+    - ForgeGalacticStandard
+    - Bubblish
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Slime

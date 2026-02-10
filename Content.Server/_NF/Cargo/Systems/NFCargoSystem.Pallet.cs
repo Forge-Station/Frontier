@@ -10,6 +10,10 @@ using Robust.Shared.Audio;
 using Robust.Shared.Map;
 using System.Numerics;
 using Content.Shared.Coordinates;
+using Content.Shared._Mono.ItemTax.Components; // Forge-change: take Mono:782
+using Content.Server._NF.Bank; // Forge-change: take Mono:782
+using Content.Shared._NF.Bank.BUI; // Forge-change: take Mono:782
+using Robust.Shared.Toolshed.Commands.Math; // Forge-change: take Mono:782
 
 namespace Content.Server._NF.Cargo.Systems;
 
@@ -45,7 +49,7 @@ public sealed partial class NFCargoSystem
         }
 
         // Modify prices based on modifier.
-        GetPalletGoods(ent, gridUid, out var toSell, out var amount, out var noModAmount);
+        GetPalletGoods(ent, gridUid, out var toSell, out var amount, out var noModAmount, out var blackMarketTaxAmount, out var frontierTaxAmount, out var nfsdTaxAmount, out var medicalTaxAmount); // Forge-change: take Mono taxes
         if (TryComp<MarketModifierComponent>(ent, out var priceMod))
         {
             amount *= priceMod.Mod;
@@ -134,11 +138,11 @@ public sealed partial class NFCargoSystem
 
     #region Station
 
-    private bool SellPallets(Entity<NFCargoPalletConsoleComponent> consoleUid, EntityUid gridUid, out double amount, out double noMultiplierAmount) // Frontier: first arg to Entity, add noMultiplierAmount
+    private bool SellPallets(Entity<NFCargoPalletConsoleComponent> consoleUid, EntityUid gridUid, out double amount, out double noMultiplierAmount, out double blackMarketTaxAmount, out double frontierTaxAmount, out double nfsdTaxAmount, out double medicalTaxAmount) // Forge-change: take Mono taxes // Frontier: first arg to Entity, add noMultiplierAmount
     {
-        GetPalletGoods(consoleUid, gridUid, out var toSell, out amount, out noMultiplierAmount);
+        GetPalletGoods(consoleUid, gridUid, out var toSell, out amount, out noMultiplierAmount, out blackMarketTaxAmount, out frontierTaxAmount, out nfsdTaxAmount, out medicalTaxAmount); // Forge-change: take Mono taxes
 
-        Log.Debug($"Cargo sold {toSell.Count} entities for {amount} (plus {noMultiplierAmount} without mods)");
+        Log.Debug($"Cargo sold {toSell.Count} entities for {amount} (plus {noMultiplierAmount} without mods). (Taxes: Black Market: {blackMarketTaxAmount}, Outpost: {frontierTaxAmount}, NFSD: {nfsdTaxAmount}, Medical: {medicalTaxAmount})"); // Forge-change: take Mono taxes
 
         if (toSell.Count == 0)
             return false;
@@ -152,10 +156,14 @@ public sealed partial class NFCargoSystem
         return true;
     }
 
-    private void GetPalletGoods(Entity<NFCargoPalletConsoleComponent> consoleUid, EntityUid gridUid, out HashSet<EntityUid> toSell, out double amount, out double noMultiplierAmount) // Frontier: first arg to Entity, add noMultiplierAmount
+    private void GetPalletGoods(Entity<NFCargoPalletConsoleComponent> consoleUid, EntityUid gridUid, out HashSet<EntityUid> toSell, out double amount, out double noMultiplierAmount, out double blackMarketTaxAmount, out double frontierTaxAmount, out double nfsdTaxAmount, out double medicalTaxAmount) // Forge-change: take Mono taxes // Frontier: first arg to Entity, add noMultiplierAmount
     {
         amount = 0;
         noMultiplierAmount = 0;
+        blackMarketTaxAmount = 0; // Forge-change: take Mono taxes
+        frontierTaxAmount = 0; // Forge-change: take Mono taxes
+        nfsdTaxAmount = 0; // Forge-change: take Mono taxes
+        medicalTaxAmount = 0; // Forge-change: take Mono taxes
         toSell = new HashSet<EntityUid>();
 
         foreach (var (palletUid, _, _) in GetCargoPallets(consoleUid, gridUid, BuySellType.Sell))
@@ -195,6 +203,31 @@ public sealed partial class NFCargoSystem
                     noMultiplierAmount += price;
                 else
                     amount += price;
+                // Forge-change-start: Mono: ItemTaxs to budgets.
+                if (TryComp<ItemTaxComponent>(ent, out var itemTax))
+                {
+                    foreach (var (account, taxCoeff) in itemTax.TaxAccounts)
+                    {
+                        switch (account)
+                        {
+                            case SectorBankAccount.Invalid:
+                                blackMarketTaxAmount += price * taxCoeff;
+                                break;
+                            case SectorBankAccount.Frontier:
+                                frontierTaxAmount += price * taxCoeff;
+                                break;
+                            case SectorBankAccount.Nfsd:
+                                nfsdTaxAmount += price * taxCoeff;
+                                break;
+                            case SectorBankAccount.Medical:
+                                medicalTaxAmount += price * taxCoeff;
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+                // Forge-change-end: End Mono
             }
         }
     }
@@ -239,7 +272,7 @@ public sealed partial class NFCargoSystem
             return;
         }
 
-        if (!SellPallets(ent, gridUid, out var price, out var noMultiplierPrice))
+        if (!SellPallets(ent, gridUid, out var price, out var noMultiplierPrice, out var blackMarketTaxAmount, out var frontierTaxAmount, out var nfsdTaxAmount, out var medicalTaxAmount)) // Forge-change: take Mono taxes
             return;
 
         // Handle market modifiers & immune objects
@@ -248,7 +281,36 @@ public sealed partial class NFCargoSystem
             price *= priceMod.Mod;
         }
         price += noMultiplierPrice;
-
+        // Mono Begin
+        if (blackMarketTaxAmount > 0)
+            _bank.TrySectorDeposit(SectorBankAccount.Invalid, (int)blackMarketTaxAmount, LedgerEntryType.BlackMarketSales);
+        if (frontierTaxAmount > 0)
+            _bank.TrySectorDeposit(SectorBankAccount.Frontier, (int)frontierTaxAmount, LedgerEntryType.FrontierSales);
+        if (nfsdTaxAmount > 0)
+            _bank.TrySectorDeposit(SectorBankAccount.Nfsd, (int)nfsdTaxAmount, LedgerEntryType.NFSDSales);
+        if (medicalTaxAmount > 0)
+            _bank.TrySectorDeposit(SectorBankAccount.Medical, (int)medicalTaxAmount, LedgerEntryType.MedicalSales);
+        if (blackMarketTaxAmount < 0)
+        {
+            blackMarketTaxAmount = -blackMarketTaxAmount;
+            _bank.TrySectorWithdraw(SectorBankAccount.Invalid, (int)blackMarketTaxAmount, LedgerEntryType.BlackMarketPenalties);
+        }
+        if (frontierTaxAmount < 0)
+        {
+            frontierTaxAmount = -frontierTaxAmount;
+            _bank.TrySectorWithdraw(SectorBankAccount.Frontier, (int)frontierTaxAmount, LedgerEntryType.FrontierPenalties);
+        }
+        if (nfsdTaxAmount < 0)
+        {
+            nfsdTaxAmount = -nfsdTaxAmount;
+            _bank.TrySectorWithdraw(SectorBankAccount.Nfsd, (int)nfsdTaxAmount, LedgerEntryType.NFSDPenalties);
+        }
+        if (medicalTaxAmount < 0)
+        {
+            medicalTaxAmount = -medicalTaxAmount;
+            _bank.TrySectorWithdraw(SectorBankAccount.Medical, (int)medicalTaxAmount, LedgerEntryType.MedicalPenalties);
+        }
+        // Mono End
         var stackPrototype = _proto.Index(ent.Comp.CashType);
         var stackUid = _stack.Spawn((int)price, stackPrototype, args.Actor.ToCoordinates());
         if (!_hands.TryPickupAnyHand(args.Actor, stackUid))

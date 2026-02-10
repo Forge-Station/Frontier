@@ -5,6 +5,7 @@ using Content.Shared.Mind.Components;
 using Content.Shared.Whitelist;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Content.Shared.Chat; // Forge-change: take Einstein Engines - Languages
 
 namespace Content.Server.Speech.EntitySystems;
 

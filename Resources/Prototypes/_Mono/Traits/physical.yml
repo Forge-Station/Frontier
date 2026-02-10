@@ -1,0 +1,226 @@
+# Forge-change: move to skills
+# - type: trait
+#   id: PrybarProsthetics
+#   name: trait-prybar-prosthetics-name
+#   description: trait-prybar-prosthetics-desc
+#   category: Skills # Forge-change: switch to Skills
+#   cost: 2
+#   components:
+#   - type: PrybarProsthetics
+
+- type: trait
+  id: Vigor
+  name: trait-vigor-name
+  description: trait-vigor-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: 6
+  mutuallyExclusiveTraits:
+  - Lethargy
+  speciesBlacklist:
+  - Oni
+  - Ipc
+  components:
+  - type: Vigor
+
+- type: trait
+  id: Lethargy
+  name: trait-lethargy-name
+  description: trait-lethargy-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: -1
+  mutuallyExclusiveTraits:
+  - Vigor
+  speciesBlacklist:
+  - Felinid
+  - Tajaran
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: Lethargy
+
+- type: trait
+  id: GlassJaw
+  name: trait-glass-jaw-name
+  description: trait-glass-jaw-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: -2
+  mutuallyExclusiveTraits:
+  - Tenacity
+  speciesBlacklist:
+  - Ipc
+  components:
+  - type: GlassJaw
+
+- type: trait
+  id: Tenacity
+  name: trait-tenacity-name
+  description: trait-tenacity-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: 2
+  mutuallyExclusiveTraits:
+  - GlassJaw
+  - OsteogenesisImperfecta
+  speciesBlacklist:
+  - Ipc
+  components:
+  - type: Tenacity
+
+- type: trait
+  id: WillToLive
+  name: trait-will-to-live-name
+  description: trait-will-to-live-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: 2
+  mutuallyExclusiveTraits:
+  - WillToDie
+  speciesBlacklist:
+  - Ipc
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: WillToLive
+
+- type: trait
+  id: WillToDie
+  name: trait-will-to-die-name
+  description: trait-will-to-die-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: -1
+  mutuallyExclusiveTraits:
+  - WillToLive
+  speciesBlacklist:
+  - Ipc
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: WillToDie
+
+# Forge-change: move to Skills
+# - type: trait
+#   id: Thieving
+#   name: trait-thieving-name
+#   description: trait-thieving-desc
+#   category: Skills # Forge-change: switch to Skills
+#   cost: 3
+#   speciesBlacklist:
+#   - Felinid
+#   components:
+#   - type: Thieving
+#     stealthy: true
+#     timeMultiplier: 0.67
+#     identifyHidden: true
+
+- type: trait
+  id: BionicLegs
+  name: trait-bionic-legs-name
+  description: trait-bionic-legs-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: 3
+  components:
+  - type: BionicLegs
+
+- type: trait
+  id: OsteogenesisImperfecta
+  name: trait-osteogenesis-imperfecta-name
+  description: trait-osteogenesis-imperfecta-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: -3
+  mutuallyExclusiveTraits:
+  - Tenacity
+  speciesBlacklist:
+  - Ipc
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: GlassJaw
+    critDecrease: 50
+
+- type: trait
+  id: Hemophilia
+  name: trait-hemophilia-name
+  description: trait-hemophilia-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: -2
+  speciesBlacklist:
+  - Ipc
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+  - type: Hemophilia
+
+- type: trait
+  id: Voracious
+  name: trait-voracious-name
+  description: trait-voracious-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: 1
+  speciesBlacklist:
+    - Ipc
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+    - type: Voracious
+      consumptionSpeedMultiplier: 2.0
+
+- type: trait
+  id: BionicSpinarette
+  name: trait-bionic-spinarette-name
+  description: trait-bionic-spinarette-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: 2
+  speciesBlacklist:
+    - Ipc
+    - Arachnid
+  blacklist:
+    components:
+    - BorgChassis
+  components:
+    - type: Sericulture
+      action: ActionSericulture
+      productionLength: 2
+      entityProduced: MaterialWebSilk1
+      hungerCost: 4
+
+- type: trait
+  id: Feeble
+  name: trait-feeble-name
+  description: trait-feeble-desc
+  category: Skills # Forge-change: switch to Skills
+  cost: -2
+  speciesBlacklist:
+    - Felinid
+    - Tajaran
+  components:
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        "45": 0.70
+        "65": 0.46
+
+# Forge-change move to Skills
+# - type: trait
+#   id: TrapAvoider
+#   name: trait-trap-avoider-name
+#   description: trait-trap-avoider-desc
+#   category: Skills # Forge-change: switch to Skills
+#   cost: 4
+#   speciesBlacklist:
+#     - Felinid
+#     - Tajaran
+#     - Harpy
+#   components:
+#     - type: TrapAvoider
+
+# - type: trait
+#   id: SelfAware
+#   name: trait-self-aware-name
+#   description: trait-self-aware-desc
+#   category: Skills # Forge-change: switch to Skills
+#   cost: 2
+#   components:
+#   - type: SelfAware

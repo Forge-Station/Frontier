@@ -53,6 +53,14 @@
     whitelist:
       components:
       - SecretStash
+  - type: LanguageSpeaker # Einstein Engines - Language
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - ForgeGalacticStandard
+    - RobotTalk
+    understands:
+    - ForgeGalacticStandard
+    - RobotTalk
 
 - type: entity
   parent: MMI
@@ -138,4 +146,11 @@
       whitelist:
         components:
         - SecretStash
-
+    - type: LanguageSpeaker # Einstein Engines - Language
+    - type: LanguageKnowledge # Einstein Engines - Language
+      speaks:
+      - ForgeGalacticStandard # Added since posi brains should be able to talk to roboticists/scientists.
+      - RobotTalk
+      understands:
+      - ForgeGalacticStandard # Added since posi brains should be able to understand ForgeGalacticStandard (they can in a chassis)
+      - RobotTalk

@@ -1,0 +1,88 @@
+# Spoken by Shadowkins.
+- type: language
+  id: Marish
+  isVisibleLanguage: true
+  speech:
+    color: "#be3cc5"
+    # fontId: Lymphatic #* FONTS NOT ALREADY HERE ARE NOT BEING ADDED
+    empathySpeech: false
+    speechVerbOverrides:
+    - chat-speech-verb-marish
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 2
+    maxSyllables: 5
+    replacement:
+    # Forge-change
+    # - mar
+    # - mwrrr
+    # - maaAr
+    # - aarrr
+    # - wrurrl
+    # - mmar
+    # - mwar
+    # - mlar
+    # - mlwar
+    # - mwaarr
+    # - mAaAr
+    # - lmwar
+    # - wlurrl
+    # - wlmwar
+    # - arrmaw
+    # - mwAlwar
+    # - wrlurll
+    # - wlarrul
+    # - wlAmur
+    # - AlwuRm
+    # - mrrrAw
+    # - wurlMur
+    # - uuRlmmr
+    - мар
+    - мврр
+    - маар
+    - аррр
+    - вррл
+    - ммар
+    - мвар
+    - млар
+    - млвар
+    - мваар
+    - лмвар
+    - влурл
+    - влмвар
+    - аррмау
+    - мвалур
+    - врлурл
+    - вларул
+    - вламур
+    - алвурм
+    - мрррав
+    - вурлмур
+    - урлммр
+    - мурр
+    - шрр
+    - хрр
+    - жрр
+    - тень
+    - мрак
+    - влум
+    - лрр
+    - шрлл
+    - мурл
+    - влур
+    - хлам
+    - шрам
+    - мшрр
+    - урмл
+    - лурр
+    - влурр
+    - муррл
+    - шррм
+    - хрмм
+    - жрмм
+    - мшлл
+    - урмм
+    - влмм
+    - мурмм
+    - шрмм
+    - хрммр

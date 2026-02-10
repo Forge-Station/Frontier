@@ -120,6 +120,11 @@
     molsPerSecondPerUnitMass: 0.0005
   - type: Speech
     speechVerb: LargeMob
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - Xeno
+    understands:
+    - Xeno
 
 - type: entity
   name: praetorian
@@ -232,6 +237,13 @@
   - type: Tag
     tags:
     - CannotSuicide
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - ForgeGalacticStandard
+    - Xeno
+    understands:
+    - ForgeGalacticStandard
+    - Xeno
 
 - type: entity
   name: ravager

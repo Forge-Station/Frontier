@@ -86,6 +86,9 @@
   - type: Contraband
     severity: Class3General
     allowedDepartments: []
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: -0.05
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -97,6 +100,9 @@
     turnInValues:
       FrontierUplinkCoin: 2
       Doubloon: 2
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: -0.05
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -129,6 +135,9 @@
   components:
   - type: Contraband
     turnInValues: *oneFUC
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: -0.1
 
 - type: entity
   parent: BaseC3CultContraband
@@ -155,6 +164,9 @@
   - type: Contraband
     turnInValues:
       FrontierUplinkCoin: 2 # Forge-change
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: -0.1
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -179,6 +191,9 @@
   components:
   - type: Contraband
     turnInValues: *oneFUC
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: -0.2
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -196,6 +211,9 @@
   - type: Contraband
     severity: Class3Wizard
     turnInValues: *oneFUC
+  - type: ItemTax # Mono
+    taxAccounts:
+      nfsd: -0.2
 # endregion
 
 # region Class 3 Mobs

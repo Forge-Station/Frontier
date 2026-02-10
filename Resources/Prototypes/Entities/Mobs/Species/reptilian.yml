@@ -43,6 +43,13 @@
       Male: MaleReptilian
       Female: FemaleReptilian
       Unsexed: MaleReptilian
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - ForgeGalacticStandard
+    - Draconic
+    understands:
+    - ForgeGalacticStandard
+    - Draconic
   - type: BodyEmotes
     soundsId: ReptilianBodyEmotes
   - type: Damageable

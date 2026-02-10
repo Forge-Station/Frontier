@@ -26,6 +26,11 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:AddLanguageSpecial
+    languagesSpoken:
+    - SecurityCodebase
+    languagesUnderstood:
+    - SecurityCodebase
 
 - type: startingGear
   id: EngineerNfsdGear
