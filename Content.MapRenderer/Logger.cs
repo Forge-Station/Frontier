@@ -12,12 +12,12 @@ namespace Content.MapRenderer
             try
             {
                 File.WriteAllText(LogFilePath, string.Empty);
-                Log("Started", sendInConsole = false);
+                Log("Started", sendInConsole: false);
             }
             catch {}
         }
 
-        private static void Log(string message, Exception? ex = null, bool sendInConsole = true)
+        public static void Log(string message, Exception? ex = null, bool sendInConsole = true)
         {
             try
             {

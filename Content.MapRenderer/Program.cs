@@ -11,6 +11,7 @@ using Content.Server.Maps;
 using Robust.Shared.Prototypes;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Webp;
+//using Robust.Shared.Log;
 
 namespace Content.MapRenderer
 {
@@ -22,7 +23,26 @@ namespace Content.MapRenderer
 
         internal static async Task Main(string[] args)
         {
-            Logger.Logger.Init();
+            //LogManager.GlobalSawmill.Subscribe((level, message, exception) =>
+            //{
+            //    if (level >= LogLevel.Error)
+            //    {
+            //        Logger.Log($"{message}", exception, false);
+            //    }
+            //});
+            Logger.Init();
+
+            AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
+            {
+                if (e.ExceptionObject is Exception ex)
+                    Logger.Log("Unhandled exception", ex);
+            };
+
+            TaskScheduler.UnobservedTaskException += (sender, e) =>
+            {
+                Logger.Log("Unobserved task exception", e.Exception);
+                e.SetObserved();
+            };
 
             if (!CommandLineArguments.TryParse(args, out var arguments))
                 return;
