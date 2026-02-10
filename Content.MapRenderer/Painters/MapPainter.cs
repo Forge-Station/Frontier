@@ -45,21 +45,27 @@ namespace Content.MapRenderer.Painters
         {
             var stopwatch = RStopwatch.StartNew();
 
+            Logger.Log($"Map type: {_map.GetType().Name}");
+            Logger.Log($"Map: {_map}");
+
             var poolSettings = new PoolSettings
             {
                 DummyTicker = false,
                 Connected = true,
                 Destructive = true,
                 Fresh = true,
-                // Seriously whoever made MapPainter use GameMapPrototype I wish you step on a lego one time.
                 Map = _map is RenderMapPrototype prototype ? prototype.Prototype : PoolManager.TestMap,
             };
+
+            Logger.Log($"Pool map setting: {poolSettings.Map}");
+
             _pair = await PoolManager.GetServerClient(poolSettings, _testContextLike);
 
             Logger.Log($"Loaded client and server in {(int)stopwatch.Elapsed.TotalMilliseconds} ms");
 
             if (_map is RenderMapFile mapFile)
             {
+                Logger.Log($"Loading RenderMapFile: {mapFile.FileName}");
                 using var stream = File.OpenRead(mapFile.FileName);
 
                 await _pair.Server.WaitPost(() =>
@@ -77,10 +83,12 @@ namespace Content.MapRenderer.Painters
                         throw new IOException($"File {mapFile.FileName} could not be read");
 
                     _grids = loadResult.Grids.ToArray();
+                    Logger.Log($"Loaded {_grids.Length} grids from RenderMapFile");
                 });
             }
             else if (_map is RenderMapGrid gridFile)
             {
+                Logger.Log($"Loading RenderMapGrid: {gridFile.FileName}");
                 await _pair.Server.WaitPost(() =>
                 {
                     var mapSystem = _pair.Server.System<SharedMapSystem>();
@@ -88,16 +96,23 @@ namespace Content.MapRenderer.Painters
                     var mapLoader = _pair.Server.System<MapLoaderSystem>();
 
                     var mapId = new MapId(1);
+                    Logger.Log($"Creating empty map with ID: {mapId}");
                     mapSystem.CreateMap(mapId, false);
 
                     var path = new ResPath(gridFile.FileName);
                     var opts = new DeserializationOptions { StoreYamlUids = true };
 
+                    Logger.Log($"Loading grid from: {path}");
                     if (!mapLoader.TryLoadGrid(mapId, path, out var loadedGrid, opts))
                         throw new IOException($"Grid file {gridFile.FileName} could not be loaded");
 
                     _grids = mapManager.GetAllGrids(mapId).ToArray();
+                    Logger.Log($"Loaded {_grids.Length} grids from RenderMapGrid");
                 });
+            }
+            else
+            {
+                Logger.Log($"Using RenderMapPrototype with default map loading");
             }
         }
 

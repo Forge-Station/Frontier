@@ -7,6 +7,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Content.IntegrationTests;
 using Content.MapRenderer.Painters;
+using Robust.Shared.ContentPack;
 using Content.Server.Maps;
 using Robust.Shared.Prototypes;
 using SixLabors.ImageSharp;
@@ -125,23 +126,49 @@ namespace Content.MapRenderer
 
                 foreach (var protoId in selectedMapPrototypes)
                 {
+                    Logger.Log($"Processing prototype: {protoId}");
                     if (protoManager.TryIndex<GameMapPrototype>(protoId, out var proto))
                     {
-                        if (proto.IsGrid)
+                        Logger.Log($"Found prototype '{protoId}': IsGrid={proto.IsGrid}, MapPath={proto.MapPath}");
+
+                        var treatAsGrid = proto.IsGrid;
+                        try
                         {
+                            if (!treatAsGrid)
+                            {
+                                var resMgr = pair.Server.ResolveDependency<IResourceManager>();
+                                if (IsGridResource(resMgr, proto.MapPath))
+                                {
+                                    Logger.Log($"Detected grid content in resource {proto.MapPath}");
+                                    treatAsGrid = true;
+                                }
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Logger.Log($"Error while checking resource {proto.MapPath}: {e.Message}");
+                        }
+
+                        if (treatAsGrid)
+                        {
+                            Logger.Log($"Creating RenderMapGrid for '{protoId}'");
                             maps.Add(new RenderMapGrid { FileName = proto.MapPath.ToString() });
                         }
                         else
                         {
+                            Logger.Log($"Creating RenderMapPrototype for '{protoId}'");
                             maps.Add(new RenderMapPrototype { Prototype = protoId });
                         }
                     }
+                    else
+                    {
+                        Logger.Log($"Failed to find prototype: {protoId}");
+                    }
                 }
 
-                Logger.Log($"Selected maps: {string.Join(", ", selectedMapPrototypes)}");
+                Logger.Log($"Selected maps: {string.Join(", ", selectedMapPrototypes)}. Total maps created: {maps.Count}");
             }
-
-            if (arguments.ArgumentsAreFileNames)
+            else if (arguments.ArgumentsAreFileNames)
             {
                 Logger.Log("Retrieving maps by file names...");
 
@@ -214,20 +241,24 @@ namespace Content.MapRenderer
             }
             else
             {
+                Logger.Log("Processing prototypes from arguments");
                 await using var pair = await PoolManager.GetServerClient();
                 var protoManager = pair.Server.ResolveDependency<IPrototypeManager>();
 
                 foreach (var map in arguments.Maps)
                 {
+                    Logger.Log($"Processing prototype: {map}");
                     if (protoManager.TryIndex<GameMapPrototype>(map, out var proto))
                     {
+                        Logger.Log($"Found prototype '{map}': IsGrid={proto.IsGrid}, MapPath={proto.MapPath}");
                         if (proto.IsGrid)
                         {
+                            Logger.Log($"Creating RenderMapGrid for '{map}'");
                             maps.Add(new RenderMapGrid { FileName = proto.MapPath.ToString() });
-                            Logger.Log($"Found grid prototype: {proto.MapName}");
                         }
                         else
                         {
+                            Logger.Log($"Creating RenderMapPrototype for '{map}'");
                             maps.Add(new RenderMapPrototype { Prototype = map });
                         }
                     }
@@ -248,6 +279,11 @@ namespace Content.MapRenderer
             ExternalTestContext testContext)
         {
             Logger.Log($"Creating images for {toRender.Count} maps");
+            Logger.Log($"Map types to render:");
+            foreach (var map in toRender)
+            {
+                Logger.Log($"{map.GetType().Name}: {map}");
+            }
 
             var parallaxOutput = arguments.OutputParallax ? new ParallaxOutput(arguments.OutputPath) : null;
 
@@ -359,6 +395,37 @@ namespace Content.MapRenderer
             catch (Exception ex)
             {
                 Logger.Log($"Error checking if file is grid: {ex.Message}");
+            }
+
+            return false;
+        }
+
+        private static bool IsGridResource(IResourceManager resMgr, ResPath path)
+        {
+            try
+            {
+                using var stream = resMgr.ContentFileRead(path);
+                using var reader = new StreamReader(stream);
+                string? line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    if (line.Contains("meta:"))
+                    {
+                        while ((line = reader.ReadLine()) != null)
+                        {
+                            if (line.Contains("category:"))
+                                return line.Contains("Grid");
+
+                            if (!line.StartsWith(" ") && !string.IsNullOrWhiteSpace(line))
+                                break;
+                        }
+                        break;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
             }
 
             return false;
