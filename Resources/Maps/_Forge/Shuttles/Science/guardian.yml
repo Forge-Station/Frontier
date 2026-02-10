@@ -4297,20 +4297,6 @@ entities:
     - type: Transform
       pos: 15.5,6.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        disk_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
 - proto: ScrapGlass
   entities:
   - uid: 381
