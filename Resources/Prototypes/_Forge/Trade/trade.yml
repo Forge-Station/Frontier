@@ -1,0 +1,66 @@
+# Базовый прототип, наследуемся от него.
+# Дополню потом немного, не думаю что сломается что-то..
+- type: entity
+  id: BaseTrademachine
+  name: Base trade machine
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: UserInterface
+    interfaces:
+      enum.NcStoreUiKey.NcKey:
+        type: NcStoreStructuredBoundUi
+  - type: ActivatableUI
+    key: enum.NcStoreUiKey.NcKey
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        density: 300
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+# Остальные консоли
+- type: entity
+  parent: BaseTrademachine
+  id: Trademachine
+  name: Консоль MercHunter™
+  description: Консоль, предоставляющая доступ к обширной сети заказчиков MercHunter (Торговая марка).
+  suffix: Mercenary
+  components:
+  - type: NcStore
+    buyPresets:
+      - mercenary_buy
+    sellPresets:
+      - mercenary_sell
+    contractPresets:
+      - mercenary_contract
+  - type: Sprite
+    sprite: Forge/merchunted.rsi
+    layers:
+    - state: "base" # База - сама структура
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "on" # Экран
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: "keyboard" # Клавитуара
+    - state: "keys" # Кнопки
+      shader: unshaded
+  - type: PointLight
+    radius: 2.5
+    energy: 1
+    color: "#8897db"
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true

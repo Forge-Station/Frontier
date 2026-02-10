@@ -33,6 +33,8 @@
       - NFShipyardVoucher
       - Card # single cards
       - NFEmagPass
+      tags: # Forge-change
+      - MercenaryToken
     blacklist:
       tags:
       - Book
@@ -61,6 +63,8 @@
         whitelist:
           components:
           - NFCoin
+          tags: # Forge-change
+          - MercenaryToken
   - type: GenericVisualizer
     visuals:
       enum.SharedBagOpenVisuals.BagState:

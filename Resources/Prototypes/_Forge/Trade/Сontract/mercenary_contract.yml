@@ -1,0 +1,133 @@
+- type: storeContractsPreset
+  id: mercenary_contract
+  contracts:
+  - mercenary_contract_collection
+  - mercenary_contract_randomstaff
+
+# region Easy
+- type: storeContract
+  id: mercenary_contract_collection
+  name: Коллекционер
+  description: "Требуются следующие вещи для пополнения коллекции..."
+  targetCount: { min: 1, max: 2 }
+  bonusPickCount: { min: 1, max: 5 }
+  difficulty: Easy
+  targets:
+# Watch
+  - id: WristwatchGold
+    required: { min: 1, max: 1 }
+    weight: 5
+  - id: Wristwatch
+    required: { min: 1, max: 2 }
+    weight: 5
+# Treasure
+  - id: TreasureFlopDiskDrive
+    required: { min: 1, max: 5 }
+    weight: 5
+  - id: TreasureCDDrive
+    required: { min: 1, max: 5 }
+    weight: 5
+  - id: TreasureHardDiskDrive
+    required: { min: 1, max: 5 }
+    weight: 5
+  - id: TreasureHardDiskDrive
+    required: { min: 1, max: 5 }
+    weight: 5
+  - id: TreasureDatadiskEncrypted
+    required: { min: 1, max: 5 }
+    weight: 5
+  - id: TreasureCPUSupercharged
+    required: { min: 1, max: 3 }
+    weight: 5
+  - id: TreasureSampleTube
+    required: { min: 1, max: 5 }
+    weight: 5
+  currencies:
+  - id: MercenaryToken
+    min: 1
+    max: 3
+  - id: Credit
+    min: 0
+    max: 5000
+
+- type: storeContract
+  id: mercenary_contract_randomstaff
+  name: Собиратель
+  description: "Я.. Я не знаю зачем мне это, но я готов заплатить!"
+  targetCount: { min: 1, max: 3 }
+  bonusPickCount: { min: 1, max: 5 }
+  difficulty: Easy
+  targets:
+  - id: EuphoniumInstrument
+    required: { min: 1, max: 1 }
+    weight: 5
+  - id: BikeHornInstrument
+    required: { min: 1, max: 1 }
+    weight: 5
+  - id: RubberChicken
+    required: { min: 1, max: 1 }
+    weight: 5
+  - id: ClothingShoesHighheelBoots
+    required: { min: 1, max: 1 }
+    weight: 5
+  - id: ClothingOuterCoatJensen
+    required: { min: 1, max: 1 }
+    weight: 5
+  - id: ScrapFireExtinguisher
+    required: { min: 1, max: 1 }
+    weight: 5
+  - id: SaxophoneInstrument
+    required: { min: 1, max: 1 }
+    weight: 5
+  - id: CelloInstrument
+    required: { min: 1, max: 1 }
+    weight: 5
+  currencies:
+  - id: MercenaryToken
+    min: 1
+    max: 2
+  - id: Credit
+    min: 0
+    max: 3000
+
+# region Medium
+# а почему тут пусто?..
+
+
+# region Hard
+# и тут пусто, етить!
+
+
+
+#  region Пример
+# - type: storeContract
+#   id: caravan_contract_guns
+#   name: Спизди это!
+#   description: "Спизди вещи ТЛ, дабы я перенёс их по нормальным папкам, а то пиздец"
+#   targetCount: { min: 1, max: 3 }
+#   bonusPickCount: { min: 1, max: 5 }
+#   difficulty: Easy
+#   targets:
+#   - id: NFClothingEyesNightVisionGoggleTL
+#     required: { min: 1, max: 2 }
+#     weight: 5
+#   - id: ClothingMaskGasTL
+#     required: 1
+#     weight: 5
+#   - id: ClothingUniformJumpsuitTL
+#     required: { min: 1, max: 1 }
+#     weight: 5
+#   currencies:
+#   - id: Credit
+#     min: 0
+#     max: 1000
+#   - id: Credit
+#     min: 0
+#     max: 500
+#   rewardItems:
+#     - id: FoodBoxDonkpocketDink
+#       weight: 12
+#       always: true
+#     - id: DrinkColaBottleFull
+#       weight: 1
+#       mode: Replace
