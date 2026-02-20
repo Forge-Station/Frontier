@@ -27,3 +27,24 @@
   keycode: 'г'
   frequency: 1165
   color: "#75baf3"
+
+- type: radioChannel
+  id: Renegade
+  name: chat-radio-renegade
+  keycode: 'ы' 
+  frequency: 1125
+  color: "#bd33a4"
+  
+- type: radioChannel
+  id: TechRenegade
+  name: chat-radio-tech-renegade
+  keycode: 'я' 
+  frequency: 1130
+  color: "#ed39c9"
+  
+- type: radioChannel
+  id: ComRenegade
+  name: chat-radio-com-renegade
+  keycode: 'е' 
+  frequency: 1134
+  color: "#8b008b"

@@ -9,3 +9,15 @@
     sprite: Forge/Clothing/Neck/mantles/shermantle.rsi
   - type: Clothing
     sprite: Forge/Clothing/Neck/mantles/shermantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleRenegade
+  name: renegade's mantle
+  suffix: Ренегаты
+  description: Is it legal?
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/mantles/renegade.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Neck/mantles/renegade.rsi

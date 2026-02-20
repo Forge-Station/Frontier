@@ -57,5 +57,52 @@
   - type: Clothing
     sprite: Clothing/Ears/Headsets/syndicate.rsi
 
-
+# Ренегаты
+- type: entity
+  parent: [ClothingHeadset, BaseC3Contraband, ContrabandClothing]
+  id: ClothingHeadsetRenegade
+  name: renegade headset
+  description: An updated, modular intercom that fits over the head. Takes encryption keys.
+  suffix: Ренегаты
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRenegade
+  - type: Sprite
+    sprite: Forge/Clothing/Ears/Headsets/headset_renegade.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Ears/Headsets/headset_renegade.rsi
+    
+- type: entity
+  parent: [ClothingHeadsetAlt, BaseC3Contraband, ContrabandClothing]
+  id: ClothingHeadsetRenegadeTech
+  name: technical renegade headset
+  description: An updated, modular intercom that fits over the head. Takes encryption keys.
+  suffix: Ренегаты
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRenegadeTech
+  - type: Sprite
+    sprite: Forge/Clothing/Ears/Headsets/headset_renegade.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Ears/Headsets/headset_renegade.rsi
+    
+- type: entity
+  parent: [ClothingHeadsetAlt, BaseC3Contraband, ContrabandClothing]
+  id: ClothingHeadsetRenegadedCom
+  name: command renegade headset
+  description: An updated, modular intercom that fits over the head. Takes encryption keys.
+  suffix: Ренегаты
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRenegadeCom
+  - type: Sprite
+    sprite: Forge/Clothing/Ears/Headsets/headset_renegade.rsi
+  - type: Clothing
+    sprite: Forge/Clothing/Ears/Headsets/headset_renegade.rsi
 
