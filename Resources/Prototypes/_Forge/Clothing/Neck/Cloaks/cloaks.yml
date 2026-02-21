@@ -1,0 +1,29 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakRenegade
+  name: renegade cloak
+  suffix: Ренегаты
+  description: Is it legal?
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/Renegade/renegade.rsi
+    
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakRenegadePoncho
+  name: renegade poncho
+  suffix: Ренегаты
+  description: Is it legal?
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/Renegade/renegadeponcho.rsi
+    
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakRenegadeCaptain
+  name: renegade captain cloak
+  suffix: Ренегаты
+  description: Is it legal?
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Neck/Cloaks/Renegade/renegadecaptain.rsi

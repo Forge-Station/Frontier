@@ -39,3 +39,18 @@
   - type: Storage
     grid:
     - 0,0,7,4
+
+- type: entity
+  parent: [NFClothingBackpack, BaseC3Contraband, ContrabandClothing]
+  id: ClothingBackpackRenegade
+  name: backpack renegade
+  suffix: Ренегаты
+  description: A comfortable and practical backpack.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Back/Backpacks/renegade.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,7,4

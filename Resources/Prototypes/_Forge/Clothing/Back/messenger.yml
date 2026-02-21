@@ -1,0 +1,19 @@
+- type: entity
+  parent: [ClothingBackpackMessenger, BaseC3Contraband]
+  id: ClothingBackpackMessengerRenegade
+  name: renegade messenger bag
+  suffix: Ренегаты
+  description: A sterile messenger bag with renegade colours.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Back/Messenger/renegade.rsi
+  - type: Storage
+    grid:
+    - 0,0,1,2
+    - 0,4,1,6
+    - 3,1,6,5
+    - 8,0,9,2
+    - 8,4,9,6
+  - type: ExplosionResistance # Corvax-Forge
+    damageCoefficient: 0.1
+    

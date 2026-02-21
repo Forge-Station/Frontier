@@ -11,3 +11,18 @@
   - type: Storage
     grid:
     - 0,0,9,5
+
+- type: entity
+  parent: [NFClothingDuffel, BaseC3Contraband, ContrabandClothing]
+  id: ClothingDuffelRenegade
+  name: duffel renegade
+  suffix: Ренегаты
+  description: A large duffel bag for storing things.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Back/Duffels/renegade.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,9,5

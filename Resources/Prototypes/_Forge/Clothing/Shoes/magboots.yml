@@ -259,3 +259,25 @@
     state: icon-on
   name: alerts-magboots-name
   description: alerts-magboots-desc
+
+- type: entity
+  parent: [ClothingShoesBootsMagSecurity, BaseC3Contraband] 
+  id: ClothingShoesBootsMagRenegade
+  suffix: Ренегаты
+  name: renegade magboots
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/magboots-renegade.rsi 
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/magboots-renegade.rsi
+  - type: Magboots
+    magbootsAlert: MagbootsRenegade
+    
+- type: alert
+  id: MagbootsRenegade
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/magboots-renegade.rsi
+    state: icon-on
+  name: alerts-magboots-name
+  description: alerts-magboots-desc
