@@ -19,6 +19,9 @@
   category: Medium
   group: Mercenary
   shuttlePath: /Maps/_Forge/Shuttles/Mercenary/boyarichnik2.yml
+  addComponents:
+  - type: MercenaryBountyDatabase
+    bounties: []
 
 - type: gameMap
   id: boyaryshnik2
@@ -27,7 +30,7 @@
   minPlayers: 0
   stations:
     boyaryshnik2:
-      stationProto: StandardFrontierExpeditionVessel
+      stationProto: MercenaryFrontierVessel
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Боярышник MK2 {1}'
