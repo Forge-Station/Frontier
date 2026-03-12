@@ -30,7 +30,7 @@
   minPlayers: 0
   stations:
     boyaryshnik2:
-      stationProto: MercenaryFrontierVessel
+      stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Боярышник MK2 {1}'
